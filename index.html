@@ -124,6 +124,8 @@ h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1
 .band { width: 100%; height: auto; display: block; }
 .band text { font-family: var(--font-data); font-size: 9px; fill: var(--ink-2); }
 .band .lbl-price { fill: var(--ink); font-weight: 600; }
+.band .cap { font-family: var(--font-body); font-size: 8px; }
+.card .kv { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
 
 /* Controls */
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
@@ -328,6 +330,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
       tabs: { resumen: "Resumen", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca" },
       valHelp: "Valor estimado: lo que calculamos que vale la acción en el escenario central. Precio máximo de compra: ese valor menos el descuento que exige el plan; por encima de él no se compra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado.",
+      bandCap: { lo: "si va mal", mid: "valor estimado", hi: "si va bien" },
       latestOnly: "Solo la última decisión de cada empresa", anaDate: "Escáner",
       apst: { status: "Estado", live: "Vigente", bought: "Comprada el {d}", sold: "Comprada el {d}, ya vendida", stale: "Caducada: {n} escáneres después, revalidar",
         liveTitle: "Vigentes", liveLede: "Aprobadas en los últimos {n} escáneres y todavía sin comprar. «Ahora» es el último precio conocido frente al precio máximo de compra.",
@@ -438,6 +441,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
       tabs: { resumen: "Overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library" },
       valHelp: "Estimated value: what we calculate the share is worth in the central case. Max. buy price: that value minus the discount the plan requires; above it, the plan says don't buy. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value.",
+      bandCap: { lo: "goes badly", mid: "estimated value", hi: "goes well" },
       latestOnly: "Only each company's latest decision", anaDate: "Scan",
       apst: { status: "Status", live: "Current", bought: "Bought on {d}", sold: "Bought on {d}, since sold", stale: "Expired: {n} scans later, revalidate",
         liveTitle: "Current", liveLede: "Approved in the last {n} scans and not bought yet. \"Now\" is the latest known price against the max. buy price.",
@@ -657,7 +661,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var pad = (hi - lo) * 0.12 || 1; lo -= pad; hi += pad;
     var W = 300, L = 8, R = 292;
     function x(v) { return L + (v - lo) / (hi - lo) * (R - L); }
-    var s = '<svg class="band" viewBox="0 0 ' + W + ' 54" role="img" aria-label="' + esc(t().col.cons + " " + fmtM(r.cons) + ", " + t().col.base + " " + fmtM(r.base) + ", " + t().col.fav + " " + fmtM(r.fav) + ", " + t().col.price + " " + fmtM(r.price)) + '">';
+    var s = '<svg class="band" viewBox="0 0 ' + W + ' 64" role="img" aria-label="' + esc(t().col.cons + " " + fmtM(r.cons) + ", " + t().col.base + " " + fmtM(r.base) + ", " + t().col.fav + " " + fmtM(r.fav) + ", " + t().col.priceScan + " " + fmtM(r.price)) + '">';
     s += '<line x1="' + L + '" x2="' + R + '" y1="24" y2="24" stroke="var(--rule)" stroke-width="2"/>';
     s += '<rect x="' + x(r.cons) + '" y="18" width="' + Math.max(1, x(r.fav) - x(r.cons)) + '" height="12" rx="2" fill="var(--accent-soft)"/>';
     s += '<line x1="' + x(r.base) + '" x2="' + x(r.base) + '" y1="14" y2="34" stroke="var(--accent)" stroke-width="2"/>';
@@ -666,6 +670,10 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     s += '<text x="' + x(r.cons) + '" y="48" text-anchor="middle">' + esc(fmtM(r.cons, 0)) + "</text>";
     s += '<text x="' + x(r.base) + '" y="48" text-anchor="middle" fill="var(--accent)">' + esc(fmtM(r.base, 0)) + "</text>";
     s += '<text x="' + x(r.fav) + '" y="48" text-anchor="middle">' + esc(fmtM(r.fav, 0)) + "</text>";
+    var B = t().bandCap;
+    s += '<text class="cap" x="' + x(r.cons) + '" y="60" text-anchor="middle">' + esc(B.lo) + "</text>";
+    s += '<text class="cap" x="' + x(r.base) + '" y="60" text-anchor="middle" fill="var(--accent)">' + esc(B.mid) + "</text>";
+    s += '<text class="cap" x="' + x(r.fav) + '" y="60" text-anchor="middle">' + esc(B.hi) + "</text>";
     if (r.price !== null) s += '<text class="lbl-price" x="' + x(r.price) + '" y="9" text-anchor="middle">' + esc(fmtM(r.price)) + "</text>";
     s += "</svg>";
     return s;
@@ -811,7 +819,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return '<button type="button" class="card" data-open="' + esc(r.date + "|" + r.ticker) + '">' +
       '<div class="card-top"><div><div class="tick">' + esc(r.ticker) + '</div><div class="co">' + esc(r.company) + "</div></div>" + pill(r.decision) + "</div>" +
       band(r) +
-      '<dl class="kv"><div><dt>' + esc(t().col.priceScan) + "</dt><dd>" + esc(fmtM(r.price)) + "</dd></div><div><dt>" + esc(t().col.maxc) + "</dt><dd>" + esc(fmtM(r.maxc)) + "</dd></div><div><dt>" + esc(t().col.mos) + '</dt><dd class="' + signCls(r.mos) + '">' + esc(fmtP(r.mos)) + "</dd></div></dl>" +
+      '<dl class="kv"><div><dt>' + esc(t().col.priceScan) + "</dt><dd>" + esc(fmtM(r.price)) + "</dd></div><div><dt>" + esc(t().col.base) + '</dt><dd style="color:var(--accent)">' + esc(fmtM(r.base)) + "</dd></div><div><dt>" + esc(t().col.maxc) + "</dt><dd>" + esc(fmtM(r.maxc)) + "</dd></div><div><dt>" + esc(t().col.mos) + '</dt><dd class="' + signCls(r.mos) + '">' + esc(fmtP(r.mos)) + "</dd></div>" +
+      (r.cons !== null && r.fav !== null ? '<div style="grid-column:1/-1"><dt>' + esc(t().col.valRange) + "</dt><dd>" + esc(fmtM(r.cons) + " – " + fmtM(r.fav)) + "</dd></div>" : "") + "</dl>" +
       "<p>" + esc(whyOf(r)) + "</p>" + nowLine(r) + "</button>";
   }
 
