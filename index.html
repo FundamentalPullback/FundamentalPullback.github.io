@@ -107,6 +107,7 @@ h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1
 .d-wait { color: var(--wait); background: var(--wait-bg); }
 .d-watch { color: var(--watch); background: var(--watch-bg); }
 .d-out { color: var(--out); background: var(--out-bg); }
+.d-held { color: var(--ink); background: var(--rule); }
 
 /* Candidate cards */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 14px; }
@@ -375,8 +376,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 
 <div id="drawer-root"></div>
 <div id="calc-root"></div>
-
 <script src="data/manifest.js"></script>
+
 <script>
 (function () {
   "use strict";
@@ -385,7 +386,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   var TOOL = "get_values";
   var RANGES = {
     scan: "'Escáner'!A:M",
-    dec: "'Decisiones'!A:AF",
+    dec: "'Decisiones'!A:AG",
     ops: "'Operaciones'!A:L",
     acct: "'Cuenta'!A1:F60",
     hist: "'Historial'!A1:AP400",
@@ -399,27 +400,27 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       refresh: "Actualizar",
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
       tabs: { resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca" },
-      valHelp: "Valor estimado: lo que calculamos que vale la acción en el escenario central. Precio máximo de compra: ese valor menos el descuento que exige el plan; por encima de él no se compra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado.",
+      valHelp: "Valor estimado: lo que el informe calcula que vale la acción en el escenario central. Precio máximo de compra: el techo que fija el informe de cada empresa (puede venir de la valoración, de la técnica o de un evento); no es un descuento fijo del plan, y si el informe no fija techo no se muestra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado. Los escenarios «si va mal» y «si va bien» no son límites garantizados.",
       whatMeans: "¿Qué significa cada número?", trRet: "Rentabilidad", trEx: "Frente al SPY",
       bandCap: { lo: "bajista", mid: "valor estimado", hi: "alcista" },
       latestOnly: "Solo la última decisión de cada empresa", anaDate: "Escáner",
-      apst: { status: "Estado", live: "Vigente", bought: "Comprada el {d}", sold: "Comprada el {d}, ya vendida", stale: "Caducada: {n} escáneres después, revalidar",
-        liveTitle: "Vigentes", liveLede: "Aprobadas en los últimos {n} escáneres y todavía sin comprar. «Ahora» es el último precio conocido frente al precio máximo de compra.",
-        noneLive: "No hay aprobaciones vigentes. Las de abajo necesitan un análisis nuevo al precio actual antes de actuar.",
-        oldTitle: "Ya no vigentes", oldLede: "Compradas después de aprobarse, o con un análisis de hace {n} escáneres o más. No sirven para operar sin revalidarlas al precio actual.",
+      apst: { status: "Estado", live: "En el último análisis", held: "En cartera: comprar más exige ficha nueva", bought: "Comprada el {d}", sold: "Comprada el {d}, ya vendida", stale: "Análisis del {d}: revalidar",
+        liveTitle: "Aprobadas en el último análisis", liveLede: "Aprobado no significa autorizado: cada ficha fija su señal, su caducidad y cómo tratar los resultados, y una ficha suspendida o caducada no se reactiva por precio ni por volver a salir en el escáner. «Ahora» es el último precio conocido frente al precio máximo de compra.",
+        noneLive: "No hay aprobaciones en el último análisis.",
+        oldTitle: "De análisis anteriores", oldLede: "Aprobaciones que no forman parte del último análisis, o ya compradas. No sirven para operar sin un análisis nuevo.", notOrder: "(condición necesaria, no orden de compra)",
         now: "Ahora", above: "por encima del precio máximo de compra", below: "por debajo del precio máximo de compra" },
       retro: {
         title: "Retrospectiva", lede: "Qué hicieron después las candidatas que no se compraron, frente al SPY en el mismo periodo. Datos de la auditoría del 22 oct 2026 (informe A088), con precios hasta el 21 oct. Retornos de precio, sin costes ni dividendos.",
         hz: { "5": "5 sesiones", "10": "10 sesiones", corte: "Hasta el 21 oct" }, hzLbl: "Horizonte",
-        grp: { A: "A · Descartadas tras análisis completo", B: "B · Investigación o filtros pendientes", C: "C · Aprobadas o rechazo revocado" },
+        grp: { A: "A · Decisiones negativas desarrolladas", B: "B · Investigación o filtros pendientes (no rechazadas)", C: "C · Aprobadas o rechazo revocado" },
         grpShort: { A: "A", B: "B", C: "C" },
         fCases: "Casos", fBeat: "Batieron al SPY", fAvgEx: "Exceso medio vs SPY", fMedEx: "Exceso mediano",
-        verdictGood: "En las descartadas (A y B), el exceso medio frente al SPY fue de {x}: no comprarlas evitó, de media, un resultado peor que el índice.",
-        verdictBad: "En las descartadas (A y B), el exceso medio frente al SPY fue de +{x}: de media, lo que se dejó pasar lo hizo mejor que el índice. Conviene revisar si el filtro es demasiado exigente.",
+        grpWord: "grupo", allGroups: "todos",
+        verdict: { A: "Grupo A (decisiones negativas desarrolladas): exceso medio frente al SPY de {x}; {b} de {n} lo hicieron mejor que el índice.", B: "El grupo B no son rechazos definitivos: es investigación o filtros pendientes. Exceso medio {x}; {b} de {n} batieron al SPY.", C: "El grupo C son aprobaciones o rechazos revocados, como referencia. Exceso medio {x}; {b} de {n} batieron al SPY.", all: "Todos los grupos juntos mezclan poblaciones distintas. Exceso medio {x}; {b} de {n} batieron al SPY." },
         verdictNote: "Muestra pequeña y horizonte muy corto: es una señal para vigilar, no una conclusión.",
         byGrpTitle: "Por grupo", barsTitle: "Exceso vs SPY por empresa", barsLede: "Retorno de la acción menos el del SPY desde el precio de referencia. Verde: lo hizo mejor que el índice. Toca una empresa para ver su ficha.",
         tblTitle: "Detalle", n: "N.º", avgRet: "Retorno medio", avgEx: "Exceso medio", beat: "% que batió al SPY", avgDown: "Caída máx. media",
-        inScan: "En el escáner", days: "días", ficha: "Ficha", open: "Ver ficha", decDate: "Decisión", refPrice: "Precio ref.", ret: "Retorno", spy: "SPY", ex: "Exceso", up: "Máx. subida", down: "Máx. caída", why: "Motivo", rep: "Informe",
+        noSrc: "fuente pendiente", inScan: "En el escáner", days: "días", ficha: "Ficha", open: "Ver ficha", decDate: "Decisión", refPrice: "Precio ref.", ret: "Retorno", spy: "SPY", ex: "Exceso", up: "Máx. subida", down: "Máx. caída", why: "Motivo", rep: "Informe",
         note: "Cada horizonte es una observación distinta del mismo caso: no se suman. Grupo C no son descartes, se muestra como referencia."
       },
       lib: {
@@ -433,7 +434,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         capital: "Capital inicial", capNote: "se cambia en la pestaña Cuenta de la hoja",
         value: "Valor de la cuenta", total: "Ganancia/pérdida total", vsSpy: "Cuenta vs SPY", spyLbl: "SPY", today: "Hoy", since: "desde el", account: "Tu cuenta", spyLine: "Mismo capital en SPY", eqAria: "Valor diario de la cuenta frente al mismo capital invertido en el SPY", noHist: "La curva aparecerá cuando la pestaña Historial de la hoja termine de cargar los precios.", live: "ahora", ofAcct: "de la cuenta", dd: "Caída máxima desde un pico", others: "Otras", cashLbl: "Efectivo", allocTitle: "Reparto de la cuenta", allocLede: "Peso de cada posición y del efectivo sobre el valor total.", bestDay: "Mejor día de la cuenta", worstDay: "Peor día de la cuenta",
         unreal: "Ganancia/pérdida abierta (sin vender)", real: "Ganancia/pérdida cerrada (ya vendida)", cash: "Efectivo", invested: "Invertido",
-        statsTitle: "Estadísticas", openWin: "Posiciones abiertas en ganancia", sellWin: "Ventas con ganancia", of: "de",
+        statsTitle: "Estadísticas", openWin: "Posiciones abiertas en ganancia", sellWin: "Ventas con ganancia (cada venta parcial cuenta aparte)", of: "de",
         avgWin: "Ganancia media por venta ganadora", avgLoss: "Pérdida media por venta perdedora", pf: "Profit factor (ventas)", pfNote: "sin pérdidas todavía",
         bigWin: "Mayor ganancia realizada", bigLoss: "Mayor pérdida realizada", best: "Mejor posición abierta", worst: "Peor posición abierta", top: "Mayor peso en la cuenta",
         risk: "Riesgo abierto hasta el stop S", riskMissing: "falta el stop S en", riskOf: "de la cuenta", positions: "posiciones",
@@ -465,7 +466,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       onlyS2: "Solo Stage 2",
       search: "Buscar ticker o empresa",
       anaTitle: "Análisis",
-      anaLede: "Las empresas analizadas en el escáner elegido, con su decisión y motivo. Valor estimado: lo que calculamos que vale cada acción en el escenario central. Precio máximo de compra: ese valor menos el descuento que exige el plan; por encima no se compra. Toca una fila para ver la ficha.",
+      anaLede: "Las empresas analizadas en el escáner elegido, con su decisión y motivo. Valor estimado: lo que calculamos que vale cada acción en el escenario central. Precio máximo de compra: el techo que fija el informe de cada empresa, cuando lo hay. Toca una fila para ver la ficha y su informe.",
       all: "Todas",
       appTitle: "Aprobadas",
       appLede: "Aptas para Stage 3.5 o aprobadas en Stage 3 a la espera de una condición del plan.",
@@ -480,6 +481,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       perfTitle: "Rendimiento",
       perfLede: "Rentabilidad desde el precio del escáner, comparada con el SPY en el mismo periodo. Sin dividendos.",
       perfPending: "Los primeros datos a 3 meses llegan el",
+      perfUnit: "Una observación por empresa ({n} empresas): su primera decisión registrada, sin contar las revisiones posteriores. «3 meses» = 91 días naturales desde la fecha del escáner (6 meses = 182, 12 meses = 365).",
       group: "Grupo",
       n: "N.º",
       avg: "Media",
@@ -487,17 +489,19 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       excess: "Exceso vs SPY",
       horizon: { "3m": "3 meses", "6m": "6 meses", "12m": "12 meses" },
       groups: { ok: "Aprobadas", wait: "Esperar precio", watch: "En observación", out: "Descartadas" },
-      col: { priceScan: "Precio en el escáner", baseEst: "Valor estimado", date: "Fecha", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máx. 52s", pull: "Retroceso", opm: "Margen op.", fcf: "FCF/acc.", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decisión", depth: "Profundidad", why: "Motivo", cons: "Valor escenario bajista", base: "Valor estimado", fav: "Valor escenario alcista", disc: "Descuento que exige el plan", maxc: "Precio máximo de compra", mos: "Descuento sobre el valor", valRange: "Rango de valor (escenario bajista – alcista)", next: "Próximo evento", r3: "Rent. 3m", r6: "Rent. 6m", r12: "Rent. 12m", x3: "Exceso 3m", x6: "Exceso 6m", x12: "Exceso 12m", via: "Vía", type: "Tipo", shares: "Acciones", exec: "Precio", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" },
-      close: "Cerrar",
+      col: { priceScan: "Precio en el escáner", baseEst: "Valor estimado", date: "Fecha", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máx. 52s", pull: "Retroceso", opm: "Margen op.", fcf: "FCF/acc.", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decisión", depth: "Profundidad", why: "Motivo", cons: "Valor escenario bajista", base: "Valor estimado", fav: "Valor escenario alcista", disc: "Descuento implícito frente al valor estimado", maxc: "Precio máximo de compra", mos: "Descuento sobre el valor", valRange: "Rango de valor (escenario bajista – alcista)", next: "Próximo evento", r3: "Rent. 3m", r6: "Rent. 6m", r12: "Rent. 12m", x3: "Exceso 3m", x6: "Exceso 6m", x12: "Exceso 12m", via: "Vía", type: "Tipo", shares: "Acciones", exec: "Precio", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" },
+      close: "Cerrar", srcLbl: "Informe de origen", aDate: "Análisis", sDate: "escáner",
       calc: { btn: "Cómo se calcula", title: "Cómo se calcula", tapHint: "Toca cualquier cifra subrayada de la tarjeta para saltar a su explicación.",
         price: "Precio en el escáner", priceTxt: "Precio de cierre del {d}, tal como venía en el CSV del escáner de ese día. Es el precio con el que se hizo el análisis.", scanData: "Otros datos de esa fila del escáner (Stages 1 y 2):",
-        base: "Valor estimado", baseTxt: "Valor base (escenario central) del {rep}, analizado el {a}. Es lo que calculamos que vale la acción si el negocio evoluciona como esperamos.", report: "informe Stage 3 {id}", reportGen: "informe Stage 3",
+        base: "Valor estimado", baseTxt: "Valor base (escenario central) del {rep}, analizado el {a}. Es lo que el informe calcula que vale la acción si el negocio evoluciona como espera.", report: "informe Stage 3 {id}", reportGen: "informe Stage 3",
         range: "Rango de valor", rangeTxt: "Los dos escenarios extremos del mismo informe. Escenario bajista: lo que valdría la acción si el negocio evoluciona peor de lo previsto (supuestos conservadores). Escenario alcista: lo que valdría si evoluciona mejor (supuestos favorables). El valor estimado es el escenario base, entre ambos.",
         detail: "Datos del informe usados:", noDetail: "El desglose de los datos del informe (flujo de caja, múltiplo aplicado, crecimiento…) todavía no está cargado en la hoja para esta empresa.",
-        maxc: "Precio máximo de compra", maxcTxt: "Valor estimado menos el descuento que exige el plan para esta empresa ({p}). Por encima de este precio, el plan dice que no se compra.", maxcAdj: "El informe fija el máximo en {m} (redondeado o ajustado sobre el cálculo exacto).",
+        maxc: "Precio máximo de compra", maxcTxt: "Techo de compra que fija el informe de esta empresa; no es una regla fija del plan. Frente al valor estimado equivale a un descuento implícito de {p}. Por encima de este precio no se compra.", maxcNoBase: "Techo de compra que fija el informe de esta empresa. Por encima de este precio no se compra.",
         mos: "Descuento sobre el valor", mosTxt: "Cuánto más barata cotizaba la acción frente a su valor estimado el día del escáner. Positivo (verde) = más barata; negativo (rojo) = más cara.",
         now: "Precio ahora frente al máximo", nowTxtAcct: "Último precio de la pestaña Cuenta de la hoja ({d}), comparado con el precio máximo de compra.", nowTxtScan: "Último precio del escáner ({d}), comparado con el precio máximo de compra.",
         above: "por encima del máximo", below: "por debajo del máximo" },
+      wTitle: "Operaciones con problemas", wUnknown: "tipo de operación desconocido, no se ha contado", wOversell: "venta de más acciones de las que había; se limita a las existentes",
+      loadFail: "No se pudieron cargar algunos datos:", retry: "Reintentar",
       tracking: "Seguimiento",
       pending: "pendiente",
       yes: "Sí", no: "No",
@@ -520,27 +524,27 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       refresh: "Refresh",
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
       tabs: { resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library" },
-      valHelp: "Estimated value: what we calculate the share is worth in the central case. Max. buy price: that value minus the discount the plan requires; above it, the plan says don't buy. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value.",
+      valHelp: "Estimated value: what the report calculates the share is worth in the central case. Max. buy price: the ceiling set by each company's report (it can come from the valuation, the technicals or an event); it isn't a fixed plan discount, and if the report sets no ceiling none is shown. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value. The badly/well scenarios are not guaranteed limits.",
       whatMeans: "What does each number mean?", trRet: "Return", trEx: "Vs SPY",
       bandCap: { lo: "bear case", mid: "estimated value", hi: "bull case" },
       latestOnly: "Only each company's latest decision", anaDate: "Scan",
-      apst: { status: "Status", live: "Current", bought: "Bought on {d}", sold: "Bought on {d}, since sold", stale: "Expired: {n} scans later, revalidate",
-        liveTitle: "Current", liveLede: "Approved in the last {n} scans and not bought yet. \"Now\" is the latest known price against the max. buy price.",
-        noneLive: "No current approvals. The ones below need a fresh analysis at today's price before acting.",
-        oldTitle: "No longer current", oldLede: "Bought after being approved, or analyzed {n} or more scans ago. Not usable for trading until revalidated at the current price.",
+      apst: { status: "Status", live: "In the latest analysis", held: "Held: buying more needs a new plan", bought: "Bought on {d}", sold: "Bought on {d}, since sold", stale: "Analysis of {d}: revalidate",
+        liveTitle: "Approved in the latest analysis", liveLede: "Approved doesn't mean authorized: each plan sets its signal, its expiry and how to handle earnings, and a suspended or expired plan isn't revived by price or by reappearing in the scan. \"Now\" is the latest known price against the max. buy price.",
+        noneLive: "No approvals in the latest analysis.",
+        oldTitle: "From earlier analyses", oldLede: "Approvals that aren't part of the latest analysis, or already bought. Not usable for trading without a new analysis.", notOrder: "(a necessary condition, not a buy order)",
         now: "Now", above: "above the max. buy price", below: "below the max. buy price" },
       retro: {
         title: "Hindsight", lede: "What the candidates that weren't bought did afterwards, against SPY over the same period. Data from the Oct 22, 2026 audit (report A088), with prices up to Oct 21. Price returns, without costs or dividends.",
         hz: { "5": "5 sessions", "10": "10 sessions", corte: "Up to Oct 21" }, hzLbl: "Horizon",
-        grp: { A: "A · Rejected after full analysis", B: "B · Research or filters pending", C: "C · Approved or rejection reversed" },
+        grp: { A: "A · Developed negative decisions", B: "B · Research or filters pending (not rejected)", C: "C · Approved or rejection reversed" },
         grpShort: { A: "A", B: "B", C: "C" },
         fCases: "Cases", fBeat: "Beat SPY", fAvgEx: "Average excess vs SPY", fMedEx: "Median excess",
-        verdictGood: "For the rejected names (A and B), the average excess over SPY was {x}: on average, not buying them avoided a result worse than the index.",
-        verdictBad: "For the rejected names (A and B), the average excess over SPY was +{x}: on average, what was passed over beat the index. Worth checking whether the filter is too strict.",
+        grpWord: "group", allGroups: "all",
+        verdict: { A: "Group A (developed negative decisions): average excess over SPY of {x}; {b} of {n} beat the index.", B: "Group B are not final rejections: research or filters were pending. Average excess {x}; {b} of {n} beat SPY.", C: "Group C are approvals or reversed rejections, shown for reference. Average excess {x}; {b} of {n} beat SPY.", all: "All groups together mix different populations. Average excess {x}; {b} of {n} beat SPY." },
         verdictNote: "Small sample and a very short horizon: a signal to watch, not a conclusion.",
         byGrpTitle: "By group", barsTitle: "Excess vs SPY by company", barsLede: "Stock return minus SPY return from the reference price. Green: it beat the index. Tap a company to open its record.",
         tblTitle: "Detail", n: "Count", avgRet: "Average return", avgEx: "Average excess", beat: "% that beat SPY", avgDown: "Avg. max drop",
-        inScan: "In the scanner", days: "days", ficha: "Record", open: "Open record", decDate: "Decision", refPrice: "Ref. price", ret: "Return", spy: "SPY", ex: "Excess", up: "Max. gain", down: "Max. drop", why: "Reason", rep: "Report",
+        noSrc: "source pending", inScan: "In the scanner", days: "days", ficha: "Record", open: "Open record", decDate: "Decision", refPrice: "Ref. price", ret: "Return", spy: "SPY", ex: "Excess", up: "Max. gain", down: "Max. drop", why: "Reason", rep: "Report",
         note: "Each horizon is a separate observation of the same case: don't add them up. Group C are not rejections; shown for reference."
       },
       lib: {
@@ -554,7 +558,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         capital: "Starting capital", capNote: "change it in the sheet's Cuenta tab",
         value: "Account value", total: "Total gain/loss", vsSpy: "Account vs SPY", spyLbl: "SPY", today: "Today", since: "since", account: "Your account", spyLine: "Same capital in SPY", eqAria: "Daily account value against the same capital invested in SPY", noHist: "The curve will appear once the sheet's Historial tab finishes loading prices.", live: "now", ofAcct: "of the account", dd: "Maximum drawdown from a peak", others: "Others", cashLbl: "Cash", allocTitle: "Account allocation", allocLede: "Weight of each position and of cash in the total value.", bestDay: "Best day for the account", worstDay: "Worst day for the account",
         unreal: "Open gain/loss (not sold)", real: "Closed gain/loss (already sold)", cash: "Cash", invested: "Invested",
-        statsTitle: "Statistics", openWin: "Open positions in profit", sellWin: "Sales at a gain", of: "of",
+        statsTitle: "Statistics", openWin: "Open positions in profit", sellWin: "Sales at a gain (each partial sale counts separately)", of: "of",
         avgWin: "Average gain per winning sale", avgLoss: "Average loss per losing sale", pf: "Profit factor (sales)", pfNote: "no losses yet",
         bigWin: "Largest realized gain", bigLoss: "Largest realized loss", best: "Best open position", worst: "Worst open position", top: "Largest weight in the account",
         risk: "Open risk down to stop S", riskMissing: "stop S missing for", riskOf: "of the account", positions: "positions",
@@ -586,7 +590,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       onlyS2: "Stage 2 only",
       search: "Search ticker or company",
       anaTitle: "Analysis",
-      anaLede: "The companies analyzed in the chosen scan, with their decision and reason. Estimated value: what we calculate each share is worth in the central case. Max. buy price: that value minus the discount the plan requires; above it, the plan says don't buy. Tap a row for the full record.",
+      anaLede: "The companies analyzed in the chosen scan, with their decision and reason. Estimated value: what we calculate each share is worth in the central case. Max. buy price: the ceiling set by each company's report, when there is one. Tap a row for the record and its report.",
       all: "All",
       appTitle: "Approved",
       appLede: "Ready for Stage 3.5, or passed Stage 3 and waiting on one condition of the plan.",
@@ -601,6 +605,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       perfTitle: "Performance",
       perfLede: "Return from the scan price, compared with SPY over the same period. Excludes dividends.",
       perfPending: "The first 3-month data arrives on",
+      perfUnit: "One observation per company ({n} companies): its first recorded decision, not counting later revisions. \"3 months\" = 91 calendar days from the scan date (6 months = 182, 12 months = 365).",
       group: "Group",
       n: "Count",
       avg: "Average",
@@ -608,17 +613,19 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       excess: "Excess vs SPY",
       horizon: { "3m": "3 months", "6m": "6 months", "12m": "12 months" },
       groups: { ok: "Approved", wait: "Wait for price", watch: "On watch", out: "Rejected" },
-      col: { priceScan: "Price at scan", baseEst: "Estimated value", date: "Date", ticker: "Ticker", company: "Company", price: "Price", pe: "P/E", high: "52w high", pull: "Pullback", opm: "Op. margin", fcf: "FCF/sh", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decision", depth: "Depth", why: "Reason", cons: "Bear-case value", base: "Estimated value", fav: "Bull-case value", disc: "Discount the plan requires", maxc: "Max. buy price", mos: "Discount to value", valRange: "Value range (bear – bull case)", next: "Next event", r3: "Ret. 3m", r6: "Ret. 6m", r12: "Ret. 12m", x3: "Excess 3m", x6: "Excess 6m", x12: "Excess 12m", via: "Path", type: "Type", shares: "Shares", exec: "Price", amount: "Amount", stop: "Stop S", m: "Low M", signal: "Signal or reason", notes: "Notes", fee: "Fee" },
-      close: "Close",
+      col: { priceScan: "Price at scan", baseEst: "Estimated value", date: "Date", ticker: "Ticker", company: "Company", price: "Price", pe: "P/E", high: "52w high", pull: "Pullback", opm: "Op. margin", fcf: "FCF/sh", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decision", depth: "Depth", why: "Reason", cons: "Bear-case value", base: "Estimated value", fav: "Bull-case value", disc: "Implied discount to estimated value", maxc: "Max. buy price", mos: "Discount to value", valRange: "Value range (bear – bull case)", next: "Next event", r3: "Ret. 3m", r6: "Ret. 6m", r12: "Ret. 12m", x3: "Excess 3m", x6: "Excess 6m", x12: "Excess 12m", via: "Path", type: "Type", shares: "Shares", exec: "Price", amount: "Amount", stop: "Stop S", m: "Low M", signal: "Signal or reason", notes: "Notes", fee: "Fee" },
+      close: "Close", srcLbl: "Source report", aDate: "Analysis", sDate: "scan",
       calc: { btn: "How it's calculated", title: "How it's calculated", tapHint: "Tap any underlined figure on the card to jump to its explanation.",
         price: "Price at scan", priceTxt: "Closing price on {d}, as it came in that day's scanner CSV. It's the price the analysis used.", scanData: "Other data from that scanner row (Stages 1 and 2):",
-        base: "Estimated value", baseTxt: "Base value (central case) from {rep}, analyzed on {a}. It's what we calculate the share is worth if the business performs as expected.", report: "Stage 3 report {id}", reportGen: "the Stage 3 report",
+        base: "Estimated value", baseTxt: "Base value (central case) from {rep}, analyzed on {a}. It's what the report calculates the share is worth if the business performs as expected.", report: "Stage 3 report {id}", reportGen: "the Stage 3 report",
         range: "Value range", rangeTxt: "The two outer scenarios from the same report. Bear case: what the share would be worth if the business does worse than expected (conservative assumptions). Bull case: what it would be worth if it does better (favorable assumptions). The estimated value is the base case, between the two.",
         detail: "Report data used:", noDetail: "The breakdown of the report's inputs (cash flow, multiple applied, growth…) isn't loaded in the sheet for this company yet.",
-        maxc: "Max. buy price", maxcTxt: "Estimated value minus the discount the plan requires for this company ({p}). Above this price, the plan says don't buy.", maxcAdj: "The report sets the max at {m} (rounded or adjusted from the exact calculation).",
+        maxc: "Max. buy price", maxcTxt: "The buy ceiling set by this company's report; it isn't a fixed plan rule. Against the estimated value it works out to an implied discount of {p}. Above this price, don't buy.", maxcNoBase: "The buy ceiling set by this company's report. Above this price, don't buy.",
         mos: "Discount to value", mosTxt: "How much cheaper the stock traded than its estimated value on the scan day. Positive (green) = cheaper; negative (red) = more expensive.",
         now: "Price now vs. max", nowTxtAcct: "Latest price from the sheet's Cuenta tab ({d}), compared with the max. buy price.", nowTxtScan: "Latest scanner price ({d}), compared with the max. buy price.",
         above: "above the max", below: "below the max" },
+      wTitle: "Trades with problems", wUnknown: "unknown trade type, not counted", wOversell: "sold more shares than were held; limited to the shares held",
+      loadFail: "Some data couldn't be loaded:", retry: "Retry",
       tracking: "Tracking",
       pending: "pending",
       yes: "Yes", no: "No",
@@ -642,18 +649,20 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     "Aprobada Stage 3, bloqueada": "Passed Stage 3, blocked",
     "Esperar precio": "Wait for price",
     "En observación": "On watch",
-    "Descartada": "Rejected"
+    "Descartada": "Rejected",
+    "En cartera": "Held"
   };
-  var DEPTH_EN = { "Stage 3 completo": "Full Stage 3", "Stage 3 rápido": "Quick Stage 3", "Stage 1": "Stage 1" };
+  var DEPTH_EN = { "Stage 3 completo": "Full Stage 3", "Stage 3 rápido": "Quick Stage 3", "Stage 1": "Stage 1", "Revisión de lista": "List review" };
   var DEC_CLASS = {
     "Apta para Stage 3.5": "d-ok",
     "Aprobada Stage 3, bloqueada": "d-hold",
     "Esperar precio": "d-wait",
     "En observación": "d-watch",
-    "Descartada": "d-out"
+    "Descartada": "d-out",
+    "En cartera": "d-held"
   };
-  var DEC_ORDER = ["Apta para Stage 3.5", "Aprobada Stage 3, bloqueada", "Esperar precio", "En observación", "Descartada"];
-  var DEC_VAR = { "d-ok": "--ok", "d-hold": "--hold", "d-wait": "--wait", "d-watch": "--watch", "d-out": "--out" };
+  var DEC_ORDER = ["Apta para Stage 3.5", "Aprobada Stage 3, bloqueada", "En cartera", "Esperar precio", "En observación", "Descartada"];
+  var DEC_VAR = { "d-ok": "--ok", "d-hold": "--hold", "d-wait": "--wait", "d-watch": "--watch", "d-out": "--out", "d-held": "--ink-2" };
 
   var lang = "es";
   try { var saved = localStorage.getItem("fpj-lang"); if (saved === "en" || saved === "es") lang = saved; } catch (e) {}
@@ -667,7 +676,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     view: "resumen",
     scanDate: null, onlyS2: true, scanQ: "",
     anaFilter: "all", rejFilter: "all", rejQ: "", anaQ: "", resDate: null, anaDate: null, latestOnly: true,
-    retroHz: "corte", retroGrp: "all",
+    retroHz: "corte", retroGrp: "A",
     lib: null, libState: "idle", libQ: "", libCat: "all", libSel: null,
     sort: {}
   };
@@ -676,17 +685,20 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   /* ---------- parsing ---------- */
   function num(v) {
     if (v === null || v === undefined) return null;
-    if (typeof v === "number") return v;
+    if (typeof v === "number") return isFinite(v) ? v : null;
     var s = String(v).trim();
     if (!s || s === "-" || s === "—") return null;
     var neg = false;
     if (/^\(.*\)$/.test(s)) { neg = true; s = s.slice(1, -1); }
     var pct = /%$/.test(s);
-    s = s.replace(/[%$€\s ]/g, "");
-    if (s.indexOf(",") >= 0) s = s.replace(/\./g, "").replace(",", ".");
+    s = s.replace(/[%$€\s ]/g, "").replace(/−/g, "-");
     if (s.charAt(0) === "-") { neg = !neg; s = s.slice(1); }
+    var lc = s.lastIndexOf(","), ld = s.lastIndexOf(".");
+    if (lc >= 0 && ld >= 0) s = lc > ld ? s.replace(/\./g, "").replace(",", ".") : s.replace(/,/g, "");
+    else if (lc >= 0) { if ((s.match(/,/g) || []).length > 1) return null; s = s.replace(",", "."); }
+    else if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, "");
+    if (!/^\d+(\.\d+)?$/.test(s)) return null;
     var x = parseFloat(s);
-    if (isNaN(x)) return null;
     if (pct) x = x / 100;
     return neg ? -x : x;
   }
@@ -706,7 +718,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return out;
   }
   var SCAN_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máximo 52 semanas", pull: "Retroceso desde máximo", opm: "Margen operativo", fcf: "FCF por acción", qp: "QP Score", opp: "Opportunity", rsi: "RSI 14", s2: "Pasa Stage 2" };
-  var DEC_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio en escáner", adate: "Fecha análisis", depth: "Profundidad", decision: "Decisión", why: "Motivo", cons: "Valor conservador", base: "Valor base", fav: "Valor favorable", disc: "Descuento exigido", maxc: "Máximo condicionado", mos: "Margen vs base", next: "Próximo evento", p3: "Precio +3m", p6: "Precio +6m", p12: "Precio +12m", r3: "Rentab. +3m", r6: "Rentab. +6m", r12: "Rentab. +12m", spy: "SPY en escáner", x3: "Exceso vs SPY +3m", x6: "Exceso vs SPY +6m", x12: "Exceso vs SPY +12m", whyEn: "Motivo (EN)", nextEn: "Próximo evento (EN)", calc: "Cálculo", calcEn: "Cálculo (EN)" };
+  var DEC_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio en escáner", adate: "Fecha análisis", depth: "Profundidad", decision: "Decisión", why: "Motivo", cons: "Valor conservador", base: "Valor base", fav: "Valor favorable", disc: "Descuento implícito", maxc: "Máximo condicionado", mos: "Margen vs base", next: "Próximo evento", p3: "Precio +3m", p6: "Precio +6m", p12: "Precio +12m", r3: "Rentab. +3m", r6: "Rentab. +6m", r12: "Rentab. +12m", spy: "SPY en escáner", x3: "Exceso vs SPY +3m", x6: "Exceso vs SPY +6m", x12: "Exceso vs SPY +12m", whyEn: "Motivo (EN)", nextEn: "Próximo evento (EN)", calc: "Cálculo", calcEn: "Cálculo (EN)", rep: "Informe (ID)" };
   var OPS_MAP = { date: "Fecha", ticker: "Ticker", via: "Vía (A, B o C)", type: "Tipo (Compra o Venta)", shares: "Acciones", exec: "Precio de ejecución", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" };
   var RETRO_MAP = { ticker: "Empresa", grp: "Grupo", ddate: "Fecha decisión", why: "Motivo", whyEn: "Motivo (EN)", rdate: "Fecha referencia", price: "Precio inicial", hz: "Horizonte", edate: "Fecha final", ret: "Retorno acción", spy: "Retorno SPY", ex: "Exceso vs SPY", up: "Máxima subida", down: "Máxima caída", rep: "Informe (ID)" };
   var NUM_RETRO = ["price", "ret", "spy", "ex", "up", "down"];
@@ -741,7 +753,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   function scanDates() { if (!S.scan) return []; var u = {}; S.scan.forEach(function (r) { u[r.date] = 1; }); return Object.keys(u).sort().reverse(); }
   function decOnLatest() { if (!S.dec) return []; var d = latestDate(S.dec); return S.dec.filter(function (r) { return r.date === d; }); }
   function isApproved(d) { return d === "Apta para Stage 3.5" || d === "Aprobada Stage 3, bloqueada"; }
-  function groupOf(d) { if (isApproved(d)) return "ok"; if (d === "Esperar precio") return "wait"; if (d === "En observación") return "watch"; return "out"; }
+  function groupOf(d) { if (d === "En cartera") return "held"; if (isApproved(d)) return "ok"; if (d === "Esperar precio") return "wait"; if (d === "En observación") return "watch"; return "out"; }
 
   /* ---------- valuation band ---------- */
   function band(r) {
@@ -926,7 +938,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     function para(x, c) { return "<p" + (c ? ' class="' + c + '"' : "") + ">" + esc(x) + "</p>"; }
     function fml(x) { return '<div class="calc-f">' + esc(x) + "</div>"; }
     var idm = String(r.why || "").match(/\binforme\s+(A\d{2,4})\b/i) || String(r.whyEn || "").match(/\breport\s+(A\d{2,4})\b/i);
-    var repTxt = idm ? sub(L.report, { id: idm[1] }) : L.reportGen;
+    var repId = r.rep || (idm && idm[1]), repTxt = repId ? sub(L.report, { id: repId }) : L.reportGen;
     var h = '<div class="calc-scrim" id="calc-scrim"><div class="calc-sheet" role="dialog" aria-modal="true" aria-labelledby="calc-t"><div class="calc-top"><div class="calc-grab" aria-hidden="true"></div>' +
       '<div class="calc-head"><div><h3 id="calc-t">' + esc(L.title) + '</h3><div class="co">' + esc(r.ticker + " · " + r.company) + '</div></div><button class="btn" type="button" id="calc-close">' + esc(t().close) + "</button></div></div>";
 
@@ -947,14 +959,9 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (r.cons !== null && r.fav !== null) h += sec("range", L.range, fmtM(r.cons) + " – " + fmtM(r.fav), "", para(L.rangeTxt) +
       fml(t().col.cons + ": " + fmtM(r.cons)) + fml(t().col.base + ": " + fmtM(r.base)) + fml(t().col.fav + ": " + fmtM(r.fav)));
 
-    /* 4. max buy price */
+    /* 4. max buy price (set by the report; the discount is implied, not a plan rule) */
     if (r.maxc !== null) {
-      var mb = "";
-      if (r.base !== null && r.disc !== null) {
-        var exact = r.base * (1 - r.disc);
-        mb = para(sub(L.maxcTxt, { p: fmtP(r.disc, 0) })) + fml(fmtM(r.base) + " × (1 − " + fmtP(r.disc, 0) + ") = " + fmtM(exact)) +
-          (Math.abs(exact - r.maxc) >= 0.005 ? para(sub(L.maxcAdj, { m: fmtM(r.maxc) }), "calc-note") : "");
-      } else mb = para(sub(L.maxcTxt, { p: "—" }));
+      var mb = r.base ? para(sub(L.maxcTxt, { p: fmtP(1 - r.maxc / r.base, 1) })) + fml("1 − " + fmtM(r.maxc) + " ÷ " + fmtM(r.base) + " = " + fmtP(1 - r.maxc / r.base, 1)) : para(L.maxcNoBase);
       h += sec("maxc", L.maxc, fmtM(r.maxc), "", mb);
     }
 
@@ -1057,7 +1064,6 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return head(t().anaTitle, t().anaLede, sel) + chips("ana", S.anaFilter, opts) + searchBox("ana-q", S.anaQ, rows.length) + table("ana", decCols(), rows, { click: true });
   }
   /* is an approval still actionable? bought since, or too many scans old = no */
-  var STALE_SCANS = 3;
   function lastPrice(tk) {
     var q = S.acct && S.acct.prices && S.acct.prices[tk];
     if (q && q.p !== null && q.p !== undefined) return { p: q.p, d: S.snapshot || null, live: !S.snapshot };
@@ -1065,17 +1071,15 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     (S.scan || []).forEach(function (r) { if (r.ticker === tk && r.price !== null && (!best || r.date > best.d)) best = { p: r.price, d: r.date }; });
     return best;
   }
+  function latestAnalysisDate() { var m = ""; (S.dec || []).forEach(function (r) { if (r.date > m) m = r.date; }); return m; }
   function approvalStatus(r) {
-    var A = t().apst, from = String(r.adate || r.date || "");
-    var trades = (S.ops || []).filter(function (o) { return o.ticker === r.ticker && isoDay(o.date) && isoDay(o.date) >= from; })
-      .sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
-    var buy = trades.filter(function (o) { return !/^(venta|sell)/i.test(String(o.type || "").trim()); })[0];
-    if (buy) {
-      var held = positions().list.some(function (p) { return p.ticker === r.ticker && p.shares > 0; });
-      return { code: "bought", label: (held ? A.bought : A.sold).replace("{d}", fmtD(isoDay(buy.date))) };
-    }
-    var n = scanDates().filter(function (d) { return d > r.date; }).length;
-    if (n >= STALE_SCANS) return { code: "stale", label: A.stale.replace("{n}", n) };
+    var A = t().apst;
+    var held = positions().list.some(function (p) { return p.ticker === r.ticker && p.shares > 0; });
+    if (held) return { code: "held", label: A.held };
+    var from = String(r.adate || r.date || "");
+    var buy = (S.ops || []).filter(function (o) { return o.ticker === r.ticker && isoDay(o.date) && isoDay(o.date) >= from && !/^(venta|sell)/i.test(String(o.type || "").trim()); })[0];
+    if (buy) return { code: "bought", label: A.sold.replace("{d}", fmtD(isoDay(buy.date))) };
+    if (r.date !== latestAnalysisDate()) return { code: "stale", label: A.stale.replace("{d}", fmtD(r.date)) };
     return { code: "live", label: A.live };
   }
   function nowLine(r) {
@@ -1083,7 +1087,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (!lp) return "";
     var vs = r.maxc !== null && r.maxc ? lp.p / r.maxc - 1 : null;
     return '<p class="muted">' + esc(A.now + " " + fmtM(lp.p) + (lp.d ? " (" + fmtDs(lp.d) + ")" : "")) +
-      (vs !== null ? ' · <span class="' + (vs > 0 ? "neg" : "pos") + '">' + esc(fmtP(Math.abs(vs)) + " " + (vs > 0 ? A.above : A.below)) + "</span>" : "") + "</p>";
+      (vs !== null ? ' · <span class="' + (vs > 0 ? "neg" : "pos") + '">' + esc(fmtP(Math.abs(vs)) + " " + (vs > 0 ? A.above : A.below + " " + A.notOrder)) + "</span>" : "") + "</p>";
   }
   function vAprobadas() {
     var g = guard(["dec"]);
@@ -1101,16 +1105,16 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (!S.latestOnly) return h + table("app", cols, rows, { click: true });
     var live = rows.filter(function (r) { return r.st === "live"; }).sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
     var old = rows.filter(function (r) { return r.st !== "live"; });
-    h += '<div class="panel"><div><h3>' + esc(A.liveTitle) + '</h3><p class="lede">' + esc(A.liveLede.replace("{n}", STALE_SCANS)) + "</p></div>" +
+    h += '<div class="panel"><div><h3>' + esc(A.liveTitle) + '</h3><p class="lede">' + esc(A.liveLede) + "</p></div>" +
       (live.length ? bandLegend() + valHelpP() + '<div class="cards">' + live.map(card).join("") + "</div>" : '<p class="muted">' + esc(A.noneLive) + "</p>") + "</div>";
-    if (old.length) h += '<div class="panel"><div><h3>' + esc(A.oldTitle) + '</h3><p class="lede">' + esc(A.oldLede.replace("{n}", STALE_SCANS)) + "</p></div>" + table("appold", cols, old, { click: true }) + "</div>";
+    if (old.length) h += '<div class="panel"><div><h3>' + esc(A.oldTitle) + '</h3><p class="lede">' + esc(A.oldLede) + "</p></div>" + table("appold", cols, old, { click: true }) + "</div>";
     return h;
   }
   function vDescartadas() {
     var g = guard(["dec"]);
     if (g) return head(t().rejTitle, t().rejLede) + g;
     if (!S.sort.rej) S.sort.rej = { key: "date", dir: "desc" };
-    var rows = (S.latestOnly ? latestPerTicker(S.dec) : S.dec).filter(function (r) { return !isApproved(r.decision); });
+    var rows = (S.latestOnly ? latestPerTicker(S.dec) : S.dec).filter(function (r) { return !isApproved(r.decision) && r.decision !== "En cartera"; });
     var counts = {}; rows.forEach(function (r) { counts[r.decision] = (counts[r.decision] || 0) + 1; });
     var opts = [{ v: "all", l: t().all + " · " + rows.length }].concat(["Esperar precio", "En observación", "Descartada"].filter(function (d) { return counts[d]; }).map(function (d) { return { v: d, l: decLabel(d) + " · " + counts[d] }; }));
     if (S.rejFilter !== "all") rows = rows.filter(function (r) { return r.decision === S.rejFilter; });
@@ -1125,6 +1129,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var h = head(t().opsTitle, t().opsLede);
     var rows = S.ops.filter(function (r) { return r.ticker; });
     if (!rows.length) return h + notice(t().opsTitle, t().noOps);
+    var W = positions().warn; if (W.length) h += notice(t().wTitle, W.join(" · "));
     var C = t().col;
     var prow = positions().list;
     var totR = prow.reduce(function (a, p) { return a + p.realized; }, 0);
@@ -1144,16 +1149,26 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       labelled({ key: "notes", cell: function (r) { return '<td class="why">' + esc(r.notes) + "</td>"; } }, C.notes)];
     return h + table("ops", cols, rows);
   }
+  function curDay() { if (S.snapshot) return S.snapshot; var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  /* previous regular close from the same history the curve uses */
+  function histPrev(tk) {
+    var m = S.hist && S.hist[tk]; if (!m) return null;
+    var cd = curDay(), best = null;
+    Object.keys(m).forEach(function (d) { if (d < cd && (!best || d > best)) best = d; });
+    return best ? m[best] : null;
+  }
   /* positions at average cost, shared by Operaciones and Cartera */
   function positions() {
-    var pos = {}, order = [], sales = [], fees = 0;
+    var pos = {}, order = [], sales = [], fees = 0, warn = [];
     var rows = (S.ops || []).filter(function (r) { return r.ticker; });
     rows.slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); }).forEach(function (r) {
       if (r.shares === null || r.exec === null) return;
       var p = pos[r.ticker]; if (!p) { p = pos[r.ticker] = { ticker: r.ticker, shares: 0, cost: 0, realized: 0, stop: null }; order.push(r.ticker); }
       if (r.stop !== null) p.stop = r.stop;
-      var sell = /^(venta|sell)/i.test(String(r.type || "").trim());
+      var ty = String(r.type || "").trim(), sell = /^(venta|sell)/i.test(ty);
+      if (!sell && !/^(compra|buy)/i.test(ty)) { warn.push(r.ticker + " " + isoDay(r.date) + ": " + t().wUnknown + " «" + ty + "»"); return; }
       var fee = r.fee || 0; fees += fee;
+      if (sell && r.shares > p.shares + 1e-6) { warn.push(r.ticker + " " + isoDay(r.date) + ": " + t().wOversell); if (p.shares <= 0) return; r = Object.assign({}, r, { shares: p.shares }); }
       if (!sell) { p.shares += r.shares; p.cost += r.shares * r.exec + fee; }
       else if (p.shares > 0) {
         var avg = p.cost / p.shares, pnl = r.shares * (r.exec - avg) - fee;
@@ -1162,7 +1177,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       }
     });
     var list = order.map(function (k) { var p = pos[k]; if (Math.abs(p.shares) < 1e-6) { p.shares = 0; p.cost = 0; } p.avg = p.shares > 0 ? p.cost / p.shares : null; p.state = p.shares > 0 ? t().open : t().closed; return p; });
-    return { list: list, sales: sales, n: rows.length, fees: fees };
+    return { list: list, sales: sales, n: rows.length, fees: fees, warn: warn };
   }
 
   function vCartera() {
@@ -1175,7 +1190,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var missing = [];
     open.forEach(function (p) {
       var q = A.prices[p.ticker] || {};
-      p.price = q.p === undefined ? null : q.p; p.prev = q.prev === undefined ? null : q.prev;
+      p.price = q.p === undefined ? null : q.p; p.prev = histPrev(p.ticker); if (p.prev === null) p.prev = q.prev === undefined ? null : q.prev;
       if (p.price === null) missing.push(p.ticker);
       p.value = p.price !== null ? p.shares * p.price : p.cost;
       p.upl = p.price !== null ? p.value - p.cost : null;
@@ -1191,10 +1206,13 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var ret = cap ? totPL / cap : null;
     var spyRet = A.spy0 && A.spy ? A.spy / A.spy0 - 1 : null;
     var excess = ret !== null && spyRet !== null ? ret - spyRet : null;
-    var dayPct = total !== null && total - day ? day / (total - day) : null;
     open.forEach(function (p) { p.weight = total ? p.value / total : null; });
     var eq = equitySeries(total);
     S.eq = eq;
+    /* day change from the account-value series: includes shares sold during the day and recorded fees */
+    if (eq && eq.length > 1 && total !== null) day = total - eq[eq.length - 2].v;
+    var dayBase = eq && eq.length > 1 ? eq[eq.length - 2].v : (total !== null ? total - day : null);
+    var dayPct = dayBase ? day / dayBase : null;
 
     /* hero */
     var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + '</div>' +
@@ -1298,17 +1316,17 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     days = days.filter(function (d) { return d >= start; });
     var ops = S.ops.filter(function (r) { return r.ticker && r.shares !== null && r.exec !== null && isoDay(r.date); })
       .slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
-    var sh = {}, cash = A.capital, k = 0, last = {}, out = [];
+    var sh = {}, cash = A.capital, k = 0, last = {}, lastExec = {}, out = [];
     days.forEach(function (d) {
       while (k < ops.length && isoDay(ops[k].date) <= d) {
         var o = ops[k++], sell = /^(venta|sell)/i.test(String(o.type || "").trim());
-        sh[o.ticker] = (sh[o.ticker] || 0) + (sell ? -o.shares : o.shares);
+        sh[o.ticker] = (sh[o.ticker] || 0) + (sell ? -o.shares : o.shares); lastExec[o.ticker] = o.exec;
         cash += (sell ? o.shares * o.exec : -o.shares * o.exec) - (o.fee || 0);
       }
       var v = cash;
       Object.keys(sh).forEach(function (tk) {
         var c = H[tk] && H[tk][d]; if (c !== undefined && c !== null) last[tk] = c;
-        if (sh[tk] > 1e-6) v += sh[tk] * (last[tk] !== undefined ? last[tk] : 0);
+        if (sh[tk] > 1e-6) v += sh[tk] * (last[tk] !== undefined ? last[tk] : lastExec[tk]);
       });
       out.push({ d: d, v: v, spy: H.SPY[d] });
     });
@@ -1381,7 +1399,11 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (g) return head(t().perfTitle, t().perfLede) + g;
     var h = head(t().perfTitle, t().perfLede);
     var first = S.dec.map(function (r) { return r.date; }).filter(Boolean).sort()[0];
-    var anyData = S.dec.some(function (r) { return r.r3 !== null; });
+    var firstBy = {};
+    S.dec.forEach(function (r) { var k = String(r.date) + "|" + String(r.adate); if (!firstBy[r.ticker] || k < firstBy[r.ticker].k) firstBy[r.ticker] = { k: k, r: r }; });
+    var base = Object.keys(firstBy).map(function (tk) { return firstBy[tk].r; });
+    h += '<p class="muted" style="margin:0">' + esc(t().perfUnit.replace("{n}", base.length)) + "</p>";
+    var anyData = base.some(function (r) { return r.r3 !== null; });
     if (!anyData && first) {
       var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(first);
       if (m) { var d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3] + 91)); var iso = d.toISOString().slice(0, 10); h += notice(t().perfTitle, t().perfPending + " " + fmtD(iso) + "."); }
@@ -1389,7 +1411,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     ["3m", "6m", "12m"].forEach(function (hz) {
       var rk = { "3m": "r3", "6m": "r6", "12m": "r12" }[hz], xk = { "3m": "x3", "6m": "x6", "12m": "x12" }[hz];
       var rows = ["ok", "wait", "watch", "out"].map(function (gk) {
-        var list = S.dec.filter(function (r) { return groupOf(r.decision) === gk && r[rk] !== null; });
+        var list = base.filter(function (r) { return groupOf(r.decision) === gk && r[rk] !== null; });
         var n = list.length;
         var avg = n ? list.reduce(function (a, r) { return a + r[rk]; }, 0) / n : null;
         var hit = n ? list.filter(function (r) { return r[rk] > 0; }).length / n : null;
@@ -1421,11 +1443,11 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   }
   /* the analysis record closest to a decision date */
   function fichaKey(tk, d) {
-    var best = null, bd = Infinity, t0 = Date.parse(d);
+    var best = null;
     (S.dec || []).forEach(function (r) {
-      if (r.ticker !== tk) return;
-      var x = Math.abs(Date.parse(r.adate || r.date) - t0); if (isNaN(x)) return;
-      if (x < bd || (x === bd && String(r.adate) > String(best.adate))) { bd = x; best = r; }
+      var ad = String(r.adate || r.date || "");
+      if (r.ticker !== tk || !ad || ad > d) return;
+      if (!best || ad > String(best.adate || best.date)) best = r;
     });
     return best ? best.date + "|" + best.ticker : null;
   }
@@ -1435,20 +1457,23 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (g) return head(R.title, R.lede) + g;
     var hz = S.retroHz;
     var all = S.retro.filter(function (r) { return r.hz === hz; });
-    var rej = all.filter(function (r) { return r.grp === "A" || r.grp === "B"; });
     var rows = S.retroGrp === "all" ? all : all.filter(function (r) { return r.grp === S.retroGrp; });
+    var rej = rows;
     var h = head(R.title, R.lede);
     h += '<div class="controls"><span class="muted">' + esc(R.hzLbl) + "</span>" + ["5", "10", "corte"].map(function (k) {
       var n = S.retro.filter(function (r) { return r.hz === k; }).length;
       return '<button type="button" class="chip" data-chip="rhz|' + k + '" aria-pressed="' + (hz === k) + '">' + esc(R.hz[k] + " · " + n) + "</button>";
     }).join("") + "</div>";
+    /* group filter: drives the headline, bars and table */
+    var gOpts = [{ v: "all", l: t().all + " · " + all.length }].concat(["A", "B", "C"].filter(function (gk) { return all.some(function (r) { return r.grp === gk; }); }).map(function (gk) { return { v: gk, l: R.grp[gk] + " · " + all.filter(function (r) { return r.grp === gk; }).length }; }));
+    h += chips("rgrp", S.retroGrp, gOpts);
     var avgEx = avgOf(rej, "ex"), medEx = medianOf(rej, "ex"), beat = rej.filter(function (r) { return r.ex !== null && r.ex > 0; }).length;
     function fig(v, label, cls, sub) { return '<div class="fig"><b class="' + (cls || "") + '">' + esc(v) + "</b>" + (sub ? "<small>" + esc(sub) + "</small>" : "") + "<span>" + esc(label) + "</span></div>"; }
-    h += '<div class="figures">' + fig(String(rej.length), R.fCases, "", "A + B") +
+    h += '<div class="figures">' + fig(String(rej.length), R.fCases, "", S.retroGrp === "all" ? R.allGroups : R.grpWord + " " + S.retroGrp) +
       fig(rej.length ? beat + " / " + rej.length : "—", R.fBeat, "", rej.length ? fmtP(beat / rej.length, 0) : "") +
       fig(avgEx === null ? "—" : (avgEx > 0 ? "+" : "") + fmtP(avgEx), R.fAvgEx, signCls(avgEx)) +
       fig(medEx === null ? "—" : (medEx > 0 ? "+" : "") + fmtP(medEx), R.fMedEx, signCls(medEx)) + "</div>";
-    if (avgEx !== null) h += '<div class="panel"><p class="verdict">' + esc((avgEx <= 0 ? R.verdictGood : R.verdictBad).replace("{x}", fmtP(avgEx))) + '</p><p class="muted" style="margin:0">' + esc(R.verdictNote) + "</p></div>";
+    if (avgEx !== null) h += '<div class="panel"><p class="verdict">' + esc((R.verdict[S.retroGrp] || R.verdict.all).replace("{x}", (avgEx > 0 ? "+" : "") + fmtP(avgEx)).replace("{b}", beat).replace("{n}", rej.length)) + '</p><p class="muted" style="margin:0">' + esc(R.verdictNote) + "</p></div>";
     /* by group */
     var gRows = ["A", "B", "C"].map(function (gk) {
       var l = all.filter(function (r) { return r.grp === gk; });
@@ -1458,9 +1483,6 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       labelled({ key: "grp", cell: function (r) { return "<td>" + grpPill(r.grp) + " " + esc(R.grp[r.grp].replace(/^\w · /, "")) + "</td>"; } }, t().group),
       labelled(cN("n", 0), R.n), labelled(cP("avgRet", true), R.avgRet), labelled(cP("avgEx", true), R.avgEx), labelled(cP("beat"), R.beat), labelled(cP("avgDown", true), R.avgDown)
     ], gRows) + "</div>";
-    /* group filter + bars */
-    var gOpts = [{ v: "all", l: t().all + " · " + all.length }].concat(["A", "B", "C"].filter(function (gk) { return all.some(function (r) { return r.grp === gk; }); }).map(function (gk) { return { v: gk, l: R.grp[gk] + " · " + all.filter(function (r) { return r.grp === gk; }).length }; }));
-    h += chips("rgrp", S.retroGrp, gOpts);
     var bRows = rows.filter(function (r) { return r.ex !== null; }).slice().sort(function (a, b) { return b.ex - a.ex; });
     var mx = Math.max.apply(null, bRows.map(function (r) { return Math.abs(r.ex); }).concat([0.0001]));
     h += '<div class="panel"><div><h3>' + esc(R.barsTitle) + '</h3><p class="lede">' + esc(R.barsLede) + '</p></div><div class="plbars" role="img" aria-label="' + esc(bRows.map(function (r) { return r.ticker + " " + fmtP(r.ex); }).join(", ")) + '">' +
@@ -1479,7 +1501,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       labelled(cP("up", true), R.up), labelled(cP("down", true), R.down),
       labelled({ key: "why", cell: function (r) { return '<td class="why">' + esc(lang === "en" && r.whyEn ? r.whyEn : r.why) + "</td>"; } }, R.why),
       labelled({ key: "scanN", num: true, cell: function (r) { var sr = scanRanges(r.ticker); return '<td style="min-width:150px">' + (sr.n ? "<b>" + sr.n + "</b> " + esc(R.days) + '<br><span class="muted">' + esc(sr.text) + "</span>" : '<span class="muted">—</span>') + "</td>"; } }, R.inScan),
-      labelled({ key: "ficha", cell: function (r) { var fk = fichaKey(r.ticker, r.ddate); return "<td>" + (fk ? '<button type="button" class="chip" data-open="' + esc(fk) + '">' + esc(R.open) + "</button>" : "") + "</td>"; } }, R.ficha),
+      labelled({ key: "ficha", cell: function (r) { var fk = fichaKey(r.ticker, r.ddate); return "<td>" + (fk ? '<button type="button" class="chip" data-open="' + esc(fk) + '">' + esc(R.open) + "</button>" : '<span class="muted">' + esc(R.noSrc) + "</span>") + "</td>"; } }, R.ficha),
       labelled({ key: "rep", cell: function (r) { return "<td>" + (r.rep ? '<button type="button" class="chip" data-libopen="' + esc(r.rep) + '">' + esc(r.rep) + "</button>" : "") + "</td>"; } }, R.rep)
     ], rows) + '<p class="muted" style="margin:0">' + esc(R.note) + "</p></div>";
     return h;
@@ -1543,7 +1565,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     ensureLib();
     var h = head(L.title, L.lede);
     if (S.libState === "loading" || S.libState === "idle") return h + notice(L.title, L.loading) + loadingBlock();
-    if (S.libState === "fail") return h + notice(L.title, L.fail);
+    if (S.libState === "fail") return h + notice(L.title, L.fail, '<p><button class="btn" type="button" data-libretry="1">' + esc(t().retry) + "</button></p>");
     if (S.libSel) {
       var r = S.lib.filter(function (x) { return x.id === S.libSel; })[0];
       if (r) return '<div class="controls"><button class="btn" type="button" id="lib-back">' + esc(L.back) + '</button><span class="muted">' + esc(r.id + (r.date ? " · " + fmtD(r.date) : "") + " · " + (L.cat[r.cat] || r.cat)) + '</span></div><article class="panel md">' + md(r.text) + "</article>";
@@ -1571,6 +1593,10 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   }
 
   /* ---------- drawer ---------- */
+  function closeDrawer() {
+    var root = document.getElementById("drawer-root"); if (root) root.innerHTML = "";
+    if (!document.querySelector(".gate")) ["main", "header.mast", "footer"].forEach(function (q) { var el = document.querySelector(q); if (el) el.removeAttribute("inert"); });
+  }
   function openDetail(key) {
     if (!S.dec) return;
     var p = key.split("|");
@@ -1582,7 +1608,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     function li(label, val, cls) { return "<div><dt>" + esc(label) + '</dt><dd class="' + (cls || "") + '">' + val + "</dd></div>"; }
     var h = '<div class="scrim" id="scrim"><aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-t">' +
       '<div class="drawer-head"><div><div class="tick" id="dr-t">' + esc(r.ticker) + '</div><div class="co">' + esc(r.company) + '</div></div><button class="btn" type="button" id="dr-close">' + esc(t().close) + "</button></div>" +
-      "<div>" + pill(r.decision) + ' <span class="muted">· ' + esc(depthLabel(r.depth)) + " · " + esc(fmtD(r.date)) + "</span></div>" +
+      "<div>" + pill(r.decision) + ' <span class="muted">· ' + esc(depthLabel(r.depth)) + " · " + esc(t().aDate + " " + fmtD(r.adate || r.date) + (r.adate && r.adate !== r.date ? " (" + t().sDate + " " + fmtD(r.date) + ")" : "")) + "</span></div>" +
+      (r.rep ? '<div><span class="muted" style="font-size:0.85rem">' + esc(t().srcLbl) + ': </span><button type="button" class="chip" data-libopen="' + esc(r.rep) + '">' + esc(r.rep) + " →</button></div>" : "") +
       "<p style=\"margin:0\">" + esc(whyOf(r)) + "</p>" +
       (r.base !== null ? band(r) + bandLegend() : "") +
       '<div class="dr-key">' + kb(C.priceScan, fmtM(r.price), "", "", "price") + kb(C.base, fmtM(r.base), "", "color:var(--accent)", "base") + kb(C.maxc, fmtM(r.maxc), "", "", "maxc") + kb(C.mos, fmtP(r.mos), signCls(r.mos), "", "mos") + "</div>" +
@@ -1600,10 +1627,12 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       }).join("") + "</tbody></table>" +
       '<p><button class="btn" type="button" data-libq="' + esc(r.ticker) + '">' + esc(t().lib.fromDec + " " + r.ticker + " →") + "</button></p></aside></div>";
     var root = document.getElementById("drawer-root");
+    var opener = document.activeElement;
     root.innerHTML = h;
+    ["main", "header.mast", "footer"].forEach(function (q) { var el = document.querySelector(q); if (el) el.setAttribute("inert", ""); });
     var btn = document.getElementById("dr-close");
     btn.focus();
-    function close() { root.innerHTML = ""; document.removeEventListener("keydown", onKey); }
+    function close() { closeDrawer(); document.removeEventListener("keydown", onKey); if (opener && opener.focus && document.contains(opener)) opener.focus(); }
     function onKey(e) { if (e.key === "Escape") close(); }
     btn.addEventListener("click", close);
     document.getElementById("scrim").addEventListener("click", function (e) { if (e.target.id === "scrim") close(); });
@@ -1633,7 +1662,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       el.hidden = v !== S.view;
       if (v === S.view) {
         var focusId = document.activeElement && document.activeElement.id;
-        el.innerHTML = '<div style="display:grid;gap:16px">' + RENDER[v]() + "</div>";
+        var lf = S.loadFail && S.loadFail.length ? notice(t().loadFail, S.loadFail.join(", "), '<p><button class="btn" type="button" data-retry="1">' + esc(t().retry) + "</button></p>") : "";
+        el.innerHTML = '<div style="display:grid;gap:16px">' + lf + RENDER[v]() + "</div>";
         if (v === "cartera") drawEquity();
         if (focusId === "scan-q" || focusId === "lib-q" || focusId === "rej-q" || focusId === "ana-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
       }
@@ -1643,7 +1673,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   /* ---------- events ---------- */
   document.addEventListener("click", function (e) {
     var tab = e.target.closest("[data-view]");
-    if (tab) { S.view = tab.getAttribute("data-view"); try { history.replaceState(null, "", "#" + S.view); } catch (x) {} render(); window.scrollTo(0, 0); return; }
+    if (tab) { go(tab.getAttribute("data-view")); return; }
     var s = e.target.closest("[data-sort]");
     if (s) { var p = s.getAttribute("data-sort").split("|"); var cur = S.sort[p[0]]; S.sort[p[0]] = { key: p[1], dir: cur && cur.key === p[1] && cur.dir === "desc" ? "asc" : "desc" }; render(); return; }
     var ch = e.target.closest("[data-chip]");
@@ -1656,9 +1686,11 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var rd = e.target.closest("[data-resdate]");
     if (rd) { S.resDate = rd.getAttribute("data-resdate"); render(); return; }
     var lo = e.target.closest("[data-libopen]");
-    if (lo) { S.view = "biblioteca"; S.libSel = lo.getAttribute("data-libopen"); try { history.replaceState(null, "", "#biblioteca"); } catch (x) {} render(); window.scrollTo(0, 0); return; }
+    if (lo) { closeDrawer(); S.libSel = lo.getAttribute("data-libopen"); go("biblioteca"); return; }
     var lq = e.target.closest("[data-libq]");
-    if (lq) { document.getElementById("drawer-root").innerHTML = ""; S.view = "biblioteca"; S.libSel = null; S.libQ = lq.getAttribute("data-libq"); S.libCat = "all"; try { history.replaceState(null, "", "#biblioteca"); } catch (x) {} render(); window.scrollTo(0, 0); return; }
+    if (lq) { closeDrawer(); S.libSel = null; S.libQ = lq.getAttribute("data-libq"); S.libCat = "all"; go("biblioteca"); return; }
+    if (e.target.closest("[data-retry]")) { location.reload(); return; }
+    if (e.target.closest("[data-libretry]")) { S.libState = "idle"; render(); return; }
     if (e.target.id === "lib-back") { S.libSel = null; render(); window.scrollTo(0, 0); return; }
     if (e.target.id === "latest-only") { S.latestOnly = !S.latestOnly; render(); return; }
     var cc = e.target.closest("[data-calc]");
@@ -1685,6 +1717,16 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 
   var hash = (location.hash || "").replace("#", "");
   if (VIEWS.indexOf(hash) >= 0) S.view = hash;
+  function go(v) {
+    if (VIEWS.indexOf(v) < 0) return;
+    if (location.hash !== "#" + v) { location.hash = v; return; }   /* hashchange renders */
+    S.view = v; render(); window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", function () {
+    var v = (location.hash || "").replace("#", "");
+    if (VIEWS.indexOf(v) < 0) return;
+    closeDrawer(); S.view = v; render(); window.scrollTo(0, 0);
+  });
 
   /* ---------- data loading ---------- */
   var mcpNS = null;
@@ -1802,7 +1844,9 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var MF = window.FP_MANIFEST;
     document.getElementById("refresh").hidden = true;
     var foot = document.querySelector("footer .wrap"); if (foot) { var sn = document.createElement("div"); sn.setAttribute("data-i18n", "snapNote"); sn.style.marginTop = "6px"; foot.parentNode.appendChild(sn); sn.className = "wrap"; }
-    MF.files.reduce(function (pr, f) { return pr.then(function () { return loadScript(f); }); }, Promise.resolve()).then(function () {
+    var failed = [];
+    MF.files.reduce(function (pr, f) { return pr.then(function () { return loadScript(f).catch(function () { failed.push(f); }); }); }, Promise.resolve()).then(function () {
+      S.loadFail = failed;
       var F = window.FP || {};
       S.scan = PARTS.scan([F.scanHead || []].concat(F.scan || []));
       S.dec = PARTS.dec(F.dec || []); S.ops = PARTS.ops(F.ops || []); S.acct = PARTS.acct(F.acct || []); S.hist = PARTS.hist(F.hist || []); S.retro = PARTS.retro(F.retro || []);

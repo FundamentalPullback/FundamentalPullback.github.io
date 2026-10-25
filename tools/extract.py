@@ -17,9 +17,9 @@ mf_txt = open(os.path.join(data, "manifest.js"), encoding="utf-8").read()
 mf = json.loads(re.search(r"=\s*(\{.*\})\s*;?\s*$", mf_txt, re.S).group(1))
 scan_start = int(mf.get("scanRows", 0)) + 2          # first sheet row not yet published
 
-FULL = {"Decisiones": "A1:AF", "Operaciones": "A1:L", "Cuenta": "A1:F", "Historial": "A1:AP", "Retrospectiva": "A1:O"}
-# older reads of Decisiones (before the "Cálculo" columns AE:AF) are still accepted
-ALT = {"Decisiones": "A1:AD"}
+FULL = {"Decisiones": "A1:AG", "Operaciones": "A1:L", "Cuenta": "A1:F", "Historial": "A1:AP", "Retrospectiva": "A1:O"}
+# older reads of Decisiones (before the "Cálculo" and "Informe (ID)" columns) are still accepted
+ALT = {"Decisiones": ("A1:AD", "A1:AE", "A1:AF")}
 NAMES = {"Decisiones": "dec", "Operaciones": "ops", "Cuenta": "acct", "Historial": "hist", "Retrospectiva": "retro"}
 found, scan_new = {}, None
 
@@ -71,7 +71,7 @@ with open(src, encoding="utf-8") as f:
                 sheet, rng = r.split("!", 1)
                 sheet = sheet.strip("'")
                 v = d.get("values")
-                if sheet in FULL and (rng.startswith(FULL[sheet]) or rng.startswith(ALT.get(sheet, "\0"))) and isinstance(v, list):
+                if sheet in FULL and (rng.startswith(FULL[sheet]) or rng.startswith(ALT.get(sheet, ("\0",)))) and isinstance(v, list):
                     found[sheet] = v
                 elif sheet == "Escáner" and rng.startswith("A%d:" % scan_start):
                     scan_new = v if isinstance(v, list) else []
