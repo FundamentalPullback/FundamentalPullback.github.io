@@ -261,6 +261,18 @@ tr.click:hover td { background: var(--paper); }
 .md th { text-transform: none; letter-spacing: 0; font-size: 0.75rem; white-space: normal; }
 .md td { font-size: 0.82rem; }
 
+.gate { position: fixed; inset: 0; z-index: 50; background: var(--paper); display: flex; align-items: center; justify-content: center; padding: max(16px, env(safe-area-inset-top, 0px)) 16px max(16px, env(safe-area-inset-bottom, 0px)); overflow-y: auto; }
+.gate-box { background: var(--sheet); border: 1px solid var(--rule); border-radius: 12px; max-width: 620px; width: 100%; padding: 26px 24px; display: grid; gap: 14px; box-shadow: 0 12px 40px rgba(0,0,0,0.12); position: relative; overflow: hidden; }
+.gate-box::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--accent); }
+.gate-box h2 { font-size: 1.3rem; }
+.gate-box p { margin: 0; color: var(--ink-2); font-size: 0.92rem; max-width: 64ch; }
+.gate-box .lang-block { display: grid; gap: 6px; }
+.gate-box .lang-block + .lang-block { border-top: 1px solid var(--rule); padding-top: 14px; }
+.gate-box .tag-l { font-family: var(--font-data); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; color: var(--ink-2); }
+.gate-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.gate-actions .btn { padding: 10px 16px; font-size: 0.9rem; }
+.btn-primary { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+.btn-primary:hover { opacity: 0.9; }
 footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var(--ink-2); font-size: 0.8rem; }
 </style>
 </head>
@@ -1564,6 +1576,34 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     mcpNS.invalidate(SERVER, TOOL).catch(function () {}).then(loadOnce);
   });
 
+
+  /* ---------- disclaimer gate (public snapshot only) ---------- */
+  var GATE_KEY = "fpj-disclaimer-v1", GATE_DAYS = 30;
+  function gateAccepted() { try { var v = +localStorage.getItem(GATE_KEY); return v && Date.now() - v < GATE_DAYS * 86400000; } catch (e) { return false; } }
+  function showGate(declined) {
+    var root = document.getElementById("gate-root");
+    if (!root) { root = document.createElement("div"); root.id = "gate-root"; document.body.appendChild(root); }
+    ["main", "header.mast", "footer"].forEach(function (q) { var el = document.querySelector(q); if (el) el.setAttribute("inert", ""); });
+    var body = declined
+      ? '<div class="lang-block"><span class="tag-l">ES</span><h2>No puedes acceder sin aceptar el aviso</h2><p>Esta web solo se muestra a quien acepta que su contenido es informativo y no es asesoramiento de inversión.</p></div>' +
+        '<div class="lang-block"><span class="tag-l">EN</span><h2>You can\'t enter without accepting the notice</h2><p>This site is only shown to visitors who accept that its content is informational and not investment advice.</p></div>' +
+        '<div class="gate-actions"><button class="btn" type="button" id="gate-back">Volver al aviso · Back to the notice</button></div>'
+      : '<div class="lang-block"><span class="tag-l">ES</span><h2 id="gate-t">Aviso importante</h2><p>Esta web es un diario personal de <strong>paper trading</strong>: operaciones simuladas, sin dinero real. Su único objetivo es informativo y educativo.</p><p><strong>No es asesoramiento de inversión</strong> ni una recomendación de comprar o vender ningún valor. Los datos y análisis pueden contener errores o estar desactualizados. Cualquier decisión de inversión es solo tuya; si la necesitas, consulta a un asesor financiero autorizado.</p></div>' +
+        '<div class="lang-block"><span class="tag-l">EN</span><h2>Important notice</h2><p>This site is a personal <strong>paper-trading</strong> journal: simulated trades, no real money. It is for informational and educational purposes only.</p><p><strong>It is not investment advice</strong> or a recommendation to buy or sell any security. The data and analysis may contain errors or be out of date. Any investment decision is yours alone; if you need advice, consult a licensed financial advisor.</p></div>' +
+        '<div class="gate-actions"><button class="btn btn-primary" type="button" id="gate-yes">Acepto y entro · I agree, enter</button><button class="btn" type="button" id="gate-no">No acepto · I don\'t agree</button></div>';
+    root.innerHTML = '<div class="gate" role="dialog" aria-modal="true" aria-labelledby="gate-t"><div class="gate-box">' + body + "</div></div>";
+    document.documentElement.style.overflow = "hidden";
+    var first = root.querySelector("button"); if (first) first.focus();
+    var yes = document.getElementById("gate-yes"), no = document.getElementById("gate-no"), back = document.getElementById("gate-back");
+    if (yes) yes.addEventListener("click", function () {
+      try { localStorage.setItem(GATE_KEY, String(Date.now())); } catch (e) {}
+      root.innerHTML = ""; document.documentElement.style.overflow = "";
+      ["main", "header.mast", "footer"].forEach(function (q) { var el = document.querySelector(q); if (el) el.removeAttribute("inert"); });
+    });
+    if (no) no.addEventListener("click", function () { showGate(true); });
+    if (back) back.addEventListener("click", function () { showGate(false); });
+  }
+  if (window.FP_MANIFEST && !gateAccepted()) showGate(false);
   render();
   function loadScript(src) { return new Promise(function (ok, ko) { var el = document.createElement("script"); el.src = src; el.onload = ok; el.onerror = function () { ko(src); }; document.head.appendChild(el); }); }
   if (window.FP_MANIFEST) {
