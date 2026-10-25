@@ -618,14 +618,14 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, eq: null,
     err: { scan: null, dec: null, ops: null, acct: null, hist: null, retro: null },
     loadedAt: null,
-    view: "cartera",
+    view: "resumen",
     scanDate: null, onlyS2: true, scanQ: "",
     anaFilter: "all", rejFilter: "all", rejQ: "", anaQ: "", resDate: null, anaDate: null, latestOnly: true,
     retroHz: "corte", retroGrp: "all",
     lib: null, libState: "idle", libQ: "", libCat: "all", libSel: null,
     sort: {}
   };
-  var VIEWS = ["cartera", "resumen", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca"];
+  var VIEWS = ["resumen", "cartera", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca"];
 
   /* ---------- parsing ---------- */
   function num(v) {
