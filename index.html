@@ -130,6 +130,10 @@ h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1
 .card .kv { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
 .kv dd[data-calc], .dr-key b[data-calc] { cursor: pointer; text-decoration: underline dotted var(--ink-2); text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .calc-btn { justify-self: start; display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 0.82rem; font-weight: 600; color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 999px; padding: 6px 12px; cursor: pointer; min-height: 34px; }
+.pos-card { cursor: default; }
+.pos-card:hover { border-color: var(--rule); }
+.pos-card .dr-list dd { font-size: 0.92rem; }
+.pos-val { border-top: 1px solid var(--rule); padding-top: 10px; display: grid; gap: 8px; }
 .calc-btn:hover { background: var(--accent-soft); }
 .calc-btn i { font-style: normal; display: inline-grid; place-items: center; width: 17px; height: 17px; border-radius: 50%; background: var(--accent); color: var(--sheet); font-family: Georgia, serif; font-weight: 700; font-size: 0.75rem; }
 .calc-scrim { position: fixed; inset: 0; z-index: 30; background: rgba(10, 16, 22, 0.5); display: flex; align-items: flex-end; justify-content: center; }
@@ -360,6 +364,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 <main class="wrap viz" id="main">
   <section id="v-cartera"></section>
   <section id="v-resumen" hidden></section>
+  <section id="v-posiciones" hidden></section>
   <section id="v-escaner" hidden></section>
   <section id="v-analisis" hidden></section>
   <section id="v-aprobadas" hidden></section>
@@ -390,7 +395,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     ops: "'Operaciones'!A:L",
     acct: "'Cuenta'!A1:F60",
     hist: "'Historial'!A1:AP400",
-    retro: "'Retrospectiva'!A1:O300"
+    retro: "'Retrospectiva'!A1:O300",
+    ges: "'Gestión'!A1:L100"
   };
 
   /* ---------- i18n ---------- */
@@ -399,7 +405,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       sub: "Diario de investigación · paper trading",
       refresh: "Actualizar",
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
-      tabs: { resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca" },
+      tabs: { posiciones: "Posiciones", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca" },
       valHelp: "Valor estimado: lo que el informe calcula que vale la acción en el escenario central. Precio máximo de compra: el techo que fija el informe de cada empresa (puede venir de la valoración, de la técnica o de un evento); no es un descuento fijo del plan, y si el informe no fija techo no se muestra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado. Los escenarios «si va mal» y «si va bien» no son límites garantizados.",
       whatMeans: "¿Qué significa cada número?", trRet: "Rentabilidad", trEx: "Frente al SPY",
       bandCap: { lo: "bajista", mid: "valor estimado", hi: "alcista" },
@@ -429,6 +435,12 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         back: "← Volver a la lista", mentions: "menciones", reports: "informes", fromDec: "Informes sobre",
         cat: { "Selección y valoración": "Selección y valoración", "Gestión de posiciones": "Gestión de posiciones", "Entrada y seguimiento": "Entrada y seguimiento", "Ampliaciones": "Ampliaciones", "Retrospectiva": "Retrospectiva" }
       },
+      pos: { title: "Posiciones", lede: "Cada posición abierta con su última revisión de gestión (Stage 4) y su última valoración. Ordenadas de la más cercana a su stop a la más lejana. Los niveles son los registrados en el informe: no certifican órdenes en el bróker.",
+        fOpen: "Posiciones abiertas", fValue: "Valor en posiciones", fUpl: "Ganancia/pérdida abierta", fNear: "Más cerca de su stop",
+        review: "Revisión de gestión del {d}", noReview: "Sin revisión de gestión registrada en la hoja.", shares: "Acciones", avg: "Coste medio", price: "Precio actual", upl: "Ganancia/pérdida abierta",
+        protTitle: "Protecciones", stop: "Stop S (manual, salta al tocarlo)", trail: "Trailing (se evalúa al cierre)", m: "Mínimo M", toStop: "{p} por encima", below: "¡por debajo!", next: "Próximo evento",
+        valTitle: "Última valoración", valOf: "Análisis del {d}", noVal: "No hay una valoración completa (valor estimado y escenarios) registrada en el historial para esta empresa.", openRec: "Ver ficha", reports: "Informes sobre {t} →", allPos: "Ver todas las posiciones →",
+        none: "No hay posiciones abiertas." },
       cart: {
         title: "Cartera", lede: "Valor de la cuenta con precios de GOOGLEFINANCE (pueden ir con unos 20 minutos de retraso). Coste medio; incluye las comisiones registradas, sin dividendos.", feesLbl: "comisiones",
         capital: "Capital inicial", capNote: "se cambia en la pestaña Cuenta de la hoja",
@@ -523,7 +535,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       sub: "Research journal · paper trading",
       refresh: "Refresh",
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
-      tabs: { resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library" },
+      tabs: { posiciones: "Positions", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library" },
       valHelp: "Estimated value: what the report calculates the share is worth in the central case. Max. buy price: the ceiling set by each company's report (it can come from the valuation, the technicals or an event); it isn't a fixed plan discount, and if the report sets no ceiling none is shown. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value. The badly/well scenarios are not guaranteed limits.",
       whatMeans: "What does each number mean?", trRet: "Return", trEx: "Vs SPY",
       bandCap: { lo: "bear case", mid: "estimated value", hi: "bull case" },
@@ -553,6 +565,12 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         back: "← Back to the list", mentions: "mentions", reports: "reports", fromDec: "Reports on",
         cat: { "Selección y valoración": "Selection and valuation", "Gestión de posiciones": "Position management", "Entrada y seguimiento": "Entry and follow-up", "Ampliaciones": "Add-ons", "Retrospectiva": "Hindsight" }
       },
+      pos: { title: "Positions", lede: "Each open position with its latest management review (Stage 4) and its latest valuation. Sorted from closest to its stop to farthest. Levels are the ones recorded in the report: they don't certify orders at the broker.",
+        fOpen: "Open positions", fValue: "Value in positions", fUpl: "Open gain/loss", fNear: "Closest to its stop",
+        review: "Management review of {d}", noReview: "No management review recorded in the sheet.", shares: "Shares", avg: "Average cost", price: "Current price", upl: "Open gain/loss",
+        protTitle: "Protections", stop: "Stop S (manual, triggers on touch)", trail: "Trailing (checked at the close)", m: "Low M", toStop: "{p} above", below: "below it!", next: "Next event",
+        valTitle: "Latest valuation", valOf: "Analysis of {d}", noVal: "No full valuation (estimated value and scenarios) is recorded in the history for this company.", openRec: "Open record", reports: "Reports on {t} →", allPos: "See all positions →",
+        none: "No open positions." },
       cart: {
         title: "Portfolio", lede: "Account value using GOOGLEFINANCE prices (may lag by about 20 minutes). Average-cost basis; includes recorded fees, excludes dividends.", feesLbl: "fees",
         capital: "Starting capital", capNote: "change it in the sheet's Cuenta tab",
@@ -670,8 +688,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 
   /* ---------- state ---------- */
   var S = {
-    scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, eq: null,
-    err: { scan: null, dec: null, ops: null, acct: null, hist: null, retro: null },
+    scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null, eq: null,
+    err: { scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null },
     loadedAt: null,
     view: "resumen",
     scanDate: null, onlyS2: true, scanQ: "",
@@ -680,7 +698,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     lib: null, libState: "idle", libQ: "", libCat: "all", libSel: null,
     sort: {}
   };
-  var VIEWS = ["resumen", "cartera", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca"];
+  var VIEWS = ["resumen", "cartera", "posiciones", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca"];
 
   /* ---------- parsing ---------- */
   function num(v) {
@@ -721,6 +739,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   var DEC_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio en escáner", adate: "Fecha análisis", depth: "Profundidad", decision: "Decisión", why: "Motivo", cons: "Valor conservador", base: "Valor base", fav: "Valor favorable", disc: "Descuento implícito", maxc: "Máximo condicionado", mos: "Margen vs base", next: "Próximo evento", p3: "Precio +3m", p6: "Precio +6m", p12: "Precio +12m", r3: "Rentab. +3m", r6: "Rentab. +6m", r12: "Rentab. +12m", spy: "SPY en escáner", x3: "Exceso vs SPY +3m", x6: "Exceso vs SPY +6m", x12: "Exceso vs SPY +12m", whyEn: "Motivo (EN)", nextEn: "Próximo evento (EN)", calc: "Cálculo", calcEn: "Cálculo (EN)", rep: "Informe (ID)" };
   var OPS_MAP = { date: "Fecha", ticker: "Ticker", via: "Vía (A, B o C)", type: "Tipo (Compra o Venta)", shares: "Acciones", exec: "Precio de ejecución", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" };
   var RETRO_MAP = { ticker: "Empresa", grp: "Grupo", ddate: "Fecha decisión", why: "Motivo", whyEn: "Motivo (EN)", rdate: "Fecha referencia", price: "Precio inicial", hz: "Horizonte", edate: "Fecha final", ret: "Retorno acción", spy: "Retorno SPY", ex: "Exceso vs SPY", up: "Máxima subida", down: "Máxima caída", rep: "Informe (ID)" };
+  var GES_MAP = { ticker: "Ticker", date: "Fecha revisión", rep: "Informe (ID)", state: "Estado", stateEn: "Estado (EN)", stop: "Stop S", trail: "Trailing por cierre", m: "Mínimo M", note: "Nota", noteEn: "Nota (EN)", next: "Próximo evento", nextEn: "Próximo evento (EN)" };
   var NUM_RETRO = ["price", "ret", "spy", "ex", "up", "down"];
   var NUM_SCAN = ["price", "pe", "high", "pull", "opm", "fcf", "qp", "opp", "rsi"];
   var NUM_DEC = ["price", "cons", "base", "fav", "disc", "maxc", "mos", "p3", "p6", "p12", "r3", "r6", "r12", "spy", "x3", "x6", "x12"];
@@ -1100,7 +1119,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (!S.sort.app) S.sort.app = { key: "date", dir: "desc" };
     if (!S.sort.appold) S.sort.appold = { key: "date", dir: "desc" };
     var h = head(t().appTitle, t().appLede) + '<div class="controls">' + latestToggle() + "</div>";
-    var heldBlock = heldRows.length ? '<div class="panel"><div><h3>' + esc(A.heldTitle) + '</h3><p class="lede">' + esc(A.heldLede) + '</p></div><div class="cards">' + heldRows.map(card).join("") + "</div></div>" : "";
+    var heldBlock = heldRows.length ? '<div class="panel"><div><h3>' + esc(A.heldTitle) + '</h3><p class="lede">' + esc(A.heldLede) + '</p></div><div class="cards">' + heldRows.map(card).join("") + '</div><p style="margin:0"><button class="btn" type="button" data-goview="posiciones">' + esc(t().pos.allPos) + "</button></p></div>" : "";
     if (!rows.length) return h + notice(t().appTitle, t().noneReady) + heldBlock;
     var stCol = labelled({ key: "stLabel", cell: function (r) { return '<td class="' + (r.st === "live" ? "pos" : "muted") + '">' + esc(r.stLabel) + "</td>"; } }, A.status);
     var cols = [labelled(cT("date"), C.date), stCol].concat(decCols([labelled({ key: "next", cell: function (r) { return "<td>" + esc(nextOf(r)) + "</td>"; } }, C.next)]));
@@ -1182,6 +1201,69 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return { list: list, sales: sales, n: rows.length, fees: fees, warn: warn };
   }
 
+
+  /* ---------- positions: latest management review + latest valuation ---------- */
+  var TRAIL_EN = { "Inactivo": "Inactive", "Activo; número pendiente": "Active; level pending" };
+  function vPosiciones() {
+    var K = t().pos, C = t().col;
+    var g = guard(["ops", "acct"]);
+    if (g) return head(K.title, K.lede) + g;
+    function sub(str, o) { return str.replace(/\{(\w+)\}/g, function (m, k) { return o[k] !== undefined ? o[k] : m; }); }
+    var open = positions().list.filter(function (p) { return p.shares > 0; });
+    var h = head(K.title, K.lede);
+    if (!open.length) return h + notice(K.title, K.none);
+    var ges = {}; (S.ges || []).forEach(function (r) { if (!ges[r.ticker] || String(r.date) >= String(ges[r.ticker].date)) ges[r.ticker] = r; });
+    function latestOf(tk, pred) { var best = null; (S.dec || []).forEach(function (r) { if (r.ticker !== tk || (pred && !pred(r))) return; var k = String(r.adate || r.date) + "|" + r.date; if (!best || k >= best.k) best = { k: k, r: r }; }); return best && best.r; }
+    function company(tk) { var d = latestOf(tk); if (d && d.company) return d.company; var c = ""; (S.scan || []).forEach(function (r) { if (r.ticker === tk && r.company) c = r.company; }); return c; }
+    open.forEach(function (p) {
+      var q = (S.acct.prices || {})[p.ticker] || {};
+      p.price = q.p === undefined ? null : q.p;
+      p.value = p.price !== null ? p.shares * p.price : p.cost;
+      p.upl = p.price !== null ? p.value - p.cost : null;
+      p.uplPct = p.upl !== null && p.cost ? p.upl / p.cost : null;
+      p.g = ges[p.ticker] || null;
+      p.sv = p.g && p.g.stop !== null ? p.g.stop : p.stop;
+      p.toStop = p.price !== null && p.sv ? p.price / p.sv - 1 : null;
+    });
+    open.sort(function (a, b) { return (a.toStop === null ? 9 : a.toStop) - (b.toStop === null ? 9 : b.toStop); });
+    var sum = function (k) { return open.reduce(function (a, p) { return a + (p[k] || 0); }, 0); };
+    var cost = sum("cost"), upl = sum("upl"), near = open.filter(function (p) { return p.toStop !== null; })[0];
+    function fig(v, label, cls, sb, sbc) { return '<div class="fig"><b class="' + (cls || "") + '">' + esc(v) + "</b>" + (sb ? '<small class="' + (sbc || "") + '">' + esc(sb) + "</small>" : "") + "<span>" + esc(label) + "</span></div>"; }
+    h += '<div class="figures">' + fig(String(open.length), K.fOpen) + fig(fmtM(sum("value"), 0), K.fValue) +
+      fig(sgnM(upl, 0), K.fUpl, signCls(upl), cost ? fmtP(upl / cost, 2) : "", signCls(upl)) +
+      fig(near ? near.ticker : "—", K.fNear, "", near ? sub(K.toStop, { p: fmtP(near.toStop) }) : "") + "</div>";
+    h += '<div class="cards">' + open.map(function (p) {
+      var G = p.g, en = lang === "en";
+      var v = latestOf(p.ticker, function (r) { return r.base !== null; });
+      var x = '<div class="card pos-card"><div class="card-top"><div><div class="tick">' + esc(p.ticker) + '</div><div class="co">' + esc(company(p.ticker)) + "</div></div>" +
+        (G && G.state ? '<span class="pill d-held">' + esc(en && G.stateEn ? G.stateEn : G.state) + "</span>" : "") + "</div>";
+      x += '<div class="muted" style="font-size:0.82rem">' + (G ? esc(sub(K.review, { d: fmtD(G.date) })) + (G.rep ? ' · <button type="button" class="chip" data-libopen="' + esc(G.rep) + '">' + esc(G.rep) + " →</button>" : "") : esc(K.noReview)) + "</div>";
+      x += '<dl class="kv"><div><dt>' + esc(K.shares) + "</dt><dd>" + esc(fmtSh(p.shares)) + "</dd></div><div><dt>" + esc(K.avg) + "</dt><dd>" + esc(fmtM(p.avg)) + "</dd></div>" +
+        "<div><dt>" + esc(K.price) + "</dt><dd>" + esc(fmtM(p.price)) + "</dd></div><div><dt>" + esc(K.upl) + '</dt><dd class="' + signCls(p.upl) + '">' + esc(sgnM(p.upl, 0) + " · " + fmtP(p.uplPct)) + "</dd></div></dl>";
+      function lvl(label, val, txt) {
+        var d = val !== null && p.price !== null ? p.price / val - 1 : null;
+        return "<div><dt>" + esc(label) + "</dt><dd>" + esc(val !== null ? fmtM(val) : (txt ? (en ? (TRAIL_EN[txt] || txt) : txt) : "—")) +
+          (d !== null ? ' <span class="' + (d < 0 ? "neg" : "muted") + '" style="font-size:0.8rem">' + esc(d < 0 ? K.below : sub(K.toStop, { p: fmtP(d) })) + "</span>" : "") + "</dd></div>";
+      }
+      x += '<div><div class="eyebrow">' + esc(K.protTitle) + '</div><dl class="dr-list">' + lvl(K.stop, p.sv !== undefined ? p.sv : null) +
+        lvl(K.trail, G ? G.trailN : null, G && G.trailN === null ? G.trail : "") + (G && G.m !== null ? lvl(K.m, G.m) : "") + "</dl></div>";
+      var note = G ? (en && G.noteEn ? G.noteEn : G.note) : "", nx = G ? (en && G.nextEn ? G.nextEn : G.next) : "";
+      if (note) x += "<p>" + esc(note) + "</p>";
+      if (nx) x += '<p class="muted"><b>' + esc(K.next) + ":</b> " + esc(nx) + "</p>";
+      x += '<div class="pos-val"><div class="eyebrow">' + esc(K.valTitle) + "</div>";
+      if (v) {
+        var k = esc(v.date + "|" + v.ticker);
+        x += '<div class="muted" style="font-size:0.82rem">' + esc(sub(K.valOf, { d: fmtD(v.adate || v.date) })) + (v.rep ? ' · <button type="button" class="chip" data-libopen="' + esc(v.rep) + '">' + esc(v.rep) + " →</button>" : "") + "</div>" + band(v) +
+          '<dl class="kv"><div><dt>' + esc(C.base) + '</dt><dd style="color:var(--accent)" data-calc="' + k + '|base">' + esc(fmtM(v.base)) + "</dd></div><div><dt>" + esc(C.maxc) + '</dt><dd data-calc="' + k + '|maxc">' + esc(fmtM(v.maxc)) + "</dd></div>" +
+          (v.cons !== null && v.fav !== null ? '<div style="grid-column:1/-1"><dt>' + esc(C.valRange) + '</dt><dd data-calc="' + k + '|range">' + esc(fmtM(v.cons) + " – " + fmtM(v.fav)) + "</dd></div>" : "") + "</dl>" +
+          '<div class="controls"><button type="button" class="calc-btn" data-calc="' + k + '|"><i aria-hidden="true">i</i>' + esc(t().calc.btn) + '</button><button type="button" class="btn" data-open="' + k + '">' + esc(K.openRec) + "</button></div>";
+      } else x += '<p class="muted calc-note" style="margin:0">' + esc(K.noVal) + "</p>";
+      x += "</div>";
+      x += '<p style="margin:0"><button class="btn" type="button" data-libq="' + esc(p.ticker) + '">' + esc(sub(K.reports, { t: p.ticker })) + "</button></p></div>";
+      return x;
+    }).join("") + "</div>";
+    return h;
+  }
   function vCartera() {
     var K = t().cart, C = t().col;
     var g = guard(["ops", "acct"]);
@@ -1656,7 +1738,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     else if (S.loadedAt) st.textContent = t().updated + " · " + new Intl.DateTimeFormat(loc(), { hour: "2-digit", minute: "2-digit" }).format(new Date(S.loadedAt));
     else st.textContent = S.err.dec || S.err.scan ? "" : t().loading;
   }
-  var RENDER = { resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca };
+  var RENDER = { posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca };
   function render() {
     renderChrome();
     VIEWS.forEach(function (v) {
@@ -1689,6 +1771,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (rd) { S.resDate = rd.getAttribute("data-resdate"); render(); return; }
     var lo = e.target.closest("[data-libopen]");
     if (lo) { closeDrawer(); S.libSel = lo.getAttribute("data-libopen"); go("biblioteca"); return; }
+    var gv = e.target.closest("[data-goview]");
+    if (gv) { closeDrawer(); go(gv.getAttribute("data-goview")); return; }
     var lq = e.target.closest("[data-libq]");
     if (lq) { closeDrawer(); S.libSel = null; S.libQ = lq.getAttribute("data-libq"); S.libCat = "all"; go("biblioteca"); return; }
     if (e.target.closest("[data-retry]")) { location.reload(); return; }
@@ -1736,6 +1820,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     scan: function (v) { return numify(rowsToObjects(v, SCAN_MAP), NUM_SCAN); },
     dec: function (v) { return numify(rowsToObjects(v, DEC_MAP), NUM_DEC); },
     ops: function (v) { return numify(rowsToObjects(v, OPS_MAP), NUM_OPS); },
+    ges: function (v) { return numify(rowsToObjects(v, GES_MAP), ["stop", "m"]).map(function (r) { r.trailN = num(r.trail); return r; }); },
     retro: function (v) { return numify(rowsToObjects(v, RETRO_MAP), NUM_RETRO).map(function (r) { r.hz = String(r.hz); return r; }); },
     acct: function (v) {
       var a = { capital: null, spy0: null, spy: null, prices: {} };
@@ -1851,7 +1936,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       S.loadFail = failed;
       var F = window.FP || {};
       S.scan = PARTS.scan([F.scanHead || []].concat(F.scan || []));
-      S.dec = PARTS.dec(F.dec || []); S.ops = PARTS.ops(F.ops || []); S.acct = PARTS.acct(F.acct || []); S.hist = PARTS.hist(F.hist || []); S.retro = PARTS.retro(F.retro || []);
+      S.dec = PARTS.dec(F.dec || []); S.ops = PARTS.ops(F.ops || []); S.acct = PARTS.acct(F.acct || []); S.hist = PARTS.hist(F.hist || []); S.retro = PARTS.retro(F.retro || []); S.ges = PARTS.ges(F.ges || []);
       S.snapshot = MF.asOf; S.loadedAt = Date.parse(MF.generated) || Date.now();
       render();
     }, function () { ["scan", "dec", "ops", "acct"].forEach(function (p) { S.err[p] = { code: "generic" }; }); render(); });
