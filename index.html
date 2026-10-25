@@ -173,6 +173,9 @@ label.inline { display: inline-flex; align-items: center; gap: 6px; font-size: 0
 
 /* Tables */
 .tbl-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; background: var(--sheet); }
+.tbl-outer { position: relative; min-width: 0; }
+.tbl-outer::after { content: ""; position: absolute; top: 1px; right: 1px; bottom: 1px; width: 36px; border-radius: 0 8px 8px 0; pointer-events: none; background: linear-gradient(to right, transparent, var(--sheet)); opacity: 0; transition: opacity 0.2s; }
+.tbl-outer.more::after { opacity: 1; }
 .tbl-wrap td:first-child, .tbl-wrap th:first-child { position: sticky; left: 0; z-index: 1; background: var(--sheet); box-shadow: 1px 0 0 var(--rule); }
 .tbl-wrap th:first-child { z-index: 2; }
 tr.click:hover td:first-child { background: var(--paper); }
@@ -386,6 +389,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 <div id="drawer-root"></div>
 <div id="calc-root"></div>
 <script src="data/manifest.js"></script>
+<script src="data/names.js"></script>
 
 <script>
 (function () {
@@ -724,6 +728,17 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (pct) x = x / 100;
     return neg ? -x : x;
   }
+  /* the scanner export cuts company names at ~20 characters; data/names.js holds the full ones */
+  function fullNames(list) {
+    var N = window.FP_NAMES || {};
+    list.forEach(function (o) { if (o && o.ticker && N[o.ticker]) o.company = N[o.ticker]; });
+    return list;
+  }
+  function opType(v) {
+    v = String(v || "");
+    if (lang !== "en") return v;
+    return v.replace(/^compra/i, "Buy").replace(/^venta/i, "Sale");
+  }
   function rowsToObjects(values, map) {
     if (!values || !values.length) return [];
     var head = values[0].map(function (h) { return String(h || "").trim(); });
@@ -816,7 +831,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         va = String(va || ""); vb = String(vb || ""); return st.dir === "asc" ? va.localeCompare(vb) : vb.localeCompare(va);
       });
     }
-    var h = '<div class="tbl-wrap"><table><thead><tr>';
+    var h = '<div class="tbl-outer"><div class="tbl-wrap"><table><thead><tr>';
     cols.forEach(function (c) {
       var dir = st && st.key === c.key ? st.dir : "";
       h += '<th class="' + (c.num ? "n" : "") + '" scope="col"><button type="button" data-sort="' + id + "|" + c.key + '" ' + (dir ? 'data-dir="' + dir + '"' : "") + ">" + esc(c.label) + "</button></th>";
@@ -827,7 +842,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       cols.forEach(function (c) { h += c.cell(r); });
       h += "</tr>";
     });
-    h += "</tbody></table></div>";
+    h += "</tbody></table></div></div>";
     return h;
   }
   function cM(key, d) { return { key: key, num: true, cell: function (r) { return '<td class="n">' + esc(fmtM(r[key], d)) + "</td>"; } }; }
@@ -932,7 +947,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       gone.sort().map(function (k) { var now = day.filter(function (r) { return r.ticker === k; })[0]; return '<span class="chip">' + esc(k + (now && now.opp !== null ? " · Opp " + fmtN(now.opp, 0) : " · " + R.notListed)) + "</span>"; }).join("") + "</div></div>";
 
     if (trades.length) h += '<div class="panel"><h3>' + esc(R.tradesTitle) + "</h3>" + table("restr", [
-      labelled({ key: "date", cell: function (r) { return '<td class="n" style="text-align:left">' + esc(fmtD(r.date)) + "</td>"; } }, C.date), labelled(cT("ticker", "t"), C.ticker), labelled(cT("type"), C.type),
+      labelled({ key: "date", cell: function (r) { return '<td class="n" style="text-align:left">' + esc(fmtD(r.date)) + "</td>"; } }, C.date), labelled(cT("ticker", "t"), C.ticker), labelled({ key: "type", cell: function (r) { return "<td>" + esc(opType(r.type)) + "</td>"; } }, C.type),
       labelled({ key: "shares", num: true, cell: function (r) { return '<td class="n">' + esc(fmtSh(r.shares)) + "</td>"; } }, C.shares), labelled(cM("exec"), C.exec), labelled(cM("amount"), C.amount)
     ], trades) + "</div>";
     return h;
@@ -1168,10 +1183,13 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       labelled({ key: "realized", num: true, cell: function (r) { return '<td class="n ' + signCls(r.realized) + '">' + esc(fmtM(r.realized)) + '</td>'; } }, t().realized)
     ], prow) + '</div><h3>' + esc(t().tradesTitle) + '</h3>';
     if (!S.sort.ops) S.sort.ops = { key: "date", dir: "desc" };
-    var cols = [labelled({ key: "date", cell: function (r) { return '<td class="n" style="text-align:left">' + esc(fmtD(r.date)) + '</td>'; } }, C.date), labelled(cT("ticker", "t"), C.ticker), labelled(cT("via"), C.via), labelled(cT("type"), C.type),
+    var cols = [labelled({ key: "date", cell: function (r) { return '<td class="n" style="text-align:left">' + esc(fmtD(r.date)) + '</td>'; } }, C.date), labelled(cT("ticker", "t"), C.ticker), labelled(cT("via"), C.via), labelled({ key: "type", cell: function (r) { return "<td>" + esc(opType(r.type)) + "</td>"; } }, C.type),
       labelled({ key: "shares", num: true, cell: function (r) { return '<td class="n">' + esc(fmtSh(r.shares)) + '</td>'; } }, C.shares), labelled(cM("exec"), C.exec), labelled(cM("amount"), C.amount), labelled(cM("fee"), C.fee), labelled(cM("stop"), C.stop), labelled(cM("m"), C.m),
       labelled({ key: "signal", cell: function (r) { return '<td class="why">' + esc(r.signal) + "</td>"; } }, C.signal),
       labelled({ key: "notes", cell: function (r) { return '<td class="why">' + esc(r.notes) + "</td>"; } }, C.notes)];
+    /* columns nobody has filled yet (Vía, Stop S, Mínimo M, señal…) are hidden until a trade records them */
+    var OPT = { via: 1, fee: 1, stop: 1, m: 1, signal: 1, notes: 1 };
+    cols = cols.filter(function (c) { return !OPT[c.key] || rows.some(function (r) { var v = r[c.key]; return v !== null && v !== undefined && String(v).trim() !== ""; }); });
     return h + table("ops", cols, rows);
   }
   function curDay() { if (S.snapshot) return S.snapshot; var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
@@ -1606,8 +1624,11 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   function ensureLib() {
     if (S.libState !== "idle") return;
     S.libState = "loading";
-    loadScript("data/lib.js").then(function () { S.lib = (window.FP_LIB || {}).reports || []; S.libState = "ok"; render(); }, function () { S.libState = "fail"; render(); });
+    function done() { if (S.view === "biblioteca") render(); }
+    loadScript("data/lib.js").then(function () { S.lib = (window.FP_LIB || {}).reports || []; S.libState = "ok"; done(); }, function () { S.libState = "fail"; done(); });
   }
+  /* start downloading the library a moment after the page is ready, so the tab opens instantly */
+  function prefetchLib() { setTimeout(function () { (window.requestIdleCallback || function (f) { f(); })(function () { ensureLib(); }); }, 1200); }
   function libMatcher(q) {
     q = String(q || "").trim(); if (!q) return null;
     var e = q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -1750,6 +1771,15 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     else st.textContent = S.err.dec || S.err.scan ? "" : t().loading;
   }
   var RENDER = { posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca };
+  /* fade on the right edge of a table while there are more columns to scroll to */
+  function markScroll(root) {
+    [].forEach.call(root.querySelectorAll(".tbl-outer"), function (o) {
+      var w = o.firstElementChild; if (!w) return;
+      function upd() { o.classList.toggle("more", w.scrollLeft + w.clientWidth < w.scrollWidth - 2); }
+      upd(); w.addEventListener("scroll", upd, { passive: true });
+    });
+  }
+  window.addEventListener("resize", function () { var el = document.getElementById("v-" + S.view); if (el) markScroll(el); });
   function render() {
     renderChrome();
     VIEWS.forEach(function (v) {
@@ -1760,6 +1790,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         var lf = S.loadFail && S.loadFail.length ? notice(t().loadFail, S.loadFail.join(", "), '<p><button class="btn" type="button" data-retry="1">' + esc(t().retry) + "</button></p>") : "";
         el.innerHTML = '<div style="display:grid;gap:16px">' + lf + RENDER[v]() + "</div>";
         if (v === "cartera") drawEquity();
+        markScroll(el);
         if (focusId === "scan-q" || focusId === "lib-q" || focusId === "rej-q" || focusId === "ana-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
       }
     });
@@ -1828,8 +1859,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   /* ---------- data loading ---------- */
   var mcpNS = null;
   var PARTS = {
-    scan: function (v) { return numify(rowsToObjects(v, SCAN_MAP), NUM_SCAN); },
-    dec: function (v) { return numify(rowsToObjects(v, DEC_MAP), NUM_DEC); },
+    scan: function (v) { return fullNames(numify(rowsToObjects(v, SCAN_MAP), NUM_SCAN)); },
+    dec: function (v) { return fullNames(numify(rowsToObjects(v, DEC_MAP), NUM_DEC)); },
     ops: function (v) { return numify(rowsToObjects(v, OPS_MAP), NUM_OPS); },
     ges: function (v) { return numify(rowsToObjects(v, GES_MAP), ["stop", "m"]).map(function (r) { r.trailN = num(r.trail); return r; }); },
     retro: function (v) { return numify(rowsToObjects(v, RETRO_MAP), NUM_RETRO).map(function (r) { r.hz = String(r.hz); return r; }); },
@@ -1950,12 +1981,14 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       S.dec = PARTS.dec(F.dec || []); S.ops = PARTS.ops(F.ops || []); S.acct = PARTS.acct(F.acct || []); S.hist = PARTS.hist(F.hist || []); S.retro = PARTS.retro(F.retro || []); S.ges = PARTS.ges(F.ges || []);
       S.snapshot = MF.asOf; S.loadedAt = Date.parse(MF.generated) || Date.now();
       render();
+      prefetchLib();
     }, function () { ["scan", "dec", "ops", "acct"].forEach(function (p) { S.err[p] = { code: "generic" }; }); render(); });
   } else if (window.claude && typeof window.claude.use === "function") {
     window.claude.use("mcp").then(function (ns) {
       if (!ns) { ["scan", "dec", "ops", "acct", "hist", "retro"].forEach(function (p) { S.err[p] = { code: "none" }; }); render(); return; }
       mcpNS = ns;
       watchAll();
+      prefetchLib();
     }, function () { ["scan", "dec", "ops", "acct", "hist", "retro"].forEach(function (p) { S.err[p] = { code: "none" }; }); render(); });
   } else {
     ["scan", "dec", "ops", "acct", "hist", "retro"].forEach(function (p) { S.err[p] = { code: "none" }; });
