@@ -327,12 +327,13 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       refresh: "Actualizar",
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
       tabs: { resumen: "Resumen", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca" },
+      valHelp: "Valor estimado: lo que calculamos que vale la acción en el escenario central. Precio máximo de compra: ese valor menos el descuento que exige el plan; por encima de él no se compra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado.",
       latestOnly: "Solo la última decisión de cada empresa", anaDate: "Escáner",
       apst: { status: "Estado", live: "Vigente", bought: "Comprada el {d}", sold: "Comprada el {d}, ya vendida", stale: "Caducada: {n} escáneres después, revalidar",
-        liveTitle: "Vigentes", liveLede: "Aprobadas en los últimos {n} escáneres y todavía sin comprar. «Ahora» es el último precio conocido frente al máximo condicionado.",
+        liveTitle: "Vigentes", liveLede: "Aprobadas en los últimos {n} escáneres y todavía sin comprar. «Ahora» es el último precio conocido frente al precio máximo de compra.",
         noneLive: "No hay aprobaciones vigentes. Las de abajo necesitan un análisis nuevo al precio actual antes de actuar.",
         oldTitle: "Ya no vigentes", oldLede: "Compradas después de aprobarse, o con un análisis de hace {n} escáneres o más. No sirven para operar sin revalidarlas al precio actual.",
-        now: "Ahora", vsMax: "vs máx." },
+        now: "Ahora", above: "por encima del precio máximo de compra", below: "por debajo del precio máximo de compra" },
       retro: {
         title: "Retrospectiva", lede: "Qué hicieron después las candidatas que no se compraron, frente al SPY en el mismo periodo. Datos de la auditoría del 22 oct 2026 (informe A088), con precios hasta el 21 oct. Retornos de precio, sin costes ni dividendos.",
         hz: { "5": "5 sesiones", "10": "10 sesiones", corte: "Hasta el 21 oct" }, hzLbl: "Horizonte",
@@ -390,7 +391,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       onlyS2: "Solo Stage 2",
       search: "Buscar ticker o empresa",
       anaTitle: "Análisis",
-      anaLede: "Las empresas analizadas en el escáner elegido, con su decisión y motivo. Valor base: lo que estimamos que vale cada acción en el escenario base. Máx. condicionado: precio máximo de compra según el plan (base menos el descuento exigido). Toca una fila para ver la ficha.",
+      anaLede: "Las empresas analizadas en el escáner elegido, con su decisión y motivo. Valor estimado: lo que calculamos que vale cada acción en el escenario central. Precio máximo de compra: ese valor menos el descuento que exige el plan; por encima no se compra. Toca una fila para ver la ficha.",
       all: "Todas",
       appTitle: "Aprobadas",
       appLede: "Aptas para Stage 3.5 o aprobadas en Stage 3 a la espera de una condición del plan.",
@@ -412,7 +413,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       excess: "Exceso vs SPY",
       horizon: { "3m": "3 meses", "6m": "6 meses", "12m": "12 meses" },
       groups: { ok: "Aprobadas", wait: "Esperar precio", watch: "En observación", out: "Descartadas" },
-      col: { priceScan: "Precio en escáner", baseEst: "Valor base (est.)", date: "Fecha", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máx. 52s", pull: "Retroceso", opm: "Margen op.", fcf: "FCF/acc.", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decisión", depth: "Profundidad", why: "Motivo", cons: "Conservador", base: "Base", fav: "Favorable", disc: "Descuento", maxc: "Máx. condicionado", mos: "Margen vs base", next: "Próximo evento", r3: "Rent. 3m", r6: "Rent. 6m", r12: "Rent. 12m", x3: "Exceso 3m", x6: "Exceso 6m", x12: "Exceso 12m", via: "Vía", type: "Tipo", shares: "Acciones", exec: "Precio", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" },
+      col: { priceScan: "Precio en el escáner", baseEst: "Valor estimado", date: "Fecha", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máx. 52s", pull: "Retroceso", opm: "Margen op.", fcf: "FCF/acc.", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decisión", depth: "Profundidad", why: "Motivo", cons: "Valor si va mal", base: "Valor estimado", fav: "Valor si va bien", disc: "Descuento que exige el plan", maxc: "Precio máximo de compra", mos: "Descuento sobre el valor", valRange: "Rango de valor (si va mal – si va bien)", next: "Próximo evento", r3: "Rent. 3m", r6: "Rent. 6m", r12: "Rent. 12m", x3: "Exceso 3m", x6: "Exceso 6m", x12: "Exceso 12m", via: "Vía", type: "Tipo", shares: "Acciones", exec: "Precio", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" },
       close: "Cerrar",
       tracking: "Seguimiento",
       pending: "pendiente",
@@ -436,12 +437,13 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       refresh: "Refresh",
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
       tabs: { resumen: "Overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library" },
+      valHelp: "Estimated value: what we calculate the share is worth in the central case. Max. buy price: that value minus the discount the plan requires; above it, the plan says don't buy. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value.",
       latestOnly: "Only each company's latest decision", anaDate: "Scan",
       apst: { status: "Status", live: "Current", bought: "Bought on {d}", sold: "Bought on {d}, since sold", stale: "Expired: {n} scans later, revalidate",
-        liveTitle: "Current", liveLede: "Approved in the last {n} scans and not bought yet. \"Now\" is the latest known price against the max. price.",
+        liveTitle: "Current", liveLede: "Approved in the last {n} scans and not bought yet. \"Now\" is the latest known price against the max. buy price.",
         noneLive: "No current approvals. The ones below need a fresh analysis at today's price before acting.",
         oldTitle: "No longer current", oldLede: "Bought after being approved, or analyzed {n} or more scans ago. Not usable for trading until revalidated at the current price.",
-        now: "Now", vsMax: "vs max." },
+        now: "Now", above: "above the max. buy price", below: "below the max. buy price" },
       retro: {
         title: "Hindsight", lede: "What the candidates that weren't bought did afterwards, against SPY over the same period. Data from the Oct 22, 2026 audit (report A088), with prices up to Oct 21. Price returns, without costs or dividends.",
         hz: { "5": "5 sessions", "10": "10 sessions", corte: "Up to Oct 21" }, hzLbl: "Horizon",
@@ -499,7 +501,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       onlyS2: "Stage 2 only",
       search: "Search ticker or company",
       anaTitle: "Analysis",
-      anaLede: "The companies analyzed in the chosen scan, with their decision and reason. Base value: our estimate of what each share is worth in the base case. Max. price: the highest price the plan allows paying (base value minus the required discount). Tap a row for the full record.",
+      anaLede: "The companies analyzed in the chosen scan, with their decision and reason. Estimated value: what we calculate each share is worth in the central case. Max. buy price: that value minus the discount the plan requires; above it, the plan says don't buy. Tap a row for the full record.",
       all: "All",
       appTitle: "Approved",
       appLede: "Ready for Stage 3.5, or passed Stage 3 and waiting on one condition of the plan.",
@@ -521,7 +523,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       excess: "Excess vs SPY",
       horizon: { "3m": "3 months", "6m": "6 months", "12m": "12 months" },
       groups: { ok: "Approved", wait: "Wait for price", watch: "On watch", out: "Rejected" },
-      col: { priceScan: "Price at scan", baseEst: "Base value (est.)", date: "Date", ticker: "Ticker", company: "Company", price: "Price", pe: "P/E", high: "52w high", pull: "Pullback", opm: "Op. margin", fcf: "FCF/sh", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decision", depth: "Depth", why: "Reason", cons: "Conservative", base: "Base", fav: "Favorable", disc: "Discount", maxc: "Max. price", mos: "Margin vs base", next: "Next event", r3: "Ret. 3m", r6: "Ret. 6m", r12: "Ret. 12m", x3: "Excess 3m", x6: "Excess 6m", x12: "Excess 12m", via: "Path", type: "Type", shares: "Shares", exec: "Price", amount: "Amount", stop: "Stop S", m: "Low M", signal: "Signal or reason", notes: "Notes", fee: "Fee" },
+      col: { priceScan: "Price at scan", baseEst: "Estimated value", date: "Date", ticker: "Ticker", company: "Company", price: "Price", pe: "P/E", high: "52w high", pull: "Pullback", opm: "Op. margin", fcf: "FCF/sh", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decision", depth: "Depth", why: "Reason", cons: "Value if it goes badly", base: "Estimated value", fav: "Value if it goes well", disc: "Discount the plan requires", maxc: "Max. buy price", mos: "Discount to value", valRange: "Value range (badly – well)", next: "Next event", r3: "Ret. 3m", r6: "Ret. 6m", r12: "Ret. 12m", x3: "Excess 3m", x6: "Excess 6m", x12: "Excess 12m", via: "Path", type: "Type", shares: "Shares", exec: "Price", amount: "Amount", stop: "Stop S", m: "Low M", signal: "Signal or reason", notes: "Notes", fee: "Fee" },
       close: "Close",
       tracking: "Tracking",
       pending: "pending",
@@ -669,7 +671,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return s;
   }
   function bandLegend() {
-    return '<div class="legend"><span><i style="background:var(--ink)"></i>' + esc(t().col.price) + '</span><span><i style="background:var(--accent-soft)"></i>' + esc(t().col.cons + " – " + t().col.fav) + '</span><span><i style="background:var(--accent)"></i>' + esc(t().col.base) + '</span><span><i style="background:var(--ok)"></i>' + esc(t().col.maxc) + "</span></div>";
+    return '<div class="legend"><span><i style="background:var(--ink)"></i>' + esc(t().col.priceScan) + '</span><span><i style="background:var(--accent-soft)"></i>' + esc(t().col.valRange) + '</span><span><i style="background:var(--accent)"></i>' + esc(t().col.base) + '</span><span><i style="background:var(--ok)"></i>' + esc(t().col.maxc) + '</span></div><p class="muted" style="margin:0;font-size:0.82rem">' + esc(t().valHelp) + "</p>";
   }
 
   /* ---------- generic table ---------- */
@@ -809,7 +811,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return '<button type="button" class="card" data-open="' + esc(r.date + "|" + r.ticker) + '">' +
       '<div class="card-top"><div><div class="tick">' + esc(r.ticker) + '</div><div class="co">' + esc(r.company) + "</div></div>" + pill(r.decision) + "</div>" +
       band(r) +
-      '<dl class="kv"><div><dt>' + esc(t().col.price) + "</dt><dd>" + esc(fmtM(r.price)) + "</dd></div><div><dt>" + esc(t().col.maxc) + "</dt><dd>" + esc(fmtM(r.maxc)) + "</dd></div><div><dt>" + esc(t().col.mos) + '</dt><dd class="' + signCls(r.mos) + '">' + esc(fmtP(r.mos)) + "</dd></div></dl>" +
+      '<dl class="kv"><div><dt>' + esc(t().col.priceScan) + "</dt><dd>" + esc(fmtM(r.price)) + "</dd></div><div><dt>" + esc(t().col.maxc) + "</dt><dd>" + esc(fmtM(r.maxc)) + "</dd></div><div><dt>" + esc(t().col.mos) + '</dt><dd class="' + signCls(r.mos) + '">' + esc(fmtP(r.mos)) + "</dd></div></dl>" +
       "<p>" + esc(whyOf(r)) + "</p>" + nowLine(r) + "</button>";
   }
 
@@ -903,7 +905,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (!lp) return "";
     var vs = r.maxc !== null && r.maxc ? lp.p / r.maxc - 1 : null;
     return '<p class="muted">' + esc(A.now + " " + fmtM(lp.p) + (lp.d ? " (" + fmtDs(lp.d) + ")" : "")) +
-      (vs !== null ? ' · <span class="' + (vs > 0 ? "neg" : "pos") + '">' + esc((vs > 0 ? "+" : "") + fmtP(vs) + " " + A.vsMax) + "</span>" : "") + "</p>";
+      (vs !== null ? ' · <span class="' + (vs > 0 ? "neg" : "pos") + '">' + esc(fmtP(Math.abs(vs)) + " " + (vs > 0 ? A.above : A.below)) + "</span>" : "") + "</p>";
   }
   function vAprobadas() {
     var g = guard(["dec"]);
@@ -1378,7 +1380,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       "<p>" + esc(whyOf(r)) + "</p>" +
       (r.base !== null ? bandLegend() + band(r) : "") +
       '<dl class="facts">' +
-      f(C.price, esc(fmtM(r.price))) + f(C.maxc, esc(fmtM(r.maxc))) +
+      f(C.priceScan, esc(fmtM(r.price))) + f(C.maxc, esc(fmtM(r.maxc))) +
       f(C.cons, esc(fmtM(r.cons))) + f(C.base, esc(fmtM(r.base))) +
       f(C.fav, esc(fmtM(r.fav))) + f(C.disc, esc(fmtP(r.disc, 0))) +
       f(C.mos, esc(fmtP(r.mos)), signCls(r.mos)) + f(C.next, esc(nextOf(r) || "—"), "txt") +
