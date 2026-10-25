@@ -235,6 +235,34 @@ tr.click:hover td { background: var(--paper); }
 .facts dd { margin: 0; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
 .facts dd.txt { font-family: var(--font-body); }
 
+.vband { position: relative; height: 76px; margin: 2px 0 0; }
+.vband i { position: absolute; display: block; }
+.vband .trk { left: 0; right: 0; top: 32px; height: 2px; background: var(--rule); }
+.vband .rng { top: 27px; height: 12px; border-radius: 3px; background: var(--accent-soft); }
+.vband .bse { top: 21px; height: 24px; width: 2px; margin-left: -1px; background: var(--accent); }
+.vband .mx { top: 21px; height: 24px; width: 0; border-left: 2px dashed var(--ok); margin-left: -1px; }
+.vband .dot { top: 26px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--ink); border: 2px solid var(--sheet); }
+.vband .lb { position: absolute; transform: translateX(-50%); font-family: var(--font-data); font-size: 11px; line-height: 1.25; color: var(--ink-2); white-space: nowrap; text-align: center; }
+.vband .lb.top { top: 2px; color: var(--ink); font-weight: 600; }
+.vband .lb.bot { top: 48px; }
+.vband .lb.base { color: var(--accent); }
+.vband .lb small { display: block; font-family: var(--font-body); font-size: 10px; }
+.dr-key { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.dr-key div { background: var(--paper); border-radius: 8px; padding: 10px 12px; display: grid; gap: 2px; min-width: 0; }
+.dr-key span { font-size: 0.74rem; color: var(--ink-2); line-height: 1.25; }
+.dr-key b { font-family: var(--font-data); font-weight: 600; font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+.dr-list { margin: 0; display: grid; }
+.dr-list div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--rule); }
+.dr-list div:last-child { border-bottom: 0; }
+.dr-list dt { font-size: 0.85rem; color: var(--ink-2); }
+.dr-list dd { margin: 0; text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+.dr-list dd.txt { font-family: var(--font-body); }
+.dr-track { width: 100%; font-size: 0.85rem; border-collapse: collapse; }
+.dr-track th, .dr-track td { padding: 6px 4px; border-bottom: 1px solid var(--rule); text-align: right; }
+.dr-track th:first-child, .dr-track td:first-child { text-align: left; }
+.dr-track th { position: static; font-size: 0.72rem; }
+.drawer details summary { cursor: pointer; font-size: 0.85rem; color: var(--ink-2); }
+.drawer details p { margin: 8px 0 0; font-size: 0.85rem; color: var(--ink-2); }
 /* Retrospective + library */
 .plrow.wide { grid-template-columns: 64px minmax(0, 1fr) 76px; }
 .plrow.click { cursor: pointer; border-radius: 4px; } .plrow.click:hover { background: var(--paper); } .plrow.click:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -344,6 +372,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
       tabs: { resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca" },
       valHelp: "Valor estimado: lo que calculamos que vale la acción en el escenario central. Precio máximo de compra: ese valor menos el descuento que exige el plan; por encima de él no se compra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado.",
+      whatMeans: "¿Qué significa cada número?", trRet: "Rentabilidad", trEx: "Frente al SPY",
       bandCap: { lo: "si va mal", mid: "valor estimado", hi: "si va bien" },
       latestOnly: "Solo la última decisión de cada empresa", anaDate: "Escáner",
       apst: { status: "Estado", live: "Vigente", bought: "Comprada el {d}", sold: "Comprada el {d}, ya vendida", stale: "Caducada: {n} escáneres después, revalidar",
@@ -455,6 +484,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
       tabs: { resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library" },
       valHelp: "Estimated value: what we calculate the share is worth in the central case. Max. buy price: that value minus the discount the plan requires; above it, the plan says don't buy. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value.",
+      whatMeans: "What does each number mean?", trRet: "Return", trEx: "Vs SPY",
       bandCap: { lo: "goes badly", mid: "estimated value", hi: "goes well" },
       latestOnly: "Only each company's latest decision", anaDate: "Scan",
       apst: { status: "Status", live: "Current", bought: "Bought on {d}", sold: "Bought on {d}, since sold", stale: "Expired: {n} scans later, revalidate",
@@ -672,28 +702,25 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (r.cons === null || r.fav === null || r.base === null) return "";
     var vals = [r.cons, r.base, r.fav, r.price, r.maxc].filter(function (v) { return v !== null; });
     var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
-    var pad = (hi - lo) * 0.12 || 1; lo -= pad; hi += pad;
-    var W = 300, L = 8, R = 292;
-    function x(v) { return L + (v - lo) / (hi - lo) * (R - L); }
-    var s = '<div class="band-wrap"><svg class="band" width="' + W + '" height="64" viewBox="0 0 ' + W + ' 64" preserveAspectRatio="xMidYMid meet" role="img" aria-label="' + esc(t().col.cons + " " + fmtM(r.cons) + ", " + t().col.base + " " + fmtM(r.base) + ", " + t().col.fav + " " + fmtM(r.fav) + ", " + t().col.priceScan + " " + fmtM(r.price)) + '">';
-    s += '<line x1="' + L + '" x2="' + R + '" y1="24" y2="24" stroke="var(--rule)" stroke-width="2"/>';
-    s += '<rect x="' + x(r.cons) + '" y="18" width="' + Math.max(1, x(r.fav) - x(r.cons)) + '" height="12" rx="2" fill="var(--accent-soft)"/>';
-    s += '<line x1="' + x(r.base) + '" x2="' + x(r.base) + '" y1="14" y2="34" stroke="var(--accent)" stroke-width="2"/>';
-    if (r.maxc !== null) s += '<line x1="' + x(r.maxc) + '" x2="' + x(r.maxc) + '" y1="14" y2="34" stroke="var(--ok)" stroke-width="2" stroke-dasharray="3 2"/>';
-    if (r.price !== null) s += '<circle cx="' + x(r.price) + '" cy="24" r="5" fill="var(--ink)" stroke="var(--sheet)" stroke-width="1.5"/>';
-    s += '<text x="' + x(r.cons) + '" y="48" text-anchor="middle">' + esc(fmtM(r.cons, 0)) + "</text>";
-    s += '<text x="' + x(r.base) + '" y="48" text-anchor="middle" fill="var(--accent)">' + esc(fmtM(r.base, 0)) + "</text>";
-    s += '<text x="' + x(r.fav) + '" y="48" text-anchor="middle">' + esc(fmtM(r.fav, 0)) + "</text>";
-    var B = t().bandCap;
-    s += '<text class="cap" x="' + x(r.cons) + '" y="60" text-anchor="middle">' + esc(B.lo) + "</text>";
-    s += '<text class="cap" x="' + x(r.base) + '" y="60" text-anchor="middle" fill="var(--accent)">' + esc(B.mid) + "</text>";
-    s += '<text class="cap" x="' + x(r.fav) + '" y="60" text-anchor="middle">' + esc(B.hi) + "</text>";
-    if (r.price !== null) s += '<text class="lbl-price" x="' + x(r.price) + '" y="9" text-anchor="middle">' + esc(fmtM(r.price)) + "</text>";
-    s += "</svg></div>";
-    return s;
+    var pad = (hi - lo) * 0.1 || 1; lo -= pad; hi += pad;
+    function x(v) { return (v - lo) / (hi - lo) * 100; }
+    function cl(v) { return Math.max(8, Math.min(92, v)); }
+    var B = t().bandCap, xc = x(r.cons), xb = x(r.base), xf = x(r.fav);
+    var h = '<div class="vband" role="img" aria-label="' + esc(t().col.cons + " " + fmtM(r.cons) + ", " + t().col.base + " " + fmtM(r.base) + ", " + t().col.fav + " " + fmtM(r.fav) + ", " + t().col.priceScan + " " + fmtM(r.price)) + '">';
+    h += '<i class="trk"></i><i class="rng" style="left:' + xc.toFixed(2) + "%;width:" + Math.max(0.5, xf - xc).toFixed(2) + '%"></i>';
+    h += '<i class="bse" style="left:' + xb.toFixed(2) + '%"></i>';
+    if (r.maxc !== null) h += '<i class="mx" style="left:' + x(r.maxc).toFixed(2) + '%"></i>';
+    if (r.price !== null) h += '<i class="dot" style="left:' + x(r.price).toFixed(2) + '%"></i><span class="lb top" style="left:' + cl(x(r.price)).toFixed(2) + '%">' + esc(fmtM(r.price)) + "</span>";
+    var near = function (a, b) { return Math.abs(a - b) < 20; };
+    h += '<span class="lb bot" style="left:' + cl(xc).toFixed(2) + '%">' + esc(fmtM(r.cons, 0)) + (near(xc, xb) ? "" : "<small>" + esc(B.lo) + "</small>") + "</span>";
+    h += '<span class="lb bot base" style="left:' + cl(xb).toFixed(2) + '%">' + esc(fmtM(r.base, 0)) + "<small>" + esc(B.mid) + "</small></span>";
+    h += '<span class="lb bot" style="left:' + cl(xf).toFixed(2) + '%">' + esc(fmtM(r.fav, 0)) + (near(xf, xb) ? "" : "<small>" + esc(B.hi) + "</small>") + "</span>";
+    return h + "</div>";
   }
   function bandLegend() {
-    return '<div class="legend"><span><i style="background:var(--ink)"></i>' + esc(t().col.priceScan) + '</span><span><i style="background:var(--accent-soft)"></i>' + esc(t().col.valRange) + '</span><span><i style="background:var(--accent)"></i>' + esc(t().col.base) + '</span><span><i style="background:var(--ok)"></i>' + esc(t().col.maxc) + '</span></div><p class="muted" style="margin:0;font-size:0.82rem">' + esc(t().valHelp) + "</p>";
+    return '<div class="legend"><span><i style="background:var(--ink)"></i>' + esc(t().col.priceScan) + '</span><span><i style="background:var(--accent-soft)"></i>' + esc(t().col.valRange) + '</span><span><i style="background:var(--accent)"></i>' + esc(t().col.base) + '</span><span><i style="background:var(--ok)"></i>' + esc(t().col.maxc) + "</span></div>";
+  }
+  function valHelpP() { return '<p class="muted" style="margin:0;font-size:0.82rem">' + esc(t().valHelp) + "</p>";
   }
 
   /* ---------- generic table ---------- */
@@ -797,7 +824,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       DEC_ORDER.forEach(function (x) { var c = dc[x] || 0; if (!c) return; var v = DEC_VAR[DEC_CLASS[x]]; bar += '<i style="width:' + (c / decs.length * 100) + "%;background:var(" + v + ')"></i>'; leg += '<span><i style="background:var(' + v + ')"></i>' + esc(decLabel(x)) + " · " + c + "</span>"; });
       h += '<div class="panel"><h3>' + esc(R.distDay) + "</h3>" + bar + "</div>" + leg + "</div></div>";
       var appr = decs.filter(function (r) { return isApproved(r.decision); });
-      h += '<div class="panel"><div><h3>' + esc(t().readyTitle) + '</h3><p class="lede">' + esc(t().readyLede) + "</p></div>" + (appr.length ? bandLegend() + '<div class="cards">' + appr.map(card).join("") + "</div>" : '<p class="muted">' + esc(t().noneReady) + "</p>") + "</div>";
+      h += '<div class="panel"><div><h3>' + esc(t().readyTitle) + '</h3><p class="lede">' + esc(t().readyLede) + "</p></div>" + (appr.length ? bandLegend() + valHelpP() + '<div class="cards">' + appr.map(card).join("") + "</div>" : '<p class="muted">' + esc(t().noneReady) + "</p>") + "</div>";
     } else h += notice(R.noAnalysisTitle, R.noAnalysisBody);
 
     /* Stage 2 list for the day */
@@ -955,7 +982,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var live = rows.filter(function (r) { return r.st === "live"; }).sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
     var old = rows.filter(function (r) { return r.st !== "live"; });
     h += '<div class="panel"><div><h3>' + esc(A.liveTitle) + '</h3><p class="lede">' + esc(A.liveLede.replace("{n}", STALE_SCANS)) + "</p></div>" +
-      (live.length ? bandLegend() + '<div class="cards">' + live.map(card).join("") + "</div>" : '<p class="muted">' + esc(A.noneLive) + "</p>") + "</div>";
+      (live.length ? bandLegend() + valHelpP() + '<div class="cards">' + live.map(card).join("") + "</div>" : '<p class="muted">' + esc(A.noneLive) + "</p>") + "</div>";
     if (old.length) h += '<div class="panel"><div><h3>' + esc(A.oldTitle) + '</h3><p class="lede">' + esc(A.oldLede.replace("{n}", STALE_SCANS)) + "</p></div>" + table("appold", cols, old, { click: true }) + "</div>";
     return h;
   }
@@ -1431,21 +1458,26 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (!r) return;
     var C = t().col;
     function f(label, val, cls) { return "<div><dt>" + esc(label) + '</dt><dd class="' + (cls || "") + '">' + val + "</dd></div>"; }
+    function kb(label, val, cls, st) { return "<div><span>" + esc(label) + '</span><b class="' + (cls || "") + '"' + (st ? ' style="' + st + '"' : "") + ">" + esc(val) + "</b></div>"; }
+    function li(label, val, cls) { return "<div><dt>" + esc(label) + '</dt><dd class="' + (cls || "") + '">' + val + "</dd></div>"; }
     var h = '<div class="scrim" id="scrim"><aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-t">' +
       '<div class="drawer-head"><div><div class="tick" id="dr-t">' + esc(r.ticker) + '</div><div class="co">' + esc(r.company) + '</div></div><button class="btn" type="button" id="dr-close">' + esc(t().close) + "</button></div>" +
       "<div>" + pill(r.decision) + ' <span class="muted">· ' + esc(depthLabel(r.depth)) + " · " + esc(fmtD(r.date)) + "</span></div>" +
-      "<p>" + esc(whyOf(r)) + "</p>" +
-      (r.base !== null ? bandLegend() + band(r) : "") +
-      '<dl class="facts">' +
-      f(C.priceScan, esc(fmtM(r.price))) + f(C.maxc, esc(fmtM(r.maxc))) +
-      f(C.cons, esc(fmtM(r.cons))) + f(C.base, esc(fmtM(r.base))) +
-      f(C.fav, esc(fmtM(r.fav))) + f(C.disc, esc(fmtP(r.disc, 0))) +
-      f(C.mos, esc(fmtP(r.mos)), signCls(r.mos)) + f(C.next, esc(nextOf(r) || "—"), "txt") +
-      "</dl><h3>" + esc(t().tracking) + '</h3><dl class="facts">' +
-      f(C.r3, esc(r.r3 === null ? t().pending : fmtP(r.r3)), signCls(r.r3)) + f(C.x3, esc(r.x3 === null ? t().pending : fmtP(r.x3)), signCls(r.x3)) +
-      f(C.r6, esc(r.r6 === null ? t().pending : fmtP(r.r6)), signCls(r.r6)) + f(C.x6, esc(r.x6 === null ? t().pending : fmtP(r.x6)), signCls(r.x6)) +
-      f(C.r12, esc(r.r12 === null ? t().pending : fmtP(r.r12)), signCls(r.r12)) + f(C.x12, esc(r.x12 === null ? t().pending : fmtP(r.x12)), signCls(r.x12)) +
-      '</dl><p><button class="btn" type="button" data-libq="' + esc(r.ticker) + '">' + esc(t().lib.fromDec + " " + r.ticker + " →") + "</button></p></aside></div>";
+      "<p style=\"margin:0\">" + esc(whyOf(r)) + "</p>" +
+      (r.base !== null ? band(r) + bandLegend() : "") +
+      '<div class="dr-key">' + kb(C.priceScan, fmtM(r.price)) + kb(C.base, fmtM(r.base), "", "color:var(--accent)") + kb(C.maxc, fmtM(r.maxc)) + kb(C.mos, fmtP(r.mos), signCls(r.mos)) + "</div>" +
+      '<dl class="dr-list">' +
+      li(C.valRange, r.cons !== null && r.fav !== null ? esc(fmtM(r.cons) + " – " + fmtM(r.fav)) : "—") +
+      li(C.disc, esc(r.disc === null ? "—" : fmtP(r.disc, 0))) +
+      li(C.next, esc(nextOf(r) || "—"), "txt") +
+      "</dl>" +
+      "<details><summary>" + esc(t().whatMeans) + "</summary><p>" + esc(t().valHelp) + "</p></details>" +
+      "<h3>" + esc(t().tracking) + "</h3>" +
+      '<table class="dr-track"><thead><tr><th></th><th>' + esc(t().trRet) + "</th><th>" + esc(t().trEx) + "</th></tr></thead><tbody>" +
+      [["3m", "r3", "x3"], ["6m", "r6", "x6"], ["12m", "r12", "x12"]].map(function (z) {
+        return "<tr><td>" + esc(t().horizon[z[0]]) + '</td><td class="' + signCls(r[z[1]]) + '">' + esc(r[z[1]] === null ? t().pending : fmtP(r[z[1]])) + '</td><td class="' + signCls(r[z[2]]) + '">' + esc(r[z[2]] === null ? t().pending : fmtP(r[z[2]])) + "</td></tr>";
+      }).join("") + "</tbody></table>" +
+      '<p><button class="btn" type="button" data-libq="' + esc(r.ticker) + '">' + esc(t().lib.fromDec + " " + r.ticker + " →") + "</button></p></aside></div>";
     var root = document.getElementById("drawer-root");
     root.innerHTML = h;
     var btn = document.getElementById("dr-close");
