@@ -398,7 +398,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       tabs: { resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca" },
       valHelp: "Valor estimado: lo que calculamos que vale la acción en el escenario central. Precio máximo de compra: ese valor menos el descuento que exige el plan; por encima de él no se compra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado.",
       whatMeans: "¿Qué significa cada número?", trRet: "Rentabilidad", trEx: "Frente al SPY",
-      bandCap: { lo: "si va mal", mid: "valor estimado", hi: "si va bien" },
+      bandCap: { lo: "bajista", mid: "valor estimado", hi: "alcista" },
       latestOnly: "Solo la última decisión de cada empresa", anaDate: "Escáner",
       apst: { status: "Estado", live: "Vigente", bought: "Comprada el {d}", sold: "Comprada el {d}, ya vendida", stale: "Caducada: {n} escáneres después, revalidar",
         liveTitle: "Vigentes", liveLede: "Aprobadas en los últimos {n} escáneres y todavía sin comprar. «Ahora» es el último precio conocido frente al precio máximo de compra.",
@@ -484,12 +484,12 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       excess: "Exceso vs SPY",
       horizon: { "3m": "3 meses", "6m": "6 meses", "12m": "12 meses" },
       groups: { ok: "Aprobadas", wait: "Esperar precio", watch: "En observación", out: "Descartadas" },
-      col: { priceScan: "Precio en el escáner", baseEst: "Valor estimado", date: "Fecha", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máx. 52s", pull: "Retroceso", opm: "Margen op.", fcf: "FCF/acc.", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decisión", depth: "Profundidad", why: "Motivo", cons: "Valor si va mal", base: "Valor estimado", fav: "Valor si va bien", disc: "Descuento que exige el plan", maxc: "Precio máximo de compra", mos: "Descuento sobre el valor", valRange: "Rango de valor (si va mal – si va bien)", next: "Próximo evento", r3: "Rent. 3m", r6: "Rent. 6m", r12: "Rent. 12m", x3: "Exceso 3m", x6: "Exceso 6m", x12: "Exceso 12m", via: "Vía", type: "Tipo", shares: "Acciones", exec: "Precio", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" },
+      col: { priceScan: "Precio en el escáner", baseEst: "Valor estimado", date: "Fecha", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máx. 52s", pull: "Retroceso", opm: "Margen op.", fcf: "FCF/acc.", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decisión", depth: "Profundidad", why: "Motivo", cons: "Valor escenario bajista", base: "Valor estimado", fav: "Valor escenario alcista", disc: "Descuento que exige el plan", maxc: "Precio máximo de compra", mos: "Descuento sobre el valor", valRange: "Rango de valor (escenario bajista – alcista)", next: "Próximo evento", r3: "Rent. 3m", r6: "Rent. 6m", r12: "Rent. 12m", x3: "Exceso 3m", x6: "Exceso 6m", x12: "Exceso 12m", via: "Vía", type: "Tipo", shares: "Acciones", exec: "Precio", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" },
       close: "Cerrar",
       calc: { btn: "Cómo se calcula", title: "Cómo se calcula", tapHint: "Toca cualquier cifra subrayada de la tarjeta para saltar a su explicación.",
         price: "Precio en el escáner", priceTxt: "Precio de cierre del {d}, tal como venía en el CSV del escáner de ese día. Es el precio con el que se hizo el análisis.", scanData: "Otros datos de esa fila del escáner (Stages 1 y 2):",
         base: "Valor estimado", baseTxt: "Valor base (escenario central) del {rep}, analizado el {a}. Es lo que calculamos que vale la acción si el negocio evoluciona como esperamos.", report: "informe Stage 3 {id}", reportGen: "informe Stage 3",
-        range: "Rango de valor", rangeTxt: "Los dos escenarios extremos del mismo informe: «si va mal» (conservador) y «si va bien» (favorable). El valor estimado queda entre ambos.",
+        range: "Rango de valor", rangeTxt: "Los dos escenarios extremos del mismo informe. Escenario bajista: lo que valdría la acción si el negocio evoluciona peor de lo previsto (supuestos conservadores). Escenario alcista: lo que valdría si evoluciona mejor (supuestos favorables). El valor estimado es el escenario base, entre ambos.",
         detail: "Datos del informe usados:", noDetail: "El desglose de los datos del informe (flujo de caja, múltiplo aplicado, crecimiento…) todavía no está cargado en la hoja para esta empresa.",
         maxc: "Precio máximo de compra", maxcTxt: "Valor estimado menos el descuento que exige el plan para esta empresa ({p}). Por encima de este precio, el plan dice que no se compra.", maxcAdj: "El informe fija el máximo en {m} (redondeado o ajustado sobre el cálculo exacto).",
         mos: "Descuento sobre el valor", mosTxt: "Cuánto más barata cotizaba la acción frente a su valor estimado el día del escáner. Positivo (verde) = más barata; negativo (rojo) = más cara.",
@@ -519,7 +519,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       tabs: { resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library" },
       valHelp: "Estimated value: what we calculate the share is worth in the central case. Max. buy price: that value minus the discount the plan requires; above it, the plan says don't buy. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value.",
       whatMeans: "What does each number mean?", trRet: "Return", trEx: "Vs SPY",
-      bandCap: { lo: "goes badly", mid: "estimated value", hi: "goes well" },
+      bandCap: { lo: "bear case", mid: "estimated value", hi: "bull case" },
       latestOnly: "Only each company's latest decision", anaDate: "Scan",
       apst: { status: "Status", live: "Current", bought: "Bought on {d}", sold: "Bought on {d}, since sold", stale: "Expired: {n} scans later, revalidate",
         liveTitle: "Current", liveLede: "Approved in the last {n} scans and not bought yet. \"Now\" is the latest known price against the max. buy price.",
@@ -605,12 +605,12 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       excess: "Excess vs SPY",
       horizon: { "3m": "3 months", "6m": "6 months", "12m": "12 months" },
       groups: { ok: "Approved", wait: "Wait for price", watch: "On watch", out: "Rejected" },
-      col: { priceScan: "Price at scan", baseEst: "Estimated value", date: "Date", ticker: "Ticker", company: "Company", price: "Price", pe: "P/E", high: "52w high", pull: "Pullback", opm: "Op. margin", fcf: "FCF/sh", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decision", depth: "Depth", why: "Reason", cons: "Value if it goes badly", base: "Estimated value", fav: "Value if it goes well", disc: "Discount the plan requires", maxc: "Max. buy price", mos: "Discount to value", valRange: "Value range (badly – well)", next: "Next event", r3: "Ret. 3m", r6: "Ret. 6m", r12: "Ret. 12m", x3: "Excess 3m", x6: "Excess 6m", x12: "Excess 12m", via: "Path", type: "Type", shares: "Shares", exec: "Price", amount: "Amount", stop: "Stop S", m: "Low M", signal: "Signal or reason", notes: "Notes", fee: "Fee" },
+      col: { priceScan: "Price at scan", baseEst: "Estimated value", date: "Date", ticker: "Ticker", company: "Company", price: "Price", pe: "P/E", high: "52w high", pull: "Pullback", opm: "Op. margin", fcf: "FCF/sh", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decision", depth: "Depth", why: "Reason", cons: "Bear-case value", base: "Estimated value", fav: "Bull-case value", disc: "Discount the plan requires", maxc: "Max. buy price", mos: "Discount to value", valRange: "Value range (bear – bull case)", next: "Next event", r3: "Ret. 3m", r6: "Ret. 6m", r12: "Ret. 12m", x3: "Excess 3m", x6: "Excess 6m", x12: "Excess 12m", via: "Path", type: "Type", shares: "Shares", exec: "Price", amount: "Amount", stop: "Stop S", m: "Low M", signal: "Signal or reason", notes: "Notes", fee: "Fee" },
       close: "Close",
       calc: { btn: "How it's calculated", title: "How it's calculated", tapHint: "Tap any underlined figure on the card to jump to its explanation.",
         price: "Price at scan", priceTxt: "Closing price on {d}, as it came in that day's scanner CSV. It's the price the analysis used.", scanData: "Other data from that scanner row (Stages 1 and 2):",
         base: "Estimated value", baseTxt: "Base value (central case) from {rep}, analyzed on {a}. It's what we calculate the share is worth if the business performs as expected.", report: "Stage 3 report {id}", reportGen: "the Stage 3 report",
-        range: "Value range", rangeTxt: "The two outer scenarios from the same report: \"if it goes badly\" (conservative) and \"if it goes well\" (favorable). The estimated value sits between them.",
+        range: "Value range", rangeTxt: "The two outer scenarios from the same report. Bear case: what the share would be worth if the business does worse than expected (conservative assumptions). Bull case: what it would be worth if it does better (favorable assumptions). The estimated value is the base case, between the two.",
         detail: "Report data used:", noDetail: "The breakdown of the report's inputs (cash flow, multiple applied, growth…) isn't loaded in the sheet for this company yet.",
         maxc: "Max. buy price", maxcTxt: "Estimated value minus the discount the plan requires for this company ({p}). Above this price, the plan says don't buy.", maxcAdj: "The report sets the max at {m} (rounded or adjusted from the exact calculation).",
         mos: "Discount to value", mosTxt: "How much cheaper the stock traded than its estimated value on the scan day. Positive (green) = cheaper; negative (red) = more expensive.",
@@ -942,7 +942,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 
     /* 3. range */
     if (r.cons !== null && r.fav !== null) h += sec("range", L.range, fmtM(r.cons) + " – " + fmtM(r.fav), "", para(L.rangeTxt) +
-      fml(t().bandCap.lo + ": " + fmtM(r.cons) + " · " + t().bandCap.mid + ": " + fmtM(r.base) + " · " + t().bandCap.hi + ": " + fmtM(r.fav)));
+      fml(t().col.cons + ": " + fmtM(r.cons)) + fml(t().col.base + ": " + fmtM(r.base)) + fml(t().col.fav + ": " + fmtM(r.fav)));
 
     /* 4. max buy price */
     if (r.maxc !== null) {
