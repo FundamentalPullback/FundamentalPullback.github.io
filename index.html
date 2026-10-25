@@ -1910,7 +1910,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 
 
   /* ---------- disclaimer gate (public snapshot only) ---------- */
-  var GATE_KEY = "fpj-disclaimer-v1", GATE_DAYS = 30;
+  var GATE_KEY = "fpj-disclaimer-v1", GATE_DAYS = 1;
   function gateAccepted() { try { var v = +localStorage.getItem(GATE_KEY); return v && Date.now() - v < GATE_DAYS * 86400000; } catch (e) { return false; } }
   function showGate(declined) {
     var root = document.getElementById("gate-root");
