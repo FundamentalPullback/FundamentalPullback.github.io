@@ -237,6 +237,7 @@ tr.click:hover td { background: var(--paper); }
 
 /* Retrospective + library */
 .plrow.wide { grid-template-columns: 64px minmax(0, 1fr) 76px; }
+.plrow.click { cursor: pointer; border-radius: 4px; } .plrow.click:hover { background: var(--paper); } .plrow.click:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .grp { display: inline-block; font-family: var(--font-data); font-size: 0.72rem; font-weight: 600; padding: 1px 7px; border-radius: 999px; background: var(--out-bg); color: var(--ink-2); }
 .grp-A { background: var(--wait-bg); color: var(--wait); } .grp-B { background: var(--watch-bg); color: var(--watch); } .grp-C { background: var(--ok-bg); color: var(--ok); }
 .verdict { font-size: 0.95rem; max-width: 80ch; margin: 0; }
@@ -359,9 +360,9 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         verdictGood: "En las descartadas (A y B), el exceso medio frente al SPY fue de {x}: no comprarlas evitó, de media, un resultado peor que el índice.",
         verdictBad: "En las descartadas (A y B), el exceso medio frente al SPY fue de +{x}: de media, lo que se dejó pasar lo hizo mejor que el índice. Conviene revisar si el filtro es demasiado exigente.",
         verdictNote: "Muestra pequeña y horizonte muy corto: es una señal para vigilar, no una conclusión.",
-        byGrpTitle: "Por grupo", barsTitle: "Exceso vs SPY por empresa", barsLede: "Retorno de la acción menos el del SPY desde el precio de referencia. Verde: lo hizo mejor que el índice.",
+        byGrpTitle: "Por grupo", barsTitle: "Exceso vs SPY por empresa", barsLede: "Retorno de la acción menos el del SPY desde el precio de referencia. Verde: lo hizo mejor que el índice. Toca una empresa para ver su ficha.",
         tblTitle: "Detalle", n: "N.º", avgRet: "Retorno medio", avgEx: "Exceso medio", beat: "% que batió al SPY", avgDown: "Caída máx. media",
-        decDate: "Decisión", refPrice: "Precio ref.", ret: "Retorno", spy: "SPY", ex: "Exceso", up: "Máx. subida", down: "Máx. caída", why: "Motivo", rep: "Informe",
+        inScan: "En el escáner", days: "días", ficha: "Ficha", open: "Ver ficha", decDate: "Decisión", refPrice: "Precio ref.", ret: "Retorno", spy: "SPY", ex: "Exceso", up: "Máx. subida", down: "Máx. caída", why: "Motivo", rep: "Informe",
         note: "Cada horizonte es una observación distinta del mismo caso: no se suman. Grupo C no son descartes, se muestra como referencia."
       },
       lib: {
@@ -470,9 +471,9 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         verdictGood: "For the rejected names (A and B), the average excess over SPY was {x}: on average, not buying them avoided a result worse than the index.",
         verdictBad: "For the rejected names (A and B), the average excess over SPY was +{x}: on average, what was passed over beat the index. Worth checking whether the filter is too strict.",
         verdictNote: "Small sample and a very short horizon: a signal to watch, not a conclusion.",
-        byGrpTitle: "By group", barsTitle: "Excess vs SPY by company", barsLede: "Stock return minus SPY return from the reference price. Green: it beat the index.",
+        byGrpTitle: "By group", barsTitle: "Excess vs SPY by company", barsLede: "Stock return minus SPY return from the reference price. Green: it beat the index. Tap a company to open its record.",
         tblTitle: "Detail", n: "Count", avgRet: "Average return", avgEx: "Average excess", beat: "% that beat SPY", avgDown: "Avg. max drop",
-        decDate: "Decision", refPrice: "Ref. price", ret: "Return", spy: "SPY", ex: "Excess", up: "Max. gain", down: "Max. drop", why: "Reason", rep: "Report",
+        inScan: "In the scanner", days: "days", ficha: "Record", open: "Open record", decDate: "Decision", refPrice: "Ref. price", ret: "Return", spy: "SPY", ex: "Excess", up: "Max. gain", down: "Max. drop", why: "Reason", rep: "Report",
         note: "Each horizon is a separate observation of the same case: don't add them up. Group C are not rejections; shown for reference."
       },
       lib: {
@@ -1260,6 +1261,27 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   function avgOf(list, k) { var v = list.map(function (r) { return r[k]; }).filter(function (x) { return x !== null && x !== undefined; }); return v.length ? v.reduce(function (a, b) { return a + b; }, 0) / v.length : null; }
   function medianOf(list, k) { var v = list.map(function (r) { return r[k]; }).filter(function (x) { return x !== null && x !== undefined; }).sort(function (a, b) { return a - b; }); if (!v.length) return null; var m = Math.floor(v.length / 2); return v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2; }
   function grpPill(gk) { return '<span class="grp grp-' + esc(gk) + '" title="' + esc(t().retro.grp[gk] || gk) + '">' + esc(gk) + "</span>"; }
+  /* scanner appearances as compact ranges of consecutive scan days */
+  function scanRanges(tk) {
+    var all = scanDates().slice().reverse(), have = {};
+    (S.scan || []).forEach(function (r) { if (r.ticker === tk) have[r.date] = 1; });
+    var out = [], cur = null;
+    all.forEach(function (d, i) {
+      if (have[d]) { if (cur && cur.endIdx === i - 1) { cur.end = d; cur.endIdx = i; } else { cur = { start: d, end: d, endIdx: i }; out.push(cur); } }
+    });
+    var n = Object.keys(have).length;
+    return { n: n, text: out.map(function (c) { return c.start === c.end ? fmtDs(c.start) : fmtDs(c.start) + "–" + fmtDs(c.end); }).join(", ") };
+  }
+  /* the analysis record closest to a decision date */
+  function fichaKey(tk, d) {
+    var best = null, bd = Infinity, t0 = Date.parse(d);
+    (S.dec || []).forEach(function (r) {
+      if (r.ticker !== tk) return;
+      var x = Math.abs(Date.parse(r.adate || r.date) - t0); if (isNaN(x)) return;
+      if (x < bd || (x === bd && String(r.adate) > String(best.adate))) { bd = x; best = r; }
+    });
+    return best ? best.date + "|" + best.ticker : null;
+  }
   function vRetro() {
     var R = t().retro;
     var g = guard(["retro"]);
@@ -1297,9 +1319,11 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     h += '<div class="panel"><div><h3>' + esc(R.barsTitle) + '</h3><p class="lede">' + esc(R.barsLede) + '</p></div><div class="plbars" role="img" aria-label="' + esc(bRows.map(function (r) { return r.ticker + " " + fmtP(r.ex); }).join(", ")) + '">' +
       bRows.map(function (r) {
         var w = Math.abs(r.ex) / mx * 50, pos = r.ex >= 0;
-        return '<div class="plrow wide" title="' + esc(r.ticker + " (" + r.grp + ") · " + R.ret + " " + fmtP(r.ret) + " · " + R.spy + " " + fmtP(r.spy)) + '"><span class="t">' + esc(r.ticker) + ' <small class="muted">' + esc(r.grp) + '</small></span><span class="pltrack"><i class="plbar" style="' + (pos ? "left:50%" : "right:50%") + ";width:" + w.toFixed(2) + "%;background:var(" + (pos ? "--ok" : "--neg") + ')"></i></span><span class="v ' + signCls(r.ex) + '">' + esc((r.ex > 0 ? "+" : "") + fmtP(r.ex)) + "</span></div>";
+        var fk = fichaKey(r.ticker, r.ddate);
+        return '<div class="plrow wide' + (fk ? " click" : "") + '"' + (fk ? ' data-open="' + esc(fk) + '" tabindex="0" role="button"' : "") + ' title="' + esc(r.ticker + " (" + r.grp + ") · " + R.ret + " " + fmtP(r.ret) + " · " + R.spy + " " + fmtP(r.spy)) + '"><span class="t">' + esc(r.ticker) + ' <small class="muted">' + esc(r.grp) + '</small></span><span class="pltrack"><i class="plbar" style="' + (pos ? "left:50%" : "right:50%") + ";width:" + w.toFixed(2) + "%;background:var(" + (pos ? "--ok" : "--neg") + ')"></i></span><span class="v ' + signCls(r.ex) + '">' + esc((r.ex > 0 ? "+" : "") + fmtP(r.ex)) + "</span></div>";
       }).join("") + "</div></div>";
     if (!S.sort.retro) S.sort.retro = { key: "ex", dir: "desc" };
+    rows.forEach(function (r) { r.scanN = scanRanges(r.ticker).n; });
     h += '<div class="panel"><h3>' + esc(R.tblTitle) + "</h3>" + table("retro", [
       labelled(cT("ticker", "t"), t().col.ticker),
       labelled({ key: "grp", cell: function (r) { return "<td>" + grpPill(r.grp) + "</td>"; } }, t().group),
@@ -1307,6 +1331,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       labelled(cM("price"), R.refPrice), labelled(cP("ret", true), R.ret), labelled(cP("spy", true), R.spy), labelled(cP("ex", true), R.ex),
       labelled(cP("up", true), R.up), labelled(cP("down", true), R.down),
       labelled({ key: "why", cell: function (r) { return '<td class="why">' + esc(lang === "en" && r.whyEn ? r.whyEn : r.why) + "</td>"; } }, R.why),
+      labelled({ key: "scanN", num: true, cell: function (r) { var sr = scanRanges(r.ticker); return '<td style="min-width:150px">' + (sr.n ? "<b>" + sr.n + "</b> " + esc(R.days) + '<br><span class="muted">' + esc(sr.text) + "</span>" : '<span class="muted">—</span>') + "</td>"; } }, R.inScan),
+      labelled({ key: "ficha", cell: function (r) { var fk = fichaKey(r.ticker, r.ddate); return "<td>" + (fk ? '<button type="button" class="chip" data-open="' + esc(fk) + '">' + esc(R.open) + "</button>" : "") + "</td>"; } }, R.ficha),
       labelled({ key: "rep", cell: function (r) { return "<td>" + (r.rep ? '<button type="button" class="chip" data-libopen="' + esc(r.rep) + '">' + esc(r.rep) + "</button>" : "") + "</td>"; } }, R.rep)
     ], rows) + '<p class="muted" style="margin:0">' + esc(R.note) + "</p></div>";
     return h;
@@ -1488,7 +1514,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (e.target.closest("[data-allow]")) { loadOnce(); return; }
   });
   document.addEventListener("keydown", function (e) {
-    if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("tr.click")) { e.preventDefault(); openDetail(e.target.getAttribute("data-open")); }
+    if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("tr.click, .plrow.click")) { e.preventDefault(); openDetail(e.target.getAttribute("data-open")); }
   });
   document.addEventListener("change", function (e) { if (e.target.id === "scan-date") { S.scanDate = e.target.value; render(); } if (e.target.id === "res-date") { S.resDate = e.target.value; render(); } if (e.target.id === "ana-date") { S.anaDate = e.target.value; S.anaFilter = "all"; render(); } });
   var libT;
