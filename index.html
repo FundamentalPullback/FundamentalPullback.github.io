@@ -133,6 +133,10 @@ h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1
 .pos-card { cursor: default; }
 .pos-card:hover { border-color: var(--rule); }
 .pos-card .dr-list dd { font-size: 0.92rem; }
+.pos-sl { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 2px 12px; background: var(--paper); border-left: 4px solid var(--neg); border-radius: 8px; padding: 10px 12px; }
+.pos-sl span { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--neg); }
+.pos-sl b { font-family: var(--font-data); font-size: 1.25rem; font-variant-numeric: tabular-nums; justify-self: end; }
+.pos-sl small { grid-column: 1 / -1; font-size: 0.8rem; color: var(--ink-2); }
 .pos-val { border-top: 1px solid var(--rule); padding-top: 10px; display: grid; gap: 8px; }
 .calc-btn:hover { background: var(--accent-soft); }
 .calc-btn i { font-style: normal; display: inline-grid; place-items: center; width: 17px; height: 17px; border-radius: 50%; background: var(--accent); color: var(--sheet); font-family: Georgia, serif; font-weight: 700; font-size: 0.75rem; }
@@ -438,7 +442,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       pos: { title: "Posiciones", lede: "Cada posición abierta con su última revisión de gestión (Stage 4) y su última valoración. Ordenadas de la más cercana a su stop a la más lejana. Los niveles son los registrados en el informe: no certifican órdenes en el bróker.",
         fOpen: "Posiciones abiertas", fValue: "Valor en posiciones", fUpl: "Ganancia/pérdida abierta", fNear: "Más cerca de su stop",
         review: "Revisión de gestión del {d}", noReview: "Sin revisión de gestión registrada en la hoja.", shares: "Acciones", avg: "Coste medio", price: "Precio actual", upl: "Ganancia/pérdida abierta",
-        protTitle: "Protecciones", stop: "Stop S (manual, salta al tocarlo)", trail: "Trailing (se evalúa al cierre)", m: "Mínimo M", toStop: "{p} por encima", below: "¡por debajo!", next: "Próximo evento",
+        protTitle: "Protecciones", sl: "Stop loss", slSub: "{p} por debajo del precio actual", slNone: "sin stop registrado", stop: "Stop loss S (manual: salta si el precio lo toca)", trail: "Stop por cierre (trailing: solo cuenta el cierre)", m: "Mínimo M (referencia de la regla de salida)", toStop: "{p} por debajo del precio", below: "¡el precio ya está por debajo!", next: "Próximo evento",
         valTitle: "Última valoración", valOf: "Análisis del {d}", noVal: "No hay una valoración completa (valor estimado y escenarios) registrada en el historial para esta empresa.", openRec: "Ver ficha", reports: "Informes sobre {t} →", allPos: "Ver todas las posiciones →",
         none: "No hay posiciones abiertas." },
       cart: {
@@ -568,7 +572,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       pos: { title: "Positions", lede: "Each open position with its latest management review (Stage 4) and its latest valuation. Sorted from closest to its stop to farthest. Levels are the ones recorded in the report: they don't certify orders at the broker.",
         fOpen: "Open positions", fValue: "Value in positions", fUpl: "Open gain/loss", fNear: "Closest to its stop",
         review: "Management review of {d}", noReview: "No management review recorded in the sheet.", shares: "Shares", avg: "Average cost", price: "Current price", upl: "Open gain/loss",
-        protTitle: "Protections", stop: "Stop S (manual, triggers on touch)", trail: "Trailing (checked at the close)", m: "Low M", toStop: "{p} above", below: "below it!", next: "Next event",
+        protTitle: "Protections", sl: "Stop loss", slSub: "{p} below the current price", slNone: "no stop recorded", stop: "Stop loss S (manual: triggers if the price touches it)", trail: "Closing stop (trailing: only the close counts)", m: "Low M (reference for the exit rule)", toStop: "{p} below the price", below: "price is already below it!", next: "Next event",
         valTitle: "Latest valuation", valOf: "Analysis of {d}", noVal: "No full valuation (estimated value and scenarios) is recorded in the history for this company.", openRec: "Open record", reports: "Reports on {t} →", allPos: "See all positions →",
         none: "No open positions." },
       cart: {
@@ -1223,7 +1227,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       p.uplPct = p.upl !== null && p.cost ? p.upl / p.cost : null;
       p.g = ges[p.ticker] || null;
       p.sv = p.g && p.g.stop !== null ? p.g.stop : p.stop;
-      p.toStop = p.price !== null && p.sv ? p.price / p.sv - 1 : null;
+      p.toStop = p.price !== null && p.sv ? 1 - p.sv / p.price : null;
     });
     open.sort(function (a, b) { return (a.toStop === null ? 9 : a.toStop) - (b.toStop === null ? 9 : b.toStop); });
     var sum = function (k) { return open.reduce(function (a, p) { return a + (p[k] || 0); }, 0); };
@@ -1231,7 +1235,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     function fig(v, label, cls, sb, sbc) { return '<div class="fig"><b class="' + (cls || "") + '">' + esc(v) + "</b>" + (sb ? '<small class="' + (sbc || "") + '">' + esc(sb) + "</small>" : "") + "<span>" + esc(label) + "</span></div>"; }
     h += '<div class="figures">' + fig(String(open.length), K.fOpen) + fig(fmtM(sum("value"), 0), K.fValue) +
       fig(sgnM(upl, 0), K.fUpl, signCls(upl), cost ? fmtP(upl / cost, 2) : "", signCls(upl)) +
-      fig(near ? near.ticker : "—", K.fNear, "", near ? sub(K.toStop, { p: fmtP(near.toStop) }) : "") + "</div>";
+      fig(near ? near.ticker : "—", K.fNear, "", near ? sub(K.slSub, { p: fmtP(near.toStop) }) : "") + "</div>";
     h += '<div class="cards">' + open.map(function (p) {
       var G = p.g, en = lang === "en";
       var v = latestOf(p.ticker, function (r) { return r.base !== null; });
@@ -1240,8 +1244,10 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       x += '<div class="muted" style="font-size:0.82rem">' + (G ? esc(sub(K.review, { d: fmtD(G.date) })) + (G.rep ? ' · <button type="button" class="chip" data-libopen="' + esc(G.rep) + '">' + esc(G.rep) + " →</button>" : "") : esc(K.noReview)) + "</div>";
       x += '<dl class="kv"><div><dt>' + esc(K.shares) + "</dt><dd>" + esc(fmtSh(p.shares)) + "</dd></div><div><dt>" + esc(K.avg) + "</dt><dd>" + esc(fmtM(p.avg)) + "</dd></div>" +
         "<div><dt>" + esc(K.price) + "</dt><dd>" + esc(fmtM(p.price)) + "</dd></div><div><dt>" + esc(K.upl) + '</dt><dd class="' + signCls(p.upl) + '">' + esc(sgnM(p.upl, 0) + " · " + fmtP(p.uplPct)) + "</dd></div></dl>";
+      var slDist = p.sv && p.price !== null ? 1 - p.sv / p.price : null;
+      x += '<div class="pos-sl"><span>' + esc(K.sl) + "</span><b>" + esc(p.sv ? fmtM(p.sv) : "—") + "</b><small" + (slDist !== null && slDist < 0 ? ' class="neg"' : "") + ">" + esc(p.sv ? (slDist !== null ? (slDist < 0 ? K.below : sub(K.slSub, { p: fmtP(slDist) })) : "") : K.slNone) + "</small></div>";
       function lvl(label, val, txt) {
-        var d = val !== null && p.price !== null ? p.price / val - 1 : null;
+        var d = val !== null && p.price !== null ? 1 - val / p.price : null;
         return "<div><dt>" + esc(label) + "</dt><dd>" + esc(val !== null ? fmtM(val) : (txt ? (en ? (TRAIL_EN[txt] || txt) : txt) : "—")) +
           (d !== null ? ' <span class="' + (d < 0 ? "neg" : "muted") + '" style="font-size:0.8rem">' + esc(d < 0 ? K.below : sub(K.toStop, { p: fmtP(d) })) + "</span>" : "") + "</dd></div>";
       }
