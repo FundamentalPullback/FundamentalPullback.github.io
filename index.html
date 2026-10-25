@@ -453,7 +453,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         statsTitle: "Estadísticas", openWin: "Posiciones abiertas en ganancia", sellWin: "Ventas con ganancia (cada venta parcial cuenta aparte)", of: "de",
         avgWin: "Ganancia media por venta ganadora", avgLoss: "Pérdida media por venta perdedora", pf: "Profit factor (ventas)", pfNote: "sin pérdidas todavía",
         bigWin: "Mayor ganancia realizada", bigLoss: "Mayor pérdida realizada", best: "Mejor posición abierta", worst: "Peor posición abierta", top: "Mayor peso en la cuenta",
-        risk: "Riesgo abierto hasta el stop S", riskMissing: "falta el stop S en", riskOf: "de la cuenta", positions: "posiciones",
+        risk: "Riesgo abierto hasta el stop loss", riskSrc: "stops según la revisión de gestión del {s}; no certifican órdenes en el bróker", riskMissing: "falta el stop S en", riskOf: "de la cuenta", positions: "posiciones",
         barsTitle: "Ganancia/pérdida abierta por posición", barsLede: "Cuánto gana o pierde cada posición abierta, en % sobre lo que costó.",
         tblTitle: "Posiciones abiertas", price: "Precio actual", mktValue: "Valor actual", upl: "Ganancia/pérdida ($)", uplPct: "Ganancia/pérdida (%)", weight: "Peso en la cuenta", day: "Cambio hoy",
         noPrice: "Sin precio en la hoja para", none: "No hay posiciones abiertas."
@@ -583,7 +583,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         statsTitle: "Statistics", openWin: "Open positions in profit", sellWin: "Sales at a gain (each partial sale counts separately)", of: "of",
         avgWin: "Average gain per winning sale", avgLoss: "Average loss per losing sale", pf: "Profit factor (sales)", pfNote: "no losses yet",
         bigWin: "Largest realized gain", bigLoss: "Largest realized loss", best: "Best open position", worst: "Worst open position", top: "Largest weight in the account",
-        risk: "Open risk down to stop S", riskMissing: "stop S missing for", riskOf: "of the account", positions: "positions",
+        risk: "Open risk down to the stop loss", riskSrc: "stops from the management review of {s}; they don't certify orders at the broker", riskMissing: "stop S missing for", riskOf: "of the account", positions: "positions",
         barsTitle: "Open gain/loss by position", barsLede: "How much each open position is up or down, as a % of what it cost.",
         tblTitle: "Open positions", price: "Current price", mktValue: "Current value", upl: "Gain/loss ($)", uplPct: "Gain/loss (%)", weight: "Share of account", day: "Change today",
         noPrice: "No price in the sheet for", none: "No open positions."
@@ -1361,12 +1361,17 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var gw = sum(wins, "pnl"), gl = -sum(losses, "pnl");
     var openUp = open.filter(function (p) { return p.upl !== null && p.upl > 0; }).length;
     var heavy = byVal[0];
+    /* current stop: latest management review (Gestión) first, else the stop recorded with the trades */
+    var gesBy = {}; (S.ges || []).forEach(function (r) { if (r.stop !== null && (!gesBy[r.ticker] || String(r.date) >= String(gesBy[r.ticker].date))) gesBy[r.ticker] = r; });
+    var gSrc = {};
+    open.forEach(function (p) { var gr = gesBy[p.ticker]; if (gr) { p.stop = gr.stop; gSrc[gr.date + "|" + gr.rep] = gr; } });
+    var srcTxt = Object.keys(gSrc).map(function (k) { var gr = gSrc[k]; return fmtD(gr.date) + (gr.rep ? " (" + gr.rep + ")" : ""); }).join(", ");
     var noStop = open.filter(function (p) { return p.stop === null; });
     var risk = open.filter(function (p) { return p.stop !== null && p.price !== null; }).reduce(function (a, p) { return a + p.shares * Math.max(0, p.price - p.stop); }, 0);
     function kv(label, val, cls) { return "<div><dt>" + esc(label) + '</dt><dd class="' + (cls || "") + '">' + esc(val) + "</dd></div>"; }
     function frac(a, b) { return b ? a + " " + K.of + " " + b + " (" + fmtP(a / b, 0) + ")" : "—"; }
     var riskTxt = noStop.length === open.length ? K.riskMissing + " " + open.length + " " + K.positions :
-      fmtM(risk, 0) + " · " + fmtP(total ? risk / total : null, 2) + " " + K.riskOf + (noStop.length ? " (" + K.riskMissing + " " + noStop.map(function (p) { return p.ticker; }).join(", ") + ")" : "");
+      fmtM(risk, 0) + " · " + fmtP(total ? risk / total : null, 2) + " " + K.riskOf + (noStop.length ? " (" + K.riskMissing + " " + noStop.map(function (p) { return p.ticker; }).join(", ") + ")" : "") + (srcTxt ? " · " + K.riskSrc.replace("{s}", srcTxt) : "");
     h += '<div class="panel"><h3>' + esc(K.statsTitle) + '</h3><dl class="kv stats">' +
       kv(K.openWin, frac(openUp, priced.length)) +
       kv(K.sellWin, frac(wins.length, P.sales.length)) +
