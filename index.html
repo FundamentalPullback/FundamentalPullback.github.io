@@ -121,7 +121,8 @@ h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1
 .kv div { display: grid; gap: 0; }
 .kv dt { font-size: 0.7rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.06em; }
 .kv dd { margin: 0; font-family: var(--font-data); font-variant-numeric: tabular-nums; font-size: 0.95rem; }
-.band { width: 100%; height: auto; display: block; }
+.band-wrap { position: relative; width: 100%; aspect-ratio: 300 / 64; min-height: 0; }
+.band { position: absolute; inset: 0; width: 100%; height: 100%; display: block; overflow: visible; }
 .band text { font-family: var(--font-data); font-size: 9px; fill: var(--ink-2); }
 .band .lbl-price { fill: var(--ink); font-weight: 600; }
 .band .cap { font-family: var(--font-body); font-size: 8px; }
@@ -673,7 +674,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var pad = (hi - lo) * 0.12 || 1; lo -= pad; hi += pad;
     var W = 300, L = 8, R = 292;
     function x(v) { return L + (v - lo) / (hi - lo) * (R - L); }
-    var s = '<svg class="band" viewBox="0 0 ' + W + ' 64" role="img" aria-label="' + esc(t().col.cons + " " + fmtM(r.cons) + ", " + t().col.base + " " + fmtM(r.base) + ", " + t().col.fav + " " + fmtM(r.fav) + ", " + t().col.priceScan + " " + fmtM(r.price)) + '">';
+    var s = '<div class="band-wrap"><svg class="band" width="' + W + '" height="64" viewBox="0 0 ' + W + ' 64" preserveAspectRatio="xMidYMid meet" role="img" aria-label="' + esc(t().col.cons + " " + fmtM(r.cons) + ", " + t().col.base + " " + fmtM(r.base) + ", " + t().col.fav + " " + fmtM(r.fav) + ", " + t().col.priceScan + " " + fmtM(r.price)) + '">';
     s += '<line x1="' + L + '" x2="' + R + '" y1="24" y2="24" stroke="var(--rule)" stroke-width="2"/>';
     s += '<rect x="' + x(r.cons) + '" y="18" width="' + Math.max(1, x(r.fav) - x(r.cons)) + '" height="12" rx="2" fill="var(--accent-soft)"/>';
     s += '<line x1="' + x(r.base) + '" x2="' + x(r.base) + '" y1="14" y2="34" stroke="var(--accent)" stroke-width="2"/>';
@@ -687,7 +688,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     s += '<text class="cap" x="' + x(r.base) + '" y="60" text-anchor="middle" fill="var(--accent)">' + esc(B.mid) + "</text>";
     s += '<text class="cap" x="' + x(r.fav) + '" y="60" text-anchor="middle">' + esc(B.hi) + "</text>";
     if (r.price !== null) s += '<text class="lbl-price" x="' + x(r.price) + '" y="9" text-anchor="middle">' + esc(fmtM(r.price)) + "</text>";
-    s += "</svg>";
+    s += "</svg></div>";
     return s;
   }
   function bandLegend() {
