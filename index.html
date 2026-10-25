@@ -127,6 +127,30 @@ h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1
 .band .lbl-price { fill: var(--ink); font-weight: 600; }
 .band .cap { font-family: var(--font-body); font-size: 8px; }
 .card .kv { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
+.kv dd[data-calc], .dr-key b[data-calc] { cursor: pointer; text-decoration: underline dotted var(--ink-2); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.calc-btn { justify-self: start; display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 0.82rem; font-weight: 600; color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 999px; padding: 6px 12px; cursor: pointer; min-height: 34px; }
+.calc-btn:hover { background: var(--accent-soft); }
+.calc-btn i { font-style: normal; display: inline-grid; place-items: center; width: 17px; height: 17px; border-radius: 50%; background: var(--accent); color: var(--sheet); font-family: Georgia, serif; font-weight: 700; font-size: 0.75rem; }
+.calc-scrim { position: fixed; inset: 0; z-index: 30; background: rgba(10, 16, 22, 0.5); display: flex; align-items: flex-end; justify-content: center; }
+.calc-sheet { width: min(620px, 100%); max-height: 86vh; overflow-y: auto; background: var(--sheet); border: 1px solid var(--rule); border-bottom: 0; border-radius: 16px 16px 0 0; padding: 0 18px calc(22px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 14px; align-content: start; animation: calcUp 0.22s ease-out; }
+@keyframes calcUp { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .calc-sheet { animation: none; } }
+@media (min-width: 720px) { .calc-scrim { align-items: center; } .calc-sheet { border-radius: 14px; border-bottom: 1px solid var(--rule); } }
+.calc-grab { width: 40px; height: 4px; border-radius: 2px; background: var(--rule); margin: 0 auto 10px; }
+.calc-top { position: sticky; top: 0; z-index: 1; background: var(--sheet); padding: 10px 0 10px; border-bottom: 1px solid var(--rule); }
+.calc-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.calc-head h3 { margin: 0; font-size: 1.05rem; }
+.calc-sec { border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; display: grid; gap: 6px; scroll-margin-top: 64px; transition: border-color 0.3s, background 0.3s; }
+.calc-sec.hl { border-color: var(--accent); background: var(--accent-soft); }
+.calc-sec header { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.calc-sec header span { font-size: 0.72rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.06em; }
+.calc-sec header b { font-family: var(--font-data); font-variant-numeric: tabular-nums; font-size: 1.1rem; white-space: nowrap; }
+.calc-sec p { margin: 0; font-size: 0.86rem; color: var(--ink-2); line-height: 1.45; }
+.calc-f { font-family: var(--font-data); font-variant-numeric: tabular-nums; font-size: 0.84rem; background: var(--paper); border-radius: 6px; padding: 8px 10px; overflow-wrap: anywhere; color: var(--ink); }
+.calc-src { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 14px; margin: 2px 0 0; }
+.calc-src div { display: flex; justify-content: space-between; gap: 8px; font-size: 0.82rem; border-bottom: 1px dashed var(--rule); padding-bottom: 3px; }
+.calc-src dt { color: var(--ink-2); } .calc-src dd { margin: 0; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+.calc-note { font-size: 0.8rem !important; font-style: italic; }
 
 /* Controls */
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
@@ -347,6 +371,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 </footer>
 
 <div id="drawer-root"></div>
+<div id="calc-root"></div>
 
 <script src="data/manifest.js"></script>
 <script>
@@ -461,6 +486,15 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       groups: { ok: "Aprobadas", wait: "Esperar precio", watch: "En observación", out: "Descartadas" },
       col: { priceScan: "Precio en el escáner", baseEst: "Valor estimado", date: "Fecha", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máx. 52s", pull: "Retroceso", opm: "Margen op.", fcf: "FCF/acc.", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decisión", depth: "Profundidad", why: "Motivo", cons: "Valor si va mal", base: "Valor estimado", fav: "Valor si va bien", disc: "Descuento que exige el plan", maxc: "Precio máximo de compra", mos: "Descuento sobre el valor", valRange: "Rango de valor (si va mal – si va bien)", next: "Próximo evento", r3: "Rent. 3m", r6: "Rent. 6m", r12: "Rent. 12m", x3: "Exceso 3m", x6: "Exceso 6m", x12: "Exceso 12m", via: "Vía", type: "Tipo", shares: "Acciones", exec: "Precio", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" },
       close: "Cerrar",
+      calc: { btn: "Cómo se calcula", title: "Cómo se calcula", tapHint: "Toca cualquier cifra subrayada de la tarjeta para saltar a su explicación.",
+        price: "Precio en el escáner", priceTxt: "Precio de cierre del {d}, tal como venía en el CSV del escáner de ese día. Es el precio con el que se hizo el análisis.", scanData: "Otros datos de esa fila del escáner (Stages 1 y 2):",
+        base: "Valor estimado", baseTxt: "Valor base (escenario central) del {rep}, analizado el {a}. Es lo que calculamos que vale la acción si el negocio evoluciona como esperamos.", report: "informe Stage 3 {id}", reportGen: "informe Stage 3",
+        range: "Rango de valor", rangeTxt: "Los dos escenarios extremos del mismo informe: «si va mal» (conservador) y «si va bien» (favorable). El valor estimado queda entre ambos.",
+        detail: "Datos del informe usados:", noDetail: "El desglose de los datos del informe (flujo de caja, múltiplo aplicado, crecimiento…) todavía no está cargado en la hoja para esta empresa.",
+        maxc: "Precio máximo de compra", maxcTxt: "Valor estimado menos el descuento que exige el plan para esta empresa ({p}). Por encima de este precio, el plan dice que no se compra.", maxcAdj: "El informe fija el máximo en {m} (redondeado o ajustado sobre el cálculo exacto).",
+        mos: "Descuento sobre el valor", mosTxt: "Cuánto más barata cotizaba la acción frente a su valor estimado el día del escáner. Positivo (verde) = más barata; negativo (rojo) = más cara.",
+        now: "Precio ahora frente al máximo", nowTxtAcct: "Último precio de la pestaña Cuenta de la hoja ({d}), comparado con el precio máximo de compra.", nowTxtScan: "Último precio del escáner ({d}), comparado con el precio máximo de compra.",
+        above: "por encima del máximo", below: "por debajo del máximo" },
       tracking: "Seguimiento",
       pending: "pendiente",
       yes: "Sí", no: "No",
@@ -573,6 +607,15 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       groups: { ok: "Approved", wait: "Wait for price", watch: "On watch", out: "Rejected" },
       col: { priceScan: "Price at scan", baseEst: "Estimated value", date: "Date", ticker: "Ticker", company: "Company", price: "Price", pe: "P/E", high: "52w high", pull: "Pullback", opm: "Op. margin", fcf: "FCF/sh", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decision", depth: "Depth", why: "Reason", cons: "Value if it goes badly", base: "Estimated value", fav: "Value if it goes well", disc: "Discount the plan requires", maxc: "Max. buy price", mos: "Discount to value", valRange: "Value range (badly – well)", next: "Next event", r3: "Ret. 3m", r6: "Ret. 6m", r12: "Ret. 12m", x3: "Excess 3m", x6: "Excess 6m", x12: "Excess 12m", via: "Path", type: "Type", shares: "Shares", exec: "Price", amount: "Amount", stop: "Stop S", m: "Low M", signal: "Signal or reason", notes: "Notes", fee: "Fee" },
       close: "Close",
+      calc: { btn: "How it's calculated", title: "How it's calculated", tapHint: "Tap any underlined figure on the card to jump to its explanation.",
+        price: "Price at scan", priceTxt: "Closing price on {d}, as it came in that day's scanner CSV. It's the price the analysis used.", scanData: "Other data from that scanner row (Stages 1 and 2):",
+        base: "Estimated value", baseTxt: "Base value (central case) from {rep}, analyzed on {a}. It's what we calculate the share is worth if the business performs as expected.", report: "Stage 3 report {id}", reportGen: "the Stage 3 report",
+        range: "Value range", rangeTxt: "The two outer scenarios from the same report: \"if it goes badly\" (conservative) and \"if it goes well\" (favorable). The estimated value sits between them.",
+        detail: "Report data used:", noDetail: "The breakdown of the report's inputs (cash flow, multiple applied, growth…) isn't loaded in the sheet for this company yet.",
+        maxc: "Max. buy price", maxcTxt: "Estimated value minus the discount the plan requires for this company ({p}). Above this price, the plan says don't buy.", maxcAdj: "The report sets the max at {m} (rounded or adjusted from the exact calculation).",
+        mos: "Discount to value", mosTxt: "How much cheaper the stock traded than its estimated value on the scan day. Positive (green) = cheaper; negative (red) = more expensive.",
+        now: "Price now vs. max", nowTxtAcct: "Latest price from the sheet's Cuenta tab ({d}), compared with the max. buy price.", nowTxtScan: "Latest scanner price ({d}), compared with the max. buy price.",
+        above: "above the max", below: "below the max" },
       tracking: "Tracking",
       pending: "pending",
       yes: "Yes", no: "No",
@@ -660,7 +703,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return out;
   }
   var SCAN_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máximo 52 semanas", pull: "Retroceso desde máximo", opm: "Margen operativo", fcf: "FCF por acción", qp: "QP Score", opp: "Opportunity", rsi: "RSI 14", s2: "Pasa Stage 2" };
-  var DEC_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio en escáner", adate: "Fecha análisis", depth: "Profundidad", decision: "Decisión", why: "Motivo", cons: "Valor conservador", base: "Valor base", fav: "Valor favorable", disc: "Descuento exigido", maxc: "Máximo condicionado", mos: "Margen vs base", next: "Próximo evento", p3: "Precio +3m", p6: "Precio +6m", p12: "Precio +12m", r3: "Rentab. +3m", r6: "Rentab. +6m", r12: "Rentab. +12m", spy: "SPY en escáner", x3: "Exceso vs SPY +3m", x6: "Exceso vs SPY +6m", x12: "Exceso vs SPY +12m", whyEn: "Motivo (EN)", nextEn: "Próximo evento (EN)" };
+  var DEC_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio en escáner", adate: "Fecha análisis", depth: "Profundidad", decision: "Decisión", why: "Motivo", cons: "Valor conservador", base: "Valor base", fav: "Valor favorable", disc: "Descuento exigido", maxc: "Máximo condicionado", mos: "Margen vs base", next: "Próximo evento", p3: "Precio +3m", p6: "Precio +6m", p12: "Precio +12m", r3: "Rentab. +3m", r6: "Rentab. +6m", r12: "Rentab. +12m", spy: "SPY en escáner", x3: "Exceso vs SPY +3m", x6: "Exceso vs SPY +6m", x12: "Exceso vs SPY +12m", whyEn: "Motivo (EN)", nextEn: "Próximo evento (EN)", calc: "Cálculo", calcEn: "Cálculo (EN)" };
   var OPS_MAP = { date: "Fecha", ticker: "Ticker", via: "Vía (A, B o C)", type: "Tipo (Compra o Venta)", shares: "Acciones", exec: "Precio de ejecución", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" };
   var RETRO_MAP = { ticker: "Empresa", grp: "Grupo", ddate: "Fecha decisión", why: "Motivo", whyEn: "Motivo (EN)", rdate: "Fecha referencia", price: "Precio inicial", hz: "Horizonte", edate: "Fecha final", ret: "Retorno acción", spy: "Retorno SPY", ex: "Exceso vs SPY", up: "Máxima subida", down: "Máxima caída", rep: "Informe (ID)" };
   var NUM_RETRO = ["price", "ret", "spy", "ex", "up", "down"];
@@ -857,12 +900,86 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return h;
   }
   function card(r) {
-    return '<button type="button" class="card" data-open="' + esc(r.date + "|" + r.ticker) + '">' +
+    var k = esc(r.date + "|" + r.ticker);
+    function cv(f) { return ' data-calc="' + k + "|" + f + '"'; }
+    return '<div class="card" role="group" tabindex="0" aria-label="' + esc(r.ticker) + '" data-open="' + k + '">' +
       '<div class="card-top"><div><div class="tick">' + esc(r.ticker) + '</div><div class="co">' + esc(r.company) + "</div></div>" + pill(r.decision) + "</div>" +
       band(r) +
-      '<dl class="kv"><div><dt>' + esc(t().col.priceScan) + "</dt><dd>" + esc(fmtM(r.price)) + "</dd></div><div><dt>" + esc(t().col.base) + '</dt><dd style="color:var(--accent)">' + esc(fmtM(r.base)) + "</dd></div><div><dt>" + esc(t().col.maxc) + "</dt><dd>" + esc(fmtM(r.maxc)) + "</dd></div><div><dt>" + esc(t().col.mos) + '</dt><dd class="' + signCls(r.mos) + '">' + esc(fmtP(r.mos)) + "</dd></div>" +
-      (r.cons !== null && r.fav !== null ? '<div style="grid-column:1/-1"><dt>' + esc(t().col.valRange) + "</dt><dd>" + esc(fmtM(r.cons) + " – " + fmtM(r.fav)) + "</dd></div>" : "") + "</dl>" +
-      "<p>" + esc(whyOf(r)) + "</p>" + nowLine(r) + "</button>";
+      '<dl class="kv"><div><dt>' + esc(t().col.priceScan) + "</dt><dd" + cv("price") + ">" + esc(fmtM(r.price)) + "</dd></div><div><dt>" + esc(t().col.base) + '</dt><dd style="color:var(--accent)"' + cv("base") + ">" + esc(fmtM(r.base)) + "</dd></div><div><dt>" + esc(t().col.maxc) + "</dt><dd" + cv("maxc") + ">" + esc(fmtM(r.maxc)) + "</dd></div><div><dt>" + esc(t().col.mos) + '</dt><dd class="' + signCls(r.mos) + '"' + cv("mos") + ">" + esc(fmtP(r.mos)) + "</dd></div>" +
+      (r.cons !== null && r.fav !== null ? '<div style="grid-column:1/-1"><dt>' + esc(t().col.valRange) + "</dt><dd" + cv("range") + ">" + esc(fmtM(r.cons) + " – " + fmtM(r.fav)) + "</dd></div>" : "") + "</dl>" +
+      "<p>" + esc(whyOf(r)) + "</p>" + nowLine(r) +
+      '<button type="button" class="calc-btn" data-calc="' + k + '|"><i aria-hidden="true">i</i>' + esc(t().calc.btn) + "</button></div>";
+  }
+
+  /* ---------- "how it's calculated" sheet ---------- */
+  function openCalc(key) {
+    if (!S.dec) return;
+    var p = key.split("|"), focus = p[2] || "";
+    var r = S.dec.filter(function (x) { return x.date === p[0] && x.ticker === p[1]; })[0];
+    if (!r) return;
+    var L = t().calc, C = t().col;
+    function sub(str, o) { return str.replace(/\{(\w+)\}/g, function (m, k) { return o[k] !== undefined ? o[k] : m; }); }
+    function sec(id, label, val, cls, body) { return '<section class="calc-sec" id="calc-' + id + '"><header><span>' + esc(label) + '</span><b class="' + (cls || "") + '">' + esc(val) + "</b></header>" + body + "</section>"; }
+    function para(x, c) { return "<p" + (c ? ' class="' + c + '"' : "") + ">" + esc(x) + "</p>"; }
+    function fml(x) { return '<div class="calc-f">' + esc(x) + "</div>"; }
+    var idm = String(r.why || "").match(/\binforme\s+(A\d{2,4})\b/i) || String(r.whyEn || "").match(/\breport\s+(A\d{2,4})\b/i);
+    var repTxt = idm ? sub(L.report, { id: idm[1] }) : L.reportGen;
+    var h = '<div class="calc-scrim" id="calc-scrim"><div class="calc-sheet" role="dialog" aria-modal="true" aria-labelledby="calc-t"><div class="calc-top"><div class="calc-grab" aria-hidden="true"></div>' +
+      '<div class="calc-head"><div><h3 id="calc-t">' + esc(L.title) + '</h3><div class="co">' + esc(r.ticker + " · " + r.company) + '</div></div><button class="btn" type="button" id="calc-close">' + esc(t().close) + "</button></div></div>";
+
+    /* 1. price at scan + the scanner row it came from */
+    var sr = (S.scan || []).filter(function (x) { return x.date === r.date && x.ticker === r.ticker; })[0], src = "";
+    if (sr) {
+      var it = [[C.pe, fmtN(sr.pe, 1)], [C.fcf, fmtM(sr.fcf)], [C.opm, fmtP(sr.opm)], [C.high, fmtM(sr.high)], [C.pull, fmtP(sr.pull)], [C.rsi, fmtN(sr.rsi, 1)], [C.qp, fmtN(sr.qp, 0)], [C.opp, fmtN(sr.opp, 0)]];
+      src = para(L.scanData) + '<dl class="calc-src">' + it.map(function (z) { return "<div><dt>" + esc(z[0]) + "</dt><dd>" + esc(z[1]) + "</dd></div>"; }).join("") + "</dl>";
+    }
+    h += sec("price", L.price, fmtM(r.price), "", para(sub(L.priceTxt, { d: fmtD(r.date) })) + src);
+
+    /* 2. estimated value (from the Stage 3 report) */
+    var det = lang === "en" && r.calcEn ? r.calcEn : r.calc;
+    var detHtml = det ? para(L.detail) + String(det).split(/\n+/).filter(function (x) { return x.trim(); }).map(function (x) { return fml(x.trim()); }).join("") : para(L.noDetail, "calc-note");
+    h += sec("base", L.base, fmtM(r.base), "", para(sub(L.baseTxt, { rep: repTxt, a: fmtD(r.adate || r.date) })) + detHtml);
+
+    /* 3. range */
+    if (r.cons !== null && r.fav !== null) h += sec("range", L.range, fmtM(r.cons) + " – " + fmtM(r.fav), "", para(L.rangeTxt) +
+      fml(t().bandCap.lo + ": " + fmtM(r.cons) + " · " + t().bandCap.mid + ": " + fmtM(r.base) + " · " + t().bandCap.hi + ": " + fmtM(r.fav)));
+
+    /* 4. max buy price */
+    if (r.maxc !== null) {
+      var mb = "";
+      if (r.base !== null && r.disc !== null) {
+        var exact = r.base * (1 - r.disc);
+        mb = para(sub(L.maxcTxt, { p: fmtP(r.disc, 0) })) + fml(fmtM(r.base) + " × (1 − " + fmtP(r.disc, 0) + ") = " + fmtM(exact)) +
+          (Math.abs(exact - r.maxc) >= 0.005 ? para(sub(L.maxcAdj, { m: fmtM(r.maxc) }), "calc-note") : "");
+      } else mb = para(sub(L.maxcTxt, { p: "—" }));
+      h += sec("maxc", L.maxc, fmtM(r.maxc), "", mb);
+    }
+
+    /* 5. discount to value */
+    if (r.mos !== null) h += sec("mos", L.mos, fmtP(r.mos), signCls(r.mos), para(L.mosTxt) +
+      (r.base !== null && r.price !== null ? fml("(" + fmtM(r.base) + " − " + fmtM(r.price) + ") ÷ " + fmtM(r.base) + " = " + fmtP((r.base - r.price) / r.base)) : ""));
+
+    /* 6. price now vs max */
+    var lp = lastPrice(r.ticker);
+    if (lp && r.maxc) {
+      var vs = lp.p / r.maxc - 1, fromAcct = !!(S.acct && S.acct.prices && S.acct.prices[r.ticker]);
+      h += sec("now", L.now + " · " + (vs > 0 ? L.above : L.below), (vs > 0 ? "+" : "") + fmtP(vs), vs > 0 ? "neg" : "pos",
+        para(sub(fromAcct ? L.nowTxtAcct : L.nowTxtScan, { d: lp.d ? fmtD(lp.d) : t().apst.now })) + fml(fmtM(lp.p) + " ÷ " + fmtM(r.maxc) + " − 1 = " + (vs > 0 ? "+" : "") + fmtP(vs)));
+    }
+    if (!focus) h += para(L.tapHint, "calc-note");
+    h += "</div></div>";
+
+    var root = document.getElementById("calc-root"), prevFocus = document.activeElement;
+    root.innerHTML = h;
+    var btn = document.getElementById("calc-close");
+    function close() { root.innerHTML = ""; document.removeEventListener("keydown", onKey, true); if (prevFocus && prevFocus.focus) try { prevFocus.focus({ preventScroll: true }); } catch (x) {} }
+    function onKey(e) { if (e.key === "Escape") { e.stopPropagation(); close(); } }
+    btn.addEventListener("click", close);
+    document.getElementById("calc-scrim").addEventListener("click", function (e) { if (e.target.id === "calc-scrim") close(); });
+    document.addEventListener("keydown", onKey, true);
+    var tgt = focus && document.getElementById("calc-" + focus);
+    if (tgt) { tgt.classList.add("hl"); tgt.scrollIntoView({ block: "start" }); setTimeout(function () { tgt.classList.remove("hl"); }, 1800); }
+    btn.focus({ preventScroll: true });
   }
 
   function vEscaner() {
@@ -1458,14 +1575,15 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (!r) return;
     var C = t().col;
     function f(label, val, cls) { return "<div><dt>" + esc(label) + '</dt><dd class="' + (cls || "") + '">' + val + "</dd></div>"; }
-    function kb(label, val, cls, st) { return "<div><span>" + esc(label) + '</span><b class="' + (cls || "") + '"' + (st ? ' style="' + st + '"' : "") + ">" + esc(val) + "</b></div>"; }
+    function kb(label, val, cls, st, cf) { return "<div><span>" + esc(label) + '</span><b class="' + (cls || "") + '"' + (st ? ' style="' + st + '"' : "") + (cf ? ' data-calc="' + esc(key + "|" + cf) + '"' : "") + ">" + esc(val) + "</b></div>"; }
     function li(label, val, cls) { return "<div><dt>" + esc(label) + '</dt><dd class="' + (cls || "") + '">' + val + "</dd></div>"; }
     var h = '<div class="scrim" id="scrim"><aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-t">' +
       '<div class="drawer-head"><div><div class="tick" id="dr-t">' + esc(r.ticker) + '</div><div class="co">' + esc(r.company) + '</div></div><button class="btn" type="button" id="dr-close">' + esc(t().close) + "</button></div>" +
       "<div>" + pill(r.decision) + ' <span class="muted">· ' + esc(depthLabel(r.depth)) + " · " + esc(fmtD(r.date)) + "</span></div>" +
       "<p style=\"margin:0\">" + esc(whyOf(r)) + "</p>" +
       (r.base !== null ? band(r) + bandLegend() : "") +
-      '<div class="dr-key">' + kb(C.priceScan, fmtM(r.price)) + kb(C.base, fmtM(r.base), "", "color:var(--accent)") + kb(C.maxc, fmtM(r.maxc)) + kb(C.mos, fmtP(r.mos), signCls(r.mos)) + "</div>" +
+      '<div class="dr-key">' + kb(C.priceScan, fmtM(r.price), "", "", "price") + kb(C.base, fmtM(r.base), "", "color:var(--accent)", "base") + kb(C.maxc, fmtM(r.maxc), "", "", "maxc") + kb(C.mos, fmtP(r.mos), signCls(r.mos), "", "mos") + "</div>" +
+      '<button type="button" class="calc-btn" data-calc="' + esc(key) + '|"><i aria-hidden="true">i</i>' + esc(t().calc.btn) + "</button>" +
       '<dl class="dr-list">' +
       li(C.valRange, r.cons !== null && r.fav !== null ? esc(fmtM(r.cons) + " – " + fmtM(r.fav)) : "—") +
       li(C.disc, esc(r.disc === null ? "—" : fmtP(r.disc, 0))) +
@@ -1540,13 +1658,15 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (lq) { document.getElementById("drawer-root").innerHTML = ""; S.view = "biblioteca"; S.libSel = null; S.libQ = lq.getAttribute("data-libq"); S.libCat = "all"; try { history.replaceState(null, "", "#biblioteca"); } catch (x) {} render(); window.scrollTo(0, 0); return; }
     if (e.target.id === "lib-back") { S.libSel = null; render(); window.scrollTo(0, 0); return; }
     if (e.target.id === "latest-only") { S.latestOnly = !S.latestOnly; render(); return; }
+    var cc = e.target.closest("[data-calc]");
+    if (cc) { openCalc(cc.getAttribute("data-calc")); return; }
     var op = e.target.closest("[data-open]");
     if (op) { openDetail(op.getAttribute("data-open")); return; }
     if (e.target.id === "only-s2") { S.onlyS2 = !S.onlyS2; render(); return; }
     if (e.target.closest("[data-allow]")) { loadOnce(); return; }
   });
   document.addEventListener("keydown", function (e) {
-    if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("tr.click, .plrow.click")) { e.preventDefault(); openDetail(e.target.getAttribute("data-open")); }
+    if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("tr.click, .plrow.click, div.card")) { e.preventDefault(); openDetail(e.target.getAttribute("data-open")); }
   });
   document.addEventListener("change", function (e) { if (e.target.id === "scan-date") { S.scanDate = e.target.value; render(); } if (e.target.id === "res-date") { S.resDate = e.target.value; render(); } if (e.target.id === "ana-date") { S.anaDate = e.target.value; S.anaFilter = "all"; render(); } });
   var libT;
