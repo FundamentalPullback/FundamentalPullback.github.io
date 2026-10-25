@@ -588,7 +588,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     loadedAt: null,
     view: "cartera",
     scanDate: null, onlyS2: true, scanQ: "",
-    anaFilter: "all", rejFilter: "all", resDate: null, anaDate: null, latestOnly: true,
+    anaFilter: "all", rejFilter: "all", rejQ: "", anaQ: "", resDate: null, anaDate: null, latestOnly: true,
     retroHz: "corte", retroGrp: "all",
     lib: null, libState: "idle", libQ: "", libCat: "all", libSel: null,
     sort: {}
@@ -885,6 +885,13 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     list.forEach(function (r) { var k = String(r.adate || "") + "|" + String(r.date || ""), c = by[r.ticker]; if (!c || k >= c.k) by[r.ticker] = { k: k, r: r }; });
     return Object.keys(by).map(function (tk) { return by[tk].r; });
   }
+  function qMatch(q) {
+    q = String(q || "").trim().toLowerCase();
+    return function (r) { return !q || String(r.ticker).toLowerCase().indexOf(q) === 0 || String(r.company || "").toLowerCase().split(/[^a-z0-9&]+/).some(function (w) { return w.indexOf(q) === 0; }); };
+  }
+  function searchBox(id, val, n) {
+    return '<div class="controls"><input type="search" id="' + id + '" placeholder="' + esc(t().search) + '" aria-label="' + esc(t().search) + '" value="' + esc(val) + '" autocomplete="off"><span class="status">' + n + "</span></div>";
+  }
   function latestToggle() { return '<button type="button" class="chip" id="latest-only" aria-pressed="' + S.latestOnly + '">' + esc(t().latestOnly) + "</button>"; }
   function vAnalisis() {
     var g = guard(["dec"]);
@@ -896,8 +903,9 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var counts = {}; rows.forEach(function (r) { counts[r.decision] = (counts[r.decision] || 0) + 1; });
     var opts = [{ v: "all", l: t().all + " · " + rows.length }].concat(DEC_ORDER.filter(function (d) { return counts[d]; }).map(function (d) { return { v: d, l: decLabel(d) + " · " + counts[d] }; }));
     if (S.anaFilter !== "all") rows = rows.filter(function (r) { return r.decision === S.anaFilter; });
+    rows = rows.filter(qMatch(S.anaQ));
     var sel = '<label class="inline" for="ana-date">' + esc(t().anaDate) + ' <select id="ana-date">' + dates.map(function (x) { return '<option value="' + esc(x) + '"' + (x === S.anaDate ? " selected" : "") + ">" + esc(fmtD(x)) + "</option>"; }).join("") + "</select></label>";
-    return head(t().anaTitle, t().anaLede, sel) + chips("ana", S.anaFilter, opts) + table("ana", decCols(), rows, { click: true });
+    return head(t().anaTitle, t().anaLede, sel) + chips("ana", S.anaFilter, opts) + searchBox("ana-q", S.anaQ, rows.length) + table("ana", decCols(), rows, { click: true });
   }
   /* is an approval still actionable? bought since, or too many scans old = no */
   var STALE_SCANS = 3;
@@ -957,8 +965,9 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var counts = {}; rows.forEach(function (r) { counts[r.decision] = (counts[r.decision] || 0) + 1; });
     var opts = [{ v: "all", l: t().all + " · " + rows.length }].concat(["Esperar precio", "En observación", "Descartada"].filter(function (d) { return counts[d]; }).map(function (d) { return { v: d, l: decLabel(d) + " · " + counts[d] }; }));
     if (S.rejFilter !== "all") rows = rows.filter(function (r) { return r.decision === S.rejFilter; });
+    rows = rows.filter(qMatch(S.rejQ));
     var C = t().col;
-    return head(t().rejTitle, t().rejLede) + '<div class="controls">' + latestToggle() + "</div>" + chips("rej", S.rejFilter, opts) +
+    return head(t().rejTitle, t().rejLede) + '<div class="controls">' + latestToggle() + "</div>" + chips("rej", S.rejFilter, opts) + searchBox("rej-q", S.rejQ, rows.length) +
       table("rej", [labelled(cT("date"), C.date)].concat(decCols([labelled(cP("r3", true), C.r3), labelled(cP("x3", true), C.x3)])), rows, { click: true });
   }
   function vOperaciones() {
@@ -1446,7 +1455,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         var focusId = document.activeElement && document.activeElement.id;
         el.innerHTML = '<div style="display:grid;gap:16px">' + RENDER[v]() + "</div>";
         if (v === "cartera") drawEquity();
-        if (focusId === "scan-q" || focusId === "lib-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
+        if (focusId === "scan-q" || focusId === "lib-q" || focusId === "rej-q" || focusId === "ana-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
       }
     });
   }
@@ -1484,6 +1493,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   var libT;
   document.addEventListener("input", function (e) {
     if (e.target.id === "scan-q") { S.scanQ = e.target.value; render(); }
+    if (e.target.id === "rej-q" || e.target.id === "ana-q") { S[e.target.id === "rej-q" ? "rejQ" : "anaQ"] = e.target.value; clearTimeout(libT); libT = setTimeout(render, 150); }
     if (e.target.id === "lib-q") { S.libQ = e.target.value; clearTimeout(libT); libT = setTimeout(render, 180); }
   });
   var rsz; window.addEventListener("resize", function () { clearTimeout(rsz); rsz = setTimeout(function () { if (S.view === "cartera") drawEquity(); }, 120); });
