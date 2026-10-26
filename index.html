@@ -433,7 +433,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         liveTitle: "Aprobadas en el último análisis", liveLede: "Aprobado no significa autorizado: cada ficha fija su señal, su caducidad y cómo tratar los resultados, y una ficha suspendida o caducada no se reactiva por precio ni por volver a salir en el escáner. «Ahora» es el último precio conocido frente al precio máximo de compra.",
         noneLive: "No hay aprobaciones en el último análisis.",
         oldTitle: "De análisis anteriores", oldLede: "Aprobaciones que no forman parte del último análisis, o ya compradas. No sirven para operar sin un análisis nuevo.", notOrder: "(condición necesaria, no orden de compra)",
-        now: "Ahora", above: "por encima del precio máximo de compra", below: "por debajo del precio máximo de compra" },
+        now: "Ahora", liveTag: "en vivo, {t}", today: "hoy", above: "por encima del precio máximo de compra", below: "por debajo del precio máximo de compra" },
       retro: {
         title: "Retrospectiva", lede: "Qué hicieron después las candidatas que no se compraron, frente al SPY en el mismo periodo. Datos de la auditoría del 22 oct 2026 (informe A088), con precios hasta el 21 oct. Retornos de precio, sin costes ni dividendos.",
         hz: { "5": "5 sesiones", "10": "10 sesiones", corte: "Hasta el 21 oct" }, hzLbl: "Horizonte",
@@ -564,7 +564,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         liveTitle: "Approved in the latest analysis", liveLede: "Approved doesn't mean authorized: each plan sets its signal, its expiry and how to handle earnings, and a suspended or expired plan isn't revived by price or by reappearing in the scan. \"Now\" is the latest known price against the max. buy price.",
         noneLive: "No approvals in the latest analysis.",
         oldTitle: "From earlier analyses", oldLede: "Approvals that aren't part of the latest analysis, or already bought. Not usable for trading without a new analysis.", notOrder: "(a necessary condition, not a buy order)",
-        now: "Now", above: "above the max. buy price", below: "below the max. buy price" },
+        now: "Now", liveTag: "live, {t}", today: "today", above: "above the max. buy price", below: "below the max. buy price" },
       retro: {
         title: "Hindsight", lede: "What the candidates that weren't bought did afterwards, against SPY over the same period. Data from the Oct 22, 2026 audit (report A088), with prices up to Oct 21. Price returns, without costs or dividends.",
         hz: { "5": "5 sessions", "10": "10 sessions", corte: "Up to Oct 21" }, hzLbl: "Horizon",
@@ -1116,6 +1116,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   }
   /* is an approval still actionable? bought since, or too many scans old = no */
   function lastPrice(tk) {
+    var lv = S.live && S.live.prices && S.live.prices[tk];
+    if (lv && lv.p !== null && lv.p !== undefined && marketState() === "open") return { p: lv.p, live: true, at: S.live.at, prev: lv.prev };
     var q = S.acct && S.acct.prices && S.acct.prices[tk];
     if (q && q.p !== null && q.p !== undefined) return { p: q.p, d: S.snapshot || null, live: !S.snapshot };
     var best = null;
@@ -1137,7 +1139,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var lp = lastPrice(r.ticker), A = t().apst;
     if (!lp) return "";
     var vs = r.maxc !== null && r.maxc ? lp.p / r.maxc - 1 : null;
-    return '<p class="muted">' + esc(A.now + " " + fmtM(lp.p) + (lp.d ? " (" + fmtDs(lp.d) + ")" : "")) +
+    var when = lp.live ? A.liveTag.replace("{t}", lp.at ? new Intl.DateTimeFormat(loc(), { hour: "2-digit", minute: "2-digit", timeZone: "America/New_York" }).format(new Date(lp.at)) : "—") + (lp.prev ? " · " + (lp.p >= lp.prev ? "+" : "") + fmtP(lp.p / lp.prev - 1) + " " + A.today : "") : (lp.d ? fmtDs(lp.d) : "");
+    return '<p class="muted">' + esc(A.now + " " + fmtM(lp.p) + (when ? " (" + when + ")" : "")) +
       (vs !== null ? ' · <span class="' + (vs > 0 ? "neg" : "pos") + '">' + esc(fmtP(Math.abs(vs)) + " " + (vs > 0 ? A.above : A.below + " " + A.notOrder)) + "</span>" : "") + "</p>";
   }
   function vAprobadas() {
@@ -1341,7 +1344,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         });
         if (!L.prices.SPY) throw new Error("format");
         S.live = L;
-        if (S.view === "cartera") render();
+        if (["cartera", "resumen", "aprobadas"].indexOf(S.view) >= 0 && !(document.activeElement && /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName))) render();
       })
       .catch(function () { /* keep the last good live read; the close numbers are unaffected */ });
   }
