@@ -1,1 +1,1 @@
-window.FP_MANIFEST={"generated": "2026-10-26T22:23:15+00:00", "asOf": "2026-10-26", "scanRows": 2850, "files": ["data/scan-base.js", "data/dec.js", "data/ops.js", "data/acct.js", "data/hist.js", "data/retro.js", "data/ges.js"]};
+window.FP_MANIFEST={"generated": "2026-10-26T22:26:34+00:00", "asOf": "2026-10-26", "scanRows": 3025, "files": ["data/scan-base.js", "data/scan-2852.js", "data/dec.js", "data/ops.js", "data/acct.js", "data/hist.js", "data/retro.js", "data/ges.js"]};
