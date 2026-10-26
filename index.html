@@ -256,6 +256,14 @@ tr.click:hover td { background: var(--paper); }
 .muted { color: var(--ink-2); }
 
 /* States */
+.live-panel { border-left: 3px solid var(--s3); gap: 12px; }
+.live-panel h3 { display: flex; align-items: center; gap: 8px; }
+.live-panel:not(.live-off) h3::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 3px var(--ok-bg); }
+.live-figs .fig b { font-size: 1.15rem; }
+.live-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.live-chip { display: inline-flex; gap: 6px; align-items: baseline; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 999px; font-family: var(--font-data); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+.live-chip .pos { color: var(--ok); } .live-chip .neg { color: var(--neg); }
+.live-foot { margin: 0; font-size: 0.78rem; }
 .notice { border: 1px dashed var(--rule); border-radius: 8px; padding: 18px; background: var(--sheet); display: grid; gap: 8px; }
 .notice strong { font-family: var(--font-display); font-size: 1rem; }
 .notice p { margin: 0; color: var(--ink-2); max-width: 70ch; }
@@ -395,6 +403,9 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 (function () {
   "use strict";
   var SHEET_ID = "1xHLydY52p_EcbW_mnRZMxGwyu9DI4SLGtZGCjbWVJXg";
+  /* "Live" tab of the sheet, published to the web as CSV (File > Share > Publish to web). Empty = no live panel. */
+  var LIVE_URL = "";
+  var LIVE_EVERY = 120000;   /* re-read every 2 minutes while the page is visible */
   var SERVER = "Google Sheets";
   var TOOL = "get_values";
   var RANGES = {
@@ -449,6 +460,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         protTitle: "Protecciones", sl: "Stop loss", slSub: "{p} por debajo del precio actual", slNone: "sin stop registrado", stop: "Stop loss S (manual: salta si el precio lo toca)", trail: "Stop por cierre (trailing: solo cuenta el cierre)", m: "Mínimo M (referencia de la regla de salida)", toStop: "{p} por debajo del precio", below: "¡el precio ya está por debajo!", next: "Próximo evento",
         valTitle: "Última valoración", valOf: "Análisis del {d}", noVal: "No hay una valoración completa (valor estimado y escenarios) registrada en el historial para esta empresa.", openRec: "Ver ficha", reports: "Informes sobre {t} →", allPos: "Ver todas las posiciones →",
         none: "No hay posiciones abiertas." },
+      live: { title: "Hoy, en vivo", sub: "Movimiento desde el cierre anterior. Precios de Google con hasta ~20 min de retraso: lo que cuenta es el cierre de arriba.", value: "Valor ahora", day: "Hoy", spy: "SPY hoy", vsSpy: "Cuenta vs SPY hoy", upd: "Precios leídos a las {t} (hora de Nueva York)", stale: "Los precios llevan más de 30 minutos sin actualizarse.", closed: "Mercado cerrado. Los números en vivo aparecen de 9:30 a 16:00 (Nueva York), de lunes a viernes.", pre: "Antes de la apertura: aún no hay movimiento de hoy.", tradesNote: "Usa las posiciones del último cierre: una compra o venta de hoy aparece tras la actualización diaria.", byPos: "Por posición, hoy", headline: "Al cierre del {d}", lastSession: "Última sesión" },
       cart: {
         title: "Cartera", lede: "Valor de la cuenta con precios de GOOGLEFINANCE (pueden ir con unos 20 minutos de retraso). Coste medio; incluye las comisiones registradas, sin dividendos.", feesLbl: "comisiones",
         capital: "Capital inicial", capNote: "se cambia en la pestaña Cuenta de la hoja",
@@ -579,6 +591,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
         protTitle: "Protections", sl: "Stop loss", slSub: "{p} below the current price", slNone: "no stop recorded", stop: "Stop loss S (manual: triggers if the price touches it)", trail: "Closing stop (trailing: only the close counts)", m: "Low M (reference for the exit rule)", toStop: "{p} below the price", below: "price is already below it!", next: "Next event",
         valTitle: "Latest valuation", valOf: "Analysis of {d}", noVal: "No full valuation (estimated value and scenarios) is recorded in the history for this company.", openRec: "Open record", reports: "Reports on {t} →", allPos: "See all positions →",
         none: "No open positions." },
+      live: { title: "Today, live", sub: "Move since the previous close. Google prices delayed up to ~20 min: the close above is what counts.", value: "Value now", day: "Today", spy: "SPY today", vsSpy: "Account vs SPY today", upd: "Prices read at {t} (New York time)", stale: "Prices haven't updated for over 30 minutes.", closed: "Market closed. Live numbers show from 9:30 to 16:00 (New York), Monday to Friday.", pre: "Before the open: no move for today yet.", tradesNote: "Uses the positions as of the last close: a buy or sale made today shows after the daily update.", byPos: "By position, today", headline: "As of the close on {d}", lastSession: "Last session" },
       cart: {
         title: "Portfolio", lede: "Account value using GOOGLEFINANCE prices (may lag by about 20 minutes). Average-cost basis; includes recorded fees, excludes dividends.", feesLbl: "fees",
         capital: "Starting capital", capNote: "change it in the sheet's Cuenta tab",
@@ -1288,6 +1301,81 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     }).join("") + "</div>";
     return h;
   }
+
+  /* ---------- live prices (published "Live" tab) ---------- */
+  function nyNow() {
+    var o = {}; new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+      .formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
+    return { wd: o.weekday, min: (+o.hour) * 60 + (+o.minute) };
+  }
+  function marketState() {
+    var n = nyNow();
+    if (n.wd === "Sat" || n.wd === "Sun") return "closed";
+    if (n.min < 570) return "pre";
+    return n.min < 960 ? "open" : "closed";
+  }
+  function parseCsv(txt) {
+    var rows = [], row = [], cur = "", q = false;
+    for (var i = 0; i < txt.length; i++) {
+      var c = txt[i];
+      if (q) { if (c === '"') { if (txt[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
+      else if (c === '"') q = true;
+      else if (c === ",") { row.push(cur); cur = ""; }
+      else if (c === "\n" || c === "\r") { if (c === "\r" && txt[i + 1] === "\n") i++; row.push(cur); rows.push(row); row = []; cur = ""; }
+      else cur += c;
+    }
+    if (cur || row.length) { row.push(cur); rows.push(row); }
+    return rows;
+  }
+  function liveInt(v) { var s = String(v || "").trim(); return /^-?\d+$/.test(s) ? +s / 10000 : null; }
+  function loadLive() {
+    if (!LIVE_URL || document.hidden) return;
+    fetch(LIVE_URL + (LIVE_URL.indexOf("?") < 0 ? "?" : "&") + "_=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function (txt) {
+        var rows = parseCsv(txt), L = { prices: {}, at: null };
+        rows.slice(1).forEach(function (r, i) {
+          var tk = String(r[0] || "").trim();
+          if (i === 0 && /^\d+$/.test(String(r[3] || "").trim())) L.at = +String(r[3]).trim() * 1000;
+          if (tk) L.prices[tk] = { p: liveInt(r[1]), prev: liveInt(r[2]) };
+        });
+        if (!L.prices.SPY) throw new Error("format");
+        S.live = L;
+        if (S.view === "cartera") render();
+      })
+      .catch(function () { /* keep the last good live read; the close numbers are unaffected */ });
+  }
+  function livePanel(open, cash) {
+    var LV = t().live, L = S.live;
+    if (!LIVE_URL || !L) return "";
+    var ms = marketState();
+    var hd = '<div><h3>' + esc(LV.title) + '</h3><p class="lede">' + esc(LV.sub) + "</p></div>";
+    if (ms !== "open") return '<div class="panel live-panel live-off">' + hd + '<p class="muted" style="margin:0">' + esc(ms === "pre" ? LV.pre : LV.closed) + "</p></div>";
+    var val = cash, day = 0, prevVal = cash, ok = true, rows = [];
+    open.forEach(function (p) {
+      var q = L.prices[p.ticker];
+      if (!q || q.p === null || q.prev === null) { ok = false; return; }
+      val += p.shares * q.p; prevVal += p.shares * q.prev; day += p.shares * (q.p - q.prev);
+      rows.push({ t: p.ticker, r: q.p / q.prev - 1, a: p.shares * (q.p - q.prev) });
+    });
+    if (!ok || cash === null) return "";
+    var dayPct = prevVal ? day / prevVal : null, sq = L.prices.SPY, spyDay = sq && sq.p !== null && sq.prev ? sq.p / sq.prev - 1 : null;
+    var diff = dayPct !== null && spyDay !== null ? dayPct - spyDay : null;
+    function fig(label, v, cls, sb, sbc) { return '<div class="fig"><b class="' + (cls || "") + '">' + esc(v) + "</b>" + (sb ? '<small class="' + (sbc || "") + '">' + esc(sb) + "</small>" : "") + "<span>" + esc(label) + "</span></div>"; }
+    var h = '<div class="panel live-panel">' + hd + '<div class="figures live-figs">' +
+      fig(LV.value, fmtM(val, 0)) +
+      fig(LV.day, sgnM(day, 0), signCls(day), (dayPct > 0 ? "+" : "") + fmtP(dayPct, 2), signCls(dayPct)) +
+      fig(LV.spy, (spyDay > 0 ? "+" : "") + fmtP(spyDay, 2), signCls(spyDay)) +
+      fig(LV.vsSpy, (diff > 0 ? "+" : "") + fmtP(diff, 2), signCls(diff)) + "</div>";
+    rows.sort(function (a, b) { return b.r - a.r; });
+    h += '<div><div class="eyebrow">' + esc(LV.byPos) + '</div><div class="live-chips">' + rows.map(function (x) {
+      return '<span class="live-chip" title="' + esc(sgnM(x.a, 0)) + '"><b>' + esc(x.t) + '</b><span class="' + signCls(x.r) + '">' + esc((x.r > 0 ? "+" : "") + fmtP(x.r, 1)) + "</span></span>";
+    }).join("") + "</div></div>";
+    var when = L.at ? new Intl.DateTimeFormat(loc(), { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit" }).format(new Date(L.at)) : "—";
+    var stale = L.at && Date.now() - L.at > 30 * 60000;
+    h += '<p class="muted live-foot">' + esc(LV.upd.replace("{t}", when)) + (stale ? ' · <span class="neg">' + esc(LV.stale) + "</span>" : "") + " " + esc(LV.tradesNote) + "</p></div>";
+    return h;
+  }
   function vCartera() {
     var K = t().cart, C = t().col;
     var g = guard(["ops", "acct"]);
@@ -1323,17 +1411,19 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var dayPct = dayBase ? day / dayBase : null;
 
     /* hero */
-    var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + '</div>' +
+    var LV = t().live;
+    var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + (S.snapshot ? " · " + LV.headline.replace("{d}", fmtD(S.snapshot)) : "") + '</div>' +
       '<div class="hero-num">' + esc(fmtM(total)) + '</div>' +
       '<div class="hero-sub"><span class="tag ' + (totPL >= 0 ? "tag-pos" : "tag-neg") + '">' + esc(sgnM(totPL) + " · " + (ret >= 0 ? "+" : "") + fmtP(ret, 2)) + '</span>' +
       '<span class="muted">' + esc(K.capital + " " + fmtM(cap) + " · " + K.since + " " + fmtD(A.start)) + "</span></div></div>" +
       '<div class="hero-side"><div><span class="eyebrow">' + esc(K.vsSpy) + '</span><b class="' + signCls(excess) + '">' + esc((excess >= 0 ? "+" : "") + fmtP(excess, 2)) + '</b><small>' + esc(K.spyLbl + " " + fmtP(spyRet, 2)) + '</small></div>' +
-      '<div><span class="eyebrow">' + esc(K.today) + '</span><b class="' + signCls(day) + '">' + esc(sgnM(day)) + '</b><small class="' + signCls(dayPct) + '">' + esc(fmtP(dayPct, 2)) + "</small></div></div></div>";
+      '<div><span class="eyebrow">' + esc(S.snapshot ? LV.lastSession : K.today) + '</span><b class="' + signCls(day) + '">' + esc(sgnM(day)) + '</b><small class="' + signCls(dayPct) + '">' + esc(fmtP(dayPct, 2)) + "</small></div></div></div>";
     if (eq && eq.length > 1) {
       h += '<div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" +
         '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
     } else h += '<p class="muted">' + esc(K.noHist) + "</p>";
     h += "</div>";
+    h += livePanel(open, cash);
     var acctNote = lang === "en" && A.noteEn ? A.noteEn : A.note;
     if (acctNote) h += '<p class="acct-note">' + esc(acctNote) + "</p>";
     if (missing.length) h += notice(K.title, K.noPrice + " " + missing.join(", ") + ".");
@@ -1982,6 +2072,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       S.snapshot = MF.asOf; S.loadedAt = Date.parse(MF.generated) || Date.now();
       render();
       prefetchLib();
+      loadLive(); setInterval(loadLive, LIVE_EVERY);
+      document.addEventListener("visibilitychange", function () { if (!document.hidden) loadLive(); });
     }, function () { ["scan", "dec", "ops", "acct"].forEach(function (p) { S.err[p] = { code: "generic" }; }); render(); });
   } else if (window.claude && typeof window.claude.use === "function") {
     window.claude.use("mcp").then(function (ns) {
