@@ -428,15 +428,15 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       refresh: "Actualizar",
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
       tabs: { posiciones: "Posiciones", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca" },
-      valHelp: "Valor estimado: lo que el informe calcula que vale la acción en el escenario central. Precio máximo de compra: el techo que fija el informe de cada empresa (puede venir de la valoración, de la técnica o de un evento); no es un descuento fijo del plan, y si el informe no fija techo no se muestra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado. Los escenarios «si va mal» y «si va bien» no son límites garantizados.",
+      valHelp: "Valor estimado: lo que el informe calcula que vale la acción en el escenario central. Techo del informe: el precio máximo de compra que fijó el informe de cada empresa (puede venir de la valoración, de la técnica o de un evento); no es un descuento fijo del plan, no autoriza una orden por sí solo, y si el informe no fija techo no se muestra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado. Los escenarios «si va mal» y «si va bien» no son límites garantizados.",
       whatMeans: "¿Qué significa cada número?", trRet: "Rentabilidad", trEx: "Frente al SPY",
       bandCap: { lo: "bajista", mid: "valor estimado", hi: "alcista" },
       latestOnly: "Solo la última decisión de cada empresa", anaDate: "Escáner",
-      apst: { status: "Estado", live: "Revisada en el último análisis", execLbl: "Ejecución", expired: "Ficha caducada el {d}: requiere ficha nueva", susp: "Suspendida: requiere ficha nueva", held: "En cartera: comprar más exige ficha nueva", heldTitle: "En cartera", heldLede: "Empresas que ya tienes compradas, con su última valoración. Están en gestión (Stage 4): comprar más exige una ficha nueva.", bought: "Comprada el {d}", sold: "Comprada el {d}, ya vendida", stale: "Análisis del {d}: revalidar",
-        liveTitle: "Revisadas en el último análisis", liveLede: "Revisada hoy no significa señal vigente: el estado de ejecución de cada ficha se muestra aparte. Aprobado no significa autorizado: cada ficha fija su señal, su caducidad y cómo tratar los resultados, y una ficha suspendida o caducada no se reactiva por precio ni por volver a salir en el escáner. «Ahora» es el último precio conocido frente al precio máximo de compra.",
+      apst: { status: "Estado", live: "Revisada en el último análisis", execLbl: "Ejecución", expired: "Ficha caducada el {d}: requiere ficha nueva", susp: "Suspendida: requiere ficha nueva", held: "Decisión histórica: ahora en cartera (Stage 4); comprar más exige ficha nueva", heldTitle: "En cartera", heldLede: "Empresas que ya tienes compradas, con su última valoración. Están en gestión (Stage 4): comprar más exige una ficha nueva.", bought: "Comprada el {d}", sold: "Comprada el {d}, ya vendida (operación cerrada)", stale: "Fila del escáner del {d}: revalidar", noEntry: "Sin entrada autorizada · cantidad nueva 0", valSrc: "Valoración: informe {id}", valSrcD: "Valoración: informe {id} del {d}", revSrc: "Última revisión: {id} del {d}", noValNow: "Sin valoración vigente: ver «Cómo se calcula».",
+        liveTitle: "Revisadas en el último análisis", liveLede: "Revisada hoy no significa señal vigente: el estado de ejecución de cada ficha se muestra aparte. Aprobado no significa autorizado: cada ficha fija su señal, su caducidad y cómo tratar los resultados, y una ficha suspendida o caducada no se reactiva por precio ni por volver a salir en el escáner. «Ahora» es el último precio conocido frente al techo del informe, que es histórico y no autoriza una orden.",
         noneLive: "No hay aprobaciones en el último análisis.",
         oldTitle: "De análisis anteriores", oldLede: "Aprobaciones que no forman parte del último análisis, o ya compradas. No sirven para operar sin un análisis nuevo.", notOrder: "(condición necesaria, no orden de compra)",
-        now: "Ahora", liveTag: "en vivo, {t}", today: "hoy", above: "por encima del precio máximo de compra", below: "por debajo del precio máximo de compra" },
+        now: "Ahora", liveTag: "en vivo, {t}", today: "hoy", above: "por encima del techo del informe", below: "por debajo del techo del informe" },
       retro: {
         title: "Retrospectiva", lede: "Qué hicieron después las candidatas que no se compraron, frente al SPY en el mismo periodo. Datos de la auditoría del 22 oct 2026 (informe A088), con precios hasta el 21 oct. Retornos de precio, sin costes ni dividendos.",
         hz: { "5": "5 sesiones", "10": "10 sesiones", corte: "Hasta el 21 oct" }, hzLbl: "Horizonte",
@@ -460,8 +460,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       pos: { title: "Posiciones", lede: "Cada posición abierta con su última revisión de gestión (Stage 4) y su última valoración. Ordenadas de la más cercana a su stop a la más lejana. Los niveles son los registrados en el informe: no certifican órdenes en el bróker.",
         fOpen: "Posiciones abiertas", fValue: "Valor en posiciones", fUpl: "Ganancia/pérdida abierta", fNear: "Más cerca de su stop",
         review: "Revisión de gestión del {d}", noReview: "Sin revisión de gestión registrada en la hoja.", shares: "Acciones", avg: "Coste medio", price: "Precio actual", upl: "Ganancia/pérdida abierta",
-        protTitle: "Protecciones", sl: "Stop loss", slSub: "{p} por debajo del precio actual", slNone: "sin stop registrado", stop: "Stop loss S (manual: salta si el precio lo toca)", trail: "Stop por cierre (trailing: solo cuenta el cierre)", m: "Mínimo M (referencia de la regla de salida)", toStop: "{p} por debajo del precio", below: "¡el precio ya está por debajo!", next: "Próximo evento",
-        valTitle: "Última valoración", valOf: "Análisis del {d}", noVal: "No hay una valoración completa (valor estimado y escenarios) registrada en el historial para esta empresa.", openRec: "Ver ficha", reports: "Informes sobre {t} →", allPos: "Ver todas las posiciones →",
+        protTitle: "Protecciones", sl: "Stop loss", slSub: "{p} por debajo del precio actual", slNone: "sin stop registrado", stop: "Stop loss S (manual: si el precio lo toca, queda una venta pendiente de ejecutar a mano)", trail: "Stop por cierre (trailing: solo cuenta el cierre)", m: "Mínimo M (referencia de la regla de salida)", toStop: "{p} por debajo del precio", below: "¡el precio ya está por debajo!", next: "Próximo evento",
+        valTitle: "Última valoración", valOf: "Valoración del {d}", noVal: "No hay una valoración completa (valor estimado y escenarios) registrada en el historial para esta empresa.", openRec: "Ver ficha", reports: "Informes sobre {t} →", allPos: "Ver todas las posiciones →",
         none: "No hay posiciones abiertas." },
       live: { title: "Hoy, en vivo", sub: "Movimiento desde el cierre anterior. Precios de Google con hasta ~20 min de retraso: lo que cuenta es el cierre de arriba.", value: "Valor ahora", day: "Hoy", spy: "SPY hoy", vsSpy: "Cuenta vs SPY hoy", upd: "Precios leídos a las {t} (hora de Nueva York)", stale: "Los precios llevan más de 30 minutos sin actualizarse.", closed: "Mercado cerrado. Los números en vivo aparecen de 9:30 a 16:00 (Nueva York), de lunes a viernes.", pre: "Antes de la apertura: aún no hay movimiento de hoy.", tradesNote: "Usa las posiciones del último cierre: una compra o venta de hoy aparece tras la actualización diaria.", byPos: "Por posición, hoy", headline: "Al cierre del {d}", lastSession: "Última sesión" },
       cart: {
@@ -524,17 +524,17 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       excess: "Exceso vs SPY",
       horizon: { "3m": "3 meses", "6m": "6 meses", "12m": "12 meses" },
       groups: { ok: "Aprobadas", wait: "Esperar precio", watch: "En observación", out: "Descartadas" },
-      col: { priceScan: "Precio en el escáner", baseEst: "Valor estimado", date: "Fecha", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máx. 52s", pull: "Retroceso", opm: "Margen op.", fcf: "FCF/acc.", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decisión", depth: "Profundidad", why: "Motivo", cons: "Valor escenario bajista", base: "Valor estimado", fav: "Valor escenario alcista", disc: "Descuento implícito frente al valor estimado", maxc: "Precio máximo de compra", mos: "Descuento sobre el valor", valRange: "Rango de valor (escenario bajista – alcista)", next: "Próximo evento", r3: "Rent. 3m", r6: "Rent. 6m", r12: "Rent. 12m", x3: "Exceso 3m", x6: "Exceso 6m", x12: "Exceso 12m", via: "Vía", type: "Tipo", shares: "Acciones", exec: "Precio", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" },
+      col: { priceScan: "Precio en el escáner", baseEst: "Valor estimado", date: "Fecha", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máx. 52s", pull: "Retroceso", opm: "Margen op.", fcf: "FCF/acc.", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decisión", depth: "Profundidad", why: "Motivo", cons: "Valor escenario bajista", base: "Valor estimado", fav: "Valor escenario alcista", disc: "Descuento implícito frente al valor estimado", maxc: "Techo del informe", mos: "Descuento sobre el valor", valRange: "Rango de valor (escenario bajista – alcista)", next: "Próximo evento", r3: "Rent. 3m", r6: "Rent. 6m", r12: "Rent. 12m", x3: "Exceso 3m", x6: "Exceso 6m", x12: "Exceso 12m", via: "Vía", type: "Tipo", shares: "Acciones", exec: "Precio", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" },
       close: "Cerrar", srcLbl: "Informe de origen", aDate: "Análisis", sDate: "escáner",
       calc: { btn: "Cómo se calcula", title: "Cómo se calcula", tapHint: "Toca cualquier cifra subrayada de la tarjeta para saltar a su explicación.",
-        price: "Precio en el escáner", priceTxt: "Precio de cierre del {d}, tal como venía en el CSV del escáner de ese día. Es el precio con el que se hizo el análisis.", scanData: "Otros datos de esa fila del escáner (Stages 1 y 2):",
-        base: "Valor estimado", baseTxt: "Valor base (escenario central) del {rep}, analizado el {a}. Es lo que el informe calcula que vale la acción si el negocio evoluciona como espera.", report: "informe Stage 3 {id}", reportGen: "informe Stage 3",
+        price: "Precio en el escáner", priceTxt: "Last del escáner del {d}: el último precio que traía el CSV de ese día. No siempre coincide con el cierre regular; cuando el informe usa un cierre distinto, lo indica en el motivo.", scanData: "Otros datos de esa fila del escáner (Stages 1 y 2):",
+        base: "Valor estimado", baseTxt: "Valor base (escenario central) del {rep}{a}. Es lo que el informe calcula que vale la acción si el negocio evoluciona como espera.", baseOn: ", valorado el {d}", lastRev: "Última revisión de esta fila: {rep}, del {d}. Una revisión de seguimiento o de gestión no recalcula el valor.", noBase: "No hay valoración vigente en esta fila. La explicación está abajo.", report: "informe {id}", reportGen: "informe de valoración",
         range: "Rango de valor", rangeTxt: "Los dos escenarios extremos del mismo informe. Escenario bajista: lo que valdría la acción si el negocio evoluciona peor de lo previsto (supuestos conservadores). Escenario alcista: lo que valdría si evoluciona mejor (supuestos favorables). El valor estimado es el escenario base, entre ambos.",
         detail: "Datos del informe usados:", noDetail: "El desglose de los datos del informe (flujo de caja, múltiplo aplicado, crecimiento…) todavía no está cargado en la hoja para esta empresa.",
-        maxc: "Precio máximo de compra", maxcTxt: "Techo de compra que fija el informe de esta empresa; no es una regla fija del plan. Frente al valor estimado equivale a un descuento implícito de {p}. Por encima de este precio no se compra.", maxcNoBase: "Techo de compra que fija el informe de esta empresa. Por encima de este precio no se compra.",
+        maxc: "Techo del informe", maxcTxt: "Techo de compra que fijó el informe de esta empresa; no es una regla fija del plan. Frente al valor estimado equivale a un descuento implícito de {p}. Es un techo histórico: no autoriza una orden. Comprar exige una ficha Stage 3.5 vigente con su señal; por encima de este precio no se compra.", maxcNoBase: "Techo de compra que fijó el informe de esta empresa. Es histórico y no autoriza una orden; por encima de este precio no se compra.",
         mos: "Descuento sobre el valor", mosTxt: "Cuánto más barata cotizaba la acción frente a su valor estimado el día del escáner. Positivo (verde) = más barata; negativo (rojo) = más cara.",
         now: "Precio ahora frente al máximo", nowTxtAcct: "Último precio de la pestaña Cuenta de la hoja ({d}), comparado con el precio máximo de compra.", nowTxtScan: "Último precio del escáner ({d}), comparado con el precio máximo de compra.",
-        above: "por encima del máximo", below: "por debajo del máximo" },
+        above: "por encima del techo", below: "por debajo del techo" },
       wTitle: "Operaciones con problemas", wUnknown: "tipo de operación desconocido, no se ha contado", wOversell: "venta de más acciones de las que había; se limita a las existentes",
       loadFail: "No se pudieron cargar algunos datos:", retry: "Reintentar",
       tracking: "Seguimiento",
@@ -559,15 +559,15 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       refresh: "Refresh",
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
       tabs: { posiciones: "Positions", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library" },
-      valHelp: "Estimated value: what the report calculates the share is worth in the central case. Max. buy price: the ceiling set by each company's report (it can come from the valuation, the technicals or an event); it isn't a fixed plan discount, and if the report sets no ceiling none is shown. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value. The badly/well scenarios are not guaranteed limits.",
+      valHelp: "Estimated value: what the report calculates the share is worth in the central case. Report ceiling: the max. buy price set by each company's report (it can come from the valuation, the technicals or an event); it isn't a fixed plan discount, it doesn't authorize an order on its own, and if the report sets no ceiling none is shown. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value. The badly/well scenarios are not guaranteed limits.",
       whatMeans: "What does each number mean?", trRet: "Return", trEx: "Vs SPY",
       bandCap: { lo: "bear case", mid: "estimated value", hi: "bull case" },
       latestOnly: "Only each company's latest decision", anaDate: "Scan",
-      apst: { status: "Status", live: "Reviewed in the latest analysis", execLbl: "Execution", expired: "Plan expired on {d}: needs a new plan", susp: "Suspended: needs a new plan", held: "Held: buying more needs a new plan", heldTitle: "Held", heldLede: "Companies you already own, with their latest valuation. They are under management (Stage 4): buying more needs a new plan.", bought: "Bought on {d}", sold: "Bought on {d}, since sold", stale: "Analysis of {d}: revalidate",
-        liveTitle: "Reviewed in the latest analysis", liveLede: "Reviewed today doesn't mean a valid signal: each plan's execution status is shown separately. Approved doesn't mean authorized: each plan sets its signal, its expiry and how to handle earnings, and a suspended or expired plan isn't revived by price or by reappearing in the scan. \"Now\" is the latest known price against the max. buy price.",
+      apst: { status: "Status", live: "Reviewed in the latest analysis", execLbl: "Execution", expired: "Plan expired on {d}: needs a new plan", susp: "Suspended: needs a new plan", held: "Earlier decision: now held (Stage 4); buying more needs a new plan", heldTitle: "Held", heldLede: "Companies you already own, with their latest valuation. They are under management (Stage 4): buying more needs a new plan.", bought: "Bought on {d}", sold: "Bought on {d}, since sold (closed trade)", stale: "Scanner row of {d}: revalidate", noEntry: "No entry authorized · new quantity 0", valSrc: "Valuation: report {id}", valSrcD: "Valuation: report {id} of {d}", revSrc: "Latest review: {id} of {d}", noValNow: "No valuation in force: see \"How it's calculated\".",
+        liveTitle: "Reviewed in the latest analysis", liveLede: "Reviewed today doesn't mean a valid signal: each plan's execution status is shown separately. Approved doesn't mean authorized: each plan sets its signal, its expiry and how to handle earnings, and a suspended or expired plan isn't revived by price or by reappearing in the scan. \"Now\" is the latest known price against the report ceiling, which is historical and doesn't authorize an order.",
         noneLive: "No approvals in the latest analysis.",
         oldTitle: "From earlier analyses", oldLede: "Approvals that aren't part of the latest analysis, or already bought. Not usable for trading without a new analysis.", notOrder: "(a necessary condition, not a buy order)",
-        now: "Now", liveTag: "live, {t}", today: "today", above: "above the max. buy price", below: "below the max. buy price" },
+        now: "Now", liveTag: "live, {t}", today: "today", above: "above the report ceiling", below: "below the report ceiling" },
       retro: {
         title: "Hindsight", lede: "What the candidates that weren't bought did afterwards, against SPY over the same period. Data from the Oct 22, 2026 audit (report A088), with prices up to Oct 21. Price returns, without costs or dividends.",
         hz: { "5": "5 sessions", "10": "10 sessions", corte: "Up to Oct 21" }, hzLbl: "Horizon",
@@ -591,8 +591,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       pos: { title: "Positions", lede: "Each open position with its latest management review (Stage 4) and its latest valuation. Sorted from closest to its stop to farthest. Levels are the ones recorded in the report: they don't certify orders at the broker.",
         fOpen: "Open positions", fValue: "Value in positions", fUpl: "Open gain/loss", fNear: "Closest to its stop",
         review: "Management review of {d}", noReview: "No management review recorded in the sheet.", shares: "Shares", avg: "Average cost", price: "Current price", upl: "Open gain/loss",
-        protTitle: "Protections", sl: "Stop loss", slSub: "{p} below the current price", slNone: "no stop recorded", stop: "Stop loss S (manual: triggers if the price touches it)", trail: "Closing stop (trailing: only the close counts)", m: "Low M (reference for the exit rule)", toStop: "{p} below the price", below: "price is already below it!", next: "Next event",
-        valTitle: "Latest valuation", valOf: "Analysis of {d}", noVal: "No full valuation (estimated value and scenarios) is recorded in the history for this company.", openRec: "Open record", reports: "Reports on {t} →", allPos: "See all positions →",
+        protTitle: "Protections", sl: "Stop loss", slSub: "{p} below the current price", slNone: "no stop recorded", stop: "Stop loss S (manual: if the price touches it, a sale is pending to execute by hand)", trail: "Closing stop (trailing: only the close counts)", m: "Low M (reference for the exit rule)", toStop: "{p} below the price", below: "price is already below it!", next: "Next event",
+        valTitle: "Latest valuation", valOf: "Valuation of {d}", noVal: "No full valuation (estimated value and scenarios) is recorded in the history for this company.", openRec: "Open record", reports: "Reports on {t} →", allPos: "See all positions →",
         none: "No open positions." },
       live: { title: "Today, live", sub: "Move since the previous close. Google prices delayed up to ~20 min: the close above is what counts.", value: "Value now", day: "Today", spy: "SPY today", vsSpy: "Account vs SPY today", upd: "Prices read at {t} (New York time)", stale: "Prices haven't updated for over 30 minutes.", closed: "Market closed. Live numbers show from 9:30 to 16:00 (New York), Monday to Friday.", pre: "Before the open: no move for today yet.", tradesNote: "Uses the positions as of the last close: a buy or sale made today shows after the daily update.", byPos: "By position, today", headline: "As of the close on {d}", lastSession: "Last session" },
       cart: {
@@ -655,17 +655,17 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       excess: "Excess vs SPY",
       horizon: { "3m": "3 months", "6m": "6 months", "12m": "12 months" },
       groups: { ok: "Approved", wait: "Wait for price", watch: "On watch", out: "Rejected" },
-      col: { priceScan: "Price at scan", baseEst: "Estimated value", date: "Date", ticker: "Ticker", company: "Company", price: "Price", pe: "P/E", high: "52w high", pull: "Pullback", opm: "Op. margin", fcf: "FCF/sh", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decision", depth: "Depth", why: "Reason", cons: "Bear-case value", base: "Estimated value", fav: "Bull-case value", disc: "Implied discount to estimated value", maxc: "Max. buy price", mos: "Discount to value", valRange: "Value range (bear – bull case)", next: "Next event", r3: "Ret. 3m", r6: "Ret. 6m", r12: "Ret. 12m", x3: "Excess 3m", x6: "Excess 6m", x12: "Excess 12m", via: "Path", type: "Type", shares: "Shares", exec: "Price", amount: "Amount", stop: "Stop S", m: "Low M", signal: "Signal or reason", notes: "Notes", fee: "Fee" },
+      col: { priceScan: "Price at scan", baseEst: "Estimated value", date: "Date", ticker: "Ticker", company: "Company", price: "Price", pe: "P/E", high: "52w high", pull: "Pullback", opm: "Op. margin", fcf: "FCF/sh", qp: "QP", opp: "Opp.", rsi: "RSI", s2: "Stage 2", decision: "Decision", depth: "Depth", why: "Reason", cons: "Bear-case value", base: "Estimated value", fav: "Bull-case value", disc: "Implied discount to estimated value", maxc: "Report ceiling", mos: "Discount to value", valRange: "Value range (bear – bull case)", next: "Next event", r3: "Ret. 3m", r6: "Ret. 6m", r12: "Ret. 12m", x3: "Excess 3m", x6: "Excess 6m", x12: "Excess 12m", via: "Path", type: "Type", shares: "Shares", exec: "Price", amount: "Amount", stop: "Stop S", m: "Low M", signal: "Signal or reason", notes: "Notes", fee: "Fee" },
       close: "Close", srcLbl: "Source report", aDate: "Analysis", sDate: "scan",
       calc: { btn: "How it's calculated", title: "How it's calculated", tapHint: "Tap any underlined figure on the card to jump to its explanation.",
-        price: "Price at scan", priceTxt: "Closing price on {d}, as it came in that day's scanner CSV. It's the price the analysis used.", scanData: "Other data from that scanner row (Stages 1 and 2):",
-        base: "Estimated value", baseTxt: "Base value (central case) from {rep}, analyzed on {a}. It's what the report calculates the share is worth if the business performs as expected.", report: "Stage 3 report {id}", reportGen: "the Stage 3 report",
+        price: "Price at scan", priceTxt: "Scanner Last on {d}: the latest price in that day's CSV. It doesn't always match the regular close; when the report uses a different close, the reason says so.", scanData: "Other data from that scanner row (Stages 1 and 2):",
+        base: "Estimated value", baseTxt: "Base value (central case) from {rep}{a}. It's what the report calculates the share is worth if the business performs as expected.", baseOn: ", valued on {d}", lastRev: "Latest review of this row: {rep}, of {d}. A follow-up or management review doesn't recalculate the value.", noBase: "There's no valuation in force in this row. The explanation is below.", report: "report {id}", reportGen: "the valuation report",
         range: "Value range", rangeTxt: "The two outer scenarios from the same report. Bear case: what the share would be worth if the business does worse than expected (conservative assumptions). Bull case: what it would be worth if it does better (favorable assumptions). The estimated value is the base case, between the two.",
         detail: "Report data used:", noDetail: "The breakdown of the report's inputs (cash flow, multiple applied, growth…) isn't loaded in the sheet for this company yet.",
-        maxc: "Max. buy price", maxcTxt: "The buy ceiling set by this company's report; it isn't a fixed plan rule. Against the estimated value it works out to an implied discount of {p}. Above this price, don't buy.", maxcNoBase: "The buy ceiling set by this company's report. Above this price, don't buy.",
+        maxc: "Report ceiling", maxcTxt: "The buy ceiling set by this company's report; it isn't a fixed plan rule. Against the estimated value it works out to an implied discount of {p}. It's a historical ceiling: it doesn't authorize an order. Buying needs a valid Stage 3.5 plan with its signal; above this price, don't buy.", maxcNoBase: "The buy ceiling set by this company's report. It's historical and doesn't authorize an order; above this price, don't buy.",
         mos: "Discount to value", mosTxt: "How much cheaper the stock traded than its estimated value on the scan day. Positive (green) = cheaper; negative (red) = more expensive.",
         now: "Price now vs. max", nowTxtAcct: "Latest price from the sheet's Cuenta tab ({d}), compared with the max. buy price.", nowTxtScan: "Latest scanner price ({d}), compared with the max. buy price.",
-        above: "above the max", below: "below the max" },
+        above: "above the ceiling", below: "below the ceiling" },
       wTitle: "Trades with problems", wUnknown: "unknown trade type, not counted", wOversell: "sold more shares than were held; limited to the shares held",
       loadFail: "Some data couldn't be loaded:", retry: "Retry",
       tracking: "Tracking",
@@ -771,7 +771,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return out;
   }
   var SCAN_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máximo 52 semanas", pull: "Retroceso desde máximo", opm: "Margen operativo", fcf: "FCF por acción", qp: "QP Score", opp: "Opportunity", rsi: "RSI 14", s2: "Pasa Stage 2" };
-  var DEC_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio en escáner", adate: "Fecha análisis", depth: "Profundidad", decision: "Decisión", why: "Motivo", cons: "Valor conservador", base: "Valor base", fav: "Valor favorable", disc: "Descuento implícito", maxc: "Máximo condicionado", mos: "Margen vs base", next: "Próximo evento", p3: "Precio +3m", p6: "Precio +6m", p12: "Precio +12m", r3: "Rentab. +3m", r6: "Rentab. +6m", r12: "Rentab. +12m", spy: "SPY en escáner", x3: "Exceso vs SPY +3m", x6: "Exceso vs SPY +6m", x12: "Exceso vs SPY +12m", whyEn: "Motivo (EN)", nextEn: "Próximo evento (EN)", calc: "Cálculo", calcEn: "Cálculo (EN)", rep: "Informe (ID)", exec: "Ejecución", execEn: "Ejecución (EN)", expiry: "Caducidad ficha" };
+  var DEC_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio en escáner", adate: "Fecha análisis", depth: "Profundidad", decision: "Decisión", why: "Motivo", cons: "Valor conservador", base: "Valor base", fav: "Valor favorable", disc: "Descuento implícito", maxc: "Máximo condicionado", mos: "Margen vs base", next: "Próximo evento", p3: "Precio +3m", p6: "Precio +6m", p12: "Precio +12m", r3: "Rentab. +3m", r6: "Rentab. +6m", r12: "Rentab. +12m", spy: "SPY en escáner", x3: "Exceso vs SPY +3m", x6: "Exceso vs SPY +6m", x12: "Exceso vs SPY +12m", whyEn: "Motivo (EN)", nextEn: "Próximo evento (EN)", calc: "Cálculo", calcEn: "Cálculo (EN)", rep: "Informe (ID)", exec: "Ejecución", execEn: "Ejecución (EN)", expiry: "Caducidad ficha", vrep: "Informe valoración (ID)", vdate: "Fecha valoración" };
   var OPS_MAP = { date: "Fecha", ticker: "Ticker", via: "Vía (A, B o C)", type: "Tipo (Compra o Venta)", shares: "Acciones", exec: "Precio de ejecución", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" };
   var RETRO_MAP = { ticker: "Empresa", grp: "Grupo", ddate: "Fecha decisión", why: "Motivo", whyEn: "Motivo (EN)", rdate: "Fecha referencia", price: "Precio inicial", hz: "Horizonte", edate: "Fecha final", ret: "Retorno acción", spy: "Retorno SPY", ex: "Exceso vs SPY", up: "Máxima subida", down: "Máxima caída", rep: "Informe (ID)" };
   var GES_MAP = { ticker: "Ticker", date: "Fecha revisión", rep: "Informe (ID)", state: "Estado", stateEn: "Estado (EN)", stop: "Stop S", trail: "Trailing por cierre", m: "Mínimo M", note: "Nota", noteEn: "Nota (EN)", next: "Próximo evento", nextEn: "Próximo evento (EN)" };
@@ -807,6 +807,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   function scanDates() { if (!S.scan) return []; var u = {}; S.scan.forEach(function (r) { u[r.date] = 1; }); return Object.keys(u).sort().reverse(); }
   function decOnLatest() { if (!S.dec) return []; var d = latestDate(S.dec); return S.dec.filter(function (r) { return r.date === d; }); }
   function isApproved(d) { return d === "Apta para Stage 3.5" || d === "Aprobada Stage 3, bloqueada"; }
+  /* valuation source kept apart from the latest review of the row */
+  function vSrc(r) { var c = String(r.calc || "").match(/\b[Ii]nforme\s+(A\d{2,4})\b/); return { id: r.vrep || (c && c[1]) || (r.base !== null ? r.rep : "") || "", d: isoDay(r.vdate) || "" }; }
   function groupOf(d) { if (d === "En cartera") return "held"; if (isApproved(d)) return "ok"; if (d === "Esperar precio") return "wait"; if (d === "En observación") return "watch"; return "out"; }
 
   /* ---------- valuation band ---------- */
@@ -968,15 +970,27 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     ], trades) + "</div>";
     return h;
   }
+  function srcLine(r) {
+    var A = t().apst, v = vSrc(r), parts = [];
+    if (r.base !== null && v.id) parts.push(v.d ? A.valSrcD.replace("{id}", v.id).replace("{d}", fmtD(v.d)) : A.valSrc.replace("{id}", v.id));
+    if (r.rep && r.rep !== v.id) parts.push(A.revSrc.replace("{id}", r.rep).replace("{d}", fmtD(r.adate || r.date)));
+    return parts.length ? '<div class="muted" style="font-size:0.8rem">' + esc(parts.join(" · ")) + "</div>" : "";
+  }
+  /* an approval or a held name is not an entry: only a live Stage 3.5 plan can authorize one */
+  function entryLine(r) {
+    var st = approvalStatus(r), ex = execState(r);
+    if (r.decision === "Apta para Stage 3.5" && st.code === "live" && !(ex && (ex.expired || ex.suspended))) return "";
+    return '<p class="muted" style="margin:0;font-size:0.82rem">' + esc(t().apst.noEntry) + "</p>";
+  }
   function card(r) {
     var k = esc(r.date + "|" + r.ticker);
     function cv(f) { return ' data-calc="' + k + "|" + f + '"'; }
     return '<div class="card" role="group" tabindex="0" aria-label="' + esc(r.ticker) + '" data-open="' + k + '">' +
       '<div class="card-top"><div><div class="tick">' + esc(r.ticker) + '</div><div class="co">' + esc(r.company) + "</div></div>" + pill(r.decision) + "</div>" +
-      band(r) +
+      band(r) + srcLine(r) +
       '<dl class="kv"><div><dt>' + esc(t().col.priceScan) + "</dt><dd" + cv("price") + ">" + esc(fmtM(r.price)) + "</dd></div><div><dt>" + esc(t().col.base) + '</dt><dd style="color:var(--accent)"' + cv("base") + ">" + esc(fmtM(r.base)) + "</dd></div><div><dt>" + esc(t().col.maxc) + "</dt><dd" + cv("maxc") + ">" + esc(fmtM(r.maxc)) + "</dd></div><div><dt>" + esc(t().col.mos) + '</dt><dd class="' + signCls(r.mos) + '"' + cv("mos") + ">" + esc(fmtP(r.mos)) + "</dd></div>" +
       (r.cons !== null && r.fav !== null ? '<div style="grid-column:1/-1"><dt>' + esc(t().col.valRange) + "</dt><dd" + cv("range") + ">" + esc(fmtM(r.cons) + " – " + fmtM(r.fav)) + "</dd></div>" : "") + "</dl>" +
-      "<p>" + esc(whyOf(r)) + "</p>" + execLine(r) + nowLine(r) +
+      "<p>" + esc(whyOf(r)) + "</p>" + (r.base === null && r.calc ? '<p class="muted">' + esc(t().apst.noValNow) + "</p>" : "") + execLine(r) + entryLine(r) + nowLine(r) +
       '<button type="button" class="calc-btn" data-calc="' + k + '|"><i aria-hidden="true">i</i>' + esc(t().calc.btn) + "</button></div>";
   }
 
@@ -992,7 +1006,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     function para(x, c) { return "<p" + (c ? ' class="' + c + '"' : "") + ">" + esc(x) + "</p>"; }
     function fml(x) { return '<div class="calc-f">' + esc(x) + "</div>"; }
     var idm = String(r.why || "").match(/\binforme\s+(A\d{2,4})\b/i) || String(r.whyEn || "").match(/\breport\s+(A\d{2,4})\b/i);
-    var repId = r.rep || (idm && idm[1]), repTxt = repId ? sub(L.report, { id: repId }) : L.reportGen;
+    var vs0 = vSrc(r), repId = vs0.id || (r.base !== null && idm && idm[1]) || "", repTxt = repId ? sub(L.report, { id: repId }) : L.reportGen;
+    var revTxt = r.rep && r.rep !== repId ? para(sub(L.lastRev, { rep: sub(L.report, { id: r.rep }), d: fmtD(r.adate || r.date) }), "calc-note") : "";
     var h = '<div class="calc-scrim" id="calc-scrim"><div class="calc-sheet" role="dialog" aria-modal="true" aria-labelledby="calc-t"><div class="calc-top"><div class="calc-grab" aria-hidden="true"></div>' +
       '<div class="calc-head"><div><h3 id="calc-t">' + esc(L.title) + '</h3><div class="co">' + esc(r.ticker + " · " + r.company) + '</div></div><button class="btn" type="button" id="calc-close">' + esc(t().close) + "</button></div></div>";
 
@@ -1007,7 +1022,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     /* 2. estimated value (from the Stage 3 report) */
     var det = lang === "en" && r.calcEn ? r.calcEn : r.calc;
     var detHtml = det ? para(L.detail) + '<ul class="calc-list">' + String(det).split(/\n+/).filter(function (x) { return x.trim(); }).map(function (x) { return "<li>" + esc(x.trim()) + "</li>"; }).join("") + "</ul>" : para(L.noDetail, "calc-note");
-    h += sec("base", L.base, fmtM(r.base), "", para(sub(L.baseTxt, { rep: repTxt, a: fmtD(r.adate || r.date) })) + detHtml);
+    var aTxt = vs0.d ? sub(L.baseOn, { d: fmtD(vs0.d) }) : (repId && repId !== r.rep ? "" : sub(L.baseOn, { d: fmtD(r.adate || r.date) }));
+    h += sec("base", L.base, fmtM(r.base), "", (r.base === null ? para(L.noBase) : para(sub(L.baseTxt, { rep: repTxt, a: aTxt }))) + revTxt + detHtml);
 
     /* 3. range */
     if (r.cons !== null && r.fav !== null) h += sec("range", L.range, fmtM(r.cons) + " – " + fmtM(r.fav), "", para(L.rangeTxt) +
@@ -1288,7 +1304,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       fig(near ? near.ticker : "—", K.fNear, "", near ? sub(K.slSub, { p: fmtP(near.toStop) }) : "") + "</div>";
     h += '<div class="cards">' + open.map(function (p) {
       var G = p.g, en = lang === "en";
-      var v = latestOf(p.ticker, function (r) { return r.base !== null; });
+      var v = latestOf(p.ticker, function (r) { return r.base !== null || !!r.calc; });
+      var vNone = v && v.base === null ? v : null; if (vNone) v = null;
       var x = '<div class="card pos-card"><div class="card-top"><div><div class="tick">' + esc(p.ticker) + '</div><div class="co">' + esc(company(p.ticker)) + "</div></div>" +
         (G && G.state ? '<span class="pill d-held">' + esc(en && G.stateEn ? G.stateEn : G.state) + "</span>" : "") + "</div>";
       x += '<div class="muted" style="font-size:0.82rem">' + (G ? esc(sub(K.review, { d: fmtD(G.date) })) + (G.rep ? ' · <button type="button" class="chip" data-libopen="' + esc(G.rep) + '">' + esc(G.rep) + " →</button>" : "") : esc(K.noReview)) + "</div>";
@@ -1309,11 +1326,12 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       x += '<div class="pos-val"><div class="eyebrow">' + esc(K.valTitle) + "</div>";
       if (v) {
         var k = esc(v.date + "|" + v.ticker);
-        x += '<div class="muted" style="font-size:0.82rem">' + esc(sub(K.valOf, { d: fmtD(v.adate || v.date) })) + (v.rep ? ' · <button type="button" class="chip" data-libopen="' + esc(v.rep) + '">' + esc(v.rep) + " →</button>" : "") + "</div>" + band(v) +
+        x += '<div class="muted" style="font-size:0.82rem">' + esc(sub(K.valOf, { d: fmtD(vSrc(v).d || v.adate || v.date) })) + (vSrc(v).id ? ' · <button type="button" class="chip" data-libopen="' + esc(vSrc(v).id) + '">' + esc(vSrc(v).id) + " →</button>" : "") + "</div>" + band(v) +
           '<dl class="kv"><div><dt>' + esc(C.base) + '</dt><dd style="color:var(--accent)" data-calc="' + k + '|base">' + esc(fmtM(v.base)) + "</dd></div><div><dt>" + esc(C.maxc) + '</dt><dd data-calc="' + k + '|maxc">' + esc(fmtM(v.maxc)) + "</dd></div>" +
           (v.cons !== null && v.fav !== null ? '<div style="grid-column:1/-1"><dt>' + esc(C.valRange) + '</dt><dd data-calc="' + k + '|range">' + esc(fmtM(v.cons) + " – " + fmtM(v.fav)) + "</dd></div>" : "") + "</dl>" +
           '<div class="controls"><button type="button" class="calc-btn" data-calc="' + k + '|"><i aria-hidden="true">i</i>' + esc(t().calc.btn) + '</button><button type="button" class="btn" data-open="' + k + '">' + esc(K.openRec) + "</button></div>";
-      } else x += '<p class="muted calc-note" style="margin:0">' + esc(K.noVal) + "</p>";
+      } else if (vNone) x += '<p class="muted calc-note" style="margin:0">' + esc(String((lang === "en" && vNone.calcEn ? vNone.calcEn : vNone.calc)).split(/\n+/)[0]) + '</p><div class="controls"><button type="button" class="calc-btn" data-calc="' + esc(vNone.date + "|" + vNone.ticker) + '|"><i aria-hidden="true">i</i>' + esc(t().calc.btn) + "</button></div>";
+      else x += '<p class="muted calc-note" style="margin:0">' + esc(K.noVal) + "</p>";
       x += "</div>";
       x += '<p style="margin:0"><button class="btn" type="button" data-libq="' + esc(p.ticker) + '">' + esc(sub(K.reports, { t: p.ticker })) + "</button></p></div>";
       return x;
