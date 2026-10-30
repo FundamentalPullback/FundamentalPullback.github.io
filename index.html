@@ -771,7 +771,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return out;
   }
   var SCAN_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio", pe: "PER", high: "Máximo 52 semanas", pull: "Retroceso desde máximo", opm: "Margen operativo", fcf: "FCF por acción", qp: "QP Score", opp: "Opportunity", rsi: "RSI 14", s2: "Pasa Stage 2" };
-  var DEC_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio en escáner", adate: "Fecha análisis", depth: "Profundidad", decision: "Decisión", why: "Motivo", cons: "Valor conservador", base: "Valor base", fav: "Valor favorable", disc: "Descuento implícito", maxc: "Máximo condicionado", mos: "Margen vs base", next: "Próximo evento", p3: "Precio +3m", p6: "Precio +6m", p12: "Precio +12m", r3: "Rentab. +3m", r6: "Rentab. +6m", r12: "Rentab. +12m", spy: "SPY en escáner", x3: "Exceso vs SPY +3m", x6: "Exceso vs SPY +6m", x12: "Exceso vs SPY +12m", whyEn: "Motivo (EN)", nextEn: "Próximo evento (EN)", calc: "Cálculo", calcEn: "Cálculo (EN)", rep: "Informe (ID)", exec: "Ejecución", execEn: "Ejecución (EN)", expiry: "Caducidad ficha", vrep: "Informe valoración (ID)", vdate: "Fecha valoración" };
+  var DEC_MAP = { date: "Fecha escáner", ticker: "Ticker", company: "Empresa", price: "Precio en escáner", adate: "Fecha análisis", depth: "Profundidad", decision: "Decisión", why: "Motivo", cons: "Valor conservador", base: "Valor base", fav: "Valor favorable", disc: "Descuento implícito", maxc: "Máximo condicionado", mos: "Margen vs base", next: "Próximo evento", p3: "Precio +3m", p6: "Precio +6m", p12: "Precio +12m", r3: "Rentab. +3m", r6: "Rentab. +6m", r12: "Rentab. +12m", spy: "SPY en escáner", x3: "Exceso vs SPY +3m", x6: "Exceso vs SPY +6m", x12: "Exceso vs SPY +12m", whyEn: "Motivo (EN)", nextEn: "Próximo evento (EN)", calc: "Cálculo", calcEn: "Cálculo (EN)", rep: "Informe (ID)", exec: "Ejecución", execEn: "Ejecución (EN)", expiry: "Caducidad ficha", vrep: "Informe valoración (ID)", vdate: "Fecha valoración", vlab: "Etiqueta valor", vlabEn: "Etiqueta valor (EN)" };
   var OPS_MAP = { date: "Fecha", ticker: "Ticker", via: "Vía (A, B o C)", type: "Tipo (Compra o Venta)", shares: "Acciones", exec: "Precio de ejecución", amount: "Importe", stop: "Stop S", m: "Mínimo M", signal: "Señal o motivo", notes: "Notas", fee: "Comisión" };
   var RETRO_MAP = { ticker: "Empresa", grp: "Grupo", ddate: "Fecha decisión", why: "Motivo", whyEn: "Motivo (EN)", rdate: "Fecha referencia", price: "Precio inicial", hz: "Horizonte", edate: "Fecha final", ret: "Retorno acción", spy: "Retorno SPY", ex: "Exceso vs SPY", up: "Máxima subida", down: "Máxima caída", rep: "Informe (ID)" };
   var GES_MAP = { ticker: "Ticker", date: "Fecha revisión", rep: "Informe (ID)", state: "Estado", stateEn: "Estado (EN)", stop: "Stop S", trail: "Trailing por cierre", m: "Mínimo M", note: "Nota", noteEn: "Nota (EN)", next: "Próximo evento", nextEn: "Próximo evento (EN)" };
@@ -809,6 +809,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   function isApproved(d) { return d === "Apta para Stage 3.5" || d === "Aprobada Stage 3, bloqueada"; }
   /* valuation source kept apart from the latest review of the row */
   function vSrc(r) { var c = String(r.calc || "").match(/\b[Ii]nforme\s+(A\d{2,4})\b/); return { id: r.vrep || (c && c[1]) || (r.base !== null ? r.rep : "") || "", d: isoDay(r.vdate) || "" }; }
+  function vLab(r) { var x = lang === "en" && r.vlabEn ? r.vlabEn : r.vlab; return x ? '<small class="muted" style="display:block;font-size:0.72rem;color:var(--ink-2)">' + esc(x) + "</small>" : ""; }
   function groupOf(d) { if (d === "En cartera") return "held"; if (isApproved(d)) return "ok"; if (d === "Esperar precio") return "wait"; if (d === "En observación") return "watch"; return "out"; }
 
   /* ---------- valuation band ---------- */
@@ -988,7 +989,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     return '<div class="card" role="group" tabindex="0" aria-label="' + esc(r.ticker) + '" data-open="' + k + '">' +
       '<div class="card-top"><div><div class="tick">' + esc(r.ticker) + '</div><div class="co">' + esc(r.company) + "</div></div>" + pill(r.decision) + "</div>" +
       band(r) + srcLine(r) +
-      '<dl class="kv"><div><dt>' + esc(t().col.priceScan) + "</dt><dd" + cv("price") + ">" + esc(fmtM(r.price)) + "</dd></div><div><dt>" + esc(t().col.base) + '</dt><dd style="color:var(--accent)"' + cv("base") + ">" + esc(fmtM(r.base)) + "</dd></div><div><dt>" + esc(t().col.maxc) + "</dt><dd" + cv("maxc") + ">" + esc(fmtM(r.maxc)) + "</dd></div><div><dt>" + esc(t().col.mos) + '</dt><dd class="' + signCls(r.mos) + '"' + cv("mos") + ">" + esc(fmtP(r.mos)) + "</dd></div>" +
+      '<dl class="kv"><div><dt>' + esc(t().col.priceScan) + "</dt><dd" + cv("price") + ">" + esc(fmtM(r.price)) + "</dd></div><div><dt>" + esc(t().col.base) + '</dt><dd style="color:var(--accent)"' +  cv("base") + ">" + esc(fmtM(r.base)) + vLab(r) + "</dd></div><div><dt>" + esc(t().col.maxc) + "</dt><dd" + cv("maxc") + ">" + esc(fmtM(r.maxc)) + "</dd></div><div><dt>" + esc(t().col.mos) + '</dt><dd class="' + signCls(r.mos) + '"' + cv("mos") + ">" + esc(fmtP(r.mos)) + "</dd></div>" +
       (r.cons !== null && r.fav !== null ? '<div style="grid-column:1/-1"><dt>' + esc(t().col.valRange) + "</dt><dd" + cv("range") + ">" + esc(fmtM(r.cons) + " – " + fmtM(r.fav)) + "</dd></div>" : "") + "</dl>" +
       "<p>" + esc(whyOf(r)) + "</p>" + (r.base === null && r.calc ? '<p class="muted">' + esc(t().apst.noValNow) + "</p>" : "") + execLine(r) + entryLine(r) + nowLine(r) +
       '<button type="button" class="calc-btn" data-calc="' + k + '|"><i aria-hidden="true">i</i>' + esc(t().calc.btn) + "</button></div>";
@@ -1023,7 +1024,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var det = lang === "en" && r.calcEn ? r.calcEn : r.calc;
     var detHtml = det ? para(L.detail) + '<ul class="calc-list">' + String(det).split(/\n+/).filter(function (x) { return x.trim(); }).map(function (x) { return "<li>" + esc(x.trim()) + "</li>"; }).join("") + "</ul>" : para(L.noDetail, "calc-note");
     var aTxt = vs0.d ? sub(L.baseOn, { d: fmtD(vs0.d) }) : (repId && repId !== r.rep ? "" : sub(L.baseOn, { d: fmtD(r.adate || r.date) }));
-    h += sec("base", L.base, fmtM(r.base), "", (r.base === null ? para(L.noBase) : para(sub(L.baseTxt, { rep: repTxt, a: aTxt }))) + revTxt + detHtml);
+    h += sec("base", L.base, fmtM(r.base), "", (r.base === null ? para(L.noBase) : para(sub(L.baseTxt, { rep: repTxt, a: aTxt })) + ((lang === "en" && r.vlabEn) || r.vlab ? para("⚠ " + (lang === "en" && r.vlabEn ? r.vlabEn : r.vlab), "calc-note") : "")) + revTxt + detHtml);
 
     /* 3. range */
     if (r.cons !== null && r.fav !== null) h += sec("range", L.range, fmtM(r.cons) + " – " + fmtM(r.fav), "", para(L.rangeTxt) +
@@ -1327,7 +1328,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       if (v) {
         var k = esc(v.date + "|" + v.ticker);
         x += '<div class="muted" style="font-size:0.82rem">' + esc(sub(K.valOf, { d: fmtD(vSrc(v).d || v.adate || v.date) })) + (vSrc(v).id ? ' · <button type="button" class="chip" data-libopen="' + esc(vSrc(v).id) + '">' + esc(vSrc(v).id) + " →</button>" : "") + "</div>" + band(v) +
-          '<dl class="kv"><div><dt>' + esc(C.base) + '</dt><dd style="color:var(--accent)" data-calc="' + k + '|base">' + esc(fmtM(v.base)) + "</dd></div><div><dt>" + esc(C.maxc) + '</dt><dd data-calc="' + k + '|maxc">' + esc(fmtM(v.maxc)) + "</dd></div>" +
+          '<dl class="kv"><div><dt>' + esc(C.base) + '</dt><dd style="color:var(--accent)" data-calc="' + k + '|base">' + esc(fmtM(v.base)) + vLab(v) + "</dd></div><div><dt>" + esc(C.maxc) + '</dt><dd data-calc="' + k + '|maxc">' + esc(fmtM(v.maxc)) + "</dd></div>" +
           (v.cons !== null && v.fav !== null ? '<div style="grid-column:1/-1"><dt>' + esc(C.valRange) + '</dt><dd data-calc="' + k + '|range">' + esc(fmtM(v.cons) + " – " + fmtM(v.fav)) + "</dd></div>" : "") + "</dl>" +
           '<div class="controls"><button type="button" class="calc-btn" data-calc="' + k + '|"><i aria-hidden="true">i</i>' + esc(t().calc.btn) + '</button><button type="button" class="btn" data-open="' + k + '">' + esc(K.openRec) + "</button></div>";
       } else if (vNone) x += '<p class="muted calc-note" style="margin:0">' + esc(String((lang === "en" && vNone.calcEn ? vNone.calcEn : vNone.calc)).split(/\n+/)[0]) + '</p><div class="controls"><button type="button" class="calc-btn" data-calc="' + esc(vNone.date + "|" + vNone.ticker) + '|"><i aria-hidden="true">i</i>' + esc(t().calc.btn) + "</button></div>";

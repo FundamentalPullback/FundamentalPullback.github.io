@@ -17,9 +17,9 @@ mf_txt = open(os.path.join(data, "manifest.js"), encoding="utf-8").read()
 mf = json.loads(re.search(r"=\s*(\{.*\})\s*;?\s*$", mf_txt, re.S).group(1))
 scan_start = int(mf.get("scanRows", 0)) + 2          # first sheet row not yet published
 
-FULL = {"Decisiones": "A1:AL", "Operaciones": "A1:L", "Cuenta": "A1:F", "Historial": "A1:AP", "Retrospectiva": "A1:O", "Gestión": "A1:L"}
+FULL = {"Decisiones": "A1:AN", "Operaciones": "A1:L", "Cuenta": "A1:F", "Historial": "A1:AP", "Retrospectiva": "A1:O", "Gestión": "A1:L"}
 # older reads of Decisiones (before the "Cálculo" and "Informe (ID)" columns) are still accepted
-ALT = {"Decisiones": ("A1:AD", "A1:AE", "A1:AF", "A1:AG", "A1:AJ")}
+ALT = {"Decisiones": ("A1:AD", "A1:AE", "A1:AF", "A1:AG", "A1:AJ", "A1:AL")}
 NAMES = {"Decisiones": "dec", "Operaciones": "ops", "Cuenta": "acct", "Historial": "hist", "Retrospectiva": "retro", "Gestión": "ges"}
 found, scan_new = {}, None
 
