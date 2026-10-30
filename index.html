@@ -67,6 +67,7 @@ header.mast { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; 
 .status { font-family: var(--font-data); font-size: 0.75rem; color: var(--ink-2); }
 .btn { font: inherit; font-size: 0.82rem; font-weight: 600; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 10px; cursor: pointer; }
 .btn:hover { border-color: var(--ink-2); }
+a.btn { display: inline-block; text-decoration: none; }
 .btn:focus-visible, .tab:focus-visible, .chip:focus-visible, tr.click:focus-visible, select:focus-visible, th button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .lang { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
 .lang button { font: inherit; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; background: var(--sheet); color: var(--ink-2); border: 0; padding: 6px 9px; cursor: pointer; }
@@ -353,6 +354,31 @@ tr.click:hover td { background: var(--paper); }
 .gate-actions .btn { padding: 10px 16px; font-size: 0.9rem; }
 .btn-primary { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
 .btn-primary:hover { opacity: 0.9; }
+.plan-sum { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.plan-sum button { font: inherit; text-align: left; color: inherit; background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 14px; display: grid; gap: 6px; cursor: pointer; align-content: start; }
+.plan-sum button:hover { border-color: var(--ink-2); }
+.plan-sum b { font-size: 0.95rem; }
+.plan-sum span { font-size: 0.84rem; color: var(--ink-2); }
+.plan-sec { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; min-width: 0; scroll-margin-top: 180px; }
+.plan-sec > summary { cursor: pointer; padding: 14px 18px; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; list-style: none; }
+.plan-sec > summary::-webkit-details-marker { display: none; }
+.plan-sec > summary::before { content: "+"; font-weight: 700; color: var(--ink-2); width: 1ch; }
+.plan-sec[open] > summary::before { content: "\2212"; }
+.plan-sec > summary h3 { margin: 0; font-size: 1rem; }
+.plan-sec > summary small { color: var(--ink-2); font-size: 0.78rem; }
+.plan-body { padding: 0 18px 18px; display: grid; gap: 10px; min-width: 0; }
+.plan-body p, .plan-body li { margin: 0; font-size: 0.9rem; max-width: 78ch; }
+.plan-body h4 { margin: 8px 0 0; font-size: 0.92rem; }
+.plan-body h5 { margin: 4px 0 0; font-size: 0.86rem; color: var(--ink-2); }
+.plan-body ol { margin: 0; padding-left: 1.4em; display: grid; gap: 6px; }
+.plan-body pre { margin: 0; font-family: var(--font-data); font-size: 0.8rem; background: var(--paper); border-radius: 6px; padding: 10px 12px; overflow-x: auto; }
+.plan-body .note { font-size: 0.82rem; color: var(--ink-2); border-left: 3px solid var(--rule); padding-left: 10px; }
+.plan-body table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+.plan-body th, .plan-body td { text-align: left; vertical-align: top; padding: 7px 10px; border-bottom: 1px solid var(--rule); }
+.plan-body th { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-2); }
+.plan-new { font-size: 0.7rem; font-weight: 700; padding: 1px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--ink); }
+.plan-stage { margin: 10px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+.plan-log { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; font-size: 0.88rem; }
 footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var(--ink-2); font-size: 0.8rem; }
 </style>
 </head>
@@ -391,6 +417,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   <section id="v-rendimiento" hidden></section>
   <section id="v-retro" hidden></section>
   <section id="v-biblioteca" hidden></section>
+  <section id="v-plan" hidden></section>
 </main>
 
 <footer>
@@ -401,6 +428,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
 <div id="calc-root"></div>
 <script src="data/manifest.js"></script>
 <script src="data/names.js"></script>
+<script src="data/plan.js"></script>
 
 <script>
 (function () {
@@ -427,7 +455,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       sub: "Diario de investigación · paper trading",
       refresh: "Actualizar",
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
-      tabs: { posiciones: "Posiciones", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca" },
+      tabs: { posiciones: "Posiciones", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca", plan: "Plan" },
+      plan: { title: "Plan de trading", lede: "Las reglas con las que se toman las decisiones de esta web, en su edición vigente. Cada sección indica desde cuándo rige.", edition: "Edición vigente: {v}, {d}", sumTitle: "Resumen", sumLede: "Las cinco etapas en una pantalla. Toca una para ir a su detalle.", fullTitle: "Plan completo", intro: "Introducción y orden de aplicación", since: "Vigente desde", isNew: "Nuevo", open: "Abrir todo", close: "Cerrar todo", logTitle: "Historial de versiones", pdf: "Descargar el PDF de esta edición", none: "El plan no se ha podido cargar." },
       valHelp: "Valor estimado: lo que el informe calcula que vale la acción en el escenario central. Techo del informe: el precio máximo de compra que fijó el informe de cada empresa (puede venir de la valoración, de la técnica o de un evento); no es un descuento fijo del plan, no autoriza una orden por sí solo, y si el informe no fija techo no se muestra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado. Los escenarios «si va mal» y «si va bien» no son límites garantizados.",
       whatMeans: "¿Qué significa cada número?", trRet: "Rentabilidad", trEx: "Frente al SPY",
       bandCap: { lo: "bajista", mid: "valor estimado", hi: "alcista" },
@@ -558,7 +587,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
       sub: "Research journal · paper trading",
       refresh: "Refresh",
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
-      tabs: { posiciones: "Positions", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library" },
+      tabs: { posiciones: "Positions", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library", plan: "Plan" },
+      plan: { title: "Trading plan", lede: "The rules behind the decisions on this site, in their current edition. Each section shows when it took effect.", edition: "Current edition: {v}, {d}", sumTitle: "Summary", sumLede: "The five stages on one screen. Tap one to go to its detail.", fullTitle: "Full plan", intro: "Introduction and order of application", since: "In force since", isNew: "New", open: "Open all", close: "Close all", logTitle: "Version history", pdf: "Download this edition's PDF (Spanish)", none: "The plan couldn't be loaded." },
       valHelp: "Estimated value: what the report calculates the share is worth in the central case. Report ceiling: the max. buy price set by each company's report (it can come from the valuation, the technicals or an event); it isn't a fixed plan discount, it doesn't authorize an order on its own, and if the report sets no ceiling none is shown. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value. The badly/well scenarios are not guaranteed limits.",
       whatMeans: "What does each number mean?", trRet: "Return", trEx: "Vs SPY",
       bandCap: { lo: "bear case", mid: "estimated value", hi: "bull case" },
@@ -722,7 +752,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     lib: null, libState: "idle", libQ: "", libCat: "all", libSel: null,
     sort: {}
   };
-  var VIEWS = ["resumen", "cartera", "posiciones", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca"];
+  var VIEWS = ["resumen", "cartera", "posiciones", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca", "plan"];
 
   /* ---------- parsing ---------- */
   function num(v) {
@@ -1804,6 +1834,50 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     flush();
     return out;
   }
+  /* ---------- trading plan (static, data/plan.js) ---------- */
+  function vPlan() {
+    var P = window.FP_PLAN, L = t().plan;
+    if (!P) return head(L.title, L.lede) + notice(L.title, L.none);
+    var M = P.meta, ML = M[lang] || M.es, C = P[lang] || P.es;
+    function blocks(list) {
+      return list.map(function (b) {
+        if (b[0] === "h") return "<h4>" + esc(b[1]) + "</h4>";
+        if (b[0] === "h3") return "<h5>" + esc(b[1]) + "</h5>";
+        if (b[0] === "code") return "<pre><code>" + esc(b[1]) + "</code></pre>";
+        if (b[0] === "note") return '<p class="note">' + esc(b[1]) + "</p>";
+        if (b[0] === "ol") return "<ol>" + b[1].map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ol>";
+        if (b[0] === "t") return '<div class="tbl-outer"><div class="tbl-wrap"><table><thead><tr>' + b[1][0].map(function (x) { return '<th scope="col">' + esc(x) + "</th>"; }).join("") + "</tr></thead><tbody>" +
+          b[1].slice(1).map(function (r) { return "<tr>" + r.map(function (x) { return "<td>" + esc(x) + "</td>"; }).join("") + "</tr>"; }).join("") + "</tbody></table></div></div>";
+        return "<p>" + esc(b[1]) + "</p>";
+      }).join("");
+    }
+    var h = head(L.title, L.lede);
+    h += '<div class="notice"><strong>' + esc(L.edition.replace("{v}", lang === "en" ? M.versionEn : M.version).replace("{d}", fmtD(M.date))) + "</strong><p>" + esc(ML.disclaimer) + "</p></div>";
+    h += '<div class="panel"><div><h3>' + esc(L.sumTitle) + '</h3><p class="lede">' + esc(L.sumLede) + '</p></div><div class="plan-sum">' +
+      ML.summary.map(function (x) { return '<button type="button" data-plango="' + esc(x[3]) + '"><span class="eyebrow">' + esc(x[0]) + "</span><b>" + esc(x[1]) + "</b><span>" + esc(x[2]) + "</span></button>"; }).join("") + "</div></div>";
+    h += '<div class="sec-head"><div><h2 style="font-size:1.15rem">' + esc(L.fullTitle) + '</h2></div><div class="controls"><button type="button" class="chip" data-planall="1">' + esc(L.open) + '</button><button type="button" class="chip" data-planall="0">' + esc(L.close) + "</button></div></div>";
+    var OP = S.planOpen || (S.planOpen = {});
+    h += '<details class="plan-sec" id="plan-intro"' + (OP.intro ? " open" : "") + '><summary><h3>' + esc(L.intro) + '</h3></summary><div class="plan-body">' + blocks(C.intro) + "</div></details>";
+    var last = "";
+    C.sections.forEach(function (sx) {
+      if (sx.stage !== last) { h += '<p class="plan-stage">' + esc(sx.stage) + "</p>"; last = sx.stage; }
+      h += '<details class="plan-sec" id="plan-' + esc(sx.id) + '"' + (OP[sx.id] ? " open" : "") + '><summary><h3>' + esc(sx.title) + "</h3>" + (sx["new"] ? '<span class="plan-new">' + esc(L.isNew) + "</span>" : "") +
+        "<small>" + esc(L.since + ": " + sx.since) + "</small></summary><div class=\"plan-body\">" + (sx.lede ? '<p class="lede" style="margin:0">' + esc(sx.lede) + "</p>" : "") + blocks(sx.blocks) + "</div></details>";
+    });
+    h += '<div class="panel"><div><h3>' + esc(L.logTitle) + '</h3></div><ul class="plan-log">' + ML.changes.map(function (x) { return "<li><b>" + esc(x[0]) + ".</b> " + esc(x[1]) + "</li>"; }).join("") + "</ul>" +
+      '<p class="muted" style="margin:0;font-size:0.84rem">' + esc(ML.archiveNote) + '</p><p style="margin:0"><a class="btn" href="' + esc(M.pdf) + '" download>' + esc(L.pdf) + "</a></p></div>";
+    return h;
+  }
+  function planGo(id) {
+    (S.planOpen || (S.planOpen = {}))[id] = true;
+    var el = document.getElementById("plan-" + id); if (!el) return;
+    el.open = true; el.scrollIntoView({ block: "start" });
+  }
+  document.addEventListener("toggle", function (e) {
+    var d = e.target; if (!d.classList || !d.classList.contains("plan-sec")) return;
+    (S.planOpen || (S.planOpen = {}))[d.id.replace(/^plan-/, "")] = d.open;
+  }, true);
+
   function vBiblioteca() {
     var L = t().lib;
     ensureLib();
@@ -1898,7 +1972,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     else if (S.loadedAt) st.textContent = t().updated + " · " + new Intl.DateTimeFormat(loc(), { hour: "2-digit", minute: "2-digit" }).format(new Date(S.loadedAt));
     else st.textContent = S.err.dec || S.err.scan ? "" : t().loading;
   }
-  var RENDER = { posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca };
+  var RENDER = { posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca, plan: vPlan };
   /* fade on the right edge of a table while there are more columns to scroll to */
   function markScroll(root) {
     [].forEach.call(root.querySelectorAll(".tbl-outer"), function (o) {
@@ -1955,6 +2029,10 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     if (op) { openDetail(op.getAttribute("data-open")); return; }
     if (e.target.id === "only-s2") { S.onlyS2 = !S.onlyS2; render(); return; }
     if (e.target.closest("[data-allow]")) { loadOnce(); return; }
+    var pg = e.target.closest("[data-plango]");
+    if (pg) { planGo(pg.getAttribute("data-plango")); return; }
+    var pa = e.target.closest("[data-planall]");
+    if (pa) { var on = pa.getAttribute("data-planall") === "1"; document.querySelectorAll("#v-plan details.plan-sec").forEach(function (d) { d.open = on; }); return; }
   });
   document.addEventListener("keydown", function (e) {
     if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("tr.click, .plrow.click, div.card")) { e.preventDefault(); openDetail(e.target.getAttribute("data-open")); }
@@ -1971,7 +2049,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   document.getElementById("lang-es").addEventListener("click", function () { setLang("es"); });
   document.getElementById("lang-en").addEventListener("click", function () { setLang("en"); });
 
-  var hash = (location.hash || "").replace("#", "");
+  var hash = (location.hash || "").replace("#", ""), planAnchor = null;
+  if (/^plan-/.test(hash)) { planAnchor = hash.slice(5); hash = "plan"; }
   if (VIEWS.indexOf(hash) >= 0) S.view = hash;
   function go(v) {
     if (VIEWS.indexOf(v) < 0) return;
@@ -1979,9 +2058,11 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     S.view = v; render(); window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", function () {
-    var v = (location.hash || "").replace("#", "");
+    var v = (location.hash || "").replace("#", ""), pa = null;
+    if (/^plan-/.test(v)) { pa = v.slice(5); v = "plan"; }
     if (VIEWS.indexOf(v) < 0) return;
     closeDrawer(); S.view = v; render(); window.scrollTo(0, 0);
+    if (pa) planGo(pa);
   });
 
   /* ---------- data loading ---------- */
@@ -2096,6 +2177,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
   }
   if (window.FP_MANIFEST && !gateAccepted()) showGate(false);
   render();
+  if (planAnchor) planGo(planAnchor);
   function loadScript(src) { return new Promise(function (ok, ko) { var el = document.createElement("script"); el.src = src; el.onload = ok; el.onerror = function () { ko(src); }; document.head.appendChild(el); }); }
   if (window.FP_MANIFEST) {
     var MF = window.FP_MANIFEST;
