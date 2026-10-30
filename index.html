@@ -1212,7 +1212,8 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; color: var
     var A = t().apst, C = t().col;
     var base = S.latestOnly ? latestPerTicker(S.dec) : S.dec;
     var rows = base.filter(function (r) { return isApproved(r.decision); });
-    var heldRows = base.filter(function (r) { return r.decision === "En cartera"; }).sort(function (a, b) { return String(a.ticker).localeCompare(String(b.ticker)); });
+    var openTk = {}; positions().list.forEach(function (p) { if (p.shares > 0) openTk[p.ticker] = 1; });
+    var heldRows = base.filter(function (r) { return r.decision === "En cartera" && openTk[r.ticker]; }).sort(function (a, b) { return String(a.ticker).localeCompare(String(b.ticker)); });
     rows.forEach(function (r) { var s = approvalStatus(r); r.st = s.code; r.stLabel = s.label; });
     if (!S.sort.app) S.sort.app = { key: "date", dir: "desc" };
     if (!S.sort.appold) S.sort.appold = { key: "date", dir: "desc" };
