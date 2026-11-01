@@ -8,7 +8,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
 <style>
 /* Layout: a research ledger. Sticky masthead + section tabs, one working column of tables and decision cards, numbers in mono. */
 :root {
@@ -27,7 +27,7 @@
   --neg: #B3362B;   --neg-bg: #F7E0DC;
   --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-data: "Archivo", "Helvetica Neue", Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -411,6 +411,119 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
 .cal-detail ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-family: var(--font-data); font-size: 0.84rem; }
 .cal-detail li { display: flex; justify-content: space-between; gap: 12px; }
 @media (max-width: 640px) { .cal-cell { min-height: 50px; } .cal-cell .v { font-size: 0.7rem; letter-spacing: -0.02em; } .cal-cell .d { font-size: 0.72rem; } .cal-grid { gap: 3px; } }
+
+/* ---------- 2026-11 refresh ---------- */
+body { font-variant-numeric: tabular-nums; }
+.hero::before { display: none; }
+.eyebrow, th, .kv dt, .facts dt, .calc-sec header span, .pos-sl span, .plan-body th, .plan-stage, .cal-dow, .lang button, .gate-box .tag-l {
+  text-transform: none; letter-spacing: 0; }
+.eyebrow { font-size: 0.8rem; font-weight: 600; }
+th { font-size: 0.76rem; font-weight: 600; }
+.kv dt, .facts dt { font-size: 0.76rem; }
+.tick, td.t, .alloc-list .t { font-variation-settings: "wdth" 85; letter-spacing: 0.01em; font-weight: 700; }
+.status { font-size: 0.78rem; }
+/* two-level navigation */
+nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
+.nav-groups, .nav-sub { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.nav-groups::-webkit-scrollbar, .nav-sub::-webkit-scrollbar { display: none; }
+.nav-groups .tab { font-size: 0.95rem; font-weight: 700; padding: 8px 14px 10px; }
+.nav-sub { gap: 6px; padding: 8px 0 10px; border-top: 1px solid var(--rule); }
+.nav-sub[hidden] { display: none; }
+.nav-sub .sub { font: inherit; font-size: 0.84rem; font-weight: 600; white-space: nowrap; color: var(--ink-2); background: none; border: 1px solid transparent; border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.nav-sub .sub:hover { color: var(--ink); }
+.nav-sub .sub[aria-current="page"] { color: var(--ink); background: var(--paper); border-color: var(--rule); }
+.nav-sub .sub:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* folded explanations */
+.why-fold { margin: 6px 0 0; max-width: 68ch; color: var(--ink-2); }
+.why-fold summary { cursor: pointer; font-size: 0.85rem; font-weight: 600; color: var(--ink-2); width: max-content; max-width: 100%; }
+.why-fold summary:hover { color: var(--ink); }
+.why-fold p { margin: 6px 0 0; font-size: 0.9rem; }
+/* home */
+.home { display: grid; gap: 22px; }
+.home-lead { display: grid; gap: 10px; padding-top: 4px; }
+.home-lead .eyebrow { color: var(--ink-2); }
+.home-hl { margin: 0; font-family: var(--font-display); font-weight: 800; font-variation-settings: "wdth" 72; font-size: clamp(1.9rem, 5.2vw, 3.3rem); line-height: 1.02; letter-spacing: -0.02em; max-width: 22ch; text-wrap: balance; }
+.home-hl .pos { color: var(--ok); } .home-hl .neg { color: var(--neg); }
+.home-sub { margin: 0; color: var(--ink-2); font-size: 1rem; max-width: 62ch; }
+.home-chart { background: var(--sheet); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px 6px; display: grid; gap: 8px; }
+.home-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--rule); padding-top: 10px; }
+.home-stats div { display: grid; gap: 1px; padding: 0 12px; border-left: 1px solid var(--rule); min-width: 0; }
+.home-stats div:first-child { border-left: 0; padding-left: 0; }
+.home-stats b { font-size: 1.15rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.home-stats span { font-size: 0.78rem; color: var(--ink-2); }
+@media (max-width: 640px) { .home-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 0; } .home-stats div:nth-child(3) { border-left: 0; padding-left: 0; } }
+.home-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+@media (max-width: 820px) { .home-grid { grid-template-columns: minmax(0, 1fr); } }
+.home-sec { background: var(--sheet); border: 1px solid var(--rule); border-radius: 12px; padding: 16px 18px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.home-sec > header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.home-sec > header h3 { font-size: 1.1rem; }
+.home-sec > header small { color: var(--ink-2); font-size: 0.82rem; }
+.more-link { font: inherit; font-size: 0.85rem; font-weight: 600; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.more-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.home-nums { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.home-nums div { display: grid; }
+.home-nums b { font-size: 1.5rem; font-weight: 700; line-height: 1.15; }
+.home-nums span { font-size: 0.8rem; color: var(--ink-2); }
+.home-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.home-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; align-items: baseline; padding: 8px 0; border-top: 1px solid var(--rule); font-size: 0.9rem; }
+.home-list li:first-child { border-top: 0; }
+.home-list .t { font-weight: 700; font-variation-settings: "wdth" 85; }
+.home-list small { grid-column: 1 / -1; color: var(--ink-2); font-size: 0.8rem; }
+.home-list .r { text-align: right; white-space: nowrap; }
+/* price vs value gauge: the signature element */
+.gauge-list { display: grid; gap: 0; }
+.gauge-row { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr) 9rem; gap: 6px 16px; align-items: center; padding: 10px 0; border-top: 1px solid var(--rule); font: inherit; color: inherit; background: none; border-left: 0; border-right: 0; border-bottom: 0; text-align: left; cursor: pointer; width: 100%; }
+.gauge-row:first-child { border-top: 0; }
+.gauge-row:hover .gauge-track { background: var(--rule); }
+.gauge-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.gauge-row .who { display: grid; gap: 2px; min-width: 0; }
+.gauge-row .who b { font-size: 1.05rem; font-variation-settings: "wdth" 85; }
+.gauge-row .who .pill { justify-self: start; }
+.gauge-track { position: relative; height: 10px; border-radius: 5px; background: var(--paper); transition: background 0.15s; }
+.gauge-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 5px; background: var(--wait-bg); }
+.gauge-val { position: absolute; top: -5px; bottom: -5px; width: 2px; margin-left: -1px; background: var(--accent); }
+.gauge-dot { position: absolute; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--ink); border: 2px solid var(--sheet); }
+.gauge-row .gap { text-align: right; display: grid; gap: 1px; }
+.gauge-row .gap b { font-size: 1rem; }
+.gauge-row .gap span { font-size: 0.76rem; color: var(--ink-2); white-space: nowrap; }
+.gauge-key { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.8rem; color: var(--ink-2); }
+.gauge-key i { display: inline-block; vertical-align: middle; margin-right: 6px; }
+.gauge-key .k-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ink); }
+.gauge-key .k-val { width: 2px; height: 12px; background: var(--accent); }
+@media (max-width: 560px) { .gauge-row { grid-template-columns: minmax(0, 1fr) auto; } .gauge-track { grid-column: 1 / -1; grid-row: 2; } }
+/* phone fixes */
+@media (max-width: 640px) {
+  .mast-top { padding-block: 10px 6px; gap: 6px 10px; }
+  .brand p { display: none; }
+  .brand h1 { font-size: 1.15rem; }
+  .tools { width: 100%; justify-content: space-between; }
+  #refresh { display: none; }
+  .hero { padding: 16px 14px 10px; }
+  .hero-side { flex-wrap: wrap; gap: 8px; }
+  .hero-side > div { min-width: 0; flex: 1 1 140px; padding: 8px 10px; }
+  .hero-side b { font-size: 1.05rem; overflow-wrap: anywhere; }
+  .nav-groups { gap: 0; margin: 0 -6px; }
+  .nav-groups .tab { font-size: 0.86rem; padding: 8px 7px 9px; }
+  .nav-sub { gap: 2px; }
+  .nav-sub .sub { padding: 4px 9px; }
+  main { padding-block: 16px 32px; }
+}
+/* stacked tables on phones */
+@media (max-width: 640px) {
+  .tbl-stack .tbl-wrap { overflow: visible; }
+  .tbl-stack.tbl-outer::after { display: none; }
+  .tbl-stack thead { display: none; }
+  .tbl-stack table, .tbl-stack tbody { display: block; }
+  .tbl-stack tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; padding: 12px 14px; border-bottom: 1px solid var(--rule); }
+  .tbl-stack tr:last-child { border-bottom: 0; }
+  .tbl-stack td { display: block; padding: 0; border: 0; min-width: 0; max-width: none; text-align: left; position: static; box-shadow: none; background: none; white-space: normal; }
+  .tbl-stack td.t { font-size: 1.05rem; align-self: center; }
+  .tbl-stack td:nth-child(2) { justify-self: end; align-self: center; }
+  .tbl-stack td.n::before { content: attr(data-label); display: block; font-size: 0.74rem; color: var(--ink-2); }
+  .tbl-stack td.why { grid-column: 1 / -1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; font-size: 0.85rem; }
+  .tbl-stack tr.click:hover td { background: none; }
+  .tbl-stack .tbl-wrap td:first-child { position: static; box-shadow: none; background: none; }
+}
 </style>
 </head>
 <body>
@@ -437,7 +550,8 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
 </header>
 
 <main class="wrap viz" id="main">
-  <section id="v-cartera"></section>
+  <section id="v-inicio"></section>
+  <section id="v-cartera" hidden></section>
   <section id="v-resumen" hidden></section>
   <section id="v-posiciones" hidden></section>
   <section id="v-escaner" hidden></section>
@@ -485,8 +599,18 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     es: {
       sub: "Diario de investigación · paper trading",
       refresh: "Actualizar",
+      navGroups: { inicio: "Hoy", cartera: "Cartera", invest: "Investigación", plan: "Plan y biblioteca" },
+      readMore: "Cómo leer esto",
+      home: { eyebrow: "Al cierre del {d}", hlUp: "La cuenta gana un {r} en {n} días, {x} por delante del SPY.", hlUpBehind: "La cuenta gana un {r} en {n} días, {x} por detrás del SPY.", hlDown: "La cuenta pierde un {r} en {n} días, {x} frente al SPY.",
+        sub: "Paper trading con 100.000 $ simulados desde el {s}. Cada compra y cada descarte sale de un informe publicado en la biblioteca.",
+        value: "Valor de la cuenta", cash: "Efectivo", open: "Posiciones abiertas", last: "Última sesión", pts: "{p} puntos",
+        seeCart: "Ver la cartera", scanTitle: "Último escáner", scanSub: "{d}", rows: "empresas en el escáner", cands: "pasan a investigación (Opp ≥ 85)", newC: "nuevas respecto al anterior",
+        decTitle: "Decisiones de ese día", seeAna: "Ver el análisis", tradesTitle: "Operaciones recientes", seeOps: "Ver todas", noTrades: "Sin operaciones registradas.",
+        closeTitle: "Más cerca de su valor", closeSub: "Precio del escáner frente al valor estimado del informe. Ninguna tiene una entrada autorizada salvo que su ficha lo diga.",
+        kDot: "precio", kVal: "valor estimado", ofVal: "del valor", below: "por debajo", above: "por encima", noClose: "No hay valoraciones en el último análisis.",
+        posTitle: "Posiciones abiertas", seePos: "Ver posiciones", repTitle: "Últimos informes", seeLib: "Abrir la biblioteca", libLoading: "Cargando la biblioteca…", weight: "del total" },
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
-      tabs: { posiciones: "Posiciones", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca", plan: "Plan" },
+      tabs: { inicio: "Hoy", posiciones: "Posiciones", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca", plan: "Plan" },
       plan: { title: "Plan de trading", lede: "Las reglas con las que se toman las decisiones de esta web, en su edición vigente. Cada sección indica desde cuándo rige.", edition: "Edición vigente: {v}, {d}", sumTitle: "Resumen", sumLede: "Las cinco etapas en una pantalla. Toca una para ir a su detalle.", fullTitle: "Plan completo", intro: "Introducción y orden de aplicación", since: "Vigente desde", isNew: "Nuevo", open: "Abrir todo", close: "Cerrar todo", logTitle: "Historial de versiones", pdf: "Descargar el PDF de esta edición", none: "El plan no se ha podido cargar." },
       valHelp: "Valor estimado: lo que el informe calcula que vale la acción en el escenario central. Techo del informe: el precio máximo de compra que fijó el informe de cada empresa (puede venir de la valoración, de la técnica o de un evento); no es un descuento fijo del plan, no autoriza una orden por sí solo, y si el informe no fija techo no se muestra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado. Los escenarios «si va mal» y «si va bien» no son límites garantizados.",
       whatMeans: "¿Qué significa cada número?", trRet: "Rentabilidad", trEx: "Frente al SPY",
@@ -618,8 +742,18 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     en: {
       sub: "Research journal · paper trading",
       refresh: "Refresh",
+      navGroups: { inicio: "Today", cartera: "Portfolio", invest: "Research", plan: "Plan & library" },
+      readMore: "How to read this",
+      home: { eyebrow: "As of the close on {d}", hlUp: "The account is up {r} in {n} days, {x} ahead of the SPY.", hlUpBehind: "The account is up {r} in {n} days, {x} behind the SPY.", hlDown: "The account is down {r} in {n} days, {x} versus the SPY.",
+        sub: "Paper trading with a simulated $100,000 since {s}. Every buy and every rejection comes from a report published in the library.",
+        value: "Account value", cash: "Cash", open: "Open positions", last: "Last session", pts: "{p} points",
+        seeCart: "See the portfolio", scanTitle: "Latest scan", scanSub: "{d}", rows: "companies in the scan", cands: "move to research (Opp ≥ 85)", newC: "new versus the previous scan",
+        decTitle: "Decisions that day", seeAna: "See the analysis", tradesTitle: "Recent trades", seeOps: "See all", noTrades: "No trades recorded.",
+        closeTitle: "Closest to their value", closeSub: "Scanner price versus the report's estimated value. None has an authorized entry unless its card says so.",
+        kDot: "price", kVal: "estimated value", ofVal: "of value", below: "below", above: "above", noClose: "No valuations in the latest analysis.",
+        posTitle: "Open positions", seePos: "See positions", repTitle: "Latest reports", seeLib: "Open the library", libLoading: "Loading the library…", weight: "of total" },
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
-      tabs: { posiciones: "Positions", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library", plan: "Plan" },
+      tabs: { inicio: "Today", posiciones: "Positions", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library", plan: "Plan" },
       plan: { title: "Trading plan", lede: "The rules behind the decisions on this site, in their current edition. Each section shows when it took effect.", edition: "Current edition: {v}, {d}", sumTitle: "Summary", sumLede: "The five stages on one screen. Tap one to go to its detail.", fullTitle: "Full plan", intro: "Introduction and order of application", since: "In force since", isNew: "New", open: "Open all", close: "Close all", logTitle: "Version history", pdf: "Download this edition's PDF (Spanish)", none: "The plan couldn't be loaded." },
       valHelp: "Estimated value: what the report calculates the share is worth in the central case. Report ceiling: the max. buy price set by each company's report (it can come from the valuation, the technicals or an event); it isn't a fixed plan discount, it doesn't authorize an order on its own, and if the report sets no ceiling none is shown. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value. The badly/well scenarios are not guaranteed limits.",
       whatMeans: "What does each number mean?", trRet: "Return", trEx: "Vs SPY",
@@ -778,14 +912,21 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null, eq: null,
     err: { scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null },
     loadedAt: null,
-    view: "resumen",
+    view: "inicio",
     scanDate: null, onlyS2: true, scanQ: "",
     anaFilter: "all", rejFilter: "all", rejQ: "", anaQ: "", resDate: null, anaDate: null, latestOnly: true,
     retroHz: "corte", retroGrp: "A", calMode: "m", calMonth: null, calYear: null, calSel: null,
     lib: null, libState: "idle", libQ: "", libCat: "all", libSel: null,
-    sort: {}
+    sort: {}, lastIn: {}
   };
-  var VIEWS = ["resumen", "cartera", "posiciones", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca", "plan"];
+  var GROUPS = [
+    { id: "inicio", views: ["inicio"] },
+    { id: "cartera", views: ["cartera", "posiciones", "operaciones", "rendimiento"] },
+    { id: "invest", views: ["resumen", "escaner", "analisis", "aprobadas", "descartadas", "retro"] },
+    { id: "plan", views: ["plan", "biblioteca"] }
+  ];
+  function navGroupOf(v) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i].views.indexOf(v) >= 0) return GROUPS[i].id; return "inicio"; }
+  var VIEWS = ["inicio", "resumen", "cartera", "posiciones", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca", "plan"];
 
   /* ---------- parsing ---------- */
   function num(v) {
@@ -913,7 +1054,7 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
         va = String(va || ""); vb = String(vb || ""); return st.dir === "asc" ? va.localeCompare(vb) : vb.localeCompare(va);
       });
     }
-    var h = '<div class="tbl-outer"><div class="tbl-wrap"><table><thead><tr>';
+    var h = '<div class="tbl-outer' + (opts.stack ? " tbl-stack" : "") + '"><div class="tbl-wrap"><table><thead><tr>';
     cols.forEach(function (c) {
       var dir = st && st.key === c.key ? st.dir : "";
       h += '<th class="' + (c.num ? "n" : "") + '" scope="col"><button type="button" data-sort="' + id + "|" + c.key + '" ' + (dir ? 'data-dir="' + dir + '"' : "") + ">" + esc(c.label) + "</button></th>";
@@ -921,7 +1062,7 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     h += "</tr></thead><tbody>";
     rows.forEach(function (r, i) {
       h += "<tr" + (opts.click ? ' class="click" tabindex="0" data-open="' + esc(r.date + "|" + r.ticker) + '"' : "") + ">";
-      cols.forEach(function (c) { h += c.cell(r); });
+      cols.forEach(function (c) { var cell = c.cell(r); h += opts.stack ? cell.replace(/^<td/, '<td data-label="' + esc(c.label) + '"') : cell; });
       h += "</tr>";
     });
     h += "</tbody></table></div></div>";
@@ -936,7 +1077,14 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
   /* ---------- views ---------- */
   function notice(title, body, extra) { return '<div class="notice"><strong>' + esc(title) + "</strong><p>" + esc(body) + "</p>" + (extra || "") + "</div>"; }
   function loadingBlock() { return '<div class="panel"><div class="skeleton" style="width:40%"></div><div class="skeleton"></div><div class="skeleton" style="width:85%"></div><div class="skeleton" style="width:70%"></div></div>'; }
-  function head(title, lede, right) { return '<div class="sec-head"><div><h2>' + esc(title) + '</h2><p class="lede">' + esc(lede) + "</p></div>" + (right || "") + "</div>"; }
+  function foldLede(lede) {
+    lede = String(lede || "");
+    if (lede.length <= 170) return '<p class="lede">' + esc(lede) + "</p>";
+    var m = lede.match(/^(.{40,}?[.:])\s+(.+)$/);
+    if (!m || m[1].length > 200) return '<p class="lede">' + esc(lede) + "</p>";
+    return '<p class="lede">' + esc(m[1]) + '</p><details class="why-fold"><summary>' + esc(t().readMore) + "</summary><p>" + esc(m[2]) + "</p></details>";
+  }
+  function head(title, lede, right) { return '<div class="sec-head"><div><h2>' + esc(title) + "</h2>" + foldLede(lede) + "</div>" + (right || "") + "</div>"; }
 
   function errorBlock(part) {
     var e = S.err[part];
@@ -1002,7 +1150,7 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
       DEC_ORDER.forEach(function (x) { var c = dc[x] || 0; if (!c) return; var v = DEC_VAR[DEC_CLASS[x]]; bar += '<i style="width:' + (c / decs.length * 100) + "%;background:var(" + v + ')"></i>'; leg += '<span><i style="background:var(' + v + ')"></i>' + esc(decLabel(x)) + " · " + c + "</span>"; });
       h += '<div class="panel"><h3>' + esc(R.distDay) + "</h3>" + bar + "</div>" + leg + "</div></div>";
       var appr = decs.filter(function (r) { return isApproved(r.decision); });
-      h += '<div class="panel"><div><h3>' + esc(t().readyTitle) + '</h3><p class="lede">' + esc(t().readyLede) + "</p></div>" + (appr.length ? bandLegend() + valHelpP() + '<div class="cards">' + appr.map(card).join("") + "</div>" : '<p class="muted">' + esc(t().noneReady) + "</p>") + "</div>";
+      h += '<div class="panel"><div><h3>' + esc(t().readyTitle) + "</h3>" + foldLede(t().readyLede) + "</div>" + (appr.length ? bandLegend() + valHelpP() + '<div class="cards">' + appr.map(card).join("") + "</div>" : '<p class="muted">' + esc(t().noneReady) + "</p>") + "</div>";
     } else h += notice(R.noAnalysisTitle, R.noAnalysisBody);
 
     /* Stage 2 list for the day */
@@ -1195,7 +1343,7 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     if (S.anaFilter !== "all") rows = rows.filter(function (r) { return r.decision === S.anaFilter; });
     rows = rows.filter(qMatch(S.anaQ));
     var sel = '<label class="inline" for="ana-date">' + esc(t().anaDate) + ' <select id="ana-date">' + dates.map(function (x) { return '<option value="' + esc(x) + '"' + (x === S.anaDate ? " selected" : "") + ">" + esc(fmtD(x)) + "</option>"; }).join("") + "</select></label>";
-    return head(t().anaTitle, t().anaLede, sel) + chips("ana", S.anaFilter, opts) + searchBox("ana-q", S.anaQ, rows.length) + table("ana", decCols(), rows, { click: true });
+    return head(t().anaTitle, t().anaLede, sel) + chips("ana", S.anaFilter, opts) + searchBox("ana-q", S.anaQ, rows.length) + table("ana", decCols(), rows, { click: true, stack: true });
   }
   /* is an approval still actionable? bought since, or too many scans old = no */
   function lastPrice(tk) {
@@ -1258,7 +1406,7 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     if (!S.latestOnly) return h + table("app", cols, rows, { click: true }) + heldBlock;
     var live = rows.filter(function (r) { return r.st === "live"; }).sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
     var old = rows.filter(function (r) { return r.st !== "live"; });
-    h += '<div class="panel"><div><h3>' + esc(A.liveTitle) + '</h3><p class="lede">' + esc(A.liveLede) + "</p></div>" +
+    h += '<div class="panel"><div><h3>' + esc(A.liveTitle) + "</h3>" + foldLede(A.liveLede) + "</div>" +
       (live.length ? bandLegend() + valHelpP() + '<div class="cards">' + live.map(card).join("") + "</div>" : '<p class="muted">' + esc(A.noneLive) + "</p>") + "</div>" + heldBlock;
     if (old.length) h += '<div class="panel"><div><h3>' + esc(A.oldTitle) + '</h3><p class="lede">' + esc(A.oldLede) + "</p></div>" + table("appold", cols, old, { click: true }) + "</div>";
     return h;
@@ -1443,7 +1591,7 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
         });
         if (!L.prices.SPY) throw new Error("format");
         S.live = L;
-        if (["cartera", "resumen", "aprobadas"].indexOf(S.view) >= 0 && !(document.activeElement && /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName))) render();
+        if (["inicio", "cartera", "resumen", "aprobadas"].indexOf(S.view) >= 0 && !(document.activeElement && /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName))) render();
       })
       .catch(function () { /* keep the last good live read; the close numbers are unaffected */ });
   }
@@ -1478,10 +1626,111 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     h += '<p class="muted live-foot">' + esc(LV.upd.replace("{t}", when)) + (stale ? ' · <span class="neg">' + esc(LV.stale) + "</span>" : "") + " " + esc(LV.tradesNote) + "</p></div>";
     return h;
   }
-  function vCartera() {
-    var K = t().cart, C = t().col;
+  /* ---------- home ---------- */
+  function vInicio() {
+    var H = t().home, K = t().cart;
     var g = guard(["ops", "acct"]);
-    if (g) return head(K.title, K.lede) + g;
+    if (g) return head(t().tabs.inicio, "") + g;
+    var X = acctCalc(), A = X.A;
+    var asOf = S.snapshot || isoDay(new Date().toISOString());
+    var nDays = A.start && asOf ? Math.max(1, Math.round((Date.parse(asOf) - Date.parse(isoDay(A.start) || A.start)) / 864e5)) : null;
+    var pts = X.excess !== null ? H.pts.replace("{p}", fmtN(Math.abs(X.excess) * 100, 1)) : "—";
+    var rTxt = fmtP(Math.abs(X.ret), 2);
+    var tpl = X.ret >= 0 ? (X.excess !== null && X.excess < 0 ? H.hlUpBehind : H.hlUp) : H.hlDown;
+    var hl = esc(tpl).replace("{r}", '<span class="' + signCls(X.ret) + '">' + esc(rTxt) + "</span>").replace("{n}", esc(String(nDays || "—"))).replace("{x}", '<span class="' + signCls(X.excess) + '">' + esc(pts) + "</span>");
+    function more(view, label) { return '<button type="button" class="more-link" data-goview="' + view + '">' + esc(label) + "</button>"; }
+    function secHead(title, sub, link) { return "<header><div><h3>" + esc(title) + "</h3>" + (sub ? "<small>" + esc(sub) + "</small>" : "") + "</div>" + (link || "") + "</header>"; }
+
+    var h = '<div class="home"><div class="home-lead"><div class="eyebrow">' + esc(H.eyebrow.replace("{d}", fmtD(asOf))) + "</div>" +
+      '<h2 class="home-hl">' + hl + "</h2>" +
+      '<p class="home-sub">' + esc(H.sub.replace("{s}", fmtD(isoDay(A.start) || A.start))) + "</p></div>";
+
+    /* account curve */
+    h += '<div class="home-chart">';
+    if (X.eq && X.eq.length > 1) h += '<div class="sec-head"><div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" + more("cartera", H.seeCart) + "</div>" +
+      '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
+    else h += '<p class="muted">' + esc(K.noHist) + "</p>";
+    h += '<div class="home-stats">' +
+      "<div><span>" + esc(H.value) + "</span><b>" + esc(fmtM(X.total)) + "</b></div>" +
+      "<div><span>" + esc(H.cash) + "</span><b>" + esc(fmtM(X.cash)) + "</b></div>" +
+      "<div><span>" + esc(H.open) + "</span><b>" + X.open.length + "</b></div>" +
+      "<div><span>" + esc(H.last) + '</span><b class="' + signCls(X.day) + '">' + esc(sgnM(X.day) + " (" + fmtP(X.dayPct, 2) + ")") + "</b></div></div></div>";
+
+    /* price vs value: the closest names in the latest analysis */
+    if (S.dec) {
+      var la = latestAnalysisDate();
+      var cand = S.dec.filter(function (r) { return r.date === la && r.base !== null && r.base > 0 && r.price !== null && r.decision !== "Descartada"; });
+      cand.forEach(function (r) { r._ratio = r.price / r.base; });
+      cand.sort(function (a, b) { return a._ratio - b._ratio; });
+      var top = cand.slice(0, 6);
+      var scale = Math.min(3, Math.max(1.25, top.length ? top[top.length - 1]._ratio * 1.08 : 1.25));
+      function pos(x) { return Math.max(0, Math.min(100, x / scale * 100)).toFixed(1); }
+      h += '<div class="home-sec">' + secHead(H.closeTitle, H.closeSub, more("analisis", H.seeAna));
+      if (top.length) {
+        h += '<div class="gauge-key"><span><i class="k-dot"></i>' + esc(H.kDot) + '</span><span><i class="k-val"></i>' + esc(H.kVal) + "</span></div>";
+        h += '<div class="gauge-list">' + top.map(function (r) {
+          var gap = r._ratio - 1;
+          return '<button type="button" class="gauge-row" data-open="' + esc(r.date + "|" + r.ticker) + '" aria-label="' + esc(r.ticker + ": " + fmtM(r.price) + " / " + fmtM(r.base)) + '">' +
+            '<span class="who"><b>' + esc(r.ticker) + "</b>" + pill(r.decision) + "</span>" +
+            '<span class="gauge-track" aria-hidden="true"><i class="gauge-fill" style="width:' + pos(r._ratio) + '%"></i><i class="gauge-val" style="left:' + pos(1) + '%"></i><i class="gauge-dot" style="left:' + pos(r._ratio) + '%"></i></span>' +
+            '<span class="gap"><b class="' + (gap <= 0 ? "pos" : "") + '">' + esc((gap > 0 ? "+" : "") + fmtP(gap, 1)) + "</b><span>" + esc(fmtM(r.price) + " · " + fmtM(r.base)) + "</span></span></button>";
+        }).join("") + "</div>";
+      } else h += '<p class="muted">' + esc(H.noClose) + "</p>";
+      h += "</div>";
+    }
+
+    h += '<div class="home-grid">';
+    /* latest scan + decisions */
+    if (S.scan) {
+      var dates = scanDates(), d0 = dates[0], d1 = dates[1];
+      function cset(dt) { var o = {}; S.scan.forEach(function (r) { if (r.date === dt && r.opp !== null && r.opp >= 85) o[r.ticker] = 1; }); return o; }
+      var rowsN = S.scan.filter(function (r) { return r.date === d0; }).length, c0 = cset(d0), c1 = d1 ? cset(d1) : null;
+      var nNew = c1 ? Object.keys(c0).filter(function (k) { return !c1[k]; }).length : null;
+      h += '<div class="home-sec">' + secHead(H.scanTitle, H.scanSub.replace("{d}", fmtD(d0)), more("resumen", t().tabs.resumen)) +
+        '<div class="home-nums"><div><b>' + rowsN + "</b><span>" + esc(H.rows) + "</span></div><div><b>" + Object.keys(c0).length + "</b><span>" + esc(H.cands) + "</span></div>" +
+        (nNew !== null ? "<div><b>" + nNew + "</b><span>" + esc(H.newC) + "</span></div>" : "") + "</div>";
+      if (S.dec) {
+        var decs = S.dec.filter(function (r) { return r.date === latestAnalysisDate(); });
+        if (decs.length) {
+          var dc = {}; decs.forEach(function (r) { dc[r.decision] = (dc[r.decision] || 0) + 1; });
+          var bar = '<div class="dist" role="img" aria-label="' + esc(DEC_ORDER.map(function (x) { return decLabel(x) + " " + (dc[x] || 0); }).join(", ")) + '">', leg = '<div class="legend">';
+          DEC_ORDER.forEach(function (x) { var c = dc[x] || 0; if (!c) return; var v = DEC_VAR[DEC_CLASS[x]]; bar += '<i style="width:' + (c / decs.length * 100) + "%;background:var(" + v + ')"></i>'; leg += '<span><i style="background:var(' + v + ')"></i>' + esc(decLabel(x) + " " + c) + "</span>"; });
+          h += "<div style=\"display:grid;gap:8px\"><div class=\"sec-head\"><b style=\"font-size:0.9rem\">" + esc(H.decTitle) + "</b>" + more("analisis", H.seeAna) + "</div>" + bar + "</div>" + leg + "</div></div>";
+        }
+      }
+      h += "</div>";
+    }
+    /* recent trades */
+    var trades = (S.ops || []).filter(function (r) { return r.ticker && r.date; }).slice().sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); }).slice(0, 5);
+    h += '<div class="home-sec">' + secHead(H.tradesTitle, "", more("operaciones", H.seeOps));
+    h += trades.length ? '<ul class="home-list">' + trades.map(function (r) {
+      return '<li><span><span class="t">' + esc(r.ticker) + "</span> · " + esc(opType(r.type)) + " " + esc(fmtSh(r.shares)) + '</span><span class="r">' + esc(fmtM(r.exec)) + "</span><small>" + esc(fmtD(isoDay(r.date))) + "</small></li>";
+    }).join("") + "</ul>" : '<p class="muted">' + esc(H.noTrades) + "</p>";
+    h += "</div>";
+
+    /* open positions */
+    var open = X.open.slice().sort(function (a, b) { return (b.value || 0) - (a.value || 0); });
+    h += '<div class="home-sec">' + secHead(H.posTitle, "", more("posiciones", H.seePos));
+    h += open.length ? '<ul class="home-list">' + open.map(function (p) {
+      var w = X.total ? p.value / X.total : null;
+      return '<li><span class="t">' + esc(p.ticker) + '</span><span class="r ' + signCls(p.uplPct) + '">' + esc((p.uplPct > 0 ? "+" : "") + fmtP(p.uplPct, 1)) + "</span><small>" + esc(fmtM(p.value) + " · " + fmtP(w, 1) + " " + H.weight) + "</small></li>";
+    }).join("") + "</ul>" : '<p class="muted">' + esc(K.none) + "</p>";
+    h += "</div>";
+
+    /* latest reports */
+    ensureLib();
+    h += '<div class="home-sec">' + secHead(H.repTitle, "", more("biblioteca", H.seeLib));
+    if (S.libState === "ok" && S.lib && S.lib.length) {
+      var reps = S.lib.slice().sort(function (a, b) { return String(b.date).localeCompare(String(a.date)) || String(b.id).localeCompare(String(a.id), undefined, { numeric: true }); }).slice(0, 4);
+      h += '<ul class="home-list">' + reps.map(function (r) {
+        return '<li><button type="button" class="more-link" style="text-align:left;color:var(--ink);text-decoration:none" data-libopen="' + esc(r.id) + '">' + esc(r.title) + '</button><span class="r muted">' + esc(r.id) + "</span><small>" + esc(fmtD(r.date)) + "</small></li>";
+      }).join("") + "</ul>";
+    } else h += '<p class="muted">' + esc(H.libLoading) + "</p>";
+    h += "</div></div></div>";
+    return h;
+  }
+  /* account figures shared by the home page and the Portfolio tab */
+  function acctCalc() {
     var A = S.acct, P = positions();
     var cap = A.capital;
     var open = P.list.filter(function (p) { return p.shares > 0; });
@@ -1511,6 +1760,16 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     if (eq && eq.length > 1 && total !== null) day = total - eq[eq.length - 2].v;
     var dayBase = eq && eq.length > 1 ? eq[eq.length - 2].v : (total !== null ? total - day : null);
     var dayPct = dayBase ? day / dayBase : null;
+    return { A: A, P: P, cap: cap, open: open, missing: missing, openCost: openCost, invested: invested, unreal: unreal, realized: realized, day: day, cash: cash, total: total, totPL: totPL, ret: ret, spyRet: spyRet, excess: excess, eq: eq, dayBase: dayBase, dayPct: dayPct };
+  }
+  function vCartera() {
+    var K = t().cart, C = t().col;
+    var g = guard(["ops", "acct"]);
+    if (g) return head(K.title, K.lede) + g;
+    var X = acctCalc();
+    var A = X.A, P = X.P, cap = X.cap, open = X.open, missing = X.missing, openCost = X.openCost, invested = X.invested, unreal = X.unreal, realized = X.realized, day = X.day;
+    var cash = X.cash, total = X.total, totPL = X.totPL, ret = X.ret, spyRet = X.spyRet, excess = X.excess, eq = X.eq, dayBase = X.dayBase, dayPct = X.dayPct;
+    function sum(list, k) { return list.reduce(function (a, x) { return a + (x[k] || 0); }, 0); }
 
     /* hero */
     var LV = t().live;
@@ -1527,7 +1786,7 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     h += "</div>";
     h += livePanel(open, cash);
     var acctNote = lang === "en" && A.noteEn ? A.noteEn : A.note;
-    if (acctNote) h += '<p class="acct-note">' + esc(acctNote) + "</p>";
+    if (acctNote) { var nm = /^([^:]{6,60}):\s*([\s\S]+)$/.exec(acctNote); h += nm ? '<details class="why-fold acct-note"><summary>' + esc(nm[1]) + "</summary><p>" + esc(nm[2]) + "</p></details>" : '<p class="acct-note">' + esc(acctNote) + "</p>"; }
     if (missing.length) h += notice(K.title, K.noPrice + " " + missing.join(", ") + ".");
 
     /* figure strip */
@@ -1929,7 +2188,7 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
   function ensureLib() {
     if (S.libState !== "idle") return;
     S.libState = "loading";
-    function done() { if (S.view === "biblioteca") render(); }
+    function done() { if (S.view === "biblioteca" || S.view === "inicio") render(); }
     loadScript("data/lib.js").then(function () { S.lib = (window.FP_LIB || {}).reports || []; S.libState = "ok"; done(); }, function () { S.libState = "fail"; done(); });
   }
   /* start downloading the library a moment after the page is ready, so the tab opens instantly */
@@ -2110,16 +2369,22 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     document.querySelectorAll("[data-i18n]").forEach(function (el) { var k = el.getAttribute("data-i18n"); if (t()[k]) el.textContent = t()[k]; });
     document.getElementById("lang-es").setAttribute("aria-pressed", lang === "es");
     document.getElementById("lang-en").setAttribute("aria-pressed", lang === "en");
-    var tabs = document.getElementById("tabs");
-    tabs.innerHTML = VIEWS.map(function (v) {
-      return '<button class="tab" role="tab" type="button" id="tab-' + v + '" data-view="' + v + '" aria-controls="v-' + v + '" aria-selected="' + (S.view === v) + '">' + esc(t().tabs[v]) + "</button>";
-    }).join("");
+    var tabs = document.getElementById("tabs"), cg = navGroupOf(S.view);
+    tabs.setAttribute("role", "navigation"); tabs.setAttribute("aria-label", lang === "en" ? "Sections" : "Secciones");
+    var sub = GROUPS.filter(function (g) { return g.id === cg; })[0].views;
+    tabs.innerHTML = '<div class="nav-groups">' + GROUPS.map(function (g) {
+      var target = g.id === cg ? g.views[0] : (S.lastIn[g.id] || g.views[0]);
+      return '<button class="tab" type="button" data-view="' + target + '" aria-selected="' + (g.id === cg) + '"' + (g.id === cg ? ' aria-current="true"' : "") + ">" + esc(t().navGroups[g.id]) + "</button>";
+    }).join("") + "</div>" +
+      '<div class="nav-sub"' + (sub.length > 1 ? "" : " hidden") + ">" + sub.map(function (v) {
+        return '<button class="sub" type="button" id="tab-' + v + '" data-view="' + v + '" aria-controls="v-' + v + '"' + (S.view === v ? ' aria-current="page"' : "") + ">" + esc(t().tabs[v]) + "</button>";
+      }).join("") + "</div>";
     var st = document.getElementById("status");
     if (S.snapshot) st.textContent = t().asOf + " " + fmtD(S.snapshot);
     else if (S.loadedAt) st.textContent = t().updated + " · " + new Intl.DateTimeFormat(loc(), { hour: "2-digit", minute: "2-digit" }).format(new Date(S.loadedAt));
     else st.textContent = S.err.dec || S.err.scan ? "" : t().loading;
   }
-  var RENDER = { posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca, plan: vPlan };
+  var RENDER = { inicio: vInicio, posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca, plan: vPlan };
   /* fade on the right edge of a table while there are more columns to scroll to */
   function markScroll(root) {
     [].forEach.call(root.querySelectorAll(".tbl-outer"), function (o) {
@@ -2130,15 +2395,17 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
   }
   window.addEventListener("resize", function () { var el = document.getElementById("v-" + S.view); if (el) markScroll(el); });
   function render() {
+    S.lastIn[navGroupOf(S.view)] = S.view;
     renderChrome();
     VIEWS.forEach(function (v) {
       var el = document.getElementById("v-" + v);
       el.hidden = v !== S.view;
+      if (v !== S.view && el.innerHTML) el.innerHTML = "";   /* only one view in the DOM: ids like #eqchart stay unique */
       if (v === S.view) {
         var focusId = document.activeElement && document.activeElement.id;
         var lf = S.loadFail && S.loadFail.length ? notice(t().loadFail, S.loadFail.join(", "), '<p><button class="btn" type="button" data-retry="1">' + esc(t().retry) + "</button></p>") : "";
         el.innerHTML = '<div style="display:grid;gap:16px">' + lf + RENDER[v]() + "</div>";
-        if (v === "cartera") drawEquity();
+        if (v === "cartera" || v === "inicio") drawEquity();
         markScroll(el);
         if (focusId === "scan-q" || focusId === "lib-q" || focusId === "rej-q" || focusId === "ana-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
       }
@@ -2201,7 +2468,7 @@ button.cal-cell[aria-pressed="true"] { outline: 2px solid var(--accent); outline
     if (e.target.id === "rej-q" || e.target.id === "ana-q") { S[e.target.id === "rej-q" ? "rejQ" : "anaQ"] = e.target.value; clearTimeout(libT); libT = setTimeout(render, 150); }
     if (e.target.id === "lib-q") { S.libQ = e.target.value; clearTimeout(libT); libT = setTimeout(render, 180); }
   });
-  var rsz; window.addEventListener("resize", function () { clearTimeout(rsz); rsz = setTimeout(function () { if (S.view === "cartera") drawEquity(); }, 120); });
+  var rsz; window.addEventListener("resize", function () { clearTimeout(rsz); rsz = setTimeout(function () { if (S.view === "cartera" || S.view === "inicio") drawEquity(); }, 120); });
   function setLang(l) { lang = l; try { localStorage.setItem("fpj-lang", l); } catch (e) {} render(); }
   document.getElementById("lang-es").addEventListener("click", function () { setLang("es"); });
   document.getElementById("lang-en").addEventListener("click", function () { setLang("en"); });
