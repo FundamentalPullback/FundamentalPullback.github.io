@@ -638,7 +638,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         liveTitle: "Revisadas en el último análisis", liveLede: "Revisada hoy no significa señal vigente: el estado de ejecución de cada ficha se muestra aparte. Aprobado no significa autorizado: cada ficha fija su señal, su caducidad y cómo tratar los resultados, y una ficha suspendida o caducada no se reactiva por precio ni por volver a salir en el escáner. «Ahora» es el último precio conocido frente al techo del informe, que es histórico y no autoriza una orden.",
         noneLive: "No hay aprobaciones en el último análisis.",
         oldTitle: "De análisis anteriores", oldLede: "Aprobaciones que no forman parte del último análisis, o ya compradas. No sirven para operar sin un análisis nuevo.", notOrder: "(condición necesaria, no orden de compra)",
-        now: "Ahora", liveTag: "en vivo, {t}", today: "hoy", above: "por encima del techo del informe", below: "por debajo del techo del informe" },
+        now: "Ahora", liveTag: "hoja recalculada, {t}", today: "frente al cierre anterior", above: "por encima del techo del informe", below: "por debajo del techo del informe" },
       retro: {
         title: "Retrospectiva", lede: "Qué hicieron después las candidatas que no se compraron, frente al SPY en el mismo periodo. Datos de la auditoría del 22 oct 2026 (informe A088), con precios hasta el 21 oct. Retornos de precio, sin costes ni dividendos.",
         hz: { "5": "5 sesiones", "10": "10 sesiones", corte: "Hasta el 21 oct" }, hzLbl: "Horizonte",
@@ -665,7 +665,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         protTitle: "Protecciones", sl: "Stop loss", slSub: "{p} por debajo del precio actual", slNone: "sin stop registrado", stop: "Stop loss S (manual: si el precio lo toca, queda una venta pendiente de ejecutar a mano)", trail: "Stop por cierre (trailing: solo cuenta el cierre)", m: "Mínimo M (referencia de la regla de salida)", toStop: "{p} por debajo del precio", below: "¡el precio ya está por debajo!", next: "Próximo evento",
         valTitle: "Última valoración", valOf: "Valoración del {d}", noVal: "No hay una valoración completa (valor estimado y escenarios) registrada en el historial para esta empresa.", openRec: "Ver ficha", reports: "Informes sobre {t} →", allPos: "Ver todas las posiciones →",
         none: "No hay posiciones abiertas." },
-      live: { title: "Hoy, en vivo", sub: "Movimiento desde el cierre anterior. Precios de Google con hasta ~20 min de retraso: lo que cuenta es el cierre de arriba.", value: "Valor ahora", day: "Hoy", spy: "SPY hoy", vsSpy: "Cuenta vs SPY hoy", upd: "Precios leídos a las {t} (hora de Nueva York)", stale: "Los precios llevan más de 30 minutos sin actualizarse.", closed: "Mercado cerrado. Los números en vivo aparecen de 9:30 a 16:00 (Nueva York), de lunes a viernes.", pre: "Antes de la apertura: aún no hay movimiento de hoy.", tradesNote: "Usa las posiciones del último cierre: una compra o venta de hoy aparece tras la actualización diaria.", byPos: "Por posición, hoy", headline: "Al cierre del {d}", lastSession: "Última sesión" },
+      live: { title: "Últimos precios disponibles", sub: "Movimiento frente al cierre anterior de la fuente. Se conservan también después del cierre; no son precios en tiempo real.", value: "Valor ahora", day: "Desde cierre anterior", spy: "SPY vs cierre anterior", vsSpy: "Cuenta vs SPY", upd: "Hoja recalculada: {t} (hora de Nueva York)", stale: "La hora de recálculo de la hoja tiene más de 30 minutos; frescura de cotización no verificada.", closed: "Mercado cerrado. Los números en vivo aparecen de 9:30 a 16:00 (Nueva York), de lunes a viernes.", pre: "Antes de la apertura: aún no hay movimiento de hoy.", tradesNote: "Usa las posiciones del último cierre: una compra o venta de hoy aparece tras la actualización diaria.", byPos: "Por posición, frente al cierre anterior", headline: "Al cierre del {d}", lastSession: "Última sesión" },
       cart: {
         title: "Cartera", lede: "Valor de la cuenta con precios de GOOGLEFINANCE (pueden ir con unos 20 minutos de retraso). Coste medio; incluye las comisiones registradas, sin dividendos.", feesLbl: "comisiones",
         capital: "Capital inicial", capNote: "se cambia en la pestaña Cuenta de la hoja",
@@ -686,7 +686,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         listTitle: "Empresas en Stage 2", listLede: "Racha: días seguidos en Stage 2 hasta esta fecha. Último precio y cambio: el precio en el escáner más reciente en que aparece, frente al de este día.",
         status: "Estado", newTag: "Nueva", streak: "Racha (días)", lastPrice: "Último precio", change: "Cambio desde entonces",
         goneTitle: "Salieron de Stage 2", goneLede: "Estaban en Stage 2 el", notListed: "fuera del escáner", tradesTitle: "Tus operaciones de ese día" },
-      asOf: "Datos al cierre del", snapNote: "Se actualiza cada día de mercado tras el cierre.",
+      asOf: "Datos al cierre del", snapNote: "Los precios se consultan automáticamente en Google Sheets. Análisis, operaciones y cierres históricos se publican por separado.",
       updated: "Datos de la hoja",
       lastScan: "Último escáner",
       fScanned: "Empresas escaneadas",
@@ -781,7 +781,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         liveTitle: "Reviewed in the latest analysis", liveLede: "Reviewed today doesn't mean a valid signal: each plan's execution status is shown separately. Approved doesn't mean authorized: each plan sets its signal, its expiry and how to handle earnings, and a suspended or expired plan isn't revived by price or by reappearing in the scan. \"Now\" is the latest known price against the report ceiling, which is historical and doesn't authorize an order.",
         noneLive: "No approvals in the latest analysis.",
         oldTitle: "From earlier analyses", oldLede: "Approvals that aren't part of the latest analysis, or already bought. Not usable for trading without a new analysis.", notOrder: "(a necessary condition, not a buy order)",
-        now: "Now", liveTag: "live, {t}", today: "today", above: "above the report ceiling", below: "below the report ceiling" },
+        now: "Now", liveTag: "sheet recalculated, {t}", today: "versus previous close", above: "above the report ceiling", below: "below the report ceiling" },
       retro: {
         title: "Hindsight", lede: "What the candidates that weren't bought did afterwards, against SPY over the same period. Data from the Oct 22, 2026 audit (report A088), with prices up to Oct 21. Price returns, without costs or dividends.",
         hz: { "5": "5 sessions", "10": "10 sessions", corte: "Up to Oct 21" }, hzLbl: "Horizon",
@@ -808,7 +808,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         protTitle: "Protections", sl: "Stop loss", slSub: "{p} below the current price", slNone: "no stop recorded", stop: "Stop loss S (manual: if the price touches it, a sale is pending to execute by hand)", trail: "Closing stop (trailing: only the close counts)", m: "Low M (reference for the exit rule)", toStop: "{p} below the price", below: "price is already below it!", next: "Next event",
         valTitle: "Latest valuation", valOf: "Valuation of {d}", noVal: "No full valuation (estimated value and scenarios) is recorded in the history for this company.", openRec: "Open record", reports: "Reports on {t} →", allPos: "See all positions →",
         none: "No open positions." },
-      live: { title: "Today, live", sub: "Move since the previous close. Google prices delayed up to ~20 min: the close above is what counts.", value: "Value now", day: "Today", spy: "SPY today", vsSpy: "Account vs SPY today", upd: "Prices read at {t} (New York time)", stale: "Prices haven't updated for over 30 minutes.", closed: "Market closed. Live numbers show from 9:30 to 16:00 (New York), Monday to Friday.", pre: "Before the open: no move for today yet.", tradesNote: "Uses the positions as of the last close: a buy or sale made today shows after the daily update.", byPos: "By position, today", headline: "As of the close on {d}", lastSession: "Last session" },
+      live: { title: "Latest available prices", sub: "Move versus the feed’s previous close. Retained after market hours; not real-time quotes.", value: "Value now", day: "Since previous close", spy: "SPY vs previous close", vsSpy: "Account vs SPY", upd: "Sheet recalculated: {t} (New York time)", stale: "Sheet recalculation is over 30 minutes old; quote freshness is unverified.", closed: "Market closed. Live numbers show from 9:30 to 16:00 (New York), Monday to Friday.", pre: "Before the open: no move for today yet.", tradesNote: "Uses the positions as of the last close: a buy or sale made today shows after the daily update.", byPos: "By position, versus previous close", headline: "As of the close on {d}", lastSession: "Last session" },
       cart: {
         title: "Portfolio", lede: "Account value using GOOGLEFINANCE prices (may lag by about 20 minutes). Average-cost basis; includes recorded fees, excludes dividends.", feesLbl: "fees",
         capital: "Starting capital", capNote: "change it in the sheet's Cuenta tab",
@@ -829,7 +829,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         listTitle: "Companies in Stage 2", listLede: "Streak: consecutive days in Stage 2 up to this date. Latest price and change: the price in the most recent scan it appears in, against this day's.",
         status: "Status", newTag: "New", streak: "Streak (days)", lastPrice: "Latest price", change: "Change since",
         goneTitle: "Dropped out of Stage 2", goneLede: "They were in Stage 2 on", notListed: "not in the scan", tradesTitle: "Your trades that day" },
-      asOf: "Data as of the close on", snapNote: "Updated every market day after the close.",
+      asOf: "Data as of the close on", snapNote: "Prices refresh automatically from Google Sheets. Research, trades and historical closes are separately published snapshots.",
       updated: "Sheet data",
       lastScan: "Latest scan",
       fScanned: "Companies scanned",
@@ -1366,7 +1366,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   /* is an approval still actionable? bought since, or too many scans old = no */
   function lastPrice(tk) {
     var lv = S.live && S.live.prices && S.live.prices[tk];
-    if (lv && lv.p !== null && lv.p !== undefined && marketState() === "open") return { p: lv.p, live: true, at: S.live.at, prev: lv.prev };
+    if (lv && Number.isFinite(lv.p) && lv.p > 0 && S.live.at && S.live.at >= Date.parse(S.snapshot || "1970-01-01")) return { p: lv.p, live: true, at: S.live.at, prev: lv.prev };
     var q = S.acct && S.acct.prices && S.acct.prices[tk];
     if (q && q.p !== null && q.p !== undefined) return { p: q.p, d: S.snapshot || null, live: !S.snapshot };
     var best = null;
@@ -1401,7 +1401,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     var lp = lastPrice(r.ticker), A = t().apst;
     if (!lp) return "";
     var vs = r.maxc !== null && r.maxc ? lp.p / r.maxc - 1 : null;
-    var when = lp.live ? A.liveTag.replace("{t}", lp.at ? new Intl.DateTimeFormat(loc(), { hour: "2-digit", minute: "2-digit", timeZone: "America/New_York" }).format(new Date(lp.at)) : "—") + (lp.prev ? " · " + (lp.p >= lp.prev ? "+" : "") + fmtP(lp.p / lp.prev - 1) + " " + A.today : "") : (lp.d ? fmtDs(lp.d) : "");
+    var when = lp.live ? A.liveTag.replace("{t}", lp.at ? new Intl.DateTimeFormat(loc(), { dateStyle: "medium", timeStyle: "short", timeZone: "America/New_York" }).format(new Date(lp.at)) : "—") + (lp.prev ? " · " + (lp.p >= lp.prev ? "+" : "") + fmtP(lp.p / lp.prev - 1) + " " + A.today : "") : (lp.d ? fmtDs(lp.d) : "");
     return '<p class="muted">' + esc(A.now + " " + fmtM(lp.p) + (when ? " (" + when + ")" : "")) +
       (vs !== null ? ' · <span class="' + (vs > 0 ? "neg" : "pos") + '">' + esc(fmtP(Math.abs(vs)) + " " + (vs > 0 ? A.above : A.below + " " + A.notOrder)) + "</span>" : "") + "</p>";
   }
@@ -1511,13 +1511,13 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     if (g) return head(K.title, K.lede) + g;
     function sub(str, o) { return str.replace(/\{(\w+)\}/g, function (m, k) { return o[k] !== undefined ? o[k] : m; }); }
     var open = positions().list.filter(function (p) { return p.shares > 0; });
-    var h = head(K.title, K.lede);
+    var h = head(K.title, K.lede) + priceStatus();
     if (!open.length) return h + notice(K.title, K.none);
     var ges = {}; (S.ges || []).forEach(function (r) { if (!ges[r.ticker] || String(r.date) >= String(ges[r.ticker].date)) ges[r.ticker] = r; });
     function latestOf(tk, pred) { var best = null; (S.dec || []).forEach(function (r) { if (r.ticker !== tk || (pred && !pred(r))) return; var k = String(r.adate || r.date) + "|" + r.date; if (!best || k >= best.k) best = { k: k, r: r }; }); return best && best.r; }
     function company(tk) { var d = latestOf(tk); if (d && d.company) return d.company; var c = ""; (S.scan || []).forEach(function (r) { if (r.ticker === tk && r.company) c = r.company; }); return c; }
     open.forEach(function (p) {
-      var q = (S.acct.prices || {})[p.ticker] || {};
+      var q = accountQuotes(open).prices[p.ticker] || {};
       p.price = q.p === undefined ? null : q.p;
       p.value = p.price !== null ? p.shares * p.price : p.cost;
       p.upl = p.price !== null ? p.value - p.cost : null;
@@ -1596,29 +1596,58 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     return rows;
   }
   function liveInt(v) { var s = String(v || "").trim(); return /^-?\d+$/.test(s) ? +s / 10000 : null; }
+  /* One complete valuation set: never mix old snapshot holdings with new quotes. */
+  function accountQuotes(open) {
+    var L = S.live;
+    open = open || positions().list.filter(function (p) { return p.shares > 0; });
+    var valid = L && L.at && L.at >= Date.parse(S.snapshot || "1970-01-01") &&
+      ["SPY"].concat(open.map(function (p) { return p.ticker; })).every(function (tk) {
+        var q = L.prices[tk]; return q && Number.isFinite(q.p) && q.p > 0 && Number.isFinite(q.prev) && q.prev > 0;
+      });
+    return valid ? { prices: L.prices, spy: L.prices.SPY.p, current: true } :
+      { prices: (S.acct || {}).prices || {}, spy: (S.acct || {}).spy, current: false };
+  }
+  function priceStatus() {
+    var en = lang === "en", L = S.live, current = accountQuotes().current;
+    var text = current ? (en ? "Latest available Google prices (not real-time). Refresh checked every 2 minutes; quotes may be delayed up to 20 minutes. " : "Últimos precios disponibles de Google (no en tiempo real). Consulta cada 2 minutos; cotizaciones con hasta 20 minutos de retraso. ") :
+      (en ? "Using the saved price snapshot of " : "Usando los precios guardados del ") + fmtD(S.snapshot) + ". ";
+    if (L && L.at) text += (en ? "Sheet recalculated: " : "Hoja recalculada: ") + new Intl.DateTimeFormat(loc(), { timeZone: "America/New_York", dateStyle: "medium", timeStyle: "short" }).format(new Date(L.at)) + " (New York). ";
+    if (L && L.readAt) text += (en ? "Last successful check: " : "Última consulta correcta: ") + new Intl.DateTimeFormat(loc(), {timeZone: "America/New_York", hour: "2-digit", minute: "2-digit"}).format(new Date(L.readAt)) + " (New York). ";
+    text += en ? "The feed does not provide an exchange quote timestamp. Positions and historical chart remain the published record." : "La fuente no proporciona la hora de cotización de la bolsa. Las posiciones y la curva histórica siguen siendo el registro publicado.";
+    var warning = S.liveError || (L && (!current || Date.now() - L.at > 30 * 60000 || Date.now() - L.readAt > 5 * 60000));
+    if (warning) text += en ? " WARNING: refresh failed, incomplete or old feed; displayed prices may be stale." : " AVISO: actualización fallida, incompleta o antigua; los precios mostrados pueden estar desactualizados.";
+    return '<p class="acct-note' + (warning ? ' neg' : '') + '" role="status">' + esc(text) + '</p>';
+  }
+  var livePending = false;
   function loadLive() {
-    if (!LIVE_URL || document.hidden) return;
-    fetch(LIVE_URL + (LIVE_URL.indexOf("?") < 0 ? "?" : "&") + "_=" + Date.now(), { cache: "no-store" })
+    if (!LIVE_URL || document.hidden || livePending) return;
+    livePending = true;
+    var controller = new AbortController(), timeout = setTimeout(function () { controller.abort(); }, 15000);
+    return fetch(LIVE_URL + (LIVE_URL.indexOf("?") < 0 ? "?" : "&") + "_=" + Date.now(), { cache: "no-store", signal: controller.signal })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
       .then(function (txt) {
-        var rows = parseCsv(txt), L = { prices: {}, at: null };
+        var rows = parseCsv(txt), L = { prices: {}, at: null, readAt: Date.now() };
         rows.slice(1).forEach(function (r, i) {
           var tk = String(r[0] || "").trim();
           if (i === 0 && /^\d+$/.test(String(r[3] || "").trim())) L.at = +String(r[3]).trim() * 1000;
           if (tk) L.prices[tk] = { p: liveInt(r[1]), prev: liveInt(r[2]) };
         });
-        if (!L.prices.SPY) throw new Error("format");
-        S.live = L;
-        if (["inicio", "cartera", "resumen", "aprobadas"].indexOf(S.view) >= 0 && !(document.activeElement && /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName))) render();
+        var required = ["SPY"].concat(positions().list.filter(function (p) { return p.shares > 0; }).map(function (p) { return p.ticker; }));
+        if (!L.at || L.at > Date.now() + 5 * 60000 || required.some(function (tk) { var q = L.prices[tk]; return !q || !(q.p > 0) || !(q.prev > 0); })) throw new Error("incomplete feed");
+        if (S.live && L.at < S.live.at) throw new Error("older feed");
+        S.live = L; S.liveError = false;
       })
-      .catch(function () { /* keep the last good live read; the close numbers are unaffected */ });
+      .catch(function () { S.liveError = true; /* retain last complete read, visibly marked */ })
+      .finally(function () {
+        clearTimeout(timeout); livePending = false;
+        if (["inicio", "cartera", "posiciones", "resumen", "aprobadas"].indexOf(S.view) >= 0 && !(document.activeElement && /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName))) render();
+      });
   }
   function livePanel(open, cash) {
     var LV = t().live, L = S.live;
-    if (!LIVE_URL || !L) return "";
+    if (!LIVE_URL || !L || !accountQuotes(open).current) return "";
     var ms = marketState();
     var hd = '<div><h3>' + esc(LV.title) + '</h3><p class="lede">' + esc(LV.sub) + "</p></div>";
-    if (ms !== "open") return '<div class="panel live-panel live-off">' + hd + '<p class="muted" style="margin:0">' + esc(ms === "pre" ? LV.pre : LV.closed) + "</p></div>";
     var val = cash, day = 0, prevVal = cash, ok = true, rows = [];
     open.forEach(function (p) {
       var q = L.prices[p.ticker];
@@ -1639,7 +1668,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     h += '<div><div class="eyebrow">' + esc(LV.byPos) + '</div><div class="live-chips">' + rows.map(function (x) {
       return '<span class="live-chip" title="' + esc(sgnM(x.a, 0)) + '"><b>' + esc(x.t) + '</b><span class="' + signCls(x.r) + '">' + esc((x.r > 0 ? "+" : "") + fmtP(x.r, 1)) + "</span></span>";
     }).join("") + "</div></div>";
-    var when = L.at ? new Intl.DateTimeFormat(loc(), { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit" }).format(new Date(L.at)) : "—";
+    var when = L.at ? new Intl.DateTimeFormat(loc(), { timeZone: "America/New_York", dateStyle: "medium", timeStyle: "short" }).format(new Date(L.at)) : "—";
     var stale = L.at && Date.now() - L.at > 30 * 60000;
     h += '<p class="muted live-foot">' + esc(LV.upd.replace("{t}", when)) + (stale ? ' · <span class="neg">' + esc(LV.stale) + "</span>" : "") + " " + esc(LV.tradesNote) + "</p></div>";
     return h;
@@ -1656,16 +1685,19 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     var rTxt = fmtP(Math.abs(X.ret), 2);
     var tpl = X.ret >= 0 ? (X.excess !== null && X.excess < 0 ? H.hlUpBehind : H.hlUp) : H.hlDown;
     var hl = esc(tpl).replace("{r}", '<span class="' + signCls(X.ret) + '">' + esc(rTxt) + "</span>").replace("{n}", esc(String(nDays || "—"))).replace("{x}", '<span class="' + signCls(X.excess) + '">' + esc(pts) + "</span>");
+    if (X.current) hl = esc(K.total + ": " + fmtP(X.ret, 2) + " · " + K.vsSpy + ": " + fmtP(X.excess, 2));
     function more(view, label) { return '<button type="button" class="more-link" data-goview="' + view + '">' + esc(label) + "</button>"; }
     function secHead(title, sub, link) { return "<header><div><h3>" + esc(title) + "</h3>" + (sub ? "<small>" + esc(sub) + "</small>" : "") + "</div>" + (link || "") + "</header>"; }
 
-    var h = '<div class="home"><div class="home-top"><div class="home-lead"><div class="eyebrow">' + esc(H.eyebrow.replace("{d}", fmtD(asOf))) + "</div>" +
+    var h = '<div class="home"><div class="home-top"><div class="home-lead"><div class="eyebrow">' + esc(X.current ? t().live.title : H.eyebrow.replace("{d}", fmtD(asOf))) + "</div>" +
       '<h2 class="home-hl">' + esc(H.tagline) + "</h2>" +
       '<p class="home-live">' + hl + "</p>" +
       '<p class="home-sub">' + esc(H.sub.replace("{s}", fmtD(isoDay(A.start) || A.start))) + "</p></div>" +
       '<img class="home-emblem" src="img/emblem-320.png" width="220" height="220" alt="Fundamental Pullback"></div>';
 
+    h += priceStatus();
     /* account curve */
+    h += '<p class="muted">' + esc((lang === "en" ? "Historical closes through " : "Cierres históricos hasta ") + fmtD((X.eq && X.eq.length ? X.eq[X.eq.length - 1].d : S.snapshot))) + "</p>";
     h += '<div class="home-chart">';
     if (X.eq && X.eq.length > 1) h += '<div class="sec-head"><div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" + more("cartera", H.seeCart) + "</div>" +
       '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
@@ -1674,7 +1706,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       "<div><span>" + esc(H.value) + "</span><b>" + esc(fmtM(X.total)) + "</b></div>" +
       "<div><span>" + esc(H.cash) + "</span><b>" + esc(fmtM(X.cash)) + "</b></div>" +
       "<div><span>" + esc(H.open) + "</span><b>" + X.open.length + "</b></div>" +
-      "<div><span>" + esc(H.last) + '</span><b class="' + signCls(X.day) + '">' + esc(sgnM(X.day) + " (" + fmtP(X.dayPct, 2) + ")") + "</b></div></div></div>";
+      "<div><span>" + esc(X.current ? (lang === "en" ? "Versus previous close" : "Frente al cierre anterior") : H.last) + '</span><b class="' + signCls(X.day) + '">' + esc(sgnM(X.day) + " (" + fmtP(X.dayPct, 2) + ")") + "</b></div></div></div>";
 
     /* price vs value: the closest names in the latest analysis */
     if (S.dec) {
@@ -1751,13 +1783,13 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   }
   /* account figures shared by the home page and the Portfolio tab */
   function acctCalc() {
-    var A = S.acct, P = positions();
+    var A = S.acct, P = positions(), quotes = accountQuotes();
     var cap = A.capital;
     var open = P.list.filter(function (p) { return p.shares > 0; });
     var missing = [];
     open.forEach(function (p) {
-      var q = A.prices[p.ticker] || {};
-      p.price = q.p === undefined ? null : q.p; p.prev = histPrev(p.ticker); if (p.prev === null) p.prev = q.prev === undefined ? null : q.prev;
+      var q = quotes.prices[p.ticker] || {};
+      p.price = q.p === undefined ? null : q.p; p.prev = quotes.current ? q.prev : histPrev(p.ticker); if (p.prev === null) p.prev = q.prev === undefined ? null : q.prev;
       if (p.price === null) missing.push(p.ticker);
       p.value = p.price !== null ? p.shares * p.price : p.cost;
       p.upl = p.price !== null ? p.value - p.cost : null;
@@ -1771,16 +1803,16 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     var total = cash !== null ? cash + invested : null;
     var totPL = realized + unreal;
     var ret = cap ? totPL / cap : null;
-    var spyRet = A.spy0 && A.spy ? A.spy / A.spy0 - 1 : null;
+    var spyRet = A.spy0 && quotes.spy ? quotes.spy / A.spy0 - 1 : null;
     var excess = ret !== null && spyRet !== null ? ret - spyRet : null;
     open.forEach(function (p) { p.weight = total ? p.value / total : null; });
-    var eq = equitySeries(total);
+    var eq = equitySeries(quotes.current ? null : total);
     S.eq = eq;
     /* day change from the account-value series: includes shares sold during the day and recorded fees */
-    if (eq && eq.length > 1 && total !== null) day = total - eq[eq.length - 2].v;
-    var dayBase = eq && eq.length > 1 ? eq[eq.length - 2].v : (total !== null ? total - day : null);
+    if (!quotes.current && eq && eq.length > 1 && total !== null) day = total - eq[eq.length - 2].v;
+    var dayBase = !quotes.current && eq && eq.length > 1 ? eq[eq.length - 2].v : (total !== null ? total - day : null);
     var dayPct = dayBase ? day / dayBase : null;
-    return { A: A, P: P, cap: cap, open: open, missing: missing, openCost: openCost, invested: invested, unreal: unreal, realized: realized, day: day, cash: cash, total: total, totPL: totPL, ret: ret, spyRet: spyRet, excess: excess, eq: eq, dayBase: dayBase, dayPct: dayPct };
+    return { current: quotes.current, A: A, P: P, cap: cap, open: open, missing: missing, openCost: openCost, invested: invested, unreal: unreal, realized: realized, day: day, cash: cash, total: total, totPL: totPL, ret: ret, spyRet: spyRet, excess: excess, eq: eq, dayBase: dayBase, dayPct: dayPct };
   }
   function vCartera() {
     var K = t().cart, C = t().col;
@@ -1793,18 +1825,19 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 
     /* hero */
     var LV = t().live;
-    var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + (S.snapshot ? " · " + LV.headline.replace("{d}", fmtD(S.snapshot)) : "") + '</div>' +
+    var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + (X.current ? " · " + LV.title : (S.snapshot ? " · " + LV.headline.replace("{d}", fmtD(S.snapshot)) : "")) + '</div>' +
       '<div class="hero-num">' + esc(fmtM(total)) + '</div>' +
       '<div class="hero-sub"><span class="tag ' + (totPL >= 0 ? "tag-pos" : "tag-neg") + '">' + esc(sgnM(totPL) + " · " + (ret >= 0 ? "+" : "") + fmtP(ret, 2)) + '</span>' +
       '<span class="muted">' + esc(K.capital + " " + fmtM(cap) + " · " + K.since + " " + fmtD(A.start)) + "</span></div></div>" +
       '<div class="hero-side"><div><span class="eyebrow">' + esc(K.vsSpy) + '</span><b class="' + signCls(excess) + '">' + esc((excess >= 0 ? "+" : "") + fmtP(excess, 2)) + '</b><small>' + esc(K.spyLbl + " " + fmtP(spyRet, 2)) + '</small></div>' +
-      '<div><span class="eyebrow">' + esc(S.snapshot ? LV.lastSession : K.today) + '</span><b class="' + signCls(day) + '">' + esc(sgnM(day)) + '</b><small class="' + signCls(dayPct) + '">' + esc(fmtP(dayPct, 2)) + "</small></div></div></div>";
+      '<div><span class="eyebrow">' + esc(X.current ? (lang === "en" ? "Versus previous close" : "Frente al cierre anterior") : LV.lastSession) + '</span><b class="' + signCls(day) + '">' + esc(sgnM(day)) + '</b><small class="' + signCls(dayPct) + '">' + esc(fmtP(dayPct, 2)) + "</small></div></div></div>";
     if (eq && eq.length > 1) {
+      h += '<p class="muted">' + esc((lang === "en" ? "Historical closes through " : "Cierres históricos hasta ") + fmtD((X.eq && X.eq.length ? X.eq[X.eq.length - 1].d : S.snapshot))) + "</p>";
       h += '<div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" +
         '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
     } else h += '<p class="muted">' + esc(K.noHist) + "</p>";
     h += "</div>";
-    h += livePanel(open, cash);
+    h += priceStatus() + livePanel(open, cash);
     var acctNote = lang === "en" && A.noteEn ? A.noteEn : A.note;
     if (acctNote) { var nm = /^([^:]{6,60}):\s*([\s\S]+)$/.exec(acctNote); h += nm ? '<details class="why-fold acct-note"><summary>' + esc(nm[1]) + "</summary><p>" + esc(nm[2]) + "</p></details>" : '<p class="acct-note">' + esc(acctNote) + "</p>"; }
     if (missing.length) h += notice(K.title, K.noPrice + " " + missing.join(", ") + ".");
@@ -1882,7 +1915,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       labelled({ key: "shares", num: true, cell: function (r) { return '<td class="n">' + esc(fmtSh(r.shares)) + "</td>"; } }, C.shares),
       labelled(cM("avg"), t().avgCost), labelled(cM("price"), K.price), labelled(cM("value", 0), K.mktValue),
       labelled({ key: "upl", num: true, cell: function (r) { return '<td class="n ' + signCls(r.upl) + '">' + esc(fmtM(r.upl, 0)) + "</td>"; } }, K.upl),
-      labelled(cP("uplPct", true), K.uplPct), labelled(cP("weight"), K.weight), labelled(cP("dayPct", true), K.day), labelled(cM("stop"), C.stop)
+      labelled(cP("uplPct", true), K.uplPct), labelled(cP("weight"), K.weight), labelled(cP("dayPct", true), X.current ? (lang === "en" ? "Vs previous close" : "Vs cierre anterior") : K.day), labelled(cM("stop"), C.stop)
     ], open) + "</div>";
     return h;
   }
@@ -2400,7 +2433,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         return '<button class="sub" type="button" id="tab-' + v + '" data-view="' + v + '" aria-controls="v-' + v + '"' + (S.view === v ? ' aria-current="page"' : "") + ">" + esc(t().tabs[v]) + "</button>";
       }).join("") + "</div>";
     var st = document.getElementById("status");
-    if (S.snapshot) st.textContent = t().asOf + " " + fmtD(S.snapshot);
+    if (S.snapshot) st.textContent = (lang === "en" ? "Published record: " : "Registro publicado: ") + fmtD(S.snapshot);
     else if (S.loadedAt) st.textContent = t().updated + " · " + new Intl.DateTimeFormat(loc(), { hour: "2-digit", minute: "2-digit" }).format(new Date(S.loadedAt));
     else st.textContent = S.err.dec || S.err.scan ? "" : t().loading;
   }
@@ -2588,6 +2621,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     });
   }
   document.getElementById("refresh").addEventListener("click", function () {
+    if (window.FP_MANIFEST) { loadLive(); return; }
     if (!mcpNS) return;
     mcpNS.invalidate(SERVER, TOOL).catch(function () {}).then(loadOnce);
   });
@@ -2625,7 +2659,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   function loadScript(src) { return new Promise(function (ok, ko) { var el = document.createElement("script"); el.src = src; el.onload = ok; el.onerror = function () { ko(src); }; document.head.appendChild(el); }); }
   if (window.FP_MANIFEST) {
     var MF = window.FP_MANIFEST;
-    document.getElementById("refresh").hidden = true;
+    document.getElementById("refresh").hidden = false;
     var foot = document.querySelector("footer .wrap"); if (foot) { var sn = document.createElement("div"); sn.setAttribute("data-i18n", "snapNote"); sn.style.marginTop = "6px"; foot.parentNode.appendChild(sn); sn.className = "wrap"; }
     var failed = [];
     MF.files.reduce(function (pr, f) { return pr.then(function () { return loadScript(f).catch(function () { failed.push(f); }); }); }, Promise.resolve()).then(function () {
@@ -2657,3 +2691,4 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
+
