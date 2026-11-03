@@ -1191,7 +1191,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     var trades = (S.ops || []).filter(function (r) { return r.ticker && isoDay(r.date) === d; });
 
     var sel = '<label class="inline" for="res-date">' + esc(t().date) + ' <select id="res-date">' + dates.map(function (x) { return '<option value="' + esc(x) + '"' + (x === d ? " selected" : "") + ">" + esc(fmtD(x)) + "</option>"; }).join("") + "</select></label>";
-    var h = head(t().tabs.resumen, R.lede, sel);
+    var h = head(t().tabs.resumen, R.lede, sel) + scanAuditNote(d);
     var delta = prev ? curT.length - Object.keys(prev).length : null;
     function fig(v, label, sub, cls, subCls) { return '<div class="fig"><b class="' + (cls || "") + '">' + esc(v) + "</b>" + (sub ? '<small class="' + (subCls || "") + '">' + esc(sub) + "</small>" : "") + "<span>" + esc(label) + "</span></div>"; }
     var ready = decs.filter(function (r) { return r.decision === "Apta para Stage 3.5"; }).length;
@@ -1291,10 +1291,10 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     /* 1. price at scan + the scanner row it came from */
     var sr = (S.scan || []).filter(function (x) { return x.date === r.date && x.ticker === r.ticker; })[0], src = "";
     if (sr) {
-      var it = [[C.pe, fmtN(sr.pe, 1)], [C.fcf, fmtM(sr.fcf)], [C.opm, fmtP(sr.opm)], [C.high, fmtM(sr.high)], [C.pull, fmtP(sr.pull)], [C.rsi, fmtN(sr.rsi, 1)], [C.qp, fmtN(sr.qp, 0)], [C.opp, fmtN(sr.opp, 0)]];
+      var it = [[C.pe, fmtN(sr.pe, 1)], [C.fcf, fmtM(sr.fcf)], [scannerAudit(sr.date) ? pt("Margen exportado (sin validar)", "Exported margin (unverified)") : C.opm, fmtP(sr.opm)], [C.high, fmtM(sr.high)], [C.pull, fmtP(sr.pull)], [C.rsi, fmtN(sr.rsi, 1)], [C.qp, fmtN(sr.qp, 0)], [C.opp, fmtN(sr.opp, 0)]];
       src = para(L.scanData) + '<dl class="calc-src">' + it.map(function (z) { return "<div><dt>" + esc(z[0]) + "</dt><dd>" + esc(z[1]) + "</dd></div>"; }).join("") + "</dl>";
     }
-    h += sec("price", L.price, fmtM(r.price), "", para(sub(L.priceTxt, { d: fmtD(r.date) })) + src);
+    h += sec("price", L.price, fmtM(r.price), "", para(sub(L.priceTxt, { d: fmtD(r.date) })) + src + scanAuditNote(r.date,r.ticker));
 
     /* 2. estimated value (from the Stage 3 report) */
     var det = lang === "en" && r.calcEn ? r.calcEn : r.calc;
@@ -1339,6 +1339,19 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     btn.focus({ preventScroll: true });
   }
 
+  /* Source labels and independently verified corrections stay separate. */
+  function scannerAudit(date) { return (window.FP_SCAN_AUDIT || {})[date] || null; }
+  function scanAuditNote(date, ticker) {
+    var a = scannerAudit(date); if (!a) return '';
+    var c = ticker && a.corrections[ticker];
+    var h = '<section class="panel scan-audit"><h3>' + esc(pt('Control de datos del escáner', 'Scanner data check')) + '</h3><p>' + esc(a.rawTimestamp + ' · ' + pt('zona horaria no indicada; cierre regular no certificado por el archivo.', 'timezone unspecified; the file does not certify a regular-session close.')) + '</p>';
+    h += '<p>' + esc(pt('Los scores y campos originales se conservan. El margen exportado no está verificado como margen operativo. Las cifras GAAP comprobadas se muestran aparte; no son beneficio normalizado ni aprobación de entrada.', 'Original scores and fields are retained. The exported margin is not verified as operating margin. Checked GAAP metrics are shown separately; they are not normalized earnings or an entry approval.')) + '</p>';
+    if (c) h += '<dl class="kv"><div><dt>' + esc(pt('Margen exportado', 'Exported margin')) + '</dt><dd>' + esc(fmtP(c.exportedMargin,4)) + '</dd></div><div><dt>' + esc(pt('Margen operativo GAAP verificado', 'Verified GAAP operating margin')) + '</dt><dd>' + esc(fmtP(c.verifiedOperatingMargin,2)) + '</dd></div></dl><p>' + esc(c.period) + '</p><p>' + esc(c.finding) + '</p>';
+    else if (ticker) h += '<p>' + esc(pt('No hay corrección de margen verificada para este símbolo en la muestra de nueve empresas.', 'No verified margin correction is available for this symbol in the nine-company sample.')) + '</p>';
+    else h += '<p>' + esc(pt('200 símbolos · 82 con Opportunity ≥85 · 70 de investigación provisional tras exclusiones. Nueve márgenes comprobados. Stage 1 y tendencia larga pendientes de verificación.', '200 symbols · 82 with Opportunity ≥85 · 70 provisional research names after exclusions. Nine margins checked. Stage 1 and long-term trend remain unverified.')) + '</p>';
+    return h + '<p><a href="#biblioteca/' + esc(a.reportId) + '">' + esc(pt('Método, límites y fuentes', 'Method, limits and sources')) + '</a> · <a href="' + esc(a.rawFile) + '">' + esc(pt('CSV original', 'Original CSV')) + '</a> · <a href="' + esc(a.workbookFile) + '">' + esc(pt('Libro corregido', 'Corrected workbook')) + '</a></p></section>';
+  }
+
   function vEscaner() {
     var g = guard(["scan"]);
     if (g) return head(t().scanTitle, t().scanLede) + g;
@@ -1356,14 +1369,15 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     var cols = [
       labelled(cT("ticker", "t"), C.ticker), labelled(cT("company"), C.company),
       labelled(cM("price"), C.price), labelled(cN("pe", 1), C.pe), labelled(cP("pull"), C.pull),
-      labelled(cP("opm"), C.opm), labelled(cM("fcf"), C.fcf), labelled(cN("qp", 0), C.qp),
+      labelled(cP("opm"), scannerAudit(S.scanDate) ? pt("Margen exportado (sin validar)", "Exported margin (unverified)") : C.opm), labelled(cM("fcf"), C.fcf), labelled(cN("qp", 0), C.qp),
       labelled(cN("opp", 0), C.opp), labelled(cN("rsi", 1), C.rsi)
     ];
+    if (scannerAudit(S.scanDate)) cols.splice(6,0,labelled(cP("verifiedOpm"),pt("Margen operativo GAAP verificado", "Verified GAAP operating margin")));
     var ctl = '<div class="controls"><label class="inline" for="scan-date">' + esc(t().date) + ' <select id="scan-date">' +
       dates.map(function (d) { return '<option value="' + esc(d) + '"' + (d === S.scanDate ? " selected" : "") + ">" + esc(fmtD(d)) + "</option>"; }).join("") +
       '</select></label><button type="button" class="chip" id="only-s2" aria-pressed="' + S.onlyS2 + '">' + esc(t().onlyS2) + '</button>' +
       '<input type="search" id="scan-q" placeholder="' + esc(t().search) + '" aria-label="' + esc(t().search) + '" value="' + esc(S.scanQ) + '"><span class="status">' + rows.length + "</span></div>";
-    return head(t().scanTitle, t().scanLede) + ctl + table("scan", cols, rows);
+    return head(t().scanTitle, t().scanLede) + scanAuditNote(S.scanDate) + ctl + table("scan", cols, rows);
   }
 
   function decCols(extra) {
@@ -1747,6 +1761,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       '<img class="home-emblem" src="img/emblem-320.png" width="220" height="220" alt="Fundamental Pullback"></div>';
 
     h += '<section class="panel profile-home"><div><h3>' + esc(pt('Encuentra la ficha de cualquier acción', 'Find any stock profile')) + '</h3><p>' + esc(pt('Busca por ticker o empresa y recupera su análisis e historial.', 'Search by ticker or company to retrieve its research and history.')) + '</p></div><a class="btn" href="#fichas">' + esc(pt('Buscar acciones →', 'Find a stock →')) + '</a></section>';
+    h += '<section class="panel"><h3>' + esc(pt('Escáner 3 noviembre · nueve revisiones preliminares', 'November 3 scanner · nine preliminary reviews')) + '</h3><p>' + esc(pt('200 símbolos publicados, 82 con Opportunity ≥85 y 70 de investigación provisional tras exclusiones. EL, FIVE, FLS, LYB, OXY, IT, BR, SPGI y JKHY cuentan con nueva investigación. Ninguna entrada aprobada ni valor certificado. Los informes anteriores se conservan.', '200 symbols published, 82 with Opportunity ≥85 and 70 provisional research names after exclusions. EL, FIVE, FLS, LYB, OXY, IT, BR, SPGI and JKHY have new research. No entry approved or value certified. Earlier reports are preserved.')) + '</p><div class="controls"><a class="btn" href="#escaner">' + esc(pt('Ver escáner', 'View scanner')) + '</a><a class="btn" href="#fichas">' + esc(pt('Buscar investigación', 'Find research')) + '</a><a class="btn" href="#biblioteca/A149">' + esc(pt('Control de calidad y fuentes', 'Data quality and sources')) + '</a></div></section>';
     h += priceStatus();
     h += '<section class="panel"><div><h3>' + (lang === "en" ? "3 November close · Stage 4 review" : "Cierre 3 noviembre · revisión Stage 4") + '</h3><p class="lede">' + (lang === "en" ? "All six paper positions reviewed. No technical exit triggered. ANF’s calculated close-based level for November 4 is $148.56, not a broker order; other protection is unchanged. HRB remains below its +2R closing threshold. Fundamental diagnostics are unapproved: DOCU, ULTA and ANF need priority formal hold/exit review. No add-ons or new partial sales." : "Revisadas las seis posiciones paper. Sin nueva salida técnica. Nivel por cierre calculado para ANF el 4 noviembre: 148,56 USD, no una orden del bróker; las demás protecciones no cambian. HRB sigue bajo +2R al cierre. Diagnósticos fundamentales no aprobados: revisión formal prioritaria de mantener/salir en DOCU, ULTA y ANF. Sin ampliaciones ni nuevas parciales.") + '</p></div><div class="controls"><a class="btn" href="research/2026-11-03/stage4-review.html">' + (lang === "en" ? "Read full Stage 4 review" : "Leer revisión Stage 4 completa") + '</a><button class="btn" type="button" data-libopen="A148">A148 →</button></div></section>';
     h += '<div class="panel"><div><h3>' + (lang === "en" ? "2 November close · research extended 3 November UTC" : "Cierre 2 noviembre · análisis ampliado 3 noviembre UTC") + '</h3><p class="lede">' + (lang === "en" ? "Stage 4: six open positions. NTNX paper sale confirmed November 3 at 09:45 EST: 184.134 shares at displayed average $65.21; estimated fee $0.29, remaining quantity zero. Scanner: 200 rows, 82 with Opp ≥85. Five completed current-price WAIT decisions, two blocked dossiers and four deferred dossiers. The original 31-name triage is retained; VFC, CNX and ENTG now have expanded dossiers. HPE and CLS now also have completed conditional watchlist refreshes, both waiting and technically ineligible; they are not new scanner qualifiers. HOOD’s full review is also complete: observation, with no certified fair value or approved entry. The earlier priorities note is retained as history. No new buys approved." : "Stage 4: seis posiciones abiertas. Venta paper de NTNX confirmada el 3 noviembre a las 09:45 EST: 184,134 acciones al precio medio mostrado de 65,21 USD; comisión estimada 0,29 USD, cantidad restante cero. Escáner: 200 filas, 82 con Opp ≥85. Cinco decisiones de esperar a precio actual completadas, dos dossiers bloqueados y cuatro aplazados. Se conserva el triaje original de 31 candidatas; VFC, CNX y ENTG tienen ahora dossiers ampliados. HPE y CLS tienen además revisiones condicionales de seguimiento completadas: ambas en espera y sin cumplir el filtro técnico; no son nuevos pases del escáner. HOOD también tiene la revisión completa: en observación, sin valor justo certificado ni entrada aprobada. La nota anterior de prioridades se conserva como historial. Ninguna compra nueva aprobada.") + '</p></div><div class="controls">' + more("posiciones", "Stage 4") + more("analisis", lang === "en" ? "Scanner analyses" : "Análisis del escáner") + '<a class="btn" href="research/2026-11-02/index.html">' + (lang === "en" ? "Initial dossiers (8)" : "Dossiers iniciales (8)") + '</a><a class="btn" href="research/2026-11-03/index.html">' + (lang === "en" ? "New dossiers and refreshes (7)" : "Nuevos dossiers y revisiones (7)") + '</a><button class="btn" type="button" data-libopen="A142">' + (lang === "en" ? "Review priorities" : "Prioridades de revisión") + '</button></div></div>';
@@ -2328,6 +2343,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     h+='<section class="profile-hero panel"><div><p class="eyebrow">'+esc(pt('Archivo de investigación','Research archive'))+'</p><h2>'+esc(p.ticker)+'</h2><p class="profile-company">'+esc(p.company||pt('Nombre no registrado','Company name not recorded'))+'</p></div><span class="profile-tag '+(a?'profile-complete':'')+'">'+esc(profileState(p))+'</span></section>';
     function metric(label,value,note){return '<div><dt>'+esc(label)+'</dt><dd>'+esc(value)+'</dd><small>'+esc(note)+'</small></div>';}
     h+='<dl class="profile-metrics">'+metric(pt('Primer escáner registrado','First recorded scan'),profileDate(p.firstScan),pt('Primera aparición en el archivo disponible','First appearance in the available archive'))+metric(pt('Último escáner','Latest scan'),profileDate(p.lastScan),p.scanDates.length+' '+pt('fechas registradas','recorded dates'))+metric(pt('Último análisis completado','Last completed analysis'),profileDate(completed&&completed.date),completed?(completed.id+' · '+pt('fecha de la fuente del análisis','analysis source date')):pt('No se sustituye por una fecha de escáner','Never replaced with a scanner date'))+'</dl>';
+    h+=scanAuditNote(p.lastScan,p.ticker);
     h+='<section class="panel profile-analysis"><h3>'+esc(pt('Análisis más reciente disponible','Latest available analysis'))+'</h3>';
     if(a) {
       var title=a.report?a.report.title:depthLabel(a.kind);
@@ -2676,7 +2692,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   /* ---------- data loading ---------- */
   var mcpNS = null;
   var PARTS = {
-    scan: function (v) { return fullNames(numify(rowsToObjects(v, SCAN_MAP), NUM_SCAN)); },
+    scan: function (v) { var rows=fullNames(numify(rowsToObjects(v, SCAN_MAP), NUM_SCAN)); rows.forEach(function(r){var a=scannerAudit(r.date),c=a&&a.corrections[r.ticker];r.verifiedOpm=c?c.verifiedOperatingMargin:null;});return rows; },
     dec: function (v) { return fullNames(numify(rowsToObjects(v, DEC_MAP), NUM_DEC)); },
     ops: function (v) { return numify(rowsToObjects(v, OPS_MAP), NUM_OPS); },
     ges: function (v) { return numify(rowsToObjects(v, GES_MAP), ["stop", "m"]).map(function (r) { r.trailN = num(r.trail); return r; }); },
