@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"><title>Stage 4 · 3 November 2026 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+</style></head><body><main><nav aria-label="Research navigation"><a href="../../index.html#posiciones">← Posiciones / Positions</a><a href="index.html">3 November research</a><a href="stage4-diagnostic-calculations.json" download>Diagnostic calculation data (JSON)</a></nav><p class="eyebrow">A148 · Regular close 3 Nov 2026 · Paper portfolio research</p><div class="status-line"><span class="tag complete">Technical close review completed</span><span class="tag deferred">Fundamental diagnostics · not approved</span><span class="tag blocked">No new trades or add-ons</span></div><h1 id="stage-4-revisión-del-3-noviembre-2026">Stage 4 · Revisión del 3 noviembre 2026</h1>
+<p><strong>Seis posiciones paper abiertas. Revisión técnica de cierre completada; revisión fundamental diagnóstica preparada, no valoración aprobada ni decisión formal de venta.</strong> No hay ampliaciones autorizadas, nuevas operaciones o parciales repetidos. NTNX permanece cerrada según la ejecución paper ya registrada en A147.</p>
+<h2 id="resultado-outcome">Resultado / Outcome</h2>
+<ul>
+<li><strong>HRB, ASO y EXLS:</strong> mantener de forma condicionada bajo las reglas vigentes, sin ampliar. No se demuestra una nueva señal fundamental suficiente de venta; esto no certifica una valoración actual ni elimina el riesgo.</li>
+<li><strong>DOCU, ULTA y ANF:</strong> revisión formal de mantener/salir prioritaria. Los diagnósticos cuestionan la compensación por riesgo, pero no bastan para registrar una salida automática ni sustituir las valoraciones aprobadas.</li>
+<li>Las tasas de descuento son hipótesis de investigación sin calibración de mercado contemporánea completa. Las cifras siguientes no son objetivos de venta, probabilidades, límites de pérdida ni techos de compra.</li>
+<li>Existing technical protection remains in force. The new valuation work is diagnostic and unapproved. DOCU, ULTA and ANF need priority formal hold/exit review; HRB, ASO and EXLS remain conditional holds. No add-on, new partial sale, broker order or trade is authorized by this publication.</li>
+</ul>
+<h2 id="cierre-oficial-y-protección-calculada">Cierre oficial y protección calculada</h2>
+<p>Referencia: sesión regular del 3 noviembre 2026, finalizada a las 16:00 EST / 21:00 UTC. Los cierres no son precios intradía ni operaciones ejecutadas. USD por acción.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Empresa</th>
+<th style="text-align: right;">Cierre</th>
+<th style="text-align: right;">Mínimo de sesión</th>
+<th style="text-align: right;">EMA50 calculada</th>
+<th style="text-align: right;">Stop manual S</th>
+<th style="text-align: right;">Trailing registrado anterior</th>
+<th style="text-align: right;">Nivel calculado para 4 nov</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HRB</td>
+<td style="text-align: right;">53,17</td>
+<td style="text-align: right;">52,02</td>
+<td style="text-align: right;">46,75</td>
+<td style="text-align: right;">45,80</td>
+<td style="text-align: right;">Inactivo</td>
+<td style="text-align: right;">Inactivo</td>
+</tr>
+<tr class="even">
+<td>ASO</td>
+<td style="text-align: right;">60,86</td>
+<td style="text-align: right;">60,74</td>
+<td style="text-align: right;">54,07</td>
+<td style="text-align: right;">50,30</td>
+<td style="text-align: right;">56,02</td>
+<td style="text-align: right;">56,02</td>
+</tr>
+<tr class="odd">
+<td>EXLS</td>
+<td style="text-align: right;">42,13</td>
+<td style="text-align: right;">41,56</td>
+<td style="text-align: right;">37,74</td>
+<td style="text-align: right;">33,50</td>
+<td style="text-align: right;">39,60</td>
+<td style="text-align: right;">39,60</td>
+</tr>
+<tr class="even">
+<td>ANF</td>
+<td style="text-align: right;">157,52</td>
+<td style="text-align: right;">156,69</td>
+<td style="text-align: right;">143,80</td>
+<td style="text-align: right;">128,00</td>
+<td style="text-align: right;">148,19</td>
+<td style="text-align: right;"><strong>148,56</strong></td>
+</tr>
+<tr class="odd">
+<td>ULTA</td>
+<td style="text-align: right;">634,89</td>
+<td style="text-align: right;">623,44</td>
+<td style="text-align: right;">576,70</td>
+<td style="text-align: right;">522,00</td>
+<td style="text-align: right;">597,42</td>
+<td style="text-align: right;">597,42</td>
+</tr>
+<tr class="even">
+<td>DOCU</td>
+<td style="text-align: right;">80,36</td>
+<td style="text-align: right;">79,00</td>
+<td style="text-align: right;">72,26</td>
+<td style="text-align: right;">62,50</td>
+<td style="text-align: right;">76,97</td>
+<td style="text-align: right;">76,97</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ningún mínimo alcanza S; ningún cierre pierde su trailing vigente. Todos los cierres están sobre EMA50: no aparece una nueva salida técnica por esos criterios. Los niveles son cálculos de gestión, no órdenes en el bróker; los huecos de apertura y el deslizamiento pueden impedir ejecutarlos al precio indicado.</p>
+<p><strong>HRB:</strong> el máximo intradía de 53,91 supera 53,63, pero el cierre de 53,17 no alcanza el umbral +2R de 53,63. No se activa el trailing ni se registra una nueva parcial por un máximo intradía. La ampliación permanece suspendida desde el 28 octubre; M 47,33 y las demás condiciones anteriores no se reactivan por publicar este informe.</p>
+<p><strong>ANF:</strong> reconstrucción cronológica desde el nivel registrado 148,19. Con máximo de cierre 165,770004, ATR14 de 5,765934 el 30 octubre da 148,472203; ATR14 de 5,736939 el 2 noviembre da 148,559188. El 3 noviembre, ATR14 de 5,861443 da un candidato menor de 148,185676. La regla de no reducir el trailing conserva el máximo acumulado y redondea a <strong>148,56 para la sesión del 4 noviembre</strong>. La revisión anterior dejó ese nivel pendiente por precisión de la semilla; el recálculo con serie completa resuelve esa limitación. Esto no afirma que 148,56 fuese una orden vigente antes de registrarlo. Se preserva el antiguo 148,19 en el historial.</p>
+<p><strong>ASO, EXLS, ULTA y DOCU:</strong> el nuevo cálculo no mejora los niveles registrados; no se reducen. Las parciales de campaña existentes no se repiten. Los niveles M históricos y bloqueos de ampliación no cambian.</p>
+<h3 id="fuentes-y-método-técnico">Fuentes y método técnico</h3>
+<p>Cierres contrastados con Yahoo Finance, Nasdaq y la página de precios de Stock Analysis. EMA20/50: suavizado exponencial de cierres con factor 2/(n+1). ATR14: verdadero rango y suavizado Wilder; serie diaria de dos años y precisión completa en el recálculo. No se mezclan precios ajustados con OHLC sin ajustar para el cálculo. El redondeo a dos decimales se aplica al presentar niveles, no en cada paso de la serie.</p>
+<p><a href="https://stockanalysis.com/stocks/hrb/history/">HRB</a> · <a href="https://stockanalysis.com/stocks/aso/history/">ASO</a> · <a href="https://stockanalysis.com/stocks/exls/history/">EXLS</a> · <a href="https://stockanalysis.com/stocks/anf/history/">ANF</a> · <a href="https://stockanalysis.com/stocks/ulta/history/">ULTA</a> · <a href="https://stockanalysis.com/stocks/docu/history/">DOCU</a>.</p>
+<h2 id="mapa-fundamental-diagnóstico-no-aprobación">Mapa fundamental: diagnóstico, no aprobación</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Empresa</th>
+<th style="text-align: right;">Diagnóstico central aproximado</th>
+<th>Interpretación y siguiente paso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HRB</td>
+<td style="text-align: right;">59,00</td>
+<td>Reproduce 58,05 histórico y explica la transición. No aporta una razón nueva suficiente de salida; revisar resultados 9 nov tras cierre.</td>
+</tr>
+<tr class="even">
+<td>ASO</td>
+<td style="text-align: right;">61,52</td>
+<td>Reconcilia la base histórica cercana a 61, no confundir con el diagnóstico anterior de 52. Mantener condicionado; sin añadir.</td>
+</tr>
+<tr class="odd">
+<td>EXLS</td>
+<td style="text-align: right;">36,69</td>
+<td>Crecimiento favorable, pero peor conversión de caja y obligaciones de iMerit. Vigilar; no convertir el antiguo 38 en salida automática.</td>
+</tr>
+<tr class="even">
+<td>ANF</td>
+<td style="text-align: right;">128,75</td>
+<td>Mayor exigencia del precio y debilidad operativa sin devoluciones arancelarias. Revisión formal prioritaria; próximos resultados 24 nov.</td>
+</tr>
+<tr class="odd">
+<td>ULTA</td>
+<td style="text-align: right;">389,36</td>
+<td>Discrepancia grande con el precio; los contrastes por EPS son menos negativos. Falta validar capital, reinversión y duración del crecimiento.</td>
+</tr>
+<tr class="even">
+<td>DOCU</td>
+<td style="text-align: right;">56,10</td>
+<td>SBC e inversión económica reducen la caja atribuible al accionista. Suplari sin términos: puente preoperación, no valoración postadquisición completada.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las cifras no son comparables sin sus supuestos, normalizaciones, balances y sensibilidad. Una diferencia porcentual frente al valor presente no es una rentabilidad anual esperada. Las TIR de los anexos son condicionales y emplean convenciones de distribución diferentes; no deben ordenarse como pronósticos homogéneos.</p>
+<h3 id="contraste-independiente-qué-hipótesis-sí-podrían-sostener-mantener">Contraste independiente: qué hipótesis sí podrían sostener mantener</h3>
+<p>El diagnóstico central no es una verdad única. Una comprobación independiente con supuestos combinados más favorables produce los siguientes resultados condicionales:</p>
+<ul>
+<li><strong>DOCU: aproximadamente 83,38 USD</strong> con crecimiento de ventas del 10/11/12/12/11% durante los primeros cinco años, márgenes GAAP de 17,5/19/20,5/22/23% los primeros cinco años y 25% terminal y descuento del 9%. Exige más crecimiento y mejora de margen que el caso central; no incluye sin coste beneficios demostrados de Suplari.</li>
+<li><strong>ULTA: aproximadamente 676 USD</strong> con crecimiento del 7% que converge al 3%, margen del 14%, tasa del 8% y ROIC terminal del 25%. La menor tasa aún debe calibrarse y el margen y crecimiento duraderos deben justificarse.</li>
+<li><strong>ANF: aproximadamente 169,31 USD</strong> con las ventas iniciales del caso base (5.730 M USD), ROIC terminal del 16%, crecimiento del 6%, margen inicial/terminal del 13,5%/13% y descuento del 10%. Tampoco es un nuevo valor aprobado ni elimina los indicios de debilidad operativa.</li>
+</ul>
+<p>Son variaciones conjuntas de hipótesis, no corroboraciones independientes de un valor justo ni escenarios con probabilidades asignadas. Demuestran que la conclusión de mantener/salir depende de juicios pendientes de validación y que los casos centrales no justifican una venta mecánica.</p>
+<h2 id="qué-falta-para-cerrar-una-decisión-fundamental">Qué falta para cerrar una decisión fundamental</h2>
+<ol type="1">
+<li>Calibrar el coste de capital con componentes fechados y separar WACC de rentabilidad exigida al accionista.</li>
+<li>Completar normalización de TTM, SBC, software, circulante, caja excedentaria y obligaciones, evitando regalar recompras o duplicar deuda/arrendamientos.</li>
+<li>Reconciliar a la misma fecha los modelos históricos y nuevos; distinguir datos nuevos, método y supuestos. Donde el modelo histórico no se recuperó, declararlo.</li>
+<li>Contrastar la tesis que justificaría mantener, registrar el juicio rentabilidad-riesgo y validar el modelo antes de adoptar una decisión formal.</li>
+</ol>
+<p><a href="https://fundamentalpullback.github.io/data/plan/Plan_Completo_2026-10-30.pdf">Plan vigente del 30 octubre</a>. No se crean umbrales automáticos nuevos ni se alteran las reglas.</p>
+<h2 id="anexos-fundamentales-completos">Anexos fundamentales completos</h2>
+<p>Los siguientes anexos presentan los cálculos y sus límites. La conclusión de publicación anterior prevalece: diagnóstico preparado y revisión formal todavía abierta donde se indica. No se adopta una venta ni una nueva valoración ejecutable.</p>
+<h2 id="hrb-y-ulta-revisión-fundamental-stage-4">HRB y ULTA: revisión fundamental Stage 4</h2>
+<p>Corte: 3 noviembre 2026. Precios de la sesión regular del 3 noviembre: HRB 53,17 USD; ULTA 634,89 USD. Investigación para cartera paper. No registra operaciones, órdenes ni sustitución de reglas. Cálculos nuevos <strong>screen-grade</strong>, no precios aprobados.</p>
+<h2 id="resultado-utilizable">Resultado utilizable</h2>
+<ul>
+<li><strong>HRB:</strong> el modelo histórico de 58,05 se reproduce. Ya era FCFF; no hay que inventar un cambio de método. La adaptación exploratoria a diez años da aproximadamente 59, con rango por WACC 9–11% de 52–68. Al cierre 53,17 no está por encima de esa base. No aparece un fundamento nuevo suficiente para salida por valoración; tampoco se restablece la ampliación suspendida ni el techo ejecutable. Revalidar antes del evento del 9 de noviembre y ante nueva evidencia operativa.</li>
+<li><strong>ULTA:</strong> sí necesita una revisión de valoración prioritaria, separada de su evolución técnica. Un FCFF operativo preliminar da alrededor de 390, sensibilidad central 330–475 y escenarios amplios aproximadamente 230–595. No son una valoración aprobada ni límites garantizados. Los contrastes por EPS son menos negativos y explican qué tesis podría justificar mantener: crecimiento del EPS cercano al 10% durante cinco años y conservación de un múltiplo de 22x darían aproximadamente 10% anualizado. Esa tesis exige probar sostenibilidad de caja, reinversión y recompras, no solo citar la guía de este año. No emitir una venta automática a partir de un modelo nuevo aún no validado.</li>
+</ul>
+<p>El plan vigente pide revisar si precio supera valoración central y vender solo si una revisión documentada concluye que mantener no compensa el riesgo. Una corrección de modelo debe validarse antes de utilizarse. Los stops y salidas técnicas vigentes mantienen su prioridad. <a href="https://fundamentalpullback.github.io/data/plan/Plan_Completo_2026-10-30.pdf">Plan vigente</a>.</p>
+<h2 id="hrb-historia-datos-y-conciliación">1. HRB: historia, datos y conciliación</h2>
+<p><strong>Antecedente recuperado:</strong> A082, 21 de octubre, en la biblioteca pública: FCFF a cinco años, adverso/base/favorable 33,17/58,05/75,80; techo fundamental histórico49. A115 deja la valoración pendiente de revalidación para ampliar. No hay nueva autorización de compra. <a href="https://fundamentalpullback.github.io/data/lib.js">Biblioteca de informes</a>.</p>
+<p>Datos FY2026: ventas3.945,392 M; EBIT calculado907,686 M; CFO838,695 M; capex82,614 M; adquisiciones57,639 M; SBC30,478 M. FCF estricto756,081 M. El beneficio continuo736,318 M incluye84,1 M de beneficio fiscal extraordinario: retirarlo deja652,218 M, no confundir con el beneficio ajustado de la dirección. FY2027 guía ventas4.110–4.160 M, EBITDA ajustado1.110–1.140 M, impuesto23%, EPS ajustado6,04–6,24. <a href="https://investors.hrblock.com/news-releases/news-release-details/hr-block-reports-fiscal-2026-results-and-enters-fiscal-2027">Resultados FY2026</a>.</p>
+<p>Balance: deuda principal1.500 M y caja958,706 M; el modelo retiene500 M como necesidad operativa estacional. Se conservan124,5 M de acciones para dilución frente123,266 M básicas publicadas al31jul. No descontar arrendamientos adicionalmente mientras los alquileres permanecen en EBIT. El 10-K declara una reestructuración posterior al cierre de unos8,3 M antes de impuestos; revisar su cargo real en Q1. <a href="https://investors.hrblock.com/node/33641/html">10-K FY2026</a>.</p>
+<h3 id="puente-que-no-atribuye-todo-al-método">Puente que no atribuye todo al método</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paso</th>
+<th style="text-align: right;">Valor/acción</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reproducción del modelo A082</td>
+<td style="text-align: right;">58,0474</td>
+<td>Coincide con58,05 publicado.</td>
+</tr>
+<tr class="even">
+<td>Explicitar otros5 años idénticos al estado terminal antiguo</td>
+<td style="text-align: right;">58,0474</td>
+<td>Cambio de presentación/horizonte por sí solo: cero efecto económico.</td>
+</tr>
+<tr class="odd">
+<td>Cinco años detallados + transición nueva de5 años</td>
+<td style="text-align: right;">59,0014</td>
+<td>+0,9540 por hipótesis nuevas de transición, no por otro método.</td>
+</tr>
+<tr class="even">
+<td>Usar23% impuesto uniforme en vez de25%, resto igual</td>
+<td style="text-align: right;">60,8356</td>
+<td>+1,8342 por hipótesis fiscal. Sensibilidad, no adopción automática.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ningún resultado nuevo de HRB se ha publicado desde el modelo original; el cambio de precio no cambia el valor intrínseco por sí mismo.</p>
+<p><strong>Hipótesis replicadas:</strong> ventas iniciales3.945,392 M; crecimiento4,8/4/3/3/2,5%; margen EBIT23%; impuesto25%; D&amp;A3,1%, capex2,2% y adquisiciones recurrentes1,4% de ventas; circulante10% del incremento positivo de ventas. WACC10%; g2%; ROIC terminal15%. SBC retenida como coste. Modelo nuevo añade crecimiento2,4/2,3/2,2/2,1/2% y reinversión gradual hacia NOPAT×g/ROIC. WACC es hipótesis de investigación, no medición certificada al3nov.</p>
+<p><strong>Sensibilidades:</strong> WACC9/10/11%, g2%:68,43/59,00/51,65. Terminal45,7% del EV central frente66,9% antiguo. Escenarios ilustrativos adverso33,25 (margen20%, crecimiento muy bajo, WACC11,5%, g1%, ROIC10%); favorable80,00 (margen24%, crecimiento5,5→2,5%, WACC9%, g2,5%, ROIC20%). A53,17: descuento9,9% respecto59, subida posible11%, descenso al adverso37,5%. No interpretar como probabilidades.</p>
+<p><strong>Inversa:</strong> con el calendario de crecimiento central, el precio admite margen constante~21,05%, frente23% modelizado. Con margen23%, crecimiento constante~1,51% primeros5 años y transición hacia2% también reproduce precio. Son combinaciones alternativas del mismo modelo, no corroboración independiente.</p>
+<p><strong>Contraste:</strong> PER sobre EPS guía medio6,14 =8,66x; sobre EPS FY26 parcialmente normalizado5,04 =10,55x. No mezclarlos. Dividendo anualizado1,84 implica3,46% de rendimiento corriente, no garantía. Marca, recurrencia fiscal y mejora de beneficio apoyan mantener la tesis; sustitución tecnológica, servicios gratuitos, precio/volumen, salarios, estacionalidad y reinversión de franquicias siguen siendo riesgos.</p>
+<p><strong>Evento confirmado:</strong> resultados Q1 FY2027 el9nov después del cierre, no5nov estimado en el informe antiguo. Revisar especialmente perspectiva anual, caja estacional, número de acciones y costes de reestructuración. <a href="https://investors.hrblock.com/news-releases/news-release-details/hr-block-release-fiscal-2027-first-quarter-results-november-9">Convocatoria oficial</a>. El emisor anunció Investor Day3dic. <a href="https://investors.hrblock.com/">IR</a>.</p>
+<h2 id="ulta-datos-fcff-y-contraste-de-tesis">2. ULTA: datos, FCFF y contraste de tesis</h2>
+<p><strong>Antecedentes:</strong> los informes recuperados solo contenían comprobaciones operativas y gestión; A048 utilizó guía EPS y PER como contexto, no un DCF íntegro. A078 bloquea ampliación por capital acumulado. No se ha recuperado una valoración central aprobada histórica con la que hacer un puente numérico. No afirmar que nunca existió; tampoco inventarla.</p>
+<p>FY2025 terminado31ene2026: ventas12.392,820 M; EBIT1.532,992 M; CFO1.502,780 M; capex434,829 M; SBC37,426 M. El margen12,37% es inferior a13,85% de FY2024, pese al crecimiento de ventas. <a href="https://www.ulta.com/investor/sec-filings/all-sec-filings/content/0001104659-26-035243/ulta-20260131x10k.htm">10-K</a>.</p>
+<p>Q2 FY2026: comps+3,8%, EBIT+10,1%; guía anual ventas+6,7–7,2%, EBIT+8,3–9,3%, EPS28,70–29,00, capex400–450 M. No hay deterioro operativo verificado que por sí solo rompa la tesis. <a href="https://www.ulta.com/investor/news-events/press-releases/detail/234/ulta-beauty-announces-second-quarter-fiscal-2026-results">Resultados Q2</a>.</p>
+<p><strong>TTM derivado =FY2025−H12025+H12026:</strong> ventas12.955,517 M; EBIT1.614,258 M (12,46%); CFO1.567,827 M; capex418,375 M; FCF1.149,452 M; SBC38,151 M; FCF−SBC1.111,301 M. No anualizar solamenteH1: existe estacionalidad. Estas cifras se reconcilian con los estados de resultados/caja de ambos periodos.</p>
+<p>Balance1ago: caja158,451 M+inversiones55 M; deuda339,578 M; arrendamientos2.184,453 M. Acciones básicas42,757 M al24ago; diluidas Q2 43,062 M. Se emplean43,1 M fijas, sin recompras futuras gratuitas. Manteniendo alquileres en EBIT no se resta nuevamente deuda por arrendamientos. La caja se trata como operativa dada la estacionalidad; el10-Q sitúa la mayor necesidad de circulante en agosto–noviembre. <a href="https://www.sec.gov/Archives/edgar/data/1403568/000110465926102442/ulta-20260801x10q.htm">10-Q Q2</a>.</p>
+<h3 id="hipótesis-y-resultado-exploratorio">Hipótesis y resultado exploratorio</h3>
+<p>Año1 de caja futura utiliza el ritmo anual de ventas13.254 M y margen12,58%, aproximadamente coherente con guíaFY2026. Es una aproximación anual de próximos flujos, <strong>no</strong> un calendario trimestral que adjudique como futuros los cobros ya realizados. La migración definitiva debe precisar fecha de valoración, fracción de año y balance posterior.</p>
+<p>Ventas años2–5 crecen5,5/5/4,5/4%; años6–10 convergen3,7→2,5%. Margen sube de12,58% a13% año5 y converge12,5%. Impuesto25%, D&amp;A2,6%, capex3,3%, otros desembolsos de crecimiento0,15% de ventas, circulante10% del aumento. Reinversión transita al20% de ROIC terminal, g2,5%. El capex inicial437 M está dentro de la guía. No se carga nuevamente la compra ya pagada de SpaceNK, ni se supone otra adquisición futura gratis. El allowance de otros desembolsos es hipótesis prudencial, no guía.</p>
+<p>WACC9,5% es supuesto de investigación <strong>aún no certificado con componentes actuales de coste de capital</strong>. Modelo central~389; terminal52,6% del EV. Variando WACC8,5–10,5% y g2–3%:~333–474. Adverso~228: margen10,5–12%, ventas más débiles, WACC11%, g2%, ROIC15%. Favorable~594: crecimiento inicial7,2–7,5% que converge3%, margen14%, WACC8,5%, g3%, ROIC25%. El favorable no es un techo máximo posible.</p>
+<p><strong>Comprobaciones contra un falso descenso contable</strong>, una variable cada vez, resto central: - Añadir toda caja e inversiones:394,31, solo+4,95. - Usar acciones básicas publicadas:392,48, +3,12. - Impuesto24%:394,96, +5,60. - Cero circulante incremental:397,19, +7,83. - Capex=D&amp;A y sin otros desembolsos:403,93, +14,57. - Convención de descuento a mitad de año:407,80, +18,44. - Margen14% constante:434,95.</p>
+<p>No deben sumarse mecánicamente estos ajustes. Confirman que el desacuerdo no se explica principalmente por caja, deuda, dilución o timing. El peso está en crecimiento duradero, margen, tasa y terminal.</p>
+<p><strong>Inversa central:</strong>634,89 requiere~6,85% de WACC con la misma trayectoria, o margen constante~20%, o crecimiento de ventas~14,6% durante cinco años y posterior transición, cada uno por separado. No son las únicas combinaciones ni afirmaciones de consenso. Mezclar mejor crecimiento, margen14% y menor tasa puede sostener precios superiores al favorable ilustrado.</p>
+<h3 id="contrastes-que-no-deben-promediarse">Contrastes que no deben promediarse</h3>
+<ol type="1">
+<li><strong>Caja observada:</strong> FCF−SBC TTM/valor de mercado ≈4,1%. Proyectar esa caja para el accionista con crecimiento5% durante cinco años, transición a3%, coste de capital propio9/10/11% arroja~496/424/370. No se resta deuda otra vez porque la caja ya paga intereses. Es contrasteFCFE simplificado, no sustituto del FCFF; no demuestra por separado el ROIC de esa caja.</li>
+<li><strong>Beneficios y múltiplo:</strong> precio22,0xEPS guía medio28,85. Si EPS crece10% durante cinco años, múltiplo final16/20/22/24x implica retorno anualizado3,2/7,9/10,0/11,9%. Si EPS solo crece6% y termina20x, retorno~4,0%. Son rendimientos de precio hipotéticos, sin dividendos asumidos, no estimaciones aprobadas.</li>
+<li><strong>Contraste con dirección:</strong> sus objetivos largos reafirmados en abril2026 son crecimiento de ventas4–6%, beneficio operativo de un dígito medio y EPS de dos dígitos bajos. La diferencia entre crecimiento del negocio y EPS depende en parte del capital devuelto. Una recompra consume caja; el modelo no puede sumar su beneficio y dejar el dinero disponible a la vez. <a href="https://www.ulta.com/investor/sec-filings/all-sec-filings/content/0001104659-26-046620/tmb-20260131xars.pdf">Carta anual2026</a>.</li>
+</ol>
+<p>El PER puede sostener634,89 si el crecimiento por acción y un múltiplo elevado perduran; el FCFF central presupone maduración del negocio y una rentabilidad terminal más moderada. No son pruebas independientes del mismo pronóstico, y promediarlos ocultaría el desacuerdo.</p>
+<h3 id="qué-falta-para-registrar-mantener-o-salir">Qué falta para registrar mantener o salir</h3>
+<p>Validar coste de capital y duración del crecimiento; justificar margen sostenible, capex/circulante y retorno incremental; incorporar la capacidad real de recompras a distintos precios sin deuda indefinida; comprobar balance/acciones nuevos cuando se publiquen; recuperar si existe el modelo de compra anterior. El cierre contable posterior no puede inventarse antes de su publicación. Riesgos relevantes: competencia y promociones, consumo discrecional, mezclaSpaceNK, expansión internacional, y pérdida/traslado de clientes tras terminar la alianzaTarget. El precio exige mantener ejecución y valoración premium; la sola recuperación desde la compra no es tesis.</p>
+<p><strong>Conclusión Stage4:</strong> abrir/reabrir y cerrar con prioridad la revisión formal de ULTA. Los resultados disponibles no invalidan el negocio, pero el rendimiento esperado depende de supuestos más exigentes de los que resume una etiqueta de «buenos resultados». No convertir389 en objetivo exacto ni en orden de venta. Mantener reglas protectoras; ningún añadido queda autorizado. Próximo resultado en calendarioIR:3dic2026. <a href="https://www.ulta.com/investor">IR</a>.</p>
+<h2 id="reproducibilidad-y-límites">Reproducibilidad y límites</h2>
+<p>Los cálculos reproducen HRB, FCFF de diez años, escenarios, inversas, sensibilidades, contraste FCFE y retornos por EPS. Las hipótesis son del análisis, no consenso. No se obtuvo calibración contemporánea completa del coste de capital; no presentar9,5% como WACC certificado. La lectura deSEC/IR y la aritmética sí se verificaron. Esta revisión fundamental no certifica órdenes ni modifica modelos aprobados.</p>
+<h2 id="anf-y-aso-revisión-fundamental-stage-4">ANF y ASO: revisión fundamental Stage 4</h2>
+<p>Fecha: 3 de noviembre de 2026. Precios de cierre regular: ANF 157,52 USD; ASO 60,86 USD. Esta investigación no ejecuta operaciones.</p>
+<h2 id="conclusión-utilizable">Conclusión utilizable</h2>
+<p><strong>ANF merece prioridad de revisión de salida.</strong> El crecimiento del EPS publicado exagera la mejora económica y el precio exige más crecimiento o margen que el caso central. No basta responder «mantener porque el stop sigue intacto». En el diagnóstico FCFF, el retorno anual implícito de la caja atribuible al accionista es aproximadamente 7,8%, frente al 11% exigido en ese diagnóstico. Es evidencia desfavorable para mantener al precio actual, no una orden ni una conclusión formalmente validada: faltan calibración del coste de capital y cierre del puente de migración exigido por el plan.</p>
+<p><strong>ASO no tiene una señal fundamental de venta demostrada por esta revisión.</strong> El antiguo valor central de aproximadamente 61 USD sí es reproducible. Los 52 USD eran un diagnóstico anterior, no el cierre de decisión. Un FCFF nuevo con hipótesis explícitas produce aproximadamente 61,52 USD. Su proximidad al precio NO equivale a esperar solo 1,1% de rentabilidad anual. Bajo las hipótesis de distribución de caja indicadas abajo, el retorno anual condicional es aproximadamente 11,36%. Mantener resulta defendible de manera condicionada, sin nueva aprobación para añadir. El riesgo adverso sigue siendo significativo.</p>
+<p><strong>Estado:</strong> diagnóstico de valoración y reconciliación preparados; no registrar ninguno como valor aprobado de reemplazo ni como decisión de salida ejecutable. El plan del 30 de octubre exige validar la corrección/modelo, documentar rentabilidad-riesgo y registrar la decisión. Una revisión abierta no suspende stops o salidas válidas existentes.</p>
+<h2 id="datos-oficiales-y-normalizaciones">Datos oficiales y normalizaciones</h2>
+<h3 id="anf">ANF</h3>
+<p>La guía FY2026 es EPS 13,10–13,60, pero incluye 2,10 por devolución arancelaria: proxy recurrente <strong>11,00–11,50</strong>. A 157,52, PER recurrente <strong>13,7–14,3x</strong>, frente a 11,6–12,0x con la guía sin ajustar. El margen anual sin el efecto de 220 puntos básicos es aproximadamente <strong>12,3–12,8%</strong>. Q2 EBIT 252,7 M menos devolución de 100 M = 152,7 M, contra 168,084 M comparables: <strong>−9,15%</strong>. H1 comparable: 241,497 frente a 269,617 M, <strong>−10,43%</strong>. Los comparables Q2 fueron planos, Abercrombie +4% y Hollister −3%. Esto es debilidad operativa real, aunque no prueba una tesis destruida. <a href="https://abercrombieandfitchcompany.gcs-web.com/news-releases/news-release-details/abercrombie-fitch-co-reports-second-quarter-fiscal-2026-results">Resultados Q2 oficiales</a>.</p>
+<p>El H1 produjo CFO 313,401 M y capex real 129,357 M: FCF simple <strong>184,044 M</strong>. No usar CFO menos flujo inversor neto: incluye vencimientos/compras de valores. Devoluciones y variaciones temporales del circulante ayudan a CFO. Caja y valores suman 637,999 M; no son íntegramente caja excedentaria. No hay deuda financiera dispuesta; los arrendamientos permanecen como coste operativo en nuestro modelo. <a href="https://www.sec.gov/Archives/edgar/data/1018840/000101884026000047/anf-20260801.htm">10-Q, flujos y notas</a>.</p>
+<h3 id="aso">ASO</h3>
+<p>La guía correcta subió a EPS GAAP <strong>6,05–6,45</strong>, ajustado <strong>6,50–6,90</strong>, y FCF ajustado <strong>300–350 M</strong>. El beneficio neto previsto siguió en 390–415 M: el incremento del EPS respecto a la guía anterior procede del menor denominador, no de una mejora del beneficio total. A 60,86, el PER GAAP de guía es 9,4–10,1x; el ajustado excluye SBC y no debe sustituir automáticamente al económico. Q2 comparables −0,4%; H1 +1,1%; las aperturas apoyan ventas, pero requieren inversión. <a href="https://academy.gcs-web.com/news-releases/news-release-details/academy-sports-outdoors-reports-second-quarter-fiscal-2026">Resultados Q2 oficiales</a>.</p>
+<p>El 10-Q registra devolución de 83,7 M, remisión de 72,224 M al comprador de derechos y reconocimiento de 10,5 M cobrados antes. El flujo remitido figura en financiación: <strong>237,558 M de FCF comunicado −72,224 =165,334 M</strong>, o <strong>144,915 M</strong> tras retener 20,419 M de SBC como coste económico; no es aún FCF normalizado por impuestos/circulante. El beneficio extraordinario antes de reinversiones es aproximadamente 21,9 M; no confundirlo con el efecto neto de 0,06 USD/acción comunicado tras inversiones comerciales. <a href="https://academy.gcs-web.com/static-files/e5e56bc2-007d-45fd-9bc8-b19fc1219905">10-Q, notas 5/10 y flujo, páginas 7, 16 y 28</a>.</p>
+<h2 id="reconciliación-de-los-valores-anteriores">Reconciliación de los valores anteriores</h2>
+<ul>
+<li><strong>ANF A003/A010, 2–5 octubre:</strong> EPS 9/11,25/13 por PER 10/13/15 y descuento de un año al 10% daban aproximadamente 82/133/177. Era un contraste por beneficios, no FCFF. Ya retiraba 2,10 de devolución; no atribuir el nuevo resultado a «descubrir» ahora ese ajuste.</li>
+<li><strong>ASO A032, diagnóstico 12 octubre:</strong> FCFE de 275 M, crecimiento 5%, exigencia 11%, terminal 2% daba base 52 a cinco años o 54 con transición.</li>
+<li><strong>ASO A031, cierre del mismo día:</strong> caja operativa reconstruida; base 287 M de FCFE, ventas iniciales 6.450 M, margen 8,4%, crecimiento 4%, impuesto 22%, interés 33 M, 64,5 M acciones, exigencia 11%, terminal 2% y reinversión terminal 15%. Resultado 42/61/76. El cambio 52→61 fue de hipótesis/reinversión y reconstrucción del modelo, no de nuevas cuentas.</li>
+<li>Se reconstruyó A031 a <strong>60,9963 USD</strong>, coincidiendo con el redondeo histórico. El archivo original de cálculo no se recuperó; esta es una reproducción independiente con las hipótesis textuales.</li>
+<li><strong>Puente ASO:</strong> 60,996 →62,534 al pasar de FCFE11% a FCFF10,5%, eliminando interés del flujo y aplicando deuda500 menos caja excedentaria100; →60,544 al normalizar impuesto22→24%; →61,448 al usar63,551 M de acciones; →61,520 al actualizar la base inicial de ventas al punto medio de la guía FY2026. El puente separa decisiones del analista, no demuestra que 10,5% sea un WACC medido.</li>
+<li>A115 volvió a mostrar 52 como base histórica: no debe desplazar a A031 ni tomarse como valoración actual. El techo antiguo54 tampoco es un objetivo de venta.</li>
+</ul>
+<h2 id="fcff-nuevo-hipótesis-transparentes-todavía-diagnósticas">FCFF nuevo: hipótesis transparentes, todavía diagnósticas</h2>
+<p>Diez años, cinco detallados y cinco de transición. USD nominales; valores presentes, no objetivos futuros. EBIT mantiene rentas y SBC. No se regalan recompras ni se deducen arrendamientos de nuevo. FCFF = EBIT×(1−impuesto)+D&amp;A−capex−incremento de circulante. Años6–10: crecimiento converge linealmente al2%, margen al terminal y reinversión a NOPAT×g/ROIC. Sin probabilidades asignadas a escenarios.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hipótesis</th>
+<th style="text-align: right;">ANF</th>
+<th style="text-align: right;">ASO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas año1 adverso/base/favorable, M</td>
+<td style="text-align: right;">5.400 /5.730 /5.880</td>
+<td style="text-align: right;">6.100 /6.450 /6.600</td>
+</tr>
+<tr class="even">
+<td>Crecimiento ventas años2–5</td>
+<td style="text-align: right;">1% /4% /6%</td>
+<td style="text-align: right;">1% /4% /6%</td>
+</tr>
+<tr class="odd">
+<td>Margen EBIT año1–5</td>
+<td style="text-align: right;">10,5% /12,55% /14%</td>
+<td style="text-align: right;">7,5% /8,4% /9%</td>
+</tr>
+<tr class="even">
+<td>Margen EBIT terminal</td>
+<td style="text-align: right;">10% /12% /13,5%</td>
+<td style="text-align: right;">7% /8,4% /9%</td>
+</tr>
+<tr class="odd">
+<td>Impuesto normalizado</td>
+<td style="text-align: right;">29%</td>
+<td style="text-align: right;">24%</td>
+</tr>
+<tr class="even">
+<td>D&amp;A /capex como % ventas, años1–5</td>
+<td style="text-align: right;">3,3% /4,5%</td>
+<td style="text-align: right;">2% /3,5%</td>
+</tr>
+<tr class="odd">
+<td>Circulante incremental /aumento ventas</td>
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">5%</td>
+</tr>
+<tr class="even">
+<td>Tasa FCFF usada</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">10,5%</td>
+</tr>
+<tr class="odd">
+<td>g terminal /ROIC adverso-base-favorable</td>
+<td style="text-align: right;">2% /12%-16%-20%</td>
+<td style="text-align: right;">2% /12%-15%-18%</td>
+</tr>
+<tr class="even">
+<td>Acciones, M</td>
+<td style="text-align: right;">43,000</td>
+<td style="text-align: right;">63,551</td>
+</tr>
+<tr class="odd">
+<td>Caja excedentaria/deuda/otros derechos, M</td>
+<td style="text-align: right;">350 /0 /15,141</td>
+<td style="text-align: right;">100 /500 /0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los márgenes base se anclan a guía normalizada o al modelo previo reconstruido. Las tasas son exigencias analíticas por riesgo comercial, <strong>no WACC observados mediante CAPM verificado</strong>. La caja excedentaria deja reservas de288 M para ANF y198 M para ASO, hipótesis no validadas por la compañía. ANF43 M es proxy de acciones actuales más dilución, no una proyección de recompras gratuitas; ASO usa el promedio diluido Q2 conservador respecto a acciones básicas actuales. Minoritarios ANF se descuentan al valor contable como aproximación pendiente de valoración.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Resultado</th>
+<th style="text-align: right;">ANF</th>
+<th style="text-align: right;">ASO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Valor presente adverso/base/favorable</td>
+<td style="text-align: right;">88,69 /128,75 /162,76</td>
+<td style="text-align: right;">40,41 /61,52 /76,69</td>
+</tr>
+<tr class="even">
+<td>Diferencia frente al precio</td>
+<td style="text-align: right;">−43,7% /−18,3% /+3,3%</td>
+<td style="text-align: right;">−33,6% /+1,1% /+26,0%</td>
+</tr>
+<tr class="odd">
+<td>FCFF año1 base, M</td>
+<td style="text-align: right;">431,81</td>
+<td style="text-align: right;">307,14</td>
+</tr>
+<tr class="even">
+<td>Peso terminal en EV base</td>
+<td style="text-align: right;">44,0%</td>
+<td style="text-align: right;">49,2%</td>
+</tr>
+<tr class="odd">
+<td>Sensibilidad base tasa ±1pp y g1,5–2,5%</td>
+<td style="text-align: right;">115,36–146,94</td>
+<td style="text-align: right;">53,26–73,01</td>
+</tr>
+<tr class="even">
+<td>Base sin ninguna caja excedentaria</td>
+<td style="text-align: right;">120,61</td>
+<td style="text-align: right;">59,95</td>
+</tr>
+<tr class="odd">
+<td>Base con capex +0,3% de ventas años1–5, luego transición</td>
+<td style="text-align: right;">126,68</td>
+<td style="text-align: right;">59,92</td>
+</tr>
+</tbody>
+</table></div>
+<p>El adverso no es pérdida máxima. No usar estos intervalos como stops o probabilidades. La sensibilidad adicional de capex ayuda a mostrar el posible coste de software/capitalización no cerrado, pero no sustituye una conciliación completa.</p>
+<h2 id="qué-exige-el-precio-y-rentabilidad">Qué exige el precio y rentabilidad</h2>
+<p>Manteniendo el resto del mismo modelo, ANF157,52 exige <strong>9,08% de crecimiento anual en años2–5</strong>, con margen base y transición al2%; alternativamente, con crecimiento4%, márgenes de <strong>15,25% inicialmente y14,70% terminal</strong>, frente a12,55%/12% en el caso central. Son combinaciones condicionales, no «la expectativa única del mercado». ASO60,86 exige aproximadamente <strong>3,77% de crecimiento</strong> con margen8,4%, o margen8,33% con crecimiento4%. ASO tiene una exigencia menos agresiva, aunque no una ganga evidente.</p>
+<p>Se calculó además una TIR condicional de flujos al accionista sobre diez años: distribuir cada FCFF menos intereses netos, mantener deuda ASO500 M a cupón5,875% y cancelar principal en el valor de salida; liberar caja excedentaria al inicio; mantener la valoración terminal del caso base. Resultados: <strong>ANF7,81%; ASO11,36%</strong>. No son previsiones de dividendos, retornos esperados con probabilidades ni garantías. La refinanciación ASO a igual coste después de2031 es una hipótesis. Este contraste evita el error de llamar «rentabilidad esperada anual» al descuento al valor presente.</p>
+<h2 id="pendientes-y-revisión">Pendientes y revisión</h2>
+<p>Para elevar el diagnóstico a decisión registrada faltan: calibración con fuentes fechadas del coste de capital; consolidación del historial y TTM normalizado completo; cierre de inversión/software y circulante operativo; caja realmente excedentaria, minoritarios/dilución; contraste homogéneo de pares e historia; validación independiente del modelo. El FCFF nuevo de ANF no constituye todavía el puente completo con su contraste histórico de PER. El plan vigente y el 10-Q oficial sustentan la revisión; no se infieren datos no publicados.</p>
+<p><strong>ANF:</strong> no añadir. La evidencia favorece una revisión de salida, especialmente si el retorno exigido al accionista está cerca del11%. Reevaluar por mejora comprobada del beneficio operativo sin devoluciones, recuperación de Hollister, conversión a caja y disciplina de inventario. Próximos resultados <strong>24 noviembre, comunicado aproximadamente07:30 ET y conferencia08:30 ET</strong>, fecha confirmada oficialmente. <a href="https://abercrombieandfitchcompany.gcs-web.com/news-releases/news-release-details/abercrombie-fitch-co-report-third-quarter-2026-results-november">Anuncio</a>.</p>
+<p><strong>ASO:</strong> mantener condicionado, sin añadir por el antiguo techo54. Revisar ante comparables débiles persistentes, margen sostenible por debajo del supuesto8,4%, inversión/circulante que no produzcan retorno, guía reducida o deuda creciente. El calendario oficial consultado no tenía próximo resultado anunciado; no afirmar una fecha estimada como confirmada. <a href="https://academy.gcs-web.com/news-events/events">Calendario</a>.</p>
+<p>Los antecedentes A003/A010/A030/A031/A032/A068/A069/A070/A115 se conservan como historia, no como nuevas aprobaciones. Los resultados reproducibles del diagnóstico acompañan este informe.</p>
+<h2 id="exls-and-docu-event-driven-stage-4-valuation-review">EXLS and DOCU: event-driven Stage 4 valuation review</h2>
+<p>As of 3 November 2026. November 3 regular-session reference closes: EXLS $42.13, DOCU $80.36. This is analytical work, not a trade, recorded exit decision, or modification of a position record. Model version: EXLS-DOCU-FCFF-20261103-v1. All model amounts are USD millions except per-share values.</p>
+<h2 id="conclusions">Conclusions</h2>
+<ul>
+<li><strong>EXLS: the business thesis is not impaired by the new results. Maintain under close fundamental monitoring rather than declaring a valuation exit from the stale $38 reference. Do not approve an addition.</strong> The fresh results strengthen the growth case, but cash conversion and acquisition obligations limit value. Central FCFF value is approximately $36.7, with $18.3 adverse and $59.8 favorable cases. At $42.13, the central ten-year economic equity-return proxy is approximately 7.9%, modest against the assumed required return. However, the valuation conclusion is sensitive to discount rate, and the growth required by the present price is relatively close to the latest organic performance. This supports a monitored hold rather than a robust forced-exit conclusion. Holding is a judgment about plausible outcomes and estimation error, not a favorable-case-only justification.</li>
+<li><strong>DOCU: the operating thesis is improving, but compensation for valuation risk at $80.36 looks inadequate under the SBC-consistent central case. This is evidence for a priority formal valuation-exit review, not an adopted exit recommendation or a claim that the business is broken.</strong> Central value is approximately $56.1; adverse/favorable values are $28.8/$107.8. The central return proxy is approximately 4.8%. The current price requires growth or margins materially stronger than current disclosed results and guidance. Suplari supplies a strategic explanation, not verified incremental economic value. This conclusion is an analytical recommendation only. A formal Stage 4 decision still requires validated assumptions and a documented risk/return conclusion; no trade has been executed by this review.</li>
+<li>These conclusions cannot override a valid existing stop, trailing, EMA50/M or other exit. A073/A072 remain blocked addition cards. Neither a holding recommendation nor available risk capacity is an entry signal. No probability weighting or universal overvaluation threshold is used.</li>
+</ul>
+<h2 id="evidence-and-event-changes">Evidence and event changes</h2>
+<p>EXLS released Q3 results on 27 October. Revenue was $633.959m (+19.7%); GAAP EBIT $88.856m (+16.6%), a 14.0% margin versus 14.4%; net income $68.771m (+18.2%). Diluted EPS growth also benefited from fewer shares. The adjusted FY26 EPS guide rose from $2.25–2.29 to $2.34–2.36 and revenue guidance to $2.430–2.440bn. Adjusted EPS is not our SBC-inclusive earnings measure. Data/AI growth was strong; the OpenAI partnership announcement does not disclose booked revenue and receives no discrete valuation premium. <a href="https://ir.exlservice.com/news-releases/news-release-details/exl-reports-2026-third-quarter-results">Q3 release</a>, <a href="https://www.exlservice.com/about/newsroom/exl-named-an-openai-select-partner">OpenAI partner announcement</a>.</p>
+<p>The EXLS 10-Q attributes 2.9 percentage points of Q3 revenue growth to iMerit and -0.2 points to FX, implying approximately 17% organic constant-currency growth. Nine-month CFO was $208.804m, capex $44.125m and SBC $72.274m. DSO rose from 63 to 67 days. Cash plus short-term investments was $332.678m; debt principal was $512.5m, finance leases $2.432m, deferred/contingent acquisition consideration $76.1m and recorded noncurrent retirement liability $35.213m. iMerit already closed; maximum contingent consideration of $125m exceeds its initial $53.1m fair-value liability. <a href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000031/exls-20260930.htm">September 2026 10-Q</a>.</p>
+<p>DOCU’s latest reported quarter remains Q2 FY27, ended 31 July and released 3 September. Revenue was $875.746m, growing 9.4% with an approximately 1.3-point FX benefit. H1 GAAP EBIT was $228.930m versus $125.482m. FY27 revenue guidance is $3.499–3.507bn; ARR growth guidance is 8.5–9.0%, and IAM’s expected year-end ARR share is 18–19%. These are stronger operating indicators but do not establish mid-teens group growth. <a href="https://investor.docusign.com/news-and-events/press-releases/news-details/2026/Docusign-Announces-Second-Quarter-Fiscal-2027-Financial-Results/default.aspx">Q2 release</a>.</p>
+<p>DOCU H1 CFO was $656.234m; cash capex $71.042m; expensed SBC $289.981m; capitalized software SBC $35.2m; D&amp;A $65.994m. Cash/investments totaled $973.075m. No revolving debt was outstanding. Deferred tax assets of $764.330m and seasonal collections mean current cash conversion is not perpetually repeatable. The July diluted average was 193.117m shares; stock-price-dependent dilution and subsequent repurchases are not known as of this review. <a href="https://www.sec.gov/Archives/edgar/data/1261333/000126133326000099/docu-20260731.htm">July 2026 10-Q</a>.</p>
+<p>On 3 November DOCU announced the acquisition of Suplari for procurement intelligence. Terms are undisclosed, including price, financing, acquired revenue/profit and integration costs. No numerical uplift or assumed purchase price is justified. <a href="https://www.docusign.com/blog/docusign-acquires-suplari">Company announcement</a>.</p>
+<h2 id="cash-normalization-and-accounting-consistency">Cash normalization and accounting consistency</h2>
+<p>Reported FCF is not enterprise FCFF:</p>
+<ul>
+<li>EXLS 9M CFO minus cash capex = 208.804 - 44.125 = <strong>164.679</strong>. Subtracting expensed SBC gives <strong>92.405</strong>, versus 233.336 - 41.727 - 58.718 = <strong>132.891</strong> in the prior period, a 30.5% decline. These are economic levered cash-flow diagnostics, not FCFF forecasts. Receivables absorbed substantial cash; a sustainable growth thesis must also restore conversion.</li>
+<li>DOCU H1 CFO minus cash capex = 656.234 - 71.042 = <strong>585.192</strong>. Subtract expensed SBC 289.981 and capitalized software SBC 35.2 = <strong>260.011</strong>. This is also not yet normalized FCFF: taxes, seasonal working capital, interest and other items remain.</li>
+<li>A transparent diagnostic operating reconstruction for DOCU is EBIT 228.930 × (1 - 24%) + D&amp;A 65.994 - economic capex (71.042 + 35.2) + net operating-asset/contract-cost cash benefit 59.833 = <strong>193.572</strong>. The 59.833 equals AR 142.755 - prepaids 16.816 + contract amortization 137.038 - contract additions 132.676 + other assets 7.722 - payables 0.444 + accruals 1.930 - compensation 24.544 - contract liabilities 55.132. This diagnostic removes financing and normalizes taxes; it does not annualize favorable collections into the DCF.</li>
+<li>Forecast EBIT retains recurring SBC. DOCU capex includes capitalized SBC as an economic investment. D&amp;A reverses depreciation/amortization already charged in EBIT; it does not add expensed SBC back. Future SBC is treated as a cash-equivalent cost, so we do <strong>not</strong> also grow future shares for the same expense. Existing diluted-share averages are proxies, not forecasts of further dilution; share-count sensitivity addresses their uncertainty. No free future repurchases are assumed.</li>
+<li>Operating leases remain operating costs within projected margins and are not subtracted again as debt. EXLS finance leases are debt-like and deducted once. Acquisition cash already paid is reflected in the September balance sheet; unpaid acquisition consideration is deducted once. No subsequent acquisition growth is assumed without reinvestment.</li>
+</ul>
+<h2 id="model-specification">Model specification</h2>
+<p>Ten common normalized annual periods ending 3 November 2027 through 3 November 2036, five detailed plus five transition years. Revenue baselines use the midpoint of current FY guidance (EXLS 2,435; DOCU 3,503) as an annual run-rate anchor, <strong>not</strong> an actual trailing-twelve-month observation. Fiscal years do not end on 3 November; no fabricated stub actuals are used. This timing approximation and the stale July DOCU balance are limitations, with materially less impact than growth/margins/SBC assumptions.</p>
+<p>For each year:</p>
+<p>Revenue[t] = Revenue[t-1] × (1 + growth[t]). EBIT[t] = Revenue[t] × operating margin[t]. NOPAT[t] = EBIT[t] × (1 - tax rate). FCFF[t] = NOPAT[t] + D&amp;A[t] - economic capex[t] - change in operating working capital[t]. Enterprise value = present value of years 1–10 FCFF plus discounted terminal value. Terminal FCFF = NOPAT[10] × (1 + g) × (1 - g / terminal ROIC). Terminal EV = terminal FCFF / (WACC - g). Equity value = EV + excess cash - debt - other financial claims.</p>
+<p>Tax rate is an analyst-normalized 24% for both, not company guidance. Discount rates are explicit nominal-USD required-return assumptions, not claimed empirically estimated CAPM WACCs. EXLS’s 9.5% central rate reflects labor/FX, acquisition and execution risks with modest net leverage. DOCU’s 10% reflects competitive/AI execution uncertainty despite no funded debt. The ±1-point sensitivities are essential, not precision intervals. Terminal growth stays below each discount rate; ROIC funds continuing investment rather than assuming free terminal growth.</p>
+<p>All numbers below are analyst assumptions, except the identified revenue anchors:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Company/case</th>
+<th>First-five-year revenue growth</th>
+<th>First-five-year EBIT margin</th>
+<th>Terminal margin</th>
+<th>WACC / g / ROIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EXLS adverse</td>
+<td>8/7/6/5/4%</td>
+<td>13.5% throughout</td>
+<td>13.5%</td>
+<td>10.5/2.5/15%</td>
+</tr>
+<tr class="even">
+<td>EXLS central</td>
+<td>15/14/12/10/8%</td>
+<td>15/15.3/15.6/15.8/16%</td>
+<td>15.5%</td>
+<td>9.5/3/20%</td>
+</tr>
+<tr class="odd">
+<td>EXLS favorable</td>
+<td>19/18/16/14/12%</td>
+<td>15.5/16/16.5/17/17.5%</td>
+<td>17%</td>
+<td>9/3.5/25%</td>
+</tr>
+<tr class="even">
+<td>DOCU adverse</td>
+<td>5/5/5/4/4%</td>
+<td>13/14/15/16/17%</td>
+<td>17%</td>
+<td>11/2.5/15%</td>
+</tr>
+<tr class="odd">
+<td>DOCU central</td>
+<td>8/9/10/10/9%</td>
+<td>14.5/16/17.5/19/20%</td>
+<td>22%</td>
+<td>10/3/25%</td>
+</tr>
+<tr class="even">
+<td>DOCU favorable</td>
+<td>12/14/15/14/12%</td>
+<td>16/19/22/24/25%</td>
+<td>27%</td>
+<td>9/3.5/30%</td>
+</tr>
+</tbody>
+</table></div>
+<p>EXLS D&amp;A is 3% of sales; first-five-year capex adverse/central/favorable is 3.8/3.5/3.5%; incremental operating working capital is 18/15/13% of incremental revenue. Central capex exceeds the latest company cash-capex rate, allowing more growth investment; lowering it by 1 point is an explicit sensitivity, not a factual forecast change.</p>
+<p>DOCU D&amp;A is 4% of sales; economic capex adverse/central/favorable is 6.5/6.2/6%; change in operating working capital is 0/-10/-15% of incremental revenue. The negative ratio modestly reflects customer prepayments net of receivables and contract-acquisition assets. Deferred contract costs are included within this aggregate working-capital assumption, not omitted or double-counted. The central 6.2% economic-capex ratio is anchored to H1 cash capex plus capitalized SBC divided by revenue.</p>
+<p>Years 6–10: growth and EBIT margin linearly approach terminal assumptions. The reinvestment/NOPAT ratio transitions from year-five’s ratio to growth[t]/terminal ROIC. For alpha = (t-5)/5, reinvestment ratio = (1-alpha)×year-five ratio + alpha×growth[t]/terminal ROIC. D&amp;A remains at its sales ratio; capex is solved from total reinvestment minus working-capital investment plus D&amp;A. This ensures the year-ten reinvestment and terminal formula are consistent.</p>
+<h2 id="balance-sheet-bridge">Balance-sheet bridge</h2>
+<p>EXLS excess cash = 332.678 - 50 operating reserve - 14.650 illustrative foreign-distribution tax reserve = <strong>268.028</strong>. The tax reserve is an assumption (5% of $293m foreign cash/investments), not a reported payable. Subtract principal borrowings 512.5 plus finance leases 2.432 = <strong>514.932</strong>, and acquisition liabilities 76.1 plus recorded retirement liability 35.213 = <strong>111.313</strong>. The retirement subtraction is for the existing obligation, not an additional future recurring service expense. Net bridge: <strong>-358.217</strong>. Restricted cash is excluded. FX hedge fair values are not additionally deducted because operating forecasts retain hedging/FX effects in margins; a separate net-hedge-liability stress of about $43.5m changes value by only about $0.29/share. Full maximum iMerit earnout versus recorded amount would reduce value by a further ~$0.47/share, absent corresponding performance benefits.</p>
+<p>DOCU excess cash = 973.075 - 150 operating reserve = <strong>823.075</strong>. No funded debt is deducted. <strong>This is a pre-Suplari bridge.</strong> The effect of Suplari is explicitly unknown: delta value/share = (incremental enterprise value acquired/created - consideration and integration commitments not already reflected)/193.117. Every $100m of net cost without offsetting value subtracts ~$0.52/share. No value for deferred tax assets is separately added under the normalized-tax base case. Adding the entire $764.330m reported asset at undiscounted face value would add only ~$3.96/share; that is an optimistic ceiling test, not fair value.</p>
+<h2 id="results-and-reverse-valuation">Results and reverse valuation</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Company/case</th>
+<th style="text-align: right;">Value/share</th>
+<th style="text-align: right;">Versus supplied price</th>
+<th style="text-align: right;">Terminal share of EV</th>
+<th style="text-align: right;">Illustrative ten-year equity IRR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EXLS adverse</td>
+<td style="text-align: right;">18.26</td>
+<td style="text-align: right;">-56.7%</td>
+<td style="text-align: right;">48.7%</td>
+<td style="text-align: right;">-0.1%</td>
+</tr>
+<tr class="even">
+<td>EXLS central</td>
+<td style="text-align: right;">36.69</td>
+<td style="text-align: right;">-12.9%</td>
+<td style="text-align: right;">58.2%</td>
+<td style="text-align: right;">7.9%</td>
+</tr>
+<tr class="odd">
+<td>EXLS favorable</td>
+<td style="text-align: right;">59.78</td>
+<td style="text-align: right;">+41.9%</td>
+<td style="text-align: right;">65.8%</td>
+<td style="text-align: right;">13.7%</td>
+</tr>
+<tr class="even">
+<td>DOCU adverse</td>
+<td style="text-align: right;">28.79</td>
+<td style="text-align: right;">-64.2%</td>
+<td style="text-align: right;">49.3%</td>
+<td style="text-align: right;">-3.1%</td>
+</tr>
+<tr class="odd">
+<td>DOCU central</td>
+<td style="text-align: right;">56.10</td>
+<td style="text-align: right;">-30.2%</td>
+<td style="text-align: right;">59.0%</td>
+<td style="text-align: right;">4.8%</td>
+</tr>
+<tr class="even">
+<td>DOCU favorable</td>
+<td style="text-align: right;">107.75</td>
+<td style="text-align: right;">+34.1%</td>
+<td style="text-align: right;">66.0%</td>
+<td style="text-align: right;">12.5%</td>
+</tr>
+</tbody>
+</table></div>
+<p>The IRR is <strong>not</strong> WACC and not a probability-weighted expected return. It assumes each year’s FCFF less after-tax interest is distributed, fixed debt/claims, no repurchases, and year-ten terminal EV plus cash less debt/claims is realized. Excess cash is held until year ten without interest, a conservative simplification. EXLS interest assumption is 5.5% on $514.932m debt; DOCU has none. Actual distribution timing, financing, taxes and market exits can differ. Scenario ranges are neither probabilities nor loss limits.</p>
+<p>Central EXLS: EV 5,956.510 - net claims 358.217 = equity 5,598.293 / 152.570075 shares = <strong>36.693</strong>. FCFF years 1/5/10: <strong>250.440 / 448.067 / 542.563</strong>; terminal FCFF 558.840.</p>
+<p>Central DOCU: EV 10,011.178 + cash 823.075 = equity 10,834.253 / 193.117 shares = <strong>56.102</strong>. FCFF years 1/5/10: <strong>361.706 / 751.950 / 1,040.262</strong>; terminal FCFF 1,071.470.</p>
+<p>With central operations and terminal growth 3%, WACC -1/base/+1 points produces EXLS <strong>44.24/36.69/31.17</strong>, DOCU <strong>65.73/56.10/48.92</strong>. DOCU base value with 200m/210m shares is <strong>54.17/51.59</strong>. The lower value is not attributed twice to SBC.</p>
+<p>Reverse valuation uses the identical DCF, not an independent confirming method:</p>
+<ul>
+<li>EXLS $42.13 requires first-five-year growth of approximately <strong>17.66/16.66/14.66/12.66/10.66%</strong> with central margin assumptions and the same transition framework, or about <strong>2.04 percentage points higher EBIT margins throughout</strong>, all else equal. This is demanding over several years, but comparatively near the newest ~17% organic constant-currency quarterly result.</li>
+<li>DOCU $80.36 requires approximately <strong>14.89/15.89/16.89/16.89/15.89%</strong> growth, or roughly <strong>9.35 points higher margins throughout</strong>. The latter means a first-year margin around 23.85% and terminal 31.35%, after SBC, rather than confusing a non-GAAP margin with GAAP economics. Neither is adequately established by current ~9% revenue/ARR guidance. Mixed growth/margin combinations could also support the price; there is no unique implied expectation.</li>
+<li>The DOCU gap to the central equity value is about <strong>$4.685bn</strong>. No disclosed Suplari economics justify simply crediting that amount. This is a size test, not a claim about the undisclosed deal price or achievable synergies.</li>
+</ul>
+<h2 id="migration-from-prior-work">Migration from prior work</h2>
+<p>A003’s EXLS $38 was an EPS/multiple sensitivity, not a DCF: 1.90 × 22 / 1.10 = 38. A048 retained it as a cross-check and removed an automatic 15% discount gate. Neither $32 nor $32.30 is a current rule. A073 has no authorized add price.</p>
+<p>At the same current information date, retaining the old earnings assumptions still returns $38. Updating only the one-year EPS estimate from the new central operating assumptions gives approximately <strong>$1.9913</strong>, calculated as (420.0375 EBIT - 514.932×5.5% interest + 268.028×3% cash income)×76% / 152.570075. Keeping 22× and 10% gives <strong>$39.826</strong>. The corresponding FCFF central estimate is <strong>$36.693</strong>.</p>
+<p>Bridge: $38 old cross-check → +$1.826 from refreshed first-year earnings assumptions → -$3.133 from using explicit longer-term cash/reinvestment/terminal and balance-sheet assumptions. The latter is a <strong>combined method and long-horizon-assumption effect</strong>, not a precisely isolated pure-method effect: the old model has no ten-year reinvestment path to hold constant. The new results strengthen operations, while new acquisition obligations and cash-conversion evidence temper valuation. A lower DCF alone is not verified business deterioration and does not automatically activate an EXLS sale.</p>
+<p>The supplied DOCU records A048/A072 do not contain an auditable prior full valuation. This is a new SBC-consistent FCFF assessment, not a claimed numerical revision from an invented earlier fair value. A formal historical migration cannot be reconstructed without an original model that is not present in those records.</p>
+<h2 id="monitoring-and-decision-changes">Monitoring and decision changes</h2>
+<p>EXLS: review the next published quarter/2027 guidance, receivables/DSO and cash conversion, GAAP and SBC-inclusive margins, iMerit earned consideration, and organic growth. The central case already assumes margin recovery and reduced growth-related cash drag. Persistently rising DSO, organic growth materially below the mid-teens trajectory, or worsening margin/earnout/debt without matching cash would weaken a hold. A new valuation should also follow a materially higher price without stronger cash estimates. These are analyst review triggers, not new automatic system rules or numerical trade orders.</p>
+<p>DOCU: quantified Suplari consideration/financial contribution, next results and ARR outlook, IAM monetization, SBC including capitalized amounts, software investment and economic cash conversion. Holding at $80.36 would need affirmative support for sustained growth materially above the present guide or better after-SBC margins than this central case, not merely product announcements. A lower price can improve prospective returns but never repairs a broken operating thesis by itself. The transaction disclosure gap remains a valuation uncertainty, not evidence of misconduct or thesis invalidation.</p>
+<p>Confidence: high in the cited reported data and arithmetic; moderate-to-low in decade forecasts and exact price targets. No verified contemporaneous peer comp set or market-derived WACC was obtained; multiples are cross-checks rather than a second validation. The model is transparent and executable, but its forecasts are judgmental and do not establish a uniquely correct value.</p>
+<p>Sources for the rules/history: <a href="https://fundamentalpullback.github.io/data/plan/Plan_Completo_2026-10-30.pdf">current plan</a>; supplied A003, A048, A072 and A073 extracts. Model assumptions and annual schedules are available in the accompanying diagnostic calculation data; they are not approved forecasts.</p>
+<footer><p>Publication does not certify broker orders, replace approved valuations or change the strategy. Historical reports and the existing paper-trade ledger are preserved.</p></footer></main></body></html>
