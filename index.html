@@ -2434,7 +2434,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         return '<button class="sub" type="button" id="tab-' + v + '" data-view="' + v + '" aria-controls="v-' + v + '"' + (S.view === v ? ' aria-current="page"' : "") + ">" + esc(t().tabs[v]) + "</button>";
       }).join("") + "</div>";
     var st = document.getElementById("status");
-    if (S.snapshot) st.textContent = (lang === "en" ? "Published record: " : "Registro publicado: ") + fmtD(S.snapshot);
+    if (S.snapshot) st.textContent = (lang === "en" ? "Historical closes through: " : "Cierres históricos hasta: ") + fmtD(S.snapshot);
     else if (S.loadedAt) st.textContent = t().updated + " · " + new Intl.DateTimeFormat(loc(), { hour: "2-digit", minute: "2-digit" }).format(new Date(S.loadedAt));
     else st.textContent = S.err.dec || S.err.scan ? "" : t().loading;
   }
