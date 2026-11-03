@@ -589,7 +589,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 
 <div id="drawer-root"></div>
 <div id="calc-root"></div>
-<script src="data/manifest.js?v=20261103-interest"></script>
+<script src="data/manifest.js?v=20261102"></script>
 <script src="data/names.js"></script>
 <script src="data/plan.js"></script>
 
@@ -1618,53 +1618,6 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     if (warning) text += en ? " WARNING: refresh failed, incomplete or old feed; displayed prices may be stale." : " AVISO: actualización fallida, incompleta o antigua; los precios mostrados pueden estar desactualizados.";
     return '<p class="acct-note' + (warning ? ' neg' : '') + '" role="status">' + esc(text) + '</p>';
   }
-  /* Separate normalized cash-interest simulation: never mutate the trading ledger. */
-  function lastCompletedNYDay(at) {
-    if (!Number.isFinite(at)) return null;
-    var p = new Intl.DateTimeFormat("en-US", {timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date(at)), o = {};
-    p.forEach(function(x){o[x.type]=x.value;});
-    return new Date(Date.UTC(+o.year,+o.month-1,+o.day)-864e5).toISOString().slice(0,10);
-  }
-  function validInterest(M) {
-    return M && M.version === "cash_apy_v1" && M.apy === 0.036 && /^\d{4}-\d{2}-\d{2}$/.test(M.cutoff || "") &&
-      Number.isFinite(M.interest) && M.interest >= 0 && Number.isFinite(M.baseCash) &&
-      Number.isInteger(M.days) && M.days > 0 && M.days <= 2000 && M.days === Math.round((Date.parse(M.cutoff)-Date.parse("2026-09-29"))/864e5)+1 &&
-      Number.isInteger(M.negativeDays) && M.negativeDays >= 0 && M.negativeDays <= M.days;
-  }
-  function parseInterest(r, at) {
-    if (!r || r[5] !== "cash_apy_v1") return null;
-    var M = {version:r[5],apy:/^\d+$/.test(r[6]||"") ? +r[6]/1e8 : null,cutoff:r[7],interest:liveInt(r[8]),baseCash:liveInt(r[9]),days:+r[10],negativeDays:+r[11],sourceAt:at};
-    return validInterest(M) && M.cutoff === lastCompletedNYDay(at) ? M : null;
-  }
-  function interestReconciles(M) {
-    if (!validInterest(M) || !S.acct || S.acct.capital !== 100000) return false;
-    var flows = {}, bad = false;
-    (S.ops || []).forEach(function(o){
-      var d=isoDay(o.date), type=String(o.type||"").trim(), sell=/^(venta|sell)/i.test(type);
-      if(!d || !Number.isFinite(o.shares) || !Number.isFinite(o.exec) || (!sell && !/^(compra|buy)/i.test(type))) {bad=true;return;}
-      if(d < "2026-09-29") {bad=true;return;}
-      if(d <= M.cutoff) flows[d]=(flows[d]||0)+(sell?1:-1)*o.shares*o.exec-(o.fee||0);
-    });
-    if(bad)return false;
-    var cash=100000,interest=0,negative=0,rate=Math.pow(1.036,1/365)-1,start=Date.parse("2026-09-29T00:00:00Z");
-    for(var i=0;i<M.days;i++){var d=new Date(start+i*864e5).toISOString().slice(0,10);cash+=flows[d]||0;if(cash<0)negative++;interest+=Math.max(0,cash+interest)*rate;}
-    return Math.abs(cash-M.baseCash)<=0.00011 && Math.abs(interest-M.interest)<=0.00011 && negative===M.negativeDays;
-  }
-  function interestPanel(X) {
-    var en = lang === "en", M = S.interestLive || window.FP_INTEREST;
-    var title = en ? "Simulated cash interest · 3.6% APY" : "Intereses simulados del efectivo · 3,6 % APY";
-    if (!interestReconciles(M) || !Number.isFinite(X.cash)) return '<div class="panel"><h3>'+esc(title)+'</h3><p role="status">'+(en ? "Model unavailable or not reconciled with the published cash ledger. Trading figures are unchanged." : "Modelo no disponible o no conciliado con el efectivo publicado. Las cifras bursátiles no cambian.")+'</p></div>';
-    var stale = !S.interestLive || S.interestError || S.liveError || !S.live || M.cutoff !== lastCompletedNYDay(S.live.at);
-    var total = X.total === null ? null : X.total+M.interest, ret = total !== null && X.cap ? (total-X.cap)/X.cap : null;
-    function item(k,v){return '<div class="fig"><b>'+esc(v)+'</b><span>'+esc(k)+'</span></div>';}
-    var h='<div class="panel cash-interest"><div><h3>'+esc(title)+'</h3><p class="lede">'+esc((en ? "Interest through " : "Intereses hasta el ")+fmtD(M.cutoff)+(en ? " inclusive (completed New York days). Not interest paid by the broker." : " incluido (días terminados en Nueva York). No son intereses abonados por el bróker."))+'</p></div>';
-    h+='<div class="figures">'+item(en?"Accrued simulated interest":"Interés simulado acumulado",fmtM(M.interest))+item(en?"Cash including simulation":"Efectivo incluyendo simulación",fmtM(X.cash+M.interest))+item(en?"Total including simulation":"Total incluyendo simulación",fmtM(total))+item(en?"Return including simulation":"Rentabilidad incluyendo simulación",fmtP(ret,2))+'</div>';
-    h+='<p class="muted">'+esc((en?"Profit including simulation: ":"Beneficio incluyendo simulación: ")+fmtM(X.totPL+M.interest))+'</p>';
-    h+='<details class="why-fold"><summary>'+(en?"Method and limits":"Método y límites")+'</summary><p>'+esc(en ? "Normalized $100,000 from 29 September 2026, recorded trade dates, no deposits or withdrawals. Daily closing cash plus prior simulated interest compounds at (1.036)^(1/365)−1, only when the resulting balance is positive. Includes weekends; excludes the unfinished New York day. The negative 12 October balance earns zero; no borrowing cost is assumed. This is not settled broker cash. Base cash, stock P/L, holdings, the historical chart and the SPY price-only comparison remain unchanged." : "Modelo normalizado de 100.000 $ desde el 29 de septiembre de 2026, fechas registradas y ningún ingreso ni retirada. El saldo al cierre de cada día más el interés simulado anterior capitaliza a (1,036)^(1/365)−1 solo cuando el saldo resultante es positivo. Incluye fines de semana; excluye el día de Nueva York aún sin terminar. El saldo negativo del 12 de octubre no genera intereses; no se supone coste de financiación. No es efectivo liquidado del bróker. El efectivo base, el beneficio bursátil, las posiciones, la curva histórica y la comparación SPY sin dividendos permanecen sin cambios.")+'</p><p>'+esc((en?"Accrual days: ":"Días de cálculo: ")+M.days+(en?" · Negative base-cash days: ":" · Días con efectivo base negativo: ")+M.negativeDays)+'</p></details>';
-    if(stale)h+='<p class="muted" role="status">'+(en?"Using the last verified model snapshot; automatic refresh is unavailable or not yet verified. The cutoff above is not extended." : "Se muestra el último modelo verificado; la actualización automática no está disponible o aún no se ha verificado. No se amplía el corte indicado.")+'</p>';
-    return h+'</div>';
-  }
-
   var livePending = false;
   function loadLive() {
     if (!LIVE_URL || document.hidden || livePending) return;
@@ -1682,12 +1635,9 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         var required = ["SPY"].concat(positions().list.filter(function (p) { return p.shares > 0; }).map(function (p) { return p.ticker; }));
         if (!L.at || L.at > Date.now() + 5 * 60000 || required.some(function (tk) { var q = L.prices[tk]; return !q || !(q.p > 0) || !(q.prev > 0); })) throw new Error("incomplete feed");
         if (S.live && L.at < S.live.at) throw new Error("older feed");
-        var IM = parseInterest(rows[1], L.at);
-        if (IM && interestReconciles(IM) && (!S.interestLive || IM.cutoff >= S.interestLive.cutoff)) { S.interestLive = IM; S.interestError = false; }
-        else S.interestError = true;
         S.live = L; S.liveError = false;
       })
-      .catch(function () { S.liveError = true; S.interestError = true; /* retain last complete read, visibly marked */ })
+      .catch(function () { S.liveError = true; /* retain last complete read, visibly marked */ })
       .finally(function () {
         clearTimeout(timeout); livePending = false;
         if (["inicio", "cartera", "posiciones", "resumen", "aprobadas"].indexOf(S.view) >= 0 && !(document.activeElement && /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName))) render();
@@ -1745,7 +1695,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       '<p class="home-sub">' + esc(H.sub.replace("{s}", fmtD(isoDay(A.start) || A.start))) + "</p></div>" +
       '<img class="home-emblem" src="img/emblem-320.png" width="220" height="220" alt="Fundamental Pullback"></div>';
 
-    h += priceStatus() + interestPanel(X);
+    h += priceStatus();
     h += '<div class="panel"><div><h3>' + (lang === "en" ? "2 November · daily review" : "2 de noviembre · revisión diaria") + '</h3><p class="lede">' + (lang === "en" ? "Stage 4: seven recorded positions; NTNX manual exit pending, not a confirmed sale. Scanner: 200 rows, 82 with Opp ≥85. Three completed current-price rejections, one blocked dossier and four deferred dossiers; 31 further names have bounded triage, not full Stage 3. No new buys approved." : "Stage 4: siete posiciones registradas; NTNX con salida manual pendiente, no una venta confirmada. Escáner: 200 filas, 82 con Opp ≥85. Tres rechazos a precio actual completados, un dossier bloqueado y cuatro aplazados; otras 31 candidatas tienen triaje acotado, no Stage 3 completo. Ninguna compra nueva aprobada.") + '</p></div><div class="controls">' + more("posiciones", "Stage 4") + more("analisis", lang === "en" ? "Scanner analyses" : "Análisis del escáner") + '<a class="btn" href="research/2026-11-02/index.html">' + (lang === "en" ? "Read all dossiers" : "Leer todos los dossiers") + '</a></div></div>';
     /* account curve */
     h += '<p class="muted">' + esc((lang === "en" ? "Historical closes through " : "Cierres históricos hasta ") + fmtD((X.eq && X.eq.length ? X.eq[X.eq.length - 1].d : S.snapshot))) + "</p>";
@@ -1888,7 +1838,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
     } else h += '<p class="muted">' + esc(K.noHist) + "</p>";
     h += "</div>";
-    h += priceStatus() + livePanel(open, cash) + interestPanel(X);
+    h += priceStatus() + livePanel(open, cash);
     var acctNote = lang === "en" && A.noteEn ? A.noteEn : A.note;
     if (acctNote) { var nm = /^([^:]{6,60}):\s*([\s\S]+)$/.exec(acctNote); h += nm ? '<details class="why-fold acct-note"><summary>' + esc(nm[1]) + "</summary><p>" + esc(nm[2]) + "</p></details>" : '<p class="acct-note">' + esc(acctNote) + "</p>"; }
     if (missing.length) h += notice(K.title, K.noPrice + " " + missing.join(", ") + ".");
