@@ -1555,7 +1555,10 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       var note = G ? (en && G.noteEn ? G.noteEn : G.note) : "", nx = G ? (en && G.nextEn ? G.nextEn : G.next) : "";
       if (note) x += "<p>" + esc(note) + "</p>";
       if (nx) x += '<p class="muted"><b>' + esc(K.next) + ":</b> " + esc(nx) + "</p>";
-      x += '<div class="pos-val"><div class="eyebrow">' + esc(K.valTitle) + "</div>";
+      var diagnosticReview = G && G.rep === "A148";
+      x += '<div class="pos-val"><div class="eyebrow">' + esc(diagnosticReview ? (en ? "Historical valuation reference" : "Referencia histórica de valoración") : K.valTitle) + "</div>";
+      if (diagnosticReview) x += '<p class="muted calc-note">' + esc(en ? "Historical figures below have not been revalidated as current approvals. A148 adds diagnostic research only. No buy ceiling shown here authorizes an add-on." : "Las cifras históricas siguientes no se han revalidado como aprobaciones vigentes. A148 añade solo investigación diagnóstica. Ningún techo mostrado aquí autoriza una ampliación.") + '</p>';
+      if (diagnosticReview && p.ticker === "ASO") x += '<p class="notice">' + esc(en ? "Historical data discrepancy: the numeric record shows $52, but the A031 narrative reconstructs approximately $61. The old row is retained for traceability; neither it nor the new $61.52 diagnostic is a current approval. See A148 for the reconciliation." : "Discrepancia histórica: la fila numérica muestra 52 USD, pero el texto de A031 se reproduce en aproximadamente 61 USD. Se conserva la fila antigua por trazabilidad; ni ella ni el diagnóstico nuevo de 61,52 USD son una aprobación vigente. Ver conciliación en A148.") + '</p>';
       if (v) {
         var k = esc(v.date + "|" + v.ticker);
         x += '<div class="muted" style="font-size:0.82rem">' + esc(sub(K.valOf, { d: fmtD(vSrc(v).d || v.adate || v.date) })) + (vSrc(v).id ? ' · <button type="button" class="chip" data-libopen="' + esc(vSrc(v).id) + '">' + esc(vSrc(v).id) + " →</button>" : "") + "</div>" + band(v) +
