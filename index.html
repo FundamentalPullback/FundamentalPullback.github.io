@@ -2342,6 +2342,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     var L = t().lib;
     ensureLib();
     var h = head(L.title, L.lede);
+    if (!S.libSel) h += '<section class="panel" aria-labelledby="library-files-title"><h2 id="library-files-title">' + esc(lang === "en" ? "Study downloads" : "Archivos del estudio") + '</h2><p><a class="btn" href="research/2026-11-03/Revision_descartadas_2026-11-03.xlsx" download="Revision_descartadas_2026-11-03.xlsx">' + esc(lang === "en" ? "Download rejected-stocks review · 3 Nov 2026 (Excel, Spanish)" : "Descargar revisión de descartadas · 3 nov 2026 (Excel)") + '</a></p><p class="muted" style="margin:0">' + esc(lang === "en" ? "Original study workbook, including sources, calculations and limitations. Publishing this file does not change the strategy rules." : "Libro original del estudio, con fuentes, cálculos y limitaciones. La publicación del archivo no cambia las reglas de la estrategia.") + '</p></section>';
     if (S.libState === "loading" || S.libState === "idle") return h + notice(L.title, L.loading) + loadingBlock();
     if (S.libState === "fail") return h + notice(L.title, L.fail, '<p><button class="btn" type="button" data-libretry="1">' + esc(t().retry) + "</button></p>");
     if (S.libSel) {
