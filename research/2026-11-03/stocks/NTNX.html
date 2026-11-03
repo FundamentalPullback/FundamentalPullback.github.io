@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"><title>NTNX · Nutanix · análisis independiente · 3 noviembre 2026</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+</style></head><body><main><nav aria-label="Navegación de investigación"><a href="../../../index.html#biblioteca">← Fundamental Pullback · Biblioteca</a><a href="../index.html">Índice de investigación · 3 noviembre</a></nav><p class="eyebrow">Fundamental Pullback · Investigación independiente · 3 noviembre 2026</p><h1>NTNX <span class="muted">Nutanix</span></h1><div class="status-line"><span class="tag deferred">EN OBSERVACIÓN · Esperar; no iniciar una nueva compra</span><span class="tag">FCFF · escenarios condicionados</span></div><p class="lead">Nutanix presenta un negocio sólido y oportunidades de crecimiento, pero no iniciaría una compra a 64,43 USD con la evidencia actual. El valor central condicional es 36,16 USD; los escenarios son sensibles al crecimiento, los márgenes, la reinversión y los cobros.</p><dl class="metadata"><div><dt>Fecha de investigación</dt><dd>2026-11-03 UTC</dd></div><div><dt>Referencia de mercado</dt><dd>$64.43 USD · cierre regular 2 noviembre 2026</dd></div><div><dt>Método</dt><dd>FCFF a 10 años y valoración inversa consistente</dd></div><div><dt>Alcance</dt><dd>Investigación fundamental independiente</dd></div></dl><p class="notice">Análisis fundamental independiente de una posible inversión nueva al precio de referencia. Los escenarios no son precios objetivo a doce meses ni límites de compra aprobados.</p><section class="dossier" id="NTNX"><p class="eyebrow">A146 · NTNX · 2026-11-03</p><h2>Informe completo</h2><div class="dossier-content"><h2 id="nutanix-como-inversión-nueva">Nutanix como inversión nueva</h2>
+<p>Evaluación independiente de NTNX</p>
+<p><strong>No iniciaría una compra a 64,43 USD con la evidencia actual.</strong> El negocio tiene una oportunidad creíble, pero el precio deja poco margen para fallos si se reconoce el coste de remunerar en acciones, se normalizan cobros e impuestos y se exige una rentabilidad razonable al capital.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Métrica</th>
+<th>Valor</th>
+<th>Contexto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Último cierre verificado</td>
+<td>64,43 USD</td>
+<td>2 de noviembre de 2026</td>
+</tr>
+<tr class="even">
+<td>Valor central del modelo</td>
+<td>36,2 USD</td>
+<td>Estimación condicionada</td>
+</tr>
+<tr class="odd">
+<td>Crecimiento ARR FY26</td>
+<td>15,8%</td>
+<td>Serie comparable</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="por-qué-el-negocio-merece-atención">Por qué el negocio merece atención</h3>
+<p>Nutanix crece a doble dígito, obtiene márgenes brutos altos y genera caja. La compatibilidad con almacenamiento externo facilita sustituir VMware sin cambiar toda la infraestructura. La integración operativa y los costes de cambio pueden sostener una relación rentable con el cliente. [F1-F4, B04]</p>
+<h3 id="por-qué-no-pagaría-este-precio-desde-cero">Por qué no pagaría este precio desde cero</h3>
+<p>El FCF FY26 de 840,7 M USD cae a 483,0 M al restar SBC como prueba económica. El escenario central ya presupone mejora importante del margen operativo después de SBC hasta el 24% a largo plazo y aun así estima unos 36 USD por acción. Una variante que mantiene cobros anticipados favorables eleva ese valor a unos 41 USD.</p>
+<h3 id="qué-tan-amplia-es-la-incertidumbre">Qué tan amplia es la incertidumbre</h3>
+<p>Los escenarios principales dan aproximadamente 20, 36 y 67 USD. El favorable con una financiación por clientes más persistente llega a unos 76 USD. No son un suelo, un techo ni precios objetivo a doce meses. La conclusión es que, a 64,43 USD, la compra necesita una ejecución bastante favorable; no que una subida sea imposible.</p>
+<h3 id="qué-cambiaría-la-decisión">Qué cambiaría la decisión</h3>
+<p>Un precio sustancialmente menor sin deterioro del negocio, o evidencia de mayor crecimiento y caja por acción que justifique elevar el modelo. Aplicar un descuento del 20% al valor central da cerca de 29 USD: es una referencia condicional de margen de seguridad, no una orden de compra ni un precio que deba alcanzarse.</p>
+<p>Corte de información: 3 de noviembre de 2026. Últimos resultados completos: FY26, cerrado el 31 de julio. Se utiliza el cierre del 2 de noviembre, no una cotización intradía. Moneda: USD. Fuentes y cálculos reproducibles acompañan al informe.</p>
+<h2 id="negocio-y-modelo-de-ingresos">Negocio y modelo de ingresos</h2>
+<p>Nutanix vende software para operar infraestructura privada e híbrida. Su propuesta es simplificar cómo una empresa ejecuta y administra aplicaciones, máquinas virtuales, almacenamiento y contenedores. No es un fabricante de GPU ni un proveedor que deba construir centros de datos para alquilar capacidad.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Producto</th>
+<th>Función principal</th>
+<th>Lectura económica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NCI y AHV</td>
+<td>Infraestructura y virtualización</td>
+<td>Primera implantación y sustitución de plataformas existentes</td>
+</tr>
+<tr class="even">
+<td>NCM</td>
+<td>Operación, automatización y costes</td>
+<td>Expansión dentro de la misma cuenta</td>
+</tr>
+<tr class="odd">
+<td>NKP y NAI</td>
+<td>Kubernetes e inferencia de IA</td>
+<td>Mercado adicional cuya aportación financiera no se desglosa</td>
+</tr>
+<tr class="even">
+<td>NUS y NDB</td>
+<td>Almacenamiento y bases de datos</td>
+<td>Más productos sobre la relación instalada</td>
+</tr>
+</tbody>
+</table></div>
+<p>La venta empieza con una carga de trabajo y puede convertirse en una relación crítica. La administración común, la fiabilidad y los conocimientos adquiridos elevan el coste de cambiar otra vez de plataforma. Esa ventaja debe compensar al cliente por licencias, formación, migración y hardware. Es una tesis económica, no superioridad universal. [B01]</p>
+<h3 id="suscripción-no-significa-reconocimiento-uniforme">Suscripción no significa reconocimiento uniforme</h3>
+<p>Las licencias de duración determinada suelen reconocerse al inicio, mientras que soporte y SaaS se reconocen durante el contrato. En FY26, 1.412,6 M USD de suscripción se reconocieron al inicio y 1.299,7 M de forma periódica. Un contrato de tres años puede aportar ingreso y caja con perfiles distintos. Por eso ingresos, ARR, pedidos y cobros no son intercambiables. [F1, F3]</p>
+<p>ARR aproxima el valor anualizado de contratos activos, suponiendo renovación en condiciones actuales. No es una previsión auditada de ingresos futuros. La duración media contratada fue 3,2 años en FY26. Los contratos largos aumentan visibilidad, pero no eliminan el riesgo de renovación. [F2, F3]</p>
+<h3 id="interpretación-para-una-compra-nueva">Interpretación para una compra nueva</h3>
+<p>La inversión debe sostenerse con la plataforma actual, altas de clientes y expansión rentable. Los productos de IA añaden una posibilidad favorable, pero hoy no existe un desglose que permita atribuirles ingresos o margen de forma independiente. El caso central no necesita que NTNX se convierta en un ganador dominante de IA. [F1]</p>
+<h2 id="competencia-y-ventaja-sostenible">Competencia y ventaja sostenible</h2>
+<p>La oportunidad más tangible es facilitar el cambio de virtualización sin exigir que el cliente renueve toda su infraestructura a la vez. El 27 de octubre de 2026 se anunció la disponibilidad de Nutanix con NetApp ONTAP mediante NFS. Dell PowerStore ya estaba disponible; también existen integraciones con PowerFlex y Everpure FlashArray. La compatibilidad depende de configuraciones soportadas. [B04, B05]</p>
+<p>Esta apertura puede reducir inversión inicial y separar la migración de un ciclo de renovación de servidores. También puede reducir el software vendido por despliegue si el cliente conserva parte de la pila anterior. La prueba no es el anuncio: serán adopción, ACV por contrato, margen y productos añadidos.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rival</th>
+<th>Fortaleza relevante</th>
+<th>Qué debe probar Nutanix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>VMware y Broadcom</td>
+<td>Base instalada, experiencia operativa y soporte</td>
+<td>Ahorro total y migración suficientemente segura</td>
+</tr>
+<tr class="even">
+<td>Microsoft</td>
+<td>Ecosistema Azure y ruta hacia Azure Local</td>
+<td>Valor adicional frente a una plataforma ya utilizada</td>
+</tr>
+<tr class="odd">
+<td>Red Hat e IBM</td>
+<td>VM y contenedores sobre OpenShift</td>
+<td>Menor fricción operativa o mejor economía por carga</td>
+</tr>
+<tr class="even">
+<td>HPE</td>
+<td>Canal y alternativas de virtualización KVM</td>
+<td>Diferenciación aun dentro de socios no exclusivos</td>
+</tr>
+<tr class="odd">
+<td>Nubes públicas</td>
+<td>Servicios nativos y sustitución de infraestructura privada</td>
+<td>Utilidad de una capa común en entornos híbridos</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="broadcom-sigue-siendo-un-competidor-fuerte">Broadcom sigue siendo un competidor fuerte</h3>
+<p>El paso de VMware a suscripciones favorece la revisión de proveedores, pero no implica éxodo automático. NTT DOCOMO anunció el 19 de octubre de 2026 un acuerdo VMware por diez años. Broadcom también está desarrollando IA privada. Una cuenta ganada o perdida no demuestra cuota total, pero estos hechos impiden valorar NTNX como si el rival hubiera abandonado el mercado. [B07, B08, B09]</p>
+<p>La ventaja sostenible reside en integración operativa, canal, fiabilidad y costes de cambio una vez instalado. AHV por sí solo no es una barrera insalvable. El examen decisivo llegará cuando deban renovarse los clientes captados durante el cambio comercial de VMware. [B01, B10-B13]</p>
+<h2 id="evolución-financiera-comparable">Evolución financiera comparable</h2>
+<p>Nutanix ha mejorado ingresos, rentabilidad operativa y caja en los tres últimos ejercicios. El avance no depende solo de ajustes no GAAP: el beneficio operativo GAAP también creció. Las cifras siguientes están en millones de USD y los ejercicios terminan el 31 de julio. [F1-F3]</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Métrica</th>
+<th>FY2024</th>
+<th>FY2025</th>
+<th>FY2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ingresos</td>
+<td>2.148,8</td>
+<td>2.537,9</td>
+<td>2.853,5</td>
+</tr>
+<tr class="even">
+<td>ARR recalculado</td>
+<td>1.873,3</td>
+<td>2.201,7</td>
+<td>2.548,8</td>
+</tr>
+<tr class="odd">
+<td>Margen bruto GAAP</td>
+<td>84,9%</td>
+<td>86,8%</td>
+<td>86,8%</td>
+</tr>
+<tr class="even">
+<td>Beneficio operativo GAAP</td>
+<td>7,6</td>
+<td>172,5</td>
+<td>274,0</td>
+</tr>
+<tr class="odd">
+<td>Beneficio operativo no GAAP</td>
+<td>347,1</td>
+<td>536,1</td>
+<td>675,4</td>
+</tr>
+<tr class="even">
+<td>Flujo operativo de caja</td>
+<td>672,9</td>
+<td>821,5</td>
+<td>916,7</td>
+</tr>
+<tr class="odd">
+<td>Capex</td>
+<td>75,3</td>
+<td>71,3</td>
+<td>76,0</td>
+</tr>
+<tr class="even">
+<td>FCF reportado</td>
+<td>597,7</td>
+<td>750,2</td>
+<td>840,7</td>
+</tr>
+<tr class="odd">
+<td>SBC</td>
+<td>333,8</td>
+<td>351,6</td>
+<td>357,7</td>
+</tr>
+<tr class="even">
+<td>FCF menos SBC</td>
+<td>263,8</td>
+<td>398,6</td>
+<td>483,0</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="qué-mejora-y-qué-sigue-pendiente">Qué mejora y qué sigue pendiente</h3>
+<p>Los ingresos crecieron 18,1% en FY25 y 12,4% en FY26. El margen operativo GAAP pasó de 0,4% a 6,8% y 9,6%; el margen no GAAP alcanzó 23,7% en FY26. La diferencia sigue siendo material. El margen bruto GAAP del 86,8% permite apalancamiento operativo, pero la expansión de beneficio exige controlar el gasto comercial, I+D y remuneración en acciones.</p>
+<p>La remuneración en acciones descendió del 15,5% al 12,5% de ingresos, aunque su importe subió de 333,8 a 357,7 M USD. Es una mejora de intensidad, no desaparición del coste. El FCF menos SBC aumentó de 263,8 a 483,0 M, lo que apoya una mejora económica real. Esta resta es una prueba analítica y no un flujo oficial. [F1]</p>
+<p>El FCF FY24 incluyó cerca de 30 M USD no recurrentes de un acuerdo de colaboración, por lo que la base inicial tampoco es completamente orgánica. [F12]</p>
+<p>Comparabilidad: ARR FY24 y FY25 está recalculado según la metodología introducida en FY26. La historia más larga mezcla hardware, software y transición a suscripciones; no se utiliza una tasa histórica única como previsión automática. No se presenta el beneficio neto FY26 como una base normal de valoración.</p>
+<h2 id="calidad-del-crecimiento-comercial">Calidad del crecimiento comercial</h2>
+<p>El ARR creció 15,8% en FY26 hasta 2.548,8 M USD y los clientes acumulados pasaron de 29.290 a 32.360. Son señales de adopción. El dato menos favorable es la menor expansión de la base existente: NRR cayó de 109% a 106% durante FY26. [F1-F3, F5-F7]</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Métrica</th>
+<th>Q1 FY26</th>
+<th>Q2 FY26</th>
+<th>Q3 FY26</th>
+<th>Q4 FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ingresos M USD</td>
+<td>670,6</td>
+<td>722,8</td>
+<td>703,1</td>
+<td>757,1</td>
+</tr>
+<tr class="even">
+<td>ARR M USD</td>
+<td>2.284</td>
+<td>2.356</td>
+<td>2.435</td>
+<td>2.549</td>
+</tr>
+<tr class="odd">
+<td>NRR</td>
+<td>109%</td>
+<td>107%</td>
+<td>106%</td>
+<td>106%</td>
+</tr>
+<tr class="even">
+<td>Duración contractual</td>
+<td>3,1 años</td>
+<td>3,1 años</td>
+<td>3,4 años</td>
+<td>3,3 años</td>
+</tr>
+<tr class="odd">
+<td>Clientes acumulados</td>
+<td>29.930</td>
+<td>30.980</td>
+<td>31.710</td>
+<td>32.360</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="no-confundir-retención-neta-con-ausencia-de-bajas">No confundir retención neta con ausencia de bajas</h3>
+<p>Un NRR de 106% significa que el ARR de una cohorte existente aumenta neto un 6%, incorporando expansión, contracción y bajas. No revela por sí solo churn bruto ni que todos los clientes renueven. La moderación puede convivir con crecimiento total por nuevas cuentas. Para una compra nueva, conviene exigir que el crecimiento no dependa cada vez más de ventas nuevas costosas.</p>
+<h3 id="pedidos-pendientes-y-calendario-de-reconocimiento">Pedidos pendientes y calendario de reconocimiento</h3>
+<p>Las obligaciones de desempeño pendientes (RPO) fueron 3.440,4 M USD, frente a 2.692,6 M un año antes. Incluyen trabajo contractual por reconocer y no equivalen a caja inmediata. La dirección describió crecimiento de pedidos TCV de dos dígitos altos y más contratos con inicio futuro. Sin una serie homogénea de volumen, duración, precio y cobro, no se convierte ese comentario en una tasa de crecimiento permanente. [F1, F4]</p>
+<h3 id="qué-exigir-en-los-próximos-resultados">Qué exigir en los próximos resultados</h3>
+<p>ARR comparable creciendo a doble dígito, estabilización o mejora de NRR y conversión de contratos pendientes. Si ARR, pedidos e ingresos desaceleran al mismo tiempo, el problema es mayor que un desplazamiento trimestral. Si solo cambia la fecha de puesta en marcha y luego se convierte, la tesis puede mantenerse.</p>
+<p>Los valores trimestrales se publican redondeados; pueden no sumar exactamente el total anual. NRR es una medida propia de la empresa y no es comparable sin revisar definiciones de otras compañías.</p>
+<h2 id="calidad-del-flujo-de-caja">Calidad del flujo de caja</h2>
+<p>Los 840,7 M USD de FCF FY26 son reales bajo la definición de la empresa, pero no son íntegramente beneficio económico atribuible al accionista. Surgen de cobros, pagos, anticipos y ajustes no monetarios. Para valorar, hay que separar estos componentes. [F1, F2]</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Puente FY26</th>
+<th>M USD</th>
+<th>Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Flujo operativo de caja</td>
+<td>916,7</td>
+<td>Después de capital circulante e impuestos pagados</td>
+</tr>
+<tr class="even">
+<td>Menos inversión en inmovilizado</td>
+<td>(76,0)</td>
+<td>Capex de la definición de la empresa</td>
+</tr>
+<tr class="odd">
+<td>FCF reportado</td>
+<td>840,7</td>
+<td>29,5% de los ingresos</td>
+</tr>
+<tr class="even">
+<td>Menos remuneración en acciones</td>
+<td>(357,7)</td>
+<td>Prueba de coste económico de SBC</td>
+</tr>
+<tr class="odd">
+<td>FCF menos SBC</td>
+<td>483,0</td>
+<td>16,9% de ingresos; medida analítica, no oficial</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="tres-ajustes-conceptuales-imprescindibles">Tres ajustes conceptuales imprescindibles</h3>
+<p><strong>Remuneración en acciones.</strong> SBC se suma de nuevo al calcular CFO porque no consume caja inmediata, pero transfiere valor a empleados. El DCF trata SBC como coste operativo; no la añade al flujo y no impone a la vez una dilución futura arbitraria que cobre dos veces el mismo coste.</p>
+<p><strong>Cobros anticipados.</strong> El aumento de ingresos diferidos aportó 315,0 M USD al CFO de FY26. No es caja ficticia: el cliente pagó, aunque queda servicio por prestar. Su persistencia depende del crecimiento, renovaciones, duración y condiciones de cobro. La flexibilidad de pagos anuales prevista para FY27 puede reducir caja antes de afectar a ingresos. Los activos contractuales ascendieron a 193,4 M, desde importes no materiales en FY25. [F1, F3, F4]</p>
+<p><strong>Impuestos normalizados.</strong> El beneficio neto GAAP de 1.506,8 M USD incorpora aproximadamente 1.208 M de liberación de una provisión sobre activos fiscales diferidos. El CFO ya revierte el efecto no monetario. No se resta otra vez del FCF ni se utiliza ese beneficio para calcular un PER normal. Los impuestos pagados de 30,3 M tampoco son una tasa perpetua garantizada. [F1]</p>
+<p>FY26 reconoció 27,6 M USD de gasto de reestructuración sin pagarlo todavía. La salida se concentra en FY27; el modelo la descuenta una vez. [F1]</p>
+<p>El FCF menos SBC es una comprobación de prudencia, no un DCF abreviado. Sigue incluyendo capital circulante, intereses e impuestos del periodo. La valoración principal parte del resultado operativo y normaliza reinversión e impuestos.</p>
+<h2 id="balance-y-economía-por-acción">Balance y economía por acción</h2>
+<p>La liquidez reduce el riesgo financiero inmediato, pero una compra de la acción debe reconocer las obligaciones convertibles y el coste de mantener estable el número de acciones. Un dólar de recompras no equivale automáticamente a un dólar distribuido a cada accionista. [F1]</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Balance al 31 de julio de 2026</th>
+<th>M USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja y equivalentes</td>
+<td>777,3</td>
+</tr>
+<tr class="even">
+<td>Inversiones de corto plazo</td>
+<td>1.584,2</td>
+</tr>
+<tr class="odd">
+<td>Liquidez total no restringida</td>
+<td>2.361,5</td>
+</tr>
+<tr class="even">
+<td>Principal de deuda convertible</td>
+<td>(1.362,5)</td>
+</tr>
+<tr class="odd">
+<td>Caja neta simple antes de otros ajustes</td>
+<td>999,0</td>
+</tr>
+<tr class="even">
+<td>Valor presente de arrendamientos operativos</td>
+<td>170,0</td>
+</tr>
+<tr class="odd">
+<td>Línea de crédito no utilizada</td>
+<td>500,0</td>
+</tr>
+</tbody>
+</table></div>
+<p>La caja neta simple no es todo el ajuste de valoración. El modelo reserva liquidez operativa y considera la conversión económica de los bonos. La línea no dispuesta es capacidad de financiación, no caja que pueda sumarse al valor de la acción. Los arrendamientos se tratan de forma consistente con el gasto operativo para no descontarlos dos veces.</p>
+<h3 id="recompras-y-remuneración-en-acciones">Recompras y remuneración en acciones</h3>
+<p>En FY26 salieron 483,5 M USD por recompras de acciones y 195,5 M por retenciones fiscales asociadas a la liquidación neta de remuneración en acciones. Hubo 61,4 M de cobros por emisión a empleados y una colocación privada de 150 M vinculada a AMD. Son flujos de financiación, no ingresos de clientes. La inversión de AMD ya está en la caja reportada y no se vuelve a añadir. [F1]</p>
+<p>Las acciones básicas medias ponderadas aumentaron de 267,5 M en FY25 a 268,7 M en FY26, pese a las recompras. La métrica relevante es crecimiento de valor por acción después de remuneración y financiación, no solo aumento de FCF corporativo. La cifra media de un año no sustituye al número de acciones a una fecha concreta. [F1]</p>
+<p>La deuda convertible requiere un puente coherente: o se mantiene el principal como obligación y se reconoce solo la prima de conversión, o se utiliza el método de conversión total con más acciones y sin restar ese mismo principal. El informe no combina las dos penalizaciones.</p>
+<h2 id="guía-y-exigencia-de-ejecución">Guía y exigencia de ejecución</h2>
+<p>La guía de la dirección apunta a crecimiento de doble dígito y moderada mejora de margen. Es una expectativa de la empresa publicada el 26 de agosto, no consenso ni resultado realizado. El ejercicio FY27 termina el 31 de julio de 2027. [F2, F3]</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métrica</th>
+<th>Guía FY27</th>
+<th>Punto medio y lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ingresos</td>
+<td>3.180 a 3.230 M USD</td>
+<td>3.205 M; crecimiento de 12,3%</td>
+</tr>
+<tr class="even">
+<td>Margen operativo no GAAP</td>
+<td>24% a 25%</td>
+<td>24,5% frente a 23,7% FY26</td>
+</tr>
+<tr class="odd">
+<td>FCF reportado</td>
+<td>850 a 950 M USD</td>
+<td>900 M; crecimiento de 7,1%</td>
+</tr>
+<tr class="even">
+<td>Margen FCF implícito</td>
+<td>Según extremos del rango</td>
+<td>28,1% al punto medio</td>
+</tr>
+</tbody>
+</table></div>
+<p>La guía incorpora restricciones de oferta de servidores, más licencias con comienzo futuro y mayor flexibilidad de pago. Incluye 33 a 43 M USD de costes extraordinarios de reestructuración; aproximadamente 30 a 35 M se esperaban en caja en Q1. La reducción anunciada afectó a cerca del 5% de plantilla y se prevé reinvertir la mayor parte del ahorro. No se suma automáticamente todo el ahorro a los márgenes futuros. [F3, F4]</p>
+<h3 id="la-secuencia-de-revisiones-importa">La secuencia de revisiones importa</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Guía para FY26</th>
+<th>Ingresos M USD</th>
+<th>FCF M USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Agosto de 2025</td>
+<td>2.900 a 2.940</td>
+<td>790 a 830</td>
+</tr>
+<tr class="even">
+<td>Noviembre de 2025</td>
+<td>2.820 a 2.860</td>
+<td>800 a 840</td>
+</tr>
+<tr class="odd">
+<td>Febrero de 2026</td>
+<td>2.800 a 2.840</td>
+<td>745 a 775</td>
+</tr>
+<tr class="even">
+<td>Mayo de 2026</td>
+<td>2.820 a 2.840</td>
+<td>760 a 780</td>
+</tr>
+<tr class="odd">
+<td>Resultado final</td>
+<td>2.853,5</td>
+<td>840,7</td>
+</tr>
+</tbody>
+</table></div>
+<p>El cierre fue mejor que la última guía, pero ingresos quedaron por debajo del rango inicial. Por tanto, superar una previsión reducida no prueba precisión estructural del plan. La guía FY27 merece un margen de seguridad y escenarios que admitan retrasos de proyectos. [F2, F5-F8]</p>
+<p>Q1 FY27: ingresos previstos de 755 a 765 M USD y margen no GAAP de 26% a 28%. No se ha verificado una fecha oficial del próximo anuncio a la fecha de corte. [F2, B21]</p>
+<h2 id="valoración-por-escenarios">Valoración por escenarios</h2>
+<p>El método principal es un descuento de flujos disponibles para todos los financiadores (FCFF). Parte de EBIT normalizado después de SBC, no GAAP estricto, aplica impuestos de caja y descuenta reinversión. Proyecta FY27 a FY36 y una fase perpetua posterior. Los supuestos futuros son propios salvo la guía de la dirección identificada.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Supuesto o resultado</th>
+<th>Adverso</th>
+<th>Central</th>
+<th>Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crecimiento anual ingresos FY26-FY31</td>
+<td>6,9%</td>
+<td>10,1%</td>
+<td>13,8%</td>
+</tr>
+<tr class="even">
+<td>Ingresos FY31 M USD</td>
+<td>3.975</td>
+<td>4.607</td>
+<td>5.454</td>
+</tr>
+<tr class="odd">
+<td>Margen operativo FY31 después de SBC</td>
+<td>15,0%</td>
+<td>21,0%</td>
+<td>26,0%</td>
+</tr>
+<tr class="even">
+<td>Margen operativo terminal después de SBC</td>
+<td>18,0%</td>
+<td>24,0%</td>
+<td>30,0%</td>
+</tr>
+<tr class="odd">
+<td>WACC</td>
+<td>11,5%</td>
+<td>10,5%</td>
+<td>9,5%</td>
+</tr>
+<tr class="even">
+<td>Crecimiento terminal</td>
+<td>2,5%</td>
+<td>3,0%</td>
+<td>3,5%</td>
+</tr>
+<tr class="odd">
+<td>ROIC terminal</td>
+<td>15,0%</td>
+<td>20,0%</td>
+<td>25,0%</td>
+</tr>
+<tr class="even">
+<td>Valor por acción USD</td>
+<td>19,4</td>
+<td>36,2</td>
+<td>66,7</td>
+</tr>
+<tr class="odd">
+<td>Diferencia frente a 64,43 USD</td>
+<td>-69,9%</td>
+<td>-43,9%</td>
+<td>3,5%</td>
+</tr>
+<tr class="even">
+<td>Peso del terminal en valor empresa</td>
+<td>45,9%</td>
+<td>52,7%</td>
+<td>60,5%</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="el-caso-central-no-presupone-estancamiento">El caso central no presupone estancamiento</h3>
+<p>Ingresos pasan de 2.853,5 M en FY26 a 4.606,7 M en FY31 y 5.876,8 M en FY36. El margen operativo después de SBC llega al 21% en FY31 y 24% en FY36, frente a 9,6% GAAP en FY26. La intensidad de SBC baja del 12% previsto para FY27 al 8% en FY36. Esta combinación ya exige ejecución y disciplina de costes.</p>
+<p>El favorable combina mayor crecimiento, margen final del 30%, SBC del 6%, WACC del 9,5% y crecimiento perpetuo del 3,5%. Puede ocurrir, pero no debe tratarse como resultado seguro. El valor favorable de 67 USD tampoco es un máximo: otras hipótesis razonables pueden ampliarlo, como se muestra en la revisión de sensibilidades.</p>
+<p>No se asignan probabilidades subjetivas ni se presenta una media ponderada como valor exacto. Las diferencias respecto al precio son comparación de valores actuales del modelo, no rentabilidades bursátiles pronosticadas para un plazo concreto.</p>
+<h3 id="contraste-con-la-dirección">Contraste con la dirección</h3>
+<p>La transcripción secundaria del Investor Day de abril recoge aspiraciones FY29 de crecimiento de ingresos y ARR «mid-high teens» (aproximadamente 15%-19%), margen no GAAP en la franja media-alta del 20%-29% y margen FCF en la franja alta del 20%-29%. No son guía y presuponen normalización del suministro. El PDF primario con cifras no pudo comprobarse. Nuestro crecimiento FY29 del 10% es deliberadamente inferior, no una extrapolación de esas metas. [M5, M6]</p>
+<h2 id="proyección-y-puente-a-la-acción">Proyección y puente a la acción</h2>
+<p>Caso central, en M USD. EBIT normalizado incluye SBC pero no la reestructuración, pagada aparte; no es GAAP estricto. El FCFF anual FY27 de la tabla precede ese pago. Se descuenta solo el periodo restante desde el 3 de noviembre, no todo FY27.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Ejercicio</th>
+<th>Ingresos</th>
+<th>Margen EBIT</th>
+<th>FCFF anual</th>
+<th>SBC ventas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td>3.205</td>
+<td>12,5%</td>
+<td>439</td>
+<td>12,0%</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td>3.558</td>
+<td>15,0%</td>
+<td>547</td>
+<td>11,5%</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td>3.913</td>
+<td>17,0%</td>
+<td>643</td>
+<td>11,0%</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td>4.266</td>
+<td>19,0%</td>
+<td>740</td>
+<td>10,5%</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td>4.607</td>
+<td>21,0%</td>
+<td>826</td>
+<td>10,0%</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td>4.929</td>
+<td>21,6%</td>
+<td>869</td>
+<td>9,6%</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td>5.225</td>
+<td>22,2%</td>
+<td>902</td>
+<td>9,2%</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td>5.486</td>
+<td>22,8%</td>
+<td>925</td>
+<td>8,8%</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td>5.706</td>
+<td>23,4%</td>
+<td>936</td>
+<td>8,4%</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td>5.877</td>
+<td>24,0%</td>
+<td>935</td>
+<td>8,0%</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente central</th>
+<th>M USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Valor actual de flujos explícitos</td>
+<td>4.360,2</td>
+</tr>
+<tr class="even">
+<td>Valor actual de flujos posteriores a FY36</td>
+<td>4.855,6</td>
+</tr>
+<tr class="odd">
+<td>Valor de empresa</td>
+<td>9.215,8</td>
+</tr>
+<tr class="even">
+<td>Más caja e inversiones menos reserva operativa</td>
+<td>2.011,5</td>
+</tr>
+<tr class="odd">
+<td>Menos deuda y obligaciones financieras</td>
+<td>(1.365,2)</td>
+</tr>
+<tr class="even">
+<td>Valor del capital</td>
+<td>9.862,0</td>
+</tr>
+<tr class="odd">
+<td>Acciones básicas a 13 de octubre de 2026</td>
+<td>272,732 M</td>
+</tr>
+<tr class="even">
+<td>Valor central por acción</td>
+<td>36,16 USD</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fórmula: FCFF = EBIT después de SBC × (1 − tasa fiscal) + depreciación y amortización − capex − aumento de capital circulante. Se deducen 38 M USD de reestructuración pendiente una sola vez. No se añade SBC, activo fiscal diferido ni inversión de AMD ya recogida en caja. Acciones: proxy de octubre. [M4]</p>
+<p>El descuento a final de ejercicio y la caja de julio dejan pequeñas diferencias temporales. La revisión separada estima unos 0,42 USD por acción por caja del periodo ya transcurrido y 0,81 USD por convención de flujos a mitad de año. Son sensibilidades, no caja confirmada a noviembre.</p>
+<h2 id="sensibilidad-y-precio-implícito">Sensibilidad y precio implícito</h2>
+<p>Ningún valor puntual elimina la incertidumbre. Esta matriz mantiene los flujos operativos centrales y modifica la tasa de descuento y el crecimiento perpetuo. Valores por acción en USD; no son previsiones de cotización.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC / g</th>
+<th>2,0%</th>
+<th>2,5%</th>
+<th>3,0%</th>
+<th>3,5%</th>
+<th>4,0%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8,5%</td>
+<td>46,0</td>
+<td>47,4</td>
+<td>49,0</td>
+<td>51,0</td>
+<td>53,4</td>
+</tr>
+<tr class="even">
+<td>9,5%</td>
+<td>39,8</td>
+<td>40,6</td>
+<td>41,6</td>
+<td>42,7</td>
+<td>44,1</td>
+</tr>
+<tr class="odd">
+<td>10,5%</td>
+<td>35,1</td>
+<td>35,6</td>
+<td>36,2</td>
+<td>36,8</td>
+<td>37,6</td>
+</tr>
+<tr class="even">
+<td>11,5%</td>
+<td>31,3</td>
+<td>31,7</td>
+<td>32,0</td>
+<td>32,4</td>
+<td>32,9</td>
+</tr>
+<tr class="odd">
+<td>12,5%</td>
+<td>28,3</td>
+<td>28,5</td>
+<td>28,7</td>
+<td>29,0</td>
+<td>29,3</td>
+</tr>
+</tbody>
+</table></div>
+<p>Una banda de WACC de 9,5% a 11,5% y crecimiento terminal de 2,5% a 3,5% produce aproximadamente 32 a 43 USD. El 52,7% del valor de empresa central procede del terminal, de modo que su tratamiento importa mucho. La tasa central del 10,5% utiliza una referencia del Treasury a diez años del 4,91% y supuestos de beta 1,2 y prima de riesgo del 5%; estos dos últimos no son estimaciones de consenso. [M3]</p>
+<h3 id="qué-exige-el-precio-bajo-distintas-restricciones">Qué exige el precio bajo distintas restricciones</h3>
+<p>Una valoración inversa no revela las expectativas exactas del mercado. Solo calcula qué cambio de una variable justificaría 64,43 USD manteniendo otras hipótesis. El resultado muestra por qué una compra aquí exige más que cumplir la guía actual.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Prueba inversa</th>
+<th>Resultado requerido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mantener margen terminal del 24% y variar crecimiento FY28-FY31</td>
+<td>Aproximadamente 21,8% anual durante esos cuatro ejercicios</td>
+</tr>
+<tr class="even">
+<td>Mantener ingresos centrales y elevar trayectoria de márgenes</td>
+<td>Margen terminal después de SBC cercano al 46,2%</td>
+</tr>
+<tr class="odd">
+<td>Mantener toda la operación central y variar descuento</td>
+<td>Tasa de descuento FCFF aproximada del 7,1%</td>
+</tr>
+</tbody>
+</table></div>
+<p>La primera parte de FY27 en 3.205 M USD y también exige una transición posterior de crecimiento elevado hasta converger al 3% en FY36; no basta crecer cuatro años y caer inmediatamente al 3%. La segunda cambia una trayectoria de margen, no solo un dato aislado final. La tercera es una tasa interna del modelo de empresa; no equivale a la TIR que obtendría el accionista.</p>
+<p>Para justificar una compra pueden combinarse cambios menores en varias variables. El punto no es que solo exista una senda, sino que el precio ya deja atrás el conjunto central de supuestos.</p>
+<h2 id="pruebas-de-robustez-y-límites">Pruebas de robustez y límites</h2>
+<p>La revisión independiente reprodujo los tres valores principales y el puente de convertibles. También identificó que la transición de capital circulante y reinversión es una decisión material del modelo, no un hecho inevitable.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Cambio aislado sobre el central</th>
+<th>Valor USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modelo principal</td>
+<td>36,2</td>
+</tr>
+<tr class="even">
+<td>Mantener financiación por clientes y ratios de inversión</td>
+<td>40,6</td>
+</tr>
+<tr class="odd">
+<td>Sin liberación de capital circulante durante fase explícita</td>
+<td>34,6</td>
+</tr>
+<tr class="even">
+<td>SBC dos puntos de ventas más elevada</td>
+<td>33,2</td>
+</tr>
+<tr class="odd">
+<td>SBC dos puntos de ventas más baja</td>
+<td>39,2</td>
+</tr>
+<tr class="even">
+<td>Obligación residual hipotética de 200 M por derechos previos</td>
+<td>35,4</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="capital-circulante-y-terminal">Capital circulante y terminal</h3>
+<p>El central permite financiación de clientes al principio, pero converge hacia reinversión compatible con crecimiento perpetuo del 3% y ROIC del 20%. Esto cambia el capital circulante desde una fuente de 85 M USD en FY31 a un uso de 147 M en FY36. Mantener de forma más persistente el beneficio de cobro anticipado eleva el central a 40,6 USD y el favorable a 75,8 USD. Esta variante es relevante en software con capital circulante negativo; no debe ocultarse.</p>
+<h3 id="comprobación-con-múltiplos">Comprobación con múltiplos</h3>
+<p>La capitalización usando acciones básicas es aproximadamente 17,57 mil millones de USD. Equivale a 20,9 veces FCF FY26 y 36,4 veces FCF menos SBC. Los rendimientos correspondientes son 4,8% y 2,7%. El múltiplo sobre FCF publicado parece más moderado que el que reconoce el coste accionarial. Estas divisiones no reemplazan la valoración de crecimiento. [F1, M1-M2]</p>
+<p>No se presenta una tabla de consenso de comparables sin datos homogéneos verificados. VMware ya no cotiza de forma independiente; Microsoft, Broadcom e IBM mezclan negocios distintos y las compañías de almacenamiento no son equivalentes directos de software. No hay fundamento para copiar su múltiplo sin ajustes.</p>
+<p>El FCFF central FY27 tras 38 M de reestructuración es 400,8 M. Al añadir SBC prevista de 384,6 M e intereses netos de caja ilustrativos de 70-77 M, se aproxima a FCF de 855-862 M: cerca del suelo de la guía 850-950 M, no del centro de 900 M. La prudencia en cobros es explícita; no se resta la reestructuración dos veces.</p>
+<p>Límites restantes: no hay balance a noviembre ni resultados Q1 FY27 publicados en los insumos; la caja intermedia y el gasto posterior a julio pueden cambiar; la opción temporal de convertibles no está valorada con un modelo de opciones completo; los impuestos y derechos de empleados son aproximaciones. Estos límites reducen precisión, pero no justifican ocultar el amplio rango.</p>
+<h2 id="riesgos-que-pueden-cambiar-la-tesis">Riesgos que pueden cambiar la tesis</h2>
+<p>El principal riesgo no es que el negocio desaparezca. Es pagar por una combinación de crecimiento, márgenes y durabilidad que no llegue a materializarse. Los siguientes umbrales son criterios analíticos propuestos, no guías de Nutanix.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Riesgo</th>
+<th>Evidencia que vigilar</th>
+<th>Consecuencia para la compra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Expansión débil de clientes</td>
+<td>NRR acercándose a 100% o menos de forma persistente, junto con menor crecimiento ARR</td>
+<td>Revisar a la baja crecimiento y capacidad de fijar precios</td>
+</tr>
+<tr class="even">
+<td>Migración más lenta</td>
+<td>Pedidos, ARR e ingresos se debilitan simultáneamente; contratos se retrasan repetidamente</td>
+<td>No atribuir todo el deterioro al calendario</td>
+</tr>
+<tr class="odd">
+<td>Menor caja normalizada</td>
+<td>Más pagos anuales y activos contractuales; menor caja por acción durante varios periodos</td>
+<td>Reducir conversión de beneficio en caja y múltiplo aceptable</td>
+</tr>
+<tr class="even">
+<td>Competencia y canal</td>
+<td>Retención de grandes cuentas por VMware; canal favorece alternativas propias</td>
+<td>Exigir evidencia de ganancia económica y no solo demos</td>
+</tr>
+<tr class="odd">
+<td>SBC y capital</td>
+<td>Remuneración deja de caer respecto a ventas; recompras no evitan mayor dilución</td>
+<td>Valorar con coste laboral completo y puente de acciones actualizado</td>
+</tr>
+<tr class="even">
+<td>IA no monetiza</td>
+<td>Anuncios sin contratos, ingresos recurrentes o métricas de adopción</td>
+<td>Mantener IA fuera de la justificación del precio</td>
+</tr>
+<tr class="odd">
+<td>Dependencia de hardware</td>
+<td>Falta o encarecimiento de servidores/GPU desplaza proyectos</td>
+<td>No tratar software como totalmente ajeno al ciclo físico</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="concentración-operativa">Concentración operativa</h3>
+<p>Los dos mayores distribuidores representaron el 39% de ingresos FY26, aunque ningún cliente final superó el 10%. Nutanix no fabrica su línea NX; depende de Supermicro y de disponibilidad de componentes. La diversificación de OEM y almacenamiento ayuda, pero no elimina el riesgo del canal o del suministro. [F1]</p>
+<p>Una caída del precio por sí sola no invalida la tesis ni la confirma. Debe distinguirse entre volatilidad, menor valor fundamental y aumento de margen de seguridad. Si se deterioran flujos esperados, un precio menor puede seguir siendo caro.</p>
+<h2 id="catalizadores-y-comprobaciones">Catalizadores y comprobaciones</h2>
+<p>Los próximos hitos sirven para contrastar la tesis, no para asumir una subida automática. El valor solo mejora si el acontecimiento cambia ingresos, rentabilidad, duración de la ventaja o riesgo de ejecución.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hito</th>
+<th>Estado al 3 de noviembre</th>
+<th>Qué conviene medir</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Resultados Q1 FY27</td>
+<td>Próximo trimestre a evaluar; fecha oficial no verificada</td>
+<td>Ventas frente a 755-765 M, ARR, NRR, inicios futuros y caja</td>
+</tr>
+<tr class="even">
+<td>NetApp con Nutanix</td>
+<td>Disponibilidad anunciada el 27 de octubre de 2026</td>
+<td>ACV, contratos ganados, plazo de migración y venta adicional</td>
+</tr>
+<tr class="odd">
+<td>Soluciones con Supermicro</td>
+<td>Disponibilidad prevista a comienzos de 2027</td>
+<td>Entrega efectiva, adopción pagada y margen</td>
+</tr>
+<tr class="even">
+<td>Colaboración Netris</td>
+<td>Vista previa técnica prevista a comienzos de 2027</td>
+<td>Paso de prueba técnica a uso comercial</td>
+</tr>
+<tr class="odd">
+<td>Ryax dentro de NKP y NAI</td>
+<td>Adquisición anunciada el 22 de septiembre</td>
+<td>Integración de producto y monetización, no solo funcionalidad</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="preguntas-para-la-siguiente-llamada-de-resultados">Preguntas para la siguiente llamada de resultados</h3>
+<p><strong>1.</strong> ¿Cuánto de la expansión con almacenamiento externo es cliente nuevo y cuánto sustituye compras que ya se habrían hecho? ¿Cómo cambia el ACV por despliegue?</p>
+<p><strong>2.</strong> ¿Qué explica el NRR del 106%: menor expansión, bajas, descuentos o calendario? ¿Cuáles son las tasas brutas de renovación cuando se publiquen?</p>
+<p><strong>3.</strong> ¿Cuánto FCF se desplaza por pagos anuales y por fechas futuras? ¿Qué nivel de activos contractuales considera normal la dirección?</p>
+<p><strong>4.</strong> ¿Qué contribución demostrable aportan NAI, NKP y las alianzas de IA? ¿Hay ingresos y cobros recurrentes, más allá de inversión de socios?</p>
+<p><strong>5.</strong> ¿Qué trayectoria de SBC, recompras e impuestos permite que crezca la caja económica por acción, no solo el beneficio ajustado?</p>
+<p>Fuentes: F2-F4, B04, B16-B19 y B21. Fechas de producto previstas por los emisores, sujetas a cambios. El informe no incorpora una prima por la celebración de un evento.</p>
+<h2 id="método-y-fuentes-financieras">Método y fuentes financieras</h2>
+<p>El informe distingue resultados históricos, guía de la dirección y supuestos analíticos. Los escenarios no son previsiones garantizadas. El corte informativo es el 3 de noviembre de 2026 y el precio de referencia es el último cierre verificado del 2 de noviembre a las 16:00 EST.</p>
+<h3 id="convenciones-y-documentación">Convenciones y documentación</h3>
+<p>M USD significa millones de dólares estadounidenses. FY indica ejercicio fiscal terminado el 31 de julio. SBC es remuneración en acciones; CFO, flujo operativo de caja; FCF, CFO menos capex; FCFF, flujo libre para todos los financiadores; NRR, retención neta; ARR, ingreso recurrente anualizado definido por el emisor; WACC, coste medio ponderado del capital; ROIC, retorno sobre capital invertido.</p>
+<p>Los anexos incluyen datos anuales y trimestrales, historial de guía, supuestos, resultados por año, sensibilidades, registro de fuentes y scripts reproducibles. Las cifras mostradas se redondean; los cálculos conservan precisión. Se comprobó la conciliación del flujo de caja y las identidades de la valoración. No se ha ejecutado ninguna transacción.</p>
+<p><strong>F1.</strong> <a href="https://www.sec.gov/Archives/edgar/data/1618732/000119312526394793/ntnx-20260731.htm">Nutanix FY26 Form 10-K</a>. 2026-09-17 (fecha de firma; index de presentación no verificado).</p>
+<p><strong>F2.</strong> <a href="https://ir.nutanix.com/news-releases/news-release-details/nutanix-reports-fourth-quarter-and-fiscal-2026-financial-results">Q4 and FY26 results</a>. 2026-08-26.</p>
+<p><strong>F3.</strong> <a href="https://ir.nutanix.com/static-files/fad6dc30-c90f-4e4d-97b7-b4243ae74c0a">Q4 FY26 earnings presentation</a>. 2026-08-26.</p>
+<p><strong>F4.</strong> <a href="https://ir.nutanix.com/static-files/a3c778d0-41c3-4d3a-a3bd-74eff0c253ec">Q4 FY26 call, transcript hosted by Nutanix IR</a>. 2026-08-26.</p>
+<p><strong>F5.</strong> <a href="https://ir.nutanix.com/news-releases/news-release-details/nutanix-reports-third-quarter-fiscal-2026-financial-results">Q3 FY26 results</a>. 2026-05-27.</p>
+<p><strong>F6.</strong> <a href="https://ir.nutanix.com/news-releases/news-release-details/nutanix-reports-second-quarter-fiscal-2026-financial-results">Q2 FY26 results</a>. 2026-02-25.</p>
+<p><strong>F7.</strong> <a href="https://ir.nutanix.com/news-releases/news-release-details/nutanix-reports-first-quarter-fiscal-2026-financial-results">Q1 FY26 results</a>. 2025-11-25.</p>
+<p><strong>F8.</strong> <a href="https://ir.nutanix.com/news-releases/news-release-details/nutanix-reports-fourth-quarter-and-fiscal-2025-financial-results">Q4 FY25 results and initial FY26 guidance</a>. 2025-08-27.</p>
+<p><strong>F9.</strong> <a href="https://ir.nutanix.com/static-files/68984fde-bb37-44cc-81d2-5ec24d916f68">Q1 FY26 call, transcript hosted by Nutanix IR</a>. 2025-11-25.</p>
+<p><strong>F10.</strong> <a href="https://ir.nutanix.com/static-files/7288dce4-0255-4b9b-b3c8-e6e12cd3c4ad">Q2 FY26 call, transcript hosted by Nutanix IR</a>. 2026-02-25.</p>
+<p><strong>F11.</strong> <a href="https://ir.nutanix.com/static-files/307303de-e36e-4721-ac7b-2418fb1337b0">Q3 FY26 call, transcript hosted by Nutanix IR</a>. 2026-05-27.</p>
+<p><strong>F12.</strong> <a href="https://ir.nutanix.com/static-files/fccbe53a-b111-4d15-9e28-271c08faa639">Q4 FY24 call, transcript hosted by Nutanix IR</a>. 2024-08-28.</p>
+<h2 id="fuentes-de-negocio-y-mercado">Fuentes de negocio y mercado</h2>
+<p>Las fuentes de producto son documentación o anuncios de los propios emisores. Demuestran disponibilidad, acuerdos y características declaradas; no prueban superioridad universal, cuota ganada ni monetización futura. Las conclusiones competitivas del informe son interpretación propia.</p>
+<p><strong>B01.</strong> <a href="https://www.nutanix.com/products/cloud-platform/software-options">Opciones oficiales de producto</a>. 2026-11-03.</p>
+<p><strong>B04.</strong> <a href="https://www.nutanix.com/blog/reclaiming-control-delivering-virtualization-freedom">Disponibilidad NetApp, 27 octubre</a>. 2026-11-03.</p>
+<p><strong>B05.</strong> <a href="https://www.nutanix.com/press-releases/2026/nutanix-recognized-as-a-leader-in-the-gartner-distributed-hybrid-infrastructure-magic-quadrant">Actualización de infraestructura, 10 septiembre</a>. 2026-11-03.</p>
+<p><strong>B07.</strong> <a href="https://www.broadcom.com/company/news/articles/cloud/vmware-by-broadcom-business-transformation">Anuncio original Broadcom</a>. 2026-11-03.</p>
+<p><strong>B08.</strong> <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-advance-ntt-docomos-private-cloud-vmware-cloud">Acuerdo DOCOMO</a>. 2026-11-03.</p>
+<p><strong>B09.</strong> <a href="https://investors.broadcom.com/node/64666/pdf">Anuncio de Broadcom</a>. 2026-11-03.</p>
+<p><strong>B10.</strong> <a href="https://learn.microsoft.com/en-us/azure/azure-local/migrate/migration-options-overview?view=azloc-2609">Documentación Microsoft</a>. 2026-11-03.</p>
+<p><strong>B11.</strong> <a href="https://developers.redhat.com/articles/2026/02/24/migration-choice-openshift-virtualization">Red Hat, febrero 2026</a>. 2026-11-03.</p>
+<p><strong>B12.</strong> <a href="https://www.hpe.com/us/en/collaterals/collateral.a50009231enw.html">Especificación HPE</a>. 2026-11-03.</p>
+<p><strong>B13.</strong> <a href="https://www.nutanix.com/products/cloud-platform">Plataforma Nutanix</a>. 2026-11-03.</p>
+<p><strong>B16.</strong> <a href="https://ir.nutanix.com/news-releases/news-release-details/amd-and-nutanix-announce-strategic-partnership-advance-open-and">Alianza AMD</a>. 2026-11-03.</p>
+<p><strong>B17.</strong> <a href="https://ir.nutanix.com/news-releases/news-release-details/nutanix-acquires-ryax-technologies-help-customers-accelerate">Ryax</a>. 2026-11-03.</p>
+<p><strong>B18.</strong> <a href="https://ir.nutanix.com/news-releases/news-release-details/nutanix-and-supermicro-take-runaway-ai-costs-jointly-engineered">Supermicro</a>. 2026-11-03.</p>
+<p><strong>B19.</strong> <a href="https://ir.nutanix.com/news-releases/news-release-details/nutanix-and-netris-announce-strategic-collaboration-deliver">Netris</a>. 2026-11-03.</p>
+<p><strong>B21.</strong> <a href="https://ir.nutanix.com/events">Calendario IR</a>. 2026-11-03.</p>
+<h3 id="precio-y-referencia-de-descuento">Precio y referencia de descuento</h3>
+<p><strong>M1.</strong> <a href="https://stockanalysis.com/stocks/ntnx/history/">Histórico de cotización de NTNX en Stock Analysis</a>. Cierre 2 noviembre 2026.</p>
+<p><strong>M2.</strong> <a href="https://finance.yahoo.com/quote/NTNX/">Cotización de NTNX en Yahoo Finance como contraste</a>. Consulta 3 noviembre 2026.</p>
+<p><strong>M3.</strong> <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value=2026">US Treasury curva diaria de rendimientos 2026</a>. 2 noviembre 2026.</p>
+<p><strong>M4.</strong> <a href="https://www.sec.gov/Archives/edgar/data/1618732/000119312526426829/ntnx-20261020.htm">Nutanix proxy statement de octubre y acciones a fecha de registro</a>. 20 octubre 2026.</p>
+<p><strong>M5.</strong> <a href="https://stockanalysis.com/stocks/ntnx/transcripts/603011-investor-day-2026/">Transcripción Investor Day en Stock Analysis como fuente secundaria</a>. 7 abril 2026.</p>
+<p><strong>M6.</strong> <a href="https://nutanix.gcs-web.com/static-files/1d12756e-7436-4a21-825f-af2a66ebcd29">Corporate Overview y advertencias sobre objetivos FY29</a>. Mayo 2026.</p>
+<h3 id="alcance-de-la-decisión">Alcance de la decisión</h3>
+<p>Este trabajo responde si la acción resulta atractiva como una compra nueva al precio de referencia. No pretende determinar un tamaño de inversión adecuado a necesidades personales, horizonte, liquidez o tolerancia al riesgo no evaluados aquí. Antes de actuar conviene actualizar cotización, resultados, obligaciones convertibles y los supuestos que sostienen el valor.</p>
+</div></section><footer class="footer"><p>Fuentes y cálculos descritos en el informe. Precio de referencia: cierre regular del 2 de noviembre de 2026. No constituye un pase del escáner ni una decisión de ejecución.</p></footer></main></body></html>
