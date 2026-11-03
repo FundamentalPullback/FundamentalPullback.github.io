@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"><title>HPE research dossier · 3 November 2026</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+</style></head><body><main><nav aria-label="Research navigation"><a href="../../../index.html#biblioteca">← Fundamental Pullback · Biblioteca</a><a href="../index.html">3 November research index</a></nav><p class="eyebrow">Fundamental Pullback · Watchlist research update · 3 November 2026 UTC</p><h1>HPE <span class="muted">Hewlett Packard Enterprise</span></h1><div class="status-line"><span class="tag deferred">ESPERAR · WAIT_PRICE</span><span class="tag">screen-grade</span><span class="tag">No Stage 3.5 approval</span></div><p class="lead">HPE improves operationally, but the conditional 10-year industrial FCFF plus FS equity central reference is $39.99 versus $51.19. Legacy $51.02 is preserved and reconciled; no new entry is approved, and price below EMA50 independently fails the required technical filter.</p><dl class="metadata"><div><dt>Research date</dt><dd>2026-11-03 UTC</dd></div><div><dt>Market reference / cutoff</dt><dd>2026-11-02 regular-session close</dd></div><div><dt>Research price (USD)</dt><dd>$51.19</dd></div><div><dt>Conditional central estimate · screen-grade</dt><dd>$39.99</dd></div><div><dt>Decision scope</dt><dd>Current-price WAIT decision complete; previously watched, not current scanner-qualified</dd></div><div><dt>Earnings gate</dt><dd>2026-11-23 · official call outside excluded week; exact release time unverified</dd></div></dl><p class="notice">Approved buy ceiling: <strong>none</strong> · Approved stop: <strong>none</strong> · Authorized shares: <strong>0</strong>. Publication is not an investment or trading approval.</p><h2>Conditional scenario reference</h2><div class="table-wrap"><table><thead><tr><th>Adverse</th><th>Base</th><th>Favorable</th></tr></thead><tbody><tr><td>$16.17</td><td>$39.99</td><td>$70.75</td></tr></tbody></table></div><p class="content-table-note">Conditional analyst scenarios, not probabilities or certified price targets. The adverse-to-favorable span is not a fair-value range. Research-only discount references are not approved entry levels.</p><details open><summary>Conditions before any future purchase approval</summary><ul><li>Conditional assumptions require refresh with FY2026 results and complete FY2027 cash/working-capital guidance.</li><li>Current price 51.19 is below mandatory EMA50 58.68; no approved technical signal, support, stop or size.</li><li>FS earnings/equity and current diluted ownership are labeled estimates/proxies, not fully observed current separate accounts.</li></ul></details><section class="dossier" id="HPE"><p class="eyebrow">A143 · FP-S3-HPE-20261103-v1</p><h2>Full research dossier</h2><div class="dossier-content"><h1 id="hpe-stage-3-actualizado-esperar-precio-y-recuperación-técnica">HPE | Stage 3 actualizado: esperar precio y recuperación técnica</h1>
+<p><strong>Versión HPE-FCFF-20261103-v 1. Investigación: 3 noviembre 2026 UTC. Precio: cierre regular del 2 noviembre 2026, $51.19.</strong> NYSE:HPE, Hewlett Packard Enterprise Company. Moneda USD; estados y modelo en millones, acciones en millones. Sin ADR. Revisión de una compañía ya seguida, no nueva selección aprobada por el scanner. Plan rector: Fundamental Pullback, 30 octubre 2026, S3-FCFF-20261030-v 1. Paper trading, sin orden, posición, stop o tamaño autorizado.</p>
+<h2 id="decisión-que-se-puede-tomar-hoy">Decisión que se puede tomar hoy</h2>
+<p><strong>BUENA EMPRESA; ESPERAR PRECIO. No se aprueba una entrada a $51.19.</strong> La recuperación operativa es real, pero adquirir Juniper, financiar clientes, sostener inventario y normalizar impuestos absorbe parte del crecimiento. El FCFF industrial más el valor del negocio financiero da una referencia central <strong>$39.99</strong>, frente al antiguo FCFE simplificado $51.02. Rango central orientativo <strong>$37–44</strong>; escenario adverso $16.17 y favorable $70.75. No llamar «rango justo» a todo el intervalo extremo.</p>
+<p>A $51.19, el margen frente al valor central es <strong>-28.0%</strong> y el retorno hasta ese valor sería -21.9%. La referencia de revisión con un descuento del 20% es <strong>$32</strong>, redondeada; no es precio máximo de compra autorizado. Confianza <strong>media-baja</strong>; modelo condicional <strong>screen-grade</strong>. El estudio y la decisión de no entrar al precio actual están completos; una valoración condicional no es certificación de valor justo ni aprobación de compra.</p>
+<p>Además, el precio está por debajo de EMA50 $58.68, así que falla el filtro intermedio obligatorio, aun con EMA20 $59.22 &gt; EMA50, precio &gt; EMA200 $45.23 y EMA200 creciente. QP u Opportunity no sustituyen esa condición. No se fija soporte, stop ni señal retrospectiva. <a href="https://stockanalysis.com/stocks/hpe/history/">S13: HPE cierre regular 2 noviembre 2026</a></p>
+<p><strong>Próxima revisión:</strong> resultados Q4 FY2026, llamada oficial 23 noviembre 2026 a las 17:00 ET (22:00 UTC), fuera de la semana excluida 2–6 noviembre. La convocatoria confirma la llamada, no una hora exacta de publicación del comunicado. No hay monitor automático implícito. <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/11/hpe-to-present-live-audio-webcast-of-fiscal-2026-fourth-quarter-earnings-conference-call.html">S8: HPE convocatoria oficial Q4FY2026, 2 noviembre 2026</a></p>
+<h2 id="qué-sostiene-y-qué-limita-la-tesis">1. Qué sostiene y qué limita la tesis</h2>
+<p>HPE combina redes, servidores, almacenamiento y financiación de equipos. Networking amplía la mezcla de servicios/software y la exposición a AI, pero la demanda de hardware depende de presupuestos empresariales, disponibilidad de componentes y ciclos de inversión. La consolidación de Juniper desde julio de 2025 impide llamar orgánico a todo el crecimiento reportado. Cloud &amp; AI ahora incluye Financial Services; los segmentos históricos se recastaron en FY2026. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm">S1: SEC HPE FY2025 Form 10-K, FY2023–2025; notes 2, 4, 8, 13, 14</a> <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a></p>
+<p>El crecimiento nominal de servidores tampoco equivale a unidades: el 10-Q atribuye buena parte del avance a precios medios, memoria y SSD. Networking Q3 creció cerca de 75% reportado, pero aproximadamente 10% sobre la serie combinada gerencial. Esa serie no es pro forma auditada conforme a Article 11. Los pedidos y backlog muestran demanda, pero siguen sujetos a cancelación, rebooking y cumplimiento. No convertimos el backlog entero en ingresos ni margen asegurados. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a> <a href="https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2026/q3-2026-earnings-presentation.pdf">S4: HPE Q3FY2026 presentation, slides 7–12, 20–26, 32</a></p>
+<p>La guía posterior de Networking y la oportunidad comercial apoyan continuar el seguimiento. El coste de hacerlo incluye inventario, compromisos de suministro, integración y posible financiación del cliente. Ese capital no desaparece por denominar AI a la venta. La recuperación de margen exige confirmación de caja después de esos usos.</p>
+<p><strong>Causa de la caída:</strong> el cierre baja 15.9% frente a $60.84 del expediente del 27 octubre y 30.4% frente al máximo diario de 252 sesiones $73.56. DELL y CSCO también cayeron el 2 noviembre. Es compatible con una revaloración sectorial, pero no prueba causalidad. No se ha verificado una noticia de HPE que explique toda la bajada ni un nuevo recorte de guidance; la ausencia de una noticia encontrada no demuestra ausencia de deterioro. <a href="https://stockanalysis.com/stocks/hpe/history/">S13: HPE cierre regular 2 noviembre 2026</a> <a href="https://stockanalysis.com/stocks/dell/history/">S14: DELL cierre regular 2 noviembre 2026</a> <a href="https://stockanalysis.com/stocks/csco/history/">S15: CSCO cierre regular 2 noviembre 2026</a></p>
+<h2 id="tres-ejercicios-cuatro-trimestres-y-dos-ttm">2. Tres ejercicios, cuatro trimestres y dos TTM</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>Margen bruto</th>
+<th>EBIT GAAP</th>
+<th>Margen EBIT</th>
+<th>Neto HPE</th>
+<th>EPS dil.</th>
+<th>CFO</th>
+<th>Capex bruto</th>
+<th>Ventas PP&amp;E</th>
+<th>FCF neto</th>
+<th>SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td>29,135</td>
+<td>35.1%</td>
+<td>2,089</td>
+<td>7.2%</td>
+<td>2,025</td>
+<td>1.54</td>
+<td>4,428</td>
+<td>2,828</td>
+<td>602</td>
+<td>2,202</td>
+<td>428</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td>30,127</td>
+<td>32.8%</td>
+<td>2,190</td>
+<td>7.3%</td>
+<td>2,579</td>
+<td>1.93</td>
+<td>4,341</td>
+<td>2,367</td>
+<td>370</td>
+<td>2,344</td>
+<td>430</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td>34,296</td>
+<td>30.3%</td>
+<td>-437</td>
+<td>-1.3%</td>
+<td>57</td>
+<td>-0.04</td>
+<td>2,919</td>
+<td>2,292</td>
+<td>380</td>
+<td>1,007</td>
+<td>643</td>
+</tr>
+<tr class="even">
+<td>Q4 FY25</td>
+<td>9,679</td>
+<td>33.5%</td>
+<td>-8</td>
+<td>-0.1%</td>
+<td>175</td>
+<td>0.11</td>
+<td>2,465</td>
+<td>641</td>
+<td>126</td>
+<td>1,950</td>
+<td>196</td>
+</tr>
+<tr class="odd">
+<td>Q1 FY26</td>
+<td>9,301</td>
+<td>35.9%</td>
+<td>470</td>
+<td>5.1%</td>
+<td>452</td>
+<td>0.31</td>
+<td>1,178</td>
+<td>569</td>
+<td>66</td>
+<td>675</td>
+<td>216</td>
+</tr>
+<tr class="even">
+<td>Q2 FY26</td>
+<td>10,678</td>
+<td>36.5%</td>
+<td>747</td>
+<td>7.0%</td>
+<td>624</td>
+<td>0.44</td>
+<td>1,410</td>
+<td>583</td>
+<td>130</td>
+<td>957</td>
+<td>218</td>
+</tr>
+<tr class="odd">
+<td>Q3 FY26</td>
+<td>12,213</td>
+<td>40.1%</td>
+<td>1,393</td>
+<td>11.4%</td>
+<td>1,540</td>
+<td>1.06</td>
+<td>1,641</td>
+<td>745</td>
+<td>92</td>
+<td>988</td>
+<td>165</td>
+</tr>
+<tr class="even">
+<td>TTM2025</td>
+<td>33,075</td>
+<td>29.5%</td>
+<td>264</td>
+<td>0.8%</td>
+<td>1,248</td>
+<td>ver nota</td>
+<td>2,484</td>
+<td>2,259</td>
+<td>344</td>
+<td>569</td>
+<td>536</td>
+</tr>
+<tr class="odd">
+<td>TTM2026</td>
+<td>41,871</td>
+<td>36.7%</td>
+<td>2,602</td>
+<td>6.2%</td>
+<td>2,791</td>
+<td>ver nota</td>
+<td>6,694</td>
+<td>2,538</td>
+<td>414</td>
+<td>4,570</td>
+<td>795</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuentes de cifras publicadas y derivaciones: <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm">S1: SEC HPE FY2025 Form 10-K, FY2023–2025; notes 2, 4, 8, 13, 14</a> <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a> <a href="https://www.hpe.com/content/dam/hpe/newsroom/2026/09/HPE_Q3FY26_earnings_financial_tables.pdf">S3: HPE Q3FY2026 financial tables, 2 septiembre 2026</a> <a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0001645590.json">S9: SEC Companyfacts HPE, extracto reproducible con fechas y accesiones</a> <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559024000119/hpe-20240731.htm">S17: SEC HPE Q3FY2024 10-Q, comparación anterior</a></p>
+<p>FCF neto en esta tabla = CFO − inversión PP&amp;E y software + ventas de activos productivos. No incluye el ajuste de divisas usado por HPE y no es FCFF. Q4 y flujos trimestrales se obtienen por diferencias de acumulados, con fuentes y fórmulas conservadas en financials.json. TTM2026 termina 31 julio 2026; TTM2025 termina 31 julio 2025. No se mezclan con FY2026 estimado, que ya acabó en octubre pero todavía no ha sido publicado.</p>
+<p>EPS: Q4 FY25 0.11, Q1 FY26 0.31, Q2 0.44 y Q3 1.06; su suma descriptiva es <strong>1.92</strong>, frente a <strong>0.82</strong> en los cuatro trimestres anteriores (0.99 + 0.44 − 0.82 + 0.21). Sumar EPS trimestrales no genera un EPS anual GAAP exacto: cambian las acciones y la prueba antidilución de las preferentes. FY2025 tuvo neto HPE positivo 57 pero EPS común −0.04 por los dividendos preferentes. <a href="https://www.hpe.com/content/dam/hpe/newsroom/2026/09/HPE_Q3FY26_earnings_financial_tables.pdf">S3: HPE Q3FY2026 financial tables, 2 septiembre 2026</a> <a href="https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2026/q3-2026-earnings-presentation.pdf">S4: HPE Q3FY2026 presentation, slides 7–12, 20–26, 32</a> <a href="https://www.hpe.com/us/en/newsroom/press-release/2024/12/hewlett-packard-enterprise-reports-fiscal-2024-fourth-quarter-results.html">S16: HPE Q4FY2024 resultados, EPS diluido 0.99</a></p>
+<p>La venta TTM crece 26.6%; el margen bruto pasa de 29.5% a 36.7% y el operativo de 0.8% a 6.2%. No interpretar el crecimiento GAAP del EBIT desde 264 a 2,602 como una tasa sostenible. Quitando <strong>solo impairments</strong> 1,361 del TTM anterior y 260 del actual, y reteniendo SBC, amortización y cargos de integración, el EBIT comparable indicativo pasa de <strong>1,625 a 2,862 (+76.1%)</strong>. La base todavía mezcla perímetros; no es crecimiento orgánico. Una normalización más permisiva de todos los cargos de adquisición/reducción daría 2,302 a 3,713 (+61.3%), pero no se adopta como beneficio gratuito porque esos desembolsos pueden repetirse. <a href="https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2026/q3-2026-earnings-presentation.pdf">S4: HPE Q3FY2026 presentation, slides 7–12, 20–26, 32</a></p>
+<p>La prioridad de beneficio sostenible se cumple como señal de recuperación para investigar, no como aprobación automática: ni los porcentajes desde una base deprimida ni el BPA impulsado por adquisiciones prueban por sí mismos crecimiento de igual calidad.</p>
+<h2 id="caja-impuestos-reinversión-y-estacionalidad">3. Caja, impuestos, reinversión y estacionalidad</h2>
+<p>Puente TTM2026: CFO <strong>6,694</strong> − capex bruto/software <strong>2,538</strong> + ventas de PP&amp;E <strong>414</strong> = FCF neto <strong>4,570</strong>; menos SBC <strong>795</strong> = <strong>3,775</strong> de aproximación económica para el accionista, todavía después de financiación y antes de normalizar. FCF bruto sin ventas de activos: <strong>4,156</strong>. HPE informa FCF con divisas: los cuatro trimestres 1,920 + 708 + 915 + 958 = <strong>4,501</strong>, 69 menos que nuestra definición. El FX no es una mejora operativa permanente. <a href="https://www.hpe.com/content/dam/hpe/newsroom/2026/09/HPE_Q3FY26_earnings_financial_tables.pdf">S3: HPE Q3FY2026 financial tables, 2 septiembre 2026</a> <a href="https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2026/q3-2026-earnings-presentation.pdf">S4: HPE Q3FY2026 presentation, slides 7–12, 20–26, 32</a></p>
+<p>FCF neto por acción, usando un denominador comparable de 1,449 para ambos TTM, pasa de <strong>$0.39 a $3.15</strong>; tras SBC, de $0.02 a $2.61. Es una comparación económica fija, no el FCF por acción GAAP ni una promesa. La conversión FCF neto/neto HPE es 164% actual y 46% anterior; los beneficios extraordinarios, amortizaciones y circulante hacen que no baste esa ratio.</p>
+<p>Los nueve meses de 2026 presentan salida por inventario 5,847, financiada casi en paralelo por aumento de proveedores 5,870. Con cuentas comerciales por cobrar −997, financiación a clientes −224 y otros −455, esas cinco líneas usan <strong>1,653</strong>, frente a <strong>3,430</strong> usados en el periodo anterior: mejora de 1,777. No es caja recurrente que pueda crecer sin límite. DOS 145 días y DPO 169 son especialmente elevados; una normalización de pagos antes de vender inventario dañaría la caja. Se modela ΔWC sobre crecimiento y 300 adicionales de normalización inicial, no se anualiza Q4. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a></p>
+<p>El factoring comercial de nueve meses fue 3,800 y había 9,701 de receivables de financiación netos. Esto no justifica sumar créditos como caja ni restarlos además de la retención de capital de FS. La política de capex incluye software; las ventas de equipos arrendados tienen una función normal dentro de FS, no son todas extraordinarias ni enteramente caja industrial. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a></p>
+<p>Impuestos pagados FY2023/24/25: 307/248/425; la tasa GAAP de nueve meses 2026 es 9.6% y Q4 FY25 tuvo un beneficio fiscal de 436. H3C aporta una ganancia de 444 en Q3 y 1,357 de cobro en inversión, no FCFF perpetuo. El modelo usa <strong>21% de impuesto operativo en caja</strong> y no capitaliza ganancias H3C ni dividendos de esa participación ya vendida. No hay desglose suficiente para afirmar un impuesto pagado trimestral exacto de 2026; no se rellena con cero. Sensibilidad al 18%/24%: $41.67/$38.31. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm">S1: SEC HPE FY2025 Form 10-K, FY2023–2025; notes 2, 4, 8, 13, 14</a> <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a> <a href="https://www.hpe.com/content/dam/hpe/newsroom/2026/09/HPE_Q3FY26_earnings_financial_tables.pdf">S3: HPE Q3FY2026 financial tables, 2 septiembre 2026</a></p>
+<h2 id="deuda-industrial-y-financiación-de-clientes-una-sola-contabilización">4. Deuda industrial y financiación de clientes: una sola contabilización</h2>
+<p><strong>Corrección de A107:</strong> 2,137 era solo el tramo corriente de deuda a largo plazo. Faltaban commercial paper 622 y bancos/otros 142. Deuda corriente correcta 2,901; total <strong>20,244</strong>, no 19,480. Con caja 6,216, deuda neta consolidada <strong>14,028</strong>. La presentación asigna <strong>10,800 de deuda neta a FS</strong>, dejando <strong>3,228 industrial</strong>. El dato FS es una asignación gerencial, incluye relaciones intercompañía y no describe dos entidades completamente aisladas del riesgo. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a> <a href="https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2026/q3-2026-earnings-presentation.pdf">S4: HPE Q3FY2026 presentation, slides 7–12, 20–26, 32</a></p>
+<p>FS FY2025 tenía ingresos 3,504 y resultado operativo <strong>361 después del coste de financiación</strong>; años anteriores 316 y 281. Sus activos de cartera netos gerenciales eran 13,181, deuda asignada 11,600, equity aproximado 1,700 y caja 727; son cifras históricas, no balances actuales auditados de una financiera separada. En julio 2026, los créditos consolidados de financiación son 9,908 brutos, reserva 207 y netos 9,701; no son todo el patrimonio de FS, pues también hay equipos en leasing y ajustes intercompañía. Los activos comerciales no son caja excedentaria. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm">S1: SEC HPE FY2025 Form 10-K, FY2023–2025; notes 2, 4, 8, 13, 14</a> <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a></p>
+<p>Antes de calcular se adopta la excepción del plan para la financiera: <strong>FCFF industrial + valor de equity de FS</strong>. Su financiación se mantiene en su beneficio y la retención necesaria; no se vuelve a restar deuda FS ni se suman sus créditos a valor nominal. FS FY2027 neto base 350 deriva de un supuesto de beneficio después de financiación y antes de impuestos <strong>443 × 79%</strong>, frente a EBIT 361 en FY2025. El EBIT histórico 361 después de financiación equivaldría a 285 de neto aplicando 21% de impuesto; la referencia gerencial de ROE superior al 20% sobre equity aproximado 1,700 respalda un neto cercano a 340. El neto 350 sigue siendo una estimación de recuperación, no una cifra publicada; NI 350/equity histórico 1,700 ≈20.6%. Modelamos ROE 20%, crecimiento 3%, retención 15% y distribución económica 297.5, Ke 12%. En terminal g 2.5%, retención 12.5%. Valor de equity FS 3,251. Con NI 280–440 el valor total HPE cambia aproximadamente de 39.54 a 40.57, aislando esa hipótesis.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Puente a equity, MUSD</th>
+<th>Importe</th>
+<th>Tratamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deuda GAAP 31 julio</td>
+<td>20,244</td>
+<td>2,901 corriente + 17,343 largo plazo</td>
+</tr>
+<tr class="even">
+<td>Menos caja no restringida</td>
+<td>6,216</td>
+<td>No se añade después otra vez</td>
+</tr>
+<tr class="odd">
+<td>Menos deuda neta FS asignada</td>
+<td>10,800</td>
+<td>FS se valora como equity, con su financiación dentro</td>
+</tr>
+<tr class="even">
+<td>Deuda neta industrial 31 julio</td>
+<td>3,228</td>
+<td>Dato derivado de split gerencial redondeado</td>
+</tr>
+<tr class="odd">
+<td>Menos retención estimada Q4</td>
+<td>263.25</td>
+<td>Hipótesis, no balance reportado</td>
+</tr>
+<tr class="even">
+<td>Reserva de caja operativa</td>
+<td>1,500</td>
+<td>Evita tratar toda la caja operativa como excedentaria</td>
+</tr>
+<tr class="odd">
+<td>Pensiones/posretiro deficitarios</td>
+<td>933</td>
+<td>Sin sumar activos restringidos de planes superavitarios</td>
+</tr>
+<tr class="even">
+<td>Pasivos fiscales inciertos</td>
+<td>412</td>
+<td>Importe registrado; no duplicar en impuesto operativo</td>
+</tr>
+<tr class="odd">
+<td>Intereses minoritarios</td>
+<td>62</td>
+<td>Participaciones ajenas</td>
+</tr>
+<tr class="even">
+<td>Dividendos preferentes restantes, PV</td>
+<td>109</td>
+<td>No se resta también principal convertible</td>
+</tr>
+<tr class="odd">
+<td>Total derechos netos a restar</td>
+<td>5,980.75</td>
+<td>Una sola deducción</td>
+</tr>
+<tr class="even">
+<td>Acciones diluidas de valoración</td>
+<td>1,453.156</td>
+<td>Proxy 1,449 + reserva warrants 4.156</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Fecha del balance:</strong> no existe todavía cierre reportado de octubre. Aproximamos Q4 FCF 1,169 = mínimo anual 3,750 − YTD2,581. Si se devuelve exactamente el mínimo 75% anunciado a comunes y se pagan 29 a preferentes, quedarían 263.25. Es una hipótesis de retención, no confirmación de cobro o amortización de deuda. Se aplica a deuda neta industrial, sin otorgar reducción gratuita al número de acciones por recompras. No reconocer esa retención baja el central unos $0.18. Al cambiar Q4 se debe rehacer el puente. Se valora al 2 noviembre con FY2027 como primer año y se desprecia únicamente la diferencia de dos días desde el inicio fiscal. <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-reports-fiscal-2026-third-quarter-results.html">S5: HPE Q3FY2026 results and FY2027 framework, 2 septiembre</a></p>
+<p>Las obligaciones de pensiones/posretiro usadas son un proxy FY2025 <strong>bruto de planes deficitarios</strong>, no un déficit consolidado: hay superávits inaccesibles en otros planes. No se suma su activo 2,074. Las finance leases 31 de FY2025 ya están en deuda. Los alquileres operativos permanecen en costes, por lo que no se resta adicionalmente su pasivo 1,712. Los pasivos fiscales 412 se tratan aparte del impuesto ordinario futuro; no se infla la cifra con todas las diferencias inciertas brutas. Estas decisiones conservadoras no sustituyen verificar saldos octubre. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm">S1: SEC HPE FY2025 Form 10-K, FY2023–2025; notes 2, 4, 8, 13, 14</a> <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a></p>
+<p>Liquidez: en julio había 6,531 de recursos de financiación disponibles, aunque parte no comprometida. El préstamo de adquisición 2,000 se amortizó en marzo/mayo 2026. El calendario anual de octubre 2025 era 3,804/3,136/3,778/2,376/404/8,250 para FY26/27/28/29/30/posterior; no se presenta como vigente sin ajuste: FY26 ya tuvo pagos y nuevas emisiones, y el préstamo FY28 ya se pagó. La deuda corriente actual 2,137 de vencimientos largos incluye 881 de ABS. La financiación no parece frágil hoy, pero el desapalancamiento depende de caja, no solo de EBITDA ajustado. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm">S1: SEC HPE FY2025 Form 10-K, FY2023–2025; notes 2, 4, 8, 13, 14</a> <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a></p>
+<p>Compromisos de compra 30,400, incluidos 11,600 para FY2027, son un riesgo operativo, no otra resta íntegra de deuda: el inventario y sus costes futuros están en el modelo. Si los pedidos no se convierten, sí habría pérdidas/obsolescencia y caja peor que la base. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a></p>
+<h2 id="juniper-sbc-y-propiedad-diluida">5. Juniper, SBC y propiedad diluida</h2>
+<p>Juniper cerró 2 jul 2025. Purchase consideration 13,625; deuda asumida 1,232 y cash acquisition neta 12,278 ya pasan por estados y financiación. <strong>No se resta de nuevo el precio del negocio en el DCF</strong> ni se suma su crecimiento sin financiarlo. FY2025 pro forma publicado: ventas 38,085 y neto 108, frente a FY2024 pro forma 35,201/neto 1,196. La amortización, costes de cierre y distinto calendario explican parte de las diferencias; no existe una serie de caja pro forma plenamente comparable que haga irrelevante la integración. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm">S1: SEC HPE FY2025 Form 10-K, FY2023–2025; notes 2, 4, 8, 13, 14</a></p>
+<p>En septiembre 30 se elevó el objetivo de ahorro anualizado FY2028 a <strong>800</strong>, desde 600. Ese dato ya existía el 27 oct: se incorpora correctamente ahora, no se vende como noticia posterior. Los márgenes de Networking 26–27% en los primeros años ya incorporan ejecución parcial; <strong>no se añaden 800 más como una línea independiente de caja</strong>. Se reservan costes 250/200/150/100/100 en los cinco años y un coste estructural 0.2% de ventas después. Ventas, margen e integración están ligados. El plan de suministro y sistemas aún tiene hitos en 2027–28; «Partner Day One» del 1 noviembre era una fecha planeada, no se declara completado sin confirmación. <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-to-outline-networking-priorities-for-long-term-value-creation.html">S6: HPE Networking Investor Day update, 30 septiembre 2026</a> <a href="https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/hpe-networking-investor-day-transcript-09-30-2026.pdf">S7: HPE Networking Investor Day transcript, 30 septiembre 2026</a></p>
+<p>SBC TTM795 frente 536; año 2027 modelado 997 en el negocio industrial (2% ventas), dentro de EBIT, nunca add-back de FCFF. La medida 14.2% non-GAAP HPE no equivale al margen económico después de SBC. La base de acciones 1,449 incluye 1,336 básicas ponderadas +37 planes de empleados +76 conversión preferente. Las acciones básicas reales a 27 agosto son 1,327.465; por eso 1,449 no es una cuenta exacta de propiedad actual. Conservamos ese proxy prudente y reservamos 4.156 por el warrant Oracle de precio de ejercicio 0.01, sujeto a hitos. Si ya estuviera incluido en otra cifra diluida, habría que eliminar la reserva, cuyo impacto es apenas unos $0.11. No suponemos recompras futuras gratuitas. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm">S2: SEC HPE Q3FY2026 Form 10-Q, 31 julio 2026; filed 3 septiembre</a> <a href="https://www.hpe.com/content/dam/hpe/newsroom/2026/09/HPE_Q3FY26_earnings_financial_tables.pdf">S3: HPE Q3FY2026 financial tables, 2 septiembre 2026</a></p>
+<p>La emisión preferente es 1,500, con conversión prevista 1 septiembre 2027 entre 76.056 y 93.168 millones de acciones, sujeto a ajustes. Ya se recoge conversión mínima aproximada en el denominador; no se resta también 1,500. Sí se reservan 109 de dividendos restantes descontados. En una caída extrema por debajo de los niveles de conversión, el aumento al máximo diluiría algo más; los escenarios no son límites de pérdida. <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm">S1: SEC HPE FY2025 Form 10-K, FY2023–2025; notes 2, 4, 8, 13, 14</a></p>
+<h2 id="fcff-a-diez-años-datos-guía-e-hipótesis-separados">6. FCFF a diez años: datos, guía e hipótesis separados</h2>
+<p>Ancla FY2026E: ventas 32,192 publicadas 9 M +14,350 punto medio de guía Q4 =46,542. FS 3553 es 2663 publicado 9 M +890 estimado Q4. Networking 11,340 usa 6,536 FY25 recast ×1.735, punto medio de crecimiento guía. El resto industrial y corporativo concilia al total. No se etiqueta FY2026E como real. <a href="https://www.hpe.com/content/dam/hpe/newsroom/2026/09/HPE_Q3FY26_earnings_financial_tables.pdf">S3: HPE Q3FY2026 financial tables, 2 septiembre 2026</a> <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-reports-fiscal-2026-third-quarter-results.html">S5: HPE Q3FY2026 results and FY2027 framework, 2 septiembre</a></p>
+<p>Primeros cinco años, hipótesis centrales: - Networking: crecimiento 20/18/16/10/8%; margen segmental 26/27/27/26.5/26%. La senda FY26–29 coincide aproximadamente con crecimiento high teens comunicado. - Cloud industrial, excluida FS: crecimiento 15/10/8/6/5%; margen 12.2/12.5/12.5/12/11.5%. Otros 1,100 iniciales y margen −10%. No usamos el margen récord de un trimestre como permanente. - Corporativo 1.1% y SBC 2% de ventas industriales; integración explícita. Base FY27 implica un margen HPE antes de SBC/cargos de alrededor 14.2%, dentro del marco corporativo 14–15%, no un añadido mecánico al margen de Networking. - Capex industrial 2.2% de ventas, D&amp;A ordinaria 1.5%, ΔWC8% de ventas incrementales más 300 iniciales. Software está incluido; R&amp;D normal está dentro del margen. No se prevén adquisiciones futuras con ingresos gratuitos. - Amortización PPA 1,200/1,100/900/600/400 se conserva en EBIT y en D&amp;A; se agota durante transición. No se inventa un ahorro fiscal por amortización contable adquirida: impuesto de caja 21% sobre EBIT antes de esa amortización. Es una elección prudente y revisable, no afirmación de que ninguna deducción fiscal exista.</p>
+<p>Años 6–10: crecimiento de cada línea converge linealmente a 2.5%; margen Networking 24%, Cloud 10%; ROIC incremental de transición 25% a 15%. Reinversión neta = NOPAT económico × crecimiento/ROIC, y capex = D&amp;A ordinaria + reinversión − ΔWC. Con ello el capex sigue positivo y el terminal no recibe crecimiento gratuito. El cambio de método de reinversión en el sexto año eleva capex desde 2.2% a aproximadamente 3.3% de ventas y reduce FCFF pese a crecer las ventas. Es una normalización conservadora de la transición, no una caída operativa prevista. ROIC 15% es una hipótesis incremental sostenible superior al coste de capital, no el ROIC histórico de balance con goodwill.</p>
+<p>FCFF = EBIT − impuesto operativo en caja + D&amp;A − capex − ΔWC. El NOPAT del modelo equivale a EBIT después del impuesto de caja especificado, no simplemente EBIT×79% cuando la amortización PPA carece de escudo fiscal asumido. Al agotarse PPA las definiciones convergen.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>FY</th>
+<th>Ventas industriales</th>
+<th>EBIT*</th>
+<th>Impuesto caja</th>
+<th>D&amp;A</th>
+<th>Capex</th>
+<th>ΔWC</th>
+<th>FCFF</th>
+<th>FCFE FS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td>49,839</td>
+<td>4,719</td>
+<td>1,243</td>
+<td>1,948</td>
+<td>1,096</td>
+<td>848</td>
+<td>3,479</td>
+<td>298</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td>55,802</td>
+<td>6,026</td>
+<td>1,497</td>
+<td>1,937</td>
+<td>1,228</td>
+<td>477</td>
+<td>4,762</td>
+<td>306</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td>61,463</td>
+<td>7,181</td>
+<td>1,697</td>
+<td>1,822</td>
+<td>1,352</td>
+<td>453</td>
+<td>5,501</td>
+<td>316</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td>65,829</td>
+<td>7,888</td>
+<td>1,782</td>
+<td>1,587</td>
+<td>1,448</td>
+<td>349</td>
+<td>5,895</td>
+<td>325</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td>69,681</td>
+<td>8,325</td>
+<td>1,832</td>
+<td>1,445</td>
+<td>1,533</td>
+<td>308</td>
+<td>6,097</td>
+<td>335</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td>73,303</td>
+<td>8,763</td>
+<td>1,882</td>
+<td>1,300</td>
+<td>2,410</td>
+<td>290</td>
+<td>5,480</td>
+<td>347</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td>76,628</td>
+<td>9,169</td>
+<td>1,926</td>
+<td>1,149</td>
+<td>2,448</td>
+<td>266</td>
+<td>5,679</td>
+<td>358</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td>79,588</td>
+<td>9,297</td>
+<td>1,952</td>
+<td>1,194</td>
+<td>2,450</td>
+<td>237</td>
+<td>5,852</td>
+<td>370</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td>82,122</td>
+<td>9,342</td>
+<td>1,962</td>
+<td>1,232</td>
+<td>2,411</td>
+<td>203</td>
+<td>5,998</td>
+<td>382</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td>84,175</td>
+<td>9,298</td>
+<td>1,953</td>
+<td>1,263</td>
+<td>2,323</td>
+<td>164</td>
+<td>6,121</td>
+<td>394</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>EBIT después de SBC, integración y amortización PPA. Los importes posteriores a 2026 son estimaciones propias.</em></p>
+<p>Base FY27 FCFF industrial 3,479. Añadiendo caja distribuible FS 297.5 y la SBC 997, y restando aproximadamente 400 de interés industrial después de impuestos, el contraste aproximado con FCF corporativo es 4,374, frente al objetivo de al menos 5,000. La diferencia refleja nuestra carga fiscal y reinversión más prudentes; <strong>no es una conciliación contable exacta ni consenso</strong>. Es una razón por la que el valor no sube automáticamente por la guía. La política comercial, los impuestos y el capex pueden justificar una revisión posterior, si los datos la respaldan.</p>
+<p>WACC base 10.5%: referencia pública Treasury 10 Y 4.94% (30 octubre, último dato de la publicación H.15 consultada), beta normalizada propia 1.30, prima de equity 5%, Ke 11.44%; peso deuda industrial 15%, coste marginal de deuda 6%, impuesto 21%, WACC ≈10.44%, redondeado 10.5%. Beta, ERP, peso deuda y coste marginal son hipótesis, no feeds observados. No usamos deuda FS para abaratar artificialmente WACC industrial. Casos 11.5% adverso/9.5% favorable capturan escenarios de riesgo, no probabilidades. <a href="https://www.federalreserve.gov/releases/h15/">S10: Federal Reserve H.15, publicación 2 noviembre, observación 30 octubre 2026</a></p>
+<p>Terminal base: NOPAT 7,529, reinversión 1,255 =16.67% NOPAT, FCFF 6,274. Peso terminal industrial 47.5%. WACC&gt;g en todos los casos. Los flujos se descuentan a final de año; no se añade un valor de salida por múltiplo.</p>
+<h2 id="escenarios-sensibilidad-y-precio-implícito">7. Escenarios, sensibilidad y precio implícito</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>WACC / g / ROIC terminal</th>
+<th>FCFF FY27 / FY31</th>
+<th>EV industrial</th>
+<th>Valor equity FS</th>
+<th>Valor/acción</th>
+<th>vs precio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>adverse</td>
+<td>11.5% / 2.0% / 12.0%</td>
+<td>1,322 / 2,936</td>
+<td>27,260</td>
+<td>2,222</td>
+<td>$16.17</td>
+<td>-68.4%</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>10.5% / 2.5% / 15.0%</td>
+<td>3,479 / 6,097</td>
+<td>60,842</td>
+<td>3,251</td>
+<td>$39.99</td>
+<td>-21.9%</td>
+</tr>
+<tr class="odd">
+<td>favorable</td>
+<td>9.5% / 3.0% / 18.0%</td>
+<td>4,585 / 8,533</td>
+<td>103,894</td>
+<td>4,902</td>
+<td>$70.75</td>
+<td>38.2%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Adverso: desaceleración de pedidos, márgenes 22–23% redes/8.5–9.5% Cloud, más capex y normalización de proveedores. Favorable: redes 20%+ al inicio, mayor crecimiento Cloud y márgenes más altos, menor coste de capital. No son cotas de pérdida ni rangos con probabilidades. El precio actual cae entre base y favorable; no necesita literalmente el caso extremo entero, pero sí una combinación claramente mejor que la base central.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th>g 2.0%</th>
+<th>g 2.5%</th>
+<th>g 3.0%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9.5%</td>
+<td>$44.94</td>
+<td>$46.03</td>
+<td>$47.28</td>
+</tr>
+<tr class="even">
+<td>10.0%</td>
+<td>$41.93</td>
+<td>$42.81</td>
+<td>$43.79</td>
+</tr>
+<tr class="odd">
+<td>10.5%</td>
+<td>$39.29</td>
+<td>$39.99</td>
+<td>$40.78</td>
+</tr>
+<tr class="even">
+<td>11.0%</td>
+<td>$36.93</td>
+<td>$37.50</td>
+<td>$38.13</td>
+</tr>
+<tr class="odd">
+<td>11.5%</td>
+<td>$34.83</td>
+<td>$35.29</td>
+<td>$35.80</td>
+</tr>
+</tbody>
+</table></div>
+<p>El rango central $37–44 recoge WACC 10–11%, g 2–3%, manteniendo la senda operativa. La matriz amplia 9.5–11.5% va aproximadamente $35–47. No la mezclamos con $16–71 como si fuera una sola banda razonable. Sensibilidades específicas: margen de Networking −2 puntos →$37.57; ROIC terminal 12%/18% →$38.76/$40.84.</p>
+<p><strong>Inversa, exactamente el mismo modelo:</strong> 1. Manteniendo márgenes/tasas/reinversión base, elevar cada crecimiento inicial de Networking y Cloud <strong>5.36 puntos porcentuales</strong> y aplicar la misma transición produce $51.19. Ventas industriales FY2031≈88,028 frente 69,681 base; FCFF 2031≈7,441 frente 6,097. Redes FY27 necesitaría 25.36% y Cloud 20.36%. 2. Manteniendo ventas base, elevar márgenes de ambos segmentos <strong>3.00 puntos</strong> en toda la senda/terminal produce $51.19: margen económico agregado FY2031≈15.48% frente 12.54% base, FCFF ≈7,725. 3. Combinaciones crecimiento/margen parciales también sirven; están en calculations.json. No hay una única expectativa implícita y la inversa no es una segunda prueba independiente. Los pedidos y la integración permiten imaginar mejoras, pero no demuestran que esos márgenes puedan persistir hasta terminal.</p>
+<p>El descuento 20% se justifica por integración, capital circulante, financiación del cliente y escasa visibilidad de conversiones de caja. La tasa trata el coste/riesgo del capital; el margen adicional trata error de estimación. No se aplica para compensar datos esenciales ausentes ni para «aprobar» una compra. Incluso a $32 seguirían siendo necesarios actualización de datos y Stage 3.5.</p>
+<h2 id="comparables-e-historia-como-contraste-no-método-alternativo">8. Comparables e historia como contraste, no método alternativo</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Compañía</th>
+<th style="text-align: right;">Cierre 2 noviembre</th>
+<th>Ejercicio guía</th>
+<th style="text-align: right;">EPS GAAP guía central</th>
+<th style="text-align: right;">PER GAAP</th>
+<th style="text-align: right;">EPS ajustado guía central</th>
+<th style="text-align: right;">PER ajustado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HPE</td>
+<td style="text-align: right;">$51.19</td>
+<td>FY2026 octubre</td>
+<td style="text-align: right;">$2.98</td>
+<td style="text-align: right;">17.18 x</td>
+<td style="text-align: right;">$3.80</td>
+<td style="text-align: right;">13.47 x</td>
+</tr>
+<tr class="even">
+<td>DELL</td>
+<td style="text-align: right;">$392.78</td>
+<td>FY2027 enero</td>
+<td style="text-align: right;">$24.37</td>
+<td style="text-align: right;">16.12 x</td>
+<td style="text-align: right;">$25.50</td>
+<td style="text-align: right;">15.40 x</td>
+</tr>
+<tr class="odd">
+<td>CSCO</td>
+<td style="text-align: right;">$101.61</td>
+<td>FY2027 julio</td>
+<td style="text-align: right;">$4.03</td>
+<td style="text-align: right;">25.21 x</td>
+<td style="text-align: right;">$5.08</td>
+<td style="text-align: right;">20.00 x</td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-reports-fiscal-2026-third-quarter-results.html">S5: HPE Q3FY2026 results and FY2027 framework, 2 septiembre</a> <a href="https://investors.delltechnologies.com/sec-filings/all-sec-filings/content/0001571996-26-000039/exhibit991earnings8kq2fy27.htm">S11: DELL Q2FY2027 resultados y guía, 1 septiembre 2026</a> <a href="https://investor.cisco.com/news/news-details/2026/CISCO-REPORTS-FOURTH-QUARTER-AND-FISCAL-YEAR-2026-EARNINGS/default.aspx">S12: Cisco FY2026 resultados y guía FY2027, 12 agosto 2026</a> <a href="https://stockanalysis.com/stocks/dell/history/">S14: DELL cierre regular 2 noviembre 2026</a> <a href="https://stockanalysis.com/stocks/csco/history/">S15: CSCO cierre regular 2 noviembre 2026</a></p>
+<p>HPE FY2027 framework 16–20% sobre EPS ajustado FY26 central 3.80 implica 4.408–4.56, PER 11.23–11.61 x. No es guía completa de beneficios GAAP ni estimación de caja. DELL tiene mezcla de PCs/servidores y mayores tasas de crecimiento actuales; Cisco mayor margen/servicios y diferente cierre. Las exclusiones SBC/amortización/restructuring no son homogéneas. Por eso el descuento ajustado no demuestra infravaloración. El contraste GAAP de HPE con DELL es mucho menos favorable.</p>
+<p>A precio fijo actual, PER sobre EPS GAAP FY2023/24 sería 33.24 x/26.52 x y FY2025 no significativo; sobre suma EPS últimos cuatro trimestres 1.92 sería 26.66 x. Son diagnósticos de denominadores históricos al precio actual, <strong>no una serie histórica de múltiplos negociados</strong>. No se certifica esa serie porque los cambios Juniper/H3C y preferentes rompen comparabilidad. Esa limitación no altera el rechazo actual, pero sí impide presentar un «descuento histórico» validado.</p>
+<p>Capitalización plenamente diluida de valoración ≈74,386; sobre FCF neto TTM 4,570≈16.28 x, y sobre FCF tras SBC 3,775≈19.71 x. Utilizar EV/EBITDA consolidado mezclando financiación FS con EBITDA industrial daría una apariencia de precisión; no se usa como fundamento de aprobación.</p>
+<h2 id="conciliación-con-el-expediente-anterior">9. Conciliación con el expediente anterior</h2>
+<p>A107 se conserva intacto. Su FCFE de 10 años 4100 inicial, 10% crecimiento 5 años, transición 2.5%, Ke 11%, acciones 1449 reproduce <strong>$51.0164</strong>. Adverso $22.6611/favorable $87.3997 también reproducen. Cambiar únicamente el precio de 60.84 a 51.19 no modifica ese valor; la inversa vieja bajaría de 13.3% a aproximadamente 10.06%.</p>
+<p>Existe un problema de calendario: 4100 ya venía de guía FY2027 FCF 5000 menos SBC 900, y luego se multiplicaba por 1.10 en el primer año. Si 4100 es la caja FY2027 del primer año, corregir solo esa anticipación da <strong>$46.3786</strong>, −$4.6379. No se corrige reescribiendo la historia; se publica este diagnóstico.</p>
+<p>Puente controlado, con la misma información financiera disponible al 27 octubre: - $51.0164 antiguo reproducido. - $46.3786 tras corregir solo la ubicación temporal de 4100. - $42.0047 al usar la nueva senda industrial/FS antes de derechos, manteniendo 11% común y 1449 acciones. Aquí cambian conjuntamente presupuesto operativo, impuestos, reinversión y separación financiera; no es un «efecto puro del método». - $37.8772 tras derechos netos 5,980.75 al mismo descuento y acciones. - $40.1049 tras las tasas diferenciadas 10.5% industrial/12% FS. - <strong>$39.9901</strong> con reserva incremental de warrants y 1,453.156 acciones.</p>
+<p>El antiguo FCFE no conserva un presupuesto industrial y una política de deuda que permitan aislar causalmente método de hipótesis. <strong>No se afirma haber identificado un efecto puro FCFF.</strong> Sí se reproducen el modelo antiguo, el error temporal, los derechos financieros y cada cálculo nuevo. La omisión de 764 de deuda era un error de fuentes, aunque no afectaba aritméticamente al viejo FCFE que no restaba deuda. En el nuevo FCFF omitirla inflaría el valor unos $0.53.</p>
+<p>No hay un nuevo resultado financiero entre 27 octubre y 2 noviembre que cause la reducción. Investor Day 30 septiembre ya existía; incorporarlo es subsanar cobertura incompleta. La única nueva confirmación temporal utilizada es la fecha de resultados y el nuevo precio/técnico. La reducción procede principalmente de disciplina de caja/reinversión y conciliación, no de una guía empresarial recortada. La versión nueva sustituye la referencia de revisión, <strong>no activa una venta por cambio de método ni anula stops válidos</strong>.</p>
+<h2 id="qué-tendría-que-cambiar-y-controles-antes-de-cualquier-entrada">10. Qué tendría que cambiar y controles antes de cualquier entrada</h2>
+<ul>
+<li>Confirmar FY2026 y guía FY2027 completa el 23 noviembre: margen después de SBC, cash taxes, inventario/proveedores y reinversión necesaria. Una guía de FCF≥5,000 acompañada de alta conversión sin estirar proveedores permitiría reconsiderar la normalización.</li>
+<li>Evidencia de Networking con crecimiento porcentual alto de dos dígitos (high teens) con rentabilidad y servicios, y ahorro real de integración sin duplicarlo en márgenes. Costes y procesos de 2027–28 deben seguir contabilizados.</li>
+<li>Actualizar deuda/caja de octubre, situación FS y denominador después de recompras/conversión. No elevar valor por recompras sin restar su caja.</li>
+<li>Invalidación empresarial: recorte relevante de demanda/margen, cartera AI no cobrable, devolución de inventario/obsolescencia, inversión crece sin retorno, problemas contables o financiación frágil. Un cambio de precio por sí solo no cumple estas condiciones.</li>
+<li>Invalidación de nuestra prudencia: cash taxes sosteniblemente inferiores y intensidad de capital menor demostrados, con mejores márgenes por varios periodos. La valoración se puede elevar por esa evidencia.</li>
+<li>Antes de Stage 3.5: precio&gt;EMA50 y demás condiciones del plan, señal numérica previa, soporte/stop válidos, patrimonio/riesgo/posiciones verificados. <strong>max_buy_price=null; execution_approved=false; authorized_shares=0.</strong></li>
+</ul>
+<p>No se solicita una decisión de cartera a partir de este expediente. Las hipótesis son para evaluar la lista de seguimiento del plan, no asesoramiento personalizado sobre capital real.</p>
+<h2 id="fuentes-y-reproducción">Fuentes y reproducción</h2>
+<p>Informe reproducible con extract_financials.py → financials.json/CSV; model.py → calculations.json/model_inputs.json/forecast.csv; build_dossier.py → informe/registro. Los archivos de fuente originales y extractos se conservan en raw; manifest.json incluye hashes SHA256. Una captura parcial de web se identifica como tal y no se presenta como PDF íntegro. Se contrastaron filings SEC y tablas IR; el PDF del deck fue accesible en consulta web pero no descargable directamente.</p>
+<p>Los escenarios, WACC, ROIC, retenciones, reservas de caja, beneficio neto de FS y ajustes Q4 son estimaciones propias expresamente etiquetadas. No se usan cifras de consenso pagado ni se afirma cobertura de un proveedor de mercado no verificado. La revisión independiente y sus límites se conservan aparte.</p>
+<h2 id="technical-appendix-november-2-regular-close">Technical appendix · November 2 regular close</h2>
+<p>HPE: technical review as of November 2, 2026 regular close. Close 51.19; EMA20 59.2227; EMA50 58.6780; EMA200 45.2297. Mandatory intermediate gate passes: False. Price is below EMA50. Long-trend checks: {“price_above_EMA200”: true, “EMA50_above_EMA200”: true, “EMA200_rising_20sessions”: true}. Latest raw daily close is null; same-response regularMarketPrice/time supplies the November 2 close, independently matched to StockAnalysis regular close, never after-hours. Raw response remains preserved. Not in November 2 scanner. Explicit waitlist refresh authorized independently. No support, entry signal, stop, position sizing or trade is approved.</p>
+<p>Full retained technical metrics (not entry approval):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;last&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;date&quot;</span><span class="fu">:</span> <span class="st">&quot;2026-11-02&quot;</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;open&quot;</span><span class="fu">:</span> <span class="fl">55.5</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;high&quot;</span><span class="fu">:</span> <span class="fl">55.73</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;low&quot;</span><span class="fu">:</span> <span class="fl">50.83</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;close&quot;</span><span class="fu">:</span> <span class="fl">51.19</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;volume&quot;</span><span class="fu">:</span> <span class="dv">16427061</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;observations&quot;</span><span class="fu">:</span> <span class="dv">1254</span><span class="fu">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;first_date&quot;</span><span class="fu">:</span> <span class="st">&quot;2021-11-03&quot;</span><span class="fu">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;EMA20&quot;</span><span class="fu">:</span> <span class="fl">59.22272269770961</span><span class="fu">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;EMA50&quot;</span><span class="fu">:</span> <span class="fl">58.67796858446953</span><span class="fu">,</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;EMA200&quot;</span><span class="fu">:</span> <span class="fl">45.22973557757332</span><span class="fu">,</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;EMA200_20ago&quot;</span><span class="fu">:</span> <span class="fl">41.692052404761306</span><span class="fu">,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;EMA50_10ago&quot;</span><span class="fu">:</span> <span class="fl">59.47239536057885</span><span class="fu">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;ATR14_Wilder&quot;</span><span class="fu">:</span> <span class="fl">3.6482824520305894</span><span class="fu">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;avgvol20&quot;</span><span class="fu">:</span> <span class="fl">17944553.05</span><span class="fu">,</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;high252&quot;</span><span class="fu">:</span> <span class="fl">73.56</span><span class="fu">,</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;pullback_pct&quot;</span><span class="fu">:</span> <span class="fl">30.410549211528004</span><span class="fu">,</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;intermediate_pass&quot;</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;long_trend_checks&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;price_above_EMA200&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;EMA50_above_EMA200&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;EMA200_rising_20sessions&quot;</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;source&quot;</span><span class="fu">:</span> <span class="st">&quot;https://query2.finance.yahoo.com/v8/finance/chart/HPE?range=5y&amp;interval=1d&quot;</span><span class="fu">,</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;method&quot;</span><span class="fu">:</span> <span class="st">&quot;Split-adjusted OHLC close, not dividend-adjusted close; EMA seeded first close over five years of observations; Wilder ATR14 seed mean initial14 TR. No approved support/stop inferred.&quot;</span><span class="fu">,</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;latest_close_reconstruction&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;raw_daily_close_null&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;used&quot;</span><span class="fu">:</span> <span class="st">&quot;same-response metadata regularMarketPrice at regularMarketTime; separately matched StockAnalysis regular close&quot;</span><span class="fu">,</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;verification_url&quot;</span><span class="fu">:</span> <span class="st">&quot;https://stockanalysis.com/stocks/hpe/history/&quot;</span><span class="fu">,</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;not_after_hours&quot;</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p><a href="https://query2.finance.yahoo.com/v8/finance/chart/HPE?range=5y&amp;interval=1d">Daily-price source</a> · <a href="https://stockanalysis.com/stocks/hpe/history/">Independent regular-close verification</a></p>
+</div></section><footer class="footer"><p>Research published 3 November 2026 UTC. Prices refer to the 2 November regular-session close. These are previously watched companies, not November 2 scanner-qualified selections. Conditional model outputs are not certified fair values, approved buy ceilings or orders. No new purchase, stop or position size is authorized.</p><p>Public sources are linked in each dossier. Supporting filenames identify the research audit trail; private research archives are not hosted here.</p></footer></main></body></html>
