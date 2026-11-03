@@ -589,7 +589,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 
 <div id="drawer-root"></div>
 <div id="calc-root"></div>
-<script src="data/manifest.js"></script>
+<script src="data/manifest.js?v=20261102"></script>
 <script src="data/names.js"></script>
 <script src="data/plan.js"></script>
 
@@ -2243,7 +2243,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     if (S.libState !== "idle") return;
     S.libState = "loading";
     function done() { if (S.view === "biblioteca" || S.view === "inicio") render(); }
-    loadScript("data/lib.js").then(function () { return loadScript("data/lib-nov2.js"); }).then(function () { S.lib = (window.FP_LIB || {}).reports || []; S.libState = "ok"; done(); }, function () { S.libState = "fail"; done(); });
+    loadScript("data/lib.js").then(function () { return loadScript("data/lib-nov2.js?v=140f2942"); }).then(function () { S.lib = (window.FP_LIB || {}).reports || []; S.libState = "ok"; done(); }, function () { S.libState = "fail"; done(); });
   }
   /* start downloading the library a moment after the page is ready, so the tab opens instantly */
   function prefetchLib() { setTimeout(function () { (window.requestIdleCallback || function (f) { f(); })(function () { ensureLib(); }); }, 1200); }
@@ -2663,7 +2663,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     document.getElementById("refresh").hidden = false;
     var foot = document.querySelector("footer .wrap"); if (foot) { var sn = document.createElement("div"); sn.setAttribute("data-i18n", "snapNote"); sn.style.marginTop = "6px"; foot.parentNode.appendChild(sn); sn.className = "wrap"; }
     var failed = [];
-    MF.files.reduce(function (pr, f) { return pr.then(function () { return loadScript(f).catch(function () { failed.push(f); }); }); }, Promise.resolve()).then(function () {
+    MF.files.reduce(function (pr, f) { return pr.then(function () { return loadScript(f + "?v=" + encodeURIComponent(MF.generated)).catch(function () { failed.push(f); }); }); }, Promise.resolve()).then(function () {
       S.loadFail = failed;
       var F = window.FP || {};
       S.scan = PARTS.scan([F.scanHead || []].concat(F.scan || []));
