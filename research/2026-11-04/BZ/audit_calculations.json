@@ -1,0 +1,1071 @@
+{
+  "asof_utc": "2026-11-04 06:28 UTC",
+  "source_sha256": {
+    "UL": "fa289b2f41ab437f74668c2a51a5b0ad051a6bc3fa1c73251c72f48e269395a3",
+    "DHT": "62789c840734c1c81c98df90a7df1faeed5c4e1456f70c4a5756e0f820fead78",
+    "BZ": "6b20479b0af2adca2d8f0670e8457e4f283062a559a1e1d3c31d87df8e9b6495",
+    "AR": "d3da210cc63531d787482ee11d6317670ef60ce5ef292ddf8338ec6f961bb58c"
+  },
+  "UL": {
+    "direct_value": 67.26375496007486,
+    "irr": 0.0857265730498743,
+    "joint": [
+      {
+        "label": "base",
+        "value": 67.26375496007486,
+        "irr": 0.0857265730498743,
+        "assumptions": {}
+      },
+      {
+        "label": "steady_quality",
+        "value": 64.15002552734128,
+        "irr": 0.07974552915484356,
+        "assumptions": {
+          "growth": 0.04,
+          "margin5": 0.205
+        }
+      },
+      {
+        "label": "modest_execution",
+        "value": 70.89173413516446,
+        "irr": 0.09239453994378699,
+        "assumptions": {
+          "growth": 0.05,
+          "margin5": 0.21
+        }
+      },
+      {
+        "label": "lower_volume_higher_cost",
+        "value": 51.29980138728938,
+        "irr": 0.05765829316086479,
+        "assumptions": {
+          "growth": 0.03,
+          "margin5": 0.2,
+          "wacc": 0.08
+        }
+      },
+      {
+        "label": "modest_execution_higher_cost",
+        "value": 62.97635062480524,
+        "irr": 0.08335451750426015,
+        "assumptions": {
+          "growth": 0.05,
+          "margin5": 0.21,
+          "wacc": 0.08
+        }
+      }
+    ],
+    "deal_value": 62.4885948755273,
+    "deal_irr": 0.08141372682936499,
+    "deal_joint": [
+      {
+        "label": "base",
+        "value": 62.4885948755273,
+        "irr": 0.08141372682936499,
+        "hpc_growth": 0.05,
+        "hpc_margin": 0.203,
+        "cost_eur": 4,
+        "synergy_usd": 0.6,
+        "hpc_wacc": 0.075
+      },
+      {
+        "label": "modest_execution",
+        "value": 64.89089468354348,
+        "irr": 0.08620198012593405,
+        "hpc_growth": 0.055,
+        "hpc_margin": 0.205,
+        "cost_eur": 4,
+        "synergy_usd": 0.6,
+        "hpc_wacc": 0.075
+      },
+      {
+        "label": "cost_control",
+        "value": 62.98110750422381,
+        "irr": 0.08209972267986909,
+        "hpc_growth": 0.05,
+        "hpc_margin": 0.203,
+        "cost_eur": 3,
+        "synergy_usd": 0.6,
+        "hpc_wacc": 0.075
+      },
+      {
+        "label": "reasonable_caution",
+        "value": 53.470061301513134,
+        "irr": 0.0670812392757284,
+        "hpc_growth": 0.045,
+        "hpc_margin": 0.2,
+        "cost_eur": 5,
+        "synergy_usd": 0.45,
+        "hpc_wacc": 0.08
+      },
+      {
+        "label": "modest_execution_higher_cost",
+        "value": 58.825269938285,
+        "irr": 0.07885565660498928,
+        "hpc_growth": 0.055,
+        "hpc_margin": 0.205,
+        "cost_eur": 4,
+        "synergy_usd": 0.6,
+        "hpc_wacc": 0.08
+      }
+    ]
+  },
+  "BZ": {
+    "price": 17.12,
+    "scanned_price": 17.25,
+    "base_value": 16.524388915197658,
+    "bridge": 2883.482719412962,
+    "operating_ev": 4719.515246861738,
+    "marketcap": 7877.043190560002,
+    "bridge_fraction_market": 0.3660615601128838,
+    "usd_operating_discount_rate": 0.1149195135174772,
+    "bridge_timing_irrs": {
+      "delay0_yield0.00_fxloss0.00": 0.11121721737904744,
+      "delay0_yield0.00_fxloss0.01": 0.11121721737904744,
+      "delay0_yield0.02_fxloss0.00": 0.11121721737904744,
+      "delay0_yield0.02_fxloss0.01": 0.11121721737904744,
+      "delay0_yield0.04_fxloss0.00": 0.11121721737904744,
+      "delay0_yield0.04_fxloss0.01": 0.11121721737904744,
+      "delay3_yield0.00_fxloss0.00": 0.09220331976116503,
+      "delay3_yield0.00_fxloss0.01": 0.09072512465115656,
+      "delay3_yield0.02_fxloss0.00": 0.09550485535796127,
+      "delay3_yield0.02_fxloss0.01": 0.09397776633008592,
+      "delay3_yield0.04_fxloss0.00": 0.09885701284945692,
+      "delay3_yield0.04_fxloss0.01": 0.09728003412283914,
+      "delay10_yield0.00_fxloss0.00": 0.0732554955593846,
+      "delay10_yield0.00_fxloss0.01": 0.07091383369215032,
+      "delay10_yield0.02_fxloss0.00": 0.0800589445730907,
+      "delay10_yield0.02_fxloss0.01": 0.07752776283316065,
+      "delay10_yield0.04_fxloss0.00": 0.08687264629127289,
+      "delay10_yield0.04_fxloss0.01": 0.08415602518796905
+    },
+    "base_year1_ebit_rmb": 3297.2800000000007,
+    "base_year1_fcff_usd": 358.40898516892094,
+    "joint": [
+      {
+        "label": "lower_steady_margin",
+        "value": 15.250996596781967
+      },
+      {
+        "label": "reasonable_growth_at_current_margin",
+        "value": 16.788662172658906
+      },
+      {
+        "label": "modest_faster_growth_no_lower_wacc",
+        "value": 17.129688822423056
+      },
+      {
+        "label": "higher_risk_slower_growth",
+        "value": 13.32459497441311
+      }
+    ]
+  },
+  "DHT_recomputed": {
+    "value": 21.596050949727974,
+    "EV": 3672.072622346095,
+    "equity": 3485.602623286095,
+    "claims": 186.46999906000002,
+    "PV_flows": 2560.7366560946048,
+    "PV_terminal": 1111.3359662514906,
+    "terminal_value": 3016.2556601500146,
+    "terminal_smooth_value": 2944.0119495817066,
+    "terminal_cohort_timing_correction": 72.24371056830773,
+    "terminal_FCFF": 250.24101571444504,
+    "terminal_share": 0.30264542141365813,
+    "rows": [
+      {
+        "year": 1,
+        "vessel_equivalent": 23.0,
+        "revenue_days": 8185.125000000032,
+        "TC_days": 3345.224999999996,
+        "TC_fraction": 0.40869565217391096,
+        "spot_reference": 200000.0,
+        "effective_TCE": 149086.00357355506,
+        "TCE_revenue": 1220.2875749999996,
+        "opex": 79.7525,
+        "GA": 22.0,
+        "economic_DandA": 125.0,
+        "EBIT": 993.5350749999996,
+        "NOPAT": 988.5673996249996,
+        "incremental_WC": 0,
+        "committed_delivery_capex": 26.80659999999999,
+        "actual_hull_replacement": 0,
+        "normalized_hull_reserve": 139.2,
+        "net_reinvestment": -86.19340000000001,
+        "FCFF": 1074.7607996249997,
+        "PV": 972.6342078054296
+      },
+      {
+        "year": 2,
+        "vessel_equivalent": 23.315068493150687,
+        "revenue_days": 8297.250000000031,
+        "TC_days": 2200.574999999998,
+        "TC_fraction": 0.2652173913043466,
+        "spot_reference": 110000.0,
+        "effective_TCE": 95958.40188014046,
+        "TCE_revenue": 796.1908499999985,
+        "opex": 82.4619,
+        "GA": 22.44,
+        "economic_DandA": 127.5,
+        "EBIT": 563.7889499999984,
+        "NOPAT": 560.9700052499984,
+        "incremental_WC": -16.963869000000045,
+        "committed_delivery_capex": 80.41979999999995,
+        "actual_hull_replacement": 0,
+        "normalized_hull_reserve": 141.98399999999998,
+        "net_reinvestment": -51.804069000000084,
+        "FCFF": 612.7740742499984,
+        "PV": 501.8521932392854
+      },
+      {
+        "year": 3,
+        "vessel_equivalent": 24.0,
+        "revenue_days": 8541.000000000035,
+        "TC_days": 1925.6249999999982,
+        "TC_fraction": 0.2254566210045651,
+        "spot_reference": 80000.0,
+        "effective_TCE": 74747.14611872114,
+        "TCE_revenue": 638.4153749999999,
+        "opex": 86.582088,
+        "GA": 22.8888,
+        "economic_DandA": 130.05,
+        "EBIT": 398.89448699999997,
+        "NOPAT": 396.900014565,
+        "incremental_WC": -6.311018999999942,
+        "committed_delivery_capex": 0,
+        "actual_hull_replacement": 0,
+        "normalized_hull_reserve": 144.82368,
+        "net_reinvestment": -123.87621899999995,
+        "FCFF": 520.776233565,
+        "PV": 385.97957380774125
+      },
+      {
+        "year": 4,
+        "vessel_equivalent": 24.0,
+        "revenue_days": 8541.000000000035,
+        "TC_days": 1067.6250000000002,
+        "TC_fraction": 0.12499999999999951,
+        "spot_reference": 67500.0,
+        "effective_TCE": 64187.49999999975,
+        "TCE_revenue": 548.2254375000001,
+        "opex": 88.31372976,
+        "GA": 23.346576000000002,
+        "economic_DandA": 132.651,
+        "EBIT": 303.9141317400001,
+        "NOPAT": 302.3945610813001,
+        "incremental_WC": -3.6075974999999927,
+        "committed_delivery_capex": 0,
+        "actual_hull_replacement": 0,
+        "normalized_hull_reserve": 147.7201536,
+        "net_reinvestment": -123.5241015,
+        "FCFF": 425.91866258130005,
+        "PV": 285.6785007457405
+      },
+      {
+        "year": 5,
+        "vessel_equivalent": 24.0,
+        "revenue_days": 8541.000000000035,
+        "TC_days": 562.5750000000002,
+        "TC_fraction": 0.06586757990867555,
+        "spot_reference": 62500.0,
+        "effective_TCE": 60733.16210045661,
+        "TCE_revenue": 518.721937500002,
+        "opex": 90.08000435519999,
+        "GA": 23.813507519999998,
+        "economic_DandA": 135.30402,
+        "EBIT": 269.52440562480206,
+        "NOPAT": 268.17678359667804,
+        "incremental_WC": -1.180139999999924,
+        "committed_delivery_capex": 0,
+        "actual_hull_replacement": 251.12426112,
+        "normalized_hull_reserve": 150.674556672,
+        "net_reinvestment": 127.62928704000008,
+        "FCFF": 140.54749655667797,
+        "PV": 85.31231446281731
+      },
+      {
+        "year": 6,
+        "vessel_equivalent": 24.065753424657533,
+        "revenue_days": 8564.400000000032,
+        "TC_days": 236.92499999999998,
+        "TC_fraction": 0.0276639344262294,
+        "spot_reference": 63750.0,
+        "effective_TCE": 61708.76024590126,
+        "TCE_revenue": 528.4985062499987,
+        "opex": 92.13333486543361,
+        "GA": 24.2897776704,
+        "economic_DandA": 138.0101004,
+        "EBIT": 274.06529331416516,
+        "NOPAT": 272.69496684759434,
+        "incremental_WC": 0.3910627499998691,
+        "committed_delivery_capex": 0,
+        "actual_hull_replacement": 384.22011951359997,
+        "normalized_hull_reserve": 153.68804780544,
+        "net_reinvestment": 263.076287771485,
+        "FCFF": 9.618679076109345,
+        "PV": 5.283743988981197
+      },
+      {
+        "year": 7,
+        "vessel_equivalent": 24.0,
+        "revenue_days": 8541.000000000035,
+        "TC_days": 0.0,
+        "TC_fraction": 0.0,
+        "spot_reference": 65025.0,
+        "effective_TCE": 62902.779965753434,
+        "TCE_revenue": 537.2526436875023,
+        "opex": 93.71923653115009,
+        "GA": 24.775573223808003,
+        "economic_DandA": 140.77030240800002,
+        "EBIT": 277.9875315245442,
+        "NOPAT": 276.59759386692144,
+        "incremental_WC": 0.3501654975001429,
+        "committed_delivery_capex": 0,
+        "actual_hull_replacement": 0,
+        "normalized_hull_reserve": 156.7618087615488,
+        "net_reinvestment": -120.40859664109054,
+        "FCFF": 397.00619050801197,
+        "PV": 197.36099800777095
+      },
+      {
+        "year": 8,
+        "vessel_equivalent": 24.0,
+        "revenue_days": 8541.000000000035,
+        "TC_days": 0.0,
+        "TC_fraction": 0.0,
+        "spot_reference": 66325.50000000001,
+        "effective_TCE": 62733.625890410694,
+        "TCE_revenue": 535.8078987299999,
+        "opex": 95.59362126177308,
+        "GA": 25.271084688284162,
+        "economic_DandA": 143.58570845616,
+        "EBIT": 271.3574843237827,
+        "NOPAT": 270.00069690216384,
+        "incremental_WC": -0.05778979830009576,
+        "committed_delivery_capex": 0,
+        "actual_hull_replacement": 0,
+        "normalized_hull_reserve": 159.89704493677976,
+        "net_reinvestment": -120.88186536891897,
+        "FCFF": 390.8825622710828,
+        "PV": 175.85230786087322
+      },
+      {
+        "year": 9,
+        "vessel_equivalent": 24.0,
+        "revenue_days": 8541.000000000035,
+        "TC_days": 0.0,
+        "TC_fraction": 0.0,
+        "spot_reference": 67652.01,
+        "effective_TCE": 63940.41684862999,
+        "TCE_revenue": 546.1151003041509,
+        "opex": 97.50549368700855,
+        "GA": 25.776506382049845,
+        "economic_DandA": 146.45742262528321,
+        "EBIT": 276.3756776098094,
+        "NOPAT": 274.9937992217603,
+        "incremental_WC": 0.41228806296604037,
+        "committed_delivery_capex": 0,
+        "actual_hull_replacement": 135.9124881962628,
+        "normalized_hull_reserve": 163.0949858355154,
+        "net_reinvestment": 15.705295026027215,
+        "FCFF": 259.2885041957331,
+        "PV": 105.56568257513044
+      },
+      {
+        "year": 10,
+        "vessel_equivalent": 24.065753424657533,
+        "revenue_days": 8564.400000000032,
+        "TC_days": 0.0,
+        "TC_fraction": 0.0,
+        "spot_reference": 69005.0502,
+        "effective_TCE": 66704.8818599998,
+        "TCE_revenue": 571.2872902017845,
+        "opex": 99.72808466639461,
+        "GA": 26.292036509690842,
+        "economic_DandA": 149.3865710777889,
+        "EBIT": 295.88059794791013,
+        "NOPAT": 294.4011949581706,
+        "incremental_WC": 1.0068875959053412,
+        "committed_delivery_capex": 0,
+        "actual_hull_replacement": 831.7844277611284,
+        "normalized_hull_reserve": 166.3568855522257,
+        "net_reinvestment": 714.4944080352645,
+        "FCFF": -420.09321307709394,
+        "PV": -154.78286639916521
+      }
+    ],
+    "WACC": 0.105,
+    "g": 0.02,
+    "ROIC": 0.12
+  },
+  "AR_recomputed_base": {
+    "name": "base",
+    "assumptions": {
+      "prod": [
+        4.5,
+        4.6,
+        4.7,
+        4.8,
+        4.9,
+        4.95,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "hh": [
+        3.16,
+        3.35,
+        3.5
+      ],
+      "c3": 38.0,
+      "ethane": 11.0,
+      "oil": 65.0,
+      "basis": -0.2,
+      "regional": [
+        -0.95,
+        -0.95,
+        -0.75
+      ],
+      "maint": 1000.0,
+      "corecost": 2.07,
+      "savings": [
+        30.0,
+        70.0,
+        110.0
+      ],
+      "wacc": 0.1,
+      "tax": [
+        0.15,
+        0.2,
+        0.25
+      ],
+      "g": 0.02,
+      "roic": 0.1,
+      "am": 0.2
+    },
+    "wacc": 0.1,
+    "hh_shift": 0,
+    "c3_shift": 0,
+    "maint_override": null,
+    "stub_fcff": 133.87024123787194,
+    "rows": [
+      {
+        "year": 2027,
+        "production_bcfe_d": 4.5,
+        "hh": 3.16,
+        "c3": 38.0,
+        "physical_sales": 5725.700745738787,
+        "hedge_cash": 274.34865550999996,
+        "hedges": {
+          "gas_swaps": 265.0209228,
+          "basis_swaps": -1.429402050000014,
+          "collars": 6.6414524,
+          "vpp_embedded": 0.0,
+          "three_way": 4.100045,
+          "short_calls": 0.0,
+          "ngl_swaps": 0.01563735999999961
+        },
+        "production_cost": 3480.4953273757133,
+        "savings": 30.0,
+        "cash_gna": 180.0,
+        "sbc": 55.0,
+        "marketing": 65.7,
+        "recurring": 50.0,
+        "ebitda": 2194.854073873074,
+        "dda": 1018.35,
+        "ebit": 1176.504073873074,
+        "cash_tax": 176.4756110809611,
+        "tax_rate": 0.15,
+        "maintenance_dc": 1046.5116279069769,
+        "land": 104.65116279069768,
+        "other_and_new_aro": 35.0,
+        "growth_capex": 99.99999999999964,
+        "total_capex": 1286.1627906976742,
+        "delta_wc": -15.188965198856613,
+        "fcff": 747.4046372932954
+      },
+      {
+        "year": 2028,
+        "production_bcfe_d": 4.6,
+        "hh": 3.35,
+        "c3": 38.76,
+        "physical_sales": 6116.030375661308,
+        "hedge_cash": 52.40998864999997,
+        "hedges": {
+          "gas_swaps": 50.38653449999997,
+          "basis_swaps": 2.0234541499999983,
+          "collars": 0.0,
+          "vpp_embedded": 0.0,
+          "three_way": 0.0,
+          "short_calls": 0.0,
+          "ngl_swaps": 0
+        },
+        "production_cost": 3606.624702752908,
+        "savings": 71.4,
+        "cash_gna": 183.6,
+        "sbc": 56.1,
+        "marketing": 68.50319999999999,
+        "recurring": 51.0,
+        "ebitda": 2269.9324615584005,
+        "dda": 1061.7996,
+        "ebit": 1208.1328615584005,
+        "cash_tax": 241.6265723116801,
+        "tax_rate": 0.2,
+        "maintenance_dc": 1091.1627906976744,
+        "land": 109.11627906976743,
+        "other_and_new_aro": 35.7,
+        "growth_capex": 102.00000000000055,
+        "total_capex": 1337.9790697674423,
+        "delta_wc": 11.709888897675636,
+        "fcff": 678.6169305816024
+      },
+      {
+        "year": 2029,
+        "production_bcfe_d": 4.7,
+        "hh": 3.5,
+        "c3": 39.5352,
+        "physical_sales": 6471.634807467877,
+        "hedge_cash": 1.1855519,
+        "hedges": {
+          "gas_swaps": 1.1855519,
+          "basis_swaps": 0,
+          "collars": 0.0,
+          "vpp_embedded": 0.0,
+          "three_way": 0.0,
+          "short_calls": 0.0,
+          "ngl_swaps": 0
+        },
+        "production_cost": 3735.2875342140014,
+        "savings": 114.444,
+        "cash_gna": 187.272,
+        "sbc": 57.222,
+        "marketing": 71.39224800000001,
+        "recurring": 52.019999999999996,
+        "ebitda": 2479.9089771538756,
+        "dda": 1106.579844,
+        "ebit": 1373.3291331538755,
+        "cash_tax": 343.3322832884689,
+        "tax_rate": 0.25,
+        "maintenance_dc": 1137.1813953488372,
+        "land": 113.71813953488372,
+        "other_and_new_aro": 36.414,
+        "growth_capex": 104.03999999999962,
+        "total_capex": 1391.3535348837204,
+        "delta_wc": 10.668132954197063,
+        "fcff": 734.5550260274895
+      },
+      {
+        "year": 2030,
+        "production_bcfe_d": 4.8,
+        "hh": 3.5700000000000003,
+        "c3": 40.32590400000001,
+        "physical_sales": 6741.515748375047,
+        "hedge_cash": 0.0,
+        "hedges": {
+          "gas_swaps": 0,
+          "basis_swaps": 0,
+          "collars": 0.0,
+          "vpp_embedded": 0.0,
+          "three_way": 0.0,
+          "short_calls": 0.0,
+          "ngl_swaps": 0
+        },
+        "production_cost": 3865.382449787139,
+        "savings": 116.73288000000002,
+        "cash_gna": 191.01744000000002,
+        "sbc": 58.36644000000001,
+        "marketing": 74.36945664000001,
+        "recurring": 53.06040000000001,
+        "ebitda": 2611.8076099479085,
+        "dda": 1152.7265779200002,
+        "ebit": 1459.0810320279083,
+        "cash_tax": 364.7702580069771,
+        "tax_rate": 0.25,
+        "maintenance_dc": 1184.6042790697675,
+        "land": 118.46042790697676,
+        "other_and_new_aro": 37.14228000000001,
+        "growth_capex": 106.12080000000059,
+        "total_capex": 1446.3277869767448,
+        "delta_wc": 8.096428227215101,
+        "fcff": 792.6131367369713
+      },
+      {
+        "year": 2031,
+        "production_bcfe_d": 4.9,
+        "hh": 3.6414,
+        "c3": 41.13242208,
+        "physical_sales": 7019.603272995518,
+        "hedge_cash": 0.0,
+        "hedges": {
+          "gas_swaps": 0,
+          "basis_swaps": 0,
+          "collars": 0.0,
+          "vpp_embedded": 0.0,
+          "three_way": 0.0,
+          "short_calls": 0.0,
+          "ngl_swaps": 0
+        },
+        "production_cost": 3999.187046969516,
+        "savings": 119.0675376,
+        "cash_gna": 194.8377888,
+        "sbc": 59.5337688,
+        "marketing": 77.4371967264,
+        "recurring": 54.121608,
+        "ebitda": 2749.2236726596016,
+        "dda": 1200.2765492592,
+        "ebit": 1548.9471234004016,
+        "cash_tax": 387.2367808501004,
+        "tax_rate": 0.25,
+        "maintenance_dc": 1233.4692055813955,
+        "land": 123.34692055813956,
+        "other_and_new_aro": 37.8851256,
+        "growth_capex": 54.12160799999981,
+        "total_capex": 1448.822859739535,
+        "delta_wc": 8.342625738614116,
+        "fcff": 904.8214063313521
+      },
+      {
+        "year": 2032,
+        "production_bcfe_d": 4.95,
+        "hh": 3.7142280000000003,
+        "c3": 41.9550705216,
+        "physical_sales": 7233.056515378442,
+        "hedge_cash": 0.0,
+        "hedges": {
+          "gas_swaps": 0,
+          "basis_swaps": 0,
+          "collars": 0.0,
+          "vpp_embedded": 0.0,
+          "three_way": 0.0,
+          "short_calls": 0.0,
+          "ngl_swaps": 0
+        },
+        "production_cost": 4107.98423148409,
+        "savings": 121.448888352,
+        "cash_gna": 198.734544576,
+        "sbc": 60.724444176,
+        "marketing": 79.79191964726401,
+        "recurring": 55.20404016,
+        "ebitda": 2847.6499004742877,
+        "dda": 1236.774754532592,
+        "ebit": 1610.8751459416958,
+        "cash_tax": 402.71878648542395,
+        "tax_rate": 0.25,
+        "maintenance_dc": 1270.9767385674418,
+        "land": 127.0976738567442,
+        "other_and_new_aro": 38.642828112000004,
+        "growth_capex": 55.204040159999806,
+        "total_capex": 1491.921280696186,
+        "delta_wc": 6.403597271487724,
+        "fcff": 946.60623602119
+      },
+      {
+        "year": 2033,
+        "production_bcfe_d": 5.0,
+        "hh": 3.78851256,
+        "c3": 42.794171932032,
+        "physical_sales": 7452.240046147485,
+        "hedge_cash": 0.0,
+        "hedges": {
+          "gas_swaps": 0,
+          "basis_swaps": 0,
+          "collars": 0.0,
+          "vpp_embedded": 0.0,
+          "three_way": 0.0,
+          "short_calls": 0.0,
+          "ngl_swaps": 0
+        },
+        "production_cost": 4219.533628560458,
+        "savings": 123.87786611904001,
+        "cash_gna": 202.70923546752002,
+        "sbc": 61.938933059520004,
+        "marketing": 82.209856606272,
+        "recurring": 56.308120963200004,
+        "ebitda": 2948.9134879324993,
+        "dda": 1274.252777397216,
+        "ebit": 1674.6607105352832,
+        "cash_tax": 418.6651776338208,
+        "tax_rate": 0.25,
+        "maintenance_dc": 1309.4911851906977,
+        "land": 130.94911851906977,
+        "other_and_new_aro": 39.415684674240005,
+        "growth_capex": 0.0,
+        "total_capex": 1479.8559883840076,
+        "delta_wc": 6.575505923071304,
+        "fcff": 1043.8168159915997
+      },
+      {
+        "year": 2034,
+        "production_bcfe_d": 5.0,
+        "hh": 3.8642828112,
+        "c3": 43.65005537067264,
+        "physical_sales": 7601.284847070435,
+        "hedge_cash": 0.0,
+        "hedges": {
+          "gas_swaps": 0,
+          "basis_swaps": 0,
+          "collars": 0.0,
+          "vpp_embedded": 0.0,
+          "three_way": 0.0,
+          "short_calls": 0.0,
+          "ngl_swaps": 0
+        },
+        "production_cost": 4303.924301131668,
+        "savings": 126.35542344142081,
+        "cash_gna": 206.7634201768704,
+        "sbc": 63.177711720710406,
+        "marketing": 83.85405373839744,
+        "recurring": 57.434283382464,
+        "ebitda": 3007.891757691149,
+        "dda": 1299.7378329451603,
+        "ebit": 1708.1539247459887,
+        "cash_tax": 427.03848118649717,
+        "tax_rate": 0.25,
+        "maintenance_dc": 1335.6810088945117,
+        "land": 133.5681008894512,
+        "other_and_new_aro": 40.2039983677248,
+        "growth_capex": 0.0,
+        "total_capex": 1509.4531081516877,
+        "delta_wc": 4.471344027688483,
+        "fcff": 1066.9288243252759
+      },
+      {
+        "year": 2035,
+        "production_bcfe_d": 5.0,
+        "hh": 3.941568467424,
+        "c3": 44.5230564780861,
+        "physical_sales": 7753.310544011845,
+        "hedge_cash": 0.0,
+        "hedges": {
+          "gas_swaps": 0,
+          "basis_swaps": 0,
+          "collars": 0.0,
+          "vpp_embedded": 0.0,
+          "three_way": 0.0,
+          "short_calls": 0.0,
+          "ngl_swaps": 0
+        },
+        "production_cost": 4390.002787154301,
+        "savings": 128.88253191024924,
+        "cash_gna": 210.89868858040782,
+        "sbc": 64.44126595512462,
+        "marketing": 85.5311348131654,
+        "recurring": 58.582969050113284,
+        "ebitda": 3068.0495928449736,
+        "dda": 1325.7325896040636,
+        "ebit": 1742.31700324091,
+        "cash_tax": 435.5792508102275,
+        "tax_rate": 0.25,
+        "maintenance_dc": 1362.394629072402,
+        "land": 136.2394629072402,
+        "other_and_new_aro": 41.008078335079304,
+        "growth_capex": 0.0,
+        "total_capex": 1539.6421703147216,
+        "delta_wc": 4.560770908242311,
+        "fcff": 1088.267400811782
+      },
+      {
+        "year": 2036,
+        "production_bcfe_d": 5.0,
+        "hh": 4.02039983677248,
+        "c3": 45.41351760764782,
+        "physical_sales": 7908.376754892081,
+        "hedge_cash": 0.0,
+        "hedges": {
+          "gas_swaps": 0,
+          "basis_swaps": 0,
+          "collars": 0.0,
+          "vpp_embedded": 0.0,
+          "three_way": 0.0,
+          "short_calls": 0.0,
+          "ngl_swaps": 0
+        },
+        "production_cost": 4477.802842897387,
+        "savings": 131.4601825484542,
+        "cash_gna": 215.116662352016,
+        "sbc": 65.7300912742271,
+        "marketing": 87.24175750942871,
+        "recurring": 59.754628431115556,
+        "ebitda": 3129.4105847018723,
+        "dda": 1352.247241396145,
+        "ebit": 1777.1633433057273,
+        "cash_tax": 444.2908358264318,
+        "tax_rate": 0.25,
+        "maintenance_dc": 1389.64252165385,
+        "land": 138.964252165385,
+        "other_and_new_aro": 41.82823990178089,
+        "growth_capex": 0.0,
+        "total_capex": 1570.435013721016,
+        "delta_wc": 4.651986326407086,
+        "fcff": 1110.0327488280175
+      }
+    ],
+    "terminal_nopat": 1359.5299576288814,
+    "terminal_net_reinvestment": 271.9059915257763,
+    "terminal_maintenance_floor": 222.55152777136848,
+    "terminal_fcff": 1087.6239661031052,
+    "terminal_ev": 13595.299576288815,
+    "pv_terminal": 5162.790027197223,
+    "ev": 10566.767823714177,
+    "am_value": 2331.4179712800005,
+    "debt": 2801.0,
+    "aro": 67.149,
+    "shares": 308.354,
+    "equity": 10030.036794994177,
+    "value": 32.52766883190806,
+    "unfloored_value": 32.52766883190806,
+    "terminal_ev_fraction": 0.4885874387824415,
+    "ten_year_production_tcfe": 17.68425
+  },
+  "AR_joint": [
+    {
+      "label": "cautious_normal",
+      "inputs": {
+        "wacc": 0.11,
+        "maint_override": 1100,
+        "hh_shift": -0.15,
+        "c3_shift": -2
+      },
+      "value": 17.783347770132192,
+      "equity_irr": 0.015017559462407015,
+      "first_fcff": 484.86373201927785
+    },
+    {
+      "label": "central",
+      "inputs": {},
+      "value": 32.52766883190806,
+      "equity_irr": 0.07880770974123508,
+      "first_fcff": 747.4046372932954
+    },
+    {
+      "label": "balanced_improvement",
+      "inputs": {
+        "wacc": 0.1,
+        "maint_override": 950,
+        "hh_shift": 0.25,
+        "c3_shift": 2
+      },
+      "value": 44.36583053340689,
+      "equity_irr": 0.1217740909117252,
+      "first_fcff": 1011.6796317006272
+    },
+    {
+      "label": "better_execution_lower_risk",
+      "inputs": {
+        "wacc": 0.095,
+        "maint_override": 950,
+        "hh_shift": 0.25,
+        "c3_shift": 2
+      },
+      "value": 47.468849879360405,
+      "equity_irr": 0.1261642244991662,
+      "first_fcff": 1011.6796317006272
+    },
+    {
+      "label": "higher_cost_gas_support",
+      "inputs": {
+        "wacc": 0.105,
+        "maint_override": 1150,
+        "hh_shift": 0.5,
+        "c3_shift": 3
+      },
+      "value": 45.417937158478985,
+      "equity_irr": 0.13010993333555765,
+      "first_fcff": 979.386583246049
+    },
+    {
+      "label": "firm_gas_no_multiple_help",
+      "inputs": {
+        "wacc": 0.11,
+        "maint_override": 1000,
+        "hh_shift": 0.5,
+        "c3_shift": 2
+      },
+      "value": 45.06261858749668,
+      "equity_irr": 0.13495299198772026,
+      "first_fcff": 1097.9632090869297
+    }
+  ],
+  "DHT_joint_return": [
+    {
+      "label": "base",
+      "inputs": {},
+      "value": 21.596050949727974,
+      "equity_irr": 0.08053268137899139
+    },
+    {
+      "label": "normalized_rate_plus6000",
+      "inputs": {
+        "normal_shift": 6000
+      },
+      "value": 23.94732155348617,
+      "equity_irr": 0.10347587387880897
+    },
+    {
+      "label": "normalized_rate_plus10000",
+      "inputs": {
+        "normal_shift": 10000
+      },
+      "value": 25.51483528932514,
+      "equity_irr": 0.11695988970139848
+    },
+    {
+      "label": "higher_rates_higher_risk",
+      "inputs": {
+        "normal_shift": 10000,
+        "w": 0.115
+      },
+      "value": 23.3873712643866,
+      "equity_irr": 0.10892194440123781
+    },
+    {
+      "label": "softer_rates_higher_cost",
+      "inputs": {
+        "normal_shift": -10000,
+        "w": 0.115,
+        "renewal_scale": 1.1
+      },
+      "value": 15.904159274211914,
+      "equity_irr": 0.008897538935112137
+    }
+  ],
+  "DHT_principal_claim_refinement": {
+    "debt_book": 434.804,
+    "debt_principal": 443.251,
+    "unamortized_fees": 8.447,
+    "per_share_effect": -0.0523358116480793,
+    "value": 21.543715138079897
+  },
+  "UL_no_deal_fx_irr": {
+    "-0.01": 0.07486930731937558,
+    "0": 0.08572657304987441,
+    "0.01": 0.09658383878037324
+  },
+  "QA": [
+    {
+      "check": "UL direct central reproduction",
+      "result": "pass"
+    },
+    {
+      "check": "UL deal central reproduction",
+      "result": "pass"
+    },
+    {
+      "check": "BZ central reproduction",
+      "result": "pass"
+    },
+    {
+      "check": "DHT central reproduction",
+      "result": "pass"
+    },
+    {
+      "check": "AR central reproduction",
+      "result": "pass"
+    },
+    {
+      "check": "BZ bridge accounts for assets and claims",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year1 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year1 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year2 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year2 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year3 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year3 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year4 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year4 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year5 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year5 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year6 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year6 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year7 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year7 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year8 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year8 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year9 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year9 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year10 FCFF identity",
+      "result": "pass"
+    },
+    {
+      "check": "BZ year10 currency and withholding",
+      "result": "pass"
+    },
+    {
+      "check": "BZ terminal currency consistency",
+      "result": "pass"
+    },
+    {
+      "check": "UL original source unchanged",
+      "result": "pass"
+    },
+    {
+      "check": "DHT original source unchanged",
+      "result": "pass"
+    },
+    {
+      "check": "BZ original source unchanged",
+      "result": "pass"
+    },
+    {
+      "check": "AR original source unchanged",
+      "result": "pass"
+    }
+  ]
+}

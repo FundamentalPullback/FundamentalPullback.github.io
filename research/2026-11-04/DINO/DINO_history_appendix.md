@@ -90,6 +90,24 @@ These cash measures are **levered and include unusual RIN/credit cash effects**.
 
 Quarterly turnaround outlays and tax settlement timing explain part of the cash volatility: CFO was only $8m in Q4 2025 versus $1,784m in Q3 2026. Extrapolating the latter would overstate cash earning power. The forward model already settles the opening tax payable in its Q4 bridge and reserves known environmental/closure obligations separately.
 
+## Per-share cash and ownership comparison
+
+USD per share except denominators. These are analytical cash-per-share comparisons, not GAAP EPS or a dividend forecast. Annual and Q1–Q3 denominators are reported weighted-average diluted shares. Q4 and TTM denominators are day-weighted bridges from the annual/nine-month disclosures, labeled estimates rather than invented reported quarter counts. Cash FCF retains financing costs and subtracts SBC and outside distributions; the fixed-margin FCFF proxy is consolidated before financing and minority allocation, as defined above.
+
+| Period | Diluted denominator, millions | Cash FCF after SBC/minorities per share | Fixed-$19 FCFF proxy per share |
+|---|---:|---:|---:|
+| FY2023 | 190.03 | 9.31 | 7.08 |
+| FY2024 | 192.07 | 3.18 | 8.59 |
+| FY2025 | 186.47 | 4.41 | 8.95 |
+| Q42025 | 182.84 | -0.75 | 1.85 |
+| Q12026 | 180.65 | 1.92 | 2.95 |
+| Q22026 | 179.42 | 7.71 | 3.74 |
+| Q32026 | 175.87 | 9.29 | 2.69 |
+| TTM2025 | 187.84 | 3.40 | 8.38 |
+| TTM2026 | 179.69 | 17.95 | 11.22 |
+
+The TTM diluted denominator falls from about 187.8m to 179.7m, amplifying per-share growth beyond operating growth. This is not a substitute for operating improvement, and the funding used for repurchases is already reflected in cash. The forward valuation uses 174m economic shares with the corresponding September cash bridge rather than applying that lower current denominator retrospectively to historical EPS. HEP's 2023 outside ownership/buy-in also changes parent cash claims; it does not create a second consolidated enterprise value.
+
 ## Valuation reconciliation and publication status
 
 The original executable was rerun and reconciles $110.74, $17.65 and $218.99. That verifies the old arithmetic, not the old choice of central margin path. The versioned normalized model changes only the 2027–30 margin bridge initially, producing $90.95. It then tests firmer ordinary margins, non-refining improvement and lower discount rates jointly. The original $35→28→23→20→19 path remains an explicit elevated-spread alternative, not the central estimate.

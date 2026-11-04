@@ -1,4 +1,4 @@
-MATERIAL CORRECTION 2026-11-04 05:39 UTC: cycle-normalized central value replaces $110.74 with $90.95 and illustrative shareholder return falls from 11.2% to 7.6%. The ordinary reasonable-price partial classification is withdrawn. $110.74 remains an elevated-spread alternate, not the central case. Original report, model and decision snapshot remain accessible below. Research is complete with the historical appendix; Stage 3.5 is not approved.
+Dated review 2026-11-04 10:29 UTC. Research complete; no approved entry. Original reports, models and decisions remain accessible below. Source cutoffs and dated scanner/regular-close distinctions are retained. Additional per-share historical supplement integrated; normalized central $90.95 unchanged. No ordinary partial-position candidacy.
 
 # HF Sinclair revised Fundamental Pullback Stage 3
 
@@ -143,7 +143,7 @@ At the reference price, the claims-adjusted core operating value is $20.39bn, or
 
 ## Reproducibility and model conventions
 
-Run `python dino_history.py`, `python dino_normalized_model.py`, `python write_dino.py` and `python write_dino_revised.py` in that order in the revised research folder. The original model is preserved as `refiners_core_original.py`; revised outputs are `DINO_normalized_model_results.json`. All amounts in the code are USD billions, volumes are million barrels and share counts are billions. Automated checks require finite values, monotonic margin/claim/WACC behavior and bear < base < bull. No external Python package is needed.
+Run `python dino_history.py`, `python dino_normalized_model.py`, `python write_dino.py` `python write_dino_revised.py`, then `python dino_per_share_supplement.py` in that order in the revised research folder. The original model is preserved as `refiners_core_original.py`; revised outputs are `DINO_normalized_model_results.json`. All amounts in the code are USD billions, volumes are million barrels and share counts are billions. Automated checks require finite values, monotonic margin/claim/WACC behavior and bear < base < bull. No external Python package is needed.
 
 Operating EBITDA = volume × (gross refining margin − refinery cash opex) − refinery SG&A + other consolidated segment EBITDA − corporate cost − incremental RIN stress. EBIT deducts economic D&A. FCFF = EBIT − cash tax + D&A − sustaining cash − growth capex − working-capital investment − special cash costs. SBC remains an expense. Equity-method earnings are excluded from operating EBIT and replaced with cash distributions after JV taxes, debt service and investment, valued at a separate equity discount rate. Owned logistics businesses are included once.
 
@@ -158,6 +158,12 @@ The November 3 Treasury 10-year yield was **4.95%**. ERP, beta and future borrow
 The EPA hearing is **November 4, 2026, 9:00 a.m. EST**. The proposal reallocates an additional 770m 2025-exemption RINs either equally across 2026/2027 or entirely into 2027; comments close December 4. A possible compliance-date extension is also proposed. This is not a final rule, a new waiver award, or an assured share-price catalyst. A higher obligation may affect refiners differently depending on exemptions, blending credits, RIN inventories and product-price pass-through. Renewable-fuels interests provide only a partial, imperfect offset. [EPA proposal page](https://www.epa.gov/renewable-fuel-standard/proposed-reallocation-additional-2025-small-refinery-exemptions); [Federal Register proposal and hearing details](https://www.govinfo.gov/content/pkg/FR-2026-10-16/pdf/2026-21155.pdf)
 
 Stage 3 is the completed business/valuation review. Stage 3.5 is a separate execution test: verify broad market and sector conditions, the relevant longer-term trend, a confirmed reversal or support setup, liquidity, event exposure and an actual stop. A fundamental bear value is not a technical stop. A 3:1 trade requires (credible target − entry)/(entry − actual invalidation) ≥ 3, allowing for gaps and execution costs. Neither a bull/base ratio nor a large drawdown from a recent high establishes that trade. No trading action is authorized by this research.
+
+## Confidence, price context and review level
+
+A reasonable central sensitivity band is roughly **$86–108**, from the lower ordinary path through the constructive joint case, rather than the entire $18–219 severe bear/bull span. Confidence is **medium in the sourced financial/claims bridge and low-to-medium in sustainable spreads and post-separation cash economics**. Central margin of safety, defined as (value − price)/value, is about **−24.6%**. Around $91 is a central-value review level, not an authorized purchase maximum; no uniform extra discount or prediction of a future market price is imposed.
+
+The October 14 high of $129.37 to November 3 close $113.36 represents a 12.4% pullback. That price move is verified, but this review does not establish one causal news item. RIN policy, margin normalization and separation/closure execution are underwriting risks, not proven explanations of each day's price action. No verified single catalyst is not evidence of no deterioration. [Dated OHLC history](https://stockanalysis.com/stocks/dino/history/).
 
 ## Decision triggers
 
@@ -259,6 +265,24 @@ FY2023 HEP outside ownership and its later buy-in change parent per-share econom
 These cash measures are **levered and include unusual RIN/credit cash effects**. The before-working-capital adjustment includes income-tax receivable/payable movements as well as operating accounts, so it must not be called fully recurring owner earnings. TTM PP&E plus turnaround cash is $899m, versus $960m prior TTM. The existing model's 2027 $800m sustaining plus $150m growth, with additional Western Gateway funding outside that core capital line, is compatible with funding a genuine capital burden. It does not treat the $488m TTM PP&E line as the whole sustaining requirement.
 
 Quarterly turnaround outlays and tax settlement timing explain part of the cash volatility: CFO was only $8m in Q4 2025 versus $1,784m in Q3 2026. Extrapolating the latter would overstate cash earning power. The forward model already settles the opening tax payable in its Q4 bridge and reserves known environmental/closure obligations separately.
+
+## Per-share cash and ownership comparison
+
+USD per share except denominators. These are analytical cash-per-share comparisons, not GAAP EPS or a dividend forecast. Annual and Q1–Q3 denominators are reported weighted-average diluted shares. Q4 and TTM denominators are day-weighted bridges from the annual/nine-month disclosures, labeled estimates rather than invented reported quarter counts. Cash FCF retains financing costs and subtracts SBC and outside distributions; the fixed-margin FCFF proxy is consolidated before financing and minority allocation, as defined above.
+
+| Period | Diluted denominator, millions | Cash FCF after SBC/minorities per share | Fixed-$19 FCFF proxy per share |
+|---|---:|---:|---:|
+| FY2023 | 190.03 | 9.31 | 7.08 |
+| FY2024 | 192.07 | 3.18 | 8.59 |
+| FY2025 | 186.47 | 4.41 | 8.95 |
+| Q42025 | 182.84 | -0.75 | 1.85 |
+| Q12026 | 180.65 | 1.92 | 2.95 |
+| Q22026 | 179.42 | 7.71 | 3.74 |
+| Q32026 | 175.87 | 9.29 | 2.69 |
+| TTM2025 | 187.84 | 3.40 | 8.38 |
+| TTM2026 | 179.69 | 17.95 | 11.22 |
+
+The TTM diluted denominator falls from about 187.8m to 179.7m, amplifying per-share growth beyond operating growth. This is not a substitute for operating improvement, and the funding used for repurchases is already reflected in cash. The forward valuation uses 174m economic shares with the corresponding September cash bridge rather than applying that lower current denominator retrospectively to historical EPS. HEP's 2023 outside ownership/buy-in also changes parent cash claims; it does not create a second consolidated enterprise value.
 
 ## Valuation reconciliation and publication status
 

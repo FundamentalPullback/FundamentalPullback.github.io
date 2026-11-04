@@ -1,0 +1,314 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SPGI · A187 revision</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><p><strong><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/SPGI.html">Open the full readable SPGI dossier</a></strong></p><nav><a href="../../../#ficha/SPGI">← SPGI profile</a><a href="../index.html">Research index</a></nav><p class="eyebrow">A187 · November4,2026 · No entry approval</p><h2 id="dated-correction-a187-november-4-2026">Dated correction: A187, November 4, 2026</h2>
+<p>Updates only <strong>SPGI</strong> in historical <strong>A155</strong>. The original shared report and unrelated issuer components must remain unchanged.</p>
+<p><strong>Observation; public-source review complete but exact continuing-cash coverage remains unavailable. Reproduced $156.80/$296.60/$500.63. Continuing TTM CFO remains algebraic, not an exact complete series; Mobility carve-out cash cannot simply be subtracted.</strong></p>
+<p>Prepared November4,2026 after10:00UTC. Source cutoff is retained below; later event completion has not been verified.</p>
+<p><strong>Price audit:</strong> November3 scanner $466.03; separately sourced regular close $466.03. Scanner header timezone is not certified. SPGI source providers differ by $0.02 ($466.03 vs $466.01).</p>
+<p><strong>Coverage and source limits:</strong> FY2023–FY2025 continuing earnings and old-group cash; Q4 2025/Q1–Q3 2026 continuing earnings. Exact quarterly/annual continuing CFO and both continuing TTM cash series unavailable. Current CFO=5409−D4,25; prior=5057−D4,24. Prior homogeneous earnings TTM not reconstructed.</p>
+<p><strong>Next review:</strong> Retain explicit cash-perimeter limitation. CapitalIQ strategic review is not a signed sale; no proceeds or separation premium invented.</p>
+<p><strong>No entry approved.</strong> No new position, quantity, buy ceiling or stop. No universal15/20/25% valuation-discount rule.</p>
+<hr />
+<h1 id="spgi-revisión-adicional-de-caja-perímetro-y-valoración">SPGI: revisión adicional de caja, perímetro y valoración</h1>
+<p><strong>4 de noviembre de 2026, 05:50 UTC. Complemento de A155, no sustitución de los datos de JKHY.</strong> Investigación terminada hasta el límite de información pública identificado. La serie exacta de caja continuada de tres ejercicios, cuatro trimestres y TTM anterior <strong>no está publicada de forma recuperable en las fuentes revisadas</strong>. Se mantiene visible esa limitación; no se convierte una estimación en un hecho ni se declara cerrado ese requisito.</p>
+<p><strong>Decisión sin cambio: no aprobar a $466,03.</strong> El precio corresponde también al cierre del 3 de noviembre en Yahoo Finance y otros registros fechados; StockAnalysis muestra $466,01, una diferencia de dos centavos que no cambia el análisis. El modelo publicado se ha reconstruido de manera independiente y reproduce <strong>$156,80 adverso / $296,60 base / $500,63 favorable</strong>. El crecimiento y la conversión de caja de los nueve meses comparables son favorables, pero no justifican sustituir el escenario central por el favorable. No existe una regla universal de descuento del 15%, 20% o 25%, y no hay aprobación técnica ni operación. <a href="https://nz.finance.yahoo.com/quote/SPGI/history/">Precio fechado</a>; <a href="https://stockanalysis.com/stocks/spgi/history/">contraste de precio</a></p>
+<h2 id="qué-se-ha-podido-cerrar">1. Qué se ha podido cerrar</h2>
+<p>Se revisaron el 10-Q de septiembre presentado el 28 de octubre, el anuncio de resultados del 27 de octubre, el 10-K de 2025, los 10-Q de marzo y junio, la pro forma del 23 de octubre, la recast de julio, la información de la separación y los estados carve-out de Mobility. La SEC confirma que los únicos importes recientes de CFO continuado etiquetados expresamente para este perímetro son los nueve meses de 2026 y de 2025. La pro forma de octubre proporciona balances y cuentas de resultados, <strong>no</strong> una nueva serie anual de cash flow.</p>
+<p>Los resultados más recientes ya se publicaron y se incorporan. La revisión estratégica de Capital IQ anunciada con Q3 no es un acuerdo firmado: no se añade precio de venta ni prima de separación. Los últimos formularios posteriores al 10-Q revisados no aportan una nueva cuenta de resultados o caja operativa. <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000058/spgi-20260930.htm">10-Q Q3</a>; <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000053/spgi3q2026-earningsrelease.htm">resultados y revisión estratégica</a>; <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000049/a630proformaupdate.htm">pro forma octubre</a>; <a href="https://www.sec.gov/Archives/edgar/data/64040/000110465926080571/tm2619099d2_ex99-1.htm">recast julio</a></p>
+<h2 id="por-qué-restar-el-cash-flow-de-mobility-no-resuelve-el-problema">2. Por qué restar el cash flow de Mobility no resuelve el problema</h2>
+<p>Mobility se separó el 1 de julio. La clasificación como discontinued operations <strong>excluye</strong> ciertos costes corporativos históricos que siguen en SPGI, y elimina transacciones internas. Sus estados carve-out, en cambio, incluyen asignaciones corporativas, saldos con la matriz y un cálculo fiscal como entidad separada. No son la misma cuenta de caja ni el mismo resultado económico.</p>
+<p>Ejemplo verificable: en 2025 el beneficio retirado de SPGI como operaciones discontinuadas es <strong>$305m</strong>, mientras el beneficio neto carve-out de Mobility es <strong>$220m</strong>. En 2024 son <strong>$283m y $208m</strong>. Por tanto, tomar CFO de Mobility de $485m/$427m y restarlo del CFO histórico de SPGI no constituye por sí solo una conciliación continuada. Habría que explicar impuestos, costes retenidos, intercompañía y pagos de separación, no solo hacer la resta. <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000049/a630proformaupdate.htm">Pro forma y criterios de perímetro</a>; <a href="https://s29.q4cdn.com/690959130/files/doc_downloads/2026/06/Mobility-Global-Inc-Information-Statement-June-4-2026.pdf">información definitiva Mobility, estados y notas de impuestos/partes relacionadas</a>; <a href="https://www.sec.gov/Archives/edgar/data/2090312/000209031226000014/mbgl-20260630.htm">Mobility H1 2026</a></p>
+<p>Los acuerdos transitorios de servicios duran hasta 18 meses. En Q3 la compañía considera su impacto no material. Los beneficios hipotéticos de TSA de $35m anuales y $13m en H1 de la pro forma no se capitalizan como ingresos perpetuos. Los costes corporativos retenidos tampoco desaparecen al quitar Mobility.</p>
+<h2 id="tres-ejercicios-resultados-continuados-y-caja-de-perímetro-antiguo-separados">3. Tres ejercicios: resultados continuados y caja de perímetro antiguo separados</h2>
+<p>USD millones. EBIT económico = EBIT continuado − ganancias de venta − beneficios de asociadas + amortización de intangibles. Las pérdidas de venta tienen signo contrario. Se conservan SBC, costes operativos y reestructuración.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ejercicio</th>
+<th style="text-align: right;">Ventas continuadas</th>
+<th style="text-align: right;">EBIT continuado</th>
+<th style="text-align: right;">EBIT económico</th>
+<th style="text-align: right;">Beneficio neto atribuible continuado</th>
+<th style="text-align: right;">CFO grupo antiguo</th>
+<th style="text-align: right;">Capex grupo antiguo</th>
+<th style="text-align: right;">FCF grupo antes de minoritarios</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td style="text-align: right;">11.013</td>
+<td style="text-align: right;">3.703</td>
+<td style="text-align: right;">4.477</td>
+<td style="text-align: right;">2.371</td>
+<td style="text-align: right;">3.710</td>
+<td style="text-align: right;">143</td>
+<td style="text-align: right;">3.567</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td style="text-align: right;">12.599</td>
+<td style="text-align: right;">5.206</td>
+<td style="text-align: right;">5.879</td>
+<td style="text-align: right;">3.569</td>
+<td style="text-align: right;">5.689</td>
+<td style="text-align: right;">124</td>
+<td style="text-align: right;">5.565</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td style="text-align: right;">13.589</td>
+<td style="text-align: right;">6.105</td>
+<td style="text-align: right;">6.570</td>
+<td style="text-align: right;">4.166</td>
+<td style="text-align: right;">5.651</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">5.456</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Las últimas tres columnas incluyen Mobility y no se usan como caja de SPGI actual.</strong> La tabla no oculta los importes originales, pero tampoco afirma comparabilidad donde no está demostrada. Las cuentas continuadas anuales de resultados son pro forma, no una nueva auditoría independiente del grupo separado. <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm">Estados históricos auditados</a>; <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000049/a630proformaupdate.htm">reclasificación de resultados</a></p>
+<h2 id="cuatro-trimestres-y-ttm-lo-conocido-y-la-incógnita-exacta">4. Cuatro trimestres y TTM: lo conocido y la incógnita exacta</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas continuadas</th>
+<th style="text-align: right;">EBIT continuado</th>
+<th style="text-align: right;">EBIT económico</th>
+<th style="text-align: right;">Beneficio atribuible continuado</th>
+<th>CFO continuado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q4 2025</td>
+<td style="text-align: right;">3.472</td>
+<td style="text-align: right;">1.629</td>
+<td style="text-align: right;">1.549</td>
+<td style="text-align: right;">1.075</td>
+<td>1.748 − D4,25</td>
+</tr>
+<tr class="even">
+<td>Q1 2026</td>
+<td style="text-align: right;">3.717</td>
+<td style="text-align: right;">1.921</td>
+<td style="text-align: right;">1.946</td>
+<td style="text-align: right;">1.329</td>
+<td>1.037 − D1,26</td>
+</tr>
+<tr class="odd">
+<td>Q2 2026</td>
+<td style="text-align: right;">3.679</td>
+<td style="text-align: right;">1.750</td>
+<td style="text-align: right;">1.938</td>
+<td style="text-align: right;">1.200</td>
+<td>1.439 − D2,26</td>
+</tr>
+<tr class="even">
+<td>Q3 2026</td>
+<td style="text-align: right;">3.678</td>
+<td style="text-align: right;">1.956</td>
+<td style="text-align: right;">1.955</td>
+<td style="text-align: right;">1.298</td>
+<td>1.185 + D1,26 + D2,26</td>
+</tr>
+<tr class="odd">
+<td>TTM septiembre 2026</td>
+<td style="text-align: right;">14.546</td>
+<td style="text-align: right;">7.256</td>
+<td style="text-align: right;">7.388</td>
+<td style="text-align: right;">4.902</td>
+<td><strong>5.409 − D4,25</strong></td>
+</tr>
+<tr class="even">
+<td>TTM septiembre 2025</td>
+<td style="text-align: right;">No reconstruido homogéneo</td>
+<td style="text-align: right;">No reconstruido homogéneo</td>
+<td style="text-align: right;">No reconstruido homogéneo</td>
+<td style="text-align: right;">No reconstruido homogéneo</td>
+<td><strong>5.057 − D4,24</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>D representa el CFO clasificado como discontinued operations de <strong>SPGI</strong> para el trimestre indicado, no el CFO carve-out de Mobility. Las fórmulas son identidades condicionadas, <strong>no estimaciones</strong>. El crecimiento absoluto del CFO continuado TTM es exactamente <strong>$352m − (D4,25 − D4,24)</strong>; su porcentaje no puede calcularse sin esas dos incógnitas. Así se identifica qué dato falta y cuánto puede alterar el comparativo, sin inventar un intervalo de confianza. Tampoco se usa cero por defecto para las celdas no publicadas.</p>
+<p>Cálculo del TTM actual: CFO grupo FY2025 5.651 − CFO grupo 9M2025 3.903 + CFO continuado 9M2026 3.661 − D4,25 = 5.409 − D4,25. Comparativo: 5.689 − 3.949 + 3.317 − D4,24 = 5.057 − D4,24. Q1/Q2 de 2026 se derivan del grupo original; Q3 se despeja del acumulado continuado oficial. <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000024/spgi-20260331.htm">10-Q marzo</a>; <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm">10-Q junio</a>; <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm">10-K</a>; <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000058/spgi-20260930.htm">comparación vigente septiembre</a></p>
+<p>Las cifras trimestrales de beneficio conservan la reconstrucción de A155: Q4 = anual continuado menos nueve meses de la última comparación; Q2 = H1 implícito en septiembre menos Q1. Hay $1m de redondeo/perímetro en las ventas de H1 frente a la pro forma de julio. La diferencia del beneficio Q4 puede aislarse mejor: julio mostraba $1.112m incluyendo $7m de beneficio TSA hipotético, es decir $1.105m antes de TSA. El residual de octubre/septiembre es $1.075m. Queda una redistribución de <strong>$30m</strong> entre periodos que no está conciliada al detalle en los documentos revisados. No se atribuye sin prueba a una causa fiscal concreta. El modelo se apoya en EBIT económico y no en ese EPS residual.</p>
+<h2 id="comparativo-de-caja-verdaderamente-homogéneo-nueve-meses">5. Comparativo de caja verdaderamente homogéneo: nueve meses</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>USD millones</th>
+<th style="text-align: right;">9M 2025</th>
+<th style="text-align: right;">9M 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CFO continuado oficial</td>
+<td style="text-align: right;">3.317</td>
+<td style="text-align: right;">3.661</td>
+</tr>
+<tr class="even">
+<td>Capex continuado</td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">93</td>
+</tr>
+<tr class="odd">
+<td>FCF antes de minoritarios</td>
+<td style="text-align: right;">3.184</td>
+<td style="text-align: right;">3.568</td>
+</tr>
+<tr class="even">
+<td>Distribuciones a minoritarios</td>
+<td style="text-align: right;">234</td>
+<td style="text-align: right;">269</td>
+</tr>
+<tr class="odd">
+<td>FCF definido por compañía</td>
+<td style="text-align: right;">2.950</td>
+<td style="text-align: right;">3.299</td>
+</tr>
+<tr class="even">
+<td>SBC añadido en CFO</td>
+<td style="text-align: right;">155</td>
+<td style="text-align: right;">127</td>
+</tr>
+<tr class="odd">
+<td>Caja después de SBC, antes de minoritarios</td>
+<td style="text-align: right;">3.029</td>
+<td style="text-align: right;">3.441</td>
+</tr>
+<tr class="even">
+<td>Más interés neto a impuesto normal 23%</td>
+<td style="text-align: right;">179,41</td>
+<td style="text-align: right;">205,59</td>
+</tr>
+<tr class="odd">
+<td>Diagnóstico no apalancado, aún con timing fiscal/circulante</td>
+<td style="text-align: right;">3.208,41</td>
+<td style="text-align: right;">3.646,59</td>
+</tr>
+<tr class="even">
+<td>EBIT económico reteniendo SBC</td>
+<td style="text-align: right;">5.021</td>
+<td style="text-align: right;">5.839</td>
+</tr>
+<tr class="odd">
+<td>NOPAT a impuesto normal 23%</td>
+<td style="text-align: right;">3.866,17</td>
+<td style="text-align: right;">4.496,03</td>
+</tr>
+<tr class="even">
+<td>Más depreciación PP&amp;E</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">86</td>
+</tr>
+<tr class="odd">
+<td>Menos capex</td>
+<td style="text-align: right;">(133)</td>
+<td style="text-align: right;">(93)</td>
+</tr>
+<tr class="even">
+<td>FCFF operativo antes de inversión en circulante</td>
+<td style="text-align: right;">3.801,17</td>
+<td style="text-align: right;">4.489,03</td>
+</tr>
+<tr class="odd">
+<td>Aportación de capital operativo, excluidos impuestos</td>
+<td style="text-align: right;">(762)</td>
+<td style="text-align: right;">(747)</td>
+</tr>
+<tr class="even">
+<td>Provisión de cobros no monetaria, para conciliar con las variaciones de circulante del estado de caja</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr class="odd">
+<td><strong>FCFF normalizado después de capital operativo histórico</strong></td>
+<td style="text-align: right;"><strong>3.064,17</strong></td>
+<td style="text-align: right;"><strong>3.778,03</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>El CFO crece <strong>10,37%</strong>, el FCF corporativo después de minoritarios <strong>11,83%</strong>, el EBIT económico <strong>16,29%</strong> y este FCFF normalizado <strong>23,30%</strong>. No son cuatro medidas intercambiables. El impuesto del 23% es una hipótesis normalizadora del modelo, no el impuesto efectivamente pagado. La normalización no añade de vuelta SBC. Tampoco vuelve a sumar la amortización adquirida después de haberla excluido del EBIT económico. Rentas de arrendamientos permanecen en costes.</p>
+<p>La inversión operativa de −747/−762 incluye cuentas a cobrar, anticipos, proveedores/devengos, ingresos diferidos, otros pasivos corrientes y otros activos/pasivos. Se quita el movimiento fiscal de −19/−55 al sustituir la tributación por una tasa normal. La provisión no monetaria de cuentas a cobrar se conserva como ajuste al emplear los movimientos de circulante del estado de cash flow; quitarla y usar esos mismos movimientos podría cobrar dos veces la pérdida de cobro. No equivale a eliminar el coste económico de incobrables de los márgenes futuros. Las reconciliaciones completas, incluidas provisiones, impuestos diferidos, ventas de activos y otros ajustes no monetarios, están en el JSON y sus dos vías de cálculo coinciden.</p>
+<p>El FCFF es consolidado. Restar además las distribuciones a minoritarios y después descontar su valor económico del EV sería duplicar el mismo derecho. La distribución de Mobility de $1.974m y los $198m de caja transferida son financiación/separación, no ingreso operativo recurrente. Los $667m de cobros por ventas de activos tampoco son FCFF recurrente. <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000058/spgi-20260930.htm">Estado de cash flow, disposición de Mobility y FCF corporativo</a></p>
+<h2 id="valoración-reproducida-sin-ajustar-artificialmente-para-llenar-datos">6. Valoración reproducida, sin ajustar artificialmente para llenar datos</h2>
+<p>El modelo reconstruido conserva los diez flujos anuales y todos los supuestos publicados. Reproduce a precisión no redondeada:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th style="text-align: right;">Valor por acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverso</td>
+<td style="text-align: right;">$156,802817</td>
+</tr>
+<tr class="even">
+<td>Base</td>
+<td style="text-align: right;">$296,603560</td>
+</tr>
+<tr class="odd">
+<td>Favorable</td>
+<td style="text-align: right;">$500,627873</td>
+</tr>
+</tbody>
+</table></div>
+<p>Base: ventas iniciales $14.546m, crecimiento 7/7/6,5/6/5,5% y transición a 3%; margen económico 51,5% hacia 53%; impuesto 23%; WACC 9,5%; ROIC incremental terminal 30%. El FCFF del año 1 es $5.832,49m y del año 10 $8.862,26m. EV $102.943,11m, derechos netos $17.284m y 288,8m acciones. No se añade MBGL, su deuda ni otra vez la distribución ya incorporada al balance. El ASR ya pagado no se resta de caja de nuevo.</p>
+<p>Los $13.062m de deuda usados son el <strong>valor contable reportado</strong>, una aproximación de valoración, no un nominal exacto de reembolso certificado. Los costes/descuentos no amortizados y ciertos ajustes heredados de deuda pueden producir una diferencia. Se conserva transparentemente la aproximación en lugar de describirla como idéntica al nominal. El minoritario no rescatable de $640m sigue siendo una estimación económica; el rescatable de Indices, $5.348m, procede de la nota de capital. Cada $100m de diferencia puntual en derechos vale aproximadamente $0,35 por acción.</p>
+<p>Como sensibilidad de escala, un coste de caja operativo adicional de $100m cada año durante diez años, creciendo 3% después, reduce el valor aproximadamente <strong>$4,39 por acción</strong> al 9,5%. No se presume que tal coste exista ni se utiliza como margen de seguridad automático. Los datos de caja de nueve meses no obligan a cambiar el modelo central ni bastan para cerrar todas las hipótesis de reinversión.</p>
+<p><strong>Confianza:</strong> alta en las cuentas oficiales de nueve meses y las identidades aritméticas; media en los resultados continuados pro forma; media-baja en un valor puntual por riesgo de costes remanentes, reinversión y cambios de perímetro. El contraste homogéneo completo frente a pares e historia que A155 dejó abierto no ha sido sustituido por una comparación apresurada. La investigación de este complemento está terminada, pero no debe cambiarse el estado a “todos los requisitos de Stage 3 cerrados” mientras se afirme disponer de la serie de caja que la compañía todavía no aporta.</p>
+<h2 id="soporte-y-siguientes-datos-que-resolverían-la-limitación">Soporte y siguientes datos que resolverían la limitación</h2>
+<p><code>model_and_history.py</code> reproduce las tres valoraciones, treinta flujos anuales y las tablas de historia. <code>model_and_history.json</code> y los CSV preservan datos ausentes como null/vacío, con su razón. <strong>43 comprobaciones pasan</strong>, incluidas reconciliaciones de CFO, las dos rutas de normalización, sumas trimestrales y reproducción del modelo previo. El manifiesto conserva fuentes y hashes.</p>
+<p>La laguna se resuelve con estados anuales continuados que incluyan CFO y sus ajustes, o con una conciliación expresa de SPGI entre el cash flow carve-out de Mobility y el cash flow de sus discontinued operations para los periodos requeridos. No es razonable pedir al usuario que invente esos datos. Cuando se publiquen, recalcular TTM, impuestos/circulante, costes residuales y precio; mientras tanto, usar el comparativo de nueve meses realmente disponible. No se ha contactado con terceros ni colocado operaciones.</p>
+<h2 id="full-dossier-and-analyst-audit-files">Full dossier and analyst audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/source_report.md">source_report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/annual_history.csv">annual_history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/base_10year_fcff.csv">base_10year_fcff.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/bear_10year_fcff.csv">bear_10year_fcff.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/bull_10year_fcff.csv">bull_10year_fcff.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/comparative_nine_months.csv">comparative_nine_months.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/four_quarters.csv">four_quarters.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/manifest.json">manifest.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/model_and_history.json">model_and_history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/source_ledger.json">source_ledger.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/ttm_disclosure_limits.csv">ttm_disclosure_limits.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SPGI/validation_checks.csv">validation_checks.csv</a></li>
+</ul>
+</main></body></html>

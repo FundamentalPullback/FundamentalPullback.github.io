@@ -1,0 +1,105 @@
+{
+  "ticker": "HTHT",
+  "as_of": "2026-11-04",
+  "units": "RMB millions in data; billions in appendix; per ADS amounts RMB unless USD explicitly labeled",
+  "table_index_convention": "Zero-based indices in locally extracted tables.json; source titles and row labels are the authoritative anchors.",
+  "sources": [
+    {
+      "key": "fy25",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483994/000110465926048058/htht-20251231x20f.htm",
+      "periods": "FY2023\u20132025; FY2024/2025 lease comparisons",
+      "statement_locator": "20-F: consolidated income table 321; operating/investing cash flow 323; financing/supplement 324; EBITDA reconciliation 181; lease expense 352; lease cash 355",
+      "local_html": "sources/fy25.html",
+      "local_text": "sources/fy25.txt",
+      "extracted_tables": "sources/fy25.tables.json"
+    },
+    {
+      "key": "h126",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483994/000110465926109789/htht-20260923xex99d1.htm",
+      "periods": "H1 2025/H1 2026; June 30, 2026 balance sheet and shares",
+      "statement_locator": "6-K interim exhibit: balance 1; income 2; equity 3; cash 4; lease expense 30; lease cash 32; debt, dividend and VIE context",
+      "local_html": "sources/h126.html",
+      "local_text": "sources/h126.txt",
+      "extracted_tables": "sources/h126.tables.json"
+    },
+    {
+      "key": "h125",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483994/000141057825002265/htht-20250912xex99d1.htm",
+      "periods": "H1 2024/H1 2025",
+      "statement_locator": "6-K interim exhibit: cash 4; lease expense 30; lease cash 32",
+      "local_html": "sources/h125.html",
+      "local_text": "sources/h125.txt",
+      "extracted_tables": "sources/h125.tables.json"
+    },
+    {
+      "key": "q226",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483994/000110465926097496/tm2623383d1_ex99-1.htm",
+      "periods": "Q2 2025/Q1 2026/Q2 2026; H1 2025/H1 2026",
+      "statement_locator": "6-K results: income 31; cash 33; EBITDA reconciliation 37",
+      "local_html": "sources/q226.html",
+      "local_text": "sources/q226.txt",
+      "extracted_tables": "sources/q226.tables.json"
+    },
+    {
+      "key": "q425",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483994/000110465926029875/tm269239d1_ex99-1.htm",
+      "periods": "Q4 2024/Q3 2025/Q4 2025; FY2024/FY2025",
+      "statement_locator": "6-K results: income 35; cash 37; EBITDA reconciliation 40",
+      "local_html": "sources/q425.html",
+      "local_text": "sources/q425.txt",
+      "extracted_tables": "sources/q425.tables.json"
+    },
+    {
+      "key": "q126",
+      "url": "https://ir.hworld.com/news-releases/news-release-details/h-world-group-limited-reports-first-quarter-2026-unaudited",
+      "periods": "Q1 2025/Q4 2025/Q1 2026",
+      "statement_locator": "Issuer results: income 3; cash 4; EBITDA reconciliation 5",
+      "local_html": "sources/q126.html",
+      "local_text": "sources/q126.txt",
+      "extracted_tables": "sources/q126.tables.json"
+    },
+    {
+      "key": "q325",
+      "url": "https://ir.hworld.com/news-releases/news-release-details/h-world-group-limited-reports-third-quarter-2025-unaudited",
+      "periods": "Q3 2024/Q2 2025/Q3 2025",
+      "statement_locator": "Issuer results: income 3; cash 4; EBITDA reconciliation 5",
+      "local_html": "sources/q325.html",
+      "local_text": "sources/q325.txt",
+      "extracted_tables": "sources/q325.tables.json"
+    },
+    {
+      "key": "q225",
+      "url": "https://ir.hworld.com/news-releases/news-release-details/h-world-group-limited-reports-second-quarter-and-interim-2025",
+      "periods": "Q2 2024/Q1 2025/Q2 2025; H1 2024/H1 2025",
+      "statement_locator": "Issuer results: income 3; cash 4; EBITDA reconciliation 5",
+      "local_html": "sources/q225.html",
+      "local_text": "sources/q225.txt",
+      "extracted_tables": "sources/q225.tables.json"
+    },
+    {
+      "key": "q224",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483994/000110465924091033/tm2421903d2_ex99-1.htm",
+      "periods": "H1 2023 comparative revenue; Q2 2024/H1 2024",
+      "statement_locator": "6-K results: revenue summary 13; full income 20; H1 2023 revenue RMB 10,010 million",
+      "local_html": "sources/q224.html",
+      "local_text": "sources/q224.txt",
+      "extracted_tables": "sources/q224.tables.json"
+    }
+  ],
+  "important_assumptions": [
+    "Normalized cash operating tax 30%, sensitivity 25\u201335%.",
+    "Incremental operating capital 5% of change in trailing annual revenue.",
+    "Ordinary SBC stays within EBIT. Cash diagnostic deducts SBC because CFO adds it back.",
+    "Operating and finance leases treated as operating cash requirements; do not deduct lease debt a second time.",
+    "Supplemental purchases of PP&E included in payables are not proven full end-balance roll-forwards. Main normalized FCFF deducts reported cash capex. The conditional accrued-capex sensitivity is explicitly separate.",
+    "322 million ADS and RMB 6.67233/USD are unchanged valuation inputs, not historical weighted share counts or historical reporting FX.",
+    "No Q3 2026 actuals inferred from annual guidance."
+  ],
+  "model_preserved": "../HTHT_Stage3_complete.md",
+  "calendar_verification": {
+    "checked_at_utc": "2026-11-04T05:49:42Z",
+    "release_url": "https://ir.hworld.com/news-and-events/press-releases",
+    "events_url": "https://ir.hworld.com/news-and-events/events-calendar",
+    "result": "Latest displayed release is September 16, 2026 bonds; latest financial results August 17, 2026 Q2; upcoming events empty. No confirmed November 4\u20136 earnings event found, not a guarantee."
+  }
+}

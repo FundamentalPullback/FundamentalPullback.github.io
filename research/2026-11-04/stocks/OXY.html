@@ -1,0 +1,728 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OXY · A184 revision</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><p><strong><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/OXY.html">Open the full readable OXY dossier</a></strong></p><nav><a href="../../../#ficha/OXY">← OXY profile</a><a href="../index.html">Research index</a></nav><p class="eyebrow">A184 · November4,2026 · No entry approval</p><h2 id="dated-correction-a184-november-4-2026">Dated correction: A184, November 4, 2026</h2>
+<p>Updates only <strong>OXY</strong> in historical <strong>A152</strong>. The original shared report and unrelated issuer components must remain unchanged.</p>
+<p><strong>Cycle-dependent observation. Reference $32.71 is not the whole valuation: capital-execution cases $44.34–52.54, favorable capital cases $72.06–75.50. Continuing cash rebuilt; WES, Tronox, pension and ARO treatment explicit. Scanner $60.42; regular close $60.43.</strong></p>
+<p>Prepared November4,2026 after10:00UTC. Source cutoff is retained below; later event completion has not been verified.</p>
+<p><strong>Price audit:</strong> November3 scanner $60.42; separately sourced regular close $60.43. Scanner header timezone is not certified.</p>
+<p><strong>Coverage and source limits:</strong> FY2023–FY2025; Q3–Q4 2025 and Q1–Q2 2026; June2025/2026 TTM continuing CFO and cash capex rebuilt. Forecast sustaining capital and contingent claims remain assumptions.</p>
+<p><strong>Next review:</strong> WES November4 after close and OXY November9 after close were future at source cutoff. Revalidate releases and capital-execution assumptions.</p>
+<p><strong>No entry approved.</strong> No new position, quantity, buy ceiling or stop. No universal15/20/25% valuation-discount rule.</p>
+<hr />
+<h1 id="oxy-revisión-stage-3-completada-y-conciliación-de-cajaperímetro">OXY: revisión Stage 3 completada y conciliación de caja/perímetro</h1>
+<p><strong>Fecha: 4 noviembre 2026, 06:16 UTC. Referencia de decisión: scanner 3 noviembre, $60,42.</strong> Cierre contrastado de ese día: $60,43; se mantiene el precio del scanner para que el antes/después sea comparable. Las cotizaciones intradía almacenadas no sustituyen un cierre. NYSE, ordinaria estadounidense, sin ratio ADR. Esta adenda sustituye únicamente la conclusión y las conciliaciones de <strong>OXY</strong> de A152; no modifica LYB.</p>
+<p><strong>Resultado: investigación Stage 3 completa con la información pública disponible; en observación, dependiente del ciclo, sin aprobación de entrada.</strong> Ya no existe el bloqueo por falta de cuatro trimestres o TTM anterior continuado. No se invoca un descuento mínimo del 15%, crecimiento mínimo ni una rentabilidad universal. La referencia central conservadora resulta $32,71, pero la eficiencia de reposición merece una alternativa de $41,44; un escenario conjuntamente favorable de petróleo y capital eficiente alcanza $72,06. La valoración relativa, $53,55–72,68, sí contiene el precio actual. Por tanto, no se fuerza una coincidencia entre métodos ni se presenta la acción como intrínsecamente inadecuada: para entrar cerca de $60 hay que defender supuestos más favorables que los centrales, y revisar los eventos inmediatos.</p>
+<p>OXY publica Q3 el <strong>9 noviembre después del cierre</strong>, llamada el 10; no está en la exclusión semanal del 2–6. Su participada WES publica <strong>4 noviembre después del cierre</strong>, llamada el 5. Ninguno de esos resultados futuros se ha inventado. Stage 3.5, señal técnica y riesgo/tamaño de posición, sigue sin comprobarse; completar investigación no equivale a autorizar una orden. Fuentes: <a href="https://stockanalysis.com/stocks/oxy/">cierre</a>, <a href="https://www.oxy.com/news/news-releases/occidental-to-announce-third-quarter-results-monday-november-9-2026--hold-conference-call-tuesday-november-10-2026/">calendario OXY</a>, <a href="https://investors.westernmidstream.com/2026-10-19-Western-Midstream-Announces-Third-Quarter-2026-Distribution-and-Earnings-Conference-Call">calendario WES</a>.</p>
+<h2 id="el-perímetro-que-realmente-se-compra">1. El perímetro que realmente se compra</h2>
+<p>OxyChem se vendió el <strong>2 enero 2026</strong>. El precio inicial de 9,700 bn quedó en <strong>9,472 bn</strong> tras ajustes de circulante de −0,158 y posteriores de −0,070, todavía sujeto a ajustes finales. H1 contiene una ganancia discontinuada de aproximadamente 3,1 bn y CFO discontinuado <strong>−0,926 bn</strong>, principalmente impuestos de la venta. El CFO continuado es <strong>6,478 bn</strong>, frente a CFO consolidado <strong>5,552 bn</strong>. No se añaden otra vez al valor los 9,472 bn: ya afectan a caja y deuda de junio. El EBIT/FCFF proyectado no contiene química ni su ganancia de venta.</p>
+<p>La venta no eliminó las indemnizaciones ambientales históricas. Tampoco convirtió a las preferentes en acciones comunes ni las amortizó. El pro forma de enero suponía una amortización de deuda de 6,5 bn y ajustes CrownRock; no es una serie GAAP de caja continuada. Para la historia se usan el 10-K reexpresado y la matriz trimestral posterior del emisor. Los costes corporativos retenidos permanecen en los resultados continuados publicados; no se inventa un beneficio independiente sin ellos. CrownRock entró en agosto de 2024: FY2024 tiene solo cinco meses y el TTM junio 2025 once; el crecimiento no es totalmente orgánico. <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026053388/oxy-20260630.htm">10-Q junio, notas 1, 3 y 4</a>; <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026000153/exhibit992unauditedproform.htm">pro forma de enero</a>.</p>
+<h2 id="tres-ejercicios-cuatro-trimestres-y-dos-ttm-homogéneos">2. Tres ejercicios, cuatro trimestres y dos TTM homogéneos</h2>
+<p>EBIT core = ventas − gastos totales + intereses. Es un subtotal reconstruido, <strong>no un subtotal GAAP del emisor</strong>. Excluye ganancias de venta, renta financiera y resultados de asociadas; conserva costes operativos, exploración y SBC. Beneficio común continuado = beneficio continuado − NCI − dividendos/primas preferentes. En 2023 estos últimos incluyen primas de rescate, de modo que no son un cupón perpetuo de 0,923 bn.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>USD bn salvo EPS</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas continuadas</td>
+<td style="text-align: right;">23,156</td>
+<td style="text-align: right;">22,019</td>
+<td style="text-align: right;">21,593</td>
+</tr>
+<tr class="even">
+<td>EBIT core reconstruido</td>
+<td style="text-align: right;">4,518</td>
+<td style="text-align: right;">4,258</td>
+<td style="text-align: right;">3,649</td>
+</tr>
+<tr class="odd">
+<td>Beneficio continuado</td>
+<td style="text-align: right;">3,332</td>
+<td style="text-align: right;">2,866</td>
+<td style="text-align: right;">2,107</td>
+</tr>
+<tr class="even">
+<td>Beneficio común continuado</td>
+<td style="text-align: right;">2,409</td>
+<td style="text-align: right;">2,165</td>
+<td style="text-align: right;">1,385</td>
+</tr>
+<tr class="odd">
+<td>EPS diluido continuado</td>
+<td style="text-align: right;">2,49</td>
+<td style="text-align: right;">2,23</td>
+<td style="text-align: right;">1,35</td>
+</tr>
+<tr class="even">
+<td>CFO continuado</td>
+<td style="text-align: right;">10,235</td>
+<td style="text-align: right;">10,519</td>
+<td style="text-align: right;">9,606</td>
+</tr>
+<tr class="odd">
+<td>Capex antes del ajuste de devengo</td>
+<td style="text-align: right;">5,696</td>
+<td style="text-align: right;">6,263</td>
+<td style="text-align: right;">6,427</td>
+</tr>
+<tr class="even">
+<td>Ajuste de caja por devengo de capex, signo publicado</td>
+<td style="text-align: right;">-0,022</td>
+<td style="text-align: right;">0,100</td>
+<td style="text-align: right;">0,032</td>
+</tr>
+<tr class="odd">
+<td>Capex efectivamente pagado</td>
+<td style="text-align: right;">5,718</td>
+<td style="text-align: right;">6,163</td>
+<td style="text-align: right;">6,395</td>
+</tr>
+<tr class="even">
+<td>CFO menos capex pagado</td>
+<td style="text-align: right;">4,517</td>
+<td style="text-align: right;">4,356</td>
+<td style="text-align: right;">3,211</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuente: <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/oxy-20251231.htm">10-K 2025, presentado 18 febrero 2026</a>. Capex pagado = capex publicado menos el ajuste firmado de devengo. Por ejemplo, 2025: 6,427 − 0,032 = 6,395; FCF = 9,606 − 6,395 = 3,211. El informe anterior mostraba 3,179 antes de ese ajuste, que no era caja pagada.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>USD bn salvo EPS</th>
+<th style="text-align: right;">Q32025</th>
+<th style="text-align: right;">Q42025</th>
+<th style="text-align: right;">Q12026</th>
+<th style="text-align: right;">Q22026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas continuadas</td>
+<td style="text-align: right;">5,519</td>
+<td style="text-align: right;">5,112</td>
+<td style="text-align: right;">5,230</td>
+<td style="text-align: right;">8,065</td>
+</tr>
+<tr class="even">
+<td>EBIT core reconstruido</td>
+<td style="text-align: right;">1,012</td>
+<td style="text-align: right;">0,506</td>
+<td style="text-align: right;">0,807</td>
+<td style="text-align: right;">3,627</td>
+</tr>
+<tr class="odd">
+<td>Beneficio continuado</td>
+<td style="text-align: right;">0,706</td>
+<td style="text-align: right;">0,233</td>
+<td style="text-align: right;">0,236</td>
+<td style="text-align: right;">3,000</td>
+</tr>
+<tr class="even">
+<td>Beneficio común continuado</td>
+<td style="text-align: right;">0,525</td>
+<td style="text-align: right;">0,051</td>
+<td style="text-align: right;">0,052</td>
+<td style="text-align: right;">2,811</td>
+</tr>
+<tr class="odd">
+<td>EPS diluido continuado</td>
+<td style="text-align: right;">0,51</td>
+<td style="text-align: right;">0,05</td>
+<td style="text-align: right;">0,05</td>
+<td style="text-align: right;">2,76</td>
+</tr>
+<tr class="even">
+<td>CFO continuado</td>
+<td style="text-align: right;">2,447</td>
+<td style="text-align: right;">2,398</td>
+<td style="text-align: right;">1,392</td>
+<td style="text-align: right;">5,086</td>
+</tr>
+<tr class="odd">
+<td>Capex antes del ajuste de devengo</td>
+<td style="text-align: right;">1,512</td>
+<td style="text-align: right;">1,528</td>
+<td style="text-align: right;">1,554</td>
+<td style="text-align: right;">1,589</td>
+</tr>
+<tr class="even">
+<td>Ajuste firmado de devengo</td>
+<td style="text-align: right;">-0,068</td>
+<td style="text-align: right;">0,074</td>
+<td style="text-align: right;">-0,025</td>
+<td style="text-align: right;">-0,040</td>
+</tr>
+<tr class="odd">
+<td>Capex efectivamente pagado</td>
+<td style="text-align: right;">1,580</td>
+<td style="text-align: right;">1,454</td>
+<td style="text-align: right;">1,579</td>
+<td style="text-align: right;">1,629</td>
+</tr>
+<tr class="even">
+<td>CFO menos capex pagado</td>
+<td style="text-align: right;">0,867</td>
+<td style="text-align: right;">0,944</td>
+<td style="text-align: right;">-0,187</td>
+<td style="text-align: right;">3,457</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los CFO 2,447/2,398 de Q3/Q4 2025 sustituyen los antiguos aproximadamente 2,8/2,6 que incluían química. Q2 2026 se obtiene por H1 − Q1: CFO 6,478 − 1,392 = 5,086; capex pagado 3,208 − 1,579 = 1,629. El emisor publica los trimestres 2024/2025 reexpresados completos, así que no hace falta estimar el CFO de OxyChem. Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026009054/oxyex99112-31x25earningsre.htm">matriz trimestral FY2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026030584/oxy-20260331.htm">10-Q marzo</a>, <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026053388/oxy-20260630.htm">10-Q junio</a>, <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026053377/oxyex9916-30x26earningsrel.htm">suplemento Q2</a>. Hay diferencias de redondeo de 1m entre D&amp;A de resultados y algunos flujos trimestrales de 2024; se conserva la línea de D&amp;A de resultados, que suma al año.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>USD bn salvo EPS</th>
+<th style="text-align: right;">TTM2025-06</th>
+<th style="text-align: right;">TTM2026-06</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas continuadas</td>
+<td style="text-align: right;">22,554</td>
+<td style="text-align: right;">23,926</td>
+</tr>
+<tr class="even">
+<td>EBIT core reconstruido</td>
+<td style="text-align: right;">4,338</td>
+<td style="text-align: right;">5,952</td>
+</tr>
+<tr class="odd">
+<td>Beneficio continuado</td>
+<td style="text-align: right;">2,581</td>
+<td style="text-align: right;">4,175</td>
+</tr>
+<tr class="even">
+<td>Beneficio común continuado</td>
+<td style="text-align: right;">1,869</td>
+<td style="text-align: right;">3,439</td>
+</tr>
+<tr class="odd">
+<td>CFO continuado</td>
+<td style="text-align: right;">11,390</td>
+<td style="text-align: right;">11,323</td>
+</tr>
+<tr class="even">
+<td>Capex efectivamente pagado</td>
+<td style="text-align: right;">6,291</td>
+<td style="text-align: right;">6,242</td>
+</tr>
+<tr class="odd">
+<td>CFO menos capex pagado</td>
+<td style="text-align: right;">5,099</td>
+<td style="text-align: right;">5,081</td>
+</tr>
+<tr class="even">
+<td>Efecto de circulante operativo en CFO</td>
+<td style="text-align: right;">0,502</td>
+<td style="text-align: right;">-1,923</td>
+</tr>
+<tr class="odd">
+<td>Efecto de impuestos corrientes en CFO</td>
+<td style="text-align: right;">0,131</td>
+<td style="text-align: right;">-0,109</td>
+</tr>
+<tr class="even">
+<td>FCF sin ambos movimientos de circulante</td>
+<td style="text-align: right;">4,466</td>
+<td style="text-align: right;">7,113</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Conciliación exacta, FY + H1 actual − H1 anterior:</strong> - TTM junio 2025 CFO = 10,519 + 4,761 − 3,890 = <strong>11,390</strong>. Capex pagado = 6,163 + 3,361 − 3,233 = <strong>6,291</strong>. FCF = <strong>5,099</strong>. - TTM junio 2026 CFO = 9,606 + 6,478 − 4,761 = <strong>11,323</strong>. Capex pagado = 6,395 + 3,208 − 3,361 = <strong>6,242</strong>. FCF = <strong>5,081</strong>, −0,35%. - Ventas crecen 6,1%; EBIT 37,2%; beneficio común continuado 84,0%. Los 6,575 bn de beneficio común total TTM incluyen 3,136 bn discontinuados: no justifican un PER recurrente de aproximadamente nueve veces. - La suma del EPS continuado de los últimos cuatro trimestres es 3,37; <strong>no</strong> se etiqueta como EPS TTM GAAP calculado con un único denominador. Las medias de acciones y los ajustes a participantes/warrants cambian.</p>
+<p>El FCF publicado casi plano no significa que la operación esté plana: el TTM actual absorbió 1,923 bn de circulante operativo frente a una liberación previa de 0,502 bn. Al quitar también los movimientos de impuestos corrientes, el diagnóstico de caja es 7,113 frente a 4,466 bn. Ese ajuste elimina el calendario de cobros/pagos, <strong>no</strong> el ciclo del petróleo ni la necesidad de pagar impuestos.</p>
+<h2 id="normalización-reproducible-sin-borrar-costes-económicos">3. Normalización reproducible sin borrar costes económicos</h2>
+<p>Se publican dos series distintas. CFO−capex sigue incluyendo intereses, distribuciones de asociadas y add-backs no monetarios; no es FCFF ni dinero enteramente distribuible al común. El puente operativo alternativo usa:</p>
+<p><strong>EBIT core + deterioros de activos identificados + costes de adquisición identificados</strong>, después impuesto uniforme del 28%, más D&amp;A y gasto no monetario de pozos secos identificado, menos capex pagado, con circulante recurrente cero. Los pozos secos se suman porque su desembolso de perforación permanece en capex, evitando contabilizarlo dos veces. No se excluye toda exploración ni se añade íntegra la partida «otros cargos no monetarios».</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>USD bn salvo EPS</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">TTM2025-06</th>
+<th style="text-align: right;">TTM2026-06</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EBIT core normalizado contablemente</td>
+<td style="text-align: right;">4,753</td>
+<td style="text-align: right;">4,697</td>
+<td style="text-align: right;">3,683</td>
+<td style="text-align: right;">4,763</td>
+<td style="text-align: right;">6,079</td>
+</tr>
+<tr class="even">
+<td>Pozos secos no monetarios identificados</td>
+<td style="text-align: right;">0,299</td>
+<td style="text-align: right;">0,106</td>
+<td style="text-align: right;">0,109</td>
+<td style="text-align: right;">0,104</td>
+<td style="text-align: right;">0,121</td>
+</tr>
+<tr class="odd">
+<td>Puente FCFF antes de reserva adicional ARO</td>
+<td style="text-align: right;">4,452</td>
+<td style="text-align: right;">4,276</td>
+<td style="text-align: right;">3,899</td>
+<td style="text-align: right;">4,559</td>
+<td style="text-align: right;">5,803</td>
+</tr>
+<tr class="even">
+<td>Puente con reserva ARO uniforme de 0,350/año</td>
+<td style="text-align: right;">4,102</td>
+<td style="text-align: right;">3,926</td>
+<td style="text-align: right;">3,549</td>
+<td style="text-align: right;">4,209</td>
+<td style="text-align: right;">5,453</td>
+</tr>
+</tbody>
+</table></div>
+<p>El último diagnóstico pasa de <strong>4,209 a 5,453 bn, +29,5%</strong>; es mejora a precios realizados de cada periodo, <strong>no caja de medio ciclo demostrada</strong>. Las cuatro cifras trimestrales correspondientes son 1,045/0,807/0,861/2,740 bn; suman 5,453. Se conserva la SBC en EBIT. La nota anual informa gasto de incentivos de 0,203/0,213/0,234 bn en 2023/24/25, incluyendo modalidades liquidadas en efectivo y acciones: restar todo otra vez a CFO duplicaría la parte ya pagada. No se fabrica una SBC trimestral desagregada.</p>
+<p>Q2 no se extrapola: crudo realizado <strong>$96,78</strong>, beneficio midstream ajustado <strong>0,961 bn</strong>, frente a guía Q3 de −0,1 a +0,1. H1 tuvo pérdidas contables por collars de crudo de 0,234 bn y liquidaciones de caja de 0,183 bn; quitar todas las pérdidas de coberturas borraría una salida real. La diferencia de 0,051 bn y los derivados de marketing generan ruido temporal; la serie conservadora no los convierte automáticamente en caja recurrente. Q3 preliminar del 13 octubre informa crudo <strong>$85,91</strong>, liquidaciones de collars de <strong>−0,094 bn</strong> y restricciones de terceros en el Golfo, sin publicar todavía resultados completos. <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026053388/oxy-20260630.htm">10-Q, derivados y segmentos</a>; <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026065586/oxyex99193026preearningsre.htm">preanuncio del 13 octubre</a>.</p>
+<h2 id="reservas-reposición-y-cuánto-de-da-representa-inversión-económica">4. Reservas, reposición y cuánto de D&amp;A representa inversión económica</h2>
+<p>2025 terminó con <strong>4,603 bn boe de reservas probadas</strong> frente a producción anual de 0,523 bn: 8,8 años de vida estática, no una fecha predicha de agotamiento. Extensiones/descubrimientos 0,340 + recuperación mejorada 0,060 + revisiones 0,161 = 0,561 bn, reposición orgánica 107%; <strong>sin revisiones, 76%</strong>. Compras 0,010 y ventas −0,057 explican parte del resto. No se confunden recursos potenciales con reservas ni se atribuyen todas las revisiones a perforación rentable.</p>
+<p>El coste de lease por boe bajó de $10,48 en 2023 a $9,75 en 2024 y $8,94 en 2025, evidencia favorable. El valor estandarizado después de impuestos, descontado al 10%, era 36,627 bn en 2025 frente a 42,871 bn en 2024: utiliza precios/reglas SEC y reservas existentes, <strong>no equivale a EV ni al valor de la acción</strong>. La guía 2026 de capex 5,5–5,9 bn y producción 1,423–1,453 mboe/d apoya eficiencia inmediata; no prueba que el mismo capex mantenga diez años la base de reservas. <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/oxy-20251231.htm">10-K, información suplementaria de petróleo y gas</a>; <a href="https://www.oxy.com/siteassets/documents/investors/quarterly-earnings/oxy2q26conferencecallslides.pdf">guía Q2</a>.</p>
+<p>El caso central conserva la normalización de reposición de A152, pero se prueba explícitamente su posible exceso de prudencia: reducir la inversión terminal económica en <strong>1,5 bn/año</strong>, introducida gradualmente en años 6–10, lleva el valor central de $32,71 a <strong>$41,44</strong>. En año 10 implica capex aproximadamente 7,273 bn frente a 8,773 bn, no inversión cero. Combinar esa eficiencia con el escenario favorable de petróleo aumenta el valor a <strong>$72,06</strong>. Estos casos reconocen que D&amp;A incluye bases históricas y adquisiciones y no es una ley física de mantenimiento.</p>
+<p><strong>Contraste adicional con la promesa de inversión de la dirección:</strong> las diapositivas de agosto 6 parten de sustaining capex 5,387 bn en 2025 y buscan aproximadamente 4,5 bn para 2029, con caída del declino de 25% a 20%. No es capex total: la reconciliación excluye 0,840 bn de exploración, proyectos multianuales y crecimiento, y resta aportacionesNCI; también separa 0,450 bnLCV. El gráfico de mejora 4,0 bn excluye inflación e incluye 0,740 bn de ahorro de intereses y el rescate preferente de 2029. Sumarlos al FCFF sin pagar deuda/preferentes sería duplicar.</p>
+<p>Se añade un caso de ejecución de capital propio, sin sumar otra vez todos los ahorros operativos: ahorro terminal 2,0 bn frente a la senda antigua, capex año 10 de 6,773 bn. Orientativamente cubre 4,5 bn de sostenimiento en dólares 2025 inflados 2% durante 11 años (5,595), inversión de crecimiento 0,764, menos circulante 0,042, y 0,456 de exploración/reposición adicional. Las equivalencias son supuestos, no guidance 2036. A WACC10% vale aproximadamente $44,34 y a 9% aproximadamente $52,54; con crudo favorable alcanza aproximadamente $75,50. Por tanto, la cercanía entre precio y valor depende también del capital operativo sostenible, no solo del petróleo. No se declara obligatorio que capex converja a D&amp;A.</p>
+<p>Los puentes históricos de FCFF son diagnósticos, no un estado de caja unlevered auditado. Los intereses capitalizados identificados totalizan 0,082/0,156/0,179 bn en 2023/24/25, y 0,103 bn enH12026; no hay un desglose trimestral completo que permita atribuir todos los años a continuadas sin supuestos. El puente histórico conserva el capex de caja íntegro y, por ello, es prudente respecto a esa partida financiera. En la previsión, el presupuesto de inversión es operativo y excluye financiación capitalizada; los intereses se tratan únicamente en WACC/puente o en la TIR común. No se inventa una segregaciónGAAP faltante.</p>
+<h2 id="puente-de-capital-corregido-y-obligaciones-retenidas">5. Puente de capital corregido y obligaciones retenidas</h2>
+<p>Importes de junio 30 salvo donde se indica; no se usan ahorros futuros de intereses para sumar valor dos veces.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th style="text-align: right;">USD bn</th>
+<th>Tratamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja</td>
+<td style="text-align: right;">4,150</td>
+<td>Reserva operativa propia 1,000; exceso 3,150</td>
+</tr>
+<tr class="even">
+<td>Principal de deuda</td>
+<td style="text-align: right;">11,818</td>
+<td><strong>Ya es junio 30</strong>, no un saldo posterior de agosto</td>
+</tr>
+<tr class="odd">
+<td>Prima contable neta / costes emisión</td>
+<td style="text-align: right;">+1,030 / −0,048</td>
+<td>Deuda en libros 12,800</td>
+</tr>
+<tr class="even">
+<td>Arrendamientos financieros</td>
+<td style="text-align: right;">0,943</td>
+<td>0,741 largo +0,202 corto</td>
+</tr>
+<tr class="odd">
+<td>Total contable deuda y leases</td>
+<td style="text-align: right;">13,743</td>
+<td>Conciliado, no confundido con principal</td>
+</tr>
+<tr class="even">
+<td>Valor razonable de deuda comunicado</td>
+<td style="text-align: right;">12,200</td>
+<td>Más leases 0,943 = <strong>13,143</strong>, usado en EV</td>
+</tr>
+<tr class="odd">
+<td>Preferentes nominal / libros</td>
+<td style="text-align: right;">8,4897 / 8,287</td>
+<td>Libros no es el derecho económico</td>
+</tr>
+<tr class="even">
+<td>Preferentes liquidación/rescate voluntario</td>
+<td style="text-align: right;">8,9142</td>
+<td>105% nominal; cupón 8%, 0,679/año</td>
+</tr>
+<tr class="odd">
+<td>Ambiental retenido</td>
+<td style="text-align: right;">1,853</td>
+<td>Incluye 1,663 de sitios vinculados a discontinuadas</td>
+</tr>
+<tr class="even">
+<td>NCI</td>
+<td style="text-align: right;">0,635</td>
+<td>Incluye derechos prioritarios en DAC/BlackRock</td>
+</tr>
+<tr class="odd">
+<td>Déficit pensiones/posretiro FY2025</td>
+<td style="text-align: right;">0,885</td>
+<td>Último déficit neto íntegro verificado; claim separado</td>
+</tr>
+<tr class="even">
+<td>Exposición tributaria Tronox provisionada</td>
+<td style="text-align: right;">2,400</td>
+<td>Reserva íntegra, no nueva deuda financiera</td>
+</tr>
+</tbody>
+</table></div>
+<p>La nota de junio estima deuda a valor razonable 12,2 bn. Usar principal en vez de valor razonable aumentaría el valor común aproximadamente $0,37; usar libros lo reduciría aproximadamente $0,59. La diferencia no es una fecha incompatible. El déficit de pensiones FY2025 se obtiene de obligaciones 1,617 menos activos 0,732; junio solo presenta obligación no corriente 0,937, no todo el funded status. Se usa 0,885 como estimación explícita del claim, rango 0,7–1,0, sin presentar un neto inventado de junio. El margen futuro conserva coste normal de servicio, pero no una segunda cuota para amortizar ese déficit.</p>
+<p><strong>Tronox es una omisión material de A152.</strong> La nota estima 1,4 bn de impuestos y 1,0 bn de intereses que podrían pagarse si se pierde la deducción. Están ya provisionados: que no produzcan un nuevo gasto contable no evita la salida de caja. Se restan 2,4 bn una sola vez; no se vuelven a restar además los 2,472 bn de la línea de pasivos tributarios de largo plazo. No se predice la sentencia ni se presume que haya ocurrido. Ganar totalmente recuperaría aproximadamente $2,35/acción en la referencia central. La responsabilidad ambiental puede superar la reserva: el emisor identifica pérdidas adicionales razonablemente posibles de hasta 1,9 bn, que son un estrés de aproximadamente $1,86/acción, no una obligación cierta adicional. <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026053388/oxy-20260630.htm">notas de deuda y contingencias</a>; <a href="https://www.sec.gov/Archives/edgar/data/797468/000162828026009059/oxy-20251231.htm">pensiones y preferentes</a>.</p>
+<p>ARO asciende a <strong>4,056 bn incluyendo 0,400 corriente</strong>, no solo 3,656 bn. En 2025 se pagaron 0,536 bn y se reconoció acreción no monetaria 0,212 bn. Para no afirmar sin prueba que todo está incluido en el capex anterior, el modelo v 2 introduce una <strong>reserva de caja incremental neta de 0,350 bn/año</strong> por encima del coste ya cargado a EBIT, creciente con g. Es una hipótesis prudente de aproximadamente 0,50 de pagos menos 0,15 de acreción después de impuestos; no una segmentación GAAP ni un cálculo actuarial. <strong>No se deduce además el saldoARO4,056 bn</strong>. Si el presupuesto operativo/de inversión ya cubriera íntegramente esa diferencia, el valor sería <strong>$36,75</strong>, no $32,71. Los pagos de 2025 son una referencia histórica, no una promesa del perímetro futuro.</p>
+<p>Los leases operativos siguen en gastos y no se deducen otra vez como deuda. Los financieros sí están en el puente; el presupuesto de reposición incluye los activos correspondientes. No se añade una amortización de principal al FCFF. El modelo no deduce íntegra la obligación tributaria diferida 5,671 bn además de impuestos normalizados: sería ignorar el ritmo de reversión y duplicar parte del coste fiscal futuro.</p>
+<h2 id="wes-warrants-y-dilución">6. WES, warrants y dilución</h2>
+<p>WES confirma que OXY tenía <strong>150.374.176 unidades comunes +9.060.641 unidades GP</strong> en junio, además de <strong>1,8% directo de WES Operating</strong>. A $43,87, las unidades cotizadas/económicamente equivalentes valen <strong>6,994 bn brutos</strong>. Se añade 0,340 bn como estimación del interés operativo directo y se reserva 0,800 bn por eventual fiscalidad de monetización, cuyo coste exacto no es público; total usado <strong>6,534 bn</strong>, frente al supuesto antiguo 6,0. No se añade además el valor en libros 2,569 bn de todas las inversiones ni se consolida deuda de WES. Sensibilidad transparente: allowance fiscal 0–1,4 bn mueve aproximadamente+$0,79/−$0,59 respecto al central. El valor bruto marcado no exige vender WES. Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/1423902/000142390226000093/wes-20260630.htm">10-Q WES</a>, <a href="https://stockanalysis.com/stocks/wes/history/">cierre 3 nov</a>, <a href="https://investors.westernmidstream.com/2026-10-19-Western-Midstream-Announces-Third-Quarter-2026-Distribution-and-Earnings-Conference-Call">distribución 0,93</a>.</p>
+<p>Se conservan 0,999708551 bn acciones de junio +0,0014 bn por premios existentes. No se inventa un balance posterior a junio; OXY reportó 999.637.371 acciones a 31 julio, diferencia inmaterial. Los warrants pendientes son 17,9m a $22 (vencen 3 agosto 2027) y 83,9m a $59,59 de Berkshire. Se resuelve el precio con acciones <strong>y</strong> contraprestación de ejercicio cuando cada tramo diluye. No se parte de EPS diluido y se añaden dos veces. Si Berkshire utiliza preferentes como pago, debe reducirse ese claim en lugar de añadir también efectivo. El modelo utiliza pago en efectivo como convención explícita, no afirma que haya ocurrido.</p>
+<p>Antes de agosto 2029 no hay rescate preferente voluntario; distribuir al común más de $4/acción en doce meses activa rescate obligatorio al 110%. Después puede rescatarse al 105%. Se prueba un coste adicional de 0,4245 bn si se fuerza el 110%, aproximadamente $0,42/acción en el central. La TIR ilustrativa limita las distribuciones iniciales para respetar esa restricción.</p>
+<h2 id="diez-años-valoración-directa-y-escenarios-conjuntos">7. Diez años, valoración directa y escenarios conjuntos</h2>
+<p>El código reproduce exactamente la referencia publicada <strong>EV54,0276 bn y $37,7094</strong> antes de cambiar nada. Los cinco años de transición interpolan crecimiento de ventas 2%→1,5%, margen 26%→25% y reinversión neta/NOPAT −31,85%→15%. La adenda añade 0,100 bn/año de gasto no monetario de pozos secos identificado, cuyo coste de caja queda en inversión, y resta la reserva incrementalARO0,350; ambas crecen con g. SBC sigue en EBIT. Los escenarios adverso/favorable conservan la senda publicada redondeada; no se simula haber recuperado un archivo original desaparecido.</p>
+<p>WACC central 10%, pruebas 9–11%; g 1,5%, ROIC terminal 10%, impuesto 28%. El ejemplo de estructura 70% común al 11,75%,20% deuda al 6,5% antes de impuestos y 10% preferentes al 8% aproxima ese coste; son <strong>hipótesis de riesgo</strong>, no una beta ni una curva de deuda verificadas hoy. Terminal exige reinversión 15% NOPAT, no crecimiento gratis. D&amp;A/inversión de transición se desglosan de forma reproducible en el CSV; su asignación es propia, no guidance.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ventas bn</th>
+<th style="text-align: right;">MargenEBIT</th>
+<th style="text-align: right;">D&amp;A bn</th>
+<th style="text-align: right;">Capex bn</th>
+<th style="text-align: right;">ΔNWC bn</th>
+<th style="text-align: right;">FCFF final bn</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">25,000</td>
+<td style="text-align: right;">23,0%</td>
+<td style="text-align: right;">7,300</td>
+<td style="text-align: right;">6,100</td>
+<td style="text-align: right;">0,110</td>
+<td style="text-align: right;">4,980</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">24,500</td>
+<td style="text-align: right;">23,0%</td>
+<td style="text-align: right;">7,200</td>
+<td style="text-align: right;">5,900</td>
+<td style="text-align: right;">0,000</td>
+<td style="text-align: right;">5,103</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">25,000</td>
+<td style="text-align: right;">24,0%</td>
+<td style="text-align: right;">7,200</td>
+<td style="text-align: right;">5,700</td>
+<td style="text-align: right;">0,050</td>
+<td style="text-align: right;">5,512</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">25,500</td>
+<td style="text-align: right;">25,0%</td>
+<td style="text-align: right;">7,300</td>
+<td style="text-align: right;">5,700</td>
+<td style="text-align: right;">0,050</td>
+<td style="text-align: right;">5,879</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">26,000</td>
+<td style="text-align: right;">26,0%</td>
+<td style="text-align: right;">7,400</td>
+<td style="text-align: right;">5,800</td>
+<td style="text-align: right;">0,050</td>
+<td style="text-align: right;">6,152</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">26,494</td>
+<td style="text-align: right;">25,8%</td>
+<td style="text-align: right;">7,541</td>
+<td style="text-align: right;">6,385</td>
+<td style="text-align: right;">0,049</td>
+<td style="text-align: right;">5,758</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">26,971</td>
+<td style="text-align: right;">25,6%</td>
+<td style="text-align: right;">7,676</td>
+<td style="text-align: right;">6,977</td>
+<td style="text-align: right;">0,048</td>
+<td style="text-align: right;">5,350</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td style="text-align: right;">27,429</td>
+<td style="text-align: right;">25,4%</td>
+<td style="text-align: right;">7,807</td>
+<td style="text-align: right;">7,573</td>
+<td style="text-align: right;">0,046</td>
+<td style="text-align: right;">4,926</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td style="text-align: right;">27,868</td>
+<td style="text-align: right;">25,2%</td>
+<td style="text-align: right;">7,932</td>
+<td style="text-align: right;">8,173</td>
+<td style="text-align: right;">0,044</td>
+<td style="text-align: right;">4,490</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td style="text-align: right;">28,286</td>
+<td style="text-align: right;">25,0%</td>
+<td style="text-align: right;">8,051</td>
+<td style="text-align: right;">8,773</td>
+<td style="text-align: right;">0,042</td>
+<td style="text-align: right;">4,042</td>
+</tr>
+</tbody>
+</table></div>
+<p>FCFF final incluye aparte el add-back no monetario de pozos secos y la reserva incrementalARO; no están ocultos en capex. Año 1 son próximos doce meses, no FY2026. Las narrativas $55/$75/$90 WTI de los escenarios son regímenes orientativos, no curvas de futuros ni una relación mecánica campo por campo. La eficiencia de transporte, el gas, diferenciales y comercialización también importan.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th style="text-align: right;">WACC/g</th>
+<th style="text-align: right;">EV operativo bn</th>
+<th style="text-align: right;">Valor/acción</th>
+<th style="text-align: right;">Diferencia vs $60,42</th>
+<th style="text-align: right;">TIR común ilustrativa 10 años</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverso, crudo bajo</td>
+<td style="text-align: right;">11,5%/0,0%</td>
+<td style="text-align: right;">23,334</td>
+<td style="text-align: right;">$5,18</td>
+<td style="text-align: right;">-91,4%</td>
+<td style="text-align: right;">-11,6%</td>
+</tr>
+<tr class="even">
+<td>Central, reposición normalizada</td>
+<td style="text-align: right;">10,0%/1,5%</td>
+<td style="text-align: right;">51,086</td>
+<td style="text-align: right;">$32,71</td>
+<td style="text-align: right;">-45,9%</td>
+<td style="text-align: right;">3,2%</td>
+</tr>
+<tr class="odd">
+<td>Favorable, crudo alto</td>
+<td style="text-align: right;">9,0%/2,0%</td>
+<td style="text-align: right;">80,850</td>
+<td style="text-align: right;">$61,74</td>
+<td style="text-align: right;">2,2%</td>
+<td style="text-align: right;">10,4%</td>
+</tr>
+<tr class="even">
+<td>Central + reposición eficiente</td>
+<td style="text-align: right;">10,0%/1,5%</td>
+<td style="text-align: right;">59,977</td>
+<td style="text-align: right;">$41,44</td>
+<td style="text-align: right;">-31,4%</td>
+<td style="text-align: right;">6,4%</td>
+</tr>
+<tr class="odd">
+<td>Favorable + reposición eficiente</td>
+<td style="text-align: right;">9,0%/2,0%</td>
+<td style="text-align: right;">92,228</td>
+<td style="text-align: right;">$72,06</td>
+<td style="text-align: right;">19,3%</td>
+<td style="text-align: right;">12,6%</td>
+</tr>
+<tr class="even">
+<td>Central si ARO ya estaba cubierto</td>
+<td style="text-align: right;">10,0%/1,5%</td>
+<td style="text-align: right;">55,204</td>
+<td style="text-align: right;">$36,75</td>
+<td style="text-align: right;">-39,2%</td>
+<td style="text-align: right;">4,6%</td>
+</tr>
+<tr class="odd">
+<td>Ejecución de capital del plan, WACC10%</td>
+<td style="text-align: right;">10,0%/1,5%</td>
+<td style="text-align: right;">62,940</td>
+<td style="text-align: right;">$44,34</td>
+<td style="text-align: right;">-26,6%</td>
+<td style="text-align: right;">7,3%</td>
+</tr>
+<tr class="even">
+<td>Ejecución de capital del plan, WACC9%</td>
+<td style="text-align: right;">9,0%/1,5%</td>
+<td style="text-align: right;">71,290</td>
+<td style="text-align: right;">$52,54</td>
+<td style="text-align: right;">-13,0%</td>
+<td style="text-align: right;">8,3%</td>
+</tr>
+<tr class="odd">
+<td>Crudo favorable + capital del plan</td>
+<td style="text-align: right;">9,0%/2,0%</td>
+<td style="text-align: right;">96,020</td>
+<td style="text-align: right;">$75,50</td>
+<td style="text-align: right;">25,0%</td>
+<td style="text-align: right;">13,3%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Central: EV <strong>51,086</strong> +WES/asociadas 6,534 +caja excedente 3,150 −deuda/leases 13,143 −preferentes 8,914 −ambiental 1,853 −NCI0,635 −pensiones 0,885 −Tronox 2,400 = común antes de warrants <strong>32,940 bn</strong>. Tras ejercicio del tramo $22: <strong>$32,71</strong>. Terminal representa 36,4% del EV;48,1% en el favorable eficiente. Los escenarios no tienen probabilidades asignadas ni acotan la pérdida máxima.</p>
+<p>La TIR común es un segundo cálculo: distribuye FCFF más caja estimada de WES (0,633 bn inicial), menos interés después de impuestos (0,597 bn) y cupón preferente (0,679 bn); mantiene deuda/preferentes y valora el remanente al año 10 con el terminal del escenario. Supone ejercicio inicial de ambos warrants al estar hoy in-the-money, contabiliza la contraprestación una sola vez, liquida los claims heredados con caja inicial y retiene el exceso. Limita pagos a $4/común en años 1–3 y libera exceso en año 4 tras remunerarlo al 3%, evitando el supuesto imposible de repartir todo antes de 2029 sin rescatar preferentes. <strong>No es guía de dividendos, TIR garantizada ni ahorro de deuda gratuito</strong>; el flujo y las hipótesis completas están enJSON. No incluye impuestos del inversor.</p>
+<h2 id="inversa-y-sensibilidad-conjunta">8. Inversa y sensibilidad conjunta</h2>
+<p>Con ventas/reinversión centrales y sin la alternativa de eficiencia, el precio requiere estos desplazamientos de margen en <strong>toda</strong> la senda:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th style="text-align: right;">Aumento de margen</th>
+<th style="text-align: right;">Margen terminal requerido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9%</td>
+<td style="text-align: right;">10,42pp</td>
+<td style="text-align: right;">35,42%</td>
+</tr>
+<tr class="even">
+<td>10%</td>
+<td style="text-align: right;">14,84pp</td>
+<td style="text-align: right;">39,84%</td>
+</tr>
+<tr class="odd">
+<td>11%</td>
+<td style="text-align: right;">19,25pp</td>
+<td style="text-align: right;">44,25%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mantener los flujos centrales implica descuento empresarial de <strong>6,65%</strong>, distinto de la TIR común. La inversa no dice que el crudo deba subir un porcentaje exacto: mantuvo ventas fijas al cambiar margen. En una combinación más realista, subir margen 8pp, reducir inversión terminal 1,5 bn y usar WACC9% produce un valor de aproximadamente $65,5; no basta con cambiar una cifra aislada y mantener todo favorable gratis.</p>
+<p>A g 1,5%, WACC9/10/11% da aproximadamente $38,5/$32,7/$28,1. El archivo incluye la matriz g 0,5/1,5/2% y las 18 combinaciones margen/eficiencia/WACC. El efecto limitado o negativo de g es coherente cuando el crecimiento exige reinversión y ROIC no supera el coste de capital.</p>
+<h2 id="comparables-actuales-contraste-que-no-se-oculta">9. Comparables actuales: contraste que no se oculta</h2>
+<p>Precios del 3 noviembre; datos hastajunio, última información publicada de estos pares al corte. CFO/FCF TTM =FY2025+H12026−H12025. Se usan líneas de capex de caja, incluyendo ajuste firmado de devengo de COP. De OXY se resta el cupón preferente antes de comparar derechos del común. Son diagnósticos <strong>antes de coste económico adicional de SBC, crecimiento adquirido y normalización de ciclo</strong>, no FCFF ni recomendaciones de comprar estos pares.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Compañía</th>
+<th style="text-align: right;">Precio</th>
+<th>Acciones bn y fecha</th>
+<th style="text-align: right;">CFO TTM bn</th>
+<th style="text-align: right;">Capex caja TTM bn</th>
+<th style="text-align: right;">Caja común proxy bn</th>
+<th style="text-align: right;">Caja/capitalización</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OXY</td>
+<td style="text-align: right;">$60,42</td>
+<td>0,9997 (2026-06-30)</td>
+<td style="text-align: right;">11,323</td>
+<td style="text-align: right;">6,242</td>
+<td style="text-align: right;">4,402</td>
+<td style="text-align: right;">7,29%</td>
+</tr>
+<tr class="even">
+<td>EOG</td>
+<td style="text-align: right;">$155,17</td>
+<td>0,5245 (2026-07-28)</td>
+<td style="text-align: right;">13,358</td>
+<td style="text-align: right;">6,744</td>
+<td style="text-align: right;">6,614</td>
+<td style="text-align: right;">8,13%</td>
+</tr>
+<tr class="odd">
+<td>COP</td>
+<td style="text-align: right;">$144,40</td>
+<td>1,2013 (2026-06-30)</td>
+<td style="text-align: right;">21,925</td>
+<td style="text-align: right;">11,712</td>
+<td style="text-align: right;">10,213</td>
+<td style="text-align: right;">5,89%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Aplicar a 4,402 bn de caja común OXY los rendimientos de EOG/COP, y resolver los warrants, da <strong>$53,55/$72,68</strong>. Ese contraste <strong>no rechaza por sí solo $60,42</strong>. Difiere del DCF porque capitaliza caja de un periodo favorecido por precios, trata distinto la expansión/reposición y no descuenta por separado los claims heredados de OXY. COP tiene exposición geográfica/LNG distinta y EOG una mezcla de gas/adquisiciones diferente. No se aplica una mediana como verdad ni se retienen los ratios del scanner sin conciliación. Los pares aportan contexto, no reemplazan el análisis económico.</p>
+<p>Fuentes primarias: <a href="https://www.sec.gov/Archives/edgar/data/821189/000082118926000054/eog-20251231.htm">EOG10-K</a>, <a href="https://www.sec.gov/Archives/edgar/data/821189/000082118926000149/eog-20260630.htm">EOG10-Q</a>, <a href="https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm">COP10-K</a>, <a href="https://www.sec.gov/Archives/edgar/data/1163165/000116316526000032/cop-20260630.htm">COP10-Q</a>; precios: <a href="https://stockanalysis.com/stocks/eog/history/">EOG3 nov</a>, <a href="https://stockanalysis.com/stocks/cop/history/">COP3 nov</a>. Los recuentos tienen fecha explícita; no se inventan recompras posteriores.</p>
+<h2 id="dictamen-y-condiciones-que-cambiarían-la-decisión">10. Dictamen y condiciones que cambiarían la decisión</h2>
+<ul>
+<li><strong>La revisión histórica queda cerrada:</strong> tres ejercicios, cuatro trimestres, ambosTTM, caja continuada, impuestos de venta y derechos sobre el capital están reconciliados. Las estimaciones de inversión/ARO/WES/pensiones son supuestos visibles, no datos ausentes disimulados.</li>
+<li><strong>Tesis positiva real:</strong> menor coste unitario, simplificación tras OxyChem, deuda muy reducida, participada con distribuciones y capacidad de generar caja con petróleo alto. El fuerte Q2 no es ficticio, pero contiene condiciones extraordinariamente favorables.</li>
+<li><strong>Lo que se exige al precio:</strong> el central no demuestra valor razonable a $60,42; la combinación favorable y eficiente sí da cerca de 19% de potencial y 12,6% TIR ilustrativa. Es una candidata condicional a esa tesis de crudo/reposición, no una compra descartada mecánicamente por falta de 15% de descuento. Mantenerla en observación es un juicio sobre duración del flujo y asimetría, no sobre puntuación del scanner.</li>
+<li><strong>Próximas comprobaciones concretas:</strong> resultadosWES4 nov; OXY9 nov/llamada 10 nov, con producción y cash capex, cash taxes discontinuadas residuales, deuda/caja/preferentes, collars y normalización de marketing; pruebas de reservas y coste de reposición; actualización del litigioTronox sin anticipar desenlace. No se presume que anunciar una ambición de 4 bn de caja adicional sea aportar 4 bn deFCFF.</li>
+<li><strong>Stage 3.5 separado:</strong> precio/volumen, estabilización del pullback, invalidación, tamaño y concentración de cartera no se han observado. No hay señal confirmada ni orden. Una investigación terminada puede concluir observación y aun así estar terminada.</li>
+</ul>
+<h2 id="reproducción-y-alcance">Reproducción y alcance</h2>
+<p>Ejecutar <code>python history.py</code> y <code>python model.py</code>. Salidas: <code>historical_bridge.json/csv</code>, <code>model_results.json</code>, <code>base_10year.csv</code>, <code>scenario_10year.csv</code>. <code>source_index.json</code> identifica fechas/URLs; <code>qa.txt</code> recoge pruebas. OriginalA152 se conserva sin sobrescribir. Los enlaces y cifras son públicos; ninguna cifraQ32026 aún no publicada se convierte en hecho. El nivel de confianza es <strong>alto en la reconstrucción contable, medio/bajo en petróleo y reposición económica</strong>; esa incertidumbre se valora, no bloquea indefinidamente el trabajo.</p>
+<h2 id="full-dossier-and-analyst-audit-files">Full dossier and analyst audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/source_report.md">source_report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/base_10year.csv">base_10year.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/historical_bridge.csv">historical_bridge.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/historical_bridge.json">historical_bridge.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/model_results.json">model_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/publication_delta.json">publication_delta.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/scenario_10year.csv">scenario_10year.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/sha256_manifest.json">sha256_manifest.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OXY/source_index.json">source_index.json</a></li>
+</ul>
+</main></body></html>

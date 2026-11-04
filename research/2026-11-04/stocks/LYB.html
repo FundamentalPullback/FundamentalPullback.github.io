@@ -1,0 +1,346 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LYB · A183 revision</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><p><strong><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/LYB.html">Open the full readable LYB dossier</a></strong></p><nav><a href="../../../#ficha/LYB">← LYB profile</a><a href="../index.html">Research index</a></nav><p class="eyebrow">A183 · November4,2026 · No entry approval</p><h2 id="dated-correction-a183-november-4-2026">Dated correction: A183, November 4, 2026</h2>
+<p>Updates only <strong>LYB</strong> in historical <strong>A152</strong>. The original shared report and unrelated issuer components must remain unchanged.</p>
+<p><strong>Observation. Central $41.90; ordinary joint range $32–54 and constructive $73.51 versus $66.09. JV product economics and financial distributions separated, capital claims explicit. Bear is equity floored at zero, not a guaranteed loss estimate.</strong></p>
+<p>Prepared November4,2026 after10:00UTC. Source cutoff is retained below; later event completion has not been verified.</p>
+<p><strong>Price audit:</strong> November3 scanner $66.09; separately sourced regular close $66.09. Scanner header timezone is not certified.</p>
+<p><strong>Coverage and source limits:</strong> FY2023–FY2025; Q4 2025 and Q1–Q3 2026; September2025/2026 TTM. Revenue/EBIT exclude refining; cash/NI retain discontinued operations; European disposals prevent a constant-perimeter organic-growth claim.</p>
+<p><strong>Next review:</strong> Q3 October30 results incorporated. Recheck cycle, capital spending, distributions and technical conditions; no automatic purchase at $42.</p>
+<p><strong>No entry approved.</strong> No new position, quantity, buy ceiling or stop. No universal15/20/25% valuation-discount rule.</p>
+<hr />
+<h1 id="lyb-fundamental-pullback-stage-3-revisión-completa-v2">LYB: Fundamental Pullback Stage 3, revisión completa v2</h1>
+<p><strong>Investigación: 4 noviembre 2026, 01:14 EST (06:14 UTC). Referencia de mercado: cierre regular 3 noviembre 2026. Versión LYB-FCFF-20261104-v2.</strong></p>
+<h2 id="resultado">Resultado</h2>
+<p><strong>EN OBSERVACIÓN. No aprobada en Stage 3 al precio $66,09.</strong> Se completan la normalización histórica y el tratamiento explícito de inversiones/obligaciones que mantenían A152 provisional. Completar la investigación no convierte la acción en una compra: la limitación decisiva pasa a ser económica, no la ausencia de una línea contable.</p>
+<p>Valor central de análisis <strong>$41.90</strong>, banda conjunta ordinaria <strong>$32–54</strong>; confianza media-baja por ciclicidad y sensibilidad a capital, con mejor respaldo del perímetro que en v1. El escenario central produce aproximadamente <strong>6.9% anual</strong> de retorno de caja al equity al precio evaluado, inferior al ~13% de coste de equity utilizado como referencia de riesgo. No es una rentabilidad garantizada ni media probabilística. El caso ordinario más firme llega a $54.23 y 9.5%. El constructivo llega a $73.51 y 13.0%, pero exige simultáneamente márgenes persistentes superiores, menor coste de capital y mejores distribuciones de asociadas. Un tamaño parcial no resuelve esa dependencia.</p>
+<p>No se ha aplicado un descuento universal del 15%, ni se exige crecimiento del 15% a toda compañía. La evaluación no falla por una diferencia marginal frente a un valor único: el precio está por encima de la banda ordinaria y necesita hipótesis más favorables de rentabilidad duradera. Revisar alrededor de <strong>$42</strong> con los mismos supuestos sería un punto para repetir el análisis, no precio automático de compra. No existe aprobación técnica Stage 3.5 ni orden.</p>
+<h2 id="calendario-cotización-y-hechos-recientes">Calendario, cotización y hechos recientes</h2>
+<p>LYB publicó Q3 el <strong>30 de octubre</strong>; el resultado ya está incorporado y no corresponde aplazarla como empresa que aún publica del 4 al 6 de noviembre. Scanner del 3 noviembre, 17:27:04 sin zona horaria: $66,09, QP/Opportunity 100. Independientemente, el histórico muestra $66,09 a las 16:00 EST el 3 noviembre. El score y retroceso indicado por el scanner no sustituyen valoración. La acción subió 5,0% el día del resultado y después cedió a $66,09; no se atribuye toda la caída desde máximos a una noticia singular sin un estudio de eventos. <a href="https://www.lyondellbasell.com/en/who-we-are/updates-events/corporate--financial-news/lyondellbasell-reports-third-quarter-2026-earnings/">Resultados oficiales Q3, 30 octubre 2026</a>, <a href="https://stockanalysis.com/stocks/lyb/history/">Histórico LYB, cierre regular 3 noviembre</a></p>
+<p>La ventaja de materias primas de Norteamérica, integración productiva y tecnología de licencias aporta resiliencia. El precio del polímero y de oxyfuels sigue dependiendo de oferta, demanda, materias primas y utilización. La retirada de activos europeos de alto coste puede mejorar el perímetro; no elimina sobrecapacidad mundial ni transforma LYB en un negocio de precios controlados. La recuperación de 2026 es real, pero el incremento de spreads no es crecimiento secular demostrado.</p>
+<h2 id="historia-normalizada-no-solo-ebitda-ajustado">Historia normalizada, no solo EBITDA ajustado</h2>
+<p>El anexo adjunto incluye tres ejercicios completos, cuatro trimestres y TTM contra TTM anterior, con todas las sumas. Resumen de USD millones: | Periodo | Ventas | EBIT GAAP | EBIT normalizado | Net income GAAP | CFO | Capex | FCF tras SBC/preferentes por acción | |—|—|—|—|—|—|—|—| | FY2023 | 33.336 | 2.725 | 3.232 | 2.121 | 4.942 | 1.531 | 10,16 | | FY2024 | 33.394 | 1.918 | 2.867 | 1.367 | 3.819 | 1.839 | 5,77 | | FY2025 | 30.153 | -420 | 1.020 | -738 | 2.262 | 1.878 | 0,89 | | Q4 2025 | 7.091 | -88 | -26 | -140 | 1.507 | 450 | 3,21 | | Q1 2026 | 7.197 | 239 | 268 | 125 | -269 | 269 | -1,82 | | Q2 2026 | 9.177 | 1.543 | 1.636 | 559 | 752 | 270 | 1,43 | | Q3 2026 | 8.499 | 1.067 | 1.135 | 758 | 1.716 | 303 | 4,33 | | TTM Sep2025 | 30.870 | -929 | 1.393 | -1.201 | 2.670 | 1.932 | 1,99 | | TTM Sep2026 | 31.964 | 2.761 | 3.013 | 1.302 | 3.706 | 1.292 | 7,14 |</p>
+<p>Ventas/EBIT están reexpresados sin refino; net income y caja conservan operaciones descontinuadas. Los activos europeos vendidos en mayo siguen dentro de los comparativos anteriores: no se publica una falsa tasa orgánica constante. Se retienen SBC, I+D, mantenimiento ordinario y costes del Cash Improvement Plan. Se separan deterioros, cierres específicos y transacción europea; no se añade al EBIT la pérdida de venta de $734m que ya está debajo de él. La reconciliación TTM es <strong>2.761+106+147−1=3.013</strong>, frente a <strong>−929+2.178+117+27=1.393</strong>. <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000012/lyb-20251231.htm">10-K 2025, estados reexpresados y notas 2, 4, 9, 10, 13, 15, 17, 20 y 22</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939325000056/lyb-20250930.htm">10-Q septiembre 2025, comparativo 2024</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000070/lyb-20260930.htm">10-Q septiembre 2026</a></p>
+<p>El crecimiento normalizado de 116,3% y margen 9,43% frente a 4,51% muestran recuperación del ciclo. A margen fijo del 9%, el crecimiento asociado a ventas sería solo 3,5%, todavía mezclando composición y precios. El beneficio sintético del núcleo después de intereses e impuesto uniforme de 24% pasa de $775,8m a $1.950,8m; su EPS aproximado de $2,40 a $6,04. Es una herramienta de comparación que excluye resultados no operativos y asociadas, no EPS anunciado por LYB ni una tasa sostenible de 151%.</p>
+<p>Con una carga de capital homogénea (capex consolidado $1.650m, JV $150m y circulante $100m, con add-back de D&amp;A), el FCFF operativo estandarizado TTM sube de $639,7m a $1.958,9m. A margen constante del 9% en ambos periodos, el crecimiento baja a 9,6%; véase el anexo para todos los años/trimestres y supuestos. No son flujos publicados ni una nueva guía.</p>
+<p>La mejora de FCF simple de $738m a $2.414m combina $1.036m más CFO con <strong>$640m menos capex</strong>. El capital diferido no puede tratarse como ahorro eterno. La cifra de caja FY2025 anterior de $864m reflejaba solo clientes/inventario/proveedores: el total incluyendo «Other, net» fue $415m. TTM actual estos cambios aportan $57m, contra $564m anterior. Por tanto, la mejora anual de CFO no se explica por una mayor liberación neta de circulante; el último trimestre sí recibió una liberación. Son distinciones importantes. <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000028/lyb-20260331.htm">10-Q marzo 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000061/lyb-20260630.htm">10-Q junio 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000070/lyb-20260930.htm">10-Q septiembre 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000012/lyb-20251231.htm">10-K 2025, estados reexpresados y notas 2, 4, 9, 10, 13, 15, 17, 20 y 22</a></p>
+<p>Los cuatro trimestres de EBIT normalizado son −26/268/1.636/1.135m. Q3 se debilita frente a Q2 aun con recuperación interanual. Para el siguiente periodo, management prevé utilización Q4 de 85% en O&amp;P Americas, 60% Europa y 75% I&amp;D, con estacionalidad/mantenimiento. La expansión de oxyfuels y mejores márgenes integrados de PE recibió apoyo de disrupciones de oferta. <strong>Las proyecciones a diez años de este informe son nuestras hipótesis, no guía del emisor ni consenso.</strong> <a href="https://www.lyondellbasell.com/en/who-we-are/updates-events/corporate--financial-news/lyondellbasell-reports-third-quarter-2026-earnings/">Resultados oficiales Q3, 30 octubre 2026</a></p>
+<h2 id="asociadas-la-corrección-central-de-alcance">Asociadas: la corrección central de alcance</h2>
+<p><strong>No todas las inversiones por método de participación son activos financieros aparte del negocio.</strong> En las JVs de PO y Louisiana, los socios aportan materias primas/capital y reciben producto en especie; LYB vende su producción dentro de ventas consolidadas. Su parte de depreciación se carga a coste de ventas. Añadir el valor completo de esas JVs a un DCF que ya contiene el margen de sus productos duplicaría el negocio. El flat $2.000m de v1 no distinguía de manera demostrada esas categorías. <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000012/lyb-20251231.htm">10-K 2025, estados reexpresados y notas 2, 4, 9, 10, 13, 15, 17, 20 y 22</a></p>
+<p>La reconstrucción utiliza dos tratamientos: 1. <strong>JVs de producción en especie:</strong> mantener ventas/márgenes en el núcleo, añadir $125m de depreciación no monetaria y restar $150m de capex económico en el año 1; ambos suben 2% durante los cinco años explícitos. El neto adicional es $25m. Los $125m se anclan en FY2025, frente a $118m FY2024 y $148m FY2023. El mantenimiento de $150m es estimación, rango $100–200m, no cifra publicada. Después, toda reinversión del núcleo y estas JVs converge conjuntamente a g/ROIC, sin otra anualidad duplicada. 2. <strong>Asociadas con dividendos en efectivo:</strong> excluir su beneficio contable del EBIT y valorar flujos netos de distribuciones e inversión normal. Las distribuciones netas fueron 169/122/92m en 2023–25 y 104m TTM actual; las aportaciones globales fueron 54/113/25m, incluyendo tanto JVs operativas como otras inversiones. No se equiparan automáticamente esas series a un mantenimiento exacto.</p>
+<p>El central supone distribuciones netas de impuestos de $110m menos $25m de financiación normal, flujo patrimonial <strong>$85m</strong>, crecimiento 2%, coste de equity propio 12,5%: valor separado <strong>$810m</strong>, no el libro de inversiones $3.834m. El caso firme sube a $115m de flujo neto y el bull a $200m. La valoración no presume un mercado líquido ni suma la deuda del 100% de las participadas al holding: la distribución ya viene después de gastos/deuda del vehículo. Las llamadas extraordinarias de capital siguen siendo riesgo; no están «garantizadas» por este promedio. El agregado de estados de las participadas corresponde al 100% de sus entidades, no a la cuota económica de LYB.</p>
+<h2 id="caja-deuda-y-demás-derechos-puente-sin-duplicación">Caja, deuda y demás derechos: puente sin duplicación</h2>
+<p>Base a 30 septiembre, USD miles de millones: | Elemento | Tratamiento | |—|—| | EV operativo | 24,959 | | Asociadas financieras, DCF de dividendos netos | 0,810 | | Caja libre añadida | 2,227 = 3,227 menos 1,000 operativo | | Deuda financiera por principal analítico | −12,625 | | Pensiones/posretiro estimados tras venta | −0,952 | | Remediación ambiental | −0,095 | | ARO legado, última medición anual | −0,203 | | Reserva de cierre adicional, estimación neta de solapamientos | −0,100 | | NCI y participación reembolsable | −0,123 | | Derivados financieros netos | −0,237 | | Valor del equity | 13,661 | | Acciones prospectivas | 0,326bn | | Valor por acción | 41,90 |</p>
+<ul>
+<li><strong>Deuda:</strong> $12.331m contables = 11.193 largo +891 vencimientos +247 corto. El puente de principal añade $179m de descuento/costes de emisión y $115m de ajuste acumulado de cobertura de valor razonable: $12.625m. Es una convención de obligación a reembolsar, no el valor de mercado observado de todos los bonos ni prueba de error en citar deuda contable. La sensibilidad con $12.331m se publica. No sumar los nominales originalmente emitidos sin ajustar recompras. Derivados de interés: pasivo neto $116m; divisa: $121m. El modelo supone liquidarlos sin volver a cobrar/pagar sus flujos históricos; derivados de materias primas permanecen en la operación/circulante. <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000070/lyb-20260930.htm">10-Q septiembre 2026</a></li>
+<li><strong>Pensiones:</strong> FY2025 déficit neto de pensiones $863m y posretiro $189m, total $1.052m. La venta europea contemplaba transferir $150–250m de pensiones y otros pasivos, pero no desglosa una nueva medición actuarial exacta a septiembre. Central $952m = $1.052m menos $100m estimados como pensión transferida; intervalo $802–1.052m antes de nuevo riesgo de mercado; aumentar $250m por un shock actuarial reduciría ~$0,77/acción. No se presenta el punto central como saldo publicado. Coste de servicio corriente permanece en EBIT. <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000012/lyb-20251231.htm">10-K 2025, estados reexpresados y notas 2, 4, 9, 10, 13, 15, 17, 20 y 22</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000061/lyb-20260630.htm">10-Q junio 2026</a></li>
+<li><strong>Ambiente y cierres:</strong> remediación $95m a septiembre, ya sin $74m ligados al grupo vendido. No restar nuevamente los $178m antiguos. ARO $203m es la medición FY2025, con $154m de refino y resto Europa; hasta verificar pagos/traspaso se conserva como reserva prudente, no saldo exacto de septiembre. Se añade una provisión analítica <strong>neta de potencial solapamiento</strong> de $100m, rango $50–150m, para cierres PO/Brindisi no capturados en el ARO legado. La porción de PO de LYB tenía presupuesto ~$215m hasta 2027, con $126m de gasto en 2025 y $76m en 9M2026; gasto reconocido no informa el saldo exacto por pagar. Estos rangos completan el juicio, no inventan un pasivo oficial. No se deducen de nuevo sus salidas futuras en FCFF. Se revierte $9m de accretion anual en años 1–5, anclado en FY2025, para no mantener ese coste del ARO legado además de descontar su obligación. La responsabilidad ambiental puede superar reservas. Una reserva ARO remanente de $100m en lugar de $203m elevaría valor ~$0,32/acción; la reserva adicional de cierre $50–150m mueve aproximadamente ±$0,15/acción respecto al central. No se suman estos extremos como una falsa precisión conjunta. <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000012/lyb-20251231.htm">10-K 2025, estados reexpresados y notas 2, 4, 9, 10, 13, 15, 17, 20 y 22</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000070/lyb-20260930.htm">10-Q septiembre 2026</a></li>
+<li><strong>Europa/Houston:</strong> el desembolso europeo de $310m ya redujo la caja de septiembre; no volver a restarlo. Houston tiene acuerdo, no cierre verificado: cobro bruto $320,5m y asunción de ciertas obligaciones por Valero. Central no añade cobro ni elimina pasivos aún. Un cobro neto ilustrativo de $280m añadiría $0,86/acción; si se transfiriera además todo el ARO de refino de $154m, otros $0,47, pero no se afirma esa liberación total. Es insuficiente para cerrar la diferencia con el precio. <a href="https://www.lyondellbasell.com/en/who-we-are/updates-events/corporate--financial-news/lyondellbasell-agrees-to-sell-former-refinery-site-in-houston">Acuerdo de venta de Houston a Valero</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000061/lyb-20260630.htm">10-Q junio 2026</a></li>
+<li><strong>Otros:</strong> NCI ordinario $9m + participación reembolsable $114m; esta última tiene dividendo 6% y derecho de reembolso. Arrendamientos siguen como coste operativo, sin restar la misma obligación por segunda vez. Los impuestos diferidos no se deducen íntegros además de impuestos normalizados/reinversión. No se añade como caja libre el activo de pensión ni efectivo restringido. Supply-chain finance ya incluido en proveedores no se vuelve a tratar como deuda en el central. <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000012/lyb-20251231.htm">10-K 2025, estados reexpresados y notas 2, 4, 9, 10, 13, 15, 17, 20 y 22</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000070/lyb-20260930.htm">10-Q septiembre 2026</a></li>
+</ul>
+<p>Liquidez comunicada $7.700m y vencimientos manejables no equivalen a caja distribuible. El dividendo bajó de $1,37 a $0,69 trimestrales en febrero: yield anualizada ~4,18%, no 8,3%. En 9M2026 no hubo recompras de acciones frente a $201m previos; las acciones emitidas subieron de 322,085m a 323,202m. SBC de $80m 9M queda como coste, y se modelan 326m acciones sin recompras gratis. El balance permite operar, pero el equity sigue apalancado al ciclo. <a href="https://investors.lyondellbasell.com/news/news-details/2026/LyondellBasell-recalibrates-quarterly-dividend/default.aspx">Reducción del dividendo, 20 febrero 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000070/lyb-20260930.htm">10-Q septiembre 2026</a></p>
+<h2 id="reinversión-y-diez-años-de-fcff">Reinversión y diez años de FCFF</h2>
+<p>Se parte de EBIT operativo en efectivo después de impuestos normalizados, con D&amp;A y reinversión explícitas. No se confunde CFO ajustado, EBITDA ni dividendo con FCFF. En 9M2026 capex fue $842m, ~65% mantenimiento/turnarounds/seguridad/ambiente. FY2025 fue $1.878m y FY2024 $1.839m. El gasto de mantenimiento ordinario ya está en COGS; turnarounds capitalizados están en capex. El capex futuro central <strong>1,50/1,60/1,65/1,70/1,75bn</strong>, más el aporte a JVs operativas, no perpetúa el presupuesto deprimido ni reduce mantenimiento al 65% de un año bajo. No se usa D&amp;A como prueba automática de reposición suficiente. <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000012/lyb-20251231.htm">10-K 2025, estados reexpresados y notas 2, 4, 9, 10, 13, 15, 17, 20 y 22</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000070/lyb-20260930.htm">10-Q septiembre 2026</a></p>
+<p>Años 1–5: ventas 32,50/32,50/33,15/33,813/34,489bn; margen 9,43/9/9,5/10/10%; D&amp;A consolidada 1,40/1,40/1,43/1,45/1,48bn. Circulante incremental 75/0/91/93/95m. Año 1 usa el margen TTM limpio; luego baja y recupera gradualmente, no anualiza Q2. COGS mantiene salarios/SBC, mantenimiento y costes normales. Añadidos pequeños de depreciación JV/accretion se muestran en el archivo de cálculo.</p>
+<p>Años 6–10: ventas suben 2%, margen se mantiene en 10%; la reinversión neta/NOPAT converge linealmente desde el año 5 hasta <strong>g/ROIC = 2%/10,5% = 19,05%</strong>. El terminal no permite crecimiento gratis. ROIC 10,5% es hipótesis de rentabilidad de nueva inversión, no un dato exacto anunciado. Como control grueso, NOPAT TTM normalizado de ~$2,29bn frente al promedio de deuda+equity+preferentes−caja de ~$20,09bn equivale a ~11,4%; contiene diferencias de alcance y efecto de deterioros/ventas, por lo que no certifica ROIC del núcleo. Se prueba 8–13% según escenarios.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>Margen antes de reversión ARO</th>
+<th>NOPAT</th>
+<th>Reinversión neta económica</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>32,500</td>
+<td>9,43%</td>
+<td>2,335</td>
+<td>0,200</td>
+<td>2,135</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>32,500</td>
+<td>9,00%</td>
+<td>2,230</td>
+<td>0,226</td>
+<td>2,004</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>33,150</td>
+<td>9,50%</td>
+<td>2,401</td>
+<td>0,337</td>
+<td>2,064</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>33,813</td>
+<td>10,00%</td>
+<td>2,577</td>
+<td>0,370</td>
+<td>2,208</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>34,489</td>
+<td>10,00%</td>
+<td>2,629</td>
+<td>0,392</td>
+<td>2,237</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>35,179</td>
+<td>10,00%</td>
+<td>2,674</td>
+<td>0,421</td>
+<td>2,253</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>35,883</td>
+<td>10,00%</td>
+<td>2,727</td>
+<td>0,452</td>
+<td>2,275</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>36,600</td>
+<td>10,00%</td>
+<td>2,782</td>
+<td>0,484</td>
+<td>2,298</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>37,332</td>
+<td>10,00%</td>
+<td>2,837</td>
+<td>0,517</td>
+<td>2,320</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>38,079</td>
+<td>10,00%</td>
+<td>2,894</td>
+<td>0,551</td>
+<td>2,343</td>
+</tr>
+</tbody>
+</table></div>
+<p>Unidades de la tabla: USD bn. Periodos anuales prospectivos, años 1–10, etiquetados 2027–36 en el archivo por conveniencia; no una guía exacta por calendario. Descuento a fin de cada periodo, primera caja a un año. No se suma un stub Q4 adicional. El desfase entre balance septiembre y cotización noviembre es una convención explícita: no se inventa caja intrames. La comparación v1 mantiene esta convención.</p>
+<p><strong>WACC:</strong> se conserva 10% como central, sensibilidad 9–11%. Último Treasury primario legible consultado: 4,91% el 2 noviembre, no se etiqueta como dato del 3. ERP analítica 5%, beta de negocio/equity asumida ~1,6 y coste de deuda nuevo 6,5%, no cupón histórico promedio. Con pesos objetivo 63% equity/37% deuda e impuesto 24%, Ke cercano a 13% da WACC ~10%. ERP/beta/pesos son hipótesis, no estimaciones de regresión verificadas. Rango combinado cambia esos costes junto con margen, ROIC y capital; no se elige WACC bajo únicamente para justificar cotización. <a href="https://www.federalreserve.gov/datadownload/Preview.aspx?pi=400&amp;preview=H15/H15/RIFLGFCY10_N.B&amp;rel=H15">Reserva Federal, Treasury a diez años: 4,91% el 2 noviembre</a></p>
+<p>El valor terminal representa <strong>46.1%</strong> del EV operativo central. Su g nominal 2% es inferior a WACC y no presupone crecimiento superior al tamaño económico indefinidamente. Asociadas financieras se descuentan a su coste de equity propio, no al WACC de LYB.</p>
+<h2 id="escenarios-conjuntos-y-retorno-de-equity">Escenarios conjuntos y retorno de equity</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso conjunto</th>
+<th>Margen inicial / maduro</th>
+<th>WACC / g / ROIC</th>
+<th>Valor/acción</th>
+<th>IRR de caja de equity a $66,09</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Central</td>
+<td>9.43% / 10.0%</td>
+<td>10.00% / 2.00% / 10.5%</td>
+<td>$41.90</td>
+<td>6.95%</td>
+</tr>
+<tr class="even">
+<td>Ordinary lower cycle</td>
+<td>9.00% / 9.5%</td>
+<td>10.50% / 2.00% / 10.5%</td>
+<td>$32.56</td>
+<td>4.80%</td>
+</tr>
+<tr class="odd">
+<td>Ordinary firmer cycle</td>
+<td>10.00% / 10.5%</td>
+<td>9.50% / 2.00% / 11.5%</td>
+<td>$54.23</td>
+<td>9.46%</td>
+</tr>
+<tr class="even">
+<td>Constructive joint</td>
+<td>11.50% / 11.5%</td>
+<td>9.00% / 2.25% / 12.0%</td>
+<td>$73.51</td>
+<td>12.96%</td>
+</tr>
+<tr class="odd">
+<td>Severe prolonged downturn</td>
+<td>6.00% / 7.0%</td>
+<td>11.50% / 1.00% / 8.0%</td>
+<td>$0, con déficit de cobertura</td>
+<td>No comparable: recapitalización posible</td>
+</tr>
+<tr class="even">
+<td>Strong structural recovery</td>
+<td>12.00% / 12.0%</td>
+<td>9.00% / 2.50% / 13.0%</td>
+<td>$87.59</td>
+<td>15.44%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Central y ordinarios comparten inversión razonable; ordinario inferior reduce márgenes ~0,5 pp, sube WACC a 10,5% y disminuye distribución JV. Firme combina márgenes 10–10,5%, WACC 9,5%, ROIC 11,5% y $115m de flujo neto de asociadas. Constructivo requiere 11–11,5% sostenido, WACC 9%, ROIC 12%, mayor dividendo JV y cobro neto de Houston. Bull añade mayor volumen y g 2,5%, sin tratar toda subida de precios como producción. No son probabilidades inferidas ni se mezcla a voluntad el mejor dato de cada caso.</p>
+<p>Bear lleva ventas a 30/29,4bn, margen 5,5–7%, capital sostenido y mayor coste/claims: el residual DCF es negativo antes de la limitación de responsabilidad. Se muestra <strong>$0 como piso del equity</strong>, no precio objetivo negativo ni afirmación de quiebra inminente. En ese mundo serían probables recapitalización, venta de activos o cambios de inversión: el caso estático no valora la opción de reorganizar. La consecuencia es riesgo de deterioro permanente, no una orden de vender a cero.</p>
+<p>IRR de equity: inversión inicial = capitalización a $66,09 − exceso de caja + otros claims; cada año cobra FCFF menos interés sobre deuda nominal constante a coste del escenario, después de impuesto, más distribución neta de asociadas. En año 10 se vende a EV terminal, añade valor terminal de asociadas y paga deuda. Caja/claims se liquidan inicialmente para no deducirlos dos veces. No es un pronóstico del dividendo, no impone nuevas recompras, y difiere de la TIR del negocio o del porcentaje de descuento respecto a valor presente. Mantener deuda constante es una convención transparente; desapalancar cambia momento de pagos y coste, no crea valor gratis.</p>
+<h2 id="sensibilidad-y-valoración-inversa">Sensibilidad y valoración inversa</h2>
+<p>Valores por acción, todas las demás variables del central constantes. Desplazamientos afectan simultáneamente todos los márgenes de la senda; <strong>no son escenarios completos</strong>: | WACC / desplazamiento de todos los márgenes | −1 pp | −0,5 pp | Base | +0,5 pp | +1 pp | |—|—|—|—|—|—| | 9,0% | 43,34 | 48,02 | 52,69 | 57,37 | 62,04 | | 9,5% | 38,18 | 42,56 | 46,94 | 51,32 | 55,70 | | 10,0% | 33,65 | 37,78 | 41,90 | 46,03 | 50,15 | | 10,5% | 29,66 | 33,56 | 37,46 | 41,36 | 45,25 | | 11,0% | 26,11 | 29,81 | 33,51 | 37,20 | 40,90 |</p>
+<p>Para pagar $66,09 con el puente central, el mercado exigiría esta senda de margen, entre otras soluciones posibles: | WACC | Aumento de todos los márgenes | Margen año 1 requerido | Margen maduro requerido | |—|—|—|—| | 9,0% | 1,43 pp | 10,86% | 11,43% | | 9,5% | 2,19 pp | 11,61% | 12,19% | | 10,0% | 2,93 pp | 12,36% | 12,93% | | 10,5% | 3,67 pp | 13,10% | 13,67% | | 11,0% | 4,41 pp | 13,84% | 14,41% |</p>
+<p>A WACC 10%, margen inicial requerido ~12.36% y maduro ~12.93%, frente a 9,43% TTM limpio y 10% terminal central. La solución no demuestra que el mercado use precisamente esos supuestos. En reverse <strong>conjunto</strong>, WACC 9,5%, flujo JV neto $125m, mantenimiento JV $125m y pensión $902m, todavía haría falta +1.97 pp en toda la curva, margen maduro 11.97%. Por eso no basta decir «está algo por encima del fair value»: el precio incorpora ejecución/retorno estructural más exigentes.</p>
+<p>Sensibilidades puntuales adicionales, sin convertirlas en hechos: pensión $1.052m → $41.60; flujo neto de asociadas $150m → $43.80; capex JV $200m inicial → $41.12; cobro neto Houston $280m → $42.76; deuda contable en vez de principal → $42.81. Las estimaciones razonables de claims mueven dólares, no justifican solas $66.</p>
+<h2 id="comparación-con-dow-mismo-ciclo-no-misma-definición-de-ebitda">Comparación con Dow: mismo ciclo, no misma definición de EBITDA</h2>
+<p>DOW es el comparable directo más útil por poliolefinas, materias primas y exposición global, aunque tiene más coatings/silicones, distinta mezcla geográfica, minoritarios y pensiones. Un refinador puro no es un comparable de valoración directo: oxyfuels no convierte todo LYB en refino. Sasol también combina otros riesgos de energía, carbón y divisa; no se utiliza un múltiplo sin ajustar como prueba mecánica.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>DOW, USD millones</th>
+<th>Q4 2025</th>
+<th>Q1 2026</th>
+<th>Q2 2026</th>
+<th>Q3 2026</th>
+<th>TTM anterior</th>
+<th>TTM actual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas</td>
+<td>9.460</td>
+<td>9.794</td>
+<td>12.092</td>
+<td>11.267</td>
+<td>40.913</td>
+<td>42.613</td>
+</tr>
+<tr class="even">
+<td>EBIT directo reconstruido</td>
+<td>-10</td>
+<td>-4</td>
+<td>1.385</td>
+<td>750</td>
+<td>472</td>
+<td>2.121</td>
+</tr>
+<tr class="odd">
+<td>EBITDA directo reconstruido</td>
+<td>698</td>
+<td>715</td>
+<td>2.049</td>
+<td>1.416</td>
+<td>3.349</td>
+<td>4.878</td>
+</tr>
+<tr class="even">
+<td>EBITDA operativo compañía</td>
+<td>741</td>
+<td>873</td>
+<td>2.312</td>
+<td>1.553</td>
+<td>3.720</td>
+<td>5.479</td>
+</tr>
+<tr class="odd">
+<td>CFO continuado</td>
+<td>298</td>
+<td>1.124</td>
+<td>1.324</td>
+<td>1.839</td>
+<td>1.575</td>
+<td>4.585</td>
+</tr>
+<tr class="even">
+<td>Capex</td>
+<td>568</td>
+<td>503</td>
+<td>632</td>
+<td>706</td>
+<td>2.678</td>
+<td>2.409</td>
+</tr>
+<tr class="odd">
+<td>FCF simple</td>
+<td>-270</td>
+<td>621</td>
+<td>692</td>
+<td>1.133</td>
+<td>-1.103</td>
+<td>2.176</td>
+</tr>
+</tbody>
+</table></div>
+<p>El proxy directo DOW = ventas − COGS − I+D − SG&amp;A − amortización intangible; excluye el renglón de reestructuración/impairment y los resultados de afiliadas/«sundry». Retiene SBC y costes de implantación alojados en COGS/SG&amp;A. No se llama idéntico al EBIT normalizado LYB: algunos costes de transacción permanecen en DOW. Se muestra el EBITDA compañía en paralelo, en vez de esconder la diferencia. Q3 DOW mejoró interanual pero también cayó frente al Q2; su volumen −1% con precio +14% y suspensión de reconocimiento de pérdidas de Sadara no equivale a crecimiento puro. <a href="https://investors.dow.com/en/news/news-details/2026/Dow-reports-first-quarter-2026-results/default.aspx">Dow Q1 2026</a>, <a href="https://investors.dow.com/en/news/news-details/2026/Dow-reports-second-quarter-2026-results/default.aspx">Dow Q2 2026</a>, <a href="https://investors.dow.com/en/news/news-details/2026/Dow-reports-third-quarter-2026-results/default.aspx">Dow Q3 2026</a>, <a href="https://investors.dow.com/en/news/news-details/2026/Dow-reports-fourth-quarter-2025-results/default.aspx">Dow FY2025</a></p>
+<p>LYB EBITDA ajustado TTM compañía $4.671m frente a proxy núcleo $4.457m = EBIT limpio $3.013m + D&amp;A $1.444m. Diferencia exacta $214m: $42m de resultado de asociadas +$134m de otros ingresos +$38m de costes del plan que nosotros retenemos. DOW EBITDA operativo TTM $5.479m frente a directo $4.878m. Esto impide comparar cifras ajustadas como si fueran definiciones idénticas.</p>
+<p>Con cierres Nov3 LYB $66,09 y DOW $33,79, deuda contable, caja total y NCI publicados, EV convencional simple ~$30,59bn/$39,34bn. Múltiplos EBITDA compañía <strong>6,55x/7,18x</strong>; con proxy directo <strong>6,86x/8,06x</strong>. Son diagnósticos, <strong>no múltiplos finales plenamente ajustados</strong>: esos EV no separan valor de asociadas ni añaden todas las pensiones/ambiente/caja mínima. DOW tiene $4.318m de obligaciones no corrientes de pensiones/posretiro, $564m de asbestos y otros riesgos, de modo que su mayor múltiplo bruto no hace a LYB barata por sí solo. No se aplica un múltiplo de DOW al beneficio de LYB para fabricar aprobación. <a href="https://investors.dow.com/en/news/news-details/2026/Dow-reports-third-quarter-2026-results/default.aspx">Dow Q3 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1489393/000148939326000070/lyb-20260930.htm">10-Q septiembre 2026</a>, <a href="https://stockanalysis.com/stocks/lyb/history/">Histórico LYB, cierre regular 3 noviembre</a>, <a href="https://stockanalysis.com/stocks/dow/history/">Histórico DOW, cierre regular 3 noviembre</a></p>
+<h2 id="qué-cambió-frente-a-a152-y-cómo-utilizar-esta-revisión">Qué cambió frente a A152 y cómo utilizar esta revisión</h2>
+<p>Los diez FCFF publicados en v1, descontados con su terminal, reproducen <strong>$48,8006</strong>. No se encontró un ejecutable original de LYB; el archivo preserva una reconstrucción de esos flujos redondeados y la identifica como tal. No se afirma haber ejecutado un código que no estaba disponible.</p>
+<p>Puente aproximado desde $48,80: nueva valoración de asociadas ~$3,65 menos por acción; convención de principal ~$0,90 menos; otros claims netos ~$1,64 menos; reinversión de JV y ajuste inicial al margen TTM, parcialmente compensados por quitar accretion legado, completan la diferencia a <strong>$41.90</strong>. Conservar el antiguo margen inicial de 10% pero aplicar claims/JVs corregidos da <strong>$42.30</strong>. La caída de valoración no se basa en escoger un año malo ni en aumentar una exigencia universal de descuento.</p>
+<p>La v1 permanece histórica, no recomendación vigente. Esta v2 sustituye solo LYB. Se cierran huecos de fuente con datos públicos y rangos explícitos donde una medición interim no existe: pensión tras disposición, pagos de cierre, valor de JVs y mantenimiento. Son incertidumbres económicas normales acotadas, no excusa para fingir certeza ni mantener trabajo sin terminar.</p>
+<p>Para reconsiderar una entrada parcial a precio razonable haría falta: que margen sin disrupciones justifique una senda superior a la ordinaria; caja después de capex y financiación de JVs sostenga la rentabilidad; ventas/cierre de obligaciones reduzcan riesgos como se espera; y que el retorno plausible compense el riesgo cíclico. Si solo el constructivo alcanza el requisito, <strong>la clasificación actual sigue en observación</strong>, aunque la posición propuesta fuera pequeña.</p>
+<p>Stage 3.5 exige además M/S pertinentes, tendencia real, soporte/invalidación verificables, volumen, calendario y un stop ejecutable con relación recompensa/riesgo al menos 3:1. No hay esos datos técnicos completos en esta revisión, no se deducen del scanner. La distancia al bear del DCF no es el stop. La ratio bull/base/bear tampoco acredita 3:1 técnico. Un valor central, una banda y un precio de revisión no autorizan ninguna operación.</p>
+<h2 id="fuentes-y-artefactos-de-reproducción">Fuentes y artefactos de reproducción</h2>
+<p>Se adjuntan el anexo histórico, CSV de historia, CSV con los diez años por escenario, JSON completo de resultados/inputs, source ledger, scripts history.py/model.py/comps.py y comprobaciones. Ejecutar en orden history.py, model.py, comps.py, write_report.py. El informe usa exclusivamente archivos propios y fuentes públicas para afirmaciones financieras; no aplica datos de consenso no verificados. Toda cifra futura es supuesto explícito.</p>
+<h2 id="full-dossier-and-analyst-audit-files">Full dossier and analyst audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/source_report.md">source_report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/LYB_10year_FCFF.csv">LYB_10year_FCFF.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/LYB_DOW_comps.json">LYB_DOW_comps.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/LYB_history.csv">LYB_history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/LYB_history_normalization_appendix.md">LYB_history_normalization_appendix.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/LYB_model_results.json">LYB_model_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/QA_results.json">QA_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/history.json">history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/history_checks.json">history_checks.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/model_checks.json">model_checks.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/source_ledger.md">source_ledger.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/source_sha256.json">source_sha256.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/LYB/sources.json">sources.json</a></li>
+</ul>
+</main></body></html>

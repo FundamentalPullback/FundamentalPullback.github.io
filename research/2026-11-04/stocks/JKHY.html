@@ -1,0 +1,850 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>JKHY · A188 revision</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><p><strong><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/JKHY.html">Open the full readable JKHY dossier</a></strong></p><nav><a href="../../../#ficha/JKHY">← JKHY profile</a><a href="../index.html">Research index</a></nav><p class="eyebrow">A188 · November4,2026 · No entry approval</p><h2 id="dated-correction-a188-november-4-2026">Dated correction: A188, November 4, 2026</h2>
+<p>Updates only <strong>JKHY</strong> in historical <strong>A155</strong>. The original shared report and unrelated issuer components must remain unchanged.</p>
+<p><strong>Observation. Revised $67.62/$116.78/$189.50; prior $115.81 reproduced. Strict TTM FCF +27.7%, normalized operating FCFF −5.1%. Current SBC is undisclosed and remains parametric, not fabricated. Scanner $163.58 differs from $161.66 regular close.</strong></p>
+<p>Prepared November4,2026 after10:00UTC. Source cutoff is retained below; later event completion has not been verified.</p>
+<p><strong>Price audit:</strong> November3 scanner $163.58; separately sourced regular close $161.66. Scanner header timezone is not certified.</p>
+<p><strong>Coverage and source limits:</strong> FY2024–FY2026; Q2–Q4 FY2026/Q1 FY2027; September2025/2026 TTM. Cash rebuilt, but current SBC unseparated from other noncash adjustments; parametric FCF and principal SBC-independent FCFF disclosed.</p>
+<p><strong>Next review:</strong> Source cutoff06:05UTC; November4 call scheduled13:45UTC. September10-Q unavailable at cutoff; revalidate call/filing without pretending release is a10-Q.</p>
+<p><strong>No entry approved.</strong> No new position, quantity, buy ceiling or stop. No universal15/20/25% valuation-discount rule.</p>
+<hr />
+<h1 id="jkhy-stage-3-completado-con-información-pública-al-4-de-noviembre-de-2026">JKHY · Stage 3 completado con información pública al 4 de noviembre de 2026</h1>
+<p><strong>Corte de información: 4 noviembre 2026, 06:05 UTC. Versión de revisión del componente JKHY de A155. Esta entrega no revisa ni completa SPGI.</strong></p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Jack Henry conserva un negocio recurrente de calidad y un crecimiento operativo saludable. <strong>A $163.58 del scanner, la relación precio/valor no resulta suficientemente favorable bajo el escenario central; mantener en observación, sin aprobar entrada.</strong> La revisión completa los trimestres de caja, compara el TTM con el anterior, reconstruye el DCF y añade pares con precios fechados. La conclusión no depende de exigir un crecimiento de 15%, ni de descontar mecánicamente 15%, 20% o 25% al valor razonable.</p>
+<p>El valor central revisado es <strong>$116.78</strong>, con escenarios <strong>$67.62 / $116.78 / $189.50</strong>. El modelo anterior de A155 se reproduce en <strong>$115.81</strong>. La nueva serie de caja aconseja mayor reinversión próxima; por separado, se incorpora el ingreso económico de cuentas de liquidación y una reserva por posiciones fiscales inciertas. Los cambios se explican, no se compensan mediante un recorte arbitrario. El intervalo no es una banda estadística de confianza ni una promesa de precios.</p>
+<p>La principal novedad no es un desplome de valor: <strong>FCF estricto TTM +27.7%, pero FCFF operativo normalizado con reinversión observada −5.1%</strong>. El fuerte aumento de caja reportada incluye una mejora de calendario fiscal. Crecen ventas y beneficios, pero el accionista no debe capitalizar como permanente toda esa caja temporal. El caso favorable sí puede justificar la cotización: necesita una combinación exigente de expansión de margen, crecimiento y coste de capital, no un único número mágico.</p>
+<p><strong>Estado de evidencia:</strong> investigación terminada con los documentos efectivamente públicos al corte. El release del 3 noviembre es un 8-K, no un nuevo 10-Q. El 10-Q de septiembre todavía no aparece en SEC; el último es marzo de 2026. El release no separa SBC actual de otros ajustes no monetarios. Se explicita esa variable y se calcula un FCFF principal que no depende de conocerla, sin inventar la cifra. La conferencia está programada para el 4 noviembre a las 7:45 Central, 13:45 UTC, todavía futura al corte. Esto no invalida utilizar los resultados ya publicados. [J1, J2, JQ3, JS]</p>
+<h2 id="precio-fecha-y-tesis-del-negocio">1. Precio, fecha y tesis del negocio</h2>
+<ul>
+<li>Scanner original: <strong>$163.58</strong>, encabezado «Quote on 11/3/26 17:27:04», sin zona horaria identificada. No se etiqueta como cierre oficial ni se presupone que fuese posterior a resultados. [SC]</li>
+<li>Cierre regular verificado del 3 noviembre: <strong>$161.66, 16:00 EST</strong>. Fue anterior al comunicado de resultados; se usa para una comparación simultánea de cotizaciones con los pares. Un registro separado de mercado muestra <strong>$165.00 a las 18:23 EST</strong>, negociación fuera de horario. Ninguno se presenta como precio ejecutable en tiempo real. [P1, P1A]</li>
+<li>Frente al caso central, valor/precio es -28.6% al scanner, -27.8% al cierre y -29.2% a ese registro fuera de horario. El margen con denominador valor, (valor − precio)/valor, es -40.1%; no debe confundirse con potencial de rentabilidad.</li>
+</ul>
+<p>Core bancario, pagos y productos complementarios dependen de relaciones duraderas, integración, regulación y costes de migración. Las obligaciones de desempeño pendientes FY26 de $8,440.905m, con 23% estimado en los siguientes doce meses, apoyan visibilidad; no son cuentas a cobrar ni caja íntegramente garantizada. Hosting, pagos y digital pueden compensar presión sobre entidades financieras pequeñas. Los riesgos son consolidación bancaria, terminaciones de contratos, renovaciones a menor precio, fallos/ciberseguridad y la inversión en software/nube necesaria para seguir competitivo. [J2]</p>
+<p>Q1 FY27: ventas $701.547m (+8.8%), EBIT $207.071m (+12.5%), beneficio neto $160.412m (+11.4%), EPS diluido $2.28 (+15.6%). Las acciones diluidas medias bajan de 72.909m a 70.262m: EPS no equivale a crecimiento del negocio. Hosting +11.7%, software usage +9.9%, tarjetas +9.4% y digital +13.3% respaldan la demanda. La conferencia Connect pasa de Q1 FY26 a Q2 FY27; su desplazamiento no es ahorro permanente. [J1]</p>
+<p>Guidance FY27 de la compañía: ventas GAAP $2,698–2,718m, ajustadas $2,667–2,687m, EBIT ajustado $643–653m, margen ajustado 24.1–24.3% y EPS GAAP $7.47–7.51. El DCF usa años prospectivos anualizados desde el TTM; su año 1 no se denomina FY27 ni se fuerza a coincidir con un ejercicio fiscal parcialmente transcurrido. La expansión a 28% de margen del escenario favorable supera sustancialmente el guidance actual. [J1]</p>
+<h2 id="tres-ejercicios-cuatro-trimestres-y-comparativo-ttm">2. Tres ejercicios, cuatro trimestres y comparativo TTM</h2>
+<p>USD millones. FY termina en junio. Q2/Q3/Q4 FY26 terminan en diciembre 2025/marzo 2026/junio 2026; Q1 FY27 termina en septiembre 2026. Los TTM terminan en septiembre. No se suman promedios de acciones para construir una cifra de acciones reales. EPS diluido FY24/FY25/FY26: 5.23/6.24/6.98; últimos cuatro trimestres: 1.72/1.71/1.57/2.28. Su suma es <strong>7.28</strong>, corrigiendo el 7.29 del informe anterior, que mezclaba EPS anual y trimestral con denominadores distintos. No cambia el DCF, que valora beneficio y caja totales.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT GAAP</th>
+<th>Beneficio neto</th>
+<th>EBIT normalizado</th>
+<th>Beneficio normalizado¹</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>2,215.543</td>
+<td>489.391</td>
+<td>381.816</td>
+<td>492.688</td>
+<td>386.013</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>2,375.288</td>
+<td>568.715</td>
+<td>455.748</td>
+<td>538.694</td>
+<td>428.132</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>2,544.339</td>
+<td>635.033</td>
+<td>502.776</td>
+<td>598.251</td>
+<td>474.326</td>
+</tr>
+<tr class="even">
+<td>Q2 FY26</td>
+<td>619.334</td>
+<td>159.148</td>
+<td>124.668</td>
+<td>152.516</td>
+<td>121.322</td>
+</tr>
+<tr class="odd">
+<td>Q3 FY26</td>
+<td>636.245</td>
+<td>155.047</td>
+<td>122.894</td>
+<td>140.412</td>
+<td>110.808</td>
+</tr>
+<tr class="even">
+<td>Q4 FY26</td>
+<td>644.023</td>
+<td>136.773</td>
+<td>111.227</td>
+<td>132.157</td>
+<td>104.044</td>
+</tr>
+<tr class="odd">
+<td>Q1 FY27</td>
+<td>701.547</td>
+<td>207.071</td>
+<td>160.412</td>
+<td>191.872</td>
+<td>150.486</td>
+</tr>
+<tr class="even">
+<td>TTM sep-2025</td>
+<td>2,419.044</td>
+<td>601.504</td>
+<td>480.543</td>
+<td>565.886</td>
+<td>449.632</td>
+</tr>
+<tr class="odd">
+<td>TTM sep-2026</td>
+<td>2,601.148</td>
+<td>658.039</td>
+<td>519.202</td>
+<td>616.955</td>
+<td>486.658</td>
+</tr>
+</tbody>
+</table></div>
+<p>¹ Beneficio normalizado = (EBIT normalizado + interés neto reportado) × 77%. Es una medida analítica a impuesto uniforme del 23%, no beneficio ajustado divulgado. El NOPAT de la valoración excluye financiación. Fuentes anuales J2/J25 y comparativas trimestrales JQ1/JQ2/JQ3/J1; datos y accesiones por celda en el soporte.</p>
+<p><strong>Normalización de EBIT:</strong> - FY24: 489.391 − 13.146 de deconversiones + 16.443 del programa extraordinario de salida voluntaria = <strong>492.688</strong>. - FY25: 568.715 − 27.663 de deconversiones − 2.358 por cambio contractual = <strong>538.694</strong>. - FY26: 635.033 − 29.953 de deconversiones − 6.829 de ganancia de activos = <strong>598.251</strong>. - Q1 FY27: 207.071 − 15.199 = <strong>191.872</strong>. Se conserva la pérdida operativa Victor de 0.759; la compañía la excluye al calcular su EBIT ajustado 192.631. - Q1 FY26 comparable: 184.065 − 7.101 − 3.796 = <strong>173.168</strong>. Q1 FY25: 151.276 − 3.495 − 1.805 por cambio contractual = <strong>145.976</strong>. La reclasificación del cambio contractual se toma del comparativo posterior, no se mezcla con la antigua definición ajustada. - TTM actual: 598.251 + 191.872 − 173.168 = <strong>616.955</strong>. TTM previo: 538.694 + 173.168 − 145.976 = <strong>565.886</strong>. Crecimiento <strong>9.0%</strong>. El beneficio normalizado a tipo uniforme crece <strong>8.2%</strong>, frente a 8.0% del beneficio GAAP. [J1, J2, J25, JQ1, JQ2, JQ3]</p>
+<p>Deconversiones son pagos por terminación: no se perpetúan como crecimiento normal ni se supone que desaparecerán para siempre de la caja. Mantenerlas en escenarios de upside sería posible, pero debe tener una hipótesis de pérdida de clientes y cobros, no tratarse como ARR. Victor se conserva como parte del negocio comprado, incluidos sus costes.</p>
+<h3 id="caja-e-inversión-desglose-que-faltaba">Caja e inversión: desglose que faltaba</h3>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>CFO</th>
+<th>PP&amp;E</th>
+<th>Software comprado</th>
+<th>Software desarrollado</th>
+<th>FCF estricto</th>
+<th>SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>568.041</td>
+<td>58.118</td>
+<td>7.130</td>
+<td>167.175</td>
+<td>335.618</td>
+<td>28.873</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>641.504</td>
+<td>53.358</td>
+<td>5.363</td>
+<td>172.445</td>
+<td>410.338</td>
+<td>28.392</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>761.960</td>
+<td>67.103</td>
+<td>4.108</td>
+<td>184.243</td>
+<td>506.506</td>
+<td>32.460</td>
+</tr>
+<tr class="even">
+<td>Q2 FY26</td>
+<td>152.664</td>
+<td>21.216</td>
+<td>1.399</td>
+<td>44.281</td>
+<td>85.768</td>
+<td>8.439</td>
+</tr>
+<tr class="odd">
+<td>Q3 FY26</td>
+<td>186.032</td>
+<td>16.520</td>
+<td>0.090</td>
+<td>47.519</td>
+<td>121.903</td>
+<td>8.195</td>
+</tr>
+<tr class="even">
+<td>Q4 FY26</td>
+<td>302.674</td>
+<td>20.487</td>
+<td>1.110</td>
+<td>44.240</td>
+<td>236.837</td>
+<td>9.509</td>
+</tr>
+<tr class="odd">
+<td>Q1 FY27</td>
+<td>161.253</td>
+<td>26.960</td>
+<td>1.577</td>
+<td>49.784</td>
+<td>82.932</td>
+<td>No divulgado: s</td>
+</tr>
+<tr class="even">
+<td>TTM sep-2025</td>
+<td>645.198</td>
+<td>49.437</td>
+<td>4.196</td>
+<td>178.389</td>
+<td>413.176</td>
+<td>28.004</td>
+</tr>
+<tr class="odd">
+<td>TTM sep-2026</td>
+<td>802.623</td>
+<td>85.183</td>
+<td>4.176</td>
+<td>185.824</td>
+<td>527.440</td>
+<td>26.143 + s</td>
+</tr>
+</tbody>
+</table></div>
+<p>FCF estricto = CFO − PP&amp;E − software comprado − software desarrollado. <strong>No incluye ventas de activos.</strong> CFO y capex Q2/Q3 se calculan mediante diferencias de estados acumulados; Q4 = FY − nueve meses. El P&amp;L usa el trimestre divulgado cuando está disponible. Redondeos de $0.001–0.003m explican pequeñas diferencias entre suma de trimestres y estados acumulados. Por ejemplo, SBC Q3 reportado en el estado de patrimonio es 8.196 y la diferencia acumulada es 8.195; el soporte usa esta última para que cierre el acumulado. No es una discrepancia económica.</p>
+<p><strong>s = SBC Q1 FY27 no divulgado por separado.</strong> El release agrupa $4.578m como «other non-cash expenses»; no se iguala automáticamente esa línea con SBC. El soporte permite una ilustración de s = 9m, cercana al último trimestre conocido (9.509m). No es dato reportado ni consenso. La fórmula exacta paramétrica del TTM es 32.460 + s − 6.317 = <strong>26.143 + s</strong>. Para sensibilidad se muestran s = 0 / 4 / 9 / 12m, sin afirmar que sean límites estadísticos.</p>
+<h3 id="caja-normalizada-sin-confundir-sbc-ni-impuestos">Caja normalizada, sin confundir SBC ni impuestos</h3>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>NOPAT normalizado</th>
+<th>D&amp;A</th>
+<th>Capex total</th>
+<th>ΔWC/contratos: efecto caja²</th>
+<th>FCFF operativo normalizado³</th>
+<th>FCFF + interés bruto⁴</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>379.370</td>
+<td>199.904</td>
+<td>232.423</td>
+<td>-55.409</td>
+<td>291.442</td>
+<td>310.701</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>414.794</td>
+<td>204.751</td>
+<td>231.166</td>
+<td>-61.905</td>
+<td>326.474</td>
+<td>347.849</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>460.653</td>
+<td>213.241</td>
+<td>255.454</td>
+<td>-100.790</td>
+<td>317.650</td>
+<td>335.471</td>
+</tr>
+<tr class="even">
+<td>Q2 FY26</td>
+<td>117.437</td>
+<td>53.155</td>
+<td>66.896</td>
+<td>-62.618</td>
+<td>41.078</td>
+<td>45.842</td>
+</tr>
+<tr class="odd">
+<td>Q3 FY26</td>
+<td>108.117</td>
+<td>53.653</td>
+<td>64.129</td>
+<td>-34.186</td>
+<td>63.455</td>
+<td>67.204</td>
+</tr>
+<tr class="even">
+<td>Q4 FY26</td>
+<td>101.761</td>
+<td>54.541</td>
+<td>65.837</td>
+<td>103.649</td>
+<td>194.114</td>
+<td>197.925</td>
+</tr>
+<tr class="odd">
+<td>Q1 FY27</td>
+<td>147.741</td>
+<td>55.838</td>
+<td>78.321</td>
+<td>-106.750</td>
+<td>18.508</td>
+<td>22.429</td>
+</tr>
+<tr class="even">
+<td>TTM sep-2025</td>
+<td>435.732</td>
+<td>206.149</td>
+<td>232.022</td>
+<td>-75.584</td>
+<td>334.275</td>
+<td>354.719</td>
+</tr>
+<tr class="odd">
+<td>TTM sep-2026</td>
+<td>475.055</td>
+<td>217.187</td>
+<td>275.183</td>
+<td>-99.905</td>
+<td>317.154</td>
+<td>333.399</td>
+</tr>
+</tbody>
+</table></div>
+<p>² Efecto de caja observado de receivables, prepaid/deferred contract costs/otros activos, proveedores, devengos y deferred revenue; se excluyen cambios en impuestos. Un valor negativo es inversión. No se añade otra vez la amortización de contratos al tratar la variación neta de esos activos.</p>
+<p>³ <strong>FCFF core = EBIT normalizado × 77% + depreciación + amortización del estado de caja − todo capex efectivo + cambio no fiscal de circulante/contratos.</strong> SBC permanece como coste en EBIT y no se añade: no se resta otra vez. Se conserva la reinversión observada, incluida expansión, y no se presenta como flujo de mantenimiento. Los cobros de deconversiones no se separan por completo del circulante en los estados; por tanto es un indicador normalizado consistente, no una cifra GAAP ni una promesa del próximo año.</p>
+<p>⁴ Añade interés bruto reportado después de impuesto uniforme, sin interés de deuda. El 10-K explica que se obtiene interés en cuentas de liquidación. No se añade su principal como caja libre. La columna permite observar el negocio incluyendo todo el ingreso de intereses; el DCF usa una estimación menor para no atribuir automáticamente a operaciones todo el rendimiento de caja corporativa. TTM con interés bruto baja de <strong>354.719 a 333.399m</strong>, cerca de −6.0%. [J1, J2, JQ1, JQ2, JQ3]</p>
+<p>La caída no significa que la franquicia se esté contrayendo: EBIT crece, mientras el capex total aumenta 18.6% y el consumo no fiscal de circulante pasa de 75.584 a 99.905m. Permite separar crecimiento rentable de generación inmediata de efectivo. La estacionalidad es intensa: no se anualiza el débil FCFF de Q1 ni el fuerte Q4.</p>
+<h3 id="reconciliación-fiscal-y-caja-del-accionista">Reconciliación fiscal y caja del accionista</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente TTM</th>
+<th>Sep-2025</th>
+<th>Sep-2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FCF estricto</td>
+<td>413.176</td>
+<td>527.440</td>
+</tr>
+<tr class="even">
+<td>Menos SBC</td>
+<td>28.004</td>
+<td>26.143 + s</td>
+</tr>
+<tr class="odd">
+<td>Menos efecto de impuestos diferidos en CFO</td>
+<td>39.578</td>
+<td>98.399</td>
+</tr>
+<tr class="even">
+<td>Menos cambio de impuestos por pagar/cobrar</td>
+<td>−31.678</td>
+<td>30.649</td>
+</tr>
+<tr class="odd">
+<td>Más impuesto GAAP menos impuesto al 23%</td>
+<td>−3.485</td>
+<td>−0.910</td>
+</tr>
+<tr class="even">
+<td>Caja económica con impuesto normal</td>
+<td>373.787</td>
+<td>371.339 − s</td>
+</tr>
+<tr class="odd">
+<td>Ilustración, s = 9.000</td>
+<td>373.787</td>
+<td>362.339</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fórmula: <strong>CFO − capex − SBC − ajuste de impuestos diferidos − variación de impuestos por pagar/cobrar + impuesto GAAP − 23% del beneficio antes de impuestos.</strong> «Menos −31.678» equivale a añadir 31.678. Los cambios fiscales de caja netos son <strong>7.900m en el TTM previo y 129.048m en el actual</strong>. La diferencia de la última línea depende solo de s; incluso si se supusiese s = 0, el actual 371.339m no supera el previo 373.787m. Para s = 4 / 9 / 12m, resulta <strong>367.339 / 362.339 / 359.339m</strong>. No hace falta inventar SBC para concluir que el crecimiento bruto de FCF no refleja crecimiento equivalente de caja recurrente.</p>
+<p>Esta medida conserva las deconversiones y otros componentes de beneficio incluidos en el estado de caja; no se confunde con el FCFF core anterior. Este último es independiente de s porque parte de EBIT real, que ya contiene el gasto. La provisión fiscal FY26 fue 150.014m y el impuesto pagado 38.868m frente a 117.581m en FY25. La reforma sobre deducción de I+D y la transición alteran calendario; se aplica 23% a beneficios futuros y no se vuelve a restar toda la deuda fiscal diferida como si fuese deuda financiera adicional. [J2]</p>
+<h3 id="software-contratos-y-ventas-de-activos">Software, contratos y ventas de activos</h3>
+<ul>
+<li>FY26: I+D llevada a gasto <strong>176.445m</strong> y desarrollo de software capitalizado en efectivo <strong>184.243m</strong>. El segundo importe también consume recursos; todo se incluye en reinversión. El software desarrollado neto es 656.288m. La valoración mantiene amortización económica y reinversión; no usa EBITDA como flujo libre. [J2]</li>
+<li>Activos de contratos de obtención/cumplimiento: <strong>599.529m</strong>, antes 541.714m; aumento neto 57.815m. Amortización 195.671m, ya dentro de costes operativos. Añadirla íntegramente a D&amp;A y además usar solo el aumento neto del activo inflaría caja. Aquí no se hace. [J2]</li>
+<li>Los documentos examinados no separan una cifra relevante de SBC capitalizada en software. No se declara que sea cero. Mantener SBC en EBIT, cobrar todo software en capex y contrastar caja económica evita tratar la compensación como gratis; una revelación material de capitalización exigiría ajustar el puente, no sumar SBC a FCF.</li>
+<li>FCF FY26 divulgado 539.333m incluye <strong>32.827m de ventas de activos</strong>; el estricto es 506.506m. Q1 FY26 divulgado 69.477m incluye 7.479m de venta; comparable estricto 61.998m. Los 6.829m de ganancia son distintos del cobro bruto y se eliminan de EBIT, no se restan otra vez de CFO, donde el efecto no monetario ya se concilia. [J1, J2]</li>
+<li>Se trata de activos inmobiliarios/operativos dispuestos o mantenidos para venta, <strong>no de una operación discontinuada segregada comparable al spin-off de SPGI</strong>. Activos para venta FY26 9.172m no se suman al valor por encima del negocio sin descontar costes, impuestos y capex de sustitución. No se suma otra vez el cobro ya reflejado en balance. El precio de compra Victor 42.390m fue pagado; no se trata como adquisición pendiente ni como caja adicional. [J2, nota 5]</li>
+</ul>
+<h2 id="acciones-balance-y-derechos-económicos">3. Acciones, balance y derechos económicos</h2>
+<p>Una sola clase ordinaria JKHY, un voto por acción. El proxy del 2 octubre informa <strong>70.111999m acciones reales al 21 septiembre</strong>, sin preferentes en circulación. El DCF conserva <strong>70.262m</strong> como aproximación diluida reciente, distinguiéndola de las acciones reales y de las 72.043m medias FY26. La diferencia de aproximadamente 0.15m incorpora una pequeña cautela por dilución, no recompras futuras gratuitas. No se multiplica EPS por una cantidad de acciones incompatible para derivar beneficios. El uso de 70.112m en vez de 70.262m subiría valor aproximadamente 0.2%. [JP, J1]</p>
+<ul>
+<li>Caja septiembre: <strong>25.356m</strong>. Se reserva toda para operaciones; exceso añadido al equity = cero.</li>
+<li>Deuda: <strong>85m</strong>. Línea de crédito 1,000m, vencimiento <strong>25 marzo 2031</strong>. La fecha 2027 de la facilidad anterior no es el vencimiento actual. No hay convertibles ni preferentes identificados en las fuentes revisadas. [J1, J2]</li>
+<li>Posiciones fiscales inciertas: <strong>24.905m</strong> en FY26, con importe/fecha de liquidación inciertos. La revisión reserva el importe completo como reclamación separada por ejercicios pasados. Liberar toda esa reserva añadiría solo <strong>$0.35 por acción</strong>. No se resta además el pasivo fiscal diferido íntegro. [J2]</li>
+<li>Obligaciones de compra no reconocidas en balance <strong>2,135.981m</strong> y pagos de arrendamiento <strong>41.611m</strong>. Son compromisos operativos plurianuales, no deuda que deba deducirse por segunda vez si los costes están en EBIT/capex. Refuerzan la necesidad de mantener inversión y vigilar renovaciones. El valor actual del arrendamiento 37.821m tampoco se resta además mientras se capitaliza un EBIT con alquileres como gasto. [J2]</li>
+<li>Recompras FY26 448.173m y dividendos 170.405m superan el FCF estricto 506.506m; hubo desinversiones y deuda. Las recompras no son una fuente adicional de valor independiente del precio pagado y la financiación. Q1 FY27 recompra 70.903m y dividendos 42.768m frente a 82.932m de FCF estricto. [J1, J2]</li>
+</ul>
+<p>El float de liquidación se valora por su ingreso neto de impuesto, no por apropiación del dinero de clientes. Interés bruto TTM reportado 21.097m, frente a 26.551m; el modelo estima <strong>8/18/24m</strong> de ingreso normal inicial en escenarios adverso/base/favorable, creciendo 2% anual. Base 18m es una hipótesis inferior al bruto divulgado, no una separación contable exacta entre caja corporativa y liquidaciones. Su valor presente es <strong>198m, $2.82 por acción</strong>; si no se atribuyera valor a ese ingreso, el caso base sería <strong>$113.96</strong>. Deuda financiera se deduce una vez y sus intereses no se restan del FCFF.</p>
+<h2 id="dcf-reproducible-a-diez-años">4. DCF reproducible a diez años</h2>
+<p><strong>Base:</strong> ventas normalizadas iniciales 2,549.026m = ventas TTM 2,601.148 − deconversiones 52.122; conserva Victor. Crecimientos años 1–5 7/7/6.5/6/5.5%; márgenes EBIT 24.2/24.4/24.6/24.8/25%; impuesto 23%; D&amp;A 8.4% de ventas. Capex efectivo <strong>10.6/10.45/10.3/10.3/10.3%</strong>, incluyendo software; inversión en circulante/contratos <strong>45% del aumento de ventas</strong>.</p>
+<p>Frente a A155, capex inicial recoge parte del incremento observado: el efectivo TTM fue 10.58% de ventas reportadas, 10.80% de ventas sin deconversiones; 10.6% en el primer año supone una pequeña mejora antes de normalizarse; 45% de incremento de ventas es un punto intermedio, no regla del plan. El consumo de circulante FY25 fue 61.905m, FY26 100.790m y TTM actual 99.905m. El caso central aún supone que cobros y contratos se estabilizan: la inversión de WC año 1 baja a 80.294m. De ahí que el FCFF core previsto 367.936m supere los 317.154m históricos; no es caja ya obtenida. Si las mayores necesidades persistieran, corresponde el caso de más reinversión o menor rentabilidad terminal.</p>
+<p>Años 6–10: crecimiento converge linealmente a 2.75%, margen queda en 25%, reinversión/NOPAT converge a g/ROIC. ROIC incremental terminal <strong>20%</strong>, por lo que se reinvierte 13.75% del NOPAT core terminal. Capex se resuelve como reinversión + D&amp;A − inversión WC. La compensación en acciones queda dentro del margen y no se añade al flujo. El ingreso de liquidación se proyecta por separado con crecimiento 2%, sin capitalizar como propio su principal.</p>
+<p>WACC base <strong>9%</strong>: Treasury diez años <strong>4.95% el 3 noviembre</strong>, prima de riesgo analítica 5%, beta normalizada analítica 0.8, coste de equity aproximado 8.95%, financiación casi totalmente equity. Prima y beta son juicios, no estimaciones de consenso verificadas. WACC 8% favorable y 10.25% adverso son escenarios. El crecimiento terminal nominal 2–3% y el ROIC se prueban conjuntamente; no se elige el WACC para alcanzar la cotización. [RF]</p>
+<p><strong>Fórmulas:</strong> FCFF core = EBIT × (1 − T) + D&amp;A − capex − ΔWC. FCFF total añade interés de liquidación × (1 − T). Terminal core = NOPAT año 11 × (1 − g/ROIC)/(WACC − g). Terminal del ingreso de liquidación usa su flujo año 11 y crecimiento 2%. Descuento al cierre de cada año, sin convención de mitad de año ni un stub implícito. Equity = EV − deuda 85 − reserva fiscal 24.905; caja excedente cero; acciones 70.262m.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>NOPAT</th>
+<th>D&amp;A</th>
+<th>Capex efectivo</th>
+<th>Inversión WC</th>
+<th>FCFF core</th>
+<th>Interés liquidación neto impuesto</th>
+<th>FCFF total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>2,727.5</td>
+<td>660.0</td>
+<td>508.2</td>
+<td>229.1</td>
+<td>289.1</td>
+<td>80.3</td>
+<td>367.9</td>
+<td>13.9</td>
+<td>381.8</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2,918.4</td>
+<td>712.1</td>
+<td>548.3</td>
+<td>245.1</td>
+<td>305.0</td>
+<td>85.9</td>
+<td>402.6</td>
+<td>14.1</td>
+<td>416.7</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3,108.1</td>
+<td>764.6</td>
+<td>588.7</td>
+<td>261.1</td>
+<td>320.1</td>
+<td>85.4</td>
+<td>444.3</td>
+<td>14.4</td>
+<td>458.7</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>3,294.6</td>
+<td>817.1</td>
+<td>629.1</td>
+<td>276.7</td>
+<td>339.3</td>
+<td>83.9</td>
+<td>482.6</td>
+<td>14.7</td>
+<td>497.3</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>3,475.8</td>
+<td>868.9</td>
+<td>669.1</td>
+<td>292.0</td>
+<td>358.0</td>
+<td>81.5</td>
+<td>521.5</td>
+<td>15.0</td>
+<td>536.5</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>3,647.8</td>
+<td>912.0</td>
+<td>702.2</td>
+<td>306.4</td>
+<td>372.2</td>
+<td>77.4</td>
+<td>559.0</td>
+<td>15.3</td>
+<td>574.3</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>3,808.3</td>
+<td>952.1</td>
+<td>733.1</td>
+<td>319.9</td>
+<td>385.0</td>
+<td>72.2</td>
+<td>595.8</td>
+<td>15.6</td>
+<td>611.4</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>3,954.9</td>
+<td>988.7</td>
+<td>761.3</td>
+<td>332.2</td>
+<td>396.2</td>
+<td>66.0</td>
+<td>631.3</td>
+<td>15.9</td>
+<td>647.3</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>4,085.4</td>
+<td>1,021.4</td>
+<td>786.4</td>
+<td>343.2</td>
+<td>405.6</td>
+<td>58.7</td>
+<td>665.2</td>
+<td>16.2</td>
+<td>681.5</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>4,197.8</td>
+<td>1,049.4</td>
+<td>808.1</td>
+<td>352.6</td>
+<td>413.2</td>
+<td>50.6</td>
+<td>697.0</td>
+<td>16.6</td>
+<td>713.5</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Reconciliación de la revisión:</strong> 1. Modelo previo reproducido: EV 8,222.061m; equity 8,137.061m; <strong>$115.8103</strong> por acción. 2. Mayor reinversión cercana, resto igual: <strong>$114.3165</strong>. 3. Ingreso de liquidación normalizado: +198m EV, <strong>+$2.8180</strong> por acción. 4. Reserva fiscal 24.905m: <strong>−$0.3545</strong> por acción. 5. Resultado: <strong>$116.7801</strong>, +0.84% respecto al previo. La actualización cambia la explicación de caja, pero no la conclusión de precio.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th>EV</th>
+<th>Deuda + reserva fiscal</th>
+<th>Equity</th>
+<th>Valor/acción</th>
+<th>Peso terminal</th>
+<th>Diferencia vs scanner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td>4,861.1</td>
+<td>109.905</td>
+<td>4,751.2</td>
+<td>$67.62</td>
+<td>48.7%</td>
+<td>-58.7%</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>8,315.1</td>
+<td>109.905</td>
+<td>8,205.2</td>
+<td>$116.78</td>
+<td>59.4%</td>
+<td>-28.6%</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>13,424.2</td>
+<td>109.905</td>
+<td>13,314.3</td>
+<td>$189.50</td>
+<td>66.0%</td>
+<td>15.8%</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Adverso:</strong> ventas crecen 4/4/3.5/3/3%, margen cae 23/22.5/22/22/22%, capex 11%, D&amp;A 8.5%, WC 45%, WACC 10.25%, g 2%, ROIC terminal 15%. Incluye presión competitiva, costes rígidos y menor interés de liquidación. Es un escenario de menor crecimiento y peor monetización, no quiebra.</p>
+<p><strong>Favorable:</strong> ventas 8.5/9/8.5/8/7.5%, margen 24.8/25.7/26.6/27.5/28%, capex 10%, D&amp;A 8.4%, WC 25%, WACC 8%, g 3%, ROIC terminal 25%. Requiere que el gasto actual produzca escalabilidad y que el crecimiento requiera menos capital incremental. Mantiene la compensación y software necesarios; no basta extrapolar el margen estacional de Q1.</p>
+<p><strong>Sensibilidad central:</strong> WACC 8.5–9.5%, g 2.5–3%, manteniendo la trayectoria operativa base: <strong>$105.72–$130.71</strong>. No es una banda de probabilidad y no recoge toda la incertidumbre operativa. La banda de escenarios más amplia es 67.62–189.50. El terminal pesa 59.4% del EV base; por eso un valor puntual con dos decimales sirve para reproducir cálculos, no para afirmar precisión económica.</p>
+<p>Con los demás supuestos revisados, capex constante 10.3% y WC 35% dan $118.27; capex 11% y WC 60% dan $113.33. La sensibilidad limitada no demuestra que invertir sea irrelevante: ambos convergen al mismo ROIC terminal. Una menor rentabilidad del capital permanente también debe afectar terminal y escenario, como en el adverso.</p>
+<h2 id="qué-descuenta-la-cotización-combinaciones-no-una-única-exigencia">5. Qué descuenta la cotización: combinaciones, no una única exigencia</h2>
+<p>El reverse usa las mismas fórmulas, capex, reservas, float y crecimiento terminal del caso central; cambia conjuntamente crecimiento, margen alcanzado y descuento. El margen progresa desde 24.2% hacia el objetivo, no salta instantáneamente al margen final.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Margen EBIT año 5</th>
+<th>WACC</th>
+<th>Crecimiento anual ventas años 1–5 compatible con $163.58</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>25.0%</td>
+<td>9.0%</td>
+<td>12.97%</td>
+</tr>
+<tr class="even">
+<td>28.0%</td>
+<td>8.5%</td>
+<td>8.86%</td>
+</tr>
+<tr class="odd">
+<td>28.0%</td>
+<td>8.0%</td>
+<td>6.95%</td>
+</tr>
+<tr class="even">
+<td>30.0%</td>
+<td>8.0%</td>
+<td>5.67%</td>
+</tr>
+<tr class="odd">
+<td>25.0%</td>
+<td>7.5%</td>
+<td>7.03%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Son combinaciones que igualan el precio, <strong>no pronósticos ni requisitos del plan</strong>. En particular, $163.58 puede sostenerse con crecimiento cercano al <strong>7%</strong>, margen de <strong>28%</strong> y WACC <strong>8%</strong>; por tanto sería incorrecto afirmar que JKHY necesita forzosamente crecer 13% para justificar el mercado. La discrepancia central está en cuánto margen y eficiencia de reinversión son defendibles, y qué retorno exige el inversor. También hay combinaciones con crecimiento moderado y coste de capital menor; tienen sus propios riesgos.</p>
+<p>La visión favorable se fortalecería con varios periodos de crecimiento de hosting/digital sin más deterioro de inversión y una trayectoria de márgenes superior al guidance actual. Si la compañía solo consigue márgenes 24–25% con mayor inversión y un coste de capital cercano a 9%, el precio exige una aceleración mucho más fuerte. El escenario favorable de $189.50 supone cerca de 15.8% de valor/precio sobre el scanner, frente a aproximadamente −58.7% en el adverso; no se asignan probabilidades artificiales para convertir esa asimetría en una media aparente.</p>
+<h2 id="pares-fis-y-fiserv-precios-actuales-fechados-y-estados-comparables">6. Pares: FIS y Fiserv, precios actuales fechados y estados comparables</h2>
+<p><strong>No se presentan balances antiguos como si fueran del día del precio.</strong> Cotizaciones uniformes al cierre regular del 3 noviembre: JKHY 161.66, FIS 38.99, FISV 58.40. FISV es el ticker NASDAQ actual de Fiserv; no se usa el antiguo FI. Acciones reales publicadas: JKHY al 21 septiembre; FIS/FISV al 31 julio, las últimas verificadas en los documentos revisados. La capitalización resultante es aproximada al precio actual, no una afirmación de acciones intradía exactas. Fiserv publicó promedios Q3 GAAP 531.8m y ajustados 533.6m, consistentes con el orden de magnitud, pero no son acciones reales en circulación. [P1, P2, P3, JP, FQ2, VQ2, V3]</p>
+<p>FISV usa TTM septiembre: FY25 + nueve meses 2026 − nueve meses 2025. FIS usa <strong>TTM junio</strong>, último periodo público al corte. Su evento Q3 cambió oficialmente del 3 al <strong>4 noviembre, 8:30 EST</strong>; no se incorpora un resultado aún futuro. La adquisición Issuer Solutions de enero modifica perímetro: el TTM solo incluye seis meses mientras la deuda de cierre ya incorpora toda la operación. Esa diferencia limita el múltiplo, no se oculta. [FE, FQ2]</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métrica, USDm salvo ratios</th>
+<th>JKHY</th>
+<th>FIS</th>
+<th>FISV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cierre 3 nov, USD</td>
+<td>161.66</td>
+<td>38.99</td>
+<td>58.40</td>
+</tr>
+<tr class="even">
+<td>Acciones reales divulgadas, millones</td>
+<td>70.111999</td>
+<td>515.705917</td>
+<td>531.766721</td>
+</tr>
+<tr class="odd">
+<td>Capitalización calculada</td>
+<td>11,334.3</td>
+<td>20,107.4</td>
+<td>31,055.2</td>
+</tr>
+<tr class="even">
+<td>Deuda financiera contable</td>
+<td>85.0</td>
+<td>21,174.0</td>
+<td>27,063.0</td>
+</tr>
+<tr class="odd">
+<td>Caja corporativa no restringida</td>
+<td>25.4</td>
+<td>744.0</td>
+<td>545.0</td>
+</tr>
+<tr class="even">
+<td>Deuda neta</td>
+<td>59.6</td>
+<td>20,430.0</td>
+<td>26,518.0</td>
+</tr>
+<tr class="odd">
+<td>Intereses minoritarios</td>
+<td>0.0</td>
+<td>3.0</td>
+<td>24.0</td>
+</tr>
+<tr class="even">
+<td>EV básico</td>
+<td>11,393.9</td>
+<td>40,540.4</td>
+<td>57,597.2</td>
+</tr>
+<tr class="odd">
+<td>Ventas TTM</td>
+<td>2,601.1</td>
+<td>12,200.0</td>
+<td>20,799.0</td>
+</tr>
+<tr class="even">
+<td>EBIT GAAP TTM</td>
+<td>658.0</td>
+<td>1,915.0</td>
+<td>-2,270.0</td>
+</tr>
+<tr class="odd">
+<td>EBIT comparable diagnóstico*</td>
+<td>617.0</td>
+<td>1,915.0</td>
+<td>3,988.0</td>
+</tr>
+<tr class="even">
+<td>CFO TTM</td>
+<td>802.6</td>
+<td>2,976.0</td>
+<td>5,038.0</td>
+</tr>
+<tr class="odd">
+<td>Capex, incluido software</td>
+<td>275.2</td>
+<td>1,055.0</td>
+<td>1,880.0</td>
+</tr>
+<tr class="even">
+<td>FCF estricto</td>
+<td>527.4</td>
+<td>1,921.0</td>
+<td>3,158.0</td>
+</tr>
+<tr class="odd">
+<td>SBC TTM</td>
+<td>35.1</td>
+<td>186.0</td>
+<td>400.0</td>
+</tr>
+<tr class="even">
+<td>FCF − SBC</td>
+<td>492.3</td>
+<td>1,735.0</td>
+<td>2,758.0</td>
+</tr>
+<tr class="odd">
+<td>Caja tras ajustes específicos</td>
+<td>492.3</td>
+<td>1,595.0</td>
+<td>2,470.0</td>
+</tr>
+<tr class="even">
+<td>EV / ventas</td>
+<td>4.38</td>
+<td>3.32</td>
+<td>2.77</td>
+</tr>
+<tr class="odd">
+<td>EV / EBIT diagnóstico*</td>
+<td>18.47</td>
+<td>21.17</td>
+<td>14.44</td>
+</tr>
+</tbody>
+</table></div>
+<p>*EBIT diagnóstico no completamente homogéneo: JKHY excluye deconversiones/ganancias identificadas; FIS retiene su EBIT GAAP, incluida amortización de adquisiciones; FISV toma EBIT GAAP −2,270m + goodwill impairment 6,452m − ganancias de venta netas TTM 194m = <strong>3,988m</strong>, conservando SBC, amortización y gastos de transformación. No se usa el beneficio negativo por goodwill para decir que Fiserv carece de caja, ni se elimina automáticamente toda reestructuración. EV básico = capitalización + deuda − caja corporativa + minoritarios; no añade customer settlement cash ni descuenta dos veces pasivos operativos. [FQ2, FK25, V3, VK25, VQ325]</p>
+<p><strong>Puentes de caja de los pares:</strong> - FIS: CFO continuado 2,976m − PP&amp;E/software 1,055m = 1,921m; menos SBC 186m = 1,735m. Se deducen además <strong>112m de cupones recurrentes de swaps clasificados en inversión</strong> y <strong>28m de entrada de settlement activity</strong> que no se considera renta del accionista: diagnóstico <strong>1,595m</strong>, rentabilidad <strong>7.93%</strong> de capitalización. No se añaden Worldpay distributions ya en salida de perímetro, cobros de ventas ni ganancias de la participación vendida; el múltiplo P/E GAAP sería engañoso. [FK25, FQ2] - FISV: CFO 5,038m − capex, software incluido, 1,880m = 3,158m; menos SBC 400m = 2,758m. La financiación neta de merchant cash advances está en inversión: 1,129m FY25 − 227m de recuperaciones netas 9M26 − 614m invertidos 9M25 = <strong>288m de inversión TTM</strong>. Se descuenta, resultando <strong>2,470m</strong>, rentabilidad <strong>7.95%</strong>. Los 1,326m de caja final del estado de flujos incluyen fondos que no son caja corporativa libre; el puente EV usa solo <strong>545m</strong> del balance y no resta settlement obligations de nuevo. [V3, VK25, VQ325] - JKHY: el FCF − SBC de 492.297m es ilustrativo con s = 9m y todavía tiene ventaja fiscal. Después de normalizar impuestos queda <strong>362.339m</strong>, rentabilidad <strong>3.20%</strong> del valor de mercado. Para FIS/FISV no se presume que sus cifras diagnósticas estén fiscalmente normalizadas igual que JKHY; son contrastes de caja financiada, no múltiplos transferibles sin más.</p>
+<p>FIS tiene cerca de 20.43bn de deuda neta y ejecución de una adquisición grande; FISV 26.52bn, ingresos Q3 −1% y orgánicos planos, caída de rentabilidad y costes de transformación. JKHY merece prima por balance y recurrencia, pero eso no demuestra que cualquier prima sea razonable. Fiserv mantiene guía ajustada de EPS 7.20–7.40; el aparente múltiplo de unas 8 veces a 58.40 excluye partidas que el accionista financia y no es comparable sin ajustes con el EPS GAAP de JKHY. [V3, FQ2]</p>
+<p><strong>Lectura de valoración:</strong> los pares aportan una referencia, no un precio objetivo por promedio. JKHY cotiza a 4.38× ventas y 18.47× EBIT core frente a 2.77×/14.44× de FISV; FIS 3.32×/21.17× está distorsionado por compra reciente y PPA. El caso central JKHY implica EV/EBIT core histórico cercano a 13.5×, más exigente en términos de precio que su cotización, pero no una copia del competidor en recuperación. Los mayores rendimientos de caja de los pares vienen con mucha más deuda y riesgos propios. La dispersión impide afirmar precisión a partir de una media de dos múltiplos.</p>
+<p>Como referencia histórica propia, el 28 agosto JKHY cerró a 169.73, aproximadamente 24.3× el EPS FY26 6.98 ya divulgado. La lectura con las nuevas cifras a 165 fuera de horario ronda 22.7× el EPS TTM sumado 7.28. Es una comparación de dos fechas, no una serie histórica completa de múltiplos. Desde 143.24 el 30 septiembre hasta 161.66 al cierre del 3 noviembre, la acción había recuperado aproximadamente 12.9%; estar por debajo de un máximo no demuestra por sí solo precio razonable. [P1, J4]</p>
+<h2 id="decisión-confianza-y-qué-cambiaría-la-valoración">7. Decisión, confianza y qué cambiaría la valoración</h2>
+<ul>
+<li><strong>Negocio y beneficios:</strong> calidad defendible, crecimiento normalizado positivo; aproximadamente 9% de EBIT es admisible para estudiar una compra a precio razonable. No hay veto por estar por debajo de 15%.</li>
+<li><strong>Caja:</strong> las series ya cuantifican software, contratos, SBC y fiscalidad. El gasto SBC actual no divulgado tiene una sensibilidad transparente y no gobierna el FCFF principal. La mejora del cash conversion prevista aún debe materializarse.</li>
+<li><strong>Valoración:</strong> $116.78 central; escenarios $67.62–189.50. Confianza <strong>media en que el precio exige una combinación favorable</strong>, media-baja en el punto exacto. Las cifras contables históricas tienen confianza alta, salvo el componente actual de SBC explícitamente desconocido y la asignación de float explícitamente estimada.</li>
+<li><strong>Decisión actual:</strong> observación; no aprobación de compra ni de Stage 3.5. El trabajo fundamental queda documentado al corte, pero no convierte en verificados los aspectos técnicos no examinados.</li>
+<li><strong>Precio razonable/entrada parcial:</strong> puede reevaluarse una primera posición si la cotización y la evidencia permiten defender retorno/riesgo con una trayectoria operativa realista. No se exige descuento fijo adicional. Tampoco basta que el precio cruce el caso central si se deterioran negocio, liquidez, reinversión o tendencia.</li>
+<li><strong>Stage 3.5 y Stage 1:</strong> tendencia larga, señal técnica, estabilización posterior al evento y controles de cartera no fueron comprobados en esta tarea. Permanecen separados del juicio fundamental y deben verificarse antes de cualquier autorización. No hay precio máximo de compra aprobado ni orden.</li>
+</ul>
+<p><strong>Catalizadores y pruebas:</strong> conferencia del 4 noviembre (13:45 UTC) y próximo 10-Q para composición de SBC, interés de liquidación y detalle fiscal; siguiente trimestre para costes Connect y conversión de contratos en caja; renovaciones y crecimiento de hosting/digital; inversión de plataforma frente a crecimiento; efecto de normalización del impuesto efectivo. La fecha del siguiente resultado no se inventa. No se afirma haber creado un seguimiento automatizado.</p>
+<p>La tesis central fallaría por deterioro sostenido de retención/contratos, margen incapaz de sostenerse sin deconversiones, gasto de software/contratos superior a lo modelado sin crecimiento compensatorio o asignación de capital que convierta el balance ligero en apalancamiento relevante. La tesis de precio mejoraría por ganancias sostenidas de margen y caja económica, menor capital incremental demostrado o una cotización más baja manteniendo calidad. Un trimestre estacional o un ahorro fiscal puntual no bastan.</p>
+<h2 id="fuentes-y-reproducción">8. Fuentes y reproducción</h2>
+<p><strong>Primarias JKHY</strong> - <a href="https://www.sec.gov/Archives/edgar/data/779152/000077915226000095/jkhy-20260930xex99pressrel.htm">J1 · release Q1 FY27, 3 noviembre, anexo al 8-K</a>. - <a href="https://www.sec.gov/Archives/edgar/data/779152/000077915226000067/jkhy-20260630.htm">J2 · 10-K FY26, tres años y notas de software, impuestos, contratos y activos</a>. - <a href="https://www.sec.gov/Archives/edgar/data/779152/000077915225000055/jkhy-20250630.htm">J25 · 10-K FY25</a>. - <a href="https://www.sec.gov/Archives/edgar/data/779152/000077915225000092/jkhy-20250930.htm">JQ1 · 10-Q septiembre 2025</a>. - <a href="https://www.sec.gov/Archives/edgar/data/779152/000077915226000009/jkhy-20251231.htm">JQ2 · 10-Q diciembre 2025</a>. - <a href="https://www.sec.gov/Archives/edgar/data/779152/000077915226000025/jkhy-20260331.htm">JQ3 · 10-Q marzo 2026</a>. - <a href="https://www.sec.gov/Archives/edgar/data/779152/000077915226000057/jkhy-20260630xex99pressrel.htm">J4 · release FY26, Q4 y acciones trimestrales</a>. - <a href="https://www.sec.gov/Archives/edgar/data/779152/000077915226000088/jkhy-20261001.htm">JP · proxy, acciones reales y derechos de voto</a>. - <a href="https://data.sec.gov/submissions/CIK0000779152.json">JS · SEC submissions</a> y <a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0000779152.json">XBRL company facts</a>.</p>
+<p><strong>Pares</strong> - <a href="https://www.sec.gov/Archives/edgar/data/1136893/000113689326000050/fis-20260630.htm">FQ2 · FIS 10-Q junio 2026</a>. - <a href="https://www.sec.gov/Archives/edgar/data/1136893/000113689326000013/fis-20251231.htm">FK25 · FIS 10-K 2025</a>. - <a href="https://fisglobal.gcs-web.com/news-releases/news-release-details/fis-announced-new-date-third-quarter-earnings-november-4-2026">FE · FIS, cambio oficial del evento a 4 noviembre</a>. - <a href="https://fiserv.gcs-web.com/news-releases/news-release-details/fiserv-reports-third-quarter-2026-results">V3 · Fiserv, Q3 2026 publicado 3 noviembre</a>. - <a href="https://www.sec.gov/Archives/edgar/data/798354/000079835426000009/fi-20251231.htm">VK25 · Fiserv 10-K 2025</a>. - <a href="https://www.sec.gov/Archives/edgar/data/798354/000079835426000031/fisv-20260630.htm">VQ2 · Fiserv 10-Q junio 2026</a>. - <a href="https://www.sec.gov/Archives/edgar/data/798354/000079835425000171/fisv-20250930.htm">VQ325 · Fiserv 10-Q septiembre 2025</a>.</p>
+<p><strong>Cotizaciones y tasa</strong> - <a href="https://fundamentalpullback.github.io/research/2026-11-03/scanner/2026-11-03-Quote.csv">SC · exportación original del scanner</a>; ficha original A155 obtenida de lib-scanner-nov3.js, sin sobrescribirla. - <a href="https://stockanalysis.com/stocks/jkhy/history/">P1 · JKHY histórico</a> y <a href="https://stockanalysis.com/stocks/jkhy/">P1A · registro fuera de horario</a>. - <a href="https://stockanalysis.com/stocks/fis/history/">P2 · FIS histórico</a>; <a href="https://stockanalysis.com/stocks/fisv/history/">P3 · FISV histórico</a>. Fuente secundaria de mercado, con fecha/hora; estados de compañías de fuentes primarias. - <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">RF · Treasury, curva nominal diaria 2026</a>.</p>
+<p><strong>Soporte reproducible:</strong> history.py / history.json / history.csv / history_sources.json / history_checks.json; model.py / model_results.json / forecast.csv; peers.py / peers.json / peers.csv / peer_source_facts.json. Scripts autónomos sobre fuentes archivadas. Las pruebas verifican identidades y reproducción del DCF previo, no que las hipótesis futuras se cumplan. El original A155 no se altera y SPGI permanece fuera del alcance de esta revisión.</p>
+<h2 id="full-dossier-and-analyst-audit-files">Full dossier and analyst audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/source_report.md">source_report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/forecast.csv">forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/history.csv">history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/history.json">history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/history_checks.json">history_checks.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/history_raw.json">history_raw.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/history_sources.json">history_sources.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/manifest.json">manifest.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/model_results.json">model_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/offline_reproduction.json">offline_reproduction.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/peer_source_facts.json">peer_source_facts.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/peers.csv">peers.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/peers.json">peers.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/JKHY/qa_results.json">qa_results.json</a></li>
+</ul>
+</main></body></html>

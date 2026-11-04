@@ -1,4 +1,18 @@
-**IT · Stage 3.5: awaiting post-earnings structure. No entry approved; quantity 0.** Assessment as of November 4, 2026, 10:28 UTC. The $184.45 observed low is not an operative stop; no buy signal or maximum is approved. The $213.50 premarket print is dated 09:21 UTC and not independently cross-verified.
+## Share-count precision correction · November 4, 2026, 11:15 UTC
+
+[Official Q3 supplement, slide 33](https://investor.gartner.com/static-files/8e3808a2-ca31-409e-8318-28ed0600f9c7) reports **63.9 million diluted shares: 63.6 million basic plus 0.3 million awards**. The model's **64.0 million is rounded**, not the exact disclosed point-in-time count. Holding equity value and every other input constant, using 63.9 rather than 64.0 million would add approximately **$0.33 per share**. This is a denominator-only sensitivity, not a full model recalibration. The archived model and published central value of **$213.76 remain unchanged**. This source precision was verified by the reviewing analyst.
+
+## Event-narrative correction · November 4, 2026, 11:07 UTC
+
+**Apta para Stage 3.5; execution suspended, no entry approved, quantity 0.** The only dated market-price reference used in this review is the **November 3 regular close of $204.22**, not a live or premarket quotation. No operative M, stop S, buy ceiling or signal is established.
+
+The total contract-value growth improvement from 1.7% to 2.5% must be read alongside a weaker underlying measure: the CFO said **contract-value growth excluding U.S. federal business slowed from 3.3% to 2.8%**, and management **no longer expected a 4% FY2026 exit growth rate**. The total and ex-federal series are different measures; one does not invalidate the other. This weakens a simple acceleration narrative and supports caution about durable demand. It does not by itself prove a particular cause of the stock-price decline.
+
+The existing valuation already assumes **3% initial revenue growth**, which is not identical to contract-value growth. There is no automatic DCF cut merely because the 4% contract-value exit expectation was withdrawn. Central value remains **$213.76**, alternative return calibration **$203.44**, and no-excess-cash case **$196.05**. Parent-reviewed sensitivities are **$200.81 with 2% growth / 25.2% margin** and **$200.73 with 3% growth / 24% margin**. These sensitivity values were supplied by the reviewing analyst; their underlying calculation files were not located or independently rerun for this publication correction. They are conditional checks, not a new central case or buy ceiling.
+
+Sources: [Gartner official Q3 materials](https://investor.gartner.com/static-files/8e3808a2-ca31-409e-8318-28ed0600f9c7), [November 3 call transcript](https://www.fool.com/earnings/call-transcripts/2026/11/03/gartner-it-q3-2026-earnings-call-transcript/). The event statements above were verified by the reviewing analyst against those sources. This publication pass did not independently retrieve the official file. Financial-history and technical calculations retain their previously stated cutoffs; there is no claim of refreshed intraday market data.
+
+**IT · Stage 3.5: awaiting post-earnings structure. No entry approved; quantity 0.** Assessment as of November 4, 2026, 10:28 UTC. The $184.45 observed low is not an operative stop; no buy signal or maximum is approved. Only the November 3 regular close of $204.22 is used as the dated market-price reference; it is not a live quote.
 
 [Open the full IT dossier](https://fundamentalpullback.github.io/research/2026-11-04/stocks/IT.html)
 
@@ -46,7 +60,7 @@ The financial model is suitable for fundamental research with the caveats disclo
 
 The November 3 earnings event has occurred and is incorporated. FY2026 guidance is at least $6,405m revenue,$1,615m adjusted EBITDA,$14.65 adjusted EPS and $1,235m free cash flow. Guidance includes about $177m SBC,$181m D&A,$95m capex and 22% adjusted tax. The model does not mistake adjusted earnings for unencumbered cash.
 
-Contract-value growth accelerated from 1.7% in Q2 to 2.5% in Q3, with 1.1% sequential growth. Q3 revenue fell 1.3% reported but rose 2.4% excluding Digital Markets; adjusted EBITDA excluding that business grew 7.5%. This supports a modest recovery, not high-growth extrapolation. Global wallet retention remains 99%, below 100%; enterprise-client count 12,680 is below 13,218 a year earlier. Global client retention improved to 85.4% from 84.7%, but weaker customer counts and AI-assisted alternatives to advisory research remain real risks. Gartner has recurring subscription economics and a trusted research/network franchise; those attributes do not eliminate competitive substitution or customer-budget risk. [S1–S3]
+Contract-value growth accelerated from 1.7% in Q2 to 2.5% in Q3, with 1.1% sequential growth. Q3 revenue fell 1.3% reported but rose 2.4% excluding Digital Markets; adjusted EBITDA excluding that business grew 7.5%. This headline improvement must be read alongside the weaker ex-federal contract-value trend and withdrawn 4% exit expectation described in the dated event correction; it does not establish broad acceleration. Global wallet retention remains 99%, below 100%; enterprise-client count 12,680 is below 13,218 a year earlier. Global client retention improved to 85.4% from 84.7%, but weaker customer counts and AI-assisted alternatives to advisory research remain real risks. Gartner has recurring subscription economics and a trusted research/network franchise; those attributes do not eliminate competitive substitution or customer-budget risk. [S1–S3]
 
 ## Three fiscal years, four quarters and both TTM periods
 
@@ -100,7 +114,7 @@ The recent capex trough is important:9 M capex declined 31.691m, approximately 2
 
 - Cash September 30 **1,633.137**; management-supported operating reserve **500**; excess-cash credit **1,133.137**. Approximately 66% of cash is outside the US. No-excess-cash sensitivity is $196.05, not a claim that foreign cash is worthless.
 - Principal debt **3,000**, not carrying value net of issuance fees. Fixed-rate maturities:800 in 2028,600 in 2029,800 in 2030,350 in 2031,450 in 2035;1,000 undrawn revolver. Ratings BBB-/Baa 3. No imminent maturity wall, but refinancing at higher rates matters.
-- **64m diluted shares** are the supplement's September point-in-time figure. October 30 basic shares 63.081351m are useful for an approximate current market capitalization, not a free reduction in the DCF denominator while retaining pre-buyback cash. No future repurchases are assumed.
+- **The official September point-in-time diluted share count is 63.9m (63.6m basic + 0.3m awards), while this model uses a rounded 64.0m denominator.** October 30 basic shares 63.081351m are useful for an approximate current market capitalization, not a free reduction in the DCF denominator while retaining pre-buyback cash. No future repurchases are assumed.
 - Pension deficit **36.960** is the latest full annual actuarial disclosure (obligation 81.795 less assets 44.835). Net deferred compensation **7.336** is September liability 192.857 less related assets 185.521. Related assets are netted against their obligations, never separately treated as excess cash.
 - Past-tax reserve **149.765** uses the last separately disclosed long-term tax-payable balance as a cash-claim proxy, not a proven September settlement amount. Gross unrecognized tax benefits 293.2 are not automatically debt: they can involve deferred-tax/refund attributes. We do **not** subtract both figures. Zero incremental tax reserve gives $216.10; a deliberately conservative alternative gross 293.2 plus last disclosed 25.9 interest/penalties, replacing 149.765, gives $211.11. Ordinary current income-tax payable remains working capital. No duplicate deferred-tax liability deduction or deferred-tax-asset credit is added.
 - Operating leases stay in operating costs and cash. They are not also deducted as financing debt. Ordinary working capital is handled in forecast cash flows; unrestricted cash, pension assets and equity claims are not interchanged. [S2–S4]
@@ -252,6 +266,16 @@ Package: model.py, history.py, peers.py; exact sourced history JSON/CSV and sour
 
 **4 November 2026, 10:28 UTC / 05:28 EST. Paper-trading research only. No order, fill, holding, cash change or new protective stop is recorded.**
 
+## Event-narrative correction · November 4, 2026, 11:07 UTC
+
+**Apta para Stage 3.5; execution suspended, no entry approved, quantity 0.** The only dated market-price reference used in this review is the **November 3 regular close of $204.22**, not a live or premarket quotation. No operative M, stop S, buy ceiling or signal is established.
+
+The total contract-value growth improvement from 1.7% to 2.5% must be read alongside a weaker underlying measure: the CFO said **contract-value growth excluding U.S. federal business slowed from 3.3% to 2.8%**, and management **no longer expected a 4% FY2026 exit growth rate**. The total and ex-federal series are different measures; one does not invalidate the other. This weakens a simple acceleration narrative and supports caution about durable demand. It does not by itself prove a particular cause of the stock-price decline.
+
+The existing valuation already assumes **3% initial revenue growth**, which is not identical to contract-value growth. There is no automatic DCF cut merely because the 4% contract-value exit expectation was withdrawn. Central value remains **$213.76**, alternative return calibration **$203.44**, and no-excess-cash case **$196.05**. Parent-reviewed sensitivities are **$200.81 with 2% growth / 25.2% margin** and **$200.73 with 3% growth / 24% margin**. These sensitivity values were supplied by the reviewing analyst; their underlying calculation files were not located or independently rerun for this publication correction. They are conditional checks, not a new central case or buy ceiling.
+
+Sources: [Gartner official Q3 materials](https://investor.gartner.com/static-files/8e3808a2-ca31-409e-8318-28ed0600f9c7), [November 3 call transcript](https://www.fool.com/earnings/call-transcripts/2026/11/03/gartner-it-q3-2026-earnings-call-transcript/). The event statements above were verified by the reviewing analyst against those sources. This publication pass did not independently retrieve the official file. Financial-history and technical calculations retain their previously stated cutoffs; there is no claim of refreshed intraday market data.
+
 ## Decision
 
 **Move Gartner (NYSE: IT) to Stage 3.5: awaiting a valid post-earnings setup.** The revised Stage 3 analysis supports evaluating a small initial position at a reasonable price around the reviewed **$204.22**. Stage 3.5 is the correct next stage. It is not a reason to manufacture a tight stop or treat a premarket rebound as an entry signal.
@@ -261,8 +285,7 @@ Package: model.py, history.py, peers.py; exact sourced history JSON/CSV and sour
 ## Price and events, with clocks kept separate
 
 - Last completed regular session: November 3, **open/high $208.00, low $185.00, close $204.22**, down **13.19%** from $235.26. Daily OHLC agrees between Yahoo daily history and StockAnalysis. Yahoo quote metadata gives a different low of $185.06; daily OHLC is used consistently for the calculations.
-- StockAnalysis, fetched November 4 around 10:27 UTC, displays **$213.50 at 04:21 EST / 09:21 UTC**, +4.54% versus the regular close. This is a dated premarket print, **not a current executable quote or confirmation candle**. The separately retrieved Yahoo intraday feed ends November 3 and does not corroborate that premarket trade. Do not relabel $204.22 as the latest premarket price, nor claim $213.50 is independently cross-verified.
-- The preliminary fundamental case is thin: revised central FCFF value **$213.76**, alternate rate calibration **$203.44**, no-excess-cash sensitivity **$196.05**, operating recovery **$243.96**. At $213.50, the central price-to-value gap is only **0.12%**, versus 4.67% at $204.22. Neither gap is an annual shareholder return, and fair value is not automatically a buy ceiling.
+- The preliminary fundamental case is thin: revised central FCFF value **$213.76**, alternate rate calibration **$203.44**, no-excess-cash sensitivity **$196.05**, operating recovery **$243.96**. At the November 3 close of $204.22, the central price-to-value gap is 4.67%. That gap is not an annual shareholder return, and fair value is not automatically a buy ceiling.
 - Gartner's official events page confirms the Q3 call was **November 3 at 08:00 EST**. The next earnings date is not announced in the issuer pages checked; do not invent one. The new Q3 results and September 10-Q are incorporated in the revised fundamental report. No future event-free guarantee is asserted.
 
 Sources: [StockAnalysis quote](https://stockanalysis.com/stocks/it/), [daily history](https://stockanalysis.com/stocks/it/history/), [official Gartner events](https://investor.gartner.com/ir-events-presentations), [Q3 release](https://investor.gartner.com/static-files/7b280338-ac38-407c-9c3f-c0766d3411db), [September 10-Q](https://www.sec.gov/Archives/edgar/data/749251/000074925126000307/it-20260930.htm).
@@ -300,9 +323,8 @@ Using the optimistic S = $184.45 only as a diagnostic:
 | Reference entry | To $214.85 | To $228.51 | To $237.54 | To $256.90 | Price needed for exactly 3R |
 |---|---:|---:|---:|---:|---:|
 | $204.22 regular close | 0.54R | 1.23R | 1.69R | 2.66R | $263.53 |
-| $213.50 dated premarket print | 0.05R | 0.52R | 0.83R | 1.49R | $300.65 |
 
-These are not target prices. They demonstrate why chasing either level is not presently supported by the requested 3:1 assessment. Even using the generous $237.54 reference, the theoretical entry cap is **$197.72 before costs**, below the latest EMA50 of $199.20. It cannot simply become a standing limit order: a future completed close must satisfy the EMA50 rule or a documented recovery review. Using the much farther annual high raises the mathematical cap to $202.56, but does not supply a continuation thesis across the intervening resistance. This is not a universal obligation to sell at first resistance.
+These are not target prices. They demonstrate why an entry at the reviewed close is not presently supported by the requested 3:1 assessment. Even using the generous $237.54 reference, the theoretical entry cap is **$197.72 before costs**, below the latest EMA50 of $199.20. It cannot simply become a standing limit order: a future completed close must satisfy the EMA50 rule or a documented recovery review. Using the much farther annual high raises the mathematical cap to $202.56, but does not supply a continuation thesis across the intervening resistance. This is not a universal obligation to sell at first resistance.
 
 The original request's 3:1 study is kept distinct from the plan itself. No new universal return/discount rule is introduced.
 
@@ -316,11 +338,7 @@ Individual account figures and holdings are omitted from this public research co
 1. **Route under study:** B, small initial entry at a reasonable price, or A after a genuine stabilizing pullback. Do not require an automatic 15% discount. Route C above $208.00 is only a recovery observation for now: it does not overcome the current stop-distance problem.
 2. **Timeframe chosen for this review:** completed regular-session daily bars. A close above $208.00 is a predeclared monitoring checkpoint, **not an armed buy signal**. Do not change to a 15-minute signal after seeing the price; a later separately specified intraday plan would need its own advance levels and intact daily structure.
 3. **Next assessment:** after the November 4 regular close, **16:00 EST / 21:00 UTC**. Inspect the actual post-event base and updated averages, then either keep waiting or record a new independent M/S, signal, target rationale and technical max. Today's monitoring levels expire at that close and must be re-evaluated, not automatically rolled into an order.
-4. **Stop monitoring for entry and reassess immediately** on a break of the $184.45–185 broad support area, a material fundamental update, a new pending exit condition, or evidence the long trend has deteriorated. A print above the reviewed fundamental price is not permission to raise a ceiling. At $213.50 the price/risk judgment requires renewed review.
+4. **Stop monitoring for entry and reassess immediately** on a break of the $184.45–185 broad support area, a material fundamental update, a new pending exit condition, or evidence the long trend has deteriorated. A print above the reviewed fundamental price is not permission to raise a ceiling. Any later market-price assessment requires a verified, dated quotation and renewed price/risk review.
 5. Only after all prerequisites pass should the record contain a final fundamental maximum, technical maximum, valid-zone cancellation, actual M/S, future numerical buy signal, reserve, quantity, and DAY/regular-session validity. No order is proposed in this assessment.
 
 The promotion is complete at the research-workflow level: **IT is in Stage 3.5, waiting for structure and a price-valid prospective entry plan.**
-
-
-- [Public technical ticket](https://fundamentalpullback.github.io/research/2026-11-04/IT/IT_Stage35_ticket_public.json)
-- [Public assessment](https://fundamentalpullback.github.io/research/2026-11-04/IT/IT_Stage35_assessment_public.md)

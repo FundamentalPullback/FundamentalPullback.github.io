@@ -1,0 +1,687 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BR · A186 revision</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><p><strong><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/BR.html">Open the full readable BR dossier</a></strong></p><nav><a href="../../../#ficha/BR">← BR profile</a><a href="../index.html">Research index</a></nav><p class="eyebrow">A186 · November4,2026 · No entry approval</p><h2 id="dated-correction-a186-november-4-2026">Dated correction: A186, November 4, 2026</h2>
+<p>Updates only <strong>BR</strong> in historical <strong>A154</strong>. The original shared report and unrelated issuer components must remain unchanged.</p>
+<p><strong>Conditional recovery observation. Revised central $153.27; credible same-rate recovery $184.50 can support $183.76. Original $124.33 reproduced; WACC, claims and organic reinvestment revised. A stronger path must be underwritten, not automatically renamed the base.</strong></p>
+<p>Prepared November4,2026 after10:00UTC. Source cutoff is retained below; later event completion has not been verified.</p>
+<p><strong>Price audit:</strong> November3 scanner $183.76; separately sourced regular close $183.76. Scanner header timezone is not certified.</p>
+<p><strong>Coverage and source limits:</strong> FY2024–FY2026; Q2–Q4 FY2026 and Q1 FY2027; September2025/2026 TTM. November3 release and10-Q incorporated; tax credits, token gains and license timing separated.</p>
+<p><strong>Next review:</strong> Verify recurring-fee growth, cash conversion and reinvestment; technical strength alone does not prove the recovery path.</p>
+<p><strong>No entry approved.</strong> No new position, quantity, buy ceiling or stop. No universal15/20/25% valuation-discount rule.</p>
+<hr />
+<h1 id="broadridge-br-completed-stage-3-remediation-and-model-revision">Broadridge (BR): completed Stage 3 remediation and model revision</h1>
+<p><strong>4 November 2026, before the US market opens. USD millions except per-share values.</strong> The November 3 Q1 FY2027 release and 10-Q are incorporated. Reference <strong>$183.76</strong> is both the November 3 scanner price and verified regular-session NYSE close, not the $185.45 after-hours quotation. This revision supersedes the analytical conclusion and model framing of A154; the earlier source report remains historical. No trade is approved.</p>
+<h2 id="decision">Decision</h2>
+<p><strong>Keep on the conditional recovery watchlist; do not treat the old $124.33 estimate as the sole defensible valuation.</strong> Revised organic-core bear/base/bull values are <strong>$87.09 / $153.27 / $240.38</strong>, with a same-discount-rate recovery case of <strong>$184.50</strong>. The current price is about 19.9% above the base, but close to a credible stronger operating path. That is a meaningful change from saying only implausible single-variable growth or margins can support the price.</p>
+<p>At $183.76, the central case does not provide a positive valuation cushion. A purchase would require explicitly underwriting the recovery path, rather than relabeling it as the base or claiming that any bullish scenario authorizes a partial position. Current research disposition is <strong>observation / conditional recovery, not a completed entry approval</strong>. A good technical setup cannot by itself prove the stronger fundamental path. Conversely, absence of 15% growth or a 15/20/25% discount is not a universal rejection rule. Stage 3.5 and a portfolio decision remain separate.</p>
+<p>Confidence is high in the reported arithmetic, moderate in the recurring franchise, and lower in the precise margin/reinvestment path. The scenario span is not a statistical confidence interval, stop-loss range, or promised target.</p>
+<h2 id="what-the-audit-repaired">What the audit repaired</h2>
+<ol type="1">
+<li><strong>Original model reproduced:</strong> $70.187 / $124.330 / $212.645, matching A154. It was not a spreadsheet arithmetic error.</li>
+<li><strong>Discount rate calibrated:</strong> Treasury, ERP, beta, debt assumption and capital weights are now explicit. Keeping original cash flows but using the calibrated WACC raises $124.33 to $131.82.</li>
+<li><strong>Capital claims reconciled:</strong> the original bridge subtracted gross retirement obligations net only of Rabbi Trust assets, while giving all other disclosed investments zero credit. The revised bridge includes the full investment pool once, against gross obligations, and adds a separately identified past-tax reserve. Same old cash flows after this bridge give $133.99.</li>
+<li><strong>Reinvestment and acquired amortization separated:</strong> the old explicit forecast combined a 4.5% investment budget with persistent acquired-amortization economics. That can be a conservative purchased-growth case, but should not be the only model for an organic growth thesis. The revised core keeps operating technology/client investment, runs off existing purchase-accounting amortization, and funds terminal growth. This produces $153.27 rather than hiding a conservative replacement-acquisition assumption inside a universal valuation rule.</li>
+<li><strong>Current peers and joint reverse cases added:</strong> the earlier report explicitly lacked fresh SS&amp;C/FactSet multiples. The comparison below uses November 3 closes and latest reported cash/debt, not stale vendor ratio screens.</li>
+</ol>
+<h2 id="business-latest-results-and-normalization-needs">Business, latest results and normalization needs</h2>
+<p>Broadridge has recurring financial-market infrastructure, regulatory communications and client workflows with meaningful switching costs. Its scale and relationships are valuable; cyber incidents, outages, regulatory changes and implementation failures can still damage that franchise. Distribution/postage revenue is low-margin pass-through activity, and event-driven proxy revenue is volatile. Consolidated revenue growth is therefore not the same as recurring-fee growth.</p>
+<p>Q1 FY2027 recurring revenue grew 11%, about 9% organically; total revenue grew 5%. Event-driven revenue fell 41%. Adjusted operating profit fell 9% even though adjusted EPS increased 3%, partly because of share repurchases. Q1 total EBIT was 173.5 versus 188.8. Management retained 6–8% constant-currency recurring growth, approximately 21% adjusted operating margin, approximately 19% GAAP operating margin, 8–12% adjusted EPS growth and 100%+ free-cash-flow conversion guidance. The capex/software amount in the cash-conversion reconciliation is approximately 123. [S1–S3]</p>
+<p>The quarter’s 13.6% tax rate benefits from transferable federal credits related to the prior year. The cash-flow footnote includes amounts paid to third parties for purchased tax credits in cash taxes; adding them again would double count. We use 25% normalized tax, not the exceptional quarterly rate. The prior and current earnings comparisons also contain noncash Canton/CNTN gains and losses, treated separately below.</p>
+<p>The operating recovery is not based solely on the 9% organic headline. GTO capital-markets growth included a 4-point benefit from software term licenses; wealth growth included a 3-point license benefit. These are real sales but their timing is not automatically a perpetual growth rate. Distribution growth largely reflected postage increases. A durable recovery needs repeatable recurring-fee growth and conversion into operating cash, not token gains or licensing timing alone. [S2]</p>
+<h2 id="three-fiscal-years-four-quarters-current-and-prior-ttm">Three fiscal years, four quarters, current and prior TTM</h2>
+<p>Fiscal years end June. Current TTM = FY2026 + Q1 FY2027 − Q1 FY2026; prior TTM uses the equivalent earlier periods. Quarters are cumulative dollar differences, with reported rounding of up to 0.1. EPS is not differenced. The source ledger ties each fact to its accession and period, and notes the issuer’s unusual XBRL pretax tag rather than blindly interpreting its name.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Revenue</th>
+<th>EBIT</th>
+<th>GAAP NI</th>
+<th>CFO</th>
+<th>PPE capex</th>
+<th>Software</th>
+<th>SBC</th>
+<th>Cash tax</th>
+<th>Owner cash</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>6,506.800</td>
+<td>1,017.100</td>
+<td>698.100</td>
+<td>1,056.200</td>
+<td>57.400</td>
+<td>55.600</td>
+<td>70.600</td>
+<td>240.200</td>
+<td>872.600</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>6,889.100</td>
+<td>1,188.600</td>
+<td>839.500</td>
+<td>1,171.300</td>
+<td>43.800</td>
+<td>71.100</td>
+<td>73.400</td>
+<td>279.800</td>
+<td>983.000</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>7,476.800</td>
+<td>1,300.600</td>
+<td>1,124.300</td>
+<td>1,345.600</td>
+<td>67.200</td>
+<td>45.400</td>
+<td>93.900</td>
+<td>203.600</td>
+<td>1,139.100</td>
+</tr>
+<tr class="even">
+<td>Q2_FY2026</td>
+<td>1,713.900</td>
+<td>206.000</td>
+<td>284.600</td>
+<td>324.800</td>
+<td>6.300</td>
+<td>12.600</td>
+<td>26.900</td>
+<td>62.800</td>
+<td>279.000</td>
+</tr>
+<tr class="odd">
+<td>Q3_FY2026</td>
+<td>1,953.600</td>
+<td>359.500</td>
+<td>276.200</td>
+<td>301.100</td>
+<td>13.600</td>
+<td>15.100</td>
+<td>24.300</td>
+<td>19.300</td>
+<td>248.100</td>
+</tr>
+<tr class="even">
+<td>Q4_FY2026</td>
+<td>2,219.900</td>
+<td>546.300</td>
+<td>398.100</td>
+<td>677.400</td>
+<td>32.100</td>
+<td>3.300</td>
+<td>27.200</td>
+<td>50.100</td>
+<td>614.800</td>
+</tr>
+<tr class="odd">
+<td>Q1_FY2027</td>
+<td>1,668.700</td>
+<td>173.500</td>
+<td>94.800</td>
+<td>93.200</td>
+<td>15.300</td>
+<td>1.600</td>
+<td>23.200</td>
+<td>110.900</td>
+<td>53.100</td>
+</tr>
+<tr class="even">
+<td>TTM_2025</td>
+<td>7,055.600</td>
+<td>1,243.000</td>
+<td>925.100</td>
+<td>1,339.100</td>
+<td>51.100</td>
+<td>61.300</td>
+<td>74.000</td>
+<td>236.100</td>
+<td>1,152.700</td>
+</tr>
+<tr class="odd">
+<td>TTM_2026</td>
+<td>7,556.100</td>
+<td>1,285.300</td>
+<td>1,053.700</td>
+<td>1,396.500</td>
+<td>67.300</td>
+<td>32.600</td>
+<td>101.600</td>
+<td>243.100</td>
+<td>1,195.000</td>
+</tr>
+</tbody>
+</table></div>
+<p>Owner cash is CFO − physical capex − capitalized software − SBC. It includes the cost of cash operating investment already inside CFO, including client-conversion/commission spending. It is an after-interest, after-current-cash-tax diagnostic, not FCFF or a perpetuity. Acquisitions are separate: 34.3/193.5/282.7 in FY2024/25/26 and 228.2 in current TTM. All are disclosed rather than treating acquired growth as free.</p>
+<h3 id="full-profitcash-normalization-bridge">Full profit/cash normalization bridge</h3>
+<p>The table removes the issuer’s specified noncash digital/treasury adjustments and the 7.3 private-investment gain, then applies 25% to pretax income. It retains ordinary restructuring, SBC and acquired amortization. For the cash bridge, noncash marks are <strong>not</strong> subtracted again: the cash-flow statement already reverses them. Cash taxes are replaced by the normalized tax charge, then actual capex/software is compared with a consistent 1.65% revenue cash-investment benchmark.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Noncash digital gains/(losses) removed</th>
+<th>Other investment gain removed</th>
+<th>NI at 25% tax</th>
+<th>Owner cash: tax normalized</th>
+<th>Owner cash: tax +1.65% capex normalized</th>
+<th>Reported operating asset/liability cash changes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>658.050</td>
+<td>893.450</td>
+<td>899.088</td>
+<td>-31.200</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>794.025</td>
+<td>998.125</td>
+<td>999.355</td>
+<td>-224.600</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>227.000</td>
+<td>7.300</td>
+<td>908.625</td>
+<td>1,039.825</td>
+<td>1,029.058</td>
+<td>-218.600</td>
+</tr>
+<tr class="even">
+<td>Q2_FY2026</td>
+<td>186.900</td>
+<td>0.000</td>
+<td>137.475</td>
+<td>295.975</td>
+<td>286.596</td>
+<td>24.800</td>
+</tr>
+<tr class="odd">
+<td>Q3_FY2026</td>
+<td>5.600</td>
+<td>0.000</td>
+<td>251.250</td>
+<td>183.650</td>
+<td>180.116</td>
+<td>-116.300</td>
+</tr>
+<tr class="even">
+<td>Q4_FY2026</td>
+<td>-11.300</td>
+<td>7.300</td>
+<td>394.425</td>
+<td>533.425</td>
+<td>532.197</td>
+<td>93.800</td>
+</tr>
+<tr class="odd">
+<td>Q1_FY2027</td>
+<td>-40.200</td>
+<td>0.000</td>
+<td>112.425</td>
+<td>126.525</td>
+<td>115.891</td>
+<td>-136.600</td>
+</tr>
+<tr class="even">
+<td>TTM_2025</td>
+<td>45.800</td>
+<td>0.000</td>
+<td>844.275</td>
+<td>1,107.375</td>
+<td>1,103.358</td>
+<td>-126.800</td>
+</tr>
+<tr class="odd">
+<td>TTM_2026</td>
+<td>141.000</td>
+<td>7.300</td>
+<td>895.575</td>
+<td>1,139.575</td>
+<td>1,114.799</td>
+<td>-134.300</td>
+</tr>
+</tbody>
+</table></div>
+<p>Key comparisons: - TTM EBIT 1,285.3 versus 1,243.0, <strong>+3.40%</strong>; legacy selectively normalized NI 895.575 versus 844.275, <strong>+6.08%</strong>. - Raw owner cash 1,195.0 versus 1,152.7, <strong>+3.67%</strong>. - Cash taxes 243.1 versus 236.1. Tax-normalized owner cash 1,139.575 versus 1,107.375, <strong>+2.91%</strong>. - Replacing capex/software with 1.65% of sales yields <strong>1,114.799 versus 1,103.358, +1.04%</strong>. This is an analytical recurring-investment comparison, not an issuer forecast or a second deduction on top of actual capex. - Reported operating asset/liability cash changes are −134.3 versus −126.8. They were a slightly larger cash use, not a source of current cash growth. These mixed rows contain tax/client-contract effects, so we do not remove them wholesale after separately normalizing cash taxes. That would risk double counting.</p>
+<p>The legacy profit normalization is not entirely ex-crypto. The non-GAAP digital line excludes noncash marks and the noncash treasury exchange, but leaves certain realized coin-sale gains. FY2026 total realized coin gains 58.4 include a 53.1 noncash contribution to the treasury transaction; the residual cash-sale gain is about 5.3. Q1 FY2026 disclosed 1.1 realized gains, while Q1 FY2027 had none. Removing the residual gives <strong>current/prior TTM normalized NI 892.425/843.450, +5.81%</strong>. The 0.1 inconsistencies between rounded component totals are source rounding, not an economic change.</p>
+<p>Validator-service revenue of 14.2/3.7 remains in current/prior TTM operations. Removing every dollar as profit, with no offsetting cost, gives a deliberately conservative further sensitivity of <strong>881.775/840.675</strong>. The exact standalone margin is not disclosed, so this is not presented as audited core earnings. The forecast excludes the FY2026 16.5 validator-revenue run-rate and does not compound future token marks.</p>
+<p>The token roll-forward records current/prior TTM dispositions of 6.9/1.6. The reviewed cash-flow statement does not separately label all coin receipts and associated taxes. A conservative bound removing all those amounts from operating owner cash, while removing tax on the residual realized gains, gives approximately <strong>1,108.949/1,102.033</strong> on the normalized capex basis. If those receipts sit outside CFO, subtracting them would be wrong; this bound is therefore disclosed separately, not silently embedded as an exact reported subtotal. Noncash token rewards or asset marks are never removed twice. [S2–S5]</p>
+<h3 id="client-conversion-software-and-sbc">Client conversion, software and SBC</h3>
+<p>Current TTM physical/software depreciation and amortization is 141.6; acquired-intangible amortization is 191.7, totaling 333.3. Amortization of other assets is another 174.3, chiefly client conversion/commissions. It is <strong>not</strong> added to FCFF, because the associated replacement outlays recur. The corresponding mixed non-current-asset cash-use row is about 172.0. They are close in aggregate but not a published pure conversion-cost bridge, so they are not equated account by account.</p>
+<p>In the forecast, recurring technology payroll/data-center costs stay in EBITA, physical/internal-use software replacement is funded, and incremental client/contract balances are included in working capital. SBC remains a cost in EBITA; it is subtracted once in the separate CFO diagnostic. No simultaneous perpetual share-dilution penalty is added. Future buybacks are not assumed.</p>
+<h2 id="capital-claims-and-non-operating-assets">Capital claims and non-operating assets</h2>
+<p>The September cash/debt/share boundary is explicit: - Cash 284.1, less 76.1 held by regulated entities and a 200 operating cash reserve, leaves <strong>8.0</strong> credit. The reserve is an analyst liquidity allowance, not a statutory requirement. Zero excess-cash credit changes value by only $0.07/share. Foreign cash is not assumed to be wholly distributable. - Principal debt <strong>3,398.7</strong>, versus carrying value 3,347.1. Revolver 398.7, term loan 750, and notes 2,250. No scheduled principal repayment before fiscal 2030, but the revolver/750 note calendar maturity is December 2029. Unused revolver 1,101.3. The 500 note is swapped from fixed to floating; the debt is <strong>not all fixed-rate</strong>. - Retirement/deferred-compensation obligations <strong>266.3</strong> are taken gross. <strong>392.9 long-term investments</strong> are credited once at disclosed carrying value, including the 69.1 Rabbi Trust and other benefit-plan/ERSP-related securities. We do not separately credit the Rabbi Trust again. Some holdings are illiquid or strategic; carrying value is not guaranteed liquidation proceeds. Crediting none of the investment pool lowers the base by $3.44/share to $149.83, and is a stress, not the default treatment of assets whose related liabilities we deduct. - Software-license obligations 124.1, acquisition obligations 74.8, accrued dividend 124.3 and non-current tax cash reserve 75.7 are separately identified. The tax amount is a reserve based on the disclosed liability, not a known settlement date; gross uncertain tax benefits or deferred-tax liabilities are not also deducted. - For software licenses, the base treats the opening balance as debt-like and treats the 1.65% forecast budget as <strong>new replacement/growth commitments</strong>, not repayments of that same opening balance. The issuer does not publish a complete payment split. An alternative interpretation in which opening payments are absorbed inside the forecast total cash budget removes the separate 124.1 deduction and gives <strong>$154.35</strong>. This is a different cash-budget convention, not permission to subtract the opening obligation and its repayments twice. - The interest-rate hedge liability 35.2 is paired with the hedged debt’s downward fair-value adjustment. Principal debt is used as the combined obligation proxy; a second gross hedge deduction would overstate that paired claim. The 3.7 net-investment hedge asset is not given a separate material credit. Operating leases stay in operating costs and are not also deducted as debt.</p>
+<p>Net claims after the investment credit are <strong>3,671.0</strong>. Operating EV21,181.279 +cash credit 8 −net claims 3,671 =equity 17,518.279 /114.3 =<strong>$153.266</strong>. The denominator is the reported current-quarter diluted average, rather than the annual weighted count. September basic shares 112.9 and October 29 basic 113.106236 are separately disclosed; neither is silently called an exact point-in-time diluted count or paired with pre-buyback cash to manufacture upside. [S2–S3]</p>
+<h3 id="canton-warrants-and-capital-obligations">Canton, warrants and capital obligations</h3>
+<p>Core value gives zero separate credit to Canton tokens 185.0 and nontransferable CNTN warrants 25.9, while explicitly displaying their optional value. This is a <strong>core-versus-noncore presentation</strong>, not a claim the assets are worthless or that an arbitrary percentage haircut applies to all stocks. About 162.3 of tokens are locked; unlocking can be elected, releases occur over a year, and it can reduce validator economics. The model excludes the validator revenue rather than assuming both full monetization and unchanged rewards forever.</p>
+<p>At September book values, the gross maximum extra credit is 210.9/114.3=$1.85/share. A simple 25% tax on token gains above the 14.7 reported cost basis reduces that combined amount to about $1.47/share before release timing, warrant exercise, market movement and any warrant-tax effects. The tax basis/method are estimates, not legal/tax conclusions. Even full gross book credit does not close the core valuation gap. A20.2 investment-funding commitment disclosed at June is not a loss automatically: funding adds an asset. Treat it as a liquidity claim or incremental investment, not both a full deduction and zero-value acquired asset. [S2–S3]</p>
+<h2 id="discount-rate-observable-inputs-and-assumptions">Discount rate: observable inputs and assumptions</h2>
+<p>November 3 Treasury 10-year yield <strong>4.95%</strong>; NYU November 1 implied ERP <strong>4.41%</strong>. Yahoo’s dated November 2 BR page reports a <strong>0.90 five-year monthly beta</strong>; it is not mislabeled a November 3 regression. Base beta is normalized to <strong>1.0</strong>, yielding cost of equity 9.36%. Marginal debt cost 6.25% is an analyst refinancing assumption, not the legacy coupon or an observed market yield. The new 2036 note was issued at 5.75%; the extra 50 bp tests refinancing uncertainty rather than being presented as a quote. At 25% tax and current market equity/debt weights, <strong>WACC8.7092%</strong>. [S6–S8]</p>
+<p>The NYU ERP page uses its own 5.29% Treasury assumption. Rolling its premium to the current official yield is the central convention. Preserving the combined 9.70% implied market return instead produces core value <strong>$144.95</strong>. Using the observed 0.90 beta rather than normalized 1.0 produces <strong>$165.29</strong>. Neither eliminates the need to underwrite stronger operations at $183.76. The old 9% WACC was not grossly punitive; the main correction is operating/reinvestment architecture, not a fabricated interest-rate windfall.</p>
+<h2 id="revised-ten-year-organic-fcff">Revised ten-year organic FCFF</h2>
+<p>Starting revenue <strong>7,460.3</strong> =FY2026 revenue 7,476.8−validator revenue 16.5. First-five-year total growth 5%, then 4.5/4/3.5/3/2.5%. This is below recurring guidance because recurring fees were about 65% of sales and distribution/event-driven revenue has different growth economics. No future acquisition revenue is included without funding it.</p>
+<p>EBITA here means operating income <strong>after ordinary depreciation, internal-use software amortization, client-conversion amortization, SBC, technology payroll and recurring operating costs</strong>, but before existing purchase-accounting amortization. It is not EBITDA and is not management’s full adjusted-income measure. Its margin rises 21% to 22% overfive years. Starting GAAP EBIT margin is about 19.09% after the finite acquired-amortization charge, consistent with the approximately 19% guide.</p>
+<p>The June acquired-software/customer/trademark net carrying balances total 467.2; less Q1 acquired amortization 38.9 suggests roughly 428.3 before small acquisition/FX changes. The model uses an explicitly estimated <strong>428.0 opening amortizable pool</strong>, released 35/27/18/10/6/4% in years 1–6 and zero thereafter. Total forecast amortization cannot exceed that opening pool. This is an analytical cohort runoff, not an issuer schedule; it reflects customer-contract remaining lives around 1.5 years and acquired-software lives around 5.1 years. The long-lived internal-use software pool is separate. The issuer’s aggregate intangible schedule includes that continuing software and must not all be assigned to finite acquisition amortization.</p>
+<p>Maintenance D&amp;A1.84% of revenue is based on FY2026 ordinary D&amp;A137.7/7,476.8. New physical/software investment 1.65% approximately matches the 123 guidance scale before the separately treated opening software obligation; operating innovation spending remains expensed. Incremental working capital is 10% of revenue growth, including net client/contract investment. These are estimates, not a claim that acquisitions are unnecessary in every future strategy.</p>
+<p>FCFF=EBIT×75%+D&amp;A−investment−incremental working capital. Years 6–10 blend explicit net investment toward NOPAT×annual growth/20% incremental ROIC at 20/40/60/80/100% weights. Terminal growth 2.5%; terminal FCFF=NOPAT11×(1−2.5%/20%). Existing amortization has run off by then, and terminal GAAP operating margin equals 22%. Terminal PV is 55.20% of operating EV.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Revenue</th>
+<th>Finite PPA amortization</th>
+<th>EBIT after SBC and PPA</th>
+<th>D&amp;A</th>
+<th>Initial investment</th>
+<th>Net reinvestment after transition</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.000</td>
+<td>7,833.315</td>
+<td>149.800</td>
+<td>1,495.196</td>
+<td>293.933</td>
+<td>129.250</td>
+<td>-127.382</td>
+<td>1,248.779</td>
+</tr>
+<tr class="even">
+<td>2.000</td>
+<td>8,224.981</td>
+<td>115.560</td>
+<td>1,632.248</td>
+<td>266.900</td>
+<td>135.712</td>
+<td>-92.021</td>
+<td>1,316.207</td>
+</tr>
+<tr class="odd">
+<td>3.000</td>
+<td>8,636.230</td>
+<td>77.040</td>
+<td>1,779.749</td>
+<td>235.947</td>
+<td>142.498</td>
+<td>-52.324</td>
+<td>1,387.136</td>
+</tr>
+<tr class="even">
+<td>4.000</td>
+<td>9,068.041</td>
+<td>42.800</td>
+<td>1,929.499</td>
+<td>209.652</td>
+<td>149.623</td>
+<td>-16.848</td>
+<td>1,463.972</td>
+</tr>
+<tr class="odd">
+<td>5.000</td>
+<td>9,521.443</td>
+<td>25.680</td>
+<td>2,069.038</td>
+<td>200.875</td>
+<td>157.104</td>
+<td>1.569</td>
+<td>1,550.209</td>
+</tr>
+<tr class="even">
+<td>6.000</td>
+<td>9,949.908</td>
+<td>17.120</td>
+<td>2,171.860</td>
+<td>200.198</td>
+<td>164.173</td>
+<td>78.758</td>
+<td>1,550.137</td>
+</tr>
+<tr class="odd">
+<td>7.000</td>
+<td>10,347.905</td>
+<td>0.000</td>
+<td>2,276.539</td>
+<td>190.401</td>
+<td>170.740</td>
+<td>148.676</td>
+<td>1,558.729</td>
+</tr>
+<tr class="even">
+<td>8.000</td>
+<td>10,710.081</td>
+<td>0.000</td>
+<td>2,356.218</td>
+<td>197.065</td>
+<td>176.716</td>
+<td>191.900</td>
+<td>1,575.264</td>
+</tr>
+<tr class="odd">
+<td>9.000</td>
+<td>11,031.384</td>
+<td>0.000</td>
+<td>2,426.904</td>
+<td>202.977</td>
+<td>182.018</td>
+<td>220.656</td>
+<td>1,599.523</td>
+</tr>
+<tr class="even">
+<td>10.000</td>
+<td>11,307.168</td>
+<td>0.000</td>
+<td>2,487.577</td>
+<td>208.052</td>
+<td>186.568</td>
+<td>233.210</td>
+<td>1,632.472</td>
+</tr>
+</tbody>
+</table></div>
+<p>The finite tax shield on acquired amortization is not a perpetuity. If none of that amortization is tax-deductible, base value is $152.49 instead of $153.27. Retaining the same 20% terminal operating margin as the original while using the new organic mechanics gives $138.57; the rest of the uplift reflects removal of indefinitely recurring purchase-accounting amortization from a no-acquisitions thesis and modest operating improvement. It is not all free cash from lower investment.</p>
+<p>A one-percentage-point higher investment budget gives $149.31; terminal ROIC 15/25% gives $147.17/$156.92; no transition catch-up gives $156.79. A zero-incremental-cost validator sensitivity reducing the ongoing margin by 20 bp gives a lower core value in the supplied model. These checks show the decision is not being forced by a single conservative input. A future acquisition strategy must replace the organic model with an explicit purchase-price, revenue and amortization schedule.</p>
+<h2 id="scenarios-and-credible-recovery">Scenarios and credible recovery</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Five-year total growth%</th>
+<th>Year 5 EBITA margin%</th>
+<th>WACC%</th>
+<th>Terminal g%</th>
+<th>Year 1 FCFF</th>
+<th>Year 10 FCFF</th>
+<th>Value/share</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>base</td>
+<td>5.000</td>
+<td>22.000</td>
+<td>8.709</td>
+<td>2.500</td>
+<td>1,248.779</td>
+<td>1,632.472</td>
+<td>153.266</td>
+</tr>
+<tr class="even">
+<td>bear</td>
+<td>3.000</td>
+<td>20.000</td>
+<td>10.000</td>
+<td>2.000</td>
+<td>1,115.385</td>
+<td>1,265.835</td>
+<td>87.092</td>
+</tr>
+<tr class="odd">
+<td>recovery</td>
+<td>6.500</td>
+<td>24.000</td>
+<td>8.709</td>
+<td>2.500</td>
+<td>1,255.426</td>
+<td>1,967.480</td>
+<td>184.497</td>
+</tr>
+<tr class="even">
+<td>bull</td>
+<td>7.000</td>
+<td>24.000</td>
+<td>8.000</td>
+<td>3.000</td>
+<td>1,257.642</td>
+<td>2,074.731</td>
+<td>240.381</td>
+</tr>
+</tbody>
+</table></div>
+<p>Base and recovery share the same 8.7092% WACC,2.5% terminal growth,20% terminal ROIC, taxes, asset/claim treatment, capital investment and share count. Recovery requires <strong>6.5% consolidated growth and 24% operating margin before the finite acquired amortization byyear 5</strong>. It is supported as a possible stronger path by recurring growth near the upper end of the 6–8% guide, sustained conversion wins, favorable mix and an event-driven rebound. It is not proven by a single quarter: license timing, postage pass-through and weaker ICS profitability remain reasons not to make it the central case yet.</p>
+<p>The recovery case of $184.50 essentially supports the current price without a lower discount rate or a 15% growth assumption. Bull adds 7% total growth,24% margin,8% WACC,3% terminal growth and 25% terminal ROIC. Bear uses 3% growth,19.5→20% EBITA margin,2% investment,15% incremental working capital,10% WACC,2% terminal growth and 15% terminal ROIC. No probabilities or guaranteed downside floors are asserted.</p>
+<h2 id="joint-reverse-valuation">Joint reverse valuation</h2>
+<p>Each row solves five-year total revenue growth jointly with the stated year 5/terminal EBITA margin and WACC. All other organic-base mechanics are retained; these are combinations, not independent forecasts.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>WACC%</th>
+<th>Year 5/terminal EBITA margin%</th>
+<th>Five-year total growth supporting $183.76</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8.709</td>
+<td>20.000</td>
+<td>9.540</td>
+</tr>
+<tr class="even">
+<td>8.709</td>
+<td>22.000</td>
+<td>7.908</td>
+</tr>
+<tr class="odd">
+<td>8.709</td>
+<td>23.000</td>
+<td>7.153</td>
+</tr>
+<tr class="even">
+<td>8.709</td>
+<td>24.000</td>
+<td>6.436</td>
+</tr>
+<tr class="odd">
+<td>9.000</td>
+<td>20.000</td>
+<td>10.470</td>
+</tr>
+<tr class="even">
+<td>9.000</td>
+<td>22.000</td>
+<td>8.819</td>
+</tr>
+<tr class="odd">
+<td>9.000</td>
+<td>23.000</td>
+<td>8.056</td>
+</tr>
+<tr class="even">
+<td>9.000</td>
+<td>24.000</td>
+<td>7.329</td>
+</tr>
+</tbody>
+</table></div>
+<p>At the calibrated WACC, <strong>6.44% growth with 24% margin</strong> supports $183.76. With 22% margin, growth needs 7.91%; at 9% WACC and 24% margin, it needs 7.33%. The original one-variable 11.13% growth/28.52% GAAP-margin requirements are retained as historical results of the old model, not universal market hurdles. The current price embeds meaningful improvement, but not an impossible combination. The attached operating grid and WACC/terminal-growth matrix show the full joint trade-offs.</p>
+<h2 id="dated-peer-comparisons">Dated peer comparisons</h2>
+<p>All quotes are November 3 regular-session closes in USD. Latest reported cash/debt and explicitly dated diluted share proxies are used; these equity values are not exact contemporaneous exchange market caps. BR’s approximate basic market cap using the October 29 disclosed count is $20,784.40m. SS&amp;C’s September 10-Q had not been filed in the retrieved submissions at the research cutoff; its October 22 earnings release contains the required quarter statements and cash-flow details.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ticker</th>
+<th>Nov 3 close</th>
+<th>Diluted shares proxy</th>
+<th>Equity proxy</th>
+<th>Cash</th>
+<th>Principal debt</th>
+<th>EV</th>
+<th>CFO</th>
+<th>Owner cash</th>
+<th>Equity/owner cash</th>
+<th>EV/EBIT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BR</td>
+<td>183.760</td>
+<td>114.300</td>
+<td>21,003.768</td>
+<td>284.100</td>
+<td>3,398.700</td>
+<td>24,118.368</td>
+<td>1,396.500</td>
+<td>1,195.000</td>
+<td>17.576</td>
+<td>18.765</td>
+</tr>
+<tr class="even">
+<td>SSNC</td>
+<td>80.880</td>
+<td>240.600</td>
+<td>19,459.728</td>
+<td>525.400</td>
+<td>7,483.500</td>
+<td>26,486.828</td>
+<td>1,859.800</td>
+<td>1,285.200</td>
+<td>15.141</td>
+<td>16.625</td>
+</tr>
+<tr class="odd">
+<td>FDS</td>
+<td>332.590</td>
+<td>35.572</td>
+<td>11,830.891</td>
+<td>233.339</td>
+<td>1,375.000</td>
+<td>12,972.552</td>
+<td>822.200</td>
+<td>623.381</td>
+<td>18.979</td>
+<td>18.533</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>SS&amp;C:</strong> TTM CFO 1,859.8; PPE47.5; capitalized software 256.6; SBC 270.5; owner cash 1,285.2. FY2025+9 M2026−9 M2025 gives SBC 270.6, while the issuer’s direct TTM table gives 270.5, a disclosed 0.1 rounding difference. Gross debt 7,483.5 comes from the release, not book debt 7,449.5. Cash 525.4 excludes matched client funds 3,846.5 and restricted cash 2.5. EV includes 69 minority interest because EBIT is consolidated; owner cash is a consolidated diagnostic, not an exact minority-adjusted payout. About 2bn notes mature September 2027; expected Q4 refinancing is management’s expectation, not a completed transaction. Higher leverage explains some lower equity cash multiple. [S9–S10]</li>
+<li><strong>FactSet:</strong> FYended August 31, reported October 20, with Q4 diluted shares 35.572. CFO 822.2−PPE/software 114.72−SBC 84.099=623.381. Software is already within that capex line, not zero investment. Principal debt 1,375 differs from 1,370.022 book value. Its 7% organic ASV growth is faster than BR’s total sales but addresses a different customer/data mix. Reported EBIT retains restructuring/onboarding costs; adjusted margins are not silently compared with BR’s GAAP profitability. [S11]</li>
+<li><strong>Broadridge:</strong> raw owner-cash multiple 17.58× becomes approximately 18.84× on tax/capex-normalized cash 1,114.799. EV/EBIT 18.77× is above SS&amp;C16.63× and close to FDS18.53×. That is not obvious relative cheapness, but BR’s lower leverage, franchise and recurring mix can warrant some premium. The comparison does not import a peer multiple as fair value. Distribution pass-through, amortization, SBC, minority interests, restructuring and capitalized software make naive adjusted EBITDA comparisons particularly unreliable.</li>
+</ul>
+<h2 id="catalysts-evidence-that-changes-the-view-and-technical-boundary">Catalysts, evidence that changes the view and technical boundary</h2>
+<p>November 3 results are complete; BR is not deferred as an upcoming earnings event. No next issuer-announced earnings date was verified. Watch recurring-fee growth excluding term-license timing, closed sales conversion, ICS event normalization, expansion of operating margin without cutting needed platform/client investment, and after-tax economic cash growth. Digital token value is a separate balance-sheet sensitivity, not the operating catalyst needed to support $183.76.</p>
+<p>Reclassification toward a reasonable-price core candidate would require evidence supporting the recovery economics or a lower price that aligns with the ordinary base. There is no universal discount trigger. Evidence of sustained mid/high-single-digit total growth with margin expansion could justify a higher base; weaker recurring growth, structurally lower event revenue, cyber/regulatory cost or consistently heavier required investment would move it lower. Buying back stock does not by itself create revenue or economic earnings.</p>
+<p>The bear value is not a technical stop. Bull upside/adverse-value downside is about 0.59:1, a scenario asymmetry diagnostic rather than a chart reward/risk test. No verified current entry, invalidation price, volume condition, concentration check or execution plan is supplied. Research is completed with explicit public-data limits; no Stage 3.5 or trade approval is asserted.</p>
+<h2 id="primary-sources-and-reproducible-work">Primary sources and reproducible work</h2>
+<p>[S1] <a href="https://www.prnewswire.com/news-releases/broadridge-reports-first-quarter-fiscal-2027-results-302927141.html">Broadridge November 3 FY2027 Q1 release and guidance reconciliation</a>. [S2] <a href="https://www.sec.gov/Archives/edgar/data/1383312/000162828026069260/br-20260930.htm">September 2026 10-Q, including cash flows and notes 7–16</a>. [S3] <a href="https://www.sec.gov/Archives/edgar/data/1383312/000162828026052243/br-20260630.htm">June 2026 10-K, including comparative cash flows, intangibles, investments and taxes</a>. [S4] <a href="https://www.sec.gov/Archives/edgar/data/1383312/000162828026028675/br-20260331.htm">March 2026 10-Q</a>; <a href="https://www.sec.gov/Archives/edgar/data/1383312/000162828026004859/br-20251231.htm">December 2025 10-Q</a>. [S5] <a href="https://www.sec.gov/Archives/edgar/data/1383312/000162828025048668/br-20250930.htm">September 2025 10-Q</a>; <a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0001383312.json">SEC companyfacts</a>. [S6] <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">Treasury daily yields, November 3</a>. [S7] <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm">NYU November 1 implied ERP</a>. [S8] <a href="https://finance.yahoo.com/quote/BR/">BR beta, provider page with November 2 price stamp</a>; <a href="https://stockanalysis.com/stocks/br/history/">November 3 price cross-check</a>. [S9] <a href="https://investor.ssctech.com/news-releases/news-release-details/ssc-technologies-releases-q3-2026-financial-results">SS&amp;C October 22 Q3 release</a>. [S10] <a href="https://www.sec.gov/Archives/edgar/data/1402436/000119312526076745/ssnc-20251231.htm">SS&amp;C FY2025 10-K</a>; <a href="https://stockanalysis.com/stocks/ssnc/history/">November 3 SSNC price</a>. [S11] <a href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">FactSet FY2026 10-K</a>; <a href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026063888/fdsq42026earningsrelease.htm">earnings reconciliation</a>; <a href="https://stockanalysis.com/stocks/fds/history/">November 3 FDS price</a>.</p>
+<p>Reproducibility: model.py reconstructs the old and revised ten-year cases, history.py reads the preserved SEC numerical facts, peers.py reconstructs current comparisons, and qa.py independently recalculates the results. JSON/CSV files include source-to-period ledger, forecast cash flows for each case, joint reverse requirements and sensitivity grids. Archived full issuer documents are not required to be redistributed with the public research package. Remaining undisclosed splits are described where they affect interpretation, rather than filled with invented precision.</p>
+<h2 id="full-dossier-and-analyst-audit-files">Full dossier and analyst audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/source_report.md">source_report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base.csv">forecast_base.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_higher_terminal_ROIC.csv">forecast_base_higher_terminal_ROIC.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_lower_terminal_ROIC.csv">forecast_base_lower_terminal_ROIC.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_no_ppa_taxshield.csv">forecast_base_no_ppa_taxshield.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_no_tax_claim.csv">forecast_base_no_tax_claim.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_no_transition.csv">forecast_base_no_transition.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_observed_beta.csv">forecast_base_observed_beta.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_preserve_NYU_return.csv">forecast_base_preserve_NYU_return.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_reinvestment_1pct_higher.csv">forecast_base_reinvestment_1pct_higher.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_software_operating_budget.csv">forecast_base_software_operating_budget.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_tax23.csv">forecast_base_tax23.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_validator_zero_cost.csv">forecast_base_validator_zero_cost.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_base_zero_investment_credit.csv">forecast_base_zero_investment_credit.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_bear.csv">forecast_bear.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_bull.csv">forecast_bull.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_organic_same_20pct_terminal_ebit.csv">forecast_organic_same_20pct_terminal_ebit.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_original_base.csv">forecast_original_base.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_original_bear.csv">forecast_original_bear.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_original_bull.csv">forecast_original_bull.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_recovery.csv">forecast_recovery.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_same_cashflows_calibrated_and_claims.csv">forecast_same_cashflows_calibrated_and_claims.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/forecast_same_cashflows_calibrated_wacc.csv">forecast_same_cashflows_calibrated_wacc.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/history.csv">history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/history.json">history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/joint_reverse.csv">joint_reverse.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/model_results.json">model_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/operating_grid.csv">operating_grid.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/peers.csv">peers.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/peers.json">peers.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/publication_metadata.json">publication_metadata.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/qa_results.json">qa_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/sensitivity.csv">sensitivity.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/BR/source_tieout.csv">source_tieout.csv</a></li>
+</ul>
+</main></body></html>

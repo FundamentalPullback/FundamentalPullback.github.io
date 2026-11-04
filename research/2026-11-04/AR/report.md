@@ -1,3 +1,5 @@
+Dated review 2026-11-04 10:29 UTC. Research complete; no approved entry. Original reports, models and decisions remain accessible below. Source cutoffs and dated scanner/regular-close distinctions are retained. 8.63% is implied WACC with recalculated terminal, not fixed-terminal investor IRR. Base equity IRR is 7.88%. Firmer case finite-inventory 20/25/30-year values $34.33/$37.48/$39.65 clarify duration risk; $32.53 central unchanged.
+
 # Antero Resources Fundamental Pullback Stage 3
 
 **Research date: November 4, 2026, 12:24 a.m. Eastern Standard Time. Financial cutoff: September 30, 2026. Price: November 3 regular close, $39.93.** This is a replacement for the November 2 A132 research-blocked assessment, not a trade authorization. No AR scanner timestamp or Opportunity score was supplied for this re-review; the independently checked regular close is used throughout. [AR price history](https://stockanalysis.com/stocks/ar/history/)
@@ -214,3 +216,20 @@ The balanced-improvement value has about 11% price appreciation to its present e
 ## Reproducibility
 
 The delivered research package includes `model.py`, `model_results.json`, `bear_forecast.csv`, `base_forecast.csv`, `bull_forecast.csv`, `history.py`, `historical_financials.csv`, `history_results.json`, `source_ledger.json` and `QA_checks.txt`. Source inputs are classified as reported facts, management guidance or analyst assumptions. Run `python history.py` and `python model.py` from the package directory to reproduce the tables. A scenario is not a probability distribution; rounding, reserve uncertainty and future commodity prices prevent false precision.
+
+
+# Independent focused review · 2026-11-04
+
+## 4. AR: el mantenimiento ya está estimado; el gas y la duración siguen mandando
+
+La comprobación independiente no detectó doble cómputo material de hedges, AM o deuda. Los derivados entran por liquidaciones de caja, sin sumar además el activo de balance; AM queda fuera de FCFF upstream y se valora aparte. Deuda principal USD 2.801m, ARO 67,149m y 308,354m acciones diluidas. Los 139,173m títulos de AM se marcan a 20,94 y reciben una reserva analítica 20% por impuestos/incertidumbre, no una supuesta obligación fiscal medida. [Q3 10-Q](https://www.sec.gov/Archives/edgar/data/1433270/000110465926119637/ar-20260930x10q.htm).
+
+El capital base no es cero ni solo mantenimiento declarado: USD 1.286m en 2027, incluyendo D&C de sostenimiento, tierra, otros activos, nuevas obligaciones de retiro y crecimiento siguiente. El rango de mantenimiento se apoya en el plan de febrero, volumen, pozos e intensidad de capital de pares. Las etiquetas de una presentación trimestral no convierten cuatro veces un trimestre en mantenimiento perpetuo. [Plan de febrero](https://www.anteroresources.com/news-events/press-releases/detail/255/antero-resources-announces-fourth-quarter-2025-results-and), [actualización28/10](https://www.anteroresources.com/news-events/press-releases/detail/262/antero-resources-announces-third-quarter-2026-financial-and).
+
+La base 32,53 ofrece 7,88%; a 35 sería 9,73%, a 32,53 10,79% y a 30 11,99%. El caso de mejora conjunta 44,37/12,18% mantiene WACC 10%, sube HH 0,25 y C3+ 2 USD y usa mantenimiento 950m por 4,3 Bcfe/día. **Con ese mismo gas/NGL y mantenimiento 1.000m todavía vale 43,18**: reducir mantenimiento 50m solo añade 1,18 USD. El motor de la aceptación sería la tesis de producto y duración, no simplemente quitar el antiguo bloqueo de capex.
+
+La comprobación de vida finita es decisiva: para la mejora conjunta, continuidad 20/25/30 años da **34,33/37,48/39,65 USD**. La perpetuidad presupone futura sustitución del inventario económico; no basta demostrar las reservas actuales. El plan no exige certeza sobre cada pozo, pero una aceptación debe defender esa duración además de las cotizaciones. Un caso cauteloso conjunto da 17,78; la mejora no elimina la asimetría del gas y del capital.
+
+**Aclaración de etiqueta:** 8,63% de la inversión inversa es un **WACC implícito**, recalculando el terminal, no una TIR empresarial con salida fija. Esta última es 7,26% en la base. La TIR accionista 7,88% del informe sí usa salida fija y permanece válida bajo sus hipótesis. Esta precisión afecta la comparación, no los valores publicados.
+
+**Condición de avance:** sustentar precios moderadamente más firmes, ejecución/capital y duración, sin reducir simultáneamente el WACC para forzar el precio. Si no se adopta explícitamente esa tesis, la base no respalda una aprobación actual.

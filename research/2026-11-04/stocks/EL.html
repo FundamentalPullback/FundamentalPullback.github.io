@@ -1,0 +1,814 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>EL · A180 revision</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><p><strong><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/EL.html">Open the full readable EL dossier</a></strong></p><nav><a href="../../../#ficha/EL">← EL profile</a><a href="../index.html">Research index</a></nav><p class="eyebrow">A180 · November4,2026 · No entry approval</p><h2 id="dated-correction-a180-november-4-2026">Dated correction: A180, November 4, 2026</h2>
+<p>Updates only <strong>EL</strong> in historical <strong>A150</strong>. The original shared report and unrelated issuer components must remain unchanged.</p>
+<p><strong>Recovery strengthened; observation. Central $47.47, upper ambition $75.55 and extended success $103.20 versus $105.39. Original A150 code unavailable: independent reconstruction, not exact replication. FY2030 ambition incorporated.</strong></p>
+<p>Prepared November4,2026 after10:00UTC. Source cutoff is retained below; later event completion has not been verified.</p>
+<p><strong>Price audit:</strong> November3 scanner $105.39; separately sourced regular close $105.39. Scanner header timezone is not certified.</p>
+<p><strong>Coverage and source limits:</strong> FY2024–FY2026; Q2–Q4 FY2026 and Q1 FY2027; both September TTM periods, with reported cash and SBC bridges. Original code unrecovered.</p>
+<p><strong>Next review:</strong> Research cutoff 06:08 UTC. Scheduled webcast window ended at 10:00 UTC; its actual completion and full content remain unverified. Do not describe the event as still ongoing or fully reviewed.</p>
+<p><strong>No entry approved.</strong> No new position, quantity, buy ceiling or stop. No universal15/20/25% valuation-discount rule.</p>
+<hr />
+<h1 id="el-suplemento-stage-3-posterior-al-anuncio-de-china">EL | Suplemento Stage 3 posterior al anuncio de China</h1>
+<p><strong>Fecha: 4 de noviembre de 2026, 06:08 UTC. USD; importes en millones, salvo precio y EPS. Actualiza A150 sin borrar el análisis previo. No aprueba entrada ni Stage 3.5.</strong></p>
+<h2 id="resultado">Resultado</h2>
+<p>La recuperación tiene ahora objetivos de medio plazo publicados por la compañía. El evento no puede tratarse como un simple pendiente sin información: ya existe una comunicación nueva, publicada a las 05:00 UTC. Pero tampoco se ha revisado una presentación completa o su sesión de preguntas, ni se ha verificado que el evento haya terminado.</p>
+<p>La reconstrucción financiera está completa: tres ejercicios, los cuatro últimos trimestres y sus cuatro comparativos, ambos TTM y dos puentes de caja con SBC. El DCF se reconstruye de forma reproducible y se actualiza con el anuncio. Su centro es <strong>47,47 USD</strong>, el caso de ejecución superior <strong>75,55 USD</strong> y una combinación de éxito prolongado <strong>103,20 USD</strong>, frente a <strong>105,39 USD</strong> de cierre del 3 de noviembre. Estos son valores condicionales, no precios certificados ni probabilidades.</p>
+<p><strong>Decisión propuesta: recuperación reforzada, valoración todavía exigente; mantener observación, sin aprobar una compra parcial.</strong> No se exige descuento universal del 15%. Una entrada a valor razonable podría ser admisible si retorno, caja y riesgos la sostuvieran. Aquí esa defensa depende de combinar recuperación, persistencia prolongada y una prima de valoración que aún no está demostrada.</p>
+<h2 id="qué-se-ha-publicado-durante-el-evento">1. Qué se ha publicado durante el evento</h2>
+<p>La comunicación de la empresa distribuida por Business Wire anuncia una ambición FY2030: crecimiento orgánico anual de ventas de un dígito medio, margen operativo ajustado de 16,5–18,5%, tipo impositivo ajustado del 30% o inferior y crecimiento de EPS ajustado de dos dígitos. Espera que la mejora de margen sea mayor en FY2028 que en FY2029–30 y que crezca la caja libre. Los objetivos excluyen cargos de reestructuración FY2028 de 40–50 millones. No son resultados realizados ni una guía numérica de FCF. <a href="https://via.tt.se/pressmeddelande/4627519/the-estee-lauder-companies-announces-fiscal-2030-ambition-at-its-capital-markets-experience-china-ecosystem-immersion-event?publisherId=259167">Comunicado distribuido por Business Wire</a>, <a href="https://www.businesswire.com/news/home/20261103967530/en/">referencia canónica de la distribución</a>.</p>
+<p>La página del distribuidor indica 06:00 CET, equivalente a 05:00 UTC. El calendario oficial y los datos públicos de la plataforma de webcast coinciden en el comienzo a las 13:00 de Shanghái; la plataforma fija una ventana hasta las 18:00 de Shanghái, 10:00 UTC. <strong>El análisis se cierra dentro de esa ventana programada.</strong> No se afirma que todas las intervenciones hayan ocurrido a su hora. No se usó registro ni acceso autenticado. <a href="https://investors.elcompanies.com/en/investors/events-and-presentations">Agenda del emisor</a>, <a href="https://estee-lauder-capital-markets-experience-china-ecosystem.open-exchange.net/registration">webcast enlazado por el emisor</a>.</p>
+<p>La agenda de IR seguía sin mostrar un enlace público a diapositivas o transcripción. Su listado de noticias tampoco había incorporado el nuevo comunicado, por lo que se conserva la copia distribuida oficialmente. Lo pendiente es el contenido completo del evento y cualquier detalle adicional sobre inversión, productividad y demanda final; <strong>los objetivos publicados sí están incorporados</strong>. La próxima publicación ordinaria de resultados figura el 3 de febrero de 2027, no durante el 4–6 de noviembre. El evento de hoy sigue siendo un catalizador relevante aunque no sea una publicación trimestral.</p>
+<h2 id="precio-definición-de-datos-y-trazabilidad">2. Precio, definición de datos y trazabilidad</h2>
+<p>La referencia es 105,39 USD a las 16:00 EST del 3 de noviembre. La lectura posterior muestra 105,50 a las 19:49 EST, también anterior al anuncio de las 00:00 EST del día 4. No se atribuye a esos precios una reacción al evento. Antes de Stage 3.5 hay que actualizar mercado y técnicos. <a href="https://stockanalysis.com/stocks/el/history/">Histórico de precios</a>.</p>
+<p>A150 detectó que el campo de escáner denominado margen operativo, 1,2093%, era en realidad 182/15.049: margen neto FY2026. La actualización no lo utiliza como EBIT. El EBIT TTM correcto es 1.019 sobre ventas de 15.283, margen 6,67%. También quedan separados el EPS GAAP TTM aproximado de 1,01 y el EPS ajustado sumado de 2,91. No se mezclan con el PER antiguo de más de 200 veces ni se considera un dato del escáner sustituto de los estados oficiales.</p>
+<p>El programa original de A150 no está disponible en el expediente publicado ni pudo recuperarse para esta comprobación. Se conserva su texto y se reconstruye un modelo nuevo, con todas las fórmulas y fuentes. <strong>No se afirma haber replicado exactamente el código perdido.</strong> La comparación numérica controlada aparece más adelante y separa nueva información de diferencias metodológicas.</p>
+<h2 id="tres-ejercicios-completos">3. Tres ejercicios completos</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>FY</th>
+<th>Ventas</th>
+<th>EBIT GAAP</th>
+<th>Beneficio matriz</th>
+<th>EBIT ajustado</th>
+<th>EPS GAAP</th>
+<th>EPS ajustado</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>D&amp;A</th>
+<th>SBC</th>
+<th>FCF menos SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>15,608</td>
+<td>970</td>
+<td>390</td>
+<td>1,588</td>
+<td>1.08</td>
+<td>2.59</td>
+<td>2,360</td>
+<td>919</td>
+<td>825</td>
+<td>325</td>
+<td>1,116</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>14,326</td>
+<td>-785</td>
+<td>-1,133</td>
+<td>1,146</td>
+<td>-3.15</td>
+<td>1.51</td>
+<td>1,272</td>
+<td>602</td>
+<td>829</td>
+<td>304</td>
+<td>366</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>15,049</td>
+<td>780</td>
+<td>182</td>
+<td>1,687</td>
+<td>0.50</td>
+<td>2.51</td>
+<td>1,773</td>
+<td>457</td>
+<td>796</td>
+<td>310</td>
+<td>1,006</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuente: <a href="https://www.sec.gov/Archives/edgar/data/1001250/000100125026000041/el-20260630.htm">10-K FY2026</a>, <a href="https://investors.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/08-19-2026-110037466">resultados FY2026 y conciliaciones</a> y <a href="https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2025/08-20-2025-110025649">resultados FY2025</a>. FY termina el 30 de junio.</p>
+<p>Las ventas caen 8,2% en FY2025 y se recuperan 5,0% en FY2026. El EBIT ajustado cae 27,8% y después crece 47,2%. El FCF después de SBC pasa de 1.116 a 366 y 1.006: una recuperación importante, todavía por debajo de FY2024. El beneficio atribuible FY2024 es 390; los 409 de beneficio consolidado incluyen 19 correspondientes a intereses no controladores.</p>
+<p>La compañía ajusta fuertes cargos de deterioro, litigios y transformación. Esos ajustes ayudan a interpretar el negocio, pero no convierten automáticamente la totalidad de su beneficio ajustado en beneficio económico permanente. El gasto de SBC ordinaria permanece en el EBIT de nuestro DCF.</p>
+<h2 id="cuatro-trimestres-comparativos-y-estacionalidad">4. Cuatro trimestres, comparativos y estacionalidad</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Trimestre</th>
+<th>Ventas</th>
+<th>EBIT GAAP</th>
+<th>NI matriz</th>
+<th>EBIT ajustado</th>
+<th>EPS ajustado</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>D&amp;A</th>
+<th>SBC</th>
+<th>FCF menos SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q2 FY2025</td>
+<td>4,004</td>
+<td>-580</td>
+<td>-590</td>
+<td>462</td>
+<td>0.62</td>
+<td>1,057</td>
+<td>132</td>
+<td>207</td>
+<td>106</td>
+<td>819</td>
+</tr>
+<tr class="even">
+<td>Q3 FY2025</td>
+<td>3,550</td>
+<td>306</td>
+<td>159</td>
+<td>403</td>
+<td>0.65</td>
+<td>284</td>
+<td>122</td>
+<td>204</td>
+<td>75</td>
+<td>87</td>
+</tr>
+<tr class="odd">
+<td>Q4 FY2025</td>
+<td>3,411</td>
+<td>-390</td>
+<td>-546</td>
+<td>137</td>
+<td>0.09</td>
+<td>601</td>
+<td>207</td>
+<td>210</td>
+<td>49</td>
+<td>345</td>
+</tr>
+<tr class="even">
+<td>Q1 FY2026</td>
+<td>3,481</td>
+<td>169</td>
+<td>47</td>
+<td>255</td>
+<td>0.32</td>
+<td>-340</td>
+<td>96</td>
+<td>200</td>
+<td>88</td>
+<td>-524</td>
+</tr>
+<tr class="odd">
+<td>Q2 FY2026</td>
+<td>4,229</td>
+<td>401</td>
+<td>162</td>
+<td>608</td>
+<td>0.89</td>
+<td>1,125</td>
+<td>108</td>
+<td>197</td>
+<td>94</td>
+<td>923</td>
+</tr>
+<tr class="even">
+<td>Q3 FY2026</td>
+<td>3,712</td>
+<td>249</td>
+<td>89</td>
+<td>557</td>
+<td>0.91</td>
+<td>412</td>
+<td>102</td>
+<td>201</td>
+<td>72</td>
+<td>238</td>
+</tr>
+<tr class="odd">
+<td>Q4 FY2026</td>
+<td>3,627</td>
+<td>-39</td>
+<td>-116</td>
+<td>267</td>
+<td>0.39</td>
+<td>576</td>
+<td>151</td>
+<td>198</td>
+<td>56</td>
+<td>369</td>
+</tr>
+<tr class="even">
+<td>Q1 FY2027</td>
+<td>3,715</td>
+<td>408</td>
+<td>233</td>
+<td>449</td>
+<td>0.72</td>
+<td>-166</td>
+<td>69</td>
+<td>191</td>
+<td>70</td>
+<td>-305</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las cuatro últimas filas forman el TTM actual. Las cuatro primeras forman el TTM comparable. Los flujos trimestrales se obtienen restando los acumulados oficiales, no distribuyendo el ejercicio por cuatro. Q4 se calcula como FY menos nueve meses; EPS Q4 se toma directamente de la comunicación anual.</p>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/1001250/000100125026000006/el-20251231.htm">10-Q diciembre 2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/1001250/000100125026000019/el-20260331.htm">10-Q marzo 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1001250/000100125025000109/el-20250930.htm">10-Q septiembre 2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/1001250/000100125026000060/el-20260930.htm">10-Q septiembre 2026</a>. Las conciliaciones ajustadas vienen de las comunicaciones <a href="https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/02-05-2026-110042358">Q2</a>, <a href="https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/05-01-2026-110042145">Q3</a>, <a href="https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2025/10-30-2025-100022718">Q1 FY2026</a> y <a href="https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/11-02-2026-110046663">Q1 FY2027</a>.</p>
+<p>El Q1 fiscal consume caja: −305 después de capex y SBC en FY2027, frente a −524 un año antes. El Q2 suele recuperar una parte relevante de esa salida. Ni el Q1 negativo ni el Q2 positivo son una tasa anual sostenible.</p>
+<p>Las ventas de los últimos cuatro trimestres crecen, respectivamente, 5,6%, 4,6%, 6,3% y 6,7% frente a sus comparativos. El EBIT ajustado crece 31,6%, 38,2%, 94,9% y 76,1%. Las comparaciones más fuertes incluyen bases deprimidas y efectos puntuales; no se extrapolan como una tasa perpetua.</p>
+<h2 id="ttm-y-normalización-de-caja-comparables">5. TTM y normalización de caja comparables</h2>
+<p>TTM actual = FY2026 + Q1 FY2027 − Q1 FY2026. TTM previo = FY2025 + Q1 FY2026 − Q1 FY2025. Por ejemplo, ventas actuales = 15.049 + 3.715 − 3.481 = 15.283; CFO = 1.773 − 166 + 340 = 1.947. Ambas fórmulas coinciden con la suma de sus cuatro trimestres.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Concepto, USD millones</th>
+<th>TTM sep2025</th>
+<th>TTM sep2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas</td>
+<td>14,446.00</td>
+<td>15,283.00</td>
+</tr>
+<tr class="even">
+<td>EBIT GAAP</td>
+<td>-495.00</td>
+<td>1,019.00</td>
+</tr>
+<tr class="odd">
+<td>Beneficio neto matriz</td>
+<td>-930.00</td>
+<td>368.00</td>
+</tr>
+<tr class="even">
+<td>EBIT ajustado compañía</td>
+<td>1,257.00</td>
+<td>1,881.00</td>
+</tr>
+<tr class="odd">
+<td>CFO</td>
+<td>1,602.00</td>
+<td>1,947.00</td>
+</tr>
+<tr class="even">
+<td>Capex</td>
+<td>557.00</td>
+<td>430.00</td>
+</tr>
+<tr class="odd">
+<td>FCF compañía</td>
+<td>1,045.00</td>
+<td>1,517.00</td>
+</tr>
+<tr class="even">
+<td>SBC</td>
+<td>318.00</td>
+<td>292.00</td>
+</tr>
+<tr class="odd">
+<td>FCF menos SBC</td>
+<td>727.00</td>
+<td>1,225.00</td>
+</tr>
+<tr class="even">
+<td>D&amp;A</td>
+<td>821.00</td>
+<td>787.00</td>
+</tr>
+<tr class="odd">
+<td>Interés gasto</td>
+<td>351.00</td>
+<td>331.00</td>
+</tr>
+<tr class="even">
+<td>Interés e inversiones, ingreso</td>
+<td>109.00</td>
+<td>85.00</td>
+</tr>
+<tr class="odd">
+<td>Impuesto reportado</td>
+<td>179.00</td>
+<td>385.00</td>
+</tr>
+<tr class="even">
+<td>Movimiento agregado de activos/pasivos operativos</td>
+<td>430.00</td>
+<td>613.00</td>
+</tr>
+<tr class="odd">
+<td>Beneficios puntuales eliminados</td>
+<td>0.00</td>
+<td>56.00</td>
+</tr>
+<tr class="even">
+<td>Reserva recurrente de transformación</td>
+<td>72.23</td>
+<td>76.42</td>
+</tr>
+<tr class="odd">
+<td>EBIT económico proxy</td>
+<td>1,184.77</td>
+<td>1,748.59</td>
+</tr>
+<tr class="even">
+<td>Impuesto normal 30%</td>
+<td>355.43</td>
+<td>524.58</td>
+</tr>
+<tr class="odd">
+<td>Capex normal 5% ventas</td>
+<td>722.30</td>
+<td>764.15</td>
+</tr>
+<tr class="even">
+<td>Circulante incremental normal</td>
+<td>0.00</td>
+<td>41.85</td>
+</tr>
+<tr class="odd">
+<td>FCFF antes del programa finito</td>
+<td>928.04</td>
+<td>1,205.01</td>
+</tr>
+<tr class="even">
+<td>Pagos identificados PRGP</td>
+<td>191.00</td>
+<td>319.00</td>
+</tr>
+<tr class="odd">
+<td>FCFF proxy después de PRGP identificado</td>
+<td>794.34</td>
+<td>981.71</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las ventas TTM crecen 5,8%, el EBIT ajustado 49,6% y el FCF compañía 45,2%. Después del coste económico de SBC, la caja sube de <strong>727 a 1.225, +68,5%</strong>. Esa cifra sigue siendo después de intereses y con efectos de circulante: no se rotula FCFF normalizado.</p>
+<p>El movimiento agregado de activos/pasivos operativos aporta 613 de caja actual frente a 430 antes. La diferencia, 183, explica aproximadamente el 53% del aumento de CFO de 345. El resto de la mejora de FCF también se beneficia de 127 menos de capex y 26 menos de SBC. El agregado incluye impuestos, pasivos de programas y otros conceptos; no es únicamente inventario más clientes menos proveedores. No se perpetúa como fuente gratuita de financiación.</p>
+<p>El puente económico utiliza tratamiento simétrico:</p>
+<ol type="1">
+<li>Partir del EBIT ajustado y retirar 38 de devoluciones arancelarias y 18 de reversión de tarjetas regalo, ambos en Q4 FY2026. Para estos últimos se supone, conservadoramente, traslado íntegro al EBIT.</li>
+<li>Mantener SBC y reservar un 0,5% de ventas para costes de transformación que podrían repetirse. Es un supuesto analítico, no una métrica del emisor.</li>
+<li>Aplicar impuesto normal de 30%, añadir D&amp;A y presupuestar capex de 5% de ventas. El 5% no es una declaración de mantenimiento de la compañía: contrasta con 5,9%, 4,2% y 3,0% de capex reportado en FY2024–26 y con aproximadamente 4% guiado para FY2027.</li>
+<li>Dedicar 5% del incremento positivo de ventas TTM a circulante. No se concede una liberación automática cuando las ventas caen.</li>
+<li>Mostrar separadamente los pagos PRGP identificados: 132 + 67 − 8 = 191 antes; 275 + 111 − 67 = 319 ahora. Aplicando el mismo impuesto normal, el proxy después de esos pagos es <strong>794,34 frente a 981,71, +23,6%</strong>. La nota PRGP de <a href="https://www.sec.gov/Archives/edgar/data/1001250/000100125024000177/el-20240930.htm">septiembre 2024</a> permite completar el comparativo.</li>
+</ol>
+<p>Este último es un <strong>proxy analítico normalizado con pagos PRGP identificados</strong>, no una conciliación exhaustiva de todos los impuestos de caja y costes de consultoría. La reserva recurrente presupuestada sustituye parte de esa incertidumbre, mientras los pagos finitos conocidos se modelan expresamente. Antes de esos pagos, el proxy es 928,04/1.205,01, +29,8%. No se utiliza esa versión más alta como si el programa ya hubiera terminado.</p>
+<p>La mejora del beneficio total importa más que un EPS favorecido por recompras. El denominador diluido Q1 sube de 363,3 a 366,1 millones. En ejercicios con pérdidas, la contabilidad excluye instrumentos antidilutivos del EPS GAAP, mientras el EPS ajustado puede incluirlos. Sumar EPS trimestral no crea un denominador TTM exacto.</p>
+<h2 id="balance-caja-disponible-fx-y-obligaciones">6. Balance, caja disponible, FX y obligaciones</h2>
+<p>Se conserva el puente prudente de A150, ahora contrastado con el 10-Q:</p>
+<ul>
+<li>Deuda corriente y a largo plazo: 7.251; notas de proveedor: 133.</li>
+<li>Pasivos de planes de pensiones y posjubilación: 339, sin compensar automáticamente los 186 de activos de otros planes.</li>
+<li>Reserva de talco: 90. No representa un límite de responsabilidad futura.</li>
+<li>Caja: 3.198 menos 197 pagados por Forest Essentials y menos reserva operativa analítica de 750 = <strong>2.251 de caja excedente</strong>.</li>
+<li>Derechos netos deducidos de EV: <strong>5.562</strong>. Denominador económico: <strong>368 millones</strong>, coherente con la guía, no las 361,8 millones que todavía muestra algún proveedor.</li>
+</ul>
+<p>Forest Essentials se completó el 5 de octubre: 160 por el 51% restante y 37 de incentivo. Los 37 ya se deducen de caja, no se cargan otra vez en FCFF. La revalorización contable esperada de 94 sobre el 49% anterior se excluye del beneficio operativo recurrente. El supuesto de crecimiento posterior no concede adquisiciones futuras gratuitas.</p>
+<p>El balance conserva aproximadamente 3.500 de líneas no dispuestas y 500 de principal con vencimiento en marzo de 2027. El vencimiento no es otra deducción además de la deuda. La cobertura aproximada es 3,1 veces con EBIT GAAP TTM y 5,7 veces con EBIT ajustado TTM, sobre interés de 331. El 10-Q indica A− estable de S&amp;P y A3 con perspectiva negativa de Moody’s a 26 de octubre. No se describe una financiación inmediatamente quebrada, pero tampoco un balance libre de restricciones.</p>
+<p>La reserva operativa de 750 <strong>no es una cifra publicada de caja atrapada</strong>. Las cuentas indican posible tributación estatal y extranjera al repatriar determinadas ganancias; no proporcionan aquí una partición cuantificada que permita declarar toda la caja extranjera inaccesible o totalmente libre. Quitar la reserva completa aumenta el valor central en 2,04 por acción. Usar deuda a valor razonable publicado, 6.508 en vez de 7.251, aporta 2,02; no se asume que pueda recomprarse toda a ese precio sin costes o restricciones.</p>
+<p>Los alquileres operativos continúan como costes, por lo que no se deduce además deuda de arrendamiento. Los servicios corrientes de pensiones siguen en margen; los pasivos previos se deducen en el puente y no se cargan otra vez como un flujo adicional. El crédito de los 186 de activos de planes elevaría el valor solo 0,51.</p>
+<p>El crecimiento Q1 se descompone en volumen +7%, precio/mix −1% y traducción FX +1%. Que las ventas suban en dólares no prueba poder generalizado de precios. Los efectos de traducción en patrimonio, la caja por coberturas y el ingreso operativo en moneda constante son conceptos distintos. El DCF está íntegramente en USD nominales y no añade una ganancia FX permanente.</p>
+<h2 id="dcf-nuevo-reproducible-y-contrastado-con-el-previo">7. DCF nuevo, reproducible y contrastado con el previo</h2>
+<p>El modelo utiliza un stub restante FY2027 y <strong>diez ejercicios completos FY2028–37</strong>, divididos en cinco explícitos y cinco de transición. El ancla de balance es septiembre, ajustada por la adquisición conocida de octubre. Para no inventar una caja de noviembre, los flujos se descuentan desde ese ancla; la comparación con precio del 3 de noviembre conserva una limitación temporal de 35 días. Un movimiento de caja no observado de 250 cambia el valor 0,68 por acción. No se interpreta esa diferencia como precisión suficiente para operar.</p>
+<p>FY2027: ventas 15.914, margen económico 12,8% frente al punto medio ajustado guiado de 13,3%, impuesto 33,5%, D&amp;A 5% y capex 4%. La guía de CFO 1.400–1.500 implica aproximadamente 813 de FCF en el punto medio. Restar SBC estimada de 300 y añadir interés neto estimado de 230 después de impuestos produce <strong>666,39 de FCFF proxy</strong>. Restar el proxy Q1 de −266,43 da <strong>932,82 para el stub restante</strong>. No se anualiza Q1.</p>
+<p>Los 511 de pasivos PRGP devengados incluyen pagos restantes de 417/78/16 en FY2027/28/29. Frente al coste total esperado de 1.700 y los 1.475 acumulados, se presupuestan 225 adicionales. La actualización asigna 180 a FY2027 y 45 a FY2028, incorporando el nuevo anuncio <strong>sin sumar otra vez los mismos 45</strong>. La composición futura de cargos no es todo caja: tratarlos íntegramente como caja es conservador. Si los 45 fueran adicionales a los 225 y no parte de ellos, el valor central bajaría solo 0,07.</p>
+<p>El residual FY2027 de circulante e impuestos es 376,53, calibrado a la guía; no es una segunda prueba independiente de conversión. El programa finito, el coste recurrente en margen y las obligaciones de balance se identifican por separado. Posibles solapamientos requieren ajustar una partida, no descontarlas dos veces.</p>
+<h3 id="coste-de-capital">Coste de capital</h3>
+<p>Tesoro a diez años: <strong>4,95%</strong> el 3 de noviembre. Beta publicada: <strong>1,27</strong>. ERP de 5%, deuda marginal de 5,95%, peso equity/deuda de 85/15 y escudo fiscal de 30% son supuestos analíticos. Ke = 4,95% + 1,27 × 5% = 11,30%; WACC = 85% × 11,30% + 15% × 5,95% × 70% = <strong>10,22975%</strong>. Se conserva el cálculo, sin redondearlo favorablemente al 10%. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&amp;type=daily_treasury_yield_curve">Tesoro</a>, <a href="https://stockanalysis.com/stocks/el/">beta y precio</a>.</p>
+<p>El 8,75% del caso de éxito prolongado es condicional a menor riesgo operativo/financiero y menor prima exigida, no un coste observado hoy. L’Oréal tiene una beta publicada inferior, pero transferirla sin ajustar el riesgo de EL sería incorrecto.</p>
+<h3 id="proyección-central">Proyección central</h3>
+<p>El crecimiento FY2028–32 es 5%, 5%, 5%, 4% y 3,7%. Los márgenes económicos son 15%, 16%, 17%, 17% y 17%; el 17% en FY2030 es el punto medio anunciado menos la reserva recurrente. Impuesto converge a 30%. Después, crecimiento y ROIC convergen a 2,5% y 15%. La reinversión terminal es NOPAT × g/ROIC; no se prolonga capex artificialmente bajo.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>Margen EBIT</th>
+<th>NOPAT</th>
+<th>D&amp;A</th>
+<th>Capex</th>
+<th>ΔNWC</th>
+<th>Reinversión total</th>
+<th>Pagos programa</th>
+<th>FCFF</th>
+<th>PV FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY27 remaining Q2-Q4</td>
+<td>12,199.0</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>597.0</td>
+<td>932.8</td>
+<td>867.1</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td>16,709.7</td>
+<td>15.00%</td>
+<td>1,704.4</td>
+<td>802.1</td>
+<td>751.9</td>
+<td>39.8</td>
+<td>-10.3</td>
+<td>123.0</td>
+<td>1,631.1</td>
+<td>1,375.5</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td>17,545.2</td>
+<td>16.00%</td>
+<td>1,937.0</td>
+<td>807.1</td>
+<td>877.3</td>
+<td>41.8</td>
+<td>112.0</td>
+<td>16.0</td>
+<td>1,814.0</td>
+<td>1,387.8</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td>18,422.4</td>
+<td>17.00%</td>
+<td>2,192.3</td>
+<td>810.6</td>
+<td>921.1</td>
+<td>43.9</td>
+<td>154.4</td>
+<td>0.0</td>
+<td>2,037.9</td>
+<td>1,414.3</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td>19,159.3</td>
+<td>17.00%</td>
+<td>2,280.0</td>
+<td>804.7</td>
+<td>958.0</td>
+<td>36.8</td>
+<td>190.1</td>
+<td>0.0</td>
+<td>2,089.8</td>
+<td>1,315.8</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td>19,868.2</td>
+<td>17.00%</td>
+<td>2,364.3</td>
+<td>794.7</td>
+<td>993.4</td>
+<td>35.4</td>
+<td>234.1</td>
+<td>0.0</td>
+<td>2,130.2</td>
+<td>1,216.7</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td>20,555.7</td>
+<td>17.00%</td>
+<td>2,446.1</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>265.9</td>
+<td>0.0</td>
+<td>2,180.2</td>
+<td>1,129.7</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td>21,217.6</td>
+<td>17.00%</td>
+<td>2,524.9</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>294.4</td>
+<td>0.0</td>
+<td>2,230.5</td>
+<td>1,048.6</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td>21,849.9</td>
+<td>17.00%</td>
+<td>2,600.1</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>331.0</td>
+<td>0.0</td>
+<td>2,269.2</td>
+<td>967.7</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td>22,448.5</td>
+<td>17.00%</td>
+<td>2,671.4</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>381.1</td>
+<td>0.0</td>
+<td>2,290.3</td>
+<td>886.1</td>
+</tr>
+<tr class="odd">
+<td>2037</td>
+<td>23,009.8</td>
+<td>17.00%</td>
+<td>2,738.2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>456.4</td>
+<td>0.0</td>
+<td>2,281.8</td>
+<td>800.9</td>
+</tr>
+</tbody>
+</table></div>
+<p>En FY2033–37, la tabla deja D&amp;A/capex/ΔNWC individuales vacíos porque emplea <strong>reinversión neta total</strong>, ligada a crecimiento y ROIC. No son ceros. El ROIC de transición parte del rendimiento incremental implícito del modelo, no de un ROIC histórico “demostrado” por cuentas afectadas por deterioros.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>WACC</th>
+<th>g terminal</th>
+<th>ROIC terminal</th>
+<th>Valor/acción</th>
+<th>TV / EV</th>
+<th>IRR equity ilustrativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverse</td>
+<td>11.00%</td>
+<td>2.0%</td>
+<td>12.5%</td>
+<td>22.08</td>
+<td>38.8%</td>
+<td>-5.6%</td>
+</tr>
+<tr class="even">
+<td>Central_after_event</td>
+<td>10.23%</td>
+<td>2.5%</td>
+<td>15.0%</td>
+<td>47.47</td>
+<td>46.1%</td>
+<td>1.7%</td>
+</tr>
+<tr class="odd">
+<td>Upper_ambition</td>
+<td>9.25%</td>
+<td>3.0%</td>
+<td>25.0%</td>
+<td>75.55</td>
+<td>54.7%</td>
+<td>6.1%</td>
+</tr>
+<tr class="even">
+<td>Extended_success</td>
+<td>8.75%</td>
+<td>3.0%</td>
+<td>30.0%</td>
+<td>103.20</td>
+<td>60.2%</td>
+<td>9.2%</td>
+</tr>
+</tbody>
+</table></div>
+<p>El caso adverso usa crecimiento de 2% y margen de 13%. El superior usa 6% inicial, margen económico de 18% en FY2030 y 18,5% después, impuesto de 29%, WACC 9,25% y ROIC terminal 25%. El éxito prolongado combina 7% durante cinco años, margen de 20% después de FY2030, crecimiento más persistente en la segunda fase, impuesto de 28%, WACC 8,75% y ROIC terminal 30%. Esta última combinación excede la ambición publicada en varios componentes y no se etiqueta escenario central.</p>
+<p>La IRR es una ilustración de caja potencial al accionista con deuda neta constante, interés neto de 230, distribución del excedente y salida al valor terminal de cada caso. No es una promesa de dividendos o rentabilidad. Sin probabilidades defendibles, no se publica una rentabilidad esperada ponderada inventada.</p>
+<h3 id="reconciliación-con-a150">Reconciliación con A150</h3>
+<p>A150 publicó 20,8/48,1/91,8 para sus escenarios. Nuestro código no es el perdido y no fuerza esos números. Como comparación controlada, manteniendo el nuevo método pero usando una trayectoria anterior plausible que llega al 17% un año después, el centro es <strong>46,47</strong>. Incorporar la ambición eleva ese mismo modelo a <strong>47,47</strong>, aproximadamente +1,00. Con WACC redondeado al 10%, los respectivos valores serían <strong>48,40 y 49,41</strong>. La proximidad de 48,40 a los 48,1 anteriores no demuestra identidad de modelos.</p>
+<p>Por tanto, comparar 48,1 con 47,47 y describirlo como una rebaja causada por el evento sería falso: la información operativa mejora el caso; la diferencia neta incorpora coste de capital, temporalidad y reconstrucción explícita.</p>
+<h2 id="combinaciones-reverse-dcf-y-múltiplos">8. Combinaciones, reverse DCF y múltiplos</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Crecimiento 5 años</th>
+<th>Margen maduro</th>
+<th>WACC</th>
+<th>g / ROIC terminal</th>
+<th>Valor/acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4%</td>
+<td>16%</td>
+<td>11.00%</td>
+<td>2.5% / 15%</td>
+<td>37.81</td>
+</tr>
+<tr class="even">
+<td>5%</td>
+<td>17%</td>
+<td>10.23%</td>
+<td>2.5% / 15%</td>
+<td>49.30</td>
+</tr>
+<tr class="odd">
+<td>6%</td>
+<td>18%</td>
+<td>9.25%</td>
+<td>3.0% / 25%</td>
+<td>74.26</td>
+</tr>
+<tr class="even">
+<td>7%</td>
+<td>20%</td>
+<td>8.75%</td>
+<td>3.0% / 25%</td>
+<td>98.10</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hay 64 combinaciones reproducibles, no solo cambios de una variable. El reverse central exige un margen maduro cercano a 35,3% si se inmovilizan las demás hipótesis. <strong>No implica que el mercado exija inevitablemente ese margen.</strong> El caso superior necesitaría WACC de aproximadamente 7,74% para justificar 105,39 con sus demás supuestos. La combinación de éxito prolongado llega cerca del precio; elevar su crecimiento inicial de 7% a aproximadamente 7,44% lo iguala. Son caminos distintos, exigentes por razones diferentes.</p>
+<p>La prueba más favorable al comprador es la de múltiplos. EL cotiza a 30,5–32,9 veces el EPS FY2027 guiado. L’Oréal, a 432,70 EUR el 3 de noviembre, equivale a 33,2 veces EPS subyacente TTM aproximado de 13,04 EUR: 12,71 FY2025 + 7,40 H1 2026 − 7,07 H1 2025. No se convierte EUR a USD para comparar PER. Su margen H1 de 21,3% y crecimiento orgánico Q3 de 7,2% (7,7% ajustado por calendario IT) son evidencia de una rentabilidad y persistencia más avanzadas. El EPS subyacente incluye dividendos de participaciones y no es una medida pura del negocio cosmético. <a href="https://www.loreal.com/en/press-release/finance/2026-half-year-results/">Resultados H1</a>, <a href="https://www.loreal.com/en/press-release/finance/sales-at-30-september-2026/">ventas Q3</a>, <a href="https://stockanalysis.com/quote/epa/OR/">precio</a>.</p>
+<p>El contraste de e.l.f. requiere cautela: su guía de crecimiento es 18–20%, pero sus métricas ajustadas excluyen SBC y otros costes, y Q1 tuvo un beneficio arancelario equivalente a unos 1.050 puntos básicos de margen bruto. Coty combina desinversiones, salida de Gucci y una revisión de Consumer Beauty; su FCF FY2026 de 348 no crea un múltiplo directamente trasladable. Se usan como controles de modelo de negocio y definición, no como “promedio del sector”. <a href="https://investor.elfbeauty.com/stock-and-financial/press-releases/landing-news/2026/08-05-2026-210618204">e.l.f.</a>, <a href="https://www.coty.com/news/coty-announces-fourth-quarter-fiscal-year-2026-results">Coty</a>.</p>
+<p>Para explicar la divergencia entre DCF y múltiplos, se calcula EPS económico FY2030 con margen del escenario, interés neto de 230, otros costes financieros de pensión de 19, impuesto del escenario y 368 millones de acciones. Se ensayan PER de salida, no se presentan como guía del emisor:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario FY2030</th>
+<th>EPS proxy</th>
+<th>PER de salida</th>
+<th>Precio futuro</th>
+<th>Retorno anual con dividendo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Central_after_event</td>
+<td>5.48</td>
+<td>20</td>
+<td>109.67</td>
+<td>2.3%</td>
+</tr>
+<tr class="even">
+<td>Central_after_event</td>
+<td>5.48</td>
+<td>25</td>
+<td>137.09</td>
+<td>8.3%</td>
+</tr>
+<tr class="odd">
+<td>Central_after_event</td>
+<td>5.48</td>
+<td>28</td>
+<td>153.54</td>
+<td>11.6%</td>
+</tr>
+<tr class="even">
+<td>Central_after_event</td>
+<td>5.48</td>
+<td>32</td>
+<td>175.48</td>
+<td>15.5%</td>
+</tr>
+<tr class="odd">
+<td>Upper_ambition</td>
+<td>6.10</td>
+<td>20</td>
+<td>122.04</td>
+<td>5.2%</td>
+</tr>
+<tr class="even">
+<td>Upper_ambition</td>
+<td>6.10</td>
+<td>25</td>
+<td>152.55</td>
+<td>11.4%</td>
+</tr>
+<tr class="odd">
+<td>Upper_ambition</td>
+<td>6.10</td>
+<td>28</td>
+<td>170.85</td>
+<td>14.7%</td>
+</tr>
+<tr class="even">
+<td>Upper_ambition</td>
+<td>6.10</td>
+<td>32</td>
+<td>195.26</td>
+<td>18.7%</td>
+</tr>
+</tbody>
+</table></div>
+<p>La recuperación central más un PER de 28 veces en FY2030 ofrece aproximadamente 11,6% anual contando dividendos planos de 1,40; el caso superior con 25 veces ofrece aproximadamente 11,4%. Son rutas plausibles al precio actual, pero dependen de conservar una prima elevada después de la recuperación. La sensibilidad a 20 veces reduce sustancialmente esos retornos.</p>
+<p>El DCF, en cambio, presupone que el crecimiento y ROIC se normalizan tras diez años, cobra reinversión y descontará flujos más lejanos. El PER de salida capitaliza una duración de crecimiento o una prima terminal mayor. <strong>No se promedian ambos métodos ni se escoge el que concede aprobación.</strong> La divergencia está explicada y cuantificada: el riesgo principal es pagar hoy una recuperación y después conservar el múltiplo, no la inexistencia de una posible ruta alcista.</p>
+<h2 id="conclusión-y-trabajo-que-realmente-depende-del-evento">9. Conclusión y trabajo que realmente depende del evento</h2>
+<p>La historia financiera y el modelo están completos a partir de la información pública verificada. La nueva ambición refuerza una recuperación que ya se observaba. No demuestra que todas las ventas sean consumo final incremental, que el margen objetivo se consiga sin más inversión o que los altos múltiplos persistan después de 2030.</p>
+<p>El centro no depende de una prohibición por crecimiento inferior al 15% ni de un descuento obligatorio. El plan utiliza crecimiento de beneficio total normalizado como prioridad; EPS y recompras se analizan por separado. Las mejoras actuales son fuertes, pero parte procede de una base deprimida, menores cargos y cambios de caja.</p>
+<p><strong>No se propone entrada parcial a 105,39 con la evidencia actual.</strong> Un argumento para cambiar esa decisión tendría que apoyar conjuntamente persistencia de ventas, margen económico, inversión, conversión y retorno exigido. La combinación superior de múltiplo y beneficio puede justificar el precio, pero todavía no constituye margen de protección frente a ejecución o reducción del múltiplo.</p>
+<p>Pendiente preciso: presentación completa y preguntas del evento, todavía dentro de su ventana programada; cualquier cifra nueva de caja o capex, desglose del crecimiento China frente al consumo final y mecanismos de productividad. Se debe actualizar este suplemento cuando esos materiales sean públicos, sin registrar usuarios ni inventar intervenciones. Ningún otro dato recuperable se utiliza aquí como excusa para omitir el análisis. Stage 3.5, repricing posterior al anuncio y autorización de operación siguen separados.</p>
+<h2 id="archivos-y-comprobaciones">Archivos y comprobaciones</h2>
+<p>El paquete incluye <code>history.py</code>, <code>history.json/csv</code>, <code>model.py</code>, <code>model_results.json</code>, cuatro proyecciones CSV, <code>compare_models.py</code>, <code>model_reconciliation.json</code>, <code>source_ledger.json</code> y copias de fuentes. Las 40 comprobaciones históricas y 97 del modelo pasan: <strong>137 aprobadas, cero fallidas</strong>. Verifican sumas, identidades de caja, diez ejercicios completos, puente EV-equity, descuento y reinversión terminal; no verifican como hechos los supuestos futuros.</p>
+<h2 id="full-dossier-and-analyst-audit-files">Full dossier and analyst audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/source_report.md">source_report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/Adverse.csv">Adverse.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/Central_after_event.csv">Central_after_event.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/Extended_success.csv">Extended_success.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/Upper_ambition.csv">Upper_ambition.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/history.csv">history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/history.json">history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/history_checks.json">history_checks.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/model_checks.json">model_checks.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/model_reconciliation.json">model_reconciliation.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/model_results.json">model_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/publication_summary.json">publication_summary.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/EL/source_ledger.json">source_ledger.json</a></li>
+</ul>
+</main></body></html>

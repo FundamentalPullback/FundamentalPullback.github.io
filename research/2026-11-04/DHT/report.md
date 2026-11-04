@@ -1,3 +1,5 @@
+Dated review 2026-11-04 10:29 UTC. Research complete; no approved entry. Original reports, models and decisions remain accessible below. Source cutoffs and dated scanner/regular-close distinctions are retained. Debt principal correction is a small alternate: $21.60→$21.54 (about $0.0523/share). Classification and original model unchanged; no approved entry.
+
 # DHT Holdings (DHT): Stage 3 completo, 4 de noviembre de 2026
 
 **Dictamen: candidato neutral y condicionado a precio/señal, no compra aprobada.** A **23,95 USD**, DHT está cerca de una valoración razonable, aunque por encima del DCF central de **21,60 USD**. Su balance y contratos hacen el caso más defendible que una lectura aislada del P/E de pico. La rentabilidad anual central modelada para el accionista es **8,0%**; a 22 y 20 USD pasa a **9,9% y 12,1%**. No exige obligatoriamente un descuento del 15% ni un mínimo genérico de crecimiento. Puede seguir como candidato de entrada parcial si se acepta su riesgo cíclico y aparece la señal de entrada, pero no ofrece una oportunidad de alta convicción claramente barata al precio del escáner.
@@ -155,3 +157,26 @@ Invalidadores: tarifas que reviertan rápidamente por menor dislocación, más b
 ## Reproducibilidad
 
 `full_model.json` contiene estados, TTM, contratos, cohortes, puente financiero, diez años, reverse, sensibilidades, escenarios, NAV y fuentes. `model.py` genera los cálculos; `enrich.py` añade fuentes y comprobaciones aritméticas. Ejecutar ambos en ese orden conserva el archivo completo. Hipótesis no públicas se etiquetan y acotan, en lugar de presentarlas como hechos o impedir una conclusión razonada.
+
+
+# Independent focused review · 2026-11-04
+
+## 3. DHT: poca deuda no elimina el riesgo del precio normal del flete
+
+Reproduce 21,5961 USD y 8,05% de TIR al cierre 23,92. El modelo sí paga reposición de flota y Oryx, con calendario por cohortes y terminal ajustado por renovación. No capitaliza para siempre la tarifa excepcional del trimestre. La actualización oficial de octubre es extraordinariamente fuerte, pero sus métricas operativas no son los estados IFRS finales. [Actualización12/10](https://www.dhtankers.com/dht-holdings-inc-business-update-19/).
+
+| Hipótesis conjunta frente a base | Valor | TIR al cierre |
+|---|---:|---:|
+| Base: spot converge a 62.500/día, WACC 10,5% | 21,60 | 8,05% |
+| Convergencia a 68.500, mismo WACC | 23,95 | 10,35% |
+| Convergencia a 72.500, mismo WACC | 25,51 | 11,70% |
+| 72.500 pero WACC 11,5% | 23,39 | 10,89% |
+| 52.500, WACC 11,5%, renovación +10% | 15,90 | 0,89% |
+
+El cambio se introduce gradualmente hasta el año cinco, no se suma el mismo aumento a todo el pico inicial. **68.500 no es una hipótesis extrema**, pero un charter de tres años o un trimestre excepcional tampoco demuestra esa tarifa durante el resto del horizonte. A 20–22 USD la base arroja aproximadamente 12,1–9,9%: es una mejora de retorno calculada, no un descuento universal obligatorio.
+
+**Refinamiento menor detectado:** el modelo usa deuda de balance de junio 434,804m, neta de comisiones de emisión. El principal programado es 443,251m. Usar principal aumenta el claim 8,447m y reduce el valor **0,0523 USD**, a 21,54. No modifica la clasificación. El puente julio–octubre utiliza CFO estimado 400m, no un saldo de caja publicado; ±100m mueve el valor aproximadamente ±0,62. Es mayor que el refinamiento anterior y debe contrastarse el 9/11. [Q2, nota 4 y balance](https://ml-eu.globenewswire.com/Resource/Download/8909fb05-d34b-4509-856b-0d1cd36687ea).
+
+161,4m acciones frente a161,236m efectivas de junio; SBC económico conservado en G&A. Oryx incluye depósito ya pagado y capital pendiente una sola vez. No se suma otra vez el dividendo de 1,22 USD pagado en agosto. Los años de reemplazo con caja negativa implican retener previamente caja o financiarse; la TIR no promete distribuir siempre toda la caja y financiar gratuitamente esos déficits.
+
+**Condición de avance:** aceptar con evidencia un régimen normal cercano a 68.500–72.500/día, o un precio que remunere la base; confirmar caja, reconocimiento de ingresos y nuevas obligaciones en Q3. No basta que aparezca una señal técnica para subsanar una rentabilidad fundamental insuficiente.

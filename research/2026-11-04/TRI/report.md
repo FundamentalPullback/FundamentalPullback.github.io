@@ -1,3 +1,5 @@
+Publication scope note, November 4, 2026: this TRI valuation retains its original source cutoff before the scheduled 07:00 UTC Wolters Kluwer update. That later peer release has not been incorporated or represented as checked in this dossier. This is a dated analysis, not a continuously refreshed peer comparison.
+
 Historical coverage supplement verified and integrated 2026-11-04 05:35 UTC. Research complete with explicitly stated reporting limits; no approved entry. Earlier pending-history notices are superseded. Prior/current cash comparison uses the same historical combined perimeter including Print. Current SBC of $120m remains an estimate, and no unavailable prior-Q4 Print carve-out is invented. Valuation is unchanged.
 
 # TRI — Stage 3 terminado tras resultados del 3 de noviembre

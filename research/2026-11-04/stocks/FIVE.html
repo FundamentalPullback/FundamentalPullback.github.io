@@ -1,0 +1,990 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FIVE · A181 revision</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><p><strong><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/FIVE.html">Open the full readable FIVE dossier</a></strong></p><nav><a href="../../../#ficha/FIVE">← FIVE profile</a><a href="../index.html">Research index</a></nav><p class="eyebrow">A181 · November4,2026 · No entry approval</p><h2 id="dated-correction-a181-november-4-2026">Dated correction: A181, November 4, 2026</h2>
+<p>Updates only <strong>FIVE</strong> in historical <strong>A151</strong>. The original shared report and unrelated issuer components must remain unchanged.</p>
+<p><strong>Wait. Revised $100.24/$192.39/$271.75 scenarios replace FIVE only in A151. The old assertion that $236.19 exceeds even the bull case is withdrawn. Tariff refund, prior charges and cash bridge normalized; 9.5% central WACC is explicit.</strong></p>
+<p>Prepared November4,2026 after10:00UTC. Source cutoff is retained below; later event completion has not been verified.</p>
+<p><strong>Price audit:</strong> November3 scanner $236.19; separately sourced regular close $236.19. Scanner header timezone is not certified.</p>
+<p><strong>Coverage and source limits:</strong> FY2023–FY2025; Q3–Q4 FY2025 and Q1–Q2 FY2026; TTM August2025/2026. FY2023 has53 weeks; no false calendar-adjusted growth claim.</p>
+<p><strong>Next review:</strong> Recheck the next earnings date and current technical/portfolio conditions before any entry; December 2 was a provider estimate, not confirmed issuer guidance.</p>
+<p><strong>No entry approved.</strong> No new position, quantity, buy ceiling or stop. No universal15/20/25% valuation-discount rule.</p>
+<hr />
+<h1 id="five-suplemento-independiente-de-cierre-fundamental-de-a151">FIVE: suplemento independiente de cierre fundamental de A151</h1>
+<p><strong>Versión 2, 4 de noviembre de 2026, 06:09 UTC. Investigación fundamental concluida: ESPERAR; sin aprobación de entrada.</strong> Sustituye únicamente la valoración y las normalizaciones de FIVE en A151. No modifica FLS. USD millones salvo precios y ratios. Datos disponibles hasta esta hora; estados más recientes al 1 de agosto de 2026.</p>
+<h2 id="conclusión-y-correcciones-materiales">Conclusión y correcciones materiales</h2>
+<p>FIVE recuperó tráfico y rentabilidad, incluso sin el reembolso arancelario. La caja económica TTM mejora aproximadamente <strong>26.3%</strong>, mientras el beneficio operativo crece <strong>63.0–79.1%</strong> según el tratamiento de los costos excepcionales antiguos. La recuperación no depende de recompras. Pero a <strong>$236.19</strong>, el negocio exige un crecimiento y margen superiores al caso central y cotiza con prima frente a comparables.</p>
+<p>La valoración revisada es <strong>$100 / $192 / $272</strong> en escenarios desfavorable, central y favorable. No son probabilidades, límites garantizados ni órdenes. <strong>La antigua afirmación de que el precio supera incluso el escenario favorable queda retirada.</strong> El costo de capital previo de 11.5% era una hipótesis de riesgo, no una beta verificada. La estimación independiente descrita abajo respalda 9.5% como centro, con incertidumbre considerable. Aun con ese cambio, el caso central queda 18.5% debajo del cierre. No se impone un descuento universal de 15%, 20% o 25%: la decisión depende de las hipótesis, su incertidumbre y el precio.</p>
+<p>El cierre de <strong>3-nov-2026, 16:00 EST</strong>, coincide exactamente con $236.19 del scanner. El máximo de 52 semanas del proveedor es $263.88: caída de 10.49%, no evidencia suficiente por sí sola de infravaloración. La última publicación de resultados fue el 2-sep y el 10-Q se presentó el 3-sep. No se encontró anuncio oficial de resultados para la semana 2–6 de noviembre. La fecha 2-dic es <strong>estimada por proveedor</strong>, no confirmada por la empresa; no se convierte esa ausencia de anuncio en un veto automático a investigar. Antes de una eventual entrada habría que comprobar de nuevo calendario, precio y condición técnica.</p>
+<h2 id="tres-ejercicios-cuatro-trimestres-y-ttm-comparables">1. Tres ejercicios, cuatro trimestres y TTM comparables</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Período</th>
+<th>Ventas</th>
+<th>EBIT GAAP</th>
+<th>EBIT económico</th>
+<th>NI GAAP</th>
+<th>CFO</th>
+<th>Capex caja</th>
+<th>SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td>3,559.369</td>
+<td>385.571</td>
+<td>385.571</td>
+<td>301.106</td>
+<td>499.619</td>
+<td>335.050</td>
+<td>17.859</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td>3,876.527</td>
+<td>323.817</td>
+<td>314.574</td>
+<td>253.611</td>
+<td>430.648</td>
+<td>323.994</td>
+<td>15.589</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td>4,764.147</td>
+<td>457.399</td>
+<td>457.399</td>
+<td>358.641</td>
+<td>586.428</td>
+<td>174.741</td>
+<td>34.680</td>
+</tr>
+<tr class="even">
+<td>Q3_2025</td>
+<td>1,038.293</td>
+<td>43.305</td>
+<td>43.305</td>
+<td>36.505</td>
+<td>-80.125</td>
+<td>53.032</td>
+<td>7.753</td>
+</tr>
+<tr class="odd">
+<td>Q4_2025</td>
+<td>1,728.480</td>
+<td>310.882</td>
+<td>310.882</td>
+<td>238.226</td>
+<td>440.895</td>
+<td>40.781</td>
+<td>8.508</td>
+</tr>
+<tr class="even">
+<td>Q1_2026</td>
+<td>1,285.602</td>
+<td>154.243</td>
+<td>154.243</td>
+<td>123.056</td>
+<td>227.224</td>
+<td>37.189</td>
+<td>5.132</td>
+</tr>
+<tr class="odd">
+<td>Q2_2026</td>
+<td>1,261.493</td>
+<td>275.350</td>
+<td>111.767</td>
+<td>221.395</td>
+<td>215.486</td>
+<td>73.228</td>
+<td>9.897</td>
+</tr>
+<tr class="even">
+<td>TTM_2025_08_02</td>
+<td>4,231.969</td>
+<td>349.370</td>
+<td>346.243</td>
+<td>273.054</td>
+<td>558.612</td>
+<td>213.450</td>
+<td>29.280</td>
+</tr>
+<tr class="odd">
+<td>TTM_2026_08_01</td>
+<td>5,313.868</td>
+<td>783.780</td>
+<td>620.197</td>
+<td>619.182</td>
+<td>803.480</td>
+<td>204.230</td>
+<td>31.290</td>
+</tr>
+</tbody>
+</table></div>
+<p>FY2023 terminó el 3-feb-2024 y contiene 53 semanas. FY2024 terminó el 1-feb-2025; FY2025, el 31-ene-2026. Los ejercicios siguientes son de 52 semanas. No se presenta el crecimiento FY2024/FY2023 como una comparación perfectamente ajustada por calendario. Q3 FY2025 terminó el 1-nov-2025; Q4, 31-ene-2026; Q1 FY2026, 2-may; Q2, 1-ago. Las cifras Q4 son anual menos nueve meses; los flujos Q3/Q2 se derivan de acumulados. Ambos TTM se construyen anual menos H1 anterior más H1 actual. Las series fuente y cada componente quedan en CSV, no sólo cifras redondeadas en prosa.</p>
+<p><strong>Normalización de resultados.</strong> Q2 y H1 FY2026 incluyen $163.583 de devolución de aranceles en costo de ventas y aproximadamente $5.9 de interés. Se eliminan de la capacidad de beneficio, no se repiten en las proyecciones y no se resta dos veces la misma entrada de caja. La empresa dice que los reembolsos pendientes no deberían ser materiales. Q2 EBIT sin reembolso es $111.767 frente a $52.365, y H1 $266.010 frente a $103.212. El NI TTM sin el beneficio arancelario después de impuestos comunicado de $128.823 es $490.359 frente a $273.054; esa comparación no normaliza los cargos antiguos.</p>
+<p>El puente conservador de la tabla retiene salarios, SBC, premios de retención, pérdidas de inventario, optimizaciones y costos de adquisición de arrendamientos como costos económicos. Además retira el crédito extraordinario de SBC de FY2024 de $9.243; de éste quedan $3.127 en el TTM anterior. Por ello EBIT económico anterior es $346.243, en lugar del $349.370 de la comparación que sólo eliminaba aranceles. El actual permanece $620.197.</p>
+<p>No se esconde la base deprimida: el EBIT ajustado del emisor fue $356.086 en FY2024 y $472.421 en FY2025, frente a GAAP $323.817/$457.399. Su TTM ajustado sería $395.614/$625.691. Manteniendo dentro los premios de retención, esos TTM serían <strong>$380.491/$620.196</strong>, crecimiento <strong>63.0%</strong>. El puente conservador da <strong>79.1%</strong>. La diferencia proviene principalmente del inventario dado de baja y costos de optimización antiguos, no de nuevos ingresos. No se afirma que todos esos cargos sean inexistentes o sin costo. La diferencia de $0.001 entre puentes actuales es redondeo publicado. El escenario forward conserva SBC y costos ordinarios.</p>
+<h2 id="caja-económica-puente-verificable-no-sustitución-de-impuestos-por-conjeturas">2. Caja económica: puente verificable, no sustitución de impuestos por conjeturas</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Período</th>
+<th>FCF declarado¹</th>
+<th>Capex devengado²</th>
+<th>Variación operativa caja³</th>
+<th>Ajuste alquileres</th>
+<th>FCFF económico⁴</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td>164.569</td>
+<td>339.736</td>
+<td>-35.459</td>
+<td>51.515</td>
+<td>96.245</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td>106.654</td>
+<td>296.031</td>
+<td>-56.761</td>
+<td>45.891</td>
+<td>96.476</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td>411.687</td>
+<td>167.567</td>
+<td>12.330</td>
+<td>-8.540</td>
+<td>371.395</td>
+</tr>
+<tr class="even">
+<td>Q3_2025</td>
+<td>-133.157</td>
+<td>47.437</td>
+<td>-160.786</td>
+<td>-2.043</td>
+<td>-128.910</td>
+</tr>
+<tr class="odd">
+<td>Q4_2025</td>
+<td>400.114</td>
+<td>33.114</td>
+<td>87.362</td>
+<td>-3.843</td>
+<td>332.558</td>
+</tr>
+<tr class="even">
+<td>Q1_2026</td>
+<td>190.035</td>
+<td>60.794</td>
+<td>-0.031</td>
+<td>7.014</td>
+<td>112.994</td>
+</tr>
+<tr class="odd">
+<td>Q2_2026</td>
+<td>142.258</td>
+<td>62.376</td>
+<td>22.330</td>
+<td>-0.930</td>
+<td>94.052</td>
+</tr>
+<tr class="even">
+<td>TTM_2025_08_02</td>
+<td>345.162</td>
+<td>191.703</td>
+<td>68.880</td>
+<td>5.359</td>
+<td>325.267</td>
+</tr>
+<tr class="odd">
+<td>TTM_2026_08_01</td>
+<td>599.250</td>
+<td>203.721</td>
+<td>-51.125</td>
+<td>0.198</td>
+<td>410.695</td>
+</tr>
+</tbody>
+</table></div>
+<p>¹ CFO menos capex pagado: es una métrica apalancada declarada, no el FCFF de valoración. ² Capex devengado = capex caja + aumento/(reducción) de compras de activos aún no pagadas. ³ Suma de inventarios, prepagos operativos, cuentas por pagar operativas, salarios y otros devengos; excluye partidas fiscales. ⁴ EBIT económico × 75% + D&amp;A − capex devengado + variación operativa de caja + reconciliación de alquileres. La tasa 25% es un <strong>supuesto normalizado</strong>, no el impuesto efectivamente pagado por cada reembolso. La depreciación representa activos físicos; no se presupone inversión de reposición igual a cero.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente TTM</th>
+<th>Anterior agosto 2025</th>
+<th>Actual agosto 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CFO menos capex caja</td>
+<td>345.162</td>
+<td>599.250</td>
+</tr>
+<tr class="even">
+<td>SBC a deducir</td>
+<td>29.280</td>
+<td>31.290</td>
+</tr>
+<tr class="odd">
+<td>Impuesto: reconciliación a sustituir</td>
+<td>97.187</td>
+<td>203.315</td>
+</tr>
+<tr class="even">
+<td>Interés/otros ingresos no operativos a deducir</td>
+<td>17.991</td>
+<td>35.458</td>
+</tr>
+<tr class="odd">
+<td>Otros ajustes no monetarios a retirar</td>
+<td>1.870</td>
+<td>6.999</td>
+</tr>
+<tr class="even">
+<td>Beneficio arancelario operativo a retirar</td>
+<td>0.000</td>
+<td>163.583</td>
+</tr>
+<tr class="odd">
+<td>Crédito SBC excepcional a retirar</td>
+<td>3.127</td>
+<td>0.000</td>
+</tr>
+<tr class="even">
+<td>EBIT económico</td>
+<td>346.243</td>
+<td>620.197</td>
+</tr>
+<tr class="odd">
+<td>Impuesto operativo normalizado 25%</td>
+<td>86.561</td>
+<td>155.049</td>
+</tr>
+<tr class="even">
+<td>Variación de deuda de capex a deducir</td>
+<td>-21.747</td>
+<td>-0.509</td>
+</tr>
+<tr class="odd">
+<td>Resultado económico</td>
+<td>325.267</td>
+<td>410.695</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reproducir el resultado: tomar FCF declarado, restar SBC, sumar la reconciliación fiscal que se sustituye, restar ingresos de interés/otros, otros ajustes no monetarios, aranceles y crédito SBC, restar el impuesto normalizado sobre EBIT, y restar la variación de deuda de capex. El proxy fiscal es gasto fiscal menos impuesto diferido menos cambios de cuentas fiscales de la conciliación; <strong>no se etiqueta como efectivo pagado exacto</strong>. Se retiran todos los ingresos de intereses, incluidos los del reembolso, porque el excedente financiero se valora separadamente. No se añade SBC otra vez.</p>
+<p>La caja con capex pagado y tax normalizado es $303.520/$410.186; al neutralizar el momento del pago de activos queda <strong>$325.267/$410.695</strong>, +26.3%. Antes de cambios reales en capital operativo/alquileres, el indicador económico pasa de $251.028 a $461.622. El capital operativo aportó $68.880 en el TTM anterior y consumió $51.125 en el actual: el crecimiento no se explica por una liberación artificial de inventarios este año. El impuesto específico pagado sobre el reembolso no está desglosado. Este método cierra la comparación económica con hipótesis explícitas; <strong>no inventa ese dato de caja fiscal</strong>.</p>
+<p>No se deduce un segundo SBC capitalizado sin evidencia: los documentos revisados no desglosan una partida separada material de ese tipo. El capex recoge inversiones tangibles/sistemas; el gasto SBC declarado sigue siendo costo. Los ajustes de alquileres aportaron $51.515/$45.891 en FY2023/24, pero sólo $0.198 en el TTM actual. El DCF no perpetúa aquellos aportes. Una cuarta parte aislada no representa el año: Q3 absorbe inventario y Q4 concentra ventas/caja navideña.</p>
+<h2 id="negocio-balance-y-calidad-de-la-recuperación">3. Negocio, balance y calidad de la recuperación</h2>
+<p>Q2 ventas +22.9%, comps +14.1%, transacciones +13.6% y ticket +0.4%. Los 2,022 establecimientos crecieron 8.8%. H1 comps +18.3%. El inventario de $941.162 creció 17.7% interanual, menos que ventas trimestrales; no prueba ausencia de rebajas o shrink futuros. Los diluidos H1 subieron de 55.290m a 55.541m: la mejora operativa no es EPS generado únicamente por recompras.</p>
+<p>La ventaja es una propuesta reconocible de precio, compra por impulso y descubrimiento para jóvenes/familias, escala de compras y distribución. Es una ventaja comercial, <strong>no una barrera inexpugnable</strong>: otras cadenas, comercio electrónico y cambios de moda pueden erosionarla. La dirección apunta a más de 3,500 tiendas a largo plazo; no es un compromiso ni un techo físico probado. Su modelo de nueva tienda supone ~$2m de ventas en el primer año completo y ~$0.4m de inversión inicial neta de incentivos y proveedores. Es economía objetivo de tienda, no ROIC corporativo: no incluye gratuitamente todo el capital de centros logísticos, tecnología o corporativo.</p>
+<p>Guía FY2026: ventas $5.63–5.71bn, EPS ajustado $9.83–10.31, capex bruto $250–260m y ~150 aperturas netas. Unos $100m de capex son para aperturas; el resto para remodelaciones, reubicaciones, sistemas e infraestructura/logística. No se sostiene crecimiento rápido extrapolando el bajo capex FY2025. La guía Q3 de ventas $1.21–1.23bn, comps +8–10% y EPS $1.01–1.13 ya contempla moderación. Premios de retención excluidos de EPS ajustado siguen siendo costo económico aquí.</p>
+<p>Caja $561.083 + inversiones cortas $626.821 = $1,187.904, sin deuda financiera dispuesta al 1-ago. Se retienen $250m de caja operativa/estacional y se suma $937.904 al EV. Es una reserva analítica; variarla ±$100m cambia $1.80 por acción. No se confunde el balance de agosto con caja actualizada a noviembre ni se acreditan recompras futuras gratis. Se usan 55.5m acciones diluidas constantes. Los $2,038.638m de pasivos de arrendamiento <strong>no se restan otra vez</strong>, pues renta y renovaciones permanecen en los márgenes; esto no significa que las obligaciones desaparezcan.</p>
+<p>China es la principal fuente de mercancía importada, directa o indirectamente. El reembolso histórico no elimina riesgos de futuros aranceles, sourcing, transporte, salarios, inventarios y consumo discrecional. Los catalizadores verificables son próximas ventas/resultados oficiales y temporada navideña, no un día de resultados inventado. La hipótesis se debilita si tráfico se vuelve negativo, margen sin devoluciones se deteriora de forma persistente, inventarios crecen más que ventas o la expansión exige más reinversión de la proyectada. No se atribuye causalmente toda la caída bursátil a una noticia única: la documentación primaria sólo permite verificar el desempeño y riesgos, no probar que el descenso sea transitorio.</p>
+<h2 id="comparables-reales-fecha-común-y-normalizaciones-distintas-visibles">4. Comparables reales, fecha común y normalizaciones distintas visibles</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ticker</th>
+<th>Cierre 3-nov</th>
+<th>Ventas TTM</th>
+<th>EBIT normalizado</th>
+<th>Margen</th>
+<th>EV/ventas</th>
+<th>EV/EBIT</th>
+<th>Comps Q2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FIVE</td>
+<td>236.19</td>
+<td>5,313.868</td>
+<td>620.197</td>
+<td>11.67%</td>
+<td>2.24x</td>
+<td>19.21x</td>
+<td>14.1%</td>
+</tr>
+<tr class="even">
+<td>OLLI</td>
+<td>88.98</td>
+<td>2,793.108</td>
+<td>314.237</td>
+<td>11.25%</td>
+<td>1.74x</td>
+<td>15.45x</td>
+<td>-1.8%</td>
+</tr>
+<tr class="odd">
+<td>DLTR</td>
+<td>134.07</td>
+<td>20,049.400</td>
+<td>1,746.700</td>
+<td>8.71%</td>
+<td>1.37x</td>
+<td>15.73x</td>
+<td>3.7%</td>
+</tr>
+<tr class="even">
+<td>DG</td>
+<td>130.52</td>
+<td>43,637.998</td>
+<td>2,365.290</td>
+<td>5.42%</td>
+<td>0.73x</td>
+<td>13.48x</td>
+<td>3.5%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cierres de 3-nov-2026 de un mismo proveedor. Estados Q2 terminados 1-ago (DG 31-jul), TTM = FY2025 + H1 FY2026 − H1 FY2025. EV usa precio × diluidos medios Q2 como proxy transparente, deuda contable financiera y caja/inversiones, <strong>excluyendo arrendamientos operativos</strong>, con renta en EBIT. No son capitalizaciones spot exactas ni deuda a valor de mercado. Para este ratio estándar se resta toda la caja; el DCF retiene caja operativa, diferencia de método declarada.</p>
+<p>OLLI es el comparable más próximo por descubrimiento de productos de valor, pero compra liquidaciones de marcas, tiene tiendas mayores y sus comps Q2 fueron negativas. Su devolución fue $29.4m: $28.3 en operación y $1.1 en interés; que su EPS esté «ajustado» no la elimina. DLTR usa sólo operaciones continuadas Dollar Tree, sin Family Dollar: se retiran $369m de beneficio bruto y $85.7m de ingreso neto TTM de servicios transitorios. Se retienen $37m de reinversión y $13m de derechos especiales. Si se elimina sólo el beneficio neto arancelario de $319m, su EBIT sería $1,796.7 y EV/EBIT ~15.29x. DG es más defensiva y orientada a consumibles; sólo se dispone del beneficio <strong>neto estimado</strong>, 66pb de ventas Q2 (~$74.517m) después de reinversión. Su ratio es una referencia menos homogénea, no una normalización bruta certificada.</p>
+<p>Como contraste secundario, precio/EPS de guía excluyendo devoluciones: FIVE <strong>23.45x</strong>, OLLI <strong>20.97x</strong>, DLTR <strong>18.43x</strong>, DG <strong>17.06x</strong>. Para OLLI se retiran $29.4m a impuesto supuesto 25%/60m acciones de guía; DLTR retira el beneficio neto de $0.60 del año y DG $0.25. Las guías incluyen tratamientos propios y cambios de acciones: no se mezclan con EBIT como si fuesen idénticas. FIVE merece parte de la prima por tráfico/margen y menor deuda; la comparación no demuestra que cualquier prima esté justificada ni recomienda comprar los pares.</p>
+<h2 id="dcf-independiente-diez-años-anuales-y-costo-de-capital-comprobado">5. DCF independiente: diez años anuales y costo de capital comprobado</h2>
+<p>Descarga de precios ajustados mensuales de FIVE y SPY; se excluye noviembre incompleto. Con 58 retornos entre enero-2022 y octubre-2026, beta OLS = <strong>0.910</strong>, error estándar 0.388, R²=0.089. No se confunde el precio corriente con el beta de un proveedor de metodología no documentada. Treasury 10 años de 3-nov = <strong>4.95%</strong>; ERP <strong>5% supuesto</strong>; costo de equity = 9.499%, redondeado a <strong>9.5%</strong>. Sin deuda financiera, WACC se aproxima al equity cost bajo la convención de renta operativa. Beta es ruidosa: intervalo estadístico aproximado 0.13–1.69, no un rango de valor certificado. Se usa sensibilidad, no precisión ficticia. No se añade un premio arbitrario y después un descuento universal para penalizar dos veces el mismo riesgo.</p>
+<p>El horizonte son diez períodos anuales forward aproximados desde noviembre de 2026; año 1 <strong>no es guía oficial ni el resto de FY2026</strong>. Ancla de ventas $5,670m (guía media), año 1 $6,350m. Aproxima expansión de unidades y comps moderados. No hay una proyección trimestral navideña exacta; la prueba de convención de cobro a mitad de año aumenta el caso central a $200.54, sin cambiar ESPERAR. El desfase del balance de agosto se mantiene como incertidumbre, sin fabricar Q3.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th>Ventas año 1</th>
+<th>Crecimiento años 2–5</th>
+<th>Margen año 1→5→10</th>
+<th>WACC</th>
+<th>g</th>
+<th>ROIC terminal</th>
+<th>D&amp;A/capex/ΔNWC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td>6,000</td>
+<td>7%/6%/5%/4%</td>
+<td>10.5%/11.0%/11.0%</td>
+<td>11.5%</td>
+<td>2.0%</td>
+<td>15%</td>
+<td>3.5%/5.5%/12.0%</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>6,350</td>
+<td>11%/10%/9%/8%</td>
+<td>12.3%/13.0%/13.0%</td>
+<td>9.5%</td>
+<td>2.5%</td>
+<td>18%</td>
+<td>3.5%/5.0%/10.0%</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>6,600</td>
+<td>14%/12%/11%/10%</td>
+<td>13.0%/14.0%/14.0%</td>
+<td>9.0%</td>
+<td>3.0%</td>
+<td>22%</td>
+<td>3.5%/4.8%/8.0%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tasa fiscal 25% en todos los casos. ΔNWC se aplica a ventas incrementales; D&amp;A/capex a ventas. Cinco años explícitos y cinco de transición: crecimiento y margen convergen al estado estable, mientras la reinversión neta pasa gradualmente de capex − D&amp;A + ΔNWC a NOPAT × crecimiento/ROIC. En año 10/terminal se financia íntegramente el crecimiento. Los CSV muestran capex implícito tras la transición; permanece por encima de D&amp;A en todos los años y escenarios. Los activos no se regeneran gratis. SBC ya está en margen, sin deducción doble. No hay adquisiciones o recompras gratuitas.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>EV</th>
+<th>Valor/acción</th>
+<th>Diferencia a $236.19</th>
+<th>FCFF año 1</th>
+<th>FCFF año 10</th>
+<th>PV terminal/EV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td>4,625.3</td>
+<td>100.24</td>
+<td>-57.6%</td>
+<td>312.9</td>
+<td>610.0</td>
+<td>47.7%</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>9,739.7</td>
+<td>192.39</td>
+<td>-18.5%</td>
+<td>422.5</td>
+<td>963.6</td>
+<td>58.5%</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>14,144.1</td>
+<td>271.75</td>
+<td>15.1%</td>
+<td>483.3</td>
+<td>1,235.8</td>
+<td>63.4%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las tres agendas completas de diez años se incluyen en el modelo y CSV anexos. La agenda central es:</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th>Ventas</th>
+<th>Margen EBIT</th>
+<th>NOPAT</th>
+<th>D&amp;A</th>
+<th>Capex implícito</th>
+<th>ΔNWC</th>
+<th>Reinversión neta</th>
+<th>FCFF</th>
+<th>PV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>6,350.0</td>
+<td>12.30%</td>
+<td>585.8</td>
+<td>222.3</td>
+<td>317.5</td>
+<td>68.0</td>
+<td>163.2</td>
+<td>422.5</td>
+<td>385.9</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>7,048.5</td>
+<td>12.47%</td>
+<td>659.5</td>
+<td>246.7</td>
+<td>352.4</td>
+<td>69.9</td>
+<td>175.6</td>
+<td>483.9</td>
+<td>403.6</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>7,753.4</td>
+<td>12.65%</td>
+<td>735.6</td>
+<td>271.4</td>
+<td>387.7</td>
+<td>70.5</td>
+<td>186.8</td>
+<td>548.8</td>
+<td>418.0</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>8,451.2</td>
+<td>12.83%</td>
+<td>812.9</td>
+<td>295.8</td>
+<td>422.6</td>
+<td>69.8</td>
+<td>196.5</td>
+<td>616.3</td>
+<td>428.7</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>9,127.2</td>
+<td>13.00%</td>
+<td>889.9</td>
+<td>319.5</td>
+<td>456.4</td>
+<td>67.6</td>
+<td>204.5</td>
+<td>685.4</td>
+<td>435.4</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>9,757.0</td>
+<td>13.00%</td>
+<td>951.3</td>
+<td>341.5</td>
+<td>518.9</td>
+<td>63.0</td>
+<td>240.4</td>
+<td>710.9</td>
+<td>412.4</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>10,322.9</td>
+<td>13.00%</td>
+<td>1,006.5</td>
+<td>361.3</td>
+<td>561.3</td>
+<td>56.6</td>
+<td>256.6</td>
+<td>749.9</td>
+<td>397.3</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>10,808.1</td>
+<td>13.00%</td>
+<td>1,053.8</td>
+<td>378.3</td>
+<td>579.1</td>
+<td>48.5</td>
+<td>249.3</td>
+<td>804.4</td>
+<td>389.2</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>11,197.2</td>
+<td>13.00%</td>
+<td>1,091.7</td>
+<td>391.9</td>
+<td>569.0</td>
+<td>38.9</td>
+<td>216.0</td>
+<td>875.7</td>
+<td>386.9</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>11,477.1</td>
+<td>13.00%</td>
+<td>1,119.0</td>
+<td>401.7</td>
+<td>529.1</td>
+<td>28.0</td>
+<td>155.4</td>
+<td>963.6</td>
+<td>388.8</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="agendas-desfavorable-y-favorable">Agendas desfavorable y favorable</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>Año</th>
+<th>Ventas</th>
+<th>NOPAT</th>
+<th>Reinversión neta</th>
+<th>FCFF</th>
+<th>PV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td>1</td>
+<td>6,000.0</td>
+<td>472.5</td>
+<td>159.6</td>
+<td>312.9</td>
+<td>280.6</td>
+</tr>
+<tr class="even">
+<td>bear</td>
+<td>2</td>
+<td>6,420.0</td>
+<td>511.6</td>
+<td>178.8</td>
+<td>332.8</td>
+<td>267.7</td>
+</tr>
+<tr class="odd">
+<td>bear</td>
+<td>3</td>
+<td>6,805.2</td>
+<td>548.7</td>
+<td>182.3</td>
+<td>366.3</td>
+<td>264.3</td>
+</tr>
+<tr class="even">
+<td>bear</td>
+<td>4</td>
+<td>7,145.5</td>
+<td>582.8</td>
+<td>183.7</td>
+<td>399.1</td>
+<td>258.2</td>
+</tr>
+<tr class="odd">
+<td>bear</td>
+<td>5</td>
+<td>7,431.3</td>
+<td>613.1</td>
+<td>182.9</td>
+<td>430.2</td>
+<td>249.6</td>
+</tr>
+<tr class="even">
+<td>bear</td>
+<td>6</td>
+<td>7,698.8</td>
+<td>635.2</td>
+<td>179.4</td>
+<td>455.8</td>
+<td>237.2</td>
+</tr>
+<tr class="odd">
+<td>bear</td>
+<td>7</td>
+<td>7,945.2</td>
+<td>655.5</td>
+<td>169.0</td>
+<td>486.5</td>
+<td>227.1</td>
+</tr>
+<tr class="even">
+<td>bear</td>
+<td>8</td>
+<td>8,167.6</td>
+<td>673.8</td>
+<td>151.5</td>
+<td>522.3</td>
+<td>218.7</td>
+</tr>
+<tr class="odd">
+<td>bear</td>
+<td>9</td>
+<td>8,363.7</td>
+<td>690.0</td>
+<td>126.5</td>
+<td>563.5</td>
+<td>211.6</td>
+</tr>
+<tr class="even">
+<td>bear</td>
+<td>10</td>
+<td>8,530.9</td>
+<td>703.8</td>
+<td>93.8</td>
+<td>610.0</td>
+<td>205.4</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>1</td>
+<td>6,600.0</td>
+<td>643.5</td>
+<td>160.2</td>
+<td>483.3</td>
+<td>443.4</td>
+</tr>
+<tr class="even">
+<td>bull</td>
+<td>2</td>
+<td>7,524.0</td>
+<td>747.7</td>
+<td>171.7</td>
+<td>576.0</td>
+<td>484.8</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>3</td>
+<td>8,426.9</td>
+<td>853.2</td>
+<td>181.8</td>
+<td>671.4</td>
+<td>518.5</td>
+</tr>
+<tr class="even">
+<td>bull</td>
+<td>4</td>
+<td>9,353.8</td>
+<td>964.6</td>
+<td>195.8</td>
+<td>768.9</td>
+<td>544.7</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>5</td>
+<td>10,289.2</td>
+<td>1,080.4</td>
+<td>208.6</td>
+<td>871.8</td>
+<td>566.6</td>
+</tr>
+<tr class="even">
+<td>bull</td>
+<td>6</td>
+<td>11,174.1</td>
+<td>1,173.3</td>
+<td>264.6</td>
+<td>908.7</td>
+<td>541.8</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>7</td>
+<td>11,978.6</td>
+<td>1,257.8</td>
+<td>296.7</td>
+<td>961.1</td>
+<td>525.7</td>
+</tr>
+<tr class="even">
+<td>bull</td>
+<td>8</td>
+<td>12,673.4</td>
+<td>1,330.7</td>
+<td>298.6</td>
+<td>1,032.1</td>
+<td>518.0</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>9</td>
+<td>13,231.0</td>
+<td>1,389.3</td>
+<td>265.6</td>
+<td>1,123.7</td>
+<td>517.4</td>
+</tr>
+<tr class="even">
+<td>bull</td>
+<td>10</td>
+<td>13,627.9</td>
+<td>1,430.9</td>
+<td>195.1</td>
+<td>1,235.8</td>
+<td>522.0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Terminal central: NOPAT11 $1146.996, reinversión $159.305, FCFF11 $987.691; Gordon g 2.5% / WACC 9.5%. Se suma sólo $937.904 de efectivo excedente y se divide por 55.5m acciones. Los escenarios nuevos sustituyen los casos de A151 porque ahora exponen todos sus parámetros. A 11.5% con operación central este cálculo vale $149.61, próximo al antiguo $149.73; la diferencia menor proviene de reconstrucción/convención, no de un hallazgo operativo. El cambio grande a $192.39 es costo de capital. <strong>No mantener simultáneamente objetivos viejos y nuevos como equivalentes.</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th>g 2.0%</th>
+<th>g 2.5%</th>
+<th>g 3.0%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8.5%</td>
+<td>216.52</td>
+<td>224.76</td>
+<td>234.40</td>
+</tr>
+<tr class="even">
+<td>9.5%</td>
+<td>187.07</td>
+<td>192.39</td>
+<td>198.47</td>
+</tr>
+<tr class="odd">
+<td>10.5%</td>
+<td>164.70</td>
+<td>168.26</td>
+<td>172.25</td>
+</tr>
+<tr class="even">
+<td>11.5%</td>
+<td>147.17</td>
+<td>149.61</td>
+<td>152.30</td>
+</tr>
+<tr class="odd">
+<td>12.5%</td>
+<td>133.09</td>
+<td>134.79</td>
+<td>136.64</td>
+</tr>
+</tbody>
+</table></div>
+<p>La combinación 8.5%/3% casi iguala el precio con operación central; requiere capital más barato y terminal más favorable que el centro. La incertidumbre tiene efecto material. No se presenta una baja del precio de 10.5% desde máximos como equivalente a un descuento a valor.</p>
+<h2 id="reverse-conjunto-y-qué-tendría-que-ser-cierto">6. Reverse conjunto y qué tendría que ser cierto</h2>
+<p>Para igualar $236.19 se mantiene 9.5% de descuento, 25% de impuesto, reinversión, 18% ROIC terminal y 2.5% g; se varían simultáneamente margen constante y crecimiento de ventas durante cinco años, luego se modera crecimiento cinco años:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Margen EBIT constante</th>
+<th>Crecimiento anual ventas años 1–5 necesario</th>
+<th>Ventas año 10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>12%</td>
+<td>15.69%</td>
+<td>17,037</td>
+</tr>
+<tr class="even">
+<td>13%</td>
+<td>13.92%</td>
+<td>15,269</td>
+</tr>
+<tr class="odd">
+<td>14%</td>
+<td>12.30%</td>
+<td>13,799</td>
+</tr>
+<tr class="even">
+<td>16%</td>
+<td>9.44%</td>
+<td>11,497</td>
+</tr>
+<tr class="odd">
+<td>18%</td>
+<td>6.96%</td>
+<td>9,786</td>
+</tr>
+</tbody>
+</table></div>
+<p>A margen 13%, precio exige ~13.92% anual cinco años y $15.27bn de ventas año 10, frente a $11.48bn central. Si existieran 3,500 tiendas en ese momento, serían ~$4.36m de ventas por tienda frente a ~$3.28m central; es un contraste ilustrativo, no un pronóstico de tiendas ni límite al potencial. Con margen 16%, el crecimiento requerido cae a ~9.44%, pero el margen debe superar sustancialmente el normalizado TTM de 11.67% y sostenerse. Son combinaciones, no una lectura única de expectativas del mercado.</p>
+<p><strong>Decisión final: ESPERAR.</strong> Investigación financiera y valoración completadas con incertidumbres explícitas, no «compra aprobada» ni tarea bloqueada por un calendario futuro no anunciado. Confianza alta en la conciliación de estados y el reembolso, media en recuperación sostenible y comparación de pares, moderada/baja en un valor puntual de diez años. Revisar con datos nuevos de tráfico, inventario, margen sin devoluciones y reinversión, o un precio distinto. El resultado no depende de un umbral universal de crecimiento ni de descuento.</p>
+<h2 id="fuentes-y-reproducción">Fuentes y reproducción</h2>
+<p>Los hechos financieros proceden de los documentos del emisor/SEC; datos de mercado de los proveedores identificados. Se conserva HTML/tablas de los estados SEC, scripts, series de retorno, CSV y JSON; los precios de cierre se verificaron además mediante consulta web a las URLs indicadas. Los cálculos son propios. No se usan estimaciones de consenso ocultas.</p>
+<ul>
+<li>fy25: https://www.sec.gov/Archives/edgar/data/1177609/000117760926000010/five-20260131.htm</li>
+<li>q325: https://www.sec.gov/Archives/edgar/data/1177609/000117760925000052/five-20251101.htm</li>
+<li>q225: https://www.sec.gov/Archives/edgar/data/1177609/000117760925000041/five-20250802.htm</li>
+<li>q126: https://www.sec.gov/Archives/edgar/data/1177609/000117760926000020/five-20260502.htm</li>
+<li>q226: https://www.sec.gov/Archives/edgar/data/1177609/000117760926000027/five-20260801.htm</li>
+<li>fy25_release: https://www.sec.gov/Archives/edgar/data/1177609/000117760926000006/q42025fivebelowexhibit991.htm</li>
+<li>q225_release: https://www.sec.gov/Archives/edgar/data/1177609/000117760925000037/q22025fivebelowexhibit991.htm</li>
+<li>q226_release_sec: https://www.sec.gov/Archives/edgar/data/1177609/000117760926000023/q22026fivebelowexhibit991.htm</li>
+<li>olli_fy25: https://www.sec.gov/Archives/edgar/data/1639300/000114036126010409/ef20060524_10k.htm</li>
+<li>olli_q226: https://www.sec.gov/Archives/edgar/data/1639300/000110465926104755/olli-20260801x10q.htm</li>
+<li>dltr_fy25: https://www.sec.gov/Archives/edgar/data/935703/000093570326000025/dltr-20260131.htm</li>
+<li>dltr_q226: https://www.sec.gov/Archives/edgar/data/935703/000093570326000109/dltr-20260801.htm</li>
+<li>dltr_q226_release: https://corporate.dollartree.com/news-media/press-releases/detail/310/dollar-tree-inc-reports-strong-second-quarter-results</li>
+<li>dg_fy25: https://www.sec.gov/Archives/edgar/data/29534/000110465926032325/dg-20260130x10k.htm</li>
+<li>dg_q226: https://www.sec.gov/Archives/edgar/data/29534/000110465926101932/dg-20260731x10q.htm</li>
+<li>dg_q226_release_sec: https://www.sec.gov/Archives/edgar/data/29534/000110465926101918/tm2623914d1_ex99.htm</li>
+<li>treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value=2026</li>
+<li>five_prices: https://stockanalysis.com/stocks/five/history/</li>
+<li>olli_prices: https://stockanalysis.com/stocks/olli/history/</li>
+<li>dltr_prices: https://stockanalysis.com/stocks/dltr/history/</li>
+<li>dg_prices: https://stockanalysis.com/stocks/dg/history/</li>
+<li>five_quote: https://stockanalysis.com/stocks/five/</li>
+<li>five_news: https://investor.fivebelow.com/news/default.aspx</li>
+<li>five_events: https://investor.fivebelow.com/events/default.aspx</li>
+<li>beta_FIVE: https://query1.finance.yahoo.com/v8/finance/chart/FIVE?range=5y&amp;interval=1mo</li>
+<li>beta_SPY: https://query1.finance.yahoo.com/v8/finance/chart/SPY?range=5y&amp;interval=1mo</li>
+</ul>
+<p>Reproducir: build_history.py, beta.py, peers.py, model.py y write_report.py. Las comprobaciones incluyen 75 puentes históricos y 39 pruebas del modelo, más verificaciones del paquete. No se incorporan cambios a FLS.</p>
+<h2 id="full-dossier-and-analyst-audit-files">Full dossier and analyst audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/source_report.md">source_report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/all_history.csv">all_history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/base_10year_fcff.csv">base_10year_fcff.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/bear_10year_fcff.csv">bear_10year_fcff.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/beta_estimate.json">beta_estimate.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/beta_return_series.csv">beta_return_series.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/bull_10year_fcff.csv">bull_10year_fcff.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/comparative_ttm.csv">comparative_ttm.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/four_quarters.csv">four_quarters.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/history.json">history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/history_checks.csv">history_checks.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/joint_reverse.csv">joint_reverse.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/manifest.json">manifest.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/model_checks.csv">model_checks.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/package_checks.csv">package_checks.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/peer_comparison.csv">peer_comparison.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/peer_comparison.json">peer_comparison.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/source_ledger.json">source_ledger.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/three_fiscal_years.csv">three_fiscal_years.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/valuation.json">valuation.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FIVE/wacc_growth_sensitivity.csv">wacc_growth_sensitivity.csv</a></li>
+</ul>
+</main></body></html>

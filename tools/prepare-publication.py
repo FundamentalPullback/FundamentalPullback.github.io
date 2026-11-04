@@ -13,6 +13,10 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 
 def main():
+    # Fail before quote refresh/tests if canonical Sheet reconciliation is absent.
+    subprocess.run([sys.executable, str(ROOT / "tools/stage35-publication.py"),
+                    "validate", "--site-root", str(ROOT)], check=True)
+    subprocess.run([sys.executable, str(ROOT / "tools/test-stage35-publication.py")], check=True)
     subprocess.run([sys.executable, str(ROOT / 'tools/refresh-tradingview-symbols.py'),
                     '--site-root', str(ROOT)], check=True)
     for test in ('test-stock-profiles.cjs', 'test-stock-cards.cjs', 'test-stock-quotes.cjs', 'test-stock-navigation.cjs', 'test-stock-status.cjs', 'test-research-workspace.cjs', 'test-stock-scan-filter.cjs', 'test-floating-navigation.cjs'):
@@ -38,3 +42,4 @@ if __name__ == '__main__':
     except (OSError, ValueError, subprocess.CalledProcessError) as exc:
         print('Publication preparation stopped: ' + str(exc), file=sys.stderr)
         sys.exit(1)
+
