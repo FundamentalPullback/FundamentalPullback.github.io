@@ -1,0 +1,257 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TSM · Actualización parcial · caja, capital y valoración pendientes · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/TSM">← TSM profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Actualización parcial · caja, capital y valoración pendientes</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="tsm-a213-investigación-del-4-de-noviembre-de-2026">TSM · A213 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Actualización parcial auditada: fuerte crecimiento operativo y Q3 ya incorporado. CFO menos PPE no es owner FCF; faltan intangibles, SBC, leases y capital para valorar. Sin DCF, valor total ni rango certificados. El 10 de noviembre son ventas mensuales, no resultados trimestrales. Sin entrada.</strong></p>
+<p>Audited partial update: strong operating growth and Q3 incorporated. CFO less PPE is not owner FCF; intangibles, SBC, leases and capital remain unresolved for valuation. No certified DCF, total value or range. November 10 concerns monthly sales, not quarterly earnings. No entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/TSM.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-28, 431.00 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 404.80 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04 18:22 UTC; revisión mecánica independiente posterior cerrada para investigación parcial.</p>
+<p>A105 conserva su referencia del 27 de octubre, 436,63 USD. Última fila real del escáner del 28 de octubre: 431,00 USD; cierre regular del 3 de noviembre: 404,80 USD. No se inventa una sesión nueva ni un valor cero para datos ausentes. El ADR representa cinco acciones ordinarias. La revisión parcial no cuenta como último análisis completo ni modifica gestión u operaciones.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="tsm-crecimiento-excepcional-caja-aún-sin-conciliación-integral">TSM — crecimiento excepcional, caja aún sin conciliación integral</h1>
+<p><strong>Actualización fundamental parcial. Sin valoración intrínseca, sin aprobación de entrada y sin cierre integral de Stage 3.</strong> Corte: 4 de noviembre de 2026, 18:22 UTC. Auditoría independiente completada: investigación parcial, sin certificación de valoración ni de Stage 3 integral. No altera cartera, operaciones ni A105.</p>
+<h2 id="conclusión-y-precio">1. Conclusión y precio</h2>
+<p>TSMC combina escala, liderazgo tecnológico y expansión de beneficios operativos. Sin embargo, el crecimiento de caja exige separar inversión industrial, cobros fiscales, intereses y obligaciones consolidadas. El dossier cierra la historia disponible y explica sus límites; no rellena las partidas omitidas con cero ni transforma un diferencial de caja en owner earnings.</p>
+<p>Referencia bursátil: cierre del 3 de noviembre de 2026, <strong>404,80 USD por ADR</strong>, fuente secundaria Stockanalysis contrastada con Yahoo. A105 conserva su referencia del 27 de octubre de 436,63 USD; la última observación real del escáner es 28 de octubre, 431 USD. No se ha fabricado una nueva sesión de escáner ni señal técnica.</p>
+<p>Cada ADR representa cinco acciones ordinarias. La conversión contextual utiliza <strong>32,760 NTD por USD</strong>, cierre interbancario publicado por CBC el 3 de noviembre; no confundirlo con 31,983 medio Q3, 31,880 del balance ni 31,8 supuesto en la guía. Los 25.932 millones de acciones diluidas medias Q3 equivalen a 5.186,4 millones de ADR: sirven como aproximación, no como recuento real vigente. A ese denominador, la capitalización indicativa es 2.099.455 millones USD. No constituye un enterprise value certificado.</p>
+<h2 id="historia-financiera-reproducible">2. Historia financiera reproducible</h2>
+<p>NTD millones, salvo indicación expresa. NI es atribuible a la matriz, distinto del beneficio consolidado. EBIT es resultado de operaciones, sin ganancias financieras. Las cifras del resumen Q3 están redondeadas a millones; las derivaciones desde estados completos mantienen decimales solo para reproducción, no por precisión económica.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NI matriz</th>
+<th style="text-align: right;">CFO IFRS</th>
+<th style="text-align: right;">PPE caja</th>
+<th style="text-align: right;">Intangibles caja</th>
+<th style="text-align: right;">SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">2.161.736</td>
+<td style="text-align: right;">921.466</td>
+<td style="text-align: right;">851.740</td>
+<td style="text-align: right;">1.241.967</td>
+<td style="text-align: right;">949.817</td>
+<td style="text-align: right;">5.518</td>
+<td style="text-align: right;">483</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">2.894.308</td>
+<td style="text-align: right;">1.322.053</td>
+<td style="text-align: right;">1.158.380</td>
+<td style="text-align: right;">1.826.177</td>
+<td style="text-align: right;">956.006</td>
+<td style="text-align: right;">8.876</td>
+<td style="text-align: right;">1.243</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">3.809.054</td>
+<td style="text-align: right;">1.936.092</td>
+<td style="text-align: right;">1.697.604</td>
+<td style="text-align: right;">2.274.976</td>
+<td style="text-align: right;">1.272.410</td>
+<td style="text-align: right;">10.147</td>
+<td style="text-align: right;">1.246</td>
+</tr>
+<tr class="even">
+<td>Q42025</td>
+<td style="text-align: right;">1.046.090</td>
+<td style="text-align: right;">564.902</td>
+<td style="text-align: right;">485.465</td>
+<td style="text-align: right;">725.509</td>
+<td style="text-align: right;">356.906</td>
+<td style="text-align: right;">4.552</td>
+<td style="text-align: right;">173</td>
+</tr>
+<tr class="odd">
+<td>Q12026</td>
+<td style="text-align: right;">1.134.103</td>
+<td style="text-align: right;">658.966</td>
+<td style="text-align: right;">572.480</td>
+<td style="text-align: right;">698.976</td>
+<td style="text-align: right;">350.763</td>
+<td style="text-align: right;">933</td>
+<td style="text-align: right;">114</td>
+</tr>
+<tr class="even">
+<td>Q22026</td>
+<td style="text-align: right;">1.270.380</td>
+<td style="text-align: right;">766.603</td>
+<td style="text-align: right;">706.562</td>
+<td style="text-align: right;">783.365</td>
+<td style="text-align: right;">496.002</td>
+<td style="text-align: right;">2.943</td>
+<td style="text-align: right;">123</td>
+</tr>
+<tr class="odd">
+<td>Q32026</td>
+<td style="text-align: right;">1.494.243</td>
+<td style="text-align: right;">876.445</td>
+<td style="text-align: right;">763.064</td>
+<td style="text-align: right;">919.776</td>
+<td style="text-align: right;">443.206</td>
+<td style="text-align: right;">No desglosado</td>
+<td style="text-align: right;">No desglosado</td>
+</tr>
+<tr class="even">
+<td>TTM2025Q3</td>
+<td style="text-align: right;">3.631.425</td>
+<td style="text-align: right;">1.796.902</td>
+<td style="text-align: right;">1.571.931</td>
+<td style="text-align: right;">2.169.672</td>
+<td style="text-align: right;">1.277.453</td>
+<td style="text-align: right;">8.643</td>
+<td style="text-align: right;">1.580</td>
+</tr>
+<tr class="odd">
+<td>TTM2026Q3</td>
+<td style="text-align: right;">4.944.817</td>
+<td style="text-align: right;">2.866.916</td>
+<td style="text-align: right;">2.527.571</td>
+<td style="text-align: right;">3.127.626</td>
+<td style="text-align: right;">1.646.877</td>
+<td style="text-align: right;">No desglosado</td>
+<td style="text-align: right;">No desglosado</td>
+</tr>
+</tbody>
+</table></div>
+<p>El TTM aumenta ingresos un <strong>36,17 %</strong>, EBIT un <strong>59,55 %</strong> y CFO un <strong>44,15 %</strong>. El margen operativo pasa del <strong>49,48 % al 57,98 %</strong>. Existe progreso operativo además de factores no operativos. D&amp;A TTM es 746.304 millones NTD; EPS diluido ordinario TTM aproximado 97,47 NTD por roll-forward FY2025 menos 9M2025 más 9M2026 (65,47 − 46,75 + 78,75). La suma de los cuatro trimestres con Q2 publicado directamente resulta 97,48 (18,72 + 22,08 + 27,25 + 29,43). La diferencia de 0,01 refleja redondeo y medias ponderadas; ninguno es un EPS TTM certificado por el emisor.</p>
+<p>Q4 2025 se obtiene restando nueve meses de FY2025. Q2 caja se obtiene restando Q1 de H1. Q2 EPS publicado 27,25 se conserva, sin inferirlo de EPS acumulados que emplean medias ponderadas diferentes. Los inputs, fórmulas y propagación de valores desconocidos se entregan en history/.</p>
+<h2 id="calidad-del-beneficio-y-de-la-caja">3. Calidad del beneficio y de la caja</h2>
+<p><strong>Los ingresos TTM crecen un 36,17 % y el EBIT un 59,55 %, hasta 4.944.817 y 2.866.916 millones NTD, respectivamente.</strong></p>
+<p>La venta parcial de VIS en mayo reduce la participación al 19 % y elimina la influencia significativa. La ganancia de 63.202,285 millones NTD incluye revalorización no monetaria del remanente, mientras los cobros de venta son 24.301,349 millones. Está fuera de EBIT; el CFO ya revierte la ganancia. No restarla de nuevo del EBIT ni llamar orgánico a todo el crecimiento de beneficio neto. No se presume un ajuste fiscal exacto sin desglose.</p>
+<p><strong>CFO menos PPE asciende a 1.480.749 millones NTD en el TTM, pero faltan intangibles, SBC y arrendamientos Q3 para certificar owner FCF.</strong> La cifra es un diferencial bruto, no FCF integral. En IFRS, los intereses pagados se clasifican en financiación y los cobrados en inversión. Restar los 20.054 millones de intereses pagados reduce ese diferencial a 1.460.695 millones, todavía sin cerrar los demás ajustes. Tampoco constituye FCFF: el coste de financiación no es un flujo operativo no apalancado.</p>
+<p>A la capitalización y FX indicativos, el diferencial CFO-PPE equivale al 2,15 % del equity. <strong>Ese porcentaje no es owner FCF yield</strong> y no es una valoración ni un techo de compra. No se añaden automáticamente intereses cobrados o dividendos de participadas si luego se valoran sus activos por separado.</p>
+<p>H1 muestra pagos de intangibles de 3.876,352 millones, adquisición de derechos de uso de 9.441,034 millones y principal de arrendamientos de 2.249,689 millones. La ausencia de sus filas en el resumen Q3 no significa ausencia de gastos. El interés capitalizado H1, 5.096,044 millones, está excluido del cash PPE y forma parte de la conciliación de costes financieros; exige un tratamiento coherente de capex y financiación.</p>
+<p>El informe de gestión Q3 atribuye principalmente a créditos fiscales de inversión estadounidenses el agregado de otros cobros de inversión de 198.740 millones NTD. Incluye conceptos como intereses y dividendos y no coincide con la fila resumida de otros flujos de inversión de 159.868 millones. <strong>No se dispone del importe separado exacto del crédito fiscal en esos documentos.</strong> No se añade al CFO, no se perpetúa como margen recurrente y no se vuelve a sumar al balance si ya está cobrado.</p>
+<h2 id="capital-partidas-observadas-y-pendientes">4. Capital: partidas observadas y pendientes</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto septiembre, NTD millones</th>
+<th style="text-align: right;">Importe</th>
+<th>Tratamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja</td>
+<td style="text-align: right;">3.621.894</td>
+<td>No equivale a caja excedente certificada</td>
+</tr>
+<tr class="even">
+<td>Instrumentos financieros corrientes</td>
+<td style="text-align: right;">395.085</td>
+<td>Clasificación/liquidez y reservas por conciliar</td>
+</tr>
+<tr class="odd">
+<td>Inversiones de largo plazo</td>
+<td style="text-align: right;">224.633</td>
+<td>No son caja libre; excluir de una suma automática</td>
+</tr>
+<tr class="even">
+<td>Dividendos por pagar</td>
+<td style="text-align: right;">363.053</td>
+<td>Conciliar obligaciones, ex-dividend y derechos del accionista</td>
+</tr>
+<tr class="odd">
+<td>Acreedores de equipo y contratistas</td>
+<td style="text-align: right;">298.826</td>
+<td>Conciliar altas económicas y pagos de capex; evitar doble cuenta</td>
+</tr>
+<tr class="even">
+<td>Bonos y préstamos bancarios corrientes</td>
+<td style="text-align: right;">213.198</td>
+<td>Incluyen deuda corriente, no duplicarla</td>
+</tr>
+<tr class="odd">
+<td>Bonos no corrientes contables</td>
+<td style="text-align: right;">770.315</td>
+<td>No certifican principal ni toda deuda financiera</td>
+</tr>
+<tr class="even">
+<td>Otros pasivos no corrientes agregados</td>
+<td style="text-align: right;">271.600</td>
+<td>No asumir que son íntegramente operativos o cero deuda</td>
+</tr>
+<tr class="odd">
+<td>Intereses no controladores</td>
+<td style="text-align: right;">45.326</td>
+<td>Book value, no valor económico independiente</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Los 4.016.979 millones NTD de caja e instrumentos corrientes no son caja distribuible certificada; hay dividendos pendientes y deuda bancaria no corriente por conciliar.</strong> La suma de 983.513 millones de bonos contables y deuda corriente identificada no es toda la deuda financiera. H1 contiene préstamos bancarios no corrientes de 49.226,958 millones que podrían seguir dentro del agregado septiembre; no se asume que desaparecieron. Los bonos necesitan reconciliación a principal y divisa.</p>
+<p>H1 también informa de arrendamientos no corrientes de 33.276,056 millones, prestación definida neta de 5.893,691 millones y pasivos derivados de 2.452,333 millones más coberturas de 2,563 millones. Son referencias históricas, no saldos certificados a septiembre. No se construye un puente actual sumándolos como si todas las fechas y categorías coincidiesen.</p>
+<p>Un DCF futuro deberá elegir un tratamiento coherente de arrendamientos y mantenerlo en EBIT, reinversión y deuda. Para PPE, el desfase entre pagos y altas, incluidos acreedores, no permite identificar gasto de mantenimiento únicamente con la amortización. Deben separarse créditos y subvenciones, obligaciones de devolución, capital minoritario y caja operativa mínima. Tampoco se descuenta todo acreedor de equipo como deuda si su efecto ya queda financiado en reinversión.</p>
+<p>El 6-K del 22 de octubre describe actividades de septiembre, no octubre: no registra emisión de bonos ni cancelación de acciones en septiembre. No prueba que no existan cambios posteriores.</p>
+<h2 id="ventajas-riesgos-y-guía">5. Ventajas, riesgos y guía</h2>
+<p><strong>Los nodos de 7 nm y más avanzados representan el 79 % de los ingresos Q3; HPC aporta el 68 %.</strong> La combinación indica exposición a computación avanzada y capacidad tecnológica, no una garantía de crecimiento perpetuo. Smartphones aporta el 21 %. El 79 % de ingresos de clientes de Norteamérica refleja domicilio del cliente, no ubicación de fabricación.</p>
+<p>El 20-F muestra concentración FY2025: diez mayores clientes 78 % de ventas, primero 19 % y segundo 17 %, sin identificar aquí nombres no publicados. El riesgo combina demanda de pocos grandes compradores, inversión adelantada, competencia, suministro de energía/agua, desastres y concentración productiva en Taiwán. Diversificación comercial no elimina riesgo geopolítico o de interrupción.</p>
+<p>La guía Q4 sitúa ventas en 52,3–54,3 mil millones USD, margen bruto en 65–67 % y operativo en 56,5–58,5 %, bajo supuesto FX 31,8. No es resultado conseguido. La dirección mantiene capex FY2026 de 60–64 mil millones USD y anticipa gasto elevado en 2026–28. En la llamada aclaró que la dilución de margen de fábricas internacionales de 3–4 puntos corresponde a la segunda mitad del horizonte de cinco años; no se fija automáticamente a 2027. Los nuevos nodos y las plantas exteriores pueden limitar el margen pese al crecimiento.</p>
+<p><strong>El presupuesto de capex FY2026 de 60–64 mil millones USD y el coste de plantas internacionales exigen financiar crecimiento antes de valorar beneficios futuros.</strong> El supuesto de reinversión de un futuro DCF debe cubrir expansión, mantenimiento y capital circulante; un terminal con crecimiento y reinversión nula no sería admisible.</p>
+<h2 id="normativa-y-calendario">6. Normativa y calendario</h2>
+<p>El 20-F confirma que la autorización VEU de Nanjing expiró en diciembre de 2025 y que existe una licencia anual de exportación. No garantiza su renovación ni constituye una autorización permanente. Las subvenciones tienen condiciones que pueden conllevar devolución o pérdida de financiación. No se ha certificado integralmente al corte la aplicación de cada norma, licencia, arancel o contrato de subsidio. No se asigna pérdida cero ni una probabilidad inventada a riesgos geopolíticos.</p>
+<p><strong>Los resultados Q3 ya se publicaron el 15 de octubre; el anuncio del 10 de noviembre es de ventas mensuales, no de resultados trimestrales.</strong> Calendario oficial: 10 noviembre, 13:30 Asia/Taipei, ventas de octubre. No se ha encontrado confirmación de la siguiente fecha trimestral. La página oficial de estados completos consultada contiene H1 2026, sin notas Q3 completas; no se inventa su fecha de publicación.</p>
+<h2 id="comparables-y-valoración">7. Comparables y valoración</h2>
+<p>UMC y GlobalFoundries son referencias industriales, no clones de TSMC. Sus nodos, clientes, subvenciones y utilización difieren. El resultado Q3 de GFS publicado el 4 de noviembre es posterior al cierre bursátil de referencia del 3 de noviembre; no se presenta ese precio como una reacción al anuncio. Los archivos comps/ distinguen cifras IFRS de ajustadas y documentan límites de caja.</p>
+<p>UMC publica margen operativo Q3 del 25,1 %, frente al 58,7 % de TSMC. GFS publica 12,1 % IFRS y 17,9 % ajustado: no mezclarlos. GFS CFO de 341 millones USD menos inversión bruta de 301 deja 40, mientras su FCF ajustado de 136 incluye 96 de subvenciones de inversión. UMC muestra una diferencia de aproximadamente 120 millones NTD entre capex narrativo y las filas de compras PPE más intangibles, aún sin conciliar. Estas diferencias son precisamente por qué no se aplican múltiplos cruzados automáticamente.</p>
+<p>La comparación operativa ayuda a interpretar calidad; <strong>no cierra múltiplos homogéneos TTM ni una valoración relativa certificada</strong>. No se ha ejecutado DCF, reverse DCF, rango de valor ni precio de entrada con inputs incompletos. Bear/base/bull se mantienen nulos, no en cero. No reutilizar un modelo de otro ticker ni asumir que A105 contenía valoración.</p>
+<h2 id="próximos-pasos-concretos">8. Próximos pasos concretos</h2>
+<ol type="1">
+<li>Incorporar notas completas septiembre: intangibles, SBC, arrendamientos, préstamos, principal de bonos, derivados, obligaciones fiscales y prestaciones.</li>
+<li>Conciliar inversión bruta/económica, pagos por equipo, créditos fiscales cobrados y subvenciones futuras sin duplicación.</li>
+<li>Separar beneficio recurrente y ganancia VIS, con fiscalidad verificable; conciliar participadas y minoritarios.</li>
+<li>Rehacer pares TTM en la misma base y fecha. En GFS incorporar el anuncio del 4 de noviembre y separar subvenciones del cashflow operativo.</li>
+<li>Solo después, DCF explícito de diez años con reinversión, moneda/tasa coherentes, escenarios y análisis inverso. Verificar normativa, calendario y filtros técnicos antes de cualquier eventual Stage 3.5.</li>
+</ol>
+<h2 id="fuentes-y-reproducción">9. Fuentes y reproducción</h2>
+<p>history/SOURCES.md enlaza los estados anuales, Q1, H1 y nueve meses usados. build_history.py reproduce la historia; build_analysis.py calcula diagnósticos sin rellenar desconocidos. analysis.json conserva las partidas actuales y proxies históricos por separado. Los extractos de cifras y enlaces permiten revisión sin redistribuir documentos completos.</p>
+<ul>
+<li>q3: https://investor.tsmc.com/english/quarterly-results/2026/q3</li>
+<li>h1: https://investor.tsmc.com/sites/ir/financial-report/2026/TSMC%202026Q2%20Consolidated%20Financial%20Statements_E_2.pdf</li>
+<li>annual: https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm</li>
+<li>capital_after_q3: https://www.sec.gov/Archives/edgar/data/1046179/000104617926000728/tsm-monthend6kx20261022.htm</li>
+<li>calendar: https://investor.tsmc.com/english/financial-calendar</li>
+<li>available_reports: https://investor.tsmc.com/english/financial-reports</li>
+<li>fx: https://www.cbc.gov.tw/tw/lp-645-1.html09/lp-645-1-154-20.html</li>
+<li>price_secondary: https://stockanalysis.com/stocks/tsm/history/?period=daily</li>
+<li>FS Q3: https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf</li>
+<li>Management report Q3: https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf</li>
+<li>Llamada alojada por IR: https://investor.tsmc.com/schinese/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf</li>
+</ul>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TSM/TSM_support.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TSM/build_analysis.py">Reconstrucción reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TSM/analysis.json">Resultados</a></li>
+</ul>
+</main></body></html>
