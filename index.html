@@ -599,17 +599,35 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 @media(max-width:640px) { .profile-search .profile-filters { grid-template-columns:minmax(0,1fr); } .profile-filters .profile-scan-number { grid-column:1; } .profile-card-status { max-width:100%; justify-content:flex-start; } }
 
 /* Adjacent stocks always come from the same URL-backed search results. */
-.profile-navigation { display:grid; grid-template-columns:minmax(110px,auto) minmax(0,1fr) minmax(110px,auto); align-items:center; gap:16px; padding-bottom:16px; border-bottom:1px solid var(--rule); }
-.profile-navigation .profile-nav-step { min-height:44px; display:flex; align-items:center; justify-content:center; gap:7px; white-space:nowrap; }
-.profile-nav-step>span[aria-hidden] { font-size:1.2rem; }
-.profile-nav-step:disabled { opacity:.4; cursor:not-allowed; }
+/* Desktop controls occupy reserved gutters outside all profile content. */
+.profile-navigation { display:block; padding-bottom:16px; border-bottom:1px solid var(--rule); }
+.profile-navigation .profile-nav-step { position:fixed; z-index:7; top:50%; transform:translateY(-50%); width:56px; min-height:82px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; padding:9px 4px; background:var(--sheet); box-shadow:0 3px 14px rgba(0,0,0,.12); }
+#profile-prev { left:max(12px, env(safe-area-inset-left, 0px), calc((100% - 1300px)/2 + 16px)); }
+#profile-next { right:max(12px, env(safe-area-inset-right, 0px), calc((100% - 1300px)/2 + 16px)); }
+.profile-nav-step>span[aria-hidden] { font-size:1.6rem; line-height:1; }
+.profile-nav-step b { font-size:.69rem; max-width:100%; overflow-wrap:anywhere; }
+.profile-nav-label,.profile-swipe-hint { display:none; }
+.profile-nav-step:disabled { opacity:.4; cursor:not-allowed; box-shadow:none; }
 .profile-nav-step:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
 .profile-nav-context { min-width:0; text-align:center; }
 .profile-nav-context strong { display:block; font-size:.95rem; }
 .profile-nav-context small { display:block; margin-top:4px; font-size:.74rem; color:var(--ink-2); overflow-wrap:anywhere; }
 .profile-nav-notice { margin:12px 0; font-size:.83rem; }
-@media(max-width:640px) { .profile-navigation { grid-template-columns:1fr 1fr; gap:10px; } .profile-nav-context { grid-column:1/-1; grid-row:1; } .profile-nav-step { min-width:0; } }
-@media(max-width:420px) { .profile-nav-label { display:none; } .profile-nav-step b { white-space:normal; overflow-wrap:anywhere; } }
+body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left:max(84px, calc(env(safe-area-inset-left, 0px) + 72px)); padding-right:max(84px, calc(env(safe-area-inset-right, 0px) + 72px)); }
+/* Phones use deliberate swipes, with labeled inline links as an accessible
+   alternative. Nothing is fixed over the reading area on compact screens. */
+@media(max-width:899px), (max-height:599px) {
+  body:has(.profile-navigation) #main { max-width:1180px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); }
+  .profile-navigation { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .profile-nav-context { grid-column:1/-1; grid-row:1; }
+  .profile-swipe-hint { display:block; grid-column:1/-1; grid-row:2; margin:0; font-size:.76rem; color:var(--ink-2); text-align:center; }
+  .profile-navigation .profile-nav-step { position:static; transform:none; width:auto; min-height:44px; flex-direction:row; flex-wrap:wrap; gap:5px; padding:8px; box-shadow:none; grid-row:3; }
+  .profile-nav-step>span[aria-hidden] { display:none; }
+  .profile-nav-step b,.profile-nav-label { display:inline; font-size:.75rem; }
+}
+@media(max-height:599px) { body:has(.profile-navigation) header.mast { position:static; } }
+@media print { .profile-navigation .profile-nav-step { position:static; transform:none; } body:has(.profile-navigation) #main { padding-inline:16px; } }
+
 
 /* The searchable stock card reuses the existing valuation visual language. */
 .stock-summary { border-top:3px solid var(--accent); display:grid; gap:16px; min-width:0; }
@@ -2522,12 +2540,12 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     function step(direction,row) {
       var label=direction==='prev'?pt('Acción anterior','Previous stock'):pt('Acción siguiente','Next stock'),arrow=direction==='prev'?'←':'→';
       var content='<span aria-hidden="true">'+arrow+'</span><span class="profile-nav-label">'+esc(direction==='prev'?pt('Anterior','Previous'):pt('Siguiente','Next'))+'</span>'+(row?'<b>'+esc(row.ticker)+'</b>':'');
-      var attrs=' id="profile-'+direction+'" class="btn profile-nav-step" aria-label="'+esc(label+(row?': '+row.ticker:''))+'"';
+      var attrs=' id="profile-'+direction+'" class="btn profile-nav-step" title="'+esc(label+(row?': '+row.ticker:''))+'" aria-label="'+esc(label+(row?': '+row.ticker:''))+'"';
       return row?'<a'+attrs+' href="'+esc(profileHref(row.ticker,context))+'" rel="'+direction+'">'+content+'</a>':'<button type="button"'+attrs+' disabled>'+content+'</button>';
     }
     var status=index>=0?(index+1)+' '+pt('de','of')+' '+rows.length:pt('Fuera de estos resultados','Not in these results');
     var detail=(S.profileView!=='all'?profileViewLabel(S.profileView)+' · ':'')+profileFilterLabel()+' · '+profileScanLabel()+' · '+profileStatusLabel(S.profileStatus)+' · Ticker A–Z'+(S.profileQ.trim()?' · '+pt('Búsqueda: ','Search: ')+S.profileQ:'');
-    var h='<nav class="profile-navigation" aria-label="'+esc(pt('Navegar por los resultados de acciones','Browse stock results'))+'">'+step('prev',index>0?rows[index-1]:null)+'<div class="profile-nav-context"><strong role="status" aria-live="polite" aria-atomic="true">'+esc(status)+'</strong><small>'+esc(detail)+'</small></div>'+step('next',index>=0&&index<rows.length-1?rows[index+1]:null)+'</nav>';
+    var h='<nav class="profile-navigation" aria-label="'+esc(pt('Navegar por los resultados de acciones','Browse stock results'))+'">'+step('prev',index>0?rows[index-1]:null)+'<div class="profile-nav-context"><strong role="status" aria-live="polite" aria-atomic="true">'+esc(status)+'</strong><small>'+esc(detail)+'</small></div><p class="profile-swipe-hint">'+esc(pt('Desliza a la izquierda para la siguiente acción o a la derecha para la anterior. También puedes usar estos enlaces.','Swipe left for the next stock or right for the previous one. You can also use these links.'))+'</p>'+step('next',index>=0&&index<rows.length-1?rows[index+1]:null)+'</nav>';
     if(index<0)h+='<p class="muted profile-nav-notice">'+esc(S.profileContextValid?pt('Esta acción ya no aparece en esta búsqueda con los datos publicados actuales. Vuelve a los resultados para elegir otra.','This stock is no longer in this search with the current published data. Return to the results to choose another.'):pt('No se reconoce el filtro o el orden de este enlace. Vuelve al buscador para elegir los resultados.','This link’s filter or sort order is not supported. Return to search to choose the results.'))+'</p>';
     return h;
   }
@@ -2975,8 +2993,38 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   }
 
   /* ---------- events ---------- */
+  // Touch navigation never prevents native scrolling, selection or widget gestures.
+  var profileSwipe=null;
+  function profileSwipeStart(e) {
+    profileSwipe=null;
+    if(S.view!=="fichas" || !window.matchMedia("(max-width:899px), (max-height:599px)").matches || e.touches.length!==1)return;
+    var target=e.target, touch=e.touches[0];
+    if(!target.closest || !target.closest("#v-fichas") || !document.getElementById("profile-next"))return;
+    if(target.closest('a,button,input,textarea,select,label,summary,[contenteditable],iframe,canvas,svg,[role="slider"],.profile-quote,.tbl-outer,.tbl-wrap,.profile-scan-dates'))return;
+    if(touch.clientX<28 || touch.clientX>window.innerWidth-28 || String(window.getSelection()||"").trim())return;
+    for(var node=target;node&&node.id!=="v-fichas";node=node.parentElement){if(node.scrollWidth>node.clientWidth+2 && /auto|scroll/.test(getComputedStyle(node).overflowX))return;}
+    profileSwipe={id:touch.identifier,x:touch.clientX,y:touch.clientY,time:e.timeStamp,hash:location.hash};
+  }
+  function profileSwipeMove(e) {
+    if(!profileSwipe)return;
+    if(e.touches.length!==1){profileSwipe=null;return;}
+    var touch=e.touches[0],dx=Math.abs(touch.clientX-profileSwipe.x),dy=Math.abs(touch.clientY-profileSwipe.y);
+    if(touch.identifier!==profileSwipe.id || dy>36 || (dy>14 && dy>dx*.6))profileSwipe=null;
+  }
+  function profileSwipeEnd(e) {
+    var start=profileSwipe;profileSwipe=null;
+    if(!start || start.hash!==location.hash || S.view!=="fichas" || !window.matchMedia("(max-width:899px), (max-height:599px)").matches || e.touches.length || e.changedTouches.length!==1 || String(window.getSelection()||"").trim())return;
+    var touch=e.changedTouches[0],dx=touch.clientX-start.x,dy=Math.abs(touch.clientY-start.y),elapsed=e.timeStamp-start.time;
+    if(touch.identifier!==start.id || elapsed<80 || elapsed>850 || Math.abs(dx)<72 || dy>36 || Math.abs(dx)<dy*3)return;
+    var link=document.getElementById(dx<0?"profile-next":"profile-prev"),href=link&&!link.disabled&&link.getAttribute("href");
+    if(href && href.indexOf("#ficha/")===0)location.hash=href;
+  }
+  document.addEventListener("touchstart",profileSwipeStart,{passive:true});
+  document.addEventListener("touchmove",profileSwipeMove,{passive:true});
+  document.addEventListener("touchend",profileSwipeEnd,{passive:true});
+  document.addEventListener("touchcancel",function(){profileSwipe=null;},{passive:true});
   document.addEventListener("click", function (e) {
-    if(e.target.closest("[data-profile-history]")){e.preventDefault();var target=document.getElementById("profile-research");if(target)target.scrollIntoView({block:"start"});return;}
+    if(e.target.closest("[data-profile-history]")){e.preventDefault();var target=document.getElementById("profile-research");if(target){var mast=document.querySelector("header.mast");target.style.scrollMarginTop=(mast&&getComputedStyle(mast).position==="sticky"?mast.getBoundingClientRect().height+12:12)+"px";target.scrollIntoView({block:"start"});}return;}
     var latestScanLink=e.target.closest("[data-latest-scan]");if(latestScanLink){S.scanDate=latestScanLink.getAttribute("data-latest-scan");S.scanQ="";S.onlyS2=false;}
     var latestOverviewLink=e.target.closest("[data-latest-overview]");if(latestOverviewLink){S.resDate=latestOverviewLink.getAttribute("data-latest-overview");}
     var ps = e.target.closest("[data-profile-scan]");
