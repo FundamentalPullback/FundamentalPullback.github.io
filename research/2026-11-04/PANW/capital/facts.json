@@ -1,0 +1,138 @@
+{
+  "as_of": "2026-11-04",
+  "currency": "USD",
+  "units": "millions except per-share, dates and noted raw share counts",
+  "sources": {
+    "fy26": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+    "proxy": "https://www.sec.gov/Archives/edgar/data/1327567/000130817926000432/panw-20261027.htm"
+  },
+  "source_hashes": {
+    "fy26": "f1daf99045c85787324de57d046a52b11a13831ca6e0fa70a09bc9d3fb8f96e6",
+    "proxy": "4eceef690488239b2a3467ecc4245da9b77f196456c25e8ee602563b4c005608"
+  },
+  "cash": {
+    "date": "2026-07-31",
+    "cash_and_equivalents": 2514,
+    "investments": 5392,
+    "total": 7906,
+    "short_term_investments": 557,
+    "long_term_investments": 4835,
+    "short_term_recurring_fair_value_table": 392,
+    "short_term_difference_outside_recurring_fair_value_table_derived": 165,
+    "difference_nature": "Note1 identifies certain CDs, time deposits and overnight sweep accounts carried at amounts approximating fair value; exact instrument split of derived 165 not explicitly disclosed",
+    "operating_reserve": null,
+    "reference": "FY26 MD&A p53; balance sheet; Note 3"
+  },
+  "acquisitions": {
+    "Embrace": {
+      "cash_headline": 325,
+      "closed": "2026-08-27",
+      "subject_to_adjustment": true
+    },
+    "Console": {
+      "cash_headline": 500,
+      "closed": "2026-09-01",
+      "subject_to_adjustment": true
+    },
+    "post_july_headline_cash_total": 825,
+    "cash_after_headline_acquisitions_before_other_movements": 7081,
+    "reference": "FY26 Note 8 pp81\u201382 and Note 20 p103"
+  },
+  "qradar": {
+    "date": "2026-07-31",
+    "contingent_consideration_total": 206,
+    "current": 116,
+    "noncurrent": 90,
+    "beginning_liability": 514,
+    "payments_fy26": 191,
+    "fv_gain_fy26": 117,
+    "normalization_operating_income_adjustment": -117,
+    "payment_window_end": "2028-10-31",
+    "reference": "FY26 Note 3 p76; Note 1 accounting policy; MD&A commitments"
+  },
+  "convertible": {
+    "original_principal": 1250,
+    "surrendered_principal": 153,
+    "remaining_principal_derived": 1097,
+    "remaining_principal_disclosed_rounded": 1100,
+    "fair_value_liability": 1774,
+    "capped_call_fair_value_asset": 153,
+    "net_fair_value_claim": 1621,
+    "conversion_shares_per_1000": 4.3161,
+    "conversion_cash_per_1000": 88.263,
+    "principal_settlement": "cash",
+    "excess_settlement": "issuer choice cash or cash and shares",
+    "effective_strike_approx": 211.24,
+    "cap_low": 287.21,
+    "cap_high": 291.44,
+    "maturity": "2030-06-15",
+    "note_fv_loss_in_earnings_fy26": 620,
+    "capped_call_fv_gain_fy26": 58,
+    "net_nonoperating_fv_loss_fy26": 562,
+    "reference": "FY26 Note 11 pp88\u201390; Note 3 p76"
+  },
+  "old_warrants": {
+    "all_settled": true,
+    "shares_issued_fy26": 27,
+    "incremental_outstanding_claim": 0,
+    "reference": "FY26 Note 11 p88"
+  },
+  "deferred_compensation": {
+    "funded": false,
+    "liability_classified_total": 405,
+    "current": 5,
+    "noncurrent": 400,
+    "normal_settlement": "fully vested RSUs settled in common shares",
+    "cash_exception": "insufficient shares available under equity plan",
+    "reference": "FY26 Note 1; Note 3 p76; Proxy Nonqualified Deferred Compensation",
+    "named_executive_aggregate_balances_fy26": {
+      "Arora": 990.481487,
+      "Golechha": 46.59225,
+      "Jenkins": 119.897603,
+      "total": 1156.97134,
+      "units": "USD million",
+      "reference": "Proxy Nonqualified Deferred Compensation, aggregate balance last fiscal year end",
+      "not_same_as_liability_classified_diversified_accounts405": true,
+      "additional_incremental_deduction": null
+    }
+  },
+  "tax": {
+    "gross_unrecognized_tax_benefits": 719,
+    "utb_that_would_affect_tax_expense_if_recognized": 393,
+    "accrued_interest_and_penalties": 113,
+    "gross_exposure_plus_interest": 832,
+    "verified_incremental_cash_liability": null,
+    "verified_dta_offset": null,
+    "settlement_timing": "not reasonably predictable",
+    "reference": "FY26 Note 16 pp100\u2013101"
+  },
+  "goodwill_tax_deductibility": {
+    "CyberArk": "substantially all deductible",
+    "Chronosphere": "not deductible",
+    "Koi": "deductible",
+    "Portkey": "not deductible",
+    "QRadar": "deductible",
+    "Protect AI": "not deductible",
+    "reference": "FY26 Note 8"
+  },
+  "shares": {
+    "date": "2026-10-09",
+    "basic_raw": 818771631,
+    "basic_m": 818.771631,
+    "rsu_psu_raw": 29821161,
+    "rsu_psu_m": 29.821161,
+    "psu_basis": "maximum over full term, not target expected payout",
+    "options_raw": 232754,
+    "options_m": 0.232754,
+    "option_weighted_exercise_price": 9.84,
+    "options_weighted_remaining_years": 9.88,
+    "unused_plan_capacity_raw": 26029643,
+    "unused_capacity_not_outstanding_claim": true,
+    "espp_excluded_from_record_date_awards_table": true,
+    "reference": "Proxy Additional Equity Plan Information p137 and voting record-date section",
+    "unrecognized_compensation_cost_fy26": 3300,
+    "recognition_weighted_years": 2.5,
+    "deferred_liability_overlap_verified": false,
+    "unrecognized_compensation_reference": "FY26 Note15 p97"
+  }
+}

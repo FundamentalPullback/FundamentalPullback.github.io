@@ -1,0 +1,553 @@
+{
+  "units": "USD million",
+  "warning": "Ex-UAN operating metrics retain corporate/reconciling/former renewables. Pure Petroleum company EBITDA is distinct from operating EBIT+D&A. Waiver-only adjustment leaves other RFS remeasurement. Derivative realized figures are inferred consolidated residuals.",
+  "periods": [
+    {
+      "period": "FY2023",
+      "ex_uan_ebit": {
+        "value": 922.0,
+        "observation_ids": [
+          "o0020",
+          "o0207"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+        ],
+        "method": "Consolidated EBIT minus UAN EBIT"
+      },
+      "ex_uan_da": {
+        "value": 218.0,
+        "observation_ids": [
+          "o0056",
+          "o0203"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+        ],
+        "method": "Consolidated D&A minus UAN D&A"
+      },
+      "ex_uan_ebit_plus_da": {
+        "value": 1140.0,
+        "observation_ids": [
+          "o0020",
+          "o0207",
+          "o0056",
+          "o0203"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+        ],
+        "method": "ex-UAN EBIT plus D&A; includes corporate and former renewables"
+      },
+      "petroleum_company_ebitda": 1185,
+      "petroleum_company_adjusted_ebitda": 903,
+      "consolidated_derivative_total_pnl": 5,
+      "consolidated_derivative_unrealized_pnl": 32,
+      "rin_waiver": null,
+      "consolidated_derivative_realized_pnl_inferred": -27,
+      "adjustment_source_observation_ids": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7"
+      ]
+    },
+    {
+      "period": "FY2024",
+      "ex_uan_ebit": {
+        "value": -32.0,
+        "observation_ids": [
+          "o0019",
+          "o0185"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+        ],
+        "method": "Consolidated EBIT minus UAN EBIT"
+      },
+      "ex_uan_da": {
+        "value": 210.0,
+        "observation_ids": [
+          "o0055",
+          "o0181"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+        ],
+        "method": "Consolidated D&A minus UAN D&A"
+      },
+      "ex_uan_ebit_plus_da": {
+        "value": 178.0,
+        "observation_ids": [
+          "o0019",
+          "o0185",
+          "o0055",
+          "o0181"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+        ],
+        "method": "ex-UAN EBIT plus D&A; includes corporate and former renewables"
+      },
+      "petroleum_company_ebitda": 223,
+      "petroleum_company_adjusted_ebitda": 138,
+      "consolidated_derivative_total_pnl": 13,
+      "consolidated_derivative_unrealized_pnl": -22,
+      "rin_waiver": null,
+      "consolidated_derivative_realized_pnl_inferred": 35,
+      "adjustment_source_observation_ids": [
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14"
+      ]
+    },
+    {
+      "period": "FY2025",
+      "ex_uan_ebit": {
+        "value": 53.0,
+        "observation_ids": [
+          "o0018",
+          "o0163"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+        ],
+        "method": "Consolidated EBIT minus UAN EBIT"
+      },
+      "ex_uan_da": {
+        "value": 321.0,
+        "observation_ids": [
+          "o0054",
+          "o0159"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+        ],
+        "method": "Consolidated D&A minus UAN D&A"
+      },
+      "ex_uan_ebit_plus_da": {
+        "value": 374.0,
+        "observation_ids": [
+          "o0018",
+          "o0163",
+          "o0054",
+          "o0159"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+        ],
+        "method": "ex-UAN EBIT plus D&A; includes corporate and former renewables"
+      },
+      "petroleum_company_ebitda": 411,
+      "petroleum_company_adjusted_ebitda": 199,
+      "consolidated_derivative_total_pnl": 22,
+      "consolidated_derivative_unrealized_pnl": 4,
+      "rin_waiver": 488,
+      "consolidated_derivative_realized_pnl_inferred": 18,
+      "petroleum_company_ebitda_less_specific_waiver": -77,
+      "adjustment_source_observation_ids": [
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22"
+      ]
+    },
+    {
+      "period": "Q4 2025",
+      "ex_uan_ebit": {
+        "value": -92.0,
+        "observation_ids": [
+          "o0018",
+          "o0239",
+          "o0163",
+          "o0454"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+        ],
+        "method": "Consolidated EBIT minus UAN EBIT"
+      },
+      "ex_uan_da": {
+        "value": 122.0,
+        "observation_ids": [
+          "o0054",
+          "o0299",
+          "o0159",
+          "o0449"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+        ],
+        "method": "Consolidated D&A minus UAN D&A"
+      },
+      "ex_uan_ebit_plus_da": {
+        "value": 30.0,
+        "observation_ids": [
+          "o0018",
+          "o0239",
+          "o0163",
+          "o0454",
+          "o0054",
+          "o0299",
+          "o0159",
+          "o0449"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+        ],
+        "method": "ex-UAN EBIT plus D&A; includes corporate and former renewables"
+      },
+      "petroleum_company_ebitda": null,
+      "petroleum_company_adjusted_ebitda": null,
+      "consolidated_derivative_total_pnl": null,
+      "consolidated_derivative_unrealized_pnl": null,
+      "rin_waiver": null,
+      "adjustment_source_observation_ids": []
+    },
+    {
+      "period": "Q1 2026",
+      "ex_uan_ebit": {
+        "value": -203.0,
+        "observation_ids": [
+          "o0736",
+          "o0823"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+        ],
+        "method": "Consolidated EBIT minus UAN EBIT"
+      },
+      "ex_uan_da": {
+        "value": 59.0,
+        "observation_ids": [
+          "o0760",
+          "o0820"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+        ],
+        "method": "Consolidated D&A minus UAN D&A"
+      },
+      "ex_uan_ebit_plus_da": {
+        "value": -144.0,
+        "observation_ids": [
+          "o0736",
+          "o0823",
+          "o0760",
+          "o0820"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+        ],
+        "method": "ex-UAN EBIT plus D&A; includes corporate and former renewables"
+      },
+      "petroleum_company_ebitda": null,
+      "petroleum_company_adjusted_ebitda": null,
+      "consolidated_derivative_total_pnl": null,
+      "consolidated_derivative_unrealized_pnl": null,
+      "rin_waiver": null,
+      "adjustment_source_observation_ids": []
+    },
+    {
+      "period": "Q2 2026",
+      "ex_uan_ebit": {
+        "value": -7.0,
+        "observation_ids": [
+          "o0497",
+          "o0650"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+        ],
+        "method": "Consolidated EBIT minus UAN EBIT"
+      },
+      "ex_uan_da": {
+        "value": 58.0,
+        "observation_ids": [
+          "o0547",
+          "o0760",
+          "o0646"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+        ],
+        "method": "Consolidated D&A minus UAN D&A"
+      },
+      "ex_uan_ebit_plus_da": {
+        "value": 51.0,
+        "observation_ids": [
+          "o0497",
+          "o0650",
+          "o0547",
+          "o0760",
+          "o0646"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+        ],
+        "method": "ex-UAN EBIT plus D&A; includes corporate and former renewables"
+      },
+      "petroleum_company_ebitda": null,
+      "petroleum_company_adjusted_ebitda": null,
+      "consolidated_derivative_total_pnl": null,
+      "consolidated_derivative_unrealized_pnl": null,
+      "rin_waiver": null,
+      "adjustment_source_observation_ids": []
+    },
+    {
+      "period": "Q3 2026",
+      "ex_uan_ebit": {
+        "value": 728.0,
+        "observation_ids": [
+          "o0236",
+          "o0407"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+        ],
+        "method": "Consolidated EBIT minus UAN EBIT"
+      },
+      "ex_uan_da": {
+        "value": 55.0,
+        "observation_ids": [
+          "o0298",
+          "o0547",
+          "o0403"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+        ],
+        "method": "Consolidated D&A minus UAN D&A"
+      },
+      "ex_uan_ebit_plus_da": {
+        "value": 783.0,
+        "observation_ids": [
+          "o0236",
+          "o0407",
+          "o0298",
+          "o0547",
+          "o0403"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+        ],
+        "method": "ex-UAN EBIT plus D&A; includes corporate and former renewables"
+      },
+      "petroleum_company_ebitda": 787,
+      "petroleum_company_adjusted_ebitda": 565,
+      "consolidated_derivative_total_pnl": -259,
+      "consolidated_derivative_unrealized_pnl": -127,
+      "rin_waiver": 253,
+      "consolidated_derivative_realized_pnl_inferred": -132,
+      "petroleum_company_ebitda_less_specific_waiver": 534,
+      "adjustment_source_observation_ids": [
+        "n46",
+        "n47",
+        "n48",
+        "n49",
+        "n50",
+        "n51",
+        "n52",
+        "n53"
+      ]
+    },
+    {
+      "period": "TTM Sep 2026",
+      "ex_uan_ebit": {
+        "value": 426.0,
+        "observation_ids": [
+          "o0018",
+          "o0238",
+          "o0239",
+          "o0163",
+          "o0451",
+          "o0454"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+        ],
+        "method": "Consolidated EBIT minus UAN EBIT"
+      },
+      "ex_uan_da": {
+        "value": 294.0,
+        "observation_ids": [
+          "o0054",
+          "o0298",
+          "o0299",
+          "o0159",
+          "o0447",
+          "o0449"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+        ],
+        "method": "Consolidated D&A minus UAN D&A"
+      },
+      "ex_uan_ebit_plus_da": {
+        "value": 720.0,
+        "observation_ids": [
+          "o0018",
+          "o0238",
+          "o0239",
+          "o0163",
+          "o0451",
+          "o0454",
+          "o0054",
+          "o0298",
+          "o0299",
+          "o0159",
+          "o0447",
+          "o0449"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+        ],
+        "method": "ex-UAN EBIT plus D&A; includes corporate and former renewables"
+      },
+      "petroleum_company_ebitda": 747,
+      "petroleum_company_adjusted_ebitda": 693,
+      "consolidated_derivative_total_pnl": -513,
+      "consolidated_derivative_unrealized_pnl": -268,
+      "rin_waiver": 253,
+      "consolidated_derivative_realized_pnl_inferred": -245,
+      "petroleum_company_ebitda_less_specific_waiver": 494,
+      "adjustment_source_observation_ids": [
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27",
+        "n28",
+        "n29",
+        "n30",
+        "n31",
+        "n32",
+        "n33",
+        "n34",
+        "n35",
+        "n36",
+        "n37",
+        "n38"
+      ]
+    },
+    {
+      "period": "TTM Sep 2025",
+      "ex_uan_ebit": {
+        "value": 141.0,
+        "observation_ids": [
+          "o0019",
+          "o0239",
+          "o0872",
+          "o0185",
+          "o0454",
+          "o1107"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+        ],
+        "method": "Consolidated EBIT minus UAN EBIT"
+      },
+      "ex_uan_da": {
+        "value": 249.0,
+        "observation_ids": [
+          "o0055",
+          "o0299",
+          "o0932",
+          "o0181",
+          "o0449",
+          "o1103"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+        ],
+        "method": "Consolidated D&A minus UAN D&A"
+      },
+      "ex_uan_ebit_plus_da": {
+        "value": 390.0,
+        "observation_ids": [
+          "o0019",
+          "o0239",
+          "o0872",
+          "o0185",
+          "o0454",
+          "o1107",
+          "o0055",
+          "o0299",
+          "o0932",
+          "o0181",
+          "o0449",
+          "o1103"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+          "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+        ],
+        "method": "ex-UAN EBIT plus D&A; includes corporate and former renewables"
+      },
+      "petroleum_company_ebitda": 441,
+      "petroleum_company_adjusted_ebitda": 137,
+      "consolidated_derivative_total_pnl": 25,
+      "consolidated_derivative_unrealized_pnl": -12,
+      "rin_waiver": null,
+      "consolidated_derivative_realized_pnl_inferred": 37,
+      "adjustment_source_observation_ids": [
+        "n8",
+        "n9",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n31",
+        "n32",
+        "n33",
+        "n34",
+        "n35",
+        "n36",
+        "n37",
+        "n38",
+        "n39",
+        "n40",
+        "n41",
+        "n42",
+        "n43",
+        "n44",
+        "n45"
+      ]
+    }
+  ]
+}

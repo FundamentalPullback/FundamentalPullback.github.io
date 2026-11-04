@@ -1,0 +1,111 @@
+{
+  "researchDate": "2026-11-04",
+  "valuationDate": "2026-11-03",
+  "price": 350.2,
+  "unit": "USD million except per share",
+  "proformaRevenueAnchor": 12312,
+  "normalizedOperatingEbitAnchor": 1218,
+  "common": {
+    "tax": 0.24,
+    "physicalAndInternalSoftwareDaRatio": 0.02,
+    "netCommissionPerIncrementalRevenue": 0.09,
+    "otherWcPerIncrementalRevenue": 0.02,
+    "annualSelectedAcquisitionTaxShield": 0,
+    "taxShieldYears": 10,
+    "fundAllPositiveNopatGrowth": true
+  },
+  "capital": {
+    "cashAndMarketableInvestments": 7906,
+    "subsequentAcquisitionsHeadlineCash": 825,
+    "operatingCashReserve": 2000,
+    "convertibleFairValueProxy": 1774,
+    "cappedCallFairValueProxy": 153,
+    "contingentConsideration": 206,
+    "deferredCompensationEconomicLiability": 405,
+    "selectedHistoricalTaxRiskReserve": 500,
+    "recordedSeverance": 14,
+    "unknownPostJulyCapital": 0,
+    "actualSharesOctober9": 818.771631,
+    "selectedExistingAwardNetDilution": 15
+  },
+  "scenarios": {
+    "bear": {
+      "year1Revenue": 12800,
+      "growthAfterYear1": [
+        0.12,
+        0.1,
+        0.08,
+        0.07,
+        0.06,
+        0.05,
+        0.04,
+        0.03,
+        0.03
+      ],
+      "marginYear1": 0.1,
+      "marginYear5": 0.15,
+      "marginYear10": 0.17,
+      "wacc": 0.105,
+      "g": 0.02,
+      "roic": 0.2,
+      "grossCapexRatioYear1": 0.045,
+      "grossCapexRatioYear10": 0.035,
+      "sbcMemoRatioYear1": 0.17,
+      "sbcMemoRatioYear10": 0.15
+    },
+    "base": {
+      "year1Revenue": 14150,
+      "growthAfterYear1": [
+        0.18,
+        0.16,
+        0.14,
+        0.12,
+        0.1,
+        0.08,
+        0.07,
+        0.06,
+        0.05
+      ],
+      "marginYear1": 0.15,
+      "marginYear5": 0.22,
+      "marginYear10": 0.24,
+      "wacc": 0.09,
+      "g": 0.03,
+      "roic": 0.3,
+      "grossCapexRatioYear1": 0.04,
+      "grossCapexRatioYear10": 0.03,
+      "sbcMemoRatioYear1": 0.15,
+      "sbcMemoRatioYear10": 0.12
+    },
+    "bull": {
+      "year1Revenue": 14500,
+      "growthAfterYear1": [
+        0.23,
+        0.21,
+        0.19,
+        0.17,
+        0.15,
+        0.13,
+        0.11,
+        0.09,
+        0.07
+      ],
+      "marginYear1": 0.18,
+      "marginYear5": 0.27,
+      "marginYear10": 0.3,
+      "wacc": 0.08,
+      "g": 0.035,
+      "roic": 0.4,
+      "grossCapexRatioYear1": 0.038,
+      "grossCapexRatioYear10": 0.028,
+      "sbcMemoRatioYear1": 0.14,
+      "sbcMemoRatioYear10": 0.1
+    }
+  },
+  "limitations": [
+    "Conditional research assumptions. July capital adjusted only for known headline subsequent acquisitions, not actual November balance.",
+    "No tax shield inferred from book amortization; future tax benefits sensitivity only.",
+    "Existing award net dilution15m selected proxy, not GAAP diluted share count. Conversion exposure valued in net liability, not shares again.",
+    "Proforma revenue anchor but normalized EBIT anchor is reported-scope diagnostic; margin/capital sensitivity needed for unobserved full-year acquisition profitability."
+  ]
+}

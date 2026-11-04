@@ -1,0 +1,71 @@
+{
+  "units": "USD millions except prices, EPS and units",
+  "peer_scope": "Factual scale and reported earnings only. No homogeneous enterprise multiple or peer-derived target.",
+  "companies": [
+    {
+      "ticker": "CVI",
+      "price_Nov3_USD": 48.6,
+      "actual_shares_m": 100.530599,
+      "equity_market_value_USDm": 4885.787111400001,
+      "Q3_sales_USDm": 3281,
+      "Q3_parent_net_income_USDm": 570,
+      "Q3_diluted_EPS_USD": 5.67
+    },
+    {
+      "ticker": "PSX",
+      "price_Nov3_USD": 271.94,
+      "actual_shares_m": 390.072362,
+      "equity_market_value_USDm": 106076.27812228,
+      "Q3_sales_USDm": 50540,
+      "Q3_parent_net_income_USDm": 5616,
+      "Q3_diluted_EPS_USD": 14.08
+    },
+    {
+      "ticker": "VLO",
+      "price_Nov3_USD": 387.65,
+      "actual_shares_m": 278.8844,
+      "equity_market_value_USDm": 108109.53766,
+      "Q3_sales_USDm": 46098,
+      "Q3_parent_net_income_USDm": 6828,
+      "Q3_diluted_EPS_USD": 23.89
+    },
+    {
+      "ticker": "MPC",
+      "price_Nov3_USD": 427.34,
+      "actual_shares_m": 272.28228,
+      "equity_market_value_USDm": 116357.1095352,
+      "Q3_sales_USDm": 56032,
+      "Q3_parent_net_income_USDm": 7447,
+      "Q3_diluted_EPS_USD": 26.59
+    }
+  ],
+  "uan_bridge": {
+    "owned_units_prior_disclosure": 3892000,
+    "external_units_inferred": 6677637,
+    "owned_market_value": 461.66904,
+    "external_market_value": 792.1013009400001,
+    "owned_distribution_declared": 6.96668,
+    "UAN_debt_principal_and_all_finance_leases": 570.862,
+    "UAN_cash": 158.191,
+    "ownership_caveat": "Exact CVI-owned units are from prior annual primary disclosure, corroborated by Q3 2026 approximate 37% ownership and rounded Q3/9M distributions. Not represented as a fresh exact Q3 ownership disclosure; current-market stake values are indicative on unchanged ownership."
+  },
+  "cvi_consolidated_capital_bridge": {
+    "equity_market_value": 4885.787111400001,
+    "debt_principal_and_finance_leases": 1794,
+    "cash_including_UAN": 1278,
+    "external_UAN_market_value": 792.1013009400001,
+    "enterprise_value_indicative": 6193.888412340001,
+    "erroneous_NCI_omission_understatement": 792.1013009400001,
+    "book_NCI_instead_of_market_understatement": 620.1013009400001
+  },
+  "cvi_normalization": {
+    "Q3_GAAP_operating_income": 724,
+    "Q3_GAAP_operating_income_less_SRE_only": 471,
+    "Q3_SRE_benefit": 253,
+    "Q3_RFS_reconciliation_including_SRE_and_RVO": -314,
+    "Q3_company_adjusted_EBITDA": 582,
+    "Q3_petroleum_company_adjusted_EBITDA": 565,
+    "SBC_removed": 0,
+    "warning": "Subtracting SRE only is an isolated diagnostic, not normalized EBIT. Company adjusted EBITDA also changes RVO, derivatives and inventory, and excludes D&A including capitalized turnaround amortization."
+  }
+}

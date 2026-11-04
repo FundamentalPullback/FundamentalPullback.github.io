@@ -1,0 +1,771 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CVI · Investigación parcial · financiación y valor total sin conciliar · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/CVI">← CVI profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · financiación y valor total sin conciliar</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="cvi-a225-investigación-del-4-de-noviembre-de-2026">CVI · A225 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>La oferta y adquisición transforman CVI, pero ciclo, contabilidad de paradas y financiación impiden certificar valor total. Los residuos económicos del dossier no son precios objetivo ni valor cero. Cierre 48,60 USD anterior al anuncio del precio de la oferta; no entrada.</strong></p>
+<p>The offering and acquisition transform CVI, but the cycle, turnaround accounting and funding prevent a certified total value. Dossier economic residuals are not price targets or zero fair value. The $48.60 close predates the offering-pricing announcement; no entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/CVI.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-11-02, 55.92 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 48.60 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 noviembre 2026; paquete final auditado antes de esta publicación.</p>
+<p>Última observación real: 2 de noviembre a 55,92; la referencia anterior del 28 de octubre a 57,07 se preserva. El escáner del 2 de noviembre precede a resultados, adquisición y oferta. El cierre del 3 de noviembre a 48,60 es anterior al anuncio del precio de la oferta a las 21:15 UTC, no al anuncio de resultados o adquisición. El PIPE contempla una excepción para oferta pública permitida: 53,37 es el precio base utilizado; 46,599 corresponde solo al estrés de financiación no exenta. Los déficits hipotéticos con signo no son objetivos de cotización negativos ni prueba de patrimonio sin valor. UAN se incorpora a precio de mercado, no como valoración intrínseca independiente.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="cvr-energy-el-crecimiento-comprado-no-elimina-el-ciclo-ni-la-necesidad-de-financiación">CVR Energy: el crecimiento comprado no elimina el ciclo ni la necesidad de financiación</h1>
+<p><strong>Investigación: 4 de noviembre de 2026. Corte de mercado: cierre del 3 de noviembre, 48,60 USD. PARTIAL: análisis híbrido y casos económicos condicionados. Revisión independiente completada; sin aprobación de entrada. No hay valor intrínseco total certificado ni aprobación de entrada.</strong></p>
+<h2 id="lectura-principal">Lectura principal</h2>
+<p>CVI no se puede analizar como una petrolera estable con un trimestre extrapolable. La compra propuesta de Mandan y St. Paul Park casi duplica capacidad, pero coincide con márgenes de refino excepcionalmente altos, exenciones RFS, nueva deuda y una ampliación aún no liquidada. El precio anunciado de 4.200 millones excluye circulante; el proforma utiliza 4.969 millones. Los documentos públicos no cierran el puente de financiación de inventarios ni la dilución definitiva de Trafigura.</p>
+<p>La mayor escala y las nuevas geografías pueden diversificar el negocio. Los activos comprados añaden 177.000 barriles diarios de capacidad y una plataforma comercial que suministra hasta 590 estaciones. Esto es una oportunidad operativa, no prueba de retorno económico: la integración, el coste del capital y la normalización de márgenes determinan si crea valor para cada acción.</p>
+<p>Los dos DCF aquí construidos valoran operaciones identificadas, con diez años explícitos, reinversión, turnarounds, impuestos y terminal financiado. La participación en UAN se incorpora por su cotización observada, no mediante una valoración fundamental independiente. Los resultados son por ello <strong>híbridos y parciales</strong>. Las ramas de fracaso y cierre inmediato no tienen probabilidades asignadas, no son un intervalo de valor actual y no demuestran que la financiación sea viable. Un residuo económico negativo identifica un déficit bajo esos supuestos; <strong>no es un precio negativo de la acción ni implica que la opción del accionista valga cero</strong>.</p>
+<p>Fuentes: https://www.sec.gov/Archives/edgar/data/1376139/000119312526444428/d87305dex991.htm y https://www.sec.gov/Archives/edgar/data/1376139/000119312526444445/d399885dex993.htm</p>
+<h2 id="negocio-control-y-perímetro">Negocio, control y perímetro</h2>
+<p>El negocio actual combina las refinerías de Coffeyville y Wynnewood, logística y comercialización, con una participación económica aproximada del 37% en CVR Partners, productor de amoniaco y UAN. CVI consolida el 100% de UAN, pero no posee toda su caja ni todo su beneficio económico. El general partner no tiene una participación económica adicional que permita sumar otra vez su valor. El control de Icahn añade riesgos de conflictos y asignación de capital; su participación directa en UAN pertenece a Icahn, no a los accionistas de CVI.</p>
+<p>La capacidad de crudo actual es aproximadamente 206.500 barriles diarios. Los 105.000 de St. Paul Park y 72.000 de Mandan ampliarían la base a aproximadamente 384.000. Las cifras de utilización de los activos comprados del 98% en 2023–25 excluyen turnarounds, por lo que no equivalen a disponibilidad efectiva del 98% durante todo el ciclo. La transición de Wynnewood desde renovables a hidrocarburos cambia la comparación histórica; no se suman segmentos antiguos y actuales como si su definición fuera idéntica.</p>
+<p>La nueva relación comercial con Trafigura puede mejorar distribución y suministro, pero CVI mantiene riesgo de margen. Los acuerdos de diez años, con extensión a favor de la contraparte, y la compra de inventario no constituyen financiación gratuita. No se ha verificado consenso homogéneo, interés corto o pertenencia a índices para usarlos en la tesis. No se infiere demanda institucional de los datos incompletos de propiedad de un agregador.</p>
+<p>Fuente: https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm</p>
+<h2 id="historia-caja-mejor-pero-con-diferencias-importantes-de-calidad">Historia: caja mejor, pero con diferencias importantes de calidad</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>NI matriz</th>
+<th>CFO</th>
+<th>Capex bruto</th>
+<th>Turnaround caja</th>
+<th>FCF después TA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td>9.247</td>
+<td>1.123</td>
+<td>769</td>
+<td>948</td>
+<td>205</td>
+<td>57</td>
+<td>686</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td>7.610</td>
+<td>58</td>
+<td>7</td>
+<td>404</td>
+<td>179</td>
+<td>53</td>
+<td>172</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td>7.162</td>
+<td>182</td>
+<td>27</td>
+<td>144</td>
+<td>185</td>
+<td>197</td>
+<td>-238</td>
+</tr>
+<tr class="even">
+<td>Q4 2025</td>
+<td>1.810</td>
+<td>-95</td>
+<td>-110</td>
+<td>0</td>
+<td>55</td>
+<td>1</td>
+<td>-56</td>
+</tr>
+<tr class="odd">
+<td>Q1 2026</td>
+<td>1.980</td>
+<td>-145</td>
+<td>-192</td>
+<td>64</td>
+<td>47</td>
+<td>0</td>
+<td>17</td>
+</tr>
+<tr class="even">
+<td>Q2 2026</td>
+<td>2.738</td>
+<td>78</td>
+<td>-3</td>
+<td>307</td>
+<td>43</td>
+<td>1</td>
+<td>263</td>
+</tr>
+<tr class="odd">
+<td>Q3 2026</td>
+<td>3.281</td>
+<td>724</td>
+<td>570</td>
+<td>655</td>
+<td>62</td>
+<td>1</td>
+<td>592</td>
+</tr>
+<tr class="even">
+<td>TTM Sep 2026</td>
+<td>9.810</td>
+<td>562</td>
+<td>265</td>
+<td>1.026</td>
+<td>207</td>
+<td>3</td>
+<td>816</td>
+</tr>
+<tr class="odd">
+<td>TTM Sep 2025</td>
+<td>7.299</td>
+<td>298</td>
+<td>166</td>
+<td>242</td>
+<td>185</td>
+<td>203</td>
+<td>-146</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las cifras son millones de USD. El FCF mostrado es CFO menos inversión bruta y pagos de turnarounds; no es FCFF. CFO incluye intereses, impuestos, circulante y todo UAN. Q4 se reconstruye como anual menos nueve meses cuando no existe cifra directa. La facturación Q3 publicada de 3.281 difiere en un millón de la diferencia entre acumulados redondeados; se preserva la cifra trimestral directa y la aritmética TTM de 9.810.</p>
+<p>El TTM de CFO de 1.026 frente a 242 y el FCF de 816 frente a −146 no prueban que 816 sea sostenible. Los pagos de turnarounds TTM fueron solo 3, frente a una parada importante en el comparativo. Los impuestos pagados en nueve meses fueron cero, mientras aumentó en 132 el pasivo por impuesto sobre beneficios. El flujo futuro no se modela con impuesto cero ni con ausencia permanente de paradas. El FCF empresarial incorpora 7 de devolución de inversión por puesta en equivalencia: se muestra por separado, no se añade automáticamente a FCFF recurrente.</p>
+<p>Todas las remuneraciones basadas en acciones estaban clasificadas como pasivos según la nota anual; no son títulos potencialmente dilutivos. Se revalúan con la cotización y sus pagos afectan al CFO mediante pasivos. Por ello no restamos mecánicamente SBC otra vez al CFO para llamarlo «FCF del propietario». El coste de compensación futura permanece dentro de los márgenes y costes elegidos. Se separa además el pasivo histórico de remuneración de la matriz, sin volver a cargar el pasivo de UAN ya comprendido en su equity cotizado.</p>
+<p>Las observaciones originales y las conciliaciones de 3 FY, cuatro trimestres y TTM contra TTM anterior están en los archivos reproducibles. La cifra de 90 de renovables es el aumento anual de D&amp;A explicado principalmente por depreciación acelerada, no una medición separada de exactamente 90 de gasto extraordinario que se pueda eliminar sin más.</p>
+<p>Fuentes: https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm y https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm</p>
+<h2 id="normalizar-rin-inventarios-coberturas-y-paradas">Normalizar RIN, inventarios, coberturas y paradas</h2>
+<p>El beneficio de Q3 incluye la reversión de 253 millones de obligaciones RFS por la exención de Wynnewood para 2025. El comparativo incluyó 488 por varios años anteriores. No se trata de ingreso recurrente ni de caja cobrada en ese momento. Septiembre conserva 230 de obligación RFS; no se presupone otra exención para eliminarla. CVI sigue devengando el 100% de la obligación 2026 de Wynnewood mientras no exista resolución distinta.</p>
+<p>El EBITDA ajustado de petróleo publicado fue 106, 1.021, 903, 138 y 199 en 2021–25. La media de cinco años es 473,4 y la mediana 199: la dispersión importa más que escoger mecánicamente una media. El TTM actual es 693 frente a 137 anterior. Este ajuste empresarial elimina revaloraciones RFS, inventarios y resultados no realizados de coberturas, pero conserva pérdidas realizadas. No es idéntico a un EBITDA operativo limpio: incluye partidas no operativas del segmento y su clasificación histórica cambia.</p>
+<p>En nueve meses de 2026, la pérdida total de derivados fue 516, de la que 278 era no realizada. El TTM implica aproximadamente 245 de pérdida realizada. Revertir todas las pérdidas como si nunca debieran pagarse exageraría la rentabilidad. El modelo usa márgenes futuros seleccionados, sin ganancias extraordinarias de inventario ni nuevas exenciones, y resta del puente el pasivo neto histórico de derivados. Los 98 de colateral ya compensados no se añaden otra vez como caja libre.</p>
+<p>CVI capitaliza las paradas de refinerías, mientras el negocio comprado las llevaba a gasto. En fertilizantes también se registran gastos de paradas dentro de costes operativos. El modelo operativo de refino utiliza EBITDA antes del pago de turnarounds, D&amp;A que incluye su amortización y un presupuesto de caja recurrente explícito para paradas. Así evita sumar la amortización sin financiar la siguiente parada. No elimina la parada de UAN de su equity cotizado ni añade su EBITDA a los DCF.</p>
+<p>Fuentes: https://www.sec.gov/Archives/edgar/data/1376139/000137613924000006/cvi-20231231.htm ; https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm ; https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm</p>
+<h2 id="qué-se-está-comprando-realmente">Qué se está comprando realmente</h2>
+<p>El EBITDA TTM anunciado del negocio adquirido, 1.158, incorpora 122 de crédito SRE y 95 de capitalización contable de turnarounds antes llevados a gasto. Sin SRE, el EBITDA histórico bajo la política anterior fue 941; bajo la política CVI sería 1.036 antes de reservar coste económico de paradas. El cambio de contabilidad no es una sinergia ni ahorra efectivo.</p>
+<p>El EBIT operativo adquirido, excluyendo otros ingresos y resultados de participadas, fue −50 en 2024 y 374 en 2025; sin SRE, 260 en 2025. En nueve meses de 2026 fue 932, o 810 sin SRE. No se convierte esta subida cíclica en crecimiento perpetuo. El CFO 2024/2025 fue 54/399 y capex bruto 56/69. En nueve meses de 2026 CFO 644 y capex bruto 39. El CFO histórico ya paga turnarounds: no se restan de nuevo en esa tabla histórica.</p>
+<p>El carve-out no asigna deuda/interés de MPC, barre caja con la matriz y utiliza servicios centrales asignados. Las cuentas por cobrar vendidas al programa de MPC ascendían a 389 en septiembre, fuera del balance objetivo. Inventario absorbió 400 de caja en nueve meses, proveedores aportaron 140 y obligaciones ambientales 62. Estas diferencias impiden identificar el CFO histórico con caja disponible al comprador.</p>
+<p>Los 108 de obligaciones ambientales de septiembre son principalmente RFS; la asignación contractual deja al vendedor el cumplimiento RFS previo al cierre y las reversiones correspondientes. No se descuentan otra vez esos 108 en el puente comprador. Sí se consideran por separado los 5 de remediación y 10 de ARO conocidos, sin afirmar que agotan la exposición. CVI asume numerosas responsabilidades ambientales históricas y futuras, con exclusiones y coberturas limitadas. Los procedimientos y el incidente del contratista requieren seguimiento, pero no se inventa una pérdida cuantificada ni se atribuye automáticamente toda responsabilidad al comprador.</p>
+<p>Fuentes: https://www.sec.gov/Archives/edgar/data/1376139/000119312526444445/d399885dex991.htm ; https://www.sec.gov/Archives/edgar/data/1376139/000119312526444445/d399885dex992.htm ; https://www.sec.gov/Archives/edgar/data/1376139/000119312526444428/d87305dex21.htm</p>
+<h2 id="oferta-y-financiación-anunciado-no-significa-consumado">Oferta y financiación: anunciado no significa consumado</h2>
+<p>La oferta se fijó a 47,55 USD por 10.515.248 acciones nuevas, con unos 490 millones netos y opción de otras 1.577.287 acciones. Se espera liquidación el 5 de noviembre, no verificada a este corte. La venta secundaria de Icahn prevista en el prospecto preliminar desaparece de la publicación de precio. Tampoco se suman 500 de backstop de Icahn y 500 de oferta: el compromiso se reduce por fondos primarios efectivamente recibidos. La comisión de 5 es no reembolsable.</p>
+<p>Trafigura compromete 800 al precio inicial de 53,37. La protección de mejor precio de §9(c) excluye ofertas públicas permitidas bajo §9(r), salvo ventajas preferentes adicionales. Los términos públicos de la oferta parecen cumplir el límite: 47,55 frente a 55,92 del día bursátil anterior implica descuento del 14,968%, y el importe bruto incluyendo opción es inferior a 750 millones; los usos también deben respetar el contrato. Por ello no se presupone un reset por esta oferta: la base conserva 53,37 y aproximadamente 14,990 millones de unidades. El precio neto 46,599 y 17,168 millones se muestran únicamente como estrés de otra financiación no exenta. No son acciones emitidas ni dilución final: dividendos previos, retrasos y otras condiciones pueden modificarla. La A-1 es económicamente equivalente a común, no deuda con cupón fijo ni financiación sin dilución.</p>
+<p>El puente comprometido de 2.500 no está dispuesto ni tiene financiación permanente definitiva. El 8% del proforma es supuesto, no cupón firmado final. El resumen de fuentes/usos excluye unos 800 de circulante; el proforma incluye 4.969 de contraprestación. La financiación de inventario por Trafigura carece de conciliación pública completa. Entre el ABL de 250 del resumen y 225 netos del proforma, solo 8 se identifican como costes, dejando 17 sin conciliar. El modelo emplea 75 de fricción financiera seleccionada, de los que 58 están identificados como costes de emisión, y somete ese supuesto a sensibilidad. No lo presenta como una tabla de comisiones verificada.</p>
+<p>La caja proforma consolidada de 96 no acredita caja accesible a la matriz, cuando UAN tenía 158,191. No se utiliza UAN para rellenar automáticamente el desfase. El requisito contractual de mantener efectivo hasta el cierre no demuestra una reserva operativa perpetua después del pago. Los 500 del modelo son una elección prudencial post-cierre, separada del contrato. La prueba de financiación del anexo deja visible el déficit al sumar reservas seleccionadas y pasivos históricos, sin afirmar que ese déficit sea una necesidad de financiación exacta o inevitable.</p>
+<p>Fuentes: https://investors.cvrenergy.com/news/news-details/2026/CVR-Energy-Announces-Pricing-of-Offering-of-Common-Stock/default.aspx ; https://www.sec.gov/Archives/edgar/data/1376139/000119312526444475/d162994d424b5.htm ; https://www.sec.gov/Archives/edgar/data/1376139/000119312526444445/d399885dex993.htm ; https://www.sec.gov/Archives/edgar/data/1376139/000119312526444428/d87305dex101.htm</p>
+<h2 id="puente-de-capital-y-uan">Puente de capital y UAN</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th>Importe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja ex-UAN derivada</td>
+<td>1.119,81</td>
+</tr>
+<tr class="even">
+<td>Deuda nominal y finance leases ex-UAN</td>
+<td>1.223,14</td>
+</tr>
+<tr class="odd">
+<td>Reserva operativa seleccionada</td>
+<td>500,00</td>
+</tr>
+<tr class="even">
+<td>Obligación RFS histórica</td>
+<td>230,00</td>
+</tr>
+<tr class="odd">
+<td>Derivados netos después de colateral y activos</td>
+<td>172,00</td>
+</tr>
+<tr class="even">
+<td>Impuesto corriente devengado</td>
+<td>132,00</td>
+</tr>
+<tr class="odd">
+<td>Compensación devengada ex-UAN</td>
+<td>29,57</td>
+</tr>
+<tr class="even">
+<td>Interés devengado ex-UAN</td>
+<td>12,10</td>
+</tr>
+<tr class="odd">
+<td>Reserva ambiental anual</td>
+<td>3,00</td>
+</tr>
+<tr class="even">
+<td>UTB anual</td>
+<td>1,00</td>
+</tr>
+<tr class="odd">
+<td>Participación UAN cotizada</td>
+<td>461,67</td>
+</tr>
+<tr class="even">
+<td>Reserva fiscal UAN seleccionada</td>
+<td>50,00</td>
+</tr>
+<tr class="odd">
+<td>Cambio de capital posterior desconocido (base0)</td>
+<td>0,00</td>
+</tr>
+<tr class="even">
+<td>Puente neto</td>
+<td>-771,33</td>
+</tr>
+</tbody>
+</table></div>
+<p>El puente se deriva de cifras consolidadas redondeadas y datos de UAN más precisos: no es un balance exacto de la matriz en noviembre. Se excluyen toda la caja y deuda de UAN antes de añadir solamente el equity de la participación propia. No se resta NCI contable de 172 como sustituto de su valor económico. Las 3,892 millones de unidades proceden de la divulgación anual exacta, corroborada por el porcentaje y distribuciones recientes, no de una nueva cifra exacta publicada en Q3. El valor de 461,669 usa cierre UAN de 118,62; no certifica valor intrínseco ni libre disponibilidad fiscal.</p>
+<p>La reserva fiscal de 50 sobre UAN refleja el pasivo diferido anual como sensibilidad prudencial de salida, no un impuesto inmediatamente exigible ni cálculo exacto de una venta. Los intereses devengados y compensación se separan de la parte UAN. Los saldos RFS, derivados e impuesto corriente son obligaciones heredadas distintas del gasto operativo e impuesto recurrentes del DCF. Los demás devengos de explotación no se convierten automáticamente en deuda adicional; la reserva operativa puede solaparse económicamente con necesidades de circulante, por lo que se prueba su importe.</p>
+<p>No se suma la distribución UAN declarada de 1,79 como otro activo sobre el equity cotizado cum-dividendo. Su pago previsto el 23 de noviembre puede trasladar efectivo de UAN a CVI, pero no crea valor agregado por sí mismo. Tampoco se trata el dividendo CVI de 0,10 como rentabilidad garantizada o como entrada técnica.</p>
+<p>Fuentes: https://www.sec.gov/Archives/edgar/data/1425292/000142529226000011/cvi-20251231.htm ; https://www.sec.gov/Archives/edgar/data/1425292/000142529226000033/cvi-20260930.htm ; https://stockanalysis.com/stocks/uan/history/</p>
+<h2 id="modelo-supuestos-explícitos-no-guía-corporativa">Modelo: supuestos explícitos, no guía corporativa</h2>
+<p>Los diez periodos de doce meses terminan el 3 de noviembre de 2027–2036. No son años fiscales ni incluyen un stub inventado. Se supone resolución inmediata únicamente para comparar ramas; el calendario real de cierre y los flujos hasta entonces siguen abiertos. Cada modelo desvanece EBITDA real desde año 1 al nivel normal del año 5, con inflación elegida del 2%; años 6–10 mantienen ese nivel real. El terminal tiene crecimiento nominal distinto y plenamente financiado.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>EBITDA petróleo año1→normal año5</th>
+<th>EBITDA adquirido año1→normal año5</th>
+<th>WACC actual/adquirido</th>
+<th>g</th>
+<th>ROIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td>400 → 250</td>
+<td>550 → 300</td>
+<td>11,50% / 12,00%</td>
+<td>0,00%</td>
+<td>9,00%</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>650 → 450</td>
+<td>850 → 500</td>
+<td>10,00% / 10,50%</td>
+<td>1,50%</td>
+<td>12,00%</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>900 → 750</td>
+<td>1.100 → 800</td>
+<td>9,00% / 9,50%</td>
+<td>2,00%</td>
+<td>16,00%</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Presupuesto inicial / millones</th>
+<th>Operaciones actuales</th>
+<th>Adquiridas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Coste corporativo o adicional</td>
+<td>55,00</td>
+<td>20,00</td>
+</tr>
+<tr class="even">
+<td>D&amp;A incluidas paradas</td>
+<td>220,00</td>
+<td>150,00</td>
+</tr>
+<tr class="odd">
+<td>Capex físico mínimo</td>
+<td>160,00</td>
+<td>130,00</td>
+</tr>
+<tr class="even">
+<td>Turnarounds de caja mínimos</td>
+<td>100,00</td>
+<td>70,00</td>
+</tr>
+<tr class="odd">
+<td>Inversión incremental en circulante</td>
+<td>5,00</td>
+<td>5,00</td>
+</tr>
+</tbody>
+</table></div>
+<p>La base de 450 para petróleo normalizado se contrasta con media quinquenal 473,4, mediana 199 y TTM 693, sin afirmar que cualquiera sea valor verdadero. Los 500 del negocio adquirido quedan lejos del TTM favorable ajustado y por encima de 2025 ex-SRE; reflejan una hipótesis de ciclo, no una media auditada. Los presupuestos físicos, paradas y costes corporativos son elecciones explícitas. El coste adicional de 20 del carve-out cubre servicios/reorganización no acreditados como cubiertos por completo; se sensibiliza, no se presenta como pasivo contractual.</p>
+<p>Se retiene compensación y se aplica impuesto del 24,5% sobre beneficio positivo, sin reembolso inmediato en pérdidas. La base exige inversión neta igual al mayor de: reposición física más turnarounds menos D&amp;A, más circulante; o incremento positivo de NOPAT dividido por ROIC. No se libera capital al caer beneficios. El terminal repite tanto el mínimo físico como g/ROIC: no financia diez años y luego abandona mantenimiento. No se usa la amortización de adquisición para inventar una deducción fiscal no demostrada.</p>
+<p>La regla de financiar toda mejora de NOPAT es exigente para un refinador: una recuperación de margen sobre capacidad ya instalada no siempre exige otra planta. Por eso se incluye una alternativa explícita de recuperación cíclica sobre capacidad existente. Conserva inversión física, paradas, crecimiento nominal y terminal; no es un caso de capex cero. Esta diferencia altera especialmente el inverso, que se ofrece como camino seleccionado y no como expectativa única implícita en cotización.</p>
+<p>El WACC mecánico usa Treasury 4,95%, ERP 4,41%, beta histórica 0,81, coste de deuda seleccionado 8%, deuda 35% e impuesto 24,5%: 7,6534%. El 10% de base para operaciones actuales y 10,5% para las adquiridas incluyen colchones discrecionales de ciclo, escala, ejecución y capital; no son redondeos ni una estructura proforma certificada. El ERP mensual está asociado a otro Treasury fechado; se declara ese desfase. Los escenarios y la matriz permiten juzgar el peso de este descuento.</p>
+<p>Fuentes de mercado/tipos: https://stockanalysis.com/stocks/cvi/statistics/ ; https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve ; https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm</p>
+<h3 id="diez-años-de-operaciones-actuales-caso-base">Diez años de operaciones actuales, caso base</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fin periodo</th>
+<th>EBITDA</th>
+<th>Corporativo</th>
+<th>D&amp;A</th>
+<th>NOPAT</th>
+<th>Capex total</th>
+<th>ΔWC</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027-11-03</td>
+<td>650,00</td>
+<td>55,00</td>
+<td>220,00</td>
+<td>283,12</td>
+<td>260,00</td>
+<td>5,00</td>
+<td>238,12</td>
+</tr>
+<tr class="even">
+<td>2028-11-03</td>
+<td>612,00</td>
+<td>56,10</td>
+<td>224,40</td>
+<td>250,28</td>
+<td>265,20</td>
+<td>5,10</td>
+<td>204,38</td>
+</tr>
+<tr class="odd">
+<td>2029-11-03</td>
+<td>572,22</td>
+<td>57,22</td>
+<td>228,89</td>
+<td>216,01</td>
+<td>270,50</td>
+<td>5,20</td>
+<td>169,20</td>
+</tr>
+<tr class="even">
+<td>2030-11-03</td>
+<td>530,60</td>
+<td>58,37</td>
+<td>233,47</td>
+<td>180,27</td>
+<td>275,91</td>
+<td>5,31</td>
+<td>132,52</td>
+</tr>
+<tr class="odd">
+<td>2031-11-03</td>
+<td>487,09</td>
+<td>59,53</td>
+<td>238,14</td>
+<td>143,02</td>
+<td>281,43</td>
+<td>5,41</td>
+<td>94,31</td>
+</tr>
+<tr class="even">
+<td>2032-11-03</td>
+<td>496,84</td>
+<td>60,72</td>
+<td>242,90</td>
+<td>145,88</td>
+<td>287,06</td>
+<td>5,52</td>
+<td>96,19</td>
+</tr>
+<tr class="odd">
+<td>2033-11-03</td>
+<td>506,77</td>
+<td>61,94</td>
+<td>247,76</td>
+<td>148,79</td>
+<td>292,80</td>
+<td>5,63</td>
+<td>98,12</td>
+</tr>
+<tr class="even">
+<td>2034-11-03</td>
+<td>516,91</td>
+<td>63,18</td>
+<td>252,71</td>
+<td>151,77</td>
+<td>298,66</td>
+<td>5,74</td>
+<td>100,08</td>
+</tr>
+<tr class="odd">
+<td>2035-11-03</td>
+<td>527,25</td>
+<td>64,44</td>
+<td>257,77</td>
+<td>154,81</td>
+<td>304,63</td>
+<td>5,86</td>
+<td>102,08</td>
+</tr>
+<tr class="even">
+<td>2036-11-03</td>
+<td>537,79</td>
+<td>65,73</td>
+<td>262,92</td>
+<td>157,90</td>
+<td>310,72</td>
+<td>5,98</td>
+<td>104,12</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="diez-años-adquiridos-caso-base">Diez años adquiridos, caso base</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fin periodo</th>
+<th>EBITDA</th>
+<th>Coste adicional</th>
+<th>D&amp;A</th>
+<th>NOPAT</th>
+<th>Capex total</th>
+<th>ΔWC</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027-11-03</td>
+<td>850,00</td>
+<td>20,00</td>
+<td>150,00</td>
+<td>513,40</td>
+<td>200,00</td>
+<td>5,00</td>
+<td>458,40</td>
+</tr>
+<tr class="even">
+<td>2028-11-03</td>
+<td>777,75</td>
+<td>20,40</td>
+<td>153,00</td>
+<td>456,28</td>
+<td>204,00</td>
+<td>5,10</td>
+<td>400,18</td>
+</tr>
+<tr class="odd">
+<td>2029-11-03</td>
+<td>702,27</td>
+<td>20,81</td>
+<td>156,06</td>
+<td>396,68</td>
+<td>208,08</td>
+<td>5,20</td>
+<td>339,46</td>
+</tr>
+<tr class="even">
+<td>2030-11-03</td>
+<td>623,46</td>
+<td>21,22</td>
+<td>159,18</td>
+<td>334,51</td>
+<td>212,24</td>
+<td>5,31</td>
+<td>276,14</td>
+</tr>
+<tr class="odd">
+<td>2031-11-03</td>
+<td>541,22</td>
+<td>21,65</td>
+<td>162,36</td>
+<td>269,69</td>
+<td>216,49</td>
+<td>5,41</td>
+<td>210,15</td>
+</tr>
+<tr class="even">
+<td>2032-11-03</td>
+<td>552,04</td>
+<td>22,08</td>
+<td>165,61</td>
+<td>275,08</td>
+<td>220,82</td>
+<td>5,52</td>
+<td>214,36</td>
+</tr>
+<tr class="odd">
+<td>2033-11-03</td>
+<td>563,08</td>
+<td>22,52</td>
+<td>168,92</td>
+<td>280,58</td>
+<td>225,23</td>
+<td>5,63</td>
+<td>218,64</td>
+</tr>
+<tr class="even">
+<td>2034-11-03</td>
+<td>574,34</td>
+<td>22,97</td>
+<td>172,30</td>
+<td>286,20</td>
+<td>229,74</td>
+<td>5,74</td>
+<td>223,02</td>
+</tr>
+<tr class="odd">
+<td>2035-11-03</td>
+<td>585,83</td>
+<td>23,43</td>
+<td>175,75</td>
+<td>291,92</td>
+<td>234,33</td>
+<td>5,86</td>
+<td>227,48</td>
+</tr>
+<tr class="even">
+<td>2036-11-03</td>
+<td>597,55</td>
+<td>23,90</td>
+<td>179,26</td>
+<td>297,76</td>
+<td>239,02</td>
+<td>5,98</td>
+<td>232,03</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las sinergias de 0/35/70 anuales desde año 3 son hipótesis frente al objetivo corporativo de 70. Los incrementos de ahorro neto también se financian a ROIC 15%. Integración de 50/30/10 es gasto futuro elegido, no coste anunciado confirmado ni doble suma de la compra. Por ello el valor de sinergias es mucho menor que capitalizar 70 sin coste.</p>
+<h2 id="resultados-residuos-condicionales-no-objetivos-de-cotización">Resultados: residuos condicionales, no objetivos de cotización</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>EV operaciones actuales</th>
+<th>EV adquiridas</th>
+<th>PV sinergias netas</th>
+<th>Residuo fracaso / acción</th>
+<th>Residuo cierre / acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td>-426,83</td>
+<td>785,86</td>
+<td>-57,14</td>
+<td>-7,36</td>
+<td>-34,62</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>1.375,71</td>
+<td>2.775,98</td>
+<td>39,55</td>
+<td>8,87</td>
+<td>-3,76</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>3.869,11</td>
+<td>5.913,77</td>
+<td>207,25</td>
+<td>31,33</td>
+<td>42,25</td>
+</tr>
+</tbody>
+</table></div>
+<p>Denominador ilustrativo tras oferta: 111,045847 millones; tras PIPE: 126,035542 millones. Son supuestos de ramas, no acciones actuales verificadas.</p>
+<p>La rama de fracaso presupone oferta común liquidada, ninguna aportación PIPE ni deuda de adquisición, coste hundido seleccionado de 20 y fee antitrust de 84. La oferta no se devuelve automáticamente si la adquisición falla. Otras causas contractuales pueden generar fee 0/168/252, no acumulativos, y están sensibilizadas. La rama de cierre supone oferta y PIPE financiadas, compra de 4.969, fricción 75, costes futuros 20, comisión IEP 5, pasivos objetivo 15 y reserva adicional de ajustes 100. Las disposiciones de deuda y su efectivo se cancelan en el puente de valor, no en la prueba separada de liquidez; amortizar 183 de principal existente también cancela caja y deuda, mientras el interés devengado se reconoce aparte.</p>
+<p>Los residuos negativos son señales de insuficiencia de los flujos modelados frente al capital comprometido. No valoran opciones de abandono, renegociación, venta de activos ni responsabilidad limitada y no se publican como precios negativos o como una acción con valor necesariamente cero. La ficha mantiene valor total y escenarios agregados nulos. Incluso el caso favorable depende de resultados sostenidos y financiación; la dispersión no es una distribución probabilística.</p>
+<h3 id="principales-sensibilidades-rama-de-cierre-base">Principales sensibilidades, rama de cierre base</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Valores probados</th>
+<th>Residuo por acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>parentNormalizedEbitda</td>
+<td>300,00 / 450,00 / 600,00 / 750,00 / 900,00</td>
+<td>-12,76 / -3,76 / 5,24 / 10,04 / 12,22</td>
+</tr>
+<tr class="even">
+<td>targetNormalizedEbitda</td>
+<td>300,00 / 500,00 / 700,00 / 900,00 / 1.100,00</td>
+<td>-14,97 / -3,76 / 7,23 / 14,79 / 17,11</td>
+</tr>
+<tr class="odd">
+<td>operatingCashReserve</td>
+<td>0,00 / 250,00 / 500,00 / 750,00</td>
+<td>0,21 / -1,78 / -3,76 / -5,75</td>
+</tr>
+<tr class="even">
+<td>uanStakeRecoveryFraction</td>
+<td>0,00 / 230,83 / 461,67 / 692,50</td>
+<td>-7,42 / -5,59 / -3,76 / -1,93</td>
+</tr>
+<tr class="odd">
+<td>pipePrice</td>
+<td>53,37 / 47,55 / 46,60 / 45,00 / 40,00</td>
+<td>-3,76 / -3,71 / -3,70 / -3,68 / -3,62</td>
+</tr>
+<tr class="even">
+<td>workingCapitalPurchaseAdjustment</td>
+<td>4.200,00 / 4.569,00 / 4.969,00 / 5.369,00</td>
+<td>2,34 / -0,59 / -3,76 / -6,94</td>
+</tr>
+<tr class="odd">
+<td>parentTurnaroundAnnual</td>
+<td>50,00 / 100,00 / 150,00 / 200,00</td>
+<td>-0,77 / -3,76 / -8,57 / -13,38</td>
+</tr>
+<tr class="even">
+<td>targetTurnaroundAnnual</td>
+<td>35,00 / 70,00 / 105,00 / 140,00</td>
+<td>-1,45 / -3,76 / -6,94 / -10,12</td>
+</tr>
+<tr class="odd">
+<td>financingFriction</td>
+<td>58,00 / 75,00 / 100,00 / 150,00</td>
+<td>-3,63 / -3,76 / -3,96 / -4,36</td>
+</tr>
+</tbody>
+</table></div>
+<p>El inverso estricto a 48,60 requiere EBITDA normalizado de 1.561,39 y 1.611,39 respectivamente, elevando ambos en igual importe. En la alternativa de recuperación sobre capacidad existente, requiere 944,72 y 994,72. Ninguno es una previsión única. El caso favorable de cierre pasa a 49,80 por acción con esa alternativa.</p>
+<p>La prueba de fondos arroja fuentes ilustrativas 5.084,81, usos incluidos pasivos y reservas 6.371,68 y desfase 1.286,87 millones. No es una cifra contractual de financiación faltante.</p>
+<p>La prueba de fondos es deliberadamente visible: utiliza deuda ilustrativa 2.750, no una disposición acreditada; pago completo de obligaciones históricas y reservas prudenciales, no sus fechas reales. La ausencia de financiación de inventario y generación intermedia puede exagerar el déficit de caja, mientras comisiones, capital de explotación y contingencias no conocidas pueden aumentarlo. No se corrige el déficit añadiendo caja UAN o una venta de inventario sin reconocer sus compromisos.</p>
+<h2 id="pares-y-contraste">Pares y contraste</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Empresa</th>
+<th>Cierre3nov</th>
+<th>Capitalización indicativa</th>
+<th>VentasQ3</th>
+<th>NI matrizQ3</th>
+<th>EPSdiluidoQ3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CVI</td>
+<td>48,60</td>
+<td>4.885,79</td>
+<td>3.281,00</td>
+<td>570,00</td>
+<td>5,67</td>
+</tr>
+<tr class="even">
+<td>PSX</td>
+<td>271,94</td>
+<td>106.076,28</td>
+<td>50.540,00</td>
+<td>5.616,00</td>
+<td>14,08</td>
+</tr>
+<tr class="odd">
+<td>VLO</td>
+<td>387,65</td>
+<td>108.109,54</td>
+<td>46.098,00</td>
+<td>6.828,00</td>
+<td>23,89</td>
+</tr>
+<tr class="even">
+<td>MPC</td>
+<td>427,34</td>
+<td>116.357,11</td>
+<td>56.032,00</td>
+<td>7.447,00</td>
+<td>26,59</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las cotizaciones son del 3 de noviembre y las cuentas de Q3, pero los perímetros y pasivos difieren. PSX combina midstream, marketing y participadas; MPC contiene una participación significativa en MPLX y vende los activos objetivo; VLO tiene otra escala y exposición a renovables; CVI combina refino y minoritarios UAN. No se calcula un múltiplo homogéneo ficticio ni se convierte una mediana en valor objetivo. En CVI, añadir el minoritario UAN a mercado cambia materialmente EV frente a omitirlo o usar solo NCI contable. El P/E Q3 sería especialmente engañoso por SRE y pico de márgenes.</p>
+<p>El contraste es operativo y de escala, no una comprobación relativa integral final. Las fuentes, capitales, fechas de acciones y límites figuran en comps/evidence.json y comps/README.md. La falta de múltiplos empresariales plenamente homogéneos se mantiene como requisito abierto, no como motivo para afirmar que una comparación parcial ha completado Stage 3.</p>
+<h2 id="catalizadores-falsación-y-siguiente-evidencia">Catalizadores, falsación y siguiente evidencia</h2>
+<p>Primero, comprobar liquidación de la oferta esperada para el 5 de noviembre, ejercicio de opción, suplemento definitivo y cálculo de precio PIPE. Después, financiación permanente y coste efectivo, puente de inventarios por entidad, permisos y revisión HSR. La compra se espera antes de fin de 2026, pero la fecha límite contractual y sus extensiones no garantizan cierre en esa fecha. La siguiente fecha exacta de resultados ordinarios no está confirmada; no se libera la puerta de calendario.</p>
+<p>La tesis mejoraría con márgenes después de RIN y coberturas sostenibles, paradas financiadas sin extracción de caja minoritaria, coste de inventario y deuda transparente y sinergias observables. Se debilitaría con vuelta a márgenes de 2024–25, necesidad de capital adicional, más dilución, retrasos regulatorios o gastos ambientales que consuman retorno. El inverso muestra qué niveles de rentabilidad tendrían que sostenerse, no dice que sean imposibles ni probables.</p>
+<p>El último escáner del 2 de noviembre conserva 55,92, QP 80, Opportunity 85, RSI 48 y Stage 2 «Sí». Es anterior a los resultados, adquisición y oferta. El cierre del 3 fue 48,60; no se reemplaza el dato original ni se hereda el filtro técnico como aprobación postevento. La investigación no autoriza compra, tamaño, stop ni operación alguna.</p>
+<p>Fuente: https://stockanalysis.com/stocks/cvi/history/</p>
+<h2 id="english-summary">English summary</h2>
+<p>CVI’s proposed refinery acquisition expands capacity, but headline EBITDA combines favorable refining conditions, regulatory credits and a turnaround-accounting change. The $4.2bn headline price excludes working capital; the illustrative purchase consideration is $4.969bn. The common offering is priced but not verified settled, and the PIPE price-protection clause expressly exempts qualifying public offerings. The base retains the signed $53.37 price, while final dilution remains conditional.</p>
+<p>This is partial, conditional hybrid research. Two operating DCFs retain compensation, taxes, maintenance, turnarounds and funded terminal growth; UAN is included at a dated quoted stake value, not an independently underwritten intrinsic value. Funding, inventory arrangements, final dilution and current parent-accessible capital remain unresolved. Signed economic deficits are not negative share-price targets or proof that common equity is worthless. No probability-weighted current fair value, completed Stage 3 or entry approval is provided.</p>
+<p>Evidence confidence is high for selected reported arithmetic, moderate for normalization and low-to-moderate for conditional economics and current funding. Independent review completed; partial classification preserved. The full reproducible package includes history, assumptions, separate ten-year schedules, capital and transaction evidence, sensitivity tests and source links. It does not republish complete third-party filings.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/CVI/CVI_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/CVI/model/model.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/CVI/model/results.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>

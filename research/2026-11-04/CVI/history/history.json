@@ -1,0 +1,2105 @@
+{
+  "units": "USD million",
+  "periods": [
+    {
+      "period": "FY2023",
+      "start": "2023-01-01",
+      "end": "2023-12-31",
+      "unit": "USD million",
+      "metrics": {
+        "revenue": {
+          "value": 9247.0,
+          "observation_ids": [
+            "o0014"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "ebit": {
+          "value": 1123.0,
+          "observation_ids": [
+            "o0020"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_consolidated": {
+          "value": 878.0,
+          "observation_ids": [
+            "o0029"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_parent": {
+          "value": 769.0,
+          "observation_ids": [
+            "o0035"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_nci": {
+          "value": 109.0,
+          "observation_ids": [
+            "o0032"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "cfo": {
+          "value": 948.0,
+          "observation_ids": [
+            "o0065"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "gross_capex": {
+          "value": 205.0,
+          "observation_ids": [
+            "o0068"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "cash_turnaround": {
+          "value": 57.0,
+          "observation_ids": [
+            "o0071"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "sbc": {
+          "value": 34.0,
+          "observation_ids": [
+            "o0059"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "da": {
+          "value": 298.0,
+          "observation_ids": [
+            "o0056"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "cash_taxes": {
+          "value": 93.0,
+          "observation_ids": [
+            "o0147"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "income_tax": {
+          "value": 207.0,
+          "observation_ids": [
+            "o0026"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_interest": {
+          "value": -52.0,
+          "observation_ids": [
+            "o0023"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "return_of_equity_investment": {
+          "value": 22.0,
+          "observation_ids": [
+            "o0074"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "change_tax_payable": {
+          "value": null,
+          "observation_ids": [],
+          "source_urls": [],
+          "method": "not available"
+        },
+        "change_other_operating_liabilities": {
+          "value": -386.0,
+          "observation_ids": [
+            "o0062"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "fcf_after_turnaround": {
+          "value": 686.0,
+          "observation_ids": [
+            "o0065",
+            "o0068",
+            "o0071"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround"
+        },
+        "fcf_after_turnaround_and_sbc": {
+          "value": 652.0,
+          "observation_ids": [
+            "o0065",
+            "o0068",
+            "o0071",
+            "o0059"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + -1*sbc"
+        },
+        "company_fcf": {
+          "value": 708.0,
+          "observation_ids": [
+            "o0065",
+            "o0068",
+            "o0071",
+            "o0074"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + 1*return_of_equity_investment"
+        }
+      }
+    },
+    {
+      "period": "FY2024",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "unit": "USD million",
+      "metrics": {
+        "revenue": {
+          "value": 7610.0,
+          "observation_ids": [
+            "o0013"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "ebit": {
+          "value": 58.0,
+          "observation_ids": [
+            "o0019"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_consolidated": {
+          "value": 45.0,
+          "observation_ids": [
+            "o0028"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_parent": {
+          "value": 7.0,
+          "observation_ids": [
+            "o0034"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_nci": {
+          "value": 38.0,
+          "observation_ids": [
+            "o0031"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "cfo": {
+          "value": 404.0,
+          "observation_ids": [
+            "o0064"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "gross_capex": {
+          "value": 179.0,
+          "observation_ids": [
+            "o0067"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "cash_turnaround": {
+          "value": 53.0,
+          "observation_ids": [
+            "o0070"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "sbc": {
+          "value": 15.0,
+          "observation_ids": [
+            "o0058"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "da": {
+          "value": 298.0,
+          "observation_ids": [
+            "o0055"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "cash_taxes": {
+          "value": 60.0,
+          "observation_ids": [
+            "o0146"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "income_tax": {
+          "value": -26.0,
+          "observation_ids": [
+            "o0025"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_interest": {
+          "value": -77.0,
+          "observation_ids": [
+            "o0022"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "return_of_equity_investment": {
+          "value": 9.0,
+          "observation_ids": [
+            "o0073"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "change_tax_payable": {
+          "value": null,
+          "observation_ids": [],
+          "source_urls": [],
+          "method": "not available"
+        },
+        "change_other_operating_liabilities": {
+          "value": -11.0,
+          "observation_ids": [
+            "o0061"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "fcf_after_turnaround": {
+          "value": 172.0,
+          "observation_ids": [
+            "o0064",
+            "o0067",
+            "o0070"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround"
+        },
+        "fcf_after_turnaround_and_sbc": {
+          "value": 157.0,
+          "observation_ids": [
+            "o0064",
+            "o0067",
+            "o0070",
+            "o0058"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + -1*sbc"
+        },
+        "company_fcf": {
+          "value": 181.0,
+          "observation_ids": [
+            "o0064",
+            "o0067",
+            "o0070",
+            "o0073"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + 1*return_of_equity_investment"
+        }
+      }
+    },
+    {
+      "period": "FY2025",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "unit": "USD million",
+      "metrics": {
+        "revenue": {
+          "value": 7162.0,
+          "observation_ids": [
+            "o0012"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "ebit": {
+          "value": 182.0,
+          "observation_ids": [
+            "o0018"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_consolidated": {
+          "value": 90.0,
+          "observation_ids": [
+            "o0027"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_parent": {
+          "value": 27.0,
+          "observation_ids": [
+            "o0033"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_nci": {
+          "value": 63.0,
+          "observation_ids": [
+            "o0030"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "cfo": {
+          "value": 144.0,
+          "observation_ids": [
+            "o0063"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "gross_capex": {
+          "value": 185.0,
+          "observation_ids": [
+            "o0066"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "cash_turnaround": {
+          "value": 197.0,
+          "observation_ids": [
+            "o0069"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "sbc": {
+          "value": 42.0,
+          "observation_ids": [
+            "o0057"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "da": {
+          "value": 403.0,
+          "observation_ids": [
+            "o0054"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "cash_taxes": {
+          "value": -11.0,
+          "observation_ids": [
+            "o0145"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "income_tax": {
+          "value": -10.0,
+          "observation_ids": [
+            "o0024"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "net_interest": {
+          "value": -108.0,
+          "observation_ids": [
+            "o0021"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "return_of_equity_investment": {
+          "value": 7.0,
+          "observation_ids": [
+            "o0072"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "change_tax_payable": {
+          "value": null,
+          "observation_ids": [],
+          "source_urls": [],
+          "method": "not available"
+        },
+        "change_other_operating_liabilities": {
+          "value": -289.0,
+          "observation_ids": [
+            "o0060"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "reported"
+        },
+        "fcf_after_turnaround": {
+          "value": -238.0,
+          "observation_ids": [
+            "o0063",
+            "o0066",
+            "o0069"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround"
+        },
+        "fcf_after_turnaround_and_sbc": {
+          "value": -280.0,
+          "observation_ids": [
+            "o0063",
+            "o0066",
+            "o0069",
+            "o0057"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + -1*sbc"
+        },
+        "company_fcf": {
+          "value": -231.0,
+          "observation_ids": [
+            "o0063",
+            "o0066",
+            "o0069",
+            "o0072"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + 1*return_of_equity_investment"
+        }
+      }
+    },
+    {
+      "period": "Q4 2025",
+      "start": "2025-10-01",
+      "end": "2025-12-31",
+      "unit": "USD million",
+      "metrics": {
+        "revenue": {
+          "value": 1810.0,
+          "observation_ids": [
+            "o0012",
+            "o0231"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "ebit": {
+          "value": -95.0,
+          "observation_ids": [
+            "o0018",
+            "o0239"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "net_income_consolidated": {
+          "value": -116.0,
+          "observation_ids": [
+            "o0027",
+            "o0251"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "net_income_parent": {
+          "value": -110.0,
+          "observation_ids": [
+            "o0033",
+            "o0259"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "net_income_nci": {
+          "value": -6.0,
+          "observation_ids": [
+            "o0030",
+            "o0255"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "cfo": {
+          "value": 0.0,
+          "observation_ids": [
+            "o0063",
+            "o0307"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "gross_capex": {
+          "value": 55.0,
+          "observation_ids": [
+            "o0066",
+            "o0309"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "cash_turnaround": {
+          "value": 1.0,
+          "observation_ids": [
+            "o0069",
+            "o0311"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "sbc": {
+          "value": 5.0,
+          "observation_ids": [
+            "o0057",
+            "o0301"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "da": {
+          "value": 145.0,
+          "observation_ids": [
+            "o0054",
+            "o0299"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "cash_taxes": {
+          "value": -8.0,
+          "observation_ids": [
+            "o0145",
+            "o0473"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "income_tax": {
+          "value": -7.0,
+          "observation_ids": [
+            "o0024",
+            "o0247"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "net_interest": {
+          "value": -29.0,
+          "observation_ids": [
+            "o0021",
+            "o0243"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "return_of_equity_investment": {
+          "value": 1.0,
+          "observation_ids": [
+            "o0072",
+            "o0313"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "change_tax_payable": {
+          "value": null,
+          "observation_ids": [
+            "o0303"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "change_other_operating_liabilities": {
+          "value": -37.0,
+          "observation_ids": [
+            "o0060",
+            "o0305"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + -1*2025-01-01/2025-09-30"
+        },
+        "fcf_after_turnaround": {
+          "value": -56.0,
+          "observation_ids": [
+            "o0063",
+            "o0307",
+            "o0066",
+            "o0309",
+            "o0069",
+            "o0311"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround"
+        },
+        "fcf_after_turnaround_and_sbc": {
+          "value": -61.0,
+          "observation_ids": [
+            "o0063",
+            "o0307",
+            "o0066",
+            "o0309",
+            "o0069",
+            "o0311",
+            "o0057",
+            "o0301"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + -1*sbc"
+        },
+        "company_fcf": {
+          "value": -55.0,
+          "observation_ids": [
+            "o0063",
+            "o0307",
+            "o0066",
+            "o0309",
+            "o0069",
+            "o0311",
+            "o0072",
+            "o0313"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + 1*return_of_equity_investment"
+        }
+      }
+    },
+    {
+      "period": "Q1 2026",
+      "start": "2026-01-01",
+      "end": "2026-03-31",
+      "unit": "USD million",
+      "metrics": {
+        "revenue": {
+          "value": 1980.0,
+          "observation_ids": [
+            "o0732"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "ebit": {
+          "value": -145.0,
+          "observation_ids": [
+            "o0736"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_consolidated": {
+          "value": -160.0,
+          "observation_ids": [
+            "o0267"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_parent": {
+          "value": -192.0,
+          "observation_ids": [
+            "o0746"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_nci": {
+          "value": 32.0,
+          "observation_ids": [
+            "o0744"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "cfo": {
+          "value": 64.0,
+          "observation_ids": [
+            "o0766"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "gross_capex": {
+          "value": 47.0,
+          "observation_ids": [
+            "o0768"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "cash_turnaround": {
+          "value": 0.0,
+          "observation_ids": [
+            "o0770"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "sbc": {
+          "value": 12.0,
+          "observation_ids": [
+            "o0762"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "da": {
+          "value": 79.0,
+          "observation_ids": [
+            "o0760"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "cash_taxes": {
+          "value": -1.0,
+          "observation_ids": [
+            "o0846"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "income_tax": {
+          "value": -29.0,
+          "observation_ids": [
+            "o0740"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "net_interest": {
+          "value": -58.0,
+          "observation_ids": [
+            "o0738"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "return_of_equity_investment": {
+          "value": 4.0,
+          "observation_ids": [
+            "o0772"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "change_tax_payable": {
+          "value": null,
+          "observation_ids": [],
+          "source_urls": [],
+          "method": "not available"
+        },
+        "change_other_operating_liabilities": {
+          "value": 41.0,
+          "observation_ids": [
+            "o0764"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "reported"
+        },
+        "fcf_after_turnaround": {
+          "value": 17.0,
+          "observation_ids": [
+            "o0766",
+            "o0768",
+            "o0770"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround"
+        },
+        "fcf_after_turnaround_and_sbc": {
+          "value": 5.0,
+          "observation_ids": [
+            "o0766",
+            "o0768",
+            "o0770",
+            "o0762"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + -1*sbc"
+        },
+        "company_fcf": {
+          "value": 21.0,
+          "observation_ids": [
+            "o0766",
+            "o0768",
+            "o0770",
+            "o0772"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + 1*return_of_equity_investment"
+        }
+      }
+    },
+    {
+      "period": "Q2 2026",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "unit": "USD million",
+      "metrics": {
+        "revenue": {
+          "value": 2738.0,
+          "observation_ids": [
+            "o0489"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "reported"
+        },
+        "ebit": {
+          "value": 78.0,
+          "observation_ids": [
+            "o0497"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_consolidated": {
+          "value": 46.0,
+          "observation_ids": [
+            "o0273"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_parent": {
+          "value": -3.0,
+          "observation_ids": [
+            "o0517"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_nci": {
+          "value": 49.0,
+          "observation_ids": [
+            "o0513"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "reported"
+        },
+        "cfo": {
+          "value": 307.0,
+          "observation_ids": [
+            "o0553",
+            "o0766"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*2026-01-01/2026-06-30 + -1*2026-01-01/2026-03-31"
+        },
+        "gross_capex": {
+          "value": 43.0,
+          "observation_ids": [
+            "o0555",
+            "o0768"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*2026-01-01/2026-06-30 + -1*2026-01-01/2026-03-31"
+        },
+        "cash_turnaround": {
+          "value": 1.0,
+          "observation_ids": [
+            "o0557",
+            "o0770"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*2026-01-01/2026-06-30 + -1*2026-01-01/2026-03-31"
+        },
+        "sbc": {
+          "value": -1.0,
+          "observation_ids": [
+            "o0549",
+            "o0762"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*2026-01-01/2026-06-30 + -1*2026-01-01/2026-03-31"
+        },
+        "da": {
+          "value": 80.0,
+          "observation_ids": [
+            "o0547",
+            "o0760"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*2026-01-01/2026-06-30 + -1*2026-01-01/2026-03-31"
+        },
+        "cash_taxes": {
+          "value": 0.0,
+          "observation_ids": [
+            "o0715",
+            "o0846"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*2026-01-01/2026-06-30 + -1*2026-01-01/2026-03-31"
+        },
+        "income_tax": {
+          "value": 10.0,
+          "observation_ids": [
+            "o0505"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "reported"
+        },
+        "net_interest": {
+          "value": -25.0,
+          "observation_ids": [
+            "o0501"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "reported"
+        },
+        "return_of_equity_investment": {
+          "value": 1.0,
+          "observation_ids": [
+            "o0559",
+            "o0772"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*2026-01-01/2026-06-30 + -1*2026-01-01/2026-03-31"
+        },
+        "change_tax_payable": {
+          "value": null,
+          "observation_ids": [],
+          "source_urls": [],
+          "method": "1*2026-01-01/2026-06-30 + -1*2026-01-01/2026-03-31"
+        },
+        "change_other_operating_liabilities": {
+          "value": 247.0,
+          "observation_ids": [
+            "o0551",
+            "o0764"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*2026-01-01/2026-06-30 + -1*2026-01-01/2026-03-31"
+        },
+        "fcf_after_turnaround": {
+          "value": 263.0,
+          "observation_ids": [
+            "o0553",
+            "o0766",
+            "o0555",
+            "o0768",
+            "o0557",
+            "o0770"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround"
+        },
+        "fcf_after_turnaround_and_sbc": {
+          "value": 264.0,
+          "observation_ids": [
+            "o0553",
+            "o0766",
+            "o0555",
+            "o0768",
+            "o0557",
+            "o0770",
+            "o0549",
+            "o0762"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + -1*sbc"
+        },
+        "company_fcf": {
+          "value": 264.0,
+          "observation_ids": [
+            "o0553",
+            "o0766",
+            "o0555",
+            "o0768",
+            "o0557",
+            "o0770",
+            "o0559",
+            "o0772"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000028/cvi-20260331.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + 1*return_of_equity_investment"
+        }
+      }
+    },
+    {
+      "period": "Q3 2026",
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "unit": "USD million",
+      "metrics": {
+        "revenue": {
+          "value": 3281.0,
+          "observation_ids": [
+            "o0228"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "reported"
+        },
+        "ebit": {
+          "value": 724.0,
+          "observation_ids": [
+            "o0236"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_consolidated": {
+          "value": 563.0,
+          "observation_ids": [
+            "o0248"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_parent": {
+          "value": 570.0,
+          "observation_ids": [
+            "o0256"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "reported"
+        },
+        "net_income_nci": {
+          "value": -7.0,
+          "observation_ids": [
+            "o0252"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "reported"
+        },
+        "cfo": {
+          "value": 655.0,
+          "observation_ids": [
+            "o0306",
+            "o0553"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*2026-01-01/2026-09-30 + -1*2026-01-01/2026-06-30"
+        },
+        "gross_capex": {
+          "value": 62.0,
+          "observation_ids": [
+            "o0308",
+            "o0555"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*2026-01-01/2026-09-30 + -1*2026-01-01/2026-06-30"
+        },
+        "cash_turnaround": {
+          "value": 1.0,
+          "observation_ids": [
+            "o0310",
+            "o0557"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*2026-01-01/2026-09-30 + -1*2026-01-01/2026-06-30"
+        },
+        "sbc": {
+          "value": 27.0,
+          "observation_ids": [
+            "o0300",
+            "o0549"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*2026-01-01/2026-09-30 + -1*2026-01-01/2026-06-30"
+        },
+        "da": {
+          "value": 78.0,
+          "observation_ids": [
+            "o0298",
+            "o0547"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*2026-01-01/2026-09-30 + -1*2026-01-01/2026-06-30"
+        },
+        "cash_taxes": {
+          "value": 1.0,
+          "observation_ids": [
+            "o0472",
+            "o0715"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*2026-01-01/2026-09-30 + -1*2026-01-01/2026-06-30"
+        },
+        "income_tax": {
+          "value": 141.0,
+          "observation_ids": [
+            "o0244"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "reported"
+        },
+        "net_interest": {
+          "value": -21.0,
+          "observation_ids": [
+            "o0240"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "reported"
+        },
+        "return_of_equity_investment": {
+          "value": 1.0,
+          "observation_ids": [
+            "o0312",
+            "o0559"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*2026-01-01/2026-09-30 + -1*2026-01-01/2026-06-30"
+        },
+        "change_tax_payable": {
+          "value": null,
+          "observation_ids": [
+            "o0302"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2026-01-01/2026-09-30 + -1*2026-01-01/2026-06-30"
+        },
+        "change_other_operating_liabilities": {
+          "value": -215.0,
+          "observation_ids": [
+            "o0304",
+            "o0551"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*2026-01-01/2026-09-30 + -1*2026-01-01/2026-06-30"
+        },
+        "fcf_after_turnaround": {
+          "value": 592.0,
+          "observation_ids": [
+            "o0306",
+            "o0553",
+            "o0308",
+            "o0555",
+            "o0310",
+            "o0557"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround"
+        },
+        "fcf_after_turnaround_and_sbc": {
+          "value": 565.0,
+          "observation_ids": [
+            "o0306",
+            "o0553",
+            "o0308",
+            "o0555",
+            "o0310",
+            "o0557",
+            "o0300",
+            "o0549"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + -1*sbc"
+        },
+        "company_fcf": {
+          "value": 593.0,
+          "observation_ids": [
+            "o0306",
+            "o0553",
+            "o0308",
+            "o0555",
+            "o0310",
+            "o0557",
+            "o0312",
+            "o0559"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000039/cvi-20260630.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + 1*return_of_equity_investment"
+        }
+      }
+    },
+    {
+      "period": "TTM Sep 2026",
+      "start": "2025-10-01",
+      "end": "2026-09-30",
+      "unit": "USD million",
+      "metrics": {
+        "revenue": {
+          "value": 9810.0,
+          "observation_ids": [
+            "o0012",
+            "o0230",
+            "o0231"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "ebit": {
+          "value": 562.0,
+          "observation_ids": [
+            "o0018",
+            "o0238",
+            "o0239"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "net_income_consolidated": {
+          "value": 333.0,
+          "observation_ids": [
+            "o0027",
+            "o0250",
+            "o0251"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "net_income_parent": {
+          "value": 265.0,
+          "observation_ids": [
+            "o0033",
+            "o0258",
+            "o0259"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "net_income_nci": {
+          "value": 68.0,
+          "observation_ids": [
+            "o0030",
+            "o0254",
+            "o0255"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "cfo": {
+          "value": 1026.0,
+          "observation_ids": [
+            "o0063",
+            "o0306",
+            "o0307"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "gross_capex": {
+          "value": 207.0,
+          "observation_ids": [
+            "o0066",
+            "o0308",
+            "o0309"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "cash_turnaround": {
+          "value": 3.0,
+          "observation_ids": [
+            "o0069",
+            "o0310",
+            "o0311"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "sbc": {
+          "value": 43.0,
+          "observation_ids": [
+            "o0057",
+            "o0300",
+            "o0301"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "da": {
+          "value": 382.0,
+          "observation_ids": [
+            "o0054",
+            "o0298",
+            "o0299"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "cash_taxes": {
+          "value": -8.0,
+          "observation_ids": [
+            "o0145",
+            "o0472",
+            "o0473"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "income_tax": {
+          "value": 115.0,
+          "observation_ids": [
+            "o0024",
+            "o0246",
+            "o0247"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "net_interest": {
+          "value": -134.0,
+          "observation_ids": [
+            "o0021",
+            "o0242",
+            "o0243"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "return_of_equity_investment": {
+          "value": 7.0,
+          "observation_ids": [
+            "o0072",
+            "o0312",
+            "o0313"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "change_tax_payable": {
+          "value": null,
+          "observation_ids": [
+            "o0302",
+            "o0303"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "change_other_operating_liabilities": {
+          "value": 36.0,
+          "observation_ids": [
+            "o0060",
+            "o0304",
+            "o0305"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*2025-01-01/2025-12-31 + 1*2026-01-01/2026-09-30 + -1*2025-01-01/2025-09-30"
+        },
+        "fcf_after_turnaround": {
+          "value": 816.0,
+          "observation_ids": [
+            "o0063",
+            "o0306",
+            "o0307",
+            "o0066",
+            "o0308",
+            "o0309",
+            "o0069",
+            "o0310",
+            "o0311"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround"
+        },
+        "fcf_after_turnaround_and_sbc": {
+          "value": 773.0,
+          "observation_ids": [
+            "o0063",
+            "o0306",
+            "o0307",
+            "o0066",
+            "o0308",
+            "o0309",
+            "o0069",
+            "o0310",
+            "o0311",
+            "o0057",
+            "o0300",
+            "o0301"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + -1*sbc"
+        },
+        "company_fcf": {
+          "value": 823.0,
+          "observation_ids": [
+            "o0063",
+            "o0306",
+            "o0307",
+            "o0066",
+            "o0308",
+            "o0309",
+            "o0069",
+            "o0310",
+            "o0311",
+            "o0072",
+            "o0312",
+            "o0313"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + 1*return_of_equity_investment"
+        }
+      }
+    },
+    {
+      "period": "TTM Sep 2025",
+      "start": "2024-10-01",
+      "end": "2025-09-30",
+      "unit": "USD million",
+      "metrics": {
+        "revenue": {
+          "value": 7299.0,
+          "observation_ids": [
+            "o0013",
+            "o0231",
+            "o0864"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "ebit": {
+          "value": 298.0,
+          "observation_ids": [
+            "o0019",
+            "o0239",
+            "o0872"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "net_income_consolidated": {
+          "value": 246.0,
+          "observation_ids": [
+            "o0028",
+            "o0251",
+            "o0884"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "net_income_parent": {
+          "value": 166.0,
+          "observation_ids": [
+            "o0034",
+            "o0259",
+            "o0892"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "net_income_nci": {
+          "value": 80.0,
+          "observation_ids": [
+            "o0031",
+            "o0255",
+            "o0888"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "cfo": {
+          "value": 242.0,
+          "observation_ids": [
+            "o0064",
+            "o0307",
+            "o0940"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "gross_capex": {
+          "value": 185.0,
+          "observation_ids": [
+            "o0067",
+            "o0309",
+            "o0942"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "cash_turnaround": {
+          "value": 203.0,
+          "observation_ids": [
+            "o0070",
+            "o0311",
+            "o0944"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "sbc": {
+          "value": 39.0,
+          "observation_ids": [
+            "o0058",
+            "o0301",
+            "o0934"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "da": {
+          "value": 332.0,
+          "observation_ids": [
+            "o0055",
+            "o0299",
+            "o0932"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "cash_taxes": {
+          "value": -3.0,
+          "observation_ids": [
+            "o0146",
+            "o0473",
+            "o1115"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "income_tax": {
+          "value": -15.0,
+          "observation_ids": [
+            "o0025",
+            "o0247",
+            "o0880"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "net_interest": {
+          "value": -100.0,
+          "observation_ids": [
+            "o0022",
+            "o0243",
+            "o0876"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "return_of_equity_investment": {
+          "value": 10.0,
+          "observation_ids": [
+            "o0073",
+            "o0313",
+            "o0946"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "change_tax_payable": {
+          "value": null,
+          "observation_ids": [
+            "o0303",
+            "o0936"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "change_other_operating_liabilities": {
+          "value": -291.0,
+          "observation_ids": [
+            "o0061",
+            "o0305",
+            "o0938"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*2024-01-01/2024-12-31 + 1*2025-01-01/2025-09-30 + -1*2024-01-01/2024-09-30"
+        },
+        "fcf_after_turnaround": {
+          "value": -146.0,
+          "observation_ids": [
+            "o0064",
+            "o0307",
+            "o0940",
+            "o0067",
+            "o0309",
+            "o0942",
+            "o0070",
+            "o0311",
+            "o0944"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround"
+        },
+        "fcf_after_turnaround_and_sbc": {
+          "value": -185.0,
+          "observation_ids": [
+            "o0064",
+            "o0307",
+            "o0940",
+            "o0067",
+            "o0309",
+            "o0942",
+            "o0070",
+            "o0311",
+            "o0944",
+            "o0058",
+            "o0301",
+            "o0934"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + -1*sbc"
+        },
+        "company_fcf": {
+          "value": -136.0,
+          "observation_ids": [
+            "o0064",
+            "o0307",
+            "o0940",
+            "o0067",
+            "o0309",
+            "o0942",
+            "o0070",
+            "o0311",
+            "o0944",
+            "o0073",
+            "o0313",
+            "o0946"
+          ],
+          "source_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000014/cvi-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000043/cvi-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1376139/000137613925000054/cvi-20250930.htm"
+          ],
+          "method": "1*cfo + -1*gross_capex + -1*cash_turnaround + 1*return_of_equity_investment"
+        }
+      }
+    }
+  ],
+  "scope": "Consolidated historical GAAP, before pending acquisition or equity financing. Cash flow includes 100% of UAN; not wholly attributable to CVI common holders."
+}

@@ -1,0 +1,5 @@
+from pathlib import Path
+import json
+p=Path(__file__).parent
+rf=.0495;erp=.0441;beta=.93;debt=.02;kd=rf+.015;ke=rf+beta*erp;w=ke*(1-debt)+kd*.76*debt
+r={'rf10yNov3':rf,'erpNov1':erp,'erpAssociatedRf':.0529,'providerBeta':beta,'capmKe':ke,'selectedDebtWeight':debt,'selectedPretaxDebtCost':kd,'mechanicalWacc':w,'selectedBaseWacc':.09,'selectionDifferenceBp':(.09-w)*10000,'sources':['https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve','https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm','https://stockanalysis.com/stocks/panw/statistics/'],'limits':['Debt weight and credit spread are assumptions, not observed bond quotes.','Provider beta differs from Yahoo0.97; regression method not independently reproduced.','ERP month and daily rate are not synchronized. Base9% is an analyst selection near this reference, not exact empirical WACC.']};(p/'rates_results.json').write_text(json.dumps(r,indent=2)+'\n')

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checks": [
+    "FY2023: NCI and gross cash investment reconciliation passed",
+    "FY2024: NCI and gross cash investment reconciliation passed",
+    "FY2025: NCI and gross cash investment reconciliation passed",
+    "Q4 2025: NCI and gross cash investment reconciliation passed",
+    "Q1 2026: NCI and gross cash investment reconciliation passed",
+    "Q2 2026: NCI and gross cash investment reconciliation passed",
+    "Q3 2026: NCI and gross cash investment reconciliation passed",
+    "TTM Sep 2026: NCI and gross cash investment reconciliation passed",
+    "TTM Sep 2025: NCI and gross cash investment reconciliation passed",
+    "Last four quarters reconcile to TTM within independent reporting rounding of $1m",
+    "Deterministic offline rebuild passed; all nonmissing values retain primary-source URLs and observation IDs"
+  ],
+  "rounding_caveats": [
+    "Q3 2026 reported revenue3281 versus YTD-difference3282; preserve direct quarterly value. TTM9810 derives FY25 plus9M26 minus9M25.",
+    "Q3 2026 CF-derived D&A78 versus income-statement D&A79; CF totals use reported YTD differences."
+  ],
+  "coverage_limits": [
+    "Quarterly cash taxes, capex, CFO and SBC are YTD differences, not independently reported quarterly values.",
+    "Cash taxes negative values are net refunds.",
+    "No EPS or weighted-share subtraction is performed.",
+    "Consolidated CFO contains100% of UAN and is not all available to CVI common equity.",
+    "SBC expense is liability-classified; extra SBC subtraction is an illustrative conservative sensitivity and can double count cash settlements."
+  ]
+}

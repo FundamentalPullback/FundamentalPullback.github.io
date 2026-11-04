@@ -1,0 +1,6 @@
+import pathlib,json,html
+P=pathlib.Path(__file__).parent;h=json.loads((P/'history/normalized_history.json').read_text())['records']
+t='| Periodo | Ingresos | EBIT GAAP | NI | EPS directo | CFO | PPE | Software | FCF compañía | SBC |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n'
+for k in ['FY2024','FY2025','FY2026','Q3FY2025','Q4FY2025','Q1FY2026','Q2FY2026','Q3FY2026','Q4FY2026','Q1FY2027','Q2FY2027','TTM20250731','TTM20260731']:
+ r=h[k]['metrics'];vals=[r.get(x) for x in ['revenue','ebit_gaap','net_income_gaap','eps_diluted','cfo','ppe_cash_signed','software_cash_signed','fcf_company_definition','sbc']];t+='| '+k+' | '+' | '.join('—' if v is None else f'{(-v if j in [5,6] else v):,.2f}' for j,v in enumerate(vals))+' |\n'
+s=(P/'report_body.md').read_text().replace('{HISTORY_TABLE}',t).replace('{PEERS}',(P/'comps/README.md').read_text());(P/'report.md').write_text(s);(P/'report.html').write_text('<!doctype html><html lang="es"><meta charset="utf-8"><title>OKTA investigación parcial</title><style>body{max-width:1050px;margin:30px auto;padding:20px;font:16px/1.55 system-ui;color:#173047}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}</style><body><pre>'+html.escape(s)+'</pre></body></html>')

@@ -1,0 +1,22 @@
+{
+  "rf10yNov3": 0.0495,
+  "erpNov1": 0.0441,
+  "erpAssociatedRf": 0.0529,
+  "providerBeta": 0.93,
+  "capmKe": 0.09051300000000001,
+  "selectedDebtWeight": 0.02,
+  "selectedPretaxDebtCost": 0.0645,
+  "mechanicalWacc": 0.08968314000000001,
+  "selectedBaseWacc": 0.09,
+  "selectionDifferenceBp": 3.1685999999998824,
+  "sources": [
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "https://stockanalysis.com/stocks/panw/statistics/"
+  ],
+  "limits": [
+    "Debt weight and credit spread are assumptions, not observed bond quotes.",
+    "Provider beta differs from Yahoo0.97; regression method not independently reproduced.",
+    "ERP month and daily rate are not synchronized. Base9% is an analyst selection near this reference, not exact empirical WACC."
+  ]
+}

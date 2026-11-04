@@ -1,0 +1,154 @@
+{
+  "valuationDate": "2026-11-03",
+  "researchDate": "2026-11-04",
+  "price": 48.6,
+  "unit": "USD million except per share",
+  "common": {
+    "tax": 0.245,
+    "inflation": 0.02
+  },
+  "capital": {
+    "cashExUanRounded": 1119.809,
+    "nominalDebtAndFinanceLeasesExUan": 1223.138,
+    "selectedOperatingCashReserve": 500,
+    "rfsHistoricalLiability": 230,
+    "derivativeNetLiabilityAfterCollateralAndAssets": 172,
+    "historicalIncomeTaxPayable": 132,
+    "historicalCashCompensationLiability": 29.572,
+    "environmentalLegacyReserve": 3,
+    "utbLegacyReserve": 1,
+    "uanQuotedEquityStake": 461.66904,
+    "selectedUanExitTaxReserve": 50,
+    "unknownPostSeptemberCapital": 0,
+    "existingShares": 100.530599,
+    "historicalAccruedInterestExUan": 12.103
+  },
+  "scenarios": {
+    "bear": {
+      "parent": {
+        "ebitdaYear1": 400,
+        "ebitdaNormalizedYear5": 250,
+        "corporateCashCostYear1": 55,
+        "daYear1": 220,
+        "physicalCapexYear1": 160,
+        "turnaroundCapexYear1": 100,
+        "annualWorkingCapitalInvestmentYear1": 5,
+        "priorNopatAnchor": 315.59,
+        "wacc": 0.115,
+        "g": 0,
+        "roic": 0.09
+      },
+      "target": {
+        "ebitdaYear1": 550,
+        "ebitdaNormalizedYear5": 300,
+        "corporateCashCostYear1": 20,
+        "daYear1": 150,
+        "physicalCapexYear1": 130,
+        "turnaroundCapexYear1": 70,
+        "annualWorkingCapitalInvestmentYear1": 5,
+        "priorNopatAnchor": 668.93,
+        "wacc": 0.12,
+        "g": 0,
+        "roic": 0.09
+      },
+      "synergy": {
+        "annualSynergy": 0,
+        "roic": 0.15,
+        "integrationCosts": [
+          50,
+          30,
+          10
+        ]
+      }
+    },
+    "base": {
+      "parent": {
+        "ebitdaYear1": 650,
+        "ebitdaNormalizedYear5": 450,
+        "corporateCashCostYear1": 55,
+        "daYear1": 220,
+        "physicalCapexYear1": 160,
+        "turnaroundCapexYear1": 100,
+        "annualWorkingCapitalInvestmentYear1": 5,
+        "priorNopatAnchor": 315.59,
+        "wacc": 0.1,
+        "g": 0.015,
+        "roic": 0.12
+      },
+      "target": {
+        "ebitdaYear1": 850,
+        "ebitdaNormalizedYear5": 500,
+        "corporateCashCostYear1": 20,
+        "daYear1": 150,
+        "physicalCapexYear1": 130,
+        "turnaroundCapexYear1": 70,
+        "annualWorkingCapitalInvestmentYear1": 5,
+        "priorNopatAnchor": 668.93,
+        "wacc": 0.105,
+        "g": 0.015,
+        "roic": 0.12
+      },
+      "synergy": {
+        "annualSynergy": 35,
+        "roic": 0.15,
+        "integrationCosts": [
+          50,
+          30,
+          10
+        ]
+      }
+    },
+    "bull": {
+      "parent": {
+        "ebitdaYear1": 900,
+        "ebitdaNormalizedYear5": 750,
+        "corporateCashCostYear1": 55,
+        "daYear1": 220,
+        "physicalCapexYear1": 160,
+        "turnaroundCapexYear1": 100,
+        "annualWorkingCapitalInvestmentYear1": 5,
+        "priorNopatAnchor": 315.59,
+        "wacc": 0.09,
+        "g": 0.02,
+        "roic": 0.16
+      },
+      "target": {
+        "ebitdaYear1": 1100,
+        "ebitdaNormalizedYear5": 800,
+        "corporateCashCostYear1": 20,
+        "daYear1": 150,
+        "physicalCapexYear1": 130,
+        "turnaroundCapexYear1": 70,
+        "annualWorkingCapitalInvestmentYear1": 5,
+        "priorNopatAnchor": 668.93,
+        "wacc": 0.095,
+        "g": 0.02,
+        "roic": 0.16
+      },
+      "synergy": {
+        "annualSynergy": 70,
+        "roic": 0.15,
+        "integrationCosts": [
+          50,
+          30,
+          10
+        ]
+      }
+    }
+  },
+  "scope": "Partial conditional hybrid economic cases; market-valued UAN stake, not full intrinsic value. Signed deficits are not negative stock price targets. No financing feasibility certification.",
+  "transaction": {
+    "commonNetProceeds": 490,
+    "newCommonShares": 10.515248,
+    "pipeProceeds": 800,
+    "pipePriceIllustration": 53.37,
+    "purchasePriceIncludingWorkingCapital": 4969,
+    "debtFinancingFrictionProxy": 75,
+    "futureAcquisitionCosts": 20,
+    "nonrefundableIepFee": 5,
+    "targetLegacyEnvironmentalAndAro": 15,
+    "additionalClosingAdjustmentReserve": 100,
+    "failureSunkCosts": 20,
+    "failureTerminationFee": 84
+  }
+}

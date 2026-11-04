@@ -1,0 +1,387 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FTNT · FCFF condicionado · anticipos, capital y calendario abiertos · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/FTNT">← FTNT profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">FCFF condicionado · anticipos, capital y calendario abiertos</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="ftnt-a224-investigación-del-4-de-noviembre-de-2026">FTNT · A224 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Escenarios condicionados 29,28/51,35/95,85 USD frente a 128,11 de cierre. Beneficio operativo real, pero anticipos y menor capex elevan la conversión. Se conserva SBC como coste. Capital, compromisos y calendario limitan la conclusión; no entrada.</strong></p>
+<p>Conditional scenarios $29.28/$51.35/$95.85 versus the $128.11 close. Real operating profit, but advance payments and lower capex boost conversion. SBC remains an expense. Capital, commitments and calendar limit the conclusion; no entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/FTNT.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-28, 129.00 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 128.11 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04 20:01 UTC.</p>
+<p>A112 y la observación del 28 de octubre a 129,00 se preservan. El cierre histórico documentado de esa sesión es 174,08; la discrepancia no está conciliada y no se corrige inventando una fecha. El cierre del 3 de noviembre es 128,11. La ganancia de propiedad intelectual de 5,5 millones se elimina del ancla TTM. Reservas fiscales 0/base/doble son sensibilidades, no certificación del capital actual.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="fortinet-ftnt-crecimiento-rentable-caja-anticipada-y-valoración-condicionada">Fortinet (FTNT): crecimiento rentable, caja anticipada y valoración condicionada</h1>
+<p>Corte de investigación: 4 de noviembre de 2026, 20:01 UTC. USD millones salvo precios y EPS. Investigación condicionada con auditoría independiente completada; no cierre integral de Stage 3, no latestCompleted, no aprobación Stage 3.5 ni entrada. No modifica gestión ni operaciones.</p>
+<h2 id="conclusión-y-evidencia-favorableadversa">1. Conclusión y evidencia favorable/adversa</h2>
+<p>Los ingresos TTM aumentan de 6.554,7 a 7.880,9 millones USD y el EBIT GAAP de 2.033,2 a 2.599,2 millones, manteniendo la remuneración en acciones como coste operativo.</p>
+<p>El FCF TTM de definición corporativa sube de 2.014,4 a 3.414,3 millones USD, pero 652,4 millones de la mejora proceden de mayor aportación de ingresos diferidos y 164 millones de menor capex.</p>
+<p>La caja y las inversiones de renta fija suman 5.287,3 millones USD frente a 500 millones de principal de deuda, antes de reservas operativas y fiscales.</p>
+<p>Los escenarios condicionados de 29,28 / 51,35 / 95,85 USD quedan por debajo del cierre de referencia de 128,11 USD; ninguno acredita margen de seguridad para una entrada.</p>
+<p>La discrepancia entre el escáner del 28 de octubre a 129,00 USD y el cierre histórico de esa sesión a 174,08 USD sigue sin conciliar; no se sustituyen ni se mezclan ambas observaciones.</p>
+<p>Fortinet combina equipos de seguridad, software y servicios recurrentes. La base instalada y FortiOS/FortiASIC pueden favorecer renovaciones, integración y eficiencia, pero esas ventajas no prueban por sí solas cuota futura ni inmunidad frente a fallos. Crecimiento de producto ligado al ciclo de renovación, competencia de plataformas, ejecución de SASE y coste de ampliar infraestructura son riesgos económicos concretos. No se presenta una evaluación técnica independiente de vulnerabilidades o una certificación de cumplimiento normativo.</p>
+<h2 id="historia-comparable-y-definiciones">2. Historia comparable y definiciones</h2>
+<p>La tabla siguiente recoge tres ejercicios, los últimos cuatro trimestres, sus cuatro comparativos y TTM. EBIT es operativo GAAP, no EBITDA ajustado. CFO y capex trimestrales se obtienen por diferencias YTD; Q4 por FY menos 9M. EPS de Q4 es directamente publicado; TTM suma cuatro EPS trimestrales redondeados, no un EPS anual GAAP certificado. El historial adjunto contiene márgenes, producto/servicios, SBC, contratos, impuestos y todas las fuentes.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NI</th>
+<th style="text-align: right;">EPS</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">PPE</th>
+<th style="text-align: right;">FCF compañía</th>
+<th style="text-align: right;">SBC CF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">5,304.80</td>
+<td style="text-align: right;">1,241.10</td>
+<td style="text-align: right;">1,147.80</td>
+<td style="text-align: right;">1.46</td>
+<td style="text-align: right;">1,935.50</td>
+<td style="text-align: right;">204.10</td>
+<td style="text-align: right;">1,731.40</td>
+<td style="text-align: right;">249.00</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">5,955.80</td>
+<td style="text-align: right;">1,803.40</td>
+<td style="text-align: right;">1,745.20</td>
+<td style="text-align: right;">2.26</td>
+<td style="text-align: right;">2,258.10</td>
+<td style="text-align: right;">378.90</td>
+<td style="text-align: right;">1,879.20</td>
+<td style="text-align: right;">257.90</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">6,799.60</td>
+<td style="text-align: right;">2,084.70</td>
+<td style="text-align: right;">1,853.40</td>
+<td style="text-align: right;">2.42</td>
+<td style="text-align: right;">2,590.60</td>
+<td style="text-align: right;">364.80</td>
+<td style="text-align: right;">2,211.80</td>
+<td style="text-align: right;">279.50</td>
+</tr>
+<tr class="even">
+<td>Q42024</td>
+<td style="text-align: right;">1,660.10</td>
+<td style="text-align: right;">574.10</td>
+<td style="text-align: right;">526.20</td>
+<td style="text-align: right;">0.68</td>
+<td style="text-align: right;">477.60</td>
+<td style="text-align: right;">97.60</td>
+<td style="text-align: right;">380.00</td>
+<td style="text-align: right;">65.80</td>
+</tr>
+<tr class="odd">
+<td>Q12025</td>
+<td style="text-align: right;">1,539.70</td>
+<td style="text-align: right;">453.80</td>
+<td style="text-align: right;">433.40</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">863.30</td>
+<td style="text-align: right;">66.50</td>
+<td style="text-align: right;">782.80</td>
+<td style="text-align: right;">66.10</td>
+</tr>
+<tr class="even">
+<td>Q22025</td>
+<td style="text-align: right;">1,630.00</td>
+<td style="text-align: right;">458.00</td>
+<td style="text-align: right;">440.10</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">451.90</td>
+<td style="text-align: right;">167.80</td>
+<td style="text-align: right;">284.10</td>
+<td style="text-align: right;">69.10</td>
+</tr>
+<tr class="odd">
+<td>Q32025</td>
+<td style="text-align: right;">1,724.90</td>
+<td style="text-align: right;">547.30</td>
+<td style="text-align: right;">473.90</td>
+<td style="text-align: right;">0.62</td>
+<td style="text-align: right;">655.20</td>
+<td style="text-align: right;">87.70</td>
+<td style="text-align: right;">567.50</td>
+<td style="text-align: right;">71.80</td>
+</tr>
+<tr class="even">
+<td>Q42025</td>
+<td style="text-align: right;">1,905.00</td>
+<td style="text-align: right;">625.60</td>
+<td style="text-align: right;">506.00</td>
+<td style="text-align: right;">0.68</td>
+<td style="text-align: right;">620.20</td>
+<td style="text-align: right;">42.80</td>
+<td style="text-align: right;">577.40</td>
+<td style="text-align: right;">72.50</td>
+</tr>
+<tr class="odd">
+<td>Q12026</td>
+<td style="text-align: right;">1,849.60</td>
+<td style="text-align: right;">580.00</td>
+<td style="text-align: right;">534.50</td>
+<td style="text-align: right;">0.72</td>
+<td style="text-align: right;">1,077.10</td>
+<td style="text-align: right;">70.60</td>
+<td style="text-align: right;">1,006.50</td>
+<td style="text-align: right;">72.50</td>
+</tr>
+<tr class="even">
+<td>Q22026</td>
+<td style="text-align: right;">2,047.90</td>
+<td style="text-align: right;">689.30</td>
+<td style="text-align: right;">606.30</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">1,043.60</td>
+<td style="text-align: right;">78.00</td>
+<td style="text-align: right;">965.60</td>
+<td style="text-align: right;">79.30</td>
+</tr>
+<tr class="odd">
+<td>Q32026</td>
+<td style="text-align: right;">2,078.40</td>
+<td style="text-align: right;">704.30</td>
+<td style="text-align: right;">635.50</td>
+<td style="text-align: right;">0.86</td>
+<td style="text-align: right;">946.00</td>
+<td style="text-align: right;">64.20</td>
+<td style="text-align: right;">864.80</td>
+<td style="text-align: right;">80.10</td>
+</tr>
+<tr class="even">
+<td>TTM_September_2025</td>
+<td style="text-align: right;">6,554.70</td>
+<td style="text-align: right;">2,033.20</td>
+<td style="text-align: right;">1,873.60</td>
+<td style="text-align: right;">2.43</td>
+<td style="text-align: right;">2,448.00</td>
+<td style="text-align: right;">419.60</td>
+<td style="text-align: right;">2,014.40</td>
+<td style="text-align: right;">272.80</td>
+</tr>
+<tr class="odd">
+<td>TTM_September_2026</td>
+<td style="text-align: right;">7,880.90</td>
+<td style="text-align: right;">2,599.20</td>
+<td style="text-align: right;">2,282.30</td>
+<td style="text-align: right;">3.08</td>
+<td style="text-align: right;">3,686.90</td>
+<td style="text-align: right;">255.60</td>
+<td style="text-align: right;">3,414.30</td>
+<td style="text-align: right;">304.40</td>
+</tr>
+</tbody>
+</table></div>
+<p>El CFO menos PPE TTM es 3.431,3, distinto del FCF corporativo de 3.414,3 por el cobro de escrow de 17 en Q3. El comparativo corporativo excluye 14 de cobro por propiedad intelectual. FCF corporativo menos SBC del estado de flujos es 3.109,9 frente a 1.741,6: sensibilidad económica calculada, no owner FCF publicado ni FCFF. SBC es un ajuste no monetario en el estado de flujos, no pago en efectivo. Q3: CFO 946,0 menos PPE 64,2 menos escrow 17,0 = 864,8.</p>
+<p>El crecimiento TTM del CFO es 1.238,9. La aportación de ingresos diferidos pasa de 631,5 a 1.283,9, y representa aproximadamente 34,8 % del CFO actual. Son anticipos estructurales de clientes, no ingresos ficticios; tampoco son incremento perpetuo de beneficio. Retirar toda esa aportación es solo una sensibilidad, no normalización preferida. En el modelo no se concede financiación incremental por ingresos diferidos y tampoco se resta su saldo completo como deuda: una decisión conservadora explícita, no una estimación demostrada de coste de servicio pendiente.</p>
+<p>Los costes de contratos diferidos son distintos: activo de 815,4 y gasto de caja 9M de 370,1 frente a amortización de 290,2. La amortización de contratos no se añade a D&amp;A del DCF; se financia el crecimiento del activo neto. SBC queda en márgenes y no se resta otra vez del FCFF proyectado. Las acciones futuras aún pueden diluir.</p>
+<p>Linksys se consolida al 100 % desde el 31 de enero de 2025: el TTM comparativo incluye ocho meses frente a doce actuales. No se llama orgánico a todo el crecimiento. El precio adicional de compra fue 20,8; el valor del interés anterior 21,5 y los ajustes de compra generaron ganancia de 39,9, revalorización de 10,8 y baja fiscal de 30,6. Las ganancias están debajo del EBIT; no se restan del operativo otra vez. Lacework también altera comparabilidad histórica. La adquisición de seguridad AI Q3 de 13,4 en efectivo no equivale al flujo neto 9M de adquisiciones de 9,8. No se certifica un perímetro orgánico reconstruido.</p>
+<h2 id="beneficio-impuestos-y-reinversión">3. Beneficio, impuestos y reinversión</h2>
+<p>El beneficio 9M se beneficia de deducciones FDDEI de 104,1 y beneficios fiscales de SBC de 52,5, frente a impuesto total de 356,5. La tasa efectiva de aproximadamente 17 % no se perpetúa automáticamente. El escenario central utiliza 22,5 %, adverso 25 % y favorable 20 %, supuestos del analista. Sensibilidad a 18 % no es certificación de una tasa sostenible. La dirección indica ausencia de efecto material de Pilar Dos durante 9M; eso no cierra toda la exposición futura.</p>
+<p>El capex TTM de 255,6 está por debajo del comparativo de 419,6. La guía primaria de PPE para 2026 es 390–420. De las compras 9M, 95,8 corresponden a inmuebles (64,2 terrenos, 31,6 edificios); no se añaden de vuelta como si fueran automáticamente excedentarios. Depreciación física 9M 91,5 frente a D&amp;A total 120,6; el DCF no devuelve amortización adquirida ni contratos. Tampoco se suma valor inmobiliario a un negocio cuyos costes y rentas puedan depender de esos activos.</p>
+<p>Compromisos de inventario de 1.929,5 (1.144,5 resto de 2026), reserva por exceso de 30,3 ya contabilizada, y otros compromisos contractuales de 134,1 exponen a errores de demanda. No se convierten todos en deuda financiera ni se resta dos veces la reserva. El inventario pasó de 399,5 a 591,2. La liquidez no elimina el riesgo de normalización del ciclo.</p>
+<h2 id="puente-de-capital-y-dilución">4. Puente de capital y dilución</h2>
+<p>Caja 3.750,6 + inversiones disponibles para venta 1.536,7 = 5.287,3. Se excluyen del caso base 31,1 de valores de renta variable, sin declararlos sin valor. El saldo total de inversiones cortas y largas es 1.567,8. Los importes son del 30 de septiembre, no una certificación a 3 de noviembre.</p>
+<p>Se resta principal de deuda de 500 (valor contable 497,1); los otros 500 vencidos en marzo ya se pagaron. Se retiene caja operativa equivalente a 15 % de ventas TTM, 1.182,135, y estrés bruto fiscal de 109,7 (UTB 96,2 más intereses/penalidades 13,5). Este último no es una pérdida esperada ni un vencimiento cierto; cuantía y calendario son inciertos y la reserva puede ser conservadora frente al tratamiento de impuestos normalizados. Las sensibilidades de reserva cero y doble (219,4) cuantifican ese posible solapamiento, sin cambiar el caso central. Resultado: puente positivo de 3.495,465.</p>
+<p>No se monetizan activos fiscales diferidos de 1.306,9, goodwill ni inmuebles. Arrendamientos conservan renta operativa en EBIT y no se deducen de nuevo como deuda; pagos futuros de alquiler de 63,4 no son saldo financiero descontado. No se certifica ausencia de contingencias adicionales o disponibilidad irrestricta de todo el efectivo por jurisdicción.</p>
+<p>Denominador: 742,6 millones, promedio diluido Q3, como proxy y no máximo futuro. Al 30 de septiembre había 734,6 millones emitidos, 7,7 millones de RSU y 5,5 millones de opciones con strike medio 59,15; no se suman indiscriminadamente al promedio diluido. Nuevas PSU pueden pagar hasta 200 % de objetivo; no hay reconstrucción completa de todos los premios futuros. Se muestra sensibilidad de +5 % de acciones, manteniendo SBC como coste. La autorización de recompra restante de unos 2.000 al 29 de octubre no es recompra ejecutada ni caja que deba deducirse hoy.</p>
+<h2 id="dcf-de-10-años-hipótesis-no-guía-de-la-empresa">5. DCF de 10 años: hipótesis, no guía de la empresa</h2>
+<p>No existía DCF ejecutable de A112: esto es nueva investigación, no réplica certificada del modelo antiguo. Cinco años explícitos más cinco de transición; no se capitaliza directamente el FCF extraordinariamente alto actual. Ancla TTM: ingresos 7.880,9 y EBIT GAAP 2.599,2. Se retiran 5,5 de ganancias por propiedad intelectual (FY25 10,4 menos 9M25 9,0 más 9M26 4,1), dejando 2.593,7 como ancla normalizada de NOPAT; los márgenes futuros no incorporan nuevas ganancias de esta clase. Esta ganancia contable no equivale al cobro de 14 excluido del FCF comparativo. Los escenarios no tienen probabilidades asignadas.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th>Crecimiento años 1–5</th>
+<th>Crecimiento años 6–10</th>
+<th>Márgenes años 1–10</th>
+<th style="text-align: right;">Tasa</th>
+<th style="text-align: right;">g terminal</th>
+<th style="text-align: right;">ROI supuesto</th>
+<th style="text-align: right;">Impuesto</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td>8%, 6%, 5%, 4%, 3%</td>
+<td>3%, 2.5%, 2.5%, 2%, 2%</td>
+<td>30%, 29%, 28%, 27%, 27%, 27%, 27%, 27%, 27%, 27%</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">2%</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">29.28</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>15%, 13%, 12%, 11%, 10%</td>
+<td>8%, 7%, 6%, 5%, 4%</td>
+<td>33%, 33%, 32.5%, 32%, 32%, 32%, 32%, 32%, 32%, 32%</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">3%</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">22.5%</td>
+<td style="text-align: right;">51.35</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>20%, 18%, 16%, 15%, 14%</td>
+<td>12%, 10%, 8%, 6%, 5%</td>
+<td>35%, 36%, 37%, 37%, 37%, 37%, 37%, 37%, 37%, 37%</td>
+<td style="text-align: right;">9%</td>
+<td style="text-align: right;">3.5%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">95.85</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las tasas de descuento 9–11 % son exigencias de rentabilidad del analista, no WACC calibrado mediante beta/ERP/riesgo país contemporáneos. ROI 15–25 % es hipótesis económica, no ROIC incremental demostrado. La desaceleración central y margen terminal de 32 % reflejan riesgo de ciclo, competencia y reinversión; la guía no confirma ese recorrido. La guía FY26 es ingresos 8.125–8.215 y margen operativo NO GAAP 36,5–37,5 %, no los márgenes GAAP del modelo. Q4 guía ingresos 2.155–2.245 y margen no GAAP 35,5–37,5 %; no se convierte esa guía automáticamente a GAAP.</p>
+<p>NOPAT = ventas × margen GAAP × (1 − impuesto). Capex/ventas: 4,5 / 4 / 3,5 / 3,25 / 3 % y después 3 %. D&amp;A física/ventas sube linealmente de 1,5 a 2 %; no es amortización de intangibles adquiridos. Capital circulante incremental: 5 % del crecimiento de ventas, separado del crecimiento de activos netos de contratos a razón 815,4 / 7.880,9. No hay crédito por nuevos anticipos.</p>
+<p>Reinversión física = capex − D&amp;A + Δcapital circulante + Δcontratos. Reinversión económica = máximo(0, ΔNOPAT) / ROI, financiando también expansión de margen. Reinversión final = máximo de ambas. FCFF = NOPAT − reinversión. El archivo explicita una reserva adicional que permite conciliar NOPAT + D&amp;A − capex − Δcirculante − Δcontratos − reserva. No se ignoran FCFF negativos si aparecen.</p>
+<p>Terminal: ventas y NOPAT crecen a g, y se usa el máximo entre suelo físico coherente y NOPAT terminal × g / ROI. EV suma valores presentes explícitos y terminal; se añade el puente y divide por acciones. Los suelos físicos dominan tres años adversos; el económico domina los diez centrales y favorables. Por ello las sensibilidades físicas pueden dejar el caso central idéntico: no significa que capex o contratos sean económicamente irrelevantes.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">Puente</th>
+<th style="text-align: right;">PV terminal/EV</th>
+<th style="text-align: right;">Valor/acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td style="text-align: right;">18251.122</td>
+<td style="text-align: right;">3495.465</td>
+<td style="text-align: right;">43.85%</td>
+<td style="text-align: right;">29.28439</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td style="text-align: right;">34636.073</td>
+<td style="text-align: right;">3495.465</td>
+<td style="text-align: right;">64.68%</td>
+<td style="text-align: right;">51.34869</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td style="text-align: right;">67684.874</td>
+<td style="text-align: right;">3495.465</td>
+<td style="text-align: right;">75.13%</td>
+<td style="text-align: right;">95.85287</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="sensibilidades-y-contraste-inverso">Sensibilidades y contraste inverso</h3>
+<ul>
+<li>tax_reserve_zero: 51.49642 USD.</li>
+<li>tax_reserve_double: 51.20097 USD.</li>
+<li>capex_5pct: 51.34869 USD.</li>
+<li>contract_assets_double: 51.34869 USD.</li>
+<li>nwc_10pct: 51.34869 USD.</li>
+<li>opcash_25pct: 50.28743 USD.</li>
+<li>shares_plus_5pct: 48.90352 USD.</li>
+<li>w0.09_g0.02: 56.77139 USD.</li>
+<li>w0.09_g0.03: 60.67572 USD.</li>
+<li>w0.09_g0.035: 63.14227 USD.</li>
+<li>w0.1_g0.02: 48.85908 USD.</li>
+<li>w0.1_g0.03: 51.34869 USD.</li>
+<li>w0.1_g0.035: 52.86684 USD.</li>
+<li>w0.11_g0.02: 42.78905 USD.</li>
+<li>w0.11_g0.03: 44.42781 USD.</li>
+<li>w0.11_g0.035: 45.40005 USD.</li>
+<li>w0.12_g0.02: 38.00235 USD.</li>
+<li>w0.12_g0.03: 39.10577 USD.</li>
+<li>w0.12_g0.035: 39.74596 USD.</li>
+<li>tax_0.18: 54.05691 USD.</li>
+<li>tax_0.25: 49.84412 USD.</li>
+<li>roic_0.15: 45.81699 USD.</li>
+<li>roic_0.25: 54.66771 USD.</li>
+</ul>
+<p>El barrido inverso desplaza simultáneamente los diez márgenes de 0 a +60 puntos porcentuales en pasos de 0,5. No encuentra cruce con 128,11: su máximo es 115,51 con margen terminal 92 %. No se fuerza una raíz ni se afirma imposibilidad fuera del dominio. Tampoco se presenta ese margen extremo como económicamente plausible. La dependencia del terminal central de 64,68 % y favorable de 75,13 % limita precisión.</p>
+<h2 id="pares-y-calidad-comparativa">6. Pares y calidad comparativa</h2>
+<h1 id="fortinet-operating-context-check-point-and-palo-alto-networks">Fortinet operating context: Check Point and Palo Alto Networks</h1>
+<p>As of November 4, 2026. All monetary values are USD millions. Run <code>python reproduce.py</code> offline with Python 3 to regenerate the JSON, CSV and reconciliation checks from compact source-mapped inputs. Source excerpts are included; full filings are excluded.</p>
+<h2 id="calendar-and-perimeter">Calendar and perimeter</h2>
+<p>FTNT and CHKP latest quarters both cover July 1–September 30, 2026. CHKP published its Q3 2026 results November 2. PANW’s latest published quarter is fiscal Q4 2026, covering May 1–July 31, released September 1. On November 3, PANW announced that its October 31 quarter will be released November 18, after the US close. Do not label PANW’s July figures as September-quarter results or imply its October results are already available. Calendar source: the <code>panw_calendar</code> URL in inputs.json.</p>
+<p>CHKP quarterly and nine-month 2026/2025 figures and PANW quarterly/full-fiscal-year 2026/2025 figures are provided. FY and nine-month data have different durations and must not be directly ranked against each other. No valuation multiples, DCF or inferred organic-growth comparison is included.</p>
+<h2 id="latest-quarter-observations">Latest-quarter observations</h2>
+<ul>
+<li>FTNT: revenue 2,078.4; GAAP EBIT 704.3 (33.9%); CFO 946.0; cash PPE 64.2; cash-flow SBC 80.1; CFO less capex 881.8; company FCF 864.8 after removing 17.0 escrow proceeds.</li>
+<li>CHKP: revenue 669.8; GAAP EBIT 177.2 (26.5%); CFO 264.3; PPE 6.4; no prepaid-lease or capitalized-software cash spending in this quarter; SBC 54.8; FCF and adjusted FCF both 257.9.</li>
+<li>PANW: revenue 3,410; GAAP EBIT 172 (5.0%); CFO 1,357; property/equipment/other-assets spending 103; cash-flow equity-award SBC 460; FCF 1,254; adjusted FCF 1,289.</li>
+</ul>
+<p>The latest-quarter cash-flow SBC/revenue ratios are 3.9%, 8.2% and 13.5%, respectively, but the fiscal dates and acquisition scope differ. These are descriptive indicators, not a normalized ranking. FCF less SBC is only a dilution-cost sensitivity and is not reported FCF or a complete per-share ownership model.</p>
+<h2 id="cash-flow-definitions-matter">Cash-flow definitions matter</h2>
+<p>CHKP subtracts property/equipment, prepaid-lease payments and capitalized internal-use software before reporting FCF. It then adds acquisition-related cash costs for adjusted FCF. Q3 2025 FCF of 74.8 included a 159.9 prepaid-lease outlay: CFO less ordinary PPE alone was 234.7. Consequently Q3 2026 FCF growth greatly overstates improvement in recurring cash generation if that prior lease payment is ignored. Nine-month 2026 capital spending includes PPE 22.9 and software 3.6; adjusted FCF 875.9 adds 21.4 acquisition-related costs to FCF 854.5. These are not acquisition purchase-price cash payments, which are separately reported.</p>
+<p>PANW subtracts purchases of property, equipment and other assets. The latest quarter adds back 7 corporate-asset spending and 28 acquisition-related cash costs to reach adjusted FCF. FY2026 adjustments total 301: headquarters land 91, corporate assets 42, acquisition-related payments 164, and litigation payment 4. Comparing PANW adjusted FCF directly with FTNT’s unadjusted capital spending overstates relative cash conversion. Both base and adjusted figures are retained.</p>
+<p>PANW capitalizes internally developed security software. Its FY2026 net software balance was 266 versus 167 a year earlier, with annual software amortization 104. This is a net book-value disclosure, not a separate cash-additions figure. A distinct quarterly software cash amount is not disclosed in the reviewed schedules; do not assign zero or infer cash spending from the balance difference. Retain the reported property/equipment/other-assets cash subtotal of 103 for the quarter and 440 for the year.</p>
+<p>PANW’s latest quarter SBC-related operating adjustment of 487 includes a broader definition than cash-flow equity-award SBC. The latter is 1,774 annual less 1,314 nine-month = 460. The prior quarter comparator is 1,295 less 941 = 354. Both definitions are retained in inputs; do not substitute 487 for 460 without relabeling. Even cash-flow SBC definitions can differ in liability-award treatment across companies.</p>
+<h2 id="earnings-and-acquisitions">Earnings and acquisitions</h2>
+<p>CHKP Q3 EBIT includes a 25 reduction in R&amp;D expense for expected Israeli grants; the nine-month benefit is 80. Subtracting that benefit as an isolated sensitivity gives Q3 EBIT of 152.2 (22.7%), not a company-reported adjusted result. The grant’s accounting recognition does not by itself prove current cash receipt. Q3 2025 net income also contained a one-time tax benefit, so raw EPS growth is not a clean operating comparison.</p>
+<p>CHKP acquired Cyata and Cyclops in February 2026 and Rotate’s talent that month, following Lakera in October 2025 and Veriti in June 2025. The 2026 nine-month cash-flow statement shows 94.4 net acquisition cash payments. Do not infer an organic revenue bridge from total reported growth; acquisition revenue contributions were not separately quantified in the reviewed quarterly release. Primary acquisition chronology source: <code>chkp_acquisitions</code>.</p>
+<p>PANW acquired Chronosphere January 29, 2026 for 2,951 total consideration, and CyberArk February 11 for 21,061. It also acquired Koi April 14 and Portkey May 29. Thus prior-year quarterly comparisons exclude businesses and acquired-intangible amortization now in the group. FY2026 acquisition contributions and costs, rather than an invented organic bridge, support the perimeter caveat. Embrace and Console closed after fiscal year-end, August 27 and September 1, respectively; neither belongs in FY2026 historical operations. Source: PANW 2026 10-K, Note 8 and subsequent-events note.</p>
+<p>FTNT’s Linksys consolidation started January 31, 2025. Unlike its current/prior TTM comparison, both September quarters include a full quarter of Linksys, but that does not establish organic growth or eliminate other acquisition effects. The separate Fortinet history package documents these limitations.</p>
+<h2 id="files">Files</h2>
+<p><code>inputs.json</code> contains reported numbers, primary URLs and table/row/column provenance. <code>operating_comparables.json</code> and <code>.csv</code> contain explicit start/end dates and derived margins. <code>checks.json</code> verifies every base and adjusted FCF bridge. <code>excerpts/</code> holds the compact evidence, including grants, software capitalization and acquisition disclosures. None of these calculations is a trading recommendation.</p>
+<h2 id="calendario-precio-riesgos-y-condiciones-de-revisión">7. Calendario, precio, riesgos y condiciones de revisión</h2>
+<p>El Q3 ya se publicó el 28 de octubre a las 16:05 EDT y el 10-Q el 30 de octubre. No hay que esperar a un evento ya ocurrido. Próxima fecha exacta de resultados no confirmada. El comunicado anuncia participación en BMO el 12 de noviembre, UBS el 2 de diciembre y Barclays el 9 de diciembre; son conferencias, no fechas de resultados y pueden cambiar. La página de eventos no fue accesible en una comprobación; eso no demuestra que no exista fecha futura.</p>
+<p>Precio utilizado: cierre Nasdaq de 3 de noviembre, 128,11 USD. Se preserva A112 y la observación de escáner del 28 de octubre a 129,00 con QP 80 / Opportunity 85; el cierre histórico 174,08 de esa fecha es evidencia distinta, discrepancia sin resolver. No se inventa un nuevo escáner o señal técnica. Los scores históricos no levantan filtros ni aprueban compra.</p>
+<p>Riesgos: ralentización del reemplazo de equipos, duración de contratos y menor financiación por anticipos; demanda de SASE que no compense hardware; presión competitiva y márgenes; mayor capex/contratos; dilución; fiscalidad internacional y contingencias; adquisiciones sin puente orgánico; fallos de seguridad y litigios. El filing describe alegaciones en litigios, no hechos probados por este informe; los accruals no materiales no equivalen a pérdida futura cero. Falta un análisis jurídico/técnico independiente y conciliación de disponibilidad fiscal de caja.</p>
+<p>Para mejorar la decisión: contrastar billings y renovaciones con conversión de caja; comprobar capex FY26 frente a 390–420; reconstruir premios y caja al nuevo corte; normalizar contratos y coste de servir ingresos diferidos; calibrar coste de capital y pares homogéneos; confirmar siguiente resultado y reconciliar el precio del escáner. Ningún rango aquí es techo de compra aprobado. Owner FCF normalizado y valor integral certificado permanecen sin determinar.</p>
+<h2 id="fuentes-y-reproducción">8. Fuentes y reproducción</h2>
+<ul>
+<li>Q3 10-Q: https://www.sec.gov/Archives/edgar/data/1262039/000126203926000027/ftnt-20260930.htm</li>
+<li>FY25: https://www.sec.gov/Archives/edgar/data/1262039/000126203926000007/ftnt-20251231.htm</li>
+<li>Q3 previo: https://www.sec.gov/Archives/edgar/data/1262039/000126203925000039/ftnt-20250930.htm</li>
+<li>Q2: https://www.sec.gov/Archives/edgar/data/1262039/000126203926000021/ftnt-20260630.htm</li>
+<li>Q1: https://www.sec.gov/Archives/edgar/data/1262039/000126203926000013/ftnt-20260331.htm</li>
+<li>Comunicado Q3/guía/calendario: https://investor.fortinet.com/news-releases/news-release-details/fortinet-reports-strong-third-quarter-2026-financial-results</li>
+<li>Precios de cierre: https://stockanalysis.com/stocks/ftnt/history/</li>
+</ul>
+<p>El paquete permite recalcular historia, modelo, comparables, informe y controles sin red. Contiene extractos numéricos y referencias, no filings completos. Hipótesis están separadas de hechos; investigación condicionada, no asesoramiento de ejecución.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FTNT/support.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FTNT/model.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FTNT/model.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>

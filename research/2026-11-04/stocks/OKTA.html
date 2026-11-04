@@ -1,0 +1,260 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OKTA · Investigación parcial · Permiso y capital sin conciliar · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/OKTA">← OKTA profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · Permiso y capital sin conciliar</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="okta-a226-investigación-del-4-de-noviembre-de-2026">OKTA · A226 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Mejora operativa GAAP, pero Permiso se cerró después del balance y su contraprestación no está conciliada. FCF menos SBC es sensibilidad, no caja certificada del accionista. Sin valoración ni entrada; resultados del 1 de diciembre confirmados.</strong></p>
+<p>GAAP operating improvement, but Permiso closed after the balance sheet and its consideration is unreconciled. FCF less SBC is a sensitivity, not certified owner cash. No valuation or entry; December 1 earnings confirmed.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/OKTA.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-30, 213.00 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 189.68 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04 20:08 UTC.</p>
+<p>A123 y la fila del 30 de octubre a 213,00 se preservan; el cierre de esa sesión de 208,24 permanece separado. RSI del escáner 50,6. El cierre del 3 de noviembre es 189,68. La deuda vencida en junio fue pagada y no se mantiene como deuda actual ficticia. Permiso cerró el 26 de agosto, sin contraprestación primaria conciliada. No se inventa puente combinado ni valor total.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="okta-okta-mejora-operativa-sbc-y-adquisición-aún-sin-puente-actual">Okta (OKTA): mejora operativa, SBC y adquisición aún sin puente actual</h1>
+<p>Corte: 4 de noviembre de 2026, 20:08 UTC. USD millones salvo EPS/precios y acciones en millones. Investigación parcial con auditoría independiente completada. No valoración, owner FCF normalizado, cierre integral de Stage 3, latestCompleted, Stage 3.5 ni entrada. No modifica gestión ni operaciones.</p>
+<h2 id="conclusión-y-proscontras">1. Conclusión y pros/contras</h2>
+<p>El EBIT GAAP del segundo trimestre FY27 aumenta de 41 a 107 millones USD, mientras los ingresos crecen de 728 a 805 millones; la mejora no depende de añadir SBC al beneficio operativo.</p>
+<p>El cRPO aumenta de 2.265 a 2.585 millones USD y la retención neta de dólares de 106 % a 107 %, con 5.255 clientes de ACV superior a 100.000 USD frente a 4.945.</p>
+<p>El FCF corporativo del primer semestre es 498 millones USD; tras 2 millones de intangibles adicionales y una sensibilidad de 231 millones de SBC, quedan 265 millones, no owner FCF certificado.</p>
+<p>Permiso se adquirió el 26 de agosto, después del balance de julio, pero la contraprestación y los costes posteriores no están conciliados con una fuente primaria actual; no se inventa un valor combinado.</p>
+<p>La liquidez histórica de 2.299 millones USD no equivale a caja distribuible actual, y el promedio diluido trimestral no garantiza ausencia de nueva dilución.</p>
+<p>Parte de la mejora GAAP procede de menor amortización adquirida: 3 en Q2 frente a 17, además de la reducción de SBC de 144 a 114. No todo el aumento del margen es crecimiento operativo orgánico.</p>
+<p>La mejora permite avanzar en investigación, no concluir que la acción esté barata. Todos los campos de valoración quedan nulos; la ausencia de un valor no equivale a cero ni justifica una entrada. El crecimiento y la seguridad del producto necesitan convertirse en caja por acción después de reinversión, impuestos y compensación.</p>
+<h2 id="negocio-clientes-y-prueba-de-calidad">2. Negocio, clientes y prueba de calidad</h2>
+<p>Okta suministra identidad para empleados, clientes, máquinas y agentes, con las plataformas Okta y Auth0 y más de 7.000 integraciones según el filing. El 98 % de ingresos semestrales corresponde a suscripciones. Integraciones, costes de sustitución y neutralidad frente a proveedores pueden favorecer retención; son argumentos de negocio, no una medición independiente de moat o ventaja técnica.</p>
+<p>RPO total 4.858 frente a 4.152; cRPO 2.585 frente a 2.265, aproximadamente 53 % del total previsto para los próximos doce meses. RPO incluye importes contractuales aún no facturados: no es caja ni backlog libre de costes. Duración contractual y calendario de firmas influyen en el crecimiento. Retención neta 107 % representa expansión moderada, no por sí sola una aceleración extraordinaria de demanda. Los clientes de autoservicio exclusivamente no están incluidos en el recuento de grandes cuentas.</p>
+<p>La transferencia de servicios profesionales a socios resta aproximadamente un punto al crecimiento de ingresos de la guía FY27; no es caída equivalente de suscripciones. La monetización de identidades AI ofrece oportunidad, pero no se incorpora como ventas demostradas fuera de las cifras publicadas. La integración de Permiso añade capacidades y riesgo operativo.</p>
+<h2 id="historia-tres-ejercicios-trimestres-y-ttm">3. Historia: tres ejercicios, trimestres y TTM</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">NI</th>
+<th style="text-align: right;">EPS directo</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">PPE</th>
+<th style="text-align: right;">Software</th>
+<th style="text-align: right;">FCF compañía</th>
+<th style="text-align: right;">SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td style="text-align: right;">2,263.00</td>
+<td style="text-align: right;">-516.00</td>
+<td style="text-align: right;">-355.00</td>
+<td style="text-align: right;">-2.17</td>
+<td style="text-align: right;">512.00</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">15.00</td>
+<td style="text-align: right;">489.00</td>
+<td style="text-align: right;">684.00</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td style="text-align: right;">2,610.00</td>
+<td style="text-align: right;">-74.00</td>
+<td style="text-align: right;">28.00</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: right;">750.00</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">730.00</td>
+<td style="text-align: right;">565.00</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td style="text-align: right;">2,919.00</td>
+<td style="text-align: right;">149.00</td>
+<td style="text-align: right;">235.00</td>
+<td style="text-align: right;">1.31</td>
+<td style="text-align: right;">884.00</td>
+<td style="text-align: right;">9.00</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">863.00</td>
+<td style="text-align: right;">544.00</td>
+</tr>
+<tr class="even">
+<td>Q3FY2025</td>
+<td style="text-align: right;">665.00</td>
+<td style="text-align: right;">-16.00</td>
+<td style="text-align: right;">16.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">159.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">4.00</td>
+<td style="text-align: right;">154.00</td>
+<td style="text-align: right;">135.00</td>
+</tr>
+<tr class="odd">
+<td>Q4FY2025</td>
+<td style="text-align: right;">682.00</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">23.00</td>
+<td style="text-align: right;">0.13</td>
+<td style="text-align: right;">286.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">284.00</td>
+<td style="text-align: right;">131.00</td>
+</tr>
+<tr class="even">
+<td>Q1FY2026</td>
+<td style="text-align: right;">688.00</td>
+<td style="text-align: right;">39.00</td>
+<td style="text-align: right;">62.00</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">241.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">238.00</td>
+<td style="text-align: right;">128.00</td>
+</tr>
+<tr class="odd">
+<td>Q2FY2026</td>
+<td style="text-align: right;">728.00</td>
+<td style="text-align: right;">41.00</td>
+<td style="text-align: right;">67.00</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">167.00</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">162.00</td>
+<td style="text-align: right;">144.00</td>
+</tr>
+<tr class="even">
+<td>Q3FY2026</td>
+<td style="text-align: right;">742.00</td>
+<td style="text-align: right;">23.00</td>
+<td style="text-align: right;">43.00</td>
+<td style="text-align: right;">0.24</td>
+<td style="text-align: right;">218.00</td>
+<td style="text-align: right;">4.00</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">211.00</td>
+<td style="text-align: right;">138.00</td>
+</tr>
+<tr class="odd">
+<td>Q4FY2026</td>
+<td style="text-align: right;">761.00</td>
+<td style="text-align: right;">46.00</td>
+<td style="text-align: right;">63.00</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">258.00</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">4.00</td>
+<td style="text-align: right;">252.00</td>
+<td style="text-align: right;">134.00</td>
+</tr>
+<tr class="even">
+<td>Q1FY2027</td>
+<td style="text-align: right;">765.00</td>
+<td style="text-align: right;">56.00</td>
+<td style="text-align: right;">74.00</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">277.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">5.00</td>
+<td style="text-align: right;">271.00</td>
+<td style="text-align: right;">117.00</td>
+</tr>
+<tr class="odd">
+<td>Q2FY2027</td>
+<td style="text-align: right;">805.00</td>
+<td style="text-align: right;">107.00</td>
+<td style="text-align: right;">116.00</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">234.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">6.00</td>
+<td style="text-align: right;">227.00</td>
+<td style="text-align: right;">114.00</td>
+</tr>
+<tr class="even">
+<td>TTM20250731</td>
+<td style="text-align: right;">2,763.00</td>
+<td style="text-align: right;">72.00</td>
+<td style="text-align: right;">168.00</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">853.00</td>
+<td style="text-align: right;">5.00</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">838.00</td>
+<td style="text-align: right;">538.00</td>
+</tr>
+<tr class="odd">
+<td>TTM20260731</td>
+<td style="text-align: right;">3,073.00</td>
+<td style="text-align: right;">232.00</td>
+<td style="text-align: right;">296.00</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">987.00</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">18.00</td>
+<td style="text-align: right;">961.00</td>
+<td style="text-align: right;">503.00</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ejercicios terminan el 31 de enero: FY27 no es año natural 2027. El último resultado publicado corresponde a julio, no octubre. CFO trimestral se deriva de flujos acumulados y Q4 de FY menos nueve meses; EPS trimestral se toma de resultados directos cuando está disponible y no se fabrica restando promedios ponderados anuales. La documentación del historial identifica cada cálculo, fuente y posible diferencia por redondeo. Los periodos negativos no se maquillan ni se calcula crecimiento de beneficios como si una base negativa fuese comparable sin cautela.</p>
+<h2 id="caja-costes-económicos-y-normalización-pendiente">4. Caja, costes económicos y normalización pendiente</h2>
+<p>TTM actual frente a anterior: CFO 987 / 853, FCF corporativo 961 / 838 y SBC 503 / 538. El FCF menos SBC es 458 / 300, sensibilidad calculada; después de intangibles adicionales, FCF amplio 959 y sensibilidad menos SBC 456. Adquisiciones TTM de 53 son un uso adicional separado, no capex operativo ni precio de Permiso, que queda fuera del corte.</p>
+<p>TTM: caja de comisiones 261 frente a amortización 177 (diferencia 84), y aportación de ingresos diferidos 206 frente a 160. La evolución de circulante y capitalización importa para convertir beneficio en caja sostenible.</p>
+<p>Primer semestre: CFO 511 menos PPE 2 menos software capitalizado 11 = FCF de definición corporativa 498. Compras de intangibles adicionales de 2 reducen el subtotal a 496; no se presume que toda esa inversión sea recurrente ni se ignora al describir usos de caja. Restar SBC de 231 como sensibilidad económica da 265. No es FCFF: contiene intereses, impuestos efectivamente pagados y movimientos de circulante; tampoco es una estimación certificada de caja del propietario.</p>
+<p>Q2: CFO 234 y FCF corporativo 227 frente a 167 y 162. El coste de software capitalizado forma parte de inversión aunque PPE físico sea pequeño. Amortización adquirida TTM 55 frente a 70, incluida en D&amp;A 85 frente a 96: no se suman ambas. El residual no equivale automáticamente a depreciación física porque incluye software interno. D&amp;A semestral de 37 no debe añadirse de nuevo a un flujo que parte del CFO. La amortización de comisiones de 92 es distinta; la caja invertida en comisiones es 96 y los activos netos suman 504 (173 corrientes y 331 no corrientes). Un DCF futuro deberá financiar ese crecimiento y no sumar amortización sin la correspondiente salida de caja.</p>
+<p>El CFO H1 incluye cobro de cuentas por cobrar de 217 y salida por ingresos diferidos de 124, además de reducción de compensación devengada de 56. El semestre comparable tiene 201, −143 y −75. La estacionalidad de cobros importa: no se anualiza H1 mecánicamente. Ingresos diferidos del balance 1.781 no son deuda financiera, pero implican servicio futuro; no se asumen íntegramente distribuibles.</p>
+<p>SBC de 231 H1 frente a 272 y de 114 Q2 frente a 144 sigue siendo coste laboral no monetario, no un ajuste gratuito. Gastos de awards aún no reconocidos de 739 tampoco son deuda exigible íntegra hoy. La sensibilidad SBC del FCF no debe combinarse sin explicación con una segunda resta de la misma compensación.</p>
+<p>La empresa pagó 100 de retenciones por acciones y recibió 4 por opciones y 24 por ESPP: flujo neto de financiación relacionado de 72. Es otra vista de liquidez, no un coste que deba sumarse automáticamente a la sensibilidad SBC. Compras de acciones: el estado de flujos indica 372, mientras la nota de operaciones retiradas registra 366; diferencia de 6 conservada sin atribución causal inventada. No se sustituye una definición por otra. Autorización restante de 555 no equivale a recompra ejecutada futura.</p>
+<p>El interés y otros resultados netos H1 son 41: el EBIT de 163 pasa a beneficio antes de impuestos de 204. Los intereses disminuyen después de pagar deuda y recomprar acciones; la guía de caja refleja cerca de un punto de menor margen FCF por ese efecto. No se capitaliza el beneficio financiero como operativo y a la vez se añade toda la caja en un puente.</p>
+<p>Impuesto H1 14 sobre beneficio antes de impuestos 204, tasa publicada 6,6 %; Q2 aproximadamente 7,7 %. La baja tasa refleja atributos fiscales, legislación y geografía, no una tasa terminal segura. Persiste allowance completo sobre activos fiscales diferidos estadounidenses; una posible liberación futura elevaría beneficio contable, no caja equivalente. La guía no GAAP utiliza 21 % desde febrero frente a 26 % anterior. No se confunden esas tres tasas ni se inventa saldo fiscal actual no desglosado.</p>
+<h2 id="capital-adquisición-y-límites-del-puente">5. Capital, adquisición y límites del puente</h2>
+<p>Al 31 de julio: caja 763 más inversiones cortas 1.536 = 2.299; efectivo restringido no corriente de 6 excluido. La cartera corta incluye 1.399 en deuda pública, 117 corporativa y 20 depósitos. Aunque se clasifica corta, 446 de inversiones vencen entre uno y cinco años; no equivale todo a efectivo inmediato sin riesgo de mercado. Inversiones estratégicas privadas de 45 no son caja y no se valoran al nominal por defecto.</p>
+<p>Los 350 de notas convertibles pendientes vencieron y se pagaron el 15 de junio; deuda convertible corriente de julio es cero. Los capped calls asociados expiraron sin ejercicio. No se vuelve a descontar deuda ya pagada ni se conserva dilución de convertibles ya extinguidos en un denominador futuro.</p>
+<p>Contratos: pagos de arrendamiento futuros 91 (36 a corto plazo), frente a pasivo de lease no corriente 53; no son la misma magnitud. Compromisos de compra 1.141, sobre todo hosting y ventas/marketing (445 próximos doce meses), no se convierten en deuda adicional sobre márgenes que ya incluyan esos costes. Tampoco se presume que desaparezcan por una desaceleración. El saldo preciso de obligaciones fiscales, disponibilidad jurisdiccional y capital operativo para un puente actual requiere cierre adicional.</p>
+<p>Axiom cerró el 4 de septiembre de 2025 por 54 en efectivo; tecnología 16 con vida estimada de tres años y goodwill 40 no deducible fiscalmente. La empresa lo considera no material para pro forma. Eso no demuestra que todo el crecimiento sea orgánico. Permiso cerró el 26 de agosto de 2026 y el 10-Q todavía evalúa contraprestación y costes posteriores. El anuncio corporativo confirma cierre, no un precio verificado. No se sustituye por una estimación periodística ni se asume coste cero. Julio no incorpora Permiso en balance u operaciones; no se etiqueta el historial como combinado actual.</p>
+<p>Acciones emitidas en julio: A 167,136 + B 7,681 = 174,817 millones. El promedio diluido Q2 A de 178,808 ya incluye conversión de B; añadir el promedio B de 7,756 otra vez duplicaría esas acciones. Premios antidilutivos excluidos de 0,695 no son coste nulo ni incorporación automática íntegra; se necesita valorar condiciones y proceeds. Nuevas RSU de mercado objetivo 0,396603 pueden pagar de 0 a 200 %, con servicio y condiciones. No se certifica dilución futura máxima a partir de un promedio histórico.</p>
+<h2 id="pares-contexto-y-límites">6. Pares: contexto y límites</h2>
+<h1 id="security-operating-context-not-a-homogeneous-valuation-group">Security operating context, not a homogeneous valuation group</h1>
+<p>Primary evidence gathered November 4, 2026. Run python reproduce.py offline. FTNT inputs and security_context/inputs.json cite primary SEC/IR sources. security_context is a preserved source-backed peer package, not a transfer of its target-company valuation. FTNT Q3 September: revenue2078.4, GAAP EBIT704.3, CFO946.0, cash PPE64.2, escrow receipt17 excluded from corporate FCF864.8, SBC_CF80.1. PANW Q4 fiscal year ended July: revenue3410, EBIT172, CFO1357, PPE/other-assets103, baseFCF1254, adjustedFCF1289, SBC_CF460. CHKP Q3 September: revenue669.8, EBIT177.2 includes25 R&amp;D grants, CFO264.3, PPE6.4, FCF257.9, SBC54.8. For OKTA only PANW has the same quarter end, but cybersecurity product mixes and acquisitions differ substantially. FTNT sells hardware and subscriptions; CHKP has its own lease and grant distortions. PANW includes CyberArk and Chronosphere in FY26; its next October-quarter results are November18, not yet published. No multiple is applied to OKTA. A direct listed standalone identity-only peer is not supplied, and no segment of Microsoft is invented as a separate enterprise value. See security_context/README.md for precise quarter dates, scope, capitalized-software disclosures, corporate adjustments and source URLs. Comparisons of cash-flow SBC are descriptive, not fully harmonized personnel-cost rankings. FCF less SBC is a sensitivity, not reported FCF or certified owner cash.</p>
+<p>La mayor rentabilidad GAAP relativa de FTNT, el coste SBC de PANW y las ayudas a I+D/arrendamientos de CHKP muestran por qué un único múltiplo de FCF ajustado sería engañoso. No se traslada a OKTA ninguna valoración de esos emisores. Microsoft compite en identidad, pero no se inventa una cotización o EV separado para Entra.</p>
+<h2 id="riesgos-calendario-y-conclusión-de-estado">7. Riesgos, calendario y conclusión de estado</h2>
+<p>La próxima publicación está confirmada por anuncio primario del 2 de noviembre: 1 de diciembre de 2026 después del cierre estadounidense, webcast 17:00 ET / 14:00 PT. Un listado general de eventos con contenido antiguo no invalida el anuncio fechado específico. No se interpreta el trimestre terminado en octubre como ya publicado.</p>
+<p>Guía Q3 publicada en agosto: ingresos 813–817, cRPO 2.590–2.600, EBIT no GAAP 196–200 y FCF 175–185. Guía FY27: ingresos 3.216–3.226, EBIT no GAAP 830–840, FCF 910–930 y EPS no GAAP 3,90–3,94. Son previsiones de dirección, no hechos ni márgenes GAAP listos para DCF; número de acciones no GAAP previsto de aproximadamente 184 también difiere del promedio histórico.</p>
+<p>Precio: cierre Nasdaq del 3 de noviembre 189,68 USD. Escáner histórico del 30 de octubre 213,00, QP 80 / Opportunity 85, RSI 50,6 y Stage 2 vacío se conserva. El histórico de mercado para el mismo 30 de octubre muestra 208,24; discrepancia sin conciliar, no se sustituye el dato original ni se afirma señal técnica nueva.</p>
+<p>Riesgos principales: competencia y bundling; confianza tras incidentes de seguridad; expansión neta moderada; ciclos de venta largos; capitalización de software/comisiones; compensación y dilución; baja tasa fiscal transitoria; integración y precio de Permiso; uso de liquidez en recompras; dependencia de infraestructura externa. El filing reconoce impacto reputacional y financiero de incidentes anteriores y potencial continuidad de esos efectos. Que no existan litigios materiales identificados en julio no certifica seguridad técnica, cumplimiento global o pérdidas futuras cero. No se propone una acusación nueva ni se trata una hipótesis de riesgo como hecho.</p>
+<p>Para completar: obtener precio y financiación de Permiso y contribución/costes; reconciliar caja, acciones y obligaciones al nuevo corte; separar inversión recurrente de software/intangibles y comisiones; normalizar fiscalidad e intereses; cerrar comparables homogéneos y ejecutar FCFF de diez años con reinversión económica y terminal financiado. Hasta entonces, escenarios, techo de compra, owner FCF y puente integral quedan nulos. El resultado útil es un registro verificable de lo conocido y de los bloqueos reales, sin rellenarlos con precisión ficticia.</p>
+<h2 id="fuentes-y-reproducción">8. Fuentes y reproducción</h2>
+<ul>
+<li>10-Q Q2 FY27: https://www.sec.gov/Archives/edgar/data/1660134/000166013426000069/okta-20260731.htm</li>
+<li>Resultado Q2/guía: https://investor.okta.com/news-and-events/news-releases/news-details/2026/Okta-Announces-Second-Quarter-Fiscal-Year-2027-Financial-Results/default.aspx</li>
+<li>Fecha de resultados: https://investor.okta.com/news-and-events/news-releases/news-details/2026/Okta-to-Announce-Third-Quarter-Fiscal-Year-2027-Financial-Results-on-December-1-2026/default.aspx</li>
+<li>Permiso y actualización de cierre: https://www.okta.com/en-in/newsroom/press-releases/okta-signs-definitive-agreement-to-acquire-permiso-security/</li>
+<li>Histórico de precios: https://stockanalysis.com/stocks/okta/history/</li>
+</ul>
+<p>Historial y comparables adjuntos contienen fuentes por periodo, extractos compactos y scripts offline. No se incluyen filings íntegros. Hechos, hipótesis, diferencias de definiciones y datos desconocidos permanecen separados.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OKTA/support.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OKTA/analysis.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/OKTA/analysis.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>

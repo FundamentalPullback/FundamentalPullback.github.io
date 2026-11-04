@@ -1,0 +1,626 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PANW · Investigación parcial · capital y dilución sin conciliar · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/PANW">← PANW profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · capital y dilución sin conciliar</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="panw-a228-investigación-del-4-de-noviembre-de-2026">PANW · A228 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Plataforma ampliada tras adquisiciones, pero capital actual y dilución neta no conciliados. Los DCF del dossier son casos parciales condicionados, no valor total ni rango de ficha. Resultados el 18 de noviembre confirmados. Sin entrada.</strong></p>
+<p>Expanded platform after acquisitions, but current capital and net dilution remain unreconciled. Dossier DCFs are partial conditional cases, not a total value or profile range. November 18 earnings confirmed. No entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/PANW.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-29, 377.95 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 350.20 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 noviembre 2026; paquete final auditado antes de esta publicación.</p>
+<p>A118 y la fila del 29 de octubre a 377,95 se preservan, separados del cierre de esa sesión de 380,57. Stage 2 está ausente en esa fila, no se hereda una aprobación antigua. El cierre del 3 de noviembre es 350,20. CyberArk y Chronosphere ya están en el perímetro FY2026; no se suman como adquisiciones futuras. La reserva de diferidos de 405 millones representa solo el pasivo diversificado, no todo el plan ni los 1.156,97 millones de los tres NEO. No se suman estas cifras dos veces. Los casos 22,27/67,33/164,07 permanecen solo en el dossier, no en campos de valoración total.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="panw-palo-alto-networks-investigación-parcial-y-dcf-condicionado">PANW | Palo Alto Networks | Investigación parcial y DCF condicionado</h1>
+<p>Corte de investigación: 4 noviembre 2026. Precios congelados al cierre del 3 noviembre. USD millones, salvo acciones en millones, ratios y dólares por acción. Estado: investigación parcial revisada independientemente. No aprobación de entrada ni Stage 3 integral. El valor total actual permanece <strong>no determinado</strong>; los escenarios siguientes son resultados de supuestos explícitos, no un rango certificado de valor justo.</p>
+<h2 id="decisión-y-origen-del-pendiente">1. Decisión y origen del pendiente</h2>
+<p>La caída de cotización no basta para abrir una posición. El último escáner conservado, 29 octubre, dice 377,95, QP 80, Opportunity 85 y RSI 50,8; Stage 2 está vacío, no equivale a Sí. El informe A118 distinguía ese dato del cierre 380,57. El cierre independiente del 3 noviembre es <strong>350,20</strong>, sin sustituir retrospectivamente la observación del escáner. <a href="https://stockanalysis.com/stocks/panw/history/">Historial de cotización</a>.</p>
+<p>PANW combina red, nube e identidad con ingresos FY26 de 11.480 millones y RPO de 21.200 millones. La oportunidad comercial es amplia, pero el crecimiento incluye adquisiciones y no demuestra crecimiento orgánico equivalente.</p>
+<p>El FCF bruto FY26 fue 4.113 millones; al restar el SBC del estado de flujos quedan 2.339 millones, solo un 7,59% más. Esta aproximación no es FCFF ni caja distribuible: anticipos, impuestos y comisiones alteran la conversión.</p>
+<p>La caja de julio, las compras posteriores y las obligaciones convertibles pueden modelarse, pero la dilución neta de premios y el capital actual no están conciliados. Los DCF son condicionales; no se certifica valor total ni entrada.</p>
+<p>El modelo central arroja 67.33 por acción bajo sus supuestos, y los casos alternativos 22.27/164.07. Ni siquiera el caso favorable analizado alcanza 350,20. Esto indica exigencia elevada del precio bajo esta metodología, no certeza de sobrevaloración de idéntica magnitud: el beneficio fiscal de compras y el puente de capital no están certificados, el negocio está cambiando y los márgenes futuros son supuestos. No se transforma esa distancia en señal corta o entrada.</p>
+<p>El próximo resultado está confirmado para <strong>18 noviembre de 2026 después del cierre estadounidense</strong>, Q1FY27 terminado el 31 octubre. La fecha está confirmada; no hay resultados Q1 en esta investigación. <a href="https://www2.paloaltonetworks.com/company/press/2026/palo-alto-networks-to-announce-fiscal-first-quarter-2027-financial-results-on-wednesday--november-18--2026">Anuncio oficial publicado el 3 noviembre</a>. Hasta entonces interesa comprobar alcance adquirido, margen GAAP/SBC, caja de cierre y guía, no anticipar un resultado inexistente.</p>
+<h2 id="negocio-competencia-y-evidencia-que-puede-refutar-la-tesis">2. Negocio, competencia y evidencia que puede refutar la tesis</h2>
+<p>La plataforma integra seguridad de red, operaciones/nube e identidad; CyberArk amplía identidad y Chronosphere observabilidad. La integración puede reducir proveedores y aumentar venta cruzada, pero también exige migraciones, incentivos comerciales, desarrollo e integración. Los competidores no desaparecen por agrupar productos. Fortinet y Check Point ofrecen referencias de rentabilidad de seguridad, aunque difieren en hardware, suscripciones, adquisiciones y trimestre.</p>
+<p>FY26 tuvo 9.200 de suscripción/soporte y 2.280 de producto. RPO alcanzó 21.200, de los que aproximadamente 9.300 se esperan reconocer en los siguientes doce meses. NGS ARR de 9.100 creció 63%, pero cambia de perímetro con productos/compras: no es ingreso GAAP, caja cobrada ni crecimiento orgánico. Dos distribuidores representan 15% de ingresos cada uno; ningún cliente final supera 10%. La dependencia de canal y ejecución comercial existe aunque la cartera final esté diversificada. <a href="https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm">10-K FY26</a> y <a href="https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-reports-fiscal-fourth-quarter-and-fiscal-10">comunicado Q4</a>.</p>
+<p>La tesis favorable requiere retención/venta cruzada que conviertan la ampliación de plataforma en EBIT después de SBC, sin un ciclo permanente de compras financiadas con acciones. La refutan márgenes que solo mejoren excluyendo remuneración, pérdidas persistentes en las compras, mayor capex/comisiones o pérdida de competitividad. El modelo no capitaliza una etiqueta de IA: exige ingresos, márgenes y retorno sobre inversión verificables.</p>
+<h2 id="historia-normalizada-y-conversión-de-caja">3. Historia normalizada y conversión de caja</h2>
+<p>El TTM termina el 31 julio y coincide con FY26. No se añade un trimestre octubre no publicado. El paquete incluye FY24–26 y ocho trimestres FY25–26, con observaciones, procedencia y conciliaciones. Q4 es año menos nueve meses; flujos Q2/Q3 son diferencias acumuladas. Todos los valores se ajustan al split histórico cuando así los presenta el filing.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex bruto</th>
+<th style="text-align: right;">FCF bruto</th>
+<th style="text-align: right;">SBC CFO</th>
+<th style="text-align: right;">FCF menos SBC CFO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td style="text-align: right;">8,027.00</td>
+<td style="text-align: right;">684.00</td>
+<td style="text-align: right;">3,258.00</td>
+<td style="text-align: right;">157.00</td>
+<td style="text-align: right;">3,101.00</td>
+<td style="text-align: right;">1,076.00</td>
+<td style="text-align: right;">2,025.00</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td style="text-align: right;">9,221.00</td>
+<td style="text-align: right;">1,243.00</td>
+<td style="text-align: right;">3,716.00</td>
+<td style="text-align: right;">247.00</td>
+<td style="text-align: right;">3,469.00</td>
+<td style="text-align: right;">1,295.00</td>
+<td style="text-align: right;">2,174.00</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td style="text-align: right;">11,480.00</td>
+<td style="text-align: right;">695.00</td>
+<td style="text-align: right;">4,553.00</td>
+<td style="text-align: right;">440.00</td>
+<td style="text-align: right;">4,113.00</td>
+<td style="text-align: right;">1,774.00</td>
+<td style="text-align: right;">2,339.00</td>
+</tr>
+<tr class="even">
+<td>Q1FY2026</td>
+<td style="text-align: right;">2,474.00</td>
+<td style="text-align: right;">309.00</td>
+<td style="text-align: right;">1,771.00</td>
+<td style="text-align: right;">84.00</td>
+<td style="text-align: right;">1,687.00</td>
+<td style="text-align: right;">370.00</td>
+<td style="text-align: right;">1,317.00</td>
+</tr>
+<tr class="odd">
+<td>Q2FY2026</td>
+<td style="text-align: right;">2,594.00</td>
+<td style="text-align: right;">397.00</td>
+<td style="text-align: right;">554.00</td>
+<td style="text-align: right;">170.00</td>
+<td style="text-align: right;">384.00</td>
+<td style="text-align: right;">301.00</td>
+<td style="text-align: right;">83.00</td>
+</tr>
+<tr class="even">
+<td>Q3FY2026</td>
+<td style="text-align: right;">3,002.00</td>
+<td style="text-align: right;">-183.00</td>
+<td style="text-align: right;">871.00</td>
+<td style="text-align: right;">83.00</td>
+<td style="text-align: right;">788.00</td>
+<td style="text-align: right;">643.00</td>
+<td style="text-align: right;">145.00</td>
+</tr>
+<tr class="odd">
+<td>Q4FY2026</td>
+<td style="text-align: right;">3,410.00</td>
+<td style="text-align: right;">172.00</td>
+<td style="text-align: right;">1,357.00</td>
+<td style="text-align: right;">103.00</td>
+<td style="text-align: right;">1,254.00</td>
+<td style="text-align: right;">460.00</td>
+<td style="text-align: right;">794.00</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ingresos FY26 crecen 24,50%, pero el margen EBIT cae de 13,48% a 6,05%. FCF bruto sube de 3.469 a 4.113; FCF menos SBC de CFO sube de 2.174 a 2.339, con margen que baja de 23,58% a 20,37%. El SBC de CFO 1.774 no es idéntico al gasto GAAP total 1.815; usar ambos como dos deducciones sería incorrecto. La alternativa FCF menos gasto SBC es 2.298. Ninguna es beneficio disponible por acción.</p>
+<p>Los impuestos pagados FY26 fueron 199 frente a 505; los anticipos de clientes aportaron 1.202 al CFO. No se supone que ambos favorezcan indefinidamente el flujo. Las comisiones diferidas consumieron 795 frente a amortización 590: desfase neto 205. El gasto/capex agregado 440 incluye propiedad, equipo y otros activos; no hay desglose fiable de caja de software o SBC capitalizado. Esos campos permanecen nulos. Software interno neto 266 frente a 167 y amortización 104 no demuestran 203 de adiciones de caja en un año de adquisiciones.</p>
+<p>D&amp;A 855 se separa en amortización adquirida 640, software interno 104 y residual físico/otro 111. El DCF retiene reposición del software interno; no añade D&amp;A total sobre un EBIT ya anterior a amortización adquirida. FY24 beneficio neto 2.578 incluía beneficio fiscal 1.590, por lo que no constituye base de beneficio recurrente. FY26 pérdida no operativa neta 562 por valoración de notas/capped calls tampoco se convierte en coste operativo permanente.</p>
+<p>Normalización de control: EBIT reportado 695 + amortización adquirida 640 − ganancia QRadar 117 = <strong>1.218</strong> después de SBC y antes de amortización adquirida. Eliminar la ganancia es correcto porque redujo G&amp;A. CFO ya la revierte; no se descuenta otra vez del CFO. No se añade automáticamente un escudo fiscal sobre los 640: el valor contable no prueba base ni vida fiscal.</p>
+<h2 id="compras-perímetro-y-guía-no-confundir-crecimiento-con-adquisición">4. Compras, perímetro y guía: no confundir crecimiento con adquisición</h2>
+<p>CyberArk se adquirió el 11 febrero por 21.061: efectivo 2.308, 112 millones de acciones valoradas en 18.488 y premios sustitutivos 265 atribuibles a la compra. De los premios totales 945, otros 680 dependen de servicio futuro. El goodwill 14.800 es sustancialmente deducible fiscalmente, pero no hemos reconstruido el calendario fiscal. Intangibles 6.279 incluyen tecnología 2.537, renovaciones 3.500, contratos 219 y marca 23. No se añaden goodwill ni intangibles a la valoración del negocio ya descontado.</p>
+<p>Chronosphere cerró el 29 enero por 2.951, incluidos 2.842 de caja y 109 de premios de compra. Otros 416 de premios son servicio futuro. Goodwill 2.364 no deducible e intangibles 565. Koi, 14 abril, costó 231 principalmente caja; Portkey, 29 mayo, 117. Embrace cerró 27 agosto con precio de caja anunciado 325 y Console el 1 septiembre por 500, sujetos a ajustes. Se deducen una vez 825 como puente posterior a julio, no como salida de caja exacta neta ni balance de noviembre. Las adquisiciones anteriores ya están en la caja de julio y no se vuelven a descontar.</p>
+<p>CyberArk y Chronosphere aportaron 930 de ingresos y pérdida operativa 797 desde sus compras. El proforma combinado FY26 indica ingresos <strong>12.312</strong>, frente a 10.486 comparables FY25, y pérdida neta 114; no equivale a desempeño orgánico realizado ni EBITDA normalizado. La guía FY27 de ingresos 14.100–14.200 implica aproximadamente 14,93% sobre 12.312 al punto medio, no el 23–24% frente al reporte de perímetro incompleto. La guía FY27 de margen no GAAP es 29,5% y FCF ajustado 38%, sin reconciliación GAAP prospectiva por componentes inciertos. No se adopta ese margen como después de SBC. La guía Q1 3.300–3.310 y EPS no GAAP 0,96–0,98 con 837–844 millones de acciones no reemplaza una valoración GAAP después de SBC. <a href="https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-reports-fiscal-fourth-quarter-and-fiscal-10">Comunicado</a>.</p>
+<p>El modelo utiliza 12.312 como ancla de ingresos y 1.218 como ancla anterior de EBIT para financiar incremento de NOPAT. <strong>Las dos anclas tienen diferente alcance</strong>: 1.218 procede del reporte, no es EBIT proforma. Se expone esta carencia y se prueba ancla 500–3.000; no se inventa una conciliación. La caja futura financia el crecimiento y la mejora de margen con ROIC, evitando tratarlos como gratuitos.</p>
+<h2 id="puente-de-capital-convertibles-y-remuneración">5. Puente de capital, convertibles y remuneración</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th style="text-align: right;">Importe seleccionado</th>
+<th>Naturaleza/fecha</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja e inversiones</td>
+<td style="text-align: right;">7.906</td>
+<td>Reportado 31 julio</td>
+</tr>
+<tr class="even">
+<td>Embrace + Console</td>
+<td style="text-align: right;">−825</td>
+<td>Precios anunciados, sujetos a ajustes</td>
+</tr>
+<tr class="odd">
+<td>Reserva operativa</td>
+<td style="text-align: right;">−2.000</td>
+<td>Supuesto, no caja legalmente restringida</td>
+</tr>
+<tr class="even">
+<td>Notas convertibles</td>
+<td style="text-align: right;">−1.774</td>
+<td>Valor razonable julio, no cotización noviembre</td>
+</tr>
+<tr class="odd">
+<td>Capped calls</td>
+<td style="text-align: right;">+153</td>
+<td>Valor razonable julio</td>
+</tr>
+<tr class="even">
+<td>QRadar contingente</td>
+<td style="text-align: right;">−206</td>
+<td>Valor razonable, no pago garantizado</td>
+</tr>
+<tr class="odd">
+<td>Remuneración diferida</td>
+<td style="text-align: right;">−405</td>
+<td>Obligación económica, normalmente acciones</td>
+</tr>
+<tr class="even">
+<td>Riesgo fiscal histórico</td>
+<td style="text-align: right;">−500</td>
+<td>Reserva discrecional, no deuda fiscal verificada</td>
+</tr>
+<tr class="odd">
+<td>Reestructuración reconocida</td>
+<td style="text-align: right;">−14</td>
+<td>Obligación registrada</td>
+</tr>
+<tr class="even">
+<td>Puente seleccionado</td>
+<td style="text-align: right;">+2.335</td>
+<td>No certificado como capital actual</td>
+</tr>
+</tbody>
+</table></div>
+<p>Caja 2.514 e inversiones 5.392 totalizan 7.906; inversiones de corto 557 y largo 4.835. Tras restar 825 quedan 7.081 antes de todos los demás movimientos posteriores. No se añaden DTA, goodwill, financiación a clientes ni créditos contractuales como caja libre. Arrendamientos operativos se mantienen en gasto y no se suman como deuda con un EBIT sin ajuste paralelo. Los ingresos diferidos no se restan íntegramente como deuda ni se perpetúan sus entradas de caja.</p>
+<p>Las notas tienen principal derivado 1.097 (1.250 menos 153), pero valor razonable 1.774. La conversión por 1.000 de principal da 4,3161 acciones más 88,263 en efectivo; el principal se liquida en efectivo y el exceso puede liquidarse en caja/acciones. Strike efectivo cerca de 211,24, caps de la cobertura entre 287,21 y 291,44. Se usa la obligación neta de valor razonable 1.621, <strong>sin añadir también toda la conversión como dilución</strong>. Es un proxy fechado; el precio de noviembre requiere revaloración de opción si se desea precisión. Las antiguas warrants 2025 ya se liquidaron emitiendo 27 millones de acciones incluidas en el saldo.</p>
+<p>Las acciones efectivas del 9 octubre son <strong>818,771631 millones</strong> según proxy, no las 764 medias diluidas anuales. Se añaden <strong>15 millones de dilución neta seleccionada</strong>, denominador 833,771631. Es un supuesto analítico, no un número reconciliado. Hay 29,821161 millones de RSU/PSU al máximo rendimiento y 0,232754 millones de opciones con strike 9,84; los máximos no son expectativa de devengo. El saldo de remuneración futura no reconocido 3.300 se reconoce en unos 2,5 años y no incluye futuras concesiones. Retener el SBC futuro y sumar todos los premios brutos podría contar dos veces parte de la remuneración.</p>
+<p>La obligación diferida 405 normalmente se paga en acciones, con caja si no hay suficientes acciones del plan. Los 405 cubren solo cuentas diversificadas clasificadas como pasivo, no todo el plan. El proxy muestra al cierre FY26 saldos diferidos de Arora 990,481487, Golechha 46,592250 y Jenkins 119,897603 millones: suma 1.156,971340. No se suman mecánicamente ni se convierten a acciones actuales, pues fecha, valoración y solapamiento con premios/acciones no están conciliados. Los 15 millones seleccionados no demuestran que todos los derechos ya ganados estén capturados. Por ello no se certifica valor total. Se muestran sensibilidades a dilución 0/15/30 millones y a retirar la deducción 405; ninguna resuelve por sí misma la coexistencia de premio ganado, servicio futuro, impuestos de liquidación y PSU. <a href="https://www.sec.gov/Archives/edgar/data/1327567/000130817926000432/panw-20261027.htm">Proxy del 27 octubre</a>.</p>
+<p>Los UTB brutos son 719 y los intereses/penalizaciones 113: exposición 832, no obligación incremental neta demostrada. Solo 393 afectarían gasto fiscal si se reconocieran, lo que <strong>no los convierte en caja por pagar</strong>. La reserva central 500 es discrecional, no 393+113 disfrazado de deuda cierta. La sensibilidad 0/500/719/832 deja visible la incertidumbre sin añadir también DTA como activo libre. El impuesto normalizado futuro 24% es distinto de resolver este saldo histórico.</p>
+<h2 id="fcff-de-diez-años-capital-y-sbc-no-gratuitos">6. FCFF de diez años: capital y SBC no gratuitos</h2>
+<p>Diez periodos anuales analíticos desde 3 noviembre 2026 hasta 3 noviembre 2036, no ejercicios fiscales reportados. La guía FY27 sirve como ancla económica del primer periodo, no proyección exacta agosto–julio ni un stub observado. Descuento al final de cada periodo; el flujo hasta noviembre no está certificado. La ausencia de extrapolación trimestral evita inventar Q1, pero deja una aproximación de calendario/perímetro.</p>
+<p>EBIT se define después de SBC y antes de amortización adquirida. Impuesto normalizado 24% sobre EBIT positivo, sin escudo fiscal contable automático. D&amp;A físico/software seleccionado 2% de ventas; gasto bruto de capital mínimo desciende del 4% al 3% en base. Inversión neta = máximo de (capex − D&amp;A + 9% del incremento de ventas para comisiones + 2% para otros circulantes) y (incremento positivo de NOPAT / ROIC). El segundo término financia también la expansión del margen. No se suman ambos como dos proyectos independientes ni se acredita entrada perpetua de anticipos de clientes.</p>
+<p>Estos parámetros son supuestos de reposición y crecimiento, no guía empresarial. Las bandas de capex se apoyan en 440 sobre ventas 11.480 y la necesidad de software/capital de integración, pero no afirman que todo 440 sea mantenimiento. El gasto SBC permanece dentro del margen; su ratio memo base 15%→12% no es un addback ni una segunda deducción. La alternativa con inversión ligada solo a crecimiento de ventas reconoce eficiencia de margen sin capital adicional: se muestra aparte, no se llama ROIC incremental idéntico.</p>
+<p>Terminal: crecimiento nominal perpetuo, mismos márgenes finales, capex físico/software mínimo y comisión/circulante sobre crecimiento; reinversión al menos NOPAT×g/ROIC. No se concede amortización fiscal adquirida para siempre. La prueba de escudo fiscal 100/250/400 anuales dura solo diez periodos y no es una estimación fiscal.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Supuesto</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ingresos primer periodo</td>
+<td style="text-align: right;">12.800</td>
+<td style="text-align: right;">14.150</td>
+<td style="text-align: right;">14.500</td>
+</tr>
+<tr class="even">
+<td>Crecimiento periodos 2–5</td>
+<td style="text-align: right;">12/10/8/7%</td>
+<td style="text-align: right;">18/16/14/12%</td>
+<td style="text-align: right;">23/21/19/17%</td>
+</tr>
+<tr class="odd">
+<td>Crecimiento periodos 6–10</td>
+<td style="text-align: right;">6/5/4/3/3%</td>
+<td style="text-align: right;">10/8/7/6/5%</td>
+<td style="text-align: right;">15/13/11/9/7%</td>
+</tr>
+<tr class="even">
+<td>Margen después SBC, años 1/5/10</td>
+<td style="text-align: right;">10/15/17%</td>
+<td style="text-align: right;">15/22/24%</td>
+<td style="text-align: right;">18/27/30%</td>
+</tr>
+<tr class="odd">
+<td>ROIC incremental seleccionado</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">40%</td>
+</tr>
+<tr class="even">
+<td>Descuento</td>
+<td style="text-align: right;">10,5%</td>
+<td style="text-align: right;">9%</td>
+<td style="text-align: right;">8%</td>
+</tr>
+<tr class="odd">
+<td>g terminal</td>
+<td style="text-align: right;">2%</td>
+<td style="text-align: right;">3%</td>
+<td style="text-align: right;">3,5%</td>
+</tr>
+<tr class="even">
+<td>Capex bruto/ventas 1→10</td>
+<td style="text-align: right;">4,5→3,5%</td>
+<td style="text-align: right;">4→3%</td>
+<td style="text-align: right;">3,8→2,8%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Referencia de descuento: Treasury 10 años 4,95% al 3 noviembre; ERP mensual ajustado 4,41% al 1 noviembre, originalmente calculado con Treasury 5,29%; beta de proveedor 0,93, no regresión propia. CAPM da 9,0513%. Con deuda objetivo seleccionada 2%, spread elegido 1,5% e impuesto 24%, WACC mecánico aproxima 8,97%; 9% es selección próxima, no precisión observada. La beta de otro proveedor difiere (0,97), y los inputs no están sincronizados. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">Treasury</a>, <a href="https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm">ERP</a>, <a href="https://stockanalysis.com/stocks/panw/statistics/">beta</a>.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo base</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT después SBC/pre-amortización</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">Inversión neta financiada</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">14,150.00</td>
+<td style="text-align: right;">2,122.50</td>
+<td style="text-align: right;">1,613.10</td>
+<td style="text-align: right;">2,291.40</td>
+<td style="text-align: right;">-678.30</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">16,697.00</td>
+<td style="text-align: right;">2,796.75</td>
+<td style="text-align: right;">2,125.53</td>
+<td style="text-align: right;">1,708.09</td>
+<td style="text-align: right;">417.43</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">19,368.52</td>
+<td style="text-align: right;">3,583.18</td>
+<td style="text-align: right;">2,723.21</td>
+<td style="text-align: right;">1,992.29</td>
+<td style="text-align: right;">730.93</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">22,080.11</td>
+<td style="text-align: right;">4,471.22</td>
+<td style="text-align: right;">3,398.13</td>
+<td style="text-align: right;">2,249.72</td>
+<td style="text-align: right;">1,148.41</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">24,729.73</td>
+<td style="text-align: right;">5,440.54</td>
+<td style="text-align: right;">4,134.81</td>
+<td style="text-align: right;">2,455.60</td>
+<td style="text-align: right;">1,679.21</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">27,202.70</td>
+<td style="text-align: right;">6,093.40</td>
+<td style="text-align: right;">4,630.99</td>
+<td style="text-align: right;">1,653.92</td>
+<td style="text-align: right;">2,977.06</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">29,378.91</td>
+<td style="text-align: right;">6,698.39</td>
+<td style="text-align: right;">5,090.78</td>
+<td style="text-align: right;">1,532.64</td>
+<td style="text-align: right;">3,558.14</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">31,435.44</td>
+<td style="text-align: right;">7,293.02</td>
+<td style="text-align: right;">5,542.70</td>
+<td style="text-align: right;">1,506.39</td>
+<td style="text-align: right;">4,036.30</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">33,321.57</td>
+<td style="text-align: right;">7,863.89</td>
+<td style="text-align: right;">5,976.56</td>
+<td style="text-align: right;">1,446.20</td>
+<td style="text-align: right;">4,530.36</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">34,987.64</td>
+<td style="text-align: right;">8,397.03</td>
+<td style="text-align: right;">6,381.75</td>
+<td style="text-align: right;">1,350.63</td>
+<td style="text-align: right;">5,031.11</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th style="text-align: right;">EV operativo</th>
+<th style="text-align: right;">Puente</th>
+<th style="text-align: right;">Acciones</th>
+<th style="text-align: right;">Resultado condicionado/acción</th>
+<th style="text-align: right;">Terminal/EV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td style="text-align: right;">16,235.14</td>
+<td style="text-align: right;">2,335.00</td>
+<td style="text-align: right;">833.77</td>
+<td style="text-align: right;">22.27</td>
+<td style="text-align: right;">68.3%</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td style="text-align: right;">53,805.58</td>
+<td style="text-align: right;">2,335.00</td>
+<td style="text-align: right;">833.77</td>
+<td style="text-align: right;">67.33</td>
+<td style="text-align: right;">77.4%</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td style="text-align: right;">134,463.50</td>
+<td style="text-align: right;">2,335.00</td>
+<td style="text-align: right;">833.77</td>
+<td style="text-align: right;">164.07</td>
+<td style="text-align: right;">83.3%</td>
+</tr>
+</tbody>
+</table></div>
+<p>El peso terminal, especialmente favorable, obliga a tratar las cifras como escenarios, no probabilidades ni una banda de confianza. El crecimiento, margen y ROIC favorable deben coexistir; no son tres regalos independientes.</p>
+<h2 id="sensibilidades-e-inverso-qué-exigiría-35020">7. Sensibilidades e inverso: qué exigiría 350,20</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Variación aislada base</th>
+<th style="text-align: right;">Resultado condicionado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reserva fiscal 0</td>
+<td style="text-align: right;">67.93</td>
+</tr>
+<tr class="even">
+<td>Reserva fiscal 500</td>
+<td style="text-align: right;">67.33</td>
+</tr>
+<tr class="odd">
+<td>Reserva fiscal 719</td>
+<td style="text-align: right;">67.07</td>
+</tr>
+<tr class="even">
+<td>Reserva fiscal 832</td>
+<td style="text-align: right;">66.94</td>
+</tr>
+<tr class="odd">
+<td>Dilución neta existente 0</td>
+<td style="text-align: right;">68.57</td>
+</tr>
+<tr class="even">
+<td>Dilución neta existente 15</td>
+<td style="text-align: right;">67.33</td>
+</tr>
+<tr class="odd">
+<td>Dilución neta existente 30</td>
+<td style="text-align: right;">66.14</td>
+</tr>
+<tr class="even">
+<td>Ancla EBIT anterior 500</td>
+<td style="text-align: right;">65.33</td>
+</tr>
+<tr class="odd">
+<td>Ancla EBIT anterior 1218</td>
+<td style="text-align: right;">67.33</td>
+</tr>
+<tr class="even">
+<td>Ancla EBIT anterior 2000</td>
+<td style="text-align: right;">69.32</td>
+</tr>
+<tr class="odd">
+<td>Ancla EBIT anterior 3000</td>
+<td style="text-align: right;">69.32</td>
+</tr>
+<tr class="even">
+<td>Escudo fiscal anual solo 10 años 0</td>
+<td style="text-align: right;">67.33</td>
+</tr>
+<tr class="odd">
+<td>Escudo fiscal anual solo 10 años 100</td>
+<td style="text-align: right;">68.10</td>
+</tr>
+<tr class="even">
+<td>Escudo fiscal anual solo 10 años 250</td>
+<td style="text-align: right;">69.26</td>
+</tr>
+<tr class="odd">
+<td>Escudo fiscal anual solo 10 años 400</td>
+<td style="text-align: right;">70.41</td>
+</tr>
+<tr class="even">
+<td>ROIC 0.15</td>
+<td style="text-align: right;">47.29</td>
+</tr>
+<tr class="odd">
+<td>ROIC 0.2</td>
+<td style="text-align: right;">57.31</td>
+</tr>
+<tr class="even">
+<td>ROIC 0.3</td>
+<td style="text-align: right;">67.33</td>
+</tr>
+<tr class="odd">
+<td>ROIC 0.4</td>
+<td style="text-align: right;">72.34</td>
+</tr>
+<tr class="even">
+<td>ROIC 0.6</td>
+<td style="text-align: right;">76.11</td>
+</tr>
+<tr class="odd">
+<td>Capex adicional/ventas 0</td>
+<td style="text-align: right;">67.33</td>
+</tr>
+<tr class="even">
+<td>Capex adicional/ventas 0.01</td>
+<td style="text-align: right;">65.82</td>
+</tr>
+<tr class="odd">
+<td>Capex adicional/ventas 0.02</td>
+<td style="text-align: right;">62.78</td>
+</tr>
+<tr class="even">
+<td>Capex adicional/ventas 0.04</td>
+<td style="text-align: right;">55.67</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC / g base</th>
+<th style="text-align: right;">g 2%</th>
+<th style="text-align: right;">g 3%</th>
+<th style="text-align: right;">g 4%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8%</td>
+<td style="text-align: right;">74.68</td>
+<td style="text-align: right;">84.15</td>
+<td style="text-align: right;">98.31</td>
+</tr>
+<tr class="even">
+<td>9%</td>
+<td style="text-align: right;">61.35</td>
+<td style="text-align: right;">67.33</td>
+<td style="text-align: right;">75.66</td>
+</tr>
+<tr class="odd">
+<td>10%</td>
+<td style="text-align: right;">51.54</td>
+<td style="text-align: right;">55.50</td>
+<td style="text-align: right;">60.75</td>
+</tr>
+<tr class="even">
+<td>11%</td>
+<td style="text-align: right;">44.05</td>
+<td style="text-align: right;">46.77</td>
+<td style="text-align: right;">50.24</td>
+</tr>
+</tbody>
+</table></div>
+<p>Con solo eficiencia de margen sin inversión incremental por esa mejora, la alternativa asciende a 71.70. Comisiones 0–15% del incremento no cambian central porque el suelo ROIC domina; no significa que las comisiones sean gratuitas. Capital desconocido ±1.000 mueve aproximadamente ±1,20 por acción. El escudo fiscal, la dilución y las reservas importan, pero estas variaciones aisladas no cierran la distancia al precio.</p>
+<p>El inverso manteniendo primer ingreso, margen, ROIC y descuento base requiere añadir <strong>26,31 puntos porcentuales</strong> a cada crecimiento de los periodos 2–10: crecimiento segundo periodo alrededor de 44,31% y décimo 31,31%, seguido de desaceleración terminal a 3%. No es pronóstico ni prueba de que el mercado modele eso: es una combinación matemática, muy exigente y con salto terminal. El inverso de margen no encuentra raíz al elevar todos los márgenes hasta +60 puntos; incluso margen final 84% arroja solo 227.70 porque también se financia la creación de beneficio. No se extrapola fuera del intervalo ni se presenta una raíz falsa. Los scripts verifican monotonía dentro del barrido.</p>
+<h2 id="comparables-y-límites-del-contraste-relativo">8. Comparables y límites del contraste relativo</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Último trimestre publicado</th>
+<th style="text-align: right;">PANW mayo–julio</th>
+<th style="text-align: right;">FTNT julio–septiembre</th>
+<th style="text-align: right;">CHKP julio–septiembre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ingresos</td>
+<td style="text-align: right;">3.410</td>
+<td style="text-align: right;">2.078,4</td>
+<td style="text-align: right;">669,8</td>
+</tr>
+<tr class="even">
+<td>Margen EBIT GAAP</td>
+<td style="text-align: right;">5,04%</td>
+<td style="text-align: right;">33,89%</td>
+<td style="text-align: right;">26,46%</td>
+</tr>
+<tr class="odd">
+<td>SBC CFO / ventas</td>
+<td style="text-align: right;">13,49%</td>
+<td style="text-align: right;">3,85%</td>
+<td style="text-align: right;">8,18%</td>
+</tr>
+<tr class="even">
+<td>CFO − capex agregado</td>
+<td style="text-align: right;">1.254</td>
+<td style="text-align: right;">881,8</td>
+<td style="text-align: right;">257,9</td>
+</tr>
+</tbody>
+</table></div>
+<p>La comparación retiene SBC y amortización en EBIT GAAP de los tres. El EBIT ajustado de PANW no se enfrenta directamente a EBIT GAAP ajeno. PANW ajusta FCF Q4 hasta 1.289; FTNT excluye 17 de escrow y reporta 864,8; CHKP año previo incluía anticipo de arrendamiento 159,9. Se conserva el cálculo base, no una falsa clasificación de calidad por el porcentaje de CFO. Las compras, software y periodos no son homogéneos.</p>
+<p>No se ha establecido un conjunto homogéneo contemporáneo de EV, capital/acciones y denominadores TTM para los tres. Por tanto <strong>no hay contraste de múltiplos de valoración cerrado</strong> ni mediana aplicada como objetivo. Este requisito pendiente, junto al puente de premios/capital, impide declarar Stage 3 integral. Los datos y enlaces reproducibles están en comps/. <a href="https://www.sec.gov/Archives/edgar/data/1262039/000126203926000027/ftnt-20260930.htm">FTNT Q3</a>, <a href="https://www.sec.gov/Archives/edgar/data/1015922/000117891326004953/zk2636310.htm">CHKP Q3</a>.</p>
+<h2 id="próximos-controles-y-conclusión">9. Próximos controles y conclusión</h2>
+<p>Antes de una valoración certificable: conciliar capital de octubre y pagos de compras; separar premios ya ganados de servicio futuro y diferidos; actualizar valor de notas/cobertura; reconstruir base y vida fiscal de adquisiciones; comprobar margen/caja de perímetro completo; cerrar comparables de valoración; refrescar el filtro técnico con datos actuales. El 18 noviembre puede aportar parte de ello, no se presume que resuelva todo. No hay instrucción de operar ni seguimiento de cuenta de inversión.</p>
+<p>Conclusión ES: <strong>Esperar, investigación parcial.</strong> El negocio ampliado ofrece potencial, pero el crecimiento adquirido y el FCF ajustado no sustituyen beneficio después de SBC ni capital financiado. El DCF condicionado no respalda 350,20 con los supuestos probados. Capital/dilución y contraste relativo siguen abiertos; sin valor total certificado, sin Stage 3 integral y sin entrada.</p>
+<p>Conclusion EN: <strong>Wait; partial research.</strong> The enlarged platform has potential, but acquired growth and adjusted FCF do not replace profit after SBC or funded reinvestment. The conditional DCF does not support $350.20 under tested assumptions. Current capital, net award dilution and homogeneous valuation peers remain unresolved; no certified total fair value, completed Stage 3 or entry approval.</p>
+<h2 id="fuentes-reproducción-y-alcance">10. Fuentes, reproducción y alcance</h2>
+<p>Fuentes primarias enlazadas junto a los hechos; precios/beta secundarios identificados como tales. Fuentes históricas adicionales: <a href="https://www.sec.gov/Archives/edgar/data/1327567/000132756725000035/panw-20251031.htm">Q1FY26</a>, <a href="https://www.sec.gov/Archives/edgar/data/1327567/000132756726000005/panw-20260131.htm">Q2FY26</a>, <a href="https://www.sec.gov/Archives/edgar/data/1327567/000132756726000015/panw-20260430.htm">Q3FY26</a>. El paquete incluye selección factual, procedencia, scripts, escenarios, sensibilidades y pruebas; no copias íntegras de filings. La reproducción es determinista y offline. Recalcular prueba aritmética, no verifica por sí solo calidad económica ni fuentes en tiempo real.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/PANW/PANW_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/PANW/model/model.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/PANW/model/results.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>
