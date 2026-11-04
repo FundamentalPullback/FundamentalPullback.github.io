@@ -60,3 +60,6 @@ Optional per-report `profiles` metadata supports standalone sources without a De
 A137's bounded-priority JSON records are parsed with a strict schema match (`fundamental_pullback.bounded_priority_record.v1`) and ticker, regular_close, regular_close_date. Free-text dollar amounts are never inferred. Four existing prose-only sources (A111, A143, A145, A146) have audited migration annotations; these do not form a static ticker index and newer report metadata supersedes them.
 
 The normal manifest refresh and new-publication behavior remains unchanged. New tickers, new models and new structured close facts appear from newly published data without a separate search-index rebuild.
+
+
+The main summary card intentionally omits a documented-close tile. Its three numeric tiles are the dated scanner price, estimated value and bear/bull scenarios. The provider quote is shown separately above them. Historical close records, source reports, provenance and conflict checks remain intact; they are not presented as the latest market close. At narrow widths the scenario tile spans both columns.
