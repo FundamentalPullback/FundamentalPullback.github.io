@@ -1,0 +1,242 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GPC · Investigación parcial · rentabilidad, financiación y separación · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/GPC">← GPC profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · rentabilidad, financiación y separación</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="gpc-a229-investigación-del-4-de-noviembre-de-2026">GPC · A229 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Las ventas crecen, pero el EBIT operativo retrocede y la venta de cuentas a cobrar eleva la caja reportada. La separación Automotive/Motion sigue pendiente. Sin valoración, owner FCF ni puente integral certificados; no es valor cero ni rechazo permanente. Sin entrada.</strong></p>
+<p>Sales grow, but operating EBIT declines and receivables sales boost reported cash. The Automotive/Motion separation remains pending. No certified valuation, owner FCF or complete equity bridge; this is not zero value or a permanent rejection. No entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/GPC.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-19, 130.18 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 124.27 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04 20:28 UTC.</p>
+<p>A040/A052 y la fila del 19 de octubre a 130,18 se preservan: QP80/Opportunity100, RSI50,5, Stage2Sí histórico, sin aprobación actual. Cierre separado del 3 de noviembre: 124,27. El cargo de liquidación de pensiones de 741,967 millones está fuera de EBIT operativo y no se añade otra vez para explicar su deterioro. FCF 762,849 menos financiación A/R 249,979 da 512,870; después de SBC queda 456,111 como sensibilidad, no owner FCF. El beneficio arancelario de 39 millones pertenece al par ORLY y no es recurrente ni ingreso de GPC.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="gpc-ventas-crecientes-rentabilidad-y-caja-por-normalizar-antes-de-la-separación">GPC: ventas crecientes, rentabilidad y caja por normalizar antes de la separación</h1>
+<p>Corte de investigación: 4 de noviembre de 2026, 20:28 UTC. USD millones, salvo precio, EPS y acciones en millones. Investigación parcial revisada mediante auditoría independiente, con las reservas indicadas. Sin valoración certificada, cierre integral Stage 3, latestCompleted, Stage 3.5 ni entrada. No modifica gestión ni operaciones.</p>
+<h2 id="conclusión-y-alcance">1. Conclusión y alcance</h2>
+<p>GPC mantiene una red de distribución extensa y crecimiento de ventas, pero el crecimiento no se ha traducido en mejora sostenida del beneficio operativo. EBIT operativo pasa de 1.747,053 en FY23 a 1.229,216 en FY24, 960,651 en FY25 y 912,666 en el TTM septiembre de 2026. La liquidación de pensiones de FY25 está debajo del operativo: no explica por sí sola ese deterioro. Los cargos de First Brands, asbesto, reestructuración y separación tienen distinta naturaleza y no admiten un único addback para fabricar una recuperación.</p>
+<p>La mejora de caja requiere descontar financiación de clientes vendida, no solo mirar CFO. FCF TTM de 762,849 menos financiación neta de cuentas a cobrar de 249,979 da 512,870; después de SBC de 56,759, la sensibilidad es 456,111. Ninguna de estas cifras es owner FCF certificado o FCFF.</p>
+<p>A040/A052 eran prioridad/elegibilidad histórica, no un DCF reproducible que este informe sustituya. Se conserva el escáner real del 19 de octubre: 130,18, QP 80, Opportunity 100, RSI 50,5 y Stage 2 Sí histórico. Cierre de referencia separado: 124,27 del 3 de noviembre. No se promueve el score ni el filtro técnico antiguo a aprobación actual. No se usa cotización intradía del 4 de noviembre.</p>
+<p>Valores bajista, central, favorable, techo de compra, owner FCF y puente integral quedan nulos. La separación prevista, los fondos afectados a prestaciones, la financiación de circulante y la rentabilidad normalizada necesitan conciliación antes de un DCF defendible. Esto no afirma valor cero ni constituye un rechazo permanente; documenta qué evidencia falta.</p>
+<h2 id="negocio-calidad-y-resultados-recientes">2. Negocio, calidad y resultados recientes</h2>
+<p>Distribuidor de recambios automotrices y suministros industriales con más de 10.800 ubicaciones en 17 países. Su disponibilidad de producto, red logística y relación con talleres/industria son ventajas operativas; la competencia, mano de obra, transporte, tecnología y condiciones con proveedores determinan cuánto de la venta queda para el accionista. No es un negocio de márgenes de software ni una apuesta homogénea por el consumo automotriz estadounidense.</p>
+<p>Q3 ventas 6.521,308 frente a 6.260,232, crecimiento 4,2 %: comparables 2,9 %, adquisiciones 0,9 % y divisa/otros 0,4 %. EBIT operativo 328,484 frente a 334,293; EPS diluido 1,62 en ambos periodos. EPS ajustado 2,07 frente a 1,98 no sustituye el beneficio GAAP. El crecimiento de ventas y margen bruto no evita mayor gasto de personal, fletes, salud, alquiler y sistemas.</p>
+<p>Automoción Norteamérica: ventas 2.540,319, comparables +1,7 %, EBITDA de segmento aproximadamente 194 y margen 7,6 %, 40 puntos básicos menos. Automoción internacional: ventas aproximadamente 1.572,392, comparables +1,1 %, EBITDA 141 y margen 9,0 %. Industrial: ventas aproximadamente 2.408,597, comparables +5,5 %, EBITDA 317 y margen 13,2 %, 60 puntos básicos más. Son EBITDA de segmento, no EBIT consolidado; no sumarlos como beneficio disponible sin D&amp;A, costes centrales y ajustes no asignados.</p>
+<p>La guía FY26 redujo el máximo de EPS ajustado de 8,00 a 7,75, manteniendo mínimo 7,50. EPS GAAP previsto 5,60–5,85 incluye costes de separación ya incurridos, no un presupuesto completo de costes futuros. CFO previsto 1.000–1.200 y FCF 550–700 son orientación de dirección, no resultados realizados. La tasa fiscal reportada Q3 de 19,5 % y 9M de 21,7 % incorpora créditos renovables, créditos extranjeros y mezcla geográfica; no se perpetúa mecánicamente.</p>
+<h2 id="historia-financiera-y-reconciliaciones">3. Historia financiera y reconciliaciones</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT operativo</th>
+<th style="text-align: right;">NI</th>
+<th style="text-align: right;">EPS directo</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">FCF</th>
+<th style="text-align: right;">SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">23,090.610</td>
+<td style="text-align: right;">1,747.053</td>
+<td style="text-align: right;">1,316.524</td>
+<td style="text-align: right;">9.330</td>
+<td style="text-align: right;">1,435.610</td>
+<td style="text-align: right;">512.675</td>
+<td style="text-align: right;">922.935</td>
+<td style="text-align: right;">57.226</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">23,486.569</td>
+<td style="text-align: right;">1,229.216</td>
+<td style="text-align: right;">904.076</td>
+<td style="text-align: right;">6.470</td>
+<td style="text-align: right;">1,251.251</td>
+<td style="text-align: right;">567.339</td>
+<td style="text-align: right;">683.912</td>
+<td style="text-align: right;">40.693</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">24,300.141</td>
+<td style="text-align: right;">960.651</td>
+<td style="text-align: right;">65.945</td>
+<td style="text-align: right;">0.470</td>
+<td style="text-align: right;">890.762</td>
+<td style="text-align: right;">469.838</td>
+<td style="text-align: right;">420.924</td>
+<td style="text-align: right;">48.847</td>
+</tr>
+<tr class="even">
+<td>Q42024</td>
+<td style="text-align: right;">5,770.173</td>
+<td style="text-align: right;">189.281</td>
+<td style="text-align: right;">133.056</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">155.026</td>
+<td style="text-align: right;">181.749</td>
+<td style="text-align: right;">-26.723</td>
+<td style="text-align: right;">3.413</td>
+</tr>
+<tr class="odd">
+<td>Q12025</td>
+<td style="text-align: right;">5,866.069</td>
+<td style="text-align: right;">287.945</td>
+<td style="text-align: right;">194.392</td>
+<td style="text-align: right;">1.400</td>
+<td style="text-align: right;">-40.827</td>
+<td style="text-align: right;">119.840</td>
+<td style="text-align: right;">-160.667</td>
+<td style="text-align: right;">8.574</td>
+</tr>
+<tr class="even">
+<td>Q22025</td>
+<td style="text-align: right;">6,164.425</td>
+<td style="text-align: right;">376.838</td>
+<td style="text-align: right;">254.880</td>
+<td style="text-align: right;">1.830</td>
+<td style="text-align: right;">209.942</td>
+<td style="text-align: right;">128.982</td>
+<td style="text-align: right;">80.960</td>
+<td style="text-align: right;">15.606</td>
+</tr>
+<tr class="odd">
+<td>Q32025</td>
+<td style="text-align: right;">6,260.232</td>
+<td style="text-align: right;">334.293</td>
+<td style="text-align: right;">226.171</td>
+<td style="text-align: right;">1.620</td>
+<td style="text-align: right;">341.574</td>
+<td style="text-align: right;">101.621</td>
+<td style="text-align: right;">239.953</td>
+<td style="text-align: right;">13.003</td>
+</tr>
+<tr class="even">
+<td>Q42025</td>
+<td style="text-align: right;">6,009.415</td>
+<td style="text-align: right;">-38.425</td>
+<td style="text-align: right;">-609.498</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">380.073</td>
+<td style="text-align: right;">119.395</td>
+<td style="text-align: right;">260.678</td>
+<td style="text-align: right;">11.664</td>
+</tr>
+<tr class="odd">
+<td>Q12026</td>
+<td style="text-align: right;">6,264.940</td>
+<td style="text-align: right;">286.271</td>
+<td style="text-align: right;">188.535</td>
+<td style="text-align: right;">1.370</td>
+<td style="text-align: right;">63.916</td>
+<td style="text-align: right;">97.552</td>
+<td style="text-align: right;">-33.636</td>
+<td style="text-align: right;">12.168</td>
+</tr>
+<tr class="even">
+<td>Q22026</td>
+<td style="text-align: right;">6,536.951</td>
+<td style="text-align: right;">336.336</td>
+<td style="text-align: right;">227.558</td>
+<td style="text-align: right;">1.650</td>
+<td style="text-align: right;">400.198</td>
+<td style="text-align: right;">107.839</td>
+<td style="text-align: right;">292.359</td>
+<td style="text-align: right;">17.530</td>
+</tr>
+<tr class="odd">
+<td>Q32026</td>
+<td style="text-align: right;">6,521.308</td>
+<td style="text-align: right;">328.484</td>
+<td style="text-align: right;">224.447</td>
+<td style="text-align: right;">1.620</td>
+<td style="text-align: right;">352.533</td>
+<td style="text-align: right;">109.085</td>
+<td style="text-align: right;">243.448</td>
+<td style="text-align: right;">15.397</td>
+</tr>
+<tr class="even">
+<td>TTM20250930</td>
+<td style="text-align: right;">24,060.899</td>
+<td style="text-align: right;">1,188.357</td>
+<td style="text-align: right;">808.499</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">665.715</td>
+<td style="text-align: right;">532.192</td>
+<td style="text-align: right;">133.523</td>
+<td style="text-align: right;">40.596</td>
+</tr>
+<tr class="odd">
+<td>TTM20260930</td>
+<td style="text-align: right;">25,332.614</td>
+<td style="text-align: right;">912.666</td>
+<td style="text-align: right;">31.042</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1,196.720</td>
+<td style="text-align: right;">433.871</td>
+<td style="text-align: right;">762.849</td>
+<td style="text-align: right;">56.759</td>
+</tr>
+</tbody>
+</table></div>
+<p>Importes en millones. Historia adjunta: tres ejercicios, ocho trimestres comparables y TTM. EBIT operativo = beneficio bruto menos gastos operativos. CFO/capex trimestrales por diferencias de acumulados y Q4 como FY menos 9M. El TTM se comprueba también mediante suma de cuatro trimestres. EPS Q4 y TTM quedan nulos por no haberse recuperado los EPS trimestrales directos necesarios; no se reconstruyen restando EPS anual y nueve meses; medias de acciones no equivalen a acciones actuales. El archivo de historia conserva los límites de cada campo y fuentes primarias.</p>
+<p>FY25 EBIT operativo 960,651 frente a EBT más interés neto 215,674: el segundo incluye el cargo no operativo de liquidación de pensiones de 741,967 y otros gastos. En TTM, 912,666 frente a 169,612. Añadir 741,967 al EBIT operativo sería doble cómputo. El beneficio neto TTM de 31,042 incluye estas partidas y efectos fiscales; tampoco es un ancla limpia de rentabilidad futura.</p>
+<p>First Brands: cargo FY25 de 150,500 por pérdidas esperadas en rebates y otras cantidades debidas por un proveedor en concurso, dentro del coste de ventas. No es amortización ni dinero que se recupere automáticamente. Asbesto: reestimación FY25 de 103,352, separable del coste del negocio actual pero ligada a una obligación real. Una valoración posterior debe escoger entre flujos de liquidación de esa obligación y descuento explícito de su valor; no descontar ambos sin reconciliación.</p>
+<p>Reestructuración: cargos FY24 213,520, FY25 253,961 y TTM 280,070. La recurrencia impide declarar todo coste como excepcional sin demostrar ahorro sostenible. Pagos TTM 262,066. En 9M26, pagos 176,256 y pasivo final 20,822; el cuadro excluye además 6 de inventario liquidado en coste de ventas. Separación: costes 9M 54,912, Q3 21,204. Gastos de integración de adquisiciones reportados 9M 6,092 y Q3 0,803 frente a seis meses cero presentan una asignación temporal no reconciliada; no se fabrican trimestres para cerrar esa diferencia.</p>
+<p>D&amp;A TTM 575,329 incluye amortización, pero no se ha recuperado desglose trimestral completo para separar correctamente software, activos físicos e intangibles adquiridos. Amortización anual de intangibles FY25 152,431 no demuestra que cada dólar sea adquirido ni permite imputar proporcionalmente un TTM. FY25 atribuye aproximadamente 40 del aumento de D&amp;A a un ajuste no recurrente de obligaciones de retiro de activos; tampoco se confunde todo el aumento con depreciación normal de nueva tecnología. No añadir todo D&amp;A a una base que ya excluyera amortización. Capex TTM 433,871 y compras de negocios 205,754 son usos diferentes de fondos.</p>
+<h2 id="la-calidad-de-caja-y-la-financiación-del-circulante">4. La calidad de caja y la financiación del circulante</h2>
+<p>CFO TTM 1.196,720 menos capex 433,871 = FCF 762,849. Está después de intereses e impuestos y antes de adquisiciones; no es FCFF. SBC 56,759 se mantiene como coste económico, no se supone que recomprar acciones elimine su coste.</p>
+<p>La facilidad de venta de cuentas a cobrar aumenta el principal vendido pendiente de 1.000 a 1.250 entre diciembre y septiembre. En 9M26, ventas de créditos 7.201,058 menos cobros 6.951,071 aportan 249,987 de financiación neta dentro de CFO. El flujo TTM equivalente es 249,979, no todo el volumen anual rotado de créditos. La facilidad, ampliada el 2 de enero de 2026, vence el 8 de enero de 2027: la renovación coincide con la ventana prevista de separación. Es riesgo de financiación pendiente, no prueba de cancelación ni salida de caja segura de 1.250. El programa incluye recobro y determinadas obligaciones de recompra por deterioro de crédito/devoluciones. Comisiones 9M de 36 están en gasto no operativo.</p>
+<p>FCF TTM después de retirar ese incremento de financiación es 512,870. Restando además SBC se obtiene 456,111 como sensibilidad, todavía sin certificar caja distribuible. Si un futuro FCFF reclasifica el saldo vendido como financiación, debe tratar coherentemente comisiones y capital circulante; no descontar el saldo completo y a la vez restaurar exactamente el mismo circulante inicial en el flujo sin explicar el efecto.</p>
+<p>Supply-chain finance: obligaciones 3.195,332 frente a 3.129,794 a diciembre, aumento 65,538, incluidas en cuentas a pagar de 6.394,876. Aproximadamente la mitad del pasivo comercial está en ese programa. Plazos con proveedores de 30–360 días. Es financiación operativa relevante: la clasificación en cuentas a pagar no garantiza que los plazos continúen. Tampoco justifica sumar todo como deuda mientras se descuenta de nuevo el mismo capital circulante. Falta normalizar el nivel sostenible y un escenario de reducción de plazos.</p>
+<h2 id="capital-pensiones-contingencias-y-separación">5. Capital, pensiones, contingencias y separación</h2>
+<p>Caja septiembre 763,151. Deuda contable: corto plazo 388,088, vencimiento largo corriente 250 y largo no corriente 4.472,149; total 5.110,237. Acciones efectivas al 30 de septiembre y 16 de octubre: 137,864682 millones; promedio diluido Q3 138,331, no un máximo de dilución futura. El principal de commercial paper es aproximadamente 389, distinto del importe contable descontado. Los term loans de 1.000 están incluidos en deuda, no son una adición. Vencen el 28 de octubre de 2027. El revolver de 2.000 no dispuesto no es efectivo; su capacidad disponible se reduce por el respaldo al commercial paper. Falta actualizar íntegramente principal, moneda y costes de emisión; no se presenta deuda contable como principal exacto.</p>
+<p>El fondo AFS de 245 está designado a contribuciones de planes de empleo y no se considera efectivo libre. Tras liquidar el plan estadounidense en diciembre de 2025, el excedente original incluía bonos, caja y acciones GPC; estas últimas ya fueron tratadas como recompra no monetaria. No se vuelven a sumar acciones o todo el excedente como activo disponible. El uso ajeno al plan puede soportar impuesto especial de hasta 50 %. El gasto normal de contribuciones definidas sigue siendo remuneración económica aunque se financie temporalmente con excedentes del antiguo plan.</p>
+<p>Pasivo de pensiones y prestaciones 218,787 es distinto del plan estadounidense ya liquidado y del fondo AFS. No constituye por sí solo una medición actual completa de déficit actuarial neto ni prueba ausencia de solapamiento con coste laboral. La valoración debe separar servicios corrientes y obligaciones pasadas.</p>
+<p>Asbesto: pasivo descontado 281, seguro a cobrar 34, diferencia aritmética 247; rango de pasivo 223–345, diferencia neta 189–311 si el seguro se realiza íntegramente. Importe sin descuento 362. El tipo de descuento pasó de 4,18 % a 5,29 %, de modo que una caída del pasivo contable no demuestra extinción de riesgo. Hay 3.741 demandas pendientes. El seguro no es caja y su cobro/timing puede diferir del pago. Son escenarios de obligación, no un puente certificado.</p>
+<p>Garantías de independientes: 484 de préstamos respaldados; la empresa indica reserva de pérdida esperada no material, no ausencia de exposición. Activo y pasivo de standby de 27 cada uno son distintos de la pérdida crediticia esperada. No se descuenta ciegamente toda garantía ni se considera nula.</p>
+<p>UTB con intereses y penalidades de diciembre de 2025: aproximadamente 57, de los que 45 afectarían tasa efectiva si se reconocieran. No se ha conciliado importe actual septiembre. El outside-basis extranjero de 1.500 a diciembre no es caja ni impuesto exigible; la empresa afirma reinversión indefinida y no cuantifica impuesto residual. El proyecto fiscal renovable tenía compromiso 43 pendiente a diciembre y liquidación prevista en 2026: sin reconstrucción actual no se resta otra vez como si siguiera íntegro. La tasa fiscal baja no certifica caja liberada.</p>
+<p>Separación de Automotive y Motion: objetivo primer trimestre de 2027, sujeto a condiciones. Los estados actuales no reflejan la escisión. No están certificadas aquí las asignaciones de deuda/caja, contratos transitorios, duplicación corporativa, obligaciones laborales ni coste fiscal final. No se suma valor de dos negocios sin quitar costes centrales ni se supone operación cerrada. Los reembolsos IEEPA solicitados/recibidos eran no materiales a septiembre según filing; no se inventa una normalización arancelaria.</p>
+<h2 id="comparables-y-evidencia-sectorial">6. Comparables y evidencia sectorial</h2>
+<p>Peer context only, not a homogeneous valuation set. ORLY is principally North American automotive retail/professional aftermarket; GWW broad-line industrial distribution includes consolidated MonotaRO minority interests. Neither equals GPC’s worldwide automotive plus industrial perimeter or the future split companies. Sources in inputs.json, raw numeric observations portable and outputs independently reproducible.</p>
+<p>ORLY reported a $39m benefit from tariff refunds received in Q3, included in results and guidance. Its reported margin advantage is therefore not wholly demonstrated recurring profitability; do not transfer that benefit to GPC, which reports immaterial refunds. ORLY Q3 operating margin 21.45% and comparable sales +7.2% contrast with GPC segment EBITDA measures, which are not EBIT. ORLY Q3 CFO less capex is 250.520m; reported FCF251.853m adjusts excess stock-compensation tax benefits and return of tax-credit investments. Nine-month reported FCF1729.669m is not simply CFO2598.155 minus capex860.273=1737.882m. Do not claim equality or owner cash. Nine-month SBC26.289m is a separate economic-cost sensitivity.</p>
+<p>GWW released Q3 on November4,2026; this is actual new evidence, not an estimate. Q3 GAAP EBIT828m versus511m includes a low comparative affected by196m impairment/divestiture loss. Adjusted EBIT836 versus707 shows a smaller improvement; no blanket future addback assumption. Current perimeter excludes Cromwell and Zoro UK disposed/closed in late2025, affecting growth denominators. Consolidated earnings include noncontrolling income29m Q3/85m nine months; do not value consolidated EBIT against parent equity plus debt while omitting minorities. CFO661 less capex115=FCF546m Q3. No Q3 10-Q identified in fresh SEC submissions at20:25 UTC. ORLY also has Q3 release but not Q3 10-Q in fresh submissions, so detailed current capital comparability remains limited. No EV multiple offered.</p>
+<h2 id="próximas-pruebas-y-disciplina-de-decisión">7. Próximas pruebas y disciplina de decisión</h2>
+<p>Q3 publicado el 20 de octubre y 10-Q presentado ese día, verificados directamente. No se ha localizado anuncio primario de fecha exacta del próximo resultado; fechas estimadas de febrero de 2027 no se elevan a confirmación. El objetivo de separación Q1 2027 es un hito distinto de resultados y no una fecha cerrada.</p>
+<p>Para cerrar valoración: aislar First Brands/asbesto sin regalar recuperaciones; demostrar rentabilidad después de gastos recurrentes de reestructuración y tecnología; conciliar factoring, SCF y circulante sostenible; separar amortizaciones y capex de mantenimiento; completar deuda nominal, prestaciones, impuestos y gastos de separación; reconciliar al menos dos pares con capital y perímetro homogéneos; financiar crecimiento y recuperación de margen en diez años y terminal. Un simple múltiplo de EPS ajustado no resuelve estas preguntas.</p>
+<p>Señales favorables: avance de Industrial, margen bruto, crecimiento comparable y capacidad de servicio. Señales de alarma: caída de EBIT consolidado, menor margen automotriz norteamericano, crecimiento de financiación de circulante, persistencia de reestructuración y costes del cambio de perímetro. La mejora de precio o un score antiguo alto no sustituye esas pruebas.</p>
+<h2 id="fuentes-principales">Fuentes principales</h2>
+<ul>
+<li>Q3 10-Q: https://www.sec.gov/Archives/edgar/data/40987/000004098726000041/gpc-20260930.htm</li>
+<li>FY25 10-K: https://www.sec.gov/Archives/edgar/data/40987/000004098726000003/gpc-20251231.htm</li>
+<li>Q3 comunicado: https://www.genpt.com/2026-10-20-Genuine-Parts-Company-Reports-Third-Quarter-2026-Results</li>
+<li>Precio histórico: https://finance.yahoo.com/quote/GPC/history/?p=GPC</li>
+<li>Historial SEC y cada periodo: history/evidence.json y extractos numéricos portables.</li>
+<li>Pares: comparables/inputs.json con enlaces SEC exactos.</li>
+</ul>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/GPC/support.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/GPC/analysis.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/GPC/analysis.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>

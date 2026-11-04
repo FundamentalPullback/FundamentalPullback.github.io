@@ -1,0 +1,5 @@
+import pathlib,json,html
+p=pathlib.Path(__file__).parent;h=json.loads((p/'history/history.json').read_text())['periods'];s='| Periodo | Ventas | EBIT operativo | NI | EPS directo | CFO | Capex | FCF | SBC |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|\n'
+for k in ['FY2023','FY2024','FY2025','Q42024','Q12025','Q22025','Q32025','Q42025','Q12026','Q22026','Q32026','TTM20250930','TTM20260930']:
+ r=h[k];s+='| '+k+' | '+' | '.join('—' if r.get(v) is None else f'{r[v]:,.3f}' for v in ['revenue','ebit_operating','net_income','eps_diluted','cfo','capex','fcf','sbc'])+' |\n'
+t=(p/'report_body.md').read_text().replace('{HISTORY_TABLE}',s).replace('{PEERS}',(p/'comparables/notes.md').read_text());(p/'report.md').write_text(t);(p/'report.html').write_text('<!doctype html><html lang="es"><meta charset="utf-8"><title>GPC investigación parcial</title><style>body{max-width:1050px;margin:30px auto;padding:20px;font:16px/1.55 system-ui;color:#173047}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}</style><body><pre>'+html.escape(t)+'</pre></body></html>')
