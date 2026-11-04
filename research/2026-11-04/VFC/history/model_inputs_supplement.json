@@ -1,0 +1,151 @@
+{
+  "as_of": "2026-11-04",
+  "financial_balance_date": "2026-09-26",
+  "units": "USD million unless stated",
+  "debt": {
+    "march2026_reported_longterm_principal": 3540.905,
+    "march2026_unamortized_discount": 10.094,
+    "march2026_unamortized_issuance_costs": 10.941,
+    "march2026_longterm_carrying": 3519.87,
+    "september2026_longterm_current_carrying": 499.561,
+    "september2026_longterm_noncurrent_carrying": 3004.805,
+    "september2026_shortterm_borrowings": 34.223,
+    "september2026_total_financial_carrying": 3538.589,
+    "cash_unrestricted": 442.951,
+    "carrying_net_financial_debt": 3095.638,
+    "face_notes": [
+      {
+        "maturity": "2027-04",
+        "currency": "USD",
+        "face_millions": 500.0,
+        "coupon_pct": 2.8
+      },
+      {
+        "maturity": "2028-02",
+        "currency": "EUR",
+        "face_millions": 500.0,
+        "coupon_pct": 0.25
+      },
+      {
+        "maturity": "2029-03",
+        "currency": "EUR",
+        "face_millions": 500.0,
+        "coupon_pct": 4.25
+      },
+      {
+        "maturity": "2030-04",
+        "currency": "USD",
+        "face_millions": 750.0,
+        "coupon_pct": 2.95
+      },
+      {
+        "maturity": "2032-02",
+        "currency": "EUR",
+        "face_millions": 500.0,
+        "coupon_pct": 0.625
+      },
+      {
+        "maturity": "2033-10",
+        "currency": "USD",
+        "face_millions": 277.0,
+        "coupon_pct": 6.0,
+        "precision": "rounded issuer narrative"
+      },
+      {
+        "maturity": "2037-11",
+        "currency": "USD",
+        "face_millions": 286.9,
+        "coupon_pct": 6.45,
+        "precision": "rounded issuer narrative"
+      }
+    ],
+    "face_change_check": "No long-term repayments in H1FY27 cash-flow statement; latest10Q confirms EUR1500m nominal. USD note principals reused from last annual note15. No new notes disclosed.",
+    "fx_proxy": {
+      "date": "2026-09-25",
+      "USD_per_EUR": 1.14,
+      "source": "https://www.federalreserve.gov/releases/h10/20260928/",
+      "local_source": "raw/FED_H10_20260928_web_result.json",
+      "warning": "Official Fed reference, not proved identical to issuer closing translation rate."
+    },
+    "estimated_september_note_principal": 3523.9,
+    "estimated_total_financial_principal": 3558.123,
+    "estimated_principal_net_debt": 3115.172,
+    "estimated_principal_minus_carrying": 19.534,
+    "september_exact_unamortized_discount": null,
+    "september_exact_unamortized_issuance_costs": null,
+    "warning": "Estimated September principal uses rounded USD notes and independently sourced FX. Difference19.534 is not an audited split of discounts/costs. Debt fair value3241.7 for long-term debt is a separate market-value measure, not face principal. Do not add leases if keeping operating rent in FCFF without consistent lease recast.",
+    "sources": [
+      "FY2026_10K Note15 tables127,128",
+      "Q2FY2027_10Q balance sheet, cash-flow statement, Notes15 and17",
+      "FED_H10_20260928"
+    ]
+  },
+  "d_and_a": {
+    "current_TTM_reported_DA_and_asset_writedowns": 262.508,
+    "post_sale_Q4FY26_reported": 67.483,
+    "post_sale_Q1FY27_reported": 57.786,
+    "post_sale_Q2FY27_reported": 58.357,
+    "post_sale_H1FY27_reported": 116.143,
+    "H1_times_two_magnitude_reference": 232.286,
+    "reference_warning": "Not a company forecast. Use the clean post-sale amount as an anchor for explicit future assumptions, not as an annualized seasonal-CFO forecast.",
+    "conditional_TTM_retained_source_range": [
+      244.247,
+      262.508
+    ],
+    "conditional_range_assumptions": "Dickies D&A is nonnegative and entirely contained in AllOtherFY26 D&A18.261; no unallocated corporate D&A attribution changes. This is not a hard audited bound or a pure recurring range.",
+    "broad_nonnegative_component_range": [
+      183.626,
+      262.508
+    ],
+    "broad_range_method": "Sum three fully post-sale quarters183.626 through entire reportedTTM262.508; assumes no negative Dickies depreciation contribution.",
+    "recurring_warning": "FY annual label includes other asset write-downs. Do not add back noncash items already excluded from adjusted EBIT twice. FY26 Reinvent write-down2.170 and accelerated depreciation0.322 were already in prior H1FY26, so do not mechanically subtract them again from current TTM. Other restructuring accelerated depreciationFY26 0.455; precise location within cash-flow DA versus other adjustments is not separately proved. H1FY27 impairment6.397 is excluded from adjustedEBIT but may be in other noncash adjustments, so no automatic DA subtraction.",
+    "sources": [
+      "FY2026_10K tables100,161,178,179",
+      "Q3FY2026_10Q cashflows",
+      "Q2FY2027_10Q cashflows and Note18 table46"
+    ]
+  },
+  "sbc": {
+    "current_TTM_reported": 78.883,
+    "H1FY27_post_sale": 40.276,
+    "H1_times_two_magnitude_reference": 80.552,
+    "three_post_sale_quarters": 60.146,
+    "conditional_TTM_retained_range": [
+      60.146,
+      78.883
+    ],
+    "range_method": "Only Q3FY26 remains contaminated; totalQ3SBC18.737 provides outer range under nonnegative allocation. No exact standalone Dickies SBC disclosed.",
+    "FCFF_treatment": "Keep SBC in EBIT and do not add it back to FCFF. FCF-less-SBC is only a cash-flow ownership-cost diagnostic, not another deduction from NOPAT.",
+    "sources": [
+      "FY2026_10K cashflows",
+      "Q3FY2026_10Q cashflows",
+      "Q2FY2027_10Q cashflows"
+    ]
+  },
+  "pension": {
+    "actuarial_measurement_date": "2026-03-28",
+    "plan_assets": 188.27,
+    "projected_benefit_obligation": 265.535,
+    "net_deficit": 77.265,
+    "gross_balance_sheet_liability": 79.27,
+    "balance_sheet_plan_asset": 2.005,
+    "current_liability": 6.281,
+    "noncurrent_liability": 72.989,
+    "H1FY27_service_cost_in_EBIT": 4.332,
+    "H1FY27_contributions": 3.2,
+    "remainingFY27_planned_contributions": 11.8,
+    "H1FY27_net_periodic_pension_cost": 2.124,
+    "qualified_replacement_plan_transfer_FY26": 83.5,
+    "Q2FY27_premium_refund_to_replacement_plan": 3.089,
+    "valuation_treatment": "If subtracting the77.265 latest net deficit as debt-like in equity bridge, do not separately subtract all legacy deficit-funding contributions again from FCFF. Keep ordinary pension service cost in EBIT. Alternatively explicitly value unfunded legacy payments and omit deficit subtraction. Gross77.265 adjustment avoids an unproved blended tax-shield assumption; tax treatment is jurisdiction/plan-specific.",
+    "cautions": [
+      "No September actuarial remeasurement; do not roll deficit down by contributions alone because service, returns, FX and discount-rate changes also matter.",
+      "Gross liability79.270 versus net77.265 recognizes2.005 plan surplus; any restriction on surplus access should be considered, not treated as cash.",
+      "Replacement-plan assets and premium refund are not unrestricted cash and should not offset financial debt."
+    ],
+    "sources": [
+      "FY2026_10K Note17 tables132,133",
+      "Q2FY2027_10Q Note10 table23"
+    ]
+  }
+}

@@ -1,0 +1,827 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>VFC · Stage 3 completo · Esperar precio</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/VFC">← VFC profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Stage 3 completo</span><span class="tag deferred">Esperar precio</span><span class="tag">No entry approved</span></div><h1 id="vfc-a192-investigación-del-4-de-noviembre-de-2026">VFC · A192 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Investigación Stage 3 concluida. Esperar precio o evidencia operativa más fuerte: central 10,65 USD frente al cierre 20,04; escenario favorable 22,08. El residual adverso cero es un estrés del modelo, no predicción de quiebra. Sin entrada aprobada.</strong></p>
+<p>Stage 3 research complete. Wait for price or stronger operating evidence: central $10.65 versus $20.04 close; favorable case $22.08. Zero adverse residual is a model stress, not a bankruptcy prediction. No entry approved.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/VFC.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-11-03, 19.99 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 20.04 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04T15:37:57.114332+00:00.</p>
+<p>A139 conserva la versión anterior sin DCF. Este informe cierra esa valoración con supuestos y límites expresos.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="vfc-stage-3-completo-recuperación-operativa-precio-exigente">VFC — Stage 3 completo: recuperación operativa, precio exigente</h1>
+<p><strong>Corte de investigación: 4 de noviembre de 2026. Último resultado: Q2 FY2027, trimestre cerrado el 26 de septiembre y publicado el 28 de octubre.</strong> USD millones salvo precios, acciones en millones, porcentajes y EPS. Investigación propia con fuentes originales.</p>
+<p><strong>Precio de valoración: $20.04, cierre regular del 3 de noviembre.</strong> El scanner Nov 3 conservaba $19.99, que corresponde a la sesión posterior al cierre, no al cierre regular. Se conservan ambos datos y no se presenta ninguno como precio intradía del 4 de noviembre. <a href="https://www.vfc.com/investors/stock-information/historical-data">Histórico del emisor</a>, <a href="https://stockanalysis.com/stocks/vfc/history/">histórico contrastado</a>.</p>
+<h2 id="conclusión-y-estado">Conclusión y estado</h2>
+<p><strong>Stage 3 de investigación terminado. Decisión: esperar mejor precio o evidencia de un resultado operativo superior; no entrada aprobada.</strong> Se cierra la valoración prospectiva que faltaba en A139. Las limitaciones reales de desglose histórico continúan declaradas; no se convierten en una prohibición automática de valorar ni en datos inventados.</p>
+<ul>
+<li>La recuperación es real en The North Face y Timberland; Vans todavía contrae ventas. El beneficio ajustado mejora más deprisa que el crecimiento orgánico del primer semestre.</li>
+<li>El DCF central vale <strong>$10.65</strong>, frente a <strong>$22.08</strong> favorable. El escenario adverso arroja EV inferior a los claims y residual ordinario de cero en este DCF: es una prueba de deterioro, no una predicción de precio cero ni una afirmación de insolvencia inmediata.</li>
+<li>A $20.04, el negocio central implica aproximadamente <strong>4.98% anual</strong> bajo el valor de salida calculado. La aproximación de distribuciones al accionista/refinanciación da <strong>5.20%</strong>. Son resultados de flujos hipotéticos, no rentabilidades prometidas ni CAGR de cotización.</li>
+<li>Un caso conjunto favorable de crecimiento cercano al 3.8%, margen económico del 12%, menor coste de capital y mejor reinversión puede justificar un valor de unos $22.08, aproximadamente 10.2% por encima del precio. Es plausible, pero requiere más que la meta oficial de margen del 10%; el central no lo presupone.</li>
+<li><strong>No se aplica un descuento obligatorio del 15%, una barrera universal de crecimiento ni un retorno mínimo inventado.</strong> Una entrada parcial a precio razonable puede evaluarse si la evidencia sostiene ese caso. Aquí la relación precio/escenarios no ofrece suficiente compensación bajo el caso central, y Stage 3.5 no está validado.</li>
+</ul>
+<h2 id="negocio-y-ventaja-competitiva">1. Negocio y ventaja competitiva</h2>
+<p>VFC posee marcas de ropa y calzado, con fabricación mayoritariamente externalizada y distribución mayorista/directa. The North Face y Timberland aportan reconocimiento de marca, producto técnico/lifestyle, escala de distribución y capacidad de precio. Vans conserva patrimonio cultural, pero debe convertirlo nuevamente en demanda. No hay una barrera de cambio del cliente o efecto de red comparable al software: la relevancia de marca requiere gasto recurrente en producto, marketing y tiendas.</p>
+<p>El carácter externalizado reduce intensidad fabril, no elimina inventario, financiación de proveedores, software, tiendas, logística ni riesgo de moda. La cartera diversifica exposición; los resultados divergentes de Outdoor y Active muestran que no garantiza rentabilidad. Riesgos centrales: ejecución de Vans, cancelaciones/destocking mayorista, markdowns, APAC, divisas transaccionales, tarifas de importación, clima, capital circulante y vencimientos.</p>
+<p><strong>Perímetro correcto:</strong> Timberland sigue dentro. Supreme se vendió el 1 de octubre de 2024 y está reclasificado como discontinuado. Dickies se vendió el 12 de noviembre de 2025, pero permanece en la historia GAAP de operaciones continuadas hasta su venta. No se confunden los tres negocios. <a href="https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-26-000030/vfc-20260328.htm">10-K FY2026, negocio y ventas</a>.</p>
+<h2 id="resultados-nuevos-y-calidad-del-crecimiento">2. Resultados nuevos y calidad del crecimiento</h2>
+<p>Q2 FY27: ventas $2,695.132 m, GP $1,492.678 m, EBIT GAAP $367.920 m, NI continuado $285.251 m, EPS diluido $0.71. EBIT ajustado retenido $363.716 m. Las ventas reportadas caen aproximadamente 4% por Dickies; retenidas crecen alrededor 1%. En H1, crecimiento orgánico cuantificado de $26.5 m equivale a aproximadamente 0.6% de la base retenida anterior; FX añade $28.1 m. No hay desglose agregado verificable de volumen/precio/mix que permita atribuirlo todo a volumen.</p>
+<p>Q2: TNF $1,207.3 m/+4%; Timberland $525.9 m/+4%; Vans $547.6 m/−9.8%. En moneda constante y perímetro retenido, Americas +5%, EMEA −1%, APAC −7%; DTC +3% y mayorista aproximadamente plano. Active no es solo Vans: incluye otras marcas. <a href="https://www.vfc.com/investors/news-events-presentations/press-releases/detail/1872/vf-corporation-exceeds-guidance-in-second-quarter-fiscal">Comunicado 28-oct</a>, <a href="https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-26-000135/vfc-20260926.htm">10-Q Q2FY27</a>.</p>
+<p>El margen bruto ajustado retenido sube 290 bp: aproximadamente 180 bp de mejoras estructurales según dirección y 110 bp de FX. Aproximadamente $25 m del exceso de EBIT frente a guía fue gasto SG&amp;A trasladado a Q3; no se perpetúa como ahorro. Parte de TNF mayorista se adelantó desde Q3. Vans necesita que los pedidos primavera/verano 2027 se conviertan en envíos; crecimiento DTC no demuestra por sí solo la recuperación mayorista. Estas observaciones proceden de la transcripción corregida hospedada por el emisor, enlazada en source_manifest.json; no son una verificación independiente de sell-through.</p>
+<p>Guía FY27: crecimiento retenido CC de al menos 2%, margen operativo ajustado aproximadamente 8%, FCF normalizado ≥$405 m, FCF efectivo ≥$515 m, apalancamiento 2.6–2.9 x, tasa fiscal zona alta de los veinte por ciento. <strong>Los ~$110 m de diferencia son puente anual de caja por tarifas, no cifra exacta neta cobrada en H1.</strong> Q3: ingresos +3% o mejor y EBIT ajustado ≥$390 m. FY27 tiene semana 53 en Q4; no se repite su efecto todos los años. Meta vigente de medio plazo: margen operativo ajustado <strong>≥10% para el ejercicio completo FY2029</strong>, no solo el anterior objetivo de tasa de salida FY2028. La dirección también afirma que no se detendrá en 10% y que su estructura fiscal permitiría bajar la tasa efectiva desde zona media de los treinta por ciento hacia zona baja de los veinte por ciento en próximos años. Es una aspiración de ETR contable, no una promesa de impuesto de caja sobre beneficio operativo. Se modela mejora parcial en central y mayor avance como favorable. <a href="https://d1io3yog0oux5.cloudfront.net/_4eb14af10f07a7459bdc565048bcbe14/vfc/db/409/138954/transcript/CORRECTED_TRANSCRIPT_VF_Corp.%28VFC-US%29_Q2_2027_Earnings_Call_28-October-2026_8_00_AM_ET.pdf">Transcripción oficial hospedada, pág.3</a>.</p>
+<h2 id="historia-tres-ejercicios-y-cuatro-trimestres">3. Historia: tres ejercicios y cuatro trimestres</h2>
+<p>Los estados siguientes son <strong>continuados GAAP: excluyen Supreme, incluyen Dickies hasta venta</strong>. Fuente anual común: <a href="https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-26-000030/vfc-20260328.htm">10-K FY2026, estados comparativos reexpresados</a>. No se llama a esta caja “retenida”.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>GP</th>
+<th>EBIT</th>
+<th>NI continuado</th>
+<th>EPS dil. cont.</th>
+<th>CFO cont.</th>
+<th>PPE + software</th>
+<th>FCF cont.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>9,915.678</td>
+<td>5,112.300</td>
+<td>-143.935</td>
+<td>-1,018.477</td>
+<td>-2.62</td>
+<td>884.714</td>
+<td>197.245</td>
+<td>687.469</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>9,504.691</td>
+<td>5,083.865</td>
+<td>303.773</td>
+<td>69.324</td>
+<td>0.18</td>
+<td>438.489</td>
+<td>126.023</td>
+<td>312.466</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>9,605.207</td>
+<td>5,261.715</td>
+<td>576.569</td>
+<td>254.920</td>
+<td>0.64</td>
+<td>671.274</td>
+<td>165.806</td>
+<td>505.468</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>GP</th>
+<th>EBIT</th>
+<th>NI continuado</th>
+<th>EPS dil. cont.</th>
+<th>CFO cont.</th>
+<th>PPE + software</th>
+<th>FCF cont.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q3 FY2026</td>
+<td>2,875.801</td>
+<td>1,628.341</td>
+<td>289.054</td>
+<td>300.845</td>
+<td>0.76</td>
+<td>1,010.436</td>
+<td>43.889</td>
+<td>966.547</td>
+</tr>
+<tr class="even">
+<td>Q4 FY2026</td>
+<td>2,166.034</td>
+<td>1,221.928</td>
+<td>61.504</td>
+<td>-119.282</td>
+<td>-0.30</td>
+<td>33.306</td>
+<td>41.323</td>
+<td>-8.017</td>
+</tr>
+<tr class="odd">
+<td>Q1 FY2027</td>
+<td>1,669.379</td>
+<td>917.044</td>
+<td>-83.072</td>
+<td>-97.152</td>
+<td>-0.25</td>
+<td>-62.496</td>
+<td>53.266</td>
+<td>-115.762</td>
+</tr>
+<tr class="even">
+<td>Q2 FY2027</td>
+<td>2,695.132</td>
+<td>1,492.678</td>
+<td>367.920</td>
+<td>285.251</td>
+<td>0.71</td>
+<td>-151.534</td>
+<td>55.355</td>
+<td>-206.889</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuentes trimestrales: <a href="https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-26-000011/vfc-20251227.htm">Q3FY26 10-Q</a>, <a href="https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-26-000028/q42026earningspressrelease.htm">comunicado FY26/Q4</a>, <a href="https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-26-000114/vfc-20260627.htm">Q1FY27 10-Q</a>, Q2 FY27 anterior. CFO/capex Q3 =9M−H1; Q4=FY−9M; Q2=H1−Q1. EPS Q4 procede del comunicado, no de restar EPS acumulados. El paquete conserva PPE y software separados, D&amp;A, SBC, impuestos, intereses, circulante y fuentes por celda.</p>
+<h2 id="ttm-comparable-y-normalización-sin-falsa-precisión">4. TTM comparable y normalización sin falsa precisión</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>GP</th>
+<th>EBIT</th>
+<th>NI continuado</th>
+<th>EPS dil. cont.</th>
+<th>CFO cont.</th>
+<th>PPE + software</th>
+<th>FCF cont.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TTM 2025</td>
+<td>9,541.055</td>
+<td>5,149.076</td>
+<td>378.901</td>
+<td>92.199</td>
+<td>n/d</td>
+<td>367.844</td>
+<td>134.937</td>
+<td>232.907</td>
+</tr>
+<tr class="even">
+<td>TTM 2026</td>
+<td>9,406.346</td>
+<td>5,259.991</td>
+<td>635.406</td>
+<td>369.662</td>
+<td>n/d</td>
+<td>829.712</td>
+<td>193.833</td>
+<td>635.879</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ambos TTM tienen 52 semanas. TTM actual=FY26+H1FY27−H1FY26; anterior=FY25+H1FY26−H1FY25. Las comparaciones de NI no son crecimiento normalizado: incluyen pensiones, impuestos, venta y ganancias ajenas al EBIT.</p>
+<p>La <a href="https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-25-000066/vfcex992supplementalfininf.htm">reexpresión Dickies de noviembre2025</a> permite la siguiente historia de P&amp;L retenido ajustado por dirección, <strong>no</strong> una reexpresión GAAP de caja:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas retenidas</th>
+<th>GP ajustado retenido</th>
+<th>EBIT ajustado retenido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>9,297.278</td>
+<td>n/d</td>
+<td>n/d</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>8,962.626</td>
+<td>4,852.370</td>
+<td>529.419</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>9,295.952</td>
+<td>5,129.310</td>
+<td>649.974</td>
+</tr>
+<tr class="even">
+<td>Q3 FY2026</td>
+<td>2,820.054</td>
+<td>1,607.080</td>
+<td>340.997</td>
+</tr>
+<tr class="odd">
+<td>Q4 FY2026</td>
+<td>2,166.034</td>
+<td>1,221.928</td>
+<td>53.870</td>
+</tr>
+<tr class="even">
+<td>Q1 FY2027</td>
+<td>1,669.379</td>
+<td>917.044</td>
+<td>-94.548</td>
+</tr>
+<tr class="odd">
+<td>Q2 FY2027</td>
+<td>2,695.132</td>
+<td>1,492.678</td>
+<td>363.716</td>
+</tr>
+<tr class="even">
+<td>TTM 2025</td>
+<td>9,014.676</td>
+<td>4,919.713</td>
+<td>589.561</td>
+</tr>
+<tr class="odd">
+<td>TTM 2026</td>
+<td>9,350.599</td>
+<td>5,238.730</td>
+<td>664.034</td>
+</tr>
+</tbody>
+</table></div>
+<p>FY24 ventas retenidas son aproximación ±$0.05 m por el dato redondeado Dickies; GP/EBIT retenidos exactos no se publicaron. No se inventan. El EBIT retenido ajustado TTM crece 12.63%, ventas 3.73%; ambos son crecimiento mecánico, no crecimiento orgánico ni libre de todos los efectos tarifarios.</p>
+<p>Puente anual EBIT continuado→ajustado retenido: FY25 $303.773 +$162.644 Reinvent +$89.242 deterioro +$0.490 transacción −$26.730 Dickies =$529.419. FY26 $576.569 +$43.730 Reinvent +$30.716 deterioro +$10.194 transacción −$11.235 Dickies =$649.974. En H1FY27, el ajuste Reinvent elimina <strong>$15.680 m de ganancias netas</strong>, no añade un gasto: $284.848−$15.680=$269.168. Otros costes de reestructuración H1 de $8.863 m permanecen en beneficios ajustados. El forecast mantiene costes operativos y reestructuraciones normales y SBC: no capitaliza como “ahorro” todos los ajustes de la empresa.</p>
+<p><strong>Tarifas:</strong> FY26 reconoce receivable 149.7, con 93.8 de COGS y 55.9 en inventarios. Los 37.3/18.6 liberados en FY27 compensan tarifas contenidas en ese inventario. Restarlos aisladamente una segunda vez sería un error. Falta la asignación retenida exacta entre semestres. Si x es gasto neto retenido H1FY26 posteriormente revertido en el TTM actual, el puente condicional es <strong>actual 664.034−x; anterior 589.561+x</strong>. Igualdad en x37.2365. Un sobre analítico deliberadamente amplio x0..93.8 da crecimiento+12.63% a−16.55%; no es una estimación de x ni una probabilidad. El crecimiento sostenible exacto no puede certificarse con los estados publicados.</p>
+<h2 id="caja-del-propietario-qué-mejora-y-qué-no-se-sabe">5. Caja del propietario: qué mejora y qué no se sabe</h2>
+<p>FCF estricto=CFO−PPE−software. El diagnóstico FCF−SBC trata la remuneración en acciones como coste del propietario, sin convertirlo en FCFF. Pensiones FY26 aportaron $125.373 m antes del impuesto especial aproximado $25.1 m, es decir $100.273 m netos. El cuadro siguiente añade un <strong>diagnóstico de timing</strong>, restando la aportación de caja de AR+inventario−AP y ese beneficio pensionario; no es FCF retenido normalizado.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>FCF−SBC reportado</th>
+<th>Aporte caja trade-WC</th>
+<th>Pensión neta retirada</th>
+<th>Diagnóstico sin esos dos efectos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>629.640</td>
+<td>732.792</td>
+<td>0.000</td>
+<td>-103.152</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>239.219</td>
+<td>-49.004</td>
+<td>0.000</td>
+<td>288.223</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>428.514</td>
+<td>33.521</td>
+<td>100.273</td>
+<td>294.720</td>
+</tr>
+<tr class="even">
+<td>TTM 2025</td>
+<td>151.961</td>
+<td>-128.259</td>
+<td>0.000</td>
+<td>280.220</td>
+</tr>
+<tr class="odd">
+<td>TTM 2026</td>
+<td>556.996</td>
+<td>90.917</td>
+<td>100.273</td>
+<td>365.806</td>
+</tr>
+</tbody>
+</table></div>
+<p>La mejora de trade-WC TTM es219.176 m, frente a solo 45.045 m considerando todos los cambios de circulante salvo leases. La inversión de caja crece 58.896 m. FY24 liberó 732.792 m de trade-WC: no es una tasa de caja repetible. El diagnóstico no neutraliza de forma completa impuestos, tarifas, proveedores, reestructuración o Dickies; no se aplica después otro ajuste que retire por segunda vez los mismos movimientos de AP.</p>
+<p>La identidad completa, aplicada al <strong>FCF reportado original</strong>, es: FCF neutral de tarifas=FCF+derechos pagados−reembolsos cobrados−beneficio original de concesiones de proveedores+reembolso pagado a proveedores−interés cobrado del refund. Después se separan pensión y contribución Dickies cuando haya evidencia. El pasivo de proveedores ligado a refunds sigue siendo 37.6 m en septiembre. Faltan los timings exactos y el CFO/capex standalone Dickies. Por ello no se publica una cifra puntual de FCF retenido neutral ni se garantiza crecimiento de caja con una fórmula que omita proveedores.</p>
+<p>Dickies aportó EBIT ajustado−7.954 m en TTM actual frente a+30.384 m previo. Sus activos y pasivos de circulante retirados por la venta no son una liberación de CFO. Proceeds netos de efectivo vendido 600.524−ajuste final 11.867=588.657 m son inversión; ganancia 127.211 m queda fuera de EBIT y se revierte en CFO. Supreme ya se excluye del CFO continuado. La limitación de cash carve-out afecta la precisión histórica; <strong>el modelo forward usa solamente el negocio retenido y supuestos explícitos de reinversión</strong>.</p>
+<p>H1FY27 posventa ofrece anclas limpias de magnitud: D&amp;A/write-downs 116.143 m, SBC 40.276 m, PPE+software 108.621 m. Doble semestre 232.286/80.552/217.242 m sirve solo para dimensionar supuestos, no para anualizar el CFO estacional. D&amp;A TTM 262.508 incluye write-downs y el último trimestre con Dickies; no se llama D&amp;A recurrente exacta. Los impuestos cash anuales del 10-K mezclan continuadas/discontinuadas; el detalle trimestral de impuestos/interés cash no se publica y permanece n/d.</p>
+<h2 id="capital-deuda-dilución-y-otros-derechos">6. Capital, deuda, dilución y otros derechos</h2>
+<p>Balance 26-sep: deuda carrying 3,538.589; caja no restringida 442.951; neta 3,095.638. Para evitar valorar deuda descontada por costes de emisión como si fuera principal, se usa <strong>principal aproximado 3,558.123 m</strong>. Se reconstruye con nominales USD/€ y <a href="https://www.federalreserve.gov/releases/h10/20260928/">FX oficial25-sep: EURUSD1.1400</a>; la diferencia 19.534 es proxy de nominal/FX, no desglose auditado de comisiones septiembre. El10-K marzo sí reconcilia principal 3,540.905−descuento 10.094−costes 10.941=carrying 3,519.870.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Claim / ajuste</th>
+<th>USDm</th>
+<th>Tratamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Principal financiero proxy</td>
+<td>3,558.123</td>
+<td>Se resta una vez</td>
+</tr>
+<tr class="even">
+<td>Caja</td>
+<td>442.951</td>
+<td>No restringida</td>
+</tr>
+<tr class="odd">
+<td>Reserva operativa supuesta</td>
+<td>200.000</td>
+<td>Solo 242.951 se reconoce excedentario</td>
+</tr>
+<tr class="even">
+<td>Déficit pensionario último medido</td>
+<td>77.265</td>
+<td>28-mar; no se vuelve a descontar financiación legacy en FCFF</td>
+</tr>
+<tr class="odd">
+<td>Consultoría pendiente fair value</td>
+<td>2.100</td>
+<td>No se resta el techo contractual 75 m como si fuera deuda actual</td>
+</tr>
+<tr class="even">
+<td>Reestructuración devengada</td>
+<td>24.607</td>
+<td>Claim inicial; costes futuros normales dentro de EBIT</td>
+</tr>
+<tr class="odd">
+<td>Reserva analítica legacy tax</td>
+<td>100.000</td>
+<td>Hipótesis, sensibilidad 0–268.721; no estimación judicial ni pago cierto</td>
+</tr>
+<tr class="even">
+<td>Claims netos modelo</td>
+<td>3,519.144</td>
+<td>Incluye reserva de caja</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los pasivos operativos de arrendamiento 1,462.225 m <strong>no</strong> se añaden a deuda: sus rentas permanecen en EBIT/FCFF. No se capitalizan rentas y se vuelven a cobrar a la vez. Los 83.5 m del replacement pension plan y refund 3.089 m no son caja libre. El antiguo pago fiscal Timberland 875.7 m se hizo en 2022; no se resta nuevamente. El máximo neto 268.721 de tax benefits no reconocidos es exposición contable, no factura inevitable; el modelo muestra sensibilidad a su reserva. Litigio Colorado no tiene daño cuantificable publicado: no se afirma que su valor esperado sea cero.</p>
+<p>Acciones actuales 393.639062 m al 24-oct, frente a promedio Q2básico393.369/diluido 399.680. Denominador central <strong>399.950062 m</strong>=actuales+6.311 proxy de premios existentes. No es un inventario exacto de opciones a $20.04. Puede solapar parcialmente premios no consolidados cuyo gasto futuro también persiste; el modelo no añade una capa anual extra de dilución. Usar solo básicas actuales eleva central a $10.82; cuatro millones adicionales lo reducen a $10.54. La incertidumbre no explica la diferencia con $20.04.</p>
+<p>Vence $500 m en abril 2027; dirección pretende pagarlo en marzo, aún no ejecutado. ABL disponible≈$1.47bn sujeto a borrowing base; ratings BB/Ba2. La caja estacional esperada y liquidez no permiten afirmar dificultad inmediata. Reducir deuda usando FCFF aumenta el patrimonio residual, pero <strong>no se suma otra vez</strong> como creación independiente de valor sobre el DCF.</p>
+<h2 id="dcf-fcff-diez-años-y-terminal-coherente">7. DCF FCFF: diez años y terminal coherente</h2>
+<p>FCFF=EBIT económico−impuesto cash+D&amp;A−PPE/software/inversión económica−aumento de circulante. SBC ya está dentro de EBIT; no se añade y luego se resta nuevamente. Rentas, marketing y costes recurrentes permanecen. No se compra crecimiento mediante adquisiciones gratuitas ni se extrapola la venta de Dickies.</p>
+<p>Se proyectan <strong>NTM 1–NTM 10 anuales</strong>, desde ventas retenidasTTM 9,350.599, con descuento al final de cada año. No se presenta como calendario literal FY2027–36. Es una aproximación anual de valoración, no una previsión mensual desde el día exacto de cierre del balance. Cinco años iniciales explícitos y cinco de transición.</p>
+<p>Central: impuesto cash 28/27/26/25% y 25% después; la mejora parcial es hipótesis. Ventas crecen 2.5/3.5/4/3.5/3/3/2.5/2.5/2.5/2.5%; margen económico 8.2/9.2/10/10/10/10/10/10/10/10%. Aproxima alcanzar la meta operativa, no superar indefinidamente la guía. Primera FCFF $432.42 m incluye $75 m de absorción extraordinaria de circulante supuesta por inventario/proveedores, además del crecimiento normal; no es cifra del emisor. La guía FCF≥405 añade SBC al CFO. Para compararla con FCFF económico hay que sumar interés neto normal después de impuestos y restar SBC: aproximadamente 405+83−80.6≈407 m, antes de diferencias de periodo, inversión y circulante. El valor 83 es una referencia de P&amp;L normalizada, no interés cash divulgado. La guía es mínimo de FY27, el modelo es NTM: no se afirma reconciliación exacta ni validación mecánica. El escenario sin los 75 m extras sube central unos $0.17. Los márgenes incluyen costes normales de reestructuración; el dato 8.863 m H1 no se resta otra vez.</p>
+<p>D&amp;A supuesto 2.5% de ventas, consistente en magnitud con H1 posventa. Mantenimiento central=100% D&amp;A, por lo que no se cosecha depreciación indefinidamente. Expansión de inversión neta=incremento ventas/4; circulante=14% del incremento ventas. Se suma una absorción inicial extraordinaria de $75 m, con sensibilidad 0–200 m. Se resta del capex de expansión la parte ya financiada como circulante, para no pagarla dos veces. Capex=PPE+software+inversión operativa económicamente necesaria; no hay desglose ficticio de mantenimiento GAAP. Desde años 8–10 la reinversión converge a NOPAT×crecimiento/ROIC; el terminal no presupone crecimiento gratis.</p>
+<p>Capital actual aproximado equity+deuda−caja=$5,128.923 m. NOPAT retenido bajo el sobre tarifario equivale aproximadamente a 8.0–9.3% de ese capital de cierre. No es ROIC auditado de promedio ni perímetro perfectamente homogéneo. El15% terminal supone mejora; excluir goodwill/intangibles cambia sustancialmente el denominador. No se vende 15% como dato histórico observado.</p>
+<p>Rf <strong>4.95% al 3-nov</strong>, <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&amp;type=daily_treasury_yield_curve">Treasury oficial</a>. Beta 1.4, prima de mercado 5%, spread deuda 2.3%, estructura objetivo 22% deuda y tasa 28% son hipótesis: Ke11.95%, Kd7.25%, WACC calculado 10.4694%, redondeado <strong>10.5%</strong>. No se usa el cupón viejo como coste de refinanciación. Son dólares nominales y crecimiento terminal nominal; el riesgo de ejecución no se descuenta también mediante un haircut fijo sobre el valor.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th>CAGR ventas 10a</th>
+<th>Margen año 10</th>
+<th>WACC</th>
+<th>g terminal</th>
+<th>ROIC terminal</th>
+<th>EV</th>
+<th>Valor/acción</th>
+<th>Cambio vs20.04</th>
+<th>PV terminal/EV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>adverse</td>
+<td>0.34%</td>
+<td>6.50%</td>
+<td>12.00%</td>
+<td>1.50%</td>
+<td>10.00%</td>
+<td>3,224.6</td>
+<td>0.00</td>
+<td>-100.00%</td>
+<td>36.12%</td>
+</tr>
+<tr class="even">
+<td>central</td>
+<td>2.95%</td>
+<td>10.00%</td>
+<td>10.50%</td>
+<td>2.50%</td>
+<td>15.00%</td>
+<td>7,778.1</td>
+<td>10.65</td>
+<td>-46.86%</td>
+<td>47.43%</td>
+</tr>
+<tr class="odd">
+<td>favorable</td>
+<td>3.80%</td>
+<td>12.00%</td>
+<td>9.50%</td>
+<td>3.00%</td>
+<td>20.00%</td>
+<td>12,351.3</td>
+<td>22.08</td>
+<td>10.20%</td>
+<td>55.18%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Adverso: Vans/mezcla no se recuperan, margen 6–6.5%, crecimiento casi nulo, tasa 30%, costes de inversión mayores y $150 m de absorción extraordinaria inicial. La equity residual negativa se limita a cero; este DCF no valora la opcionalidad de responsabilidad limitada ni una liquidación marca por marca. Favorable: recuperación amplia, margen 12%, crecimiento 3.8% compuesto, tasa 26→23%, WACC 9.5%, ROIC 20%, g3%. Ninguno es una probabilidad asignada ni un límite máximo de pérdidas/ganancias.</p>
+<h3 id="diez-años-centrales-con-todo-el-desembolso-económico">Diez años centrales, con todo el desembolso económico</h3>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th>Ventas</th>
+<th>Margen</th>
+<th>EBIT</th>
+<th>Impuesto</th>
+<th>D&amp;A</th>
+<th>Capex</th>
+<th>ΔWC</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>9,584.36</td>
+<td>8.20%</td>
+<td>785.92</td>
+<td>220.06</td>
+<td>239.61</td>
+<td>265.32</td>
+<td>107.73</td>
+<td>432.42</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>9,919.82</td>
+<td>9.20%</td>
+<td>912.62</td>
+<td>246.41</td>
+<td>248.00</td>
+<td>284.90</td>
+<td>46.96</td>
+<td>582.35</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>10,316.61</td>
+<td>10.00%</td>
+<td>1,031.66</td>
+<td>268.23</td>
+<td>257.92</td>
+<td>301.56</td>
+<td>55.55</td>
+<td>664.23</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>10,677.69</td>
+<td>10.00%</td>
+<td>1,067.77</td>
+<td>266.94</td>
+<td>266.94</td>
+<td>306.66</td>
+<td>50.55</td>
+<td>710.56</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>10,998.02</td>
+<td>10.00%</td>
+<td>1,099.80</td>
+<td>274.95</td>
+<td>274.95</td>
+<td>310.19</td>
+<td>44.85</td>
+<td>744.77</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>11,327.96</td>
+<td>10.00%</td>
+<td>1,132.80</td>
+<td>283.20</td>
+<td>283.20</td>
+<td>319.49</td>
+<td>46.19</td>
+<td>767.11</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>11,611.16</td>
+<td>10.00%</td>
+<td>1,161.12</td>
+<td>290.28</td>
+<td>290.28</td>
+<td>321.43</td>
+<td>39.65</td>
+<td>800.04</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>11,901.44</td>
+<td>10.00%</td>
+<td>1,190.14</td>
+<td>297.54</td>
+<td>297.54</td>
+<td>333.58</td>
+<td>40.64</td>
+<td>815.93</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>12,198.98</td>
+<td>10.00%</td>
+<td>1,219.90</td>
+<td>304.97</td>
+<td>304.97</td>
+<td>378.86</td>
+<td>41.66</td>
+<td>799.38</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>12,503.95</td>
+<td>10.00%</td>
+<td>1,250.40</td>
+<td>312.60</td>
+<td>312.60</td>
+<td>426.20</td>
+<td>42.70</td>
+<td>781.50</td>
+</tr>
+</tbody>
+</table></div>
+<p>Terminal: NOPAT 11=$961.241 m, reinversión=$160.207 m, FCFF 11=$801.034 m. TV=FCFF 11/(WACC−g)=$10012.929 m; su PV=$3689.252 m representa 47.43% del EV. Todos los años, supuestos y fórmulas se reproducen en model.py/JSON/CSV.</p>
+<h2 id="valoración-inversa-y-casos-conjuntos">8. Valoración inversa y casos conjuntos</h2>
+<p>El precio no exige una única combinación. La tabla resuelve crecimiento con el mismo esquema de impuestos central 28→25%, ROIC 15%, g2.5%, claims y reinversión centrales; el margen converge gradualmente, no salta en el primer año. <strong>Estas constantes difieren del escenario favorable completo</strong>, por eso no debe mezclarse una fila con sus otras hipótesis.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th>Margen año 10</th>
+<th>CAGR ventas exigido</th>
+<th>Ventas año 10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9.50%</td>
+<td>10.00%</td>
+<td>7.56%</td>
+<td>19,388.0</td>
+</tr>
+<tr class="even">
+<td>9.50%</td>
+<td>12.00%</td>
+<td>4.46%</td>
+<td>14,466.4</td>
+</tr>
+<tr class="odd">
+<td>9.50%</td>
+<td>14.00%</td>
+<td>1.95%</td>
+<td>11,347.7</td>
+</tr>
+<tr class="even">
+<td>10.50%</td>
+<td>10.00%</td>
+<td>10.40%</td>
+<td>25,147.4</td>
+</tr>
+<tr class="odd">
+<td>10.50%</td>
+<td>12.00%</td>
+<td>7.04%</td>
+<td>18,465.5</td>
+</tr>
+<tr class="even">
+<td>10.50%</td>
+<td>14.00%</td>
+<td>4.35%</td>
+<td>14,319.5</td>
+</tr>
+</tbody>
+</table></div>
+<p>Una alternativa intermedia no calibrada para igualar precio, con crecimiento 3.55%, margen 10.5%, WACC 10%, ROIC 17.5%, vale <strong>$14.04</strong>. El favorable completo de $22.08 demuestra una ruta no imposible a precio razonable, aunque el margen 12% supera la meta oficial≥10%. Para defender $20 hoy habría que tener mayor convicción en esa combinación, no solamente observar que EPS ajustado mejora.</p>
+<p>Prueba constructiva adicional: ventas 4% compuesto, margen 8.5/10/11/12% y 12% después, impuesto 28/26/24/23%, WACC 9.5%, g3%, ROIC 20%, ventas/capital 5 x y WCextra 25 m da <strong>$22.08</strong>. Bajo esos supuestos conjuntos, el precio exige solo <strong>2.92% de crecimiento</strong>, no el crecimiento mucho mayor de las filas centrales. Es una vía legítima a precio razonable si su evidencia llega, no una certeza.</p>
+<p>Sensibilidades sobre negocio central: WACC 9%/g2.5% da $15.19; WACC 12%/g2.5% da $7.53. Mantenimiento 110% D&amp;A da $10.31; ventas/capital 2.5 x da $10.02; ROIC terminal 10% da $9.57;20% da $11.18. Absorción inicial adicionalWC 200 m da $10.37. Impuesto 28% fijo da $9.93; llegar gradualmente 23% da $11.15. Son pruebas individuales, no bandas de confianza. La matriz conjunta completa crecimiento/margen y WACC/g está en JSON.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Precio supuesto</th>
+<th>IRR negocio con TV fijo</th>
+<th>IRR proxy accionista/refinanciación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10.00</td>
+<td>11.01%</td>
+<td>15.85%</td>
+</tr>
+<tr class="even">
+<td>12.00</td>
+<td>9.51%</td>
+<td>12.81%</td>
+</tr>
+<tr class="odd">
+<td>14.00</td>
+<td>8.20%</td>
+<td>10.39%</td>
+</tr>
+<tr class="even">
+<td>16.00</td>
+<td>7.02%</td>
+<td>8.39%</td>
+</tr>
+<tr class="odd">
+<td>18.00</td>
+<td>5.96%</td>
+<td>6.70%</td>
+</tr>
+<tr class="even">
+<td>20.04</td>
+<td>4.98%</td>
+<td>5.20%</td>
+</tr>
+<tr class="odd">
+<td>22.00</td>
+<td>4.12%</td>
+<td>3.94%</td>
+</tr>
+<tr class="even">
+<td>25.00</td>
+<td>2.92%</td>
+<td>2.27%</td>
+</tr>
+</tbody>
+</table></div>
+<p>La segunda IRR supone distribución de caja excedente, pago inicial de otros claims y deuda mantenida/refinanciada al 4.25%/5%/6.5% antes de impuestos, saldada al final. No predice política de dividendos, buybacks ni cotización. Depende del coste de financiación y del TV; no se usa como filtro universal.</p>
+<h2 id="comparables-actuales-normalizados-de-manera-explícita">9. Comparables actuales, normalizados de manera explícita</h2>
+<p>Precios 3-nov regular; balances/P&amp;L de la última publicación indicada, no balances inventados a 3-nov. COLM es outdoor, PVH moda global y LEVI denim/ropa. Diferencias de crecimiento, marcas, leverage y pensiones impiden trasladar un múltiplo sin juicio. Operating leases permanecen en resultados y no se añaden al EV. Comparables usan EV financiero estándar; no los claims analíticos adicionales del DCFVFC.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Peer</th>
+<th>Periodo</th>
+<th>Precio</th>
+<th>Acciones</th>
+<th>EV</th>
+<th>EBIT TTM reportado</th>
+<th>EBIT proxy sin refund/especiales</th>
+<th>EV/proxy EBIT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>COLM</td>
+<td>2026-09-30</td>
+<td>70.06</td>
+<td>51.193</td>
+<td>3,357.0</td>
+<td>299.2</td>
+<td>244.2</td>
+<td>13.75 x</td>
+</tr>
+<tr class="even">
+<td>PVH</td>
+<td>2026-08-02</td>
+<td>91.10</td>
+<td>46.138</td>
+<td>5,487.3</td>
+<td>363.0</td>
+<td>660.5</td>
+<td>8.31 x</td>
+</tr>
+<tr class="odd">
+<td>LEVI</td>
+<td>2026-08-30</td>
+<td>22.87</td>
+<td>383.470</td>
+<td>9,034.3</td>
+<td>753.8</td>
+<td>675.2</td>
+<td>13.38 x</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>COLM:</strong> EBIT TTM 299.222−55de refunds netos de concesiones=244.222. Cero deuda; caja/inversiones 229.579 es estacional. Acciones 51.193194 m del 24-jul: no hay nuevo inventario exacto en el comunicadoQ 3; usar promedioQ 3básico50.835 solo como sensibilidad reduce EVaprox 25 m. <a href="https://investor.columbia.com/news-events/press-releases/detail/393/columbia-sportswear-company-reports-third-quarter-2026">Q3 29-oct</a>, <a href="https://investor.columbia.com/sec-filings/all-sec-filings/content/0001050797-26-000148/cfocommentaryq32026_vf.htm">CFO commentary, reconocimiento de55m</a>, <a href="https://investor.columbia.com/news-events/press-releases/detail/383/columbia-sportswear-company-reports-fourth-quarter-and-full">FY25</a>.</li>
+<li><strong>PVH:</strong> EBIT TTM 363+439impairment−25.4ganancia−106.7refund−9.4pensión no-service=660.5. Mantiene costes recurrentes de Growth Driver 5. Incluye 49.3 de beneficio proporcional de afiliadas, coherente con que EVno retira esas inversiones; quitarlas sin valorar su activo por separado no sería neutral. <a href="https://www.sec.gov/Archives/edgar/data/78239/000007823926000056/pvh-20260802.htm">10-Q2-sep</a>, <a href="https://www.sec.gov/Archives/edgar/data/78239/000007823926000021/pvh-20260201.htm">10-K31-mar</a>. Acciones 46.137833 m al 26-ago; deuda 2248+finance lease 2.</li>
+<li><strong>LEVI:</strong> EBIT TTM 753.8−78.6refund=675.2. El impairment 2.5FY25 también estaba en 9M25 y cancela: no se añade. Mantiene 25 m de promoción/marketing redeploy porque fue coste real. AccionesA+B383.469739 m al 30-sep; no solo la clase cotizada. No se finge ejecutado el nuevoASR 100 m. <a href="https://www.sec.gov/Archives/edgar/data/94845/000009484526000047/lvis-20260830.htm">10-Q7-oct</a>, <a href="https://www.sec.gov/Archives/edgar/data/94845/000009484526000008/lvis-20251130.htm">10-K28-ene</a>.</li>
+</ul>
+<p>Estas proxies eliminan refunds reconocidos, <strong>no</strong> reconstruyen simétricamente todas las tarifas pagadas en ejercicios anteriores. No son EBIT económico exacto certificado. Los múltiplos forward, quitando refunds de la guía, son aproximadamente 13.57xCOLM/8.06xPVH/12.30xLEVI; PVH/LEVI mantienen diferencias en ajustes operativos de dirección. No se presentan como consenso sell-side. Cotizaciones verificadas: <a href="https://stockanalysis.com/stocks/colm/">COLM</a>, <a href="https://stockanalysis.com/stocks/pvh/">PVH</a>, <a href="https://stockanalysis.com/stocks/levi/">LEVI</a>.</p>
+<p>Como contraste propio, aplicar 8–14 x al EBIT retenido 664.034−x, con x0..93.8, y restar los claims DCF, arroja aproximadamente $2.61–14.45 por acción. No es un valor objetivo automático. Al EBIT forward central≈786 m,12–14 x arrojaría aproximadamente $14.78–18.71. VFC bajo la convención EV estándar comparable, usando básicas actuales/deuda carrying/toda caja, tiene EV $10,984.165 m, equivalente a 16.54–19.26 x EBIT retenido bajo el sobre x. No se compara el numerador de claims DCF $11,534 m con EV estándar de comparables sin aclararlo. El mercado puede anticipar mejor marca/margen y desapalancamiento; esos flujos ya deben estar en DCF, no añadirse después. La discrepancia de comparables no invalida por sí sola ni confirma una inversión; coincide en que la recuperación ya tiene un precio relevante.</p>
+<h2 id="entrada-tamaño-y-próximos-hechos">10. Entrada, tamaño y próximos hechos</h2>
+<p>El scanner Nov 3 tenía Opportunity 80, RSI 83.2 y Stage 2No. Son contexto histórico del scanner, no validación de una señal actual ni motivo automático de rechazo por RSI. No se ha certificado tendencia larga, cierre de confirmación, zona previa, stop manual, ATR, exposición de cartera o tamaño bajo la política vigente. <strong>No hay precio de orden ni tamaño autorizado.</strong> La ausencia de señal 3.5 no vuelve incompleto este trabajo fundamental.</p>
+<p>A favor: marcas fuertes retenidas, mejora grossmargin/Outdoor, recuperación de caja, reinversión moderada después de la reestructuración y progreso en deuda. En contra: crecimiento orgánicoH 1modesto, Vans−10%, dependencia de wholesaleH 2, parte del trimestre por FX/timing, inventario+7%, proveedores y devolución de tarifas, y precio que requiere caso bastante favorable.</p>
+<p>Qué puede mejorar tesis: varios trimestres de Vans DTC y mayorista sostenibles, crecimiento orgánico comparable, rotación de inventario, margen neto deFX/tarifas/catch-up de gasto, caja retenida posventa y deudaabril 2027pagada con recursos operativos. Qué puede invalidarla: cancelaciones/markdowns persistentes, deterioro de brand heat que exija recortes de precio, circulante financiado prolongadamente por proveedores, nueva deuda/dilución para cubrir operación, o coste estructural que impida márgenes objetivo.</p>
+<p>La <a href="https://www.vfc.com/investors/news-events-presentations/ir-calendar">agenda oficial</a> no anuncia próxima fecha de resultados en el corte revisado. No se inventa una fecha. Próxima revisión tras Q3 FY27 o noticia material, antes de cualquier compra adicional, y al verificar el vencimiento de abril 2027. No hay resultados futuros de esta semana que justifiquen posponer el análisis ya publicado de octubre.</p>
+<h2 id="registro-reproducible-y-límites-reales">11. Registro reproducible y límites reales</h2>
+<p>Historia:845 filas con fuente y 137 controles aritméticos/puentes; se tolera solo el redondeo informado $0.001 m. Archivos: history/History_and_Normalization.md, history.json, Normalized_Financials_Long.csv, tablasFY/Q/TTM, retenidas_bridge.json, CFO variance y special cash ledger. operating/operating_memo.md y operating_facts.json conservan fuente/fecha de afirmaciones; los originales se guardan para investigación. Modelo: model.py, model_results.json y tres CSVde 10 años. Comps: build_comps.py, comps.json/CSV, fuentes y estados con fecha. Auditoría independiente en audit/.</p>
+<p>Límites abiertos de divulgación, no trabajo fingidamente pendiente: CFO/capex Dickies standalone; reparto exacto de tarifas/concesiones entre semestres; currentaward inventory a precio de hoy; reparto preciso de mantenimiento y crecimiento; nueva medición actuarial después de marzo; resolución del litigio. El modelo usa rangos/sensibilidades donde esos hechos importan y no afirma conocer datos aún no publicados. Análisis completado no equivale a compra aprobada.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/VFC/VFC_stage3_publication_2026-11-04.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/VFC/model.py">Modelo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/VFC/model_results.json">Resultados</a></li>
+</ul>
+</main></body></html>

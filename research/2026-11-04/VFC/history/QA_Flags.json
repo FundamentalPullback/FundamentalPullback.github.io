@@ -1,0 +1,52 @@
+[
+  {
+    "severity": "material",
+    "issue": "Retained Dickies cash not disclosed",
+    "treatment": "Historical continuing CFO includes Dickies until sale. Exact retained CFO/capex/software/WC left null. Use prospective retained economics with explicit assumptions; do not label a standalone cash estimate reported."
+  },
+  {
+    "severity": "material",
+    "issue": "Tariff expense/cash timing and vendor original concession cash missing",
+    "treatment": "Use explicit x sensitivity and complete P/R/C/V/I identity; no automatic full refund subtraction from EBIT or false guaranteed cash improvement."
+  },
+  {
+    "severity": "material",
+    "issue": "Annual D&A includes other write-downs; annual/interim presentation differs",
+    "treatment": "Use da_and_other_asset_writedowns as source row, not pure recurring D&A. Remove excluded impairment/accelerated depreciation when forecasting adjusted EBIT."
+  },
+  {
+    "severity": "material",
+    "issue": "Annual cash tax includes discontinued operations",
+    "treatment": "Note26 footnote(a) explicit. No exact retained annual tax series. Interim/TTM cash taxes and cash interest null."
+  },
+  {
+    "severity": "minor",
+    "issue": "FY2024 retained revenue only rounded Dickies removal available; retained GP/EBIT not available",
+    "treatment": "9297.278 is approximate +/-0.05m, derived from continuing revenue less reported rounded Dickies618.4; unsuitable exact recast."
+  },
+  {
+    "severity": "minor",
+    "issue": "One-thousand-dollar retained EBIT rounding",
+    "treatment": "Q3 FY26 Dickies reported -7.955 versus annual-minus-H1 -7.954; TTM quarter sum664.035 vs bridge664.034. Annual+H1 bridge controls."
+  },
+  {
+    "severity": "material",
+    "issue": "Supreme sale does not remove all shared overhead",
+    "treatment": "Corporate/segment allocations failing discontinued classification remain continuing operations. Do not assume full cost removal."
+  },
+  {
+    "severity": "material",
+    "issue": "No EPS summation/subtraction for TTM or diluted denominator backsolve",
+    "treatment": "Reported annual/quarter EPS preserved; no invented TTM EPS or Q4 diluted share count from annual-minus9month denominator."
+  },
+  {
+    "severity": "material",
+    "issue": "Stock compensation is a real ownership cost",
+    "treatment": "FCF_less_SBC diagnostic subtracts once from cash-flow FCF; do not subtract again when modeling NOPAT that already includes SBC without addback."
+  },
+  {
+    "severity": "material",
+    "issue": "Full-year FY27 net refund110m is guidance bridge not exact H1 net collected",
+    "treatment": "Preserve approximate forecast label and distinguish gross refunds, vendor obligation, cash payment timing and refund interest."
+  }
+]

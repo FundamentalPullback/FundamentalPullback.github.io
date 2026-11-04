@@ -1,0 +1,1789 @@
+{
+  "as_of": "2026-11-04",
+  "quote": {
+    "price": 20.04,
+    "date": "2026-11-03 regular close",
+    "scanner_price": 19.99,
+    "scanner_price_context": "After-hours 18:01ET, kept distinct from regular20.04"
+  },
+  "units": "USD millions except per-share and ratios",
+  "periods": "NTM1\u2013NTM10 annualized forward periods using retained September2026TTM revenue anchor; not literal FY2027\u2013FY2036; year-end discount convention, approximate annual forecast",
+  "retained_ttm_revenue": 9350.599,
+  "claims": {
+    "cash": 442.951,
+    "minimum_operating_cash": 200.0,
+    "financial_debt_carrying": 3538.589,
+    "debt_principal_uplift_proxy": 19.534,
+    "pension_deficit": 77.265,
+    "consulting_liability": 2.1,
+    "restructuring_liability": 24.607,
+    "legacy_tax_reserve_assumed": 100.0
+  },
+  "current_common_shares": 393.639062,
+  "existing_award_increment_proxy": 6.310999999999979,
+  "economic_share_denominator": 399.950062,
+  "net_claims": 3519.144,
+  "capital_cost": {
+    "risk_free": 0.0495,
+    "risk_free_date": "2026-11-03",
+    "risk_free_source": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve",
+    "beta_assumed": 1.4,
+    "erp_assumed": 0.05,
+    "cost_equity": 0.1195,
+    "cost_debt": 0.07250000000000001,
+    "debt_spread_assumed": 0.023,
+    "target_debt_weight": 0.22,
+    "tax": 0.28,
+    "indicative_wacc": 0.10469400000000001,
+    "central_selected_wacc": 0.105
+  },
+  "scenarios": {
+    "adverse": {
+      "params": {
+        "growth": [
+          -0.02,
+          -0.02,
+          0,
+          0,
+          0.01,
+          0.01,
+          0.01,
+          0.015,
+          0.015,
+          0.015
+        ],
+        "margin": [
+          0.065,
+          0.06,
+          0.06,
+          0.065,
+          0.065,
+          0.065,
+          0.065,
+          0.065,
+          0.065,
+          0.065
+        ],
+        "wacc": 0.12,
+        "g": 0.015,
+        "roic": 0.1,
+        "sc": 3.0,
+        "wc_ratio": 0.16,
+        "da_ratio": 0.025,
+        "maintenance": 1.05,
+        "year1_extra_wc": 150.0,
+        "tax": 0.3
+      },
+      "years": [
+        {
+          "year": 1,
+          "revenue": 9163.58702,
+          "growth": -0.02,
+          "ebit_margin": 0.065,
+          "ebit": 595.6331563000001,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 178.68994689000002,
+          "nopat": 416.9432094100001,
+          "da": 229.08967550000003,
+          "capex_total": 240.54415927500003,
+          "change_wc": 120.07808320000011,
+          "fcff": 285.410642435,
+          "pv_fcff": 254.83093074553568,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 2,
+          "revenue": 8980.315279600001,
+          "growth": -0.02,
+          "ebit_margin": 0.06,
+          "ebit": 538.818916776,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 161.6456750328,
+          "nopat": 377.17324174320004,
+          "da": 224.50788199000004,
+          "capex_total": 235.73327608950007,
+          "change_wc": -29.323478463999926,
+          "fcff": 395.2713261077,
+          "pv_fcff": 315.10788114453123,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 3,
+          "revenue": 8980.315279600001,
+          "growth": 0,
+          "ebit_margin": 0.06,
+          "ebit": 538.818916776,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 161.6456750328,
+          "nopat": 377.17324174320004,
+          "da": 224.50788199000004,
+          "capex_total": 235.73327608950007,
+          "change_wc": 0.0,
+          "fcff": 365.9478476437001,
+          "pv_fcff": 260.47444968261715,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 4,
+          "revenue": 8980.315279600001,
+          "growth": 0,
+          "ebit_margin": 0.065,
+          "ebit": 583.7204931740001,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 175.11614795220004,
+          "nopat": 408.6043452218001,
+          "da": 224.50788199000004,
+          "capex_total": 235.73327608950007,
+          "change_wc": 0.0,
+          "fcff": 397.37895112230007,
+          "pv_fcff": 252.54150741577143,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 5,
+          "revenue": 9070.118432396,
+          "growth": 0.01,
+          "ebit_margin": 0.065,
+          "ebit": 589.5576981057401,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 176.86730943172202,
+          "nopat": 412.6903886740181,
+          "da": 226.75296080990003,
+          "capex_total": 253.65648866836827,
+          "change_wc": 14.368504447359882,
+          "fcff": 371.41835636818996,
+          "pv_fcff": 210.75275011017217,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 6,
+          "revenue": 9160.81961671996,
+          "growth": 0.01,
+          "ebit_margin": 0.065,
+          "ebit": 595.4532750867975,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 178.63598252603924,
+          "nopat": 416.81729256075823,
+          "da": 229.020490417999,
+          "capex_total": 256.19305355505196,
+          "change_wc": 14.51218949183356,
+          "fcff": 375.1325399318717,
+          "pv_fcff": 190.05381929578016,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 7,
+          "revenue": 9252.42781288716,
+          "growth": 0.01,
+          "ebit_margin": 0.065,
+          "ebit": 601.4078078376654,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 180.4223423512996,
+          "nopat": 420.9854654863658,
+          "da": 231.310695322179,
+          "capex_total": 258.7549840906024,
+          "change_wc": 14.657311386751827,
+          "fcff": 378.8838653311905,
+          "pv_fcff": 171.3878191863732,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 8,
+          "revenue": 9391.214230080466,
+          "growth": 0.015,
+          "ebit_margin": 0.065,
+          "ebit": 610.4289249552303,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 183.12867748656907,
+          "nopat": 427.3002474686612,
+          "da": 234.78035575201167,
+          "capex_total": 270.57568585311884,
+          "change_wc": 22.20582675092912,
+          "fcff": 369.2990906166249,
+          "pv_fcff": 149.15370880808797,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 9,
+          "revenue": 9532.082443531672,
+          "growth": 0.015,
+          "ebit_margin": 0.065,
+          "ebit": 619.5853588295587,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 185.8756076488676,
+          "nopat": 433.7097511806911,
+          "da": 238.3020610882918,
+          "capex_total": 274.63432114091535,
+          "change_wc": 22.538914152192884,
+          "fcff": 374.8385769758747,
+          "pv_fcff": 135.17054860732986,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 10,
+          "revenue": 9675.063680184647,
+          "growth": 0.015,
+          "ebit_margin": 0.065,
+          "ebit": 628.8791392120021,
+          "cash_tax_rate": 0.3,
+          "cash_tax": 188.66374176360063,
+          "nopat": 440.21539744840146,
+          "da": 241.87659200461619,
+          "capex_total": 285.0319037574004,
+          "change_wc": 22.876997864476,
+          "fcff": 374.1830878311412,
+          "pv_fcff": 120.47693986649318,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        }
+      ],
+      "terminal_revenue": 9820.189635387416,
+      "terminal_nopat": 446.8186284101275,
+      "terminal_reinvestment": 67.02279426151911,
+      "terminal_fcff": 379.7958341486084,
+      "terminal_ev": 3617.103182367699,
+      "pv_terminal": 1164.6104187094343,
+      "terminal_share": 0.3611686987742191,
+      "enterprise_value": 3224.5607735721264,
+      "equity_value": 0,
+      "per_share": 0.0,
+      "upside": -1.0,
+      "ten_year_revenue_cagr": 0.003416966104797803,
+      "enterprise_price": 11534.143242479999,
+      "enterprise_fixed_exit_irr": -0.05543163464855122,
+      "equity_distribution_refinancing_proxy_irr": -0.1809766401718333,
+      "equity_initial": 7976.020242479999,
+      "equity_cashflows": [
+        179.556483185,
+        270.7370211077,
+        204.05325114370007,
+        235.48435462230006,
+        209.52375986818996,
+        213.23794343187168,
+        216.98926883119051,
+        207.40449411662487,
+        212.94398047587467,
+        212.28849133114122
+      ],
+      "equity_terminal": 58.980182367698944
+    },
+    "central": {
+      "params": {
+        "growth": [
+          0.025,
+          0.035,
+          0.04,
+          0.035,
+          0.03,
+          0.03,
+          0.025,
+          0.025,
+          0.025,
+          0.025
+        ],
+        "margin": [
+          0.082,
+          0.092,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "wacc": 0.105,
+        "g": 0.025,
+        "roic": 0.15,
+        "sc": 4.0,
+        "wc_ratio": 0.14,
+        "da_ratio": 0.025,
+        "maintenance": 1.0,
+        "year1_extra_wc": 75.0,
+        "tax": [
+          0.28,
+          0.27,
+          0.26,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "years": [
+        {
+          "year": 1,
+          "revenue": 9584.363975,
+          "growth": 0.025,
+          "ebit_margin": 0.082,
+          "ebit": 785.91784595,
+          "cash_tax_rate": 0.28,
+          "cash_tax": 220.05699686600002,
+          "nopat": 565.8608490839999,
+          "da": 239.60909937500003,
+          "capex_total": 265.323246625,
+          "change_wc": 107.72709650000002,
+          "fcff": 432.4196053339999,
+          "pv_fcff": 391.32995957828047,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 2,
+          "revenue": 9919.816714125,
+          "growth": 0.035,
+          "ebit_margin": 0.092,
+          "ebit": 912.6231376994999,
+          "cash_tax_rate": 0.27,
+          "cash_tax": 246.408247178865,
+          "nopat": 666.214890520635,
+          "da": 247.995417853125,
+          "capex_total": 284.89521915687493,
+          "change_wc": 46.963383477499924,
+          "fcff": 582.3517057393851,
+          "pv_fcff": 476.93675865718154,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 3,
+          "revenue": 10316.60938269,
+          "growth": 0.04,
+          "ebit_margin": 0.1,
+          "ebit": 1031.660938269,
+          "cash_tax_rate": 0.26,
+          "cash_tax": 268.23184394994,
+          "nopat": 763.4290943190601,
+          "da": 257.91523456725,
+          "capex_total": 301.5624281094,
+          "change_wc": 55.550973599100004,
+          "fcff": 664.2309271778103,
+          "pv_fcff": 492.30274666520927,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 4,
+          "revenue": 10677.69071108415,
+          "growth": 0.035,
+          "ebit_margin": 0.1,
+          "ebit": 1067.769071108415,
+          "cash_tax_rate": 0.25,
+          "cash_tax": 266.9422677771037,
+          "nopat": 800.8268033313111,
+          "da": 266.9422677771037,
+          "capex_total": 306.6612139004602,
+          "change_wc": 50.55138597518097,
+          "fcff": 710.5564712327737,
+          "pv_fcff": 476.5950056443358,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 5,
+          "revenue": 10998.021432416674,
+          "growth": 0.03,
+          "ebit_margin": 0.1,
+          "ebit": 1099.8021432416674,
+          "cash_tax_rate": 0.25,
+          "cash_tax": 274.95053581041685,
+          "nopat": 824.8516074312506,
+          "da": 274.95053581041685,
+          "capex_total": 310.18691515699453,
+          "change_wc": 44.8463009865534,
+          "fcff": 744.7689270981195,
+          "pv_fcff": 452.07465424407013,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 6,
+          "revenue": 11327.962075389174,
+          "growth": 0.03,
+          "ebit_margin": 0.1,
+          "ebit": 1132.7962075389175,
+          "cash_tax_rate": 0.25,
+          "cash_tax": 283.1990518847294,
+          "nopat": 849.5971556541881,
+          "da": 283.1990518847294,
+          "capex_total": 319.49252261170443,
+          "change_wc": 46.19169001615006,
+          "fcff": 767.111994911063,
+          "pv_fcff": 421.39085418225534,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 7,
+          "revenue": 11611.161127273903,
+          "growth": 0.025,
+          "ebit_margin": 0.1,
+          "ebit": 1161.1161127273904,
+          "cash_tax_rate": 0.25,
+          "cash_tax": 290.2790281818476,
+          "nopat": 870.8370845455428,
+          "da": 290.2790281818476,
+          "capex_total": 321.43092388916773,
+          "change_wc": 39.64786726386203,
+          "fcff": 800.0373215743606,
+          "pv_fcff": 397.71713389993926,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 8,
+          "revenue": 11901.44015545575,
+          "growth": 0.025,
+          "ebit_margin": 0.1,
+          "ebit": 1190.144015545575,
+          "cash_tax_rate": 0.25,
+          "cash_tax": 297.53600388639376,
+          "nopat": 892.6080116591813,
+          "da": 297.53600388639376,
+          "capex_total": 333.5789832189732,
+          "change_wc": 40.63906394545859,
+          "fcff": 815.9259683811432,
+          "pv_fcff": 367.07307624517335,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 9,
+          "revenue": 12198.976159342143,
+          "growth": 0.025,
+          "ebit_margin": 0.1,
+          "ebit": 1219.8976159342144,
+          "cash_tax_rate": 0.25,
+          "cash_tax": 304.9744039835536,
+          "nopat": 914.9232119506607,
+          "da": 304.9744039835536,
+          "capex_total": 378.8625116153415,
+          "change_wc": 41.655040544094994,
+          "fcff": 799.380063774778,
+          "pv_fcff": 325.45639588260786,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 10,
+          "revenue": 12503.950563325696,
+          "growth": 0.025,
+          "ebit_margin": 0.1,
+          "ebit": 1250.3950563325698,
+          "cash_tax_rate": 0.25,
+          "cash_tax": 312.59876408314244,
+          "nopat": 937.7962922494273,
+          "da": 312.59876408314244,
+          "capex_total": 426.20172956701623,
+          "change_wc": 42.696416557697454,
+          "fcff": 781.4969102078561,
+          "pv_fcff": 287.941647421627,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        }
+      ],
+      "terminal_revenue": 12816.549327408837,
+      "terminal_nopat": 961.2411995556629,
+      "terminal_reinvestment": 160.2068665926105,
+      "terminal_fcff": 801.0343329630524,
+      "terminal_ev": 10012.929162038157,
+      "pv_terminal": 3689.252357589596,
+      "terminal_share": 0.474314589318316,
+      "enterprise_value": 7778.070590010277,
+      "equity_value": 4258.926590010276,
+      "per_share": 10.648645905223729,
+      "upside": -0.4686304438511113,
+      "ten_year_revenue_cagr": 0.029486797690775335,
+      "enterprise_price": 11534.143242479999,
+      "enterprise_fixed_exit_irr": 0.04980657629059693,
+      "equity_distribution_refinancing_proxy_irr": 0.052039878028936504,
+      "equity_initial": 7976.020242479999,
+      "equity_cashflows": [
+        323.54104153399993,
+        452.4802162393851,
+        493.08521087781025,
+        537.0979749827736,
+        571.3104308481195,
+        593.6534986610629,
+        626.5788253243607,
+        642.4674721311433,
+        625.9215675247781,
+        608.0384139578562
+      ],
+      "equity_terminal": 6454.806162038158
+    },
+    "favorable": {
+      "params": {
+        "growth": [
+          0.045,
+          0.055,
+          0.05,
+          0.045,
+          0.04,
+          0.035,
+          0.03,
+          0.03,
+          0.025,
+          0.025
+        ],
+        "margin": [
+          0.085,
+          0.1,
+          0.11,
+          0.115,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "wacc": 0.095,
+        "g": 0.03,
+        "roic": 0.2,
+        "sc": 5.0,
+        "wc_ratio": 0.12,
+        "da_ratio": 0.025,
+        "maintenance": 1.0,
+        "year1_extra_wc": 25.0,
+        "tax": [
+          0.26,
+          0.25,
+          0.24,
+          0.23,
+          0.23,
+          0.23,
+          0.23,
+          0.23,
+          0.23,
+          0.23
+        ]
+      },
+      "years": [
+        {
+          "year": 1,
+          "revenue": 9771.375955,
+          "growth": 0.045,
+          "ebit_margin": 0.085,
+          "ebit": 830.566956175,
+          "cash_tax_rate": 0.26,
+          "cash_tax": 215.9474086055,
+          "nopat": 614.6195475695,
+          "da": 244.284398875,
+          "capex_total": 277.9465552749999,
+          "change_wc": 75.49323459999992,
+          "fcff": 505.4641565695001,
+          "pv_fcff": 461.61110188995445,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 2,
+          "revenue": 10308.801632525,
+          "growth": 0.055,
+          "ebit_margin": 0.1,
+          "ebit": 1030.8801632524999,
+          "cash_tax_rate": 0.25,
+          "cash_tax": 257.72004081312497,
+          "nopat": 773.1601224393748,
+          "da": 257.72004081312497,
+          "capex_total": 300.71409501512494,
+          "change_wc": 64.49108130299996,
+          "fcff": 665.6749869343749,
+          "pv_fcff": 555.1802397234211,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 3,
+          "revenue": 10824.241714151249,
+          "growth": 0.05,
+          "ebit_margin": 0.11,
+          "ebit": 1190.6665885566374,
+          "cash_tax_rate": 0.24,
+          "cash_tax": 285.75998125359297,
+          "nopat": 904.9066073030444,
+          "da": 270.6060428537812,
+          "capex_total": 311.8412493838812,
+          "change_wc": 61.85280979514995,
+          "fcff": 801.8185909777945,
+          "pv_fcff": 610.7082179139612,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 4,
+          "revenue": 11311.332591288054,
+          "growth": 0.045,
+          "ebit_margin": 0.115,
+          "ebit": 1300.8032479981262,
+          "cash_tax_rate": 0.23,
+          "cash_tax": 299.184747039569,
+          "nopat": 1001.6185009585572,
+          "da": 282.78331478220133,
+          "capex_total": 321.75058495314573,
+          "change_wc": 58.45090525641659,
+          "fcff": 904.2003255311962,
+          "pv_fcff": 628.9385025990375,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 5,
+          "revenue": 11763.785894939576,
+          "growth": 0.04,
+          "ebit_margin": 0.12,
+          "ebit": 1411.6543073927492,
+          "cash_tax_rate": 0.23,
+          "cash_tax": 324.6804907003323,
+          "nopat": 1086.973816692417,
+          "da": 294.0946473734894,
+          "capex_total": 330.2909116656112,
+          "change_wc": 54.294396438182666,
+          "fcff": 996.4831559621124,
+          "pv_fcff": 632.9936686545136,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 6,
+          "revenue": 12175.51840126246,
+          "growth": 0.035,
+          "ebit_margin": 0.12,
+          "ebit": 1461.062208151495,
+          "cash_tax_rate": 0.23,
+          "cash_tax": 336.04430787484387,
+          "nopat": 1125.0179002766513,
+          "da": 304.3879600315615,
+          "capex_total": 337.3265605373922,
+          "change_wc": 49.40790075874604,
+          "fcff": 1042.6713990120745,
+          "pv_fcff": 604.8709757539838,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 7,
+          "revenue": 12540.783953300333,
+          "growth": 0.03,
+          "ebit_margin": 0.12,
+          "ebit": 1504.89407439604,
+          "cash_tax_rate": 0.23,
+          "cash_tax": 346.1256371110892,
+          "nopat": 1158.7684372849508,
+          "da": 313.51959883250834,
+          "capex_total": 342.7408429955383,
+          "change_wc": 43.83186624454487,
+          "fcff": 1085.715326877376,
+          "pv_fcff": 575.1976916686879,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 8,
+          "revenue": 12917.007471899344,
+          "growth": 0.03,
+          "ebit_margin": 0.12,
+          "ebit": 1550.0408966279213,
+          "cash_tax_rate": 0.23,
+          "cash_tax": 356.5094062244219,
+          "nopat": 1193.5314904034994,
+          "da": 322.9251867974836,
+          "capex_total": 367.55282057369817,
+          "change_wc": 45.14682223188123,
+          "fcff": 1103.7570343954035,
+          "pv_fcff": 534.0236994288631,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 9,
+          "revenue": 13239.932658696825,
+          "growth": 0.025,
+          "ebit_margin": 0.12,
+          "ebit": 1588.791919043619,
+          "cash_tax_rate": 0.23,
+          "cash_tax": 365.4221413800324,
+          "nopat": 1223.3697776635865,
+          "da": 330.99831646742064,
+          "capex_total": 407.11178299558765,
+          "change_wc": 38.751022415697804,
+          "fcff": 1108.5052887197216,
+          "pv_fcff": 489.7908830311523,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        },
+        {
+          "year": 10,
+          "revenue": 13570.930975164245,
+          "growth": 0.025,
+          "ebit_margin": 0.12,
+          "ebit": 1628.5117170197093,
+          "cash_tax_rate": 0.23,
+          "cash_tax": 374.55769491453316,
+          "nopat": 1253.9540221051761,
+          "da": 339.27327437910617,
+          "capex_total": 456.29772916616287,
+          "change_wc": 39.71979797609034,
+          "fcff": 1097.2097693420292,
+          "pv_fcff": 442.73970775862244,
+          "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+          "normal_restructuring_treatment": "Already expensed inside economic margin"
+        }
+      ],
+      "terminal_revenue": 13978.058904419173,
+      "terminal_nopat": 1291.5726427683317,
+      "terminal_reinvestment": 193.73589641524973,
+      "terminal_fcff": 1097.836746353082,
+      "terminal_ev": 16889.79609773972,
+      "pv_terminal": 6815.272336574488,
+      "terminal_share": 0.5517846238531051,
+      "enterprise_value": 12351.327024996684,
+      "equity_value": 8832.183024996684,
+      "per_share": 22.083214541411134,
+      "upside": 0.10195681344366947,
+      "ten_year_revenue_cagr": 0.03795140447172862,
+      "enterprise_price": 11534.143242479999,
+      "enterprise_fixed_exit_irr": 0.1045329729465666,
+      "equity_distribution_refinancing_proxy_irr": 0.12568745535722103,
+      "equity_initial": 7976.020242479999,
+      "equity_cashflows": [
+        393.5611882195001,
+        532.245374434375,
+        626.0473147777946,
+        726.1162693811962,
+        818.3990998121124,
+        864.5873428620745,
+        907.6312707273759,
+        925.6729782454034,
+        930.4212325697216,
+        919.1257131920291
+      ],
+      "equity_terminal": 13331.67309773972
+    }
+  },
+  "wacc_g_sensitivity": [
+    {
+      "wacc": 0.09,
+      "g": 0.015,
+      "value": 14.241009632549355
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.02,
+      "value": 14.685302530985691
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.025,
+      "value": 15.192868891358406
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.03,
+      "value": 15.779527079151606
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.015,
+      "value": 12.721332490849797
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.02,
+      "value": 13.069438093359958
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.025,
+      "value": 13.462767575309627
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.03,
+      "value": 13.911757216569471
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.015,
+      "value": 11.382136460597312
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.02,
+      "value": 11.655999988845766
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.025,
+      "value": 11.962360807393383
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.03,
+      "value": 12.30818262130428
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.015,
+      "value": 10.193281325247291
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.02,
+      "value": 10.409264525236114
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.025,
+      "value": 10.648645905223729
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.03,
+      "value": 10.916105101209887
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.015,
+      "value": 9.130975043642227
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.02,
+      "value": 9.301446452357265
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.025,
+      "value": 9.488734903891718
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.03,
+      "value": 9.695993593774222
+    },
+    {
+      "wacc": 0.12,
+      "g": 0.015,
+      "value": 7.313512013956601
+    },
+    {
+      "wacc": 0.12,
+      "g": 0.02,
+      "value": 7.419206066948055
+    },
+    {
+      "wacc": 0.12,
+      "g": 0.025,
+      "value": 7.533376835968894
+    },
+    {
+      "wacc": 0.12,
+      "g": 0.03,
+      "value": 7.657437107024024
+    }
+  ],
+  "growth_margin_joint": [
+    {
+      "growth_shift": -0.02,
+      "margin_shift": -0.02,
+      "value": 5.705858324388019,
+      "revenue_cagr": 0.009486536775688892,
+      "terminal_margin": 0.08
+    },
+    {
+      "growth_shift": -0.02,
+      "margin_shift": 0,
+      "value": 8.827767615613952,
+      "revenue_cagr": 0.009486536775688892,
+      "terminal_margin": 0.1
+    },
+    {
+      "growth_shift": -0.02,
+      "margin_shift": 0.02,
+      "value": 11.948386281375088,
+      "revenue_cagr": 0.009486536775688892,
+      "terminal_margin": 0.12000000000000001
+    },
+    {
+      "growth_shift": -0.02,
+      "margin_shift": 0.04,
+      "value": 15.069004947136222,
+      "revenue_cagr": 0.009486536775688892,
+      "terminal_margin": 0.14
+    },
+    {
+      "growth_shift": 0,
+      "margin_shift": -0.02,
+      "value": 7.041709918118914,
+      "revenue_cagr": 0.029486797690775335,
+      "terminal_margin": 0.08
+    },
+    {
+      "growth_shift": 0,
+      "margin_shift": 0,
+      "value": 10.648645905223729,
+      "revenue_cagr": 0.029486797690775335,
+      "terminal_margin": 0.1
+    },
+    {
+      "growth_shift": 0,
+      "margin_shift": 0.02,
+      "value": 14.249051464059244,
+      "revenue_cagr": 0.029486797690775335,
+      "terminal_margin": 0.12000000000000001
+    },
+    {
+      "growth_shift": 0,
+      "margin_shift": 0.04,
+      "value": 17.849457022894768,
+      "revenue_cagr": 0.029486797690775335,
+      "terminal_margin": 0.14
+    },
+    {
+      "growth_shift": 0.02,
+      "margin_shift": -0.02,
+      "value": 8.573953193258866,
+      "revenue_cagr": 0.049487048684995205,
+      "terminal_margin": 0.08
+    },
+    {
+      "growth_shift": 0.02,
+      "margin_shift": 0,
+      "value": 12.734033371293668,
+      "revenue_cagr": 0.049487048684995205,
+      "terminal_margin": 0.1
+    },
+    {
+      "growth_shift": 0.02,
+      "margin_shift": 0.02,
+      "value": 16.882460166700675,
+      "revenue_cagr": 0.049487048684995205,
+      "terminal_margin": 0.12000000000000001
+    },
+    {
+      "growth_shift": 0.02,
+      "margin_shift": 0.04,
+      "value": 21.030886962107683,
+      "revenue_cagr": 0.049487048684995205,
+      "terminal_margin": 0.14
+    },
+    {
+      "growth_shift": 0.04,
+      "margin_shift": -0.02,
+      "value": 10.328220901340943,
+      "revenue_cagr": 0.06948729031363676,
+      "terminal_margin": 0.08
+    },
+    {
+      "growth_shift": 0.04,
+      "margin_shift": 0,
+      "value": 15.117565642428133,
+      "revenue_cagr": 0.06948729031363676,
+      "terminal_margin": 0.1
+    },
+    {
+      "growth_shift": 0.04,
+      "margin_shift": 0.02,
+      "value": 19.89065909975875,
+      "revenue_cagr": 0.06948729031363676,
+      "terminal_margin": 0.12000000000000001
+    },
+    {
+      "growth_shift": 0.04,
+      "margin_shift": 0.04,
+      "value": 24.66375255708937,
+      "revenue_cagr": 0.06948729031363676,
+      "terminal_margin": 0.14
+    }
+  ],
+  "reverse_joint": [
+    {
+      "wacc": 0.095,
+      "year10_margin": 0.08,
+      "growth_shift": 0.08692605825712688,
+      "revenue_cagr": 0.11641388159447352,
+      "year10_revenue": 28124.946939493217,
+      "first_year_margin": 0.082,
+      "value": 20.040000000000006
+    },
+    {
+      "wacc": 0.095,
+      "year10_margin": 0.1,
+      "growth_shift": 0.04615877838519182,
+      "revenue_cagr": 0.07564614130037595,
+      "year10_revenue": 19388.029359819888,
+      "first_year_margin": 0.082,
+      "value": 20.04
+    },
+    {
+      "wacc": 0.095,
+      "year10_margin": 0.12,
+      "growth_shift": 0.015117709975419644,
+      "revenue_cagr": 0.04460469827370006,
+      "year10_revenue": 14466.357081198192,
+      "first_year_margin": 0.082,
+      "value": 20.03999999999999
+    },
+    {
+      "wacc": 0.095,
+      "year10_margin": 0.14,
+      "growth_shift": -0.009940757352056653,
+      "revenue_cagr": 0.019545911930433535,
+      "year10_revenue": 11347.685964057182,
+      "first_year_margin": 0.082,
+      "value": 20.04
+    },
+    {
+      "wacc": 0.105,
+      "year10_margin": 0.08,
+      "growth_shift": 0.1191499479945965,
+      "revenue_cagr": 0.1486381121895437,
+      "year10_revenue": 37382.78516269294,
+      "first_year_margin": 0.082,
+      "value": 20.04
+    },
+    {
+      "wacc": 0.105,
+      "year10_margin": 0.1,
+      "growth_shift": 0.07450273534110877,
+      "revenue_cagr": 0.10399042196465125,
+      "year10_revenue": 25147.3651594531,
+      "first_year_margin": 0.082,
+      "value": 20.03999999999999
+    },
+    {
+      "wacc": 0.105,
+      "year10_margin": 0.12,
+      "growth_shift": 0.04092746802392323,
+      "revenue_cagr": 0.07041476932414259,
+      "year10_revenue": 18465.46974758285,
+      "first_year_margin": 0.082,
+      "value": 20.039999999999996
+    },
+    {
+      "wacc": 0.105,
+      "year10_margin": 0.14,
+      "growth_shift": 0.014052381803233895,
+      "revenue_cagr": 0.04353935685005861,
+      "year10_revenue": 14319.49700568156,
+      "first_year_margin": 0.082,
+      "value": 20.039999999999992
+    },
+    {
+      "wacc": 0.12,
+      "year10_margin": 0.08,
+      "growth_shift": 0.16921770546975945,
+      "revenue_cagr": 0.19870636298906597,
+      "year10_revenue": 57275.321981667934,
+      "first_year_margin": 0.082,
+      "value": 20.039999999999992
+    },
+    {
+      "wacc": 0.12,
+      "year10_margin": 0.1,
+      "growth_shift": 0.11734671930795718,
+      "revenue_cagr": 0.14683486493358222,
+      "year10_revenue": 36800.04140725626,
+      "first_year_margin": 0.082,
+      "value": 20.039999999999992
+    },
+    {
+      "wacc": 0.12,
+      "year10_margin": 0.12,
+      "growth_shift": 0.0793247932478296,
+      "revenue_cagr": 0.10881253329918916,
+      "year10_revenue": 26267.618218205214,
+      "first_year_margin": 0.082,
+      "value": 20.039999999999992
+    },
+    {
+      "wacc": 0.12,
+      "year10_margin": 0.14,
+      "growth_shift": 0.04938763209994891,
+      "revenue_cagr": 0.0788750327474097,
+      "year10_revenue": 19977.947186618923,
+      "first_year_margin": 0.082,
+      "value": 20.04000000000001
+    }
+  ],
+  "cash_claim_sensitivities": [
+    {
+      "min_cash": 0,
+      "legacy_tax_reserve": 0,
+      "value": 11.398739550664894
+    },
+    {
+      "min_cash": 0,
+      "legacy_tax_reserve": 100,
+      "value": 11.148708335517838
+    },
+    {
+      "min_cash": 0,
+      "legacy_tax_reserve": 268.721,
+      "value": 10.726853169009576
+    },
+    {
+      "min_cash": 200,
+      "legacy_tax_reserve": 0,
+      "value": 10.898677120370783
+    },
+    {
+      "min_cash": 200,
+      "legacy_tax_reserve": 100,
+      "value": 10.648645905223729
+    },
+    {
+      "min_cash": 200,
+      "legacy_tax_reserve": 268.721,
+      "value": 10.226790738715467
+    },
+    {
+      "min_cash": 400,
+      "legacy_tax_reserve": 0,
+      "value": 10.398614690076673
+    },
+    {
+      "min_cash": 400,
+      "legacy_tax_reserve": 100,
+      "value": 10.14858347492962
+    },
+    {
+      "min_cash": 400,
+      "legacy_tax_reserve": 268.721,
+      "value": 9.726728308421357
+    }
+  ],
+  "operating_sensitivities": [
+    {
+      "case": "no_extra_wc",
+      "value": 10.818350349893674
+    },
+    {
+      "case": "extra_wc200",
+      "value": 10.365805164107153
+    },
+    {
+      "case": "slower_capital_turnover",
+      "value": 10.023551902267183
+    },
+    {
+      "case": "faster_capital_turnover",
+      "value": 10.969316954851255
+    },
+    {
+      "case": "maintenance110pct",
+      "value": 10.305534895935473
+    },
+    {
+      "case": "terminal_roic10pct",
+      "value": 9.574590567796463
+    },
+    {
+      "case": "terminal_roic20pct",
+      "value": 11.176354108594724
+    }
+  ],
+  "price_return_grid": [
+    {
+      "price": 10,
+      "enterprise_irr": 0.11005890362159876,
+      "equity_proxy_irr": 0.15852817450947432
+    },
+    {
+      "price": 12,
+      "enterprise_irr": 0.09513687433557749,
+      "equity_proxy_irr": 0.12808959311105073
+    },
+    {
+      "price": 14,
+      "enterprise_irr": 0.08197523838134424,
+      "equity_proxy_irr": 0.10388320921033534
+    },
+    {
+      "price": 16,
+      "enterprise_irr": 0.07022450370962596,
+      "equity_proxy_irr": 0.08390543201926881
+    },
+    {
+      "price": 18,
+      "enterprise_irr": 0.059627672558337674,
+      "equity_proxy_irr": 0.06696825423012809
+    },
+    {
+      "price": 20.04,
+      "enterprise_irr": 0.04980657629059693,
+      "equity_proxy_irr": 0.052039878028936504
+    },
+    {
+      "price": 22,
+      "enterprise_irr": 0.041163356896335324,
+      "equity_proxy_irr": 0.03942979314812234
+    },
+    {
+      "price": 25,
+      "enterprise_irr": 0.029189033828334376,
+      "equity_proxy_irr": 0.02266471916864987
+    }
+  ],
+  "tax_sensitivities": [
+    {
+      "case": "flat28pct",
+      "value": 9.929138336002
+    },
+    {
+      "case": "partial25pct",
+      "value": 10.648645905223729
+    },
+    {
+      "case": "reach23pct",
+      "value": 11.1472923172477
+    }
+  ],
+  "constructive_tax_margin_path": {
+    "params": {
+      "growth": [
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04
+      ],
+      "margin": [
+        0.085,
+        0.1,
+        0.11,
+        0.12,
+        0.12,
+        0.12,
+        0.12,
+        0.12,
+        0.12,
+        0.12
+      ],
+      "wacc": 0.095,
+      "g": 0.03,
+      "roic": 0.2,
+      "sc": 5.0,
+      "wc_ratio": 0.12,
+      "da_ratio": 0.025,
+      "maintenance": 1.0,
+      "year1_extra_wc": 25.0,
+      "tax": [
+        0.28,
+        0.26,
+        0.24,
+        0.23,
+        0.23,
+        0.23,
+        0.23,
+        0.23,
+        0.23,
+        0.23
+      ]
+    },
+    "years": [
+      {
+        "year": 1,
+        "revenue": 9724.62296,
+        "growth": 0.04,
+        "ebit_margin": 0.085,
+        "ebit": 826.5929516000001,
+        "cash_tax_rate": 0.28,
+        "cash_tax": 231.44602644800005,
+        "nopat": 595.146925152,
+        "da": 243.11557400000004,
+        "capex_total": 273.03749080000006,
+        "change_wc": 69.88287520000006,
+        "fcff": 495.342133152,
+        "pv_fcff": 452.36724488767123,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 2,
+        "revenue": 10113.6078784,
+        "growth": 0.04,
+        "ebit_margin": 0.1,
+        "ebit": 1011.3607878400001,
+        "cash_tax_rate": 0.26,
+        "cash_tax": 262.9538048384,
+        "nopat": 748.4069830016001,
+        "da": 252.84019696000001,
+        "capex_total": 283.95899043199995,
+        "change_wc": 46.67819020799994,
+        "fcff": 670.6099993216002,
+        "pv_fcff": 559.296094177853,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 3,
+        "revenue": 10518.152193536,
+        "growth": 0.04,
+        "ebit_margin": 0.11,
+        "ebit": 1156.99674128896,
+        "cash_tax_rate": 0.24,
+        "cash_tax": 277.67921790935037,
+        "nopat": 879.3175233796096,
+        "da": 262.9538048384,
+        "capex_total": 295.31735004928,
+        "change_wc": 48.545317816319944,
+        "fcff": 798.4086603524096,
+        "pv_fcff": 608.1110311202507,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 4,
+        "revenue": 10938.87828127744,
+        "growth": 0.04,
+        "ebit_margin": 0.12,
+        "ebit": 1312.6653937532928,
+        "cash_tax_rate": 0.23,
+        "cash_tax": 301.91304056325737,
+        "nopat": 1010.7523531900355,
+        "da": 273.47195703193603,
+        "capex_total": 307.13004405125133,
+        "change_wc": 50.48713052897292,
+        "fcff": 926.6071356417473,
+        "pv_fcff": 644.5241037109062,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 5,
+        "revenue": 11376.433412528539,
+        "growth": 0.04,
+        "ebit_margin": 0.12,
+        "ebit": 1365.1720095034245,
+        "cash_tax_rate": 0.23,
+        "cash_tax": 313.98956218578763,
+        "nopat": 1051.1824473176368,
+        "da": 284.41083531321345,
+        "capex_total": 319.4152458133013,
+        "change_wc": 52.50661575013175,
+        "fcff": 963.6714210674173,
+        "pv_fcff": 612.1507469035091,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 6,
+        "revenue": 11831.490749029681,
+        "growth": 0.04,
+        "ebit_margin": 0.12,
+        "ebit": 1419.7788898835618,
+        "cash_tax_rate": 0.23,
+        "cash_tax": 326.54914467321925,
+        "nopat": 1093.2297452103426,
+        "da": 295.787268725742,
+        "capex_total": 332.1918556458334,
+        "change_wc": 54.60688038013708,
+        "fcff": 1002.2182779101141,
+        "pv_fcff": 581.4034491138352,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 7,
+        "revenue": 12304.750378990868,
+        "growth": 0.04,
+        "ebit_margin": 0.12,
+        "ebit": 1476.5700454789041,
+        "cash_tax_rate": 0.23,
+        "cash_tax": 339.611110460148,
+        "nopat": 1136.9589350187562,
+        "da": 307.6187594747717,
+        "capex_total": 345.47952987166667,
+        "change_wc": 56.791155595342424,
+        "fcff": 1042.3070090265187,
+        "pv_fcff": 552.2005361446471,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 8,
+        "revenue": 12796.940394150502,
+        "growth": 0.04,
+        "ebit_margin": 0.12,
+        "ebit": 1535.6328472980601,
+        "cash_tax_rate": 0.23,
+        "cash_tax": 353.1955548785538,
+        "nopat": 1182.4372924195063,
+        "da": 319.9235098537626,
+        "capex_total": 379.0650620753443,
+        "change_wc": 59.06280181915616,
+        "fcff": 1064.2329383787685,
+        "pv_fcff": 514.9010090960703,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 9,
+        "revenue": 13308.818009916524,
+        "growth": 0.04,
+        "ebit_margin": 0.12,
+        "ebit": 1597.058161189983,
+        "cash_tax_rate": 0.23,
+        "cash_tax": 367.32337707369607,
+        "nopat": 1229.7347841162868,
+        "da": 332.7204502479131,
+        "capex_total": 455.734878868803,
+        "change_wc": 61.425313891922556,
+        "fcff": 1045.2950416034744,
+        "pv_fcff": 461.86155958386286,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 10,
+        "revenue": 13841.170730313184,
+        "growth": 0.04,
+        "ebit_margin": 0.12,
+        "ebit": 1660.940487637582,
+        "cash_tax_rate": 0.23,
+        "cash_tax": 382.0163121566439,
+        "nopat": 1278.9241754809382,
+        "da": 346.02926825782964,
+        "capex_total": 537.931776906418,
+        "change_wc": 63.88232644759926,
+        "fcff": 1023.1393403847507,
+        "pv_fcff": 412.85123885648443,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      }
+    ],
+    "terminal_revenue": 14256.40585222258,
+    "terminal_nopat": 1317.2919007453665,
+    "terminal_reinvestment": 197.59378511180495,
+    "terminal_fcff": 1119.6981156335617,
+    "terminal_ev": 17226.124855900947,
+    "pv_terminal": 6950.985761901003,
+    "terminal_share": 0.562803107516056,
+    "enterprise_value": 12350.652775496092,
+    "equity_value": 8831.508775496091,
+    "per_share": 22.081528707191676,
+    "upside": 0.10187268997962451,
+    "ten_year_revenue_cagr": 0.040000000000000036,
+    "enterprise_price": 11534.143242479999,
+    "enterprise_fixed_exit_irr": 0.104495168869993,
+    "equity_distribution_refinancing_proxy_irr": 0.12562765195112824,
+    "equity_initial": 7976.020242479999,
+    "equity_cashflows": [
+      386.463569352,
+      538.9594483216001,
+      622.6373841524096,
+      748.5230794917472,
+      785.5873649174173,
+      824.1342217601141,
+      864.2229528765187,
+      886.1488822287685,
+      867.2109854534743,
+      845.0552842347506
+    ],
+    "equity_terminal": 13668.001855900948
+  },
+  "reverse_constructive": {
+    "revenue_cagr": 0.029200272576472508,
+    "value": 20.039999999999974,
+    "year10_margin": 0.12,
+    "wacc": 0.095,
+    "g": 0.03,
+    "roic": 0.2,
+    "tax": [
+      0.28,
+      0.26,
+      0.24,
+      0.23,
+      0.23,
+      0.23,
+      0.23,
+      0.23,
+      0.23,
+      0.23
+    ]
+  },
+  "plausible_joint_alternative": {
+    "params": {
+      "growth": [
+        0.035,
+        0.045,
+        0.045,
+        0.04,
+        0.035,
+        0.035,
+        0.03,
+        0.03,
+        0.03,
+        0.03
+      ],
+      "margin": [
+        0.0825,
+        0.095,
+        0.1,
+        0.105,
+        0.105,
+        0.105,
+        0.105,
+        0.105,
+        0.105,
+        0.105
+      ],
+      "wacc": 0.1,
+      "g": 0.025,
+      "roic": 0.175,
+      "sc": 4.0,
+      "wc_ratio": 0.14,
+      "da_ratio": 0.025,
+      "maintenance": 1.0,
+      "year1_extra_wc": 75.0,
+      "tax": [
+        0.28,
+        0.27,
+        0.26,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "years": [
+      {
+        "year": 1,
+        "revenue": 9677.869965,
+        "growth": 0.035,
+        "ebit_margin": 0.0825,
+        "ebit": 798.4242721125,
+        "cash_tax_rate": 0.28,
+        "cash_tax": 223.55879619150002,
+        "nopat": 574.865475921,
+        "da": 241.946749125,
+        "capex_total": 277.946555275,
+        "change_wc": 120.81793509999997,
+        "fcff": 418.04773467100006,
+        "pv_fcff": 380.04339515545456,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 2,
+        "revenue": 10113.374113425,
+        "growth": 0.045,
+        "ebit_margin": 0.095,
+        "ebit": 960.7705407753749,
+        "cash_tax_rate": 0.27,
+        "cash_tax": 259.40804600935127,
+        "nopat": 701.3624947660237,
+        "da": 252.834352835625,
+        "capex_total": 300.73980916237497,
+        "change_wc": 60.97058077949995,
+        "fcff": 592.4864576597737,
+        "pv_fcff": 489.65822947088725,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 3,
+        "revenue": 10568.475948529123,
+        "growth": 0.045,
+        "ebit_margin": 0.1,
+        "ebit": 1056.8475948529124,
+        "cash_tax_rate": 0.26,
+        "cash_tax": 274.7803746617572,
+        "nopat": 782.0672201911552,
+        "da": 264.2118987132281,
+        "capex_total": 314.27310057468173,
+        "change_wc": 63.71425691457735,
+        "fcff": 668.2917614151241,
+        "pv_fcff": 502.0974916717685,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 4,
+        "revenue": 10991.214986470288,
+        "growth": 0.04,
+        "ebit_margin": 0.105,
+        "ebit": 1154.0775735793802,
+        "cash_tax_rate": 0.25,
+        "cash_tax": 288.51939339484505,
+        "nopat": 865.5581801845351,
+        "da": 274.7803746617572,
+        "capex_total": 321.2816688352853,
+        "change_wc": 59.18346531176304,
+        "fcff": 759.873420699244,
+        "pv_fcff": 519.0037707118665,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 5,
+        "revenue": 11375.907510996747,
+        "growth": 0.035,
+        "ebit_margin": 0.105,
+        "ebit": 1194.4702886546584,
+        "cash_tax_rate": 0.25,
+        "cash_tax": 298.6175721636646,
+        "nopat": 895.8527164909938,
+        "da": 284.39768777491867,
+        "capex_total": 326.7138654728292,
+        "change_wc": 53.8569534337043,
+        "fcff": 799.679585359379,
+        "pv_fcff": 496.53810616474203,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 6,
+        "revenue": 11774.064273881633,
+        "growth": 0.035,
+        "ebit_margin": 0.105,
+        "ebit": 1236.2767487575713,
+        "cash_tax_rate": 0.25,
+        "cash_tax": 309.06918718939284,
+        "nopat": 927.2075615681786,
+        "da": 294.35160684704084,
+        "capex_total": 338.1488507643783,
+        "change_wc": 55.74194680388406,
+        "fcff": 827.668370846957,
+        "pv_fcff": 467.19721807318894,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 7,
+        "revenue": 12127.286202098083,
+        "growth": 0.03,
+        "ebit_margin": 0.105,
+        "ebit": 1273.3650512202987,
+        "cash_tax_rate": 0.25,
+        "cash_tax": 318.3412628050747,
+        "nopat": 955.0237884152241,
+        "da": 303.18215505245206,
+        "capex_total": 342.0365671562615,
+        "change_wc": 49.45106995030296,
+        "fcff": 866.7183063611117,
+        "pv_fcff": 444.763535128373,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 8,
+        "revenue": 12491.104788161025,
+        "growth": 0.03,
+        "ebit_margin": 0.105,
+        "ebit": 1311.5660027569077,
+        "cash_tax_rate": 0.25,
+        "cash_tax": 327.8915006892269,
+        "nopat": 983.6745020676808,
+        "da": 312.27761970402565,
+        "capex_total": 352.29766417094925,
+        "change_wc": 50.93460204881187,
+        "fcff": 892.7198555519454,
+        "pv_fcff": 416.4604010747494,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 9,
+        "revenue": 12865.837931805856,
+        "growth": 0.03,
+        "ebit_margin": 0.105,
+        "ebit": 1350.9129828396149,
+        "cash_tax_rate": 0.25,
+        "cash_tax": 337.7282457099037,
+        "nopat": 1013.1847371297112,
+        "da": 321.6459482951464,
+        "capex_total": 402.4633962745482,
+        "change_wc": 52.462640110276375,
+        "fcff": 879.9046490400331,
+        "pv_fcff": 373.16546605275494,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      },
+      {
+        "year": 10,
+        "revenue": 13251.813069760032,
+        "growth": 0.03,
+        "ebit_margin": 0.105,
+        "ebit": 1391.4403723248033,
+        "cash_tax_rate": 0.25,
+        "cash_tax": 347.86009308120083,
+        "nopat": 1043.5802792436025,
+        "da": 331.2953267440008,
+        "capex_total": 456.15828387217664,
+        "change_wc": 54.03651931358462,
+        "fcff": 864.680802801842,
+        "pv_fcff": 333.37188101879013,
+        "sbc_treatment": "Already expensed inside EBIT; not added back or deducted again",
+        "normal_restructuring_treatment": "Already expensed inside economic margin"
+      }
+    ],
+    "terminal_revenue": 13583.10839650403,
+    "terminal_nopat": 1069.6697862246924,
+    "terminal_reinvestment": 152.80996946067035,
+    "terminal_fcff": 916.8598167640221,
+    "terminal_ev": 12224.797556853626,
+    "pv_terminal": 4713.188662679446,
+    "terminal_share": 0.5159208333014775,
+    "enterprise_value": 9135.48815720202,
+    "equity_value": 5616.34415720202,
+    "per_share": 14.042613543092838,
+    "upside": -0.2992707812827925,
+    "ten_year_revenue_cagr": 0.03548446291228591,
+    "enterprise_price": 11534.143242479999,
+    "enterprise_fixed_exit_irr": 0.06780641003819154,
+    "equity_distribution_refinancing_proxy_irr": 0.07741366223271384,
+    "equity_initial": 7976.020242479999,
+    "equity_cashflows": [
+      309.16917087100006,
+      462.61496815977364,
+      497.14604511512414,
+      586.4149244492439,
+      626.2210891093789,
+      654.209874596957,
+      693.2598101111116,
+      719.2613593019455,
+      706.446152790033,
+      691.2223065518419
+    ],
+    "equity_terminal": 8666.674556853626
+  },
+  "share_sensitivity": [
+    {
+      "shares": 393.639062,
+      "value": 10.819369826692343
+    },
+    {
+      "shares": 399.950062,
+      "value": 10.648645905223729
+    },
+    {
+      "shares": 403.950062,
+      "value": 10.54320073358542
+    }
+  ]
+}

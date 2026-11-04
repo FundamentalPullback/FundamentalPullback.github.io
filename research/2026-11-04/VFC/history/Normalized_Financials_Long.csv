@@ -1,0 +1,846 @@
+period,period_start,period_end,metric,value,unit,currency,source_id,source_location,evidence_label,note
+9MFY2025,2024-03-31,2024-12-28,capex_all,93.501,USD million,USD,Q3FY2026_10Q,PPE + software,derived_calculation,
+9MFY2025,2024-03-31,2024-12-28,capex_ppe,64.299,USD million,USD,Q3FY2026_10Q,table 8; Capital expenditures; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,capex_software,29.202,USD million,USD,Q3FY2026_10Q,table 8; Software purchases; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cash_all_wc_exleases,108.343,USD million,USD,Q3FY2026_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+9MFY2025,2024-03-31,2024-12-28,cash_interest_paid,,USD million,USD,Q3FY2026_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+9MFY2025,2024-03-31,2024-12-28,cash_taxes_paid,,USD million,USD,Q3FY2026_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+9MFY2025,2024-03-31,2024-12-28,cash_trade_wc,-33.635,USD million,USD,Q3FY2026_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+9MFY2025,2024-03-31,2024-12-28,cf_bad_debt,14.178,USD million,USD,Q3FY2026_10Q,table 8; Provision for doubtful accounts; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cf_deferred_tax,,USD million,USD,Q3FY2026_10Q,table 8; not disaggregated,missing_required_source,Interim deferred tax included within other adjustments; do not read missing as zero.
+9MFY2025,2024-03-31,2024-12-28,cf_gain_sale_reversal,0.0,USD million,USD,Q3FY2026_10Q,table 8; Gain on sale of business; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cf_impairment,51.0,USD million,USD,Q3FY2026_10Q,table 8; Impairment of goodwill and intangible assets; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cf_lease_cash_change,-262.746,USD million,USD,Q3FY2026_10Q,table 8; Operating lease right-of-use assets and liabilities; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cf_other,-31.007,USD million,USD,Q3FY2026_10Q,"table 8; Other, net; occurrence 0; column 1",fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cf_other_including_deferred_tax,-31.007,USD million,USD,Q3FY2026_10Q,table 8; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+9MFY2025,2024-03-31,2024-12-28,cf_pension,4.276,USD million,USD,Q3FY2026_10Q,table 8; Pension expense in excess of (less than) contributions; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cf_pension_asset_reversion,0,USD million,USD,Q3FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+9MFY2025,2024-03-31,2024-12-28,cf_rou_reduction,266.823,USD million,USD,Q3FY2026_10Q,table 8; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cf_tax_receivable_writeoff,0,USD million,USD,Q3FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+9MFY2025,2024-03-31,2024-12-28,cfo_cont,609.545,USD million,USD,Q3FY2026_10Q,table 8; Cash provided by operating activities - continuing operations; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cfo_discontinued,26.747,USD million,USD,Q3FY2026_10Q,table 8; Cash provided by operating activities - discontinued operations; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cfo_total,636.292,USD million,USD,Q3FY2026_10Q,table 8; Cash provided by operating activities; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,cogs,3419.511,USD million,USD,Q3FY2026_10Q,table 6; Cost of goods sold; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,da_and_other_asset_writedowns,186.468,USD million,USD,Q3FY2026_10Q,table 8; Depreciation and amortization; occurrence 0; column 1,fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+9MFY2025,2024-03-31,2024-12-28,ebit,376.66,USD million,USD,Q3FY2026_10Q,table 6; Operating income; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,eps_cont_basic,0.56,USD/share,USD,Q3FY2026_10Q,table 6; Continuing operations; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,eps_cont_diluted,0.56,USD/share,USD,Q3FY2026_10Q,table 6; Continuing operations; occurrence 1; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,eps_total_diluted,-0.1,USD/share,USD,Q3FY2026_10Q,table 6; Total earnings (loss) per common share - diluted; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,fcf_less_sbc,463.425,USD million,USD,Q3FY2026_10Q,FCF_reported_cont − SBC,derived_calculation,
+9MFY2025,2024-03-31,2024-12-28,fcf_reported_cont,516.044,USD million,USD,Q3FY2026_10Q,CFO_cont − PPE − software,derived_calculation,
+9MFY2025,2024-03-31,2024-12-28,gross_profit,3941.409,USD million,USD,Q3FY2026_10Q,table 6; revenue minus COGS,derived_calculation,
+9MFY2025,2024-03-31,2024-12-28,impairment_operating,51.0,USD million,USD,Q3FY2026_10Q,table 6; Impairment of goodwill and intangible assets; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,income_tax_expense,42.18,USD million,USD,Q3FY2026_10Q,table 6; Income tax expense; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,interest_expense,134.05,USD million,USD,Q3FY2026_10Q,table 6; Interest expense; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,interest_income,13.899,USD million,USD,Q3FY2026_10Q,table 6; Interest income; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,investing_asset_sale_proceeds,88.062,USD million,USD,Q3FY2026_10Q,table 8; Proceeds from sale of assets; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,investing_discontinued,-4.413,USD million,USD,Q3FY2026_10Q,table 8; Cash used by investing activities - discontinued operations; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,investing_sale_proceeds,1485.951,USD million,USD,Q3FY2026_10Q,"table 8; Proceeds from sale of businesses, net of cash sold; occurrence 0; column 1",fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,investing_sale_wc_payment,0,USD million,USD,Q3FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+9MFY2025,2024-03-31,2024-12-28,net_income_cont,219.591,USD million,USD,Q3FY2026_10Q,table 6; Income from continuing operations; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,net_income_discontinued,-258.519,USD million,USD,Q3FY2026_10Q,"table 6; Loss from discontinued operations, net of tax; occurrence 0; column 3",fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,net_income_total,-38.928,USD million,USD,Q3FY2026_10Q,table 6; Net income (loss); occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,other_nonoperating,5.262,USD million,USD,Q3FY2026_10Q,"table 6; Other income (expense), net; occurrence 0; column 3",fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,pretax_cont,261.771,USD million,USD,Q3FY2026_10Q,table 6; Income from continuing operations before income taxes; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,revenue,7360.92,USD million,USD,Q3FY2026_10Q,table 6; Revenues; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,sbc,52.619,USD million,USD,Q3FY2026_10Q,table 8; Stock-based compensation; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,sga,3513.749,USD million,USD,Q3FY2026_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 3",fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,shares_basic,389.001,million shares,USD,Q3FY2026_10Q,table 6; Basic; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,shares_diluted,391.435,million shares,USD,Q3FY2026_10Q,table 6; Diluted; occurrence 0; column 3,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,wc_accrued,177.794,USD million,USD,Q3FY2026_10Q,table 8; Accrued liabilities; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,wc_ap,228.241,USD million,USD,Q3FY2026_10Q,table 8; Accounts payable; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,wc_ar,-126.72,USD million,USD,Q3FY2026_10Q,table 8; Accounts receivable; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,wc_inventory,-135.156,USD million,USD,Q3FY2026_10Q,table 8; Inventories; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,wc_other,30.356,USD million,USD,Q3FY2026_10Q,table 8; Other assets and liabilities; occurrence 0; column 1,fact_source_reported,
+9MFY2025,2024-03-31,2024-12-28,wc_tax,-66.172,USD million,USD,Q3FY2026_10Q,table 8; Income taxes; occurrence 0; column 1,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,capex_all,124.483,USD million,USD,Q3FY2026_10Q,PPE + software,derived_calculation,
+9MFY2026,2025-03-30,2025-12-27,capex_ppe,87.318,USD million,USD,Q3FY2026_10Q,table 8; Capital expenditures; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,capex_software,37.165,USD million,USD,Q3FY2026_10Q,table 8; Software purchases; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cash_all_wc_exleases,43.477,USD million,USD,Q3FY2026_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+9MFY2026,2025-03-30,2025-12-27,cash_interest_paid,,USD million,USD,Q3FY2026_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+9MFY2026,2025-03-30,2025-12-27,cash_taxes_paid,,USD million,USD,Q3FY2026_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+9MFY2026,2025-03-30,2025-12-27,cash_trade_wc,-19.885,USD million,USD,Q3FY2026_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+9MFY2026,2025-03-30,2025-12-27,cf_bad_debt,7.821,USD million,USD,Q3FY2026_10Q,table 8; Provision for doubtful accounts; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cf_deferred_tax,,USD million,USD,Q3FY2026_10Q,table 8; not disaggregated,missing_required_source,Interim deferred tax included within other adjustments; do not read missing as zero.
+9MFY2026,2025-03-30,2025-12-27,cf_gain_sale_reversal,-139.068,USD million,USD,Q3FY2026_10Q,table 8; Gain on sale of business; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cf_impairment,30.716,USD million,USD,Q3FY2026_10Q,table 8; Impairment of goodwill and intangible assets; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cf_lease_cash_change,-263.003,USD million,USD,Q3FY2026_10Q,table 8; Operating lease right-of-use assets and liabilities; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cf_other,18.309,USD million,USD,Q3FY2026_10Q,"table 8; Other, net; occurrence 0; column 0",fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cf_other_including_deferred_tax,18.309,USD million,USD,Q3FY2026_10Q,table 8; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+9MFY2026,2025-03-30,2025-12-27,cf_pension,30.36,USD million,USD,Q3FY2026_10Q,table 8; Pension expense in excess of (less than) contributions; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cf_pension_asset_reversion,0,USD million,USD,Q3FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+9MFY2026,2025-03-30,2025-12-27,cf_rou_reduction,265.024,USD million,USD,Q3FY2026_10Q,table 8; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cf_tax_receivable_writeoff,0,USD million,USD,Q3FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+9MFY2026,2025-03-30,2025-12-27,cfo_cont,637.968,USD million,USD,Q3FY2026_10Q,table 8; Cash provided by operating activities - continuing operations; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cfo_discontinued,0.0,USD million,USD,Q3FY2026_10Q,table 8; Cash provided by operating activities - discontinued operations; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cfo_total,637.968,USD million,USD,Q3FY2026_10Q,table 8; Cash provided by operating activities; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,cogs,3399.386,USD million,USD,Q3FY2026_10Q,table 6; Cost of goods sold; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,da_and_other_asset_writedowns,213.046,USD million,USD,Q3FY2026_10Q,table 8; Depreciation and amortization; occurrence 0; column 0,fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+9MFY2026,2025-03-30,2025-12-27,ebit,515.065,USD million,USD,Q3FY2026_10Q,table 6; Operating income; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,eps_cont_basic,0.96,USD/share,USD,Q3FY2026_10Q,table 6; Continuing operations; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,eps_cont_diluted,0.95,USD/share,USD,Q3FY2026_10Q,table 6; Continuing operations; occurrence 1; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,eps_total_diluted,0.95,USD/share,USD,Q3FY2026_10Q,table 6; Total earnings (loss) per common share - diluted; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,fcf_less_sbc,456.401,USD million,USD,Q3FY2026_10Q,FCF_reported_cont − SBC,derived_calculation,
+9MFY2026,2025-03-30,2025-12-27,fcf_reported_cont,513.485,USD million,USD,Q3FY2026_10Q,CFO_cont − PPE − software,derived_calculation,
+9MFY2026,2025-03-30,2025-12-27,gross_profit,4039.787,USD million,USD,Q3FY2026_10Q,table 6; revenue minus COGS,derived_calculation,
+9MFY2026,2025-03-30,2025-12-27,impairment_operating,30.716,USD million,USD,Q3FY2026_10Q,table 6; Impairment of goodwill and intangible assets; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,income_tax_expense,130.345,USD million,USD,Q3FY2026_10Q,table 6; Income tax expense; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,interest_expense,133.002,USD million,USD,Q3FY2026_10Q,table 6; Interest expense; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,interest_income,11.062,USD million,USD,Q3FY2026_10Q,table 6; Interest income; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,investing_asset_sale_proceeds,0.764,USD million,USD,Q3FY2026_10Q,table 8; Proceeds from sale of assets; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,investing_discontinued,0.0,USD million,USD,Q3FY2026_10Q,table 8; Cash used by investing activities - discontinued operations; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,investing_sale_proceeds,600.524,USD million,USD,Q3FY2026_10Q,"table 8; Proceeds from sale of businesses, net of cash sold; occurrence 0; column 0",fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,investing_sale_wc_payment,0,USD million,USD,Q3FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+9MFY2026,2025-03-30,2025-12-27,net_income_cont,374.202,USD million,USD,Q3FY2026_10Q,table 6; Income from continuing operations; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,net_income_discontinued,0.0,USD million,USD,Q3FY2026_10Q,"table 6; Loss from discontinued operations, net of tax; occurrence 0; column 2",fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,net_income_total,374.202,USD million,USD,Q3FY2026_10Q,table 6; Net income (loss); occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,other_nonoperating,111.422,USD million,USD,Q3FY2026_10Q,"table 6; Other income (expense), net; occurrence 0; column 2",fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,pretax_cont,504.547,USD million,USD,Q3FY2026_10Q,table 6; Income from continuing operations before income taxes; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,revenue,7439.173,USD million,USD,Q3FY2026_10Q,table 6; Revenues; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,sbc,57.084,USD million,USD,Q3FY2026_10Q,table 8; Stock-based compensation; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,sga,3494.006,USD million,USD,Q3FY2026_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 2",fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,shares_basic,390.529,million shares,USD,Q3FY2026_10Q,table 6; Basic; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,shares_diluted,394.414,million shares,USD,Q3FY2026_10Q,table 6; Diluted; occurrence 0; column 2,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,wc_accrued,76.08,USD million,USD,Q3FY2026_10Q,table 8; Accrued liabilities; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,wc_ap,221.431,USD million,USD,Q3FY2026_10Q,table 8; Accounts payable; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,wc_ar,-137.756,USD million,USD,Q3FY2026_10Q,table 8; Accounts receivable; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,wc_inventory,-103.56,USD million,USD,Q3FY2026_10Q,table 8; Inventories; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,wc_other,-28.103,USD million,USD,Q3FY2026_10Q,table 8; Other assets and liabilities; occurrence 0; column 0,fact_source_reported,
+9MFY2026,2025-03-30,2025-12-27,wc_tax,15.385,USD million,USD,Q3FY2026_10Q,table 8; Income taxes; occurrence 0; column 0,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,capex_all,197.245,USD million,USD,FY2026_10K,PPE + software,derived_calculation,
+FY2024,2023-04-02,2024-03-30,capex_ppe,135.762,USD million,USD,FY2026_10K,table 100; Capital expenditures; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,capex_ppe_accrued_unpaid,15.903,USD million,USD,FY2026_10K,"table 177; Property, plant and equipment expenditures included in accounts payable or accrued liabilities; occurrence 0; column 2",fact_source_reported,
+FY2024,2023-04-02,2024-03-30,capex_software,61.483,USD million,USD,FY2026_10K,table 100; Software purchases; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,capex_software_accrued_unpaid,17.08,USD million,USD,FY2026_10K,table 177; Computer software costs included in accounts payable or accrued liabilities; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cash_all_wc_exleases,496.166,USD million,USD,FY2026_10K,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+FY2024,2023-04-02,2024-03-30,cash_interest_paid,175.822,USD million,USD,FY2026_10K,"table 177; Interest paid, net of amounts capitalized; occurrence 0; column 2",fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cash_taxes_paid,349.978,USD million,USD,FY2026_10K,"table 177; Income taxes paid, net of refunds (a); occurrence 0; column 2",fact_source_reported,Note26 footnote(a): includes BOTH continuing and discontinued operations; not a retained cash-tax series.
+FY2024,2023-04-02,2024-03-30,cash_trade_wc,732.792,USD million,USD,FY2026_10K,cash-flow changes in AR + inventory + AP,derived_calculation,
+FY2024,2023-04-02,2024-03-30,cf_bad_debt,11.17,USD million,USD,FY2026_10K,table 100; Provision for doubtful accounts; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cf_deferred_tax,-383.916,USD million,USD,FY2026_10K,table 100; Deferred income taxes; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cf_gain_sale_reversal,0.0,USD million,USD,FY2026_10K,table 100; Gain on sale of business; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cf_impairment,507.566,USD million,USD,FY2026_10K,table 100; Impairment of goodwill and intangible assets; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cf_lease_cash_change,-374.063,USD million,USD,FY2026_10K,table 100; Operating lease right-of-use assets and liabilities; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cf_other,-2.138,USD million,USD,FY2026_10K,"table 100; Other, net; occurrence 0; column 2",fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cf_other_including_deferred_tax,-386.054,USD million,USD,FY2026_10K,table 100; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+FY2024,2023-04-02,2024-03-30,cf_pension,-18.08,USD million,USD,FY2026_10K,table 100; Pension expense in excess of (less than) contributions; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cf_pension_asset_reversion,0.0,USD million,USD,FY2026_10K,"table 100; Pension termination asset reversion, net; occurrence 0; column 2",fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cf_rou_reduction,379.72,USD million,USD,FY2026_10K,table 100; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cf_tax_receivable_writeoff,921.409,USD million,USD,FY2026_10K,table 100; Write-off of income tax receivables and interest; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cfo_cont,884.714,USD million,USD,FY2026_10K,table 100; Cash provided by operating activities - continuing operations; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cfo_discontinued,129.867,USD million,USD,FY2026_10K,table 100; Cash provided by operating activities - discontinued operations; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cfo_total,1014.581,USD million,USD,FY2026_10K,table 100; Cash provided by operating activities; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,cogs,4803.378,USD million,USD,FY2026_10K,table 98; Cost of goods sold; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,da_and_other_asset_writedowns,307.528,USD million,USD,FY2026_10K,"table 100; Depreciation, amortization and other asset write-downs; occurrence 0; column 2",fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+FY2024,2023-04-02,2024-03-30,ebit,-143.935,USD million,USD,FY2026_10K,table 98; Operating income (loss); occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,eps_cont_basic,-2.62,USD/share,USD,FY2026_10K,table 98; Continuing operations; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,eps_cont_diluted,-2.62,USD/share,USD,FY2026_10K,table 98; Continuing operations; occurrence 1; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,eps_total_diluted,-2.49,USD/share,USD,FY2026_10K,table 98; Total earnings (loss) per common share - diluted; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,fcf_less_sbc,629.64,USD million,USD,FY2026_10K,FCF_reported_cont − SBC,derived_calculation,
+FY2024,2023-04-02,2024-03-30,fcf_reported_cont,687.469,USD million,USD,FY2026_10K,CFO_cont − PPE − software,derived_calculation,
+FY2024,2023-04-02,2024-03-30,gross_profit,5112.3,USD million,USD,FY2026_10K,table 98; revenue minus COGS,derived_calculation,
+FY2024,2023-04-02,2024-03-30,impairment_operating,507.566,USD million,USD,FY2026_10K,table 98; Impairment of goodwill and intangible assets; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,income_tax_expense,733.556,USD million,USD,FY2026_10K,table 98; Income tax expense; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,interest_expense,185.925,USD million,USD,FY2026_10K,table 98; Interest expense; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,interest_income,20.246,USD million,USD,FY2026_10K,table 98; Interest income; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,investing_asset_sale_proceeds,26.525,USD million,USD,FY2026_10K,table 100; Proceeds from sale of assets; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,investing_discontinued,-13.576,USD million,USD,FY2026_10K,table 100; Cash used by investing activities - discontinued operations; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,investing_sale_proceeds,0.0,USD million,USD,FY2026_10K,"table 100; Proceeds from sale of businesses, net of cash sold; occurrence 0; column 2",fact_source_reported,
+FY2024,2023-04-02,2024-03-30,investing_sale_wc_payment,0,USD million,USD,FY2026_10K,table 100; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+FY2024,2023-04-02,2024-03-30,net_income_cont,-1018.477,USD million,USD,FY2026_10K,table 98; Income (loss) from continuing operations; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,net_income_discontinued,49.595,USD million,USD,FY2026_10K,"table 98; Income (loss) from discontinued operations, net of tax; occurrence 0; column 2",fact_source_reported,
+FY2024,2023-04-02,2024-03-30,net_income_total,-968.882,USD million,USD,FY2026_10K,table 98; Net income (loss); occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,other_nonoperating,24.693,USD million,USD,FY2026_10K,"table 98; Other income (expense), net; occurrence 0; column 2",fact_source_reported,
+FY2024,2023-04-02,2024-03-30,pretax_cont,-284.921,USD million,USD,FY2026_10K,table 98; Income (loss) from continuing operations before income taxes; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,revenue,9915.678,USD million,USD,FY2026_10K,table 98; Revenues; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,sbc,57.829,USD million,USD,FY2026_10K,table 100; Stock-based compensation; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,sga,4748.669,USD million,USD,FY2026_10K,"table 98; Selling, general and administrative expenses; occurrence 0; column 2",fact_source_reported,
+FY2024,2023-04-02,2024-03-30,shares_basic,388.36,million shares,USD,FY2026_10K,table 98; Basic; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,shares_diluted,388.36,million shares,USD,FY2026_10K,table 98; Diluted; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,wc_accrued,27.539,USD million,USD,FY2026_10K,table 100; Accrued liabilities; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,wc_ap,-111.992,USD million,USD,FY2026_10K,table 100; Accounts payable; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,wc_ar,323.503,USD million,USD,FY2026_10K,table 100; Accounts receivable; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,wc_inventory,521.281,USD million,USD,FY2026_10K,table 100; Inventories; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,wc_other,-107.967,USD million,USD,FY2026_10K,table 100; Other assets and liabilities; occurrence 0; column 2,fact_source_reported,
+FY2024,2023-04-02,2024-03-30,wc_tax,-156.198,USD million,USD,FY2026_10K,table 100; Income taxes; occurrence 0; column 2,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,capex_all,126.023,USD million,USD,FY2026_10K,PPE + software,derived_calculation,
+FY2025,2024-03-31,2025-03-29,capex_ppe,86.274,USD million,USD,FY2026_10K,table 100; Capital expenditures; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,capex_ppe_accrued_unpaid,19.568,USD million,USD,FY2026_10K,"table 177; Property, plant and equipment expenditures included in accounts payable or accrued liabilities; occurrence 0; column 1",fact_source_reported,
+FY2025,2024-03-31,2025-03-29,capex_software,39.749,USD million,USD,FY2026_10K,table 100; Software purchases; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,capex_software_accrued_unpaid,18.229,USD million,USD,FY2026_10K,table 177; Computer software costs included in accounts payable or accrued liabilities; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cash_all_wc_exleases,32.895,USD million,USD,FY2026_10K,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+FY2025,2024-03-31,2025-03-29,cash_interest_paid,162.918,USD million,USD,FY2026_10K,"table 177; Interest paid, net of amounts capitalized; occurrence 0; column 1",fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cash_taxes_paid,162.562,USD million,USD,FY2026_10K,"table 177; Income taxes paid, net of refunds (a); occurrence 0; column 1",fact_source_reported,Note26 footnote(a): includes BOTH continuing and discontinued operations; not a retained cash-tax series.
+FY2025,2024-03-31,2025-03-29,cash_trade_wc,-49.004,USD million,USD,FY2026_10K,cash-flow changes in AR + inventory + AP,derived_calculation,
+FY2025,2024-03-31,2025-03-29,cf_bad_debt,15.377,USD million,USD,FY2026_10K,table 100; Provision for doubtful accounts; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cf_deferred_tax,-88.544,USD million,USD,FY2026_10K,table 100; Deferred income taxes; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cf_gain_sale_reversal,0.0,USD million,USD,FY2026_10K,table 100; Gain on sale of business; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cf_impairment,89.242,USD million,USD,FY2026_10K,table 100; Impairment of goodwill and intangible assets; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cf_lease_cash_change,-353.661,USD million,USD,FY2026_10K,table 100; Operating lease right-of-use assets and liabilities; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cf_other,-9.515,USD million,USD,FY2026_10K,"table 100; Other, net; occurrence 0; column 1",fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cf_other_including_deferred_tax,-98.059,USD million,USD,FY2026_10K,table 100; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+FY2025,2024-03-31,2025-03-29,cf_pension,-1.463,USD million,USD,FY2026_10K,table 100; Pension expense in excess of (less than) contributions; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cf_pension_asset_reversion,0.0,USD million,USD,FY2026_10K,"table 100; Pension termination asset reversion, net; occurrence 0; column 1",fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cf_rou_reduction,351.971,USD million,USD,FY2026_10K,table 100; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cf_tax_receivable_writeoff,0.0,USD million,USD,FY2026_10K,table 100; Write-off of income tax receivables and interest; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cfo_cont,438.489,USD million,USD,FY2026_10K,table 100; Cash provided by operating activities - continuing operations; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cfo_discontinued,26.747,USD million,USD,FY2026_10K,table 100; Cash provided by operating activities - discontinued operations; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cfo_total,465.236,USD million,USD,FY2026_10K,table 100; Cash provided by operating activities; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,cogs,4420.826,USD million,USD,FY2026_10K,table 98; Cost of goods sold; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,da_and_other_asset_writedowns,259.616,USD million,USD,FY2026_10K,"table 100; Depreciation, amortization and other asset write-downs; occurrence 0; column 1",fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+FY2025,2024-03-31,2025-03-29,ebit,303.773,USD million,USD,FY2026_10K,table 98; Operating income (loss); occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,eps_cont_basic,0.18,USD/share,USD,FY2026_10K,table 98; Continuing operations; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,eps_cont_diluted,0.18,USD/share,USD,FY2026_10K,table 98; Continuing operations; occurrence 1; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,eps_total_diluted,-0.48,USD/share,USD,FY2026_10K,table 98; Total earnings (loss) per common share - diluted; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,fcf_less_sbc,239.219,USD million,USD,FY2026_10K,FCF_reported_cont − SBC,derived_calculation,
+FY2025,2024-03-31,2025-03-29,fcf_reported_cont,312.466,USD million,USD,FY2026_10K,CFO_cont − PPE − software,derived_calculation,
+FY2025,2024-03-31,2025-03-29,gross_profit,5083.865,USD million,USD,FY2026_10K,table 98; revenue minus COGS,derived_calculation,
+FY2025,2024-03-31,2025-03-29,impairment_operating,89.242,USD million,USD,FY2026_10K,table 98; Impairment of goodwill and intangible assets; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,income_tax_expense,75.837,USD million,USD,FY2026_10K,table 98; Income tax expense; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,interest_expense,174.136,USD million,USD,FY2026_10K,table 98; Interest expense; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,interest_income,24.893,USD million,USD,FY2026_10K,table 98; Interest income; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,investing_asset_sale_proceeds,88.234,USD million,USD,FY2026_10K,table 100; Proceeds from sale of assets; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,investing_discontinued,-4.413,USD million,USD,FY2026_10K,table 100; Cash used by investing activities - discontinued operations; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,investing_sale_proceeds,1506.223,USD million,USD,FY2026_10K,"table 100; Proceeds from sale of businesses, net of cash sold; occurrence 0; column 1",fact_source_reported,
+FY2025,2024-03-31,2025-03-29,investing_sale_wc_payment,0,USD million,USD,FY2026_10K,table 100; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+FY2025,2024-03-31,2025-03-29,net_income_cont,69.324,USD million,USD,FY2026_10K,table 98; Income (loss) from continuing operations; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,net_income_discontinued,-259.04,USD million,USD,FY2026_10K,"table 98; Income (loss) from discontinued operations, net of tax; occurrence 0; column 1",fact_source_reported,
+FY2025,2024-03-31,2025-03-29,net_income_total,-189.716,USD million,USD,FY2026_10K,table 98; Net income (loss); occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,other_nonoperating,-9.369,USD million,USD,FY2026_10K,"table 98; Other income (expense), net; occurrence 0; column 1",fact_source_reported,
+FY2025,2024-03-31,2025-03-29,pretax_cont,145.161,USD million,USD,FY2026_10K,table 98; Income (loss) from continuing operations before income taxes; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,revenue,9504.691,USD million,USD,FY2026_10K,table 98; Revenues; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,sbc,73.247,USD million,USD,FY2026_10K,table 100; Stock-based compensation; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,sga,4690.85,USD million,USD,FY2026_10K,"table 98; Selling, general and administrative expenses; occurrence 0; column 1",fact_source_reported,
+FY2025,2024-03-31,2025-03-29,shares_basic,389.152,million shares,USD,FY2026_10K,table 98; Basic; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,shares_diluted,392.571,million shares,USD,FY2026_10K,table 98; Diluted; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,wc_accrued,48.847,USD million,USD,FY2026_10K,table 100; Accrued liabilities; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,wc_ap,-2.303,USD million,USD,FY2026_10K,table 100; Accounts payable; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,wc_ar,-100.803,USD million,USD,FY2026_10K,table 100; Accounts receivable; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,wc_inventory,54.102,USD million,USD,FY2026_10K,table 100; Inventories; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,wc_other,23.686,USD million,USD,FY2026_10K,table 100; Other assets and liabilities; occurrence 0; column 1,fact_source_reported,
+FY2025,2024-03-31,2025-03-29,wc_tax,9.366,USD million,USD,FY2026_10K,table 100; Income taxes; occurrence 0; column 1,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,capex_all,165.806,USD million,USD,FY2026_10K,PPE + software,derived_calculation,
+FY2026,2025-03-30,2026-03-28,capex_ppe,114.707,USD million,USD,FY2026_10K,table 100; Capital expenditures; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,capex_ppe_accrued_unpaid,25.026,USD million,USD,FY2026_10K,"table 177; Property, plant and equipment expenditures included in accounts payable or accrued liabilities; occurrence 0; column 0",fact_source_reported,
+FY2026,2025-03-30,2026-03-28,capex_software,51.099,USD million,USD,FY2026_10K,table 100; Software purchases; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,capex_software_accrued_unpaid,11.751,USD million,USD,FY2026_10K,table 177; Computer software costs included in accounts payable or accrued liabilities; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cash_all_wc_exleases,-139.032,USD million,USD,FY2026_10K,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+FY2026,2025-03-30,2026-03-28,cash_interest_paid,145.11,USD million,USD,FY2026_10K,"table 177; Interest paid, net of amounts capitalized; occurrence 0; column 0",fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cash_taxes_paid,171.775,USD million,USD,FY2026_10K,"table 177; Income taxes paid, net of refunds (a); occurrence 0; column 0",fact_source_reported,Note26 footnote(a): includes BOTH continuing and discontinued operations; not a retained cash-tax series.
+FY2026,2025-03-30,2026-03-28,cash_trade_wc,33.521,USD million,USD,FY2026_10K,cash-flow changes in AR + inventory + AP,derived_calculation,
+FY2026,2025-03-30,2026-03-28,cf_bad_debt,9.48,USD million,USD,FY2026_10K,table 100; Provision for doubtful accounts; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cf_deferred_tax,-42.249,USD million,USD,FY2026_10K,table 100; Deferred income taxes; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cf_gain_sale_reversal,-127.211,USD million,USD,FY2026_10K,table 100; Gain on sale of business; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cf_impairment,30.716,USD million,USD,FY2026_10K,table 100; Impairment of goodwill and intangible assets; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cf_lease_cash_change,-350.496,USD million,USD,FY2026_10K,table 100; Operating lease right-of-use assets and liabilities; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cf_other,9.45,USD million,USD,FY2026_10K,"table 100; Other, net; occurrence 0; column 0",fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cf_other_including_deferred_tax,-32.799,USD million,USD,FY2026_10K,table 100; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+FY2026,2025-03-30,2026-03-28,cf_pension,188.084,USD million,USD,FY2026_10K,table 100; Pension expense in excess of (less than) contributions; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cf_pension_asset_reversion,125.373,USD million,USD,FY2026_10K,"table 100; Pension termination asset reversion, net; occurrence 0; column 0",fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cf_rou_reduction,354.756,USD million,USD,FY2026_10K,table 100; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cf_tax_receivable_writeoff,0.0,USD million,USD,FY2026_10K,table 100; Write-off of income tax receivables and interest; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cfo_cont,671.274,USD million,USD,FY2026_10K,table 100; Cash provided by operating activities - continuing operations; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cfo_discontinued,0.0,USD million,USD,FY2026_10K,table 100; Cash provided by operating activities - discontinued operations; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cfo_total,671.274,USD million,USD,FY2026_10K,table 100; Cash provided by operating activities; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,cogs,4343.492,USD million,USD,FY2026_10K,table 98; Cost of goods sold; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,da_and_other_asset_writedowns,280.529,USD million,USD,FY2026_10K,"table 100; Depreciation, amortization and other asset write-downs; occurrence 0; column 0",fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+FY2026,2025-03-30,2026-03-28,ebit,576.569,USD million,USD,FY2026_10K,table 98; Operating income (loss); occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,eps_cont_basic,0.65,USD/share,USD,FY2026_10K,table 98; Continuing operations; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,eps_cont_diluted,0.64,USD/share,USD,FY2026_10K,table 98; Continuing operations; occurrence 1; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,eps_total_diluted,0.64,USD/share,USD,FY2026_10K,table 98; Total earnings (loss) per common share - diluted; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,fcf_less_sbc,428.514,USD million,USD,FY2026_10K,FCF_reported_cont − SBC,derived_calculation,
+FY2026,2025-03-30,2026-03-28,fcf_reported_cont,505.468,USD million,USD,FY2026_10K,CFO_cont − PPE − software,derived_calculation,
+FY2026,2025-03-30,2026-03-28,gross_profit,5261.715,USD million,USD,FY2026_10K,table 98; revenue minus COGS,derived_calculation,
+FY2026,2025-03-30,2026-03-28,impairment_operating,30.716,USD million,USD,FY2026_10K,table 98; Impairment of goodwill and intangible assets; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,income_tax_expense,86.298,USD million,USD,FY2026_10K,table 98; Income tax expense; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,interest_expense,166.771,USD million,USD,FY2026_10K,table 98; Interest expense; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,interest_income,18.028,USD million,USD,FY2026_10K,table 98; Interest income; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,investing_asset_sale_proceeds,0.868,USD million,USD,FY2026_10K,table 100; Proceeds from sale of assets; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,investing_discontinued,0.0,USD million,USD,FY2026_10K,table 100; Cash used by investing activities - discontinued operations; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,investing_sale_proceeds,600.524,USD million,USD,FY2026_10K,"table 100; Proceeds from sale of businesses, net of cash sold; occurrence 0; column 0",fact_source_reported,
+FY2026,2025-03-30,2026-03-28,investing_sale_wc_payment,0,USD million,USD,FY2026_10K,table 100; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+FY2026,2025-03-30,2026-03-28,net_income_cont,254.92,USD million,USD,FY2026_10K,table 98; Income (loss) from continuing operations; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,net_income_discontinued,0.0,USD million,USD,FY2026_10K,"table 98; Income (loss) from discontinued operations, net of tax; occurrence 0; column 0",fact_source_reported,
+FY2026,2025-03-30,2026-03-28,net_income_total,254.92,USD million,USD,FY2026_10K,table 98; Net income (loss); occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,other_nonoperating,-86.608,USD million,USD,FY2026_10K,"table 98; Other income (expense), net; occurrence 0; column 0",fact_source_reported,
+FY2026,2025-03-30,2026-03-28,pretax_cont,341.218,USD million,USD,FY2026_10K,table 98; Income (loss) from continuing operations before income taxes; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,revenue,9605.207,USD million,USD,FY2026_10K,table 98; Revenues; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,sbc,76.954,USD million,USD,FY2026_10K,table 100; Stock-based compensation; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,sga,4654.43,USD million,USD,FY2026_10K,"table 98; Selling, general and administrative expenses; occurrence 0; column 0",fact_source_reported,
+FY2026,2025-03-30,2026-03-28,shares_basic,390.739,million shares,USD,FY2026_10K,table 98; Basic; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,shares_diluted,395.875,million shares,USD,FY2026_10K,table 98; Diluted; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,wc_accrued,-85.677,USD million,USD,FY2026_10K,table 100; Accrued liabilities; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,wc_ap,26.713,USD million,USD,FY2026_10K,table 100; Accounts payable; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,wc_ar,-166.709,USD million,USD,FY2026_10K,table 100; Accounts receivable; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,wc_inventory,173.517,USD million,USD,FY2026_10K,table 100; Inventories; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,wc_other,-39.555,USD million,USD,FY2026_10K,table 100; Other assets and liabilities; occurrence 0; column 0,fact_source_reported,
+FY2026,2025-03-30,2026-03-28,wc_tax,-47.321,USD million,USD,FY2026_10K,table 100; Income taxes; occurrence 0; column 0,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,capex_all,71.68,USD million,USD,Q2FY2026_10Q,PPE + software,derived_calculation,
+H1FY2025,2024-03-31,2024-09-28,capex_ppe,45.953,USD million,USD,Q2FY2026_10Q,table 8; Capital expenditures; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,capex_software,25.727,USD million,USD,Q2FY2026_10Q,table 8; Software purchases; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,cash_all_wc_exleases,-495.826,USD million,USD,Q2FY2026_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+H1FY2025,2024-03-31,2024-09-28,cash_interest_paid,,USD million,USD,Q2FY2026_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+H1FY2025,2024-03-31,2024-09-28,cash_taxes_paid,,USD million,USD,Q2FY2026_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+H1FY2025,2024-03-31,2024-09-28,cash_trade_wc,-588.06,USD million,USD,Q2FY2026_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+H1FY2025,2024-03-31,2024-09-28,cf_bad_debt,11.366,USD million,USD,Q2FY2026_10Q,table 8; Provision for doubtful accounts; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,cf_deferred_tax,,USD million,USD,Q2FY2026_10Q,table 8; not disaggregated,missing_required_source,Interim deferred tax included within other adjustments; do not read missing as zero.
+H1FY2025,2024-03-31,2024-09-28,cf_gain_sale_reversal,0,USD million,USD,Q2FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2025,2024-03-31,2024-09-28,cf_impairment,0,USD million,USD,Q2FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2025,2024-03-31,2024-09-28,cf_lease_cash_change,-176.754,USD million,USD,Q2FY2026_10Q,table 8; Operating lease right-of-use assets and liabilities; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,cf_other,-31.369,USD million,USD,Q2FY2026_10Q,"table 8; Other, net; occurrence 0; column 1",fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,cf_other_including_deferred_tax,-31.369,USD million,USD,Q2FY2026_10Q,table 8; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+H1FY2025,2024-03-31,2024-09-28,cf_pension,4.028,USD million,USD,Q2FY2026_10Q,table 8; Pension expense in excess of (less than) contributions; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,cf_pension_asset_reversion,0,USD million,USD,Q2FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2025,2024-03-31,2024-09-28,cf_rou_reduction,179.206,USD million,USD,Q2FY2026_10Q,table 8; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,cf_tax_receivable_writeoff,0,USD million,USD,Q2FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2025,2024-03-31,2024-09-28,cfo_cont,-301.823,USD million,USD,Q2FY2026_10Q,table 8; Cash used by operating activities - continuing operations; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,cfo_discontinued,20.052,USD million,USD,Q2FY2026_10Q,table 8; Cash provided by operating activities - discontinued operations; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,cfo_total,-281.771,USD million,USD,Q2FY2026_10Q,table 8; Cash used by operating activities; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,cogs,2180.773,USD million,USD,Q2FY2026_10Q,table 6; Cost of goods sold; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,da_and_other_asset_writedowns,126.396,USD million,USD,Q2FY2026_10Q,table 8; Depreciation and amortization; occurrence 0; column 1,fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+H1FY2025,2024-03-31,2024-09-28,ebit,150.883,USD million,USD,Q2FY2026_10Q,table 6; Operating income; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,eps_cont_basic,0.13,USD/share,USD,Q2FY2026_10Q,table 6; Continuing operations; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,eps_cont_diluted,0.13,USD/share,USD,Q2FY2026_10Q,table 6; Continuing operations; occurrence 1; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,eps_total_diluted,-0.53,USD/share,USD,Q2FY2026_10Q,table 6; Total earnings (loss) per common share - diluted; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,fcf_less_sbc,-404.151,USD million,USD,Q2FY2026_10Q,FCF_reported_cont − SBC,derived_calculation,
+H1FY2025,2024-03-31,2024-09-28,fcf_reported_cont,-373.503,USD million,USD,Q2FY2026_10Q,CFO_cont − PPE − software,derived_calculation,
+H1FY2025,2024-03-31,2024-09-28,gross_profit,2346.235,USD million,USD,Q2FY2026_10Q,table 6; revenue minus COGS,derived_calculation,
+H1FY2025,2024-03-31,2024-09-28,impairment_operating,0,USD million,USD,Q2FY2026_10Q,table 6; no separate impairment row,fact_source_reported,No impairment in statement; zero for reported bridge.
+H1FY2025,2024-03-31,2024-09-28,income_tax_expense,14.62,USD million,USD,Q2FY2026_10Q,table 6; Income tax expense; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,interest_expense,90.708,USD million,USD,Q2FY2026_10Q,table 6; Interest expense; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,interest_income,7.073,USD million,USD,Q2FY2026_10Q,table 6; Interest income; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,investing_asset_sale_proceeds,76.683,USD million,USD,Q2FY2026_10Q,table 8; Proceeds from sale of assets; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,investing_discontinued,-4.413,USD million,USD,Q2FY2026_10Q,table 8; Cash used by investing activities - discontinued operations; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,investing_sale_proceeds,0,USD million,USD,Q2FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2025,2024-03-31,2024-09-28,investing_sale_wc_payment,0,USD million,USD,Q2FY2026_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2025,2024-03-31,2024-09-28,net_income_cont,50.482,USD million,USD,Q2FY2026_10Q,table 6; Income from continuing operations; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,net_income_discontinued,-257.19,USD million,USD,Q2FY2026_10Q,"table 6; Loss from discontinued operations, net of tax; occurrence 0; column 3",fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,net_income_total,-206.708,USD million,USD,Q2FY2026_10Q,table 6; Net income (loss); occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,other_nonoperating,-2.146,USD million,USD,Q2FY2026_10Q,"table 6; Other income (expense), net; occurrence 0; column 3",fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,pretax_cont,65.102,USD million,USD,Q2FY2026_10Q,table 6; Income from continuing operations before income taxes; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,revenue,4527.008,USD million,USD,Q2FY2026_10Q,table 6; Revenues; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,sbc,30.648,USD million,USD,Q2FY2026_10Q,table 8; Stock-based compensation; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,sga,2195.352,USD million,USD,Q2FY2026_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 3",fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,shares_basic,388.892,million shares,USD,Q2FY2026_10Q,table 6; Basic; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,shares_diluted,390.198,million shares,USD,Q2FY2026_10Q,table 6; Diluted; occurrence 0; column 3,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,wc_accrued,136.881,USD million,USD,Q2FY2026_10Q,table 8; Accrued liabilities; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,wc_ap,328.418,USD million,USD,Q2FY2026_10Q,table 8; Accounts payable; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,wc_ar,-553.73,USD million,USD,Q2FY2026_10Q,table 8; Accounts receivable; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,wc_inventory,-362.748,USD million,USD,Q2FY2026_10Q,table 8; Inventories; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,wc_other,27.423,USD million,USD,Q2FY2026_10Q,table 8; Other assets and liabilities; occurrence 0; column 1,fact_source_reported,
+H1FY2025,2024-03-31,2024-09-28,wc_tax,-72.07,USD million,USD,Q2FY2026_10Q,table 8; Income taxes; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,capex_all,80.594,USD million,USD,Q2FY2027_10Q,PPE + software,derived_calculation,
+H1FY2026,2025-03-30,2025-09-27,capex_ppe,54.763,USD million,USD,Q2FY2027_10Q,table 8; Capital expenditures; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,capex_software,25.831,USD million,USD,Q2FY2027_10Q,table 8; Software purchases; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,cash_all_wc_exleases,-623.237,USD million,USD,Q2FY2027_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+H1FY2026,2025-03-30,2025-09-27,cash_interest_paid,,USD million,USD,Q2FY2027_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+H1FY2026,2025-03-30,2025-09-27,cash_taxes_paid,,USD million,USD,Q2FY2027_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+H1FY2026,2025-03-30,2025-09-27,cash_trade_wc,-667.315,USD million,USD,Q2FY2027_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+H1FY2026,2025-03-30,2025-09-27,cf_bad_debt,6.452,USD million,USD,Q2FY2027_10Q,table 8; Provision for doubtful accounts; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,cf_deferred_tax,,USD million,USD,Q2FY2027_10Q,table 8; not disaggregated,missing_required_source,Interim deferred tax included within other adjustments; do not read missing as zero.
+H1FY2026,2025-03-30,2025-09-27,cf_gain_sale_reversal,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2026,2025-03-30,2025-09-27,cf_impairment,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2026,2025-03-30,2025-09-27,cf_lease_cash_change,-180.59,USD million,USD,Q2FY2027_10Q,table 8; Operating lease right-of-use assets and liabilities; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,cf_other,10.643,USD million,USD,Q2FY2027_10Q,"table 8; Other, net; occurrence 0; column 1",fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,cf_other_including_deferred_tax,10.643,USD million,USD,Q2FY2027_10Q,table 8; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+H1FY2026,2025-03-30,2025-09-27,cf_pension,-4.258,USD million,USD,Q2FY2027_10Q,table 8; Pension expense less than contributions; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,cf_pension_asset_reversion,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2026,2025-03-30,2025-09-27,cf_rou_reduction,172.654,USD million,USD,Q2FY2027_10Q,table 8; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,cf_tax_receivable_writeoff,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2026,2025-03-30,2025-09-27,cfo_cont,-372.468,USD million,USD,Q2FY2027_10Q,table 8; Cash used by operating activities; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,cfo_discontinued,0,USD million,USD,Q2FY2027_10Q,table 8; no separate discontinued row,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,cfo_total,-372.468,USD million,USD,Q2FY2027_10Q,table 8; Cash used by operating activities; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,cogs,2151.926,USD million,USD,Q2FY2027_10Q,table 6; Cost of goods sold; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,da_and_other_asset_writedowns,134.164,USD million,USD,Q2FY2027_10Q,table 8; Depreciation and amortization; occurrence 0; column 1,fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+H1FY2026,2025-03-30,2025-09-27,ebit,226.011,USD million,USD,Q2FY2027_10Q,table 6; Operating income; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,eps_cont_basic,0.19,USD/share,USD,Q2FY2027_10Q,table 6; Basic; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,eps_cont_diluted,0.19,USD/share,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,eps_total_diluted,0.19,USD/share,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,fcf_less_sbc,-491.409,USD million,USD,Q2FY2027_10Q,FCF_reported_cont − SBC,derived_calculation,
+H1FY2026,2025-03-30,2025-09-27,fcf_reported_cont,-453.062,USD million,USD,Q2FY2027_10Q,CFO_cont − PPE − software,derived_calculation,
+H1FY2026,2025-03-30,2025-09-27,gross_profit,2411.446,USD million,USD,Q2FY2027_10Q,table 6; revenue minus COGS,derived_calculation,
+H1FY2026,2025-03-30,2025-09-27,impairment_operating,0,USD million,USD,Q2FY2027_10Q,table 6; no separate impairment row,fact_source_reported,No impairment in statement; zero for reported bridge.
+H1FY2026,2025-03-30,2025-09-27,income_tax_expense,68.331,USD million,USD,Q2FY2027_10Q,table 6; Income tax expense; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,interest_expense,93.255,USD million,USD,Q2FY2027_10Q,table 6; Interest expense; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,interest_income,5.926,USD million,USD,Q2FY2027_10Q,table 6; Interest income; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,investing_asset_sale_proceeds,0.905,USD million,USD,Q2FY2027_10Q,table 8; Proceeds from sale of assets; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,investing_discontinued,0,USD million,USD,Q2FY2027_10Q,table 8; no separate discontinued row,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,investing_sale_proceeds,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2026,2025-03-30,2025-09-27,investing_sale_wc_payment,-0.0,USD million,USD,Q2FY2027_10Q,table 8; Payment for working capital adjustment for sale of business; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,net_income_cont,73.357,USD million,USD,Q2FY2027_10Q,table 6; Net income; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,net_income_discontinued,0,USD million,USD,Q2FY2027_10Q,table 6; no discontinued operation,fact_source_reported,No discontinued operation in period.
+H1FY2026,2025-03-30,2025-09-27,net_income_total,73.357,USD million,USD,Q2FY2027_10Q,table 6; Net income; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,other_nonoperating,3.006,USD million,USD,Q2FY2027_10Q,"table 6; Other income (expense), net; occurrence 0; column 3",fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,pretax_cont,141.688,USD million,USD,Q2FY2027_10Q,table 6; Income before income taxes; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,revenue,4563.372,USD million,USD,Q2FY2027_10Q,table 6; Revenues; occurrence 0; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,sbc,38.347,USD million,USD,Q2FY2027_10Q,table 8; Stock-based compensation; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,sga,2185.435,USD million,USD,Q2FY2027_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 3",fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,shares_basic,390.336,million shares,USD,Q2FY2027_10Q,table 6; Basic; occurrence 1; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,shares_diluted,393.043,million shares,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 1; column 3,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,wc_accrued,71.121,USD million,USD,Q2FY2027_10Q,table 8; Accrued liabilities; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,wc_ap,267.963,USD million,USD,Q2FY2027_10Q,table 8; Accounts payable; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,wc_ar,-619.53,USD million,USD,Q2FY2027_10Q,table 8; Accounts receivable; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,wc_inventory,-315.748,USD million,USD,Q2FY2027_10Q,table 8; Inventories; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,wc_other,-17.681,USD million,USD,Q2FY2027_10Q,table 8; Other assets and liabilities; occurrence 0; column 1,fact_source_reported,
+H1FY2026,2025-03-30,2025-09-27,wc_tax,-9.362,USD million,USD,Q2FY2027_10Q,table 8; Income taxes; occurrence 0; column 1,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,capex_all,108.621,USD million,USD,Q2FY2027_10Q,PPE + software,derived_calculation,
+H1FY2027,2026-03-29,2026-09-26,capex_ppe,78.696,USD million,USD,Q2FY2027_10Q,table 8; Capital expenditures; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,capex_software,29.925,USD million,USD,Q2FY2027_10Q,table 8; Software purchases; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,cash_all_wc_exleases,-533.676,USD million,USD,Q2FY2027_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+H1FY2027,2026-03-29,2026-09-26,cash_interest_paid,,USD million,USD,Q2FY2027_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+H1FY2027,2026-03-29,2026-09-26,cash_taxes_paid,,USD million,USD,Q2FY2027_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+H1FY2027,2026-03-29,2026-09-26,cash_trade_wc,-609.919,USD million,USD,Q2FY2027_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+H1FY2027,2026-03-29,2026-09-26,cf_bad_debt,7.148,USD million,USD,Q2FY2027_10Q,table 8; Provision for doubtful accounts; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,cf_deferred_tax,,USD million,USD,Q2FY2027_10Q,table 8; not disaggregated,missing_required_source,Interim deferred tax included within other adjustments; do not read missing as zero.
+H1FY2027,2026-03-29,2026-09-26,cf_gain_sale_reversal,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2027,2026-03-29,2026-09-26,cf_impairment,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2027,2026-03-29,2026-09-26,cf_lease_cash_change,-189.853,USD million,USD,Q2FY2027_10Q,table 8; Operating lease right-of-use assets and liabilities; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,cf_other,-26.408,USD million,USD,Q2FY2027_10Q,"table 8; Other, net; occurrence 0; column 0",fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,cf_other_including_deferred_tax,-26.408,USD million,USD,Q2FY2027_10Q,table 8; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+H1FY2027,2026-03-29,2026-09-26,cf_pension,-1.03,USD million,USD,Q2FY2027_10Q,table 8; Pension expense less than contributions; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,cf_pension_asset_reversion,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2027,2026-03-29,2026-09-26,cf_rou_reduction,185.271,USD million,USD,Q2FY2027_10Q,table 8; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,cf_tax_receivable_writeoff,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2027,2026-03-29,2026-09-26,cfo_cont,-214.03,USD million,USD,Q2FY2027_10Q,table 8; Cash used by operating activities; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,cfo_discontinued,0,USD million,USD,Q2FY2027_10Q,table 8; no separate discontinued row,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,cfo_total,-214.03,USD million,USD,Q2FY2027_10Q,table 8; Cash used by operating activities; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,cogs,1954.789,USD million,USD,Q2FY2027_10Q,table 6; Cost of goods sold; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,da_and_other_asset_writedowns,116.143,USD million,USD,Q2FY2027_10Q,table 8; Depreciation and amortization; occurrence 0; column 0,fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+H1FY2027,2026-03-29,2026-09-26,ebit,284.848,USD million,USD,Q2FY2027_10Q,table 6; Operating income; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,eps_cont_basic,0.48,USD/share,USD,Q2FY2027_10Q,table 6; Basic; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,eps_cont_diluted,0.47,USD/share,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,eps_total_diluted,0.47,USD/share,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,fcf_less_sbc,-362.927,USD million,USD,Q2FY2027_10Q,FCF_reported_cont − SBC,derived_calculation,
+H1FY2027,2026-03-29,2026-09-26,fcf_reported_cont,-322.651,USD million,USD,Q2FY2027_10Q,CFO_cont − PPE − software,derived_calculation,
+H1FY2027,2026-03-29,2026-09-26,gross_profit,2409.722,USD million,USD,Q2FY2027_10Q,table 6; revenue minus COGS,derived_calculation,
+H1FY2027,2026-03-29,2026-09-26,impairment_operating,0,USD million,USD,Q2FY2027_10Q,table 6; no separate impairment row,fact_source_reported,No impairment in statement; zero for reported bridge.
+H1FY2027,2026-03-29,2026-09-26,income_tax_expense,51.94,USD million,USD,Q2FY2027_10Q,table 6; Income tax expense; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,interest_expense,62.06,USD million,USD,Q2FY2027_10Q,table 6; Interest expense; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,interest_income,13.756,USD million,USD,Q2FY2027_10Q,table 6; Interest income; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,investing_asset_sale_proceeds,22.628,USD million,USD,Q2FY2027_10Q,table 8; Proceeds from sale of assets; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,investing_discontinued,0,USD million,USD,Q2FY2027_10Q,table 8; no separate discontinued row,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,investing_sale_proceeds,0,USD million,USD,Q2FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+H1FY2027,2026-03-29,2026-09-26,investing_sale_wc_payment,11.867,USD million,USD,Q2FY2027_10Q,table 8; Payment for working capital adjustment for sale of business; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,net_income_cont,188.099,USD million,USD,Q2FY2027_10Q,table 6; Net income; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,net_income_discontinued,0,USD million,USD,Q2FY2027_10Q,table 6; no discontinued operation,fact_source_reported,No discontinued operation in period.
+H1FY2027,2026-03-29,2026-09-26,net_income_total,188.099,USD million,USD,Q2FY2027_10Q,table 6; Net income; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,other_nonoperating,3.495,USD million,USD,Q2FY2027_10Q,"table 6; Other income (expense), net; occurrence 0; column 2",fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,pretax_cont,240.039,USD million,USD,Q2FY2027_10Q,table 6; Income before income taxes; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,revenue,4364.511,USD million,USD,Q2FY2027_10Q,table 6; Revenues; occurrence 0; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,sbc,40.276,USD million,USD,Q2FY2027_10Q,table 8; Stock-based compensation; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,sga,2124.874,USD million,USD,Q2FY2027_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 2",fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,shares_basic,392.738,million shares,USD,Q2FY2027_10Q,table 6; Basic; occurrence 1; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,shares_diluted,400.047,million shares,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 1; column 2,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,wc_accrued,64.951,USD million,USD,Q2FY2027_10Q,table 8; Accrued liabilities; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,wc_ap,474.448,USD million,USD,Q2FY2027_10Q,table 8; Accounts payable; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,wc_ar,-467.243,USD million,USD,Q2FY2027_10Q,table 8; Accounts receivable; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,wc_inventory,-617.124,USD million,USD,Q2FY2027_10Q,table 8; Inventories; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,wc_other,-5.051,USD million,USD,Q2FY2027_10Q,table 8; Other assets and liabilities; occurrence 0; column 0,fact_source_reported,
+H1FY2027,2026-03-29,2026-09-26,wc_tax,16.343,USD million,USD,Q2FY2027_10Q,table 8; Income taxes; occurrence 0; column 0,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,capex_all,45.394,USD million,USD,Q1FY2027_10Q,PPE + software,derived_calculation,
+Q1FY2026,2025-03-30,2025-06-28,capex_ppe,28.246,USD million,USD,Q1FY2027_10Q,table 8; Capital expenditures; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,capex_software,17.148,USD million,USD,Q1FY2027_10Q,table 8; Software purchases; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,cash_all_wc_exleases,-119.654,USD million,USD,Q1FY2027_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+Q1FY2026,2025-03-30,2025-06-28,cash_interest_paid,,USD million,USD,Q1FY2027_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+Q1FY2026,2025-03-30,2025-06-28,cash_taxes_paid,,USD million,USD,Q1FY2027_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+Q1FY2026,2025-03-30,2025-06-28,cash_trade_wc,97.635,USD million,USD,Q1FY2027_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+Q1FY2026,2025-03-30,2025-06-28,cf_bad_debt,3.327,USD million,USD,Q1FY2027_10Q,table 8; Provision for doubtful accounts; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,cf_deferred_tax,,USD million,USD,Q1FY2027_10Q,table 8; not disaggregated,missing_required_source,Interim deferred tax included within other adjustments; do not read missing as zero.
+Q1FY2026,2025-03-30,2025-06-28,cf_gain_sale_reversal,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2026,2025-03-30,2025-06-28,cf_impairment,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2026,2025-03-30,2025-06-28,cf_lease_cash_change,-86.168,USD million,USD,Q1FY2027_10Q,table 8; Operating lease right-of-use assets and liabilities; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,cf_other,8.908,USD million,USD,Q1FY2027_10Q,"table 8; Other, net; occurrence 0; column 1",fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,cf_other_including_deferred_tax,8.908,USD million,USD,Q1FY2027_10Q,table 8; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+Q1FY2026,2025-03-30,2025-06-28,cf_pension,-5.73,USD million,USD,Q1FY2027_10Q,table 8; Pension expense in excess of (less than) contributions; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,cf_pension_asset_reversion,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2026,2025-03-30,2025-06-28,cf_rou_reduction,85.219,USD million,USD,Q1FY2027_10Q,table 8; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,cf_tax_receivable_writeoff,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2026,2025-03-30,2025-06-28,cfo_cont,-145.46,USD million,USD,Q1FY2027_10Q,table 8; Cash used by operating activities; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,cfo_discontinued,0,USD million,USD,Q1FY2027_10Q,table 8; no separate discontinued row,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,cfo_total,-145.46,USD million,USD,Q1FY2027_10Q,table 8; Cash used by operating activities; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,cogs,811.664,USD million,USD,Q1FY2027_10Q,table 6; Cost of goods sold; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,da_and_other_asset_writedowns,64.362,USD million,USD,Q1FY2027_10Q,table 8; Depreciation and amortization; occurrence 0; column 1,fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+Q1FY2026,2025-03-30,2025-06-28,ebit,-86.609,USD million,USD,Q1FY2027_10Q,table 6; Operating loss; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,eps_cont_basic,-0.3,USD/share,USD,Q1FY2027_10Q,table 6; Basic; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,eps_cont_diluted,-0.3,USD/share,USD,Q1FY2027_10Q,table 6; Diluted; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,eps_total_diluted,-0.3,USD/share,USD,Q1FY2027_10Q,table 6; Diluted; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,fcf_less_sbc,-211.538,USD million,USD,Q1FY2027_10Q,FCF_reported_cont − SBC,derived_calculation,
+Q1FY2026,2025-03-30,2025-06-28,fcf_reported_cont,-190.854,USD million,USD,Q1FY2027_10Q,CFO_cont − PPE − software,derived_calculation,
+Q1FY2026,2025-03-30,2025-06-28,gross_profit,949.002,USD million,USD,Q1FY2027_10Q,table 6; revenue minus COGS,derived_calculation,
+Q1FY2026,2025-03-30,2025-06-28,impairment_operating,0,USD million,USD,Q1FY2027_10Q,table 6; no separate impairment row,fact_source_reported,No impairment in statement; zero for reported bridge.
+Q1FY2026,2025-03-30,2025-06-28,income_tax_expense,-10.185,USD million,USD,Q1FY2027_10Q,table 6; Income tax benefit; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,interest_expense,43.638,USD million,USD,Q1FY2027_10Q,table 6; Interest expense; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,interest_income,2.518,USD million,USD,Q1FY2027_10Q,table 6; Interest income; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,investing_asset_sale_proceeds,0.605,USD million,USD,Q1FY2027_10Q,table 8; Proceeds from sale of assets; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,investing_discontinued,0,USD million,USD,Q1FY2027_10Q,table 8; no separate discontinued row,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,investing_sale_proceeds,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2026,2025-03-30,2025-06-28,investing_sale_wc_payment,-0.0,USD million,USD,Q1FY2027_10Q,table 8; Payment for working capital adjustment for sale of business; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,net_income_cont,-116.408,USD million,USD,Q1FY2027_10Q,table 6; Net loss; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,net_income_discontinued,0,USD million,USD,Q1FY2027_10Q,table 6; no discontinued operation,fact_source_reported,No discontinued operation in period.
+Q1FY2026,2025-03-30,2025-06-28,net_income_total,-116.408,USD million,USD,Q1FY2027_10Q,table 6; Net loss; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,other_nonoperating,1.136,USD million,USD,Q1FY2027_10Q,"table 6; Other income (expense), net; occurrence 0; column 1",fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,pretax_cont,-126.593,USD million,USD,Q1FY2027_10Q,table 6; Loss before income taxes; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,revenue,1760.666,USD million,USD,Q1FY2027_10Q,table 6; Revenues; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,sbc,20.684,USD million,USD,Q1FY2027_10Q,table 8; Stock-based compensation; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,sga,1035.611,USD million,USD,Q1FY2027_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 1",fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,shares_basic,390.024,million shares,USD,Q1FY2027_10Q,table 6; Basic; occurrence 1; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,shares_diluted,390.024,million shares,USD,Q1FY2027_10Q,table 6; Diluted; occurrence 1; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,wc_accrued,-110.21,USD million,USD,Q1FY2027_10Q,table 8; Accrued liabilities; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,wc_ap,347.962,USD million,USD,Q1FY2027_10Q,table 8; Accounts payable; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,wc_ar,200.423,USD million,USD,Q1FY2027_10Q,table 8; Accounts receivable; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,wc_inventory,-450.75,USD million,USD,Q1FY2027_10Q,table 8; Inventories; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,wc_other,-55.776,USD million,USD,Q1FY2027_10Q,table 8; Other assets and liabilities; occurrence 0; column 1,fact_source_reported,
+Q1FY2026,2025-03-30,2025-06-28,wc_tax,-51.303,USD million,USD,Q1FY2027_10Q,table 8; Income taxes; occurrence 0; column 1,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,capex_all,53.266,USD million,USD,Q1FY2027_10Q,PPE + software,derived_calculation,
+Q1FY2027,2026-03-29,2026-06-27,capex_ppe,39.58,USD million,USD,Q1FY2027_10Q,table 8; Capital expenditures; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,capex_software,13.686,USD million,USD,Q1FY2027_10Q,table 8; Software purchases; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,cash_all_wc_exleases,-28.348,USD million,USD,Q1FY2027_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+Q1FY2027,2026-03-29,2026-06-27,cash_interest_paid,,USD million,USD,Q1FY2027_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+Q1FY2027,2026-03-29,2026-06-27,cash_taxes_paid,,USD million,USD,Q1FY2027_10Q,No interim cash tax/interest disaggregation found,missing_required_source,Do not infer cash tax/interest from income statement expense or change in tax working capital.
+Q1FY2027,2026-03-29,2026-06-27,cash_trade_wc,144.446,USD million,USD,Q1FY2027_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+Q1FY2027,2026-03-29,2026-06-27,cf_bad_debt,2.13,USD million,USD,Q1FY2027_10Q,table 8; Provision for doubtful accounts; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,cf_deferred_tax,,USD million,USD,Q1FY2027_10Q,table 8; not disaggregated,missing_required_source,Interim deferred tax included within other adjustments; do not read missing as zero.
+Q1FY2027,2026-03-29,2026-06-27,cf_gain_sale_reversal,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2027,2026-03-29,2026-06-27,cf_impairment,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2027,2026-03-29,2026-06-27,cf_lease_cash_change,-91.872,USD million,USD,Q1FY2027_10Q,table 8; Operating lease right-of-use assets and liabilities; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,cf_other,-22.755,USD million,USD,Q1FY2027_10Q,"table 8; Other, net; occurrence 0; column 0",fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,cf_other_including_deferred_tax,-22.755,USD million,USD,Q1FY2027_10Q,table 8; other + separately disclosed deferred tax,derived_calculation,Interim deferred tax is not separately disclosed and is already in other.
+Q1FY2027,2026-03-29,2026-06-27,cf_pension,1.325,USD million,USD,Q1FY2027_10Q,table 8; Pension expense in excess of (less than) contributions; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,cf_pension_asset_reversion,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2027,2026-03-29,2026-06-27,cf_rou_reduction,93.558,USD million,USD,Q1FY2027_10Q,table 8; Reduction in the carrying amount of right-of-use assets; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,cf_tax_receivable_writeoff,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2027,2026-03-29,2026-06-27,cfo_cont,-62.496,USD million,USD,Q1FY2027_10Q,table 8; Cash used by operating activities; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,cfo_discontinued,0,USD million,USD,Q1FY2027_10Q,table 8; no separate discontinued row,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,cfo_total,-62.496,USD million,USD,Q1FY2027_10Q,table 8; Cash used by operating activities; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,cogs,752.335,USD million,USD,Q1FY2027_10Q,table 6; Cost of goods sold; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,da_and_other_asset_writedowns,57.786,USD million,USD,Q1FY2027_10Q,table 8; Depreciation and amortization; occurrence 0; column 0,fact_source_reported,FY annual row includes other asset write-downs; interim label is depreciation and amortization. Not a pure D&A comparable series.
+Q1FY2027,2026-03-29,2026-06-27,ebit,-83.072,USD million,USD,Q1FY2027_10Q,table 6; Operating loss; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,eps_cont_basic,-0.25,USD/share,USD,Q1FY2027_10Q,table 6; Basic; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,eps_cont_diluted,-0.25,USD/share,USD,Q1FY2027_10Q,table 6; Diluted; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,eps_total_diluted,-0.25,USD/share,USD,Q1FY2027_10Q,table 6; Diluted; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,fcf_less_sbc,-138.594,USD million,USD,Q1FY2027_10Q,FCF_reported_cont − SBC,derived_calculation,
+Q1FY2027,2026-03-29,2026-06-27,fcf_reported_cont,-115.762,USD million,USD,Q1FY2027_10Q,CFO_cont − PPE − software,derived_calculation,
+Q1FY2027,2026-03-29,2026-06-27,gross_profit,917.044,USD million,USD,Q1FY2027_10Q,table 6; revenue minus COGS,derived_calculation,
+Q1FY2027,2026-03-29,2026-06-27,impairment_operating,0,USD million,USD,Q1FY2027_10Q,table 6; no separate impairment row,fact_source_reported,No impairment in statement; zero for reported bridge.
+Q1FY2027,2026-03-29,2026-06-27,income_tax_expense,-9.74,USD million,USD,Q1FY2027_10Q,table 6; Income tax benefit; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,interest_expense,30.418,USD million,USD,Q1FY2027_10Q,table 6; Interest expense; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,interest_income,5.807,USD million,USD,Q1FY2027_10Q,table 6; Interest income; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,investing_asset_sale_proceeds,22.514,USD million,USD,Q1FY2027_10Q,table 8; Proceeds from sale of assets; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,investing_discontinued,0,USD million,USD,Q1FY2027_10Q,table 8; no separate discontinued row,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,investing_sale_proceeds,0,USD million,USD,Q1FY2027_10Q,table 8; no separate row,fact_source_reported,Zero for presentation bridge only where absent; cf_other may include additional components.
+Q1FY2027,2026-03-29,2026-06-27,investing_sale_wc_payment,11.867,USD million,USD,Q1FY2027_10Q,table 8; Payment for working capital adjustment for sale of business; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,net_income_cont,-97.152,USD million,USD,Q1FY2027_10Q,table 6; Net loss; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,net_income_discontinued,0,USD million,USD,Q1FY2027_10Q,table 6; no discontinued operation,fact_source_reported,No discontinued operation in period.
+Q1FY2027,2026-03-29,2026-06-27,net_income_total,-97.152,USD million,USD,Q1FY2027_10Q,table 6; Net loss; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,other_nonoperating,0.791,USD million,USD,Q1FY2027_10Q,"table 6; Other income (expense), net; occurrence 0; column 0",fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,pretax_cont,-106.892,USD million,USD,Q1FY2027_10Q,table 6; Loss before income taxes; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,revenue,1669.379,USD million,USD,Q1FY2027_10Q,table 6; Revenues; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,sbc,22.832,USD million,USD,Q1FY2027_10Q,table 8; Stock-based compensation; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,sga,1000.116,USD million,USD,Q1FY2027_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 0",fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,shares_basic,392.107,million shares,USD,Q1FY2027_10Q,table 6; Basic; occurrence 1; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,shares_diluted,392.107,million shares,USD,Q1FY2027_10Q,table 6; Diluted; occurrence 1; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,wc_accrued,-99.782,USD million,USD,Q1FY2027_10Q,table 8; Accrued liabilities; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,wc_ap,467.921,USD million,USD,Q1FY2027_10Q,table 8; Accounts payable; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,wc_ar,213.53,USD million,USD,Q1FY2027_10Q,table 8; Accounts receivable; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,wc_inventory,-537.005,USD million,USD,Q1FY2027_10Q,table 8; Inventories; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,wc_other,-28.336,USD million,USD,Q1FY2027_10Q,table 8; Other assets and liabilities; occurrence 0; column 0,fact_source_reported,
+Q1FY2027,2026-03-29,2026-06-27,wc_tax,-44.676,USD million,USD,Q1FY2027_10Q,table 8; Income taxes; occurrence 0; column 0,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,capex_all,35.2,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,PPE + software,derived_calculation,
+Q2FY2026,2025-06-29,2025-09-27,capex_ppe,26.517,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.capex_ppe; -1*Q1FY2026.capex_ppe,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,capex_software,8.683,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.capex_software; -1*Q1FY2026.capex_software,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cash_all_wc_exleases,-503.583,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+Q2FY2026,2025-06-29,2025-09-27,cash_interest_paid,,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cash_interest_paid; -1*Q1FY2026.cash_interest_paid,missing_required_source,One or more required components not disclosed.
+Q2FY2026,2025-06-29,2025-09-27,cash_taxes_paid,,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cash_taxes_paid; -1*Q1FY2026.cash_taxes_paid,missing_required_source,One or more required components not disclosed.
+Q2FY2026,2025-06-29,2025-09-27,cash_trade_wc,-764.95,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+Q2FY2026,2025-06-29,2025-09-27,cf_bad_debt,3.125,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cf_bad_debt; -1*Q1FY2026.cf_bad_debt,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cf_gain_sale_reversal,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cf_gain_sale_reversal; -1*Q1FY2026.cf_gain_sale_reversal,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cf_impairment,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cf_impairment; -1*Q1FY2026.cf_impairment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cf_lease_cash_change,-94.422,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cf_lease_cash_change; -1*Q1FY2026.cf_lease_cash_change,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cf_other_including_deferred_tax,1.735,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cf_other_including_deferred_tax; -1*Q1FY2026.cf_other_including_deferred_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cf_pension,1.472,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cf_pension; -1*Q1FY2026.cf_pension,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cf_pension_asset_reversion,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cf_pension_asset_reversion; -1*Q1FY2026.cf_pension_asset_reversion,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cf_rou_reduction,87.435,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cf_rou_reduction; -1*Q1FY2026.cf_rou_reduction,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cf_tax_receivable_writeoff,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cf_tax_receivable_writeoff; -1*Q1FY2026.cf_tax_receivable_writeoff,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cfo_cont,-227.008,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cfo_cont; -1*Q1FY2026.cfo_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cfo_discontinued,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cfo_discontinued; -1*Q1FY2026.cfo_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cfo_total,-227.008,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.cfo_total; -1*Q1FY2026.cfo_total,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,cogs,1340.262,USD million,USD,Q2FY2027_10Q,table 6; Cost of goods sold; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,da_and_other_asset_writedowns,69.802,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.da_and_other_asset_writedowns; -1*Q1FY2026.da_and_other_asset_writedowns,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,ebit,312.62,USD million,USD,Q2FY2027_10Q,table 6; Operating income; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,eps_cont_basic,0.49,USD/share,USD,Q2FY2027_10Q,table 6; Basic; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,eps_cont_diluted,0.48,USD/share,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,eps_total_diluted,0.48,USD/share,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,fcf_less_sbc,-279.871,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,FCF_reported_cont − SBC,derived_calculation,
+Q2FY2026,2025-06-29,2025-09-27,fcf_reported_cont,-262.208,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,CFO_cont − PPE − software,derived_calculation,
+Q2FY2026,2025-06-29,2025-09-27,gross_profit,1462.444,USD million,USD,Q2FY2027_10Q,table 6; revenue minus COGS,derived_calculation,
+Q2FY2026,2025-06-29,2025-09-27,impairment_operating,0,USD million,USD,Q2FY2027_10Q,table 6; no separate impairment row,fact_source_reported,No impairment in statement; zero for reported bridge.
+Q2FY2026,2025-06-29,2025-09-27,income_tax_expense,78.516,USD million,USD,Q2FY2027_10Q,table 6; Income tax expense; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,interest_expense,49.617,USD million,USD,Q2FY2027_10Q,table 6; Interest expense; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,interest_income,3.408,USD million,USD,Q2FY2027_10Q,table 6; Interest income; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,investing_asset_sale_proceeds,0.3,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.investing_asset_sale_proceeds; -1*Q1FY2026.investing_asset_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,investing_discontinued,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.investing_discontinued; -1*Q1FY2026.investing_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,investing_sale_proceeds,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.investing_sale_proceeds; -1*Q1FY2026.investing_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,investing_sale_wc_payment,0.0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.investing_sale_wc_payment; -1*Q1FY2026.investing_sale_wc_payment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,net_income_cont,189.765,USD million,USD,Q2FY2027_10Q,table 6; Net income; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,net_income_discontinued,0,USD million,USD,Q2FY2027_10Q,table 6; no discontinued operation,fact_source_reported,No discontinued operation in period.
+Q2FY2026,2025-06-29,2025-09-27,net_income_total,189.765,USD million,USD,Q2FY2027_10Q,table 6; Net income; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,other_nonoperating,1.87,USD million,USD,Q2FY2027_10Q,"table 6; Other income (expense), net; occurrence 0; column 1",fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,pretax_cont,268.281,USD million,USD,Q2FY2027_10Q,table 6; Income before income taxes; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,revenue,2802.706,USD million,USD,Q2FY2027_10Q,table 6; Revenues; occurrence 0; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,sbc,17.663,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.sbc; -1*Q1FY2026.sbc,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,sga,1149.824,USD million,USD,Q2FY2027_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 1",fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,shares_basic,390.648,million shares,USD,Q2FY2027_10Q,table 6; Basic; occurrence 1; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,shares_diluted,393.986,million shares,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 1; column 1,fact_source_reported,
+Q2FY2026,2025-06-29,2025-09-27,wc_accrued,181.331,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.wc_accrued; -1*Q1FY2026.wc_accrued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,wc_ap,-79.999,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.wc_ap; -1*Q1FY2026.wc_ap,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,wc_ar,-819.953,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.wc_ar; -1*Q1FY2026.wc_ar,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,wc_inventory,135.002,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.wc_inventory; -1*Q1FY2026.wc_inventory,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,wc_other,38.095,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.wc_other; -1*Q1FY2026.wc_other,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2026,2025-06-29,2025-09-27,wc_tax,41.941,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2026.wc_tax; -1*Q1FY2026.wc_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,capex_all,55.355,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,PPE + software,derived_calculation,
+Q2FY2027,2026-06-28,2026-09-26,capex_ppe,39.116,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.capex_ppe; -1*Q1FY2027.capex_ppe,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,capex_software,16.239,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.capex_software; -1*Q1FY2027.capex_software,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cash_all_wc_exleases,-505.328,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+Q2FY2027,2026-06-28,2026-09-26,cash_interest_paid,,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cash_interest_paid; -1*Q1FY2027.cash_interest_paid,missing_required_source,One or more required components not disclosed.
+Q2FY2027,2026-06-28,2026-09-26,cash_taxes_paid,,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cash_taxes_paid; -1*Q1FY2027.cash_taxes_paid,missing_required_source,One or more required components not disclosed.
+Q2FY2027,2026-06-28,2026-09-26,cash_trade_wc,-754.365,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+Q2FY2027,2026-06-28,2026-09-26,cf_bad_debt,5.018,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cf_bad_debt; -1*Q1FY2027.cf_bad_debt,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cf_gain_sale_reversal,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cf_gain_sale_reversal; -1*Q1FY2027.cf_gain_sale_reversal,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cf_impairment,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cf_impairment; -1*Q1FY2027.cf_impairment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cf_lease_cash_change,-97.981,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cf_lease_cash_change; -1*Q1FY2027.cf_lease_cash_change,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cf_other_including_deferred_tax,-3.653,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cf_other_including_deferred_tax; -1*Q1FY2027.cf_other_including_deferred_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cf_pension,-2.355,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cf_pension; -1*Q1FY2027.cf_pension,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cf_pension_asset_reversion,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cf_pension_asset_reversion; -1*Q1FY2027.cf_pension_asset_reversion,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cf_rou_reduction,91.713,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cf_rou_reduction; -1*Q1FY2027.cf_rou_reduction,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cf_tax_receivable_writeoff,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cf_tax_receivable_writeoff; -1*Q1FY2027.cf_tax_receivable_writeoff,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cfo_cont,-151.534,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cfo_cont; -1*Q1FY2027.cfo_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cfo_discontinued,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cfo_discontinued; -1*Q1FY2027.cfo_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cfo_total,-151.534,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.cfo_total; -1*Q1FY2027.cfo_total,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,cogs,1202.454,USD million,USD,Q2FY2027_10Q,table 6; Cost of goods sold; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,da_and_other_asset_writedowns,58.357,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.da_and_other_asset_writedowns; -1*Q1FY2027.da_and_other_asset_writedowns,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,ebit,367.92,USD million,USD,Q2FY2027_10Q,table 6; Operating income; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,eps_cont_basic,0.73,USD/share,USD,Q2FY2027_10Q,table 6; Basic; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,eps_cont_diluted,0.71,USD/share,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,eps_total_diluted,0.71,USD/share,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,fcf_less_sbc,-224.333,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,FCF_reported_cont − SBC,derived_calculation,
+Q2FY2027,2026-06-28,2026-09-26,fcf_reported_cont,-206.889,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,CFO_cont − PPE − software,derived_calculation,
+Q2FY2027,2026-06-28,2026-09-26,gross_profit,1492.678,USD million,USD,Q2FY2027_10Q,table 6; revenue minus COGS,derived_calculation,
+Q2FY2027,2026-06-28,2026-09-26,impairment_operating,0,USD million,USD,Q2FY2027_10Q,table 6; no separate impairment row,fact_source_reported,No impairment in statement; zero for reported bridge.
+Q2FY2027,2026-06-28,2026-09-26,income_tax_expense,61.68,USD million,USD,Q2FY2027_10Q,table 6; Income tax expense; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,interest_expense,31.642,USD million,USD,Q2FY2027_10Q,table 6; Interest expense; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,interest_income,7.949,USD million,USD,Q2FY2027_10Q,table 6; Interest income; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,investing_asset_sale_proceeds,0.114,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.investing_asset_sale_proceeds; -1*Q1FY2027.investing_asset_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,investing_discontinued,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.investing_discontinued; -1*Q1FY2027.investing_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,investing_sale_proceeds,0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.investing_sale_proceeds; -1*Q1FY2027.investing_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,investing_sale_wc_payment,0.0,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.investing_sale_wc_payment; -1*Q1FY2027.investing_sale_wc_payment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,net_income_cont,285.251,USD million,USD,Q2FY2027_10Q,table 6; Net income; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,net_income_discontinued,0,USD million,USD,Q2FY2027_10Q,table 6; no discontinued operation,fact_source_reported,No discontinued operation in period.
+Q2FY2027,2026-06-28,2026-09-26,net_income_total,285.251,USD million,USD,Q2FY2027_10Q,table 6; Net income; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,other_nonoperating,2.704,USD million,USD,Q2FY2027_10Q,"table 6; Other income (expense), net; occurrence 0; column 0",fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,pretax_cont,346.931,USD million,USD,Q2FY2027_10Q,table 6; Income before income taxes; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,revenue,2695.132,USD million,USD,Q2FY2027_10Q,table 6; Revenues; occurrence 0; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,sbc,17.444,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.sbc; -1*Q1FY2027.sbc,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,sga,1124.758,USD million,USD,Q2FY2027_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 0",fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,shares_basic,393.369,million shares,USD,Q2FY2027_10Q,table 6; Basic; occurrence 1; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,shares_diluted,399.68,million shares,USD,Q2FY2027_10Q,table 6; Diluted; occurrence 1; column 0,fact_source_reported,
+Q2FY2027,2026-06-28,2026-09-26,wc_accrued,164.733,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.wc_accrued; -1*Q1FY2027.wc_accrued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,wc_ap,6.527,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.wc_ap; -1*Q1FY2027.wc_ap,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,wc_ar,-680.773,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.wc_ar; -1*Q1FY2027.wc_ar,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,wc_inventory,-80.119,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.wc_inventory; -1*Q1FY2027.wc_inventory,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,wc_other,23.285,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.wc_other; -1*Q1FY2027.wc_other,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q2FY2027,2026-06-28,2026-09-26,wc_tax,61.019,USD million,USD,Q1FY2027_10Q;Q2FY2027_10Q,+1*H1FY2027.wc_tax; -1*Q1FY2027.wc_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,capex_all,43.889,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,PPE + software,derived_calculation,
+Q3FY2026,2025-09-28,2025-12-27,capex_ppe,32.555,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.capex_ppe; -1*H1FY2026.capex_ppe,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,capex_software,11.334,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.capex_software; -1*H1FY2026.capex_software,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cash_all_wc_exleases,666.714,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+Q3FY2026,2025-09-28,2025-12-27,cash_interest_paid,,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cash_interest_paid; -1*H1FY2026.cash_interest_paid,missing_required_source,One or more required components not disclosed.
+Q3FY2026,2025-09-28,2025-12-27,cash_taxes_paid,,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cash_taxes_paid; -1*H1FY2026.cash_taxes_paid,missing_required_source,One or more required components not disclosed.
+Q3FY2026,2025-09-28,2025-12-27,cash_trade_wc,647.43,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+Q3FY2026,2025-09-28,2025-12-27,cf_bad_debt,1.369,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cf_bad_debt; -1*H1FY2026.cf_bad_debt,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cf_gain_sale_reversal,-139.068,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cf_gain_sale_reversal; -1*H1FY2026.cf_gain_sale_reversal,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cf_impairment,30.716,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cf_impairment; -1*H1FY2026.cf_impairment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cf_lease_cash_change,-82.413,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cf_lease_cash_change; -1*H1FY2026.cf_lease_cash_change,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cf_other_including_deferred_tax,7.666,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cf_other_including_deferred_tax; -1*H1FY2026.cf_other_including_deferred_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cf_pension,34.618,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cf_pension; -1*H1FY2026.cf_pension,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cf_pension_asset_reversion,0,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cf_pension_asset_reversion; -1*H1FY2026.cf_pension_asset_reversion,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cf_rou_reduction,92.37,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cf_rou_reduction; -1*H1FY2026.cf_rou_reduction,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cf_tax_receivable_writeoff,0,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cf_tax_receivable_writeoff; -1*H1FY2026.cf_tax_receivable_writeoff,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cfo_cont,1010.436,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cfo_cont; -1*H1FY2026.cfo_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cfo_discontinued,0.0,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cfo_discontinued; -1*H1FY2026.cfo_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cfo_total,1010.436,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.cfo_total; -1*H1FY2026.cfo_total,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,cogs,1247.46,USD million,USD,Q3FY2026_10Q,table 6; Cost of goods sold; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,da_and_other_asset_writedowns,78.882,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.da_and_other_asset_writedowns; -1*H1FY2026.da_and_other_asset_writedowns,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,ebit,289.054,USD million,USD,Q3FY2026_10Q,table 6; Operating income; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,eps_cont_basic,0.77,USD/share,USD,Q3FY2026_10Q,table 6; Continuing operations; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,eps_cont_diluted,0.76,USD/share,USD,Q3FY2026_10Q,table 6; Continuing operations; occurrence 1; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,eps_total_diluted,0.76,USD/share,USD,Q3FY2026_10Q,table 6; Total earnings (loss) per common share - diluted; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,fcf_less_sbc,947.81,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,FCF_reported_cont − SBC,derived_calculation,
+Q3FY2026,2025-09-28,2025-12-27,fcf_reported_cont,966.547,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,CFO_cont − PPE − software,derived_calculation,
+Q3FY2026,2025-09-28,2025-12-27,gross_profit,1628.341,USD million,USD,Q3FY2026_10Q,table 6; revenue minus COGS,derived_calculation,
+Q3FY2026,2025-09-28,2025-12-27,impairment_operating,30.716,USD million,USD,Q3FY2026_10Q,table 6; Impairment of goodwill and intangible assets; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,income_tax_expense,62.014,USD million,USD,Q3FY2026_10Q,table 6; Income tax expense; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,interest_expense,39.747,USD million,USD,Q3FY2026_10Q,table 6; Interest expense; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,interest_income,5.136,USD million,USD,Q3FY2026_10Q,table 6; Interest income; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,investing_asset_sale_proceeds,-0.141,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.investing_asset_sale_proceeds; -1*H1FY2026.investing_asset_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,investing_discontinued,0.0,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.investing_discontinued; -1*H1FY2026.investing_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,investing_sale_proceeds,600.524,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.investing_sale_proceeds; -1*H1FY2026.investing_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,investing_sale_wc_payment,0.0,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.investing_sale_wc_payment; -1*H1FY2026.investing_sale_wc_payment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,net_income_cont,300.845,USD million,USD,Q3FY2026_10Q,table 6; Income from continuing operations; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,net_income_discontinued,0.0,USD million,USD,Q3FY2026_10Q,"table 6; Loss from discontinued operations, net of tax; occurrence 0; column 0",fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,net_income_total,300.845,USD million,USD,Q3FY2026_10Q,table 6; Net income (loss); occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,other_nonoperating,108.416,USD million,USD,Q3FY2026_10Q,"table 6; Other income (expense), net; occurrence 0; column 0",fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,pretax_cont,362.859,USD million,USD,Q3FY2026_10Q,table 6; Income from continuing operations before income taxes; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,revenue,2875.801,USD million,USD,Q3FY2026_10Q,table 6; Revenues; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,sbc,18.737,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.sbc; -1*H1FY2026.sbc,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,sga,1308.571,USD million,USD,Q3FY2026_10Q,"table 6; Selling, general and administrative expenses; occurrence 0; column 0",fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,shares_basic,390.915,million shares,USD,Q3FY2026_10Q,table 6; Basic; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,shares_diluted,397.157,million shares,USD,Q3FY2026_10Q,table 6; Diluted; occurrence 0; column 0,fact_source_reported,
+Q3FY2026,2025-09-28,2025-12-27,wc_accrued,4.959,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.wc_accrued; -1*H1FY2026.wc_accrued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,wc_ap,-46.532,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.wc_ap; -1*H1FY2026.wc_ap,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,wc_ar,481.774,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.wc_ar; -1*H1FY2026.wc_ar,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,wc_inventory,212.188,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.wc_inventory; -1*H1FY2026.wc_inventory,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,wc_other,-10.422,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.wc_other; -1*H1FY2026.wc_other,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q3FY2026,2025-09-28,2025-12-27,wc_tax,24.747,USD million,USD,Q2FY2027_10Q;Q3FY2026_10Q,+1*9MFY2026.wc_tax; -1*H1FY2026.wc_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,capex_all,41.323,USD million,USD,FY2026_10K;Q3FY2026_10Q,PPE + software,derived_calculation,
+Q4FY2026,2025-12-28,2026-03-28,capex_ppe,27.389,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.capex_ppe; -1*9MFY2026.capex_ppe,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,capex_software,13.934,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.capex_software; -1*9MFY2026.capex_software,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cash_all_wc_exleases,-182.509,USD million,USD,FY2026_10K;Q3FY2026_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+Q4FY2026,2025-12-28,2026-03-28,cash_interest_paid,,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cash_interest_paid; -1*9MFY2026.cash_interest_paid,missing_required_source,One or more required components not disclosed.
+Q4FY2026,2025-12-28,2026-03-28,cash_taxes_paid,,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cash_taxes_paid; -1*9MFY2026.cash_taxes_paid,missing_required_source,One or more required components not disclosed.
+Q4FY2026,2025-12-28,2026-03-28,cash_trade_wc,53.406,USD million,USD,FY2026_10K;Q3FY2026_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+Q4FY2026,2025-12-28,2026-03-28,cf_bad_debt,1.659,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cf_bad_debt; -1*9MFY2026.cf_bad_debt,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cf_gain_sale_reversal,11.857,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cf_gain_sale_reversal; -1*9MFY2026.cf_gain_sale_reversal,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cf_impairment,0.0,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cf_impairment; -1*9MFY2026.cf_impairment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cf_lease_cash_change,-87.493,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cf_lease_cash_change; -1*9MFY2026.cf_lease_cash_change,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cf_other_including_deferred_tax,-51.108,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cf_other_including_deferred_tax; -1*9MFY2026.cf_other_including_deferred_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cf_pension,157.724,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cf_pension; -1*9MFY2026.cf_pension,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cf_pension_asset_reversion,125.373,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cf_pension_asset_reversion; -1*9MFY2026.cf_pension_asset_reversion,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cf_rou_reduction,89.732,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cf_rou_reduction; -1*9MFY2026.cf_rou_reduction,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cf_tax_receivable_writeoff,0.0,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cf_tax_receivable_writeoff; -1*9MFY2026.cf_tax_receivable_writeoff,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cfo_cont,33.306,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cfo_cont; -1*9MFY2026.cfo_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cfo_discontinued,0.0,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cfo_discontinued; -1*9MFY2026.cfo_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cfo_total,33.306,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cfo_total; -1*9MFY2026.cfo_total,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,cogs,944.106,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.cogs; -1*9MFY2026.cogs,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,da_and_other_asset_writedowns,67.483,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.da_and_other_asset_writedowns; -1*9MFY2026.da_and_other_asset_writedowns,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,ebit,61.504,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.ebit; -1*9MFY2026.ebit,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,eps_cont_diluted,-0.3,USD/share,USD,FY2026_RELEASE,table 0; Three Months Ended March 2026; diluted loss per share from continuing operations,fact_source_reported,
+Q4FY2026,2025-12-28,2026-03-28,eps_total_diluted,-0.3,USD/share,USD,FY2026_RELEASE,No discontinued results; diluted continuing EPS,fact_source_reported,
+Q4FY2026,2025-12-28,2026-03-28,fcf_less_sbc,-27.887,USD million,USD,FY2026_10K;Q3FY2026_10Q,FCF_reported_cont − SBC,derived_calculation,
+Q4FY2026,2025-12-28,2026-03-28,fcf_reported_cont,-8.017,USD million,USD,FY2026_10K;Q3FY2026_10Q,CFO_cont − PPE − software,derived_calculation,
+Q4FY2026,2025-12-28,2026-03-28,gross_profit,1221.928,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.gross_profit; -1*9MFY2026.gross_profit,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,impairment_operating,0.0,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.impairment_operating; -1*9MFY2026.impairment_operating,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,income_tax_expense,-44.047,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.income_tax_expense; -1*9MFY2026.income_tax_expense,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,interest_expense,33.769,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.interest_expense; -1*9MFY2026.interest_expense,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,interest_income,6.966,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.interest_income; -1*9MFY2026.interest_income,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,investing_asset_sale_proceeds,0.104,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.investing_asset_sale_proceeds; -1*9MFY2026.investing_asset_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,investing_discontinued,0.0,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.investing_discontinued; -1*9MFY2026.investing_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,investing_sale_proceeds,0.0,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.investing_sale_proceeds; -1*9MFY2026.investing_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,investing_sale_wc_payment,0,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.investing_sale_wc_payment; -1*9MFY2026.investing_sale_wc_payment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,net_income_cont,-119.282,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.net_income_cont; -1*9MFY2026.net_income_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,net_income_discontinued,0.0,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.net_income_discontinued; -1*9MFY2026.net_income_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,net_income_total,-119.282,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.net_income_total; -1*9MFY2026.net_income_total,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,other_nonoperating,-198.03,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.other_nonoperating; -1*9MFY2026.other_nonoperating,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,pretax_cont,-163.329,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.pretax_cont; -1*9MFY2026.pretax_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,revenue,2166.034,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.revenue; -1*9MFY2026.revenue,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,sbc,19.87,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.sbc; -1*9MFY2026.sbc,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,sga,1160.424,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.sga; -1*9MFY2026.sga,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,wc_accrued,-161.757,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.wc_accrued; -1*9MFY2026.wc_accrued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,wc_ap,-194.718,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.wc_ap; -1*9MFY2026.wc_ap,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,wc_ar,-28.953,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.wc_ar; -1*9MFY2026.wc_ar,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,wc_inventory,277.077,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.wc_inventory; -1*9MFY2026.wc_inventory,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,wc_other,-11.452,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.wc_other; -1*9MFY2026.wc_other,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+Q4FY2026,2025-12-28,2026-03-28,wc_tax,-62.706,USD million,USD,FY2026_10K;Q3FY2026_10Q,+1*FY2026.wc_tax; -1*9MFY2026.wc_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,capex_all,134.937,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,PPE + software,derived_calculation,
+TTM2025,2024-09-29,2025-09-27,capex_ppe,95.084,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.capex_ppe; +1*H1FY2026.capex_ppe; -1*H1FY2025.capex_ppe,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,capex_software,39.853,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.capex_software; +1*H1FY2026.capex_software; -1*H1FY2025.capex_software,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cash_all_wc_exleases,-94.516,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+TTM2025,2024-09-29,2025-09-27,cash_interest_paid,,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cash_interest_paid; +1*H1FY2026.cash_interest_paid; -1*H1FY2025.cash_interest_paid,missing_required_source,One or more required components not disclosed.
+TTM2025,2024-09-29,2025-09-27,cash_taxes_paid,,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cash_taxes_paid; +1*H1FY2026.cash_taxes_paid; -1*H1FY2025.cash_taxes_paid,missing_required_source,One or more required components not disclosed.
+TTM2025,2024-09-29,2025-09-27,cash_trade_wc,-128.259,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+TTM2025,2024-09-29,2025-09-27,cf_bad_debt,10.463,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cf_bad_debt; +1*H1FY2026.cf_bad_debt; -1*H1FY2025.cf_bad_debt,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cf_gain_sale_reversal,0.0,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cf_gain_sale_reversal; +1*H1FY2026.cf_gain_sale_reversal; -1*H1FY2025.cf_gain_sale_reversal,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cf_impairment,89.242,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cf_impairment; +1*H1FY2026.cf_impairment; -1*H1FY2025.cf_impairment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cf_lease_cash_change,-357.497,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cf_lease_cash_change; +1*H1FY2026.cf_lease_cash_change; -1*H1FY2025.cf_lease_cash_change,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cf_other_including_deferred_tax,-56.047,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cf_other_including_deferred_tax; +1*H1FY2026.cf_other_including_deferred_tax; -1*H1FY2025.cf_other_including_deferred_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cf_pension,-9.749,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cf_pension; +1*H1FY2026.cf_pension; -1*H1FY2025.cf_pension,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cf_pension_asset_reversion,0.0,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cf_pension_asset_reversion; +1*H1FY2026.cf_pension_asset_reversion; -1*H1FY2025.cf_pension_asset_reversion,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cf_rou_reduction,345.419,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cf_rou_reduction; +1*H1FY2026.cf_rou_reduction; -1*H1FY2025.cf_rou_reduction,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cf_tax_receivable_writeoff,0.0,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cf_tax_receivable_writeoff; +1*H1FY2026.cf_tax_receivable_writeoff; -1*H1FY2025.cf_tax_receivable_writeoff,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cfo_cont,367.844,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cfo_cont; +1*H1FY2026.cfo_cont; -1*H1FY2025.cfo_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cfo_discontinued,6.695,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cfo_discontinued; +1*H1FY2026.cfo_discontinued; -1*H1FY2025.cfo_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cfo_total,374.539,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cfo_total; +1*H1FY2026.cfo_total; -1*H1FY2025.cfo_total,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,cogs,4391.979,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.cogs; +1*H1FY2026.cogs; -1*H1FY2025.cogs,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,da_and_other_asset_writedowns,267.384,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.da_and_other_asset_writedowns; +1*H1FY2026.da_and_other_asset_writedowns; -1*H1FY2025.da_and_other_asset_writedowns,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,ebit,378.901,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.ebit; +1*H1FY2026.ebit; -1*H1FY2025.ebit,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,fcf_less_sbc,151.961,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,FCF_reported_cont − SBC,derived_calculation,
+TTM2025,2024-09-29,2025-09-27,fcf_reported_cont,232.907,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,CFO_cont − PPE − software,derived_calculation,
+TTM2025,2024-09-29,2025-09-27,gross_profit,5149.076,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.gross_profit; +1*H1FY2026.gross_profit; -1*H1FY2025.gross_profit,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,impairment_operating,89.242,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.impairment_operating; +1*H1FY2026.impairment_operating; -1*H1FY2025.impairment_operating,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,income_tax_expense,129.548,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.income_tax_expense; +1*H1FY2026.income_tax_expense; -1*H1FY2025.income_tax_expense,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,interest_expense,176.683,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.interest_expense; +1*H1FY2026.interest_expense; -1*H1FY2025.interest_expense,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,interest_income,23.746,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.interest_income; +1*H1FY2026.interest_income; -1*H1FY2025.interest_income,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,investing_asset_sale_proceeds,12.456,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.investing_asset_sale_proceeds; +1*H1FY2026.investing_asset_sale_proceeds; -1*H1FY2025.investing_asset_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,investing_discontinued,0.0,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.investing_discontinued; +1*H1FY2026.investing_discontinued; -1*H1FY2025.investing_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,investing_sale_proceeds,1506.223,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.investing_sale_proceeds; +1*H1FY2026.investing_sale_proceeds; -1*H1FY2025.investing_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,investing_sale_wc_payment,0.0,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.investing_sale_wc_payment; +1*H1FY2026.investing_sale_wc_payment; -1*H1FY2025.investing_sale_wc_payment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,net_income_cont,92.199,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.net_income_cont; +1*H1FY2026.net_income_cont; -1*H1FY2025.net_income_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,net_income_discontinued,-1.85,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.net_income_discontinued; +1*H1FY2026.net_income_discontinued; -1*H1FY2025.net_income_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,net_income_total,90.349,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.net_income_total; +1*H1FY2026.net_income_total; -1*H1FY2025.net_income_total,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,other_nonoperating,-4.217,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.other_nonoperating; +1*H1FY2026.other_nonoperating; -1*H1FY2025.other_nonoperating,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,pretax_cont,221.747,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.pretax_cont; +1*H1FY2026.pretax_cont; -1*H1FY2025.pretax_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,revenue,9541.055,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.revenue; +1*H1FY2026.revenue; -1*H1FY2025.revenue,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,sbc,80.946,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.sbc; +1*H1FY2026.sbc; -1*H1FY2025.sbc,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,sga,4680.933,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.sga; +1*H1FY2026.sga; -1*H1FY2025.sga,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,wc_accrued,-16.913,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.wc_accrued; +1*H1FY2026.wc_accrued; -1*H1FY2025.wc_accrued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,wc_ap,-62.758,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.wc_ap; +1*H1FY2026.wc_ap; -1*H1FY2025.wc_ap,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,wc_ar,-166.603,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.wc_ar; +1*H1FY2026.wc_ar; -1*H1FY2025.wc_ar,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,wc_inventory,101.102,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.wc_inventory; +1*H1FY2026.wc_inventory; -1*H1FY2025.wc_inventory,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,wc_other,-21.418,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.wc_other; +1*H1FY2026.wc_other; -1*H1FY2025.wc_other,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2025,2024-09-29,2025-09-27,wc_tax,72.074,USD million,USD,FY2026_10K;Q2FY2026_10Q;Q2FY2027_10Q,+1*FY2025.wc_tax; +1*H1FY2026.wc_tax; -1*H1FY2025.wc_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,capex_all,193.833,USD million,USD,FY2026_10K;Q2FY2027_10Q,PPE + software,derived_calculation,
+TTM2026,2025-09-28,2026-09-26,capex_ppe,138.64,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.capex_ppe; +1*H1FY2027.capex_ppe; -1*H1FY2026.capex_ppe,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,capex_software,55.193,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.capex_software; +1*H1FY2027.capex_software; -1*H1FY2026.capex_software,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cash_all_wc_exleases,-49.471,USD million,USD,FY2026_10K;Q2FY2027_10Q,cash-flow changes in AR + inventory + AP + tax + accrued + other,derived_calculation,
+TTM2026,2025-09-28,2026-09-26,cash_interest_paid,,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cash_interest_paid; +1*H1FY2027.cash_interest_paid; -1*H1FY2026.cash_interest_paid,missing_required_source,One or more required components not disclosed.
+TTM2026,2025-09-28,2026-09-26,cash_taxes_paid,,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cash_taxes_paid; +1*H1FY2027.cash_taxes_paid; -1*H1FY2026.cash_taxes_paid,missing_required_source,One or more required components not disclosed.
+TTM2026,2025-09-28,2026-09-26,cash_trade_wc,90.917,USD million,USD,FY2026_10K;Q2FY2027_10Q,cash-flow changes in AR + inventory + AP,derived_calculation,
+TTM2026,2025-09-28,2026-09-26,cf_bad_debt,10.176,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cf_bad_debt; +1*H1FY2027.cf_bad_debt; -1*H1FY2026.cf_bad_debt,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cf_gain_sale_reversal,-127.211,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cf_gain_sale_reversal; +1*H1FY2027.cf_gain_sale_reversal; -1*H1FY2026.cf_gain_sale_reversal,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cf_impairment,30.716,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cf_impairment; +1*H1FY2027.cf_impairment; -1*H1FY2026.cf_impairment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cf_lease_cash_change,-359.759,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cf_lease_cash_change; +1*H1FY2027.cf_lease_cash_change; -1*H1FY2026.cf_lease_cash_change,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cf_other_including_deferred_tax,-69.85,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cf_other_including_deferred_tax; +1*H1FY2027.cf_other_including_deferred_tax; -1*H1FY2026.cf_other_including_deferred_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cf_pension,191.312,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cf_pension; +1*H1FY2027.cf_pension; -1*H1FY2026.cf_pension,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cf_pension_asset_reversion,125.373,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cf_pension_asset_reversion; +1*H1FY2027.cf_pension_asset_reversion; -1*H1FY2026.cf_pension_asset_reversion,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cf_rou_reduction,367.373,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cf_rou_reduction; +1*H1FY2027.cf_rou_reduction; -1*H1FY2026.cf_rou_reduction,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cf_tax_receivable_writeoff,0.0,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cf_tax_receivable_writeoff; +1*H1FY2027.cf_tax_receivable_writeoff; -1*H1FY2026.cf_tax_receivable_writeoff,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cfo_cont,829.712,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cfo_cont; +1*H1FY2027.cfo_cont; -1*H1FY2026.cfo_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cfo_discontinued,0.0,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cfo_discontinued; +1*H1FY2027.cfo_discontinued; -1*H1FY2026.cfo_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cfo_total,829.712,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cfo_total; +1*H1FY2027.cfo_total; -1*H1FY2026.cfo_total,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,cogs,4146.355,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.cogs; +1*H1FY2027.cogs; -1*H1FY2026.cogs,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,da_and_other_asset_writedowns,262.508,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.da_and_other_asset_writedowns; +1*H1FY2027.da_and_other_asset_writedowns; -1*H1FY2026.da_and_other_asset_writedowns,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,ebit,635.406,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.ebit; +1*H1FY2027.ebit; -1*H1FY2026.ebit,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,fcf_less_sbc,556.996,USD million,USD,FY2026_10K;Q2FY2027_10Q,FCF_reported_cont − SBC,derived_calculation,
+TTM2026,2025-09-28,2026-09-26,fcf_reported_cont,635.879,USD million,USD,FY2026_10K;Q2FY2027_10Q,CFO_cont − PPE − software,derived_calculation,
+TTM2026,2025-09-28,2026-09-26,gross_profit,5259.991,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.gross_profit; +1*H1FY2027.gross_profit; -1*H1FY2026.gross_profit,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,impairment_operating,30.716,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.impairment_operating; +1*H1FY2027.impairment_operating; -1*H1FY2026.impairment_operating,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,income_tax_expense,69.907,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.income_tax_expense; +1*H1FY2027.income_tax_expense; -1*H1FY2026.income_tax_expense,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,interest_expense,135.576,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.interest_expense; +1*H1FY2027.interest_expense; -1*H1FY2026.interest_expense,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,interest_income,25.858,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.interest_income; +1*H1FY2027.interest_income; -1*H1FY2026.interest_income,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,investing_asset_sale_proceeds,22.591,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.investing_asset_sale_proceeds; +1*H1FY2027.investing_asset_sale_proceeds; -1*H1FY2026.investing_asset_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,investing_discontinued,0.0,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.investing_discontinued; +1*H1FY2027.investing_discontinued; -1*H1FY2026.investing_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,investing_sale_proceeds,600.524,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.investing_sale_proceeds; +1*H1FY2027.investing_sale_proceeds; -1*H1FY2026.investing_sale_proceeds,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,investing_sale_wc_payment,11.867,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.investing_sale_wc_payment; +1*H1FY2027.investing_sale_wc_payment; -1*H1FY2026.investing_sale_wc_payment,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,net_income_cont,369.662,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.net_income_cont; +1*H1FY2027.net_income_cont; -1*H1FY2026.net_income_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,net_income_discontinued,0.0,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.net_income_discontinued; +1*H1FY2027.net_income_discontinued; -1*H1FY2026.net_income_discontinued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,net_income_total,369.662,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.net_income_total; +1*H1FY2027.net_income_total; -1*H1FY2026.net_income_total,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,other_nonoperating,-86.119,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.other_nonoperating; +1*H1FY2027.other_nonoperating; -1*H1FY2026.other_nonoperating,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,pretax_cont,439.569,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.pretax_cont; +1*H1FY2027.pretax_cont; -1*H1FY2026.pretax_cont,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,revenue,9406.346,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.revenue; +1*H1FY2027.revenue; -1*H1FY2026.revenue,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,sbc,78.883,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.sbc; +1*H1FY2027.sbc; -1*H1FY2026.sbc,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,sga,4593.869,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.sga; +1*H1FY2027.sga; -1*H1FY2026.sga,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,wc_accrued,-91.847,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.wc_accrued; +1*H1FY2027.wc_accrued; -1*H1FY2026.wc_accrued,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,wc_ap,233.198,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.wc_ap; +1*H1FY2027.wc_ap; -1*H1FY2026.wc_ap,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,wc_ar,-14.422,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.wc_ar; +1*H1FY2027.wc_ar; -1*H1FY2026.wc_ar,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,wc_inventory,-127.859,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.wc_inventory; +1*H1FY2027.wc_inventory; -1*H1FY2026.wc_inventory,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,wc_other,-26.925,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.wc_other; +1*H1FY2027.wc_other; -1*H1FY2026.wc_other,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.
+TTM2026,2025-09-28,2026-09-26,wc_tax,-21.616,USD million,USD,FY2026_10K;Q2FY2027_10Q,+1*FY2026.wc_tax; +1*H1FY2027.wc_tax; -1*H1FY2026.wc_tax,derived_calculation,Mechanical cumulative-period difference or trailing 52-week bridge; not seasonally annualized.

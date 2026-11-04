@@ -1,0 +1,591 @@
+{
+  "as_of": "2026-11-04",
+  "units": "USD millions except percentages and share counts",
+  "research_status": "Operating-quality support only. Retained tariff timing and Dickies cash carve-out still unresolved; not a completed DCF or an approval to buy.",
+  "sources": {
+    "O1": {
+      "title": "Q2 FY2027 earnings release",
+      "date": "2026-10-28",
+      "period_end": "2026-09-26",
+      "url": "https://www.vfc.com/investors/news-events-presentations/press-releases/detail/1872/vf-corporation-exceeds-guidance-in-second-quarter-fiscal",
+      "local": "q2_2027_release.html",
+      "sha256": "e9992472b1a8f509cc9671bd729c02fcdeaf3e1b58dbd8e13489efdb7fb360aa",
+      "raw_file": "operating/raw/q2_2027_release.html"
+    },
+    "O2": {
+      "title": "Q2 FY2027 10-Q",
+      "date": "2026-10-28",
+      "period_end": "2026-09-26",
+      "url": "https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-26-000135/vfc-20260926.htm",
+      "local": "q2_2027_10q.html",
+      "sha256": "4a3edc60117814a9012ed85c700f3d276187c9bc809660094c83ddddab5ad7f0",
+      "raw_file": "operating/raw/q2_2027_10q.html"
+    },
+    "O3": {
+      "title": "Issuer-hosted corrected Q2 FY2027 call transcript",
+      "date": "2026-10-28",
+      "url": "https://d1io3yog0oux5.cloudfront.net/_4eb14af10f07a7459bdc565048bcbe14/vfc/db/409/138954/transcript/CORRECTED_TRANSCRIPT_VF_Corp.%28VFC-US%29_Q2_2027_Earnings_Call_28-October-2026_8_00_AM_ET.pdf",
+      "local": "q2_2027_transcript.pdf",
+      "sha256": "1e5fb4987300c13985d214bd5846ed4f443588d15775900e086bfb8703bcff1d",
+      "raw_file": "operating/raw/q2_2027_transcript.pdf"
+    },
+    "O4": {
+      "title": "FY2026 10-K",
+      "date": "2026-05-20",
+      "period_end": "2026-03-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/103379/000010337926000030/vfc-20260328.htm",
+      "local": "fy26_10k.html",
+      "sha256": "9092d435616318cf651fd4f4bb16c04c182db3608d2ead0a4f215933c0f10c0d",
+      "raw_file": "operating/raw/fy26_10k.html"
+    },
+    "O5": {
+      "title": "Q2 FY2026 10-Q",
+      "date": "2025-10-28",
+      "period_end": "2025-09-27",
+      "url": "https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-25-000060/vfc-20250927.htm",
+      "local": "q226_10q.html",
+      "sha256": "2563d54c71cdc82f0d32458bc7bca130ca5f52f96c625e0a44d341da95496e79",
+      "raw_file": "operating/raw/q226_10q.html"
+    },
+    "O6": {
+      "title": "Q1 FY2027 10-Q",
+      "date": "2026-07-29",
+      "period_end": "2026-06-27",
+      "url": "https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-26-000114/vfc-20260627.htm",
+      "local": "q127_10q.html",
+      "sha256": "e53ce0fa304d0a695d436ba1a93f867b6b9a13b1985f69fb8e8f62314d769f0b",
+      "raw_file": "operating/raw/q127_10q.html"
+    },
+    "O7": {
+      "title": "IR calendar",
+      "date_checked": "2026-11-04",
+      "url": "https://www.vfc.com/investors/news-events-presentations/ir-calendar",
+      "local": "ir_calendar.html",
+      "sha256": "cf3403e2c50035bba58f80ee73af2cd32f5bd5d27d002b25a97e9865692699a5",
+      "raw_file": "operating/raw/ir_calendar.html"
+    },
+    "O8": {
+      "title": "Dickies retained revenue/adjusted earnings recast",
+      "date": "2025-11-12",
+      "url": "https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-25-000066/vfcex992supplementalfininf.htm",
+      "local": "dickies_recast.html",
+      "sha256": "0cf0909f65cbab32e6a8a60d7cfe5acb3a0c507ae3bad41ec04396389686eca9",
+      "raw_file": "operating/raw/dickies_recast.html"
+    },
+    "O9": {
+      "title": "FY2025 issuer earnings presentation, initial savings achieved",
+      "date": "2025-05-21",
+      "url": "https://www.vfc.com/investors/financial-information/sec-filings/content/0000103379-25-000021/q425earningsex991.htm",
+      "local": "fy25_earnings_presentation.html",
+      "raw_file": "operating/raw/fy25_earnings_presentation.html",
+      "sha256": "713ab6974590b2e95c9068994519063471c94d796a7144b0f86e7c20cee72d38"
+    }
+  },
+  "period_and_basis": {
+    "fiscal_year_end": "2027-04-03",
+    "q2_end": "2026-09-26",
+    "q2_weeks": 13,
+    "h1_weeks": 26,
+    "fy27_weeks": 53,
+    "extra_week": "Q4",
+    "constant_currency_definition": "Removes currency translation, not transaction FX/hedging effects.",
+    "retained_basis": "Dickies removed from prior comparable; Supreme already discontinued. Timberland retained.",
+    "source": [
+      "O1",
+      "O2"
+    ]
+  },
+  "q2_revenue": {
+    "reported": 2695.132,
+    "prior_reported": 2802.706,
+    "change_reported_pct": -4,
+    "change_cc_pct": -4,
+    "retained_change_reported_pct": 1,
+    "retained_change_cc_pct": 1,
+    "organic_increment_rounded": 29.5,
+    "dickies_divestiture_rounded": -140.0,
+    "fx_increment_rounded": 2.9,
+    "source": [
+      "O1",
+      "O2"
+    ]
+  },
+  "h1_revenue": {
+    "reported": 4364.511,
+    "prior_reported": 4563.372,
+    "retained_change_reported_pct": 1,
+    "retained_change_cc_pct": 1,
+    "organic_increment_rounded": 26.5,
+    "dickies_divestiture_rounded": -253.5,
+    "fx_increment_rounded": 28.1,
+    "organic_pct_on_rounded_retained_base_derived": 0.6148634539084434,
+    "warning": "Issuer rounds growth to whole percentages; exact retained organic growth is around 0.6%, not broad-based acceleration.",
+    "source": [
+      "O1",
+      "O2"
+    ]
+  },
+  "brands_q2": {
+    "The North Face": {
+      "sales": 1207.3,
+      "prior_sales": 1157.1,
+      "reported_growth_pct": 4,
+      "cc_growth_pct": 4,
+      "regional_sales": {
+        "Americas": 513.6,
+        "Europe": 448.7,
+        "APAC": 245.0
+      },
+      "regional_reported_growth_pct": {
+        "Americas": 8,
+        "Europe": 2,
+        "APAC": 1
+      },
+      "regional_cc_growth_pct_call": {
+        "Americas": 8,
+        "EMEA": 3,
+        "APAC": -4
+      },
+      "call_claims": [
+        "Earlier wholesale demand pulled some Q3 sales into Q2; remainder of upside partly Americas DTC.",
+        "Footwear double-digit growth globally and each region."
+      ],
+      "source": [
+        "O1",
+        "O2",
+        "O3 pp5,7"
+      ]
+    },
+    "Vans": {
+      "sales": 547.6,
+      "prior_sales": 606.9,
+      "reported_growth_pct_exact_call": -9.8,
+      "reported_growth_pct_rounded": -10,
+      "cc_growth_pct_rounded": -10,
+      "regional_sales": {
+        "Americas": 346.1,
+        "Europe": 163.4,
+        "APAC": 38.1
+      },
+      "regional_reported_growth_pct": {
+        "Americas": -6,
+        "Europe": -15,
+        "APAC": -18
+      },
+      "regional_fx_pct": {
+        "Americas": 1,
+        "Europe": -1,
+        "APAC": 0
+      },
+      "call_claims": [
+        "Global DTC positive for first time in nearly five years; exact growth rate not disclosed.",
+        "Wholesale weaker than Q1; residual destocking ongoing.",
+        "Spring/Summer 2027 orders expected to improve Q4; mostly existing partners; DTC-to-wholesale product cycle lag six to nine months."
+      ],
+      "source": [
+        "O1",
+        "O2",
+        "O3 pp4-5,10-12"
+      ]
+    },
+    "Timberland": {
+      "sales": 525.9,
+      "prior_sales": 506.4,
+      "reported_growth_pct": 4,
+      "cc_growth_pct": 4,
+      "regional_sales": {
+        "Americas": 253.5,
+        "Europe": 226.5,
+        "APAC": 45.9
+      },
+      "regional_reported_growth_pct": {
+        "Americas": 15,
+        "Europe": -1,
+        "APAC": -21
+      },
+      "regional_cc_growth_pct_call": {
+        "Americas": 15,
+        "EMEA": 1,
+        "APAC_approx": -20
+      },
+      "call_claims": [
+        "APAC down about $12m; work with regional partner continues.",
+        "Five new Americas full-price stores brought total to 19; product growth broadening beyond six-inch boots."
+      ],
+      "source": [
+        "O1",
+        "O2",
+        "O3 pp6-7"
+      ]
+    },
+    "Altra": {
+      "growth_pct_call": ">40",
+      "all_regions_and_channels_growth": true,
+      "dollar_sales_q2": null,
+      "source": [
+        "O3 p6"
+      ]
+    },
+    "other_brands_release_group": {
+      "sales": 414.3,
+      "prior_sales": 532.3,
+      "retained_growth_pct": 6,
+      "warning": "Not identical to 10-Q All Other category: release Other Brands also includes smaller Active brands."
+    }
+  },
+  "channels_geographies_q2": {
+    "channels": {
+      "DTC": {
+        "sales": 915.2,
+        "reported_pct": 1,
+        "retained_cc_pct": 3
+      },
+      "Wholesale_including_royalty": {
+        "sales": 1779.9,
+        "reported_pct": -6,
+        "retained_cc_pct": 0
+      }
+    },
+    "regions": {
+      "Americas": {
+        "sales": 1322.4,
+        "reported_pct": -2,
+        "retained_reported_pct": 6,
+        "retained_cc_pct": 5
+      },
+      "EMEA": {
+        "sales": 1011.8,
+        "reported_pct": -6,
+        "retained_reported_pct": -2,
+        "retained_cc_pct": -1
+      },
+      "APAC": {
+        "sales": 361.0,
+        "reported_pct": -7,
+        "retained_reported_pct": -4,
+        "retained_cc_pct": -7
+      }
+    },
+    "retail_stores": 1095,
+    "prior_retail_stores": 1105,
+    "source": [
+      "O1",
+      "O2"
+    ]
+  },
+  "segment_quality": {
+    "Outdoor": {
+      "q2_sales": 1733.2,
+      "q2_profit": 362.2,
+      "q2_profit_growth_pct": 20.4,
+      "q2_margin_pct": 20.9,
+      "prior_margin_pct": 18.1,
+      "DTC_reported_growth_pct": 2,
+      "wholesale_reported_growth_pct": 5
+    },
+    "Active": {
+      "q2_sales": 700.3,
+      "q2_profit": 50.3,
+      "q2_profit_growth_pct": -23.5,
+      "q2_margin_pct": 7.2,
+      "prior_margin_pct": 8.6,
+      "DTC_reported_growth_pct": 3,
+      "wholesale_reported_growth_pct": -18
+    },
+    "warning": "Segment profit includes other income/expense and excludes corporate allocations; not consolidated EBIT and not brand profit.",
+    "source": [
+      "O2"
+    ]
+  },
+  "profit_drivers": {
+    "q2_gaap_ebit": 367.92,
+    "q2_adjusted_ebit": 363.716,
+    "q2_adjusted_gm_pct": 55.4,
+    "q2_retained_adjusted_gm_change_bps": 290,
+    "call_structural_component_bps": 180,
+    "call_fx_component_bps": 110,
+    "q2_oi_beat_approx": 49,
+    "q2_sga_shift_to_q3_approx": 25,
+    "q2_adjusted_sga_growth_pct_call": 4,
+    "q2_interest_net": 23.693,
+    "q2_tax_rate_pct_approx": 18,
+    "h1_tax_rate_pct": 21.6,
+    "h1_tax_rate_ex_discrete_pct": 23.5,
+    "h1_discrete_tax_benefit": 4.4,
+    "volume_price_mix": "Tactical prices, lower product costs, channel mix and planning cited; no quantified company-wide volume/ASP/mix bridge found. Do not infer volume growth from sales.",
+    "source": [
+      "O1",
+      "O2",
+      "O3 pp7-9"
+    ]
+  },
+  "working_capital": {
+    "date": "2026-09-26",
+    "inventory": 1984.403,
+    "prior_september_inventory": 1855.895,
+    "inventory_growth_pct": 7,
+    "march_inventory": 1371.274,
+    "accounts_receivable": 1885.729,
+    "prior_september_receivable": 1881.598,
+    "accounts_payable": 1284.221,
+    "prior_september_payable": 1061.041,
+    "vendor_tariff_reimbursement_payable": 37.6,
+    "supplier_finance_eligible_payables": 848.0,
+    "prior_september_supplier_finance_eligible": 696.6,
+    "march_supplier_finance_eligible": 466.0,
+    "warning": "SCF eligible balances are not the same as confirmed supplier-factoring usage; retained 2025 inventories exclude Dickies held-for-sale inventories separately reported ($140.842m). Inventory build exceeds retained sales growth; management supports H2 demand and says inventory will be up FY27.",
+    "source": [
+      "O2",
+      "O3 p8"
+    ]
+  },
+  "reinvent_and_claims": {
+    "initial_gross_savings_achieved_FY25": 300,
+    "h1_gaap_reinvent_net_benefit": 15.68,
+    "q2_gaap_reinvent_net_benefit": 4.204,
+    "h1_distribution_center_gain": 17.6,
+    "h1_distribution_center_impairment": 6.397,
+    "h1_other_restructuring_cost": 8.863,
+    "q2_other_restructuring_cost": 6.455,
+    "h1_total_restructuring_cash_and_settlements": 12.158,
+    "h1_reinvent_cash_payments": 2.4,
+    "restructuring_accrual": 24.607,
+    "due_within_12m": 22.9,
+    "other_restructuring_adjustment_treatment": "Not excluded by the release definition of adjusted measures; keep as cost, do not add back or double deduct.",
+    "consulting": {
+      "total_contract_max": 146,
+      "fixed_fees": 71,
+      "contingent_max": 75,
+      "remaining_contingent_fair_value_sep26": 2.1,
+      "q2_fair_value_expense_reversal": 4.2,
+      "h1_fair_value_expense_reversal": 4.5,
+      "prior_h1_contingent_cash_paid": 20,
+      "service_period_end": "Q3 FY2026",
+      "measurement_end": "2027-06-30",
+      "accounting": "Cash-settled nonemployee liability award, remeasured quarterly; future fair-value changes immediately in SG&A. Remaining booked fair value is not a maximum payout estimate. Unknown future stock price prevents exact final settlement."
+    },
+    "source": [
+      "O1",
+      "O2 Notes16,18",
+      "O9"
+    ]
+  },
+  "ieepa_tariff_bridge": {
+    "fy26_total_paid_refund_receivable": 149.7,
+    "fy26_sold_inventory_cogs_reversal": 93.8,
+    "fy26_inventory_reserve": 55.9,
+    "q1_fy27_reserve_release": 37.3,
+    "q2_fy27_reserve_release": 18.6,
+    "q1_refunds_received_approx": 49,
+    "q1_receivable_end": 100.8,
+    "q1_interest_received_approx": 1,
+    "q2_interest_income": 4.1,
+    "h1_interest_income": 5.6,
+    "sep_refunds_status": "Substantially all; exact final aggregate receipt not provided.",
+    "vendor_partner_reimbursement_payable": 37.6,
+    "call_fy27_net_cash_refund_approx": 110,
+    "fy27_gm_net_effect": 0,
+    "unresolved": [
+      "Retained-business H1 FY2026 tariff-in-COGS x",
+      "H1 FY2026 tariff cash paid p",
+      "Exact final cash refund/reimbursement payment timing and Dickies allocation",
+      "Original vendor concessions and reimbursement cash C/V split across periods"
+    ],
+    "interpretation": "Reserve release offsets matched tariffs in inventory, not an independent FY27 windfall. Q4 FY26 catch-up reverses FY26 expenses and distorts rolling growth. Cash refunds and tariff interest non-recurring; remove symmetrically with prior payments.",
+    "forward_h2_fy27_unmitigated_tariff_call_range": [
+      70,
+      80
+    ],
+    "forward_range_warning": "CFO uses unmitigated tariff wording. Do not reinterpret as a fully audited net-to-EBIT bridge.",
+    "source": [
+      "O2",
+      "O3 pp8,15",
+      "O5",
+      "O6"
+    ],
+    "net_cash_110_scope": "Full-year guidance bridge, not proof of precisely realized H1 net cash; $37.6m vendor payable remains at Sep26.",
+    "cash_neutral_identity": "Reported FCF + gross tariff payments P - gross refunds R - original vendor concession cash benefits C + subsequent vendor/partner reimbursements V; additionally adjust pension and divestiture perimeter.",
+    "cash_neutral_warning": "P-only sensitivity is incomplete unless C/V assumptions are explicit; do not certify normalized cash growth from approximate110 alone."
+  },
+  "guidance_oct28": {
+    "FY27": {
+      "revenue_cc_retained_min_growth_pct": 2,
+      "adjusted_om_pct_approx": 8,
+      "normalized_FCF_min": 405,
+      "actual_FCF_min": 515,
+      "leverage_min": 2.6,
+      "leverage_max": 2.9,
+      "TNF_growth": "mid-single digits",
+      "Timberland_growth": "mid-single digits",
+      "Vans_growth": "down mid-single digits",
+      "Vans_H2_growth_min_pct": -2,
+      "effective_tax_rate": "high 20s, down from original low 30s",
+      "includes_53rd_week": true
+    },
+    "Q3": {
+      "revenue_min_growth_pct": 3,
+      "adjusted_oi_min": 390,
+      "TNF_growth_min_pct": 4,
+      "Timberland_growth_min_pct": 4,
+      "Vans_growth_min_pct": -4,
+      "sga_shift_included": 25
+    },
+    "medium_term": {
+      "FY28_leverage_max": 2.5,
+      "FY29_full_year_operating_margin_min_pct": 10,
+      "tax_rate_aspiration": "CEO expects accounting effective tax rate to decline steadily from mid30s to low20s over next few years; not a formal unlevered cash tax schedule.",
+      "margin_target_not_ceiling": "CEO states they are not stopping at10% operating margin.",
+      "source": "O3 corrected issuer-hosted transcript page3, independently confirmed in review."
+    },
+    "debt_plan": "Prepay April2027 $500m maturity in March2027; intention, not completed.",
+    "extra_week_call_estimate": "In Vans Q&A CEO estimated ~50bps full-year and 200-300bps Q4 impact; scope not separately quantified in a reconciliation.",
+    "source": [
+      "O1",
+      "O3 pp8-9,15"
+    ]
+  },
+  "capital_claims": {
+    "balance_date": "2026-09-26",
+    "cash_unrestricted": 442.951,
+    "financial_debt_carrying": 3538.589,
+    "net_financial_debt_carrying": 3095.638,
+    "short_term_debt": 34.223,
+    "current_long_term_debt": 499.561,
+    "long_term_debt": 3004.805,
+    "operating_lease_liabilities": 1462.225,
+    "net_debt_including_operating_leases": 4557.863,
+    "long_term_debt_fair_value_including_current": 3241.7,
+    "lease_h1_operating_cost": 211.88,
+    "lease_h1_total_cost": 282.122,
+    "lease_h1_cash_paid": 225.3,
+    "preferred_shares_outstanding": 0,
+    "NCI": "No separate NCI reported in current balance sheet.",
+    "convertibles": "None disclosed in reviewed latest 10-Q and annual debt note; debt consists senior notes and bank borrowings.",
+    "shares_oct24": 393639062,
+    "shares_sep26": 393568481,
+    "q2_diluted_weighted_average_shares": 399680000,
+    "h1_diluted_weighted_average_shares": 400047000,
+    "h1_SBC": 40.276,
+    "prior_h1_SBC": 38.347,
+    "h1_options_granted": 1748898,
+    "h1_option_strike": 16.7,
+    "h1_nonperformance_RSU_grants_executive": 1262880,
+    "h1_nonperformance_RSU_grants_employee": 2452856,
+    "h1_nonemployee_director_units_granted": 131747,
+    "ceo_FY26_performance_award_shares_max": 516605,
+    "ceo_award_share_price_condition": 32,
+    "ceo_award_operating_condition": "FY2028 exit-run-rate adjusted OM target, not independently quantified here; zero-or-one share per unit.",
+    "ABL_availability": 1470,
+    "ABL_outstanding": 25,
+    "ABL_maturity": "2030-08-26",
+    "ABL_covenant_status": "Compliant; availability threshold means fixed-charge coverage covenant not applicable at quarter end.",
+    "ratings_sep26": {
+      "SP": "BB positive",
+      "Moodys": "Ba2 stable"
+    },
+    "next_maturity_principal": 500,
+    "next_maturity_date": "2027-04",
+    "warning": "Carrying debt is not a face-value bridge. Treat leases consistently with cash flow; no double counting. Weighted average diluted shares not identical to current fully diluted share count.",
+    "source": [
+      "O1",
+      "O2",
+      "O4 Note15"
+    ]
+  },
+  "pensions_tax_legal": {
+    "pension_net_underfunding_mar28": 77.265,
+    "pension_underfunded_US_nonqualified": 45.6,
+    "pension_underfunded_nonUS_net": 31.7,
+    "pension_h1_contributions": 3.2,
+    "pension_remaining_FY27_planned_contributions": 11.8,
+    "pension_USqualified_termination": "Completed February2026",
+    "pension_fy26_cash_reversion": 125.4,
+    "pension_fy26_excise_tax": 25.1,
+    "pension_fy26_replacement_plan_transfer": 83.5,
+    "pension_q2_premium_refund": 3.089,
+    "pension_q2_refund_use": "Transferred to qualified replacement plan for future incremental401k contributions; not unrestricted excess cash.",
+    "gross_unrecognized_tax_benefits_plus_interest_mar28": 366.971,
+    "associated_deferred_tax_benefits_mar28": 98.25,
+    "net_unrecognized_tax_benefits_mar28": 268.721,
+    "timberland_tax_cash_paid_2022": 875.7,
+    "timberland_tax_receivable_writedown_FY24": 690.0,
+    "timberland_tax_warning": "Already paid October19,2022; do not treat old $875.7m as a new future liability. Final adjustments remain possible.",
+    "securities_litigation": "Consolidated Colorado securities class action; amended February23,2026; motion to dismiss April24; plaintiffs opposition June30; VF reply August14; outcome and damages uncertain, no dollar estimate.",
+    "source": [
+      "O2 Notes10,13,19",
+      "O4 Notes17,20"
+    ]
+  },
+  "divestitures": {
+    "Dickies": {
+      "buyer": "Bluestar Alliance",
+      "close": "2025-11-12",
+      "gross_announced_price": 600,
+      "net_cash_sold_proceeds": 600.5,
+      "final_WC_paid_Q1FY27": 11.867,
+      "final_pre_tax_gain": 127.2,
+      "gain_line": "Other income, not operating EBIT",
+      "taxes_separate_deal_total": "Not disclosed separately in sources reviewed",
+      "perimeter": "Remains historical GAAP continuing operations; ex-Dickies nonGAAP recast removes P&L only.",
+      "services_remaining": "Treasury no later than Q3FY27; limited digital technology no later than Q3FY28",
+      "cash_carveout": "No issuer standalone CFO, capex, software or WC flow series located."
+    },
+    "Supreme": {
+      "buyer": "EssilorLuxottica",
+      "close": "2024-10-01",
+      "base_price": 1500,
+      "proceeds_net_cash_sold": 1506,
+      "after_tax_loss_on_sale": 126.6,
+      "debt_repayment_DDTL": 1000,
+      "debt_repayment_commercial_paper": 450,
+      "perimeter": "Discontinued operations including cash flows, all presented historical years recast; some shared corporate/segment overhead retained in continuing operations."
+    },
+    "source": [
+      "O2 Note4",
+      "O4 Note3"
+    ]
+  },
+  "calendar": {
+    "next_earnings_date": null,
+    "status": "No upcoming events listed on issuer IR calendar as of 2026-11-04; do not fabricate January date.",
+    "last_earnings": "2026-10-28",
+    "source": [
+      "O7"
+    ]
+  },
+  "peer_scope": {
+    "parent_selected": [
+      "COLM",
+      "PVH",
+      "LEVI"
+    ],
+    "direct_peer_notes": [
+      {
+        "ticker": "COLM",
+        "reason": "Outdoor apparel/footwear and wholesale/DTC; closest TNF comparison, but different brand mix, lower leverage.",
+        "latest_period": "Q3 ended2026-09-30",
+        "release_date": "2026-10-29",
+        "primary_url": "https://investor.columbia.com/news-events",
+        "normalization_caution": "FY26 guidance includes ~180bp IEEPA refund gross-margin benefit net of factory accommodations."
+      },
+      {
+        "ticker": "DECK",
+        "reason": "Alternative listed premium footwear peer for Vans/Altra channel economics; higher brand growth/profitability not a mechanical VFC multiple.",
+        "latest_period": "Q2FY27 ended2026-09-30",
+        "release_date": "2026-10-22",
+        "primary_url": "https://ir.deckers.com/news-events/press-releases/detail/666/deckers-brands-reports-second-quarter-fiscal-year-2027-financial-results",
+        "normalization_caution": "Q2 includes $46m tariff net refunds; FY27 guidance includes $87.9m refunds received throughOct8."
+      }
+    ],
+    "note": "No peer financial model attempted because parent owns selected comps."
+  },
+  "model_ready_gaps": [
+    "Retained historical tariff expense/cash split remains missing.",
+    "Dickies cash-flow carveout and exact stranded-cost allocation remain missing.",
+    "No total unit-price-mix bridge; organic sales not equal volume.",
+    "Latest net pension remeasurement unavailable after March2026.",
+    "Deal-specific Dickies cash tax not separately disclosed.",
+    "No official next earnings date.",
+    "Q2 presentation not listed; current IR latest deck Q1FY27 returned403. Release, 10-Q and transcript sufficient for latest reported/guidance work."
+  ]
+}
