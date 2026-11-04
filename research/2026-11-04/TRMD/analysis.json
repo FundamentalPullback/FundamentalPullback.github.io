@@ -1,0 +1,40 @@
+{
+  "valuation": null,
+  "bear": null,
+  "base": null,
+  "bull": null,
+  "owner_fcf": null,
+  "equity_bridge": null,
+  "approved_entry": false,
+  "cash_ex_restricted": 446.2,
+  "debt_principal_plus_leases": 1150.3,
+  "historical_net_debt_ex_restricted": 704.0999999999999,
+  "committed_vessels": 608.8,
+  "committed_other_capex": 6.5,
+  "issuer_nav_per_rounded_share_recalculated": 39.554040895813046,
+  "nav_dividend_only_mechanical": 38.20350535540409,
+  "nav_sensitivity_not_fair_value": [
+    {
+      "broker_fleet_haircut": 0,
+      "after_declared_dividend_nav_proxy": 38.20350535540409,
+      "newbuild_jv_and_other_postquarter_changes_included": false
+    },
+    {
+      "broker_fleet_haircut": 0.1,
+      "after_declared_dividend_nav_proxy": 33.98490749756572,
+      "newbuild_jv_and_other_postquarter_changes_included": false
+    },
+    {
+      "broker_fleet_haircut": 0.2,
+      "after_declared_dividend_nav_proxy": 29.76630963972736,
+      "newbuild_jv_and_other_postquarter_changes_included": false
+    }
+  ],
+  "limits": [
+    "Issuer NAV already deducts 615.3 committed capex; no second deduction.",
+    "NAV uses gross borrowing convention 1150.3 and total cash including restricted; mechanical sensitivity retains issuer definition, not distributable capital.",
+    "Only existing fleet broker value receives haircut. Newbuild marks, tax, transaction costs, charter commitments and JV funding not separately modeled.",
+    "No DCF: normalized tanker rates, fleet replacement capex, funding and cost of capital not certified.",
+    "CFO includes interest paid and is not unlevered FCFF."
+  ]
+}
