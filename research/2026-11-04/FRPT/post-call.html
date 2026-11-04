@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FRPT · Post-call check · 4 November 2026</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/FRPT">← FRPT profile</a><a href="../stocks/FRPT.html">Full dossier and original analysis</a></nav><div class="status-line"><span class="tag">Stage 3 complete · post-call check</span><span class="tag deferred">Wait for price or stronger evidence</span><span class="tag">No entry approval</span></div><h2 id="a189-actualización-posterior-a-la-conferencia-4-noviembre-2026-1504-utc">A189 · Actualización posterior a la conferencia · 4 noviembre 2026, 15:04 UTC</h2>
+<p><strong>La revisión de la llamada está terminada con las fuentes públicas accesibles. Valores y veredicto sin cambios: central 44,38 USD; adverso 10,92; favorable 84,79. Sin aprobación Stage 3.5 ni entrada.</strong></p>
+<p>Se verificaron los documentos preparados oficiales y el Q&amp;A en una <strong>transcripción automática de Benzinga/Webull, no certificada por el emisor</strong>. No se afirma haber escuchado el audio oficial, que no fue accesible. Los 150 M$ de capex citados son una referencia cualitativa, no guía formal FY2027. Las pruebas propias se reproducen y no sustituyen el caso central.</p>
+<p><strong>Post-call review completed using accessible public sources. Valuation and disposition unchanged: $44.38 central, $10.92 adverse, $84.79 favorable; no Stage 3.5 or entry approval.</strong> Q&amp;A is attributed to the automated Benzinga/Webull transcript, not a certified issuer transcript. The official audio was not accessed. The $150m capex reference is not formal FY2027 guidance. The November 3 $69.60 close remains a historical reference, not an intraday quote.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/post-call.html">Complemento completo / Full post-call supplement</a> · <a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/post_call/call_sensitivities.json">Cálculos / Reproducible sensitivities</a>.</p>
+<p><strong>Alcance / Scope:</strong> actualización de la web; sincronización de comentarios con el diario en Sheets pendiente. Se conservan valores, veredicto y falta de autorización de entrada. / Website commentary update; journal-spreadsheet commentary sync pending. Values, disposition and absence of entry authorization are unchanged.</p>
+<h1 id="frpt-comprobación-posterior-a-la-conferencia-q3-2026">FRPT — comprobación posterior a la conferencia Q3 2026</h1>
+<p><strong>Corte: 4 de noviembre de 2026, 15:04 UTC.</strong> Complemento de A189, no reemplazo del modelo ni nueva autorización de entrada. Precio de referencia conservado: cierre regular del 3 de noviembre, $69.60; no se presenta como cotización intradía.</p>
+<h2 id="resultado">Resultado</h2>
+<p>La comprobación posterior a la conferencia está terminada con la evidencia pública accesible. <strong>No encontramos una corrección material que justifique cambiar los valores A189: adverso $10.92, central $44.38 y favorable $84.79.</strong> La lectura nueva refuerza que una caída puntual de capex no representa inversión mínima permanente. Añadimos sensibilidades explícitas y conservamos la distinción entre negocio atractivo, precio razonable bajo hipótesis más exigentes y señal de entrada todavía no validada.</p>
+<h2 id="qué-se-pudo-verificar">Qué se pudo verificar</h2>
+<p>Los <a href="https://investors.freshpet.com/static-files/c7c74ec5-1ed3-410b-8411-deca2f2f769e">comentarios preparados oficiales</a> y la <a href="https://investors.freshpet.com/static-files/f82d5c97-c5cc-4996-bcf7-5114ee716771">presentación oficial</a> siguen idénticos a los incorporados al informe. Sus SHA-256 son, respectivamente, 4a2c403d8f970da788d89a9af316aa39af760994d68e40ff09e91d72f64d1232 y e6ea4bbc46a10761874c223bbd2a44676af3437f39be4098e8ca120a24d5c52c. La guía oficial continúa: ventas FY26 +12–13%, EBITDA ajustado $215–220m, capex $125–150m; objetivo EBITDA ajustado FY27 20–22%, con cautela hacia la mitad inferior sin alivio de inflación.</p>
+<p>Se leyó la transcripción completa de la llamada, incluido el turno de preguntas y cierre, publicada por <strong>Benzinga y distribuida por <a href="https://www.webull.com.au/news-detail/15865906545714176">Webull</a></strong>. Es una transcripción automática de terceros, no una transcripción certificada por el emisor. Sus cifras preparadas coinciden con las fuentes oficiales. El enlace oficial de audio devuelve un error del proveedor tanto en navegador normal como en lectura directa; no se eludió esa restricción ni se afirma haber escuchado el audio. El índice SEC consultado todavía no mostraba el 10-Q de este trimestre.</p>
+<h3 id="aclaraciones-del-qa-atribuidas-a-dirección">Aclaraciones del Q&amp;A, atribuidas a dirección</h3>
+<ul>
+<li>Capex de aproximadamente $150m sigue siendo una referencia razonable al crecimiento actual mientras se revisa la capacidad disponible; no constituye guía formal FY27.</li>
+<li>El cliente con menores compras relativas al consumo opera con mayor rotación. No se prometió reposición inmediata de inventario en Q4.</li>
+<li>La mejora tecnológica de unos 100 puntos básicos en 2027 es total frente al punto de partida, no 100 adicionales a los 35 previstos para 2026.</li>
+<li>Aproximadamente dos tercios del incremento logístico corresponden a transporte y un tercio a combustible. Los aumentos selectivos de precio buscan preservar volumen.</li>
+<li>La empresa afirma no observar deterioro de ventas o retención donde entraron nuevos competidores. Es una observación de dirección, no verificación independiente.</li>
+<li>El negocio directo representa menos del 2% de ventas; no debe confundirse con todo el comercio electrónico.</li>
+</ul>
+<p>Estas aclaraciones proceden de la transcripción enlazada. Las limitaciones de atribución y posible error automático siguen vigentes.</p>
+<h2 id="prueba-de-inversión-cálculo-propio-reproducible">Prueba de inversión: cálculo propio reproducible</h2>
+<p>El modelo original central usa mínimos de inversión de $140m/$130m en los dos primeros años rodantes. No son una previsión oficial de los ejercicios 2027 y 2028. Manteniendo los demás supuestos:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Prueba</th>
+<th style="text-align: right;">Valor por acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Central A189, sin cambios</td>
+<td style="text-align: right;">$44.38</td>
+</tr>
+<tr class="even">
+<td>Mínimo de $150m en años 1–2, capacidad integrada</td>
+<td style="text-align: right;">$44.27</td>
+</tr>
+<tr class="odd">
+<td>Mínimo de $150m en años 1–3, capacidad integrada</td>
+<td style="text-align: right;">$44.16</td>
+</tr>
+<tr class="even">
+<td>Mínimo de $150m todos los años, capacidad integrada</td>
+<td style="text-align: right;">$43.18</td>
+</tr>
+<tr class="odd">
+<td>Mínimo de $150m en años 1–2, sin crédito por más capacidad</td>
+<td style="text-align: right;">$43.86</td>
+</tr>
+<tr class="even">
+<td>Mínimo de $150m en años 1–3, sin crédito por más capacidad</td>
+<td style="text-align: right;">$43.25</td>
+</tr>
+<tr class="odd">
+<td>Mínimo de $150m todos los años, sin crédito por más capacidad</td>
+<td style="text-align: right;">$42.99</td>
+</tr>
+</tbody>
+</table></div>
+<p>La primera familia reconoce capacidad comprada por inversión superior al mantenimiento y, por ello, menor necesidad posterior de expansión. La segunda es una superposición conservadora de coste: descuenta el exceso de capex sin conceder capacidad ni desplazamiento de inversión futura. Es una sensibilidad de coste, no un escenario operativo integrado adicional. No equivale a una banda estadística de confianza.</p>
+<p>La sensibilidad más prudente no acerca el central al precio de referencia. Tampoco demuestra que el escenario favorable sea imposible. El caso alternativo conjunto ya publicado, con crecimiento cercano al 10%, mayor margen y menor coste de capital, sigue valiendo aproximadamente $68.34. La decisión depende de esas hipótesis y de la evidencia futura, no de un descuento universal del 15%.</p>
+<h2 id="alcance-residual">Alcance residual</h2>
+<p>No se dispone todavía del detalle Q3 de altas no monetarias de finance leases, premios pendientes ni un calendario preciso de mantenimiento/expansión FY27. El Q&amp;A no aporta un desglose suficiente para sustituir esas incertidumbres por ceros. El informe previo ya las identifica y cuantifica donde corresponde. La comprobación posterior a la llamada queda cerrada; cualquier actualización futura debe partir del 10-Q o de nueva evidencia, no de fingir hechos no publicados.</p>
+<p>Archivos reproducibles: check_call_sensitivities.py y call_sensitivities.json. El modelo original no se modifica.</p>
+</main></body></html>

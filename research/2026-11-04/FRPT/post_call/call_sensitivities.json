@@ -1,0 +1,131 @@
+{
+  "source_cutoff_utc": "2026-11-04T15:04:07Z",
+  "original_model_sha256": "c824f68356ea9793d5b6d259149a6f3dbc0654183836faed50e2bfed574b56f8",
+  "reference_price": 69.6,
+  "not_new_guidance": "150m is qualitative capex reference at current growth, not FY2027 formal guidance",
+  "cases": {
+    "central_unchanged": {
+      "per_share": 44.379542133488314,
+      "enterprise_value": 2287.453200811126,
+      "enterprise_fixed_exit_irr": 0.045247613645859386,
+      "equity_distribution_proxy_irr": 0.04588189400646059,
+      "cash_capex": [
+        140,
+        130,
+        109.47225154462963,
+        131.17248937271987,
+        156.37967655335348,
+        154.8693617639894,
+        155.58683038607543,
+        169.85038667849938,
+        174.51905951771843,
+        192.10961988958712
+      ]
+    },
+    "150m_floor_years1_2": {
+      "per_share": 44.27348166000925,
+      "enterprise_value": 2282.227239622464,
+      "enterprise_fixed_exit_irr": 0.0451798025585316,
+      "equity_distribution_proxy_irr": 0.04580256420639628,
+      "cash_capex": [
+        150,
+        150,
+        109.47225154462963,
+        118.86405845839602,
+        136.88579448596397,
+        154.8693617639894,
+        155.58683038607543,
+        169.85038667849938,
+        174.51905951771843,
+        192.10961988958712
+      ]
+    },
+    "150m_floor_years1_3": {
+      "per_share": 44.15981512564265,
+      "enterprise_value": 2276.6269111321935,
+      "enterprise_fixed_exit_irr": 0.045102611440644425,
+      "equity_distribution_proxy_irr": 0.04571240222719297,
+      "cash_capex": [
+        150,
+        150,
+        150,
+        118.86405845839602,
+        121.79121509799755,
+        127.25746185688817,
+        155.58683038607543,
+        169.85038667849938,
+        174.51905951771843,
+        192.10961988958712
+      ]
+    },
+    "150m_floor_all_years": {
+      "per_share": 43.17779102439542,
+      "enterprise_value": 2228.2601177062306,
+      "enterprise_fixed_exit_irr": 0.04292719344824636,
+      "equity_distribution_proxy_irr": 0.04323292509561172,
+      "cash_capex": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        150,
+        166.46105004501442,
+        178.57551882374014,
+        192.10961988958712
+      ]
+    },
+    "150m_floor_no_extra_capacity_2years": {
+      "extra_cash_capex": [
+        10,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pv_extra_capex": 25.52434428041814,
+      "per_share": 43.86145685753432,
+      "interpretation": "Conservative cost overlay: no credit for additional capacity or displaced future capex; not a new fully integrated operating scenario."
+    },
+    "150m_floor_no_extra_capacity_3years": {
+      "extra_cash_capex": [
+        10,
+        20,
+        40.52774845537037,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pv_extra_capex": 55.76677416883181,
+      "per_share": 43.24737820946156,
+      "interpretation": "Conservative cost overlay: no credit for additional capacity or displaced future capex; not a new fully integrated operating scenario."
+    },
+    "150m_floor_no_extra_capacity_10years": {
+      "extra_cash_capex": [
+        10,
+        20,
+        40.52774845537037,
+        18.827510627280134,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pv_extra_capex": 68.50997445038843,
+      "per_share": 42.988552535980304,
+      "interpretation": "Conservative cost overlay: no credit for additional capacity or displaced future capex; not a new fully integrated operating scenario."
+    }
+  }
+}
