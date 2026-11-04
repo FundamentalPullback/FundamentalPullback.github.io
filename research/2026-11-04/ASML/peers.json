@@ -1,0 +1,70 @@
+{
+  "peers": [
+    {
+      "ticker": "KLAC",
+      "currency": "USD",
+      "price_date": "2026-11-03",
+      "financial_period_end": "2026-09-30",
+      "shares_date": "2026-10-26",
+      "price": 156.2,
+      "shares_m": 1302.962435,
+      "sales_ttm_m": 14505.795,
+      "ebit_ttm_m": 6185.273,
+      "cfo_ttm_m": 4512.427,
+      "capex_ttm_m": 474.807,
+      "sbc_ttm_m": 324.062,
+      "cash_m": 1531.95,
+      "short_investments_m": 3209.241,
+      "principal_debt_m": 5950.0,
+      "market_cap_m": 203522.73234699998,
+      "ev_m": 204731.54134699996,
+      "ev_ebit": 33.09983914161913,
+      "owner_fcf_m": 3713.558,
+      "owner_fcf_yield_pct": 1.824640401185504,
+      "reported_fcf_yield_pct": 1.9838668405433857
+    },
+    {
+      "ticker": "LRCX",
+      "currency": "USD",
+      "price_date": "2026-11-03",
+      "financial_period_end": "2026-09-27",
+      "shares_date": "2026-10-20",
+      "price": 230.72,
+      "shares_m": 1249.171,
+      "sales_ttm_m": 26127.935,
+      "ebit_ttm_m": 9654.434,
+      "cfo_ttm_m": 7576.345,
+      "capex_ttm_m": 1038.981,
+      "sbc_ttm_m": 403.836,
+      "cash_m": 7437.384,
+      "short_investments_m": 0.0,
+      "principal_debt_m": 3750.0,
+      "market_cap_m": 288208.73312,
+      "ev_m": 284521.34911999997,
+      "ev_ebit": 29.47053645195565,
+      "owner_fcf_m": 6133.528,
+      "owner_fcf_yield_pct": 2.1281548041940197,
+      "reported_fcf_yield_pct": 2.268274083588602
+    }
+  ],
+  "ASML": {
+    "currency": "EUR",
+    "price_usd": 1552.14,
+    "fx": 1.1179,
+    "shares_diluted_average_proxy": 383.5,
+    "market_cap_proxy": 532467.7430897219,
+    "ev_proxy": 522498.24308972183,
+    "ev_ebit": 34.3346767002932,
+    "owner_fcf": 20781.0,
+    "owner_yield_pct": 3.9027716269562562,
+    "owner_before_aggregate_asset_liability_changes": 12904.1,
+    "owner_yield_before_aggregate_changes_pct": 2.423451968211647
+  },
+  "limits": [
+    "ASML uses diluted weighted average rather than current cover-page outstanding shares; market cap proxy not exact.",
+    "EV panel standard cash/principal-debt proxy intentionally excludes bespoke operating cash reserve and strategic assets; not identical DCF equity bridge.",
+    "ASML debt is nominal rollforward proxy, and post-period buybacks/dividend are excluded from standard peer panel to match balance-date cash.",
+    "ASML working capital movement aggregate includes taxes/other items; removal is stress, not clean recurring FCF.",
+    "No automatic cross-company target-price conversion."
+  ]
+}
