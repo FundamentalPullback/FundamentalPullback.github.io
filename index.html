@@ -606,6 +606,8 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 
 #profile-research { scroll-margin-top:180px; }
 
+.profile-quote{border:1px solid var(--rule);border-radius:10px;padding:16px;margin:6px 0 18px;min-width:0}.profile-quote h3{margin:0 0 10px}.profile-quote-mount{min-width:0;width:100%;min-height:180px}.profile-quote-note{font-size:.82rem;line-height:1.5;margin:12px 0 6px}.tradingview-widget-copyright{font-size:13px;text-align:center;padding-top:4px}.tradingview-widget-copyright a{color:var(--ink-2)}
+@media(max-width:600px){.profile-quote{border:0;border-top:1px solid var(--rule);border-radius:0;padding:14px 0;margin-left:-8px;margin-right:-8px}.profile-quote h3,.profile-quote-note,.profile-quote>.more-link{margin-left:8px;margin-right:8px}}
 </style>
 </head>
 <body>
@@ -755,7 +757,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         listTitle: "Empresas en Stage 2", listLede: "Racha: días seguidos en Stage 2 hasta esta fecha. Último precio y cambio: el precio en el escáner más reciente en que aparece, frente al de este día.",
         status: "Estado", newTag: "Nueva", streak: "Racha (días)", lastPrice: "Último precio", change: "Cambio desde entonces",
         goneTitle: "Salieron de Stage 2", goneLede: "Estaban en Stage 2 el", notListed: "fuera del escáner", tradesTitle: "Tus operaciones de ese día" },
-      asOf: "Datos al cierre del", snapNote: "Los precios se consultan automáticamente en Google Sheets. Análisis, operaciones y cierres históricos se publican por separado.",
+      asOf: "Datos al cierre del", snapNote: "Las fichas muestran cotizaciones de TradingView; los precios de la cuenta se consultan en Google Sheets. Pueden llevar retraso. Análisis, operaciones y cierres históricos se publican por separado.",
       updated: "Datos de la hoja",
       lastScan: "Último escáner",
       fScanned: "Empresas escaneadas",
@@ -898,7 +900,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         listTitle: "Companies in Stage 2", listLede: "Streak: consecutive days in Stage 2 up to this date. Latest price and change: the price in the most recent scan it appears in, against this day's.",
         status: "Status", newTag: "New", streak: "Streak (days)", lastPrice: "Latest price", change: "Change since",
         goneTitle: "Dropped out of Stage 2", goneLede: "They were in Stage 2 on", notListed: "not in the scan", tradesTitle: "Your trades that day" },
-      asOf: "Data as of the close on", snapNote: "Prices refresh automatically from Google Sheets. Research, trades and historical closes are separately published snapshots.",
+      asOf: "Data as of the close on", snapNote: "Profiles display TradingView quotes; account prices refresh from Google Sheets. Quotes may be delayed. Research, trades and historical closes are separately published snapshots.",
       updated: "Sheet data",
       lastScan: "Latest scan",
       fScanned: "Companies scanned",
@@ -2415,6 +2417,35 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     if(modelScan)scan=modelScan;
     return {row:r,analysis:a,scan:scan,latestScan:latestScan,model:model,close:close,closeConflict:closeConflict,latestKnownSession:S.snapshot||null};
   }
+  // Hosted display-only widget. Never extract its market data for calculations.
+  function profileQuoteSymbol(ticker) {
+    var known=window.FP_TRADINGVIEW_SYMBOLS||{},directory=window.FP_TRADINGVIEW_DIRECTORY||{};
+    var symbol=Object.prototype.hasOwnProperty.call(known,ticker)?known[ticker]:directory[ticker];
+    return typeof symbol==='string'&&/^(NASDAQ|NYSE|AMEX|CBOE|OTC):[A-Z0-9]+(?:\.[A-Z])?$/.test(symbol)?symbol:null;
+  }
+  function profileQuotePanel(p) {
+    var symbol=profileQuoteSymbol(p.ticker);
+    var h='<section class="profile-quote" aria-label="'+esc(pt('Cotización disponible de ','Available quote for ')+p.ticker)+'"><h3>'+esc(pt('Cotización disponible','Available quote'))+'</h3>';
+    if(symbol)h+='<div class="profile-quote-mount" data-quote-symbol="'+esc(symbol)+'"><p class="muted">'+esc(pt('Cargando la cotización del proveedor…','Loading the provider’s quote…'))+'</p></div>';
+    else h+='<p class="muted" role="status">'+esc(pt('Cotización no disponible: no se ha verificado una cotización compatible para este ticker. No se sustituye por otro valor.','Quote unavailable: a supported listing has not been verified for this ticker. No different security is substituted.'))+'</p>';
+    h+='<p class="muted profile-quote-note">'+esc(pt('Fuente: TradingView. Los precios de acciones pueden llevar retraso. Consulta la hora, el mercado y el indicador de retraso del proveedor. Esta cotización no es un cierre regular certificado ni una actualización del análisis. Si no aparece o falla la conexión, consulta la fuente.','Source: TradingView. Stock prices may be delayed. Check the provider’s time, market status and delay indicator. This quote is not a certified regular-session close or a research update. If it does not appear or the connection fails, check the source.'))+'</p>';
+    if(symbol)h+='<a class="more-link" href="https://www.tradingview.com/symbols/'+esc(symbol.replace(':','-'))+'/" target="_blank" rel="noopener noreferrer">'+esc(pt('Abrir en TradingView ↗','Open in TradingView ↗'))+'</a>';
+    return h+'</section>';
+  }
+  function mountProfileQuotes(root) {
+    root.querySelectorAll('[data-quote-symbol]').forEach(function(el) {
+      var symbol=el.getAttribute('data-quote-symbol');if(!/^[A-Z]+:[A-Z0-9.\/-]+$/.test(symbol))return;
+      var wrap=document.createElement('div');wrap.className='tradingview-widget-container';
+      var slot=document.createElement('div');slot.className='tradingview-widget-container__widget';wrap.appendChild(slot);
+      var credit=document.createElement('div');credit.className='tradingview-widget-copyright';
+      var link=document.createElement('a');link.href='https://www.tradingview.com/';link.target='_blank';link.rel='noopener nofollow';link.textContent=pt('Cotizaciones por TradingView','Quotes by TradingView');credit.appendChild(link);wrap.appendChild(credit);
+      var script=document.createElement('script');script.type='text/javascript';script.src='https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js';script.async=true;
+      var siteTheme=document.documentElement.getAttribute('data-theme');var dark=siteTheme==='dark'||(siteTheme!=='light'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+      script.textContent=JSON.stringify({symbol:symbol,width:'100%',locale:lang==='en'?'en':'es',colorTheme:dark?'dark':'light',isTransparent:true});
+      script.onerror=function(){if(el.isConnected)el.innerHTML='<p class="muted">'+esc(pt('No se pudo cargar la cotización. Utiliza el enlace a la fuente.','The quote could not load. Use the source link.'))+'</p>';};
+      el.innerHTML='';wrap.appendChild(script);el.appendChild(wrap);
+    });
+  }
   function profileSummaryCard(p,inline) {
     var d=profileCardData(p),r=d.row,v=d.model,c=d.close,s=d.scan,none=pt('No disponible','Unavailable');
     var h='<section class="panel stock-summary" aria-label="'+esc(pt('Ficha de ','Stock card: ')+p.ticker)+'"><div class="stock-summary-head"><div><p class="eyebrow">'+esc(pt('Ficha de la acción','Stock profile'))+'</p><h2>'+esc(p.ticker)+'</h2><p class="profile-company">'+esc(p.company||pt('Nombre no registrado','Name not recorded'))+'</p></div><div>'+ (r?pill(r.decision):'<span class="profile-tag">'+esc(profileState(p))+'</span>')+'</div></div>';
@@ -2428,7 +2459,8 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     h+='<p class="stock-caution">'+esc(pt('Registro de investigación, no autorización de compra. Los valores son modelos fechados, no precios objetivo garantizados.','Research record, not permission to buy. Values are dated models, not guaranteed price targets.'))+'</p>';
     function tile(label,value,sub,cls){return '<div><dt>'+esc(label)+'</dt><dd class="'+(cls||'')+'">'+esc(value)+'</dd><small>'+esc(sub)+'</small></div>';}
     var vLabel=v?(lang==='en'&&v.labelEn?v.labelEn:v.label):r?(lang==='en'&&r.vlabEn?r.vlabEn:r.vlab):'';
-    h+='<dl class="stock-summary-values">'+tile(pt('Precio del escáner','Scanner price'),s?fmtM(s.price):'—',s?profileDate(s.date)+' · '+(s.associated?pt('asociado al modelo/análisis','paired with model/research'):pt('última aparición','latest appearance')):pt('Sin observación documentada','No documented observation'))+tile(pt('Último cierre documentado','Latest documented close'),c?fmtM(c.price):'—',c?profileDate(c.date)+' · '+(c.reportId?pt('documentado en ','documented in ')+c.reportId:pt('historial de cierres publicado','published closing-price history')):d.closeConflict?pt('Fuentes discrepantes para ','Sources disagree for ')+profileDate(d.closeConflict):pt('No hay cierre regular verificado en las fuentes','No verified regular close in the sources'))+tile(pt('Valor estimado','Estimated value'),v?fmtM(v.base):'—',v?profileDate(v.date)+' · '+(v.reportId||pt('registro','record')):vLabel||pt('Sin valoración documentada utilizable','No usable documented valuation'),'stock-estimate')+tile(pt('Escenarios bajista–alcista','Bear–bull scenarios'),v&&v.cons!==null&&v.fav!==null?fmtM(v.cons)+' – '+fmtM(v.fav):'—',v?pt('Mismo modelo; no es un intervalo garantizado','Same model; not a guaranteed interval'):none)+'</dl>';
+    h+=profileQuotePanel(p);
+    h+='<dl class="stock-summary-values">'+tile(pt('Precio del escáner','Scanner price'),s?fmtM(s.price):'—',s?profileDate(s.date)+' · '+(s.associated?pt('asociado al modelo/análisis','paired with model/research'):pt('última aparición','latest appearance')):pt('Sin observación documentada','No documented observation'))+tile(pt('Último cierre documentado','Latest documented close'),c?fmtM(c.price):'—',c?profileDate(c.date)+' · '+(c.reportId?pt('documentado en ','documented in ')+c.reportId:pt('historial de cierres publicado','published closing-price history')):d.closeConflict?pt('Fuentes discrepantes para ','Sources disagree for ')+profileDate(d.closeConflict):pt('Sin cierre guardado en los informes; la cotización se muestra aparte','No close saved in the reports; the quote is shown separately'))+tile(pt('Valor estimado','Estimated value'),v?fmtM(v.base):'—',v?profileDate(v.date)+' · '+(v.reportId||pt('registro','record')):vLabel||pt('Sin valoración documentada utilizable','No usable documented valuation'),'stock-estimate')+tile(pt('Escenarios bajista–alcista','Bear–bull scenarios'),v&&v.cons!==null&&v.fav!==null?fmtM(v.cons)+' – '+fmtM(v.fav):'—',v?pt('Mismo modelo; no es un intervalo garantizado','Same model; not a guaranteed interval'):none)+'</dl>';
     if(v)h+='<p class="stock-model-note">'+esc((vLabel?vLabel+'. ':'')+pt('Modelo fechado el ','Model dated ')+profileDate(v.date)+'. '+pt('Puede estar desactualizado; conserva los supuestos y límites del informe.','May be stale; the report’s assumptions and limits still apply.'))+'</p>';
     if(v&&v.cons!==null&&v.fav!==null&&v.cons<=v.base&&v.base<=v.fav)h+='<div class="stock-summary-band">'+band({cons:v.cons,base:v.base,fav:v.fav,price:s?s.price:null,maxc:null})+'<div class="legend"><span><i style="background:var(--ink)"></i>'+esc(pt('Precio del escáner','Scanner price'))+'</span><span><i style="background:var(--accent-soft)"></i>'+esc(pt('Escenarios bajista–alcista','Bear–bull scenarios'))+'</span><span><i style="background:var(--accent)"></i>'+esc(pt('Valor estimado','Estimated value'))+'</span></div></div>';
     if(c&&c.reportId)h+='<details class="stock-note"><summary>'+esc(pt('Fuente y límites del cierre','Close source and limitations'))+'</summary><p>'+esc(pt('Cierre regular documentado por el informe, no una cotización en directo ni una nueva verificación de mercado. ','Regular close documented by the report, not a live quote or a fresh market verification. ')+(lang==='en'?(c.noteEn||c.note):c.note))+'</p>'+reportLink(c.reportId)+'</details>';
@@ -2702,6 +2734,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         el.innerHTML = '<div style="display:grid;gap:16px">' + lf + RENDER[v]() + "</div>";
         if (v === "cartera" || v === "inicio") drawEquity();
         markScroll(el);
+        if(v === "fichas")mountProfileQuotes(el);
         if (focusId === "profile-q" || focusId === "scan-q" || focusId === "lib-q" || focusId === "rej-q" || focusId === "ana-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
       }
     });
@@ -2872,7 +2905,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     });
   }
   document.getElementById("refresh").addEventListener("click", function () {
-    if (window.FP_MANIFEST) { loadLive(); return; }
+    if (window.FP_MANIFEST) { if (S.view === "fichas") { var profileRoot = document.getElementById("v-fichas"); if (profileRoot) mountProfileQuotes(profileRoot); checkPublication(true); } loadLive(); return; }
     if (!mcpNS) return;
     mcpNS.invalidate(SERVER, TOOL).catch(function () {}).then(loadOnce);
   });
