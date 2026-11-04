@@ -1,0 +1,1155 @@
+{
+  "asof": "2026-11-03",
+  "units": "USD million except price and shares million",
+  "price": 52.5974,
+  "shares": 1492.029613,
+  "bridge": {
+    "borrowings": 12800,
+    "excess_cash_after_1000_operating_and_200_restricted_reserve": -2351,
+    "affiliates_value": -1300,
+    "postretirement_claim": 470,
+    "NCI_estimated_value": 1500,
+    "declared_dividends_payable": 454
+  },
+  "netclaims": 11573,
+  "case_assumptions": {
+    "bear": {
+      "rev": 36887,
+      "growth": [
+        0,
+        0.02,
+        0.03,
+        0.03,
+        0.025
+      ],
+      "margins": [
+        0.134,
+        0.135,
+        0.14,
+        0.14,
+        0.14
+      ],
+      "da": [
+        2900,
+        2980,
+        3070,
+        3170,
+        3270
+      ],
+      "investment": [
+        2900,
+        3000,
+        3200,
+        3350,
+        3450
+      ],
+      "wc": [
+        200,
+        220,
+        300,
+        300,
+        300
+      ],
+      "wacc": 0.105,
+      "g": 0.015,
+      "roic": 0.105,
+      "terminalmargin": 0.13,
+      "tax": 0.23
+    },
+    "base": {
+      "rev": 36887,
+      "growth": [
+        0.06,
+        0.06,
+        0.05,
+        0.045,
+        0.04
+      ],
+      "margins": [
+        0.154,
+        0.162,
+        0.168,
+        0.17,
+        0.17
+      ],
+      "da": [
+        2950,
+        3080,
+        3220,
+        3340,
+        3450
+      ],
+      "investment": [
+        3000,
+        3200,
+        3400,
+        3600,
+        3800
+      ],
+      "wc": [
+        500,
+        450,
+        400,
+        400,
+        400
+      ],
+      "wacc": 0.095,
+      "g": 0.025,
+      "roic": 0.13,
+      "terminalmargin": 0.16,
+      "tax": 0.215
+    },
+    "bull": {
+      "rev": 36887,
+      "growth": [
+        0.08,
+        0.08,
+        0.07,
+        0.06,
+        0.05
+      ],
+      "margins": [
+        0.16,
+        0.17,
+        0.18,
+        0.185,
+        0.185
+      ],
+      "da": [
+        3000,
+        3160,
+        3330,
+        3500,
+        3650
+      ],
+      "investment": [
+        3200,
+        3500,
+        3800,
+        4100,
+        4400
+      ],
+      "wc": [
+        650,
+        650,
+        600,
+        550,
+        500
+      ],
+      "wacc": 0.0875,
+      "g": 0.0275,
+      "roic": 0.15,
+      "terminalmargin": 0.175,
+      "tax": 0.205
+    }
+  },
+  "results": {
+    "bear": {
+      "EV": 38744.81112294681,
+      "equity": 27171.811122946812,
+      "price": 18.21130819804098,
+      "terminal_FCFF": 3914.6028447081403,
+      "PV_terminal": 16025.899603462456,
+      "terminal_fraction": 0.41362699001443926,
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 36887,
+          "growth": 0,
+          "margin": 0.134,
+          "EBIT": 4942.858,
+          "tax_rate": 0.23,
+          "NOPAT": 3806.00066,
+          "DA": 2900,
+          "total_capital_investment": 2900,
+          "delta_WC": 200,
+          "net_reinvestment": 200,
+          "FCFF": 3606.00066,
+          "PV_FCFF": 3263.3490135746606
+        },
+        {
+          "year": 2,
+          "revenue": 37624.74,
+          "growth": 0.02,
+          "margin": 0.135,
+          "EBIT": 5079.3399,
+          "tax_rate": 0.23,
+          "NOPAT": 3911.091723,
+          "DA": 2980,
+          "total_capital_investment": 3000,
+          "delta_WC": 220,
+          "net_reinvestment": 240,
+          "FCFF": 3671.091723,
+          "PV_FCFF": 3006.565568272558
+        },
+        {
+          "year": 3,
+          "revenue": 38753.4822,
+          "growth": 0.03,
+          "margin": 0.14,
+          "EBIT": 5425.487508,
+          "tax_rate": 0.23,
+          "NOPAT": 4177.62538116,
+          "DA": 3070,
+          "total_capital_investment": 3200,
+          "delta_WC": 300,
+          "net_reinvestment": 430,
+          "FCFF": 3747.62538116,
+          "PV_FCFF": 2777.5976593806427
+        },
+        {
+          "year": 4,
+          "revenue": 39916.086666,
+          "growth": 0.03,
+          "margin": 0.14,
+          "EBIT": 5588.252133240001,
+          "tax_rate": 0.23,
+          "NOPAT": 4302.954142594801,
+          "DA": 3170,
+          "total_capital_investment": 3350,
+          "delta_WC": 300,
+          "net_reinvestment": 480,
+          "FCFF": 3822.954142594801,
+          "PV_FCFF": 2564.188667519897
+        },
+        {
+          "year": 5,
+          "revenue": 40913.98883265,
+          "growth": 0.025,
+          "margin": 0.14,
+          "EBIT": 5727.958436571001,
+          "tax_rate": 0.23,
+          "NOPAT": 4410.527996159671,
+          "DA": 3270,
+          "total_capital_investment": 3450,
+          "delta_WC": 300,
+          "net_reinvestment": 480,
+          "FCFF": 3930.5279961596707,
+          "PV_FCFF": 2385.8300476953495
+        },
+        {
+          "year": 6,
+          "revenue": 41855.010575800945,
+          "growth": 0.023,
+          "margin": 0.138,
+          "EBIT": 5775.991459460531,
+          "tax_rate": 0.23,
+          "NOPAT": 4447.513423784609,
+          "DA": 3345.2099999999996,
+          "total_capital_investment": 3735.849096602279,
+          "delta_WC": 188.20434863018892,
+          "net_reinvestment": 578.8434452324686,
+          "FCFF": 3868.66997855214,
+          "PV_FCFF": 2125.1422968563247
+        },
+        {
+          "year": 7,
+          "revenue": 42733.965797892764,
+          "growth": 0.021,
+          "margin": 0.136,
+          "EBIT": 5811.819348513416,
+          "tax_rate": 0.23,
+          "NOPAT": 4475.10089835533,
+          "DA": 3415.45941,
+          "total_capital_investment": 3885.676437450062,
+          "delta_WC": 175.7910444183639,
+          "net_reinvestment": 646.0080718684264,
+          "FCFF": 3829.0928264869035,
+          "PV_FCFF": 1903.5309770178528
+        },
+        {
+          "year": 8,
+          "revenue": 43545.91114805272,
+          "growth": 0.019,
+          "margin": 0.134,
+          "EBIT": 5835.152093839065,
+          "tax_rate": 0.23,
+          "NOPAT": 4493.06711225608,
+          "DA": 3480.3531387899993,
+          "total_capital_investment": 3997.782783802954,
+          "delta_WC": 162.3890700319913,
+          "net_reinvestment": 679.8187150449459,
+          "FCFF": 3813.248397211134,
+          "PV_FCFF": 1715.5242925144985
+        },
+        {
+          "year": 9,
+          "revenue": 44286.19163756962,
+          "growth": 0.017,
+          "margin": 0.132,
+          "EBIT": 5845.77729615919,
+          "tax_rate": 0.23,
+          "NOPAT": 4501.2485180425765,
+          "DA": 3539.519142149429,
+          "total_capital_investment": 4070.481899916327,
+          "delta_WC": 148.05609790337914,
+          "net_reinvestment": 679.0188556702767,
+          "FCFF": 3822.2296623722996,
+          "PV_FCFF": 1556.1672682667363
+        },
+        {
+          "year": 10,
+          "revenue": 44950.48451213315,
+          "growth": 0.015,
+          "margin": 0.13,
+          "EBIT": 5843.56298657731,
+          "tax_rate": 0.23,
+          "NOPAT": 4499.543499664529,
+          "DA": 3592.6119292816697,
+          "total_capital_investment": 4102.545282892467,
+          "delta_WC": 132.85857491270727,
+          "net_reinvestment": 642.7919285235041,
+          "FCFF": 3856.751571141025,
+          "PV_FCFF": 1421.0157283858334
+        }
+      ]
+    },
+    "base": {
+      "EV": 65404.25464992912,
+      "equity": 53831.25464992912,
+      "price": 36.07921329503071,
+      "terminal_FCFF": 5728.730435964272,
+      "PV_terminal": 33023.200041680386,
+      "terminal_fraction": 0.5049090493949414,
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 39100.22,
+          "growth": 0.06,
+          "margin": 0.154,
+          "EBIT": 6021.4338800000005,
+          "tax_rate": 0.215,
+          "NOPAT": 4726.825595800001,
+          "DA": 2950,
+          "total_capital_investment": 3000,
+          "delta_WC": 500,
+          "net_reinvestment": 550,
+          "FCFF": 4176.825595800001,
+          "PV_FCFF": 3814.4525989041103
+        },
+        {
+          "year": 2,
+          "revenue": 41446.2332,
+          "growth": 0.06,
+          "margin": 0.162,
+          "EBIT": 6714.289778400001,
+          "tax_rate": 0.215,
+          "NOPAT": 5270.717476044,
+          "DA": 3080,
+          "total_capital_investment": 3200,
+          "delta_WC": 450,
+          "net_reinvestment": 570,
+          "FCFF": 4700.717476044,
+          "PV_FCFF": 3920.4499289372616
+        },
+        {
+          "year": 3,
+          "revenue": 43518.54486,
+          "growth": 0.05,
+          "margin": 0.168,
+          "EBIT": 7311.115536480001,
+          "tax_rate": 0.215,
+          "NOPAT": 5739.225696136801,
+          "DA": 3220,
+          "total_capital_investment": 3400,
+          "delta_WC": 400,
+          "net_reinvestment": 580,
+          "FCFF": 5159.225696136801,
+          "PV_FCFF": 3929.5441215217206
+        },
+        {
+          "year": 4,
+          "revenue": 45476.879378699996,
+          "growth": 0.045,
+          "margin": 0.17,
+          "EBIT": 7731.0694943789995,
+          "tax_rate": 0.215,
+          "NOPAT": 6068.889553087515,
+          "DA": 3340,
+          "total_capital_investment": 3600,
+          "delta_WC": 400,
+          "net_reinvestment": 660,
+          "FCFF": 5408.889553087515,
+          "PV_FCFF": 3762.2845294198805
+        },
+        {
+          "year": 5,
+          "revenue": 47295.954553847994,
+          "growth": 0.04,
+          "margin": 0.17,
+          "EBIT": 8040.312274154159,
+          "tax_rate": 0.215,
+          "NOPAT": 6311.645135211015,
+          "DA": 3450,
+          "total_capital_investment": 3800,
+          "delta_WC": 400,
+          "net_reinvestment": 750,
+          "FCFF": 5561.645135211015,
+          "PV_FCFF": 3532.910854366316
+        },
+        {
+          "year": 6,
+          "revenue": 49045.90487234037,
+          "growth": 0.037,
+          "margin": 0.168,
+          "EBIT": 8239.712018553182,
+          "tax_rate": 0.215,
+          "NOPAT": 6468.173934564248,
+          "DA": 3577.65,
+          "total_capital_investment": 4195.848298730567,
+          "delta_WC": 349.99006369847484,
+          "net_reinvestment": 968.1883624290417,
+          "FCFF": 5499.985572135207,
+          "PV_FCFF": 3190.632871298055
+        },
+        {
+          "year": 7,
+          "revenue": 50713.46563799994,
+          "growth": 0.034,
+          "margin": 0.166,
+          "EBIT": 8418.435295907992,
+          "tax_rate": 0.215,
+          "NOPAT": 6608.471707287774,
+          "DA": 3699.2901,
+          "total_capital_investment": 4507.125756245883,
+          "delta_WC": 333.512153131915,
+          "net_reinvestment": 1141.347809377798,
+          "FCFF": 5467.123897909976,
+          "PV_FCFF": 2896.410291258334
+        },
+        {
+          "year": 8,
+          "revenue": 52285.58307277794,
+          "growth": 0.031,
+          "margin": 0.164,
+          "EBIT": 8574.835623935582,
+          "tax_rate": 0.215,
+          "NOPAT": 6731.245964789432,
+          "DA": 3813.9680931000003,
+          "total_capital_investment": 4762.630567260428,
+          "delta_WC": 314.42348695559923,
+          "net_reinvestment": 1263.0859611160263,
+          "FCFF": 5468.160003673405,
+          "PV_FCFF": 2645.6248460786965
+        },
+        {
+          "year": 9,
+          "revenue": 53749.579398815724,
+          "growth": 0.028,
+          "margin": 0.162,
+          "EBIT": 8707.431862608148,
+          "tax_rate": 0.215,
+          "NOPAT": 6835.334012147397,
+          "DA": 3920.7591997068002,
+          "total_capital_investment": 4955.740564284641,
+          "delta_WC": 292.7992652075569,
+          "net_reinvestment": 1327.7806297853977,
+          "FCFF": 5507.553382361999,
+          "PV_FCFF": 2433.501636788628
+        },
+        {
+          "year": 10,
+          "revenue": 55093.31888378611,
+          "growth": 0.025,
+          "margin": 0.16,
+          "EBIT": 8814.931021405777,
+          "tax_rate": 0.215,
+          "NOPAT": 6919.720851803535,
+          "DA": 4018.778179699469,
+          "total_capital_investment": 5080.745831129149,
+          "delta_WC": 268.74789699407705,
+          "net_reinvestment": 1330.715548423757,
+          "FCFF": 5589.005303379778,
+          "PV_FCFF": 2255.2429296757336
+        }
+      ]
+    },
+    "bull": {
+      "EV": 89112.7020733253,
+      "equity": 77539.7020733253,
+      "price": 51.96927822190973,
+      "terminal_FCFF": 7155.454544628279,
+      "PV_terminal": 51545.8042961659,
+      "terminal_fraction": 0.5784338606829817,
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 39837.96,
+          "growth": 0.08,
+          "margin": 0.16,
+          "EBIT": 6374.0736,
+          "tax_rate": 0.205,
+          "NOPAT": 5067.388512,
+          "DA": 3000,
+          "total_capital_investment": 3200,
+          "delta_WC": 650,
+          "net_reinvestment": 850,
+          "FCFF": 4217.388512,
+          "PV_FCFF": 3878.0584018390814
+        },
+        {
+          "year": 2,
+          "revenue": 43024.9968,
+          "growth": 0.08,
+          "margin": 0.17,
+          "EBIT": 7314.2494560000005,
+          "tax_rate": 0.205,
+          "NOPAT": 5814.82831752,
+          "DA": 3160,
+          "total_capital_investment": 3500,
+          "delta_WC": 650,
+          "net_reinvestment": 990,
+          "FCFF": 4824.82831752,
+          "PV_FCFF": 4079.6540140214042
+        },
+        {
+          "year": 3,
+          "revenue": 46036.746576000005,
+          "growth": 0.07,
+          "margin": 0.18,
+          "EBIT": 8286.61438368,
+          "tax_rate": 0.205,
+          "NOPAT": 6587.858435025601,
+          "DA": 3330,
+          "total_capital_investment": 3800,
+          "delta_WC": 600,
+          "net_reinvestment": 1070,
+          "FCFF": 5517.858435025601,
+          "PV_FCFF": 4290.251553498022
+        },
+        {
+          "year": 4,
+          "revenue": 48798.95137056001,
+          "growth": 0.06,
+          "margin": 0.185,
+          "EBIT": 9027.806003553602,
+          "tax_rate": 0.205,
+          "NOPAT": 7177.1057728251135,
+          "DA": 3500,
+          "total_capital_investment": 4100,
+          "delta_WC": 550,
+          "net_reinvestment": 1150,
+          "FCFF": 6027.1057728251135,
+          "PV_FCFF": 4309.151376192976
+        },
+        {
+          "year": 5,
+          "revenue": 51238.898939088016,
+          "growth": 0.05,
+          "margin": 0.185,
+          "EBIT": 9479.196303731283,
+          "tax_rate": 0.205,
+          "NOPAT": 7535.961061466371,
+          "DA": 3650,
+          "total_capital_investment": 4400,
+          "delta_WC": 500,
+          "net_reinvestment": 1250,
+          "FCFF": 6285.961061466371,
+          "PV_FCFF": 4132.618907184851
+        },
+        {
+          "year": 6,
+          "revenue": 53570.26884081653,
+          "growth": 0.0455,
+          "margin": 0.183,
+          "EBIT": 9803.359197869424,
+          "tax_rate": 0.205,
+          "NOPAT": 7793.670562306193,
+          "DA": 3816.0750000000003,
+          "total_capital_investment": 4822.61703376754,
+          "delta_WC": 466.27398034570217,
+          "net_reinvestment": 1472.8160141132423,
+          "FCFF": 6320.8545481929505,
+          "PV_FCFF": 3821.203817541235
+        },
+        {
+          "year": 7,
+          "revenue": 55766.649863290004,
+          "growth": 0.041,
+          "margin": 0.181,
+          "EBIT": 10093.763625255491,
+          "tax_rate": 0.205,
+          "NOPAT": 8024.5420820781155,
+          "DA": 3972.5340750000005,
+          "total_capital_investment": 5160.607804812512,
+          "delta_WC": 439.27620449469543,
+          "net_reinvestment": 1627.3499343072074,
+          "FCFF": 6397.192147770908,
+          "PV_FCFF": 3556.1865585901055
+        },
+        {
+          "year": 8,
+          "revenue": 57802.13258330009,
+          "growth": 0.036500000000000005,
+          "margin": 0.179,
+          "EBIT": 10346.581732410716,
+          "tax_rate": 0.205,
+          "NOPAT": 8225.532477266519,
+          "DA": 4117.5315687375005,
+          "total_capital_investment": 5411.362766416395,
+          "delta_WC": 407.0965440020169,
+          "net_reinvestment": 1700.9277416809118,
+          "FCFF": 6524.604735585607,
+          "PV_FCFF": 3335.186175698322
+        },
+        {
+          "year": 9,
+          "revenue": 59651.80082596569,
+          "growth": 0.032,
+          "margin": 0.177,
+          "EBIT": 10558.368746195927,
+          "tax_rate": 0.205,
+          "NOPAT": 8393.903153225763,
+          "DA": 4249.2925789371,
+          "total_capital_investment": 5561.918401887843,
+          "delta_WC": 369.9336485331209,
+          "net_reinvestment": 1682.5594714838635,
+          "FCFF": 6711.3436817419,
+          "PV_FCFF": 3154.612999094667
+        },
+        {
+          "year": 10,
+          "revenue": 61292.225348679756,
+          "growth": 0.0275,
+          "margin": 0.175,
+          "EBIT": 10726.139436018957,
+          "tax_rate": 0.205,
+          "NOPAT": 8527.28085163507,
+          "DA": 4366.148124857871,
+          "total_capital_investment": 5601.398043114821,
+          "delta_WC": 328.08490454281275,
+          "net_reinvestment": 1563.334822799763,
+          "FCFF": 6963.9460288353075,
+          "PV_FCFF": 3009.9739734987384
+        }
+      ]
+    }
+  },
+  "reverse": [
+    {
+      "bundle": "slower cycle",
+      "growth": [
+        0.03,
+        0.04,
+        0.04,
+        0.035,
+        0.03
+      ],
+      "wacc": 0.095,
+      "terminal_roic": 0.12,
+      "year5margin": 0.26639903874754833,
+      "terminalmargin": 0.2563990387475483,
+      "price": 52.59739999999998,
+      "year5ebit": 11670.446363058998,
+      "year5fcff": 8411.300395001314
+    },
+    {
+      "bundle": "base volumes",
+      "growth": [
+        0.06,
+        0.06,
+        0.05,
+        0.045,
+        0.04
+      ],
+      "wacc": 0.095,
+      "terminal_roic": 0.13,
+      "year5margin": 0.2404719238708995,
+      "terminalmargin": 0.2304719238708995,
+      "price": 52.5974,
+      "year5ebit": 11373.349182874457,
+      "year5fcff": 8178.079108556449
+    },
+    {
+      "bundle": "faster, higher discount",
+      "growth": [
+        0.08,
+        0.08,
+        0.07,
+        0.06,
+        0.05
+      ],
+      "wacc": 0.1,
+      "terminal_roic": 0.15,
+      "year5margin": 0.23157198272622898,
+      "terminalmargin": 0.22157198272622897,
+      "price": 52.5974,
+      "year5ebit": 11865.493420033483,
+      "year5fcff": 8564.412334726285
+    },
+    {
+      "bundle": "strong growth, favorable funding",
+      "growth": [
+        0.08,
+        0.08,
+        0.07,
+        0.06,
+        0.05
+      ],
+      "wacc": 0.0875,
+      "terminal_roic": 0.15,
+      "terminal_growth": 0.0275,
+      "tax": 0.205,
+      "year5margin": 0.18807734292174783,
+      "terminalmargin": 0.17807734292174782,
+      "price": 52.59739999999998,
+      "year5ebit": 9636.875966699638,
+      "year5fcff": 6411.316393526212
+    }
+  ],
+  "sensitivity": [
+    {
+      "wacc": 0.09,
+      "g": 0.02,
+      "price": 38.368344102613584
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.025,
+      "price": 39.39990481321055
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.03,
+      "price": 40.57757061848891
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.02,
+      "price": 35.28085144595797
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.025,
+      "price": 36.07921329503071
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.03,
+      "price": 36.977456550150904
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.02,
+      "price": 32.578784825424826
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.025,
+      "price": 33.1987076604853
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.03,
+      "price": 33.886679549330196
+    }
+  ],
+  "kelvion": [
+    {
+      "case": "adverse",
+      "PV_operating": 2553.033301753052,
+      "PV_cost": 4181.923888634201,
+      "NPV": -1628.890586881149,
+      "per_share": -1.0917280546503128,
+      "year2_revenue": 2690.28,
+      "year2_EBIT": 335.93080000000003,
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 2538.0,
+          "EBIT": 299.18000000000006,
+          "synergy": 20.0,
+          "FCFF": 75.70430000000003
+        },
+        {
+          "year": 2,
+          "revenue": 2690.28,
+          "EBIT": 335.93080000000003,
+          "synergy": 40.0,
+          "FCFF": 182.01911599999994
+        },
+        {
+          "year": 3,
+          "revenue": 2797.8912000000005,
+          "EBIT": 367.7680320000001,
+          "synergy": 60.0,
+          "FCFF": 211.08188064
+        },
+        {
+          "year": 4,
+          "revenue": 2881.8279360000006,
+          "EBIT": 377.0010729600001,
+          "synergy": 60,
+          "FCFF": 220.06375705920004
+        },
+        {
+          "year": 5,
+          "revenue": 2968.2827740800008,
+          "EBIT": 386.51110514880014,
+          "synergy": 60,
+          "FCFF": 225.27966977097608
+        },
+        {
+          "year": 6,
+          "revenue": 3054.3629745283206,
+          "EBIT": 395.9799271981153,
+          "synergy": 60,
+          "FCFF": 230.9052543847344
+        },
+        {
+          "year": 7,
+          "revenue": 3139.8851378151135,
+          "EBIT": 405.3873651596625,
+          "synergy": 60,
+          "FCFF": 236.52224392361893
+        },
+        {
+          "year": 8,
+          "revenue": 3224.6620365361214,
+          "EBIT": 414.7128240189734,
+          "synergy": 60,
+          "FCFF": 242.1190989557359
+        },
+        {
+          "year": 9,
+          "revenue": 3308.5032494860607,
+          "EBIT": 423.9353574434667,
+          "synergy": 60,
+          "FCFF": 247.68397829925726
+        },
+        {
+          "year": 10,
+          "revenue": 3391.215830723212,
+          "EBIT": 433.03374137955336,
+          "synergy": 60,
+          "FCFF": 253.20477706221914
+        }
+      ]
+    },
+    {
+      "case": "base",
+      "PV_operating": 4668.053416888513,
+      "PV_cost": 4100.759958879956,
+      "NPV": 567.2934580085575,
+      "per_share": 0.3802159508536226,
+      "year2_revenue": 3026.8,
+      "year2_EBIT": 473.48400000000004,
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 2702.5,
+          "EBIT": 391.325,
+          "synergy": 40.0,
+          "FCFF": 103.95387499999998
+        },
+        {
+          "year": 2,
+          "revenue": 3026.8,
+          "EBIT": 473.48400000000004,
+          "synergy": 80.0,
+          "FCFF": 270.53568
+        },
+        {
+          "year": 3,
+          "revenue": 3329.4800000000005,
+          "EBIT": 552.8324,
+          "synergy": 120.0,
+          "FCFF": 330.33674799999994
+        },
+        {
+          "year": 4,
+          "revenue": 3562.543600000001,
+          "EBIT": 583.1306680000001,
+          "synergy": 120,
+          "FCFF": 360.61292036
+        },
+        {
+          "year": 5,
+          "revenue": 3740.6707800000013,
+          "EBIT": 606.2872014000002,
+          "synergy": 120,
+          "FCFF": 384.0120063780001
+        },
+        {
+          "year": 6,
+          "revenue": 3909.000965100001,
+          "EBIT": 628.1701254630002,
+          "synergy": 120,
+          "FCFF": 399.8064543650102
+        },
+        {
+          "year": 7,
+          "revenue": 4065.361003704001,
+          "EBIT": 648.4969304815202,
+          "synergy": 120,
+          "FCFF": 414.90821562461053
+        },
+        {
+          "year": 8,
+          "revenue": 4207.648638833641,
+          "EBIT": 666.9943230483733,
+          "synergy": 120,
+          "FCFF": 429.1277538952969
+        },
+        {
+          "year": 9,
+          "revenue": 4333.87809799865,
+          "EBIT": 683.4041527398246,
+          "synergy": 120,
+          "FCFF": 442.2786072649337
+        },
+        {
+          "year": 10,
+          "revenue": 4442.2250504486165,
+          "EBIT": 697.4892565583201,
+          "synergy": 120,
+          "FCFF": 454.18130892568246
+        }
+      ]
+    },
+    {
+      "case": "favorable",
+      "PV_operating": 7402.329600242092,
+      "PV_cost": 4064.702448305803,
+      "NPV": 3337.627151936289,
+      "per_share": 2.2369711183046666,
+      "year2_revenue": 3525.0,
+      "year2_EBIT": 608.75,
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 2937.5,
+          "EBIT": 480.625,
+          "synergy": 40.0,
+          "FCFF": 118.946875
+        },
+        {
+          "year": 2,
+          "revenue": 3525.0,
+          "EBIT": 608.75,
+          "synergy": 80.0,
+          "FCFF": 327.73749999999995
+        },
+        {
+          "year": 3,
+          "revenue": 4053.7499999999995,
+          "EBIT": 728.0624999999999,
+          "synergy": 120.0,
+          "FCFF": 420.48937500000005
+        },
+        {
+          "year": 4,
+          "revenue": 4459.125,
+          "EBIT": 788.86875,
+          "synergy": 120,
+          "FCFF": 479.73581249999984
+        },
+        {
+          "year": 5,
+          "revenue": 4815.8550000000005,
+          "EBIT": 842.3782500000001,
+          "synergy": 120,
+          "FCFF": 522.8839274999999
+        },
+        {
+          "year": 6,
+          "revenue": 5148.1489950000005,
+          "EBIT": 892.2223492500001,
+          "synergy": 120,
+          "FCFF": 559.9448747475001
+        },
+        {
+          "year": 7,
+          "revenue": 5446.74163671,
+          "EBIT": 937.0112455065,
+          "synergy": 120,
+          "FCFF": 595.008638232855
+        },
+        {
+          "year": 8,
+          "revenue": 5702.73849363537,
+          "EBIT": 975.4107740453055,
+          "synergy": 120,
+          "FCFF": 627.1256900715491
+        },
+        {
+          "year": 9,
+          "revenue": 5908.037079406244,
+          "EBIT": 1006.2055619109366,
+          "synergy": 120,
+          "FCFF": 655.3629386146964
+        },
+        {
+          "year": 10,
+          "revenue": 6055.7380063914,
+          "EBIT": 1028.36070095871,
+          "synergy": 120,
+          "FCFF": 678.8465305945622
+        }
+      ]
+    }
+  ],
+  "comps": [
+    {
+      "ticker": "SLB",
+      "price": 52.5974,
+      "shares": 1476.029613,
+      "marketcap": 77635.3199668062,
+      "debt": 12800,
+      "cash": 3551,
+      "NCI": 1162,
+      "EV": 88046.3199668062,
+      "revenue": 36887,
+      "EBIT": 4180,
+      "DA": 2827,
+      "EBITDA": 7007,
+      "EV_EBITDA": 12.565480229314428,
+      "CFO": 6361,
+      "capital_investment": 2551,
+      "FCF": 3810,
+      "FCF_yield": 0.04907560117777586
+    },
+    {
+      "ticker": "HAL",
+      "price": 34.07,
+      "shares": 827.126342,
+      "marketcap": 28180.19447194,
+      "debt": 7345,
+      "cash": 1843,
+      "NCI": 43,
+      "EV": 33725.194471940005,
+      "revenue": 22476,
+      "EBIT": 2827,
+      "DA": 1177,
+      "EBITDA": 4004,
+      "EV_EBITDA": 8.42287574224276,
+      "CFO": 2630,
+      "capital_investment": 1030,
+      "FCF": 1600,
+      "FCF_yield": 0.05677746481108126
+    },
+    {
+      "ticker": "NOV",
+      "price": 18.49,
+      "shares": 356.512491,
+      "marketcap": 6591.91595859,
+      "debt": 1963,
+      "cash": 1058,
+      "NCI": 61,
+      "EV": 7557.91595859,
+      "revenue": 8689,
+      "EBIT": 474,
+      "DA": 368,
+      "EBITDA": 842,
+      "EV_EBITDA": 8.976147219228029,
+      "CFO": 605,
+      "capital_investment": 335,
+      "FCF": 270,
+      "FCF_yield": 0.040959260053696524
+    }
+  ],
+  "annual": [
+    {
+      "period": "2023",
+      "revenue": 33135,
+      "EBIT": 5443,
+      "NI": 4203,
+      "adjustedNI": 4305,
+      "CFO": 6637,
+      "investment": 2599,
+      "FCF": 4038,
+      "DA": 2312,
+      "SBC": 293
+    },
+    {
+      "period": "2024",
+      "revenue": 36289,
+      "EBIT": 5804,
+      "NI": 4461,
+      "adjustedNI": 4888,
+      "CFO": 6602,
+      "investment": 2612,
+      "FCF": 3990,
+      "DA": 2519,
+      "SBC": 316
+    },
+    {
+      "period": "2025",
+      "revenue": 35708,
+      "EBIT": 4368,
+      "NI": 3374,
+      "adjustedNI": 4210,
+      "CFO": 6489,
+      "investment": 2374,
+      "FCF": 4115,
+      "DA": 2643,
+      "SBC": 332
+    },
+    {
+      "period": "TTM2026Q3",
+      "revenue": 36887,
+      "EBIT": 4180,
+      "NI": 3097,
+      "adjustedNI": 3757,
+      "CFO": 6361,
+      "investment": 2551,
+      "FCF": 3810,
+      "DA": 2827,
+      "SBC": 326
+    },
+    {
+      "period": "priorTTM",
+      "revenue": 35247,
+      "EBIT": 4775,
+      "NI": 3645,
+      "adjustedNI": 4342,
+      "CFO": 5874,
+      "investment": 2417,
+      "FCF": 3457,
+      "DA": 2559,
+      "SBC": 329
+    }
+  ],
+  "quarters": [
+    {
+      "period": "2025Q4",
+      "revenue": 9745,
+      "EBIT": 996,
+      "NI": 824,
+      "adjustedNI": 1179,
+      "CFO": 3005,
+      "investment": 716,
+      "FCF": 2289
+    },
+    {
+      "period": "2026Q1",
+      "revenue": 8721,
+      "EBIT": 1029,
+      "NI": 752,
+      "adjustedNI": 783,
+      "CFO": 487,
+      "investment": 510,
+      "FCF": -23
+    },
+    {
+      "period": "2026Q2",
+      "revenue": 8972,
+      "EBIT": 1071,
+      "NI": 786,
+      "adjustedNI": 833,
+      "CFO": 1359,
+      "investment": 643,
+      "FCF": 716
+    },
+    {
+      "period": "2026Q3",
+      "revenue": 9449,
+      "EBIT": 1084,
+      "NI": 735,
+      "adjustedNI": 962,
+      "CFO": 1510,
+      "investment": 682,
+      "FCF": 828
+    }
+  ]
+}

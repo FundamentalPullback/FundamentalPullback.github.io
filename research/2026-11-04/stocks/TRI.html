@@ -1,0 +1,475 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TRI · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/TRI">← TRI profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A160 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">En observación</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Quality watch candidate; price exceeds the $92.26 central value ($84–103 sensitivity). $95–100 is a partial-position reconsideration zone, not an automatic entry. Print sale closed October 1.</strong></p>
+<h1 id="tri-stage-3-terminado-tras-resultados-del-3-de-noviembre">TRI — Stage 3 terminado tras resultados del 3 de noviembre</h1>
+<p><strong>Fecha de análisis:</strong> 4 de noviembre de 2026, con información disponible antes de las 04:25 UTC. <strong>Modelo:</strong> TRI-FCFF-20261104-v1. Importes en millones de USD salvo precio y EPS. Se analiza la acción estadounidense Nasdaq:TRI, no el precio en CAD de Toronto.</p>
+<h2 id="decisión">Decisión</h2>
+<p><strong>Investigación fundamental terminada; candidata de calidad en vigilancia por valoración. A 109,78 USD no apruebo una entrada fundamental con el caso central.</strong> No es un rechazo por falta de crecimiento, por no alcanzar un descuento universal del 15%, ni por datos técnicos ausentes. El negocio mejora, pero el precio todavía exige bastante éxito en crecimiento y monetización de IA, o aceptar una rentabilidad estimada relativamente baja frente al riesgo.</p>
+<p>Valor central FCFF <strong>92,26 USD</strong>, intervalo central práctico aproximadamente <strong>84–103 USD</strong> (WACC 8–9%, crecimiento terminal 3%); el intervalo ampliado de sensibilidad es 73,74–124,15. Adverso/base/favorable: <strong>52,86 / 92,26 / 134,38</strong>. No son probabilidades ni objetivos de corto plazo. A 109,78: distancia al central −16,0%; al favorable +22,4%. TIR ilustrativa del efectivo potencial para el accionista: <strong>6,4% anual</strong> bajo los flujos y valor terminal centrales, no una promesa de dividendos.</p>
+<p>Una entrada pequeña alrededor de <strong>95–100 USD</strong> podría resultar razonable sin exigir el precio ideal ni un descuento fijo: la misma proyección arroja aproximadamente 8,3–7,6% anual. A 105 sería 7,0%; a 90, 9,0%. Son referencias para reconsiderar la relación rentabilidad/riesgo, no precios autorizados ni reglas universales. También podría mejorar la valoración por evidencia nueva, sin esperar una caída.</p>
+<p><strong>Stage 3.5 es un expediente distinto.</strong> No están certificados cierre regular, EMA50/EMA200 y tendencia larga, soporte/M/stop, señal numérica elegida de antemano, máximo técnico, patrimonio/efectivo, exposición y órdenes. No se inventan niveles ni cantidades. La conclusión Stage 3 anterior sí está terminada; no se presenta como una investigación pendiente.</p>
+<h2 id="precio-y-trazabilidad">Precio y trazabilidad</h2>
+<p>El último manifiesto público se generó el 4/11/2026 03:18:08Z y señala scanner del 3/11. TRI: Last <strong>109,78</strong>, QP90, Opportunity85, RSI49,1, máximo anual ajustado 156,199482 y caída aproximada 29,5%. La marca «Quote on 11/3/26 17:27:04» carece de zona horaria certificada: uso 109,78 como precio evaluado, no como cierre regular verificado. Los 118,30 del 30/10 y 122,03 del 2/11 están superados. El FCF/acción 5,09 y PER29,23 del scanner no sustituyen el perímetro ni el beneficio normalizado de esta revisión. <a href="https://fundamentalpullback.github.io/">Scanner y datos del sitio</a>.</p>
+<h2 id="la-operación-global-print-ya-se-cerró">La operación Global Print ya se cerró</h2>
+<p>El <strong>1 de octubre</strong> se vendió el 51% a KKR por aproximadamente <strong>500 millones brutos</strong>; se retuvo el 49% de Westbridge Print. No sigue pendiente de cierre. Desde Q3, Print aparece como discontinuado y se reexpresaron los comparables disponibles. Thomson Reuters conserva contenido y propiedad intelectual. A partir de Q4 recibe una regalía del 20% de ingresos profesionales de Westbridge, que representan 85–90% del total, más reembolsos de servicios transitorios.</p>
+<p>Las regalías y reembolsos compensan en gran parte costes retenidos. No trato todo el ingreso nuevo como beneficio incremental. El efecto esperado de la operación en margen EBITDA es aproximadamente neutro y el crecimiento orgánico anual gana mecánicamente 60–70 puntos básicos. Tampoco capitalizo el 49% de Print antes de regalías y vuelvo a sumar las mismas regalías en TRI. El acuerdo contempla apoyo financiero a KKR en determinadas circunstancias; la documentación consultada no cuantifica aquí una obligación máxima. La reserva de 100 del modelo es una sensibilidad prudente, <strong>no el importe contractual ni un límite de responsabilidad</strong>. <a href="https://investors.thomsonreuters.com/static-files/de207bd7-c7f7-4c52-9f7a-59cda52f339c">Condiciones anunciadas el 14/7</a>, <a href="https://www.thomsonreuters.com/en/press-releases/2026/september/thomson-reuters-and-kkr-complete-joint-venture-for-global-print-business">cierre</a>, <a href="https://investors.thomsonreuters.com/static-files/13453a61-1934-494a-b639-ed45a69dd0e8">suplemento del 19/10</a>.</p>
+<h2 id="resultados-el-descenso-contable-del-ebit-no-equivale-a-deterioro-operativo">Resultados: el descenso contable del EBIT no equivale a deterioro operativo</h2>
+<p>Q3 2026 / Q3 2025, <strong>continuadas</strong>, salvo indicación:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métrica</th>
+<th style="text-align: right;">2026</th>
+<th style="text-align: right;">2025</th>
+<th>Lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ingresos</td>
+<td style="text-align: right;">1.833</td>
+<td style="text-align: right;">1.658</td>
+<td>+10,6%</td>
+</tr>
+<tr class="even">
+<td>EBIT IFRS</td>
+<td style="text-align: right;">402</td>
+<td style="text-align: right;">517</td>
+<td>−22,2%, afectado por ganancia Elite de 160 en 2025</td>
+</tr>
+<tr class="odd">
+<td>EBITDA ajustado</td>
+<td style="text-align: right;">651</td>
+<td style="text-align: right;">593</td>
+<td>+9,8%</td>
+</tr>
+<tr class="even">
+<td>D&amp;A total</td>
+<td style="text-align: right;">249</td>
+<td style="text-align: right;">231</td>
+<td>Incluye amortización adquirida</td>
+</tr>
+<tr class="odd">
+<td>EBIT normalizado = EBITDA ajustado − D&amp;A</td>
+<td style="text-align: right;">402</td>
+<td style="text-align: right;">362</td>
+<td>+11,0%</td>
+</tr>
+<tr class="even">
+<td>Beneficio continuado</td>
+<td style="text-align: right;">289</td>
+<td style="text-align: right;">364</td>
+<td>La comparación también recoge la ganancia previa</td>
+</tr>
+<tr class="odd">
+<td>Beneficio ajustado de la empresa</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">319</td>
+<td>+9,7%</td>
+</tr>
+<tr class="even">
+<td>EPS ajustado</td>
+<td style="text-align: right;">0,81</td>
+<td style="text-align: right;">0,71</td>
+<td>+14,1%, incluye menor número de acciones</td>
+</tr>
+<tr class="odd">
+<td>Acciones diluidas medias</td>
+<td style="text-align: right;">434,0</td>
+<td style="text-align: right;">450,3</td>
+<td>−3,6%</td>
+</tr>
+<tr class="even">
+<td>CFO continuado</td>
+<td style="text-align: right;">547</td>
+<td style="text-align: right;">635</td>
+<td>−13,9%</td>
+</tr>
+<tr class="odd">
+<td>FCF continuado reconstruido</td>
+<td style="text-align: right;">356</td>
+<td style="text-align: right;">459</td>
+<td>−22,4%</td>
+</tr>
+</tbody>
+</table></div>
+<p>El EBIT normalizado conserva SBC, amortización de software adquirido y otros intangibles. No se suman de nuevo los 22 de indemnizaciones de Q3: la transformación por IA sigue exigiendo gastos. El margen EBITDA bajó de 35,8% a 35,5%; el de Big 3, de 41,7% a 40,3%. La caída trimestral de caja merece seguimiento, aunque no describe por sí sola el año. <a href="https://investors.thomsonreuters.com/static-files/781f0447-2b5b-4b54-884d-d4ebc5dadf28">Resultados/6-K, 3/11/2026, tablas de conciliación</a>.</p>
+<h3 id="crecimiento-y-calidad">Crecimiento y calidad</h3>
+<p>Los ingresos recurrentes constituyen 88% de Q3 y crecieron 8% orgánico; las transacciones crecieron 23% orgánico. Legal/Corporates/Tax registraron crecimiento orgánico 9%/10%/10%. Reuters creció 12%, pero cerca de 19 millones de licencias transaccionales para IA ayudaron; excluyéndolas en ambos periodos, la cifra es aproximadamente 7%. Pagero recibió impulso del inicio de facturación electrónica obligatoria en Francia el 1/9, con moderación prevista en Q4. No proyecto estos impulsos como una aceleración perpetua.</p>
+<p>La dirección comunicó GenAI dentro del 34% del ACV frente al 24% un año antes y fuerte aumento de uso de CoCounsel. Es evidencia de adopción, <strong>no ingreso incremental de IA separado, ni rentabilidad demostrada de toda esa inversión</strong>. La distribución integrada, contenido propietario y coste de cambio favorecen la retención; la presión competitiva y el coste de inferencia/desarrollo pueden consumir parte de la ventaja. En la llamada se anticipó reinvertir apalancamiento operativo en IA durante 2027, sin guía formal anual. El modelo no trata una expansión de margen como garantía. <a href="https://investors.thomsonreuters.com/static-files/8786813a-903d-4137-8475-6fc94c624535">Presentación</a>, <a href="https://investors.thomsonreuters.com/static-files/b7c0cf70-0691-4a67-b880-56cf05d82528">llamada del 3/11</a>.</p>
+<h3 id="guidance-vigente-después-de-la-separación">Guidance vigente después de la separación</h3>
+<p>Para 2026: crecimiento total aproximado 9,5%, orgánico 8,5–9%, margen EBITDA 39%, capex 8,5–9% de ingresos, depreciación y amortización de software aproximada 900 (670 internos y 230 adquiridos), interés neto 190 e impuesto ajustado 19%. Big 3 mantiene crecimiento 9,5–10% y mejora de margen de 100 puntos básicos. La guía de FCF <strong>2.100 incluye continuadas y discontinuadas</strong>: no se utiliza como FCF perpetuo del nuevo TRI. La mejora mecánica por retirar Print se separa del crecimiento real. <a href="https://investors.thomsonreuters.com/static-files/781f0447-2b5b-4b54-884d-d4ebc5dadf28">Guía y notas, resultados del 3/11</a>.</p>
+<h3 id="tres-ejercicios-completos-sin-ocultar-el-cambio-de-perímetro">Tres ejercicios completos, sin ocultar el cambio de perímetro</h3>
+<p>2023–2025 originales <strong>incluyen Print</strong>. No son una serie enteramente comparable con continuadas 2026.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT IFRS</th>
+<th style="text-align: right;">Beneficio</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">FCF publicado</th>
+<th style="text-align: right;">EBITDA ajustado</th>
+<th style="text-align: right;">D&amp;A</th>
+<th style="text-align: right;">EBIT normalizado</th>
+<th style="text-align: right;">SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td style="text-align: right;">6.794</td>
+<td style="text-align: right;">2.332</td>
+<td style="text-align: right;">2.695</td>
+<td style="text-align: right;">2.341</td>
+<td style="text-align: right;">544</td>
+<td style="text-align: right;">1.871</td>
+<td style="text-align: right;">2.678</td>
+<td style="text-align: right;">725</td>
+<td style="text-align: right;">1.953</td>
+<td style="text-align: right;">83</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td style="text-align: right;">7.258</td>
+<td style="text-align: right;">2.109</td>
+<td style="text-align: right;">2.207</td>
+<td style="text-align: right;">2.457</td>
+<td style="text-align: right;">607</td>
+<td style="text-align: right;">1.828</td>
+<td style="text-align: right;">2.779</td>
+<td style="text-align: right;">822</td>
+<td style="text-align: right;">1.957</td>
+<td style="text-align: right;">87</td>
+</tr>
+<tr class="odd">
+<td>2025 original</td>
+<td style="text-align: right;">7.476</td>
+<td style="text-align: right;">2.132</td>
+<td style="text-align: right;">1.502</td>
+<td style="text-align: right;">2.651</td>
+<td style="text-align: right;">634</td>
+<td style="text-align: right;">1.950</td>
+<td style="text-align: right;">2.936</td>
+<td style="text-align: right;">930</td>
+<td style="text-align: right;">2.006</td>
+<td style="text-align: right;">111</td>
+</tr>
+<tr class="even">
+<td>2025 continuadas reexpresadas</td>
+<td style="text-align: right;">6.986</td>
+<td style="text-align: right;">1.823</td>
+<td style="text-align: right;">1.225</td>
+<td style="text-align: right;">2.377</td>
+<td style="text-align: right;">632</td>
+<td style="text-align: right;">1.679</td>
+<td style="text-align: right;">2.617</td>
+<td style="text-align: right;">921</td>
+<td style="text-align: right;">1.696</td>
+<td style="text-align: right;">No desglosado aquí</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las ganancias financieras/disposiciones y efectos fiscales hacen que el beneficio IFRS antiguo no sea una base perpetua. El FCF de 2023 incorporaba 137 de otras inversiones; el de 2024, 46. Quitándolos: 1.734 y 1.782, frente a 1.949 en 2025. Adquisiciones de efectivo de 1.216/622/843 en 2023/24/25, más 384 por minoritarios Pagero en 2024, no son crecimiento orgánico gratuito. <a href="https://ir.thomsonreuters.com/static-files/d4676c84-359c-42c3-9f84-8c62552d49a2">Anual 2025, aprobado 4/3/2026</a>, <a href="https://investors.thomsonreuters.com/static-files/8fbc4b5a-2788-4d6b-8519-557c6b475281">anual 2024/40-F, 6/3/2025</a>, <a href="https://investors.thomsonreuters.com/static-files/13453a61-1934-494a-b639-ed45a69dd0e8">reexpresión 19/10</a>.</p>
+<h3 id="los-últimos-cuatro-trimestres">Los últimos cuatro trimestres</h3>
+<p>Las columnas de beneficio son continuadas reexpresadas. CFO y FCF <strong>publicados combinados</strong> se identifican para no fingir un desglose trimestral de Print que el suplemento no ofrece para cada trimestre.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos cont.</th>
+<th style="text-align: right;">EBITDA ajust.</th>
+<th style="text-align: right;">D&amp;A</th>
+<th style="text-align: right;">EBIT normalizado</th>
+<th style="text-align: right;">EBIT IFRS cont.</th>
+<th style="text-align: right;">Beneficio cont.</th>
+<th style="text-align: right;">Beneficio ajust.</th>
+<th style="text-align: right;">CFO combinado</th>
+<th style="text-align: right;">FCF combinado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q4 2025</td>
+<td style="text-align: right;">1.873</td>
+<td style="text-align: right;">687</td>
+<td style="text-align: right;">238</td>
+<td style="text-align: right;">449</td>
+<td style="text-align: right;">453</td>
+<td style="text-align: right;">262</td>
+<td style="text-align: right;">407</td>
+<td style="text-align: right;">756</td>
+<td style="text-align: right;">581</td>
+</tr>
+<tr class="even">
+<td>Q1 2026</td>
+<td style="text-align: right;">1.975</td>
+<td style="text-align: right;">811</td>
+<td style="text-align: right;">243</td>
+<td style="text-align: right;">568</td>
+<td style="text-align: right;">571</td>
+<td style="text-align: right;">420</td>
+<td style="text-align: right;">490</td>
+<td style="text-align: right;">505</td>
+<td style="text-align: right;">332</td>
+</tr>
+<tr class="odd">
+<td>Q2 2026</td>
+<td style="text-align: right;">1.843</td>
+<td style="text-align: right;">678</td>
+<td style="text-align: right;">251</td>
+<td style="text-align: right;">427</td>
+<td style="text-align: right;">498</td>
+<td style="text-align: right;">393</td>
+<td style="text-align: right;">380</td>
+<td style="text-align: right;">920</td>
+<td style="text-align: right;">727</td>
+</tr>
+<tr class="even">
+<td>Q3 2026</td>
+<td style="text-align: right;">1.833</td>
+<td style="text-align: right;">651</td>
+<td style="text-align: right;">249</td>
+<td style="text-align: right;">402</td>
+<td style="text-align: right;">402</td>
+<td style="text-align: right;">289</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">599</td>
+<td style="text-align: right;">408</td>
+</tr>
+<tr class="odd">
+<td>TTM</td>
+<td style="text-align: right;">7.524</td>
+<td style="text-align: right;">2.827</td>
+<td style="text-align: right;">981</td>
+<td style="text-align: right;">1.846</td>
+<td style="text-align: right;">1.924</td>
+<td style="text-align: right;">1.364</td>
+<td style="text-align: right;">1.627</td>
+<td style="text-align: right;">2.780</td>
+<td style="text-align: right;">2.048</td>
+</tr>
+</tbody>
+</table></div>
+<p>Q1/Q4 concentran parte de la estacionalidad fiscal; no anualizo Q3. Se suman beneficios y se aplica un denominador de acciones vigente, no se suman EPS trimestrales. <a href="https://investors.thomsonreuters.com/static-files/13453a61-1934-494a-b639-ed45a69dd0e8">Suplemento</a>, <a href="https://www.sec.gov/Archives/edgar/data/1075124/000119312526333835/d125343dex991.htm">Q2 5/8</a>, <a href="https://investors.thomsonreuters.com/static-files/781f0447-2b5b-4b54-884d-d4ebc5dadf28">Q3 3/11</a>.</p>
+<p>TTM previo de ingresos sin Print: 6.878; actual 7.524, +9,4% (no equivale a crecimiento orgánico: quedan otros cambios de perímetro). En 9 meses comparables: EBIT normalizado 1.397 frente a 1.247, +12,0%; beneficio ajustado 1.220 frente a 1.096. El emisor no ha publicado aquí una reexpresión completa 2024 con costes editoriales retenidos. Una reconstrucción aproximada del EBIT normalizado TTM previo da 1.664–1.674 si se asignan 30–40 de esos costes a Q4 2024; el crecimiento resultante es 10,3–10,9%. Es una <strong>estimación de puente</strong>, no una cifra publicada; no se usa como entrada del DCF. La conclusión se apoya en los 9 meses homogéneos y el TTM actual auditables, no en falsa precisión.</p>
+<h3 id="caja-normalizada-y-beneficio-económico">Caja normalizada y beneficio económico</h3>
+<p>FCF continuado 2025 = 1.950 − (274 − 3) = <strong>1.679</strong>. Nueve meses 2026 = 1.467 − (169 − 2) = <strong>1.300</strong>; comparable 2025 = 1.369 − (198 − 2) = <strong>1.173</strong>. TTM = 1.679 + 1.300 − 1.173 = <strong>1.806</strong>. CFO continuado TTM <strong>2.535</strong>, menos capex 665, arrendamientos 61 y preferentes 4, más otras inversiones 1, también da 1.806. El FCF continuado crece 10,8% en nueve meses, pese al trimestre débil.</p>
+<p>El FCF publicado aún añade SBC vía CFO. Para el DCF no uso 2.048 ni el FCF/acción del scanner: proyecto EBIT después de SBC y la inversión real. Como diagnóstico, 1.806 + interés neto TTM 177 × 79% + preferentes 4 − SBC aproximada 120 ≈ <strong>1.830</strong> de caja económica desapalancada; 120 es una aproximación, no una cifra TTM reportada. Los movimientos de circulante e impuestos impiden tratarla como una anualidad exacta.</p>
+<p>Beneficio económico TTM a impuesto normalizado 21%: (EBIT1.846 − interés177) ×79% − preferentes4 = <strong>1.314,5</strong>, o <strong>3,02/acción</strong> con 435 millones de acciones. Beneficio ajustado empresarial 1.627/435 = <strong>3,74/acción</strong>, mayor porque excluye amortización adquirida y usa otro tratamiento fiscal. Mantengo las dos medidas; no las mezclo en el múltiplo.</p>
+<h2 id="balance-y-puente-a-acciones">Balance y puente a acciones</h2>
+<p>Deuda neta publicada a 30/9: <strong>2.747</strong>, incluyendo arrendamientos 228; caja 1.394. Apalancamiento neto próximo a 1× EBITDA continuado: no hay una alerta inmediata de solvencia. La liquidez de la venta llega en octubre, después de ese balance. Acciones comunes a 30/10: 433,5 millones; uso <strong>435 millones</strong> para dilución actual. No añado beneficio por recompras futuras gratuitas.</p>
+<p>Puente base desde valor operativo: restar 2.747; devolver 228 de deuda de arrendamientos porque sus pagos permanecen en flujos operativos; restar reserva de caja operativa 400; sumar producto neto de Print estimado 450 frente a 500 brutos; sumar valor del 49% retenido 300; restar reserva contingente 100; restar preferentes 110 y déficit neto de pensiones 421×79%=332,59. <strong>Deducción neta total: 2.711,59.</strong></p>
+<p>Las cifras de caja operativa, producto neto, JV y contingencia son supuestos del analista, no nuevas revelaciones empresariales. Una regla de tres de 500×49/51=480 no prueba el valor de una minoría después de regalías y garantías. Rango exploratorio de la JV 0–480; cada 100 millones altera 0,23/acción. No se suma por separado el activo fiscal diferido ni se capitalizan activos operativos como caja excedente. Las obligaciones de pensión se descuentan una vez; no se añade una devolución ficticia de aportaciones al FCFF proyectado. <a href="https://investors.thomsonreuters.com/static-files/781f0447-2b5b-4b54-884d-d4ebc5dadf28">Balance/conciliación deuda, Q3</a>, <a href="https://ir.thomsonreuters.com/static-files/d4676c84-359c-42c3-9f84-8c62552d49a2">pensiones y preferentes, anual 2025</a>.</p>
+<h2 id="valoración-directa-fcff-diez-años">Valoración directa: FCFF diez años</h2>
+<p>Base: ingresos continuados TTM 7.524 más regalías anualizadas iniciales estimadas 83, que decrecen 5% anual; no se consolida Print. Años F1–F5: crecimiento de ingresos centrales <strong>9/8,5/8/7,5/7%</strong>; margen EBITDA <strong>40/40,25/40,5/40,75/41%</strong>; D&amp;A <strong>12,5/12/11,5/11/10,5%</strong>; capex <strong>9/9/8,75/8,5/8,5%</strong>. Impuesto normalizado 21%; circulante adicional 5% del incremento de ingresos; pagos de arrendamientos 0,8% de ingresos. El margen aplicado al conjunto incorpora el coste retenido: no se añade margen del 100% a las regalías.</p>
+<p>FCFF = EBIT×(1−t) + D&amp;A − capex − incremento de circulante − pagos de arrendamiento. SBC permanece en EBIT. No se suman adquisiciones futuras; el crecimiento proyectado debe alcanzarse orgánicamente. La amortización adquirida se agota progresivamente; no se perpetúa D&amp;A superior a inversión. F1 EBIT 27,5% ya exige mejora desde 24,5% TTM: el caso central no es un escenario de estancamiento.</p>
+<p>F6–F10: crecimiento converge a 3%, margen EBIT a 32,5% y D&amp;A a 8,5%. La reinversión converge desde las partidas explícitas a NOPAT×crecimiento/ROIC. Terminal g 3%, ROIC incremental25%, reinversión12% del NOPAT; crecimiento perpetuo no gratuito. Ese ROIC incremental es un supuesto sobre crecimiento orgánico, no el ROIC histórico reportado del grupo incluyendo goodwill. Con ROIC terminal 15%, el valor cae a 85,59; con 20%, 89,76.</p>
+<p><strong>WACC 8,5%</strong>, no un mínimo universal del plan. Referencia: Treasury10 años <strong>4,95% el 3/11</strong>; beta0,85 y prima4,5% son hipótesis, coste de equity8,775%, deuda5,5% antes de impuestos, ponderación aproximada93/7, que arroja WACC≈8,46%. Sensibilidad explícita 7,5–9,5%. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&amp;type=daily_treasury_yield_curve">Tesoro de EE.UU., curva diaria noviembre</a>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>F</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">Reinversión neta</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">8.280</td>
+<td style="text-align: right;">2.277</td>
+<td style="text-align: right;">1.799</td>
+<td style="text-align: right;">−190</td>
+<td style="text-align: right;">1.989</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">8.973</td>
+<td style="text-align: right;">2.535</td>
+<td style="text-align: right;">2.003</td>
+<td style="text-align: right;">−163</td>
+<td style="text-align: right;">2.165</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">9.681</td>
+<td style="text-align: right;">2.808</td>
+<td style="text-align: right;">2.218</td>
+<td style="text-align: right;">−153</td>
+<td style="text-align: right;">2.371</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">10.398</td>
+<td style="text-align: right;">3.094</td>
+<td style="text-align: right;">2.444</td>
+<td style="text-align: right;">−141</td>
+<td style="text-align: right;">2.585</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">11.118</td>
+<td style="text-align: right;">3.391</td>
+<td style="text-align: right;">2.679</td>
+<td style="text-align: right;">−97</td>
+<td style="text-align: right;">2.776</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">11.800</td>
+<td style="text-align: right;">3.646</td>
+<td style="text-align: right;">2.881</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">2.786</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">12.431</td>
+<td style="text-align: right;">3.891</td>
+<td style="text-align: right;">3.074</td>
+<td style="text-align: right;">255</td>
+<td style="text-align: right;">2.819</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td style="text-align: right;">12.998</td>
+<td style="text-align: right;">4.120</td>
+<td style="text-align: right;">3.255</td>
+<td style="text-align: right;">371</td>
+<td style="text-align: right;">2.884</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td style="text-align: right;">13.487</td>
+<td style="text-align: right;">4.329</td>
+<td style="text-align: right;">3.420</td>
+<td style="text-align: right;">432</td>
+<td style="text-align: right;">2.989</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td style="text-align: right;">13.887</td>
+<td style="text-align: right;">4.513</td>
+<td style="text-align: right;">3.565</td>
+<td style="text-align: right;">428</td>
+<td style="text-align: right;">3.138</td>
+</tr>
+</tbody>
+</table></div>
+<p>Valor operativo 42.845,50; PV flujos 16.864,32; PV terminal 25.981,18; terminal 60,6%; equity 40.133,91; <strong>92,26/acción</strong>. La reinversión neta inicial negativa proviene de D&amp;A superior al capex, no de inversión material negativa. El modelo la elimina durante la transición.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC / g terminal</th>
+<th style="text-align: right;">2,5%</th>
+<th style="text-align: right;">3,0%</th>
+<th style="text-align: right;">3,5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7,5%</td>
+<td style="text-align: right;">106,83</td>
+<td style="text-align: right;">114,55</td>
+<td style="text-align: right;">124,15</td>
+</tr>
+<tr class="even">
+<td>8,0%</td>
+<td style="text-align: right;">96,29</td>
+<td style="text-align: right;">102,29</td>
+<td style="text-align: right;">109,58</td>
+</tr>
+<tr class="odd">
+<td>8,5%</td>
+<td style="text-align: right;">87,52</td>
+<td style="text-align: right;">92,26</td>
+<td style="text-align: right;">97,93</td>
+</tr>
+<tr class="even">
+<td>9,0%</td>
+<td style="text-align: right;">80,10</td>
+<td style="text-align: right;">83,91</td>
+<td style="text-align: right;">88,39</td>
+</tr>
+<tr class="odd">
+<td>9,5%</td>
+<td style="text-align: right;">73,74</td>
+<td style="text-align: right;">76,84</td>
+<td style="text-align: right;">80,44</td>
+</tr>
+</tbody>
+</table></div>
+<p>+1 punto de crecimiento en F1–F5, desvanecido después: 97,77. +1 punto de margen EBIT en toda la trayectoria: 95,34. Impuesto 19%: 94,72. Capex +1 punto en el periodo explícito: 91,20. Esas pruebas cambian una variable, no se acumulan automáticamente.</p>
+<p>Adverso 52,86: crecimiento 6→4%, EBITDA 38%, mayor capex 9,5→9%, EBIT terminal 29%, WACC 9,5%, g 2,5%, ROIC 20%, deducciones patrimoniales 400 mayores. Favorable 134,38: crecimiento 11→8%, EBITDA 40,5→44%, EBIT terminal 35,5%, WACC 8%, g 3,5%, ROIC 30%, deducciones 200 menores. No asigno probabilidades inventadas ni llamo «valor razonable» a todo el intervalo adverso/favorable.</p>
+<h2 id="valoración-inversa-y-rentabilidad">Valoración inversa y rentabilidad</h2>
+<p>Para justificar109,78 manteniendo lo demás constante, el modelo requiere una de estas alternativas: - Desplazar el crecimiento explícito <strong>+3,02 puntos</strong>: aproximadamente12,02/11,52/11,02/10,52/10,02%, con convergencia posterior al3%. - Subir <strong>+5,70 puntos</strong> toda la trayectoria de margen EBIT: F5≈36,20%, terminal≈38,20%; EBITDA F5≈46,70%. - Bajar WACC a <strong>7,68%</strong> con g 3%.</p>
+<p>También sirven combinaciones menos extremas. No son imposibles, pero la expansión de gasto en IA y el impulso transaccional temporal hacen insuficiente utilizar solo el trimestre fuerte para darlas por probadas. Directa e inversa comparten modelo y no son dos evidencias independientes.</p>
+<p>La TIR de 6,4% al accionista usa FCFF central menos interés neto 190×79% y dividendo preferente 4 cada año, sin nueva deuda ni recompras, con valor terminal operativo central fijo 58.743,02 menos el mismo puente 2.711,59. Supone distribución potencial de todo el flujo disponible, no guía de dividendos. Si se retiene caja, su creación de valor dependerá del retorno obtenido. No confundir esa TIR con el WACC 7,68% que iguala el precio rehaciendo también el terminal. Rentabilidad por dividendo actual:2,62anual/109,78≈2,39%, ya parte de la rentabilidad total, no se suma otra vez.</p>
+<h2 id="comparables-comprobación-independiente-no-valoración-automática">Comparables: comprobación independiente, no valoración automática</h2>
+<p>RELX es el contraste más cercano en Legal, aunque mezcla Risk, STM y Exhibitions. Su actualización del22/10 mostró crecimiento subyacente 7% del grupo y 10% Legal. WKL combina Tax/Legal con Health y otros negocios; H1 crecimiento orgánico5%, recurrente 7%, margen ajustado29,4%. TRI merece prima por crecimiento reciente, pero ambas también invierten en IA: no son referencias de negocios sin opciones de crecimiento.</p>
+<p>Comparación sencilla en moneda local, sin mezclar divisas: RELX precio2.952p del3/11 dividido por EPS ajustado FY2025 de128,5p≈<strong>23,0×</strong>; WKL85,44EUR del3/11 dividido por5,29EUR≈<strong>16,2×</strong>. TRI109,78 dividido por EPS FY2025 continuado ajustado3,34≈<strong>32,9×</strong>. Las cotizaciones de pares son secundarias; las métricas financieras son primarias. Como contraste más reciente, TRI cotiza a <strong>29,35×</strong> beneficio ajustado TTM sobre435millones de acciones y <strong>36,33×</strong> beneficio económico normalizado.</p>
+<p>Un rango orientativo20–26× aplicado al EPS ajustado TTM3,74 de TRI da74,80–97,24. Incluye prima sobre los pares, pero no constituye un segundo DCF ni se fuerza para coincidir con92,26. Perímetros, impuestos, SBC y amortización adquirida difieren; usarlo como rango exacto de valoración sería excesivo. La lectura útil es que <strong>el precio actual todavía incorpora una prima material</strong>, no que todo múltiplo superior a RELX sea incorrecto.</p>
+<p><a href="https://www.relx.com/~/media/Files/R/RELX-Group/documents/press-releases/2026/relx-trading-update-oct-2026.pdf">RELX actualización22/10</a>, <a href="https://www.relx.com/~/media/Files/R/RELX-Group/documents/press-releases/2026/first-half-results-2026-pressrelease.pdf">RELX resultados23/7</a>, <a href="https://assets.contenthub.wolterskluwer.com/api/public/content/3775537-2026-08-05-wolters-kluwer-2026-half-year-results-7d85c04c6c?v=15135ed1">WKL H1 5/8</a>, <a href="https://assets.contenthub.wolterskluwer.com/api/public/content/3118646-2026-02-25-wolters-kluwer-2025-full-year-results-7391945524?v=2c966da9">WKL FY2025 25/2</a>, <a href="https://www.sharecompare.co.uk/shares/REL.L/history/">precio RELX</a>, <a href="https://au.finance.yahoo.com/quote/WKL.AS/">precio WKL</a>.</p>
+<h2 id="qué-cambia-la-tesis-y-próximos-eventos">Qué cambia la tesis y próximos eventos</h2>
+<ol type="1">
+<li><strong>Márgenes y gasto en IA:</strong> confirmar que los ingresos recurrentes y la productividad compensan inversión/coste de servicio. Crecimiento sin conversión a caja puede bajar valor incluso si sube EPSajustado.</li>
+<li><strong>Q4 2026:</strong> primera observación de regalías, TSA, costes retenidos y resultado de la JV. Excluir la ganancia por venta de la rentabilidad recurrente. Guidance actual: crecimiento orgánico Q4≈8%, margen EBITDA≈42%; no exigir a Q3 un margen estacional de Q4.</li>
+<li><strong>Guía 2027:</strong> se espera con resultados Q4 en febrero 2027; fecha exacta no verificada. No hay evento de resultados TRI del3/11 pendiente: ya se incorporó.</li>
+<li><strong>WKL publica actualización9 meses el4/11 a07:00 GMT</strong>, posterior a este corte. Puede cambiar el contraste competitivo, no los resultados TRI ya conocidos. <a href="https://www.wolterskluwer.com/en/investors/calendar-faq/investor-calendar">Calendario oficial</a>.</li>
+<li><strong>Dividendo:</strong>0,655, registro18/11, pago10/12. No tratarlo como rendimiento adicional al flujo del modelo.</li>
+<li><strong>Aviso de bonos:</strong> la solicitud de exclusión prevista13/11 y efecto23/11 afecta a tres series de deuda de TR Finance, no a la acción común. No es una exclusión bursátil de TRI.</li>
+</ol>
+<p>Reabrir aprobación fundamental si el precio ofrece una rentabilidad mejor sustentada, o si evidencia de crecimiento recurrente/margen/caja eleva el modelo. Una rebaja a95–100 sin deterioro justificaría estudiar entrada pequeña; no obliga a comprar ni convierte la referencia en orden. Revisar a la baja si la IA eleva costes persistentemente sin monetización, el impulso de Pagero/licencias oculta desaceleración recurrente, o la normalización Print reduce más caja de lo previsto. La posición financiera permite esperar y ejecutar la estrategia; no elimina el riesgo de valoración.</p>
+<p><strong>Confianza:</strong> media en la conclusión; alta en los estados financieros reexpresados y el puente TTM actual, media en crecimiento/márgenes y baja-media en el terminal y valor de la minoría. El trabajo de investigación queda cerrado con una decisión razonada. Lo que todavía no existe es una autorización de entrada Stage 3.5, no un análisis fundamental por terminar.</p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/TRI.html">Open full TRI dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TRI/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TRI/model.json">model.json</a></li>
+</ul>
+</main></body></html>

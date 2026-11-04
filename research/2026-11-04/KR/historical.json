@@ -1,0 +1,79 @@
+{
+  "units": "USD millions",
+  "formula": "FY2025 plus H1FY2026 minus H1FY2025; priorTTM = FY2024 plus H1FY2025 minus H1FY2024",
+  "columns": [
+    "period",
+    "revenue",
+    "EBIT",
+    "NI_attributable",
+    "CFO",
+    "cash_capex",
+    "FCF"
+  ],
+  "rows": [
+    [
+      "FY2023",
+      150039,
+      3096,
+      2164,
+      6788,
+      3904,
+      2884
+    ],
+    [
+      "FY2024",
+      147123,
+      3849,
+      2665,
+      5794,
+      4017,
+      1777
+    ],
+    [
+      "FY2025",
+      147642,
+      1890,
+      1016,
+      7311,
+      3855,
+      3456
+    ],
+    [
+      "TTM2026Q2",
+      149326,
+      2083,
+      1084,
+      6708,
+      4324,
+      2384
+    ],
+    [
+      "priorTTM",
+      147000,
+      3925,
+      2727,
+      6018,
+      3806,
+      2212
+    ]
+  ],
+  "normalizedNI": [
+    {
+      "period": "FY2024",
+      "value": 3246
+    },
+    {
+      "period": "FY2025",
+      "value": 3199
+    },
+    {
+      "period": "TTM2026Q2",
+      "value": 3156
+    },
+    {
+      "period": "priorTTM",
+      "value": 3208
+    }
+  ],
+  "data_caveat": "FY2023 53 weeks; others 52. Q1 16 weeks, Q2/Q3 12 weeks. Historical FCF is CFO less cash PPE, not DCF FCFF."
+}

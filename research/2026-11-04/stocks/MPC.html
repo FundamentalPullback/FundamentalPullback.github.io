@@ -1,0 +1,265 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>MPC · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/MPC">← MPC profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A161 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">Esperar precio</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Good company; wait for price. Base $345.73, central sensitivity $305–395. Q3 included; refining/SPR normalization and economic ownership of MPLX. No approved entry.</strong></p>
+<h1 id="marathon-petroleum-stage-3-research-review">Marathon Petroleum Stage 3 research review</h1>
+<p><strong>Completed 4 November 2026. Decision: good business; wait for a better price.</strong> The latest published results have been incorporated. This replaces the earnings deferral and closes the fundamental research task, but does not approve an entry or predict a stock-price decline.</p>
+<p>Reference price: <strong>$427.31</strong>, the 3 November scanner observation labeled <strong>11/3/26 17:27:04</strong>; timezone not supplied. It is not represented as an independently verified regular-session closing price. The scanner shows QP 80, Opportunity 95, RSI 44.7 and a 13.5% drawdown from $493.98. Its 14.82 P/E and $43.58 FCF/share fields are not the valuation inputs following the new earnings release.</p>
+<h2 id="decision-and-valuation">Decision and valuation</h2>
+<p>The primary segment FCFF model gives <strong>$346/share</strong> in the base case. A central range is approximately <strong>$305–395</strong>, using normalized year-five refining EBITDA of $9–11 per throughput barrel and discount rates of 9.5–10.5% for MPC excluding MPLX and 8–9% for MPLX. These are present-value estimates, not future targets. Confidence is <strong>medium in the direction of the price decision, medium-low in the exact fair value</strong>, because future refining spreads and the taxable economics of MPLX are uncertain. Reported financial evidence has high confidence.</p>
+<p>Separate stress cases are <strong>$100 bear / $346 base / $773 bull</strong>. Do not call that entire stress span the fair-value range. The bull case captures a much longer high-margin refining regime and stronger midstream growth; its upside is real in the model, not the central conclusion.</p>
+<p>At $427.31, price is 23.6% above base value. The plan’s margin-of-safety definition, (value minus price)/value, is <strong>−23.6%</strong>; the modeled return to base value, value/price minus one, is <strong>−19.1%</strong>. These are different denominators. A <strong>25% discount to base value gives an approximately $260 conditional review price</strong>, justified by commodity cyclicality, regulatory exposure and sale/reinvestment uncertainty. This is not a buy limit or stop, and the discount is applied to the base case, not stacked on the bear case. Stage 3.5 would still require updated price, structure, signal, risk budget and sizing.</p>
+<h2 id="business-and-the-source-of-earnings">Business and the source of earnings</h2>
+<p>MPC combines a large U.S. refining and marketing system with approximately 64% ownership of MPLX. Refining benefits from scale, access to North American crude, complex processing and integrated logistics, but its product is economically cyclical. MPLX adds more stable infrastructure earnings and distributions, while carrying its own debt and public minority ownership. Renewable diesel depends partly on regulatory credits.</p>
+<p>The drawdown is observed; a single definitive cause is not established by the reviewed disclosures. The available business evidence shows stronger, not deteriorating, current operations. Concern that exceptional refining spreads will normalize is a valuation hypothesis rather than a verified explanation for every day’s price change.</p>
+<p>The November results remove the old reason to defer research. The A119 review had deliberately left mid-cycle earnings, MPLX ownership and maintenance capital unresolved. This is the first completed segment valuation in that sequence, not a retrospective justification of the older scanner’s roughly $750–770 indicative fields.</p>
+<h2 id="financial-history-and-current-trajectory">Financial history and current trajectory</h2>
+<p>Amounts below are USD billions except EPS. Sales exclude separately reported equity-method income and other income. CFO and PP&amp;E purchases are consolidated, including MPLX; CFO minus PP&amp;E purchases is a cash-flow diagnostic, <strong>not cash owned entirely by MPC shareholders and not the FCFF model</strong>.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th style="text-align: right;">Sales</th>
+<th style="text-align: right;">GAAP operating profit</th>
+<th style="text-align: right;">MPC net income</th>
+<th style="text-align: right;">Diluted EPS</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">PP&amp;E purchases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td style="text-align: right;">148.379</td>
+<td style="text-align: right;">14.514</td>
+<td style="text-align: right;">9.681</td>
+<td style="text-align: right;">23.63</td>
+<td style="text-align: right;">14.117</td>
+<td style="text-align: right;">1.890</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td style="text-align: right;">138.864</td>
+<td style="text-align: right;">6.796</td>
+<td style="text-align: right;">3.445</td>
+<td style="text-align: right;">10.08</td>
+<td style="text-align: right;">8.665</td>
+<td style="text-align: right;">2.533</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td style="text-align: right;">132.699</td>
+<td style="text-align: right;">8.291</td>
+<td style="text-align: right;">4.047</td>
+<td style="text-align: right;">13.22</td>
+<td style="text-align: right;">8.253</td>
+<td style="text-align: right;">3.486</td>
+</tr>
+<tr class="even">
+<td>Q4 2025</td>
+<td style="text-align: right;">32.574</td>
+<td style="text-align: right;">2.694</td>
+<td style="text-align: right;">1.535</td>
+<td style="text-align: right;">5.12</td>
+<td style="text-align: right;">3.069</td>
+<td style="text-align: right;">1.181</td>
+</tr>
+<tr class="odd">
+<td>Q1 2026</td>
+<td style="text-align: right;">34.200</td>
+<td style="text-align: right;">1.404</td>
+<td style="text-align: right;">0.511</td>
+<td style="text-align: right;">1.73</td>
+<td style="text-align: right;">1.121</td>
+<td style="text-align: right;">0.913</td>
+</tr>
+<tr class="even">
+<td>Q2 2026</td>
+<td style="text-align: right;">51.994</td>
+<td style="text-align: right;">7.322</td>
+<td style="text-align: right;">5.138</td>
+<td style="text-align: right;">17.73</td>
+<td style="text-align: right;">10.327</td>
+<td style="text-align: right;">1.186</td>
+</tr>
+<tr class="odd">
+<td>Q3 2026</td>
+<td style="text-align: right;">56.032</td>
+<td style="text-align: right;">10.450</td>
+<td style="text-align: right;">7.447</td>
+<td style="text-align: right;">26.59</td>
+<td style="text-align: right;">10.732</td>
+<td style="text-align: right;">1.127</td>
+</tr>
+<tr class="even">
+<td>TTM September 2025</td>
+<td style="text-align: right;">133.262</td>
+<td style="text-align: right;">6.738</td>
+<td style="text-align: right;">2.883</td>
+<td style="text-align: right;">Not inferred from annual/YTD EPS</td>
+<td style="text-align: right;">7.391</td>
+<td style="text-align: right;">3.115</td>
+</tr>
+<tr class="odd">
+<td>TTM September 2026</td>
+<td style="text-align: right;">174.800</td>
+<td style="text-align: right;">21.870</td>
+<td style="text-align: right;">14.631</td>
+<td style="text-align: right;">51.17 sum of four reported quarters</td>
+<td style="text-align: right;">25.249</td>
+<td style="text-align: right;">4.407</td>
+</tr>
+</tbody>
+</table></div>
+<p>Annual history is from <a href="https://s2.q4cdn.com/142437514/files/doc_financials/2025/ar/2025_MPC_Annual_Report_and_10K.pdf">MPC’s 2025 annual report</a>. Q4 EPS is directly sourced from the <a href="https://ir.marathonpetroleum.com/investor/news-releases/news-details/2026/Marathon-Petroleum-Corp--Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx">Q4 2025 release</a>, not annual EPS minus nine-month EPS. Q1 and Q2 data use the <a href="https://www.sec.gov/Archives/edgar/data/1510295/000151029526000042/mpc-20260331.htm">Q1 10-Q</a> and <a href="https://d18rn0p25nwr6d.cloudfront.net/CIK-0001510295/69a90489-aff1-4581-9a4d-a8e722a23346.html">Q2 10-Q</a>. TTM values equal the preceding fiscal year plus current nine months minus prior nine months, using the <a href="https://www.sec.gov/Archives/edgar/data/1510295/000151029525000064/mpc-20250930.htm">Q3 2025 filing</a> and <a href="https://www.sec.gov/Archives/edgar/data/1510295/000151029526000071/mpc-20260930.htm">Q3 2026 filing</a>.</p>
+<p>TTM sales increased 31.2%, operating profit 224.6% and MPC net income 407.5%. That does not establish a durable growth rate. Operating margin rose from 5.06% to 12.51%. The 2025 net-income increase was 17.5%, while EPS rose 31.2%, partly because share repurchases reduced the denominator. Both total and per-share economics matter.</p>
+<p>A reconciliation retaining recurring turnarounds, depreciation and SBC gives adjusted operating profit of $14.477bn in 2023, $6.484bn in 2024, $7.045bn in 2025, $5.803bn in prior TTM and $21.489bn in current TTM. This removes the identified LIFO, disposal/remeasurement, legal and similar management reconciliation items, but <strong>does not turn current commodity spreads into mid-cycle profit</strong>. The model separately normalizes the cycle.</p>
+<h2 id="what-the-latest-quarter-changes">What the latest quarter changes</h2>
+<p>Q3 R&amp;M adjusted EBITDA was $9.895bn, or <strong>$34.15/barrel</strong>; total adjusted EBITDA was $11.729bn. Actual throughput was 3.150m barrels/day with 100% crude utilization. Corporate costs increased with incentive compensation. The $123m tax/legal adjustment concerns prior-period matters; it is not a reason to strip ongoing compensation. Renewable diesel contributed $254m, including benefits from stronger credit values. <a href="https://ir.marathonpetroleum.com/investor/news-releases/news-details/2026/Marathon-Petroleum-Corp--Reports-Third-Quarter-2026-Results/default.aspx">Q3 earnings release</a></p>
+<p>Historical R&amp;M EBITDA/barrel was −$2.06 in 2020, $3.44 in 2021, $17.95 in 2022 on the later recast basis, $12.94 in 2023, $5.33 in 2024 and $5.63 in 2025. The older 2022 report gives $17.88 before the later segment recast; do not silently mix those two definitions. The four-year 2022–25 average is $10.46; the broader pandemic-inclusive average is lower. Base normalization to $10 by 2031 therefore already assumes a healthier environment than the 2024–25 trough, not a return to permanent crisis margins. <a href="https://www.marathonpetroleum.com/content/documents/Investors/Annual_Report/2024_MPC_Annual_Report_and_10K.pdf">2024 annual report</a>, <a href="https://www.marathonpetroleum.com/content/documents/Investors/Annual_Report/2022_MPC_Annual_Report_and_10K.pdf">2022 annual report</a></p>
+<p>The official Q4 operating outlook is 3.080m barrels/day total throughput, 95% crude utilization, $230m refining turnaround costs, $65m renewable-diesel turnaround costs and $390m R&amp;M depreciation. These are operational forecasts, not a forecast of crack spreads or full-year EPS. <a href="https://s2.q4cdn.com/142437514/files/content_files/MPC-3Q-2026-Slides.pdf">Q3 presentation, slide 11</a></p>
+<p>Management’s call argues for elevated margins through at least mid-2027 and an improved longer-term mid-cycle. It also describes conversion-unit downtime as a near-term capture headwind and Gulf Coast projects intended for year-end 2027. The model grants strong 2027 cash generation, but does not perpetuate Q3’s $34.15/barrel. Transcript observations are from a secondary transcription of management’s statements, cross-checked against the primary presentation where possible. <a href="https://www.fool.com/earnings/call-transcripts/2026/11/03/marathon-petroleum-mpc-q3-2026-earnings-call-transcript/">November 3 call transcript</a></p>
+<h2 id="cash-quality-and-claims-on-cash">Cash quality and claims on cash</h2>
+<p>Q3 CFO of $10.732bn included a $2.257bn working-capital source; CFO excluding that source was $8.475bn. Nine-month working-capital/derivative movements provided approximately $5.447bn. They are not annual recurring free cash. The cash bridge deducts a $3.411bn normalization reserve: $5.447bn consolidated source minus $0.136bn MPLX source minus the $1.900bn SPR claim separately deducted below. It is an analyst reserve, not a reported liability forecast, and is not deducted a second time in annual FCFF.</p>
+<p>The SPR arrangements delivered roughly 21m barrels, but require return of approximately 26m barrels from April 2027 to July 2029. The recognized return obligation is $1.9bn. It is removed once from parent equity value, with no second repayment deduction in forecast FCFF. Actual future cash settlement and hedge movements can differ. <a href="https://www.sec.gov/Archives/edgar/data/1510295/000151029526000071/mpc-20260930.htm">Q3 10-Q, notes 15–16 and cash-flow discussion</a></p>
+<p>As of September 30, parent cash/short-term investments excluding MPLX were $12.312bn; MPLX cash was $1.297bn. Valuation subtracts face debt and finance leases of $6.487bn at MPC and $27.005bn at MPLX. These reconcile to $33.492bn face debt. The lower $33.022bn balance-sheet debt is after issuance-cost/discount adjustments, not a smaller principal claim. Operating leases remain in operating costs and are not deducted again as debt.</p>
+<p>The denominator is <strong>276m diluted-equivalent shares</strong>, using rounded September 30 outstanding shares of 275m plus the latest disclosed approximately 1m dilution. This deliberately matches the balance-sheet date, rather than applying later buybacks for free. October 29 basic shares were 272.282m, but post-September buyback cash and cash generation are not fully reported. Using that later share count plus 1m without adjusting cash lifts base value only to $349.17 and is shown as a non-primary sensitivity. Future buybacks do not create free enterprise value.</p>
+<h2 id="mplx-ownership-and-economic-treatment">MPLX ownership and economic treatment</h2>
+<p>MPC held 647m of 1,013m MPLX common units, <strong>63.8697%</strong> using rounded reported unit counts. The model values MPLX operations, subtracts MPLX debt and other claims, adds only its excess cash and its net disposal proceeds, and then multiplies the residual equity by 647/1,013. It never adds full MPLX cash to parent cash, never grants MPC 100% of midstream earnings, and never subtracts consolidated debt after adding an already-net MPLX stake.</p>
+<p>MPLX Q3 adjusted EBITDA attributable to its LP was $1.859bn; TTM was $7.167bn. Its $1.537bn distributable cash flow is not FCFF because growth investments are not all deducted. Quarterly growth/maintenance spending including affiliate contributions was about $1.039bn, and the 2026 growth-capital outlook increased to $2.9bn, plus roughly $0.3bn maintenance capital. MPLX’s distribution increased to $1.2111/unit, implying about $3.136bn annual MPC receipts at the reported $784m quarterly amount. That distribution is not added again to FCFF or stake value. <a href="https://ir.mplx.com/CorporateProfile/press-releases/news-release/2026/MPLX-LP-Reports-Third-Quarter-2026-Financial-Results-Announces-Increase-to-Quarterly-Distribution-of-12-5/default.aspx">MPLX Q3 release</a></p>
+<p>MPC’s R&amp;M earnings already bear logistics fees paid to MPLX. Those fees remain as an expense in refining while MPLX’s economics are valued separately. MPLX’s adjusted EBITDA substitutes affiliate distributions/adjustments for some equity-accounted earnings. The model consistently treats that as an economic cash EBITDA basis and includes affiliate investment in capex, rather than independently adding affiliate book value.</p>
+<p>To avoid making SBC free, the MPLX starting EBITDA deducts the full annualized Q3 $48m “other” addback, a conservative $192m economic-cost reserve containing SBC and other adjustments. Then it removes $83.333m disposed EBITDA. The resulting $7.1607bn annual starting EBITDA is an analyst normalization, not a reported forecast. The already-retained $77m incentive-compensation expense is not separately stripped out. MPC corporate/segment compensation also remains an expense.</p>
+<p>MPLX is a partnership. This model values its cash flows on a <strong>25% corporate-tax-equivalent basis for MPC’s taxable ownership</strong>, not as if MPC’s distributions were tax-free. The exact tax basis, depreciation shield and timing are not publicly resolved by a simple book model. A zero-owner-tax upper-bound sensitivity raises the total MPC base value to $400.70, still without a normal cyclical margin of safety at $427.31. This tax sensitivity is more informative than pretending the owner’s tax position is known precisely.</p>
+<h2 id="sale-and-reinvestment-without-double-counting">Sale and reinvestment without double counting</h2>
+<p>The November 2 agreement announced November 3 sells St. Paul Park and Mandan, with 105,000 and 72,000 bpcd crude capacity, and related logistics assets to CVR. The price is $4.2bn plus inventory and adjustments: <strong>$3.45bn MPC / $0.75bn MPLX</strong>. The midstream price is 9 times projected 2027 EBITDA, implying $83.333m foregone EBITDA. Expected closing is year-end 2026, subject to HSR and other conditions. <a href="https://ir.marathonpetroleum.com/investor/news-releases/news-details/2026/Marathon-Petroleum-Corp-to-Divest-Minnesota-and-North-Dakota-Refineries--MPLX-LP-to-Divest-Related-Midstream-Assets/default.aspx">Transaction announcement</a></p>
+<p>Base assumes closing at the end of Q4, removes the refineries from 2027 throughput, and removes the disclosed MPLX EBITDA. It estimates total tax leakage at $0.60bn, the $4.2bn price less the $1.8bn disclosed net asset carrying value times 25%. <strong>Book carrying value is not tax basis</strong>; $0.45–0.75bn is tested. Allocated proportionally, base net proceeds are $2.957bn at MPC and $0.643bn at MPLX. Only approximately $3.368bn of those combined proceeds belongs economically to MPC shareholders before timing discount. Inventory proceeds are not added as a windfall; inventory is exchanged for cash and closing working-capital terms remain unknown.</p>
+<p>The buyer has not provided, in the sources used here, a complete public tax/standalone cash-flow carve-out that eliminates all assumptions about refinery earnings. Retained throughput, capex and turnarounds therefore use explicit capacity-linked estimates. A no-close case restores approximately 168,000 bpd of throughput, $100m annual depreciation/capex and $80m turnaround costs and removes sale proceeds. Base value becomes <strong>$352.37</strong>. This comparison is conditional, not a claim that the deal destroys an exactly measured amount of value.</p>
+<p>Management intends to reinvest. The model includes higher parent and MPLX capital spending and grants no extra acquisition growth for free. Beyond explicitly modeled projects, redeployment is assigned zero incremental NPV: cash spent at fair value replaces cash with equal project value, rather than allowing both the cash and an unpriced future earnings stream.</p>
+<h2 id="exact-fcff-construction-and-assumptions">Exact FCFF construction and assumptions</h2>
+<p>There are <strong>ten full forecast years, 2027–2036</strong>, plus a Q4 2026 stub, anchored to September 30 reported balance data. The model does not pretend the 35-day difference between balance date and scanner observation is a fully marked-to-market roll-forward. Discounting begins from the balance anchor; year-end factors are 0.25, 1.25 through 10.25 years. This small timing limitation is far below the scenario uncertainty.</p>
+<p>MPC excluding MPLX: R&amp;M EBITDA = daily total throughput × 365 × EBITDA/barrel. Add renewable-diesel EBITDA and other owned midstream income, deduct corporate cost and recurring turnarounds, then deduct depreciation to get EBIT. NOPAT = EBIT × (1 − tax). <strong>FCFF = NOPAT + D&amp;A − economic capex − change in operating working capital.</strong> Financing interest is excluded from FCFF; debt is subtracted in the equity bridge.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Assumption</th>
+<th>Bear</th>
+<th>Base</th>
+<th>Bull</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R&amp;M EBITDA/barrel 2027–31</td>
+<td>14 / 8 / 6 / 5.5 / 6</td>
+<td>24 / 18 / 14 / 11 / 10</td>
+<td>32 / 28 / 23 / 20 / 17</td>
+</tr>
+<tr class="even">
+<td>Total throughput 2027 → 2031, m bpd</td>
+<td>2.68 → 2.65</td>
+<td>2.82 → 2.85</td>
+<td>2.95 → 3.00</td>
+</tr>
+<tr class="odd">
+<td>Parent WACC</td>
+<td>11.5%</td>
+<td>10.0%</td>
+<td>9.0%</td>
+</tr>
+<tr class="even">
+<td>Parent terminal growth / ROIC</td>
+<td>0% / 10%</td>
+<td>2% / 12%</td>
+<td>2.5% / 14%</td>
+</tr>
+<tr class="odd">
+<td>Parent tax rate</td>
+<td>27%</td>
+<td>25%</td>
+<td>23%</td>
+</tr>
+<tr class="even">
+<td>MPLX first-five-year EBITDA growth</td>
+<td>2.5%</td>
+<td>5%</td>
+<td>7%</td>
+</tr>
+<tr class="odd">
+<td>MPLX WACC</td>
+<td>9.5%</td>
+<td>8.5%</td>
+<td>7.5%</td>
+</tr>
+<tr class="even">
+<td>MPLX terminal growth / ROIC</td>
+<td>1.5% / 10%</td>
+<td>2.5% / 12%</td>
+<td>3% / 14%</td>
+</tr>
+</tbody>
+</table></div>
+<p>These WACCs are explicit analyst discount-rate assumptions, not an assertion of an observed current beta or market-implied CAPM estimate. The sensitivity grid exposes the consequence of alternative rates.</p>
+<p>Base parent 2027 inputs are $1.10bn corporate expense, $0.09bn other midstream, $0.60bn renewable EBITDA, $1.40bn recurring turnaround cost, $1.80bn D&amp;A, $2.10bn capex and $0.05bn working-capital investment. Costs grow 2% annually. First-five-year parent capex before inflation is 2.1 / 2.1 / 1.9 / 1.9 / 1.9. Base MPLX capex including affiliate investment is 3.3 / 3.4 / 3.0 / 2.8 / 2.7, with initial D&amp;A of $1.50bn scaled with economic EBITDA. This is not the misleading assumption that maintenance-only spending funds all growth.</p>
+<p>In years 6–10, net reinvestment/NOPAT converges to terminal growth/ROIC. Terminal FCFF is next-year NOPAT × (1 − g/ROIC), discounted with WACC greater than g. Base parent terminal FCFF is $4.396bn; parent terminal value is 29.3% of parent EV. MPLX terminal value is 58.1% of MPLX EV; combined ownership-weighted terminal share of gross operating value is 40.0%.</p>
+<p>Base parent FCFF, 2027–36: <strong>15.470 / 10.841 / 7.819 / 5.372 / 4.522 / 4.486 / 4.447 / 4.405 / 4.359 / 4.310bn</strong>, subject to rounding; the accompanying model files contain unrounded working. Base MPLX corporate-tax-equivalent FCFF is approximately 2.69 / 2.89 / 3.61 / 4.14 / 4.59 / 4.73 / 4.86 / 4.96 / 5.04 / 5.09bn before its debt bridge and MPC ownership fraction.</p>
+<p>Base equity bridge: parent operations EV $70.517bn + owned MPLX equity $24.938bn + parent net bridge −$0.034bn = <strong>$95.421bn / 276m = $345.73/share</strong>. The parent net bridge includes reported cash, debt, $2bn operating cash, the WC reserve, SPR claim, $1.072bn pension/postretirement claims, $0.364bn legacy environmental claims and discounted net sale proceeds. MPLX includes $0.5bn operating cash and a $0.238bn earnout claim. Recorded pension/environmental obligations are removed once; no separate legacy payoff schedule is also charged in FCFF. This full-liability treatment is conservative about future tax relief.</p>
+<h2 id="reverse-valuation-and-cross-checks">Reverse valuation and cross-checks</h2>
+<p>At the same discount rates and cash/debt bridge, matching $427.31 requires either:</p>
+<ul>
+<li>Increasing the whole base refining margin path, including the stub, by <strong>$2.729/barrel</strong>: 2027 $26.73, year-five $12.73 and year-ten $14.05; or</li>
+<li>Keeping the early forecasts and stub fixed but raising the year-five-and-beyond normalized margin from $10 to approximately <strong>$14.00/barrel</strong> before subsequent nominal growth.</li>
+</ul>
+<p>These are alternative paths, not independent validation. The required structural margin is achievable in a favorable industry regime, but not justified simply by a 95 Opportunity score or the exceptionally strong latest quarter.</p>
+<p>At base operating assumptions, lowering the two WACCs to 8.5%/7.0% gives approximately $438 at base terminal growth; raising them to 11.5%/10.0% gives approximately $287. The full nine-point rate/growth grid spans about $285–468. This broader rate sensitivity is not the central fair-value range.</p>
+<p>Using the September 30 market value of MPC’s MPLX units, $36.46bn, instead of the corporate-tax-equivalent DCF stake gives a total check of approximately <strong>$387/share</strong>. It is a dated, market-dependent cross-check, not the primary valuation or an independently current quote. Removing all operating/WC reserves raises base value to about <strong>$366/share</strong>. The conclusion is therefore not driven solely by those cash reserves.</p>
+<p>The latest four quarterly EPS sum to $51.17, implying about <strong>8.35×</strong> trailing P/E at the scanner price, compared with 32.3× 2025 EPS. That apparent cheapness is exactly why cycle normalization matters. Base parent EV is approximately 8.6× the year-five EBITDA <strong>after recurring turnarounds</strong>, not a peak-quarter annualized multiple.</p>
+<p>For industry context, PBF’s Q3 gross refining margin less refining opex is roughly $26.76 per throughput barrel before corporate and other scope differences. DINO’s reported refining adjusted EBITDA is about $42.53 per throughput barrel, but approximately $32.94 after a $582m RIN-waiver reversal embedded in its adjusted numbers. MPC’s $34.15 is therefore part of a sector-wide strong margin regime. These are not fully identical accounting definitions, and no mechanical relative-value ranking or averaged peer target is used. <a href="https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm">PBF Q3 release</a>, <a href="https://www.sec.gov/Archives/edgar/data/1915657/000191565726000074/dino-20260930.htm">DINO Q3 filing</a></p>
+<h2 id="catalysts-risks-and-invalidation">Catalysts, risks and invalidation</h2>
+<ul>
+<li><strong>November 4, 2026 at 9am Eastern:</strong> EPA public hearing on proposed reallocation of an additional 770m RINs arising from 2025 small-refinery exemptions. Comments close <strong>December 4</strong>. The alternative proposals split the increment across 2026/27 or place it all in 2027. It is a proposal, not a finalized incremental burden, and can extend the existing 2026 compliance-reporting timetable. <a href="https://www.epa.gov/renewable-fuel-standard/proposed-reallocation-additional-2025-small-refinery-exemptions">EPA proposal page</a>, <a href="https://public-inspection.federalregister.gov/2026-21155.pdf">Federal Register proposed rule</a></li>
+<li><strong>Expected year-end 2026:</strong> HSR and closing of the refinery/logistics sale. Watch actual tax proceeds, retained liabilities, commercial agreements and capex redeployment. No clearance or completed sale is assumed as a fact.</li>
+<li><strong>April 2027–July 2029:</strong> SPR return obligations and hedges become cash/physical settlement events. A price spike or mismatched hedge adds risk beyond the booked amount.</li>
+<li><strong>Through 2027:</strong> Gulf Coast project execution, MPLX infrastructure spending and subsequent utilization. Growth must produce incremental cash returns, not merely higher EBITDA financed by recurring new debt.</li>
+<li><strong>Every quarter:</strong> refining spreads, utilization/capture, turnaround schedule, cash taxes, net working capital, MPLX leverage/coverage and organic growth. A sustained normalization above roughly $14/barrel would support a higher valuation than this base; a rapid move toward $5–6, lower utilization or poorer reinvestment returns would undermine it.</li>
+<li><strong>California:</strong> potential inventory and resupply rules, environmental costs and demand transition. The CEC currently says the minimum-inventory framework is being assessed and that it deprioritized the gross-margin penalty in August 2025. Do not describe a new implemented penalty as established. <a href="https://www.energy.ca.gov/programs-and-topics/topics/petroleum-fuels-transition/faq-california-gas-prices-and-impacts-iran">CEC current explanation</a></li>
+</ul>
+<p>Irreducible public-data uncertainty includes asset tax basis, final working-capital adjustments, precise refinery carve-out profits, future owner tax depreciation and the duration of war-related supply disruption. These are modeled and tested rather than hidden behind a false precision label. No earnings-date blocker remains. Next formal review: transaction closing or the next earnings release, earlier if spreads, policy or capital allocation materially changes. No future earnings date is invented.</p>
+<p><strong>Final plan status: Stage 3 research completed; good company, wait for price. Not approved for Stage 3.5 at $427.31. No trade, entry ceiling, stop or share quantity is authorized by this report.</strong></p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/MPC.html">Open full MPC dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/bear_mplx_forecast.csv">bear_mplx_forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/bull_mplx_forecast.csv">bull_mplx_forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/bull_parent_forecast.csv">bull_parent_forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/base_parent_forecast.csv">base_parent_forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/base_mplx_forecast.csv">base_mplx_forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/bear_parent_forecast.csv">bear_parent_forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/source_ledger.json">source_ledger.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/qa_results.json">qa_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MPC/central_sensitivity.json">central_sensitivity.json</a></li>
+</ul>
+</main></body></html>

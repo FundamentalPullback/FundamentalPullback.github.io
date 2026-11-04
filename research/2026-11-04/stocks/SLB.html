@@ -1,0 +1,623 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SLB · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/SLB">← SLB profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A168 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">En observación</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Q3 included. Standalone base $36.08, sensitivity $33–43. Kelvion is a separate fully funded acquisition scenario, not free upside. Complete research; no approved purchase.</strong></p>
+<h1 id="slb-stage-3-fundamental-completo-después-de-q3-2026">SLB — Stage 3 fundamental completo, después de Q3 2026</h1>
+<p><strong>Corte: 3 de noviembre de 2026. Precio del scanner: $52,5974. Decisión: no aprobar compra fundamental a este precio; mantener en observación.</strong> La recuperación es creíble y está expresamente incorporada en el modelo. No se está rechazando mecánicamente una empresa cíclica porque su beneficio TTM cae. El inconveniente es la valoración: el precio ya se aproxima al escenario operativo favorable, con poca protección si la recuperación es más lenta.</p>
+<p><strong>DCF central standalone $36,08; banda central razonable $33–43.</strong> Kelvion pendiente añade aproximadamente −$1,09/+0,38/+2,24 por acción en los módulos adverso/central/favorable, después de pagar toda la adquisición. Valores amplios de escenarios standalone: $18,21/$36,08/$51,97. No se presenta la amplitud adverso–favorable como rango central ni se aplica un descuento genérico del 15–25%.</p>
+<p>Stage 3 está completo. La aprobación de cierre de una adquisición, el calendario de recuperación geopolítica y los beneficios futuros siguen siendo incertidumbres económicas, no tareas analíticas sin terminar. Stage 3.5 y autorización de ejecución son exámenes distintos; no hay operación ni aprobación de entrada.</p>
+<h2 id="elegibilidad-negocio-y-ciclo">1. Elegibilidad, negocio y ciclo</h2>
+<p>El scanner del 3/11 registra Opportunity <strong>100</strong> y Quality/Pullback <strong>80</strong>. SLB publicó Q3 el <strong>23/10</strong> y presentó el 10-Q el <strong>28/10</strong>. No corresponde posponer el análisis por resultados todavía pendientes esta semana. Se usan los datos posteriores a esos resultados, no la fotografía previa.</p>
+<p>SLB vende tecnología, servicios y equipos para exploración, construcción de pozos, producción y recuperación, además de soluciones digitales y una división emergente de infraestructura de centros de datos. La escala internacional, la tecnología de subsuelo, la base instalada y los costes de cambiar procesos constituyen ventajas relevantes. La competencia de Halliburton, Baker Hughes, proveedores especializados y empresas locales limita precios y retornos.</p>
+<p>Su mezcla actual tiene más producción, químicos, artificial lift y offshore que una exposición pura a perforación norteamericana. Eso suaviza algunos ciclos, pero no los elimina. Un petróleo caro no garantiza facturación inmediata: conflictos, sanciones, transporte y acceso a instalaciones pueden paralizar actividad precisamente cuando sube el crudo. Proyectos offshore tienen plazos largos; gasto de mantenimiento de producción es más resistente, no inmune.</p>
+<p>El ciclo completo evita confundir crecimiento nominal con crecimiento estructural: ventas $23.601 millones en 2020, $22.929 millones en 2021 y $28.091 millones en 2022, seguidas de $33.135 millones en 2023 y $36.289 millones en 2024. Hubo pandemia, recuperación, cambios de cartera y adquisiciones. No extrapolo ni el mínimo de 2020 ni los mejores márgenes de 2024 indefinidamente. <a href="https://www.sec.gov/Archives/edgar/data/87347/000156459023000762/slb-10k_20221231.htm">10-K 2022 y comparativos</a>.</p>
+<h2 id="tres-años-cuatro-trimestres-y-ttm-reconstruido">2. Tres años, cuatro trimestres y TTM reconstruido</h2>
+<p>USD millones. EBIT se calcula como resultado antes de impuestos + gasto de intereses − totalidad de intereses y otros ingresos, para excluir resultados de participadas e inversiones. Por eso no debe confundirse con el beneficio operativo de segmentos de SLB, que usa otro perímetro. Inversión = capex físico + APS + datos de exploración capitalizados. FCF histórico = CFO − toda esa inversión.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Período</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT calculado</th>
+<th style="text-align: right;">NI atribuible</th>
+<th style="text-align: right;">NI ajustado corporativo</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Inversión</th>
+<th style="text-align: right;">FCF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td style="text-align: right;">33.135</td>
+<td style="text-align: right;">5.443</td>
+<td style="text-align: right;">4.203</td>
+<td style="text-align: right;">4.305</td>
+<td style="text-align: right;">6.637</td>
+<td style="text-align: right;">2.599</td>
+<td style="text-align: right;">4.038</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td style="text-align: right;">36.289</td>
+<td style="text-align: right;">5.804</td>
+<td style="text-align: right;">4.461</td>
+<td style="text-align: right;">4.888</td>
+<td style="text-align: right;">6.602</td>
+<td style="text-align: right;">2.612</td>
+<td style="text-align: right;">3.990</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td style="text-align: right;">35.708</td>
+<td style="text-align: right;">4.368</td>
+<td style="text-align: right;">3.374</td>
+<td style="text-align: right;">4.210</td>
+<td style="text-align: right;">6.489</td>
+<td style="text-align: right;">2.374</td>
+<td style="text-align: right;">4.115</td>
+</tr>
+<tr class="even">
+<td>TTM a 30/9/2026</td>
+<td style="text-align: right;">36.887</td>
+<td style="text-align: right;">4.180</td>
+<td style="text-align: right;">3.097</td>
+<td style="text-align: right;">3.757</td>
+<td style="text-align: right;">6.361</td>
+<td style="text-align: right;">2.551</td>
+<td style="text-align: right;">3.810</td>
+</tr>
+<tr class="odd">
+<td>TTM anterior</td>
+<td style="text-align: right;">35.247</td>
+<td style="text-align: right;">4.775</td>
+<td style="text-align: right;">3.645</td>
+<td style="text-align: right;">4.342</td>
+<td style="text-align: right;">5.874</td>
+<td style="text-align: right;">2.417</td>
+<td style="text-align: right;">3.457</td>
+</tr>
+</tbody>
+</table></div>
+<p>TTM = año completo + nueve meses actuales − nueve meses comparables. El beneficio ajustado es la reconciliación de la dirección, no una aceptación indiscriminada de todos los add-backs como beneficio económico permanente. El NI ajustado total cae <strong>13,5% TTM</strong>; no hay actualmente crecimiento del 15% de beneficios que pueda deducirse de una puntuación del scanner.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Trimestre</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT calculado</th>
+<th style="text-align: right;">NI atribuible</th>
+<th style="text-align: right;">NI ajustado</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Inversión</th>
+<th style="text-align: right;">FCF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q4 2025, derivado</td>
+<td style="text-align: right;">9.745</td>
+<td style="text-align: right;">996</td>
+<td style="text-align: right;">824</td>
+<td style="text-align: right;">1.179</td>
+<td style="text-align: right;">3.005</td>
+<td style="text-align: right;">716</td>
+<td style="text-align: right;">2.289</td>
+</tr>
+<tr class="even">
+<td>Q1 2026</td>
+<td style="text-align: right;">8.721</td>
+<td style="text-align: right;">1.029</td>
+<td style="text-align: right;">752</td>
+<td style="text-align: right;">783</td>
+<td style="text-align: right;">487</td>
+<td style="text-align: right;">510</td>
+<td style="text-align: right;">−23</td>
+</tr>
+<tr class="odd">
+<td>Q2 2026</td>
+<td style="text-align: right;">8.972</td>
+<td style="text-align: right;">1.071</td>
+<td style="text-align: right;">786</td>
+<td style="text-align: right;">833</td>
+<td style="text-align: right;">1.359</td>
+<td style="text-align: right;">643</td>
+<td style="text-align: right;">716</td>
+</tr>
+<tr class="even">
+<td>Q3 2026</td>
+<td style="text-align: right;">9.449</td>
+<td style="text-align: right;">1.084</td>
+<td style="text-align: right;">735</td>
+<td style="text-align: right;">962</td>
+<td style="text-align: right;">1.510</td>
+<td style="text-align: right;">682</td>
+<td style="text-align: right;">828</td>
+</tr>
+</tbody>
+</table></div>
+<p>Se utiliza el resultado antes de impuestos Q2 del 10-Q, $1.019 millones, frente al redondeo de $1.018 millones que aparece en el encabezado de algunos materiales. La marcada estacionalidad de cobros de Q4 impide anualizar los flujos de Q1 o Q3 aisladamente.</p>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/slb-20251231.htm">10-K 2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/87347/000119312526435577/slb-20260930.htm">10-Q Q3 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/87347/000119312525246028/slb-20250930.htm">10-Q Q3 2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/87347/000119312526190101/slb-20260331.htm">10-Q Q1 2026</a>, <a href="https://investorcenter.slb.com/news-releases/news-release-details/slb-announces-second-quarter-2026-results">Q2 2026</a>.</p>
+<h2 id="qué-enseñan-realmente-los-resultados-de-octubre">3. Qué enseñan realmente los resultados de octubre</h2>
+<p>En Q3, ingresos +6% y EBITDA ajustado prácticamente plano interanual. EPS ajustado $0,64 frente a $0,69; NI ajustado total $962 millones frente a $1.027 millones. El crecimiento secuencial sí fue favorable: EBITDA +9%, mayor margen y mejor actividad en todas las divisiones principales.</p>
+<p><strong>ChampionX no debe contarse como crecimiento orgánico.</strong> La contribución consolidada indicada por SLB es $956 millones frente a $579 millones en Q3 2025, cuando sólo entraban dos meses. Sin el efecto de adquisición, ingresos globales +2%, internacionales planos y Norteamérica +13%. La cifra $970 millones que aparece en la sección “Core” tiene un perímetro distinto; no se usa como contribución consolidada. En nueve meses, el crecimiento publicado +5% convive con caída cercana a 4% sin ChampionX.</p>
+<p>Por divisiones, Q3: Digital $693 millones; Reservoir Performance $1.634 millones; Well Construction $2.888 millones; Production Systems $4.000 millones. Sus márgenes operativos de segmento fueron 28,0%, 16,3%, 16,4% y 16,1%. Hay eliminaciones y costes corporativos: sumar esos beneficios y valorarlos como EBIT consolidado sobrestima lo disponible.</p>
+<p>Digital crece, pero no todo es suscripción. ARR de $1.040 millones a septiembre frente a $926 millones un año antes; ventas trimestrales de $693 millones incluyen licencias, exploración y servicios. Las licencias y los datos tienen estacionalidad. Data Center Solutions generó $230 millones en Q3 y $557 millones en nueve meses, +68% en nueve meses, pero todavía representa una fracción pequeña del grupo. No se aplica un múltiplo de software o centros de datos a todos los ingresos de SLB.</p>
+<p>Fuente: <a href="https://investorcenter.slb.com/static-files/7045f96e-ee28-4096-934c-49eb4b37e66f">comunicado Q3 con reconciliaciones y datos pro forma</a>.</p>
+<h2 id="normalización-económica-caja-y-reinversión">4. Normalización económica, caja y reinversión</h2>
+<p><strong>Cargos extraordinarios y recurrentes.</strong> Se excluye de la senda futura la liquidación contable de pensiones de $187 millones en Q3, financiada con activos del propio plan. No se borra la obligación residual de jubilación. Las integraciones y reestructuraciones también son recurrentes en una empresa adquisitiva: el modelo no suma automáticamente todos esos cargos a perpetuidad. El margen normalizado incorpora una carga ordinaria de ejecución y costes corporativos; la integración incremental de Kelvion se paga en su propio módulo.</p>
+<p>Las ganancias por venta de activos, reversión de provisiones fiscales y resultados de participadas no se perpetúan dentro del EBIT operativo. Los beneficios de participadas se valoran aparte para no duplicarlos. La provisión fiscal central de 21,5% es mayor que el 20% ajustado de Q3, y no perpetúa tipos excepcionalmente bajos.</p>
+<p><strong>Divisas y jurisdicciones.</strong> El cargo extraordinario argentino de 2023 se distingue del riesgo ordinario de moneda y repatriación. No se elimina todo coste de cambio como “no recurrente”. Rusia representaba 4% de ventas en 2025 y tenía unos $700 millones de activos netos, incluidos $200 millones de caja/inversiones; las restricciones y el riesgo de pérdida de negocio justifican no tratar toda caja mundial como excedente libre. Son datos del 10-K 2025, no una medición nueva al 3/11.</p>
+<p><strong>SBC.</strong> Se mantiene como gasto operativo: $293/$316/$332 millones en 2023/24/25 y aproximadamente $326 millones TTM. El add-back de CFO no es un flujo económico gratuito. No se añade SBC al FCFF y tampoco se financian recompras con dinero ficticio.</p>
+<p><strong>Inversión completa.</strong> En nueve meses: capex $1.287 millones + APS $340 millones + datos de exploración $208 millones = <strong>$1.835 millones</strong>. Usar sólo capex inflaría el FCF en $548 millones. La guía anual total es unos $2.500 millones. El DCF central eleva inversión a $3.000 millones NTM y $3.800 millones en el año 5, además de WC; no supone crecimiento digital, equipos y recuperación offshore sin desembolsos. R&amp;D ordinario permanece en EBIT.</p>
+<p>CFO nueve meses fue $3.356 millones, inferior a $3.484 millones anteriores, pese a mayor tamaño. El aumento de circulante consumió $1.546 millones: importa cobrar, no sólo facturar. La mejora de FCF TTM a $3.810 millones procede en parte del Q4 fuerte anterior y no demuestra por sí sola aceleración actual. No se vuelve a restar la deuda ni los dividendos de FCFF operativo.</p>
+<h2 id="próximos-doce-meses-y-visibilidad-de-recuperación">5. Próximos doce meses y visibilidad de recuperación</h2>
+<p>La dirección espera Q4 cerca de <strong>$10.000 millones de ingresos</strong> y mejora secuencial del margen EBITDA ajustado de <strong>100–150 puntos básicos</strong>. Supone Oriente Medio aproximadamente plano frente a Q3, cerca de $1.900 millones, todavía por debajo de un año antes. Para 2027 plantea crecimiento de actividad global OFSE de un dígito medio si no se agrava el conflicto, con posible mejor comportamiento de SLB.</p>
+<p>Esto apoya una recuperación, no una garantía. La compañía espera mayor contribución de producción, offshore, digital y sinergias. En la conferencia más reciente sitúa el objetivo intermedio de ChampionX cerca de $200 millones de sinergias anualizadas tras 18 meses. No se toma una página antigua de la adquisición como prueba de que un objetivo futuro ya se cobró.</p>
+<p>El NTM central del análisis es ventas <strong>$39.100 millones</strong>, EBIT <strong>$6.021 millones</strong> y FCFF <strong>$4.177 millones</strong>. Permite volver hacia rentabilidad de ciclo normal, no exige permanecer en el deprimido margen GAAP TTM. A modo orientativo, tras intereses, minoritarios y participadas, ese EBIT sostiene un beneficio atribuible normalizado cercano a $4.300 millones, frente a $3.757 millones ajustados TTM: recuperación de dos dígitos moderados, no un compromiso de la empresa.</p>
+<p>Fuentes: <a href="https://investorcenter.slb.com/static-files/b578b6d9-7008-4e3d-9317-7112b7c08493">conferencia oficial Q3, perspectivas y liquidez</a>, <a href="https://investorcenter.slb.com/news-releases/news-release-details/slb-announces-third-quarter-2026-results">resultados Q3</a>.</p>
+<h2 id="capital-minoritarios-participadas-y-acciones">6. Capital, minoritarios, participadas y acciones</h2>
+<p>Balance 30/9: deuda $12.800 millones; caja $2.621 millones e inversiones a corto plazo $930 millones; deuda neta publicada <strong>$9.249 millones</strong>. Hay $5.000 millones de líneas comprometidas disponibles, pero liquidez disponible no es valor gratuito del accionista.</p>
+<p>El puente del DCF, millones:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th style="text-align: right;">Ajuste a EV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deuda financiera</td>
+<td style="text-align: right;">−12.800</td>
+</tr>
+<tr class="even">
+<td>Caja/inversiones excedentes, después de reserva operativa $1.000 y reserva restringida $200</td>
+<td style="text-align: right;">+2.351</td>
+</tr>
+<tr class="odd">
+<td>Participadas, valor económico estimado</td>
+<td style="text-align: right;">+1.300</td>
+</tr>
+<tr class="even">
+<td>Jubilación/postretirement</td>
+<td style="text-align: right;">−470</td>
+</tr>
+<tr class="odd">
+<td>Minoritarios, valor económico estimado</td>
+<td style="text-align: right;">−1.500</td>
+</tr>
+<tr class="even">
+<td>Dividendos ya declarados y pendientes al balance</td>
+<td style="text-align: right;">−454</td>
+</tr>
+<tr class="odd">
+<td><strong>Reclamación neta</strong></td>
+<td style="text-align: right;"><strong>−11.573</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>La estimación de participadas no es un porcentaje arbitrario del libro: sus dividendos TTM reconstruidos rondan $124 millones; capitalizarlos aproximadamente al 9,5% sin crecimiento produce unos $1.300 millones. El valor contable de $1.712 millones no se confunde con una cotización. Sus ingresos ya se excluyeron del EBIT.</p>
+<p>Los minoritarios contables son $1.162 millones, pero el DCF consolida la actividad, incluida OneSubsea. Se descuentan $1.500 millones, compatible con alrededor de $122 millones de beneficio normalizado atribuible a terceros. Rango de comprobación $1.200–1.800 millones: ±$0,20 por acción respecto al centro. No se ignoran ni se vuelve a restar su participación en cada FCFF después de descontar su valor.</p>
+<p>La renta de operating leases permanece en EBIT; no se resta de nuevo el pasivo de arrendamientos. El último detalle anual de SLB identifica $905 millones de pasivos operativos y gasto de alquiler, incluyendo contratos cortos, de aproximadamente $1.500 millones; no se convierte esa renta en un add-back de EBITDA. No se añade una deuda de finance leases material no identificada en las cuentas de SLB.</p>
+<p>El ajuste por dividendos evita sumar al comprador actual caja del balance destinada a distribuciones ya declaradas. Las reservas de caja son supuestos prudenciales explícitos; si los $1.200 millones reservados fueran completamente excedentes y accesibles, el valor subiría sólo unos $0,80 por acción.</p>
+<p><strong>Acciones:</strong> 1.476.029.613 realmente en circulación a 30/9; media diluida Q3 1.497 millones, frente a media básica 1.481. Modelo: <strong>1.492,030 millones</strong>, acciones puntuales +16 millones de dilución observada. Es una estimación puntual diluida, no una cifra publicada como tal. Usar 1.497 millones da $35,96 de valor central, cambio pequeño. No se usa el denominador previo a ChampionX y no se anticipan recompras futuras gratuitas.</p>
+<p>Fuente: <a href="https://www.sec.gov/Archives/edgar/data/87347/000119312526435577/slb-20260930.htm">10-Q y notas de acciones, pensiones, participadas y liquidez</a>, <a href="https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/slb-20251231.htm">10-K y leases/Rusia</a>.</p>
+<h2 id="kelvion-potencial-real-coste-real-y-cierre-pendiente">7. Kelvion: potencial real, coste real y cierre pendiente</h2>
+<p>SLB anunció $3.400 millones de caja más $700 millones de deuda asumida: <strong>$4.100 millones de coste económico total</strong>, cierre esperado en primer semestre de 2027 sujeto a aprobaciones. Kelvion prevé ingresos 2026 $2.300–2.400 millones y EBITDA ajustado $350–400 millones. SLB apunta a $120 millones anuales de sinergias a tres años. Son previsiones de dirección, no flujos ya realizados.</p>
+<p>El objetivo combinado de centros de datos en 2028 es ventas $4.500–5.000 millones y EBITDA $700–800 millones. Incluye <strong>dos negocios</strong>: no se suma el total combinado sobre la división de SLB que ya está en el modelo standalone. Kelvion también tiene ventas industriales y energéticas, no sólo AI.</p>
+<p>Módulo incremental de adquisición: pago de $4.100 millones a medio año, integración $150–300 millones, primer año con medio ejercicio de caja, impuesto 23%, D&amp;A 3% de ventas, inversión 4,5–5%, WC 15% del incremento de ventas. Crecimiento inicial adverso/central/favorable 8/15/25%, después desaceleración hasta 2,5% terminal. Márgenes EBITDA antes de sinergias 14/16/18%; sinergias $60/$120/$120 millones alcanzadas gradualmente. Descuento 10/9,5/9% y ROIC terminal 10/13/16%.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Kelvion</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Central</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas año 2</td>
+<td style="text-align: right;">2.690</td>
+<td style="text-align: right;">3.027</td>
+<td style="text-align: right;">3.525</td>
+</tr>
+<tr class="even">
+<td>EBIT año 2 con sinergias parciales</td>
+<td style="text-align: right;">336</td>
+<td style="text-align: right;">473</td>
+<td style="text-align: right;">609</td>
+</tr>
+<tr class="odd">
+<td>PV del negocio incremental</td>
+<td style="text-align: right;">2.553</td>
+<td style="text-align: right;">4.668</td>
+<td style="text-align: right;">7.402</td>
+</tr>
+<tr class="even">
+<td>PV del precio e integración</td>
+<td style="text-align: right;">4.182</td>
+<td style="text-align: right;">4.101</td>
+<td style="text-align: right;">4.065</td>
+</tr>
+<tr class="odd">
+<td>NPV para SLB</td>
+<td style="text-align: right;">−1.629</td>
+<td style="text-align: right;">+567</td>
+<td style="text-align: right;">+3.338</td>
+</tr>
+<tr class="even">
+<td>Por acción SLB</td>
+<td style="text-align: right;"><strong>−$1,09</strong></td>
+<td style="text-align: right;"><strong>+$0,38</strong></td>
+<td style="text-align: right;"><strong>+$2,24</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Sin cierre, no se añade ese negocio ni se paga su precio; posibles gastos de ruptura no cuantificados quedan aparte. No se inventa una probabilidad de cierre. Los valores standalone más los módulos correspondientes serían aproximadamente <strong>$17,12/$36,46/$54,21</strong>, no una promesa probabilística.</p>
+<p>Comprobación financiera: deuda neta 30/9 de $9.249 millones + coste $4.100 millones, antes de caja futura, sería $13.349 millones. Frente a EBITDA ajustado TTM SLB $8.069 millones más ~$375 millones de Kelvion, resulta ~<strong>1,58x</strong>, algo sobre el objetivo de hasta 1,5x. No es un pro forma final: caja generada hasta el cierre y sinergias pueden reducirlo. Sí demuestra que dividendo, recompra, integración y adquisición compiten por caja. La guía de devolver más de $4.000 millones al accionista no se modela como financiación gratis.</p>
+<p>Fuente: <a href="https://www.slb.com/newsroom/press-release/2026/pr-2026-0831">anuncio de Kelvion, términos y objetivos</a>.</p>
+<h2 id="dcf-diez-años-hipótesis-financiadas-y-convergencia">8. DCF diez años: hipótesis financiadas y convergencia</h2>
+<p>USD nominales; primera anualidad NTM, descuento a final de año. FCFF = EBIT después de SBC × (1−impuesto) + D&amp;A − capex/APS/datos capitalizados − ΔWC. Los años 1–5 detallan crecimiento, margen e inversión; los años 6–10 convergen a crecimiento y margen sostenibles. Reinversión terminal = NOPAT × g/ROIC; no hay múltiplo de salida ni crecimiento gratuito.</p>
+<p>WACC central 9,5%: hipótesis consistente con referencia Treasury cercana a 5%, beta de trabajo 1,2, prima de equity 4,5%, coste de equity ~10,35%, deuda marginal ~6% y deuda/capital ~15%. Beta y prima son supuestos, no estimaciones estadísticas verificadas. Se exploran costes y tasas alternativos. <a href="https://www.slickcharts.com/treasury/10-year">Referencia de rentabilidad Treasury del 3/11</a>.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Supuesto</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Central</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crecimiento ventas años 1–5</td>
+<td style="text-align: right;">0/2/3/3/2,5%</td>
+<td style="text-align: right;">6/6/5/4,5/4%</td>
+<td style="text-align: right;">8/8/7/6/5%</td>
+</tr>
+<tr class="even">
+<td>Margen EBIT año 1 → 5 → 10</td>
+<td style="text-align: right;">13,4→14→13%</td>
+<td style="text-align: right;">15,4→17→16%</td>
+<td style="text-align: right;">16→18,5→17,5%</td>
+</tr>
+<tr class="odd">
+<td>Impuesto</td>
+<td style="text-align: right;">23%</td>
+<td style="text-align: right;">21,5%</td>
+<td style="text-align: right;">20,5%</td>
+</tr>
+<tr class="even">
+<td>Inversión total año 1 → 5</td>
+<td style="text-align: right;">2.900→3.450</td>
+<td style="text-align: right;">3.000→3.800</td>
+<td style="text-align: right;">3.200→4.400</td>
+</tr>
+<tr class="odd">
+<td>WACC / g / ROIC terminal</td>
+<td style="text-align: right;">10,5/1,5/10,5%</td>
+<td style="text-align: right;">9,5/2,5/13%</td>
+<td style="text-align: right;">8,75/2,75/15%</td>
+</tr>
+<tr class="even">
+<td>EV standalone</td>
+<td style="text-align: right;">38.745</td>
+<td style="text-align: right;">65.404</td>
+<td style="text-align: right;">89.113</td>
+</tr>
+<tr class="odd">
+<td>Valor por acción</td>
+<td style="text-align: right;"><strong>$18,21</strong></td>
+<td style="text-align: right;"><strong>$36,08</strong></td>
+<td style="text-align: right;"><strong>$51,97</strong></td>
+</tr>
+<tr class="even">
+<td>Peso terminal/EV</td>
+<td style="text-align: right;">41,4%</td>
+<td style="text-align: right;">50,5%</td>
+<td style="text-align: right;">57,8%</td>
+</tr>
+</tbody>
+</table></div>
+<p>El adverso no es una quiebra ni un shock máximo: recoge recuperación menos rentable y mayor tasa exigida. El favorable combina fuerte actividad, ejecución, márgenes próximos a los mejores niveles normalizados y menor descuento. No es razonable llamar a todos esos supuestos simultáneos “caso base” sólo porque reproduzcan la cotización.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ventas centrales</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">D&amp;A</th>
+<th style="text-align: right;">Inversión total</th>
+<th style="text-align: right;">ΔWC</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">39.100</td>
+<td style="text-align: right;">6.021</td>
+<td style="text-align: right;">4.727</td>
+<td style="text-align: right;">2.950</td>
+<td style="text-align: right;">3.000</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">4.177</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">41.446</td>
+<td style="text-align: right;">6.714</td>
+<td style="text-align: right;">5.271</td>
+<td style="text-align: right;">3.080</td>
+<td style="text-align: right;">3.200</td>
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">4.701</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">43.519</td>
+<td style="text-align: right;">7.311</td>
+<td style="text-align: right;">5.739</td>
+<td style="text-align: right;">3.220</td>
+<td style="text-align: right;">3.400</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">5.159</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">45.477</td>
+<td style="text-align: right;">7.731</td>
+<td style="text-align: right;">6.069</td>
+<td style="text-align: right;">3.340</td>
+<td style="text-align: right;">3.600</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">5.409</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">47.296</td>
+<td style="text-align: right;">8.040</td>
+<td style="text-align: right;">6.312</td>
+<td style="text-align: right;">3.450</td>
+<td style="text-align: right;">3.800</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">5.562</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">49.046</td>
+<td style="text-align: right;">8.240</td>
+<td style="text-align: right;">6.468</td>
+<td style="text-align: right;">3.578</td>
+<td style="text-align: right;">4.196</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">5.500</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">50.713</td>
+<td style="text-align: right;">8.418</td>
+<td style="text-align: right;">6.608</td>
+<td style="text-align: right;">3.699</td>
+<td style="text-align: right;">4.507</td>
+<td style="text-align: right;">334</td>
+<td style="text-align: right;">5.467</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td style="text-align: right;">52.286</td>
+<td style="text-align: right;">8.575</td>
+<td style="text-align: right;">6.731</td>
+<td style="text-align: right;">3.814</td>
+<td style="text-align: right;">4.763</td>
+<td style="text-align: right;">314</td>
+<td style="text-align: right;">5.468</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td style="text-align: right;">53.750</td>
+<td style="text-align: right;">8.707</td>
+<td style="text-align: right;">6.835</td>
+<td style="text-align: right;">3.921</td>
+<td style="text-align: right;">4.956</td>
+<td style="text-align: right;">293</td>
+<td style="text-align: right;">5.508</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td style="text-align: right;">55.093</td>
+<td style="text-align: right;">8.815</td>
+<td style="text-align: right;">6.920</td>
+<td style="text-align: right;">4.019</td>
+<td style="text-align: right;">5.081</td>
+<td style="text-align: right;">269</td>
+<td style="text-align: right;">5.589</td>
+</tr>
+</tbody>
+</table></div>
+<p>La reinversión sube al converger hacia retornos más ordinarios: no se perpetúa la alta utilización de capacidad existente propia de una recuperación inicial. El terminal central reinvierte 19,2% de NOPAT. Primera anualidad de FCFF positiva no equivale a caja distribuible íntegramente después de deuda, compras y dividendos.</p>
+<p>Sensibilidad, manteniendo la misma operación central: WACC 9/9,5/10%, g 2,5%, produce <strong>$39,40/$36,08/$33,20</strong>. A WACC 9,5%, g 2/2,5/3% da <strong>$35,28/$36,08/$36,98</strong>. Banda central $33–43 incluye variaciones cercanas de ejecución, financiación y módulo de Kelvion; no se convierte el escenario máximo de $54 en valor central.</p>
+<h2 id="reverse-dcf-combinaciones-conjuntas-no-una-expectativa-única">9. Reverse DCF: combinaciones conjuntas, no una expectativa única</h2>
+<p>Se reproduce $52,5974 usando el mismo sistema de flujos y capital. Los tres primeros paquetes conservan inversión, impuestos y g del caso central, pero cambian juntos volumen, WACC y ROIC; se resuelve el margen. El cuarto usa crecimiento, capex, impuestos y financiación del favorable.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paquete</th>
+<th>Crecimiento años 1–5</th>
+<th style="text-align: right;">WACC / ROIC terminal</th>
+<th style="text-align: right;">Margen EBIT año 5 requerido</th>
+<th style="text-align: right;">EBIT año 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ciclo más lento</td>
+<td>3/4/4/3,5/3%</td>
+<td style="text-align: right;">9,5/12%</td>
+<td style="text-align: right;">26,64%</td>
+<td style="text-align: right;">11.670</td>
+</tr>
+<tr class="even">
+<td>Volumen central</td>
+<td>6/6/5/4,5/4%</td>
+<td style="text-align: right;">9,5/13%</td>
+<td style="text-align: right;">24,05%</td>
+<td style="text-align: right;">11.373</td>
+</tr>
+<tr class="odd">
+<td>Más crecimiento, mayor descuento</td>
+<td>8/8/7/6/5%</td>
+<td style="text-align: right;">10/15%</td>
+<td style="text-align: right;">23,16%</td>
+<td style="text-align: right;">11.865</td>
+</tr>
+<tr class="even">
+<td>Crecimiento fuerte y financiación favorable</td>
+<td>8/8/7/6/5%</td>
+<td style="text-align: right;">8,75/15%</td>
+<td style="text-align: right;">18,81%</td>
+<td style="text-align: right;">9.637</td>
+</tr>
+</tbody>
+</table></div>
+<p>En los tres primeros, margen terminal = margen año 5 menos un punto; en el último g 2,75%, impuesto 20,5%, también con un punto de convergencia de margen. No son metas oficiales. Los márgenes &gt;23% de EBIT consolidado serían exigentes frente al historial y no deben confundirse con EBITDA. El cuarto paquete sí muestra una vía económicamente plausible a la cotización: crecimiento fuerte sostenido, margen alto, retorno terminal superior y financiación más favorable simultáneamente. Por eso la conclusión no es “imposible”, sino <strong>precio ya dependiente de un conjunto favorable</strong>. Añadir el NPV central de Kelvion reduce algo la exigencia, no cambia el diagnóstico.</p>
+<h2 id="comparables-contemporáneos-calculados-desde-cuentas">10. Comparables contemporáneos, calculados desde cuentas</h2>
+<p>Precios de cierre del 3/11: HAL $34,07 y NOV $18,49; SLB precio exacto del scanner. Todos los TTM terminan el 30/9/2026. Capitalización con acciones puntuales, no medias diluidas. EV estándar = capitalización + deuda/finance leases + minoritarios contables − caja e inversiones líquidas. Se distingue de las reservas y valores económicos del puente DCF.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Compañía</th>
+<th style="text-align: right;">Capitalización</th>
+<th style="text-align: right;">Deuda financiera*</th>
+<th style="text-align: right;">Caja/inversiones</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">EBITDA GAAP calculado</th>
+<th style="text-align: right;">EV/EBITDA</th>
+<th style="text-align: right;">FCF histórico completo</th>
+<th style="text-align: right;">FCF/capitalización</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SLB</td>
+<td style="text-align: right;">77.635</td>
+<td style="text-align: right;">12.800</td>
+<td style="text-align: right;">3.551</td>
+<td style="text-align: right;">88.046</td>
+<td style="text-align: right;">7.007</td>
+<td style="text-align: right;">12,57x</td>
+<td style="text-align: right;">3.810</td>
+<td style="text-align: right;">4,91%</td>
+</tr>
+<tr class="even">
+<td>HAL</td>
+<td style="text-align: right;">28.180</td>
+<td style="text-align: right;">7.345*</td>
+<td style="text-align: right;">1.843</td>
+<td style="text-align: right;">33.725*</td>
+<td style="text-align: right;">4.004</td>
+<td style="text-align: right;">8,42x*</td>
+<td style="text-align: right;">1.600</td>
+<td style="text-align: right;">5,68%</td>
+</tr>
+<tr class="odd">
+<td>NOV</td>
+<td style="text-align: right;">6.592</td>
+<td style="text-align: right;">1.963</td>
+<td style="text-align: right;">1.058</td>
+<td style="text-align: right;">7.558</td>
+<td style="text-align: right;">842</td>
+<td style="text-align: right;">8,98x</td>
+<td style="text-align: right;">270</td>
+<td style="text-align: right;">4,10%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Acciones: SLB 1.476,030 millones al 30/9; HAL 827,126 millones al 16/10; NOV 356,512 millones al 30/9. Minoritarios usados: $1.162/$43/$61 millones.</p>
+<p>*HAL: préstamos actuales $7.162 millones más $183 millones de finance leases del último desglose anual disponible (31/12/2025), cuyo saldo actualizado no se desglosa en el Q3 consultado. Es una aproximación fechada, no un dato nuevo fingido. Excluir esos $183 millones cambia EV/EBITDA a ~8,38x; no altera la comparación. NOV incluye finance leases actuales $256 millones. Operating leases se mantienen como renta en los tres casos.</p>
+<p>Reconciliación TTM de caja: HAL CFO $2.630 millones menos inversión $1.030; NOV $605 menos $335; SLB $6.361 menos $2.551. No se añaden ventas de activos a la caja recurrente. NOV tiene una fuerte absorción reciente de circulante: CFO nueve meses sólo $32 millones. Su FCF TTM no es una anualidad segura.</p>
+<p>En SLB, EBITDA ajustado corporativo TTM es ~$8.069 millones, que daría <strong>10,91x</strong>, pero incluye resultados de participadas y ajustes. NOV ajustado TTM ~$1.008 millones daría ~7,50x; son comprobaciones, no múltiplos perfectamente homogéneos. HAL tiene más exposición a Norteamérica y fracking, NOV a equipos y pedidos, SLB más digital, producción e internacional. SLB puede merecer premium, pero el premium no demuestra infravaloración. No se usa una mediana para imponer un precio objetivo. Baker Hughes se evita como comparable principal por su diferente mezcla y transacciones/perímetro.</p>
+<p>Fuentes: <a href="https://stockanalysis.com/stocks/hal/history/">HAL precio</a>, <a href="https://investors.nov.com/stock-information/historical-price-lookup/">NOV precio oficial</a>, <a href="https://www.sec.gov/Archives/edgar/data/45012/000004501226000074/hal-20260930.htm">HAL Q3</a>, <a href="https://www.sec.gov/Archives/edgar/data/45012/000004501226000015/hal-20251231.htm">HAL anual</a>, <a href="https://www.sec.gov/Archives/edgar/data/1021860/000119312526435747/nov-20260930.htm">NOV Q3</a>, <a href="https://www.sec.gov/Archives/edgar/data/1021860/000119312526048350/nov-20251231.htm">NOV anual</a>, <a href="https://investors.nov.com/news-releases/news-release-details/nov-reports-third-quarter-2026-earnings">NOV reconciliación trimestral</a>.</p>
+<h2 id="catalizadores-invalidaciones-y-resultado-del-plan">11. Catalizadores, invalidaciones y resultado del plan</h2>
+<p><strong>Catalizadores:</strong> entrega de Q4 cercana a la guía y cobro efectivo; actividad internacional de 2027 que confirme recuperación; mejora orgánica de margen, no sólo inclusión de ChampionX; crecimiento de ARR y digital sin depender de licencias extraordinarias; cierre de Kelvion con retornos y deuda controlados; proyectos offshore y producción que conviertan cartera en caja.</p>
+<p><strong>Invalidaciones:</strong> interrupción más prolongada en Oriente Medio, caída del gasto de clientes, recuperación de ventas sin margen, cobros demorados o incobrables, más capital necesario para financiar el crecimiento, sinergias consumidas por inflación, deterioro de retorno en centros de datos y mantenimiento de recompras a costa de elevar apalancamiento durante integración.</p>
+<p><strong>Gate Stage 3:</strong> ventaja competitiva y generación de caja, sí. Crecimiento histórico reciente del beneficio total, no; existe una recuperación futura defendible y se ha modelado. Balance manejable, sí, con menos holgura después de Kelvion. Precio atractivo frente al valor central, no: $52,60 queda por encima de $33–43 y cerca del escenario conjunto favorable de aproximadamente $54. No hace falta un margen de seguridad universal para concluirlo.</p>
+<p><strong>Confianza media</strong> en el valor central, alta en reconstrucción contable, menor en velocidad de recuperación y economía de Kelvion. La dispersión de escenarios se presenta abiertamente. La decisión es <strong>observar y reevaluar si precio o evidencia cambian</strong>, no descartar permanentemente. Una señal técnica fuerte no subsana la falta de soporte de valoración; Stage 3.5 es posterior y separado. No se emite recomendación de operar ni se han colocado órdenes.</p>
+<h3 id="reproducibilidad">Reproducibilidad</h3>
+<p>Código de cálculo, JSON con supuestos/puentes/resultados, CSV con 30 anualidades de escenarios y módulos de adquisición permiten reconstruir los valores. Las cifras reportadas, derivadas y estimadas están distinguidas. No se utiliza consenso no verificado ni probabilidades artificialmente precisas para adquisiciones o geopolítica.</p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/SLB.html">Open full SLB dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SLB/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SLB/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SLB/forecast.csv">forecast.csv</a></li>
+</ul>
+</main></body></html>

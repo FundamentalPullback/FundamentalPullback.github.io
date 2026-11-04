@@ -1,0 +1,880 @@
+{
+  "as_of": "2026-11-04",
+  "price_date": "2026-11-03",
+  "price": 24.03,
+  "assumptions": {
+    "base": {
+      "revenue0": 22570,
+      "tax": 0.255,
+      "wacc": 0.105,
+      "g": 0.01,
+      "roic": 0.1,
+      "wc_ratio": 0.1,
+      "da_ratio": 0.037,
+      "capex_ratio": 0.036
+    },
+    "cases": {
+      "Bear": {
+        "growth": [
+          -0.035,
+          -0.025,
+          -0.015,
+          -0.005,
+          0
+        ],
+        "margins": [
+          0.025,
+          0.024,
+          0.025,
+          0.026,
+          0.027
+        ],
+        "terminal_margin": 0.027,
+        "tax": 0.26,
+        "wacc": 0.12,
+        "g": 0,
+        "roic": 0.08,
+        "capex_ratio": 0.038
+      },
+      "Base": {
+        "growth": [
+          0.005,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ],
+        "margins": [
+          0.039,
+          0.04,
+          0.041,
+          0.042,
+          0.042
+        ],
+        "terminal_margin": 0.042,
+        "tax": 0.255,
+        "wacc": 0.105,
+        "g": 0.01,
+        "roic": 0.1
+      },
+      "Bull": {
+        "growth": [
+          0.02,
+          0.025,
+          0.025,
+          0.025,
+          0.02
+        ],
+        "margins": [
+          0.044,
+          0.047,
+          0.05,
+          0.052,
+          0.054
+        ],
+        "terminal_margin": 0.054,
+        "tax": 0.245,
+        "wacc": 0.095,
+        "g": 0.02,
+        "roic": 0.13,
+        "capex_ratio": 0.037
+      }
+    }
+  },
+  "scenarios": {
+    "Bear": {
+      "rows": [
+        {
+          "year": 1,
+          "period_end": "2027-11-03",
+          "growth": -0.035,
+          "revenue": 21780.05,
+          "ebit_margin": 0.025,
+          "ebit_after_SBC_and_recurring_restructuring": 544.50125,
+          "nopat": 402.930925,
+          "da": 805.8618499999999,
+          "capex": 827.6419,
+          "delta_nwc": -78.99500000000008,
+          "net_reinvestment": -57.21495,
+          "fcff": 460.145875,
+          "pv_fcff": 410.84453124999993
+        },
+        {
+          "year": 2,
+          "period_end": "2028-11-03",
+          "growth": -0.025,
+          "revenue": 21235.548749999998,
+          "ebit_margin": 0.024,
+          "ebit_after_SBC_and_recurring_restructuring": 509.65317,
+          "nopat": 377.14334579999996,
+          "da": 785.7153037499999,
+          "capex": 806.9508524999999,
+          "delta_nwc": -54.45012500000012,
+          "net_reinvestment": -33.2145762500001,
+          "fcff": 410.35792205000007,
+          "pv_fcff": 327.1348230628189
+        },
+        {
+          "year": 3,
+          "period_end": "2029-11-03",
+          "growth": -0.015,
+          "revenue": 20917.01551875,
+          "ebit_margin": 0.025,
+          "ebit_after_SBC_and_recurring_restructuring": 522.92538796875,
+          "nopat": 386.964787096875,
+          "da": 773.9295741937499,
+          "capex": 794.8465897125,
+          "delta_nwc": -31.853323124999953,
+          "net_reinvestment": -10.936307606249876,
+          "fcff": 397.9010947031249,
+          "pv_fcff": 283.2181397930177
+        },
+        {
+          "year": 4,
+          "period_end": "2030-11-03",
+          "growth": -0.005,
+          "revenue": 20812.430441156248,
+          "ebit_margin": 0.026,
+          "ebit_after_SBC_and_recurring_restructuring": 541.1231914700625,
+          "nopat": 400.4311616878462,
+          "da": 770.0599263227812,
+          "capex": 790.8723567639374,
+          "delta_nwc": -10.458507759375061,
+          "net_reinvestment": 10.353922681781205,
+          "fcff": 390.077239006065,
+          "pv_fcff": 247.90113736259644
+        },
+        {
+          "year": 5,
+          "period_end": "2031-11-03",
+          "growth": 0,
+          "revenue": 20812.430441156248,
+          "ebit_margin": 0.027,
+          "ebit_after_SBC_and_recurring_restructuring": 561.9356219112187,
+          "nopat": 415.83236021430184,
+          "da": 770.0599263227812,
+          "capex": 790.8723567639374,
+          "delta_nwc": 0.0,
+          "net_reinvestment": 20.812430441156266,
+          "fcff": 395.0199297731456,
+          "pv_fcff": 224.14491669735784
+        },
+        {
+          "year": 6,
+          "period_end": "2032-11-03",
+          "growth": 0.0,
+          "revenue": 20812.430441156248,
+          "ebit_margin": 0.027,
+          "ebit_after_SBC_and_recurring_restructuring": 561.9356219112187,
+          "nopat": 415.83236021430184,
+          "da": 770.0599263227812,
+          "capex": 786.7098706757062,
+          "delta_nwc": 0.0,
+          "net_reinvestment": 16.64994435292501,
+          "fcff": 399.18241586137685,
+          "pv_fcff": 202.2382349021208
+        },
+        {
+          "year": 7,
+          "period_end": "2033-11-03",
+          "growth": 0.0,
+          "revenue": 20812.430441156248,
+          "ebit_margin": 0.027,
+          "ebit_after_SBC_and_recurring_restructuring": 561.9356219112187,
+          "nopat": 415.83236021430184,
+          "da": 770.0599263227812,
+          "capex": 782.5473845874749,
+          "delta_nwc": 0.0,
+          "net_reinvestment": 12.48745826469376,
+          "fcff": 403.3449019496081,
+          "pv_fcff": 182.4527499070414
+        },
+        {
+          "year": 8,
+          "period_end": "2034-11-03",
+          "growth": 0.0,
+          "revenue": 20812.430441156248,
+          "ebit_margin": 0.027,
+          "ebit_after_SBC_and_recurring_restructuring": 561.9356219112187,
+          "nopat": 415.83236021430184,
+          "da": 770.0599263227812,
+          "capex": 778.3848984992437,
+          "delta_nwc": 0.0,
+          "net_reinvestment": 8.324972176462506,
+          "fcff": 407.50738803783935,
+          "pv_fcff": 164.58539930616388
+        },
+        {
+          "year": 9,
+          "period_end": "2035-11-03",
+          "growth": 0.0,
+          "revenue": 20812.430441156248,
+          "ebit_margin": 0.027,
+          "ebit_after_SBC_and_recurring_restructuring": 561.9356219112187,
+          "nopat": 415.83236021430184,
+          "da": 770.0599263227812,
+          "capex": 774.2224124110124,
+          "delta_nwc": 0.0,
+          "net_reinvestment": 4.162486088231254,
+          "fcff": 411.66987412607057,
+          "pv_fcff": 148.45228359276598
+        },
+        {
+          "year": 10,
+          "period_end": "2036-11-03",
+          "growth": 0.0,
+          "revenue": 20812.430441156248,
+          "ebit_margin": 0.027,
+          "ebit_after_SBC_and_recurring_restructuring": 561.9356219112187,
+          "nopat": 415.83236021430184,
+          "da": 770.0599263227812,
+          "capex": 770.0599263227812,
+          "delta_nwc": 0.0,
+          "net_reinvestment": -2.8854166293383738e-15,
+          "fcff": 415.83236021430184,
+          "pv_fcff": 133.8868908973469
+        }
+      ],
+      "operating_ev": 3440.583197582454,
+      "equity": 1382.583197582454,
+      "value_per_share": 5.115437156869461,
+      "upside": -0.7871228815285285,
+      "terminal_nopat": 415.83236021430184,
+      "terminal_reinvestment": 0.0,
+      "terminal_fcff": 415.83236021430184,
+      "terminal_value": 3465.2696684525154,
+      "pv_terminal": 1115.7240908112242,
+      "terminal_weight": 0.32428342136739907,
+      "wacc": 0.12,
+      "g": 0,
+      "roic": 0.08,
+      "tax": 0.26,
+      "shares": 270.276646,
+      "bridge": {
+        "cash_Aug1": 1294,
+        "tariff_cash_received_after_Aug1": 18,
+        "declared_October_dividend": -51,
+        "minimum_operating_cash": -450,
+        "debt_principal": -2441,
+        "finance_leases_latest_disclosed": -13,
+        "unfunded_SERP_claim_latest_annual": -415
+      }
+    },
+    "Base": {
+      "rows": [
+        {
+          "year": 1,
+          "period_end": "2027-11-03",
+          "growth": 0.005,
+          "revenue": 22682.85,
+          "ebit_margin": 0.039,
+          "ebit_after_SBC_and_recurring_restructuring": 884.6311499999999,
+          "nopat": 659.0502067499999,
+          "da": 839.2654499999999,
+          "capex": 816.5825999999998,
+          "delta_nwc": 11.284999999999854,
+          "net_reinvestment": -11.397850000000176,
+          "fcff": 670.4480567500001,
+          "pv_fcff": 606.7403228506788
+        },
+        {
+          "year": 2,
+          "period_end": "2028-11-03",
+          "growth": 0.01,
+          "revenue": 22909.678499999998,
+          "ebit_margin": 0.04,
+          "ebit_after_SBC_and_recurring_restructuring": 916.3871399999999,
+          "nopat": 682.7084193,
+          "da": 847.6581044999999,
+          "capex": 824.7484259999999,
+          "delta_nwc": 22.682849999999963,
+          "net_reinvestment": -0.22682850000007804,
+          "fcff": 682.9352478000001,
+          "pv_fcff": 559.3130753260581
+        },
+        {
+          "year": 3,
+          "period_end": "2029-11-03",
+          "growth": 0.01,
+          "revenue": 23138.775285,
+          "ebit_margin": 0.041,
+          "ebit_after_SBC_and_recurring_restructuring": 948.6897866850001,
+          "nopat": 706.773891080325,
+          "da": 856.1346855449999,
+          "capex": 832.99591026,
+          "delta_nwc": 22.909678500000155,
+          "net_reinvestment": -0.2290967849997969,
+          "fcff": 707.0029878653248,
+          "pv_fcff": 524.0037742678545
+        },
+        {
+          "year": 4,
+          "period_end": "2030-11-03",
+          "growth": 0.01,
+          "revenue": 23370.16303785,
+          "ebit_margin": 0.042,
+          "ebit_after_SBC_and_recurring_restructuring": 981.5468475897001,
+          "nopat": 731.2524014543266,
+          "da": 864.69603240045,
+          "capex": 841.3258693626,
+          "delta_nwc": 23.138775285000158,
+          "net_reinvestment": -0.23138775284987645,
+          "fcff": 731.4837892071764,
+          "pv_fcff": 490.6316876420766
+        },
+        {
+          "year": 5,
+          "period_end": "2031-11-03",
+          "growth": 0.01,
+          "revenue": 23603.8646682285,
+          "ebit_margin": 0.042,
+          "ebit_after_SBC_and_recurring_restructuring": 991.362316065597,
+          "nopat": 738.5649254688698,
+          "da": 873.3429927244545,
+          "capex": 849.7391280562259,
+          "delta_nwc": 23.370163037849853,
+          "net_reinvestment": -0.23370163037868608,
+          "fcff": 738.7986270992485,
+          "pv_fcff": 448.45068282216977
+        },
+        {
+          "year": 6,
+          "period_end": "2032-11-03",
+          "growth": 0.01,
+          "revenue": 23839.903314910785,
+          "ebit_margin": 0.042,
+          "ebit_after_SBC_and_recurring_restructuring": 1001.2759392262531,
+          "nopat": 745.9505747235585,
+          "da": 882.076422651699,
+          "capex": 873.2027385605957,
+          "delta_nwc": 23.603864668228564,
+          "net_reinvestment": 14.73018057712519,
+          "fcff": 731.2203941464333,
+          "pv_fcff": 401.6748382621428
+        },
+        {
+          "year": 7,
+          "period_end": "2033-11-03",
+          "growth": 0.01,
+          "revenue": 24078.302348059893,
+          "ebit_margin": 0.042,
+          "ebit_after_SBC_and_recurring_restructuring": 1011.2886986185156,
+          "nopat": 753.4100804707941,
+          "da": 890.897186878216,
+          "capex": 897.0506473622473,
+          "delta_nwc": 23.83990331491077,
+          "net_reinvestment": 29.993363798942184,
+          "fcff": 723.416716671852,
+          "pv_fcff": 359.62725164352383
+        },
+        {
+          "year": 8,
+          "period_end": "2034-11-03",
+          "growth": 0.01,
+          "revenue": 24319.085371540492,
+          "ebit_margin": 0.042,
+          "ebit_after_SBC_and_recurring_restructuring": 1021.4015856047007,
+          "nopat": 760.944181275502,
+          "da": 899.8061587469981,
+          "capex": 921.288194066076,
+          "delta_nwc": 24.07830234805988,
+          "net_reinvestment": 45.5603376671378,
+          "fcff": 715.3838436083643,
+          "pv_fcff": 321.8406550908439
+        },
+        {
+          "year": 9,
+          "period_end": "2035-11-03",
+          "growth": 0.01,
+          "revenue": 24562.276225255897,
+          "ebit_margin": 0.042,
+          "ebit_after_SBC_and_recurring_restructuring": 1031.6156014607477,
+          "nopat": 768.553623088257,
+          "da": 908.8042203344681,
+          "capex": 945.9207866392451,
+          "delta_nwc": 24.319085371540496,
+          "net_reinvestment": 61.435651676317434,
+          "fcff": 707.1179714119396,
+          "pv_fcff": 287.89317731145053
+        },
+        {
+          "year": 10,
+          "period_end": "2036-11-03",
+          "growth": 0.01,
+          "revenue": 24807.898987508455,
+          "ebit_margin": 0.042,
+          "ebit_after_SBC_and_recurring_restructuring": 1041.9317574753552,
+          "nopat": 776.2391593191396,
+          "da": 917.8922625378128,
+          "capex": 970.953902244471,
+          "delta_nwc": 24.562276225255847,
+          "net_reinvestment": 77.62391593191396,
+          "fcff": 698.6152433872256,
+          "pv_fcff": 257.4039915797948
+        }
+      ],
+      "operating_ev": 6994.190314644939,
+      "equity": 4936.190314644939,
+      "value_per_share": 18.263473325197836,
+      "upside": -0.2399719798086627,
+      "terminal_nopat": 784.001550912331,
+      "terminal_reinvestment": 78.4001550912331,
+      "terminal_fcff": 705.6013958210979,
+      "terminal_value": 7427.383113906293,
+      "pv_terminal": 2736.6108578483445,
+      "terminal_weight": 0.39126914406635915,
+      "wacc": 0.105,
+      "g": 0.01,
+      "roic": 0.1,
+      "tax": 0.255,
+      "shares": 270.276646,
+      "bridge": {
+        "cash_Aug1": 1294,
+        "tariff_cash_received_after_Aug1": 18,
+        "declared_October_dividend": -51,
+        "minimum_operating_cash": -450,
+        "debt_principal": -2441,
+        "finance_leases_latest_disclosed": -13,
+        "unfunded_SERP_claim_latest_annual": -415
+      }
+    },
+    "Bull": {
+      "rows": [
+        {
+          "year": 1,
+          "period_end": "2027-11-03",
+          "growth": 0.02,
+          "revenue": 23021.4,
+          "ebit_margin": 0.044,
+          "ebit_after_SBC_and_recurring_restructuring": 1012.9416,
+          "nopat": 764.770908,
+          "da": 851.7918,
+          "capex": 851.7918,
+          "delta_nwc": 45.14000000000015,
+          "net_reinvestment": 45.14000000000015,
+          "fcff": 719.6309079999999,
+          "pv_fcff": 657.1971762557076
+        },
+        {
+          "year": 2,
+          "period_end": "2028-11-03",
+          "growth": 0.025,
+          "revenue": 23596.934999999998,
+          "ebit_margin": 0.047,
+          "ebit_after_SBC_and_recurring_restructuring": 1109.0559449999998,
+          "nopat": 837.3372384749999,
+          "da": 873.0865949999999,
+          "capex": 873.0865949999999,
+          "delta_nwc": 57.55349999999962,
+          "net_reinvestment": 57.55349999999962,
+          "fcff": 779.7837384750003,
+          "pv_fcff": 650.3481899668483
+        },
+        {
+          "year": 3,
+          "period_end": "2029-11-03",
+          "growth": 0.025,
+          "revenue": 24186.858374999996,
+          "ebit_margin": 0.05,
+          "ebit_after_SBC_and_recurring_restructuring": 1209.3429187499999,
+          "nopat": 913.0539036562499,
+          "da": 894.9137598749999,
+          "capex": 894.9137598749999,
+          "delta_nwc": 58.99233749999985,
+          "net_reinvestment": 58.99233749999985,
+          "fcff": 854.06156615625,
+          "pv_fcff": 650.4992811653761
+        },
+        {
+          "year": 4,
+          "period_end": "2030-11-03",
+          "growth": 0.025,
+          "revenue": 24791.529834374993,
+          "ebit_margin": 0.052,
+          "ebit_after_SBC_and_recurring_restructuring": 1289.1595513874995,
+          "nopat": 973.3154612975621,
+          "da": 917.2866038718747,
+          "capex": 917.2866038718747,
+          "delta_nwc": 60.467145937499666,
+          "net_reinvestment": 60.467145937499666,
+          "fcff": 912.8483153600624,
+          "pv_fcff": 634.9538220143048
+        },
+        {
+          "year": 5,
+          "period_end": "2031-11-03",
+          "growth": 0.02,
+          "revenue": 25287.360431062494,
+          "ebit_margin": 0.054,
+          "ebit_after_SBC_and_recurring_restructuring": 1365.5174632773746,
+          "nopat": 1030.965684774418,
+          "da": 935.6323359493123,
+          "capex": 935.6323359493123,
+          "delta_nwc": 49.58305966875014,
+          "net_reinvestment": 49.58305966875014,
+          "fcff": 981.3826251056678,
+          "pv_fcff": 623.4013936940577
+        },
+        {
+          "year": 6,
+          "period_end": "2032-11-03",
+          "growth": 0.02,
+          "revenue": 25793.107639683745,
+          "ebit_margin": 0.054,
+          "ebit_after_SBC_and_recurring_restructuring": 1392.8278125429222,
+          "nopat": 1051.5849984699062,
+          "da": 954.3449826682985,
+          "capex": 976.5864999872551,
+          "delta_nwc": 50.574720862125105,
+          "net_reinvestment": 72.81623818108183,
+          "fcff": 978.7687602888243,
+          "pv_fcff": 567.7999949306774
+        },
+        {
+          "year": 7,
+          "period_end": "2033-11-03",
+          "growth": 0.02,
+          "revenue": 26308.96979247742,
+          "ebit_margin": 0.054,
+          "ebit_after_SBC_and_recurring_restructuring": 1420.6843687937805,
+          "nopat": 1072.6166984393044,
+          "da": 973.4318823216645,
+          "capex": 1018.8045776523364,
+          "delta_nwc": 51.586215279367394,
+          "net_reinvestment": 96.95891061003933,
+          "fcff": 975.6577878292651,
+          "pv_fcff": 516.8906558886176
+        },
+        {
+          "year": 8,
+          "period_end": "2034-11-03",
+          "growth": 0.02,
+          "revenue": 26835.149188326966,
+          "ebit_margin": 0.054,
+          "ebit_after_SBC_and_recurring_restructuring": 1449.0980561696563,
+          "nopat": 1094.0690324080906,
+          "da": 992.9005199680977,
+          "capex": 1062.3207438240256,
+          "delta_nwc": 52.61793958495473,
+          "net_reinvestment": 122.03816344088268,
+          "fcff": 972.0308689672079,
+          "pv_fcff": 470.2914721528887
+        },
+        {
+          "year": 9,
+          "period_end": "2035-11-03",
+          "growth": 0.02,
+          "revenue": 27371.852172093506,
+          "ebit_margin": 0.054,
+          "ebit_after_SBC_and_recurring_restructuring": 1478.0800172930492,
+          "nopat": 1115.950413056252,
+          "da": 1012.7585303674597,
+          "capex": 1107.1700348115214,
+          "delta_nwc": 53.67029837665396,
+          "net_reinvestment": 148.0818028207157,
+          "fcff": 967.8686102355364,
+          "pv_fcff": 427.65084306716267
+        },
+        {
+          "year": 10,
+          "period_end": "2036-11-03",
+          "growth": 0.02,
+          "revenue": 27919.289215535377,
+          "ebit_margin": 0.054,
+          "ebit_after_SBC_and_recurring_restructuring": 1507.6416176389102,
+          "nopat": 1138.2694213173772,
+          "da": 1033.013700974809,
+          "capex": 1153.3883691409876,
+          "delta_nwc": 54.743704344187066,
+          "net_reinvestment": 175.11837251036573,
+          "fcff": 963.1510488070115,
+          "pv_fcff": 388.64511216660435
+        }
+      ],
+      "operating_ev": 10873.251466768064,
+      "equity": 8815.251466768064,
+      "value_per_share": 32.61566101707531,
+      "upside": 0.357289264131307,
+      "terminal_nopat": 1161.0348097437247,
+      "terminal_reinvestment": 178.62073996057305,
+      "terminal_fcff": 982.4140697831517,
+      "terminal_value": 13098.854263775356,
+      "pv_terminal": 5285.573525465819,
+      "terminal_weight": 0.48610790816529226,
+      "wacc": 0.095,
+      "g": 0.02,
+      "roic": 0.13,
+      "tax": 0.245,
+      "shares": 270.276646,
+      "bridge": {
+        "cash_Aug1": 1294,
+        "tariff_cash_received_after_Aug1": 18,
+        "declared_October_dividend": -51,
+        "minimum_operating_cash": -450,
+        "debt_principal": -2441,
+        "finance_leases_latest_disclosed": -13,
+        "unfunded_SERP_claim_latest_annual": -415
+      }
+    }
+  },
+  "sensitivity": [
+    {
+      "wacc": 0.095,
+      "g": 0,
+      "value": 20.97980144021469
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.005,
+      "value": 21.101921155174715
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.01,
+      "value": 21.230148315909894
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.015,
+      "value": 21.365532317024044
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.02,
+      "value": 21.50940143676231
+    },
+    {
+      "wacc": 0.1,
+      "g": 0,
+      "value": 19.520293944505926
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.005,
+      "value": 19.59250443020346
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.01,
+      "value": 19.66522523037281
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.015,
+      "value": 19.73845984661619
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.02,
+      "value": 19.812211796430798
+    },
+    {
+      "wacc": 0.105,
+      "g": 0,
+      "value": 18.200375865132134
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.005,
+      "value": 18.23360400376075
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.01,
+      "value": 18.263473325197836
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.015,
+      "value": 18.289345500690523
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.02,
+      "value": 18.310431229682358
+    },
+    {
+      "wacc": 0.11,
+      "g": 0,
+      "value": 17.000996504642206
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.005,
+      "value": 17.003740255643514
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.01,
+      "value": 17.00048246590897
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.015,
+      "value": 16.99020404767769
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.02,
+      "value": 16.97165874461671
+    },
+    {
+      "wacc": 0.115,
+      "g": 0,
+      "value": 15.906418855985454
+    },
+    {
+      "wacc": 0.115,
+      "g": 0.005,
+      "value": 15.885337809572745
+    },
+    {
+      "wacc": 0.115,
+      "g": 0.01,
+      "value": 15.856489075671242
+    },
+    {
+      "wacc": 0.115,
+      "g": 0.015,
+      "value": 15.818642249514193
+    },
+    {
+      "wacc": 0.115,
+      "g": 0.02,
+      "value": 15.770307252502722
+    }
+  ],
+  "joint_sensitivity": [
+    {
+      "margin": 0.035,
+      "roic": 0.08,
+      "wacc": 0.115,
+      "g": 0.005,
+      "value": 12.113608218498081
+    },
+    {
+      "margin": 0.035,
+      "roic": 0.08,
+      "wacc": 0.105,
+      "g": 0.01,
+      "value": 13.915028303099117
+    },
+    {
+      "margin": 0.035,
+      "roic": 0.08,
+      "wacc": 0.095,
+      "g": 0.02,
+      "value": 16.09195194930266
+    },
+    {
+      "margin": 0.042,
+      "roic": 0.1,
+      "wacc": 0.115,
+      "g": 0.005,
+      "value": 16.20116355419879
+    },
+    {
+      "margin": 0.042,
+      "roic": 0.1,
+      "wacc": 0.105,
+      "g": 0.01,
+      "value": 18.58392902014223
+    },
+    {
+      "margin": 0.042,
+      "roic": 0.1,
+      "wacc": 0.095,
+      "g": 0.02,
+      "value": 21.834612190159472
+    },
+    {
+      "margin": 0.05,
+      "roic": 0.13,
+      "wacc": 0.115,
+      "g": 0.005,
+      "value": 20.894654971715546
+    },
+    {
+      "margin": 0.05,
+      "roic": 0.13,
+      "wacc": 0.105,
+      "g": 0.01,
+      "value": 23.974218890742353
+    },
+    {
+      "margin": 0.05,
+      "roic": 0.13,
+      "wacc": 0.095,
+      "g": 0.02,
+      "value": 28.545604854564004
+    }
+  ],
+  "reverse": [
+    {
+      "label": "Base capital / sales",
+      "wacc": 0.105,
+      "g": 0.01,
+      "roic": 0.1,
+      "first5_revenue_growth": 0.01,
+      "required_sustainable_ebit_margin": 0.050553262369884985,
+      "year1_ebit": 1152.3970030051871,
+      "year5_fcff": 893.630626442246,
+      "value": 24.029999999999998
+    },
+    {
+      "label": "Flat sales",
+      "wacc": 0.105,
+      "g": 0.005,
+      "roic": 0.1,
+      "first5_revenue_growth": 0,
+      "required_sustainable_ebit_margin": 0.05267301843146058,
+      "year1_ebit": 1188.8300259980651,
+      "year5_fcff": 908.2483693685584,
+      "value": 24.029999999999998
+    },
+    {
+      "label": "Lower discount rate",
+      "wacc": 0.095,
+      "g": 0.01,
+      "roic": 0.1,
+      "first5_revenue_growth": 0.01,
+      "required_sustainable_ebit_margin": 0.04539678593429894,
+      "year1_ebit": 1034.8515131224983,
+      "year5_fcff": 802.5034868858874,
+      "value": 24.030000000000005
+    },
+    {
+      "label": "Adverse capital / sales",
+      "wacc": 0.115,
+      "g": 0,
+      "roic": 0.08,
+      "first5_revenue_growth": -0.01,
+      "required_sustainable_ebit_margin": 0.060117707263099174,
+      "year1_ebit": 1343.2880863988669,
+      "year5_fcff": 1004.4605935480317,
+      "value": 24.030000000000005
+    },
+    {
+      "label": "Stronger sales",
+      "wacc": 0.105,
+      "g": 0.015,
+      "roic": 0.12,
+      "first5_revenue_growth": 0.02,
+      "required_sustainable_ebit_margin": 0.04782020726558972,
+      "year1_ebit": 1100.8881195440472,
+      "year5_fcff": 863.827461367343,
+      "value": 24.029999999999998
+    }
+  ],
+  "implied_wacc_base_operations": 0.08730531996964996,
+  "bridge": {
+    "cash_Aug1": 1294,
+    "tariff_cash_received_after_Aug1": 18,
+    "declared_October_dividend": -51,
+    "minimum_operating_cash": -450,
+    "debt_principal": -2441,
+    "finance_leases_latest_disclosed": -13,
+    "unfunded_SERP_claim_latest_annual": -415
+  },
+  "shares": 270.276646
+}

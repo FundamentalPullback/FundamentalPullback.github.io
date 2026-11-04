@@ -1,0 +1,509 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KR · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/KR">← KR profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A163 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">En observación</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Standalone base $59.85; sensitivity $54–70. Total normalized earnings are declining. Giant Eagle is pending; the Albertsons demand is not a judgment. Complete research, no approved purchase.</strong></p>
+<h1 id="kroger-kr-stage-3-fundamental-completo">Kroger (KR) — Stage 3 fundamental completo</h1>
+<p><strong>Corte: 3 de noviembre de 2026. Precio del scanner: $66,65. Conclusión: observación, sin aprobación fundamental de compra a este precio.</strong> El análisis está terminado; el desenlace judicial y los resultados futuros, naturalmente, no lo están. KR no se rechaza por ser un supermercado de crecimiento moderado. El problema es que el precio ya exige una mejora que aún no aparece en el beneficio total, mientras la inversión aumenta y existe una contingencia judicial material.</p>
+<p><strong>Valor central standalone: $59,85; banda central razonable: aproximadamente $54–70.</strong> El caso favorable puede justificar más, pero no es el valor central. La adquisición de Giant Eagle aporta entre −$0,54 y +$2,16 por acción en los supuestos explícitos de este estudio, antes de asignar una probabilidad de cierre. El litigio Albertsons se muestra separadamente y puede restar bastante más. No aplico un descuento porcentual universal ni convierto estos rangos en una orden de entrada.</p>
+<h2 id="elegibilidad-negocio-y-ventaja-competitiva">1. Elegibilidad, negocio y ventaja competitiva</h2>
+<p>El scanner del 3/11 marca Opportunity 90 y Quality/Pullback 90. Son filtros de selección, no evidencia de infravaloración. Los resultados más recientes son los del segundo trimestre fiscal, publicados el <strong>11 de septiembre</strong>, seguidos de una actualización estratégica el <strong>20 de octubre</strong>. No hay que esperar a unos resultados aún no publicados esta semana. Las cuentas empleadas son el 10-Q del período terminado el 15/8/2026 y el 10-K terminado el 31/1/2026.</p>
+<p>Kroger combina supermercados, farmacia, combustible, marcas propias, logística y publicidad basada en sus clientes. Su escala de compras, densidad regional, fidelización y datos proporcionan ventajas reales. No eliminan la competencia de Walmart, Costco, Aldi, Amazon y formatos de descuento. En alimentación, una pequeña diferencia de precio, ejecución o costes laborales puede absorber gran parte del beneficio.</p>
+<p>La venta de combustible modifica las ventas consolidadas sin un cambio proporcional del beneficio. La inflación alimentaria puede elevar la venta nominal sin mejorar unidades; farmacia tiene cambios de precios/reembolso. Por eso no se equiparan crecimiento de ingresos, ventas comparables, crecimiento de clientes y crecimiento económico. No hay aquí una tesis de créditos RIN propia de una refinería.</p>
+<h2 id="historial-y-trimestre-beneficio-total-frente-a-eps">2. Historial y trimestre: beneficio total frente a EPS</h2>
+<p>Cifras en millones de dólares; ejercicios fiscales Kroger, no años naturales. FY2023 tuvo 53 semanas; FY2024 y FY2025, 52. FCF de esta tabla = CFO menos inversión de caja en propiedad/equipo, incluyendo buyouts de arrendamientos. Es una medida de caja histórica, no todavía FCFF económico.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Período</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">Beneficio atribuible</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Inversión de caja</th>
+<th style="text-align: right;">FCF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">150.039</td>
+<td style="text-align: right;">3.096</td>
+<td style="text-align: right;">2.164</td>
+<td style="text-align: right;">6.788</td>
+<td style="text-align: right;">3.904</td>
+<td style="text-align: right;">2.884</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">147.123</td>
+<td style="text-align: right;">3.849</td>
+<td style="text-align: right;">2.665</td>
+<td style="text-align: right;">5.794</td>
+<td style="text-align: right;">4.017</td>
+<td style="text-align: right;">1.777</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">147.642</td>
+<td style="text-align: right;">1.890</td>
+<td style="text-align: right;">1.016</td>
+<td style="text-align: right;">7.311</td>
+<td style="text-align: right;">3.855</td>
+<td style="text-align: right;">3.456</td>
+</tr>
+<tr class="even">
+<td>TTM a Q2 FY2026</td>
+<td style="text-align: right;">149.326</td>
+<td style="text-align: right;">2.083</td>
+<td style="text-align: right;">1.084</td>
+<td style="text-align: right;">6.708</td>
+<td style="text-align: right;">4.324</td>
+<td style="text-align: right;">2.384</td>
+</tr>
+<tr class="odd">
+<td>TTM anterior</td>
+<td style="text-align: right;">147.000</td>
+<td style="text-align: right;">3.925</td>
+<td style="text-align: right;">2.727</td>
+<td style="text-align: right;">6.018</td>
+<td style="text-align: right;">3.806</td>
+<td style="text-align: right;">2.212</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los TTM se reconstruyen como año completo + semestre actual − semestre comparable. Las cuatro observaciones más recientes no se anualizan por separado:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Trimestre</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">Beneficio atribuible</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Inversión</th>
+<th style="text-align: right;">FCF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q3 FY2025</td>
+<td style="text-align: right;">33.859</td>
+<td style="text-align: right;">−1.541</td>
+<td style="text-align: right;">−1.320</td>
+<td style="text-align: right;">970</td>
+<td style="text-align: right;">941</td>
+<td style="text-align: right;">29</td>
+</tr>
+<tr class="even">
+<td>Q4 FY2025, derivado</td>
+<td style="text-align: right;">34.725</td>
+<td style="text-align: right;">1.246</td>
+<td style="text-align: right;">861</td>
+<td style="text-align: right;">2.653</td>
+<td style="text-align: right;">946</td>
+<td style="text-align: right;">1.707</td>
+</tr>
+<tr class="odd">
+<td>Q1 FY2026</td>
+<td style="text-align: right;">46.121</td>
+<td style="text-align: right;">1.407</td>
+<td style="text-align: right;">902</td>
+<td style="text-align: right;">1.774</td>
+<td style="text-align: right;">1.293</td>
+<td style="text-align: right;">481</td>
+</tr>
+<tr class="even">
+<td>Q2 FY2026</td>
+<td style="text-align: right;">34.621</td>
+<td style="text-align: right;">971</td>
+<td style="text-align: right;">641</td>
+<td style="text-align: right;">1.311</td>
+<td style="text-align: right;">1.144</td>
+<td style="text-align: right;">167</td>
+</tr>
+</tbody>
+</table></div>
+<p>Q1 tiene 16 semanas, frente a 12 en Q2 y Q3. El comunicado de Q1 redondea beneficio a 903; la diferencia por resta semestral es 902. No cambia la conclusión. El gran flujo del Q4 demuestra por qué sería incorrecto multiplicar el FCF de Q2 por cuatro.</p>
+<p>La normalización cambia radicalmente la lectura del PER, pero no revela crecimiento fuerte oculto. Beneficio neto ajustado: FY2024 <strong>3.246</strong>, FY2025 <strong>3.199</strong>, TTM actual <strong>3.156</strong>, TTM anterior <strong>3.208</strong>. El beneficio total ajustado cae aproximadamente <strong>1,6%</strong> TTM; en el semestre cae <strong>2,5%</strong>, y en Q2 <strong>4,0%</strong>. Mientras tanto, el EPS ajustado de Q2 sube de $1,04 a $1,09 gracias a menos acciones. Comprar acciones propias puede crear valor, pero no convierte una contracción del negocio en crecimiento orgánico.</p>
+<p>La perspectiva más larga también importa: el beneficio operativo FIFO ajustado pasó de unos $3.000 millones en FY2019 a $4.056 millones en FY2020, $4.310 millones en FY2021 y aproximadamente $5.100 millones en FY2022. El entorno de pandemia e inflación no debe extrapolarse; FY2025, con $4.905 millones, todavía no supera claramente aquel nivel nominal.</p>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/kr-20260131x10k.htm">10-K FY2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/56873/000110465926108926/kr-20260815x10q.htm">10-Q Q2 FY2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/56873/000110465925091648/kr-20250816x10q.htm">10-Q Q2 FY2025</a>, <a href="https://s202.q4cdn.com/463742399/files/doc_financials/2025/q3/FINAL-KR-Q3-25-Earnings-PR-tables.pdf">Q3 FY2025</a>, <a href="https://s202.q4cdn.com/463742399/files/doc_financials/2026/q1/FINAL-KR-Q1-26-Earnings-PR-tables.pdf">Q1 FY2026</a>, <a href="https://ir.kroger.com/news/news-details/2022/Kroger-Reports-Fourth-Quarter-and-Full-Year-2021-Results/default.aspx">FY2021</a>, <a href="https://ir.kroger.com/files/doc_financials/2022/q4/KR-Q4-2022-Earnings-PR_Final-3-2-with-Tables.pdf">FY2022</a>.</p>
+<h2 id="normalización-y-calidad-de-caja">3. Normalización y calidad de caja</h2>
+<ul>
+<li>La pérdida GAAP de FY2025 contiene aproximadamente $2.500 millones de deterioros y cargos ligados a la red automatizada. No perpetúo esa pérdida contable. Tampoco la trato como irrelevante: se destruyó capital y todavía hacen falta inversión física y logística, además de posibles costes de salida.</li>
+<li>Las ganancias de inversiones financieras se excluyen del beneficio operativo recurrente. Las inversiones cotizadas verificadas se reconocen aparte en el puente de capital, después de una reserva fiscal.</li>
+<li>El modelo conserva SBC en EBIT. SBC fue $157 millones en FY2025 y aproximadamente $175 millones TTM; el add-back de CFO no es beneficio gratuito para el accionista.</li>
+<li>LIFO no desaparece por el mero uso de la guía FIFO. La guía de $5.000–5.200 millones de beneficio FIFO ajustado es distinta de EBIT recurrente después del coste de inventario. El EBIT NTM central, $4.950 millones, no aplica directamente el margen FIFO a perpetuidad.</li>
+<li>CFO FY2025 fue especialmente fuerte. La caída a $6.708 millones TTM y la mayor inversión muestran por qué el FCF de $3.456 millones de aquel año no es una anualidad segura. Inventario, pagos a proveedores, impuestos y obligaciones heredadas cambian la conversión.</li>
+<li>La proyección FCFF parte de EBIT después de SBC, descuenta impuesto operativo, suma solamente D&amp;A y resta capex, nuevas inversiones mediante finance leases y capital de trabajo. No suma SBC, recompras, ingresos por emisiones ni venta de activos. El pago de deuda no se resta otra vez de FCFF.</li>
+</ul>
+<h2 id="guía-y-plan-de-crecimiento-una-recuperación-razonable-no-automática">4. Guía y plan de crecimiento: una recuperación razonable, no automática</h2>
+<p>La guía FY2026 es ventas comparables sin combustible de <strong>0,2–0,8%</strong>, beneficio FIFO ajustado <strong>$5.000–5.200 millones</strong>, EPS ajustado <strong>$5,10–5,30</strong>, FCF ajustado <strong>$2.700–2.900 millones</strong> y capex <strong>$3.800–4.000 millones</strong>. Son medidas de la dirección, con sus ajustes, no sustitutos de caja normalizada.</p>
+<p>En Q2, ventas comparables sin combustible avanzaron sólo 0,2%, frente a ingresos consolidados +2%. El negocio digital creció 20% y el beneficio de Kroger Precision Marketing 24%. Son señales favorables, pero de negocios de distinta escala: no se aplica ese crecimiento al conjunto.</p>
+<p>En octubre, Kroger fijó objetivos FY2027–29 de crecimiento de EBITDA ajustado <strong>3–6%</strong> y de EPS ajustado <strong>7–11%</strong>, excluyendo Giant Eagle. También pretende aproximadamente 3% de comparables <strong>sin combustible ni farmacia</strong> en 2029: no es la misma definición que la guía actual. Parte del crecimiento de EPS depende de recompras. El capex pasa de unos <strong>$3.900 millones a $5.000 millones en 2029</strong>. El ahorro estructural previsto de $4.000 millones coexiste con $5.000 millones de inversión en valor para el cliente: sería incorrecto sumar todo el ahorro al beneficio sin reinvertirlo.</p>
+<p>Fuentes: <a href="https://ir.kroger.com/news/news-details/2026/Kroger-Reports-Second-Quarter-2026-Results-and-Updates-Guidance-for-2026/default.aspx">resultados y guía de septiembre</a>, <a href="https://www.sec.gov/Archives/edgar/data/56873/000110465926117103/tm2627753d1_ex99-1.htm">actualización oficial del 20/10</a>, <a href="https://s202.q4cdn.com/463742399/files/content_files/Kroger-2026-Investor-Update-Presentation.pdf">presentación estratégica, especialmente marco financiero final</a>.</p>
+<h2 id="balance-acciones-y-reclamaciones-contra-el-valor">5. Balance, acciones y reclamaciones contra el valor</h2>
+<p>El 15/8: deuda financiera, incluidos finance leases, <strong>$16.997 millones</strong>; caja e inversiones temporales <strong>$1.676 millones</strong>. Los $1.060 millones de depósitos de tiendas en tránsito son circulante operativo, no caja excedente. Dejo $600 millones de caja operativa y sumo sólo $1.076 millones al accionista. Las inversiones nivel 1 de $162 millones se valoran en $125 millones después de reserva fiscal.</p>
+<p>Puente desde EV a equity, millones: −16.997 deuda; +1.076 caja excedente; +125 inversiones; −409 pensiones/postjubilación; −750 valor presente estimado de obligación heredada por opioides; −6 minoritarios. <strong>Reclamación neta: $16.961 millones.</strong> La provisión por opioides registrada es $978 millones; el PV de $750 millones es una hipótesis explícita por pagos diferidos. Usar el nominal reduciría el valor otros $0,38 por acción. No se deduce a la vez ese PV y los mismos pagos en los flujos futuros.</p>
+<p>Los operating leases suman aproximadamente $7.161 millones. La renta permanece en EBIT, por lo que no vuelvo a restar ese pasivo. Los finance leases sí están en deuda y el modelo carga $200 millones anuales iniciales por nuevas inversiones financiadas así. Pasivos de explotación normales pertenecen al capital de trabajo, no a deuda añadida indiscriminadamente.</p>
+<p>Acciones realmente declaradas: <strong>590.588.700</strong> al 15/9; media diluida Q2 <strong>608 millones</strong>, media diluida semestral <strong>612 millones</strong>. El DCF usa una estimación actual diluida transparente de <strong>592,589 millones</strong>: acciones puntuales más 2 millones, incremento dilutivo observado en Q2. No se llama a esa estimación una cifra diluida declarada. Usar 608 millones reduce el valor central de $59,85 a aproximadamente $58,34. No se anticipan recompras posteriores no verificadas ni se reduce gratuitamente el denominador futuro.</p>
+<p>En octubre se emitieron $1.500 millones de bonos al 5,8% y 6,2%, para refinanciar vencimientos y fines corporativos. Esto altera coste y calendario de deuda; no justifica añadir $1.500 millones a deuda neta sin reconocer los fondos o la deuda repagada. Conservamos el último balance completo, con esa advertencia temporal. La ratio corporativa deuda neta/EBITDA ajustado era 1,91x, por debajo de su objetivo 2,3–2,5x; una sentencia adversa grande cambiaría la evaluación.</p>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/56873/000110465926108926/kr-20260815x10q.htm">10-Q, deuda, caja y acciones</a>, <a href="https://www.sec.gov/Archives/edgar/data/56873/000110465926113599/tm2626754d1_8k.htm">emisión confirmada 5/10</a>, <a href="https://www.sec.gov/Archives/edgar/data/56873/000110465926111397/tm2625941d3_fwp.htm">condiciones de bonos</a>.</p>
+<h2 id="dos-eventos-distintos-giant-eagle-y-albertsons">6. Dos eventos distintos: Giant Eagle y Albertsons</h2>
+<p><strong>Giant Eagle pendiente.</strong> Precio anunciado $1.650 millones, compuesto por $1.250 millones de caja y aproximadamente $400 millones de deuda asumida; ventas anuales cercanas a $9.000 millones. El cierre se espera en FY2027, sujeto a aprobaciones y posibles desinversiones. No se incorpora como negocio ya adquirido ni se suma toda su facturación sin pagar su coste.</p>
+<p>El módulo separado supone cierre al final del año 1, crecimiento de ventas 2,5%, impuesto 23%, descuento 8%, g terminal 2%, desembolso completo de $1.650 millones y costes de integración $100–250 millones. Márgenes EBIT 1,8%/2,5%/3,0%, D&amp;A 2,25% de ventas y capex 2,75%/2,5%/2,5% producen NPV de <strong>−$317/+675/+1.282 millones</strong>, o <strong>−$0,54/+1,14/+2,16 por acción</strong>. Son supuestos del analista, no rentabilidad objetivo revelada. Sin cierre, el NPV operativo es cero, antes de costes de ruptura que no se han cuantificado. No asigno falsa precisión a probabilidades regulatorias. <a href="https://ir.kroger.com/news/news-details/2026/Kroger-Announces-Agreement-to-Acquire-Giant-Eagle/default.aspx">Anuncio de adquisición</a>.</p>
+<p><strong>Litigio Albertsons.</strong> La prueba testimonial terminó el 30/10; no hay sentencia verificada al corte. La reclamación publicada asciende hasta $9.300 millones, incluida la comisión de ruptura. Es una pretensión de la contraparte, no una deuda probada ni una pérdida probable cuantificada por este estudio. <a href="https://www.axios.com/2026/10/30/kroger-albertsons-merger-trial">Estado del juicio</a>, <a href="https://boisedev.com/news/2026/10/30/kroger-albertsons-trial-ends-judge-provides-specific-details-on-what-she-wants-to-see-next/">cierre de las vistas y siguientes escritos</a>.</p>
+<p>Para no ocultar la contingencia ni inventar una probabilidad, la mostramos fuera del DCF operativo: pagos equivalentes presentes de $0/$600/$3.000/$9.300 millones restan <strong>$0/$1,01/$5,06/$15,69 por acción</strong>, antes de cualquier efecto fiscal. Una suma futura tendría menor PV, pero podría encarecer financiación y restringir recompras. El caso central no registra automáticamente $9.300 millones; tampoco asume que $600 millones sea el máximo. Esta asimetría impide presentar una banda central como protección frente al peor resultado judicial.</p>
+<h2 id="fcff-a-diez-años-cinco-explícitos-y-cinco-de-convergencia">7. FCFF a diez años: cinco explícitos y cinco de convergencia</h2>
+<p>Modelo en USD nominales, primera anualidad NTM, cobros de final de año. FCFF = EBIT × (1−t) + D&amp;A − inversión de caja − nuevas inversiones por finance lease − ΔWC. Sin múltiplo de salida: perpetuidad con reinversión terminal NOPAT × g/ROIC. WACC siempre mayor que g.</p>
+<p>El WACC central de 8% es un supuesto, no una cotización observable. Es compatible con deuda reciente alrededor de 6%, coste de equity de aproximadamente 9–9,5%, deuda de aproximadamente 30% del capital y escudo fiscal del 23%. Se prueban 7,5–9%; el riesgo judicial se calcula aparte, no se multiplica otra vez por un descuento arbitrario de seguridad.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hipótesis</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Central</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crecimiento ventas años 1–5</td>
+<td style="text-align: right;">0,5/1/1,5/1,5/1,5%</td>
+<td style="text-align: right;">2/2,5/3/3/2,75%</td>
+<td style="text-align: right;">3/3,5/4/4/3,5%</td>
+</tr>
+<tr class="even">
+<td>Margen EBIT año 1 → 5 → 10</td>
+<td style="text-align: right;">3,0→3,0→2,9%</td>
+<td style="text-align: right;">3,25→3,4→3,35%</td>
+<td style="text-align: right;">3,35→3,7→3,6%</td>
+</tr>
+<tr class="odd">
+<td>Impuesto</td>
+<td style="text-align: right;">24%</td>
+<td style="text-align: right;">23%</td>
+<td style="text-align: right;">23%</td>
+</tr>
+<tr class="even">
+<td>Capex caja año 1 → 3 → 5</td>
+<td style="text-align: right;">4.300→5.000→5.200</td>
+<td style="text-align: right;">4.300→5.000→5.300</td>
+<td style="text-align: right;">4.400→5.200→5.600</td>
+</tr>
+<tr class="odd">
+<td>WACC / g terminal / ROIC terminal</td>
+<td style="text-align: right;">9/1,5/9%</td>
+<td style="text-align: right;">8/2/11%</td>
+<td style="text-align: right;">7,5/2,25/13%</td>
+</tr>
+<tr class="even">
+<td>Valor operativo EV</td>
+<td style="text-align: right;">32.218</td>
+<td style="text-align: right;">52.429</td>
+<td style="text-align: right;">68.147</td>
+</tr>
+<tr class="odd">
+<td>Valor por acción, standalone</td>
+<td style="text-align: right;"><strong>$25,75</strong></td>
+<td style="text-align: right;"><strong>$59,85</strong></td>
+<td style="text-align: right;"><strong>$86,38</strong></td>
+</tr>
+<tr class="even">
+<td>Peso del terminal en EV</td>
+<td style="text-align: right;">55,6%</td>
+<td style="text-align: right;">60,4%</td>
+<td style="text-align: right;">64,9%</td>
+</tr>
+</tbody>
+</table></div>
+<p>La reinversión física se eleva hasta el plan 2029. En años 6–10, crecimiento y margen convergen y la reinversión neta pasa gradualmente a una tasa financiada por ROIC; no desaparece. En terminal central se reinvierte 18,2% de NOPAT. La tabla completa del modelo incluye D&amp;A, WC y finance leases en los tres casos.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ventas centrales</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">D&amp;A</th>
+<th style="text-align: right;">Capex caja</th>
+<th style="text-align: right;">Reinversión neta total</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">152.313</td>
+<td style="text-align: right;">4.950</td>
+<td style="text-align: right;">3.812</td>
+<td style="text-align: right;">3.400</td>
+<td style="text-align: right;">4.300</td>
+<td style="text-align: right;">1.200</td>
+<td style="text-align: right;">2.612</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">156.120</td>
+<td style="text-align: right;">5.152</td>
+<td style="text-align: right;">3.967</td>
+<td style="text-align: right;">3.600</td>
+<td style="text-align: right;">4.650</td>
+<td style="text-align: right;">1.360</td>
+<td style="text-align: right;">2.607</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">160.804</td>
+<td style="text-align: right;">5.387</td>
+<td style="text-align: right;">4.148</td>
+<td style="text-align: right;">3.850</td>
+<td style="text-align: right;">5.000</td>
+<td style="text-align: right;">1.470</td>
+<td style="text-align: right;">2.678</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">165.628</td>
+<td style="text-align: right;">5.631</td>
+<td style="text-align: right;">4.336</td>
+<td style="text-align: right;">4.050</td>
+<td style="text-align: right;">5.150</td>
+<td style="text-align: right;">1.420</td>
+<td style="text-align: right;">2.916</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">170.183</td>
+<td style="text-align: right;">5.786</td>
+<td style="text-align: right;">4.455</td>
+<td style="text-align: right;">4.230</td>
+<td style="text-align: right;">5.300</td>
+<td style="text-align: right;">1.390</td>
+<td style="text-align: right;">3.065</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">174.608</td>
+<td style="text-align: right;">5.919</td>
+<td style="text-align: right;">4.558</td>
+<td style="text-align: right;">4.340</td>
+<td style="text-align: right;">5.339</td>
+<td style="text-align: right;">1.327</td>
+<td style="text-align: right;">3.230</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">178.885</td>
+<td style="text-align: right;">6.046</td>
+<td style="text-align: right;">4.656</td>
+<td style="text-align: right;">4.446</td>
+<td style="text-align: right;">5.359</td>
+<td style="text-align: right;">1.249</td>
+<td style="text-align: right;">3.407</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td style="text-align: right;">183.000</td>
+<td style="text-align: right;">6.167</td>
+<td style="text-align: right;">4.749</td>
+<td style="text-align: right;">4.549</td>
+<td style="text-align: right;">5.356</td>
+<td style="text-align: right;">1.152</td>
+<td style="text-align: right;">3.597</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td style="text-align: right;">186.934</td>
+<td style="text-align: right;">6.281</td>
+<td style="text-align: right;">4.836</td>
+<td style="text-align: right;">4.646</td>
+<td style="text-align: right;">5.329</td>
+<td style="text-align: right;">1.034</td>
+<td style="text-align: right;">3.802</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td style="text-align: right;">190.673</td>
+<td style="text-align: right;">6.388</td>
+<td style="text-align: right;">4.918</td>
+<td style="text-align: right;">4.739</td>
+<td style="text-align: right;">5.275</td>
+<td style="text-align: right;">894</td>
+<td style="text-align: right;">4.024</td>
+</tr>
+</tbody>
+</table></div>
+<p>Rango $25,75–86,38 = escenarios amplios, <strong>no</strong> banda central de valor. La banda central $54–70 representa ejecución cercana al plan, variaciones razonables de coste de capital y crecimiento terminal, y efectos moderados de Giant Eagle/contingencias. No cubre el fallo judicial máximo ni una guerra de precios severa.</p>
+<p>Con la misma senda operativa central y g 2%, WACC 7,5/8/8,5% produce <strong>$68,36/$59,85/$52,67</strong>. A WACC 8%, g 1,5/2/2,5% da <strong>$57,75/$59,85/$62,27</strong>. El terminal explica aproximadamente 60% del EV, por lo que la precisión al centavo no expresa certeza económica.</p>
+<h2 id="valuación-inversa-varias-combinaciones-que-justifican-6665">8. Valuación inversa: varias combinaciones que justifican $66,65</h2>
+<p>Mismo puente de deuda, inversión, impuestos, acciones y fórmula terminal; sin Giant Eagle ni pago Albertsons. Se varían conjuntamente crecimiento, retorno y descuento, resolviendo la senda de margen, no proclamando una sola expectativa del mercado.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Combinación</th>
+<th>Crecimiento inicial de ventas</th>
+<th style="text-align: right;">WACC / ROIC terminal</th>
+<th style="text-align: right;">Margen EBIT requerido año 5</th>
+<th style="text-align: right;">EBIT año 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crecimiento lento</td>
+<td>1%, después 1,5–2%</td>
+<td style="text-align: right;">8% / 10%</td>
+<td style="text-align: right;">3,95%</td>
+<td style="text-align: right;">6.411</td>
+</tr>
+<tr class="even">
+<td>Volúmenes centrales</td>
+<td>2–3%, después 2,75%</td>
+<td style="text-align: right;">8% / 11%</td>
+<td style="text-align: right;">3,67%</td>
+<td style="text-align: right;">6.246</td>
+</tr>
+<tr class="odd">
+<td>Mayor crecimiento y mayor descuento</td>
+<td>3–4%, después 3,5%</td>
+<td style="text-align: right;">8,5% / 12%</td>
+<td style="text-align: right;">3,73%</td>
+<td style="text-align: right;">6.655</td>
+</tr>
+</tbody>
+</table></div>
+<p>Esas combinaciones son posibles, pero requieren mejor margen que el 3,4% central y absorción del mayor capex. Otra combinación sería menor tasa de descuento y ejecución central; no hay una única tasa de crecimiento implícita. Un pago judicial relevante elevaría la mejora operativa necesaria. La cotización no parece descontar exclusivamente un escenario deprimido.</p>
+<h2 id="comparables-actuales-con-perímetros-y-fechas-explícitos">9. Comparables actuales, con perímetros y fechas explícitos</h2>
+<p>Cotizaciones del 3/11; balances y TTM de las últimas cuentas disponibles. Capitalización = precio × acciones puntuales declaradas, no media diluida trimestral. EV estándar = capitalización + deuda financiera/finance leases + minoritarios − toda caja declarada; por ello difiere del puente conservador del DCF. Operating leases permanecen como renta, de forma homogénea. Millones de USD.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Compañía</th>
+<th style="text-align: right;">Precio</th>
+<th>Acciones, millones / fecha</th>
+<th style="text-align: right;">Capitalización</th>
+<th style="text-align: right;">Deuda / caja</th>
+<th style="text-align: right;">EV estándar</th>
+<th style="text-align: right;">EBITDA TTM GAAP</th>
+<th style="text-align: right;">EV/EBITDA</th>
+<th style="text-align: right;">FCF histórico</th>
+<th style="text-align: right;">FCF/capitalización</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>KR</td>
+<td style="text-align: right;">66,65</td>
+<td>590,589 / 15-9</td>
+<td style="text-align: right;">39.363</td>
+<td style="text-align: right;">16.997 / 1.676</td>
+<td style="text-align: right;">54.690</td>
+<td style="text-align: right;">5.312</td>
+<td style="text-align: right;">10,30x</td>
+<td style="text-align: right;">2.384</td>
+<td style="text-align: right;">6,06%</td>
+</tr>
+<tr class="even">
+<td>ACI</td>
+<td style="text-align: right;">13,27</td>
+<td>470,482 / 16-10</td>
+<td style="text-align: right;">6.243</td>
+<td style="text-align: right;">9.328 / 282</td>
+<td style="text-align: right;">15.290</td>
+<td style="text-align: right;">2.361</td>
+<td style="text-align: right;">6,48x</td>
+<td style="text-align: right;">506,5</td>
+<td style="text-align: right;">8,11%</td>
+</tr>
+<tr class="odd">
+<td>WMT</td>
+<td style="text-align: right;">124,86</td>
+<td>7.933,746 / 26-8</td>
+<td style="text-align: right;">990.608</td>
+<td style="text-align: right;">57.243 / 11.529</td>
+<td style="text-align: right;">1.042.883</td>
+<td style="text-align: right;">47.373</td>
+<td style="text-align: right;">22,01x</td>
+<td style="text-align: right;">13.509</td>
+<td style="text-align: right;">1,36%</td>
+</tr>
+</tbody>
+</table></div>
+<p>ACI TTM a 12/9/2026 incluye un ejercicio de 53 semanas; KR a 15/8, WMT a 31/7. WMT incluye $6.561 millones de minoritarios/redeemables; KR $6 millones. No se mezclan capitalizaciones actuales con deuda posterior al corte.</p>
+<p>GAAP EBITDA de KR está distorsionado por deterioros. Como comprobación secundaria, EV/EBITDA ajustado corporativo de $8.122 millones sería <strong>6,73x</strong>, pero contiene ajustes y no es comparable mecánicamente con el EBITDA GAAP de la tabla. ACI tiene presión competitiva y suspendió actualizar su previsión mientras revisa el negocio; su valoración más barata no demuestra que KR deba cotizar igual. WMT tiene mezcla internacional, membresías y mayor crecimiento digital; además registró una devolución arancelaria de $2.900 millones. Excluida de EBITDA, su múltiplo sube a aproximadamente <strong>23,45x</strong>. Su premium tampoco es un objetivo automático para KR. No se obtiene un valor usando una mediana de estos tres negocios heterogéneos.</p>
+<p>Fuentes: <a href="https://stockanalysis.com/stocks/aci/history/">precio ACI</a>, <a href="https://stockanalysis.com/stocks/wmt/history/">precio WMT</a>, <a href="https://www.sec.gov/Archives/edgar/data/1646972/000164697226000065/aci-20260912.htm">ACI Q2</a>, <a href="https://www.sec.gov/Archives/edgar/data/1646972/000164697226000032/aci-20260228.htm">ACI anual</a>, <a href="https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm">WMT Q2</a>, <a href="https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm">WMT anual</a>.</p>
+<h2 id="qué-cambia-el-diagnóstico-y-decisión-del-plan">10. Qué cambia el diagnóstico y decisión del plan</h2>
+<p><strong>Catalizadores verificables:</strong> próximos resultados mostrando crecimiento del beneficio total ajustado y de unidades/clientes; progreso de ahorro con precios competitivos; crecimiento de publicidad rentable; capex dentro del calendario; resolución judicial; aprobación y términos finales de Giant Eagle. Las recompras son una asignación de capital, no prueba suficiente de mejora operativa.</p>
+<p><strong>Invalidaciones:</strong> ventas comparables débiles que obligan a mayor inversión de precio sin compensación de costes; capex superior sin retorno; deterioro de liquidez por sentencia o adquisición; aparente crecimiento explicado casi exclusivamente por el denominador de EPS; cierre de centros que vuelve a exigir inversión sustitutiva mayor de la prevista.</p>
+<p><strong>Gate Stage 3:</strong> negocio defendible y caja positiva, sí. Beneficio total normalizado creciendo de forma demostrada, todavía no. Balance ordinario manejable, sí, condicionado al litigio. Margen de valor a $66,65 frente a una banda central $54–70, insuficiente para aprobar: la cotización está cerca del extremo favorable central. No es un rechazo permanente. La evidencia de recuperación o un precio que remunere los riesgos puede cambiarlo.</p>
+<p><strong>Confianza:</strong> media en negocio, balance y reconstrucción histórica; media-baja en el rango conjunto por la dispersión judicial y la ejecución de inversión. No se disfraza esa incertidumbre con una posición pequeña o un descuento estándar. Stage 3 está completo y la conclusión es <strong>observar</strong>. Stage 3.5, señal técnica, invalidación, riesgo de cartera y tamaño, es un examen distinto; no se ha emitido aprobación de entrada ni realizado operaciones.</p>
+<h3 id="reproducibilidad">Reproducibilidad</h3>
+<p>El paquete de investigación incluye el código de cálculo, JSON de supuestos/resultados, CSV de las 30 anualidades de los tres escenarios y las fuentes primarias descargadas. Todos los valores proyectados, las probabilidades no asignadas y los módulos de contingencia están separados de las cifras reportadas. No se ha usado un consenso de analistas no verificado.</p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/KR.html">Open full KR dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/KR/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/KR/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/KR/forecast.csv">forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/KR/historical.json">historical.json</a></li>
+</ul>
+</main></body></html>

@@ -1,0 +1,510 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SSL · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/SSL">← SSL profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A169 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">En observación</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Base $8.38 per ADS, sensitivity $6.5–11. Real-ZAR FCFF; one ADS equals one share; adverse case exhausts equity. Operating improvement is insufficient after maintenance, carbon and other claims.</strong></p>
+<h1 id="sasol-nyse-ssl-completed-stage-3-research">Sasol (NYSE: SSL): completed Stage 3 research</h1>
+<p>Research cutoff: November 4, 2026, 04:43 UTC. Version SSL-FCFF-20261104-v 1. Financial currency is ZAR unless stated otherwise. This completes the fundamental research, not a Stage 3.5 entry approval.</p>
+<h2 id="decision">Decision</h2>
+<p><strong>Observation. No approval at the scanner price of $16.00 per ADS.</strong> Operational improvements are real, but the current multiple conceals weak cash conversion after sustaining capital, significant non-debt claims, and a fuel/chemical upcycle influenced by supply disruptions.</p>
+<p>The ten-year FCFF model gives <strong>$8.38 per ADS in the base case</strong>, with a central sensitivity range of approximately <strong>$6.5–11</strong>. This is a valuation estimate, not a guaranteed trading range. The favorable operational scenario is <strong>$26.61</strong>; the adverse scenario exhausts equity value after claims and is floored at zero. Those stress outcomes are not the central range. At $16, base margin of safety, defined as (value minus price)/value, is <strong>−91.0%</strong>; price-to-value downside is <strong>−47.7%</strong>. Do not confuse those denominators.</p>
+<p>Confidence is <strong>medium in the observation decision, low-to-medium in the point valuation</strong>. No mechanical buying price or stop is assigned. An additional percentage discount would not resolve the production, maintenance and regulatory conditions that determine value.</p>
+<h2 id="price-instrument-and-earnings-eligibility">Price, instrument and earnings eligibility</h2>
+<p>The November 3 scanner records $16.00, with source header “Quote on 11/3/26 17:27:04.” Its timezone is unspecified and it is not certified as the regular-session close. This report evaluates that dated quote, not a live executable price. It was about 12% below the scanner’s $18.1902 high. Opportunity 95/QP90 are screening outputs, not evidence of intrinsic value.</p>
+<p>One SSL ADS represents <strong>one ordinary Sasol share</strong>; no extra ADR multiplier is applied. The modeled fully diluted starting denominator is <strong>648.890m</strong>: 654.1m issued ordinary/BEE shares, less 14.010m treasury, plus 8.8m existing LTI dilution. BEE shares have different trading restrictions but participate economically. <a href="https://www.sec.gov/Archives/edgar/data/314590/000110465926104048/ssl-20260630x20f.htm">20-F, share/ADS description</a>; <a href="https://www.sasol.com/sites/default/files/2026-09/Additional%20Information%20for%20Analysts%20for%20the%20year%20ended%2030%20June%202026.pdf">analyst information, pp.4–6</a>.</p>
+<p>FY2026 audited results, for the year ended June 30, were released <strong>September 1, 2026</strong>. The October 21 update contains September-quarter operational metrics, not a new quarterly income statement or balance sheet. The next financial-results announcement is <strong>February 22, 2027</strong>, so SSL is not an earnings-ahead-this-week deferral. AGM: November 13. <a href="https://www.sasol.com/sasol-sens/202609010005a-s602420">FY2026 announcement</a>; <a href="https://www.sasol.com/sites/default/files/2026-10/Business%20Performance%20Metrics%20for%20the%20three%20months%20ended%2030%20September%202026.pdf">September-quarter update</a>; <a href="https://www.sasol.com/investor-centre/investor-calendar">issuer calendar</a>.</p>
+<p>ECB November 3 reference rates are EUR/ZAR18.5995 and EUR/USD1.1179. Their cross is <strong>R16.63789248 per US$1</strong>. This is a dated reference fixing, not simultaneous with the scanner quote. The implied local price is R266.21. <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">ECB reference rates</a>.</p>
+<h2 id="business-and-the-investment-question">Business and the investment question</h2>
+<p>Sasol combines coal mining and coal/gas-to-liquids production at Secunda, Mozambique gas, fuel distribution and its Natref refinery interest, African chemicals, and US/European chemicals. Its integration and South African distribution position are valuable; most output still sells into commodity-linked markets. US feedstock advantage and specialty products do not eliminate global chemical oversupply.</p>
+<p>The favorable thesis is improved coal quality and equipment reliability, cheaper own coal, stronger product placement, a successful chemical reset and lower debt. The opposing thesis is that elevated fuel cracks and temporary global supply constraints are being mistaken for durable free cash flow, while sustaining/decarbonization capital, gas depletion and carbon costs absorb the operating gains. A higher earnings headline does not demonstrate the plan’s preferred sustained 15% EPS growth.</p>
+<p>This is the first full valuation replacing the limited A137 review. Its reason is completion of the financial/currency/maintenance analysis, not a change of method to justify a desired answer. No issuer-specific cause of every point in the recent pullback is established.</p>
+<h2 id="financial-record-three-years-and-the-available-reporting-cadence">Financial record: three years and the available reporting cadence</h2>
+<p>Rbn except EPS; latest comparative presentation is used.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>June fiscal year</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">FY2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Revenue</td>
+<td style="text-align: right;">275.111</td>
+<td style="text-align: right;">249.096</td>
+<td style="text-align: right;">272.118</td>
+</tr>
+<tr class="even">
+<td>Adjusted EBITDA, issuer</td>
+<td style="text-align: right;">60.012</td>
+<td style="text-align: right;">51.764</td>
+<td style="text-align: right;">60.705</td>
+</tr>
+<tr class="odd">
+<td>IFRS EBIT</td>
+<td style="text-align: right;">−27.305</td>
+<td style="text-align: right;">18.819</td>
+<td style="text-align: right;">25.690</td>
+</tr>
+<tr class="even">
+<td>Attributable net income</td>
+<td style="text-align: right;">−44.271</td>
+<td style="text-align: right;">6.767</td>
+<td style="text-align: right;">12.149</td>
+</tr>
+<tr class="odd">
+<td>Basic EPS, rand</td>
+<td style="text-align: right;">−69.94</td>
+<td style="text-align: right;">10.60</td>
+<td style="text-align: right;">18.99</td>
+</tr>
+<tr class="even">
+<td>HEPS, rand</td>
+<td style="text-align: right;">18.19</td>
+<td style="text-align: right;">35.13</td>
+<td style="text-align: right;">38.31</td>
+</tr>
+<tr class="odd">
+<td>D&amp;A</td>
+<td style="text-align: right;">15.644</td>
+<td style="text-align: right;">14.002</td>
+<td style="text-align: right;">13.602</td>
+</tr>
+<tr class="even">
+<td>Expensed maintenance</td>
+<td style="text-align: right;">15.446</td>
+<td style="text-align: right;">15.524</td>
+<td style="text-align: right;">14.863</td>
+</tr>
+<tr class="odd">
+<td>Cash available from operations</td>
+<td style="text-align: right;">37.601</td>
+<td style="text-align: right;">38.541</td>
+<td style="text-align: right;">32.993</td>
+</tr>
+<tr class="even">
+<td>Cash capital additions, including accrual movement</td>
+<td style="text-align: right;">30.428</td>
+<td style="text-align: right;">25.983</td>
+<td style="text-align: right;">21.104</td>
+</tr>
+<tr class="odd">
+<td>Issuer FCF</td>
+<td style="text-align: right;">7.173</td>
+<td style="text-align: right;">12.558</td>
+<td style="text-align: right;">11.889</td>
+</tr>
+<tr class="even">
+<td>Net debt including leases</td>
+<td style="text-align: right;">92.188</td>
+<td style="text-align: right;">82.249</td>
+<td style="text-align: right;">70.863</td>
+</tr>
+</tbody>
+</table></div>
+<p>Source: <a href="https://www.sec.gov/Archives/edgar/data/314590/000110465926104048/ssl-20260630xex99d1.htm">FY2026 audited statements</a>; <a href="https://www.sasol.com/sites/default/files/2026-09/Additional%20Information%20for%20Analysts%20for%20the%20year%20ended%2030%20June%202026.pdf">FY2026 analyst financial/cash-flow tables</a>. Cash available from operations includes interest paid/received and JV dividends, and is not FCFF.</p>
+<p>The latest complete TTM is therefore <strong>June 2026</strong>, equal to FY2026, versus June 2025. Revenue rose 9.2%, adjusted EBITDA17.3%, IFRS EBIT36.5% and attributable income 79.5%, while cash available fell 14.4% and FCF fell 5.3%. FY2026 EBIT margin is <strong>9.44%</strong>, not the scanner’s 5.3131% exported field. This is a period/definition discrepancy, not proof that the normalized margin is 9.44% forever.</p>
+<p>Sasol does not report four standalone quarterly financial statements. Fabricating Q1/Q3 earnings to satisfy a quarterly checklist would be misleading. The equivalent four half-years are:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Rbn</th>
+<th style="text-align: right;">H1 FY25</th>
+<th style="text-align: right;">H2 FY25</th>
+<th style="text-align: right;">H1 FY26</th>
+<th style="text-align: right;">H2 FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Revenue</td>
+<td style="text-align: right;">122.102</td>
+<td style="text-align: right;">126.994</td>
+<td style="text-align: right;">122.387</td>
+<td style="text-align: right;">149.731</td>
+</tr>
+<tr class="even">
+<td>Adjusted EBITDA</td>
+<td style="text-align: right;">23.949</td>
+<td style="text-align: right;">27.815</td>
+<td style="text-align: right;">21.006</td>
+<td style="text-align: right;">39.699</td>
+</tr>
+<tr class="odd">
+<td>IFRS EBIT</td>
+<td style="text-align: right;">9.533</td>
+<td style="text-align: right;">9.286</td>
+<td style="text-align: right;">4.619</td>
+<td style="text-align: right;">21.071</td>
+</tr>
+<tr class="even">
+<td>Attributable income</td>
+<td style="text-align: right;">4.600</td>
+<td style="text-align: right;">2.167</td>
+<td style="text-align: right;">0.241</td>
+<td style="text-align: right;">11.908</td>
+</tr>
+<tr class="odd">
+<td>Cash available from operations</td>
+<td style="text-align: right;">14.061</td>
+<td style="text-align: right;">24.480</td>
+<td style="text-align: right;">9.449</td>
+<td style="text-align: right;">23.544</td>
+</tr>
+<tr class="even">
+<td>Issuer FCF, latest comparative basis</td>
+<td style="text-align: right;">−1.296</td>
+<td style="text-align: right;">13.854</td>
+<td style="text-align: right;">0.794</td>
+<td style="text-align: right;">11.095</td>
+</tr>
+</tbody>
+</table></div>
+<p>H2 FY25 is FY25 minus the latest H1 comparative; H2FY26 is directly cross-checked against the full-year analyst table. The older H1FY25 report had a different FCF presentation; the latest comparable −1.296 is used. No quarterly EPS is invented or annualized. <a href="https://www.sasol.com/sites/default/files/2026-02/Interim%20Financial%20Statements%20for%20the%206%20months%20ended%2031%20December%202025.pdf">December 2025 interim statements</a>; <a href="https://www.sasol.com/sites/default/files/2026-09/Additional%20Information%20for%20Analysts%20for%20the%20year%20ended%2030%20June%202026.pdf">half-year comparison, p.7</a>.</p>
+<p>The broader cycle also matters: issuer adjusted EBITDA was roughly R71.8bn inFY2022 and R66.3bn inFY2023, before FY2024–26’s R60.0/51.8/60.7bn. These are nominal figures with changing FX and operating conditions, not a steady-growth series. <a href="https://sasol.com/sites/default/files/2025-07/SASOL-Integrated-Report-2024_1.pdf">2024 integrated report, financial history</a>.</p>
+<h2 id="what-has-improved-and-what-needs-normalization">What has improved, and what needs normalization</h2>
+<p>September-quarter mining production was 8.5Mt, up 18% year-on-year, while external coal purchases fell 48%. Secunda production was 1.667Mt, down 6%, reflecting its planned shutdown. Gas production was 28.6bscf, down 5%, with well availability and natural decline. Fuel sales rose 21%, helped by inventory drawdown and extra use of Prax capacity. These are different drivers, not one organic-growth rate. Full-year guidance remains Secunda 7.2–7.4Mt, own coal 30–32Mt, and fuel sales−3% to+3%. <a href="https://www.sasol.com/sites/default/files/2026-10/Business%20Performance%20Metrics%20for%20the%20three%20months%20ended%2030%20September%202026.pdf">operating update, pp.2–5</a>.</p>
+<p>Four corrections prevent a misleading cash multiple:</p>
+<ol type="1">
+<li>FY2026’s <strong>R49/bbl South African breakeven</strong> benefited an estimated <strong>$6–9/bbl</strong> from favorable macro conditions and the absence of a Secunda annual shutdown. FY2027 guidance is <strong>$53–58</strong>, with a $50 nominal target forFY2028. The calculation excludes some group financing/tax claims and is not an equity dividend breakeven.</li>
+<li>FY2026 first-order capitalR20.872bn becomes <strong>R23–26bn FY2027 guidance</strong>, comprising maintain capitalR22–25bn and selective growth/transformR1bn. About half the reduction from the earlier maintenance plan reflects timing/phasing, rather than permanent savings. Expensed maintenance is additional to capital and remains in operating earnings.</li>
+<li>International ChemicalsFY2026 EBITDA was about$604m, including an estimated <strong>$150–200m</strong> conflict benefit. FY2027 guidance is$450–600m and 10–12% margin. Cost-led chemical-price gains do not establish demand recovery.</li>
+<li>FY2026 FCF was reduced by working-capital absorption; the prior year contained a R3.1bn after-tax Transnet cash settlement. FY2026 also received a R1.2bn tax refund. Neither settlement nor refund is a recurring run rate.</li>
+</ol>
+<p><a href="https://www.sasol.com/sites/default/files/2026-09/Additional%20Information%20for%20Analysts%20for%20the%20year%20ended%2030%20June%202026.pdf">guidance and breakeven, pp.14,18,28</a>; <a href="https://www.sasol.com/sites/default/files/2026-09/Results%20presentation%20and%20script%20for%20the%20year%20ended%2030%20June%202026.pdf">management results presentation and script</a>.</p>
+<p>Reported pre-working-capital operating cash wasR56.694bn, but R14.724bn working-capital use reduced cash generated by operating activities toR41.970bn. After JV dividends, interest and tax, cash available wasR32.993bn. These labels must not be conflated. Adjusted EBITDA excludesR0.918bn SBC, which this model restores as an economic cost. Impairments are noncash but repeated write-offs on capital-intensive assets are an economic warning; capex is not set equal to the depressed accounting depreciation. <a href="https://www.sec.gov/Archives/edgar/data/314590/000110465926104048/ssl-20260630xex99d1.htm">cash-flow reconciliation, notes 26–27</a>.</p>
+<h2 id="south-african-operating-and-regulatory-risks">South African, operating and regulatory risks</h2>
+<ul>
+<li><strong>Gas and production:</strong> the issuer’s impairment case assumes Secunda above 7Mt through 2030 and about 6.4Mt from 2035 as gas availability declines. Imported LNG is not currently economic in that case. The model does not assume a free LNG rescue. Mozambique PSA production and Junction Compression can help near-term supply, but do not prove a permanent solution.</li>
+<li><strong>License:</strong> Secunda’s load-based SO2 dispensation runs through <strong>March 31, 2030</strong>. A further arrangement is not guaranteed. The separate Highveld 40% emissions-target interpretation remains in litigation.</li>
+<li><strong>Carbon:</strong> FY2026 net carbon taxes wereR2.1bn, with R0.952bn purchased credits. The issuer discloses rising statutory rates and uncertainty around allowances/budgets after 2030. Its accounting case assumes allowance reductions and eventual penalties; those are assumptions, not a guaranteed policy settlement. The base forecast includes increasing real carbon/energy burden within Southern African margins and sustaining capital for compliance.</li>
+<li><strong>Power/water/logistics:</strong> self-generation covers roughly half of SA electricity requirements, not all. Grid reliability has improved, so historical load-shedding should not be described as today’s confirmed condition. Above-inflation tariffs, water infrastructure, Transnet reliability, labor disruption and political/regulatory change remain important risks.</li>
+<li><strong>Natref/Prax:</strong> Sasol is operating 100% capacity under arrangements with the business-rescue practitioner; that does not mean it permanently owns 100%. The RCD restart was expected at endOctober, but a completed restart was not separately verified by this cutoff. The base does not capitalize permanent ownership of Prax’s share or assumed acquisition synergies.</li>
+</ul>
+<p><a href="https://www.sec.gov/Archives/edgar/data/314590/000110465926104048/ssl-20260630x20f.htm">20-F risk factors and regulatory discussion</a>; <a href="https://www.sec.gov/Archives/edgar/data/314590/000110465926104048/ssl-20260630xex99d1.htm">impairment and carbon assumptions, note 8</a>; <a href="https://www.sasol.com/sites/default/files/2026-10/Business%20Performance%20Metrics%20for%20the%20three%20months%20ended%2030%20September%202026.pdf">current Natref/gas update</a>.</p>
+<h2 id="ten-year-fcff-model-realnominal-currency-discipline">Ten-year FCFF model: real/nominal currency discipline</h2>
+<p>The model covers <strong>FY2027–2036</strong>, five explicit detailed years plus five transition years. Figures below are <strong>real FY2026 Rbn</strong>. They are research assumptions, not issuer guidance. The balance-sheet anchor is June 30, 2026, the latest audited balance available. The dated November price and ECB FX are disclosed separately; no invented September balance or cash estimate is presented as reported.</p>
+<p>FCFF = EBIT×(1−tax) + non-lease D&amp;A − maintenance capex − growth capex − change in nominal operating working capital, deflated into FY2026 rand. Separately add sustainable net cash distributions from equity-accounted ventures. Their accounting profit is excluded from core EBITDA, and their book investment balance is not added again.</p>
+<p>Base inflation is 4% in ZAR and 2% in USD. <strong>12.5% nominal-ZAR WACC becomes 8.1731% real</strong>, calculated as 1.125/1.04−1. Terminal real growth is 0%, equivalent to 4% nominal-ZAR or 2% nominal-USD growth. The equivalent USD discount rate is 10.3365%; FX evolves only for the cross-check at 1.04/1.02 per year. Discounting the translated nominal-dollar cash flows reproduces the real-rand present value exactly. Using an unchanged FX with nominal-ZAR growth and a USD discount rate would not.</p>
+<p>The rate is an analyst estimate anchored to issuer impairment rates: SA11.5%, US8.3%, Mozambique 16.4%, with corresponding inflation 4%/2%/2%. A rough 60%SA/25%international/15%Mozambique real-rate mix is around 8%, supporting a rounded 8.17% real group requirement. Those exposure weights are a risk proxy, not a claimed market-value segment weighting. Sensitivities cover 11.5–13.5% nominal-ZAR; scenario discount rates are not a substitute for modeling weaker cash flow.</p>
+<p>Core SA EBITDA transitions 54→49→47→46→45, then 40 byFY2036; International Chemicals 8.6→9→10→10.5→11, then 12. This grants operational/cost improvement and a chemicals recovery, while removing exceptional fuel spreads and absorbing declining gas-linked output and growing carbon/energy cost. Base group corporate cost isR2bn real, ongoing SBCR0.95bn and capitalized-lease cash rentR3.991bn annually. The forecasts retain ordinary expensed maintenance and ongoing risk-management costs. They do not add the same cost saving twice as both higher EBITDA and lower capital.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>FY</th>
+<th style="text-align: right;">Revenue</th>
+<th style="text-align: right;">SA core EBITDA</th>
+<th style="text-align: right;">Intl core EBITDA</th>
+<th style="text-align: right;">EBIT after SBC/rent</th>
+<th style="text-align: right;">Maintain capex</th>
+<th style="text-align: right;">Growth capex</th>
+<th style="text-align: right;">NWC investment</th>
+<th style="text-align: right;">FCFF</th>
+<th style="text-align: right;">JV net cash</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">280.00</td>
+<td style="text-align: right;">54.00</td>
+<td style="text-align: right;">8.60</td>
+<td style="text-align: right;">44.46</td>
+<td style="text-align: right;">22.60</td>
+<td style="text-align: right;">0.96</td>
+<td style="text-align: right;">-3.08</td>
+<td style="text-align: right;">23.62</td>
+<td style="text-align: right;">1.30</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">270.00</td>
+<td style="text-align: right;">49.00</td>
+<td style="text-align: right;">9.00</td>
+<td style="text-align: right;">39.86</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: right;">16.07</td>
+<td style="text-align: right;">1.50</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">263.00</td>
+<td style="text-align: right;">47.00</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">38.86</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.54</td>
+<td style="text-align: right;">14.91</td>
+<td style="text-align: right;">1.60</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">261.00</td>
+<td style="text-align: right;">46.00</td>
+<td style="text-align: right;">10.50</td>
+<td style="text-align: right;">38.36</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">13.79</td>
+<td style="text-align: right;">1.60</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">258.00</td>
+<td style="text-align: right;">45.00</td>
+<td style="text-align: right;">11.00</td>
+<td style="text-align: right;">37.86</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.13</td>
+<td style="text-align: right;">13.59</td>
+<td style="text-align: right;">1.60</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">255.00</td>
+<td style="text-align: right;">44.00</td>
+<td style="text-align: right;">11.50</td>
+<td style="text-align: right;">37.36</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.11</td>
+<td style="text-align: right;">13.24</td>
+<td style="text-align: right;">1.60</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">252.00</td>
+<td style="text-align: right;">43.00</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">36.86</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.09</td>
+<td style="text-align: right;">12.89</td>
+<td style="text-align: right;">1.60</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">250.00</td>
+<td style="text-align: right;">42.00</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">35.86</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.23</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">1.60</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">248.00</td>
+<td style="text-align: right;">41.00</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">34.86</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.22</td>
+<td style="text-align: right;">11.28</td>
+<td style="text-align: right;">1.60</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">245.00</td>
+<td style="text-align: right;">40.00</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">33.86</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.05</td>
+<td style="text-align: right;">10.71</td>
+<td style="text-align: right;">1.60</td>
+</tr>
+</tbody>
+</table></div>
+<p>Base FY2027 nominal capex isR24.50bn, within issuer guidance. Thereafter maintenance isR23.5bn real, plus R1bn real growth, compared with non-lease D&amp;AR11.195bn. The large gap is deliberate: repeated impairments lower book D&amp;A without eliminating plant/feedstock/compliance replacement needs. Working capital starts at 18.3% of FY2026 revenue and moves to 16%; even with flat real revenue, nominal inflation still requires cash investment. The model includes that funding, not only real revenue growth.</p>
+<p>Terminal required reinvestment is the <strong>greater of</strong> sustaining capital less D&amp;A and NOPAT×nominal growth/nominal ROIC. In the base this isR12.305bn, above the R8.353bn growth/ROIC amount. Terminal working-capital investment isR1.508bn, FCFFR11.247bn and JV cashR1.6bn. Terminal value is 39.6% of total operating/JV present value. A 0% real growth assumption does not turn maintenance into zero.</p>
+<p>A rough next-twelve-month bridge, using two-thirdsFY2027 and one-thirdFY2028, gives nominal revenueR291.5bn, EBITR45.2bn and FCFFR22.2bn, plus R1.44bn JV distributions. This is a seasonality-blind research approximation, not published guidance or a constructed quarterly financial report.</p>
+<p>For an additional accounting cross-check, FY2026 adjusted EBITDA60.705 less SBC0.918, equity-accounted profit 0.079, cash lease rent 3.991 and non-lease D&amp;A11.195 gives <strong>R44.522bn normalized operating EBIT under this convention</strong>, before forecasting any improvement. Base FY2027 nominal EBIT46.243bn is only modestly above that reference; the model is not built by annualizing the extraordinary second half. Corporate costR2bn is close to the FY2024 business-support lossR2.061bn rather than perpetuating FY2026’s positiveR3.664bn, which was influenced by financial/other income. The distinction is an explicit normalization assumption and a sensitivity source, not a reported forecast.</p>
+<h2 id="balance-sheet-and-enterprise-to-equity-bridge">Balance sheet and enterprise-to-equity bridge</h2>
+<p>The full model identifies claims rather than subtracting the headline $3.3bn net debt and stopping.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Base bridge, Rbn</th>
+<th style="text-align: right;">Value</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Operating plus JV present value</td>
+<td style="text-align: right;">181.074</td>
+<td>Explicit 109.425; terminal 71.649</td>
+</tr>
+<tr class="even">
+<td>Face debt plus accrued interest, net unrestricted cash</td>
+<td style="text-align: right;">−54.809</td>
+<td>93.478 contractual utilized facilities+1.552 accrued interest−40.221 cash</td>
+</tr>
+<tr class="odd">
+<td>Minimum operating cash</td>
+<td style="text-align: right;">−8.700</td>
+<td>Approximately two weeks supplier/employee cash needs; not an assertion that cash is legally restricted</td>
+</tr>
+<tr class="even">
+<td>Pension/post-retirement deficit</td>
+<td style="text-align: right;">−11.047</td>
+<td>12.360 obligations less 1.313 assets; legacy claim, no second legacy repayment in FCFF</td>
+</tr>
+<tr class="odd">
+<td>Environmental/other long-term provision claim</td>
+<td style="text-align: right;">−14.742</td>
+<td>Includes current portion; gross PV, no unproven incremental tax shield</td>
+</tr>
+<tr class="even">
+<td>Minority economic claim</td>
+<td style="text-align: right;">−10.000</td>
+<td>Estimated 1.0bn normalized annual owner cash at 10% real equity return; not book NCI mislabeled fair value</td>
+</tr>
+<tr class="odd">
+<td>Khanyisa option estimate</td>
+<td style="text-align: right;">−0.581</td>
+<td>Vendor-financed option, not blanket 18.4% group dilution</td>
+</tr>
+<tr class="even">
+<td>Other long-term investments</td>
+<td style="text-align: right;">+3.406</td>
+<td>Includes restricted assets that offset gross legacy obligations; not all freely distributable cash</td>
+</tr>
+<tr class="odd">
+<td>Liquid investments and net commodity/currency derivatives</td>
+<td style="text-align: right;">+5.822</td>
+<td>3.832 short investments+2.230 derivatives−0.240 derivative liabilities</td>
+</tr>
+<tr class="even">
+<td>Equity value before optional conversion</td>
+<td style="text-align: right;">90.423</td>
+<td>Divided by 648.890m shares and R16.637892/USD</td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://www.sec.gov/Archives/edgar/data/314590/000110465926104048/ssl-20260630xex99d1.htm">balance sheet and notes 13–14,25,29–32,35</a>.</p>
+<p><strong>Leases:</strong> IFRS lease liabilityR17.444bn is excluded from debt because all recurring lease cash is expensed in the model. Cash lease outflowR4.693bn lessR0.702bn already-expensed short/low-value/variable leases givesR3.991bn incremental rent. Non-lease D&amp;A is 13.602−2.407=11.195. Neither principal nor the lease liability is deducted twice.</p>
+<p><strong>Convertible:</strong> the $750m bond maturesNovember 8, 2027; conversion price$18.79, with cash/share settlement at Sasol’s election. Face principal is already in debt. For the favorable scenario above the strike, the model adds that principal back and adds 39.915m conversion shares once; it does not remove debt without dilution. This is an intrinsic scenario treatment, not an option-pricing mark of the bond today.</p>
+<p><strong>Khanyisa:</strong> current participant underlying value isR6.2bn versusR10.3bn vendor funding. The arrangement ends after its ten-year term beginningJune 2018. A transparent option approximation uses 1.92years, 45% volatility,8% risk-free rate and 7.5% annual funding growth, givingR0.581bn; those option-market parameters are assumptions. It is kept separate from ordinary NCI. Existing LTIs are in the denominator; future SBC remains a recurring economic cost.</p>
+<p>The R3.022bn oxygen-contract derivative is not added as free cash on top of the operating-cost forecast. Restricted current cashR3.083bn is not spendable cash in the bridge. Deferred tax assetsR35.872bn are not added at face value on top of normalized tax benefits. Existing net commodity/currency derivative marks are included once; no extra settlement is added to the projected cash flows. Unannounced disposal proceeds are zero.</p>
+<p>Balance uncertainty is bounded, not hidden: removing the minimum-cash reserve adds$0.81; substituting book NCI adds$0.28; removing the entire pension or environmental claim adds$1.02/$1.37 respectively. A mechanical four-month advancement of operating value, without claiming a new balance sheet, gives about$9.07. Translating the identifiable netUSD debt from JuneFX to NovemberFX would reduce equity by roughlyR1.07bn, or$0.10/ADS. These do not erase the gap to$16.</p>
+<h2 id="scenarios-sensitivity-and-same-model-reverse-valuation">Scenarios, sensitivity and same-model reverse valuation</h2>
+<ul>
+<li><strong>Adverse: $0 residual floor.</strong> SA core EBITDA48→34bn, international 7→9bn; higher sustaining cost,28% tax,14% nominal-ZAR WACC, −0.5% real terminal growth, higher environmental/legal claims. Operating/JV valueR65.8bn is below modeled claims. This is a distressed-equity stress, not a prediction that the quoted share price becomes zero or that liquidation value has been measured.</li>
+<li><strong>Base: $8.38.</strong> Inputs and bridge above. The central rate/growth grid spans about$6.56–10.89.</li>
+<li><strong>Favorable: $26.61 after conversion dilution.</strong> SA core EBITDA62→55bn, international 10→16.5bn; stronger sustainable margins, lower maintenance,25% tax,11.5% nominal WACC and 0.5% real growth. This requires a lasting change in operating economics and successful transition, not just one strong quarter.</li>
+</ul>
+<p>At base terminal real growth 0%, WACC11.5/12.0/12.5/13.0/13.5% gives values$10.37/$9.31/$8.38/$7.54/$6.80. Reducing recurring real maintenance byR2.5bn raises base value to$11.21. That is a large operational assumption, not a harmless accounting choice.</p>
+<p>The joint reverse uses <strong>the exact same model</strong>, holding base taxes, growth, working capital and claims constant. It solves for a persistent annual SA EBITDA improvement while varying annual maintenance spend:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Annual maintenance change vs base, Rbn</th>
+<th style="text-align: right;">Required extra annual SA EBITDA, Rbn</th>
+<th style="text-align: right;">Required FY2036 SA EBITDA</th>
+<th style="text-align: right;">Required FY2036 total core EBITDA before SBC/rent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-2.5</td>
+<td style="text-align: right;">5.71</td>
+<td style="text-align: right;">45.71</td>
+<td style="text-align: right;">55.71</td>
+</tr>
+<tr class="even">
+<td>+0.0</td>
+<td style="text-align: right;">9.09</td>
+<td style="text-align: right;">49.09</td>
+<td style="text-align: right;">59.09</td>
+</tr>
+<tr class="odd">
+<td>+2.5</td>
+<td style="text-align: right;">12.47</td>
+<td style="text-align: right;">52.47</td>
+<td style="text-align: right;">62.47</td>
+</tr>
+<tr class="even">
+<td>+5.0</td>
+<td style="text-align: right;">15.85</td>
+<td style="text-align: right;">55.85</td>
+<td style="text-align: right;">65.85</td>
+</tr>
+</tbody>
+</table></div>
+<p>Thus$16 requires approximately <strong>R9.09bn additional annual real SA EBITDA</strong> if maintenance is unchanged. FY2036 group core EBITDA would needR59.09bn versus baseR50bn, with the improvement also present in earlier years. Cutting maintenanceR2.5bn still requires R5.71bn additional EBITDA. Raising maintenanceR2.5bn requires R12.47bn. These are combinations of profitability and capital needs, not a second valuation method.</p>
+<p>The issuer estimates FY2027 EBIT sensitivities, before hedging, ofR0.65bn per$1/bbl Brent, R0.84bn per$1/bbl product cracks, and R0.81bn perR0.10/USD change. Those local sensitivities illustrate exposure; they are <strong>not</strong> extrapolated linearly for a decade to declare the reverse hurdle easy. A weaker rand can improve local operating profit and increase USD debt in rand at the same time, while reducing the dollar value of any fixed-rand equity amount. <a href="https://www.sasol.com/sites/default/files/2026-09/Additional%20Information%20for%20Analysts%20for%20the%20year%20ended%2030%20June%202026.pdf">sensitivities, p.8</a>.</p>
+<h2 id="peer-and-multiple-cross-checks">Peer and multiple cross-checks</h2>
+<p>Using the dated $16 quote and the reported lease-inclusive net-debt/book-NCI convention gives roughlyR250.6bn EV: <strong>4.13× FY2026 adjusted EBITDA</strong>, or 4.84×FY2025. P/E is 14.0×reportedEPS or 6.95×HEPS; FY2026 issuer FCF yield is 6.9%. These attractive-looking multiples coexist with a much lower owner valuation because maintenance, leases, tax, legacy obligations and cyclicality are consequential. They are not averaged into the DCF.</p>
+<p><strong>LYB is the relevant chemical-cycle comparator</strong>, not a complete Sasol substitute: Q3 adjusted EBITDA$1.512bn was below Q2$2.127bn despite favorable disrupted-supply conditions. Its Q3 cash flow included working-capital release. <strong>MPC is a refining-cycle comparator</strong>, not a synthetic-fuel/coal comparator: Q3 R&amp;M adjusted EBITDA was$34.15 per throughput barrel during strong spreads. Neither has Sasol’s identical coal/gas, South African regulatory, FX or minority structure. Their results support fading exceptional commodity conditions, not assigning a US peer multiple to Sasol’s entire business. <a href="https://www.lyondellbasell.com/en/who-we-are/updates-events/corporate--financial-news/lyondellbasell-reports-third-quarter-2026-earnings/">LYB Q3 release</a>; <a href="https://ir.marathonpetroleum.com/investor/news-releases/news-details/2026/Marathon-Petroleum-Corp--Reports-Third-Quarter-2026-Results/default.aspx">MPC Q3 release</a>.</p>
+<h2 id="catalysts-and-what-would-change-the-decision">Catalysts and what would change the decision</h2>
+<ol type="1">
+<li><strong>Near-term operational evidence:</strong> confirm Natref RCD restart and continuing Prax arrangements; verify Q2FY27 Junction Compression and PSA ramp. The October expectation is not a confirmed completion.</li>
+<li><strong>November 13 AGM:</strong> capital allocation, gas/transition policy and governance commentary.</li>
+<li><strong>February 22, 2027 interim:</strong> real cash conversion, inventory unwind, maintenance spend, lease cash, normalized chemical profitability and net debt after the fuel-margin uplift.</li>
+<li><strong>FY2027/28 NERSA pricing:</strong> part of FY2028 is approved; FY2029/30 decisions remain pending. Also monitor gas-price litigation and the Highveld dispute.</li>
+<li><strong>2027–30:</strong> $750m convertibleNovember 2027; specialty-alumina expansion plannedFY2029; March 2030 Secunda emissions dispensation and longer-term gas availability.</li>
+<li><strong>Portfolio changes:</strong> nitrates sale to Enaex remains conditional. Sasol owns 23% of Enaex Africa; do not count both gross sale proceeds and retained asset cash flows, or assume undisclosed consideration.</li>
+</ol>
+<p>Upgrade requires evidence that <strong>post-cycle free cash generation comfortably funds adequate maintenance, carbon/transition obligations and debt reduction</strong>, plus a credible gas/license path. A price decline alone is insufficient if the underlying production economics deteriorate. Failure of the 2030 operating dispensation or materially higher unfunded transition spending would reduce value beyond an ordinary rate sensitivity.</p>
+<p>This analysis is complete on the public evidence available. Unpublished quarterly financials, undisclosed transaction consideration, future regulations and an unconfirmed equipment restart are genuine limits on what can be known, not promises of missing research. The result remains <strong>observation, no Stage 3.5 entry approval, no trade</strong>.</p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/SSL.html">Open full SSL dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SSL/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SSL/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SSL/base_forecast.csv">base_forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SSL/bear_forecast.csv">bear_forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SSL/bull_forecast.csv">bull_forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SSL/source_ledger.json">source_ledger.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SSL/qa_results.json">qa_results.json</a></li>
+</ul>
+</main></body></html>

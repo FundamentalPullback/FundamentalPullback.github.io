@@ -1,0 +1,454 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FOX · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/FOX">← FOX profile</a><a href="../../../#ficha/FOXA">← FOXA profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A159 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">En observación</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Pending Roku transaction; closing-conditional central value $61.46, sensitivity $55–70, low confidence. FOX and FOXA are classes of one issuer and one risk slot. No approved purchase.</strong></p>
+<h1 id="fox-foxa-stage-3-completado-en-observación">FOX / FOXA: Stage 3 completado, en observación</h1>
+<p><strong>Fecha de valoración:</strong> 3 de noviembre de 2026, después de resultados del 2 de noviembre. <strong>Una compañía, dos clases; una sola plaza y un solo presupuesto de riesgo.</strong> Precios del scanner: FOX $59,63; FOXA $67,10. Ambas: QP 90, Opportunity 100. Revisión bajo la política FCFF del 30 de octubre de 2026. No se aprueba una compra ni se ejecuta ninguna operación.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>El negocio mejora, pero comprar FOX hoy incluye una adquisición transformadora, no solamente los activos actuales. La caja y la dilución de Roku cambian sustancialmente la valoración. Mi DCF operativo a diez años, después de SBC, sitúa el escenario central condicionado al cierre alrededor de <strong>$61 por acción</strong>, con una banda central de sensibilidad de <strong>$55–70</strong>, confianza <strong>baja</strong>. FOX ofrece aproximadamente 3% de margen sobre el central; FOXA cotiza aproximadamente 9% por encima. Ninguna ofrece hoy una compensación suficientemente sólida por ejecución, financiación y normalización del ciclo.</p>
+<p><strong>Resultado: en observación, no aprobada.</strong> La investigación está completada para esta fecha. La incertidumbre futura de una operación pendiente no puede convertirse honestamente en un dato conocido. No hace falta esperar al cierre para analizarla, pero sí exigir que su riesgo esté remunerado. Una caída hacia $46–49 permitiría reabrir el estudio de precio con un descuento orientativo del 20–25% al central, siempre con datos y condiciones actualizados. No es una orden, ni un máximo autorizado, ni reemplaza Stage 3.5.</p>
+<h2 id="hechos-calidad-del-beneficio-y-caja">Hechos, calidad del beneficio y caja</h2>
+<p>USD millones; ejercicios terminados en junio. EBIT es beneficio operativo después de depreciación y de las partidas corporativas especiales; FCF es CFO menos inversión en propiedad/equipo, no FCFF.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ejercicio</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">Margen EBIT</th>
+<th style="text-align: right;">Beneficio atribuible</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">FCF</th>
+<th style="text-align: right;">SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY24</td>
+<td style="text-align: right;">13.980</td>
+<td style="text-align: right;">2.411</td>
+<td style="text-align: right;">17,25%</td>
+<td style="text-align: right;">1.501</td>
+<td style="text-align: right;">1.840</td>
+<td style="text-align: right;">345</td>
+<td style="text-align: right;">1.495</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr class="even">
+<td>FY25</td>
+<td style="text-align: right;">16.300</td>
+<td style="text-align: right;">2.879</td>
+<td style="text-align: right;">17,66%</td>
+<td style="text-align: right;">2.263</td>
+<td style="text-align: right;">3.324</td>
+<td style="text-align: right;">331</td>
+<td style="text-align: right;">2.993</td>
+<td style="text-align: right;">135</td>
+</tr>
+<tr class="odd">
+<td>FY26</td>
+<td style="text-align: right;">17.126</td>
+<td style="text-align: right;">3.345</td>
+<td style="text-align: right;">19,53%</td>
+<td style="text-align: right;">1.685</td>
+<td style="text-align: right;">1.970</td>
+<td style="text-align: right;">502</td>
+<td style="text-align: right;">1.468</td>
+<td style="text-align: right;">132</td>
+</tr>
+</tbody>
+</table></div>
+<p>Datos y cálculos sobre <a href="https://www.sec.gov/Archives/edgar/data/1754301/000162828026053960/fox-20260630.htm">10-K FY26</a>. No se borra SBC ni se elimina automáticamente el coste de programación deteriorada; amortización y reinversión siguen formando parte del análisis económico.</p>
+<p>Últimos cuatro trimestres, usando las publicaciones originales y diferencias de los acumulados para la caja:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Trimestre</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">Beneficio atribuible</th>
+<th style="text-align: right;">EBITDA ajustado</th>
+<th style="text-align: right;">FCF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dic25</td>
+<td style="text-align: right;">5.182</td>
+<td style="text-align: right;">229</td>
+<td style="text-align: right;">692</td>
+<td style="text-align: right;">−791</td>
+</tr>
+<tr class="even">
+<td>Mar26</td>
+<td style="text-align: right;">3.994</td>
+<td style="text-align: right;">166</td>
+<td style="text-align: right;">954</td>
+<td style="text-align: right;">1.767</td>
+</tr>
+<tr class="odd">
+<td>Jun26</td>
+<td style="text-align: right;">4.212</td>
+<td style="text-align: right;">691</td>
+<td style="text-align: right;">1.195</td>
+<td style="text-align: right;">726</td>
+</tr>
+<tr class="even">
+<td>Sep26</td>
+<td style="text-align: right;">4.571</td>
+<td style="text-align: right;">943</td>
+<td style="text-align: right;">1.641</td>
+<td style="text-align: right;">503</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuentes: <a href="https://media.foxcorporation.com/earnings/FY26/q2.pdf">Q2 FY26</a>, <a href="https://media.foxcorporation.com/earnings/FY26/q3.pdf">Q3 FY26</a>, <a href="https://media.foxcorporation.com/earnings/FY26/q4.pdf">Q4 FY26</a>, <a href="https://media.foxcorporation.com/earnings/FY27/q1.pdf">Q1 FY27</a>.</p>
+<p>TTM calculado hasta septiembre: ventas $17.959m, +9,0%; beneficio atribuible $2.029m, prácticamente plano (−0,3%); CFO $2.716m, −10,5%; FCF $2.205m, −17,3%. La referencia comparable anterior de FCF era $2.665m. El beneficio ajustado de la compañía sube de $2.216m a $2.780m, +25,5%; no equivale por sí solo a crecimiento sostenible de ciclo. Se obtienen restando el trimestre de septiembre antiguo y añadiendo el nuevo al ejercicio completo. <a href="https://media.investor.foxcorporation.com/wp-content/uploads/2025/10/30114336/q1.pdf">Comparativo Q1 FY26</a>.</p>
+<p>El crecimiento del EPS supera el crecimiento del beneficio por las recompras: el EPS GAAP TTM sumado pasa aproximadamente de $4,45 a $4,72 mientras el beneficio total está plano. El EPS ajustado TTM sumado ronda $6,45. El scanner sigue mostrando PER 17,47 para FOXA, equivalente a dividir $67,10 por el antiguo EPS FY26 de $3,84; no está actualizado a este TTM. Su FCF/acción de $3,41 tampoco debe usarse como dato posterior a resultados. No usar estos campos para aprobar precio.</p>
+<h3 id="qué-es-estructural-y-qué-es-calendario">Qué es estructural y qué es calendario</h3>
+<p>El trimestre de septiembre tuvo ventas +22%, publicidad +47% y EBITDA +54%, con el Mundial y política contribuyendo al salto. La transcripción aclara que gran parte de la mejora del FCF trimestral procede del desfase entre pagos del Mundial en FY26 y cobros publicitarios en H1 FY27. Es un traslado de caja entre periodos, no una nueva tasa perpetua de conversión. También informa Tubi +35% de ingresos y +23% de tiempo de visionado, crecimiento neto de suscriptores incluyendo FOX One y publicidad política de más de $350m acumulada en el ciclo. <a href="https://media.investor.foxcorporation.com/wp-content/uploads/2026/11/02213152/FOX-FY2027-Q1-Earnings-Call-Transcript.pdf">Conferencia del 2 de noviembre</a>.</p>
+<p>Mi lectura: Tubi, precios de distribución y FOX One sostienen una tesis de crecimiento real. Pero el Mundial atraviesa dos ejercicios y las elecciones/Super Bowl no se repiten con la misma intensidad anual. No extrapolo ni el margen trimestral de 35,9% ni cuatro veces los $503m de FCF. Los costes deportivos se amortizan según el patrón de ingresos, mientras el pago ocurre en otro calendario. La caída de caja FY26 no prueba por sí sola deterioro; el rebote FY27 tampoco demuestra recuperación estructural completa.</p>
+<p><strong>Gate de crecimiento:</strong> el +25,5% del beneficio ajustado TTM no merece automáticamente la categoría de crecimiento normalizado ≥15%. El beneficio GAAP está plano y el ciclo explica una parte importante de la mejora operativa. Mi caso propio presupone crecimiento orgánico de ventas FOX cercano al 5% anual durante cinco años, margen que baja tras el año de eventos, y una trayectoria de caja irregular. Es una tesis de crecimiento moderado más transformación digital, no de crecimiento orgánico estable al 15–20%. Roku añade crecimiento adquirido que debe pagar su contraprestación y SBC. En los próximos doce meses, el central usa ventas FOX de $18.100m, EBIT de ~$3.892m y FCFF combinado de $2.833m, no cuatro veces el último trimestre. La falta de un salto orgánico demostrado exige más descuento, no una excepción al gate.</p>
+<p>Puente económico orientativo: FCF TTM $2.205m − SBC $140m + interés neto después de impuesto normalizado (~$228m) ≈ $2.293m antes de afinar distribuciones de participadas y otros movimientos no operativos. Este control no sustituye el FCFF por EBIT y reinversión. En el DCF no se vuelve a restar SBC: ya está dentro del margen.</p>
+<h2 id="roku-crecimiento-comprado-no-gratuito">Roku: crecimiento comprado, no gratuito</h2>
+<p>Roku acaba de publicar crecimiento de ventas del 24%, plataforma +23%, EBITDA ajustado $249m y FCF TTM $796m. El crecimiento publicitario también incluye política. La plataforma gana escala, pero dispositivos tienen margen bruto −25,1% y la mezcla de suscripciones reduce su margen. <a href="https://www.sec.gov/Archives/edgar/data/1428439/000162828026068877/a04fy2026q3exhibit991.htm">Carta Q3 de Roku</a>.</p>
+<p>Su FCF publicado no descuenta SBC como coste económico. SBC de nueve meses fue $233m; caja e inversiones líquidas sumaban ~$2.721m. Los $22m de ganancia por terminar un arrendamiento y el menor gasto comercial tampoco deben perpetuarse. <a href="https://www.sec.gov/Archives/edgar/data/1428439/000162828026068887/roku-20260930.htm">10-Q Roku</a>.</p>
+<p>La contraprestación contractual es $96 en efectivo +0,9693 FOXA por acción Roku, no $160 fijo. El anuncio estimaba $400m de sinergias anuales y acreción de FCF/acción a partir del segundo ejercicio completo. <a href="https://investor.foxcorporation.com/news/corp-press-releases/2026/fox-corporation-to-acquire-roku-inc/">Anuncio de adquisición</a>.</p>
+<p>La documentación de la operación estimaba $14.689m en efectivo, 148,316m acciones nuevas y 3,604m acciones diluidas por premios convertidos. Su ejemplo de financiación utilizaba $9.815m de deuda nueva con saldos de junio. Las proyecciones de FOX daban FCFF propio FY27–31 de $2.734/2.159/2.987/1.977/3.188m; para Roku, después de SBC, $326/499/657/837/1.051m. Son previsiones de la negociación, no guidance vigente. Las previsiones alternativas del lado Roku excluyen SBC y no son intercambiables. <a href="https://media.investor.foxcorporation.com/wp-content/uploads/2026/09/10164200/FOX_Roku_Notice-of-Meeting-and-Joint-Proxy-Statement-Prospectus.pdf">Proxy conjunto, pp. 69–75 y 132–137</a>.</p>
+<p>Los accionistas y autoridades extranjeras ya aprobaron, según la conferencia; falta autorización estadounidense HSR/DOJ. El cierre sigue siendo un escenario, no un hecho. Si la prohibición regulatoria activa la condición contractual correspondiente, FOX puede deber $1.200m. <a href="https://www.sec.gov/Archives/edgar/data/1754301/000162828026068670/fox-20260930.htm">10-Q FOX</a>.</p>
+<h2 id="derechos-financieros-y-clases-de-acciones">Derechos financieros y clases de acciones</h2>
+<p>Al 30 de septiembre FOX tenía $6.607m de deuda y $4.536m de caja; al 28 de octubre, 201,553m acciones A y 220,249m B. El promedio diluido trimestral era 428m. El valor bursátil correcto con ambos precios es ~$26.658m, no la suma de dos capitalizaciones completas. Se identifican además $86m de intereses minoritarios rescatables, $105m de otros minoritarios y ~$264m de pasivos de pensiones/postempleo. <a href="https://www.sec.gov/Archives/edgar/data/1754301/000162828026068670/fox-20260930.htm">10-Q FOX</a>.</p>
+<p>La deuda pública tiene principal de $6.650m: $2.000m vence en 2029, $600m en 2030, $1.250m en 2033, $1.250m en 2039 y $1.550m en 2049. Antes de Roku no aparece un muro inmediato de vencimientos. El revolver de $1.000m, sin disponer, vence en junio de 2028; la línea de adquisición de $1.000m vencería dos años después del cierre. El riesgo financiero incremental está en convertir los compromisos puente en deuda definitiva a coste razonable, no en tratar toda la capacidad comprometida como caja disponible. <a href="https://www.sec.gov/Archives/edgar/data/1754301/000162828026053960/fox-20260630.htm">10-K, nota 9</a>, <a href="https://www.sec.gov/Archives/edgar/data/1754301/000162828026068670/fox-20260930.htm">10-Q, nota 5</a>.</p>
+<p>FOXA es clase A sin voto ordinario; FOX es clase B con voto. Comparten economía básica de dividendo y liquidación. Los nuevos títulos de la adquisición son A: diluyen ambas clases económicamente sin diluir de igual forma el bloque de voto B. La influencia del grupo Murdoch limita el valor práctico de un voto minoritario. No asigno automáticamente una prima al voto ni supongo convergencia del diferencial de cotización. <a href="https://media.investor.foxcorporation.com/wp-content/uploads/2026/09/10164200/FOX_Roku_Notice-of-Meeting-and-Joint-Proxy-Statement-Prospectus.pdf">Derechos y control, proxy conjunto</a>.</p>
+<p><strong>Puente utilizado, hipótesis explícitas:</strong> 580m títulos diluidos combinados; caja operativa mínima $1.333m; NCI económico $500m en vez de su valor contable; pensiones $264m; acciones cotizadas no operativas $335m con 25% de recorte fiscal; costes de financiación $63m. Compromisos de crédito no se suman como deuda ya dispuesta. Con los saldos de septiembre, el efectivo de la adquisición implicaría aproximadamente $8.8bn de financiación nueva antes de generación de caja posterior, en lugar de copiar mecánicamente el ejemplo de junio.</p>
+<p>El ajuste total desde EV a equity combinado es −$15.948m antes del activo fiscal. El modelo central incorpora <strong>$1.000m de valor presente fiscal</strong>, no los activos fiscales contables íntegros. La utilización y restricciones fiscales se analizan por sensibilidad: cada $500m cambia el valor unos $0,86/acción. Los arrendamientos conservan alquiler dentro de EBIT y no se restan de nuevo como deuda. No hay recompras futuras gratuitas.</p>
+<p>El derecho sobre 18,6% de FanDuel requiere pagar un ejercicio de aproximadamente $4.7bn a junio de 2026, creciente; no es una participación totalmente pagada. No añado valor opcional sin una valoración independiente. <a href="https://www.sec.gov/Archives/edgar/data/1754301/000162828026053960/fox-20260630.htm">10-K FY26</a>. Tampoco sumo por separado el valor inmobiliario de un activo cuyos flujos ya están en operaciones.</p>
+<h2 id="fcff-de-diez-años">FCFF de diez años</h2>
+<p>Modelo propio, USD miles de millones. Diez periodos prospectivos de doce meses desde la fecha de valoración, cinco detallados y cinco de transición; las cifras fiscales del proxy sirven de contraste y no se presentan como el mismo calendario. Primer periodo: medio año de Roku por supuesto de cierre a mediados de 2027. El puente completo de contraprestación y dilución se reconoce hoy, una simplificación prudente respecto del momento exacto de cierre; no es un modelo de arbitraje de la operación.</p>
+<p>FCFF = EBIT × (1−25%) + D&amp;A − capex − aumento de circulante. SBC permanece en EBIT. Programación y contenido permanecen en costes operativos/circulante; no se descuentan otra vez como todo el importe de compromisos futuros. La depreciación usada es económica recurrente; el desembolso de adquisición se paga en el puente. No perpetúo sin más amortización contable de la asignación del precio de compra ni trato los intangibles adquiridos como gratuitos.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Central, año</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">5</th>
+<th style="text-align: right;">6</th>
+<th style="text-align: right;">7</th>
+<th style="text-align: right;">8</th>
+<th style="text-align: right;">9</th>
+<th style="text-align: right;">10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas FOX</td>
+<td style="text-align: right;">18,10</td>
+<td style="text-align: right;">18,60</td>
+<td style="text-align: right;">20,00</td>
+<td style="text-align: right;">20,50</td>
+<td style="text-align: right;">21,70</td>
+<td style="text-align: right;">22,80</td>
+<td style="text-align: right;">23,79</td>
+<td style="text-align: right;">24,63</td>
+<td style="text-align: right;">25,31</td>
+<td style="text-align: right;">25,82</td>
+</tr>
+<tr class="even">
+<td>Margen EBIT FOX</td>
+<td style="text-align: right;">21,5%</td>
+<td style="text-align: right;">19,5%</td>
+<td style="text-align: right;">19,5%</td>
+<td style="text-align: right;">19,5%</td>
+<td style="text-align: right;">19,5%</td>
+<td style="text-align: right;">19,4%</td>
+<td style="text-align: right;">19,3%</td>
+<td style="text-align: right;">19,2%</td>
+<td style="text-align: right;">19,1%</td>
+<td style="text-align: right;">19,0%</td>
+</tr>
+<tr class="odd">
+<td>Ventas Roku, año completo</td>
+<td style="text-align: right;">6,10</td>
+<td style="text-align: right;">7,00</td>
+<td style="text-align: right;">7,85</td>
+<td style="text-align: right;">8,70</td>
+<td style="text-align: right;">9,60</td>
+<td style="text-align: right;">10,43</td>
+<td style="text-align: right;">11,16</td>
+<td style="text-align: right;">11,76</td>
+<td style="text-align: right;">12,19</td>
+<td style="text-align: right;">12,43</td>
+</tr>
+<tr class="even">
+<td>Margen EBIT Roku</td>
+<td style="text-align: right;">7,5%</td>
+<td style="text-align: right;">9,0%</td>
+<td style="text-align: right;">11,0%</td>
+<td style="text-align: right;">12,5%</td>
+<td style="text-align: right;">14,0%</td>
+<td style="text-align: right;">14,6%</td>
+<td style="text-align: right;">15,2%</td>
+<td style="text-align: right;">15,8%</td>
+<td style="text-align: right;">16,4%</td>
+<td style="text-align: right;">17,0%</td>
+</tr>
+<tr class="odd">
+<td>FCFF combinado</td>
+<td style="text-align: right;">2,833</td>
+<td style="text-align: right;">2,824</td>
+<td style="text-align: right;">3,842</td>
+<td style="text-align: right;">3,524</td>
+<td style="text-align: right;">4,430</td>
+<td style="text-align: right;">4,394</td>
+<td style="text-align: right;">4,558</td>
+<td style="text-align: right;">4,686</td>
+<td style="text-align: right;">4,772</td>
+<td style="text-align: right;">4,812</td>
+</tr>
+</tbody>
+</table></div>
+<p>FOX: D&amp;A 2,5% de ventas, capex 2,8%; Roku: 1,0% y 1,2%. El capex de Roku incluye una reserva propia para inversión de plataforma, superior a su cifra física reciente. Circulante FOX años 1–5: $100/300/−100/450/−100m, para no perpetuar liberaciones puntuales; Roku 0,7% de ventas. En años 6–10 la reinversión converge gradualmente a NOPAT × g/ROIC. Sinergias centrales antes de impuestos: $100/200/400m desde años 1/2/3, con $150/100m de integración en años 1/2. Son supuestos, no promesas de la compañía.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Caso de cierre</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Central</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>WACC</td>
+<td style="text-align: right;">11,0%</td>
+<td style="text-align: right;">9,5%</td>
+<td style="text-align: right;">8,5%</td>
+</tr>
+<tr class="even">
+<td>g terminal</td>
+<td style="text-align: right;">1,0%</td>
+<td style="text-align: right;">2,0%</td>
+<td style="text-align: right;">2,5%</td>
+</tr>
+<tr class="odd">
+<td>ROIC incremental terminal</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">14%</td>
+<td style="text-align: right;">18%</td>
+</tr>
+<tr class="even">
+<td>Margen FOX / Roku año 10</td>
+<td style="text-align: right;">16% / 12%</td>
+<td style="text-align: right;">19% / 17%</td>
+<td style="text-align: right;">22% / 20%</td>
+</tr>
+<tr class="odd">
+<td>Sinergias finales preimpuesto</td>
+<td style="text-align: right;">0,20</td>
+<td style="text-align: right;">0,40</td>
+<td style="text-align: right;">0,50</td>
+</tr>
+<tr class="even">
+<td>Valor por acción</td>
+<td style="text-align: right;"><strong>$19</strong></td>
+<td style="text-align: right;"><strong>$61</strong></td>
+<td style="text-align: right;"><strong>$118</strong></td>
+</tr>
+<tr class="odd">
+<td>Peso del terminal en EV</td>
+<td style="text-align: right;">40,5%</td>
+<td style="text-align: right;">51,7%</td>
+<td style="text-align: right;">60,1%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los escenarios son combinaciones económicas, no probabilidades ni límites de pérdida. WACC central 9,5% representa un coste propio supuesto próximo al 11,5%, deuda de ~6,5% antes de impuesto y mezcla aproximada 70/30; no son cotizaciones verificadas de financiación definitiva. El favorable requiere integración excelente y mejora importante del margen Roku. El adverso combina presión de publicidad/derechos y menor monetización, amplificada por el puente financiero.</p>
+<p>Sensibilidad central: WACC 9,0/9,5/10,0% y g 1,5–2,5% produce aproximadamente $66–70 / $60–63 / $55–57. <strong>Banda central razonable $55–70; no $19–118.</strong> Un menor riesgo demostrado puede cambiar el descuento, pero no lo rebajo para justificar el precio.</p>
+<h3 id="sin-adquisición-y-contingencias">Sin adquisición y contingencias</h3>
+<p>La misma arquitectura de FOX sola da ~$40/$77/$121. Si no cierra y se devenga la penalización regulatoria completa, restar ~$2,80 por título existente: central cercano a $74. No asigno una probabilidad inventada al cierre para promediar $61 y $74. La opción de que una operación fallida evite dilución no convierte su fracaso en un catalizador sin coste.</p>
+<p>Smartmatic reclama $2.700m; la compañía no estima una pérdida probable y cuantificable y sitúa un posible juicio no antes de 2027. <a href="https://www.sec.gov/Archives/edgar/data/1754301/000162828026068670/fox-20260930.htm">10-Q FOX</a>. Esto no es una deuda cierta. Como prueba de tensión, un coste adicional de $1bn resta ~$1,72/título combinado, y $2,7bn ~$4,66, antes de seguros/impuestos. No está escondido como un pasivo seguro dentro del central. El adverso no es la peor pérdida posible.</p>
+<h2 id="valoración-inversa-y-contraste">Valoración inversa y contraste</h2>
+<p>Con idéntica estructura operativa y financiera: - <strong>FOX $59,63</strong> exige EV operacional de ~$49,53bn, aproximadamente 98% de los flujos centrales. Equivale, alternativamente, a WACC ~9,65% con el caso central intacto, o márgenes EBIT de ambas operaciones unos 0,39 puntos inferiores. No exige un milagro, pero deja muy poco colchón. - <strong>FOXA $67,10</strong> exige EV operacional de ~$53,86bn, aproximadamente 106,5% de los flujos centrales; alternativamente WACC ~9,06%, o una mejora paralela de margen EBIT de ~1,20 puntos durante el horizonte. Es defendible con ejecución favorable, pero menos atractivo para el mismo derecho económico. - Estas alternativas no se suman ni son pruebas independientes del DCF. En la escala de flujos, FCFF año 10 necesario ronda $4,71bn para FOX y $5,12bn para FOXA, frente a $4,81bn central.</p>
+<p>El valor bursátil observado sobre beneficio atribuible TTM es ~13,1x; sobre beneficio ajustado, ~9,6x. EV simplificado con toda la caja y NCI contable/EBITDA TTM es ~6,45x. El EBITDA TTM recoge el Mundial y estos múltiplos son <strong>standalone</strong>, no los múltiplos del comprador después de pagar Roku.</p>
+<h3 id="comparables-actualizados-al-3-de-noviembre">Comparables actualizados al 3 de noviembre</h3>
+<p>Contraste independiente con Disney y Comcast, escogidos por exposición a deportes, televisión, publicidad y streaming, no porque sean equivalentes perfectos. Cotizaciones de cierre del 3/11/2026: <a href="https://stockanalysis.com/stocks/dis/history/">Disney $114,18</a> y <a href="https://stockanalysis.com/stocks/cmcsa/history/">Comcast $23,67</a>, datos S&amp;P Global distribuidos por Stock Analysis. No uso cotizaciones posteriores al cierre.</p>
+<p>Capitalización estimada = precio de esa fecha × último número de acciones publicado: Disney 1.726,687m al 29/7; Comcast 3.551,006m A+B al 15/10, valorando B al mismo derecho económico; FOX las dos clases a sus respectivos precios y recuentos del 28/10. No son estimaciones de acciones exactamente vivas el 3/11. EV convencional = capitalización + deuda financiera − caja + NCI contable, incluido rescatable. No se añade deuda de alquiler operativo mientras sus costes permanezcan en resultados. Las cifras no sustituyen el puente económico más conservador del DCF de FOX.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>USD millones salvo múltiplos</th>
+<th style="text-align: right;">FOX/FOXA</th>
+<th style="text-align: right;">Disney</th>
+<th style="text-align: right;">Comcast</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fecha de balance / cierre TTM</td>
+<td style="text-align: right;">30/9/26</td>
+<td style="text-align: right;">27/6/26</td>
+<td style="text-align: right;">30/9/26</td>
+</tr>
+<tr class="even">
+<td>Capitalización estimada</td>
+<td style="text-align: right;">26.658</td>
+<td style="text-align: right;">197.153</td>
+<td style="text-align: right;">84.052</td>
+</tr>
+<tr class="odd">
+<td>Deuda financiera</td>
+<td style="text-align: right;">6.607</td>
+<td style="text-align: right;">46.041</td>
+<td style="text-align: right;">87.366</td>
+</tr>
+<tr class="even">
+<td>Caja</td>
+<td style="text-align: right;">4.536</td>
+<td style="text-align: right;">5.185</td>
+<td style="text-align: right;">7.596</td>
+</tr>
+<tr class="odd">
+<td>Deuda neta</td>
+<td style="text-align: right;">2.071</td>
+<td style="text-align: right;">40.856</td>
+<td style="text-align: right;">79.770</td>
+</tr>
+<tr class="even">
+<td>NCI contable usado</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">6.810</td>
+<td style="text-align: right;">138</td>
+</tr>
+<tr class="odd">
+<td>EV convencional</td>
+<td style="text-align: right;">28.920</td>
+<td style="text-align: right;">244.819</td>
+<td style="text-align: right;">163.960</td>
+</tr>
+<tr class="even">
+<td>Beneficio atribuible TTM</td>
+<td style="text-align: right;">2.029</td>
+<td style="text-align: right;">8.600</td>
+<td style="text-align: right;">11.316</td>
+</tr>
+<tr class="odd">
+<td>EBITDA desde EBIT GAAP + D&amp;A</td>
+<td style="text-align: right;">4.306</td>
+<td style="text-align: right;">19.035</td>
+<td style="text-align: right;">33.543</td>
+</tr>
+<tr class="even">
+<td>CFO TTM</td>
+<td style="text-align: right;">2.716</td>
+<td style="text-align: right;">16.989</td>
+<td style="text-align: right;">31.727</td>
+</tr>
+<tr class="odd">
+<td>Capex y otros desembolsos capitalizados</td>
+<td style="text-align: right;">511</td>
+<td style="text-align: right;">8.696</td>
+<td style="text-align: right;">14.651</td>
+</tr>
+<tr class="even">
+<td>FCF TTM calculado</td>
+<td style="text-align: right;">2.205</td>
+<td style="text-align: right;">8.293</td>
+<td style="text-align: right;">17.076</td>
+</tr>
+<tr class="odd">
+<td>SBC TTM</td>
+<td style="text-align: right;">140</td>
+<td style="text-align: right;">1.519</td>
+<td style="text-align: right;">1.408</td>
+</tr>
+<tr class="even">
+<td>FCF menos SBC</td>
+<td style="text-align: right;">2.065</td>
+<td style="text-align: right;">6.774</td>
+<td style="text-align: right;">15.668</td>
+</tr>
+<tr class="odd">
+<td>EV / EBITDA anterior</td>
+<td style="text-align: right;">6,72x</td>
+<td style="text-align: right;">12,86x</td>
+<td style="text-align: right;">4,89x</td>
+</tr>
+<tr class="even">
+<td>Capitalización / beneficio atribuible</td>
+<td style="text-align: right;">13,14x</td>
+<td style="text-align: right;">22,92x</td>
+<td style="text-align: right;">7,43x</td>
+</tr>
+<tr class="odd">
+<td>FCF / capitalización</td>
+<td style="text-align: right;">8,27%</td>
+<td style="text-align: right;">4,21%</td>
+<td style="text-align: right;">20,32%</td>
+</tr>
+<tr class="even">
+<td>(FCF − SBC) / capitalización</td>
+<td style="text-align: right;">7,75%</td>
+<td style="text-align: right;">3,44%</td>
+<td style="text-align: right;">18,64%</td>
+</tr>
+</tbody>
+</table></div>
+<p>TTM = último ejercicio completo + acumulado actual − acumulado comparable anterior. EBITDA de esta tabla conserva SBC y cargos operativos GAAP; no es el EBITDA ajustado usado por cada compañía. Disney: <a href="https://s206.q4cdn.com/979796730/files/doc_financials/2026/q3/6cb3fe4e-d0ee-4bbf-84e5-17cc436ed37e.pdf">10-Q Q3 FY26, pp. 1, 3–6</a> y <a href="https://investors.thewaltdisneycompany.com/files/doc_financials/2025/q4/260ff65f-d9fa-4231-948e-d6e9b4a593f3.pdf">10-K FY25, pp. 71–74</a>. Comcast: <a href="https://www.sec.gov/Archives/edgar/data/1166691/000162828026066863/cmcsa-20260930.htm">10-Q Q3 2026, portada y pp. 1–4</a> y <a href="https://www.cmcsa.com/static-files/2445b35f-2af9-4ec0-adfa-6f5a89582bc0">resultados FY25, tablas 1–2</a>. FOX: los dos documentos SEC citados arriba.</p>
+<p><strong>Ajustes que cambian la lectura:</strong> - Comcast capitaliza software y otros intangibles: se restan $2.583m además de $12.060m de capex y $8m de construcción de Beijing. Por eso el FCF calculado es $8m menor que la definición publicada. El TTM aún contiene Q4 2025 de Versant y parte de Sky Alemania ya vendidos. Su EBITDA ajustado pro forma de perímetro actual es $33.294m ($7.298m + $25.996m), EV/EBITDA <strong>4,92x</strong>, cercano al control GAAP pero no idéntico. <a href="https://www.cmcsa.com/static-files/aa4ee382-8682-4c27-a4d6-f0a3e2e96747">Serie pro forma actualizada, pp. 3 y 9</a>. - El FCF Comcast incluye una ventaja de caja fiscal de ~$2.000m en Q4 2025. Restarla junto con SBC reduce el control a $13.668m, <strong>16,26%</strong> sobre capitalización, todavía antes de normalizar el perímetro vendido. No presento esta cifra como FCF recurrente exacto. El negocio principal de conectividad sufre presión competitiva y el grupo prepara otra separación de NBCUniversal/Sky. <a href="https://www.cmcsa.com/static-files/2445b35f-2af9-4ec0-adfa-6f5a89582bc0">Resultados FY25</a>, <a href="https://www.cmcsa.com/news-releases/news-release-details/comcast-reports-3rd-quarter-2026-results">resultados Q3 2026</a>. - Disney exige mucho más capital en parques y cruceros; su TTM de junio precede al trimestre de septiembre aún no publicado. El TTM GAAP ya elimina por resta el gran beneficio fiscal de Hulu del trimestre de junio de 2025, pero conserva reestructuración y otros efectos reales del periodo. No se copia su prima de múltiplo a FOX. El FCF de los tres es consolidado y después de intereses, antes de distribuciones a minoritarios: estos rendimientos son controles de caja, no FCFF ni promesas de dinero íntegramente distribuible al accionista común.</p>
+<p><strong>Lectura:</strong> FOX parece barata frente a Disney, pero no frente a Comcast. Hay razones de mezcla, crecimiento, inversión y deuda para esas diferencias. Ningún promedio de los dos pares justifica una compra de FOX; mucho menos aplicar el múltiplo standalone a la compañía después de pagar Roku. La comprobación actual no cambia la conclusión de margen insuficiente. Como referencia distinta y fechada, el asesor del proxy eligió 6–8x EBITDA FY27 para FOX con pares de junio de 2026; no confundo esa selección de transacción con precios actuales. <a href="https://media.investor.foxcorporation.com/wp-content/uploads/2026/09/10164200/FOX_Roku_Notice-of-Meeting-and-Joint-Proxy-Statement-Prospectus.pdf">Proxy, pp. 146–147</a>.</p>
+<h2 id="revisión-catalizadores-e-invalidación">Revisión, catalizadores e invalidación</h2>
+<ol type="1">
+<li><strong>Roku/DOJ y financiación definitiva:</strong> fecha de cierre, condiciones, deuda real, coste del dinero, acciones/premios emitidos y costes de integración. El evento puede cambiar tanto EV como el puente por acción.</li>
+<li><strong>Próximos resultados:</strong> normalizar publicidad después de las elecciones y calendario deportivo, cobro del Mundial, retención FOX One fuera de temporada fuerte, conversión de Tubi y crecimiento de Roku sin ayuda política. La siguiente fecha exacta no se presume anunciada.</li>
+<li><strong>Sinergias:</strong> exigir ahorro neto verificable y no solo EBITDA antes de SBC o “run-rate” sin costes de implementación.</li>
+<li><strong>Tesis deteriorada:</strong> deterioro persistente de distribución pese a FOX One, pérdida de poder de precios, mayores derechos sin monetización, caída de caja económica, o necesidad de financiar simultáneamente recompras y operación con mayor deuda.</li>
+<li><strong>Revisiones extraordinarias:</strong> Smartmatic, cambios regulatorios, refinanciación material o monetización del derecho FanDuel.</li>
+</ol>
+<p>El retroceso del scanner no demuestra descuento fundamental; la adquisición es un riesgo material verificable, pero no atribuyo toda la caída desde máximos a una sola noticia. No hay señal numérica, stop, tamaño ni ficha Stage 3.5 aprobada en esta revisión. Las dos clases comparten una única campaña y un único límite de riesgo.</p>
+<h2 id="archivos-de-cálculo">Archivos de cálculo</h2>
+<p><code>model.py</code> calcula tres escenarios completos; <code>forecast.csv</code> contiene EBIT, NOPAT, D&amp;A, capex, circulante y FCFF por empresa y año; <code>model.json</code> guarda resultados; <code>reverse.py</code> y <code>reverse.json</code> reproducen la valoración inversa; <code>comps.py</code>, <code>comps.json</code> y <code>comps.csv</code> reproducen el contraste actual de pares. Son soporte de esta versión, no instrucciones de negociación. No existe una valoración Stage 3 anterior completa que se esté migrando: las entradas anteriores del registro eran cola de investigación.</p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/FOX.html">Open full FOX dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FOX/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FOX/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FOX/comps.csv">comps.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FOX/forecast.csv">forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FOX/reverse.json">reverse.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FOX/comps.json">comps.json</a></li>
+</ul>
+</main></body></html>

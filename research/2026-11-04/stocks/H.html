@@ -1,0 +1,743 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>H · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/H">← H profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A162 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">En observación</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Fees and the asset-light transition are improving, but $185.44 requires a path near the bull case. Base $86.19. Complete research; no fundamental purchase or entry approval.</strong></p>
+<h1 id="hyatt-hotels-h-stage-3-completo">Hyatt Hotels (H): Stage 3 completo</h1>
+<p><strong>Fecha de valoración: 3 de noviembre de 2026. Investigación cerrada: 4 de noviembre de 2026. Precio: $185,44. USD millones salvo por acción.</strong></p>
+<h2 id="decisión">Decisión</h2>
+<p><strong>No aprobar a $185,44 por valoración. Mantener en observación fundamental.</strong> El negocio de comisiones mejora y la transición a asset-light es real. Sin embargo, el precio exige una combinación prolongada de crecimiento, conversión de caja y coste de capital próxima al escenario alcista. No es un expediente incompleto ni una prohibición por resultados inminentes. Es una valoración completada cuyo caso central no justifica el precio.</p>
+<p>Valor DCF central aproximado <strong>$86 por acción</strong>, bajista <strong>$16</strong>, alcista <strong>$197</strong>. Son estimaciones del modelo, no precios objetivo garantizados ni autorizaciones de compra. La amplitud refleja apalancamiento financiero, duración del crecimiento y dispersión económica, no una supuesta precisión en el negocio. El valor alcista ofrece solo aproximadamente 6% de potencial respecto al precio actual, frente a una pérdida muy grande si predomina el central.</p>
+<p>El score 90 del scanner del 3 de noviembre permite investigar, pero no sustituye Stage 3, ni acredita por sí solo Stage 3.5, stop técnico, riesgo de cartera o ejecución. No se aplica un descuento universal de 15%. Aun permitiendo una entrada parcial a valor razonable, esta cotización no pasa el caso central.</p>
+<h2 id="negocio-calidad-y-resultados-recientes">Negocio, calidad y resultados recientes</h2>
+<p>Hyatt combina gestión/franquicias, hoteles propios/arrendados y distribución turística. La unidad económica central es la comisión sobre ingresos hoteleros, royalties y resultados de los hoteles. Los ingresos reembolsados por propietarios no son ventas económicas equivalentes a estas comisiones. Por eso no se aplica un margen de software a los $7.109m de ingresos TTM.</p>
+<p>La red tenía 1.584 hoteles/resorts, 380.217 habitaciones y presencia en 84 países a septiembre. World of Hyatt, la distribución directa, las marcas premium y las relaciones con propietarios favorecen recurrencia y crecimiento con menos inmobiliario propio. No eliminan la sensibilidad a demanda hotelera, tipos de interés, liquidez de los propietarios ni los gastos para captar contratos. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-Q septiembre, notas 1, 3, 7, 13 y 17</a></p>
+<p>En Q3 el RevPAR comparable hotelero subió 7,2%, Estados Unidos 8,2%. La FIFA y el calendario favorecieron la comparación; no se extrapolan indefinidamente. El Net Package RevPAR de all-inclusive cayó 2,5%, con debilidad en México y cierres en Jamaica por el huracán Melissa. El negocio de distribución siguió débil. La guía de EBITDA de distribución para 2026 empeoró otros $5m y supone una caída anual aproximada de $30m. Las comisiones brutas Q3 fueron $327m y el EBITDA ajustado $295m. La compañía declara crecimiento de comisiones 15,2%; dividir cifras redondeadas $327/$283 produce 15,5%. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000029/q32026earningsrelease.htm" title="Hyatt resultados y guía Q3 2026, 29 octubre">Resultados Q3</a></p>
+<p>El crecimiento neto de habitaciones TTM fue 3,8%, o 3,9% excluyendo las habitaciones Playa eliminadas, frente a una guía anual de aproximadamente 6%. El pipeline superó 158.000 habitaciones (+12,1%). Pipeline no equivale a aperturas: financiación, costes de construcción y retrasos de terceros pueden impedir la conversión. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000029/q32026earningsrelease.htm" title="Hyatt resultados y guía Q3 2026, 29 octubre">Resultados Q3</a></p>
+<h2 id="historia-y-normalización">Historia y normalización</h2>
+<p>El EBIT normalizado de diagnóstico mantiene SBC, D&amp;A y contra revenue. Neutraliza el resultado de activos de rabbi trusts que compensa gastos de compensación, elimina el saldo de reembolsos de programas recuperables a largo plazo y sustituye los costes de transacción reales por $40m anuales ($10m trimestrales). No incorpora ganancias inmobiliarias ni rendimientos de inversiones. Es cálculo propio, no métrica oficial. El perímetro no es constante por adquisiciones y ventas.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Fees</th>
+<th style="text-align: right;">Ingresos GAAP</th>
+<th style="text-align: right;">Ingresos sin reembolsos</th>
+<th style="text-align: right;">EBIT normalizado</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">Key money</th>
+<th style="text-align: right;">FCF simple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td style="text-align: right;">970</td>
+<td style="text-align: right;">6,667</td>
+<td style="text-align: right;">3,609</td>
+<td style="text-align: right;">432</td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">132</td>
+<td style="text-align: right;">602</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td style="text-align: right;">1,099</td>
+<td style="text-align: right;">6,648</td>
+<td style="text-align: right;">3,296</td>
+<td style="text-align: right;">530</td>
+<td style="text-align: right;">633</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">153</td>
+<td style="text-align: right;">463</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td style="text-align: right;">1,198</td>
+<td style="text-align: right;">7,101</td>
+<td style="text-align: right;">3,472</td>
+<td style="text-align: right;">584</td>
+<td style="text-align: right;">379</td>
+<td style="text-align: right;">220</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">159</td>
+</tr>
+<tr class="even">
+<td>TTM25</td>
+<td style="text-align: right;">1,185</td>
+<td style="text-align: right;">6,914</td>
+<td style="text-align: right;">3,339</td>
+<td style="text-align: right;">557</td>
+<td style="text-align: right;">301</td>
+<td style="text-align: right;">194</td>
+<td style="text-align: right;">154</td>
+<td style="text-align: right;">107</td>
+</tr>
+<tr class="odd">
+<td>TTM26</td>
+<td style="text-align: right;">1,291</td>
+<td style="text-align: right;">7,109</td>
+<td style="text-align: right;">3,251</td>
+<td style="text-align: right;">656</td>
+<td style="text-align: right;">328</td>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">184</td>
+</tr>
+</tbody>
+</table></div>
+<p>Últimos cuatro trimestres: YoY calculado a partir de cifras redondeadas. EBIT normalizado es la definición de diagnóstico anterior, no GAAP.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Trimestre</th>
+<th style="text-align: right;">Fees</th>
+<th style="text-align: right;">Fees YoY</th>
+<th style="text-align: right;">Ingresos GAAP</th>
+<th style="text-align: right;">Ventas YoY</th>
+<th style="text-align: right;">EBIT normalizado</th>
+<th style="text-align: right;">EBIT YoY</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">FCF simple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2025Q4</td>
+<td style="text-align: right;">307</td>
+<td style="text-align: right;">4.4%</td>
+<td style="text-align: right;">1789</td>
+<td style="text-align: right;">11.7%</td>
+<td style="text-align: right;">162</td>
+<td style="text-align: right;">20.0%</td>
+<td style="text-align: right;">313</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">236</td>
+</tr>
+<tr class="even">
+<td>2026Q1</td>
+<td style="text-align: right;">333</td>
+<td style="text-align: right;">8.5%</td>
+<td style="text-align: right;">1748</td>
+<td style="text-align: right;">1.7%</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">8.3%</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">77</td>
+</tr>
+<tr class="odd">
+<td>2026Q2</td>
+<td style="text-align: right;">324</td>
+<td style="text-align: right;">7.6%</td>
+<td style="text-align: right;">1829</td>
+<td style="text-align: right;">1.2%</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">9.1%</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="even">
+<td>2026Q3</td>
+<td style="text-align: right;">327</td>
+<td style="text-align: right;">15.5%</td>
+<td style="text-align: right;">1743</td>
+<td style="text-align: right;">-2.4%</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">34.3%</td>
+<td style="text-align: right;">-135</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">-157</td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-K 2025 y 10-Q marzo/junio/septiembre</a><a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000017/h-20260331.htm" title="Hyatt 10-Q marzo 2026">S3</a><a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817425000111/h-20250930.htm" title="Hyatt 10-Q septiembre 2025">S5</a>.</p>
+<p>El CAGR 2023–25 de comisiones brutas fue 11,1%, frente a 3,2% de ingresos consolidados. El EBIT normalizado de diagnóstico creció aproximadamente 16,3% anual, pero la caja reportada empeoró. El beneficio de 2024 no es una base repetible: incluyó $1.245m de ganancias por ventas inmobiliarias. Tampoco la pérdida de 2025 demuestra por sí sola deterioro del negocio de comisiones. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000007/h-20251231.htm" title="Hyatt 10-K 2025">10-K 2025, estados de resultados y flujos</a></p>
+<p>TTM a septiembre de 2026 frente al TTM previo: comisiones $1.291m vs $1.185m (+8,9%); ingresos económicos netos de reembolsos $3.251m vs $3.339m (−2,6%, afectados por perímetro); EBIT normalizado $656m vs $557m (+17,8%); CFO $328m vs $301m; capex $144m vs $194m; FCF simple $184m vs $107m. Los datos trimestrales de caja son diferencias de estados acumulados, no anualizaciones del último trimestre. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-K y 10-Q</a><a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000017/h-20260331.htm" title="Hyatt 10-Q marzo 2026">S3</a><a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817425000111/h-20250930.htm" title="Hyatt 10-Q septiembre 2025">S5</a></p>
+<h3 id="transacciones-y-comparabilidad">Transacciones y comparabilidad</h3>
+<p>La adquisición de Playa se cerró en junio de 2025. El desembolso a accionistas fue $1.497m y se repagó deuda de Playa de $1.078m, incluido interés. El precio contable total, incluyendo participación previamente poseída, fue $1.697m. Se vendieron los 15 resorts durante 2025 por aproximadamente $2.000m, cifra que incluye una inversión preferente de $200m y posible contraprestación adicional. No fueron $2.000m de efectivo libre. La caja neta de disposiciones fue $1.603m. Se retuvieron contratos de gestión a largo plazo para 13 de los 15 hoteles. El goodwill inicial de $973m no era fiscalmente deducible a la adquisición. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-Q nota 7; 10-K nota 7</a><a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000007/h-20251231.htm" title="Hyatt 10-K 2025">S3</a></p>
+<p>La transformación reduce ingresos y capex inmobiliarios mientras añade comisiones. No se añaden al DCF otra vez los ingresos de venta de inmuebles ya cerrados ni el valor de las propiedades que generan los flujos modelizados. La preferente de Playa se cuenta dentro de la cartera financiera identificada, una sola vez.</p>
+<p>La definición de EBITDA cambió en 2026: ya no incluye EBITDA proporcional de hospitality ventures no consolidadas. FY2025 pasó de $1.159m a $1.103m; al restar $78m por activos vendidos, la base comparable fue $1.025m. El EBITDA ajustado TTM correcto bajo la definición nueva es $1.103m + $858m − $825m = <strong>$1.136m</strong>. Comparar la guía actual con el antiguo $1.159m confundiría perímetro y definición. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000029/q32026earningsrelease.htm" title="Hyatt resultados y guía Q3 2026, 29 octubre">Reconciliaciones Q3</a></p>
+<p>Bahia Principe se consolida aunque Hyatt no posee todo el negocio. Por eso los flujos consolidados requieren deducir minoritarios. Las garantías de propietarios, la exposición all-inclusive y financiación de proyectos hacen que asset-light no signifique ausencia de capital o de riesgo contractual. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-Q notas 4, 6, 13</a></p>
+<h2 id="guía-actual-y-caja-que-realmente-llega-al-accionista">Guía actual y caja que realmente llega al accionista</h2>
+<p>Guía del 29 de octubre para FY2026: comisiones $1.320–1.335m; EBITDA ajustado $1.170–1.200m; G&amp;A ajustado $440–445m; capex aproximadamente $130m; beneficio atribuible $240–310m; adjusted FCF $580–630m. RevPAR +5–5,5%; crecimiento de habitaciones aproximadamente 6%. No incluye futuras operaciones no cerradas. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000029/q32026earningsrelease.htm" title="Hyatt resultados y guía Q3 2026, 29 octubre">Resultados Q3</a></p>
+<p>La reconciliación oficial de caja es esencial:</p>
+<ul>
+<li>CFO $452–501m menos capex $130m = FCF reportado $322–371m.</li>
+<li>Más impuestos sobre ventas de activos $0–1m.</li>
+<li>Más $72m de impuestos y otros costes ligados a la adquisición Playa.</li>
+<li>Más $186m de distribución de compensación diferida a un antiguo ejecutivo.</li>
+<li>Resultado: adjusted FCF $580–630m.</li>
+</ul>
+<p>Los $186m se financiaron íntegramente vendiendo inversiones en rabbi trusts, registradas en inversión, mientras el pago pasó por CFO. No implicaron una salida neta de caja global de ese importe. Los activos y pasivos restantes de esos trusts, $441m cada uno, se neutralizan en la valoración. No son caja sobrante para el accionista. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000029/q32026earningsrelease.htm" title="Hyatt resultados y guía Q3 2026, 29 octubre">Reconciliación de FCF Q3</a></p>
+<p>En 9M2026 el CFO fue solo $15m, pero entraron $368m por deferred revenue del programa de fidelización y salieron $794m en capital de trabajo y otros conceptos. Key money pagado fue $116m. La distribución de compensación y los movimientos de programas impiden equiparar ese CFO con capacidad recurrente. A la vez, <strong>el adjusted FCF no es FCFF</strong>: sigue siendo apalancado, añade SBC vía CFO e incluye interés de la cartera financiera. Interés financiero 9M fue $96m. En inversión hubo además $103m de nuevas financiaciones a propietarios frente a $27m cobrados, y $83m de aportaciones de capital frente a $7m de retornos. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-Q, flujos y notas 6 y 19</a></p>
+<p>Como control de orden de magnitud, $605m de adjusted FCF, más $260m de interés por (1−28,5%), menos SBC $62m y menos aproximadamente $128m de interés financiero anualizado por (1−28,5%), equivale a unos $637m antes de pérdidas de crédito futuras y otros ajustes de cash tax/capital de trabajo. El FCFF operativo normalizado inicial del modelo es $535m. No se fuerza a igualdad: $128m es anualización, la guía no ofrece una conciliación completa de cash taxes y fondos de programas para un FCFF segregado, y el modelo no capitaliza indefinidamente el aumento de saldos de fidelización. Como prueba favorable, <strong>sumar $100m de FCFF adicional anual creciente al 3% eleva el valor central solo a unos $102</strong>, todavía lejos de $185,44. Esta diferencia es una sensibilidad explícita de conversión, no una razón para declarar inconclusa toda la investigación.</p>
+<h2 id="modelo-de-10-años">Modelo de 10 años</h2>
+<p>Se usa el mismo motor para valoración directa, escenarios y reverse DCF. Primer bloque explícito 2027–31, transición 2032–36, terminal 2037. Se incluye un pequeño stub de 58 días hasta fin de 2026. Los flujos anuales se descuentan al cierre de cada año. El balance utilizado es el último publicado, 30 de septiembre; no se inventa un balance de noviembre. Los cambios operativos o financieros posteriores que no están divulgados son riesgo de actualización, no hechos.</p>
+<p>Base FY2026: fees $1.327,5m, G&amp;A ajustado $442,5m y resto de contribución de EBITDA $300m, que reconcilian con $1.185m de EBITDA ajustado. El residual de $300m agrupa owned/leased, distribución y eliminaciones; no se presenta como guía segmentaria oficial. Las bases de ingresos owned $1.020m y distribución $850m son estimaciones para mix y capital de trabajo, no guía de ingresos de la compañía.</p>
+<p><strong>EBIT = EBITDA ajustado − SBC − contra revenue − costes normalizados de transacción − D&amp;A.</strong> El EBIT inicial es $713m: $1.185 − $62 − $75 − $40 − $295.</p>
+<p><strong>FCFF = EBIT × (1−tasa) + D&amp;A + amortización no monetaria de key money − capex − key money pagado − coste esperado de nuevas pérdidas crediticias − incremento de capital de trabajo.</strong></p>
+<ul>
+<li>Base: fees +10,8%, +10,8%, +8,5%, +7,5%, +6,5%; transición +5,8%, +5,1%, +4,4%, +3,7%, +3%. G&amp;A +2,5%; resto de EBITDA +3%. El modelo alcanza en 2028 fees $1.630m y EBITDA ajustado $1.483m, dentro de la ilustración oficial $1.550–1.710m y $1.400–1.585m. No supone un fracaso de esa ilustración. <a href="https://s203.q4cdn.com/249399152/files/doc_presentations/2026/2026-Hyatt-Investor-Day-Presentation_vFinal.pdf" title="Hyatt Investor Day 2026, slides 74–78 y apéndice">Investor Day, slides 74–78 y apéndice</a></li>
+<li>SBC se resta como coste económico, crece 6% anual en base. No se añade de vuelta en FCFF. No se supone recompra futura gratuita ni se acumula otra dilución anual por la misma SBC.</li>
+<li>Contra revenue inicial $75m; el modelo estima que 80% es amortización no monetaria de key money y 20% coste económico/cure. La composición exacta no está desglosada prospectivamente. El total crece con fees a elasticidad 0,6. La parte monetaria no se añade de vuelta.</li>
+<li>Capex base $135m en 2027 y +3% anual; D&amp;A $302,5m en 2027, $310m en 2028 y +$5m anual. D&amp;A incluye amortización de adquisiciones, por eso la reinversión contable neta puede ser negativa durante la fase explícita. Esa liberación no se extrapola al terminal.</li>
+<li>Key money $160m de partida, coherente con ilustración de $150–170m anuales. A partir de 2029 crece al mayor de 3% o crecimiento de fees menos 3 puntos, haciendo que más aperturas requieran más dinero. El reverse DCF conserva esta regla; no permite crecimiento adicional totalmente gratuito.</li>
+<li>$20m anuales iniciales de coste económico de <strong>nuevas</strong> pérdidas de crédito/soporte, +3%, aparte de las garantías existentes descontadas en el puente. Delta de capital de trabajo = 10% del aumento de ingresos económicos brutos. Las contribuciones netas a programas no se consideran financiación perpetua gratis.</li>
+<li>Los préstamos y preferentes ya existentes se valoran fuera del negocio. Nuevas inversiones financieras a valor razonable se suponen de NPV cero, con principal y recuperación emparejados, no gasto íntegro sin activo ni retornos gratis. La hipótesis puede fallar si se presta por debajo del coste de capital; la provisión de crédito y el escenario bajista cubren parte de ese riesgo. No se incluye adquisición futura de marcas sin pagarla.</li>
+<li>Tasa normal de impuestos 28,5%, coherente con el rango ilustrativo 27–30%; no se convierte el beneficio fiscal no monetario de Q3 en tasa permanente. No se añade una monetización separada de activos fiscales cuya utilización ya puede estar reflejada en tasas futuras.</li>
+</ul>
+<p>La ilustración corporativa de 2028 no es guidance contractual ni garantía. El escenario base supone que una fracción relevante del crecimiento actual continúa, con moderación posterior.</p>
+<h3 id="coste-de-capital-y-terminal">Coste de capital y terminal</h3>
+<p>WACC base 9,5%. Referencia libre de riesgo: Treasury a 10 años 4,95% al 3 de noviembre. Se emplean, como hipótesis del analista, beta normalizada 1,25 y prima de acciones 4,5%, coste de equity 10,58%; deuda marginal 6,0%, impuesto 28,5%, pesos aproximados 80% equity/20% deuda: WACC calculado 9,32%, redondeado a 9,5%. La beta no se presenta como regresión propia; reconoce la transición asset-light sin tratar Hyatt como ingreso contractual sin ciclo. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" title="Treasury Daily Par Yield Curve, 3 noviembre 2026">Treasury</a></p>
+<p>El coste marginal de deuda se contrasta con el nuevo bono: cupón 5,95%, yield 6,005%, precio 99,688, emisión $400m con cierre esperado 12 de noviembre. El menor coste histórico de la cartera no sirve como único coste de refinanciación. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000110465926121328/tm2628589d3_fwp.htm" title="Hyatt pricing term sheet, 2 noviembre 2026">Pricing term sheet</a></p>
+<p>Terminal base: g nominal 3%, ROIC incremental sostenible 20%, <strong>reinversión = NOPAT × g / ROIC</strong>. El 20% es supuesto de retorno futuro de la red, no afirmación de ROIC histórico consolidado. Los activos adquiridos, goodwill y soporte a propietarios impiden deducir automáticamente ese retorno de la etiqueta asset-light. ROIC terminal 15% bajista y 25% alcista.</p>
+<p>En base, NOPAT terminal $1.290m, reinversión terminal $193m y FCFF terminal $1.096m. Se sacrifica caja en terminal para sostener crecimiento, en vez de añadir g a todo el FCF sin reinversión. El terminal explica 53,2% del EV central.</p>
+<h3 id="proyección-y-valoración-por-escenarios">Proyección y valoración por escenarios</h3>
+<p>Hipótesis distintas, sin mezclar caja de un escenario con descuento de otro:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hipótesis</th>
+<th>Bajista</th>
+<th>Base</th>
+<th>Alcista</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fees años 1–5</td>
+<td>3%, 4%, 5%, 5%, 5%</td>
+<td>10,8%, 10,8%, 8,5%, 7,5%, 6,5%</td>
+<td>14%, 14%, 13%, 12%, 11%</td>
+</tr>
+<tr class="even">
+<td>Fees años 6–10</td>
+<td>4,5% a 2,5%</td>
+<td>5,8% a 3%</td>
+<td>9,5% a 3,5%</td>
+</tr>
+<tr class="odd">
+<td>G&amp;A anual</td>
+<td>3,5%</td>
+<td>2,5%</td>
+<td>2%</td>
+</tr>
+<tr class="even">
+<td>Resto EBITDA</td>
+<td>−15% en año 1, +1% año 2, luego +2%</td>
+<td>+3%</td>
+<td>+5%</td>
+</tr>
+<tr class="odd">
+<td>Impuesto normal</td>
+<td>30%</td>
+<td>28,5%</td>
+<td>27%</td>
+</tr>
+<tr class="even">
+<td>Coste crédito nuevo inicial</td>
+<td>35</td>
+<td>20</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>WACC</td>
+<td>11%</td>
+<td>9,5%</td>
+<td>8,5%</td>
+</tr>
+<tr class="even">
+<td>g terminal</td>
+<td>2,5%</td>
+<td>3%</td>
+<td>3,5%</td>
+</tr>
+<tr class="odd">
+<td>ROIC terminal</td>
+<td>15%</td>
+<td>20%</td>
+<td>25%</td>
+</tr>
+</tbody>
+</table></div>
+<p>El escenario alcista exige ejecución por encima o en la parte alta de la ilustración inicial de fees, con apalancamiento operativo y financiación favorable durante más tiempo. El bajista no supone quiebra: la caída del valor común procede de un EV moderado frente a reclamaciones previas importantes.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Fees base</th>
+<th style="text-align: right;">EBITDA ajustado base</th>
+<th style="text-align: right;">EBIT económico base</th>
+<th style="text-align: right;">FCFF bajista</th>
+<th style="text-align: right;">FCFF base</th>
+<th style="text-align: right;">FCFF alcista</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">1,471</td>
+<td style="text-align: right;">1,326</td>
+<td style="text-align: right;">853</td>
+<td style="text-align: right;">484</td>
+<td style="text-align: right;">641</td>
+<td style="text-align: right;">706</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">1,630</td>
+<td style="text-align: right;">1,483</td>
+<td style="text-align: right;">994</td>
+<td style="text-align: right;">491</td>
+<td style="text-align: right;">741</td>
+<td style="text-align: right;">851</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">1,768</td>
+<td style="text-align: right;">1,620</td>
+<td style="text-align: right;">1,117</td>
+<td style="text-align: right;">516</td>
+<td style="text-align: right;">826</td>
+<td style="text-align: right;">996</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">1,901</td>
+<td style="text-align: right;">1,750</td>
+<td style="text-align: right;">1,234</td>
+<td style="text-align: right;">545</td>
+<td style="text-align: right;">906</td>
+<td style="text-align: right;">1,148</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">2,024</td>
+<td style="text-align: right;">1,872</td>
+<td style="text-align: right;">1,342</td>
+<td style="text-align: right;">576</td>
+<td style="text-align: right;">981</td>
+<td style="text-align: right;">1,305</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">2,142</td>
+<td style="text-align: right;">1,987</td>
+<td style="text-align: right;">1,444</td>
+<td style="text-align: right;">604</td>
+<td style="text-align: right;">1,051</td>
+<td style="text-align: right;">1,457</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">2,251</td>
+<td style="text-align: right;">2,094</td>
+<td style="text-align: right;">1,538</td>
+<td style="text-align: right;">627</td>
+<td style="text-align: right;">1,115</td>
+<td style="text-align: right;">1,600</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">2,350</td>
+<td style="text-align: right;">2,191</td>
+<td style="text-align: right;">1,622</td>
+<td style="text-align: right;">646</td>
+<td style="text-align: right;">1,171</td>
+<td style="text-align: right;">1,727</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">2,437</td>
+<td style="text-align: right;">2,276</td>
+<td style="text-align: right;">1,693</td>
+<td style="text-align: right;">658</td>
+<td style="text-align: right;">1,218</td>
+<td style="text-align: right;">1,830</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">2,510</td>
+<td style="text-align: right;">2,347</td>
+<td style="text-align: right;">1,751</td>
+<td style="text-align: right;">663</td>
+<td style="text-align: right;">1,255</td>
+<td style="text-align: right;">1,904</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Resultado</th>
+<th style="text-align: right;">Bajista</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Alcista</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PV flujos explícitos</td>
+<td style="text-align: right;">3,254</td>
+<td style="text-align: right;">5,813</td>
+<td style="text-align: right;">8,159</td>
+</tr>
+<tr class="even">
+<td>PV stub</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">86</td>
+</tr>
+<tr class="odd">
+<td>PV terminal</td>
+<td style="text-align: right;">2,567</td>
+<td style="text-align: right;">6,707</td>
+<td style="text-align: right;">15,000</td>
+</tr>
+<tr class="even">
+<td>EV operativo</td>
+<td style="text-align: right;">5,903</td>
+<td style="text-align: right;">12,603</td>
+<td style="text-align: right;">23,245</td>
+</tr>
+<tr class="odd">
+<td>Equity común</td>
+<td style="text-align: right;">1,549</td>
+<td style="text-align: right;">8,249</td>
+<td style="text-align: right;">18,891</td>
+</tr>
+<tr class="even">
+<td>Valor por acción</td>
+<td style="text-align: right;">16.18</td>
+<td style="text-align: right;">86.19</td>
+<td style="text-align: right;">197.37</td>
+</tr>
+<tr class="odd">
+<td>Potencial vs $185,44</td>
+<td style="text-align: right;">-91.3%</td>
+<td style="text-align: right;">-53.5%</td>
+<td style="text-align: right;">6.4%</td>
+</tr>
+<tr class="even">
+<td>Peso terminal en EV</td>
+<td style="text-align: right;">43.5%</td>
+<td style="text-align: right;">53.2%</td>
+<td style="text-align: right;">64.5%</td>
+</tr>
+</tbody>
+</table></div>
+<p>El EBIT base pasa de aproximadamente $713m normalizados en 2026 a $1.751m en 2036. Ya incorpora una mejora considerable de mix y escala. No se necesita recortar arbitrariamente el precio final para obtener la conclusión.</p>
+<h3 id="sensibilidad-wacc-y-crecimiento-terminal">Sensibilidad WACC y crecimiento terminal</h3>
+<p>Base operativa constante, ROIC terminal 20%; $ por acción.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC / g</th>
+<th style="text-align: right;">2,0%</th>
+<th style="text-align: right;">2,5%</th>
+<th style="text-align: right;">3,0%</th>
+<th style="text-align: right;">3,5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8.5%</td>
+<td style="text-align: right;">99.94</td>
+<td style="text-align: right;">104.65</td>
+<td style="text-align: right;">110.19</td>
+<td style="text-align: right;">116.81</td>
+</tr>
+<tr class="even">
+<td>9.0%</td>
+<td style="text-align: right;">89.15</td>
+<td style="text-align: right;">92.87</td>
+<td style="text-align: right;">97.20</td>
+<td style="text-align: right;">102.29</td>
+</tr>
+<tr class="odd">
+<td>9.5%</td>
+<td style="text-align: right;">79.79</td>
+<td style="text-align: right;">82.77</td>
+<td style="text-align: right;">86.19</td>
+<td style="text-align: right;">90.15</td>
+</tr>
+<tr class="even">
+<td>10.0%</td>
+<td style="text-align: right;">71.61</td>
+<td style="text-align: right;">74.01</td>
+<td style="text-align: right;">76.74</td>
+<td style="text-align: right;">79.87</td>
+</tr>
+<tr class="odd">
+<td>10.5%</td>
+<td style="text-align: right;">64.39</td>
+<td style="text-align: right;">66.34</td>
+<td style="text-align: right;">68.54</td>
+<td style="text-align: right;">71.03</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="reverse-dcf-qué-exige-18544">Reverse DCF: qué exige $185,44</h3>
+<p>Se resuelve el crecimiento anual de fees de los primeros cinco años, seguido de cinco años de transición lineal a g, dentro del mismo motor, con el mismo puente patrimonial y reinversión de key money vinculada al crecimiento. No se cambia el beneficio inicial para hacer encajar el precio.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th style="text-align: right;">g</th>
+<th style="text-align: right;">ROIC terminal</th>
+<th style="text-align: right;">Fees CAGR años 1–5 requerido</th>
+<th style="text-align: right;">Fees año 5</th>
+<th style="text-align: right;">Fees año 10</th>
+<th style="text-align: right;">FCFF año 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9.5%</td>
+<td style="text-align: right;">3.0%</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">16.4%</td>
+<td style="text-align: right;">2,840</td>
+<td style="text-align: right;">4,233</td>
+<td style="text-align: right;">1,486</td>
+</tr>
+<tr class="even">
+<td>8.5%</td>
+<td style="text-align: right;">3.0%</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">13.7%</td>
+<td style="text-align: right;">2,527</td>
+<td style="text-align: right;">3,586</td>
+<td style="text-align: right;">1,287</td>
+</tr>
+<tr class="odd">
+<td>8.5%</td>
+<td style="text-align: right;">3.5%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">12.5%</td>
+<td style="text-align: right;">2,396</td>
+<td style="text-align: right;">3,374</td>
+<td style="text-align: right;">1,204</td>
+</tr>
+<tr class="even">
+<td>10.5%</td>
+<td style="text-align: right;">2.5%</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">19.9%</td>
+<td style="text-align: right;">3,293</td>
+<td style="text-align: right;">5,152</td>
+<td style="text-align: right;">1,773</td>
+</tr>
+</tbody>
+</table></div>
+<p>Con las operaciones del caso base, el WACC que iguala el precio sería aproximadamente <strong>6.71%</strong>, muy inferior al 9,5% defendido. Esto es una tasa de descuento implícita de los flujos operativos, no una TIR accionarial prometida.</p>
+<p>Al 9,5%, se requieren fees creciendo alrededor de 16,4% durante cinco años y después moderándose, frente a 9–13% ilustrado por la compañía para 2025–28. Incluso la combinación más favorable de descuento y retorno terminal necesita sostener aproximadamente 12,5% cinco años, más allá del horizonte corporativo. El reverse conserva costes G&amp;A y SBC del caso base, permitiendo fuerte apalancamiento operativo; si esas necesidades escalaran más con el crecimiento, el requisito sería todavía más exigente.</p>
+<h2 id="puente-de-ev-a-valor-común">Puente de EV a valor común</h2>
+<p>Se valora el negocio operativo consolidado y se añaden únicamente activos financieros identificados cuyos rendimientos no están en ese EBIT. Se deducen deuda y reclamaciones identificadas. No se suman goodwill, marca, key money ni inmuebles ya contenidos en los flujos.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th style="text-align: right;">Ajuste al EV, $m</th>
+<th>Tratamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja excedentaria estimada</td>
+<td style="text-align: right;">+226</td>
+<td>$454m de caja menos $28m en Bahia y reserva operativa analítica $200m. Los $41m de inversiones cortas no se consideran excedente automáticamente.</td>
+</tr>
+<tr class="even">
+<td>Préstamos financieros netos, excluidas fees diferidas</td>
+<td style="text-align: right;">+438</td>
+<td>Financiaciones netas $570m menos $132m de fees diferidas operativas. No se añade su ingreso financiero al FCFF.</td>
+</tr>
+<tr class="odd">
+<td>Inversiones preferentes hoteleras</td>
+<td style="text-align: right;">+462</td>
+<td>$359m HTM netos y $103m AFS. Incluye Playa; no se suma otra vez.</td>
+</tr>
+<tr class="even">
+<td>Equity-method ventures</td>
+<td style="text-align: right;">+225</td>
+<td>Valor contable como proxy. La participación cotizada tenía valor de mercado $193m, que no se añade otra vez al total.</td>
+</tr>
+<tr class="odd">
+<td>Deuda principal y finance leases</td>
+<td style="text-align: right;">−4.458</td>
+<td>$4.455m antes de descuentos/comisiones más $3m de finance leases. Deuda contable $4.430m.</td>
+</tr>
+<tr class="even">
+<td>Reclamaciones fiscales</td>
+<td style="text-align: right;">−517</td>
+<td>Unrecognized tax benefits registrados. No se resta además el escenario del litigio de fidelización $434m.</td>
+</tr>
+<tr class="odd">
+<td>Garantías existentes</td>
+<td style="text-align: right;">−215</td>
+<td>Fair value estimado por la empresa, frente a $198m de pasivo registrado corriente y no corriente.</td>
+</tr>
+<tr class="even">
+<td>Contraprestación contingente</td>
+<td style="text-align: right;">−156</td>
+<td>Fair value registrado, no máximo potencial de $352m.</td>
+</tr>
+<tr class="odd">
+<td>Contraprestación diferida</td>
+<td style="text-align: right;">−45</td>
+<td>$22m no corriente + $23m corriente.</td>
+</tr>
+<tr class="even">
+<td>Intereses minoritarios</td>
+<td style="text-align: right;">−314</td>
+<td>Proxy contable para el derecho económico de terceros; no valor de mercado certificado.</td>
+</tr>
+<tr class="odd">
+<td><strong>Ajuste neto</strong></td>
+<td style="text-align: right;"><strong>−4.354</strong></td>
+<td>Las principales incertidumbres de clasificación se prueban aparte.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuentes: balance y notas 4, 6, 9–14 del <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-Q</a>.</p>
+<p>Los $441m de rabbi trusts se compensan con su pasivo de $441m. No se añade la cartera general de fidelización o seguros como caja corporativa libre: el 10-K especifica que sus fondos financian los programas y que los préstamos internos pueden ser reembolsables a demanda. Tampoco se resta todo el saldo de fidelización como si fuera deuda financiera, pues los cobros y costes recurrentes de dichos programas se han excluido de los flujos. Las obligaciones de seguros permanecen operativas y sus inversiones asociadas no se añaden como excedente. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000007/h-20251231.htm" title="Hyatt 10-K 2025">10-K, políticas de fidelización y otras inversiones</a></p>
+<p><strong>Arrendamientos:</strong> finance leases $3m ya están en deuda. Pasivos de operating leases no corrientes $218m; la parte corriente no aparece separada en el balance resumido de septiembre, frente a $35m al cierre de 2025. Se mantiene el gasto de alquiler dentro del negocio y no se deducen otra vez esos operating leases del EV. Los pagos de leases operativos fueron $34m en 9M2026. No se mezcla EBITDA después de alquiler con deuda capitalizada antes de alquiler. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-Q; 10-K nota de leases</a><a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000007/h-20251231.htm" title="Hyatt 10-K 2025">S3</a></p>
+<p>Acciones: 93,390088m comunes al 23 de octubre, más 2,323109m de efecto dilutivo Q3 de premios ya existentes, total de trabajo <strong>95,713197m</strong>. Es aproximación de dilución actual, no promesa de recompras ni acumulación de nueva dilución además del coste SBC. Usar únicamente comunes llevaría el caso central a aproximadamente $88,33, no a $185. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-Q portada y nota EPS</a></p>
+<p>La caja exactamente disponible para accionistas y el valor realizable de minoritarios no están publicados con precisión de mercado. Por eso se incluyen sensibilidades. No impiden una decisión: incluso quitando íntegramente del puente impuestos, garantías y minoritarios, el central sería aproximadamente $97. Si todos los activos de préstamos/preferentes/JV valieran cero, caería a $74,44. Caja excedentaria entre cero y $454m mueve el central aproximadamente entre $83,83 y $88,57.</p>
+<h2 id="liquidez-deuda-y-riesgos-de-financiación">Liquidez, deuda y riesgos de financiación</h2>
+<p>Deuda contable $4.430m; caja más inversiones cortas $495m; deuda neta contable simple $3.935m. La ratio simple sobre EBITDA FY2026 medio es 3,3x. EBIT económico inicial/intereses es 2,7x. Hay acceso a financiación y no se observa incumplimiento de covenants divulgado, pero no es una estructura sin riesgo. El revolving tenía $150m utilizado y aproximadamente $1.347m disponible. Capacidad no dispuesta no se añade a caja ni al equity. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-Q</a></p>
+<p>Los vencimientos corrientes eran $755m, incluidos $600m de bonos de 2027. La emisión de $400m al 5,95% se fijó el 2 de noviembre y tiene cierre previsto el 12 de noviembre; el prospecto definitivo del 3 de noviembre estima <strong>$395,3m de proceeds netos</strong> para contribuir al repago de los $600m vencidos el 30 de enero de 2027. No se contabiliza aún como deuda emitida, efectivo recibido ni repago cerrado. Harán falta aproximadamente $205m adicionales antes de intereses/gastos. El movimiento de refinanciación no crea valor patrimonial automático. Calificaciones publicadas en el term sheet: Baa3/BBB−/BBB−, perspectivas estables. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000110465926121328/tm2628589d3_fwp.htm" title="Hyatt pricing term sheet, 2 noviembre 2026">Term sheet y prospecto definitivo</a><a href="https://www.sec.gov/Archives/edgar/data/1468174/000110465926121981/tm2628589-2_424b2.htm" title="Hyatt prospecto definitivo, 3 noviembre 2026">S10</a></p>
+<p>Riesgos materiales que quedan en la tesis: - Distribución/all-inclusive: demanda y coste comercial, huracanes y cierres, incentivos de gestión ligados al beneficio hotelero. - Propietarios: $691m de compromisos condicionales de inversión/préstamos; algunas garantías no permiten cuantificar un máximo. No se resta el máximo entero además de costes y activos del modelo, pero tampoco se ignora en liquidez. - Crédito: préstamos brutos $623m, provisión $53m; $182m de bruto en nonaccrual, incluidos fees diferidos. Una recuperación inferior al libro reduce los activos del puente. - Impuestos: el litigio de fidelización continúa. Si prevaleciera la antigua opinión del Tax Court, la estimación para 2012–26 era $434m incluyendo $76m de interés neto de beneficio fiscal; el recurso y remisión no equivalen a eliminación de la obligación. Ya se descuenta un stock de reclamaciones fiscales de $517m. - Adquisiciones: $156m de contraprestación contingente valorada frente a máximo identificable $352m y ciertos compromisos sin máximo estimable. Futuras compras no pueden contarse como crecimiento orgánico gratis. - Gobernanza: estructura de clases A/B y control de accionistas de referencia; el accionista minoritario no controla el calendario de ventas, recompras o adquisiciones. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000034/h-20260930.htm" title="Hyatt 10-Q al 30 de septiembre de 2026">10-Q y 10-K</a><a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000007/h-20251231.htm" title="Hyatt 10-K 2025">S3</a></p>
+<h2 id="comparables-control-no-sustituto-del-dcf">Comparables: control, no sustituto del DCF</h2>
+<p>Se compara EV simple (acciones actuales × precio + principal de deuda − caja) con EBITDA ajustado FY2026 y una segunda columna después de SBC. Cotizaciones del 3 de noviembre: H $185,44; MAR $416,38; HLT $363,83. Se usan acciones actuales de documentos primarios, no la cantidad retrasada de algunos agregadores. <a href="https://stockanalysis.com/stocks/h/" title="H cierre 3 noviembre 2026">Cotizaciones</a><a href="https://finance.yahoo.com/quote/HLT/" title="HLT cierre 3 noviembre 2026">S12</a></p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Compañía</th>
+<th style="text-align: right;">Acciones m</th>
+<th style="text-align: right;">EV simple $m</th>
+<th style="text-align: right;">EBITDA guía FY26 $m</th>
+<th style="text-align: right;">EV/EBITDA</th>
+<th style="text-align: right;">EV/(EBITDA−SBC)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hyatt</td>
+<td style="text-align: right;">93,390</td>
+<td style="text-align: right;">21.281</td>
+<td style="text-align: right;">1.185</td>
+<td style="text-align: right;">18,0x</td>
+<td style="text-align: right;">19,0x</td>
+</tr>
+<tr class="even">
+<td>Marriott</td>
+<td style="text-align: right;">257,504</td>
+<td style="text-align: right;">123.520</td>
+<td style="text-align: right;">6.086,5</td>
+<td style="text-align: right;">20,3x</td>
+<td style="text-align: right;">21,2x</td>
+</tr>
+<tr class="odd">
+<td>Hilton</td>
+<td style="text-align: right;">222,500</td>
+<td style="text-align: right;">93.631</td>
+<td style="text-align: right;">4.070</td>
+<td style="text-align: right;">23,0x</td>
+<td style="text-align: right;">24,2x</td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-third-quarter-2026-results" title="Marriott Q3 2026">Marriott Q3 y 10-Q</a><a href="https://www.sec.gov/Archives/edgar/data/1048286/000104828626000043/mar-20260930.htm" title="Marriott 10-Q septiembre 2026">S15</a>; <a href="https://ir.hilton.com/_assets/_0dae474c42299bf06914d109d97c2a81/hilton/news/2026-10-27_Hilton_Reports_Third_Quarter_419.pdf" title="Hilton Q3 2026">Hilton Q3</a>. Marriott ya publicó el 2 de noviembre y Hilton el 27 de octubre; no se utilizan sus estimaciones pre-resultados. Marriott EPS ajustado FY26 medio $12,105 implica P/E aproximado 34,4x; Hilton $9,10 implica aproximadamente 40,0x. No se compara con un P/E GAAP de Hyatt afectado por impuestos/disposiciones.</p>
+<p>Hyatt parece más barato en EBITDA. Sin embargo, esos múltiplos no igualan exposición a hoteles propios, distribución, soporte a propietarios, garantías, impuestos, contract investment amortization ni minoritarios. El ajuste SBC reduce una diferencia de definición, no todas. EV de la tabla tampoco es el EV operativo depurado del DCF. El descuento relativo no demuestra infravaloración absoluta cuando el sector ya cotiza con expectativas elevadas. No se importa el múltiplo más alto de Hilton para cerrar la distancia del DCF.</p>
+<h2 id="conclusión-y-condiciones-para-revisar">Conclusión y condiciones para revisar</h2>
+<p><strong>Stage 3: completado. Resultado de valoración: no aprobado al precio de referencia.</strong> Calidad del negocio de comisiones: favorable; calidad de conversión de caja y balance: mixta, con costes/obligaciones reales; riesgo de precio: elevado. La investigación no exige esperar otro trimestre para pronunciarse y no etiqueta como incompleto un resultado que sencillamente no pasa.</p>
+<p>La tesis se reforzaría con aperturas que se acerquen sostenidamente al 6–8%, fees dentro o por encima del rango de Investor Day, recuperación de distribución/all-inclusive sin elevar soporte de propietarios, y conversión de FCF que demuestre que los ajustes temporales realmente desaparecen. La tesis se debilitaría con fees creciendo menos de 6%, recorte persistente de guía, deterioro de cartera crediticia, garantías adicionales o pagos fiscales que obliguen a más deuda/recompras financiadas.</p>
+<p>Q3 se publicó el <strong>29 de octubre de 2026</strong>, antes de la semana 2–6 de noviembre. No hay un siguiente anuncio de resultados confirmado para esa semana en las fuentes revisadas; no se presenta una fecha estimada de 2027 como confirmada. El siguiente hito financiero concreto es el cierre esperado de la refinanciación del 12 de noviembre, no otro earnings release. <a href="https://www.sec.gov/Archives/edgar/data/1468174/000146817426000029/q32026earningsrelease.htm" title="Hyatt resultados y guía Q3 2026, 29 octubre">Resultados Q3</a>, <a href="https://investors.hyatt.com/events-and-presentations/default.aspx" title="Eventos de Hyatt">eventos IR</a>, <a href="https://www.sec.gov/Archives/edgar/data/1468174/000110465926121328/tm2628589d3_fwp.htm" title="Hyatt pricing term sheet, 2 noviembre 2026">term sheet</a>.</p>
+<p>Una revisión de precio cerca del valor calculado podría reabrir la decisión fundamental sin exigir un descuento fijo del 15%, siempre que la tesis y financiación sigan intactas. Cualquier futura entrada requiere nueva validación técnica Stage 3.5 y de riesgo de cartera. Este análisis no autoriza ni ejecuta operaciones.</p>
+<h2 id="fuentes-verificadas">Fuentes verificadas</h2>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/H.html">Open full H dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/H/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/H/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/H/forecast_bear.csv">forecast_bear.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/H/history.csv">history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/H/forecast_bull.csv">forecast_bull.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/H/forecast_base.csv">forecast_base.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/H/history.json">history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/H/checks.json">checks.json</a></li>
+</ul>
+</main></body></html>

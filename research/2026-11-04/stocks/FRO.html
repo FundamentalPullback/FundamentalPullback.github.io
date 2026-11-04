@@ -1,0 +1,278 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FRO · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/FRO">← FRO profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A166 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">Esperar precio</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Base $37.24, sensitivity $35.6–40.1. EPS and freight rates normalized with fleet replacement. $40–45 only invites reassessment; it is not an approved entry.</strong></p>
+<h1 id="frontline-fro-stage-3-completo-4-de-noviembre-de-2026">Frontline (FRO): Stage 3 completo, 4 de noviembre de 2026</h1>
+<p><strong>Dictamen: vigilancia por precio; investigación fundamental terminada, compra no aprobada.</strong> A los <strong>52,41 USD</strong> del escáner del 3 de noviembre, el DCF central arroja <strong>37,24 USD</strong>. El rango central de sensibilidad es aproximadamente <strong>35,6–40,1 USD</strong>; escenarios adverso y favorable dan <strong>15,15 y 79,15 USD</strong>. La dispersión es real: los fletes extraordinarios pueden producir mucha caja, pero una flota de petroleros no es una perpetuidad sin reposición. La rentabilidad anual implícita del caso central para el accionista es <strong>4,1%</strong> a 52,41 USD, antes de sus impuestos personales. El escenario favorable sí puede justificar el precio; la evidencia disponible no permite convertirlo en escenario central con confianza.</p>
+<p>No se rechaza por una regla de descuento del 15%, por falta de crecimiento mínimo ni por un umbral universal de rentabilidad. Una revisión de entrada parcial alrededor de <strong>40–45 USD</strong> sería razonable si la tesis y la señal de entrada acompañan: las rentabilidades centrales modeladas serían 10,4% y 7,5%, respectivamente. Son precios para reevaluar, no órdenes ni compras automáticamente autorizadas.</p>
+<h2 id="corte-de-información-y-evento">1. Corte de información y evento</h2>
+<p>Precio: 52,41 USD, fuente <a href="https://fundamentalpullback.github.io/data/scan-3960.js">escáner 3960 del sitio</a>, consulta 4/11. El registro del escáner señala 3/11/26 17:27:04; no se ha certificado zona horaria ni que sea el cierre regular. P/E mostrado 7,858; máximo 59,75; retroceso 12,2%; RSI 49,4. Son filtros de selección, no una valoración.</p>
+<p>La <a href="https://www.frontlineplc.cy/calendar/">agenda oficial</a> sitúa Q3 el <strong>30 de noviembre de 2026</strong>. No hay publicación de resultados del 4–6 de noviembre que obligue a aplazar este análisis. El último estado completo publicado es Q2, de <strong>28 de agosto</strong>; el negocio y la flota se actualizan con comunicados posteriores. Q3 reservado no significa Q3 reportado. En particular, la venta de dos VLCC puede generar unos 110 millones de ganancia contable en Q3: no confundirla con una mejora recurrente de los fletes.</p>
+<h2 id="negocio-calidad-y-crecimiento">2. Negocio, calidad y crecimiento</h2>
+<p>Frontline combina VLCC, Suezmax y LR2/Aframax. Su escala, flota relativamente joven y tecnología eficiente son ventajas operativas; los contratos y relaciones comerciales ayudan, pero no eliminan su condición de tomador de precios. No es un compounder con ingresos recurrentes previsibles. La mayor parte del crecimiento reciente viene del precio del transporte, la composición de flota y la dislocación de rutas, no de crecimiento orgánico estable de volumen.</p>
+<p>La presentación de septiembre relaciona el mercado fuerte con rutas más largas, reposición de inventarios y dislocaciones de suministro. También muestra debilidad de demanda durante la crisis y un libro de pedidos significativo. Por tanto, conflicto prolongado puede sostener fletes, pero también elevar seguros, riesgos de navegación y demanda destruida. La paz tampoco es necesariamente positiva para sus beneficios: puede reducir millas recorridas y primas por escasez. <a href="https://www.frontlineplc.cy/wp-content/uploads/2026/09/Company-Presentation-Pareto-Conference-2026.pdf">Presentación del emisor, 17/9/2026</a>.</p>
+<h2 id="historial-financiero-y-normalización">3. Historial financiero y normalización</h2>
+<p>Millones de USD. FCF observado = CFO menos compras de buques/equipamiento; no incluye ingresos por venta de buques. No es equivalente a FCFF de ciclo normal.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ejercicio</th>
+<th style="text-align: right;">Ingresos brutos</th>
+<th style="text-align: right;">EBIT reportado</th>
+<th style="text-align: right;">EBIT sin otros ingresos operativos</th>
+<th style="text-align: right;">Beneficio neto</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex efectivo</th>
+<th style="text-align: right;">FCF observado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td style="text-align: right;">1.802,2</td>
+<td style="text-align: right;">746,7</td>
+<td style="text-align: right;">722,6</td>
+<td style="text-align: right;">656,4</td>
+<td style="text-align: right;">856,2</td>
+<td style="text-align: right;">1.631,4</td>
+<td style="text-align: right;">-775,2</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td style="text-align: right;">2.050,4</td>
+<td style="text-align: right;">781,7</td>
+<td style="text-align: right;">669,6</td>
+<td style="text-align: right;">495,6</td>
+<td style="text-align: right;">736,4</td>
+<td style="text-align: right;">915,2</td>
+<td style="text-align: right;">-178,8</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td style="text-align: right;">1.965,1</td>
+<td style="text-align: right;">598,8</td>
+<td style="text-align: right;">592,7</td>
+<td style="text-align: right;">379,1</td>
+<td style="text-align: right;">682,5</td>
+<td style="text-align: right;">12,5</td>
+<td style="text-align: right;">669,9</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los FCF negativos de 2023–24 incluyen adquisiciones y renovación; el FCF excepcionalmente alto de 2025 incluye un año casi sin compras de flota. Ninguno describe por sí solo la capacidad distribuible perpetua. Las ventas de activos fueron 142,7/431,9/37,2 millones, respectivamente, y se mantienen separadas. Fuente: <a href="https://ml-eu.globenewswire.com/Resource/Download/09634fab-1b1f-450b-969a-5e9078dff8ab">informe anual 2025, publicado 27/3/2026</a>.</p>
+<p>Últimos cuatro trimestres:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT reportado</th>
+<th style="text-align: right;">Beneficio neto</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">EBIT sin otros ingresos operativos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q3 2025</td>
+<td style="text-align: right;">432,7</td>
+<td style="text-align: right;">96,0</td>
+<td style="text-align: right;">40,3</td>
+<td style="text-align: right;">107,6</td>
+<td style="text-align: right;">3,2</td>
+<td style="text-align: right;">90,0</td>
+</tr>
+<tr class="even">
+<td>Q4 2025</td>
+<td style="text-align: right;">624,5</td>
+<td style="text-align: right;">277,7</td>
+<td style="text-align: right;">227,9</td>
+<td style="text-align: right;">283,4</td>
+<td style="text-align: right;">6,9</td>
+<td style="text-align: right;">277,7</td>
+</tr>
+<tr class="odd">
+<td>Q1 2026</td>
+<td style="text-align: right;">714,2</td>
+<td style="text-align: right;">585,1</td>
+<td style="text-align: right;">559,1</td>
+<td style="text-align: right;">382,5</td>
+<td style="text-align: right;">323,0</td>
+<td style="text-align: right;">370,0</td>
+</tr>
+<tr class="even">
+<td>Q2 2026</td>
+<td style="text-align: right;">943,3</td>
+<td style="text-align: right;">671,5</td>
+<td style="text-align: right;">659,2</td>
+<td style="text-align: right;">579,5</td>
+<td style="text-align: right;">330,8</td>
+<td style="text-align: right;">596,1</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuentes: <a href="https://www.frontlineplc.cy/fro-third-quarter-and-nine-months-2025-results/">Q3 2025</a>, <a href="https://ml-eu.globenewswire.com/Resource/Download/abf823aa-8dfa-4d18-bd72-6ab0c46d826b">Q4 2025, 27/2/2026</a>, <a href="https://ml-eu.globenewswire.com/Resource/Download/59431810-8e9c-4a39-b3d0-cc2dd63da402">Q2 2026, 28/8/2026</a>. Las diferencias de 0,001–0,002 millones entre sumas obedecen al redondeo de los estados trimestrales.</p>
+<p>TTM hasta junio de 2026: ingresos 2.714,7; EBIT 1.630,3; beneficio neto 1.486,5; CFO 1.353,0; capex 664,0; FCF 689,0. El TTM anterior: ingresos 1.823,9; EBIT 499,6; beneficio 238,0; CFO 623,9; capex 9,2 y FCF 614,7. Los ingresos suben 48,8%, pero el FCF observado solo 12,1% por entregas de buques.</p>
+<p>Al retirar 296,4 millones de otros ingresos operativos del TTM actual, EBIT económico queda en 1.333,9, frente a 481,6 del comparable. Tras coste financiero neto de 171,5 y un impuesto normalizado del 1%, el beneficio económico aproximado es 1.150,8 millones, <strong>5,17 USD/acción</strong>. Esto corrige partidas extraordinarias; <strong>todavía no normaliza el ciclo</strong>. El beneficio ajustado por la compañía ronda 1.198 millones TTM y usa exclusiones distintas. P/E económico cercano a 10,1 frente a 7,85 reportado; ninguno es un P/E de ciclo medio. No se añaden de vuelta indiscriminadamente costes de compensación ni gastos recurrentes.</p>
+<p>El impuesto efectivo reducido refleja el régimen del transporte marítimo internacional. No aplicamos mecánicamente el impuesto corporativo ordinario chipriota a todo el resultado naviero; el 1% es una hipótesis, no una garantía tributaria perpetua.</p>
+<h2 id="fletes-utilización-y-contratos">4. Fletes, utilización y contratos</h2>
+<p>TCE spot diario VLCC/Suezmax/LR2: 2024 <strong>43.400/41.400/42.300</strong>; 2025 <strong>47.200/39.700/29.400</strong>; Q2 2026 <strong>152.700/111.500/92.400 USD</strong>. El 28/8, Q3 estaba reservado al 86%/79%/70% a <strong>156.900/117.400/81.000 USD</strong>. La base de reconocimiento load-to-discharge y los días en lastre pueden hacer que el resultado final difiera del porcentaje reservado. No se multiplica TCE por ingresos brutos: el modelo descuenta costes de viaje mediante TCE y luego resta costes operativos de la flota.</p>
+<p>La evidencia posterior obliga a reconocer que el pico no había terminado: <a href="https://www.dhtankers.com/dht-holdings-inc-business-update-19/">DHT, 12/10</a>, estimó Q3 spot en 167.100 y tenía reservado el 50% de días spot Q4 a <strong>509.100 USD/día</strong>; su medida discharge-to-discharge no es idéntica a la de Frontline. No es una previsión anual ni una tarifa universal. <a href="https://www.scorpiotankers.com/scorpio-tankers-inc-announces-financial-results-for-the-third-quarter-of-2026-and-an-increase-to-its-quarterly-dividend/">Scorpio, 28/10</a> publicó LR2 spot Q3 de 72.283 USD y contratos de tres años a 40.188–42.500 USD. Se usan como comprobación del mercado, no como múltiplos intercambiables.</p>
+<p>En agosto, Frontline tenía 17 buques en time charter, 15 VLCC, uno Suezmax y uno LR2. Parte de los acuerdos dura solo un año; otros descienden de tarifa en años posteriores. La cobertura de próximos doce meses era aproximadamente 4.066 de 27.836 días, 14,6% del total, por lo que no inmuniza todo el negocio. Utilización central 97%; no 100%. Los gastos de viaje quedan fuera del TCE, mientras los gastos de buque, G&amp;A y diques se modelan explícitamente.</p>
+<h2 id="flota-renovación-capital-y-accionista">5. Flota, renovación, capital y accionista</h2>
+<p>El listado oficial consultado el 4/11 contiene 75 buques: 38 VLCC, 19 Suezmax y 18 LR2. Tras completar el programa anunciado se modelan 77: 40/19/18. La incorporación de un nuevo VLCC al listado después de septiembre no basta para certificar su fecha de pago; se conserva una provisión explícita y no se presenta una caja de noviembre como auditada. <a href="https://www.frontlineplc.cy/fleet/">Flota oficial</a>.</p>
+<p>Cohortes de construcción del listado: 2016:12; 2017:18; 2018:3; 2019:15; 2020:3; 2021:8; 2022:4; 2023:5; 2026:7. Se añaden dos nuevas entregas para la flota final. El modelo no permite que esos buques duren para siempre. Vida económica central 20 años; valor residual supuesto VLCC/Suezmax/LR2 <strong>20/12/10 millones</strong>, y reposición <strong>136/90/75 millones</strong>, con inflación del 2%. Los residuales son hipótesis de analista, no ofertas firmes de desguace. Alargar la vida a 25 años eleva el valor central a unos 42,44 USD, con riesgo de costes y aceptación comercial no capturado plenamente.</p>
+<p>En 2026 se vendieron buques antiguos y se adquirieron nueve nuevas construcciones por 1.224 millones. Las ventas realizadas no se contabilizan a la vez como caja adicional y valor de buques retenidos. Tras pagos conocidos hasta agosto, quedan <strong>288,1 millones</strong> de entregas que el modelo reserva en el primer año. Sustituir las cohortes de 2016 exige un pico de capex hacia 2036. Diques y mejoras recurrentes: 35 millones anuales además de renovación de casco; OPEX inicial diario VLCC/Suezmax/LR2 9.200/9.000/8.500. El elevado OPEX LR2 de Q2, afectado por diques, no se proyecta completo eternamente ni se ignora su mantenimiento.</p>
+<p>Puente de deuda: deuda de junio 2.434,8 menos caja 321,4; más 313,0 de pagos de nuevas construcciones posteriores; más dividendos 759,1; menos ventas brutas 270,0; más 3,0 de comisión estimada; menos <strong>800,0 de caja operativa julio–octubre estimada</strong>. Deuda neta pro forma <strong>2.118,6 millones</strong>. Caja mínima operativa 150 y otros derechos/costes de opciones 20; se descuentan participaciones 32,5 y valores financieros 0,9: derechos netos contra el EV <strong>2.255,1 millones</strong>. Variar la caja acumulada ±250 millones cambia el valor ±1,12 USD/acción. No se considera una línea de crédito no dispuesta como efectivo.</p>
+<p>Las acciones usadas son <strong>222,623 millones</strong>, constantes, sin recompras futuras inventadas. No hay vencimiento final inmediato que equivalga a una crisis de refinanciación, pero sí amortización programada y riesgo de crédito en el siguiente valle del ciclo. El dividendo ordinario 2,61 más el extraordinario 0,80 fue <strong>pagado el 28/9</strong>: comprar el 3/11 no da derecho a cobrarlo. <a href="https://www.frontlineplc.cy/fro-declares-special-one-time-dividend-after-sale-of-two-vllcs/">Comunicado de venta y dividendo, 11/9</a>.</p>
+<h2 id="valoración-directa-fcff-de-diez-años">6. Valoración directa: FCFF de diez años</h2>
+<p>No se usa un múltiplo de beneficio de pico. WACC central <strong>10,5%</strong>: tipo libre de riesgo próximo al 4,95%, beta supuesta 1,3, prima de acciones 5%, coste de capital propio aproximado 11,45%, coste de deuda supuesto 6,2% y mezcla 80/20. Beta, prima y estructura son hipótesis de valoración, no estimaciones estadísticas certificadas. Se prueban WACC 9–12%. Crecimiento terminal nominal 2%; ROIC terminal 12%, reinversión coherente con crecimiento y renovación.</p>
+<p>Fletes spot del año 1 al 5, miles de USD/día: - VLCC: <strong>200 / 110 / 80 / 67,5 / 62,5</strong>. - Suezmax: <strong>100 / 70 / 52,5 / 47,5 / 45</strong>. - LR2: <strong>60 / 45 / 37,5 / 34 / 32,5</strong>.</p>
+<p>Se incorporan los contratos existentes: exposición TC VLCC aproximada 25%/7%/2% en los primeros años, con tarifas respectivas 100/65/45 mil; después el mercado normalizado. La cifra de 200 mil no se atribuye a la empresa como guía: es una hipótesis que reconoce el pico actual, incluida la evidencia de octubre. Los años 6–10 crecen 2% nominal con flota estable, costes crecientes y reinversión que converge al régimen terminal.</p>
+<p>FCFF = NOPAT menos reinversión neta; esta última equivale a capex menos depreciación más variación de capital de trabajo. La reposición de casco se ajusta por <strong>cohortes reales</strong>, evitando penalizar una flota joven como si sustituyera barcos anualmente desde hoy. Se descuentan las compras futuras contratadas una sola vez. El valor terminal también corrige el ciclo de reposición de los veinte años posteriores, para no regalar la gran renovación que queda después del horizonte.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Año prospectivo</th>
+<th style="text-align: right;">Ingresos TCE</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">Reinversión neta</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">3477.4</td>
+<td style="text-align: right;">2819.8</td>
+<td style="text-align: right;">2791.6</td>
+<td style="text-align: right;">-26.9</td>
+<td style="text-align: right;">2818.5</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">2270.9</td>
+<td style="text-align: right;">1600.1</td>
+<td style="text-align: right;">1584.1</td>
+<td style="text-align: right;">-369.6</td>
+<td style="text-align: right;">1953.7</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">1715.2</td>
+<td style="text-align: right;">1031.0</td>
+<td style="text-align: right;">1020.7</td>
+<td style="text-align: right;">-350.0</td>
+<td style="text-align: right;">1370.7</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">1492.1</td>
+<td style="text-align: right;">794.3</td>
+<td style="text-align: right;">786.4</td>
+<td style="text-align: right;">-343.2</td>
+<td style="text-align: right;">1129.6</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">1395.0</td>
+<td style="text-align: right;">683.2</td>
+<td style="text-align: right;">676.3</td>
+<td style="text-align: right;">-344.9</td>
+<td style="text-align: right;">1021.2</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">1422.9</td>
+<td style="text-align: right;">696.8</td>
+<td style="text-align: right;">689.9</td>
+<td style="text-align: right;">-334.8</td>
+<td style="text-align: right;">1024.7</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">1451.3</td>
+<td style="text-align: right;">710.8</td>
+<td style="text-align: right;">703.7</td>
+<td style="text-align: right;">-329.5</td>
+<td style="text-align: right;">1033.2</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td style="text-align: right;">1480.3</td>
+<td style="text-align: right;">725.0</td>
+<td style="text-align: right;">717.7</td>
+<td style="text-align: right;">-323.8</td>
+<td style="text-align: right;">1041.5</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td style="text-align: right;">1509.9</td>
+<td style="text-align: right;">739.5</td>
+<td style="text-align: right;">732.1</td>
+<td style="text-align: right;">-317.7</td>
+<td style="text-align: right;">1049.8</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td style="text-align: right;">1540.1</td>
+<td style="text-align: right;">754.3</td>
+<td style="text-align: right;">746.7</td>
+<td style="text-align: right;">834.8</td>
+<td style="text-align: right;">-88.1</td>
+</tr>
+</tbody>
+</table></div>
+<p>Millones de USD. El FCFF negativo del año 10 responde a renovación de cohortes, no a un margen operativo negativo. La empresa debe retener caja en años fuertes o financiar esas entregas; no puede repartir toda la caja actual y mantener gratis los mismos activos.</p>
+<p>PV de flujos explícitos 8.484,2; PV terminal 2.061,0; EV <strong>10.545,2</strong>. Menos derechos netos 2.255,1 = equity 8.290,1; dividido por 222,623 millones = <strong>37,24 USD/acción</strong>. Terminal representa 19,5% del EV. Una comprobación separada de explotación de la flota hasta los 20 años y posterior desguace, sin reposición perpetua, da <strong>37,71 USD</strong>: concuerda, aunque comparte hipótesis de fletes y no es evidencia independiente del mercado.</p>
+<h2 id="sensibilidad-conjunta-reverse-y-rentabilidad">7. Sensibilidad conjunta, reverse y rentabilidad</h2>
+<p>Valor por acción, columnas g terminal 1% / 2% / 2,5%: - WACC 9%: 40,94 / 43,51 / 44,90. - 10%: 37,22 / 39,08 / 40,05. - 10,5%: 35,63 / 37,24 / 38,06. - 11%: 34,19 / 35,59 / 36,28. - 12%: 31,67 / 32,74 / 33,25.</p>
+<p>No basta con cambiar una tasa de descuento. Al elevar progresivamente el flete normal VLCC en 10.000 USD/día hasta el año 5, y Suezmax/LR2 en 7.200/5.200, el valor pasa a <strong>45,06 USD</strong> al WACC central. Con +20.000/+14.400/+10.400, llega a <strong>52,89</strong>. Con -10.000/-7.200/-5.200, cae a <strong>29,41</strong>. La matriz completa WACC × fletes está en el modelo JSON. Bajar utilización a 94% reduce el valor a 34,91; elevar OPEX 20%, a 34,85; subir coste de reposición 20%, a 36,29. Son pruebas aisladas, no probabilidades.</p>
+<p><strong>Reverse DCF:</strong> para sostener 52,41 con el resto central, los fletes normalizados del quinto año deben alcanzar aproximadamente <strong>81.886 VLCC / 58.958 Suezmax / 42.581 LR2 USD/día</strong>, y crecer después 2% nominal. Alternativamente, todo el recorrido spot necesita aproximadamente <strong>20,7% más</strong> que la base. La evidencia de charters de varios años hace plausible un régimen más alto; no demuestra tarifas de ese nivel a perpetuidad.</p>
+<p>Escenarios integrados: - Adverso, normalización severa y WACC 12%: <strong>15,15 USD</strong>, con retiro de buques al final de su vida en vez de forzar nuevas inversiones antieconómicas. No es un suelo garantizado de liquidación. Forzar reposición perpetua en ese entorno arrojaría unos 8,07 USD y un terminal poco defendible; no se usa como caso principal racional. - Central: <strong>37,24 USD</strong>. - Favorable, fletes altos duraderos, WACC 9,5%, g 2,5%, utilización 98% y más caja: <strong>79,15 USD</strong>. Requiere mucho más que un trimestre excepcional.</p>
+<p>La rentabilidad anual del equity se calcula con caja potencial a accionistas después de 140 millones de intereses netos anuales, más un valor terminal central fijo y menos los derechos financieros. Incluye la financiación/retención necesaria para el año de renovación; no es un pronóstico de dividendos ni se le suma otra vez una rentabilidad por dividendo. Resultados: <strong>4,1% a 52,41; 7,5% a 45; 10,4% a 40; 14,1% a 35 USD</strong>. El IRR y el WACC no son la misma magnitud; uno es del accionista y el otro del negocio.</p>
+<h2 id="tercera-comprobación-activos-y-transacciones-verificadas">8. Tercera comprobación: activos y transacciones verificadas</h2>
+<p>La venta de dos VLCC de 2017 por Frontline a 135 millones cada uno, la venta de sus dos Suezmax por 140 millones en conjunto y ventas LR2 de Scorpio alrededor de 70–73 millones son referencias observadas. Nuevas construcciones VLCC de Scorpio a 135 millones y LR2 a 72,8 millones, con entregas 2028–29, muestran que la disponibilidad inmediata puede valer una prima. No se comparan como activos idénticos: astillero, edad, consumo, scrubber, charter y entrega importan.</p>
+<p>Aplicando curvas de edad explícitas a los 77 buques, el NAV indicativo cae aproximadamente en <strong>26,6–31,0 USD/acción</strong>, después de deuda/otros derechos y pagos pendientes. No es una tasación independiente; el JSON muestra las curvas y los comparables. El objetivo es comprobar el orden de magnitud, no inventar precisión de broker. <strong>No se suma NAV al DCF</strong>: ambos valoran los mismos buques y su capacidad de generar caja. Los P/E de navieras en el pico y el dividendo pasado no sustituyen esta comprobación.</p>
+<h2 id="catalizadores-invalidación-y-stage-3.5">9. Catalizadores, invalidación y Stage 3.5</h2>
+<p>Catalizadores: Q3 del 30/11; actualización de reservas Q4 y de caja neta; cierre/entrega de los buques restantes; disciplina para fijar charters rentables y devolver solo caja realmente excedentaria. La expansión sostenible del mercado y contratos de varios años por encima del escenario central podrían elevar valor justo sin necesitar que caiga la cotización.</p>
+<p>Riesgos que cambian la decisión: caída fuerte de fletes tras normalización de rutas; mayor oferta por entregas; OPEX/seguros y diques; restricciones ambientales; caída de valores de buques; contraparte de charters; adquisiciones relacionadas, asignación de capital y endeudamiento en un pico. Específicamente, financiación de la reposición y vida comercial son tan importantes como el EPS actual.</p>
+<p><strong>Stage 3 completado.</strong> La evidencia permite una conclusión y una valoración reproducible. <strong>Stage 3.5 no validado</strong>: el RSI del escáner no demuestra soporte, rechazo alcista ni control del riesgo. Antes de cualquier entrada hay que actualizar cotización, gráfico/volumen, condición técnica concreta, riesgo por posición y calendario; no se inventan un stop, una señal o un tamaño sin esa información. Si el precio se acerca a 40–45 o nuevos contratos respaldan la trayectoria inversa, merece reevaluación como candidato parcial. A 52,41, la relación entre retorno central y riesgo cíclico favorece esperar, no forzar una compra porque el P/E sea bajo.</p>
+<h2 id="archivo-reproducible-y-límites">Archivo reproducible y límites</h2>
+<p><code>full_model.json</code> contiene estados históricos, cuatro trimestres, TTM comparables, flota, escenarios, sensibilidades, fuentes y verificaciones; <code>model.py</code> y <code>finite_fleet.py</code> contienen las fórmulas. Los importes modelados posteriores a junio son estimaciones identificadas, no estados financieros que aún no existen. Precio de escáner, comisiones, acumulación de caja, normalización y NAV se exponen como tales. Ninguna operación de mercado ha sido realizada.</p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/FRO.html">Open full FRO dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRO/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRO/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRO/finite_fleet_crosscheck.json">finite_fleet_crosscheck.json</a></li>
+</ul>
+</main></body></html>
