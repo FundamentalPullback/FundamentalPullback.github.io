@@ -1,3 +1,5 @@
+Correction 2026-11-04 05:25 UTC: the reported South African breakeven unit is US$49/bbl, not R49/bbl. This corrects a source-transcription unit typo; the ZAR-based cash-flow model and valuation are unchanged. / Corrección: el breakeven está expresado en dólares estadounidenses por barril; modelo y valoración sin cambios.
+
 # Sasol (NYSE: SSL): completed Stage 3 research
 
 Research cutoff: November 4, 2026, 04:43 UTC. Version SSL-FCFF-20261104-v 1. Financial currency is ZAR unless stated otherwise. This completes the fundamental research, not a Stage 3.5 entry approval.
@@ -72,7 +74,7 @@ September-quarter mining production was 8.5Mt, up 18% year-on-year, while extern
 
 Four corrections prevent a misleading cash multiple:
 
-1. FY2026’s **R49/bbl South African breakeven** benefited an estimated **$6–9/bbl** from favorable macro conditions and the absence of a Secunda annual shutdown. FY2027 guidance is **$53–58**, with a $50 nominal target forFY2028. The calculation excludes some group financing/tax claims and is not an equity dividend breakeven.
+1. FY2026’s **US$49/bbl South African breakeven** benefited an estimated **$6–9/bbl** from favorable macro conditions and the absence of a Secunda annual shutdown. FY2027 guidance is **$53–58**, with a $50 nominal target forFY2028. The calculation excludes some group financing/tax claims and is not an equity dividend breakeven.
 2. FY2026 first-order capitalR20.872bn becomes **R23–26bn FY2027 guidance**, comprising maintain capitalR22–25bn and selective growth/transformR1bn. About half the reduction from the earlier maintenance plan reflects timing/phasing, rather than permanent savings. Expensed maintenance is additional to capital and remains in operating earnings.
 3. International ChemicalsFY2026 EBITDA was about$604m, including an estimated **$150–200m** conflict benefit. FY2027 guidance is$450–600m and 10–12% margin. Cost-led chemical-price gains do not establish demand recovery.
 4. FY2026 FCF was reduced by working-capital absorption; the prior year contained a R3.1bn after-tax Transnet cash settlement. FY2026 also received a R1.2bn tax refund. Neither settlement nor refund is a recurring run rate.

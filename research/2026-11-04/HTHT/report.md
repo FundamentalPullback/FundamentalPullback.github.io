@@ -1,3 +1,11 @@
+## Stage 3 historical reconciliation pending / Stage 3: conciliación histórica pendiente
+
+**Update 2026-11-04 05:25 UTC: historical reconciliation of three fiscal years, four quarters and TTM versus prior TTM awaits verification. Complete-research label temporarily withdrawn. Prior values and conclusion retained; no entry approval.**
+
+**Actualización 2026-11-04 05:25 UTC: conciliación histórica de tres ejercicios, cuatro trimestres y TTM frente al TTM anterior pendiente de verificación. Etiqueta completa retirada temporalmente. Valores y conclusión previos conservados; no entrada aprobada.**
+
+Earlier completion statements in the original report below are superseded by this dated notice. This evidence gap is separate from future Stage 3.5 entry checks.
+
 # H World Group: completed Fundamental Pullback Stage 3
 
 **Research completed November 3, 2026 ET, during the November 4 UTC overnight session.** Financial statements through June 30, 2026; detailed interim filing September 23; known subsequent financing through September 16. Scanner: November 3, timestamp 17:27:04 with timezone unspecified, $48.91, Opportunity 100. Independently verified regular-market close: **$48.91 at 4 p.m. EST November 3**. Price is per Nasdaq ADS. [Dated price history](https://stockanalysis.com/stocks/htht/history/)

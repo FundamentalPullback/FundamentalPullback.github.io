@@ -1,3 +1,5 @@
+Corrección 2026-11-04 05:26 UTC: FY2025 registró beneficio neto GAAP positivo de 1.016 millones USD, no una pérdida anual. Se corrige la frase a caída del beneficio; la pérdida correspondió a Q3. Modelo y valoración sin cambios. / Correction: FY2025 GAAP net income was positive $1.016bn; the loss was in Q3, not the full year. Valuation unchanged.
+
 # Kroger (KR) — Stage 3 fundamental completo
 
 **Corte: 3 de noviembre de 2026. Precio del scanner: $66,65. Conclusión: observación, sin aprobación fundamental de compra a este precio.** El análisis está terminado; el desenlace judicial y los resultados futuros, naturalmente, no lo están. KR no se rechaza por ser un supermercado de crecimiento moderado. El problema es que el precio ya exige una mejora que aún no aparece en el beneficio total, mientras la inversión aumenta y existe una contingencia judicial material.
@@ -43,7 +45,7 @@ Fuentes: [10-K FY2025](https://www.sec.gov/Archives/edgar/data/56873/00011046592
 
 ## 3. Normalización y calidad de caja
 
-- La pérdida GAAP de FY2025 contiene aproximadamente $2.500 millones de deterioros y cargos ligados a la red automatizada. No perpetúo esa pérdida contable. Tampoco la trato como irrelevante: se destruyó capital y todavía hacen falta inversión física y logística, además de posibles costes de salida.
+- La caída del beneficio GAAP de FY2025 contiene aproximadamente $2.500 millones de deterioros y cargos ligados a la red automatizada. No perpetúo esa pérdida contable. Tampoco la trato como irrelevante: se destruyó capital y todavía hacen falta inversión física y logística, además de posibles costes de salida.
 - Las ganancias de inversiones financieras se excluyen del beneficio operativo recurrente. Las inversiones cotizadas verificadas se reconocen aparte en el puente de capital, después de una reserva fiscal.
 - El modelo conserva SBC en EBIT. SBC fue $157 millones en FY2025 y aproximadamente $175 millones TTM; el add-back de CFO no es beneficio gratuito para el accionista.
 - LIFO no desaparece por el mero uso de la guía FIFO. La guía de $5.000–5.200 millones de beneficio FIFO ajustado es distinta de EBIT recurrente después del coste de inventario. El EBIT NTM central, $4.950 millones, no aplica directamente el margen FIFO a perpetuidad.

@@ -1,3 +1,11 @@
+## Stage 3 historical reconciliation pending / Stage 3: conciliación histórica pendiente
+
+**Update 2026-11-04 05:25 UTC: historical reconciliation of three fiscal years, four quarters and TTM versus prior TTM awaits verification. Complete-research label temporarily withdrawn. Prior values and conclusion retained; no entry approval.**
+
+**Actualización 2026-11-04 05:25 UTC: conciliación histórica de tres ejercicios, cuatro trimestres y TTM frente al TTM anterior pendiente de verificación. Etiqueta completa retirada temporalmente. Valores y conclusión previos conservados; no entrada aprobada.**
+
+Earlier completion statements in the original report below are superseded by this dated notice. This evidence gap is separate from future Stage 3.5 entry checks.
+
 # TRI — Stage 3 terminado tras resultados del 3 de noviembre
 
 **Fecha de análisis:** 4 de noviembre de 2026, con información disponible antes de las 04:25 UTC. **Modelo:** TRI-FCFF-20261104-v1. Importes en millones de USD salvo precio y EPS. Se analiza la acción estadounidense Nasdaq:TRI, no el precio en CAD de Toronto.

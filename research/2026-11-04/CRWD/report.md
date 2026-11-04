@@ -1,3 +1,11 @@
+## Stage 3 historical reconciliation pending / Stage 3: conciliación histórica pendiente
+
+**Update 2026-11-04 05:25 UTC: historical reconciliation of three fiscal years, four quarters and TTM versus prior TTM awaits verification. Complete-research label temporarily withdrawn. Prior values and conclusion retained; no entry approval.**
+
+**Actualización 2026-11-04 05:25 UTC: conciliación histórica de tres ejercicios, cuatro trimestres y TTM frente al TTM anterior pendiente de verificación. Etiqueta completa retirada temporalmente. Valores y conclusión previos conservados; no entrada aprobada.**
+
+Earlier completion statements in the original report below are superseded by this dated notice. This evidence gap is separate from future Stage 3.5 entry checks.
+
 # CRWD · Stage 3 completo
 **Fecha de corte: 3 de noviembre de 2026, cierre regular estadounidense. Moneda: USD; estados y modelo en millones salvo precios y porcentajes.**
 

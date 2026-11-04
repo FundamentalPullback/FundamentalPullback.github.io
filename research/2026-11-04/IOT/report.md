@@ -1,3 +1,11 @@
+## Stage 3 historical reconciliation pending / Stage 3: conciliación histórica pendiente
+
+**Update 2026-11-04 05:25 UTC: historical reconciliation of three fiscal years, four quarters and TTM versus prior TTM awaits verification. Complete-research label temporarily withdrawn. Prior values and conclusion retained; no entry approval.**
+
+**Actualización 2026-11-04 05:25 UTC: conciliación histórica de tres ejercicios, cuatro trimestres y TTM frente al TTM anterior pendiente de verificación. Etiqueta completa retirada temporalmente. Valores y conclusión previos conservados; no entrada aprobada.**
+
+Earlier completion statements in the original report below are superseded by this dated notice. This evidence gap is separate from future Stage 3.5 entry checks.
+
 # Samsara: completed Fundamental Pullback Stage 3
 
 **Research completed November 4, 2026 ET; November 4 UTC overnight session.** Latest financial statements: Q2 FY2027 ended August1,2026, released September3 and filed September8. Scanner: November3, timestamp17:27:04 with timezone unspecified, **$40.893**, Opportunity95. Independently verified regular-market close: **$41.11 at 4 p.m. EST November3**; the after-hours quote is different. Valuation uses the verified close, not an assumed scanner close. [Latest earnings release](https://www.sec.gov/Archives/edgar/data/1642896/000162828026060438/samsaraepr-q22027.htm); [Latest 10-Q](https://www.sec.gov/Archives/edgar/data/1642896/000162828026060909/iot-20260801.htm); [Dated market close](https://stockanalysis.com/stocks/iot/history/)

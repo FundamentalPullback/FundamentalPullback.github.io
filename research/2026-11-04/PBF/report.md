@@ -1,3 +1,11 @@
+## Stage 3 historical reconciliation pending / Stage 3: conciliación histórica pendiente
+
+**Update 2026-11-04 05:25 UTC: historical reconciliation of three fiscal years, four quarters and TTM versus prior TTM awaits verification. Complete-research label temporarily withdrawn. Prior values and conclusion retained; no entry approval.**
+
+**Actualización 2026-11-04 05:25 UTC: conciliación histórica de tres ejercicios, cuatro trimestres y TTM frente al TTM anterior pendiente de verificación. Etiqueta completa retirada temporalmente. Valores y conclusión previos conservados; no entrada aprobada.**
+
+Earlier completion statements in the original report below are superseded by this dated notice. This evidence gap is separate from future Stage 3.5 entry checks.
+
 # PBF Energy: completed Fundamental Pullback Stage 3
 
 Research date: **November 3, 2026 ET** (overnight session is November 4 UTC). Financial statements: September 30, 2026; latest earnings released October 29. Scanner: November 3, export timezone unspecified, **$77.81**, Opportunity 95. Independently checked regular close: **$77.81 at 4 p.m. EST**, not the after-hours quote. [Q3 results](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm); [dated price history](https://stockanalysis.com/stocks/pbf/history/)

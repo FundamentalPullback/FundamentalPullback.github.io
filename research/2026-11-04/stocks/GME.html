@@ -1,0 +1,665 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GME · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/GME">← GME profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A175 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">En observación</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Real operating recovery and approximately fair price: central $24.75, sensitivity $21–29, versus $24.27 close (scanner $24.20). eBay/BTC assets, convertibles and warrants separated. The eBay offer was rejected, not pending. No approved purchase.</strong></p>
+<h1 id="gme-stage-3-completo-recuperación-real-precio-aproximadamente-justo">GME · Stage 3 completo: recuperación real, precio aproximadamente justo</h1>
+<p><strong>Fecha de valoración: cierre regular del 3 de noviembre de 2026.</strong> Investigación fundamental, no orden de inversión. Importes financieros en millones de USD salvo precios y porcentajes.</p>
+<p><strong>Conclusión:</strong> GameStop ha mejorado de verdad su negocio operativo. No procede rechazarlo automáticamente por su historial de pérdidas o por su condición de «meme stock». Sin embargo, el cierre de <strong>$24,27</strong> está cerca del valor central de <strong>$24,75</strong>: la recuperación y buena parte de sus activos financieros ya están reconocidos. Banda central razonable <strong>$21–29</strong>, escenarios completos <strong>$14,52 / $24,75 / $34,17</strong>. <strong>Stage 3: observar por valoración, sin aprobación de compra.</strong> Stage 3.5, estructura técnica y riesgo de la entrada, permanece separado.</p>
+<p>La diferencia entre precio y valor central es solo 2,0%; no se impone un descuento universal del 20% o 30%. La conclusión surge de la amplitud de resultados posibles frente a ese pequeño diferencial. Una entrada más barata o nuevas pruebas de rentabilidad sostenible podrían cambiarla.</p>
+<h2 id="corte-de-información-y-elegibilidad">1. Corte de información y elegibilidad</h2>
+<p>El escáner del 3/11 mostraba <strong>$24,20</strong>, Opportunity 95, QP 80, RSI 48 y Stage 2 «Sí». El cierre regular contrastado es <strong>$24,27</strong>, usado en las comparaciones. Un precio del escáner y un cierre de mercado no deben confundirse. <a href="https://marketchameleon.com/Overview/GME/Summary/">Cotización GME</a>.</p>
+<p>Los últimos resultados oficiales son <strong>Q2 FY2026</strong>, trimestre terminado el <strong>1 de agosto</strong>, publicados el <strong>8 de septiembre</strong>; el 10-Q se presentó el 9 de septiembre. No se encontró un anuncio oficial de resultados para el 4–6 de noviembre, por lo que no corresponde aplazar esta revisión por un evento inexistente en el calendario verificado. El 8 de diciembre aparece como <strong>estimación de un proveedor, no fecha confirmada por GameStop</strong>. <a href="https://news.gamestop.com/news-releases/news-details/2026/GameStop-Discloses-Second-Quarter-2026-Results/default.aspx">Resultados oficiales</a>, <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000055/gme-20260801.htm">10-Q</a>, <a href="https://thaler.sh/s/GME/earnings">calendario estimado</a>, <a href="https://investor.gamestop.com/newsroom/">noticias del emisor</a>.</p>
+<p>El análisis incorpora hechos posteriores al balance: canje de convertibles cerrado el 3 de septiembre y vencimiento de warrants el 30 de octubre. No supone que un balance de agosto sea una fotografía exacta de noviembre.</p>
+<h2 id="negocio-cambio-de-mezcla-no-simple-crecimiento-de-tiendas">2. Negocio: cambio de mezcla, no simple crecimiento de tiendas</h2>
+<p>La salida de Francia se hizo efectiva el 8 de julio; las operaciones restantes se concentran en Estados Unidos y Australia. Las ventas semestrales bajaron 4,6%, hasta 1.625,5, y las trimestrales 18,7%, hasta 790,2. El negocio estadounidense estuvo casi plano en el semestre, pero cayó aproximadamente 16% en Q2: las desinversiones no explican toda la contracción.</p>
+<p>El motor favorable son los <strong>coleccionables</strong>, que crecieron 56,5% en Q2 hasta 356,3 y representaron 45,1% de ventas. En el semestre aumentaron 60,6%. Por el contrario, videojuegos y productos usados/reacondicionados bajaron fuertemente en Q2. La compañía cambió sus categorías de presentación y recalculó los comparativos; no se mezclan estas cifras con las antiguas categorías hardware/software.</p>
+<p>El margen bruto trimestral llegó a 43,7%, frente a 29,1%, mientras SG&amp;A cayó de 218,8 a 187,1. Esa combinación explica una mejora operativa tangible. Power Packs y las tarjetas coleccionables pueden ampliar el mercado, pero no se atribuye todo el margen a una plataforma concreta ni se asume que su auge sea permanente. Inventario, autenticación, distribución de producto y ciclos especulativos de coleccionismo siguen importando. <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000055/gme-20260801.htm">Desglose operativo y categorías, 10-Q</a>.</p>
+<p>La clasificación correcta es <strong>recuperación de beneficios con mezcla comercial cambiante</strong>, no compuesto estable de alto crecimiento. El potencial no depende de recuperar las antiguas ventas de videojuegos físicos, sino de sostener el nuevo margen y convertirlo en caja.</p>
+<h2 id="beneficios-tres-ejercicios-cuatro-trimestres-y-ttm">3. Beneficios: tres ejercicios, cuatro trimestres y TTM</h2>
+<p>FY2023, FY2024 y FY2025 terminan respectivamente en febrero de 2024, febrero de 2025 y enero de 2026.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Métrica</th>
+<th style="text-align: right;">FY2023</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">TTM a agosto 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas</td>
+<td style="text-align: right;">5.272,8</td>
+<td style="text-align: right;">3.823,0</td>
+<td style="text-align: right;">3.629,9</td>
+<td style="text-align: right;">3.550,8</td>
+</tr>
+<tr class="even">
+<td>EBIT GAAP</td>
+<td style="text-align: right;">−34,5</td>
+<td style="text-align: right;">−26,2</td>
+<td style="text-align: right;">232,1</td>
+<td style="text-align: right;">480,0</td>
+</tr>
+<tr class="odd">
+<td>Beneficio neto</td>
+<td style="text-align: right;">6,7</td>
+<td style="text-align: right;">131,3</td>
+<td style="text-align: right;">418,4</td>
+<td style="text-align: right;">893,3</td>
+</tr>
+<tr class="even">
+<td>Ingreso financiero neto</td>
+<td style="text-align: right;">49,5</td>
+<td style="text-align: right;">163,4</td>
+<td style="text-align: right;">271,5</td>
+<td style="text-align: right;">295,8</td>
+</tr>
+<tr class="odd">
+<td>CFO</td>
+<td style="text-align: right;">−203,7</td>
+<td style="text-align: right;">145,7</td>
+<td style="text-align: right;">614,8</td>
+<td style="text-align: right;">704,7</td>
+</tr>
+<tr class="even">
+<td>Capex</td>
+<td style="text-align: right;">34,9</td>
+<td style="text-align: right;">16,1</td>
+<td style="text-align: right;">17,5</td>
+<td style="text-align: right;">16,7</td>
+</tr>
+<tr class="odd">
+<td>CFO menos capex</td>
+<td style="text-align: right;">−238,6</td>
+<td style="text-align: right;">129,6</td>
+<td style="text-align: right;">597,3</td>
+<td style="text-align: right;">688,0</td>
+</tr>
+<tr class="even">
+<td>SBC</td>
+<td style="text-align: right;">22,2</td>
+<td style="text-align: right;">16,4</td>
+<td style="text-align: right;">26,7</td>
+<td style="text-align: right;">30,7</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Últimos cuatro trimestres</th>
+<th style="text-align: right;">Q3 FY25</th>
+<th style="text-align: right;">Q4 FY25</th>
+<th style="text-align: right;">Q1 FY26</th>
+<th style="text-align: right;">Q2 FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas</td>
+<td style="text-align: right;">821,0</td>
+<td style="text-align: right;">1.104,3</td>
+<td style="text-align: right;">835,3</td>
+<td style="text-align: right;">790,2</td>
+</tr>
+<tr class="even">
+<td>EBIT</td>
+<td style="text-align: right;">41,3</td>
+<td style="text-align: right;">135,2</td>
+<td style="text-align: right;">143,3</td>
+<td style="text-align: right;">160,2</td>
+</tr>
+<tr class="odd">
+<td>Beneficio neto</td>
+<td style="text-align: right;">77,1</td>
+<td style="text-align: right;">127,9</td>
+<td style="text-align: right;">389,6</td>
+<td style="text-align: right;">298,7</td>
+</tr>
+<tr class="even">
+<td>CFO menos capex</td>
+<td style="text-align: right;">107,0</td>
+<td style="text-align: right;">187,4</td>
+<td style="text-align: right;">332,9</td>
+<td style="text-align: right;">60,7</td>
+</tr>
+</tbody>
+</table></div>
+<p>Q4 se obtiene restando nueve meses al ejercicio; TTM = FY2025 + H1 FY2026 − H1 FY2025. Ventas TTM retroceden aproximadamente 7,7% frente al TTM anterior, pero el beneficio neto aumenta 146,6%. <strong>Ese crecimiento no es un CAGR operativo extrapolable.</strong> <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000013/gme-20260131.htm">10-K FY2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638025000098/gme-20251101.htm">Q3 FY2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000025/gme-20260502.htm">Q1 FY2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000055/gme-20260801.htm">Q2 FY2026</a>.</p>
+<h3 id="comparación-ttm-completa-beneficio-operativo-inversión-y-caja">Comparación TTM completa: beneficio operativo, inversión y caja</h3>
+<p>La comparación usa el mismo perímetro de estados consolidados publicados, incluidas las operaciones vendidas hasta su salida; no es una serie orgánica de tiendas constantes. TTM agosto 2025 = FY2024 + H1 FY2025 − H1 FY2024; TTM agosto 2026 = FY2025 + H1 FY2026 − H1 FY2025. El comparativo oficial H1 FY2024 registra una pérdida de <strong>17,5</strong>, no 17,4. <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638025000075/gme-20250802.htm">10-Q comparativo de agosto 2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000013/gme-20260131.htm">10-K FY2025 con FY2024</a>, <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000055/gme-20260801.htm">10-Q agosto 2026</a>.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Métrica, USD millones</th>
+<th style="text-align: right;">TTM agosto 2025</th>
+<th style="text-align: right;">TTM agosto 2026</th>
+<th style="text-align: right;">Cambio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas</td>
+<td style="text-align: right;">3.847,5</td>
+<td style="text-align: right;">3.550,8</td>
+<td style="text-align: right;">−7,7%</td>
+</tr>
+<tr class="even">
+<td>EBIT GAAP</td>
+<td style="text-align: right;">102,0</td>
+<td style="text-align: right;">480,0</td>
+<td style="text-align: right;">+370,6%</td>
+</tr>
+<tr class="odd">
+<td>Deterioros/reversiones netos dentro de EBIT</td>
+<td style="text-align: right;">43,1</td>
+<td style="text-align: right;">13,5</td>
+<td style="text-align: right;">−68,7%</td>
+</tr>
+<tr class="even">
+<td>EBIT sin esos deterioros/reversiones</td>
+<td style="text-align: right;">145,1</td>
+<td style="text-align: right;">493,5</td>
+<td style="text-align: right;">+240,1%</td>
+</tr>
+<tr class="odd">
+<td>NOPAT operativo normalizado a impuesto 25%</td>
+<td style="text-align: right;">108,8</td>
+<td style="text-align: right;">370,1</td>
+<td style="text-align: right;">+240,1%</td>
+</tr>
+<tr class="even">
+<td>Ingreso financiero neto</td>
+<td style="text-align: right;">245,5</td>
+<td style="text-align: right;">295,8</td>
+<td style="text-align: right;">+20,5%</td>
+</tr>
+<tr class="odd">
+<td>Beneficio neto GAAP</td>
+<td style="text-align: right;">362,2</td>
+<td style="text-align: right;">893,3</td>
+<td style="text-align: right;">+146,6%</td>
+</tr>
+<tr class="even">
+<td>Beneficio normalizado con interés, sin otras inversiones, a 25%</td>
+<td style="text-align: right;">293,0</td>
+<td style="text-align: right;">592,0</td>
+<td style="text-align: right;">+102,1%</td>
+</tr>
+<tr class="odd">
+<td>CFO reportado</td>
+<td style="text-align: right;">496,8</td>
+<td style="text-align: right;">704,7</td>
+<td style="text-align: right;">+41,8%</td>
+</tr>
+<tr class="even">
+<td>D&amp;A</td>
+<td style="text-align: right;">24,8</td>
+<td style="text-align: right;">13,4</td>
+<td style="text-align: right;">−46,0%</td>
+</tr>
+<tr class="odd">
+<td>SBC, conservada como coste</td>
+<td style="text-align: right;">22,2</td>
+<td style="text-align: right;">30,7</td>
+<td style="text-align: right;">+38,3%</td>
+</tr>
+<tr class="even">
+<td>Capex pagado</td>
+<td style="text-align: right;">15,1</td>
+<td style="text-align: right;">16,7</td>
+<td style="text-align: right;">+10,6%</td>
+</tr>
+<tr class="odd">
+<td>FCF reportado, CFO menos capex</td>
+<td style="text-align: right;">481,7</td>
+<td style="text-align: right;">688,0</td>
+<td style="text-align: right;">+42,8%</td>
+</tr>
+<tr class="even">
+<td>FCFF operativo antes de ΔNWC, al capex observado</td>
+<td style="text-align: right;">118,5</td>
+<td style="text-align: right;">366,8</td>
+<td style="text-align: right;">+209,5%</td>
+</tr>
+<tr class="odd">
+<td>Diagnóstico FCF menos SBC e interés neto después de impuesto</td>
+<td style="text-align: right;">275,4</td>
+<td style="text-align: right;">435,5</td>
+<td style="text-align: right;">+58,1%</td>
+</tr>
+</tbody>
+</table></div>
+<p>El EBIT sin deterioros/reversiones es un ajuste identificado, no la promesa de que los cierres nunca vuelvan a costar dinero. NOPAT = ese EBIT ×75%; el beneficio normalizado con interés = (ese EBIT + ingreso financiero neto) ×75%, excluyendo derivados, revalorizaciones cripto/eBay y otros ingresos no operativos. Esta segunda cifra <strong>no entra en el DCF retail</strong>, porque sus activos financieros ya se valoran aparte. Ninguna de las dos representa impuestos efectivamente pagados.</p>
+<p>El FCFF operativo de 118,5/366,8 se calcula como NOPAT + D&amp;A − capex histórico, <strong>antes de circulante y sin añadir SBC</strong>. Es una comparación homogénea de ganancias operativas, no caja final libre ni una justificación para perpetuar capex de solo 16,7. El DCF utiliza inversión mayor. El último diagnóstico parte de FCF publicado y todavía contiene timing fiscal y otros movimientos: no es un segundo FCFF exacto.</p>
+<p>La reconciliación de caja es visible: CFO previo =145,7 +309,9 −(−41,2)=496,8; CFO actual =614,8 +399,8 −309,9=704,7. Capex previo =16,1 +7,0 −8,0=15,1; actual =17,5 +6,2 −7,0=16,7. Los cuatro trimestres actuales suman exactamente ventas3.550,8, EBIT480,0, beneficio893,3, CFO704,7 y capex16,7.</p>
+<p>La lectura cambia en magnitud, no de dirección: la mejora operativa sigue siendo muy fuerte después de retirar la comparación favorable de deterioros, pero la caja crece bastante menos que EBIT. SBC aumenta y el perímetro se contrae. Esto respalda la recuperación base sin convertir el +146,6% de beneficio neto en una previsión recurrente. <strong>No cambia el DCF central de $24,75 ni el dictamen.</strong></p>
+<p>En H1 el beneficio neto de 688,3 incluye 434,7 de ganancias netas en derivados, 72,1 de revalorización de eBay, 160,8 de ingreso financiero neto y una pérdida de 73,9 en activos digitales. Estas partidas no son ventas minoristas. Tampoco se capitaliza el interés y después se vuelve a sumar toda la tesorería: sería doble conteo.</p>
+<p>El EBIT semestral GAAP de 303,5 se compara con 55,6. El ajustado divulgado, 299,2 frente a 92,2, elimina entre otras partidas ganancias/reversiones de activos. Para TTM, añadir 13,5 de deterioros netos al EBIT da una referencia de <strong>493,5</strong>, no una promesa de ausencia futura de cierres. La subida de guía a <strong>EBITDA ajustado superior a 650 en FY2026</strong> respalda la recuperación; restar aproximadamente 32 de SBC y 18 de depreciación produce un EBIT orientativo cercano a 600. Esta conversión es nuestra, no una guía de EBIT de la compañía. <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000050/a991-fy26q2earningsrelease.htm">Conciliaciones y guía</a>.</p>
+<h2 id="caja-normalizada-sbc-inversión-y-fiscalidad">4. Caja normalizada: SBC, inversión y fiscalidad</h2>
+<p>La SBC sigue siendo un coste económico. Se conserva dentro del margen EBIT proyectado; no se añade como caja gratis y después se penaliza otra vez toda la misma compensación mediante una dilución acumulativa arbitraria.</p>
+<p>El FCF publicado TTM, 688,0, incluye rendimientos de la cartera y movimientos de circulante. Restar SBC de 30,7 e ingreso financiero después de un impuesto normalizado del 25% deja unos <strong>435,5</strong>, solo como comprobación aproximada: no es FCFF puro porque persisten diferencias fiscales y otros efectos de inversión.</p>
+<p>En H1, cuentas por pagar/acumulaciones aportaron 161,0 de caja, mientras cuentas por cobrar e inventario consumieron 44,7 y 35,8. No se anualiza ese apoyo de proveedores. El CFO de Q2 fue 62,4, mucho menor que el beneficio neto de 298,7, por mezcla financiera, impuestos y timing. Debe seguirse su conversión, sin confundir una divergencia puntual con deterioro demostrado.</p>
+<p>La tasa efectiva subió a 25,7% desde 4,3%; beneficios fiscales previos no sostienen una tasa perpetua de 4%. Se usa <strong>25%</strong> sobre EBIT. Capex futuro de 1,1–1,3% de ventas supera el gasto reciente, evitando valorar una transformación suponiendo inversión prácticamente nula para siempre. Arrendamientos operativos permanecen en los costes y no se vuelven a restar como deuda. <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000055/gme-20260801.htm">Flujos, impuestos y arrendamientos</a>.</p>
+<h2 id="activos-financieros-y-capital-lo-que-pertenece-realmente-al-accionista">5. Activos financieros y capital: lo que pertenece realmente al accionista</h2>
+<h3 id="puente-central-actualizado">Puente central actualizado</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th style="text-align: right;">USD millones</th>
+<th>Tratamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja y valores negociables a agosto</td>
+<td style="text-align: right;">5.060,3</td>
+<td>4.854,3 + 206,0</td>
+</tr>
+<tr class="even">
+<td>Efectivo pagado en canje de septiembre</td>
+<td style="text-align: right;">−358,4</td>
+<td>Hecho posterior cerrado</td>
+</tr>
+<tr class="odd">
+<td>Reserva operativa mínima</td>
+<td style="text-align: right;">−250,0</td>
+<td>Hipótesis, no efectivo restringido</td>
+</tr>
+<tr class="even">
+<td>43,390383 millones de acciones eBay × $118,62</td>
+<td style="text-align: right;">+5.147,0</td>
+<td>Última posición declarada, precio 3/11</td>
+</tr>
+<tr class="odd">
+<td>Reserva fiscal sobre plusvalía eBay</td>
+<td style="text-align: right;">−190,2</td>
+<td>25% sobre ganancia frente a coste monetario</td>
+</tr>
+<tr class="even">
+<td>Activos digitales, proxy neta</td>
+<td style="text-align: right;">+348,7</td>
+<td>Explicación abajo</td>
+</tr>
+<tr class="odd">
+<td>Activos financieros antes de deuda</td>
+<td style="text-align: right;"><strong>9.757,4</strong></td>
+<td>No añade CFO posterior desconocido</td>
+</tr>
+<tr class="even">
+<td>Principal convertible restante</td>
+<td style="text-align: right;">−2.800,0</td>
+<td>No valor contable amortizado</td>
+</tr>
+<tr class="odd">
+<td>Activos financieros netos</td>
+<td style="text-align: right;"><strong>6.957,4</strong></td>
+<td>Aproximadamente $13,78 por acción</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los 14,0 de efectivo restringido se excluyen. La reserva operativa de 250 se prueba separadamente: ±100 cambia el valor aproximadamente ∓$0,20. Las otras obligaciones operativas ordinarias se capturan en el negocio y su circulante. No se suman goodwill ni activos fiscales como dinero libre.</p>
+<p><strong>eBay:</strong> se utiliza la posición declarada de 43.390.383 acciones, no el valor de toda eBay. El coste monetario agregado fue 4.386,3; la base contable de ciertas acciones entregadas por opciones es distinta. La reserva fiscal usa ese coste como aproximación conservadora, no como certificación de base fiscal definitiva. No se resta además el mismo impuesto diferido. <a href="https://www.sec.gov/Archives/edgar/data/1326380/000119312526307988/primary_doc.xml">13D del 17/7</a>, <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000055/gme-20260801.htm">nota de inversión del 10-Q</a>, <a href="https://investors.ebayinc.com/stock-information/Historical-Stock-Information/default.aspx">precio EBAY</a>.</p>
+<p>La oferta de adquisición a $125 por acción fue <strong>no vinculante y rechazada por eBay el 12 de mayo</strong>. No es una fusión firmada pendiente de cierre: no se incorpora toda la empresa, ninguna sinergia hipotética ni deuda de una compra inexistente. Una nueva transacción exigiría rehacer precio, financiación, acciones e integración. <a href="https://investors.ebayinc.com/investor-news/press-release-details/2026/eBay-Rejects-Unsolicited-Proposal-from-GameStop/default.aspx">Respuesta oficial de eBay</a>, <a href="https://investor.gamestop.com/ebay/">propuesta de GameStop</a>.</p>
+<p><strong>Bitcoin:</strong> el balance registra 294,1 entre activos y derechos de cobro relacionados: 1 BTC directo y derechos por 4.709 BTC, con exposición a Coinbase Credit y reutilización de garantías. Existían calls vendidas sobre 2.000 BTC a $70.000, vencidas el 25 de septiembre. No se conoce públicamente su liquidación final o eventual renovación. La proxy central combina 2.710 BTC al precio de referencia y 2.000 al precio limitado de $70.000, sin sumar otra vez el hipotético efectivo recibido. Referencia: BTC $76.995,40, 3/11, 6:45 ET. <a href="https://www.fortune.com/article/price-of-bitcoin-11-03-2026/">Precio fechado</a>.</p>
+<p>Esta proxy de 348,7 <strong>no afirma conocer las tenencias actuales</strong>. Usar el valor contable reduciría aproximadamente $0,11 por acción; valorar los 4.710 BTC sin calls al mismo precio añadiría solo $0,03. El riesgo de contraparte no desaparece: perder toda la proxy restaría alrededor de $0,69. La conclusión central no depende de acertar esta partida al céntimo.</p>
+<h3 id="convertibles-acciones-y-warrants">Convertibles, acciones y warrants</h3>
+<p>El 3 de septiembre se cancelaron <strong>1.400</strong> de principal a cambio de <strong>55,5 millones de acciones y 358,4 en efectivo</strong>. Restan 1.100 de los bonos 2030 y 1.700 de los 2032. El 10-Q ya muestra <strong>504.500.990 acciones emitidas al 3 de septiembre</strong>: no se vuelven a añadir los 55,5 millones. Se usa una base económica de 504,801 millones, incluidos 0,3 de premios dilutivos aproximados. <a href="https://investor.gamestop.com/news-releases/news-details/2026/GameStop-Announces-Amendment-to-Convertible-Notes-Exchange-Approximately-358-4-Million-to-be-Settled-in-Cash-in-Lieu-of-Stock/default.aspx">Canje y componente en efectivo</a>.</p>
+<p>Los 592,6 millones diluidos medios de Q2 incluyen la antigua conversión hipotética y no sirven como denominador actual junto a toda la deuda. Los bonos restantes implican hasta <strong>95,645 millones de acciones</strong>, con precios de conversión aproximados de $28,91 y $29,85. En bear/base se resta principal; en bull se elimina esa deuda y se añaden las acciones correspondientes. Es una equivalencia económica simplificada, no una predicción de cuándo podrán o decidirán convertir los titulares. Los derechos de recompra por los tenedores en <strong>2028</strong> también cuentan: cupón cero no significa financiación perpetua gratis.</p>
+<p>Los warrants de $32 <strong>vencieron el 30 de octubre</strong>, con entrega garantizada hasta el 2 de noviembre si se avisó y pagó a tiempo. No existe una opción perpetua después del vencimiento. El total final ejercido aún no está verificado públicamente: el caso central supone cero ejercicios no comunicados, y la prueba máxima de 59,145 millones restantes a agosto incorpora tanto nuevas acciones como 1.892,6 de efectivo. Los 9.251 ejercicios ya reportados desde la emisión están incluidos en las acciones/caja históricas y no se añaden de nuevo. El valor base pasa de $24,75 a $25,51; el bull de $34,17 a $33,98. No se afirma que se ejercieran todos ni ninguno. <a href="https://www.sec.gov/Archives/edgar/data/1326380/000132638026000064/pressrelease-warrantexpira.htm">Aviso oficial de vencimiento</a>.</p>
+<p>El premio especial de opciones de Ryan Cohen fue retirado el 23 de junio: no se incorporan 171,5 millones de opciones que ya no están concedidas. La autorización de recompra de $2.000 millones tampoco equivale a una recompra ejecutada. <a href="https://investor.gamestop.com/news-releases/news-details/2026/Ryan-Cohen-Withdraws-CEO-Performance-Award-GameStop-Focuses-on-eBay/default.aspx">Retirada del premio</a>.</p>
+<h2 id="fcff-a-diez-años-negocio-operativo-más-activos-sin-duplicarlos">6. FCFF a diez años: negocio operativo más activos, sin duplicarlos</h2>
+<p>FCFF = EBIT después de SBC × (1 − impuestos) + depreciación − capex − inversión en circulante. Se proyectan diez años, con cinco de desarrollo explícito y cinco de convergencia. El año 1 representa los próximos doce meses económicos, no una guía oficial FY2027.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Supuesto</th>
+<th style="text-align: right;">Bear</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Bull</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas año 1</td>
+<td style="text-align: right;">3.300</td>
+<td style="text-align: right;">3.600</td>
+<td style="text-align: right;">3.800</td>
+</tr>
+<tr class="even">
+<td>Ventas año 10</td>
+<td style="text-align: right;">2.637</td>
+<td style="text-align: right;">4.344</td>
+<td style="text-align: right;">5.587</td>
+</tr>
+<tr class="odd">
+<td>Margen EBIT año 1 → estable</td>
+<td style="text-align: right;">13% → 8%</td>
+<td style="text-align: right;">17% → 18%</td>
+<td style="text-align: right;">19% → 22%</td>
+</tr>
+<tr class="even">
+<td>Capex / ventas</td>
+<td style="text-align: right;">1,3%</td>
+<td style="text-align: right;">1,1%</td>
+<td style="text-align: right;">1,3%</td>
+</tr>
+<tr class="odd">
+<td>Depreciación / ventas</td>
+<td style="text-align: right;">0,7%</td>
+<td style="text-align: right;">0,7%</td>
+<td style="text-align: right;">0,8%</td>
+</tr>
+<tr class="even">
+<td>Circulante / ventas incrementales</td>
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">6%</td>
+</tr>
+<tr class="odd">
+<td>WACC / crecimiento terminal</td>
+<td style="text-align: right;">12% / 0%</td>
+<td style="text-align: right;">10% / 1,5%</td>
+<td style="text-align: right;">9% / 2%</td>
+</tr>
+<tr class="even">
+<td>ROIC terminal</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr class="odd">
+<td>eBay por acción</td>
+<td style="text-align: right;">$90</td>
+<td style="text-align: right;">$118,62</td>
+<td style="text-align: right;">$150</td>
+</tr>
+<tr class="even">
+<td>Activos digitales</td>
+<td style="text-align: right;">235,5</td>
+<td style="text-align: right;">348,7</td>
+<td style="text-align: right;">411,0</td>
+</tr>
+</tbody>
+</table></div>
+<p>Base supone crecimiento de ventas de 3%, 3%, 2,5%, 2%, 2%, 2%, 1,5%, 1,5%, 1,5% después del primer año. Bear mantiene contracción varios años; bull empieza al 7% y converge al 2%. El EBIT base del primer año, 612, está próximo a la conversión de la guía de EBITDA, pero exige superar en aproximadamente 24% el EBIT TTM normalizado.</p>
+<p>El WACC es un supuesto de rentabilidad exigida al <strong>negocio minorista</strong>, no una falsa medición exacta obtenida de la volatilidad «meme». El 10% central y 9–12% de escenarios reflejan riesgo comercial, mezcla nueva y una exigencia nominal de doble dígito; los activos financieros se valoran aparte. No se trata el cupón cero como coste de capital cero ni se aplica además un descuento discrecional por conglomerado.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">FCFF bear</th>
+<th style="text-align: right;">FCFF base</th>
+<th style="text-align: right;">FCFF bull</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">292</td>
+<td style="text-align: right;">435</td>
+<td style="text-align: right;">512</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">248</td>
+<td style="text-align: right;">466</td>
+<td style="text-align: right;">574</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">213</td>
+<td style="text-align: right;">495</td>
+<td style="text-align: right;">645</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">182</td>
+<td style="text-align: right;">508</td>
+<td style="text-align: right;">719</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">154</td>
+<td style="text-align: right;">519</td>
+<td style="text-align: right;">757</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">530</td>
+<td style="text-align: right;">790</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">540</td>
+<td style="text-align: right;">820</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">549</td>
+<td style="text-align: right;">846</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td style="text-align: right;">142</td>
+<td style="text-align: right;">558</td>
+<td style="text-align: right;">868</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td style="text-align: right;">142</td>
+<td style="text-align: right;">566</td>
+<td style="text-align: right;">887</td>
+</tr>
+</tbody>
+</table></div>
+<p>El valor terminal reinvierte <strong>NOPAT × g / ROIC</strong>: 0 / 59,5 / 94,0 al año, respectivamente. La inversión de actualización explícita converge a mantenimiento más crecimiento sostenible; no se proyecta crecimiento terminal sin financiación.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Resultado</th>
+<th style="text-align: right;">Bear</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Bull</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Valor del negocio minorista</td>
+<td style="text-align: right;">1.535,0</td>
+<td style="text-align: right;">5.538,6</td>
+<td style="text-align: right;">9.677,1</td>
+</tr>
+<tr class="even">
+<td>Deuda convertible restada</td>
+<td style="text-align: right;">2.800</td>
+<td style="text-align: right;">2.800</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>Acciones económicas, millones</td>
+<td style="text-align: right;">504,801</td>
+<td style="text-align: right;">504,801</td>
+<td style="text-align: right;">600,446</td>
+</tr>
+<tr class="even">
+<td>Valor por acción</td>
+<td style="text-align: right;"><strong>$14,52</strong></td>
+<td style="text-align: right;"><strong>$24,75</strong></td>
+<td style="text-align: right;"><strong>$34,17</strong></td>
+</tr>
+<tr class="odd">
+<td>Frente a $24,27</td>
+<td style="text-align: right;">−40,2%</td>
+<td style="text-align: right;">+2,0%</td>
+<td style="text-align: right;">+40,8%</td>
+</tr>
+<tr class="even">
+<td>Peso terminal en valor minorista</td>
+<td style="text-align: right;">27,7%</td>
+<td style="text-align: right;">43,9%</td>
+<td style="text-align: right;">52,8%</td>
+</tr>
+</tbody>
+</table></div>
+<p>La banda central <strong>$21–29</strong> no es un intervalo estadístico ni un promedio arbitrario de extremos. Dos combinaciones próximas al escenario central producen $21,26 (margen 16%, WACC 11%, g 1%, eBay $100) y $28,27 (margen 19%, WACC 9%, g 2%, eBay $135). Mantener todo lo demás fijo y variar solo WACC 9–11% y g 0,5–2,5% produce $23,46–26,68.</p>
+<p>No se resta otro 20% por «mala asignación» después de modelar ya deterioro operativo y activos en bear. Una inversión futura que destruyera 1.000/2.000 de valor restaría aproximadamente $1,98/$3,96 por acción antes de conversiones; una inversión con NPV positivo también añadiría valor. La cartera no es un suelo garantizado ni una distribución de caja comprometida.</p>
+<h2 id="valoración-inversa-varias-combinaciones-justifican-el-mismo-precio">7. Valoración inversa: varias combinaciones justifican el mismo precio</h2>
+<p>Con la estructura de capital actual, los $24,27 implican aproximadamente <strong>5.287 de valor residual para retail</strong>, después de separar los activos. Las siguientes combinaciones conjuntas reproducen el precio, sin fingir que un único crecimiento es «lo que exige el mercado»:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Trayectoria</th>
+<th style="text-align: right;">Crecimiento inicial</th>
+<th style="text-align: right;">Margen EBIT sostenido</th>
+<th style="text-align: right;">WACC</th>
+<th style="text-align: right;">eBay</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Retail estable, cartera actual</td>
+<td style="text-align: right;">2%</td>
+<td style="text-align: right;">17,9%</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">$118,62</td>
+</tr>
+<tr class="even">
+<td>Retail en declive, cartera débil</td>
+<td style="text-align: right;">−2%</td>
+<td style="text-align: right;">28,1%</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">$90</td>
+</tr>
+<tr class="odd">
+<td>Retail más dinámico, cartera fuerte</td>
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">12,0%</td>
+<td style="text-align: right;">9,5%</td>
+<td style="text-align: right;">$150</td>
+</tr>
+</tbody>
+</table></div>
+<p>Todas parten de 3.600 de ventas y convergen hacia crecimiento terminal del 1%. La primera es plausible a la luz de la recuperación reciente; la segunda exige un margen mucho más difícil para compensar ventas y activos débiles. La tercera muestra por qué un buen resultado patrimonial puede sostener el precio con menor margen comercial. <strong>El mercado no necesita hipercrecimiento, pero tampoco ofrece gratis la recuperación.</strong></p>
+<h2 id="comparables-actuales-con-perímetros-explícitos">8. Comparables actuales, con perímetros explícitos</h2>
+<p>Precios de cierre del 3/11; balances más recientes disponibles, no balances inventados a esa fecha. Acciones emitidas recientes para capitalización, no medias diluidas históricas.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Métrica</th>
+<th style="text-align: right;">GME</th>
+<th style="text-align: right;">Best Buy</th>
+<th style="text-align: right;">eBay</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Precio</td>
+<td style="text-align: right;">$24,27</td>
+<td style="text-align: right;">$93,87</td>
+<td style="text-align: right;">$118,62</td>
+</tr>
+<tr class="even">
+<td>Capitalización</td>
+<td style="text-align: right;">12.244</td>
+<td style="text-align: right;">19.750</td>
+<td style="text-align: right;">52.074</td>
+</tr>
+<tr class="odd">
+<td>Deuda menos caja/valores corrientes</td>
+<td style="text-align: right;">Véase puente</td>
+<td style="text-align: right;">−1.086</td>
+<td style="text-align: right;">4.758</td>
+</tr>
+<tr class="even">
+<td>EV relevante</td>
+<td style="text-align: right;">Retail residual 5.287</td>
+<td style="text-align: right;">18.664</td>
+<td style="text-align: right;">56.832</td>
+</tr>
+<tr class="odd">
+<td>Ventas TTM</td>
+<td style="text-align: right;">3.551</td>
+<td style="text-align: right;">42.201</td>
+<td style="text-align: right;">12.394</td>
+</tr>
+<tr class="even">
+<td>EBIT TTM</td>
+<td style="text-align: right;">480</td>
+<td style="text-align: right;">1.710</td>
+<td style="text-align: right;">Véase nota</td>
+</tr>
+<tr class="odd">
+<td>CFO menos capex TTM</td>
+<td style="text-align: right;">688</td>
+<td style="text-align: right;">1.768</td>
+<td style="text-align: right;">2.451</td>
+</tr>
+<tr class="even">
+<td>EV / EBIT</td>
+<td style="text-align: right;">11,0× retail</td>
+<td style="text-align: right;">10,9×</td>
+<td style="text-align: right;">No mezclado</td>
+</tr>
+<tr class="odd">
+<td>EV / ventas</td>
+<td style="text-align: right;">1,49× retail</td>
+<td style="text-align: right;">0,44×</td>
+<td style="text-align: right;">4,59×</td>
+</tr>
+</tbody>
+</table></div>
+<p>Best Buy es la referencia física más próxima, aunque electrónica generalista no replica coleccionables. Caja 2.255, deuda 1.169 y 210,4 millones de acciones; los arrendamientos siguen en costes. GME a 11× EBIT operativo TTM no es obviamente barato frente a BBY a 10,9×, aunque su crecimiento de beneficios es superior. A EBIT NTM modelado de 612, GME cae a 8,6×: la diferencia depende de ejecutar esa recuperación. <a href="https://www.financialcontent.com/quote/NY%3ABBY/historical">Precio BBY</a>, <a href="https://www.sec.gov/Archives/edgar/data/764478/000076447826000042/bby-20260801.htm">10-Q BBY</a>, <a href="https://www.sec.gov/Archives/edgar/data/764478/000076447826000009/bby-20260131.htm">10-K BBY</a>.</p>
+<p>eBay es a la vez activo de cartera y referencia de marketplace, no comparable puro de tiendas. Se usan 439 millones de acciones, deuda 6.733 y caja/valores corrientes 1.975. Los fondos de clientes no son caja propia; sus 2.171 de otras inversiones a largo plazo no se deducen como efectivo, por lo que el EV mostrado es una referencia bruta, no una valoración pura de operaciones.</p>
+<p>La adopción contable sobre software capitalizado obliga a no mezclar un EBIT anual antiguo con nueve meses recalculados: se omite ese múltiplo inconsistente. Q3 eBay publicado el 28/10 registró ventas de 3.206, +14%, y margen operativo GAAP del 19,2%. El FCF TTM de 2.451 sí se reconcilia porque la reclasificación entre CFO y capex no cambia su diferencia. Su EV/FCF es 23,2×, frente a 10,6× en BBY; son FCF después de intereses, no FCFF homogéneo. Restando SBC, quedan 1.781 y 1.630 respectivamente. <a href="https://www.sec.gov/Archives/edgar/data/1065088/000106508826000212/ebay-20260930.htm">10-Q eBay</a>, <a href="https://www.sec.gov/Archives/edgar/data/1065088/000106508826000027/ebay-20251231.htm">10-K eBay</a>, <a href="https://investors.ebayinc.com/investor-news/press-release-details/2026/eBay-Inc--Reports-Third-Quarter-2026-Results/default.aspx">resultados Q3</a>.</p>
+<p>No se utiliza una media de objetivos de analistas con cobertura escasa o definiciones GAAP/ajustadas incompatibles para decidir valor. Los comparables contrastan el DCF; no lo sustituyen.</p>
+<h2 id="qué-confirmaría-o-rompería-la-tesis">9. Qué confirmaría o rompería la tesis</h2>
+<p><strong>Catalizadores verificables:</strong> siguiente trimestre cuando se anuncie oficialmente; campaña navideña y mezcla de coleccionables; ejecución de EBITDA ajustado superior a 650; conversión de beneficio en caja sin apoyo extraordinario de proveedores; comunicación de ejercicios finales de warrants; nuevos datos de cartera o decisiones de asignación de capital.</p>
+<p><strong>Confirmación favorable:</strong> márgenes altos que sobreviven a la normalización del coleccionismo, inventarios sanos, ventas estadounidenses estabilizadas y reinversión suficiente. No basta otra revalorización bursátil de eBay para demostrar mejora retail.</p>
+<p><strong>Invalidación operativa:</strong> deterioro sostenido del margen normalizado, crecimiento de inventario sin ventas, recortes de inversión incompatibles con sostener la oferta o nueva contracción comercial que obligue a cierres recurrentes.</p>
+<p><strong>Riesgo patrimonial:</strong> caída de eBay, pérdidas de contraparte/cripto, compra de un negocio a precio excesivo, nueva emisión o financiación que cambie la participación económica. Una adquisición vinculante exigiría revisar el modelo antes de tratar el valor actual como vigente. Los derechos de recompra de bonos en 2028 merecen planificación aunque hoy haya liquidez amplia.</p>
+<p><strong>Confianza:</strong> media en la recuperación ya reportada y la estructura de capital conocida; media-baja en mantener márgenes nuevos durante una década y en el destino final de la tesorería. Las incertidumbres están delimitadas y modeladas: no convierten este trabajo en una revisión incompleta.</p>
+<p><strong>Decisión del plan:</strong> análisis Stage 3 terminado, seguimiento activo por valor y calidad de beneficios; no hay margen suficientemente claro a $24,27 para una aprobación fundamental robusta. RSI 48 y puntuación alta no completan Stage 3.5: deben verificarse estructura, señal, invalidación y tamaño/riesgo de una entrada. Ninguna cifra de esta revisión es una orden automática de compra o venta.</p>
+<hr />
+<p><strong>Reproducibilidad:</strong> <code>model.py</code>, <code>model.json</code>, <code>forecast.csv</code>, <code>summary.json</code>, <code>history.py</code>, <code>history.json</code>, <code>history.csv</code> y <code>qa.txt</code> contienen cálculos, diez años de ingresos/EBIT/impuestos/reinversión/FCFF, escenarios, sensibilidad, inversa conjunta, comparables y puente de capital. Todos los supuestos de valoración son estimaciones del análisis; los hechos reportados están enlazados a sus fuentes.</p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/GME.html">Open full GME dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/GME/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/GME/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/GME/history.csv">history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/GME/forecast.csv">forecast.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/GME/history.json">history.json</a></li>
+</ul>
+</main></body></html>
