@@ -1,0 +1,1224 @@
+{
+  "price": 93.26,
+  "price_date": "2026-11-03",
+  "valuation_date": "2026-11-04",
+  "fleet": [
+    [
+      "Milos",
+      "Suezmax",
+      2016
+    ],
+    [
+      "Poliegos",
+      "Suezmax",
+      2017
+    ],
+    [
+      "Kimolos",
+      "Suezmax",
+      2018
+    ],
+    [
+      "Folegandros",
+      "Suezmax",
+      2018
+    ],
+    [
+      "Nissos Sikinos",
+      "Suezmax",
+      2020
+    ],
+    [
+      "Nissos Sifnos",
+      "Suezmax",
+      2020
+    ],
+    [
+      "Nissos Piperi",
+      "Suezmax",
+      2026
+    ],
+    [
+      "Nissos Serifopoula",
+      "Suezmax",
+      2026
+    ],
+    [
+      "Nissos Tigani",
+      "Suezmax",
+      2026
+    ],
+    [
+      "Nissos Vous",
+      "Suezmax",
+      2026
+    ],
+    [
+      "Nissos Rhenia",
+      "VLCC",
+      2019
+    ],
+    [
+      "Nissos Despotiko",
+      "VLCC",
+      2019
+    ],
+    [
+      "Nissos Donoussa",
+      "VLCC",
+      2019
+    ],
+    [
+      "Nissos Kythnos",
+      "VLCC",
+      2019
+    ],
+    [
+      "Nissos Keros",
+      "VLCC",
+      2019
+    ],
+    [
+      "Nissos Anafi",
+      "VLCC",
+      2020
+    ],
+    [
+      "Nissos Kea",
+      "VLCC",
+      2022
+    ],
+    [
+      "Nissos Nikouria",
+      "VLCC",
+      2022
+    ]
+  ],
+  "capital_inputs": {
+    "June_unrestricted_cash": 222.591472,
+    "June_restricted_cash_excluded": 25.215431,
+    "June_loan_principal": 726.797584,
+    "June_office_lease": 0.050171,
+    "July_new_loan": 45,
+    "Vous_remaining_delivery_payment": 79.4,
+    "August_dividend": 204.98443874999998,
+    "July1_Nov3_CFO_assumption": 300,
+    "July1_Nov3_other_capex_assumption": 5,
+    "July1_Nov3_principal_repayments_assumption": 18,
+    "operating_cash_reserve": 40,
+    "retirement_claim": 0.061629
+  },
+  "scenarios": {
+    "base": {
+      "assumptions": {
+        "rates": {
+          "VLCC": [
+            220000,
+            120000,
+            85000,
+            70000,
+            62500
+          ],
+          "Suezmax": [
+            130000,
+            80000,
+            60000,
+            50000,
+            45000
+          ]
+        },
+        "wacc": 0.105,
+        "g": 0.02,
+        "roic": 0.12,
+        "util": 0.97,
+        "tax": 0.01,
+        "life": 20,
+        "cfo": 300,
+        "opex_scale": 1,
+        "replacement_scale": 1,
+        "charter_days": 106
+      },
+      "capital_bridge_estimated": {
+        "estimated_cash": 260.20703325,
+        "estimated_debt_principal": 753.797584,
+        "operating_reserve": 40,
+        "net_claims": 533.70235075,
+        "preforecast_CFO_assumption": 300,
+        "not_measured_November_balance": true
+      },
+      "rows": [
+        {
+          "year": 1,
+          "period_end_year": 2027,
+          "TCE_rates": {
+            "VLCC": 220000.0,
+            "Suezmax": 130000.0
+          },
+          "TCE_revenue": 1069.613,
+          "vessel_opex": 65.7,
+          "GA": 20,
+          "economic_DA": 60,
+          "EBIT": 923.913,
+          "tax": 9.239130000000001,
+          "NOPAT": 914.67387,
+          "working_capital": 0,
+          "drydock_capex": 8,
+          "normalized_hull_reserve": 90.05,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.0,
+          "FCFF": 966.67387,
+          "PV": 874.8179819004524
+        },
+        {
+          "year": 2,
+          "period_end_year": 2028,
+          "TCE_rates": {
+            "VLCC": 120000.0,
+            "Suezmax": 80000.0
+          },
+          "TCE_revenue": 623.128,
+          "vessel_opex": 67.014,
+          "GA": 20.4,
+          "economic_DA": 61.2,
+          "EBIT": 474.51400000000007,
+          "tax": 4.745140000000001,
+          "NOPAT": 469.7688600000001,
+          "working_capital": -35.7188,
+          "drydock_capex": 8.16,
+          "normalized_hull_reserve": 91.851,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.16,
+          "FCFF": 558.5276600000001,
+          "PV": 457.4252451833501
+        },
+        {
+          "year": 3,
+          "period_end_year": 2029,
+          "TCE_rates": {
+            "VLCC": 85000.0,
+            "Suezmax": 60000.0
+          },
+          "TCE_revenue": 453.18399999999997,
+          "vessel_opex": 68.35428,
+          "GA": 20.808,
+          "economic_DA": 62.424,
+          "EBIT": 301.59772,
+          "tax": 3.0159772,
+          "NOPAT": 298.5817428,
+          "working_capital": -13.595520000000006,
+          "drydock_capex": 8.3232,
+          "normalized_hull_reserve": 93.68802,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.3232,
+          "FCFF": 366.2780628,
+          "PV": 271.47139493458366
+        },
+        {
+          "year": 4,
+          "period_end_year": 2030,
+          "TCE_rates": {
+            "VLCC": 70000.0,
+            "Suezmax": 50000.0
+          },
+          "TCE_revenue": 375.293,
+          "vessel_opex": 69.7213656,
+          "GA": 21.224159999999998,
+          "economic_DA": 63.67247999999999,
+          "EBIT": 220.6749944,
+          "tax": 2.2067499440000002,
+          "NOPAT": 218.468244456,
+          "working_capital": -6.231279999999997,
+          "drydock_capex": 8.489664,
+          "normalized_hull_reserve": 95.56178039999999,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.489664,
+          "FCFF": 279.88234045599995,
+          "PV": 187.72684653473425
+        },
+        {
+          "year": 5,
+          "period_end_year": 2031,
+          "TCE_rates": {
+            "VLCC": 62500.0,
+            "Suezmax": 45000.0
+          },
+          "TCE_revenue": 336.3475,
+          "vessel_opex": 71.115792912,
+          "GA": 21.6486432,
+          "economic_DA": 64.9459296,
+          "EBIT": 178.637134288,
+          "tax": 1.78637134288,
+          "NOPAT": 176.85076294512,
+          "working_capital": -3.1156399999999986,
+          "drydock_capex": 8.65945728,
+          "normalized_hull_reserve": 97.473016008,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 8.65945728,
+          "FCFF": 236.25287526512,
+          "PV": 143.40546847972308
+        },
+        {
+          "year": 6,
+          "period_end_year": 2032,
+          "TCE_rates": {
+            "VLCC": 63750.0,
+            "Suezmax": 45900.0
+          },
+          "TCE_revenue": 343.07444999999996,
+          "vessel_opex": 72.53810877024,
+          "GA": 22.081616064000002,
+          "economic_DA": 66.244848192,
+          "EBIT": 182.20987697375995,
+          "tax": 1.8220987697375994,
+          "NOPAT": 180.38777820402234,
+          "working_capital": 0.5381559999999945,
+          "drydock_capex": 8.8326464256,
+          "normalized_hull_reserve": 99.42247632816,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.8326464256,
+          "FCFF": 237.26182397042237,
+          "PV": 130.3329413840382
+        },
+        {
+          "year": 7,
+          "period_end_year": 2033,
+          "TCE_rates": {
+            "VLCC": 65025.0,
+            "Suezmax": 46818.0
+          },
+          "TCE_revenue": 349.93593899999996,
+          "vessel_opex": 73.9888709456448,
+          "GA": 22.523248385280002,
+          "economic_DA": 67.56974515584001,
+          "EBIT": 185.85407451323516,
+          "tax": 1.8585407451323517,
+          "NOPAT": 183.9955337681028,
+          "working_capital": 0.5489191200000005,
+          "drydock_capex": 9.009299354112,
+          "normalized_hull_reserve": 101.4109258547232,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 9.009299354112,
+          "FCFF": 242.00706044983082,
+          "PV": 120.30733050834296
+        },
+        {
+          "year": 8,
+          "period_end_year": 2034,
+          "TCE_rates": {
+            "VLCC": 66325.50000000001,
+            "Suezmax": 47754.36000000001
+          },
+          "TCE_revenue": 356.93465778000007,
+          "vessel_opex": 75.4686483645577,
+          "GA": 22.9737133529856,
+          "economic_DA": 68.92114005895681,
+          "EBIT": 189.57115600349996,
+          "tax": 1.8957115600349996,
+          "NOPAT": 187.67544444346495,
+          "working_capital": 0.5598975024000084,
+          "drydock_capex": 9.18948534119424,
+          "normalized_hull_reserve": 103.43914437181766,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 9.18948534119424,
+          "FCFF": 246.84720165882752,
+          "PV": 111.0529204692397
+        },
+        {
+          "year": 9,
+          "period_end_year": 2035,
+          "TCE_rates": {
+            "VLCC": 67652.01,
+            "Suezmax": 48709.4472
+          },
+          "TCE_revenue": 364.0733509356,
+          "vessel_opex": 76.97802133184886,
+          "GA": 23.433187620045317,
+          "economic_DA": 70.29956286013595,
+          "EBIT": 193.36257912356984,
+          "tax": 1.9336257912356984,
+          "NOPAT": 191.42895333233415,
+          "working_capital": 0.571095452447994,
+          "drydock_capex": 9.373275048018126,
+          "normalized_hull_reserve": 105.50792725925403,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 9.373275048018126,
+          "FCFF": 251.78414569200402,
+          "PV": 102.51038812545201
+        },
+        {
+          "year": 10,
+          "period_end_year": 2036,
+          "TCE_rates": {
+            "VLCC": 69005.0502,
+            "Suezmax": 49683.636144000004
+          },
+          "TCE_revenue": 371.354817954312,
+          "vessel_opex": 78.51758175848583,
+          "GA": 23.90185137244622,
+          "economic_DA": 71.70555411733866,
+          "EBIT": 197.22983070604127,
+          "tax": 1.9722983070604128,
+          "NOPAT": 195.25753239898086,
+          "working_capital": 0.5825173614969618,
+          "drydock_capex": 9.560740548978488,
+          "normalized_hull_reserve": 107.6180858044391,
+          "actual_hull_replacement_net_scrap": 104.33158124072776,
+          "additional_growth_investment": 0.0,
+          "total_capex": 113.89232178970624,
+          "FCFF": 152.48824736511634,
+          "PV": 56.184121248886264
+        }
+      ],
+      "PV_flows": 2455.2346387688026,
+      "terminal_nopat": 199.16268304696047,
+      "terminal_net_reinvestment": 46.97690538952742,
+      "terminal_fcff": 152.18577765743305,
+      "terminal_smooth_value": 1790.4209136168595,
+      "terminal_cohort_correction": -526.7938916763693,
+      "terminal_value": 1263.62702194049,
+      "PV_terminal": 465.58193854823435,
+      "terminal_weight": 0.15940129283157595,
+      "EV": 2920.8165773170367,
+      "equity": 2387.114226567037,
+      "shares": 39.044655,
+      "value": 61.13805401961003,
+      "normalized_hull_reserve_year1": 90.05,
+      "calendar": "Ten forward annual periods from November4 2026; year-end cohort convention, not FY forecasts. July1-Nov3 capital estimated separately."
+    },
+    "bear": {
+      "assumptions": {
+        "rates": {
+          "VLCC": [
+            140000,
+            75000,
+            55000,
+            45000,
+            40000
+          ],
+          "Suezmax": [
+            85000,
+            55000,
+            40000,
+            35000,
+            30000
+          ]
+        },
+        "wacc": 0.12,
+        "g": 0.015,
+        "roic": 0.1,
+        "util": 0.94,
+        "tax": 0.01,
+        "life": 20,
+        "cfo": 200,
+        "opex_scale": 1,
+        "replacement_scale": 1.15,
+        "charter_days": 106,
+        "renew": false
+      },
+      "capital_bridge_estimated": {
+        "estimated_cash": 160.20703325000002,
+        "estimated_debt_principal": 753.797584,
+        "operating_reserve": 40,
+        "net_claims": 633.70235075,
+        "preforecast_CFO_assumption": 200,
+        "not_measured_November_balance": true
+      },
+      "rows": [
+        {
+          "year": 1,
+          "period_end_year": 2027,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 140000.0,
+            "Suezmax": 85000.0
+          },
+          "TCE_revenue": 670.607,
+          "vessel_opex": 65.7,
+          "GA": 20.0,
+          "economic_DA": 60.0,
+          "EBIT": 524.9069999999999,
+          "tax": 5.24907,
+          "NOPAT": 519.65793,
+          "working_capital": 0,
+          "drydock_capex": 8.0,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 8.0,
+          "FCFF": 571.65793,
+          "PV": 510.4088660714285
+        },
+        {
+          "year": 2,
+          "period_end_year": 2028,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 75000.0,
+            "Suezmax": 55000.0
+          },
+          "TCE_revenue": 394.56499999999994,
+          "vessel_opex": 67.014,
+          "GA": 20.4,
+          "economic_DA": 61.20000000000001,
+          "EBIT": 245.95099999999994,
+          "tax": 2.4595099999999994,
+          "NOPAT": 243.49148999999994,
+          "working_capital": -22.083360000000003,
+          "drydock_capex": 8.16,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 8.16,
+          "FCFF": 318.61484999999993,
+          "PV": 253.99780771683663
+        },
+        {
+          "year": 3,
+          "period_end_year": 2029,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 55000.0,
+            "Suezmax": 40000.0
+          },
+          "TCE_revenue": 288.20399999999995,
+          "vessel_opex": 68.35428,
+          "GA": 20.808,
+          "economic_DA": 62.42400000000001,
+          "EBIT": 136.61771999999993,
+          "tax": 1.3661771999999994,
+          "NOPAT": 135.25154279999992,
+          "working_capital": -8.50888,
+          "drydock_capex": 8.3232,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 8.3232,
+          "FCFF": 197.86122279999992,
+          "PV": 140.83371019724845
+        },
+        {
+          "year": 4,
+          "period_end_year": 2030,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 45000.0,
+            "Suezmax": 35000.0
+          },
+          "TCE_revenue": 243.60099999999997,
+          "vessel_opex": 69.7213656,
+          "GA": 21.224159999999998,
+          "economic_DA": 63.672479999999986,
+          "EBIT": 88.98299440000002,
+          "tax": 0.8898299440000003,
+          "NOPAT": 88.09316445600003,
+          "working_capital": -3.5682399999999985,
+          "drydock_capex": 8.489664,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 8.489664,
+          "FCFF": 146.84422045600002,
+          "PV": 93.32215680905252
+        },
+        {
+          "year": 5,
+          "period_end_year": 2031,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 40000.0,
+            "Suezmax": 30000.0
+          },
+          "TCE_revenue": 212.72199999999995,
+          "vessel_opex": 71.115792912,
+          "GA": 21.6486432,
+          "economic_DA": 64.9459296,
+          "EBIT": 55.01163428799997,
+          "tax": 0.5501163428799997,
+          "NOPAT": 54.461517945119965,
+          "working_capital": -2.4703200000000014,
+          "drydock_capex": 8.65945728,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 8.65945728,
+          "FCFF": 113.21831026511997,
+          "PV": 64.24310980350982
+        },
+        {
+          "year": 6,
+          "period_end_year": 2032,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 40599.99999999999,
+            "Suezmax": 30449.999999999996
+          },
+          "TCE_revenue": 215.91282999999996,
+          "vessel_opex": 72.18252980567999,
+          "GA": 21.973372847999997,
+          "economic_DA": 65.92011854399999,
+          "EBIT": 55.83680880231998,
+          "tax": 0.5583680880231998,
+          "NOPAT": 55.27844071429678,
+          "working_capital": 0.25526640000000045,
+          "drydock_capex": 8.789349139199999,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 8.789349139199999,
+          "FCFF": 112.15394371909677,
+          "PV": 56.82067825086411
+        },
+        {
+          "year": 7,
+          "period_end_year": 2033,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 41208.999999999985,
+            "Suezmax": 30906.749999999993
+          },
+          "TCE_revenue": 219.1515224499999,
+          "vessel_opex": 73.26526775276518,
+          "GA": 22.302973440719995,
+          "economic_DA": 66.90892032215999,
+          "EBIT": 56.67436093435475,
+          "tax": 0.5667436093435475,
+          "NOPAT": 56.107617325011205,
+          "working_capital": 0.25909539599999565,
+          "drydock_capex": 8.921189376287998,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 8.921189376287998,
+          "FCFF": 113.8362528748832,
+          "PV": 51.493739664845585
+        },
+        {
+          "year": 8,
+          "period_end_year": 2034,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 41827.13499999999,
+            "Suezmax": 31370.35124999999
+          },
+          "TCE_revenue": 222.4387952867499,
+          "vessel_opex": 74.36424676905665,
+          "GA": 22.637518042330793,
+          "economic_DA": 67.91255412699238,
+          "EBIT": 57.52447634837007,
+          "tax": 0.5752447634837007,
+          "NOPAT": 56.94923158488637,
+          "working_capital": 0.26298182693999933,
+          "drydock_capex": 9.055007216932317,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 9.055007216932317,
+          "FCFF": 115.54379666800642,
+          "PV": 46.6662015712663
+        },
+        {
+          "year": 9,
+          "period_end_year": 2035,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 42454.54202499999,
+            "Suezmax": 31840.90651874999
+          },
+          "TCE_revenue": 225.77537721605117,
+          "vessel_opex": 75.4797104705925,
+          "GA": 22.977080812965752,
+          "economic_DA": 68.93124243889726,
+          "EBIT": 58.387343493595665,
+          "tax": 0.5838734349359567,
+          "NOPAT": 57.803470058659705,
+          "working_capital": 0.266926554344102,
+          "drydock_capex": 9.190832325186301,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 9.190832325186301,
+          "FCFF": 117.27695361802655,
+          "PV": 42.29124517396009
+        },
+        {
+          "year": 10,
+          "period_end_year": 2036,
+          "vessels": 18,
+          "TCE_rates": {
+            "VLCC": 43091.36015537498,
+            "Suezmax": 32318.520116531236
+          },
+          "TCE_revenue": 229.1620078742919,
+          "vessel_opex": 76.61190612765138,
+          "GA": 23.321737025160235,
+          "economic_DA": 69.96521107548071,
+          "EBIT": 59.26315364599955,
+          "tax": 0.5926315364599956,
+          "NOPAT": 58.670522109539554,
+          "working_capital": 0.2709304526592587,
+          "drydock_capex": 9.328694810064095,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": -13.993042215096143,
+          "additional_growth_investment": 0,
+          "total_capex": -4.664347405032048,
+          "FCFF": 133.02915013739306,
+          "PV": 42.83182603064606
+        }
+      ],
+      "PV_flows": 1302.9093412896582,
+      "terminal_nopat": 0,
+      "terminal_net_reinvestment": 0,
+      "terminal_fcff": 0,
+      "terminal_smooth_value": 0,
+      "terminal_cohort_correction": 0,
+      "terminal_value": 597.3642625641303,
+      "PV_terminal": 192.3353050413873,
+      "terminal_weight": 0.1286313283336809,
+      "EV": 1495.2446463310455,
+      "equity": 861.5422955810454,
+      "shares": 39.044655,
+      "value": 22.065563022161303,
+      "normalized_hull_reserve_year1": 0,
+      "calendar": "Ten forward annual periods from November4 2026; year-end cohort convention, not FY forecasts. July1-Nov3 capital estimated separately.",
+      "finite_tail_rows": [
+        {
+          "year": 11,
+          "period_end_year": 2037,
+          "vessels": 17,
+          "TCE_rates": {
+            "VLCC": 43737.730557705596,
+            "Suezmax": 32803.2979182792
+          },
+          "TCE_revenue": 221.34462647664463,
+          "vessel_opex": 73.44102445736803,
+          "GA": 22.35647624272999,
+          "economic_DA": 67.06942872818996,
+          "EBIT": 58.477697048356646,
+          "tax": 0.5847769704835665,
+          "NOPAT": 57.89292007787308,
+          "working_capital": -0.6253905118117814,
+          "drydock_capex": 8.942590497091997,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": -14.202937848322584,
+          "additional_growth_investment": 0,
+          "total_capex": -5.260347351230587,
+          "FCFF": 130.8480866691054,
+          "PV": 37.61569818442121
+        },
+        {
+          "year": 12,
+          "period_end_year": 2038,
+          "vessels": 16,
+          "TCE_rates": {
+            "VLCC": 44393.79651607118,
+            "Suezmax": 33295.347387053385
+          },
+          "TCE_revenue": 213.24116218529628,
+          "vessel_opex": 70.15777865809744,
+          "GA": 21.357010245996175,
+          "economic_DA": 64.07103073798854,
+          "EBIT": 57.65534254321412,
+          "tax": 0.5765534254321412,
+          "NOPAT": 57.07878911778198,
+          "working_capital": -0.6482771433078688,
+          "drydock_capex": 8.54280409839847,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": -28.83196383209484,
+          "additional_growth_investment": 0,
+          "total_capex": -20.28915973369637,
+          "FCFF": 142.08725673277476,
+          "PV": 36.470259828240295
+        },
+        {
+          "year": 13,
+          "period_end_year": 2039,
+          "vessels": 14,
+          "TCE_rates": {
+            "VLCC": 45059.70346381225,
+            "Suezmax": 33794.77759785918
+          },
+          "TCE_revenue": 193.24980323042473,
+          "vessel_opex": 62.30887717072278,
+          "GA": 18.96769472472535,
+          "economic_DA": 56.90308417417605,
+          "EBIT": 55.07014716080055,
+          "tax": 0.5507014716080055,
+          "NOPAT": 54.519445689192544,
+          "working_capital": -1.5993087163897235,
+          "drydock_capex": 7.587077889890141,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": -121.93518037323442,
+          "additional_growth_investment": 0,
+          "total_capex": -114.34810248334428,
+          "FCFF": 227.3699410631026,
+          "PV": 52.10732210299951
+        },
+        {
+          "year": 14,
+          "period_end_year": 2040,
+          "vessels": 9,
+          "TCE_rates": {
+            "VLCC": 45735.599015769425,
+            "Suezmax": 34301.69926182707
+          },
+          "TCE_revenue": 117.68913016732866,
+          "vessel_opex": 40.65654235389661,
+          "GA": 12.37642080788329,
+          "economic_DA": 37.12926242364987,
+          "EBIT": 27.526904581898883,
+          "tax": 0.2752690458189888,
+          "NOPAT": 27.251635536079895,
+          "working_capital": -6.044853845047686,
+          "drydock_capex": 4.950568323153316,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": -54.456251554686474,
+          "additional_growth_investment": 0,
+          "total_capex": -49.505683231533155,
+          "FCFF": 119.9314350363106,
+          "PV": 24.54034776388623
+        },
+        {
+          "year": 15,
+          "period_end_year": 2041,
+          "vessels": 6,
+          "TCE_rates": {
+            "VLCC": 46421.63300100596,
+            "Suezmax": 34816.22475075447
+          },
+          "TCE_revenue": 79.63631141322571,
+          "vessel_opex": 27.51092699280337,
+          "GA": 8.37471141333436,
+          "economic_DA": 25.124134240003077,
+          "EBIT": 18.626538767084906,
+          "tax": 0.18626538767084908,
+          "NOPAT": 18.440273379414055,
+          "working_capital": -3.0442255003282357,
+          "drydock_capex": 3.3498845653337437,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 3.3498845653337437,
+          "FCFF": 43.258748554411625,
+          "PV": 7.903211627859085
+        },
+        {
+          "year": 16,
+          "period_end_year": 2042,
+          "vessels": 6,
+          "TCE_rates": {
+            "VLCC": 47117.957496021045,
+            "Suezmax": 35338.46812201578
+          },
+          "TCE_revenue": 80.83085608442408,
+          "vessel_opex": 27.92359089769542,
+          "GA": 8.500332084534374,
+          "economic_DA": 25.500996253603123,
+          "EBIT": 18.905936848591164,
+          "tax": 0.18905936848591165,
+          "NOPAT": 18.716877480105254,
+          "working_capital": 0.09556357369586976,
+          "drydock_capex": 3.4001328338137498,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": -51.001992507206246,
+          "additional_growth_investment": 0,
+          "total_capex": -47.6018596733925,
+          "FCFF": 91.724169833405,
+          "PV": 14.9621990143978
+        },
+        {
+          "year": 17,
+          "period_end_year": 2043,
+          "vessels": 4,
+          "TCE_rates": {
+            "VLCC": 47824.726858461356,
+            "Suezmax": 35868.545143846015
+          },
+          "TCE_revenue": 49.225991355414266,
+          "vessel_opex": 18.894963174107232,
+          "GA": 5.751891377201592,
+          "economic_DA": 17.255674131604778,
+          "EBIT": 7.323462672500664,
+          "tax": 0.07323462672500665,
+          "NOPAT": 7.250228045775658,
+          "working_capital": -2.5283891783207855,
+          "drydock_capex": 2.300756550880637,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 2.300756550880637,
+          "FCFF": 24.733534804820586,
+          "PV": 3.6022993755489994
+        },
+        {
+          "year": 18,
+          "period_end_year": 2044,
+          "vessels": 4,
+          "TCE_rates": {
+            "VLCC": 48542.09776133827,
+            "Suezmax": 36406.57332100371
+          },
+          "TCE_revenue": 49.964381225745484,
+          "vessel_opex": 19.178387621718837,
+          "GA": 5.838169747859617,
+          "economic_DA": 17.51450924357885,
+          "EBIT": 7.43331461258818,
+          "tax": 0.07433314612588181,
+          "NOPAT": 7.358981466462299,
+          "working_capital": 0.059071189626497475,
+          "drydock_capex": 2.3352678991438465,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 2.3352678991438465,
+          "FCFF": 22.479151621270805,
+          "PV": 2.9231796630127924
+        },
+        {
+          "year": 19,
+          "period_end_year": 2045,
+          "vessels": 4,
+          "TCE_rates": {
+            "VLCC": 49270.22922775833,
+            "Suezmax": 36952.67192081875
+          },
+          "TCE_revenue": 50.71384694413165,
+          "vessel_opex": 19.46606343604462,
+          "GA": 5.92574229407751,
+          "economic_DA": 17.77722688223253,
+          "EBIT": 7.544814331776994,
+          "tax": 0.07544814331776994,
+          "NOPAT": 7.469366188459224,
+          "working_capital": 0.059957257470893525,
+          "drydock_capex": 2.370296917631004,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0,
+          "total_capex": 2.370296917631004,
+          "FCFF": 22.816338895589855,
+          "PV": 2.6491315696053417
+        },
+        {
+          "year": 20,
+          "period_end_year": 2046,
+          "vessels": 4,
+          "TCE_rates": {
+            "VLCC": 50009.28266617471,
+            "Suezmax": 37506.961999631036
+          },
+          "TCE_revenue": 51.474554648293626,
+          "vessel_opex": 19.758054387585286,
+          "GA": 6.014628428488671,
+          "economic_DA": 18.043885285466015,
+          "EBIT": 7.657986546753655,
+          "tax": 0.07657986546753655,
+          "NOPAT": 7.5814066812861185,
+          "working_capital": 0.06085661633295786,
+          "drydock_capex": 2.405851371395469,
+          "normalized_hull_reserve": 0,
+          "actual_hull_replacement_net_scrap": -64.95798702767766,
+          "additional_growth_investment": 0,
+          "total_capex": -62.55213565628219,
+          "FCFF": 88.11657100670136,
+          "PV": 9.134759866267496
+        }
+      ],
+      "finite_working_capital_release_PV": 0.42689604514861634,
+      "terminal_method": "Existing fleet runoff and scrap, no uneconomic perpetual renewal",
+      "forced_perpetual_renewal_stress_value": 11.134301478897527
+    },
+    "bull": {
+      "assumptions": {
+        "rates": {
+          "VLCC": [
+            300000,
+            180000,
+            120000,
+            95000,
+            85000
+          ],
+          "Suezmax": [
+            180000,
+            120000,
+            85000,
+            70000,
+            60000
+          ]
+        },
+        "wacc": 0.095,
+        "g": 0.025,
+        "roic": 0.15,
+        "util": 0.985,
+        "tax": 0.01,
+        "life": 20,
+        "cfo": 400,
+        "opex_scale": 1,
+        "replacement_scale": 1,
+        "charter_days": 106
+      },
+      "capital_bridge_estimated": {
+        "estimated_cash": 360.20703325,
+        "estimated_debt_principal": 753.797584,
+        "operating_reserve": 40,
+        "net_claims": 433.70235075000005,
+        "preforecast_CFO_assumption": 400,
+        "not_measured_November_balance": true
+      },
+      "rows": [
+        {
+          "year": 1,
+          "period_end_year": 2027,
+          "TCE_rates": {
+            "VLCC": 300000.0,
+            "Suezmax": 180000.0
+          },
+          "TCE_revenue": 1487.745,
+          "vessel_opex": 65.7,
+          "GA": 20,
+          "economic_DA": 60,
+          "EBIT": 1342.0449999999998,
+          "tax": 13.420449999999999,
+          "NOPAT": 1328.6245499999998,
+          "working_capital": 0,
+          "drydock_capex": 8,
+          "normalized_hull_reserve": 90.05,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.0,
+          "FCFF": 1380.6245499999998,
+          "PV": 1260.8443378995432
+        },
+        {
+          "year": 2,
+          "period_end_year": 2028,
+          "TCE_rates": {
+            "VLCC": 180000.0,
+            "Suezmax": 120000.0
+          },
+          "TCE_revenue": 949.146,
+          "vessel_opex": 67.014,
+          "GA": 20.4,
+          "economic_DA": 61.2,
+          "EBIT": 800.5319999999999,
+          "tax": 8.00532,
+          "NOPAT": 792.5266799999999,
+          "working_capital": -43.08792,
+          "drydock_capex": 8.16,
+          "normalized_hull_reserve": 91.851,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.16,
+          "FCFF": 888.6546000000001,
+          "PV": 741.1476824920248
+        },
+        {
+          "year": 3,
+          "period_end_year": 2029,
+          "TCE_rates": {
+            "VLCC": 120000.0,
+            "Suezmax": 85000.0
+          },
+          "TCE_revenue": 650.74025,
+          "vessel_opex": 68.35428,
+          "GA": 20.808,
+          "economic_DA": 62.424,
+          "EBIT": 499.15396999999996,
+          "tax": 4.9915397,
+          "NOPAT": 494.1624303,
+          "working_capital": -23.87246,
+          "drydock_capex": 8.3232,
+          "normalized_hull_reserve": 93.68802,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.3232,
+          "FCFF": 572.1356903,
+          "PV": 435.76935202012976
+        },
+        {
+          "year": 4,
+          "period_end_year": 2030,
+          "TCE_rates": {
+            "VLCC": 95000.0,
+            "Suezmax": 70000.0
+          },
+          "TCE_revenue": 524.9064999999999,
+          "vessel_opex": 69.7213656,
+          "GA": 21.224159999999998,
+          "economic_DA": 63.67247999999999,
+          "EBIT": 370.28849439999993,
+          "tax": 3.7028849439999996,
+          "NOPAT": 366.58560945599993,
+          "working_capital": -10.0667,
+          "drydock_capex": 8.489664,
+          "normalized_hull_reserve": 95.56178039999999,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.489664,
+          "FCFF": 431.83512545599996,
+          "PV": 300.37341229047547
+        },
+        {
+          "year": 5,
+          "period_end_year": 2031,
+          "TCE_rates": {
+            "VLCC": 85000.0,
+            "Suezmax": 60000.0
+          },
+          "TCE_revenue": 460.192,
+          "vessel_opex": 71.115792912,
+          "GA": 21.6486432,
+          "economic_DA": 64.9459296,
+          "EBIT": 302.481634288,
+          "tax": 3.0248163428800003,
+          "NOPAT": 299.45681794512,
+          "working_capital": -5.177159999999994,
+          "drydock_capex": 8.65945728,
+          "normalized_hull_reserve": 97.473016008,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 0.0,
+          "total_capex": 8.65945728,
+          "FCFF": 360.92045026512,
+          "PV": 229.26665497439038
+        },
+        {
+          "year": 6,
+          "period_end_year": 2032,
+          "TCE_rates": {
+            "VLCC": 87124.99999999999,
+            "Suezmax": 61499.99999999999
+          },
+          "TCE_revenue": 471.6967999999999,
+          "vessel_opex": 72.8936877348,
+          "GA": 22.18985928,
+          "economic_DA": 66.56957784,
+          "EBIT": 310.0436751451999,
+          "tax": 3.1004367514519995,
+          "NOPAT": 306.94323839374795,
+          "working_capital": 0.92038399999999,
+          "drydock_capex": 8.875943712,
+          "normalized_hull_reserve": 99.9098414082,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 1.604123023751602,
+          "total_capex": 10.480066735751603,
+          "FCFF": 362.1123654979963,
+          "PV": 210.06739041551072
+        },
+        {
+          "year": 7,
+          "period_end_year": 2033,
+          "TCE_rates": {
+            "VLCC": 89303.125,
+            "Suezmax": 63037.49999999999
+          },
+          "TCE_revenue": 483.48921999999993,
+          "vessel_opex": 74.71602992817,
+          "GA": 22.744605761999996,
+          "economic_DA": 68.23381728599999,
+          "EBIT": 317.79476702383,
+          "tax": 3.1779476702383,
+          "NOPAT": 314.61681935359167,
+          "working_capital": 0.9433936000000039,
+          "drydock_capex": 9.097842304799999,
+          "normalized_hull_reserve": 102.40758744340498,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 3.288452198690783,
+          "total_capex": 12.386294503490781,
+          "FCFF": 369.5209485361009,
+          "PV": 195.76733546950751
+        },
+        {
+          "year": 8,
+          "period_end_year": 2034,
+          "TCE_rates": {
+            "VLCC": 91535.70312499997,
+            "Suezmax": 64613.43749999998
+          },
+          "TCE_revenue": 495.57645049999974,
+          "vessel_opex": 76.58393067637424,
+          "GA": 23.313220906049995,
+          "economic_DA": 69.93966271814999,
+          "EBIT": 325.73963619942555,
+          "tax": 3.2573963619942554,
+          "NOPAT": 322.4822398374313,
+          "working_capital": 0.9669784399999845,
+          "drydock_capex": 9.325288362419998,
+          "normalized_hull_reserve": 104.9677771294901,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 5.055995255487076,
+          "total_capex": 14.381283617907075,
+          "FCFF": 377.0736404976742,
+          "PV": 182.43712536425917
+        },
+        {
+          "year": 9,
+          "period_end_year": 2035,
+          "TCE_rates": {
+            "VLCC": 93824.09570312496,
+            "Suezmax": 66228.77343749997
+          },
+          "TCE_revenue": 507.96586176249974,
+          "vessel_opex": 78.49852894328359,
+          "GA": 23.896051428701245,
+          "economic_DA": 71.68815428610374,
+          "EBIT": 333.8831271044112,
+          "tax": 3.338831271044112,
+          "NOPAT": 330.5442958333671,
+          "working_capital": 0.9911529010000004,
+          "drydock_capex": 9.558420571480498,
+          "normalized_hull_reserve": 107.59197155772736,
+          "actual_hull_replacement_net_scrap": 0,
+          "additional_growth_investment": 6.909860182498983,
+          "total_capex": 16.46828075397948,
+          "FCFF": 384.7730164644913,
+          "PV": 170.01120104565757
+        },
+        {
+          "year": 10,
+          "period_end_year": 2036,
+          "TCE_rates": {
+            "VLCC": 96169.69809570308,
+            "Suezmax": 67884.49277343747
+          },
+          "TCE_revenue": 520.6650083065622,
+          "vessel_opex": 80.46099216686568,
+          "GA": 24.493452714418776,
+          "economic_DA": 73.48035814325632,
+          "EBIT": 342.2302052820214,
+          "tax": 3.422302052820214,
+          "NOPAT": 338.8079032292012,
+          "working_capital": 1.0159317235249956,
+          "drydock_capex": 9.79738108576751,
+          "normalized_hull_reserve": 110.28177084667053,
+          "actual_hull_replacement_net_scrap": 106.91392109843795,
+          "additional_growth_investment": 8.853258358826828,
+          "total_capex": 125.56456054303229,
+          "FCFF": 285.7077691059003,
+          "PV": 115.28713809590836
+        }
+      ],
+      "PV_flows": 3840.971630067407,
+      "terminal_nopat": 347.2781008099312,
+      "terminal_net_reinvestment": 57.879683468321865,
+      "terminal_fcff": 289.39841734160933,
+      "terminal_smooth_value": 4134.263104880133,
+      "terminal_cohort_correction": -545.3883806427062,
+      "terminal_value": 3588.874724237427,
+      "PV_terminal": 1448.1618656604137,
+      "terminal_weight": 0.27379945445319803,
+      "EV": 5289.133495727821,
+      "equity": 4855.4311449778215,
+      "shares": 39.044655,
+      "value": 124.355847041748,
+      "normalized_hull_reserve_year1": 90.05,
+      "calendar": "Ten forward annual periods from November4 2026; year-end cohort convention, not FY forecasts. July1-Nov3 capital estimated separately."
+    }
+  }
+}
