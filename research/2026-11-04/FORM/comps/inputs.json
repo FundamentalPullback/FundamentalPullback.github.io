@@ -1,0 +1,319 @@
+{
+  "as_of": "2026-11-03 close; accessed 2026-11-04",
+  "units": "Local currency millions, except shares in millions and price per share",
+  "peers": {
+    "FORM": {
+      "currency": "USD",
+      "period": "TTM ended 2026-09-26 (52 weeks)",
+      "accounting": "US GAAP",
+      "role": "subject; probe cards and systems",
+      "periods": {
+        "FY2025": {
+          "revenue": 784.993,
+          "ebit": 57.07,
+          "cfo": 115.398,
+          "capex": 103.658,
+          "sbc": 38.576
+        },
+        "9M2025": {
+          "revenue": 569.83,
+          "ebit": 33.58,
+          "cfo": 69.423,
+          "capex": 92.345,
+          "sbc": 28.703
+        },
+        "9M2026": {
+          "revenue": 764.933,
+          "ebit": 156.044,
+          "cfo": 211.034,
+          "capex": 64.439,
+          "sbc": 25.556
+        }
+      },
+      "capital": {
+        "price": 96.79,
+        "price_date": "2026-11-03",
+        "shares": 78.403115,
+        "shares_date": "2026-10-28",
+        "cash_and_liquid_investments": 395.41200000000003,
+        "debt_face": 11.403,
+        "operating_leases_excluded": 16.402,
+        "fict_investment_book": 70.467,
+        "pending_raise_cash_excluded": 300,
+        "pending_raise_shares_excluded": 2.234887
+      },
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1039399/000103939926000009/form-20251227.htm",
+          "locator": "FY2025 consolidated income/cash-flow statements; USD thousands divided by 1000."
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm",
+          "locator": "9M2026 consolidated income/cash-flow statements; USD thousands divided by 1000."
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm",
+          "locator": "Cover: actual shares October28; balance sheet cash/securities; debt note principal; FICT equity investment and pending subsequent equity financing."
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/form/history/",
+          "locator": "November3 close96.79; secondary quote source."
+        }
+      ],
+      "limitations": [
+        "No restructuring, factory startup, SBC or acquired amortization added back. Operating EBIT179.534m, not provider EBIT213.4m.",
+        "Conventional EV retains private20%FICT stake while EBIT excludes equity-method income. Book70.467m subtraction is sensitivity only; not a verified market value or DCF conclusion.",
+        "Pending Teradyne investment300m and2.234887m new shares are excluded from actual capital. Closing was not verified at the cut.",
+        "Basic actual shares exclude unvested awards; do not use weighted EPS shares as the observed capital count. Cash balance is September26, not November3.",
+        "CFO-capex is a cash proxy, not unlevered FCF; includes interest/tax effects and excludes acquisition/equity investment spending. Historical capex is not normalized to a sustainable rate."
+      ]
+    },
+    "TER": {
+      "currency": "USD",
+      "period": "TTM ended 2026-09-27",
+      "accounting": "US GAAP",
+      "role": "test-equipment ecosystem reference, strategic counterparty; not a direct probe-card pure play",
+      "periods": {
+        "FY2025": {
+          "revenue": 3190.024,
+          "ebit": 650.051,
+          "cfo": 674.415,
+          "capex": 224.009,
+          "sbc": 63.999
+        },
+        "9M2025": {
+          "revenue": 2106.687,
+          "ebit": 356.85,
+          "cfo": 392.776,
+          "capex": 161.121,
+          "sbc": 47.561
+        },
+        "9M2026": {
+          "revenue": 3917.434,
+          "ebit": 1312.782,
+          "cfo": 1047.875,
+          "capex": 241.762,
+          "sbc": 63.649
+        }
+      },
+      "capital": {
+        "price": 269.35,
+        "price_date": "2026-11-03",
+        "shares": 156.124751,
+        "shares_date": "2026-10-26",
+        "cash_and_liquid_investments": 624.865,
+        "debt_face": 0,
+        "operating_leases_excluded": 137.115,
+        "pension_liability": 152.91,
+        "redeemable_nci_book": 49.065,
+        "technoprobe_shares": 65.326087,
+        "technoprobe_price_eur": 24.34,
+        "usd_per_eur": 1.1179
+      },
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/97210/000119312526059002/ter-20251231.htm",
+          "locator": "FY2025 10-K consolidated statements; TTM=FY2025-9M2025+9M2026."
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/97210/000119312526441091/ter-20260927.htm",
+          "locator": "Q3 FY2026 10-Q consolidated statements; TTM=FY2025-9M2025+9M2026."
+        },
+        {
+          "url": "https://www.technoprobe.com/investors/investor-relations/shareholders-and-share-capital",
+          "locator": "ownership; capital/price/stake source. Prices are secondary; ownership and FX sources primary."
+        },
+        {
+          "url": "https://es.investing.com/equities/technoprobe-historical-data",
+          "locator": "stakePrice; capital/price/stake source. Prices are secondary; ownership and FX sources primary."
+        },
+        {
+          "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.xml",
+          "locator": "fx; capital/price/stake source. Prices are secondary; ownership and FX sources primary."
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/ter/history/",
+          "locator": "terPrice; capital/price/stake source. Prices are secondary; ownership and FX sources primary."
+        }
+      ],
+      "limitations": [
+        "TER financial inputs reproduced from local FY2025/9M2025/9M2026 source-mapped values; capital source URLs included. Prices and share dates differ from Sep balance sheet. Conventional screen excludes pension/NCI and retains Technoprobe stake. Industrial variant subtracts independently marked stake and adds pension plus NCI book, not an asserted market NCI value."
+      ]
+    },
+    "6857": {
+      "currency": "JPY",
+      "period": "TTM ended 2026-09-30",
+      "accounting": "IFRS",
+      "role": "test-equipment ecosystem reference, not direct probe-card pure play; IFRS",
+      "periods": {
+        "FY2025": {
+          "revenue": 1128610,
+          "ebit": 499120,
+          "cfo": 335182,
+          "capex_ppe": 33012,
+          "capex_intangibles": 3018,
+          "sbc": 4450,
+          "lease_principal": 4982
+        },
+        "H12025": {
+          "revenue": 526733,
+          "ebit": 232435,
+          "cfo": 139923,
+          "capex_ppe": 18303,
+          "capex_intangibles": 1295,
+          "sbc": 2117,
+          "lease_principal": 2644
+        },
+        "H12026": {
+          "revenue": 845200,
+          "ebit": 456809,
+          "cfo": 306966,
+          "capex_ppe": 21454,
+          "capex_intangibles": 1166,
+          "sbc": 2635,
+          "lease_principal": 2398
+        }
+      },
+      "capital": {
+        "price": 35770,
+        "price_date": "2026-11-02",
+        "shares_sep30": 721.952905,
+        "oct_repurchase_shares": 0.4209,
+        "oct_restricted_shares_issued": 0.040198,
+        "cash_and_liquid_investments": 401785,
+        "debt_face": 100000,
+        "debt_carrying": 89486,
+        "lease_liabilities": 17760,
+        "investment_securities_book": 432586,
+        "oct_repurchase_cost": 14563.326,
+        "conversion_price": 35946.5
+      },
+      "sources": [
+        {
+          "url": "https://www.advantest.com/document/en/investors/ir-library/result/E_FR_FY2026_2Q.pdf",
+          "locator": "PDF pp.1-2 shares; pp.8-9 capital; p.13 cash flow; p.15 SBC. Figures JPY million."
+        },
+        {
+          "url": "https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf",
+          "locator": "PDF p.1 revenue/EBIT; p.13 cash flow/SBC/capex/lease principal."
+        },
+        {
+          "url": "https://www.advantest.com/en/news/2026/mpd9kn0000000iga-att/E_Info_20261102.pdf",
+          "locator": "October29-31 repurchases420900 forJPY14563326000."
+        },
+        {
+          "url": "https://www.advantest.com/en/news/2026/mpd9kn0000000if6-att/E_Info_20261030.pdf",
+          "locator": "Restricted-stock disposal40198 shares completedOct30; noncash compensation, do not add stated amount as cash proceeds."
+        },
+        {
+          "url": "https://www.advantest.com/en/news/2026/mpd9kn0000000gi3-att/E_Info_20261028_04.pdf",
+          "locator": "Conversion price adjusted effectiveOct1 toJPY35946.5."
+        },
+        {
+          "url": "https://markets.ptc.ft.markitdigital.com/data/equities/tearsheet/historical?s=6857%3ATYO",
+          "locator": "Nov2 close35770; secondary market-data vendor."
+        },
+        {
+          "url": "https://finance.yahoo.co.jp/quote/6857.T/history",
+          "locator": "Independent Nov2 close35770 corroboration; secondary."
+        },
+        {
+          "url": "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html",
+          "locator": "Nov3 Culture Day exchange holiday."
+        }
+      ],
+      "limitations": [
+        "FY2025 is April2025-March2026, not calendar2025. TTM=FY2025-H12025+H12026.",
+        "Shares rolled from Sep30 through disclosed October transactions only; November2 and any undisclosed October movements unknown. Cash pro forma deducts disclosed October repurchases, not an actual November balance sheet.",
+        "Investment securities JPY432586m are not assumed all excess cash; subtracting their Sep book value is a separate sensitivity, not a current marked portfolio valuation.",
+        "UseJPY100000m convertible face, notJPY89486m IFRS carrying amount. Nov2 price belowJPY35946.5 conversion price; basic-share screen excludes future contingent conversion and employee-award dilution.",
+        "IFRS lease principal in financing boosts CFO versus US GAAP operating leases. Show FCF after lease principal separately. EBIT retains ROU depreciation but not lease interest; no fully lease-neutral multiple asserted.",
+        "TTM strategic valuation gains excluded via operating EBIT, not P/E. SBC is segment-note expense, not changes-in-equity payments."
+      ]
+    },
+    "COHU": {
+      "currency": "USD",
+      "period": "TTM ended 2026-09-26 (52 weeks)",
+      "accounting": "US GAAP",
+      "role": "secondary cyclical test/handling peer; TTM EBIT loss",
+      "periods": {
+        "FY2025": {
+          "revenue": 452.956,
+          "ebit": -69.769,
+          "cfo": 31.692,
+          "capex": 20.958,
+          "sbc": 23.042,
+          "non_gaap_ebit": 2.13
+        },
+        "9M2025": {
+          "revenue": 330.726,
+          "ebit": -54.278,
+          "cfo": -8.144,
+          "capex": 17.583,
+          "sbc": 17.564,
+          "non_gaap_ebit": 2.073
+        },
+        "9M2026": {
+          "revenue": 447.077,
+          "ebit": 1.939,
+          "cfo": 26.354,
+          "capex": 6.961,
+          "sbc": 17.494,
+          "non_gaap_ebit": 43.742
+        }
+      },
+      "capital": {
+        "price": 50.03,
+        "price_date": "2026-11-03",
+        "shares": 47.34605,
+        "shares_date": "2026-10-20",
+        "cash_and_liquid_investments": 507.948,
+        "debt_face": 309.804,
+        "debt_carrying": 302.061,
+        "convert_principal": 287.5,
+        "convert_shares_per_1000": 36.7975,
+        "capped_call_cap": 41.02,
+        "rsus_outstanding": 1.183608,
+        "psus_outstanding": 0.784554
+      },
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/21535/000143774926033843/cohu20260926_10q.htm",
+          "locator": "Cover sharesOct20; statements CFO/capex9M2026 and9M2025; note3 gross debt309804thousand, note8 capped calls; equity awards."
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/21535/000143774926004339/cohu20251227_10k.htm",
+          "locator": "Consolidated cash flow FY2025: CFO31692, PPE20958, SBC23042 USDthousand."
+        },
+        {
+          "url": "https://ir.cohu.com/news-releases/news-release-details/cohu-reports-third-quarter-2026-results",
+          "locator": "GAAP operating statement and nonGAAP reconciliation9M2026/9M2025."
+        },
+        {
+          "url": "https://ir.cohu.com/node/19416/pdf",
+          "locator": "FY2025 revenue452956, EBIT-69769, adjustedEBIT2130 USDthousand."
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/cohu/history/",
+          "locator": "Nov3 close50.03; S&PGlobal data via secondary website."
+        },
+        {
+          "url": "https://chartexchange.com/symbol/nasdaq-cohu/historical/",
+          "locator": "Nov3 close50.03 independently corroborated; secondary."
+        }
+      ],
+      "limitations": [
+        "Convertible notes currently in the money. Face-debt/basic-share EV is incomplete; add gross conversion intrinsic and then capped-call offset only as illustrative economic sensitivity, not market value of notes or options.",
+        "Capped-call cap41.02 is below50.03 stock; cannot assume fully protected dilution. Contract terms and differing settlement timing prevent treating simple intrinsic sensitivity as a fair value.",
+        "No employee-award dilution in basic screen. RSUs1.183608m and PSUs0.784554m are unvested; PSU payout0-200%, tax withholding and future vesting prevent use as exact incremental shares.",
+        "TTM EBIT negative so EV/EBIT not meaningful. Adjusted EBIT excludesSBC/acquisition amortization and is not compared directly with TER GAAP.",
+        "Dates differ by one-four days; no annualization of9M numbers."
+      ]
+    }
+  },
+  "methodology": {
+    "ev": "Observed basic equity market capitalization + nominal financial debt - cash and liquid investments; no operating leases or strategic investments deducted unless separately labeled.",
+    "valuation": "Current TTM screen, not forward consensus, sustainable earnings, peer median or target price.",
+    "period_growth": "Nine-month year-over-year for US names; six-month year-over-year for Advantest; not directly equal periods."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "rfNov3": 0.0495,
+  "erpNov1": 0.0441,
+  "erpAssociatedRiskFree": 0.0529,
+  "providerBeta5Y": 1.28,
+  "costEquity": 0.105948,
+  "marketEquityProxy": 7588.637500850001,
+  "debtPrincipal": 11.403,
+  "debtWeight": 0.0015003867411923226,
+  "hedgedDebtRate": 0.0275,
+  "taxRate": 0.24,
+  "calculatedWaccProxy": 0.10582039510843508,
+  "selectedBaseDiscount": 0.1075,
+  "selectedPremiumBp": 16.7960489156492,
+  "sources": [
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "https://stockanalysis.com/stocks/form/statistics/",
+    "https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm"
+  ],
+  "limitations": [
+    "ERP and risk-free observation dates differ. Provider beta is not an independent regression.",
+    "Debt is nominal not market, selected existing 2.75% hedged rate is not a new financing yield. Undrawn revolver not funded debt.",
+    "Selected10.75% is a discretionary premium, not arithmetic rounding.",
+    "Calculation uses actual outstanding shares before conditional financing; value model separately adds selected net awards and conditional new shares."
+  ]
+}

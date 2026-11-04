@@ -1,0 +1,408 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FORM · Investigación parcial · financiación pendiente y FICT sin tasación · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/FORM">← FORM profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · financiación pendiente y FICT sin tasación</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="form-a234-investigación-del-4-de-noviembre-de-2026">FORM · A234 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Crece el beneficio industrial, pero la rampa fabril, el ciclo y la inversión privada FICT impiden certificar valor total. La financiación Teradyne sigue pendiente; los casos con y sin cierre permanecen solo en el dossier. Sin valor total, cota inferior ni entrada autorizada.</strong></p>
+<p>Industrial profit grows, but the factory ramp, cycle and private FICT investment prevent a certified total value. Teradyne financing remains pending; closing and no-closing cases stay in the dossier only. No total value, lower bound or entry approval.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/FORM.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-14, 123.84 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 96.79 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 noviembre 2026; paquete final auditado antes de esta publicación.</p>
+<p>Las listas previas y el escáner del 14 de octubre a 123,84 se mantienen; el cierre del 3 de noviembre de 96,79 es una referencia distinta. La inversión de Teradyne de 300 millones no se trata como caja recibida ni dilución cerrada. Los casos industriales con financiación 17,20/52,82/113,93 y sin cierre 13,95/50,57/113,40 excluyen FICT sin tasación independiente. No son valor total, probabilidades ni cotas; FICT excluida no equivale a valor cero. El beneficio IEEPA no recurrente se retira del ancla y los costes de rampa no desaparecen por pasar a coste de ventas.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="form-investigación-parcial-expansión-industrial-y-financiación-pendiente">FORM — investigación parcial: expansión industrial y financiación pendiente</h1>
+<p>Corte informativo: 4 de noviembre de 2026. Precios: cierre del 3 de noviembre. USD millones salvo precio/acción; acciones en millones. Investigación revisada; no aprobación de entrada. No es valoración total de FormFactor ni Stage 3 integral.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>FormFactor acelera en tarjetas de prueba para memoria y lógica avanzada, pero la rentabilidad del trimestre no equivale a un margen de ciclo. El DCF industrial conserva SBC, financia fábrica y crecimiento y excluye una valoración independiente de la participación privada FICT. Con financiación Teradyne supuesta, los casos parciales son 17,20 / 52,82 / 113,93 dólares por acción; sin cierre, 13,95 / 50,57 / 113,40. Ninguno es valor total, cota inferior ni rango íntegro de FORM. No se asignan probabilidades al cierre. El precio de referencia es 96,79, no el scanner histórico 123,84.</p>
+<p>La tesis exige convertir la demanda de HBM, lógica avanzada y encapsulado en caja después de una expansión intensiva en capital. El caso favorable exige ingresos de 4.153 M en el año diez, margen operativo antes de amortización adquirida de 34% y descuento de 9,5%; no constituye previsión corporativa. El caso central no acredita margen de seguridad frente al precio, pero tampoco permite concluir una sobrevaloración total certificada porque FICT, premios y capital actual siguen incompletamente conciliados.</p>
+<h2 id="negocio-y-calidad">Negocio y calidad</h2>
+<p>El Q3 facturó 280,547 M: tarjetas 221,095 M y sistemas 59,452 M. Las tarjetas sirven foundry/lógica y DRAM/HBM, mientras sistemas incluyen pruebas avanzadas y ópticas. La cualificación técnica, complejidad de contactos y relación con fabricantes favorecen continuidad comercial; no eliminan concentración, competencia ni ciclos de capacidad. SK hynix representó 20,7% y TSMC 12,8% del trimestre: 33,5% combinado. Son porcentajes de un mismo período, no se suman clientes de trimestres diferentes. Los destinos de entrega no prueban el país del consumidor final.</p>
+<p>Los ingresos TTM subieron de 759,313 a 980,096 M y el EBIT reportado de 41,430 a 179,534 M. La mejora tiene respaldo contable, pero la expansión fabril, la concentración de clientes y la ciclicidad de memoria impiden perpetuar mecánicamente el margen Q3. Fuente: https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm</p>
+<h2 id="historia-normalizada-y-caja">Historia normalizada y caja</h2>
+<p>Los anexos history contienen tres ejercicios, cuatro trimestres y TTM comparable, con EPS, acciones, SBC, D&amp;A, capital circulante y segmentos cuando disponibles. Todos son períodos de 52/13 semanas; Q4 es FY menos nueve meses. EPS y acciones ponderadas Q4/TTM derivados se etiquetan calculados, no reportados. La ponderación temporal no reconstruye necesariamente treasury-stock ni antidilución; son proxies analíticos, no denominadores GAAP certificados ni EPS reportados.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Período</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex caja</th>
+<th style="text-align: right;">SBC CF</th>
+<th style="text-align: right;">FCF bruto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">663.102</td>
+<td style="text-align: right;">82.756</td>
+<td style="text-align: right;">64.602</td>
+<td style="text-align: right;">56.027</td>
+<td style="text-align: right;">38.616</td>
+<td style="text-align: right;">8.575</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">763.599</td>
+<td style="text-align: right;">64.780</td>
+<td style="text-align: right;">117.534</td>
+<td style="text-align: right;">38.436</td>
+<td style="text-align: right;">39.763</td>
+<td style="text-align: right;">79.098</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">784.993</td>
+<td style="text-align: right;">57.070</td>
+<td style="text-align: right;">115.398</td>
+<td style="text-align: right;">103.658</td>
+<td style="text-align: right;">38.576</td>
+<td style="text-align: right;">11.740</td>
+</tr>
+<tr class="even">
+<td>FY2025Q4</td>
+<td style="text-align: right;">215.163</td>
+<td style="text-align: right;">23.490</td>
+<td style="text-align: right;">45.975</td>
+<td style="text-align: right;">11.313</td>
+<td style="text-align: right;">9.873</td>
+<td style="text-align: right;">34.662</td>
+</tr>
+<tr class="odd">
+<td>FY2026Q1</td>
+<td style="text-align: right;">226.144</td>
+<td style="text-align: right;">16.648</td>
+<td style="text-align: right;">44.961</td>
+<td style="text-align: right;">15.192</td>
+<td style="text-align: right;">8.063</td>
+<td style="text-align: right;">29.769</td>
+</tr>
+<tr class="even">
+<td>FY2026Q2</td>
+<td style="text-align: right;">258.242</td>
+<td style="text-align: right;">57.799</td>
+<td style="text-align: right;">61.803</td>
+<td style="text-align: right;">9.599</td>
+<td style="text-align: right;">8.658</td>
+<td style="text-align: right;">52.204</td>
+</tr>
+<tr class="odd">
+<td>FY2026Q3</td>
+<td style="text-align: right;">280.547</td>
+<td style="text-align: right;">81.597</td>
+<td style="text-align: right;">104.270</td>
+<td style="text-align: right;">39.648</td>
+<td style="text-align: right;">8.835</td>
+<td style="text-align: right;">64.622</td>
+</tr>
+<tr class="even">
+<td>TTM2025Q3</td>
+<td style="text-align: right;">759.313</td>
+<td style="text-align: right;">41.430</td>
+<td style="text-align: right;">105.336</td>
+<td style="text-align: right;">100.008</td>
+<td style="text-align: right;">38.916</td>
+<td style="text-align: right;">5.328</td>
+</tr>
+<tr class="odd">
+<td>TTM2026Q3</td>
+<td style="text-align: right;">980.096</td>
+<td style="text-align: right;">179.534</td>
+<td style="text-align: right;">257.009</td>
+<td style="text-align: right;">75.752</td>
+<td style="text-align: right;">35.429</td>
+<td style="text-align: right;">181.257</td>
+</tr>
+</tbody>
+</table></div>
+<p>El EBIT FY2023 incluye ganancia por venta de negocio de 72,953 M: retirarla reduce 82,756 a 9,803 M. FY2024 incluye 20,581 M: 64,780 pasa a 44,199 M. Son puentes analíticos, no otra cifra GAAP. Reestructuración y arranque permanecen en el historial y no se añaden automáticamente al DCF. La cifra de EBIT TTM de 213,4 M mostrada por un agregador no sustituye los 179,534 M reconciliados con estados primarios. Fuente anual: https://www.sec.gov/Archives/edgar/data/1039399/000103939926000009/form-20251227.htm</p>
+<p>FCF bruto significa CFO menos compras brutas de PP&amp;E: TTM 257,009 − 75,752 = 181,257 M; menos SBC CF 35,429 resulta un proxy de 145,828 M, no FCFF ni capacidad distribuible certificada. El TTM previo fue 105,336 − 100,008 = 5,328 M, y después de SBC −33,588 M. Parte del salto obedece a calendario de inversión: el período previo incluía compra inmobiliaria Farmers Branch de 55 M en junio de 2025; no prueba capex de mantenimiento permanentemente menor.</p>
+<p>El FCF ajustado del emisor no es el mismo: Q3 64,778 M añade a 64,622 M de CFO menos capex 0,081 de intereses y 0,075 de costes de adquisición. FY2025 13,574 frente a 11,740 añade 0,362 y 1,472. No se toma ese ajuste como caja gratis. D&amp;A CF incluye amortización adquirida; el modelo antes de ésta usa sólo D&amp;A física/software seleccionada, evitando doble addback.</p>
+<p>SBC gasto Q3 fue 8,835 M y nueve meses 25,556 M, distinto del ajuste no GAAP 8,802/25,395. Los 0,161 M de SBC en reestructuración explican la diferencia de nueve meses; no se inventa su distribución trimestral. Capitalización de SBC y amortización de software no separadas quedan desconocidas. El modelo conserva SBC como coste, además de mostrar sensibilidad de premios netos ya existentes; no resta automáticamente todas las RSU sin consolidar y todo el gasto futuro dos veces.</p>
+<p>Los reembolsos IEEPA aumentaron el beneficio bruto Q3 en 8,6 M y nueve meses en 9,4 M; corresponden a tarifas de períodos anteriores y el emisor no espera repetición similar. La caja recibida 9,9 M no equivale al beneficio reconocido. Se preserva el GAAP histórico, se retiran 8,6 M del ancla trimestral del DCF y 9,4 M de la alternativa TTM. No se vuelve a restar la caja ya recibida, ni se añade como activo nuevo la expectativa de otros 1,8 M en Q4. Los márgenes futuros elegidos excluyen ese beneficio extraordinario; la base inicial de 27% es ligeramente superior al margen Q3 sin reembolso (aproximadamente 26%), por lo que presupone mejora operativa pese a la rampa. El adverso/base no cambian al corregir el ancla porque el suelo físico domina la inversión inicial; el favorable exige más inversión y sí cambia. Fuente: https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm</p>
+<h2 id="farmers-branch-y-sostenibilidad">Farmers Branch y sostenibilidad</h2>
+<p>La nueva planta comenzó producción al final de Q3 y la rampa continuará durante 2027. El 10-Q advierte costes sustanciales de infrautilización: al producir, parte del gasto de arranque pasa de G&amp;A a coste de ventas, no desaparece. Q3 soportó 6,375 M de arranque y el TTM 20,012 M. PP&amp;E neto fue 300,369 M y obra en curso 117,845 M. No se usa el margen no GAAP del trimestre como margen libre de costes futuros. Fuente: https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm</p>
+<p>El capex TTM de 75,752 M no se extrapola: FY2025 103,658 menos 9M2025 92,345 más 9M2026 64,439. La guía histórica de expansión no es una confirmación de gasto actual; no se presenta como vigente sin verificar actualizaciones. El modelo selecciona capex inicial de 14% de ingresos en base, 173,6 M, y un suelo recurrente de 6% al estabilizarse. Son supuestos propios, no guía. El stress +2/+4 puntos de capex continúa también en terminal. La evidencia primaria basta para exigir financiación explícita, no para certificar el calendario definitivo del proyecto.</p>
+<h2 id="capital-financiación-y-fict">Capital, financiación y FICT</h2>
+<p>Caja y valores líquidos al 26 de septiembre: 138,179 + 257,233 = 395,412 M; caja restringida 3,590 excluida. Se reserva caja operativa 150 y se deduce deuda principal 11,403, no deuda contable 11,358 más principal. Se añade swap 1,697 y descuenta derivado FX 0,693. El revolver de 150 no dispuesto no es caja. Arrendamientos operativos 16,402 permanecen en costes, sin segunda deducción de deuda. Pagaré de 1,5 se incorpora por 0,75 seleccionado, con sensibilidad 0–1,5. DTA 87,682 no es efectivo.</p>
+<p>Se reserva 56,397 por exposición fiscal histórica: UTB bruto septiembre 55,4 más intereses/penalizaciones FY2025 0,997 como último dato conocido. No es pago futuro exacto, puede haber compensaciones y el interés actual no está conciliado. La tasa recurrente de 24% no liquida esa exposición. Se deducen 4,948 de reestructuración devengada y 18 del grant California Competes potencialmente reembolsable, como reserva prudencial completa, no declaración de incumplimiento. Sus condiciones de empleo/inversión y el traslado de actividades exigen seguimiento. No se deduce por segunda vez toda deuda fiscal corriente que pudiera solaparse. Fuente: https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm</p>
+<p>El acuerdo Teradyne prevé 300 M por 2,234887 millones de nuevas acciones y cierre esperado en Q4 sujeto a condiciones. El 10-Q del 3 de noviembre aún lo describe pendiente. Form D identifica el compromiso, no demuestra liquidación. En el caso de cierre se añaden 297 M netos de una comisión seleccionada de 3 M y simultáneamente las acciones nuevas. Sin cierre se eliminan ambos, no se conserva el dinero sin dilución. La marca bursátil de las acciones que podría recibir Teradyne no reduce el efectivo contractual recibido por FORM. Fuentes: https://www.sec.gov/Archives/edgar/data/1039399/000103939926000037/form-20261006.htm y https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm</p>
+<p>Las acciones reales son 78,403115 M al 28 de octubre, no las ponderadas Q3. Se añade un proxy de premios netos de 1,160 M, diferencia entre diluidas y básicas ponderadas Q3: no es un cap table actual certificado. El denominador seleccionado con emisión es 81,798002 M; sin emisión 79,563115 M. Hay 1,406487 M de RSU sin consolidar y 74,680 M de compensación no reconocida, con PRSU potencialmente al 200%; no se convierten todas en pasivo corriente ni se presume que todas vestirán. La autorización de recompra 70,9 M no es activo y no se observaron recompras nueve meses.</p>
+<p>Los derechos de registro de la emisión incluyen registro vinculado al cierre y suspensiones limitadas; no garantizan liquidez inmediata ni prueban cierre. El texto completo de compra no se ha conciliado aquí, y no se infieren derechos de cancelación sin coste. Fuente: https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/ex41-teradyneformfactorreg.htm . Definición Form D: https://www.sec.gov/resources-small-businesses/exempt-offerings/filing-form-d-notice</p>
+<p>La inversión privada FICT es 20% de la holding, con valor contable de 70,467 M y resultados por puesta en equivalencia rezagados. No existe un DCF independiente conciliado del negocio. Su ingreso TTM 6,193 M está fuera del EBIT industrial y no se capitaliza dos veces. Las compras relacionadas, 12,3 M en nueve meses, siguen dentro del coste operativo. Excluir la participación del componente calculado no significa que valga cero ni que el resultado sea una cota inferior. Añadir mecánicamente su book value llevaría el caso base parcial de 52,82 a 53,68; es sensibilidad, no tasación. Fuente: https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm</p>
+<h2 id="dcf-explícito-y-supuestos">DCF explícito y supuestos</h2>
+<p>Horizonte diez años, períodos anuales al 3 de noviembre de 2027–2036, no ejercicios fiscales inventados. No se omite arbitrariamente un stub y luego se llaman fiscales los descuentos. Ancla: cuatro veces Q3, ingresos 1.122,188 y EBIT antes de amortización adquirida y excluyendo reembolsos arancelarios 295,168 = (81,597 + 0,795 − 8,6) × 4. Es run-rate elevado, no previsión anual. La alternativa ancla TTM 980,096/173,012, manteniendo los mismos futuros, produce base 49,18: requiere más inversión inicial para llegar al mismo objetivo.</p>
+<p>NOPAT = EBIT después de SBC y antes de amortización adquirida × (1−24%). No se introduce escudo fiscal de amortización no demostrado. D&amp;A física/software se selecciona en 3% de ventas, sin añadir de nuevo la amortización adquirida. Capex menos D&amp;A más circulante es el suelo físico; se toma el máximo con incremento positivo de NOPAT dividido por ROIC. La caída de NOPAT no genera liberación ficticia de capital; tampoco se libera circulante cuando caen ventas. El terminal financia el máximo entre suelo físico persistente y NOPAT × g / ROIC. No se añade adquisición futura ni FICT a ingresos industriales.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Supuesto</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ingresos primer año</td>
+<td style="text-align: right;">1.050</td>
+<td style="text-align: right;">1.240</td>
+<td style="text-align: right;">1.400</td>
+</tr>
+<tr class="even">
+<td>Margen inicial/final</td>
+<td style="text-align: right;">18%/20%</td>
+<td style="text-align: right;">27%/30%</td>
+<td style="text-align: right;">31%/34%</td>
+</tr>
+<tr class="odd">
+<td>WACC seleccionado</td>
+<td style="text-align: right;">12,5%</td>
+<td style="text-align: right;">10,75%</td>
+<td style="text-align: right;">9,5%</td>
+</tr>
+<tr class="even">
+<td>g terminal</td>
+<td style="text-align: right;">2,5%</td>
+<td style="text-align: right;">3%</td>
+<td style="text-align: right;">3,5%</td>
+</tr>
+<tr class="odd">
+<td>ROIC incremental</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">30%</td>
+</tr>
+<tr class="even">
+<td>Capex inicial/final (%ventas)</td>
+<td style="text-align: right;">14%/6%</td>
+<td style="text-align: right;">14%/6%</td>
+<td style="text-align: right;">16%/6%</td>
+</tr>
+</tbody>
+</table></div>
+<p>La base crece 20%,14%,10%,8%,6%,5%,4,5%,4%,3,5% en años dos a diez; el favorable 30%,22%,17%,13%,10%,8%,7%,6%,5%; el adverso −5%,3%,5%,5%,4%,3,5%,3%,2,5%,2,5%. El margen base inicial inferior al Q3 incorpora fricción de rampa, pero sigue siendo una selección exigente frente a la historia. El objetivo empresarial de 1.600 M de ingresos/5 dólares de EPS no GAAP carece aquí de fecha comprometida y no valida estas trayectorias.</p>
+<p>El CAPM con Treasury 10 años 4,95%, ERP 4,41% y beta proveedor 1,28 da coste de equity 10,5948%. Con deuda nominal pequeña y tipo cubierto 2,75%, el WACC proxy es 10.5820%. El 10,75% base añade 16.8 pb discrecionales: no es redondeo. ERP y Treasury tienen fechas distintas; beta no es regresión propia y tipo de deuda vigente no es rendimiento de refinanciación. Fuentes: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve ; https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm ; https://stockanalysis.com/stocks/form/statistics/</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Resultado parcial con cierre</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EV industrial</td>
+<td style="text-align: right;">953.137</td>
+<td style="text-align: right;">3,867.201</td>
+<td style="text-align: right;">8,866.036</td>
+</tr>
+<tr class="even">
+<td>PV explícito</td>
+<td style="text-align: right;">467.388</td>
+<td style="text-align: right;">1,553.083</td>
+<td style="text-align: right;">2,478.208</td>
+</tr>
+<tr class="odd">
+<td>PV terminal</td>
+<td style="text-align: right;">485.749</td>
+<td style="text-align: right;">2,314.118</td>
+<td style="text-align: right;">6,387.828</td>
+</tr>
+<tr class="even">
+<td>Puente seleccionado</td>
+<td style="text-align: right;">453.418</td>
+<td style="text-align: right;">453.418</td>
+<td style="text-align: right;">453.418</td>
+</tr>
+<tr class="odd">
+<td>Acciones seleccionadas</td>
+<td style="text-align: right;">81.798</td>
+<td style="text-align: right;">81.798</td>
+<td style="text-align: right;">81.798</td>
+</tr>
+<tr class="even">
+<td>Componente por acción</td>
+<td style="text-align: right;">17.195</td>
+<td style="text-align: right;">52.821</td>
+<td style="text-align: right;">113.933</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="diez-años-base-cifras-conciliables">Diez años base: cifras conciliables</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año al 3nov</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT preamort/SBC retenida</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">Capex suelo</th>
+<th style="text-align: right;">D&amp;A física</th>
+<th style="text-align: right;">ΔWC</th>
+<th style="text-align: right;">Inversión neta máxima</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">1,240.00</td>
+<td style="text-align: right;">334.80</td>
+<td style="text-align: right;">254.45</td>
+<td style="text-align: right;">173.60</td>
+<td style="text-align: right;">37.20</td>
+<td style="text-align: right;">25.92</td>
+<td style="text-align: right;">162.32</td>
+<td style="text-align: right;">92.13</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">1,488.00</td>
+<td style="text-align: right;">424.08</td>
+<td style="text-align: right;">322.30</td>
+<td style="text-align: right;">163.68</td>
+<td style="text-align: right;">44.64</td>
+<td style="text-align: right;">54.56</td>
+<td style="text-align: right;">271.41</td>
+<td style="text-align: right;">50.89</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">1,696.32</td>
+<td style="text-align: right;">508.90</td>
+<td style="text-align: right;">386.76</td>
+<td style="text-align: right;">144.19</td>
+<td style="text-align: right;">50.89</td>
+<td style="text-align: right;">45.83</td>
+<td style="text-align: right;">257.84</td>
+<td style="text-align: right;">128.92</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">1,865.95</td>
+<td style="text-align: right;">559.79</td>
+<td style="text-align: right;">425.44</td>
+<td style="text-align: right;">139.95</td>
+<td style="text-align: right;">55.98</td>
+<td style="text-align: right;">37.32</td>
+<td style="text-align: right;">154.70</td>
+<td style="text-align: right;">270.73</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">2,015.23</td>
+<td style="text-align: right;">604.57</td>
+<td style="text-align: right;">459.47</td>
+<td style="text-align: right;">130.99</td>
+<td style="text-align: right;">60.46</td>
+<td style="text-align: right;">32.84</td>
+<td style="text-align: right;">136.14</td>
+<td style="text-align: right;">323.33</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">2,136.14</td>
+<td style="text-align: right;">640.84</td>
+<td style="text-align: right;">487.04</td>
+<td style="text-align: right;">128.17</td>
+<td style="text-align: right;">64.08</td>
+<td style="text-align: right;">26.60</td>
+<td style="text-align: right;">110.27</td>
+<td style="text-align: right;">376.77</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">2,242.95</td>
+<td style="text-align: right;">672.88</td>
+<td style="text-align: right;">511.39</td>
+<td style="text-align: right;">134.58</td>
+<td style="text-align: right;">67.29</td>
+<td style="text-align: right;">23.50</td>
+<td style="text-align: right;">97.41</td>
+<td style="text-align: right;">413.98</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">2,343.88</td>
+<td style="text-align: right;">703.16</td>
+<td style="text-align: right;">534.41</td>
+<td style="text-align: right;">140.63</td>
+<td style="text-align: right;">70.32</td>
+<td style="text-align: right;">22.21</td>
+<td style="text-align: right;">92.52</td>
+<td style="text-align: right;">441.88</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">2,437.64</td>
+<td style="text-align: right;">731.29</td>
+<td style="text-align: right;">555.78</td>
+<td style="text-align: right;">146.26</td>
+<td style="text-align: right;">73.13</td>
+<td style="text-align: right;">20.63</td>
+<td style="text-align: right;">93.76</td>
+<td style="text-align: right;">462.03</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">2,522.95</td>
+<td style="text-align: right;">756.89</td>
+<td style="text-align: right;">575.23</td>
+<td style="text-align: right;">151.38</td>
+<td style="text-align: right;">75.69</td>
+<td style="text-align: right;">18.77</td>
+<td style="text-align: right;">94.46</td>
+<td style="text-align: right;">480.78</td>
+</tr>
+</tbody>
+</table></div>
+<p>La inversión neta es el máximo, no la suma de dos presupuestos. FCFF = NOPAT − inversión neta. El terminal representa aproximadamente 51%/60%/71% del EV, por lo que los extremos dependen mucho de persistencia y descuento.</p>
+<h2 id="sensibilidades-inversos-y-lectura-de-precio">Sensibilidades, inversos y lectura de precio</h2>
+<p>El capex persistente +2/+4 puntos reduce base 52,82 a 48,41/43,32; se mantiene el suelo también en terminal. Margen −5 puntos reduce base a 43,20; +5 puntos sube a 60,65. Las matrices ejecutables incluyen WACC/g, impuesto 20–28%, ROIC 15–35%, circulante 15–35%, caja reservada 100–250 M, UTB 27–70 M, grant 0–18 M, premios netos 0–2 M, comisiones 0–5 M y ajustes de caja ±100 M. No todos son independientes ni deben acumularse como rango estadístico.</p>
+<p>El inverso industrial manteniendo financiación y demás supuestos necesitaría añadir 12,35 puntos de crecimiento en cada uno de los años dos a diez para alcanzar 96,79. Es un requisito matemático, no crecimiento estimado. En el barrido de margen de −10 a +30 puntos, el precio llega como máximo a 94,32: no se inventa solución fuera del intervalo probado. Ambos barridos verifican monotonía. Como FICT no está tasada, no son un inverso del valor total de FORM.</p>
+<h2 id="pares-y-disciplina-relativa">Pares y disciplina relativa</h2>
+<p>La comparación contemporánea usa EBIT reportado, no el ajuste de agregador. FORM tiene EV convencional aproximado 7.205 M, 7,35× ventas TTM y 40,13× EBIT, margen 18,32%. TER tiene 8,28× ventas pero 25,80× EBIT con margen 32,11%; COHU 3,81× ventas y EBIT negativo. Un descuento en ventas no prueba menor valoración. Los activos no operativos, minoritarios, convertibles, geografías y mezcla de pruebas difieren; el anexo comps conserva fuentes y ajustes, sin aplicar mediana como objetivo.</p>
+<p>TER y COHU son referencias de ecosistema, no sustitutos exactos de tarjetas. Technoprobe compite más directamente, pero no se fuerza una comparación Q3 antes de sus resultados ni se inventa margen o valor de su inversión. La participación de TER en Technoprobe y su compromiso FORM no deben confundirse con actividad industrial pura. Los múltiplos convencionales no certifican el puente completo del DCF.</p>
+<h2 id="calendario-seguimiento-y-puerta-de-entrada">Calendario, seguimiento y puerta de entrada</h2>
+<p>Q3 se publicó el 28 de octubre y el 10-Q el 3 de noviembre. El calendario oficial no anuncia una fecha exacta siguiente: queda null/no confirmada. Una estimación de agregador no libera el requisito de calendario. Vigilar cierre de la emisión y registro de acciones, evolución de Farmers Branch/capex/infrautilización, concentración y memoria, condiciones del grant, exposición fiscal y resultados/caja propios de FICT. Fuente: https://investors.formfactor.com/events-and-presentations</p>
+<p>La observación original del scanner del 14 de octubre fue 123,84, QP80, Opportunity90, RSI45,2 y Stage2Sí histórico. El cierre verificable de esa sesión 119,71 es distinto y no sustituye el dato exportado. El precio usado de 96,79 corresponde al 3 de noviembre. No se hereda aprobación técnica de octubre ni se afirma reconciliado su desfase. Fuente de cierres: https://stockanalysis.com/stocks/form/history/</p>
+<p><strong>Clasificación: investigación parcial condicionada.</strong> Valor total, rango agregado y Stage3 completo no certificados. No latestCompleted, no Stage3.5, no orden ni aprobación de entrada. Próximas verificaciones: cierre efectivo y cap table, caja y dilución posterior, valoración independiente de FICT, inversión y márgenes normalizados, fecha oficial siguiente y filtro técnico vigente.</p>
+<h2 id="english-conclusion">English conclusion</h2>
+<p>FormFactor’s industrial DCF is partial and conditional: $17.20/$52.82/$113.93 per selected share assuming the pending Teradyne financing closes, versus $13.95/$50.57/$113.40 without closing. It excludes an independently unvalued private FICT interest and uses selected award/tax/cash reserves. These are not total-company fair values, lower bounds, or an entry approval. Current growth is strong, but factory investment, customer concentration and cycle margins require further proof.</p>
+<h2 id="reproducibilidad-y-límites">Reproducibilidad y límites</h2>
+<p>Scripts offline y ledgers factuales reproducen historia, capital, diez años, sensibilidades e inversos; no contienen filings completos. Los resultados son análisis propio, no recomendación personalizada ni precio certificado. Comisiones, reserva de caja, UTB, grant, valor del pagaré, dilución, margen, capex y coste de capital son selecciones visibles. Datos faltantes permanecen null y no se convierten en ceros económicos.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FORM/FORM_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FORM/model/model.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FORM/model/results.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>

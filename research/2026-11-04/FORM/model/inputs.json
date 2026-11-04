@@ -1,0 +1,161 @@
+{
+  "asOf": "2026-11-04",
+  "priceDate": "2026-11-03",
+  "price": 96.79,
+  "units": "USD million and shares million",
+  "classification": "Partial industrial DCF excluding independently unvalued private FICT stake. Conditional TER financing close and no-close cases; no certified total current value.",
+  "revenueAnchor": 1122.188,
+  "ebitPreIntangibleAmortAnchor": 295.168,
+  "anchorBasis": "Four times direct Q3 revenue and operating income plus acquired amortization LESS 8.6 million nonrecurring tariff gross-profit benefit. Run-rate not normalized cycle certainty.",
+  "common": {
+    "taxRate": 0.24,
+    "physicalDaRatio": 0.03,
+    "workingCapitalRatio": 0.22,
+    "releaseWorkingCapital": false,
+    "acquisitionTaxShield": 0
+  },
+  "capital": {
+    "cashAndShortInvestments": 395.412,
+    "operatingCashReserve": 150,
+    "debtPrincipal": 11.403,
+    "swapAsset": 1.697,
+    "fxDerivativeLiability": 0.693,
+    "historicTaxReserve": 56.397,
+    "grantRepaymentReserve": 18,
+    "restructuringPayable": 4.948,
+    "promissoryNoteSelectedValue": 0.75,
+    "fictStakeSelectedValue": 0,
+    "postBalanceNetAdjustment": 0,
+    "actualShares": 78.403115,
+    "selectedNetAwards": 1.16,
+    "financingClosingAssumed": true,
+    "financingCash": 300,
+    "financingFeesSelected": 3,
+    "financingShares": 2.234887
+  },
+  "scenarios": {
+    "bear": {
+      "year1Revenue": 1050,
+      "growth": [
+        -0.05,
+        0.03,
+        0.05,
+        0.05,
+        0.04,
+        0.035,
+        0.03,
+        0.025,
+        0.025
+      ],
+      "margins": [
+        0.18,
+        0.17,
+        0.18,
+        0.19,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "wacc": 0.125,
+      "g": 0.025,
+      "roic": 0.15,
+      "capexRatios": [
+        0.14,
+        0.1,
+        0.08,
+        0.07,
+        0.065,
+        0.06,
+        0.06,
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "base": {
+      "year1Revenue": 1240,
+      "growth": [
+        0.2,
+        0.14,
+        0.1,
+        0.08,
+        0.06,
+        0.05,
+        0.045,
+        0.04,
+        0.035
+      ],
+      "margins": [
+        0.27,
+        0.285,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3
+      ],
+      "wacc": 0.1075,
+      "g": 0.03,
+      "roic": 0.25,
+      "capexRatios": [
+        0.14,
+        0.11,
+        0.085,
+        0.075,
+        0.065,
+        0.06,
+        0.06,
+        0.06,
+        0.06,
+        0.06
+      ]
+    },
+    "bull": {
+      "year1Revenue": 1400,
+      "growth": [
+        0.3,
+        0.22,
+        0.17,
+        0.13,
+        0.1,
+        0.08,
+        0.07,
+        0.06,
+        0.05
+      ],
+      "margins": [
+        0.31,
+        0.33,
+        0.34,
+        0.34,
+        0.34,
+        0.34,
+        0.34,
+        0.34,
+        0.34,
+        0.34
+      ],
+      "wacc": 0.095,
+      "g": 0.035,
+      "roic": 0.3,
+      "capexRatios": [
+        0.16,
+        0.13,
+        0.1,
+        0.085,
+        0.075,
+        0.065,
+        0.06,
+        0.06,
+        0.06,
+        0.06
+      ]
+    }
+  }
+}
