@@ -1,0 +1,120 @@
+{
+  "units": "USD millions",
+  "perimeter": "Combined continuing plus discontinued cash; Global Print still present in both historical TTM periods. Not pro forma post-sale cash flow.",
+  "inputs": {
+    "FY2024": {
+      "CFO": 2457,
+      "capex": 607,
+      "lease": 63,
+      "other_investing": 46,
+      "preferred_dividends": 5,
+      "FCF": 1828,
+      "SBC": 87,
+      "before_WC_issuer_LSEG_tax_adjusted": 2541
+    },
+    "9M2024": {
+      "CFO": 1893,
+      "capex": 446,
+      "lease": 46,
+      "other_investing": 6,
+      "preferred_dividends": 4,
+      "FCF": 1403,
+      "SBC": 65,
+      "before_WC_issuer_LSEG_tax_adjusted": 1900
+    },
+    "9M2025": {
+      "CFO": 1895,
+      "capex": 476,
+      "lease": 48,
+      "other_investing": 1,
+      "preferred_dividends": 3,
+      "FCF": 1369,
+      "SBC": 84,
+      "before_WC_issuer_LSEG_tax_adjusted": 1974
+    },
+    "FY2025": {
+      "CFO": 2651,
+      "capex_plus_lease": 698,
+      "other_investing": 1,
+      "preferred_dividends": 4,
+      "FCF": 1950
+    },
+    "9M2026": {
+      "CFO": 2024,
+      "continuing_capex": 508,
+      "continuing_lease": 45,
+      "discontinued_capex_plus_lease": 2,
+      "other_investing": 1,
+      "preferred_dividends": 3,
+      "FCF": 1467
+    }
+  },
+  "prior_TTM_September2025": {
+    "CFO": 2459,
+    "capex": 637,
+    "lease": 65,
+    "other_investing": 41,
+    "preferred_dividends": 4,
+    "FCF": 1794,
+    "SBC": 106,
+    "before_WC_issuer_LSEG_tax_adjusted": 2615,
+    "owner_cash_before_WC_normalization": 1647,
+    "WC_and_other_issuer_contribution": -156,
+    "owner_cash_ex_WC_other": 1803
+  },
+  "current_TTM_September2026": {
+    "CFO": 2780,
+    "capex_plus_lease": 729,
+    "other_investing": 1,
+    "preferred_dividends": 4,
+    "FCF": 2048,
+    "SBC_estimate": 120,
+    "SBC_sensitivity": [
+      100,
+      140
+    ],
+    "owner_cash_before_WC_normalization_estimate": 1927,
+    "owner_cash_range": [
+      1907,
+      1947
+    ]
+  },
+  "source_urls": {
+    "q325_release": "https://ir.thomsonreuters.com/news-releases/news-release-details/thomson-reuters-reports-third-quarter-2025-results",
+    "q325_filing": "https://www.sec.gov/Archives/edgar/data/1075124/000119312525267009/tri-ex99_2.htm",
+    "fy25": "https://investors.thomsonreuters.com/static-files/d4676c84-359c-42c3-9f84-8c62552d49a2",
+    "q326": "https://investors.thomsonreuters.com/static-files/781f0447-2b5b-4b54-884d-d4ebc5dadf28",
+    "fy25_deck": "https://ir.thomsonreuters.com/static-files/f83eaf0b-1f4e-4f19-9b6d-5c3858321e4b",
+    "q325_deck": "https://investors.thomsonreuters.com/static-files/2212d6f3-c545-43fb-a6b2-343654900ad0",
+    "recast": "https://investors.thomsonreuters.com/static-files/13453a61-1934-494a-b639-ed45a69dd0e8"
+  },
+  "continuing_comparable_9M": {
+    "2025": {
+      "CFO": 1697,
+      "capex": 475,
+      "lease": 47,
+      "other_investing": 1,
+      "preferred": 3,
+      "FCF": 1173
+    },
+    "2026": {
+      "CFO": 1855,
+      "capex": 508,
+      "lease": 45,
+      "other_investing": 1,
+      "preferred": 3,
+      "FCF": 1300
+    }
+  },
+  "limitations": [
+    "Current TTM SBC120 is existing analyst estimate, not newly verified reported expense; sensitivity100-140.",
+    "Full Q4 2024 Global Print cash-flow carve-out not furnished in reviewed recast, so continuing-only prior TTM not fabricated.",
+    "Owner-cash diagnostic remains after interest/current cash tax and working-capital timing; not FCFF and not a sustainable annuity.",
+    "Prior before-WC measure uses issuer LSEG tax-provision adjustment; not a raw GAAP cash-flow subtotal."
+  ],
+  "QA": {
+    "status": "pass",
+    "checks": 8,
+    "DCF_changed": false
+  }
+}

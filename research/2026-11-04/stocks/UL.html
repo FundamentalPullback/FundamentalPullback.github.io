@@ -1,0 +1,591 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>UL · Stage 3 with verified historical supplement</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/UL">← UL profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A178 · Supplement verified 2026-11-04 05:35 UTC</p><div class="status-line"><span class="tag">Research complete with verified supplement</span><span class="tag">No entry approval</span></div><p>Publication 2026-11-04 05:35 UTC, before the 13:30 UTC Investor Event. Historical coverage supplement verified and integrated 2026-11-04 05:35 UTC. Research complete with explicitly stated reporting limits; no approved entry. Earlier pending-history notices are superseded. Four reported sales quarters and comparable June TTM normalized cash are included. Unilever reports complete profit/cash semiannually; no quarterly earnings are fabricated. The $67.26 no-deal and $62.49 conditional deal-package estimates are unchanged.</p>
+<h1 id="ul-unilever-stage-3-completo">UL · Unilever · Stage 3 completo</h1>
+<h2 id="valor-razonable-con-transformación-pendiente-no-una-ganga-mecánica">Valor razonable con transformación pendiente, no una ganga mecánica</h2>
+<p><strong>Corte:</strong> 4 de noviembre de 2026, antes del Investor Event de las 13:30 UTC. Incorpora el 6-K del 3 de noviembre, no comentarios aún no pronunciados. Precio del scanner del 3/11: <strong>64,81 USD por ADR</strong>, corroborado por el cierre de mercado. [1,31]</p>
+<p><strong>Conclusión:</strong> candidato neutral/condicional para una posible entrada parcial a valoración razonable. La investigación fundamental está completa con la información publicada. No está aprobado para comprar: Stage 3.5, riesgo de posición y lectura del evento deben verificarse por separado. No se exige un descuento universal del 15%, un crecimiento mínimo arbitrario ni un retorno fijo impuesto al usuario.</p>
+<ul>
+<li>DCF de diez años manteniendo el perímetro actual: <strong>67.26 USD</strong>, 3.8% sobre el precio.</li>
+<li>SOTP de diez años con Foods/McCormick completado: <strong>62.49 USD</strong> para el conjunto económico que recibiría el accionista actual, -3.6% frente al precio. No es el precio futuro aislado de la UL ex-distribución.</li>
+<li>Retorno anual modelado, incluyendo distribución de caja y valor residual: <strong>8,1% con la operación / 8,6% sin ella</strong>. Son estimaciones condicionales, no rentabilidades prometidas ni un pronóstico del dividendo.</li>
+<li>Rango central útil: <strong>62–67 USD</strong>. La acción está cerca del valor razonable. El mayor descuento respecto a PG/CL existe, pero parte remunera exposición emergente, Foods, divisas y ejecución de dos transformaciones.</li>
+<li>La caída del 13,6% desde el máximo del scanner no demuestra infravaloración. Su P/E 13,39x no es una medida utilizable del beneficio recurrente tras la escisión: el P/E de EPS subyacente TTM es <strong>18,6x</strong>, y el de EPS GAAP continuo TTM, <strong>22,7x</strong>.</li>
+</ul>
+<h2 id="perímetro-cronología-y-lo-que-pertenece-a-un-comprador-de-hoy">1. Perímetro, cronología y lo que pertenece a un comprador de hoy</h2>
+<p>Ice Cream ya salió: la escisión de TMICC se completó el <strong>6 de diciembre de 2025</strong>. Los estados de 2023–2025 utilizados aquí están reexpresados sin ese negocio. El 80,15% distribuido entonces no se vuelve a sumar a una compra nueva de UL. Sí pertenece a UL su participación retenida, aproximadamente 19,85%, contabilizada como inversión financiera, no consolidada. Las operaciones pendientes de India/Portugal completadas en H1 2026 permanecen en discontinuadas; no alimentan FCFF de continuación. [3–5]</p>
+<p>En diciembre de 2025 hubo consolidación <strong>8 nuevas acciones por 9 antiguas</strong>. Cada ADS/ADR continúa representando <strong>una acción ordinaria</strong>. Las series históricas y máximos deben ajustarse por ambos acontecimientos. No se multiplica de nuevo el precio actual por 8/9. [11]</p>
+<p>Foods es otra operación, anunciada el <strong>31/3/2026</strong>, todavía pendiente, con cierre esperado hacia mediados de 2027. Excluye Foods de India, Nepal y Portugal, Lifestyle Nutrition, Buavita y Lipton Ready-to-Drink. Por eso el futuro negocio llamado HPC incluye actividades retenidas que no encajan literalmente en belleza/cuidado del hogar. Las cifras ilustrativas de presentación son unos <strong>39.000 millones EUR de ventas</strong> para UL retenida y <strong>20.000 millones USD</strong> para la compañía Foods/McCormick combinada, sobre bases 2025. No se fuerzan esas cantidades redondeadas a cuadrar como cuentas auditadas de carve-out. [6,7]</p>
+<p>La contraprestación anunciada fue <strong>15.700 millones USD de efectivo</strong>, más <strong>65% del capital combinado</strong>: <strong>55,1% distribuido directamente a accionistas de UL y 9,9% retenido por UL</strong>. El 65% se cuenta una sola vez. La nueva compañía se endeuda para financiar el efectivo; no es dinero gratis creado por la escisión. Las participaciones se calculan después de deducir la deuda de la empresa combinada. [6,7]</p>
+<p>Los 44.800 millones USD de valor empresa anunciados dependían del precio de MKC de marzo, no constituyen un precio garantizado actual. Con MKC a 47,88 USD y 269,4 millones de acciones diluidas, el proxy 269,4/35% produce unos 769,7 millones de acciones combinadas. El 65% vale <strong>23.955 millones USD</strong>, más 15.700 millones de efectivo: <strong>39.655 millones USD</strong> antes de impuestos/costes, frente a los 44.800 millones iniciales. Es un contraste de mercado, no otra valoración que se añade al DCF. Aproxima ambas clases MKC al precio no-votante; el canje final y ajustes de cierre no están fijados por este cálculo. [14,15,22]</p>
+<h2 id="resultados-efectivamente-publicados">2. Resultados efectivamente publicados</h2>
+<p>Q3 ya se publicó el <strong>28/10/2026</strong>. No hay que aplazar el análisis por supuestos resultados UL del 4–6/11. Fue una actualización de ventas: <strong>no publicó una nueva cuenta trimestral completa de beneficios/caja</strong>. Los últimos estados completos son H1. Próximos resultados FY2026: <strong>11/2/2027</strong>. [2,3]</p>
+<p>Importes siguientes en miles de millones EUR; EPS en EUR, exclusivamente operaciones continuadas. UOP y UEPS son medidas subyacentes de la compañía, distintas de GAAP.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">UOP</th>
+<th style="text-align: right;">EPS diluido</th>
+<th style="text-align: right;">UEPS</th>
+<th style="text-align: right;">FCF comunicado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">51.680</td>
+<td style="text-align: right;">8.998</td>
+<td style="text-align: right;">9.079</td>
+<td style="text-align: right;">2.67</td>
+<td style="text-align: right;">2.70</td>
+<td style="text-align: right;">6.445</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">52.479</td>
+<td style="text-align: right;">8.829</td>
+<td style="text-align: right;">10.198</td>
+<td style="text-align: right;">2.44</td>
+<td style="text-align: right;">3.06</td>
+<td style="text-align: right;">6.304</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">50.503</td>
+<td style="text-align: right;">9.037</td>
+<td style="text-align: right;">10.084</td>
+<td style="text-align: right;">2.59</td>
+<td style="text-align: right;">3.08</td>
+<td style="text-align: right;">5.921</td>
+</tr>
+<tr class="even">
+<td>H1 2024</td>
+<td style="text-align: right;">26.507</td>
+<td style="text-align: right;">5.351</td>
+<td style="text-align: right;">5.428</td>
+<td style="text-align: right;">1.47</td>
+<td style="text-align: right;">1.61</td>
+<td style="text-align: right;">1.945</td>
+</tr>
+<tr class="odd">
+<td>H2 2024 derived</td>
+<td style="text-align: right;">25.972</td>
+<td style="text-align: right;">3.478</td>
+<td style="text-align: right;">4.770</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">1.45</td>
+<td style="text-align: right;">4.359</td>
+</tr>
+<tr class="even">
+<td>H1 2025</td>
+<td style="text-align: right;">25.506</td>
+<td style="text-align: right;">4.762</td>
+<td style="text-align: right;">5.148</td>
+<td style="text-align: right;">1.42</td>
+<td style="text-align: right;">1.57</td>
+<td style="text-align: right;">1.084</td>
+</tr>
+<tr class="odd">
+<td>H2 2025 derived</td>
+<td style="text-align: right;">24.997</td>
+<td style="text-align: right;">4.275</td>
+<td style="text-align: right;">4.936</td>
+<td style="text-align: right;">1.17</td>
+<td style="text-align: right;">1.51</td>
+<td style="text-align: right;">4.837</td>
+</tr>
+<tr class="even">
+<td>H1 2026</td>
+<td style="text-align: right;">25.623</td>
+<td style="text-align: right;">4.885</td>
+<td style="text-align: right;">5.193</td>
+<td style="text-align: right;">1.38</td>
+<td style="text-align: right;">1.61</td>
+<td style="text-align: right;">1.549</td>
+</tr>
+<tr class="odd">
+<td>TTM Jun2026 derived</td>
+<td style="text-align: right;">50.620</td>
+<td style="text-align: right;">9.160</td>
+<td style="text-align: right;">10.129</td>
+<td style="text-align: right;">2.55</td>
+<td style="text-align: right;">3.12</td>
+<td style="text-align: right;">6.386</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuentes [3–5]. H2 y TTM son cálculos FY menos H1 o FY más H1 actual menos H1 anterior. Los EPS derivados son aproximaciones por resta de cifras redondeadas y denominadores medios distintos, no EPS trimestrales independientes publicados. La marcada estacionalidad de caja explica por qué no se anualiza simplemente H1.</p>
+<p>H1 2026 tuvo UOM 20,3%, EPS continuo 1,38 y FCF 1.549 millones EUR. El EPS total 1,52 incorpora discontinuadas y no es el EPS del negocio valorado. TTM junio: ventas 50.620 millones, EBIT 9.160, UOP 10.129 y UEPS 3,12. [3, cálculo con 4]</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Ventas recientes</th>
+<th style="text-align: right;">EUR millones</th>
+<th style="text-align: right;">Crecimiento subyacente</th>
+<th style="text-align: right;">Volumen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q2 2026</td>
+<td style="text-align: right;">13.046</td>
+<td style="text-align: right;">5,8%</td>
+<td style="text-align: right;">5,5%</td>
+</tr>
+<tr class="even">
+<td>Q3 2026</td>
+<td style="text-align: right;">13.271</td>
+<td style="text-align: right;">5,2%</td>
+<td style="text-align: right;">2,9%</td>
+</tr>
+<tr class="odd">
+<td>9M 2026</td>
+<td style="text-align: right;">38.919</td>
+<td style="text-align: right;">4,9%</td>
+<td style="text-align: right;">3,8%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ventas TTM septiembre calculadas con los YTD comparables del último comunicado: <strong>51.509 millones EUR</strong>. No se asigna esa fecha a los beneficios/caja TTM de junio. Las bases acumuladas de las distintas publicaciones no suman exactamente; se utiliza el YTD oficial de Q3, no una suma que mezcla publicaciones. [2,3]</p>
+<h2 id="calidad-del-crecimiento-y-nueva-información-del-3-de-noviembre">3. Calidad del crecimiento y nueva información del 3 de noviembre</h2>
+<p>En Q3 HPC creció 7,0%, con volumen 4,1%; Foods apenas 0,1%, con volumen −1,1%. El impulso no es solo precio: Power Brands creció 5,8%, volumen 3,3%. Pero tampoco es uniforme: mercados desarrollados −0,9% y emergentes +9,5%. Hay debilidad real en Foods estadounidense y Wellbeing, incluida presión de canal/marca privada; no debe explicarse toda como timing. Grüns todavía no entra en USG hasta junio de 2027, mientras Dr. Squatch entró en septiembre de 2026. [2]</p>
+<p>El foso competitivo reside en marcas, distribución, escala de compra, innovación y capacidad de invertir en marketing; no en una ausencia de competencia. La reconstrucción de volumen tiene mejor calidad que el crecimiento basado únicamente en inflación de precios. Sin embargo, crecer en mercados con divisas débiles no garantiza igual crecimiento en euros o dólares. La venta de Foods elimina parte de un negocio más lento y de margen alto: la UL retenida parte de un UOM inferior al 20% del grupo actual. [2,7; interpretación propia]</p>
+<p><strong>Ya conocido, no futuro:</strong> el 6-K del <strong>3/11</strong> anuncia nuevo modelo operativo regional, nombramientos desde el 1/1/2027, ahorro de productividad de <strong>1.000 millones EUR hacia final de 2029</strong>, y 2027 dentro del algoritmo de <strong>4–6% USG, volumen al menos 2% y modesta mejora de margen</strong>. El ahorro incluye abordar costes varados; no se añade íntegro encima de una expansión de margen que ya lo presupone. Habrá tres categorías de reporte: Beauty &amp; Personal Care, Home Care y Other. [9]</p>
+<p>El Investor Event sigue siendo un catalizador inmediato, <strong>4/11, 13:30–19:30 UTC</strong>. La tesis puede actualizarse con detalles de ejecución, costes y Q&amp;A. Su existencia no transforma en incompleta la investigación ya cerrada, pero conviene leer cualquier cambio material antes de ejecutar una entrada. [28]</p>
+<h2 id="normalización-de-caja-no-confundir-fcf-publicado-con-fcff">4. Normalización de caja: no confundir FCF publicado con FCFF</h2>
+<p>El FCF de UL deduce intereses y es consolidado: no es directamente el flujo libre de la empresa que se descuenta a WACC ni todo pertenece al accionista de UL. También faltan las necesidades económicas de renovación de arrendamientos si se toma el capex de caja literalmente.</p>
+<p>Puente operativo TTM junio, calculado en EUR miles de millones: - UOP 10,129 menos reserva recurrente de reestructuración de 0,6% de ventas, 0,304: <strong>EBIT normalizado 9,825</strong>. - NOPAT al 26%: <strong>7,271</strong>. - Más D&amp;A 1,325; menos capex neto de caja 1,584; menos renovación estimada de derechos de uso 0,450; menos inversión normalizada de circulante 0,050. - <strong>FCFF normalizado 6,512</strong>. Es estimación analítica, no una cifra reportada.</p>
+<p>El FCF reportado TTM es 6,386, con intereses netos 0,640 y una liberación de circulante calculada de <strong>1,312</strong>; impuestos de caja 3,362. No se capitaliza para siempre esa liberación ni se considera todo gasto de reestructuración excepcional. La reserva recurrente se basa en el 0,6% de ventas explicado en la llamada de la operación. Los beneficios extraordinarios de la escisión tampoco se descuentan como flujo operativo recurrente. [3,4,8; cálculos propios]</p>
+<p>Grüns costó 767 millones EUR por el 80% en junio; esa compra ya forma parte del balance utilizado. El crecimiento futuro del modelo no requiere adquisiciones adicionales no financiadas. Se mantienen los gastos de remuneración en acciones en EBIT; no se suman como caja gratuita.</p>
+<h2 id="puente-de-empresa-a-acciones-divisa-y-coste-de-capital">5. Puente de empresa a acciones, divisa y coste de capital</h2>
+<p>Se valoran flujos UL/HPC en <strong>EUR</strong>, y Foods combinado en <strong>USD</strong>. Conversión EUR/USD: <strong>1,1179</strong>, fixing ECB del 3/11. La cotización de UL en Londres está en peniques, pero no se utiliza una mezcla de peniques, euros y ADR. [12]</p>
+<p>Capitalización diluida: 2.154,329 millones de acciones con voto al 30/10 más reserva dilutiva de 8,1 millones, basada en la diferencia diluida/básica H1; total <strong>2.162,429 millones</strong>. La recompra de 1.500 millones EUR ya terminada está reflejada en ese recuento. [3,10]</p>
+<p>Deducciones y activos del modelo, EUR miles de millones: - Deuda neta <strong>25,961</strong> a 30/6, última cifra publicada. Incluye arrendamientos y pasivos financieros por adquisición de minoritarios: no se duplican después. - Déficits de pensiones financiadas/no financiadas <strong>0,913</strong>. No se añade el superávit neto de pensiones como si fuera efectivo libre. - Minoritarios: valor intrínseco estimado <strong>9,043</strong>, por DCF de su beneficio/caja TTM 0,512, crecimiento 4,5% inicial y coste de equity 9%. <strong>No</strong> se usa el valor contable de minoritarios como precio económico. Esto contempla principalmente negocios consolidados como Hindustan Unilever; no se añade además el valor completo de HUL. - Participación MICC: <strong>2,108</strong>, usando 121,534 millones de títulos publicados y precio 19,39 USD. Se utiliza la posición publicada; se valora la participación, no el 100% del negocio. - Joint ventures/asociadas: <strong>3,877</strong>, DCF del beneficio participado TTM 0,239, conversión analítica a caja del 100%, crecimiento inicial 3% y coste 9%; fuera del EBIT operativo, por lo que no se duplica su beneficio. - Otros activos financieros no corrientes: <strong>1,169</strong>, proxy contable del remanente de inversiones y préstamos excluyendo derivados ya en deuda neta y depósitos judiciales. No es una tasación independiente de activos privados. [3,4,10,23–25; cálculos propios]</p>
+<p>Sensibilidades del puente: 1.000 millones EUR de deuda, pasivo o activo neto equivalen aproximadamente a <strong>0,52 USD por ADR</strong>. Un saldo de deuda neta de 23,5 en vez de 25,961 elevaría el valor aproximadamente 1,27 USD, sin suponer que esa mejora ya fue reportada. Un error de 3.000 millones en la valoración de minoritarios cambia el valor unos 1,55 USD.</p>
+<p><strong>WACC EUR central 7,5%:</strong> Bund diez años 3,31% al 3/11; beta analítica 0,80, prima de mercado 5% y prima adicional de exposición/ejecución 1% dan coste de equity 8,31%. Deuda marginal asumida 4,3%, después de impuestos 3,18%; ponderación aproximada deuda 15%, equity 85%, WACC 7,54%, redondeado a 7,5%. Beta/primas/ponderaciones son supuestos, no estimaciones publicadas por UL. Foods usa WACC USD <strong>8,5%</strong>. El Treasury diez años era 4,95% al 3/11; la construcción analítica añade riesgo operativo/integración y deuda USD estimada al 6%, en vez de trasladar automáticamente el WACC en euros. Se muestra sensibilidad amplia para que la conclusión no dependa de fingir precisión en WACC. [13,32 para referencias de tipos; construcción propia]</p>
+<h2 id="dcf-directo-de-diez-años">6. DCF directo de diez años</h2>
+<p>Base FY2026 estimada, no reportada: ventas <strong>52,2</strong>; margen subyacente 20,2%. Se proyecta crecimiento nominal en euros 4,5% en años 1–5, moderándose a 3% en año 10; UOM alcanza 20,7% en año 5. Se resta reestructuración recurrente 0,6%; impuesto 26%, D&amp;A 2,6%, capex de caja 3,2%, renovación de arrendamientos 0,8% de ventas y circulante 2% del incremento de ventas. El crecimiento orgánico y el crecimiento en moneda de reporte no son lo mismo.</p>
+<div class="line-block">Año | Ventas EUR miles de millones | FCFF EUR miles de millones |<br />
+2027 | 54.549 | 7.141 |<br />
+2028 | 57.004 | 7.505 |<br />
+2029 | 59.569 | 7.887 |<br />
+2030 | 62.249 | 8.288 |<br />
+2031 | 65.051 | 8.709 |<br />
+2032 | 67.783 | 9.078 |<br />
+2033 | 70.426 | 9.436 |<br />
+2034 | 72.962 | 9.780 |<br />
+2035 | 75.369 | 10.107 |<br />
+2036 | 77.631 | 10.415 |</div>
+<p>Terminal: crecimiento 2,5%, ROIC incremental sostenible 19% y reinversión explícita g/ROIC. El ROIC es coherente con el 19% subyacente 2025, pero no se presume perpetuamente capex insuficiente. Valor empresa <strong>158.875</strong>, valor equity <strong>130.113</strong>, por ADR <strong>67.26 USD</strong>. El terminal representa <strong>62.8%</strong> del EV: la sensibilidad importa.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario conjunto sin operación</th>
+<th style="text-align: right;">Crecimiento inicial</th>
+<th style="text-align: right;">UOM año 5</th>
+<th style="text-align: right;">WACC</th>
+<th style="text-align: right;">g terminal</th>
+<th style="text-align: right;">EUR/USD</th>
+<th style="text-align: right;">Valor ADR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverso</td>
+<td style="text-align: right;">2.0%</td>
+<td style="text-align: right;">19.0%</td>
+<td style="text-align: right;">8.5%</td>
+<td style="text-align: right;">2.0%</td>
+<td style="text-align: right;">1.0500</td>
+<td style="text-align: right;">33.05</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td style="text-align: right;">4.5%</td>
+<td style="text-align: right;">20.7%</td>
+<td style="text-align: right;">7.5%</td>
+<td style="text-align: right;">2.5%</td>
+<td style="text-align: right;">1.1179</td>
+<td style="text-align: right;">67.26</td>
+</tr>
+<tr class="odd">
+<td>Favorable</td>
+<td style="text-align: right;">6.0%</td>
+<td style="text-align: right;">22.0%</td>
+<td style="text-align: right;">7.0%</td>
+<td style="text-align: right;">3.0%</td>
+<td style="text-align: right;">1.1800</td>
+<td style="text-align: right;">107.96</td>
+</tr>
+</tbody>
+</table></div>
+<p>El escenario adverso es una compresión persistente de crecimiento/margen y múltiplo, no una pérdida máxima ni un precio objetivo a doce meses. El favorable requiere varias cosas a la vez; no se trata como caso central.</p>
+<h2 id="sotp-con-la-transacción-deuda-caja-impuestos-y-sinergias">7. SOTP con la transacción: deuda, caja, impuestos y sinergias</h2>
+<p>Se modela cierre en 0,67 años, y diez años explícitos para los dos negocios resultantes. HPC retenida empieza en ventas estimadas 2026 de 40,3 EUR miles de millones, crecimiento 5% inicialmente, UOM 19,4% avanzando a 20,3%. Incluye la reserva recurrente 0,6% y costes operativos varados residuales de 0,12/0,06 los dos primeros años.</p>
+<p>Foods/McCormick parte de ventas estimadas 20,6 USD miles de millones, crecimiento 3%, UOM antes de sinergias 21%, impuesto 25%, D&amp;A 2,5%, capex 3%, renovación de arrendamientos 0,4%, y circulante 3% de ventas incrementales. Sinergias de <strong>600 millones USD</strong> se alcanzan gradualmente en tres años; costes de integración analíticos 300/200/100 millones. La presentación de septiembre sitúa el margen ajustado combinado del año 3 en 23–25% y ventas creciendo 3–5%; no se suma también el ahorro reinvertido de 100 millones como beneficio adicional. [7,16]</p>
+<p>Deuda combinada: 4.687 millones USD de deuda neta MKC a agosto más 15.700 millones de financiación de la operación. Se deduce además un valor estimado de minoritarios MKC de 750 millones USD, no los 583,8 millones de patrimonio contable como si fueran valor razonable. Esto incluye el 25% ajeno de McCormick de Mexico. La deducción de minoritarios UL se mantiene íntegra en la SOTP, sin inventar una asignación fina no publicada del pequeño componente de Foods; por ello es conservadora si parte de esos claims pasa al negocio distribuido. Los contratos permiten ajustes de cierre; este no es un balance proforma legal definitivo. [14,15]</p>
+<p><strong>Impuestos/separación/restructuración: reserva total 4.000 millones EUR</strong>, con sensibilidad 2.500–6.000 millones. Es una hipótesis de valoración, no un coste divulgado. Incluye los 500 millones EUR de reestructuración extraordinaria anunciada; no vuelve a cobrarlos aparte. El beneficio de estructurar el RMT fiscalmente eficiente no significa que todos los impuestos corporativos o personales sean cero. El coste final y la elección sobre activos estadounidenses siguen sujetos a condiciones. La llamada de marzo no dio un importe total firme. [6,8]</p>
+<p>El plan de recompras de unos 6.000 millones EUR 2026–2029 <strong>incluye</strong> los 1.500 millones de 2026. No se agrega al valor la recompra y también la misma caja que la financia. El uso de 15.700 millones USD está sujeto a impuestos, separación y desapalancamiento; no es todo un dividendo extraordinario. [8]</p>
+<p>Puente SOTP en valor presente, EUR miles de millones:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Componente</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FCFF UL antes del cierre</td>
+<td style="text-align: right;">4.558</td>
+</tr>
+<tr class="even">
+<td>Valor empresa HPC retenida</td>
+<td style="text-align: right;">117.435</td>
+</tr>
+<tr class="odd">
+<td>Efectivo recibido por UL</td>
+<td style="text-align: right;">13.380</td>
+</tr>
+<tr class="even">
+<td>65% del equity Foods/MKC después de su deuda</td>
+<td style="text-align: right;">18.076</td>
+</tr>
+<tr class="odd">
+<td>Deuda neta UL</td>
+<td style="text-align: right;">-25.961</td>
+</tr>
+<tr class="even">
+<td>Déficit pensiones</td>
+<td style="text-align: right;">-0.913</td>
+</tr>
+<tr class="odd">
+<td>Minoritarios UL</td>
+<td style="text-align: right;">-9.043</td>
+</tr>
+<tr class="even">
+<td>Inversiones/JV/MICC</td>
+<td style="text-align: right;">7.154</td>
+</tr>
+<tr class="odd">
+<td>Impuestos/separación/restructuración</td>
+<td style="text-align: right;">-3.811</td>
+</tr>
+<tr class="even">
+<td><strong>Equity total del accionista actual</strong></td>
+<td style="text-align: right;"><strong>120.876</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Resultado: <strong>62.49 USD por ADR actual</strong>. De ese paquete, la parte Foods/MKC distribuida directamente vale aproximadamente <strong>7,92 USD</strong> y la retenida por UL <strong>1,42 USD</strong>, dentro del total, no además del total. El valor empresa combinado es 53.972 millones USD, menos deuda/minoritarios da 32.835 millones USD de equity antes de aplicar el 65%.</p>
+<div class="line-block">Escenario conjunto con operación | Valor del paquete USD | Retorno anual modelado |<br />
+Adverso | 33.08 | 1.4% |<br />
+Central | 62.49 | 8.1% |<br />
+Favorable | 96.16 | 13.1% |</div>
+<p>El adverso combina HPC creciendo 2,5%, UOM 19%, WACC 8,5%, Foods a 1,5% y solo 300 millones de sinergias; costes 6.000 millones, EUR/USD 1,05. El favorable combina HPC 6,5%, UOM 21,7%, WACC 7%, Foods 4,5% y 700 millones de sinergias; costes 2.500 millones y EUR/USD 1,18. Los parámetros completos y todos los flujos están en el modelo.</p>
+<p>No encontrar cuentas finales de carve-out no obliga a paralizar una valoración. Se usan datos ilustrativos publicados y escenarios de costes/claims. El índice reciente SEC de MKC consultado no contenía un S-4 de esta operación; la presentación de septiembre preveía documentación/carve-out y trámites entre Q4 2026 y Q1 2027. No se inventan cuentas que aún no se han publicado. [15,16,30]</p>
+<h2 id="reverse-dcf-y-sensibilidades-conjuntas">8. Reverse DCF y sensibilidades conjuntas</h2>
+<p>Sin operación, 64,81 USD exige <strong>3,98% de crecimiento nominal en EUR</strong> los primeros cinco años con UOM final 20,7%, WACC 7,5% y g 2,5%. Con crecimiento 4,5%, basta UOM final <strong>20,07%</strong>. Estas exigencias no parecen extremas frente a la ejecución y orientación publicadas.</p>
+<div class="line-block">WACC | UOM final | Crecimiento inicial necesario para 64,81 USD |<br />
+7.5% | 19.5% | 5.0% |<br />
+7.5% | 20.7% | 4.0% |<br />
+7.5% | 22.0% | 3.0% |<br />
+8.0% | 19.5% | 6.7% |<br />
+8.0% | 20.7% | 5.7% |<br />
+8.0% | 22.0% | 4.6% |</div>
+<p>Con la operación, a WACC HPC 7,5%, sinergias 600 millones y coste total 4.000 millones EUR, el precio pide <strong>5,64% de crecimiento HPC en moneda de reporte</strong>, frente al 5% central, o UOM año 5 de <strong>21,09%</strong>, frente al 20,3% central. Es alcanzable, pero ya exige ejecución algo mejor que el caso central. La guía 4–6% es orgánica: una divisa adversa puede impedir alcanzar ese crecimiento nominal.</p>
+<div class="line-block">WACC HPC | Crecimiento HPC exigido, demás parámetros centrales |<br />
+7.0% | 3.8% |<br />
+7.5% | 5.6% |<br />
+8.0% | 7.4% |<br />
+8.5% | 9.1% |</div>
+<p>A g 2,5%, el DCF actual vale 76,49 USD con WACC 7%, 67,26 con 7,5%, 59,72 con 8% y 53,43 con 8,5%. En la SOTP central, variar el coste de separación/impuestos entre 2.500 y 6.000 millones da <strong>63,23–61,50 USD</strong>; cambiar WACC HPC entre 7% y 8% da <strong>69,59–56,68 USD</strong>. La hipótesis de rentabilidad exigida pesa bastante más que fingir precisión del coste fiscal.</p>
+<h2 id="comparables-y-estimaciones-tercera-comprobación-no-sustituto-del-dcf">9. Comparables y estimaciones: tercera comprobación, no sustituto del DCF</h2>
+<p>Precios del cierre 3/11; fundamentales y guía proceden de emisores. Los ejercicios no son idénticos, por lo que estos múltiplos se presentan como contraste, no como múltiplos NTM perfectamente homogéneos.</p>
+<div class="line-block">Empresa | Precio USD | EPS de guía usada | Periodo y publicación | P/E |<br />
+PG | 162.06 | 6.993 | FY2027 guidance Oct22 | 23.2x |<br />
+CL | 95.62 | 3.911 | FY2026 guidance Oct30 | 24.4x |<br />
+MKC | 47.88 | 3.090 | FY2026 guidance Oct1 | 15.5x |</div>
+<p>PG mantiene core EPS entre 6,89 y aproximadamente 7,10 para FY2027; CL guía crecimiento de EPS base 5–7% sobre 3,69; MKC guía 3,05–3,13 FY2026. PG y CL tienen categorías más próximas al HPC retenido. MKC aproxima Foods, pero ahora su precio también refleja financiación e integración de esta misma operación. [14,17–22]</p>
+<p>UL a 18,1x el EPS 2026 de 3,21 EUR está por debajo de PG/CL, pero por encima de MKC. Un contraste mecánico ponderando 74% HPC al promedio PG/CL y 26% Foods a MKC produce 21,65x y <strong>77,68 USD</strong>. Esa cifra no descuenta por sí misma costes de transformación, distintas geografías, minoritarios o canje: es una referencia relativa favorable, no el objetivo central.</p>
+<p>Sobre consenso: la última tabla accesible alojada por UL que pude verificar era del 29/1/2026, con FY2026 ventas 51.490 millones y UEPS 3,21 EUR. Está fechada y es antigua; no se vende como consenso posterior a Q3. [26]</p>
+<p>Como contraste más reciente, Equibles mostraba snapshot capturado <strong>30/10, 13:33 UTC</strong>: FY2026 ventas medias 52.000 millones EUR, EPS 3,21 EUR, rango 3,09–3,31; FY2027 ventas 54.450 millones y EPS 3,44. Las fechas originales de cada estimación no se indican. El nivel de ventas 2027 parece conservar el perímetro previo a Foods: no sirve como beneficio de una UL post-escisión sin reconciliación. La proyección propia no se presenta como consenso ni transforma esa falta de detalle en una falsa cifra proforma. [27]</p>
+<h2 id="entrada-razonable-rentabilidad-y-condiciones-de-invalidación">10. Entrada razonable, rentabilidad y condiciones de invalidación</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Precio de entrada USD</th>
+<th style="text-align: right;">Retorno anual proxy sin operación</th>
+<th style="text-align: right;">Retorno anual proxy con operación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>55.00</td>
+<td style="text-align: right;">10.8%</td>
+<td style="text-align: right;">10.4%</td>
+</tr>
+<tr class="even">
+<td>60.00</td>
+<td style="text-align: right;">9.6%</td>
+<td style="text-align: right;">9.2%</td>
+</tr>
+<tr class="odd">
+<td>64.81</td>
+<td style="text-align: right;">8.6%</td>
+<td style="text-align: right;">8.1%</td>
+</tr>
+<tr class="even">
+<td>68.00</td>
+<td style="text-align: right;">7.9%</td>
+<td style="text-align: right;">7.5%</td>
+</tr>
+<tr class="odd">
+<td>72.00</td>
+<td style="text-align: right;">7.2%</td>
+<td style="text-align: right;">6.8%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Son TIR de diez años de caja atribuible más valor terminal: se deducen intereses, minoritarios y deuda residual; no se añade dividendo/recompra encima de la misma caja. No son la revalorización a un objetivo dividida entre años. El dividendo trimestral actual anualizado representa aproximadamente <strong>3,22% bruto</strong> al cambio usado; impuestos y posibles gastos del depositario dependen del inversor.</p>
+<p><strong>Lectura práctica:</strong> 60–65 USD puede tener sentido como zona de valoración razonable para considerar una posición parcial, sin exigir 15% de descuento. Cerca de 64,81 la tesis es retorno compuesto de alrededor del 8%, calidad de marcas y ejecución, no una amplia infravaloración demostrada. A 68–72 el retorno central baja a aproximadamente 6,8–7,9%; haría falta una tesis operativa mejor, menor coste de capital aceptado o preferencias del inversor que lo justifiquen. No son niveles técnicos de orden.</p>
+<p>La tesis mejora si el nuevo modelo sostiene volumen real, convierte el ahorro en margen después de reinversión y publica un puente de separación coherente sin deuda/coste inesperados. Se debilita si: - HPC pierde volumen de forma persistente o necesita promociones para sostener ventas. - Wellbeing/Foods muestran pérdida estructural de distribución/marca, no solo timing. - Costes varados no se eliminan, sinergias no alcanzan el plan o se erosiona la capacidad de invertir en marcas. - El balance, impuestos, minoritarios o condiciones de la transacción difieren materialmente de los escenarios. - Divisas y coste de capital exigen simultáneamente márgenes/crecimiento superiores para justificar el precio.</p>
+<p><strong>Stage 3: completo. Stage 3.5: no validado por este informe.</strong> Se deben comprobar cotización vigente, serie ajustada por escisión/consolidación, tendencia y niveles técnicos, volumen, stop coherente con el horizonte, relación riesgo/beneficio y tamaño dentro de la cartera. El RSI 52,9 del scanner no verifica por sí solo un disparador. No se ha emitido ni ejecutado una orden.</p>
+<h2 id="reproducción-y-limitaciones-concretas">Reproducción y limitaciones concretas</h2>
+<p>Ejecutar <code>python enrich.py</code> y después <code>python write_report.py</code> en la carpeta del modelo regenera el modelo completo, fuentes, informe y tablas de diez años. <code>model.py</code> contiene fórmulas, supuestos y sensibilidad; <code>enrich.py</code> añade historia y TIR del paquete post-operación. Las tres tablas CSV corresponden a UL actual, HPC retenida y Foods en USD. Todos los crecimientos, márgenes futuros, costes no divulgados y tasas son supuestos identificados.</p>
+<p>Se descuentan años completos al final de cada periodo, sin uplift de mitad de año. Se usa el último balance publicado, no un saldo de septiembre inventado. Es una convención conservadora de valoración, no una valoración de arbitraje diaria con cada dividendo, movimiento de deuda y fecha fiscal exactos. Las TIR usan una aproximación de deuda constante y distribución de toda caja disponible; no predicen el calendario real de recompras. Los costes de financiación, tipo de cambio y NCI son sensibilidades abiertas, no hechos futuros.</p>
+<p>La investigación no necesita acertar de antemano el importe final de impuestos para estar completa. Sí necesita mostrar cuánto cambia la decisión si el importe cambia, no confundir hipótesis con estados publicados, y actualizarse ante nueva evidencia material.</p>
+<h2 id="fuentes-verificadas">Fuentes verificadas</h2>
+<p>[1] Scanner 3 noviembre 2026: https://fundamentalpullback.github.io/data/scan-3960.js [2] Unilever Q3 2026, 28 octubre 2026: https://www.unilever.com/files/unilever-q3-2026-results-full-announcement.pdf [3] Unilever H1 2026, 28 julio 2026: https://www.unilever.com/files/unilever-q2-2026-results-full-announcement.pdf [4] Unilever Annual Report 2025, publicado 12 marzo 2026: https://www.unilever.com/files/unilever-annual-report-and-accounts-2025.pdf [5] Históricos semestrales sin Ice Cream, 12 marzo 2026: https://www.unilever.com/files/unilever-half-year-historical-financials-excluding-ice-cream-pdf.pdf [6] Anuncio operación Foods/McCormick, 31 marzo 2026: https://www.unilever.com/news/press-and-media/press-releases/2026/unilever-announces-the-combination-of-unilever-foods-with-mccormick/ [7] Presentación de la operación, 31 marzo 2026: https://www.unilever.com/files/a-sharper-focused-hpc-pureplay-presentation.pdf [8] Transcripción de la operación, 31 marzo 2026: https://www.unilever.com/files/a-sharper-focused-hpc-pureplay-transcript.pdf [9] SEC 6-K: Investor Event y plan 2027, 3 noviembre 2026: https://www.sec.gov/Archives/edgar/data/217410/000165495426009451/a6665b.htm [10] SEC 6-K: capital al 30 octubre, presentado 2 noviembre 2026: https://www.sec.gov/Archives/edgar/data/217410/000165495426009377/a4901b.htm [11] SEC: consolidación y ratio ADS, diciembre 2025: https://www.sec.gov/Archives/edgar/data/217410/000021741025000070/a2025-12x08xverdixsharec.htm [12] ECB EUR/USD, fixing 3 noviembre 2026: https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html [13] Deutsche Finanzagentur, Bund 2036, 3 noviembre 2026: https://www.deutsche-finanzagentur.de/en/federal-securities/factsheet/isin/DE000BU2Z072 [14] McCormick Q3 FY2026, 1 octubre 2026: https://ir.mccormick.com/node/34076/pdf [15] McCormick 10-Q, trimestre agosto 2026, presentado 1 octubre: https://www.sec.gov/Archives/edgar/data/63754/000006375426000329/mkc-20260831.htm [16] McCormick Barclays, 9 septiembre 2026, SEC 425: https://ir.mccormick.com/static-files/0989fc37-3add-468f-8c16-739d92328aa5 [17] PG Q1 FY2027, 22 octubre 2026: https://us.pg.com/newsroom/news-releases/PG-Announces-Fiscal-Year-2027-First-Quarter-Results/ [18] Colgate Q3 2026, 30 octubre 2026: https://investor.colgatepalmolive.com/news-releases/news-release-details/colgate-palmolive-announces-3rd-quarter-2026-results [19] Colgate FY2025, base EPS 3,69 dólares: https://investor.colgatepalmolive.com/static-files/433146db-3230-40de-86f2-6c73440d227d [20] PG cotización 3 noviembre 2026: https://stockanalysis.com/stocks/pg/history/ [21] CL cotización 3 noviembre 2026: https://stockanalysis.com/stocks/cl/history/ [22] MKC cotización 3 noviembre 2026: https://stockanalysis.com/stocks/mkc/history/ [23] MICC cotización 3 noviembre 2026: https://stockanalysis.com/stocks/micc/history/ [24] MICC: participación publicada de Unilever: https://corporate.magnumicecream.com/en/investors/shareholder-centre.html [25] UL Schedule 13G, participación MICC, 10 febrero 2026: https://www.sec.gov/Archives/edgar/data/217410/000110465926012464/primary_doc.xml [26] Consenso alojado por Unilever, 29 enero 2026: https://www.unilever.com/files/fy25-consensus-consolidation.pdf [27] Equibles, snapshot capturado 30 octubre 2026 13:33 UTC: https://equibles.com/stocks/ul/analyst-estimates [28] Unilever Investor Event 4 noviembre 2026: https://www.unilever.com/investors/unilever-investor-event-2026/ [29] Magnum Q3 2026, 29 octubre 2026: https://news.magnumicecream.com/q3-2026-trading-update/ [30] SEC índice de presentaciones MKC, consultado 4 noviembre 2026: https://data.sec.gov/submissions/CIK0000063754.json [31] UL cierre 3 noviembre 2026, corroboración del scanner: https://stockanalysis.com/stocks/ul/forecast/ [32] US Treasury: curva 2026: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve</p>
+<h1 id="ul-anexo-de-cuatro-trimestres-y-ttm-comparable">UL: anexo de cuatro trimestres y TTM comparable</h1>
+<p>Preparado el 4 de noviembre de 2026, antes del Investor Event. Complementa el informe Stage3 y <strong>no altera sus valoraciones</strong> de 67,26 USD sin Foods/McCormick y 62,49 USD para el conjunto económico posterior a la operación. Operaciones continuadas sin Ice Cream. EUR miles de millones, salvo EPS.</p>
+<h2 id="cuatro-trimestres-publicados-sin-inventar-beneficios-trimestrales">Cuatro trimestres publicados, sin inventar beneficios trimestrales</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">Crecimiento subyacente</th>
+<th style="text-align: right;">Volumen subyacente</th>
+<th>Publicación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q4 2025</td>
+<td style="text-align: right;">12,586</td>
+<td style="text-align: right;">4,2%</td>
+<td style="text-align: right;">2,1%</td>
+<td>12/2/2026</td>
+</tr>
+<tr class="even">
+<td>Q1 2026, tal como se publicó</td>
+<td style="text-align: right;">12,562</td>
+<td style="text-align: right;">3,8%</td>
+<td style="text-align: right;">2,9%</td>
+<td>30/4/2026</td>
+</tr>
+<tr class="odd">
+<td>Q2 2026</td>
+<td style="text-align: right;">13,046</td>
+<td style="text-align: right;">5,8%</td>
+<td style="text-align: right;">5,5%</td>
+<td>28/7/2026</td>
+</tr>
+<tr class="even">
+<td>Q3 2026</td>
+<td style="text-align: right;">13,271</td>
+<td style="text-align: right;">5,2%</td>
+<td style="text-align: right;">2,9%</td>
+<td>28/10/2026</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuentes primarias, tablas de segmentos: <a href="https://www.unilever.com/files/ir-q4-2025-full-announcement.pdf">Q4/FY2025</a>, <a href="https://www.unilever.com/files/unilever-q1-2026-full-announcement.pdf">Q1 2026</a>, <a href="https://www.unilever.com/files/unilever-q2-2026-results-full-announcement.pdf">H1/Q2 2026</a>, <a href="https://www.unilever.com/files/unilever-q3-2026-results-full-announcement.pdf">Q3 2026</a>.</p>
+<p>Unilever publica actualizaciones trimestrales de ventas, pero cuentas completas de beneficio/caja con frecuencia semestral y anual. No existe un EPS, EBIT o CFO público completo para cada uno de esos cuatro trimestres. El informe muestra H1 y H2 derivados precisamente para cubrir la historia económica disponible, <strong>sin dividir un semestre por dos ni trasladar beneficios de junio a septiembre</strong>.</p>
+<p>Precisión sobre versiones: el comunicado Q1 dice 12,562; H1 menos Q2 da 12,577. Los 9M publicados son 38,919, mientras H1 más Q3 suma 38,894. Estas diferencias pequeñas entre publicaciones no se corrigen inventando una cifra trimestral. El dato Q1 12,577 que aparecía en el modelo original estaba correctamente rotulado como resta H1−Q2, pero <strong>no era el Q1 publicado originalmente</strong>; este anexo añade el dato original verificable. Las cifras YTD más recientes son preferibles para el cálculo agregado; no se ha localizado un cuadro que reconcilie por separado cada ajuste entre publicaciones. No se asigna la diferencia sin evidencia a una adquisición o a divisas.</p>
+<p>La suma de los cuatro trimestres tal como se publicaron es 51,465. La aproximación TTM septiembre del informe, FY2025 + 9M2026 − 9M2025, es 51,509. Ambas son construcciones de diferentes versiones, con una diferencia de 0,044, menos del 0,1%. Ninguna es una nueva cuenta anual auditada de septiembre. Para valorar beneficios y caja se utiliza el TTM junio, construido íntegramente con los estados anuales y semestrales comparables.</p>
+<h2 id="ttm-junio-de-2025-frente-a-junio-de-2026">TTM junio de 2025 frente a junio de 2026</h2>
+<p>TTM junio 2025 = FY2024 + H1 2025 − H1 2024. TTM junio 2026 = FY2025 + H1 2026 − H1 2025. Los históricos están reexpresados sin Ice Cream; no se mezcla el antiguo grupo con el grupo continuado.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Magnitud</th>
+<th style="text-align: right;">TTM junio 2025</th>
+<th style="text-align: right;">TTM junio 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas</td>
+<td style="text-align: right;">51,478</td>
+<td style="text-align: right;">50,620</td>
+</tr>
+<tr class="even">
+<td>EBIT reportado</td>
+<td style="text-align: right;">8,240</td>
+<td style="text-align: right;">9,160</td>
+</tr>
+<tr class="odd">
+<td>Beneficio operativo subyacente UOP</td>
+<td style="text-align: right;">9,918</td>
+<td style="text-align: right;">10,129</td>
+</tr>
+<tr class="even">
+<td>EPS diluido continuo aproximado</td>
+<td style="text-align: right;">2,39</td>
+<td style="text-align: right;">2,55</td>
+</tr>
+<tr class="odd">
+<td>EPS subyacente aproximado</td>
+<td style="text-align: right;">3,02</td>
+<td style="text-align: right;">3,12</td>
+</tr>
+<tr class="even">
+<td>Caja de operaciones antes de impuestos</td>
+<td style="text-align: right;">9,910</td>
+<td style="text-align: right;">11,972</td>
+</tr>
+<tr class="odd">
+<td>Impuestos pagados</td>
+<td style="text-align: right;">2,384</td>
+<td style="text-align: right;">3,362</td>
+</tr>
+<tr class="even">
+<td>Caja de operaciones después de impuestos</td>
+<td style="text-align: right;">7,526</td>
+<td style="text-align: right;">8,610</td>
+</tr>
+<tr class="odd">
+<td>Capex neto</td>
+<td style="text-align: right;">1,505</td>
+<td style="text-align: right;">1,584</td>
+</tr>
+<tr class="even">
+<td>Intereses netos pagados</td>
+<td style="text-align: right;">0,579</td>
+<td style="text-align: right;">0,640</td>
+</tr>
+<tr class="odd">
+<td>FCF comunicado, construido por periodos</td>
+<td style="text-align: right;">5,443</td>
+<td style="text-align: right;">6,386</td>
+</tr>
+<tr class="even">
+<td>Impacto de circulante en caja</td>
+<td style="text-align: right;">−0,770</td>
+<td style="text-align: right;">+1,312</td>
+</tr>
+<tr class="odd">
+<td>D&amp;A, sin añadir deterioros como recurrentes</td>
+<td style="text-align: right;">1,240</td>
+<td style="text-align: right;">1,325</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los EPS TTM son aproximaciones calculadas con EPS publicados redondeados y denominadores medios distintos. El puente del FCF anterior difiere en 0,001 por redondeo de los componentes publicados; no se presenta una precisión superior a la fuente.</p>
+<p>La mejora del EBIT reportado es 11,2%, frente a solo 2,1% de UOP. Las partidas no subyacentes implícitas bajan de 1,678 a 0,969. El FCF comunicado crece 17,3%, pero la contribución del circulante mejora 2,082 y los impuestos de caja suben 0,978. Por tanto, el aumento de caja no es íntegramente crecimiento recurrente. Las ventas en euros caen 1,7% pese al crecimiento orgánico: moneda y cambios de perímetro importan.</p>
+<p>Fuentes: <a href="https://www.unilever.com/files/unilever-half-year-historical-financials-excluding-ice-cream-pdf.pdf">históricos H1 2024/2025 excluyendo Ice Cream, publicados 12/3/2026</a>, <a href="https://www.unilever.com/files/ir-q4-2025-full-announcement.pdf">FY2025 y comparativo FY2024</a>, <a href="https://www.unilever.com/files/unilever-q2-2026-results-full-announcement.pdf">H1 2026</a>. La cobertura FY2023–2025 permanece en el informe principal.</p>
+<h2 id="fcff-normalizado-comparable-estimación-no-cifra-publicada">FCFF normalizado comparable: estimación, no cifra publicada</h2>
+<p>Se aplica exactamente la misma política a ambos TTM: partir de UOP; restar una reserva recurrente de reestructuración del 0,6% de ventas; impuesto del 26%; sumar D&amp;A; deducir capex, 0,450 de renovación estimada de arrendamientos y 0,050 de inversión normalizada de circulante. El 0,6% proviene de la hipótesis ya explicada en el informe y la llamada de la operación; impuesto, renovación y circulante son hipótesis analíticas, no nuevas cifras comunicadas por la empresa.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente normalizado</th>
+<th style="text-align: right;">TTM junio 2025</th>
+<th style="text-align: right;">TTM junio 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>UOP</td>
+<td style="text-align: right;">9,918</td>
+<td style="text-align: right;">10,129</td>
+</tr>
+<tr class="even">
+<td>Reserva recurrente de reestructuración</td>
+<td style="text-align: right;">−0,309</td>
+<td style="text-align: right;">−0,304</td>
+</tr>
+<tr class="odd">
+<td>EBIT normalizado</td>
+<td style="text-align: right;">9,609</td>
+<td style="text-align: right;">9,825</td>
+</tr>
+<tr class="even">
+<td>NOPAT al 26%</td>
+<td style="text-align: right;">7,111</td>
+<td style="text-align: right;">7,271</td>
+</tr>
+<tr class="odd">
+<td>D&amp;A</td>
+<td style="text-align: right;">+1,240</td>
+<td style="text-align: right;">+1,325</td>
+</tr>
+<tr class="even">
+<td>Capex neto</td>
+<td style="text-align: right;">−1,505</td>
+<td style="text-align: right;">−1,584</td>
+</tr>
+<tr class="odd">
+<td>Renovación estimada de arrendamientos</td>
+<td style="text-align: right;">−0,450</td>
+<td style="text-align: right;">−0,450</td>
+</tr>
+<tr class="even">
+<td>Inversión normalizada de circulante</td>
+<td style="text-align: right;">−0,050</td>
+<td style="text-align: right;">−0,050</td>
+</tr>
+<tr class="odd">
+<td><strong>FCFF normalizado</strong></td>
+<td style="text-align: right;"><strong>6,346</strong></td>
+<td style="text-align: right;"><strong>6,512</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>La mejora de FCFF normalizado es <strong>2,6%</strong>, muy inferior al 17,3% de FCF comunicado. Esta comparación no elimina la remuneración en acciones del coste económico ni perpetúa una liberación extraordinaria de circulante. El FCFF es consolidado y anterior a deuda/minoritarios; el modelo descuenta después los derechos de terceros en su puente de valoración. No se suma dos veces el FCF ni se supone que todo pertenezca al accionista de UL.</p>
+<p>Este anexo cierra la comparación histórica exigible con datos publicados. La falta de cuentas trimestrales completas no es una tarea de investigación sin terminar: es la frecuencia de información del emisor. La posible entrada sigue siendo neutral/condicional a valor razonable, y el evento y Stage3.5 deben revisarse antes de ejecutarla.</p>
+<p>Reproducción: historical_bridge.py genera historical_bridge.json con todos los periodos fuente, las cuatro ventas trimestrales originales y las fórmulas de ambos TTM. Las valoraciones y los supuestos de futuro del informe original no se han modificado.</p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/UL.html">Open full UL dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/UL/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/UL/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/UL/UL_historical_addendum.md">UL_historical_addendum.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/UL/historical_bridge.py">historical_bridge.py</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/UL/historical_bridge.json">historical_bridge.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/UL/source-report-original.md">source-report-original.md</a></li>
+</ul>
+</main></body></html>
