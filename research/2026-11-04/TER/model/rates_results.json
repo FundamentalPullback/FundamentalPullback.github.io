@@ -1,0 +1,21 @@
+{
+  "rf10yNov3": 0.0495,
+  "erpNov1": 0.0441,
+  "erpAssociatedRf": 0.0529,
+  "providerBeta": 1.75,
+  "capmCostOfEquity": 0.12667499999999998,
+  "financialDebtWeight": 0,
+  "selectedBaseWacc": 0.1275,
+  "selectionDifferenceBp": 8.250000000000203,
+  "sources": [
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "https://stockanalysis.com/stocks/ter/statistics/"
+  ],
+  "limits": [
+    "Daily rate and monthly ERP are not synchronized.",
+    "Beta is provider5y, not independently regressed.",
+    "Debt weight zero corresponds to financial borrowings zero; operating leases remain in operating cost.",
+    "12.75% is selected near12.6675% CAPM, not exact empirical WACC."
+  ]
+}

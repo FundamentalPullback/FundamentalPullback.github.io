@@ -1,0 +1,139 @@
+{
+  "researchDate": "2026-11-04",
+  "priceDate": "2026-11-03",
+  "price": 269.35,
+  "units": "USD million except share values",
+  "revenueAnchor": 5000.771,
+  "ebitPreAcqAmortAnchor": 1621.88,
+  "initialTax": 0.2,
+  "common": {
+    "depreciationRatio": 0.025,
+    "incrementalWorkingCapitalRatio": 0.27,
+    "releaseWorkingCapitalOnDecline": false,
+    "taxBefore2036": 0.2,
+    "tax2036AndTerminal": 0.22,
+    "annualAcquisitionTaxShield": 0
+  },
+  "capital": {
+    "cashAndSecurities": 624.865,
+    "operatingCashReserve": 250,
+    "borrowings": 0,
+    "pensionLiabilities": 152.91,
+    "pensionSurplusAdded": 0,
+    "historicalTaxReserve": 188.105,
+    "derivativesNetLiability": 1.008,
+    "unpaidCapex": 12.292,
+    "nciSelectedEconomicClaim": 250,
+    "technoprobeShares": 65.326087,
+    "technoprobePriceEur": 24.34,
+    "eurUsd": 1.1179,
+    "stakeSelectedTaxCostProxy": 524.1,
+    "stakeSelectedExitTaxRate": 0.2,
+    "stakeLiquidityHaircut": 0,
+    "otherUnverifiedInvestmentsAdded": 0,
+    "postBalanceCashAdjustment": 0,
+    "actualShares": 156.124751,
+    "selectedNetAwardDilution": 1.24,
+    "formfactorClosingAssumed": true,
+    "formfactorCashCommitment": 300,
+    "formfactorPurchasedShares": 2.234887,
+    "formfactorPrice": 96.79,
+    "formfactorLiquidityHaircut": 0
+  },
+  "scenarios": {
+    "bear": {
+      "year1Revenue": 4600,
+      "growthAfterYear1": [
+        -0.17,
+        0.03,
+        0.05,
+        0.05,
+        0.04,
+        0.035,
+        0.03,
+        0.025,
+        0.025
+      ],
+      "margins": [
+        0.22,
+        0.15,
+        0.16,
+        0.17,
+        0.18,
+        0.18,
+        0.18,
+        0.18,
+        0.18,
+        0.18
+      ],
+      "wacc": 0.145,
+      "g": 0.02,
+      "roic": 0.18,
+      "capexRatioYear1": 0.065,
+      "capexRatioYear10": 0.045
+    },
+    "base": {
+      "year1Revenue": 5600,
+      "growthAfterYear1": [
+        -0.1,
+        0.08,
+        0.1,
+        0.08,
+        0.06,
+        0.055,
+        0.05,
+        0.045,
+        0.04
+      ],
+      "margins": [
+        0.27,
+        0.22,
+        0.24,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "wacc": 0.1275,
+      "g": 0.03,
+      "roic": 0.3,
+      "capexRatioYear1": 0.06,
+      "capexRatioYear10": 0.045
+    },
+    "bull": {
+      "year1Revenue": 6200,
+      "growthAfterYear1": [
+        0.18,
+        0.15,
+        0.12,
+        0.1,
+        0.09,
+        0.08,
+        0.07,
+        0.06,
+        0.05
+      ],
+      "margins": [
+        0.34,
+        0.34,
+        0.33,
+        0.32,
+        0.32,
+        0.32,
+        0.32,
+        0.32,
+        0.32,
+        0.32
+      ],
+      "wacc": 0.11,
+      "g": 0.035,
+      "roic": 0.4,
+      "capexRatioYear1": 0.065,
+      "capexRatioYear10": 0.045
+    }
+  },
+  "classification": "Conditional industrial DCF plus market-marked stake. Not certified total intrinsic fair value."
+}

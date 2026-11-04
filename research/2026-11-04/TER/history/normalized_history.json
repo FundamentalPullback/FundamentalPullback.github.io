@@ -1,0 +1,6033 @@
+{
+  "as_of": "2026-11-04",
+  "periods": {
+    "3M2025": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q1_296"
+        ],
+        "formula": "reported",
+        "value": 4.573
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q1_318"
+        ],
+        "formula": "reported",
+        "value": 4.779
+      },
+      "capex": {
+        "fact_ids": [
+          "q1_322"
+        ],
+        "formula": "reported",
+        "value": 64.021
+      },
+      "cfo": {
+        "fact_ids": [
+          "q1_320"
+        ],
+        "formula": "reported",
+        "value": 161.637
+      },
+      "da": {
+        "fact_ids": [
+          "q1_312",
+          "q1_318"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 30.302
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q1_312"
+        ],
+        "formula": "reported",
+        "value": 25.523
+      },
+      "ebit": {
+        "fact_ids": [
+          "q1_300"
+        ],
+        "formula": "reported",
+        "value": 120.803
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q1_300",
+          "q1_298",
+          "q1_296"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 139.891
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q1_300",
+          "q1_292"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 17.617985
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q1_300",
+          "q1_312",
+          "q1_318"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 151.105
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q1_304",
+          "q1_302"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 12.219384
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q1_306"
+        ],
+        "formula": "reported",
+        "value": -5.584
+      },
+      "fcf": {
+        "fact_ids": [
+          "q1_320",
+          "q1_322"
+        ],
+        "formula": "cfo - capex",
+        "value": 97.616
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q1_320",
+          "q1_322",
+          "q1_314"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 82.412
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q1_294"
+        ],
+        "formula": "reported",
+        "value": 415.336
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q1_304"
+        ],
+        "formula": "reported",
+        "value": 14.544
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q1_316"
+        ],
+        "formula": "reported",
+        "value": 4.945
+      },
+      "net_income": {
+        "fact_ids": [
+          "q1_308"
+        ],
+        "formula": "reported",
+        "value": 98.896
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q1_302"
+        ],
+        "formula": "reported",
+        "value": 119.024
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q1_298"
+        ],
+        "formula": "reported",
+        "value": 14.515
+      },
+      "revenue": {
+        "fact_ids": [
+          "q1_292"
+        ],
+        "formula": "reported",
+        "value": 685.68
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q1_310"
+        ],
+        "formula": "reported",
+        "value": 16.629
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q1_314"
+        ],
+        "formula": "reported",
+        "value": 15.204
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q1_343"
+        ],
+        "formula": "reported",
+        "value": 2.778
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q1_342"
+        ],
+        "formula": "reported",
+        "value": 2.676
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q1_341"
+        ],
+        "formula": "reported",
+        "value": 59.732
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q1_346"
+        ],
+        "formula": "reported",
+        "value": 1.506
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q1_345"
+        ],
+        "formula": "reported",
+        "value": 5.941
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q1_344"
+        ],
+        "formula": "reported",
+        "value": 22.865
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q1_340"
+        ],
+        "formula": "reported",
+        "value": 8.636
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q1_339"
+        ],
+        "formula": "reported",
+        "value": -37.177
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q1_338"
+        ],
+        "formula": "reported",
+        "value": 155.802
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q1_340",
+          "q1_337"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 11.64054
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q1_339",
+          "q1_336"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -53.889863
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q1_338",
+          "q1_335"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 28.719051
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q1_337"
+        ],
+        "formula": "reported",
+        "value": 74.189
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q1_336"
+        ],
+        "formula": "reported",
+        "value": 68.987
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q1_335"
+        ],
+        "formula": "reported",
+        "value": 542.504
+      }
+    },
+    "3M2026": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q1_295"
+        ],
+        "formula": "reported",
+        "value": 2.224
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q1_317"
+        ],
+        "formula": "reported",
+        "value": 2.415
+      },
+      "capex": {
+        "fact_ids": [
+          "q1_321"
+        ],
+        "formula": "reported",
+        "value": 64.733
+      },
+      "cfo": {
+        "fact_ids": [
+          "q1_319"
+        ],
+        "formula": "reported",
+        "value": 265.124
+      },
+      "da": {
+        "fact_ids": [
+          "q1_311",
+          "q1_317"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 32.655
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q1_311"
+        ],
+        "formula": "reported",
+        "value": 30.24
+      },
+      "ebit": {
+        "fact_ids": [
+          "q1_299"
+        ],
+        "formula": "reported",
+        "value": 473.002
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q1_299",
+          "q1_297",
+          "q1_295"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 478.651
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q1_299",
+          "q1_291"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 36.88142
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q1_299",
+          "q1_311",
+          "q1_317"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 505.657
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q1_303",
+          "q1_301"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 13.347692
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q1_305"
+        ],
+        "formula": "reported",
+        "value": -4.611
+      },
+      "fcf": {
+        "fact_ids": [
+          "q1_319",
+          "q1_321"
+        ],
+        "formula": "cfo - capex",
+        "value": 200.391
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q1_319",
+          "q1_321",
+          "q1_313"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 178.489
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q1_293"
+        ],
+        "formula": "reported",
+        "value": 780.949
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q1_303"
+        ],
+        "formula": "reported",
+        "value": 62.157
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q1_315"
+        ],
+        "formula": "reported",
+        "value": 4.682
+      },
+      "net_income": {
+        "fact_ids": [
+          "q1_307"
+        ],
+        "formula": "reported",
+        "value": 398.908
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q1_301"
+        ],
+        "formula": "reported",
+        "value": 465.676
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q1_297"
+        ],
+        "formula": "reported",
+        "value": 3.425
+      },
+      "revenue": {
+        "fact_ids": [
+          "q1_291"
+        ],
+        "formula": "reported",
+        "value": 1282.494
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q1_309"
+        ],
+        "formula": "reported",
+        "value": 20.649
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q1_313"
+        ],
+        "formula": "reported",
+        "value": 21.902
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q1_331"
+        ],
+        "formula": "reported",
+        "value": 3.409
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q1_330"
+        ],
+        "formula": "reported",
+        "value": 2.831
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q1_329"
+        ],
+        "formula": "reported",
+        "value": 58.493
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q1_334"
+        ],
+        "formula": "reported",
+        "value": 3.565
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q1_333"
+        ],
+        "formula": "reported",
+        "value": 4.327
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q1_332"
+        ],
+        "formula": "reported",
+        "value": 24.689
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q1_328"
+        ],
+        "formula": "reported",
+        "value": 4.707
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q1_327"
+        ],
+        "formula": "reported",
+        "value": -0.964
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q1_326"
+        ],
+        "formula": "reported",
+        "value": 468.052
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q1_328",
+          "q1_325"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 5.85193
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q1_327",
+          "q1_324"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -1.056346
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q1_326",
+          "q1_323"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 42.13644
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q1_325"
+        ],
+        "formula": "reported",
+        "value": 80.435
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q1_324"
+        ],
+        "formula": "reported",
+        "value": 91.258
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q1_323"
+        ],
+        "formula": "reported",
+        "value": 1110.801
+      }
+    },
+    "6M2025": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q2_200"
+        ],
+        "formula": "reported",
+        "value": 8.306
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q2_238"
+        ],
+        "formula": "reported",
+        "value": 8.856
+      },
+      "capex": {
+        "fact_ids": [
+          "q2_242"
+        ],
+        "formula": "reported",
+        "value": 114.429
+      },
+      "cfo": {
+        "fact_ids": [
+          "q2_240"
+        ],
+        "formula": "reported",
+        "value": 343.726
+      },
+      "da": {
+        "fact_ids": [
+          "q2_232",
+          "q2_238"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 61.691
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q2_232"
+        ],
+        "formula": "reported",
+        "value": 52.835
+      },
+      "ebit": {
+        "fact_ids": [
+          "q2_208"
+        ],
+        "formula": "reported",
+        "value": 211.547
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q2_208",
+          "q2_204",
+          "q2_200"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 236.74
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q2_208",
+          "q2_192"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 15.81687
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q2_208",
+          "q2_232",
+          "q2_238"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 273.238
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q2_216",
+          "q2_212"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 12.433205
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q2_220"
+        ],
+        "formula": "reported",
+        "value": -11.511
+      },
+      "fcf": {
+        "fact_ids": [
+          "q2_240",
+          "q2_242"
+        ],
+        "formula": "cfo - capex",
+        "value": 229.297
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q2_240",
+          "q2_242",
+          "q2_234"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 197.266
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q2_196"
+        ],
+        "formula": "reported",
+        "value": 788.349
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q2_216"
+        ],
+        "formula": "reported",
+        "value": 26.804
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q2_236"
+        ],
+        "formula": "reported",
+        "value": 12.347
+      },
+      "net_income": {
+        "fact_ids": [
+          "q2_226"
+        ],
+        "formula": "reported",
+        "value": 177.269
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q2_212"
+        ],
+        "formula": "reported",
+        "value": 215.584
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q2_204"
+        ],
+        "formula": "reported",
+        "value": 16.887
+      },
+      "revenue": {
+        "fact_ids": [
+          "q2_192"
+        ],
+        "formula": "reported",
+        "value": 1337.477
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q2_230"
+        ],
+        "formula": "reported",
+        "value": 32.181
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q2_234"
+        ],
+        "formula": "reported",
+        "value": 32.031
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q2_287"
+        ],
+        "formula": "reported",
+        "value": 6.065
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q2_286"
+        ],
+        "formula": "reported",
+        "value": 6.204
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q2_285"
+        ],
+        "formula": "reported",
+        "value": 103.325
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q2_290"
+        ],
+        "formula": "reported",
+        "value": 3.432
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q2_289"
+        ],
+        "formula": "reported",
+        "value": 12.009
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q2_288"
+        ],
+        "formula": "reported",
+        "value": 46.26
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q2_284"
+        ],
+        "formula": "reported",
+        "value": 24.188
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q2_283"
+        ],
+        "formula": "reported",
+        "value": -55.71
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q2_282"
+        ],
+        "formula": "reported",
+        "value": 251.565
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q2_284",
+          "q2_281"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 15.18946
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q2_283",
+          "q2_280"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -38.727034
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q2_282",
+          "q2_279"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 24.320319
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q2_281"
+        ],
+        "formula": "reported",
+        "value": 159.242
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q2_280"
+        ],
+        "formula": "reported",
+        "value": 143.853
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q2_279"
+        ],
+        "formula": "reported",
+        "value": 1034.382
+      }
+    },
+    "6M2026": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q2_199"
+        ],
+        "formula": "reported",
+        "value": 7.196
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q2_237"
+        ],
+        "formula": "reported",
+        "value": 7.421
+      },
+      "capex": {
+        "fact_ids": [
+          "q2_241"
+        ],
+        "formula": "reported",
+        "value": 155.439
+      },
+      "cfo": {
+        "fact_ids": [
+          "q2_239"
+        ],
+        "formula": "reported",
+        "value": 734.262
+      },
+      "da": {
+        "fact_ids": [
+          "q2_231",
+          "q2_237"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 66.305
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q2_231"
+        ],
+        "formula": "reported",
+        "value": 58.884
+      },
+      "ebit": {
+        "fact_ids": [
+          "q2_207"
+        ],
+        "formula": "reported",
+        "value": 910.813
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q2_207",
+          "q2_203",
+          "q2_199"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 924.466
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q2_207",
+          "q2_191"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 34.877219
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q2_207",
+          "q2_231",
+          "q2_237"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 977.118
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q2_215",
+          "q2_211"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 14.180751
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q2_219"
+        ],
+        "formula": "reported",
+        "value": -6.557
+      },
+      "fcf": {
+        "fact_ids": [
+          "q2_239",
+          "q2_241"
+        ],
+        "formula": "cfo - capex",
+        "value": 578.823
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q2_239",
+          "q2_241",
+          "q2_233"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 536.859
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q2_195"
+        ],
+        "formula": "reported",
+        "value": 1575.568
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q2_215"
+        ],
+        "formula": "reported",
+        "value": 128.945
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q2_235"
+        ],
+        "formula": "reported",
+        "value": 8.281
+      },
+      "net_income": {
+        "fact_ids": [
+          "q2_225"
+        ],
+        "formula": "reported",
+        "value": 773.442
+      },
+      "noncontrolling_income": {
+        "fact_ids": [
+          "q2_222"
+        ],
+        "formula": "reported",
+        "value": 0.352
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q2_211"
+        ],
+        "formula": "reported",
+        "value": 909.296
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q2_203"
+        ],
+        "formula": "reported",
+        "value": 6.457
+      },
+      "revenue": {
+        "fact_ids": [
+          "q2_191"
+        ],
+        "formula": "reported",
+        "value": 2611.484
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q2_229"
+        ],
+        "formula": "reported",
+        "value": 39.472
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q2_233"
+        ],
+        "formula": "reported",
+        "value": 41.964
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q2_275"
+        ],
+        "formula": "reported",
+        "value": 7.358
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q2_274"
+        ],
+        "formula": "reported",
+        "value": 9.046
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q2_273"
+        ],
+        "formula": "reported",
+        "value": 139.035
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q2_278"
+        ],
+        "formula": "reported",
+        "value": 9.336
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q2_277"
+        ],
+        "formula": "reported",
+        "value": 6.899
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q2_276"
+        ],
+        "formula": "reported",
+        "value": 49.962
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q2_272"
+        ],
+        "formula": "reported",
+        "value": 22.696
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q2_271"
+        ],
+        "formula": "reported",
+        "value": -3.54
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q2_270"
+        ],
+        "formula": "reported",
+        "value": 895.372
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q2_272",
+          "q2_269"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 12.092731
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q2_271",
+          "q2_268"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -1.851707
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q2_270",
+          "q2_267"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 40.103985
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q2_269"
+        ],
+        "formula": "reported",
+        "value": 187.683
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q2_268"
+        ],
+        "formula": "reported",
+        "value": 191.175
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q2_267"
+        ],
+        "formula": "reported",
+        "value": 2232.626
+      }
+    },
+    "9M2024": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "priorq3_358"
+        ],
+        "formula": "reported",
+        "value": 14.108
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "priorq3_394"
+        ],
+        "formula": "reported",
+        "value": 14.133
+      },
+      "capex": {
+        "fact_ids": [
+          "priorq3_398"
+        ],
+        "formula": "reported",
+        "value": 140.71
+      },
+      "cfo": {
+        "fact_ids": [
+          "priorq3_396"
+        ],
+        "formula": "reported",
+        "value": 389.619
+      },
+      "da": {
+        "fact_ids": [
+          "priorq3_388",
+          "priorq3_394"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 88.613
+      },
+      "depreciation": {
+        "fact_ids": [
+          "priorq3_388"
+        ],
+        "formula": "reported",
+        "value": 74.48
+      },
+      "ebit": {
+        "fact_ids": [
+          "priorq3_366"
+        ],
+        "formula": "reported",
+        "value": 440.203
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "priorq3_366",
+          "priorq3_362",
+          "priorq3_358"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 465.329
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "priorq3_366",
+          "priorq3_350"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 21.296751
+      },
+      "ebitda": {
+        "fact_ids": [
+          "priorq3_366",
+          "priorq3_388",
+          "priorq3_394"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 528.816
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "priorq3_374",
+          "priorq3_370"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 11.986776
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "priorq3_378"
+        ],
+        "formula": "reported",
+        "value": -1.075
+      },
+      "fcf": {
+        "fact_ids": [
+          "priorq3_396",
+          "priorq3_398"
+        ],
+        "formula": "cfo - capex",
+        "value": 248.909
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "priorq3_396",
+          "priorq3_398",
+          "priorq3_390"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 203.642
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "priorq3_354"
+        ],
+        "formula": "reported",
+        "value": 1201.639
+      },
+      "income_tax": {
+        "fact_ids": [
+          "priorq3_374"
+        ],
+        "formula": "reported",
+        "value": 54.095
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "priorq3_392"
+        ],
+        "formula": "reported",
+        "value": 15.516
+      },
+      "net_income": {
+        "fact_ids": [
+          "priorq3_382"
+        ],
+        "formula": "reported",
+        "value": 396.119
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "priorq3_370"
+        ],
+        "formula": "reported",
+        "value": 451.289
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "priorq3_362"
+        ],
+        "formula": "reported",
+        "value": 11.018
+      },
+      "revenue": {
+        "fact_ids": [
+          "priorq3_350"
+        ],
+        "formula": "reported",
+        "value": 2066.996
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "priorq3_386"
+        ],
+        "formula": "reported",
+        "value": 46.817
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "priorq3_390"
+        ],
+        "formula": "reported",
+        "value": 45.267
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "priorq3_443"
+        ],
+        "formula": "reported",
+        "value": 5.909
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "priorq3_442"
+        ],
+        "formula": "reported",
+        "value": 19.76
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "priorq3_441"
+        ],
+        "formula": "reported",
+        "value": 115.041
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "priorq3_446"
+        ],
+        "formula": "reported",
+        "value": 5.149
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "priorq3_445"
+        ],
+        "formula": "reported",
+        "value": 20.896
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "priorq3_444"
+        ],
+        "formula": "reported",
+        "value": 62.542
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "priorq3_440"
+        ],
+        "formula": "reported",
+        "value": 42.945
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "priorq3_439"
+        ],
+        "formula": "reported",
+        "value": -56.099
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "priorq3_438"
+        ],
+        "formula": "reported",
+        "value": 408.023
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "priorq3_440",
+          "priorq3_437"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 18.101922
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "priorq3_439",
+          "priorq3_436"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -21.046175
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "priorq3_438",
+          "priorq3_435"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 26.101712
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "priorq3_437"
+        ],
+        "formula": "reported",
+        "value": 237.24
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "priorq3_436"
+        ],
+        "formula": "reported",
+        "value": 266.552
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "priorq3_435"
+        ],
+        "formula": "reported",
+        "value": 1563.204
+      }
+    },
+    "9M2025": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q3_98"
+        ],
+        "formula": "reported",
+        "value": 11.82
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q3_134"
+        ],
+        "formula": "reported",
+        "value": 12.723
+      },
+      "capex": {
+        "fact_ids": [
+          "q3_140"
+        ],
+        "formula": "reported",
+        "value": 161.121
+      },
+      "cfo": {
+        "fact_ids": [
+          "q3_138"
+        ],
+        "formula": "reported",
+        "value": 392.776
+      },
+      "da": {
+        "fact_ids": [
+          "q3_130",
+          "q3_134"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 92.207
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q3_130"
+        ],
+        "formula": "reported",
+        "value": 79.484
+      },
+      "ebit": {
+        "fact_ids": [
+          "q3_106"
+        ],
+        "formula": "reported",
+        "value": 356.85
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q3_106",
+          "q3_102",
+          "q3_98"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 392.142
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q3_106",
+          "q3_90"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 16.938919
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q3_106",
+          "q3_130",
+          "q3_134"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 449.057
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q3_114",
+          "q3_110"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 13.788894
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q3_118"
+        ],
+        "formula": "reported",
+        "value": -16.709
+      },
+      "fcf": {
+        "fact_ids": [
+          "q3_138",
+          "q3_140"
+        ],
+        "formula": "cfo - capex",
+        "value": 231.655
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q3_138",
+          "q3_140",
+          "q3_132"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 184.094
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q3_94"
+        ],
+        "formula": "reported",
+        "value": 1237.655
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q3_114"
+        ],
+        "formula": "reported",
+        "value": 50.148
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q3_136"
+        ],
+        "formula": "reported",
+        "value": 19.175
+      },
+      "net_income": {
+        "fact_ids": [
+          "q3_124"
+        ],
+        "formula": "reported",
+        "value": 296.827
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q3_110"
+        ],
+        "formula": "reported",
+        "value": 363.684
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q3_102"
+        ],
+        "formula": "reported",
+        "value": 23.472
+      },
+      "revenue": {
+        "fact_ids": [
+          "q3_90"
+        ],
+        "formula": "reported",
+        "value": 2106.687
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q3_128"
+        ],
+        "formula": "reported",
+        "value": 49.136
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q3_132"
+        ],
+        "formula": "reported",
+        "value": 47.561
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q3_185"
+        ],
+        "formula": "reported",
+        "value": 10.966
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q3_184"
+        ],
+        "formula": "reported",
+        "value": 7.654
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q3_183"
+        ],
+        "formula": "reported",
+        "value": 143.666
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q3_188"
+        ],
+        "formula": "reported",
+        "value": 6.351
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q3_187"
+        ],
+        "formula": "reported",
+        "value": 16.624
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q3_186"
+        ],
+        "formula": "reported",
+        "value": 69.239
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q3_182"
+        ],
+        "formula": "reported",
+        "value": 40.084
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q3_181"
+        ],
+        "formula": "reported",
+        "value": -73.277
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q3_180"
+        ],
+        "formula": "reported",
+        "value": 402.397
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q3_182",
+          "q3_179"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 16.195686
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q3_181",
+          "q3_178"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -33.468987
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q3_180",
+          "q3_177"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 24.532678
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q3_179"
+        ],
+        "formula": "reported",
+        "value": 247.498
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q3_178"
+        ],
+        "formula": "reported",
+        "value": 218.94
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q3_177"
+        ],
+        "formula": "reported",
+        "value": 1640.249
+      }
+    },
+    "9M2026": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q3_97"
+        ],
+        "formula": "reported",
+        "value": 12.447
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q3_133"
+        ],
+        "formula": "reported",
+        "value": 12.925
+      },
+      "capex": {
+        "fact_ids": [
+          "q3_139"
+        ],
+        "formula": "reported",
+        "value": 241.762
+      },
+      "cfo": {
+        "fact_ids": [
+          "q3_137"
+        ],
+        "formula": "reported",
+        "value": 1047.875
+      },
+      "da": {
+        "fact_ids": [
+          "q3_129",
+          "q3_133"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 103.181
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q3_129"
+        ],
+        "formula": "reported",
+        "value": 90.256
+      },
+      "ebit": {
+        "fact_ids": [
+          "q3_105"
+        ],
+        "formula": "reported",
+        "value": 1312.782
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q3_105",
+          "q3_101",
+          "q3_97"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 1333.684
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q3_105",
+          "q3_89"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 33.511273
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q3_105",
+          "q3_129",
+          "q3_133"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 1415.963
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q3_113",
+          "q3_109"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 14.371173
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q3_117"
+        ],
+        "formula": "reported",
+        "value": -3.277
+      },
+      "fcf": {
+        "fact_ids": [
+          "q3_137",
+          "q3_139"
+        ],
+        "formula": "cfo - capex",
+        "value": 806.113
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q3_137",
+          "q3_139",
+          "q3_131"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 742.464
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q3_93"
+        ],
+        "formula": "reported",
+        "value": 2346.846
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q3_113"
+        ],
+        "formula": "reported",
+        "value": 188.778
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q3_135"
+        ],
+        "formula": "reported",
+        "value": 19.213
+      },
+      "net_income": {
+        "fact_ids": [
+          "q3_123"
+        ],
+        "formula": "reported",
+        "value": 1115.849
+      },
+      "noncontrolling_income": {
+        "fact_ids": [
+          "q3_120"
+        ],
+        "formula": "reported",
+        "value": 5.684
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q3_109"
+        ],
+        "formula": "reported",
+        "value": 1313.588
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q3_101"
+        ],
+        "formula": "reported",
+        "value": 8.455
+      },
+      "revenue": {
+        "fact_ids": [
+          "q3_89"
+        ],
+        "formula": "reported",
+        "value": 3917.434
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q3_127"
+        ],
+        "formula": "reported",
+        "value": 62.616
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q3_131"
+        ],
+        "formula": "reported",
+        "value": 63.649
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q3_173"
+        ],
+        "formula": "reported",
+        "value": 11.366
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q3_172"
+        ],
+        "formula": "reported",
+        "value": 13.62
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q3_171"
+        ],
+        "formula": "reported",
+        "value": 208.019
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q3_176"
+        ],
+        "formula": "reported",
+        "value": 15.194
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q3_175"
+        ],
+        "formula": "reported",
+        "value": 11.427
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q3_174"
+        ],
+        "formula": "reported",
+        "value": 76.2
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q3_170"
+        ],
+        "formula": "reported",
+        "value": 64.118
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q3_169"
+        ],
+        "formula": "reported",
+        "value": -3.195
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q3_168"
+        ],
+        "formula": "reported",
+        "value": 1262.288
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q3_170",
+          "q3_167"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 19.680534
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q3_169",
+          "q3_166"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -1.113229
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q3_168",
+          "q3_165"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 38.197478
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q3_167"
+        ],
+        "formula": "reported",
+        "value": 325.794
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q3_166"
+        ],
+        "formula": "reported",
+        "value": 287.003
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q3_165"
+        ],
+        "formula": "reported",
+        "value": 3304.637
+      }
+    },
+    "FY2023": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "fy_9"
+        ],
+        "formula": "reported",
+        "value": 18.999
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "fy_41"
+        ],
+        "formula": "reported",
+        "value": 18.768
+      },
+      "capex": {
+        "fact_ids": [
+          "fy_47"
+        ],
+        "formula": "reported",
+        "value": 159.642
+      },
+      "cfo": {
+        "fact_ids": [
+          "fy_44"
+        ],
+        "formula": "reported",
+        "value": 585.231
+      },
+      "da": {
+        "fact_ids": [
+          "fy_32",
+          "fy_41"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 110.886
+      },
+      "depreciation": {
+        "fact_ids": [
+          "fy_32"
+        ],
+        "formula": "reported",
+        "value": 92.118
+      },
+      "ebit": {
+        "fact_ids": [
+          "fy_15"
+        ],
+        "formula": "reported",
+        "value": 501.068
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "fy_15",
+          "fy_12",
+          "fy_9"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 541.344
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "fy_15",
+          "fy_3"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 18.722429
+      },
+      "ebitda": {
+        "fact_ids": [
+          "fy_15",
+          "fy_32",
+          "fy_41"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 611.954
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "fy_21",
+          "fy_18"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 14.616456
+      },
+      "fcf": {
+        "fact_ids": [
+          "fy_44",
+          "fy_47"
+        ],
+        "formula": "cfo - capex",
+        "value": 425.589
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "fy_44",
+          "fy_47",
+          "fy_35"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 367.907
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "fy_6"
+        ],
+        "formula": "reported",
+        "value": 1536.748
+      },
+      "income_tax": {
+        "fact_ids": [
+          "fy_21"
+        ],
+        "formula": "reported",
+        "value": 76.82
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "fy_38"
+        ],
+        "formula": "reported",
+        "value": 28.358
+      },
+      "net_income": {
+        "fact_ids": [
+          "fy_26"
+        ],
+        "formula": "reported",
+        "value": 448.752
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "fy_18"
+        ],
+        "formula": "reported",
+        "value": 525.572
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "fy_12"
+        ],
+        "formula": "reported",
+        "value": 21.277
+      },
+      "revenue": {
+        "fact_ids": [
+          "fy_3"
+        ],
+        "formula": "reported",
+        "value": 2676.298
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "fy_27"
+        ],
+        "formula": "reported",
+        "value": 57.94
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "fy_35"
+        ],
+        "formula": "reported",
+        "value": 57.682
+      },
+      "sbc_expense": {
+        "fact_ids": [
+          "fy_50"
+        ],
+        "formula": "reported",
+        "value": 57.682
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "fy_83"
+        ],
+        "formula": "reported",
+        "value": 5.239
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "fy_82"
+        ],
+        "formula": "reported",
+        "value": 40.739
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "fy_81"
+        ],
+        "formula": "reported",
+        "value": 113.664
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "fy_86"
+        ],
+        "formula": "reported",
+        "value": 7.021
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "fy_85"
+        ],
+        "formula": "reported",
+        "value": 25.527
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "fy_84"
+        ],
+        "formula": "reported",
+        "value": 78.568
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "fy_80"
+        ],
+        "formula": "reported",
+        "value": 79.457
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "fy_79"
+        ],
+        "formula": "reported",
+        "value": -54.252
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "fy_78"
+        ],
+        "formula": "reported",
+        "value": 498.504
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "fy_80",
+          "fy_77"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 23.102868
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "fy_79",
+          "fy_76"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -14.460143
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "fy_78",
+          "fy_75"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 25.47042
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "fy_77"
+        ],
+        "formula": "reported",
+        "value": 343.927
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "fy_76"
+        ],
+        "formula": "reported",
+        "value": 375.183
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "fy_75"
+        ],
+        "formula": "reported",
+        "value": 1957.188
+      }
+    },
+    "FY2024": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "fy_8"
+        ],
+        "formula": "reported",
+        "value": 18.764
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "fy_40"
+        ],
+        "formula": "reported",
+        "value": 18.764
+      },
+      "capex": {
+        "fact_ids": [
+          "fy_46"
+        ],
+        "formula": "reported",
+        "value": 198.095
+      },
+      "cfo": {
+        "fact_ids": [
+          "fy_43"
+        ],
+        "formula": "reported",
+        "value": 672.176
+      },
+      "da": {
+        "fact_ids": [
+          "fy_31",
+          "fy_40"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 119.741
+      },
+      "depreciation": {
+        "fact_ids": [
+          "fy_31"
+        ],
+        "formula": "reported",
+        "value": 100.977
+      },
+      "ebit": {
+        "fact_ids": [
+          "fy_14"
+        ],
+        "formula": "reported",
+        "value": 593.788
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "fy_14",
+          "fy_11",
+          "fy_8"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 628.123
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "fy_14",
+          "fy_2"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 21.057208
+      },
+      "ebitda": {
+        "fact_ids": [
+          "fy_14",
+          "fy_31",
+          "fy_40"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 713.529
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "fy_20",
+          "fy_17"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 9.769228
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "fy_23"
+        ],
+        "formula": "reported",
+        "value": -7.211
+      },
+      "fcf": {
+        "fact_ids": [
+          "fy_43",
+          "fy_46"
+        ],
+        "formula": "cfo - capex",
+        "value": 474.081
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "fy_43",
+          "fy_46",
+          "fy_34"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 413.959
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "fy_5"
+        ],
+        "formula": "reported",
+        "value": 1648.927
+      },
+      "income_tax": {
+        "fact_ids": [
+          "fy_20"
+        ],
+        "formula": "reported",
+        "value": 59.503
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "fy_37"
+        ],
+        "formula": "reported",
+        "value": 18.922
+      },
+      "net_income": {
+        "fact_ids": [
+          "fy_25"
+        ],
+        "formula": "reported",
+        "value": 542.372
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "fy_17"
+        ],
+        "formula": "reported",
+        "value": 609.086
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "fy_11"
+        ],
+        "formula": "reported",
+        "value": 15.571
+      },
+      "revenue": {
+        "fact_ids": [
+          "fy_2"
+        ],
+        "formula": "reported",
+        "value": 2819.88
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "fy_28"
+        ],
+        "formula": "reported",
+        "value": 60.397
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "fy_34"
+        ],
+        "formula": "reported",
+        "value": 60.122
+      },
+      "sbc_expense": {
+        "fact_ids": [
+          "fy_49"
+        ],
+        "formula": "reported",
+        "value": 60.122
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "fy_71"
+        ],
+        "formula": "reported",
+        "value": 7.69
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "fy_70"
+        ],
+        "formula": "reported",
+        "value": 22.275
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "fy_69"
+        ],
+        "formula": "reported",
+        "value": 168.13
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "fy_74"
+        ],
+        "formula": "reported",
+        "value": 6.336
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "fy_73"
+        ],
+        "formula": "reported",
+        "value": 27.668
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "fy_72"
+        ],
+        "formula": "reported",
+        "value": 85.737
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "fy_68"
+        ],
+        "formula": "reported",
+        "value": 65.724
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "fy_67"
+        ],
+        "formula": "reported",
+        "value": -77.552
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "fy_66"
+        ],
+        "formula": "reported",
+        "value": 558.168
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "fy_68",
+          "fy_65"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 19.849477
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "fy_67",
+          "fy_64"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -21.255975
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "fy_66",
+          "fy_63"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 26.280086
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "fy_65"
+        ],
+        "formula": "reported",
+        "value": 331.112
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "fy_64"
+        ],
+        "formula": "reported",
+        "value": 364.848
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "fy_63"
+        ],
+        "formula": "reported",
+        "value": 2123.92
+      }
+    },
+    "FY2025": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "fy_7"
+        ],
+        "formula": "reported",
+        "value": 15.27
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "fy_39"
+        ],
+        "formula": "reported",
+        "value": 16.536
+      },
+      "capex": {
+        "fact_ids": [
+          "fy_45"
+        ],
+        "formula": "reported",
+        "value": 224.009
+      },
+      "cfo": {
+        "fact_ids": [
+          "fy_42"
+        ],
+        "formula": "reported",
+        "value": 674.415
+      },
+      "da": {
+        "fact_ids": [
+          "fy_30",
+          "fy_39"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 127.981
+      },
+      "depreciation": {
+        "fact_ids": [
+          "fy_30"
+        ],
+        "formula": "reported",
+        "value": 111.445
+      },
+      "ebit": {
+        "fact_ids": [
+          "fy_13"
+        ],
+        "formula": "reported",
+        "value": 650.051
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "fy_13",
+          "fy_10",
+          "fy_7"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 703.875
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "fy_13",
+          "fy_1"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 20.377621
+      },
+      "ebitda": {
+        "fact_ids": [
+          "fy_13",
+          "fy_30",
+          "fy_39"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 778.032
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "fy_19",
+          "fy_16"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 12.138965
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "fy_22"
+        ],
+        "formula": "reported",
+        "value": -19.914
+      },
+      "fcf": {
+        "fact_ids": [
+          "fy_42",
+          "fy_45"
+        ],
+        "formula": "cfo - capex",
+        "value": 450.406
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "fy_42",
+          "fy_45",
+          "fy_33"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 386.407
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "fy_4"
+        ],
+        "formula": "reported",
+        "value": 1857.345
+      },
+      "income_tax": {
+        "fact_ids": [
+          "fy_19"
+        ],
+        "formula": "reported",
+        "value": 79.299
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "fy_36"
+        ],
+        "formula": "reported",
+        "value": 25.782
+      },
+      "net_income": {
+        "fact_ids": [
+          "fy_24"
+        ],
+        "formula": "reported",
+        "value": 554.047
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "fy_16"
+        ],
+        "formula": "reported",
+        "value": 653.26
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "fy_10"
+        ],
+        "formula": "reported",
+        "value": 38.554
+      },
+      "revenue": {
+        "fact_ids": [
+          "fy_1"
+        ],
+        "formula": "reported",
+        "value": 3190.024
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "fy_29"
+        ],
+        "formula": "reported",
+        "value": 64.299
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "fy_33"
+        ],
+        "formula": "reported",
+        "value": 63.999
+      },
+      "sbc_expense": {
+        "fact_ids": [
+          "fy_48"
+        ],
+        "formula": "reported",
+        "value": 63.999
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "fy_59"
+        ],
+        "formula": "reported",
+        "value": 14.778
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "fy_58"
+        ],
+        "formula": "reported",
+        "value": 13.283
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "fy_57"
+        ],
+        "formula": "reported",
+        "value": 197.113
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "fy_62"
+        ],
+        "formula": "reported",
+        "value": 9.653
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "fy_61"
+        ],
+        "formula": "reported",
+        "value": 24.463
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "fy_60"
+        ],
+        "formula": "reported",
+        "value": 93.857
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "fy_56"
+        ],
+        "formula": "reported",
+        "value": 60.692
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "fy_55"
+        ],
+        "formula": "reported",
+        "value": -99.367
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "fy_54"
+        ],
+        "formula": "reported",
+        "value": 700.734
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "fy_56",
+          "fy_53"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 16.953783
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "fy_55",
+          "fy_52"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -32.231142
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "fy_54",
+          "fy_51"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 27.765653
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "fy_53"
+        ],
+        "formula": "reported",
+        "value": 357.985
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "fy_52"
+        ],
+        "formula": "reported",
+        "value": 308.295
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "fy_51"
+        ],
+        "formula": "reported",
+        "value": 2523.744
+      }
+    },
+    "Q1FY2025": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q1_296"
+        ],
+        "formula": "reported",
+        "value": 4.573
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q1_318"
+        ],
+        "formula": "reported",
+        "value": 4.779
+      },
+      "capex": {
+        "fact_ids": [
+          "q1_322"
+        ],
+        "formula": "reported",
+        "value": 64.021
+      },
+      "cfo": {
+        "fact_ids": [
+          "q1_320"
+        ],
+        "formula": "reported",
+        "value": 161.637
+      },
+      "da": {
+        "fact_ids": [
+          "q1_312",
+          "q1_318"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 30.302
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q1_312"
+        ],
+        "formula": "reported",
+        "value": 25.523
+      },
+      "ebit": {
+        "fact_ids": [
+          "q1_300"
+        ],
+        "formula": "reported",
+        "value": 120.803
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q1_300",
+          "q1_298",
+          "q1_296"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 139.891
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q1_300",
+          "q1_292"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 17.617985
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q1_300",
+          "q1_312",
+          "q1_318"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 151.105
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q1_304",
+          "q1_302"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 12.219384
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q1_306"
+        ],
+        "formula": "reported",
+        "value": -5.584
+      },
+      "fcf": {
+        "fact_ids": [
+          "q1_320",
+          "q1_322"
+        ],
+        "formula": "cfo - capex",
+        "value": 97.616
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q1_320",
+          "q1_322",
+          "q1_314"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 82.412
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q1_294"
+        ],
+        "formula": "reported",
+        "value": 415.336
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q1_304"
+        ],
+        "formula": "reported",
+        "value": 14.544
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q1_316"
+        ],
+        "formula": "reported",
+        "value": 4.945
+      },
+      "net_income": {
+        "fact_ids": [
+          "q1_308"
+        ],
+        "formula": "reported",
+        "value": 98.896
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q1_302"
+        ],
+        "formula": "reported",
+        "value": 119.024
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q1_298"
+        ],
+        "formula": "reported",
+        "value": 14.515
+      },
+      "revenue": {
+        "fact_ids": [
+          "q1_292"
+        ],
+        "formula": "reported",
+        "value": 685.68
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q1_310"
+        ],
+        "formula": "reported",
+        "value": 16.629
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q1_314"
+        ],
+        "formula": "reported",
+        "value": 15.204
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q1_343"
+        ],
+        "formula": "reported",
+        "value": 2.778
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q1_342"
+        ],
+        "formula": "reported",
+        "value": 2.676
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q1_341"
+        ],
+        "formula": "reported",
+        "value": 59.732
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q1_346"
+        ],
+        "formula": "reported",
+        "value": 1.506
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q1_345"
+        ],
+        "formula": "reported",
+        "value": 5.941
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q1_344"
+        ],
+        "formula": "reported",
+        "value": 22.865
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q1_340"
+        ],
+        "formula": "reported",
+        "value": 8.636
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q1_339"
+        ],
+        "formula": "reported",
+        "value": -37.177
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q1_338"
+        ],
+        "formula": "reported",
+        "value": 155.802
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q1_340",
+          "q1_337"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 11.64054
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q1_339",
+          "q1_336"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -53.889863
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q1_338",
+          "q1_335"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 28.719051
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q1_337"
+        ],
+        "formula": "reported",
+        "value": 74.189
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q1_336"
+        ],
+        "formula": "reported",
+        "value": 68.987
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q1_335"
+        ],
+        "formula": "reported",
+        "value": 542.504
+      }
+    },
+    "Q1FY2026": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q1_295"
+        ],
+        "formula": "reported",
+        "value": 2.224
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q1_317"
+        ],
+        "formula": "reported",
+        "value": 2.415
+      },
+      "capex": {
+        "fact_ids": [
+          "q1_321"
+        ],
+        "formula": "reported",
+        "value": 64.733
+      },
+      "cfo": {
+        "fact_ids": [
+          "q1_319"
+        ],
+        "formula": "reported",
+        "value": 265.124
+      },
+      "da": {
+        "fact_ids": [
+          "q1_311",
+          "q1_317"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 32.655
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q1_311"
+        ],
+        "formula": "reported",
+        "value": 30.24
+      },
+      "ebit": {
+        "fact_ids": [
+          "q1_299"
+        ],
+        "formula": "reported",
+        "value": 473.002
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q1_299",
+          "q1_297",
+          "q1_295"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 478.651
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q1_299",
+          "q1_291"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 36.88142
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q1_299",
+          "q1_311",
+          "q1_317"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 505.657
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q1_303",
+          "q1_301"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 13.347692
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q1_305"
+        ],
+        "formula": "reported",
+        "value": -4.611
+      },
+      "fcf": {
+        "fact_ids": [
+          "q1_319",
+          "q1_321"
+        ],
+        "formula": "cfo - capex",
+        "value": 200.391
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q1_319",
+          "q1_321",
+          "q1_313"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 178.489
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q1_293"
+        ],
+        "formula": "reported",
+        "value": 780.949
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q1_303"
+        ],
+        "formula": "reported",
+        "value": 62.157
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q1_315"
+        ],
+        "formula": "reported",
+        "value": 4.682
+      },
+      "net_income": {
+        "fact_ids": [
+          "q1_307"
+        ],
+        "formula": "reported",
+        "value": 398.908
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q1_301"
+        ],
+        "formula": "reported",
+        "value": 465.676
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q1_297"
+        ],
+        "formula": "reported",
+        "value": 3.425
+      },
+      "revenue": {
+        "fact_ids": [
+          "q1_291"
+        ],
+        "formula": "reported",
+        "value": 1282.494
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q1_309"
+        ],
+        "formula": "reported",
+        "value": 20.649
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q1_313"
+        ],
+        "formula": "reported",
+        "value": 21.902
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q1_331"
+        ],
+        "formula": "reported",
+        "value": 3.409
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q1_330"
+        ],
+        "formula": "reported",
+        "value": 2.831
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q1_329"
+        ],
+        "formula": "reported",
+        "value": 58.493
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q1_334"
+        ],
+        "formula": "reported",
+        "value": 3.565
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q1_333"
+        ],
+        "formula": "reported",
+        "value": 4.327
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q1_332"
+        ],
+        "formula": "reported",
+        "value": 24.689
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q1_328"
+        ],
+        "formula": "reported",
+        "value": 4.707
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q1_327"
+        ],
+        "formula": "reported",
+        "value": -0.964
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q1_326"
+        ],
+        "formula": "reported",
+        "value": 468.052
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q1_328",
+          "q1_325"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 5.85193
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q1_327",
+          "q1_324"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -1.056346
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q1_326",
+          "q1_323"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 42.13644
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q1_325"
+        ],
+        "formula": "reported",
+        "value": 80.435
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q1_324"
+        ],
+        "formula": "reported",
+        "value": 91.258
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q1_323"
+        ],
+        "formula": "reported",
+        "value": 1110.801
+      }
+    },
+    "Q2FY2025": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q2_198"
+        ],
+        "formula": "reported",
+        "value": 3.733
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q2_238",
+          "q1_318"
+        ],
+        "formula": "+6M2025 -3M2025",
+        "value": 4.077
+      },
+      "capex": {
+        "fact_ids": [
+          "q2_242",
+          "q1_322"
+        ],
+        "formula": "+6M2025 -3M2025",
+        "value": 50.408
+      },
+      "cfo": {
+        "fact_ids": [
+          "q2_240",
+          "q1_320"
+        ],
+        "formula": "+6M2025 -3M2025",
+        "value": 182.089
+      },
+      "da": {
+        "fact_ids": [
+          "q2_232",
+          "q1_312",
+          "q2_238",
+          "q1_318"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 31.389
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q2_232",
+          "q1_312"
+        ],
+        "formula": "+6M2025 -3M2025",
+        "value": 27.312
+      },
+      "ebit": {
+        "fact_ids": [
+          "q2_206"
+        ],
+        "formula": "reported",
+        "value": 90.743
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q2_206",
+          "q2_202",
+          "q2_198"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 96.848
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q2_206",
+          "q2_190"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 13.921973
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q2_206",
+          "q2_232",
+          "q1_312",
+          "q2_238",
+          "q1_318"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 122.132
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q2_214",
+          "q2_210"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 12.6969
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q2_218"
+        ],
+        "formula": "reported",
+        "value": -5.927
+      },
+      "fcf": {
+        "fact_ids": [
+          "q2_240",
+          "q1_320",
+          "q2_242",
+          "q1_322"
+        ],
+        "formula": "cfo - capex",
+        "value": 131.681
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q2_240",
+          "q1_320",
+          "q2_242",
+          "q1_322",
+          "q2_234",
+          "q1_314"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 114.854
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q2_194"
+        ],
+        "formula": "reported",
+        "value": 373.012
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q2_214"
+        ],
+        "formula": "reported",
+        "value": 12.26
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q2_236",
+          "q1_316"
+        ],
+        "formula": "+6M2025 -3M2025",
+        "value": 7.402
+      },
+      "net_income": {
+        "fact_ids": [
+          "q2_224"
+        ],
+        "formula": "reported",
+        "value": 78.372
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q2_210"
+        ],
+        "formula": "reported",
+        "value": 96.559
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q2_202"
+        ],
+        "formula": "reported",
+        "value": 2.372
+      },
+      "revenue": {
+        "fact_ids": [
+          "q2_190"
+        ],
+        "formula": "reported",
+        "value": 651.797
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q2_228"
+        ],
+        "formula": "reported",
+        "value": 15.552
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q2_234",
+          "q1_314"
+        ],
+        "formula": "+6M2025 -3M2025",
+        "value": 16.827
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q2_263"
+        ],
+        "formula": "reported",
+        "value": 3.287
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q2_262"
+        ],
+        "formula": "reported",
+        "value": 3.528
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q2_261"
+        ],
+        "formula": "reported",
+        "value": 43.593
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q2_266"
+        ],
+        "formula": "reported",
+        "value": 1.926
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q2_265"
+        ],
+        "formula": "reported",
+        "value": 6.068
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q2_264"
+        ],
+        "formula": "reported",
+        "value": 23.395
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q2_260"
+        ],
+        "formula": "reported",
+        "value": 15.552
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q2_259"
+        ],
+        "formula": "reported",
+        "value": -18.533
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q2_258"
+        ],
+        "formula": "reported",
+        "value": 95.763
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q2_260",
+          "q2_257"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 18.285069
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q2_259",
+          "q2_256"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -24.754895
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q2_258",
+          "q2_255"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 19.468852
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q2_257"
+        ],
+        "formula": "reported",
+        "value": 85.053
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q2_256"
+        ],
+        "formula": "reported",
+        "value": 74.866
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q2_255"
+        ],
+        "formula": "reported",
+        "value": 491.878
+      }
+    },
+    "Q2FY2026": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q2_197"
+        ],
+        "formula": "reported",
+        "value": 4.972
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q2_237",
+          "q1_317"
+        ],
+        "formula": "+6M2026 -3M2026",
+        "value": 5.006
+      },
+      "capex": {
+        "fact_ids": [
+          "q2_241",
+          "q1_321"
+        ],
+        "formula": "+6M2026 -3M2026",
+        "value": 90.706
+      },
+      "cfo": {
+        "fact_ids": [
+          "q2_239",
+          "q1_319"
+        ],
+        "formula": "+6M2026 -3M2026",
+        "value": 469.138
+      },
+      "da": {
+        "fact_ids": [
+          "q2_231",
+          "q1_311",
+          "q2_237",
+          "q1_317"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 33.65
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q2_231",
+          "q1_311"
+        ],
+        "formula": "+6M2026 -3M2026",
+        "value": 28.644
+      },
+      "ebit": {
+        "fact_ids": [
+          "q2_205"
+        ],
+        "formula": "reported",
+        "value": 437.81
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q2_205",
+          "q2_201",
+          "q2_197"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 445.814
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q2_205",
+          "q2_189"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 32.943062
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q2_205",
+          "q2_231",
+          "q1_311",
+          "q2_237",
+          "q1_317"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 471.46
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q2_213",
+          "q2_209"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 15.055261
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q2_217"
+        ],
+        "formula": "reported",
+        "value": -1.946
+      },
+      "fcf": {
+        "fact_ids": [
+          "q2_239",
+          "q1_319",
+          "q2_241",
+          "q1_321"
+        ],
+        "formula": "cfo - capex",
+        "value": 378.432
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q2_239",
+          "q1_319",
+          "q2_241",
+          "q1_321",
+          "q2_233",
+          "q1_313"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 358.37
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q2_193"
+        ],
+        "formula": "reported",
+        "value": 794.618
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q2_213"
+        ],
+        "formula": "reported",
+        "value": 66.788
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q2_235",
+          "q1_315"
+        ],
+        "formula": "+6M2026 -3M2026",
+        "value": 3.599
+      },
+      "net_income": {
+        "fact_ids": [
+          "q2_223"
+        ],
+        "formula": "reported",
+        "value": 374.533
+      },
+      "noncontrolling_income": {
+        "fact_ids": [
+          "q2_221"
+        ],
+        "formula": "reported",
+        "value": 0.352
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q2_209"
+        ],
+        "formula": "reported",
+        "value": 443.619
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q2_201"
+        ],
+        "formula": "reported",
+        "value": 3.032
+      },
+      "revenue": {
+        "fact_ids": [
+          "q2_189"
+        ],
+        "formula": "reported",
+        "value": 1328.99
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q2_227"
+        ],
+        "formula": "reported",
+        "value": 18.823
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q2_233",
+          "q1_313"
+        ],
+        "formula": "+6M2026 -3M2026",
+        "value": 20.062
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q2_251"
+        ],
+        "formula": "reported",
+        "value": 3.949
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q2_250"
+        ],
+        "formula": "reported",
+        "value": 6.215
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q2_249"
+        ],
+        "formula": "reported",
+        "value": 80.542
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q2_254"
+        ],
+        "formula": "reported",
+        "value": 5.771
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q2_253"
+        ],
+        "formula": "reported",
+        "value": 2.572
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q2_252"
+        ],
+        "formula": "reported",
+        "value": 25.273
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q2_248"
+        ],
+        "formula": "reported",
+        "value": 17.989
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q2_247"
+        ],
+        "formula": "reported",
+        "value": -2.576
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q2_246"
+        ],
+        "formula": "reported",
+        "value": 427.32
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q2_248",
+          "q2_245"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 16.773273
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q2_247",
+          "q2_244"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -2.57814
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q2_246",
+          "q2_243"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 38.091503
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q2_245"
+        ],
+        "formula": "reported",
+        "value": 107.248
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q2_244"
+        ],
+        "formula": "reported",
+        "value": 99.917
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q2_243"
+        ],
+        "formula": "reported",
+        "value": 1121.825
+      }
+    },
+    "Q3FY2025": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q3_96"
+        ],
+        "formula": "reported",
+        "value": 3.514
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q3_134",
+          "q2_238"
+        ],
+        "formula": "+9M2025 -6M2025",
+        "value": 3.867
+      },
+      "capex": {
+        "fact_ids": [
+          "q3_140",
+          "q2_242"
+        ],
+        "formula": "+9M2025 -6M2025",
+        "value": 46.692
+      },
+      "cfo": {
+        "fact_ids": [
+          "q3_138",
+          "q2_240"
+        ],
+        "formula": "+9M2025 -6M2025",
+        "value": 49.05
+      },
+      "da": {
+        "fact_ids": [
+          "q3_130",
+          "q2_232",
+          "q3_134",
+          "q2_238"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 30.516
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q3_130",
+          "q2_232"
+        ],
+        "formula": "+9M2025 -6M2025",
+        "value": 26.649
+      },
+      "ebit": {
+        "fact_ids": [
+          "q3_104"
+        ],
+        "formula": "reported",
+        "value": 145.303
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q3_104",
+          "q3_100",
+          "q3_96"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 155.402
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q3_104",
+          "q3_88"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 18.8899
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q3_104",
+          "q3_130",
+          "q2_232",
+          "q3_134",
+          "q2_238"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 175.819
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q3_112",
+          "q3_108"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 15.762323
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q3_116"
+        ],
+        "formula": "reported",
+        "value": -5.198
+      },
+      "fcf": {
+        "fact_ids": [
+          "q3_138",
+          "q2_240",
+          "q3_140",
+          "q2_242"
+        ],
+        "formula": "cfo - capex",
+        "value": 2.358
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q3_138",
+          "q2_240",
+          "q3_140",
+          "q2_242",
+          "q3_132",
+          "q2_234"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": -13.172
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q3_92"
+        ],
+        "formula": "reported",
+        "value": 449.306
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q3_112"
+        ],
+        "formula": "reported",
+        "value": 23.344
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q3_136",
+          "q2_236"
+        ],
+        "formula": "+9M2025 -6M2025",
+        "value": 6.828
+      },
+      "net_income": {
+        "fact_ids": [
+          "q3_122"
+        ],
+        "formula": "reported",
+        "value": 119.558
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q3_108"
+        ],
+        "formula": "reported",
+        "value": 148.1
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q3_100"
+        ],
+        "formula": "reported",
+        "value": 6.585
+      },
+      "revenue": {
+        "fact_ids": [
+          "q3_88"
+        ],
+        "formula": "reported",
+        "value": 769.21
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q3_126"
+        ],
+        "formula": "reported",
+        "value": 16.956
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q3_132",
+          "q2_234"
+        ],
+        "formula": "+9M2025 -6M2025",
+        "value": 15.53
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q3_161"
+        ],
+        "formula": "reported",
+        "value": 4.901
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q3_160"
+        ],
+        "formula": "reported",
+        "value": 1.45
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q3_159"
+        ],
+        "formula": "reported",
+        "value": 40.341
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q3_164"
+        ],
+        "formula": "reported",
+        "value": 2.919
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q3_163"
+        ],
+        "formula": "reported",
+        "value": 4.615
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q3_162"
+        ],
+        "formula": "reported",
+        "value": 22.979
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q3_158"
+        ],
+        "formula": "reported",
+        "value": 15.896
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q3_157"
+        ],
+        "formula": "reported",
+        "value": -17.567
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q3_156"
+        ],
+        "formula": "reported",
+        "value": 150.832
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q3_158",
+          "q3_155"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 18.01124
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q3_157",
+          "q3_154"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -23.395528
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q3_156",
+          "q3_153"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 24.895233
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q3_155"
+        ],
+        "formula": "reported",
+        "value": 88.256
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q3_154"
+        ],
+        "formula": "reported",
+        "value": 75.087
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q3_153"
+        ],
+        "formula": "reported",
+        "value": 605.867
+      }
+    },
+    "Q3FY2026": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "q3_95"
+        ],
+        "formula": "reported",
+        "value": 5.251
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "q3_133",
+          "q2_237"
+        ],
+        "formula": "+9M2026 -6M2026",
+        "value": 5.504
+      },
+      "capex": {
+        "fact_ids": [
+          "q3_139",
+          "q2_241"
+        ],
+        "formula": "+9M2026 -6M2026",
+        "value": 86.323
+      },
+      "cfo": {
+        "fact_ids": [
+          "q3_137",
+          "q2_239"
+        ],
+        "formula": "+9M2026 -6M2026",
+        "value": 313.613
+      },
+      "da": {
+        "fact_ids": [
+          "q3_129",
+          "q2_231",
+          "q3_133",
+          "q2_237"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 36.876
+      },
+      "depreciation": {
+        "fact_ids": [
+          "q3_129",
+          "q2_231"
+        ],
+        "formula": "+9M2026 -6M2026",
+        "value": 31.372
+      },
+      "ebit": {
+        "fact_ids": [
+          "q3_103"
+        ],
+        "formula": "reported",
+        "value": 401.968
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "q3_103",
+          "q3_99",
+          "q3_95"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 409.216
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "q3_103",
+          "q3_87"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 30.779739
+      },
+      "ebitda": {
+        "fact_ids": [
+          "q3_103",
+          "q3_129",
+          "q2_231",
+          "q3_133",
+          "q2_237"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 438.844
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "q3_111",
+          "q3_107"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 14.799488
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "q3_115"
+        ],
+        "formula": "reported",
+        "value": 3.281
+      },
+      "fcf": {
+        "fact_ids": [
+          "q3_137",
+          "q2_239",
+          "q3_139",
+          "q2_241"
+        ],
+        "formula": "cfo - capex",
+        "value": 227.29
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "q3_137",
+          "q2_239",
+          "q3_139",
+          "q2_241",
+          "q3_131",
+          "q2_233"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 205.605
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "q3_91"
+        ],
+        "formula": "reported",
+        "value": 771.276
+      },
+      "income_tax": {
+        "fact_ids": [
+          "q3_111"
+        ],
+        "formula": "reported",
+        "value": 59.833
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "q3_135",
+          "q2_235"
+        ],
+        "formula": "+9M2026 -6M2026",
+        "value": 10.932
+      },
+      "net_income": {
+        "fact_ids": [
+          "q3_121"
+        ],
+        "formula": "reported",
+        "value": 342.407
+      },
+      "noncontrolling_income": {
+        "fact_ids": [
+          "q3_119"
+        ],
+        "formula": "reported",
+        "value": 5.332
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "q3_107"
+        ],
+        "formula": "reported",
+        "value": 404.291
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "q3_99"
+        ],
+        "formula": "reported",
+        "value": 1.997
+      },
+      "revenue": {
+        "fact_ids": [
+          "q3_87"
+        ],
+        "formula": "reported",
+        "value": 1305.95
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "q3_125"
+        ],
+        "formula": "reported",
+        "value": 23.144
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "q3_131",
+          "q2_233"
+        ],
+        "formula": "+9M2026 -6M2026",
+        "value": 21.685
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "q3_149"
+        ],
+        "formula": "reported",
+        "value": 4.021
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "q3_148"
+        ],
+        "formula": "reported",
+        "value": 4.576
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "q3_147"
+        ],
+        "formula": "reported",
+        "value": 68.97
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "q3_152"
+        ],
+        "formula": "reported",
+        "value": 5.858
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "q3_151"
+        ],
+        "formula": "reported",
+        "value": 4.528
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "q3_150"
+        ],
+        "formula": "reported",
+        "value": 26.238
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "q3_146"
+        ],
+        "formula": "reported",
+        "value": 41.422
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "q3_145"
+        ],
+        "formula": "reported",
+        "value": 0.345
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "q3_144"
+        ],
+        "formula": "reported",
+        "value": 366.915
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "q3_146",
+          "q3_143"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 29.991818
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "q3_145",
+          "q3_142"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 0.36002
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "q3_144",
+          "q3_141"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 34.226794
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "q3_143"
+        ],
+        "formula": "reported",
+        "value": 138.111
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "q3_142"
+        ],
+        "formula": "reported",
+        "value": 95.828
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "q3_141"
+        ],
+        "formula": "reported",
+        "value": 1072.011
+      }
+    },
+    "Q4FY2024": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "fy_8",
+          "priorq3_358"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 4.656
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "fy_40",
+          "priorq3_394"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 4.631
+      },
+      "capex": {
+        "fact_ids": [
+          "fy_46",
+          "priorq3_398"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 57.385
+      },
+      "cfo": {
+        "fact_ids": [
+          "fy_43",
+          "priorq3_396"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 282.557
+      },
+      "da": {
+        "fact_ids": [
+          "fy_31",
+          "priorq3_388",
+          "fy_40",
+          "priorq3_394"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 31.128
+      },
+      "depreciation": {
+        "fact_ids": [
+          "fy_31",
+          "priorq3_388"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 26.497
+      },
+      "ebit": {
+        "fact_ids": [
+          "fy_14",
+          "priorq3_366"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 153.585
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "fy_14",
+          "priorq3_366",
+          "fy_11",
+          "priorq3_362",
+          "fy_8",
+          "priorq3_358"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 162.794
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "fy_14",
+          "priorq3_366",
+          "fy_2",
+          "priorq3_350"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 20.399557
+      },
+      "ebitda": {
+        "fact_ids": [
+          "fy_14",
+          "priorq3_366",
+          "fy_31",
+          "priorq3_388",
+          "fy_40",
+          "priorq3_394"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 184.713
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "fy_20",
+          "priorq3_374",
+          "fy_17",
+          "priorq3_370"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 3.427188
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "fy_23",
+          "priorq3_378"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": -6.136
+      },
+      "fcf": {
+        "fact_ids": [
+          "fy_43",
+          "priorq3_396",
+          "fy_46",
+          "priorq3_398"
+        ],
+        "formula": "cfo - capex",
+        "value": 225.172
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "fy_43",
+          "priorq3_396",
+          "fy_46",
+          "priorq3_398",
+          "fy_34",
+          "priorq3_390"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 210.317
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "fy_5",
+          "priorq3_354"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 447.288
+      },
+      "income_tax": {
+        "fact_ids": [
+          "fy_20",
+          "priorq3_374"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 5.408
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "fy_37",
+          "priorq3_392"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 3.406
+      },
+      "net_income": {
+        "fact_ids": [
+          "fy_25",
+          "priorq3_382"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 146.253
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "fy_17",
+          "priorq3_370"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 157.797
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "fy_11",
+          "priorq3_362"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 4.553
+      },
+      "revenue": {
+        "fact_ids": [
+          "fy_2",
+          "priorq3_350"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 752.884
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "fy_28",
+          "priorq3_386"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 13.58
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "fy_34",
+          "priorq3_390"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 14.855
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "fy_71",
+          "priorq3_443"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 1.781
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "fy_70",
+          "priorq3_442"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 2.515
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "fy_69",
+          "priorq3_441"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 53.089
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "fy_74",
+          "priorq3_446"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 1.187
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "fy_73",
+          "priorq3_445"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 6.772
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "fy_72",
+          "priorq3_444"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 23.195
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "fy_68",
+          "priorq3_440"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 22.779
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "fy_67",
+          "priorq3_439"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": -21.453
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "fy_66",
+          "priorq3_438"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 150.145
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "fy_68",
+          "priorq3_440",
+          "fy_65",
+          "priorq3_437"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 24.266022
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "fy_67",
+          "priorq3_439",
+          "fy_64",
+          "priorq3_436"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -21.824896
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "fy_66",
+          "priorq3_438",
+          "fy_63",
+          "priorq3_435"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 26.77737
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "fy_65",
+          "priorq3_437"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 93.872
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "fy_64",
+          "priorq3_436"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 98.296
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "fy_63",
+          "priorq3_435"
+        ],
+        "formula": "+FY2024 -9M2024",
+        "value": 560.716
+      }
+    },
+    "Q4FY2025": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "fy_7",
+          "q3_98"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 3.45
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "fy_39",
+          "q3_134"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 3.813
+      },
+      "capex": {
+        "fact_ids": [
+          "fy_45",
+          "q3_140"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 62.888
+      },
+      "cfo": {
+        "fact_ids": [
+          "fy_42",
+          "q3_138"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 281.639
+      },
+      "da": {
+        "fact_ids": [
+          "fy_30",
+          "q3_130",
+          "fy_39",
+          "q3_134"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 35.774
+      },
+      "depreciation": {
+        "fact_ids": [
+          "fy_30",
+          "q3_130"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 31.961
+      },
+      "ebit": {
+        "fact_ids": [
+          "fy_13",
+          "q3_106"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 293.201
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "fy_13",
+          "q3_106",
+          "fy_10",
+          "q3_102",
+          "fy_7",
+          "q3_98"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 311.733
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "fy_13",
+          "q3_106",
+          "fy_1",
+          "q3_90"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 27.064616
+      },
+      "ebitda": {
+        "fact_ids": [
+          "fy_13",
+          "q3_106",
+          "fy_30",
+          "q3_130",
+          "fy_39",
+          "q3_134"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 328.975
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "fy_19",
+          "q3_114",
+          "fy_16",
+          "q3_110"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 10.066787
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "fy_22",
+          "q3_118"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": -3.205
+      },
+      "fcf": {
+        "fact_ids": [
+          "fy_42",
+          "q3_138",
+          "fy_45",
+          "q3_140"
+        ],
+        "formula": "cfo - capex",
+        "value": 218.751
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "fy_42",
+          "q3_138",
+          "fy_45",
+          "q3_140",
+          "fy_33",
+          "q3_132"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 202.313
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "fy_4",
+          "q3_94"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 619.69
+      },
+      "income_tax": {
+        "fact_ids": [
+          "fy_19",
+          "q3_114"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 29.151
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "fy_36",
+          "q3_136"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 6.607
+      },
+      "net_income": {
+        "fact_ids": [
+          "fy_24",
+          "q3_124"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 257.22
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "fy_16",
+          "q3_110"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 289.576
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "fy_10",
+          "q3_102"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 15.082
+      },
+      "revenue": {
+        "fact_ids": [
+          "fy_1",
+          "q3_90"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 1083.337
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "fy_29",
+          "q3_128"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 15.163
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "fy_33",
+          "q3_132"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 16.438
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "fy_59",
+          "q3_185"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 3.812
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "fy_58",
+          "q3_184"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 5.629
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "fy_57",
+          "q3_183"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 53.447
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "fy_62",
+          "q3_188"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 3.302
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "fy_61",
+          "q3_187"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 7.839
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "fy_60",
+          "q3_186"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 24.618
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "fy_56",
+          "q3_182"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 20.608
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "fy_55",
+          "q3_181"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": -26.09
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "fy_54",
+          "q3_180"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 298.337
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "fy_56",
+          "q3_182",
+          "fy_53",
+          "q3_179"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 18.651968
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "fy_55",
+          "q3_181",
+          "fy_52",
+          "q3_178"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -29.198142
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "fy_54",
+          "q3_180",
+          "fy_51",
+          "q3_177"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 33.76782
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "fy_53",
+          "q3_179"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 110.487
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "fy_52",
+          "q3_178"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 89.355
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "fy_51",
+          "q3_177"
+        ],
+        "formula": "+FY2025 -9M2025",
+        "value": 883.495
+      }
+    },
+    "TTM2025Q3": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "fy_8",
+          "q3_98",
+          "priorq3_358"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 16.476
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "fy_40",
+          "q3_134",
+          "priorq3_394"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 17.354
+      },
+      "capex": {
+        "fact_ids": [
+          "fy_46",
+          "q3_140",
+          "priorq3_398"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 218.506
+      },
+      "cfo": {
+        "fact_ids": [
+          "fy_43",
+          "q3_138",
+          "priorq3_396"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 675.333
+      },
+      "da": {
+        "fact_ids": [
+          "fy_31",
+          "q3_130",
+          "priorq3_388",
+          "fy_40",
+          "q3_134",
+          "priorq3_394"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 123.335
+      },
+      "depreciation": {
+        "fact_ids": [
+          "fy_31",
+          "q3_130",
+          "priorq3_388"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 105.981
+      },
+      "ebit": {
+        "fact_ids": [
+          "fy_14",
+          "q3_106",
+          "priorq3_366"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 510.435
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "fy_14",
+          "q3_106",
+          "priorq3_366",
+          "fy_11",
+          "q3_102",
+          "priorq3_362",
+          "fy_8",
+          "q3_98",
+          "priorq3_358"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 554.936
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "fy_14",
+          "q3_106",
+          "priorq3_366",
+          "fy_2",
+          "q3_90",
+          "priorq3_350"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 17.850055
+      },
+      "ebitda": {
+        "fact_ids": [
+          "fy_14",
+          "q3_106",
+          "priorq3_366",
+          "fy_31",
+          "q3_130",
+          "priorq3_388",
+          "fy_40",
+          "q3_134",
+          "priorq3_394"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 633.77
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "fy_20",
+          "q3_114",
+          "priorq3_374",
+          "fy_17",
+          "q3_110",
+          "priorq3_370"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 10.653504
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "fy_23",
+          "q3_118",
+          "priorq3_378"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": -22.845
+      },
+      "fcf": {
+        "fact_ids": [
+          "fy_43",
+          "q3_138",
+          "priorq3_396",
+          "fy_46",
+          "q3_140",
+          "priorq3_398"
+        ],
+        "formula": "cfo - capex",
+        "value": 456.827
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "fy_43",
+          "q3_138",
+          "priorq3_396",
+          "fy_46",
+          "q3_140",
+          "priorq3_398",
+          "fy_34",
+          "q3_132",
+          "priorq3_390"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 394.411
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "fy_5",
+          "q3_94",
+          "priorq3_354"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 1684.943
+      },
+      "income_tax": {
+        "fact_ids": [
+          "fy_20",
+          "q3_114",
+          "priorq3_374"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 55.556
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "fy_37",
+          "q3_136",
+          "priorq3_392"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 22.581
+      },
+      "net_income": {
+        "fact_ids": [
+          "fy_25",
+          "q3_124",
+          "priorq3_382"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 443.08
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "fy_17",
+          "q3_110",
+          "priorq3_370"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 521.481
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "fy_11",
+          "q3_102",
+          "priorq3_362"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 28.025
+      },
+      "revenue": {
+        "fact_ids": [
+          "fy_2",
+          "q3_90",
+          "priorq3_350"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 2859.571
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "fy_28",
+          "q3_128",
+          "priorq3_386"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 62.716
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "fy_34",
+          "q3_132",
+          "priorq3_390"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 62.416
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "fy_71",
+          "q3_185",
+          "priorq3_443"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 12.747
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "fy_70",
+          "q3_184",
+          "priorq3_442"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 10.169
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "fy_69",
+          "q3_183",
+          "priorq3_441"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 196.755
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "fy_74",
+          "q3_188",
+          "priorq3_446"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 7.538
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "fy_73",
+          "q3_187",
+          "priorq3_445"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 23.396
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "fy_72",
+          "q3_186",
+          "priorq3_444"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 92.434
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "fy_68",
+          "q3_182",
+          "priorq3_440"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 62.863
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "fy_67",
+          "q3_181",
+          "priorq3_439"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": -94.73
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "fy_66",
+          "q3_180",
+          "priorq3_438"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 552.542
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "fy_68",
+          "q3_182",
+          "priorq3_440",
+          "fy_65",
+          "q3_179",
+          "priorq3_437"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 18.414916
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "fy_67",
+          "q3_181",
+          "priorq3_439",
+          "fy_64",
+          "q3_178",
+          "priorq3_436"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -29.86105
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "fy_66",
+          "q3_180",
+          "priorq3_438",
+          "fy_63",
+          "q3_177",
+          "priorq3_435"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 25.104534
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "fy_65",
+          "q3_179",
+          "priorq3_437"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 341.37
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "fy_64",
+          "q3_178",
+          "priorq3_436"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 317.236
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "fy_63",
+          "q3_177",
+          "priorq3_435"
+        ],
+        "formula": "+FY2024 +9M2025 -9M2024",
+        "value": 2200.965
+      }
+    },
+    "TTM2026Q3": {
+      "acquisition_intangible_amortization": {
+        "fact_ids": [
+          "fy_7",
+          "q3_97",
+          "q3_98"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 15.897
+      },
+      "amortization_cf": {
+        "fact_ids": [
+          "fy_39",
+          "q3_133",
+          "q3_134"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 16.738
+      },
+      "capex": {
+        "fact_ids": [
+          "fy_45",
+          "q3_139",
+          "q3_140"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 304.65
+      },
+      "cfo": {
+        "fact_ids": [
+          "fy_42",
+          "q3_137",
+          "q3_138"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 1329.514
+      },
+      "da": {
+        "fact_ids": [
+          "fy_30",
+          "q3_129",
+          "q3_130",
+          "fy_39",
+          "q3_133",
+          "q3_134"
+        ],
+        "formula": "depreciation + amortization_cf",
+        "value": 138.955
+      },
+      "depreciation": {
+        "fact_ids": [
+          "fy_30",
+          "q3_129",
+          "q3_130"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 122.217
+      },
+      "ebit": {
+        "fact_ids": [
+          "fy_13",
+          "q3_105",
+          "q3_106"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 1605.983
+      },
+      "ebit_before_restructuring_and_acquisition_amortization": {
+        "fact_ids": [
+          "fy_13",
+          "q3_105",
+          "q3_106",
+          "fy_10",
+          "q3_101",
+          "q3_102",
+          "fy_7",
+          "q3_97",
+          "q3_98"
+        ],
+        "formula": "ebit + restructuring_other + acquisition_intangible_amortization; sensitivity only, not assumed sustainable",
+        "value": 1645.417
+      },
+      "ebit_margin_pct": {
+        "fact_ids": [
+          "fy_13",
+          "q3_105",
+          "q3_106",
+          "fy_1",
+          "q3_89",
+          "q3_90"
+        ],
+        "formula": "100 * ebit / revenue",
+        "value": 32.114708
+      },
+      "ebitda": {
+        "fact_ids": [
+          "fy_13",
+          "q3_105",
+          "q3_106",
+          "fy_30",
+          "q3_129",
+          "q3_130",
+          "fy_39",
+          "q3_133",
+          "q3_134"
+        ],
+        "formula": "ebit + da; SBC remains an expense",
+        "value": 1744.938
+      },
+      "effective_tax_rate_pct": {
+        "fact_ids": [
+          "fy_19",
+          "q3_113",
+          "q3_114",
+          "fy_16",
+          "q3_109",
+          "q3_110"
+        ],
+        "formula": "100 * income_tax / pretax_before_equity_method",
+        "value": 13.593681
+      },
+      "equity_method_income": {
+        "fact_ids": [
+          "fy_22",
+          "q3_117",
+          "q3_118"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": -6.482
+      },
+      "fcf": {
+        "fact_ids": [
+          "fy_42",
+          "q3_137",
+          "q3_138",
+          "fy_45",
+          "q3_139",
+          "q3_140"
+        ],
+        "formula": "cfo - capex",
+        "value": 1024.864
+      },
+      "fcf_after_sbc_cf": {
+        "fact_ids": [
+          "fy_42",
+          "q3_137",
+          "q3_138",
+          "fy_45",
+          "q3_139",
+          "q3_140",
+          "fy_33",
+          "q3_131",
+          "q3_132"
+        ],
+        "formula": "cfo - capex - sbc_cf; economic cost proxy, not GAAP",
+        "value": 944.777
+      },
+      "gross_profit": {
+        "fact_ids": [
+          "fy_4",
+          "q3_93",
+          "q3_94"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 2966.536
+      },
+      "income_tax": {
+        "fact_ids": [
+          "fy_19",
+          "q3_113",
+          "q3_114"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 217.929
+      },
+      "inventory_writedown": {
+        "fact_ids": [
+          "fy_36",
+          "q3_135",
+          "q3_136"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 25.82
+      },
+      "net_income": {
+        "fact_ids": [
+          "fy_24",
+          "q3_123",
+          "q3_124"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 1373.069
+      },
+      "pretax_before_equity_method": {
+        "fact_ids": [
+          "fy_16",
+          "q3_109",
+          "q3_110"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 1603.164
+      },
+      "restructuring_other": {
+        "fact_ids": [
+          "fy_10",
+          "q3_101",
+          "q3_102"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 23.537
+      },
+      "revenue": {
+        "fact_ids": [
+          "fy_1",
+          "q3_89",
+          "q3_90"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 5000.771
+      },
+      "sbc_apic": {
+        "fact_ids": [
+          "fy_29",
+          "q3_127",
+          "q3_128"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 77.779
+      },
+      "sbc_cf": {
+        "fact_ids": [
+          "fy_33",
+          "q3_131",
+          "q3_132"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 80.087
+      },
+      "segment_capital_additions:ProductTest": {
+        "fact_ids": [
+          "fy_59",
+          "q3_173",
+          "q3_185"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 15.178
+      },
+      "segment_capital_additions:Robotics": {
+        "fact_ids": [
+          "fy_58",
+          "q3_172",
+          "q3_184"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 19.249
+      },
+      "segment_capital_additions:SemiconductorTest": {
+        "fact_ids": [
+          "fy_57",
+          "q3_171",
+          "q3_183"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 261.466
+      },
+      "segment_da:ProductTest": {
+        "fact_ids": [
+          "fy_62",
+          "q3_176",
+          "q3_188"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 18.496
+      },
+      "segment_da:Robotics": {
+        "fact_ids": [
+          "fy_61",
+          "q3_175",
+          "q3_187"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 19.266
+      },
+      "segment_da:SemiconductorTest": {
+        "fact_ids": [
+          "fy_60",
+          "q3_174",
+          "q3_186"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 100.818
+      },
+      "segment_pretax_income:ProductTest": {
+        "fact_ids": [
+          "fy_56",
+          "q3_170",
+          "q3_182"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 84.726
+      },
+      "segment_pretax_income:Robotics": {
+        "fact_ids": [
+          "fy_55",
+          "q3_169",
+          "q3_181"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": -29.285
+      },
+      "segment_pretax_income:SemiconductorTest": {
+        "fact_ids": [
+          "fy_54",
+          "q3_168",
+          "q3_180"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 1560.625
+      },
+      "segment_pretax_margin_pct:ProductTest": {
+        "fact_ids": [
+          "fy_56",
+          "q3_170",
+          "q3_182",
+          "fy_53",
+          "q3_167",
+          "q3_179"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 19.420053
+      },
+      "segment_pretax_margin_pct:Robotics": {
+        "fact_ids": [
+          "fy_55",
+          "q3_169",
+          "q3_181",
+          "fy_52",
+          "q3_166",
+          "q3_178"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": -7.781155
+      },
+      "segment_pretax_margin_pct:SemiconductorTest": {
+        "fact_ids": [
+          "fy_54",
+          "q3_168",
+          "q3_180",
+          "fy_51",
+          "q3_165",
+          "q3_177"
+        ],
+        "formula": "100 * segment pretax income / segment revenue; NOT operating margin",
+        "value": 37.263033
+      },
+      "segment_revenue:ProductTest": {
+        "fact_ids": [
+          "fy_53",
+          "q3_167",
+          "q3_179"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 436.281
+      },
+      "segment_revenue:Robotics": {
+        "fact_ids": [
+          "fy_52",
+          "q3_166",
+          "q3_178"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 376.358
+      },
+      "segment_revenue:SemiconductorTest": {
+        "fact_ids": [
+          "fy_51",
+          "q3_165",
+          "q3_177"
+        ],
+        "formula": "+FY2025 +9M2026 -9M2025",
+        "value": 4188.132
+      }
+    }
+  }
+}

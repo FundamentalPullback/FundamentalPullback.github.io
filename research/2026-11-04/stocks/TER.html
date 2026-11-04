@@ -1,0 +1,628 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TER · Investigación parcial · inversión FORM y capital condicionados · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/TER">← TER profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · inversión FORM y capital condicionados</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="ter-a230-investigación-del-4-de-noviembre-de-2026">TER · A230 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>El crecimiento de test de memoria y centros de datos es real, pero el ciclo, MLTP y las participadas impiden certificar valor total. Los casos del dossier financian la inversión FormFactor pendiente; no son un rango integral ni una entrada autorizada.</strong></p>
+<p>Memory and data-center testing growth is real, but the cycle, MLTP and investee stakes prevent a certified total value. Dossier cases fund the pending FormFactor investment; they are not a total valuation range or entry approval.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/TER.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-12, 386.55 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 269.35 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 noviembre 2026; paquete final auditado antes de esta publicación.</p>
+<p>A025 y la observación del escáner del 12 de octubre a 386,55 se conservan, separados del cierre histórico de esa sesión de 383,85 y del cierre del 3 de noviembre de 269,35. El compromiso de FormFactor de 300 millones se financia explícitamente; la marca condicional de las acciones de 216,315 millones no prueba cierre, liquidez ni valor intrínseco. Los casos híbridos 29,07/67,42/177,88 permanecen solo en el dossier; el valor total y los escenarios agregados de la ficha siguen sin determinar. Technoprobe a mercado no es tasación intrínseca independiente.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="ter-teradyne-ciclo-de-test-y-valoración-híbrida-condicionada">TER | Teradyne | Ciclo de test y valoración híbrida condicionada</h1>
+<p>Investigación al 4 noviembre 2026. Precios congelados al cierre del 3 noviembre; USD millones salvo datos por acción y excepciones indicadas. Investigación parcial revisada; sin aprobación de entrada. Valor intrínseco total actual no certificado; escenarios del dossier son un DCF industrial más activos cotizados y obligaciones seleccionadas, no un precio objetivo íntegro validado. Sin entrada ni Stage 3 integral.</p>
+<h2 id="decisión-escáner-y-calendario">1. Decisión, escáner y calendario</h2>
+<p>La última observación del registro es del <strong>12 octubre</strong>: precio 386,55, QP 90, Opportunity 95, RSI 47,7 y Stage 2 Sí histórico. El cierre de mercado de esa fecha fue 383,85; no se reescribe el escáner para hacerlo coincidir. El cierre <strong>3 noviembre, 269,35</strong>, se usa para valoración. Un filtro positivo antiguo no demuestra una entrada vigente después del movimiento de precio y de resultados. <a href="https://stockanalysis.com/stocks/ter/history/">Historial de precios</a>.</p>
+<p>Teradyne registra TTM de 5.000,8 millones de ingresos y 1.606,0 de EBIT. El crecimiento de test de memoria y centros de datos es real, pero no elimina el ciclo ni garantiza repetir el margen del pico.</p>
+<p>El margen pretax de Semiconductor Test cayó de 42,14% a 38,09% y 34,23% entre Q1 y Q3 FY26. Anticipos a proveedores de 539,7 millones y compromisos de compra de 2.252,9 millones amplifican la exposición si se modera la demanda.</p>
+<p>El híbrido suma DCF industrial, Technoprobe a mercado y el caso de compra financiada de FormFactor. La salida fiscal y el precio futuro del minoritario MLTP no están conciliados; no es valor intrínseco total certificado ni aprobación de entrada.</p>
+<p>Los tres casos centrales condicionados son 29.07, 67.42 y 177.88 por acción, frente a 269,35. No bastan para respaldar el precio bajo estos supuestos. Sin embargo, un estrés conjunto de demanda/margen excepcional y menor descuento sí puede superarlo; por tanto no se declara que el precio sea matemáticamente imposible ni se convierte el resultado en una recomendación de venta corta.</p>
+<p>Q3 terminó el 27 septiembre; el comunicado se publicó <strong>27 octubre</strong>, seguido de llamada 28 octubre y 10-Q el 30 octubre. El calendario oficial de TER no anuncia todavía el próximo resultado. No se usa la estimación de febrero 2027 como fecha confirmada. <strong>Technoprobe</strong>, participada, sí tiene revisión del consejo de ingresos/EBITDA/posición financiera Q3 el <strong>11 noviembre</strong>: no es el resultado de Teradyne. <a href="https://investors.teradyne.com/news-events/ir-calendar">Calendario TER</a> y <a href="https://www.technoprobe.com/investors/investor-relations/financial-calendar">calendario Technoprobe</a>.</p>
+<h2 id="negocio-y-cambios-que-importan">2. Negocio y cambios que importan</h2>
+<p>Semiconductor Test prueba chips de sistema, memoria y sistemas integrados; Product Test incluye pruebas de almacenamiento y conexiones, mientras Robotics agrupa brazos colaborativos y robots móviles. La complejidad de los chips y el volumen de dispositivos AI pueden elevar contenido de test por unidad y ampliar la cartera. Pero la posición competitiva depende de instrumentos, software y rendimiento técnico; Advantest, Cohu y otros disputan gasto de clientes concentrados. No se supone monopolio ni un retorno garantizado por la etiqueta AI.</p>
+<p>Q3 ingresos 1.305,950: Semiconductor Test 1.072,011, Product Test 138,111 y Robotics 95,828. El grupo creció aproximadamente 70% interanual, con récord en memoria y test de sistemas. Guía Q4 de ingresos <strong>1.250–1.350</strong> y EPS GAAP <strong>1,88–2,18</strong>, frente a no GAAP 1,95–2,25. El punto medio de ingresos daría FY26 aproximadamente 5.217,4, cálculo propio, no una nueva guía anual. El Q3 es fuerte, pero la guía no afirma que 70% de crecimiento continúe diez años. <a href="https://www.sec.gov/Archives/edgar/data/97210/000119312526434981/ter-ex99_1.htm">Comunicado primario</a>.</p>
+<p>La concentración geográfica refleja lugar de entrega, no nacionalidad del cliente: Corea 32%, China 21% y Taiwán 14% en Q3. El ejercicio 2025 tuvo clientes especificadores de 12% y 10% de ingresos y un directo de 19%, con solapamiento: no deben sumarse como tres riesgos independientes. La fabricación del negocio de test está principalmente externalizada con operaciones relevantes en Malasia; robótica tiene fábricas en Dinamarca y Estados Unidos. Exposición a controles de exportación, aranceles y restricciones de componentes permanece. <a href="https://www.sec.gov/Archives/edgar/data/97210/000119312526059002/ter-20251231.htm">10-K FY25</a>.</p>
+<p>La tesis favorable exige que el mayor contenido de test y venta cruzada compensen normalización de gasto, sin degradar precio ni exigir inventario improductivo. La refutan caída persistente de márgenes, retrasos/cancelaciones, crecimiento de circulante superior a ventas o robótica que no sostenga rentabilidad. Los riesgos no son solo demanda final de AI: incluyen cuota, transición tecnológica, capacidad contratada y capital necesario para servirla.</p>
+<h2 id="historia-sbc-y-normalización">3. Historia, SBC y normalización</h2>
+<p>El paquete contiene tres ejercicios, ocho trimestres disponibles y TTM contra TTM anterior, con 446 hechos fuente y fórmulas. Las magnitudes se convierten de miles a millones. EBIT industrial excluye el resultado por puesta en equivalencia de Technoprobe. El beneficio neto atribuible no debe confundirse con consolidado tras la compra MLTP.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex caja</th>
+<th style="text-align: right;">SBC CFO</th>
+<th style="text-align: right;">CFO−capex−SBC CFO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">2,676.30</td>
+<td style="text-align: right;">501.07</td>
+<td style="text-align: right;">585.23</td>
+<td style="text-align: right;">159.64</td>
+<td style="text-align: right;">57.68</td>
+<td style="text-align: right;">367.91</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">2,819.88</td>
+<td style="text-align: right;">593.79</td>
+<td style="text-align: right;">672.18</td>
+<td style="text-align: right;">198.09</td>
+<td style="text-align: right;">60.12</td>
+<td style="text-align: right;">413.96</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">3,190.02</td>
+<td style="text-align: right;">650.05</td>
+<td style="text-align: right;">674.41</td>
+<td style="text-align: right;">224.01</td>
+<td style="text-align: right;">64.00</td>
+<td style="text-align: right;">386.41</td>
+</tr>
+<tr class="even">
+<td>Q4FY2025</td>
+<td style="text-align: right;">1,083.34</td>
+<td style="text-align: right;">293.20</td>
+<td style="text-align: right;">281.64</td>
+<td style="text-align: right;">62.89</td>
+<td style="text-align: right;">16.44</td>
+<td style="text-align: right;">202.31</td>
+</tr>
+<tr class="odd">
+<td>Q1FY2026</td>
+<td style="text-align: right;">1,282.49</td>
+<td style="text-align: right;">473.00</td>
+<td style="text-align: right;">265.12</td>
+<td style="text-align: right;">64.73</td>
+<td style="text-align: right;">21.90</td>
+<td style="text-align: right;">178.49</td>
+</tr>
+<tr class="even">
+<td>Q2FY2026</td>
+<td style="text-align: right;">1,328.99</td>
+<td style="text-align: right;">437.81</td>
+<td style="text-align: right;">469.14</td>
+<td style="text-align: right;">90.71</td>
+<td style="text-align: right;">20.06</td>
+<td style="text-align: right;">358.37</td>
+</tr>
+<tr class="odd">
+<td>Q3FY2026</td>
+<td style="text-align: right;">1,305.95</td>
+<td style="text-align: right;">401.97</td>
+<td style="text-align: right;">313.61</td>
+<td style="text-align: right;">86.32</td>
+<td style="text-align: right;">21.68</td>
+<td style="text-align: right;">205.61</td>
+</tr>
+<tr class="even">
+<td>TTM2025Q3</td>
+<td style="text-align: right;">2,859.57</td>
+<td style="text-align: right;">510.44</td>
+<td style="text-align: right;">675.33</td>
+<td style="text-align: right;">218.51</td>
+<td style="text-align: right;">62.42</td>
+<td style="text-align: right;">394.41</td>
+</tr>
+<tr class="odd">
+<td>TTM2026Q3</td>
+<td style="text-align: right;">5,000.77</td>
+<td style="text-align: right;">1,605.98</td>
+<td style="text-align: right;">1,329.51</td>
+<td style="text-align: right;">304.65</td>
+<td style="text-align: right;">80.09</td>
+<td style="text-align: right;">944.78</td>
+</tr>
+</tbody>
+</table></div>
+<p>TTM ingresos 5.000,771 frente a 2.859,571; EBIT 1.605,983 frente a 510,435. FCF bruto 1.024,864 frente a 456,827; tras SBC del estado de flujos 944,777 frente a 394,411. El crecimiento es extraordinario, pero la base previa estaba deprimida. Los márgenes EBIT FY23/FY24/FY25 fueron aproximadamente 18,72%/21,06%/20,38%, frente al 32,11% del TTM. Usar este último como margen perpetuo sin contrastar ciclo sobrevalora certeza.</p>
+<p>SBC CFO TTM 80,087 no es automáticamente idéntico a gasto SBC ni a movimiento APIC. El gasto anual de remuneración se conserva en el histórico cuando se divulga, mientras que gasto trimestral completo y capitalizado no se fuerzan a cero ni se deducen dos veces. El DCF retiene el SBC incluido en EBIT. FCF menos SBC es una aproximación adicional de coste económico, no FCFF ni caja distribuible por acción.</p>
+<p>Amortización adquirida TTM 15,897 se separa de D&amp;A total 138,955. EBIT anterior a amortización adquirida = <strong>1.621,880</strong>, sin añadir SBC. Reestructuración/otros TTM 23,537 permanece como coste: no se borra automáticamente una familia recurrente de ajustes. No se transforma el tag XBRL de 42,6 millones en deterioro extraordinario: el texto dice activos completamente amortizados retirados de coste/amortización acumulada y ausencia de deterioro de intangibles en nueve meses. Eliminar gastos que nunca existieron falsearía el resultado.</p>
+<p>Technoprobe aporta pérdida TTM −6,482 por puesta en equivalencia, que incluye amortización de diferencias de compra y un retraso de tres meses. Está <strong>fuera del EBIT industrial</strong>. No se suma su beneficio y su cotización a la vez. FY24 también incluye venta de DIS; por ello ingresos y composición de Product Test no son idénticos a años previos. Los registros documentan la diferencia, sin atribuir todo el crecimiento a cuota orgánica.</p>
+<p>Los márgenes de segmento divulgados son <strong>beneficio antes de impuestos</strong>, no EBIT. Semiconductor Test pasó de 42,14% a 38,09% y 34,23% en Q1/Q2/Q3 FY26. Robotics llegó a beneficio pretax 0,345 en Q3, pero margen TTM sigue aproximadamente −7,78%. No se capitaliza una rentabilidad ya consolidada de robótica que aún no existe. <a href="https://www.sec.gov/Archives/edgar/data/97210/000119312526441091/ter-20260927.htm">10-Q Q3</a>.</p>
+<h2 id="caja-ciclo-y-compromisos">4. Caja, ciclo y compromisos</h2>
+<p>Nueve meses CFO 1.047,875 y capex 241,762, frente a 392,776 y 161,121. CFO incorpora aumento de impuestos por pagar 81,144 y entradas de anticipos de clientes 64,045. En contra, cuentas a cobrar consumen 302,733, inventarios 178,794 y anticipos/otros activos 224,940. No es coherente extrapolar la recuperación de beneficio y excluir toda financiación del circulante.</p>
+<p>Anticipos a fabricantes/proveedores son 539,686; inventario 574,992 y cuentas a cobrar 1.110,798. Restando proveedores 516,967 y anticipos/deferred revenue 270,025, el diagnóstico de capital operativo es <strong>1.438,484</strong>, aproximadamente 28,8% del TTM. Omite otras cuentas y no es un balance normalizado certificado. El modelo selecciona 27% de incremento de ingresos como inversión en circulante, con sensibilidad 15–40%.</p>
+<p>Compromisos de compra de <strong>2.252,9</strong>, de ellos 1.906,4 a menos de un año, no son todos deuda adicional: gran parte abastece ventas futuras ya cargadas en margen/capex. Pero podrían provocar excedentes o costes de cancelación si se reduce la demanda. El estrés deduce 225/450 adicionales del capital sin afirmar que sean pasivos existentes. En el escenario adverso no se inventa liberación automática de todo inventario/anticipo cuando caen ventas; una variante permite recuperación proporcional y muestra el efecto.</p>
+<p>El modelo reconoce mantenimiento y expansión físicos: D&amp;A no adquirido seleccionado 2,5% de ventas; capex bruto comienza 6% base y termina 4,5%, por encima de depreciación. Los porcentajes se apoyan en intensidad histórica aproximadamente 6–7% de capex, pero no hay desglose exacto de mantenimiento. La rebaja a 4,5% es supuesto de normalización, no guía. El suelo sigue financiado en terminal.</p>
+<h2 id="capital-y-minoritarios-no-usar-libro-como-valor-económico">5. Capital y minoritarios: no usar libro como valor económico</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente industrial seleccionado</th>
+<th style="text-align: right;">USD millones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja y valores corto/largo</td>
+<td style="text-align: right;">624,865</td>
+</tr>
+<tr class="even">
+<td>Reserva operativa discrecional</td>
+<td style="text-align: right;">−250,000</td>
+</tr>
+<tr class="odd">
+<td>Deuda financiera</td>
+<td style="text-align: right;">0,000</td>
+</tr>
+<tr class="even">
+<td>Pasivos de pensiones</td>
+<td style="text-align: right;">−152,910</td>
+</tr>
+<tr class="odd">
+<td>Reserva por impuestos históricos</td>
+<td style="text-align: right;">−188,105</td>
+</tr>
+<tr class="even">
+<td>Derivados netos</td>
+<td style="text-align: right;">−1,008</td>
+</tr>
+<tr class="odd">
+<td>Capex histórico pendiente de pago</td>
+<td style="text-align: right;">−12,292</td>
+</tr>
+<tr class="even">
+<td>Obligación económica MLTP seleccionada</td>
+<td style="text-align: right;">−250,000</td>
+</tr>
+<tr class="odd">
+<td>Compromiso FormFactor, caso de cierre</td>
+<td style="text-align: right;">−300,000</td>
+</tr>
+<tr class="even">
+<td>Puente industrial antes de activos cotizados</td>
+<td style="text-align: right;">−529,450</td>
+</tr>
+</tbody>
+</table></div>
+<p>Caja 460,742 y valores 164,123 están fechados 27 septiembre; la cartera incluye fondos y bonos con riesgo de mercado. No equivalen a efectivo libre observado en noviembre. La línea de crédito renovada en agosto, <strong>1.000 hasta agosto 2031</strong>, no está dispuesta: no se suma como caja. Se mantienen covenants y garantías; deuda financiera cero no elimina riesgo de liquidez. Arrendamientos operativos 137,115 permanecen en gasto, no se añaden a deuda sin ajustar también EBIT.</p>
+<p>Pensiones 152,910 se deducen sin compensar activo 12,240 de otros planes, cuya transferibilidad no se demuestra. Reserva fiscal 188,105 corresponde a impuestos por pagar, distinta del impuesto recurrente proyectado. UTB 6,9 más intereses/penalizaciones 0,3 podrían solaparse y <strong>no se deducen otros 7,2 mecánicamente</strong>. Reserva operativa, circulante y calendario de pagos pueden solaparse parcialmente; las sensibilidades muestran la aproximación. No se suman DTA 311,092, goodwill o anticipos operativos como activos libres.</p>
+<p>MLTP se constituyó/adquirió el 8 abril: 75% por 157,839 y 25% minoritario consolidado. Valor inicial minoritario 35,799 + beneficio 5,684 + acreción 7,582 = <strong>49,065</strong> de equity temporal. El socio puede vender y TER comprar desde 2029 bajo condiciones y precio por fórmula. No se ha establecido la fórmula cuantitativa completa ni un valor actual independiente del derecho. El saldo contable no representa automáticamente el valor de toda la participación futura.</p>
+<p>Por prudencia analítica se seleccionan <strong>250</strong> como obligación económica, no pago contractual: sensibilidad 49,065/100/250/500. Anualizar beneficio minoritario Q3 5,332 produciría 21,328, lo que muestra que un saldo inicial pequeño podría ser insuficiente, pero no convierte un trimestre en FCF sostenible. No se usa esa anualización como valoración independiente. Los flujos industriales se modelan consolidados; no se restan además dividendos minoritarios anuales. La ausencia de contribución standalone separada y fórmula futura mantiene el análisis condicionado.</p>
+<p>Acciones efectivas <strong>156,124751 millones al 26 octubre</strong>, no las 157,502 medias diluidas del trimestre. Se añade un proxy de <strong>1,24 millones</strong> de dilución neta existente, inspirado en la diferencia trimestral diluida−básica, para llegar a 157,364751. No es puente exacto de premios en circulación. SBC futuro sigue como coste de margen; no se añaden todos los premios brutos ni se asumen recompras gratis. Se prueban 0/1,24/3 millones adicionales. El no reconocido FY25 97,3, amortizable en unos 2,6 años, confirma que una fracción de los premios aún depende de servicio futuro.</p>
+<h3 id="compromiso-posterior-con-formfactor-cierre-no-confirmado">Compromiso posterior con FormFactor: cierre no confirmado</h3>
+<p>El 6 octubre TER firmó la compra de <strong>2.234.887 acciones de FormFactor por aproximadamente 300 millones USD</strong>. El 8-K de FORM del 13 octubre y su 10-Q presentado el 3 noviembre todavía describen un cierre esperado en Q4, sujeto a condiciones y autorizaciones. No se ha confirmado el cierre al corte de este informe. Es un acuerdo posterior al balance del 27 septiembre, distinto de los compromisos operativos de compra de 2.252,9. <a href="https://www.sec.gov/Archives/edgar/data/1039399/000103939926000037/form-20261006.htm">FORM 8-K</a>, <a href="https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/form-20260926.htm">FORM 10-Q</a> y <a href="https://www.sec.gov/Archives/edgar/data/97210/000119312526441091/ter-20260927.htm">TER Note V</a>.</p>
+<p>Los tres casos centrales son <strong>condicionados al cierre</strong>: restan 300 de la caja y añaden solo el valor ilustrativo de las acciones que se recibirían. A cierre 3 noviembre de FORM <strong>96,79 USD</strong>, la marca es <strong>216.31 millones</strong>. El efecto neto es negativo, no se conserva simultáneamente el efectivo gastado y el activo. Tampoco se reconoce beneficio fiscal por la diferencia frente al coste. <a href="https://stockanalysis.com/stocks/form/history/">Precio FORM</a>. Son acciones de colocación privada no registrada: usar la cotización del título público es una aproximación, no valor razonable certificado del bloque ni efectivo realizable. Se prueban descuentos de liquidez 25/50/100%; no se presumen derechos de venta inmediata. No se inventan sinergias, dividendos ni ganancias de la participada en el EBIT industrial.</p>
+<p>El acuerdo de derechos de registro exige presentar un S-3 de reventa al cierre; la eficacia automática depende de elegibilidad. Permite suspensiones de hasta 60 días por ocasión y 90 al año, por lo que registro contractual no equivale a liquidez incondicional. No se ha localizado un S-3 de reventa ni confirmación posterior del cierre en los filings consultados. <a href="https://www.sec.gov/Archives/edgar/data/1039399/000103939926000043/ex41-teradyneformfactorreg.htm">Derechos de registro</a>. El Form D del 20 octubre declara 300.000.056 USD vendidos y fecha de primera venta 6 octubre; la definición SEC de primera venta es compromiso contractual irrevocable, no necesariamente liquidación del efectivo. No desplaza la descripción posterior de cierre pendiente del 10-Q. La diferencia de 56 USD frente a 300 millones no es material al modelo. <a href="https://www.sec.gov/Archives/edgar/data/1039399/000103939926000038/xslFormDX01/primary_doc.xml">Form D</a> y <a href="https://www.sec.gov/resources-small-businesses/exempt-offerings/filing-form-d-notice">definición SEC</a>.</p>
+<p>El caso alternativo <strong>sin cierre</strong> retiene caja y no incorpora acciones FORM: base <strong>67.96</strong>, frente a <strong>67.42</strong> con cierre. No representa un derecho demostrado a cancelar gratis: costes de terminación, restricciones y desenlace no están conciliados. No se asignan probabilidades. Tras desembolsar 300, caja y valores históricos serían 324,865 antes de operaciones, impuestos y otras salidas; frente a reserva operativa 250, el margen bruto es estrecho. No es una previsión de liquidez actual: no se conoce generación de caja posterior ni se añade la línea no dispuesta como efectivo.</p>
+<h2 id="technoprobe-participación-cotizada-no-segundo-dcf-implícito">6. Technoprobe: participación cotizada, no segundo DCF implícito</h2>
+<p>La página de accionistas, actualizada 22 septiembre, identifica <strong>65,326087 millones de acciones</strong> de Teradyne, 10% del capital emitido. No se toma 10% del número de acciones de un proveedor neto de autocartera. <a href="https://www.technoprobe.com/investors/investor-relations/shareholders-and-share-capital">Accionistas oficiales</a>.</p>
+<p>Cierre 3 noviembre <strong>24,34 EUR</strong>, FX ECB <strong>1,1179 USD/EUR</strong>: valor bruto seleccionado <strong>1,777.50</strong>. El valor razonable de 2.242,4 del 10-Q era al 27 septiembre; el contable 518,559 es otra base. No se suman los tres. La reserva de salida, 20% de ganancia sobre coste histórico USD 524,1, es supuesto y deja <strong>1,526.82</strong>. Coste original no es base fiscal verificada; no se certifica tratamiento tributario de la sociedad holandesa tenedora. Se prueban tasas 0/20/30% y descuento de liquidez 0/10/25%. <a href="https://es.investing.com/equities/technoprobe-historical-data">Cotización</a> y <a href="https://www.investing.com/equities/technoprobe-historical-data">corroboración</a> y <a href="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.xml">ECB</a>.</p>
+<p><strong>El bloqueo financiero original de 36 meses no sigue vigente:</strong> Teradyne anunció su terminación el 8 enero de 2025 tras ampliar la relación de Technoprobe con Advantest. Se mantiene inversor estratégico. Eso elimina una restricción histórica concreta, pero no garantiza realización inmediata íntegra ni determina todos los términos de una venta en bloque. <a href="https://www.teradyne.com/2025/01/08/open-ecosystem-0125/">Comunicado primario</a>.</p>
+<p>Este trabajo no valora por DCF el negocio completo de Technoprobe. La suma es un <strong>híbrido DCF industrial + marca de mercado</strong>. Si la cotización de la participada sobrevalora su negocio, también podría sobrevalorar esta parte del híbrido; el estrés lleva la participación a cero. No se agrega una cuota de su caja o beneficio además de sus acciones.</p>
+<h2 id="modelo-de-diez-periodos-ciclo-y-terminal-financiado">7. Modelo de diez periodos, ciclo y terminal financiado</h2>
+<p>Periodos anuales analíticos del 3 noviembre 2026 al 3 noviembre 2036, no ejercicios fiscales declarados ni un stub reconstruido de caja octubre. Ancla ingresos TTM 5.000,771 y EBIT preamortización adquirida 1.621,880; SBC retenido. La trayectoria base introduce un descenso de ventas del 10% en el segundo periodo como prueba de ciclo, <strong>no como previsión empresarial de caída en un año concreto</strong>. El caso favorable no contiene esa caída.</p>
+<p>NOPAT = EBIT después de SBC/pre-amortización adquirida × (1−impuesto). Impuesto elegido 20% hasta el noveno periodo, 22% en el décimo y terminal. El actual beneficio fiscal de Singapur exige empleo/inversión y vence 31 diciembre 2035: no se perpetúa sin más la tasa efectiva cercana a 14%. El salto anual es aproximación temporal, no cálculo jurisdiccional exacto. No hay escudo automático por amortización contable adquirida.</p>
+<p>Inversión neta = máximo entre (capex físico − D&amp;A + inversión de circulante) y (incremento positivo de NOPAT / ROIC). De este modo crecimiento de ingresos <strong>y</strong> mejora de margen reciben financiación; R&amp;D y SBC ya son gastos, no addbacks. Los ROIC son supuestos de productividad incremental, no el ratio contable observado aplicado sin crítica. Caídas de NOPAT no generan desinversión artificial. Capex y circulante mínimos siguen vigentes en terminal, donde reinversión ≥ NOPAT×g/ROIC.</p>
+<p>Referencia de descuento: Treasury 10 años 4,95% (3 noviembre), ERP 4,41% (1 noviembre, calculado originalmente con Treasury 5,29%) y beta de proveedor 1,75. CAPM = 12,6675%; sin deuda financiera, base <strong>12,75%</strong> es una selección próxima, no una medición exacta. Los inputs tienen fechas/métodos distintos; el descuento refleja volatilidad y ciclo, no solo tipo libre de riesgo. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">Treasury</a>, <a href="https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm">ERP</a>, <a href="https://stockanalysis.com/stocks/ter/statistics/">beta</a>.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hipótesis</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas primer periodo</td>
+<td style="text-align: right;">4.600</td>
+<td style="text-align: right;">5.600</td>
+<td style="text-align: right;">6.200</td>
+</tr>
+<tr class="even">
+<td>Crecimiento periodos 2–5</td>
+<td style="text-align: right;">−17/3/5/5%</td>
+<td style="text-align: right;">−10/8/10/8%</td>
+<td style="text-align: right;">18/15/12/10%</td>
+</tr>
+<tr class="odd">
+<td>Crecimiento periodos 6–10</td>
+<td style="text-align: right;">4/3,5/3/2,5/2,5%</td>
+<td style="text-align: right;">6/5,5/5/4,5/4%</td>
+<td style="text-align: right;">9/8/7/6/5%</td>
+</tr>
+<tr class="even">
+<td>Margen años 1/2/5/10</td>
+<td style="text-align: right;">22/15/18/18%</td>
+<td style="text-align: right;">27/22/25/25%</td>
+<td style="text-align: right;">34/34/32/32%</td>
+</tr>
+<tr class="odd">
+<td>ROIC</td>
+<td style="text-align: right;">18%</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">40%</td>
+</tr>
+<tr class="even">
+<td>Descuento</td>
+<td style="text-align: right;">14,5%</td>
+<td style="text-align: right;">12,75%</td>
+<td style="text-align: right;">11%</td>
+</tr>
+<tr class="odd">
+<td>Crecimiento terminal</td>
+<td style="text-align: right;">2%</td>
+<td style="text-align: right;">3%</td>
+<td style="text-align: right;">3,5%</td>
+</tr>
+<tr class="even">
+<td>Capex bruto/ventas 1→10</td>
+<td style="text-align: right;">6,5→4,5%</td>
+<td style="text-align: right;">6→4,5%</td>
+<td style="text-align: right;">6,5→4,5%</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo base</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT preamortización adquirida/después SBC</th>
+<th style="text-align: right;">Impuesto</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">Inversión neta</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">5,600.00</td>
+<td style="text-align: right;">1,512.00</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">1,209.60</td>
+<td style="text-align: right;">357.79</td>
+<td style="text-align: right;">851.81</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">5,040.00</td>
+<td style="text-align: right;">1,108.80</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">887.04</td>
+<td style="text-align: right;">168.00</td>
+<td style="text-align: right;">719.04</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">5,443.20</td>
+<td style="text-align: right;">1,306.37</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">1,045.09</td>
+<td style="text-align: right;">526.85</td>
+<td style="text-align: right;">518.25</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">5,987.52</td>
+<td style="text-align: right;">1,496.88</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">1,197.50</td>
+<td style="text-align: right;">508.03</td>
+<td style="text-align: right;">689.47</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">6,466.52</td>
+<td style="text-align: right;">1,616.63</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">1,293.30</td>
+<td style="text-align: right;">319.33</td>
+<td style="text-align: right;">973.97</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">6,854.51</td>
+<td style="text-align: right;">1,713.63</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">1,370.90</td>
+<td style="text-align: right;">287.54</td>
+<td style="text-align: right;">1,083.36</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">7,231.51</td>
+<td style="text-align: right;">1,807.88</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">1,446.30</td>
+<td style="text-align: right;">282.58</td>
+<td style="text-align: right;">1,163.72</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">7,593.09</td>
+<td style="text-align: right;">1,898.27</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">1,518.62</td>
+<td style="text-align: right;">274.80</td>
+<td style="text-align: right;">1,243.82</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">7,934.78</td>
+<td style="text-align: right;">1,983.69</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">1,586.96</td>
+<td style="text-align: right;">264.18</td>
+<td style="text-align: right;">1,322.78</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">8,252.17</td>
+<td style="text-align: right;">2,063.04</td>
+<td style="text-align: right;">22%</td>
+<td style="text-align: right;">1,609.17</td>
+<td style="text-align: right;">250.74</td>
+<td style="text-align: right;">1,358.43</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th style="text-align: right;">EV industrial</th>
+<th style="text-align: right;">Residuo tras financiar FORM, antes de marcas/acción</th>
+<th style="text-align: right;">Marcas netas participadas/acción</th>
+<th style="text-align: right;">Híbrido condicionado/acción</th>
+<th style="text-align: right;">Terminal/EV industrial</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td style="text-align: right;">3,360.46</td>
+<td style="text-align: right;">17.99</td>
+<td style="text-align: right;">11.08</td>
+<td style="text-align: right;">29.07</td>
+<td style="text-align: right;">36.4%</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td style="text-align: right;">9,396.48</td>
+<td style="text-align: right;">56.35</td>
+<td style="text-align: right;">11.08</td>
+<td style="text-align: right;">67.42</td>
+<td style="text-align: right;">46.7%</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td style="text-align: right;">26,777.65</td>
+<td style="text-align: right;">166.80</td>
+<td style="text-align: right;">11.08</td>
+<td style="text-align: right;">177.88</td>
+<td style="text-align: right;">58.1%</td>
+</tr>
+</tbody>
+</table></div>
+<p>No se asignan probabilidades, media ponderada ni confianza estadística a los extremos. Todos comparten una marca contemporánea de la participada; su cotización también puede caer en un escenario industrial adverso, de ahí la sensibilidad independiente.</p>
+<h2 id="sensibilidad-e-inverso">8. Sensibilidad e inverso</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Variación aislada del caso base</th>
+<th style="text-align: right;">Híbrido condicionado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Obligación MLTP 49.065</td>
+<td style="text-align: right;">68.70</td>
+</tr>
+<tr class="even">
+<td>Obligación MLTP 100</td>
+<td style="text-align: right;">68.38</td>
+</tr>
+<tr class="odd">
+<td>Obligación MLTP 250</td>
+<td style="text-align: right;">67.42</td>
+</tr>
+<tr class="even">
+<td>Obligación MLTP 500</td>
+<td style="text-align: right;">65.84</td>
+</tr>
+<tr class="odd">
+<td>Precio Technoprobe EUR 12.17</td>
+<td style="text-align: right;">62.91</td>
+</tr>
+<tr class="even">
+<td>Precio Technoprobe EUR 18.255</td>
+<td style="text-align: right;">65.16</td>
+</tr>
+<tr class="odd">
+<td>Precio Technoprobe EUR 24.34</td>
+<td style="text-align: right;">67.42</td>
+</tr>
+<tr class="even">
+<td>Precio Technoprobe EUR 30.425</td>
+<td style="text-align: right;">69.68</td>
+</tr>
+<tr class="odd">
+<td>Precio Technoprobe EUR 36.51</td>
+<td style="text-align: right;">71.94</td>
+</tr>
+<tr class="even">
+<td>Reserva de caja 150</td>
+<td style="text-align: right;">68.06</td>
+</tr>
+<tr class="odd">
+<td>Reserva de caja 250</td>
+<td style="text-align: right;">67.42</td>
+</tr>
+<tr class="even">
+<td>Reserva de caja 500</td>
+<td style="text-align: right;">65.84</td>
+</tr>
+<tr class="odd">
+<td>Reserva de caja 800</td>
+<td style="text-align: right;">63.93</td>
+</tr>
+<tr class="even">
+<td>Circulante/incremento ventas 0.15</td>
+<td style="text-align: right;">68.82</td>
+</tr>
+<tr class="odd">
+<td>Circulante/incremento ventas 0.27</td>
+<td style="text-align: right;">67.42</td>
+</tr>
+<tr class="even">
+<td>Circulante/incremento ventas 0.4</td>
+<td style="text-align: right;">65.58</td>
+</tr>
+<tr class="odd">
+<td>Descuento liquidez FORM 0</td>
+<td style="text-align: right;">67.42</td>
+</tr>
+<tr class="even">
+<td>Descuento liquidez FORM 0.25</td>
+<td style="text-align: right;">67.08</td>
+</tr>
+<tr class="odd">
+<td>Descuento liquidez FORM 0.5</td>
+<td style="text-align: right;">66.74</td>
+</tr>
+<tr class="even">
+<td>Descuento liquidez FORM 1</td>
+<td style="text-align: right;">66.05</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC / g base</th>
+<th style="text-align: right;">2%</th>
+<th style="text-align: right;">3%</th>
+<th style="text-align: right;">4%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10.00%</td>
+<td style="text-align: right;">87.73</td>
+<td style="text-align: right;">93.70</td>
+<td style="text-align: right;">101.67</td>
+</tr>
+<tr class="even">
+<td>11.00%</td>
+<td style="text-align: right;">77.78</td>
+<td style="text-align: right;">82.01</td>
+<td style="text-align: right;">87.43</td>
+</tr>
+<tr class="odd">
+<td>12.75%</td>
+<td style="text-align: right;">64.97</td>
+<td style="text-align: right;">67.42</td>
+<td style="text-align: right;">70.44</td>
+</tr>
+<tr class="even">
+<td>14.00%</td>
+<td style="text-align: right;">58.19</td>
+<td style="text-align: right;">59.92</td>
+<td style="text-align: right;">62.00</td>
+</tr>
+</tbody>
+</table></div>
+<p>Permitir recuperar circulante al caer ventas eleva base a 68.18; es recuperación supuesta, no cobro comprobado. Sin valor de Technoprobe, pero con FORM financiado y marcado, híbrido base 57.72. Subir capex bruto en 2,5 puntos de ventas reduce base a 58.98; no se omite ese suelo extra en terminal. Más sensibilidades de impuestos, ROIC, premios y capital están en model/checks.json.</p>
+<p>Inverso a 269,35: con margen/ROIC/descuento base y primer ingreso fijo, requiere sumar <strong>27.77 puntos porcentuales</strong> a cada crecimiento de años 2–10. El segundo periodo pasa de −10% a 17.77% y el décimo de 4% a 31.77%, antes del salto a 3% perpetuo. Es combinación matemática exigente, no lectura literal del consenso. Solo elevar márgenes hasta +60 puntos no encuentra raíz dentro del intervalo, aun con margen final 85%; valor en ese límite 182.61. El modelo financia los aumentos de NOPAT y no extrapola raíces inexistentes.</p>
+<p>La otra cara: combinando trayectoria favorable con <strong>margen 40%, WACC 10%</strong> y sus crecimientos originales, el estrés arroja <strong>256.79</strong>. Si además se suman 3 puntos de crecimiento a años 2–10, asciende a <strong>306.66</strong>; con +5 puntos, <strong>345.42</strong>. No son escenarios centrales ni probabilidades. Indican que el precio puede justificarse con un conjunto más ambicioso, especialmente si el mercado de test se expande y captura rentabilidad extraordinaria. El contraste con Advantest hace improcedente declarar que un margen alto sea imposible; tampoco demuestra que TER lo logrará. La decisión exige evidencia sobre ejecución y duración, no solo una hoja de cálculo adversa.</p>
+<h2 id="comparables">9. Comparables</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Pantalla TTM</th>
+<th style="text-align: right;">TER</th>
+<th style="text-align: right;">Advantest</th>
+<th style="text-align: right;">Cohu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Margen EBIT</td>
+<td style="text-align: right;">32,11%</td>
+<td style="text-align: right;">50,00%</td>
+<td style="text-align: right;">−2,38%</td>
+</tr>
+<tr class="even">
+<td>EV/ventas convencional</td>
+<td style="text-align: right;">8,28x</td>
+<td style="text-align: right;">17,64x</td>
+<td style="text-align: right;">3,81x</td>
+</tr>
+<tr class="odd">
+<td>EV/EBIT convencional</td>
+<td style="text-align: right;">25,80x</td>
+<td style="text-align: right;">35,28x</td>
+<td style="text-align: right;">No significativo</td>
+</tr>
+<tr class="even">
+<td>FCF/capitalización básica</td>
+<td style="text-align: right;">2,44%</td>
+<td style="text-align: right;">1,79%</td>
+<td style="text-align: right;">2,36%</td>
+</tr>
+</tbody>
+</table></div>
+<p>El paquete comps/ incorpora el contraste contemporáneo de Teradyne, Advantest y Cohu, sus fuentes y límites. La pantalla de pares usa capital de septiembre y no incorpora el cierre pendiente de FORM; el puente DCF sí presenta ese desembolso y activo como caso condicionado. La variante industrial TER resta la marca de Technoprobe y añade pensiones/minoritario contable, resultando EV/EBIT 24,81x; no es idéntica al puente DCF con minoritario económico seleccionado. Advantest tiene 432.586 millones de yenes en inversiones no tratadas todas como caja; restar su libro solo como sensibilidad baja EV/EBIT a 34,68x. Su FCF de 463.173 millones de yenes baja a 458.437 después de principal de arrendamientos y a 453.469 tras SBC, sin confundir clasificación IFRS con US GAAP.</p>
+<p>Cohu tiene EBIT TTM −13,552 millones y FCF 55,854, o 32,882 tras SBC. No se sustituye EBIT GAAP por ajustado para fabricar un múltiplo positivo. Su convertible dentro del dinero requiere sensibilidad: EV/ventas pasa de 3,81x a 3,98x al añadir intrínseco de conversión neto de capped call; el cap 41,02 es inferior al precio 50,03. Esto no captura valor temporal ni certifica valor razonable. No se añaden a la vez deuda íntegra y todas las acciones de conversión. <a href="https://www.advantest.com/document/en/investors/ir-library/result/E_FR_FY2026_2Q.pdf">Advantest H1</a>, <a href="https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf">Advantest anual</a> y <a href="https://ir.cohu.com/news-releases/news-release-details/cohu-reports-third-quarter-2026-results">Cohu Q3</a>. Los ratios de valoración no sustituyen ciclo normalizado ni se aplica una mediana como precio objetivo. Advantest usa IFRS, periodos fiscales distintos y grandes inversiones financieras; Cohu tiene diferente mezcla de sistemas/consumibles y pérdidas operativas TTM aunque Q3 sea positivo. No se compara EPS de equity-income/valoración financiera con EBIT industrial sin separar ambos.</p>
+<p>La diferencia de margen sectorial es una prueba útil contra conclusiones demasiado absolutas: Advantest presenta rentabilidad muy superior, mientras Cohu muestra sensibilidad al ciclo. TER no debe recibir automáticamente ni el margen de su competidor mejor situado ni un múltiplo de beneficio cíclico deprimido. El calendario bursátil japonés también importa: 3 noviembre fue festivo, por lo que la observación pertinente es última sesión disponible y se rotula, no se inventa un cierre japonés de ese día.</p>
+<h2 id="qué-falta-para-una-conclusión-operable">10. Qué falta para una conclusión operable</h2>
+<p>Verificar cierre, restricciones y financiación efectiva de FormFactor; reconciliar capital posterior al trimestre, puente de premios netos y fórmula/valor de la salida MLTP; confirmar condiciones y fiscalidad de una eventual venta de Technoprobe; actualizar resultados de la participada tras su evento; verificar la próxima fecha de resultados de TER y renovar filtro técnico. El modelo de ciclo y el precio marcado de la participada no certifican el valor intrínseco total del grupo.</p>
+<p>Conclusión ES: <strong>Esperar; análisis híbrido condicionado.</strong> Demanda y caja han mejorado mucho, pero márgenes secuenciales, circulante y compromisos exigen normalización. Los casos centrales no respaldan 269,35; un conjunto más optimista sí puede hacerlo. No existe margen de seguridad demostrado con este paquete, no se certifica valor total y no se autoriza entrada.</p>
+<p>Conclusion EN: <strong>Wait; conditional hybrid analysis.</strong> Demand and cash generation improved materially, but sequential margins, working capital and purchase commitments require cycle normalization. Central cases do not support $269.35; a stronger joint operating scenario can. This package does not establish a margin of safety, certify total intrinsic value or approve an entry.</p>
+<h2 id="fuentes-y-reproducción">Fuentes y reproducción</h2>
+<p><a href="https://www.sec.gov/Archives/edgar/data/97210/000119312526059002/ter-20251231.htm">10-K FY25</a>, <a href="https://www.sec.gov/Archives/edgar/data/97210/000119312526441091/ter-20260927.htm">10-Q Q3</a>, <a href="https://www.sec.gov/Archives/edgar/data/97210/000119312526327715/ter-20260628.htm">Q2</a>, <a href="https://www.sec.gov/Archives/edgar/data/97210/000119312526201058/ter-20260329.htm">Q1</a>. Todos los hechos tienen fecha/unidad/procedencia; estimaciones propias se identifican. Ejecutar reproduce.py sin red regenera historia, capital, modelo y pruebas. Se publican datos factuales seleccionados y cálculos propios, no filings íntegros. Reproducir aritmética no certifica supuestos económicos ni constituye una recomendación personal de inversión.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TER/TER_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TER/model/model.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TER/model/results.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>

@@ -1,0 +1,4 @@
+import json
+from pathlib import Path
+rf=.0495;erp=.0441;beta=1.75;ke=rf+erp*beta
+r={'rf10yNov3':rf,'erpNov1':erp,'erpAssociatedRf':.0529,'providerBeta':beta,'capmCostOfEquity':ke,'financialDebtWeight':0,'selectedBaseWacc':.1275,'selectionDifferenceBp':(.1275-ke)*10000,'sources':['https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve','https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm','https://stockanalysis.com/stocks/ter/statistics/'],'limits':['Daily rate and monthly ERP are not synchronized.','Beta is provider5y, not independently regressed.','Debt weight zero corresponds to financial borrowings zero; operating leases remain in operating cost.','12.75% is selected near12.6675% CAPM, not exact empirical WACC.']};(Path(__file__).parent/'rates_results.json').write_text(json.dumps(r,indent=2)+'\n')
