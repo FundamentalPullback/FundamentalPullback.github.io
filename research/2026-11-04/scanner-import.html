@@ -1,0 +1,688 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Escáner 4 noviembre · A250</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#revision?date=2026-11-04&panel=scanner&stage2=0">Ver escáner</a><a href="index.html">Research index</a></nav><h1 id="escáner-del-4-de-noviembre-de-2026-a250">Escáner del 4 de noviembre de 2026 · A250</h1>
+<p><strong>192 símbolos; 70 con Opportunity ≥85. Es una lista de investigación, no 70 aprobaciones Stage 2 ni análisis completos. Ninguna nueva entrada está autorizada.</strong></p>
+<p><strong>192 symbols; 70 with Opportunity ≥85. This is a research list, not 70 Stage 2 approvals or completed analyses. No new entry is authorized.</strong></p>
+<p>La cabecera original dice «Quote on 11/4/26 17:46:27» y «11.4.26». No incluye zona horaria. Se conserva la sesión del 4 de noviembre y el Last original; no se certifican como cierre regular ni cotización actual.</p>
+<p>The original export has no timezone. Its November 4 session and original Last values are preserved, not certified as regular closes or current quotes.</p>
+<h2 id="integridad-y-límites">Integridad y límites</h2>
+<ul>
+<li>Se añaden las 192 filas sin reemplazar escáneres anteriores, decisiones, modelos, posiciones ni ejecuciones. Las fichas nuevas aparecen automáticamente; las existentes conservan sus expedientes fechados.</li>
+<li>No hay campo Stage 2, capitalización, margen neto, EPS, volumen ni EMAs. Esos datos permanecen ausentes: no se hereda el pase técnico de sesiones antiguas.</li>
+<li>Los scores QP/Opportunity y RSI se conservan sin recalcular. Opportunity ≥85 define este filtro de prioridad, no sustituye todos los filtros del plan. Un RSI alto tampoco se convierte aquí en veto automático.</li>
+<li>El margen conserva la etiqueta y el número del exportador; su definición y normalización no se certifican. FCF por acción no equivale automáticamente a caja económica sostenible.</li>
+<li>PB 52W% se conserva en el CSV con su signo original. La columna histórica de retroceso de la web muestra su magnitud, como antes. En 33 filas difiere en más de 0,5 puntos porcentuales de (Last / 52High − 1) × 100. Ese corte es solo diagnóstico, no una regla del plan ni una corrección de la fuente. Se muestran ambas cifras por separado.</li>
+<li>El nuevo Last no modifica una valoración, desbloquea una operación, reabre una posición cerrada ni demuestra que los resultados pendientes ya se publicaron. Los informes individuales mantienen sus condiciones y fechas.</li>
+<li>Conciliación con el registro en Sheets pendiente; esta publicación no afirma sincronización de datos maestros.</li>
+</ul>
+<p>Missing fields remain missing, including Stage 2. Earlier technical approvals are not carried forward. Scores are unchanged; the priority filter is not an investment approval. Pullback differences are diagnostics only, and the original export is retained. New prices do not revise models, reopen closed positions or authorize trades. Spreadsheet reconciliation remains pending.</p>
+<h2 id="fuentes-y-datos-completos">Fuentes y datos completos</h2>
+<ul>
+<li><a href="scanner/2026-11-04-Quote.csv">CSV original</a></li>
+<li><a href="scanner/raw-rows.json">192 filas originales en JSON</a></li>
+<li><a href="scanner/pullback-diagnostics.json">Diagnóstico de 33 diferencias de retroceso</a></li>
+<li><a href="scanner/import-metadata.json">Metadatos de importación y huella del original</a></li>
+</ul>
+<h2 id="los-70-símbolos-de-prioridad-sin-aprobación-técnica">Los 70 símbolos de prioridad, sin aprobación técnica</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Empresa</th>
+<th style="text-align: right;">Last del CSV</th>
+<th style="text-align: right;">QP</th>
+<th style="text-align: right;">Opportunity</th>
+<th style="text-align: right;">RSI</th>
+<th style="text-align: right;">PB original %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>G</td>
+<td>GENPACT LTD</td>
+<td style="text-align: right;">40.78</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">66.0</td>
+<td style="text-align: right;">-16.2</td>
+</tr>
+<tr class="even">
+<td>WK</td>
+<td>WORKIVA INC A</td>
+<td style="text-align: right;">85.28</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">65.8</td>
+<td style="text-align: right;">-12.2</td>
+</tr>
+<tr class="odd">
+<td>VCYT</td>
+<td>VERACYTE INC</td>
+<td style="text-align: right;">37.16</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">65.3</td>
+<td style="text-align: right;">-13.8</td>
+</tr>
+<tr class="even">
+<td>MKTX</td>
+<td>MARKETAXESS HLDGS IN</td>
+<td style="text-align: right;">165.61</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">74.6</td>
+<td style="text-align: right;">-15.5</td>
+</tr>
+<tr class="odd">
+<td>NCNO</td>
+<td>NCINO INC NEW</td>
+<td style="text-align: right;">23.44</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">63.7</td>
+<td style="text-align: right;">-14.8</td>
+</tr>
+<tr class="even">
+<td>WDAY</td>
+<td>WORKDAY INC Class A</td>
+<td style="text-align: right;">201.84</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">55.9</td>
+<td style="text-align: right;">-14.8</td>
+</tr>
+<tr class="odd">
+<td>AEO</td>
+<td>AMERICAN EAGLE OUTFI</td>
+<td style="text-align: right;">21.0482</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">74.5</td>
+<td style="text-align: right;">-24.9</td>
+</tr>
+<tr class="even">
+<td>BSY</td>
+<td>BENTLEY SYS INC Class B</td>
+<td style="text-align: right;">43.64</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">79.9</td>
+<td style="text-align: right;">-13.6</td>
+</tr>
+<tr class="odd">
+<td>EAT</td>
+<td>BRINKER INTL INC</td>
+<td style="text-align: right;">220.44</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">60.4</td>
+<td style="text-align: right;">-13.5</td>
+</tr>
+<tr class="even">
+<td>FRPT</td>
+<td>FRESHPET INC</td>
+<td style="text-align: right;">71.29</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">66.5</td>
+<td style="text-align: right;">-17.1</td>
+</tr>
+<tr class="odd">
+<td>OPCH</td>
+<td>OPTION CARE HEALTH I</td>
+<td style="text-align: right;">31.66</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">78.6</td>
+<td style="text-align: right;">-14.0</td>
+</tr>
+<tr class="even">
+<td>LMT</td>
+<td>LOCKHEED MARTIN CORP</td>
+<td style="text-align: right;">591.50</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">55.0</td>
+<td style="text-align: right;">-14.0</td>
+</tr>
+<tr class="odd">
+<td>RMD</td>
+<td>RESMED INC</td>
+<td style="text-align: right;">240.51</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">52.7</td>
+<td style="text-align: right;">-13.4</td>
+</tr>
+<tr class="even">
+<td>TDC</td>
+<td>TERADATA CORP DEL</td>
+<td style="text-align: right;">34.61</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">66.6</td>
+<td style="text-align: right;">-17.2</td>
+</tr>
+<tr class="odd">
+<td>TEL</td>
+<td>TE CONNECTIVITY PLC</td>
+<td style="text-align: right;">220.22</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">55.4</td>
+<td style="text-align: right;">-12.8</td>
+</tr>
+<tr class="even">
+<td>TRI</td>
+<td>THOMSON REUTERS CORP</td>
+<td style="text-align: right;">117.23</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">57.1</td>
+<td style="text-align: right;">-24.9</td>
+</tr>
+<tr class="odd">
+<td>TRP</td>
+<td>TC ENERGY CORP</td>
+<td style="text-align: right;">62.71</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">53.2</td>
+<td style="text-align: right;">-12.4</td>
+</tr>
+<tr class="even">
+<td>UHS</td>
+<td>UNIVERSAL HEALTH SVC B</td>
+<td style="text-align: right;">196.46</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">64.8</td>
+<td style="text-align: right;">-20.2</td>
+</tr>
+<tr class="odd">
+<td>GDDY</td>
+<td>GODADDY INC Class A</td>
+<td style="text-align: right;">118.37</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">64.5</td>
+<td style="text-align: right;">-13.2</td>
+</tr>
+<tr class="even">
+<td>WAY</td>
+<td>WAYSTAR HLDG CORP</td>
+<td style="text-align: right;">29.69</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">63.9</td>
+<td style="text-align: right;">-21.3</td>
+</tr>
+<tr class="odd">
+<td>QGEN</td>
+<td>QIAGEN NV</td>
+<td style="text-align: right;">50.90</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">74.6</td>
+<td style="text-align: right;">-12.1</td>
+</tr>
+<tr class="even">
+<td>SNPS</td>
+<td>SYNOPSYS INC</td>
+<td style="text-align: right;">465.00</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">51.5</td>
+<td style="text-align: right;">-14.2</td>
+</tr>
+<tr class="odd">
+<td>CTSH</td>
+<td>COGNIZANT TECHNOLOGY Class A</td>
+<td style="text-align: right;">64.1765</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">53.7</td>
+<td style="text-align: right;">-24.4</td>
+</tr>
+<tr class="even">
+<td>UNFI</td>
+<td>UNITED NAT FOODS INC</td>
+<td style="text-align: right;">48.29</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">57.2</td>
+<td style="text-align: right;">-15.3</td>
+</tr>
+<tr class="odd">
+<td>IT</td>
+<td>GARTNER INC</td>
+<td style="text-align: right;">207.19</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: right;">48.7</td>
+<td style="text-align: right;">-19.3</td>
+</tr>
+<tr class="even">
+<td>ECO</td>
+<td>OKEANIS ECO TANKERS</td>
+<td style="text-align: right;">85.75</td>
+<td style="text-align: right;">80.0</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: right;">43.8</td>
+<td style="text-align: right;">-17.2</td>
+</tr>
+<tr class="odd">
+<td>RNG</td>
+<td>RINGCENTRAL INC Class A</td>
+<td style="text-align: right;">77.9588</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: right;">47.6</td>
+<td style="text-align: right;">-20.6</td>
+</tr>
+<tr class="even">
+<td>SSL</td>
+<td>SASOL LTD ADR</td>
+<td style="text-align: right;">15.28</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: right;">45.5</td>
+<td style="text-align: right;">-16.0</td>
+</tr>
+<tr class="odd">
+<td>HURN</td>
+<td>HURON CONSULTING GRO</td>
+<td style="text-align: right;">173.015</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: right;">43.7</td>
+<td style="text-align: right;">-14.9</td>
+</tr>
+<tr class="even">
+<td>AFRM</td>
+<td>AFFIRM HLDGS INC Class A</td>
+<td style="text-align: right;">76.27</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: right;">54.7</td>
+<td style="text-align: right;">-16.4</td>
+</tr>
+<tr class="odd">
+<td>TRMD</td>
+<td>TORM PLC A</td>
+<td style="text-align: right;">37.64</td>
+<td style="text-align: right;">80.0</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: right;">44.7</td>
+<td style="text-align: right;">-13.1</td>
+</tr>
+<tr class="even">
+<td>CRWD</td>
+<td>CROWDSTRIKE HLDGS IN A</td>
+<td style="text-align: right;">242.00</td>
+<td style="text-align: right;">70.0</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: right;">45.3</td>
+<td style="text-align: right;">-16.0</td>
+</tr>
+<tr class="odd">
+<td>BR</td>
+<td>BROADRIDGE FINL SOLU</td>
+<td style="text-align: right;">189.29</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">70.7</td>
+<td style="text-align: right;">-18.8</td>
+</tr>
+<tr class="even">
+<td>BZ</td>
+<td>KANZHUN LTD ADR</td>
+<td style="text-align: right;">17.46</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">68.7</td>
+<td style="text-align: right;">-22.3</td>
+</tr>
+<tr class="odd">
+<td>DG</td>
+<td>DOLLAR GEN CORP NEW</td>
+<td style="text-align: right;">141.64</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">63.2</td>
+<td style="text-align: right;">-10.5</td>
+</tr>
+<tr class="even">
+<td>FA</td>
+<td>FIRST ADVANTAGE CORP</td>
+<td style="text-align: right;">23.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">68.8</td>
+<td style="text-align: right;">-10.7</td>
+</tr>
+<tr class="odd">
+<td>LW</td>
+<td>LAMB WESTON HLDGS IN</td>
+<td style="text-align: right;">56.60</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">65.5</td>
+<td style="text-align: right;">-10.3</td>
+</tr>
+<tr class="even">
+<td>UL</td>
+<td>UNILEVER PLC ADR</td>
+<td style="text-align: right;">66.92</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">60.2</td>
+<td style="text-align: right;">-10.7</td>
+</tr>
+<tr class="odd">
+<td>BAH</td>
+<td>BOOZ ALLEN HAMILTON Class A</td>
+<td style="text-align: right;">89.00</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">75.4</td>
+<td style="text-align: right;">-19.1</td>
+</tr>
+<tr class="even">
+<td>FLS</td>
+<td>FLOWSERVE CORP</td>
+<td style="text-align: right;">81.18</td>
+<td style="text-align: right;">80.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">67.5</td>
+<td style="text-align: right;">-12.2</td>
+</tr>
+<tr class="odd">
+<td>GAP</td>
+<td>GAP INC</td>
+<td style="text-align: right;">23.54</td>
+<td style="text-align: right;">80.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">59.3</td>
+<td style="text-align: right;">-19.1</td>
+</tr>
+<tr class="even">
+<td>GME</td>
+<td>GAMESTOP CORP NEW A</td>
+<td style="text-align: right;">25.07</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">54.8</td>
+<td style="text-align: right;">-11.2</td>
+</tr>
+<tr class="odd">
+<td>HRI</td>
+<td>HERC HLDGS INC</td>
+<td style="text-align: right;">158.41</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">58.8</td>
+<td style="text-align: right;">-15.9</td>
+</tr>
+<tr class="even">
+<td>ROK</td>
+<td>ROCKWELL AUTOMATION</td>
+<td style="text-align: right;">445.00</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">55.2</td>
+<td style="text-align: right;">-10.8</td>
+</tr>
+<tr class="odd">
+<td>TYL</td>
+<td>TYLER TECHNOLOGIES I</td>
+<td style="text-align: right;">423.00</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">73.3</td>
+<td style="text-align: right;">-12.1</td>
+</tr>
+<tr class="even">
+<td>UNH</td>
+<td>UNITEDHEALTH GROUP I</td>
+<td style="text-align: right;">410.31</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">57.0</td>
+<td style="text-align: right;">-11.3</td>
+</tr>
+<tr class="odd">
+<td>VNT</td>
+<td>VONTIER CORP</td>
+<td style="text-align: right;">37.58</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">78.1</td>
+<td style="text-align: right;">-22.0</td>
+</tr>
+<tr class="even">
+<td>YOU</td>
+<td>CLEAR SECURE INC A</td>
+<td style="text-align: right;">59.25</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">86.4</td>
+<td style="text-align: right;">-14.5</td>
+</tr>
+<tr class="odd">
+<td>GWRE</td>
+<td>GUIDEWIRE SOFTWARE I</td>
+<td style="text-align: right;">169.66</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">52.5</td>
+<td style="text-align: right;">-25.8</td>
+</tr>
+<tr class="even">
+<td>PTGX</td>
+<td>PROTAGONIST THERAPEU</td>
+<td style="text-align: right;">143.37</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">54.5</td>
+<td style="text-align: right;">-10.8</td>
+</tr>
+<tr class="odd">
+<td>PYPL</td>
+<td>PAYPAL HLDGS INC</td>
+<td style="text-align: right;">60.0491</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">68.0</td>
+<td style="text-align: right;">-11.7</td>
+</tr>
+<tr class="even">
+<td>QLYS</td>
+<td>QUALYS INC</td>
+<td style="text-align: right;">210.85</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">54.8</td>
+<td style="text-align: right;">-10.5</td>
+</tr>
+<tr class="odd">
+<td>HTHT</td>
+<td>H WORLD GROUP LIMITE ADR</td>
+<td style="text-align: right;">50.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">71.5</td>
+<td style="text-align: right;">-11.3</td>
+</tr>
+<tr class="even">
+<td>IMAX</td>
+<td>IMAX CORP</td>
+<td style="text-align: right;">51.76</td>
+<td style="text-align: right;">80.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">50.1</td>
+<td style="text-align: right;">-10.3</td>
+</tr>
+<tr class="odd">
+<td>ISRG</td>
+<td>INTUITIVE SURGICAL I</td>
+<td style="text-align: right;">479.50</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">72.6</td>
+<td style="text-align: right;">-20.2</td>
+</tr>
+<tr class="even">
+<td>ADSK</td>
+<td>AUTODESK INC</td>
+<td style="text-align: right;">270.09</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">69.3</td>
+<td style="text-align: right;">-15.6</td>
+</tr>
+<tr class="odd">
+<td>AUPH</td>
+<td>AURINIA PHARMACEUTIC Equity</td>
+<td style="text-align: right;">17.11</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">55.9</td>
+<td style="text-align: right;">-11.1</td>
+</tr>
+<tr class="even">
+<td>SPGI</td>
+<td>S&amp;P GLOBAL INC</td>
+<td style="text-align: right;">480.01</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">75.8</td>
+<td style="text-align: right;">-12.8</td>
+</tr>
+<tr class="odd">
+<td>TENB</td>
+<td>TENABLE HLDGS INC</td>
+<td style="text-align: right;">47.34</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">61.6</td>
+<td style="text-align: right;">-11.0</td>
+</tr>
+<tr class="even">
+<td>TOST</td>
+<td>TOAST INC Class A</td>
+<td style="text-align: right;">35.48</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">68.6</td>
+<td style="text-align: right;">-10.8</td>
+</tr>
+<tr class="odd">
+<td>LYFT</td>
+<td>LYFT INC Class A</td>
+<td style="text-align: right;">18.60</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">70.3</td>
+<td style="text-align: right;">-26.6</td>
+</tr>
+<tr class="even">
+<td>CNX</td>
+<td>CNX RES CORP</td>
+<td style="text-align: right;">35.67</td>
+<td style="text-align: right;">80.0</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: right;">51.1</td>
+<td style="text-align: right;">-17.6</td>
+</tr>
+<tr class="odd">
+<td>LNG</td>
+<td>CHENIERE ENERGY INC</td>
+<td style="text-align: right;">289.62</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: right;">49.6</td>
+<td style="text-align: right;">-11.7</td>
+</tr>
+<tr class="even">
+<td>AVTR</td>
+<td>AVANTOR INC</td>
+<td style="text-align: right;">15.62</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: right;">44.0</td>
+<td style="text-align: right;">-10.3</td>
+</tr>
+<tr class="odd">
+<td>SPSC</td>
+<td>SPS COMM INC</td>
+<td style="text-align: right;">85.24</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: right;">50.3</td>
+<td style="text-align: right;">-11.7</td>
+</tr>
+<tr class="even">
+<td>STNG</td>
+<td>SCORPIO TANKERS INC</td>
+<td style="text-align: right;">85.1297</td>
+<td style="text-align: right;">80.0</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: right;">48.6</td>
+<td style="text-align: right;">-11.0</td>
+</tr>
+<tr class="odd">
+<td>SWKS</td>
+<td>SKYWORKS SOLUTIONS I</td>
+<td style="text-align: right;">82.65</td>
+<td style="text-align: right;">60.0</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: right;">49.6</td>
+<td style="text-align: right;">-10.6</td>
+</tr>
+<tr class="even">
+<td>TSLA</td>
+<td>TESLA INC</td>
+<td style="text-align: right;">384.70</td>
+<td style="text-align: right;">80.0</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: right;">51.4</td>
+<td style="text-align: right;">-22.8</td>
+</tr>
+<tr class="odd">
+<td>RYAN</td>
+<td>RYAN SPECIALTY HOLDI A</td>
+<td style="text-align: right;">47.54</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">72.2</td>
+<td style="text-align: right;">-19.3</td>
+</tr>
+<tr class="even">
+<td>CDNS</td>
+<td>CADENCE DESIGN SYS I</td>
+<td style="text-align: right;">329.00</td>
+<td style="text-align: right;">70.0</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: right;">50.5</td>
+<td style="text-align: right;">-20.9</td>
+</tr>
+</tbody>
+</table></div>
+</main></body></html>

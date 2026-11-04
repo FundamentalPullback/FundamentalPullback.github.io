@@ -835,17 +835,17 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         noPrice: "Sin precio en la hoja para", none: "No hay posiciones abiertas."
       },
       loading: "Cargando la hoja…",
-      res: { lede: "Resumen de cada escáner. Cambia la fecha o toca una barra del gráfico para ver otro día.", vsPrev: "vs día anterior", fNew: "Nuevas en Stage 2", left: "salieron", firstScan: "primer escáner", ready: "aptas para 3.5", noAnalysis: "sin análisis ese día", distDay: "Decisiones de este escáner",
-        chartTitle: "Empresas en Stage 2 por día", chartLede: "Opportunity ≥ 85 en cada escáner. La barra naranja es el día seleccionado.", inS2: "en Stage 2",
+      res: { lede: "Resumen de cada escáner. Cambia la fecha o toca una barra del gráfico para ver otro día.", vsPrev: "vs día anterior", fNew: "Nuevas con Opportunity ≥85", left: "salieron", firstScan: "primer escáner", ready: "aptas para 3.5", noAnalysis: "sin análisis ese día", distDay: "Decisiones de este escáner",
+        chartTitle: "Empresas con Opportunity ≥85 por día", chartLede: "Opportunity ≥ 85 en cada escáner. La barra naranja es el día seleccionado.", inS2: "con Opportunity ≥85",
         noAnalysisTitle: "Sin análisis este día", noAnalysisBody: "No hay decisiones guardadas para este escáner. El historial de decisiones empieza el 2 oct 2026 (biblioteca de análisis).",
-        listTitle: "Empresas en Stage 2", listLede: "Racha: días seguidos en Stage 2 hasta esta fecha. Último precio y cambio: el precio en el escáner más reciente en que aparece, frente al de este día.",
+        listTitle: "Empresas con Opportunity ≥85", listLede: "Racha: días seguidos con Opportunity ≥85 hasta esta fecha. Último precio y cambio: el precio en el escáner más reciente en que aparece, frente al de este día.",
         status: "Estado", newTag: "Nueva", streak: "Racha (días)", lastPrice: "Último precio", change: "Cambio desde entonces",
-        goneTitle: "Salieron de Stage 2", goneLede: "Estaban en Stage 2 el", notListed: "fuera del escáner", tradesTitle: "Tus operaciones de ese día" },
+        goneTitle: "Dejaron de cumplir Opportunity ≥85", goneLede: "Cumplían Opportunity ≥85 el", notListed: "fuera del escáner", tradesTitle: "Tus operaciones de ese día" },
       asOf: "Datos al cierre del", snapNote: "Las fichas muestran cotizaciones de TradingView; los precios de la cuenta se consultan en Google Sheets. Pueden llevar retraso. Análisis, operaciones y cierres históricos se publican por separado.",
       updated: "Datos de la hoja",
       lastScan: "Último escáner",
       fScanned: "Empresas escaneadas",
-      fStage2: "Pasan Stage 2",
+      fStage2: "Opportunity ≥85",
       fAnalyzed: "Analizadas",
       fReady: "Aptas para Stage 3.5",
       distTitle: "Decisiones del último escáner",
@@ -853,9 +853,9 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       readyLede: "Empresas con valoración apta. El punto marca el precio del escáner frente al rango de valor.",
       noneReady: "Ninguna empresa aprobó Stage 3 en el último escáner.",
       scanTitle: "Escáner",
-      scanLede: "Exportación diaria del scanner. Opportunity ≥ 85 pasa a Stage 2.",
+      scanLede: "Exportación diaria del escáner. Opportunity ≥85 filtra puntuaciones; no certifica Stage 2.",
       date: "Fecha",
-      onlyS2: "Solo Stage 2",
+      onlyS2: "Opportunity ≥85",
       search: "Buscar ticker o empresa",
       anaTitle: "Análisis",
       anaLede: "Las empresas analizadas en el escáner elegido, con su decisión y motivo. Valor estimado: lo que calculamos que vale cada acción en el escenario central. Techo del informe: el precio máximo de compra que fijó el informe de cada empresa, cuando lo hay; es histórico y no autoriza una orden. Toca una fila para ver la ficha y su informe.",
@@ -978,17 +978,17 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         noPrice: "No price in the sheet for", none: "No open positions."
       },
       loading: "Loading the sheet…",
-      res: { lede: "Overview of each scan. Change the date or tap a bar in the chart to see another day.", vsPrev: "vs previous day", fNew: "New in Stage 2", left: "dropped", firstScan: "first scan", ready: "ready for 3.5", noAnalysis: "no analysis that day", distDay: "Decisions for this scan",
-        chartTitle: "Companies in Stage 2 per day", chartLede: "Opportunity ≥ 85 in each scan. The orange bar is the selected day.", inS2: "in Stage 2",
+      res: { lede: "Overview of each scan. Change the date or tap a bar in the chart to see another day.", vsPrev: "vs previous day", fNew: "New with Opportunity ≥85", left: "dropped", firstScan: "first scan", ready: "ready for 3.5", noAnalysis: "no analysis that day", distDay: "Decisions for this scan",
+        chartTitle: "Companies with Opportunity ≥85 per day", chartLede: "Opportunity ≥ 85 in each scan. The orange bar is the selected day.", inS2: "with Opportunity ≥85",
         noAnalysisTitle: "No analysis this day", noAnalysisBody: "No decisions are saved for this scan. The decision history starts on Oct 2, 2026 (analysis library).",
-        listTitle: "Companies in Stage 2", listLede: "Streak: consecutive days in Stage 2 up to this date. Latest price and change: the price in the most recent scan it appears in, against this day's.",
+        listTitle: "Companies with Opportunity ≥85", listLede: "Streak: consecutive days with Opportunity ≥85 up to this date. Latest price and change: the price in the most recent scan it appears in, against this day's.",
         status: "Status", newTag: "New", streak: "Streak (days)", lastPrice: "Latest price", change: "Change since",
-        goneTitle: "Dropped out of Stage 2", goneLede: "They were in Stage 2 on", notListed: "not in the scan", tradesTitle: "Your trades that day" },
+        goneTitle: "No longer meet Opportunity ≥85", goneLede: "They met Opportunity ≥85 on", notListed: "not in the scan", tradesTitle: "Your trades that day" },
       asOf: "Data as of the close on", snapNote: "Profiles display TradingView quotes; account prices refresh from Google Sheets. Quotes may be delayed. Research, trades and historical closes are separately published snapshots.",
       updated: "Sheet data",
       lastScan: "Latest scan",
       fScanned: "Companies scanned",
-      fStage2: "Pass Stage 2",
+      fStage2: "Opportunity ≥85",
       fAnalyzed: "Analyzed",
       fReady: "Ready for Stage 3.5",
       distTitle: "Decisions from the latest scan",
@@ -996,9 +996,9 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       readyLede: "Companies whose valuation passed. The dot marks the scan price against the value range.",
       noneReady: "No company passed Stage 3 in the latest scan.",
       scanTitle: "Scanner",
-      scanLede: "Daily scanner export. Opportunity ≥ 85 moves on to Stage 2.",
+      scanLede: "Daily scanner export. Opportunity ≥85 filters scores; it does not certify Stage 2.",
       date: "Date",
-      onlyS2: "Stage 2 only",
+      onlyS2: "Opportunity ≥85",
       search: "Search ticker or company",
       anaTitle: "Analysis",
       anaLede: "The companies analyzed in the chosen scan, with their decision and reason. Estimated value: what we calculate each share is worth in the central case. Report ceiling: the max. buy price set by each company's report, when there is one; it's historical and doesn't authorize an order. Tap a row for the record and its report.",
@@ -1452,6 +1452,14 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   function scannerAudit(date) { return (window.FP_SCAN_AUDIT || {})[date] || null; }
   function scanAuditNote(date, ticker) {
     var a = scannerAudit(date); if (!a) return '';
+    if(a.schema==='fp.scanner-import.v1') {
+      var imported='<section class="panel scan-audit"><h3>'+esc(pt('Control de importación del escáner','Scanner import check'))+'</h3><p>'+esc(a.rawTimestamp+' · '+pt('zona horaria no indicada; cierre regular no certificado por el archivo.','timezone unspecified; the file does not certify a regular-session close.'))+'</p>';
+      imported+='<p>'+esc(String(a.rowCount)+' '+pt('filas originales; ','original rows; ')+String(a.priorityCount)+' '+pt('con Opportunity ≥85. No equivale a pasar Stage 2.','with Opportunity ≥85. This does not establish a Stage 2 pass.'))+'</p>';
+      imported+='<p>'+esc(pt('Campos ausentes conservados vacíos, sin heredar datos anteriores: ','Missing fields remain empty, without inheriting earlier data: ')+(a.missingFields||[]).join(', ')+'. '+pt('Stage 2 no consta en esta fuente; no se infiere de Opportunity. El margen exportado no está verificado como margen operativo.','Stage 2 is absent from this source; it is not inferred from Opportunity. The exported margin is not verified as operating margin.'))+'</p>';
+      imported+='<p>'+esc(pt('PB y demás valores originales se conservan. Discrepancias de pullback: ','PB and other original values are preserved. Pullback discrepancies: ')+String(a.pullbackDiscrepancyCount)+'. '+pt('El diagnóstico se publica aparte; no sustituye el dato original ni autoriza una entrada.','The diagnostic is published separately; it neither replaces the original value nor authorizes entry.'))+'</p><p>';
+      var importLinks=[];if(a.reportId)importLinks.push('<a href="#biblioteca/'+esc(a.reportId)+'">'+esc(pt('Método y límites','Method and limitations'))+'</a>');if(a.rawFile)importLinks.push('<a href="'+esc(a.rawFile)+'">'+esc(pt('CSV original','Original CSV'))+'</a>');if(a.diagnosticFile)importLinks.push('<a href="'+esc(a.diagnosticFile)+'">'+esc(pt('Diagnóstico de pullback','Pullback diagnostic'))+'</a>');
+      return imported+importLinks.join(' · ')+'</p></section>';
+    }
     var c = ticker && a.corrections[ticker];
     var h = '<section class="panel scan-audit"><h3>' + esc(pt('Control de datos del escáner', 'Scanner data check')) + '</h3><p>' + esc(a.rawTimestamp + ' · ' + pt('zona horaria no indicada; cierre regular no certificado por el archivo.', 'timezone unspecified; the file does not certify a regular-session close.')) + '</p>';
     h += '<p>' + esc(pt('Los scores y campos originales se conservan. El margen exportado no está verificado como margen operativo. Las cifras GAAP comprobadas se muestran aparte; no son beneficio normalizado ni aprobación de entrada.', 'Original scores and fields are retained. The exported margin is not verified as operating margin. Checked GAAP metrics are shown separately; they are not normalized earnings or an entry approval.')) + '</p>';
@@ -1898,7 +1906,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var dates=scanDates().filter(function(d){return window.FP_PROFILE_ENGINE.day(d);}),date=dates[0];if(!date)return '';
     var rows=(S.scan||[]).filter(function(r){return r.date===date;}),qual=rows.filter(function(r){return r.opp!==null&&r.opp>=85;}).length;
     var reviews=(S.dec||[]).filter(function(r){return r.date===date;}),count=Array.from(new Set(reviews.map(function(r){return r.ticker;}))).length,audit=scannerAudit(date);
-    var h='<section class="panel latest-scanner-notice" data-scan-date="'+esc(date)+'"><h3>'+esc(pt('Último escáner · ','Latest scanner · ')+fmtD(date))+'</h3><p>'+esc(rows.length+' '+pt('símbolos publicados; ','published symbols; ')+qual+' '+pt('con Opportunity ≥85. ','with Opportunity ≥85. ')+(count?count+' '+pt('empresas con registros de investigación o revisión asociados a este escáner.','companies with research or review records linked to this scan.'):pt('Todavía no hay registros de investigación asociados a este escáner.','No research records are linked to this scan yet.')) )+'</p><p class="muted">'+esc(pt('El escáner no certifica un análisis completo ni autoriza una compra. Los escáneres e informes anteriores se conservan en el archivo.','The scanner does not certify completed research or authorize a purchase. Earlier scans and reports remain in the archive.'))+'</p><div class="controls"><a class="btn" href="#escaner" data-latest-scan="'+esc(date)+'">'+esc(pt('Ver último escáner','View latest scanner'))+'</a><a class="btn" href="#resumen" data-latest-overview="'+esc(date)+'">'+esc(pt('Resumen diario y archivo','Daily overview and archive'))+'</a><a class="btn" href="#fichas">'+esc(pt('Buscar investigación','Find research'))+'</a>';
+    var h='<section class="panel latest-scanner-notice" data-scan-date="'+esc(date)+'"><h3>'+esc(pt('Último escáner · ','Latest scanner · ')+fmtD(date))+'</h3><p>'+esc(rows.length+' '+pt('símbolos publicados; ','published symbols; ')+qual+' '+pt('con Opportunity ≥85. ','with Opportunity ≥85. ')+(count?count+' '+pt('empresas con registros de investigación o revisión asociados a este escáner.','companies with research or review records linked to this scan.'):pt('Todavía no hay registros de investigación asociados a este escáner.','No research records are linked to this scan yet.')) )+'</p><p class="muted">'+esc(pt('Opportunity ≥85 es solo un filtro de puntuación: no certifica Stage 1, Stage 2, un análisis completo ni autoriza una compra. Los escáneres e informes anteriores se conservan en el archivo.','Opportunity ≥85 is only a score filter: it does not certify Stage 1, Stage 2, completed research or authorize a purchase. Earlier scans and reports remain in the archive.'))+'</p><div class="controls"><a class="btn" href="#escaner" data-latest-scan="'+esc(date)+'">'+esc(pt('Ver último escáner','View latest scanner'))+'</a><a class="btn" href="#resumen" data-latest-overview="'+esc(date)+'">'+esc(pt('Resumen diario y archivo','Daily overview and archive'))+'</a><a class="btn" href="#fichas">'+esc(pt('Buscar investigación','Find research'))+'</a>';
     if(audit&&audit.reportId)h+='<a class="btn" href="#biblioteca/'+encodeURIComponent(audit.reportId)+'">'+esc(pt('Control de calidad y fuentes','Data quality and sources'))+'</a>';
     return h+'</div></section>';
   }
@@ -2802,6 +2810,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 
   function renderProfile(p) {
     var completed=p.latestCompleted, a=p.latestAnalysis, r=p.latestReview, m=p.latestManagement, unknown=pt('No consta','Not recorded');
+    var managementDay=m&&window.FP_PROFILE_ENGINE.day(m.date), analysisDay=a&&window.FP_PROFILE_ENGINE.day(a.date), reviewDay=r&&window.FP_PROFILE_ENGINE.day(r.adate);
+    var managementAfterAnalysis=!!(managementDay&&analysisDay&&managementDay>analysisDay), managementAfterReview=!!(managementDay&&reviewDay&&managementDay>reviewDay);
     var h='<div class="controls"><a class="btn" href="'+esc(profileSearchHash())+'">← '+esc(pt('Volver a los resultados','Back to results'))+'</a><span class="muted">'+esc(pt('Enlace permanente de la ficha','Permanent profile link'))+'</span></div>';
     h+=profileSummaryCard(p,false);
     function metric(label,value,note){return '<div><dt>'+esc(label)+'</dt><dd>'+esc(value)+'</dd><small>'+esc(note)+'</small></div>';}
@@ -2814,13 +2824,13 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       h+='<p class="muted">'+esc(pt('Es la fuente de análisis más reciente identificada, no una recomendación vigente. La profundidad indicada distingue análisis completos, parciales y bloqueados. Las revisiones posteriores se muestran debajo.','This is the latest identified analysis source, not a current recommendation. The stated depth distinguishes complete, partial and blocked analyses. Later reviews are shown below.'))+'</p>';
       if(!a.isComplete)h+='<p class="profile-tag">'+esc(pt('Análisis parcial o bloqueado · no completado','Partial or blocked analysis · not completed'))+'</p>';
       if(completed && (completed.id!==a.id||completed.date!==a.date))h+='<p class="muted">'+esc(pt('Último análisis completado anterior: ','Previous last completed analysis: ')+profileDate(completed.date))+' '+(completed.report?reportLink(completed.id):'')+'</p>';
-      if(a.row)h+='<p>'+pill(a.row.decision)+'</p><p>'+esc(whyOf(a.row))+'</p>'+(nextOf(a.row)?'<p><b>'+esc(pt('Próximo paso documentado: ','Recorded next step: '))+'</b>'+esc(nextOf(a.row))+'</p>':'')+'<p class="muted">'+esc(pt('Escáner asociado a este registro: ','Scan associated with this record: ')+profileDate(window.FP_PROFILE_ENGINE.day(a.row.date)))+'</p>';
+      if(a.row)h+='<p>'+pill(a.row.decision)+'</p><p>'+esc(whyOf(a.row))+'</p>'+(nextOf(a.row)?'<p><b>'+esc(managementAfterAnalysis?pt('Próximo paso del informe histórico (puede estar superado): ','Historical report next step (may be superseded): '):pt('Próximo paso documentado: ','Recorded next step: '))+'</b>'+esc(nextOf(a.row))+'</p>':'')+'<p class="muted">'+esc(pt('Escáner asociado a este registro: ','Scan associated with this record: ')+profileDate(window.FP_PROFILE_ENGINE.day(a.row.date)))+'</p>';
       if(a.report)h+='<p>'+reportLink(a.id,pt('Abrir informe completo ','Open full report ')+a.id)+'</p><details class="profile-full"><summary>'+esc(pt('Leer el análisis aquí','Read the analysis here'))+'</summary><article class="md">'+md(a.report.text)+'</article></details>';
       else h+='<p class="muted">'+esc(pt('Fecha tomada del registro de análisis; no hay un informe enlazado disponible.','Date taken from the analysis record; no linked report is available.'))+'</p>';
     } else h+='<p>'+esc(pt('No hay un análisis fundamental completado verificable en el archivo. Los registros parciales, pendientes, de escáner o de gestión no se presentan como análisis completos.','No verifiable completed fundamental analysis is recorded in the archive. Partial, pending, scanner or management records are not presented as completed analyses.'))+'</p>';
     h+='</section>';
-    if(r && (!a || r!==a.row || window.FP_PROFILE_ENGINE.day(r.adate)!==a.date))h+='<section class="panel"><h3>'+esc(pt('Última revisión registrada','Latest recorded review'))+'</h3><p class="muted">'+esc(profileDate(window.FP_PROFILE_ENGINE.day(r.adate))+' · '+depthLabel(r.depth))+'</p><p>'+profileStatusBadge({latestReview:r})+'</p><p>'+esc(whyOf(r))+'</p>'+(nextOf(r)?'<p><b>'+esc(pt('Próximo paso: ','Next step: '))+'</b>'+esc(nextOf(r))+'</p>':'')+'<p>'+ (r.rep?reportLink(r.rep):'')+'</p><p class="muted">'+esc(pt('Fecha del registro de revisión. Puede reutilizar un análisis anterior y no equivale a una nueva valoración.','Review-record date. It may reuse an earlier analysis and does not necessarily mean a new valuation.'))+'</p></section>';
-    if(m)h+='<section class="panel"><h3>'+esc(pt('Seguimiento de la posición','Position follow-up'))+'</h3><p class="muted">'+esc(profileDate(window.FP_PROFILE_ENGINE.day(m.date))+' · '+(lang==='en'&&m.stateEn?m.stateEn:m.state))+'</p><p>'+esc(lang==='en'&&m.noteEn?m.noteEn:m.note)+'</p><p>'+ (m.rep?reportLink(m.rep):'')+'</p><p class="muted">'+esc(pt('Gestión y ejecución se conservan aparte del análisis fundamental.','Management and execution are kept separate from fundamental research.'))+'</p></section>';
+    if(r && (!a || r!==a.row || window.FP_PROFILE_ENGINE.day(r.adate)!==a.date))h+='<section class="panel"><h3>'+esc(pt('Última revisión registrada','Latest recorded review'))+'</h3><p class="muted">'+esc(profileDate(window.FP_PROFILE_ENGINE.day(r.adate))+' · '+depthLabel(r.depth))+'</p><p>'+profileStatusBadge({latestReview:r})+'</p><p>'+esc(whyOf(r))+'</p>'+(nextOf(r)?'<p><b>'+esc(managementAfterReview?pt('Próximo paso de la revisión histórica (puede estar superado): ','Historical review next step (may be superseded): '):pt('Próximo paso: ','Next step: '))+'</b>'+esc(nextOf(r))+'</p>':'')+'<p>'+ (r.rep?reportLink(r.rep):'')+'</p><p class="muted">'+esc(pt('Fecha del registro de revisión. Puede reutilizar un análisis anterior y no equivale a una nueva valoración.','Review-record date. It may reuse an earlier analysis and does not necessarily mean a new valuation.'))+'</p></section>';
+    if(m)h+='<section class="panel"><h3>'+esc(pt('Seguimiento de la posición','Position follow-up'))+'</h3><p class="muted">'+esc(profileDate(window.FP_PROFILE_ENGINE.day(m.date))+' · '+(lang==='en'&&m.stateEn?m.stateEn:m.state))+'</p><p>'+esc(lang==='en'&&m.noteEn?m.noteEn:m.note)+'</p>'+(nextOf(m)?'<p class="profile-management-calendar"><b>'+esc(pt('Próximo evento documentado en gestión','Next event recorded in management')+' · '+profileDate(managementDay)+': ')+'</b>'+esc(nextOf(m))+'</p>':'')+'<p>'+ (m.rep?reportLink(m.rep):'')+'</p><p class="muted">'+esc(pt('Gestión y ejecución se conservan aparte del análisis fundamental.','Management and execution are kept separate from fundamental research.'))+'</p></section>';
     h+='<section class="panel"><h3>'+esc(pt('Historial del escáner','Scanner history'))+'</h3><p class="muted">'+esc(pt('Fechas en las que apareció en el escáner publicado. No implican que pasara todos los filtros ni que se analizara ese día.','Dates when the stock appeared in the published scanner. They do not imply all filters passed or analysis was completed that day.'))+'</p>'+(p.scanDates.length?'<div class="profile-scan-dates">'+p.scanDates.slice().reverse().map(function(d){return '<a class="chip" href="#escaner" data-profile-scan="'+esc(d)+'" data-profile-scan-ticker="'+esc(p.ticker)+'">'+esc(fmtD(d))+'</a>';}).join('')+'</div>':'<p>'+esc(pt('No hay una aparición de escáner verificable en el archivo disponible.','No scanner appearance is verifiable in the available archive.'))+'</p>')+'</section>';
     h+='<section class="panel"><h3>'+esc(pt('Informes vinculados','Linked reports'))+' · '+p.reports.length+'</h3><p class="muted">'+esc(pt('Fuentes enlazadas en los registros o que identifican el ticker en el título. La categoría distingue valoración, seguimiento y gestión. Los informes originales conservan su idioma.','Sources linked by records or naming the ticker in their title. Categories distinguish valuation, follow-up and management. Original reports retain their language.'))+'</p>'+profileReports(p.reports)+'</section>';
     if(p.decisions.length)h+='<details class="panel profile-decision-history"><summary>'+esc(pt('Historial de revisiones','Review history'))+' · '+p.decisions.length+'</summary>'+decisionArchiveTable(p.decisions,'profilehistory')+'</details>';

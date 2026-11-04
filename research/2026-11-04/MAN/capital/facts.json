@@ -1,0 +1,453 @@
+{
+  "issuer": "MAN",
+  "as_of": "2026-11-04",
+  "units_default": "USD million",
+  "purpose": "Research-only capital and normalization inputs; not a valuation",
+  "sources": {
+    "Q3": {
+      "url": "https://www.sec.gov/Archives/edgar/data/871763/000119312526441750/man-20260930.htm",
+      "filed": "2026-10-30",
+      "period": "2026-09-30"
+    },
+    "FY25": {
+      "url": "https://www.sec.gov/Archives/edgar/data/871763/000119312526064113/man-20251231.htm",
+      "filed": "2026-02-23",
+      "period": "2025-12-31"
+    },
+    "CEO": {
+      "url": "https://www.sec.gov/Archives/edgar/data/871763/000119312526422283/d147845d8k.htm",
+      "filed": "2026-10-15"
+    },
+    "DIRECTOR": {
+      "url": "https://www.sec.gov/Archives/edgar/data/871763/000119312526435727/man-20261028.htm",
+      "filed": "2026-10-28"
+    }
+  },
+  "facts": [
+    {
+      "id": "cash",
+      "value": 233.1,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "p38 liquidity table",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "total_debt_carrying",
+      "value": 1103.4,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "p38 liquidity table",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "short_term_borrowings",
+      "value": 35.3,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "p38 liquidity table",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "current_maturities",
+      "value": 505.3,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "p38 liquidity table",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "long_term_debt",
+      "value": 562.8,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "p38 liquidity table",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "euro_2027_face",
+      "value": 400,
+      "unit": "EUR million",
+      "source_id": "Q3",
+      "locator": "Note 13/p16",
+      "note": "Maturity June 2027; FY25 Note 8 confirms June 30 and 3.50% coupon.",
+      "status": "reported"
+    },
+    {
+      "id": "euro_2030_face",
+      "value": 500,
+      "unit": "EUR million",
+      "source_id": "Q3",
+      "locator": "Note 13/p16",
+      "note": "Maturity December 2030; FY25 Note 8 confirms 3.750% coupon.",
+      "status": "reported"
+    },
+    {
+      "id": "euro_2027_carrying_usd",
+      "value": 452.5,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13/pp18-19",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "euro_2030_carrying_usd",
+      "value": 562.7,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13/pp18-19",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "notes_fair_value",
+      "value": 1003.1,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13/pp18-19",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "fair_value_hedge_swap_asset",
+      "value": 9.2,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13/pp18-19",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "net_investment_swap_current_liability",
+      "value": 25.4,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13/pp18-19",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "net_investment_swap_noncurrent_liability",
+      "value": 53.5,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13/pp18-19",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "forward_liability",
+      "value": 1.8,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13/pp18-19",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "deferred_compensation_assets",
+      "value": 194.1,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13/pp18-19",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "other_debt_carrying",
+      "value": 88.2,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "p38 and Note 13",
+      "note": "1103.4 - 452.5 - 562.7; residual, not a separate disclosed face principal.",
+      "status": "calculated"
+    },
+    {
+      "id": "net_book_debt",
+      "value": 870.3,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "p38",
+      "note": "1103.4 - 233.1; before non-debt claims.",
+      "status": "calculated"
+    },
+    {
+      "id": "net_derivative_liability",
+      "value": 71.5,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13",
+      "note": "25.4 + 53.5 + 1.8 - 9.2. Arithmetic gross-to-net only, not proof of legal set-off or realization.",
+      "status": "calculated"
+    },
+    {
+      "id": "deferred_compensation_liability_q3",
+      "value": null,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 13",
+      "note": "Not separately quantified in this quarterly disclosure.",
+      "status": "unresolved"
+    },
+    {
+      "id": "deferred_compensation_asset_and_liability_each",
+      "value": 188.6,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9/pp79-84",
+      "note": "Stale relative to Q3 balance date; do not present as current measurement.",
+      "status": "reported"
+    },
+    {
+      "id": "pension_us_current_liability",
+      "value": 2.1,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9/pp79-84",
+      "note": "Stale relative to Q3 balance date; do not present as current measurement.",
+      "status": "reported"
+    },
+    {
+      "id": "pension_us_noncurrent_liability",
+      "value": 15.7,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9/pp79-84",
+      "note": "Stale relative to Q3 balance date; do not present as current measurement.",
+      "status": "reported"
+    },
+    {
+      "id": "pension_non_us_current_liability",
+      "value": 0.8,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9/pp79-84",
+      "note": "Stale relative to Q3 balance date; do not present as current measurement.",
+      "status": "reported"
+    },
+    {
+      "id": "pension_non_us_noncurrent_liability",
+      "value": 94.9,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9/pp79-84",
+      "note": "Stale relative to Q3 balance date; do not present as current measurement.",
+      "status": "reported"
+    },
+    {
+      "id": "pension_surplus_asset",
+      "value": 42.2,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9/pp79-84",
+      "note": "Stale relative to Q3 balance date; do not present as current measurement.",
+      "status": "reported"
+    },
+    {
+      "id": "retiree_health_deficit",
+      "value": 8.9,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9/pp79-84",
+      "note": "Stale relative to Q3 balance date; do not present as current measurement.",
+      "status": "reported"
+    },
+    {
+      "id": "pension_gross_recognized_liabilities",
+      "value": 113.5,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9/p79",
+      "note": "2.1 + 15.7 + 0.8 + 94.9; no evidence reviewed establishes surplus availability across plans.",
+      "status": "calculated"
+    },
+    {
+      "id": "pension_net_funded_deficit",
+      "value": 71.3,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9/p79",
+      "note": "113.5 minus 42.2; not unrestricted cash-netted claim.",
+      "status": "calculated"
+    },
+    {
+      "id": "gross_pension_plus_health_deficits",
+      "value": 122.4,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 9",
+      "note": "113.5 + 8.9; before any supported surplus credit.",
+      "status": "calculated"
+    },
+    {
+      "id": "2026_pension_expected_contributions",
+      "value": 21,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 10/p15",
+      "note": "Revised from FY25 expectation of 17.0; YTD paid 13.4.",
+      "status": "reported"
+    },
+    {
+      "id": "gross_utb_including_interest_penalties",
+      "value": 41.6,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 7/p13",
+      "note": "Gross tax-position measure, not proven incremental cash debt. All except 3.9 would affect ETR if recognized.",
+      "status": "reported"
+    },
+    {
+      "id": "fy25_gross_utb_including_interest_penalties",
+      "value": 41.4,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 5/p75",
+      "note": "39.8 gross tax positions plus 1.6 interest/penalties.",
+      "status": "reported"
+    },
+    {
+      "id": "fy25_utb_liability_commitments_disclosure",
+      "value": 15.6,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "MD&A commitments/p39",
+      "note": "Separately described liability including interest and penalties. Difference from 41.4 gross requires reconciliation; do not assume gross equals cash claim.",
+      "status": "reported"
+    },
+    {
+      "id": "q3_etr",
+      "value": 49.8,
+      "unit": "percent",
+      "source_id": "Q3",
+      "locator": "Note 7/p13",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "ytd_etr",
+      "value": 48.7,
+      "unit": "percent",
+      "source_id": "Q3",
+      "locator": "Note 7/p13",
+      "note": "Mix, valuation allowances, French surcharge and business tax prevent a mechanical 21% normalization.",
+      "status": "reported"
+    },
+    {
+      "id": "fy25_french_business_tax_gross",
+      "value": 11.8,
+      "unit": "USD million",
+      "source_id": "FY25",
+      "locator": "Note 5/pp72-73",
+      "note": "9.3 net of benefit using US 21% in reconciliation. Phaseout delayed three years by 2025 Finance Bill; exceptional surcharge extended one year by 2026 Finance Bill per issuer.",
+      "status": "reported"
+    },
+    {
+      "id": "restructuring_reserve",
+      "value": 19,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 6/p13",
+      "note": "Most expected paid by end 2026; exited lease liabilities are already in operating lease balances.",
+      "status": "reported"
+    },
+    {
+      "id": "restructuring_ytd_charge",
+      "value": 30.6,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 6/p13",
+      "note": "Severance 30.1, lease cost 0.5; cash paid 46.2; 0.5 noncash charge.",
+      "status": "reported"
+    },
+    {
+      "id": "operating_lease_liabilities",
+      "value": 359,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 14/p19",
+      "note": "99.2 current plus 259.8 noncurrent; do not add without consistent lease convention in earnings/EV.",
+      "status": "reported"
+    },
+    {
+      "id": "jftc_exposure",
+      "value": null,
+      "unit": "USD million",
+      "source_id": "Q3",
+      "locator": "Note 16/p24",
+      "note": "Inspection June 2, 2026; ongoing investigation; scope, duration, outcome and financial impact unquantifiable.",
+      "status": "unresolved"
+    },
+    {
+      "id": "current_shares",
+      "value": 46.50557,
+      "unit": "million shares",
+      "source_id": "Q3",
+      "locator": "Cover",
+      "note": "Outstanding October 28, 2026; equals September issued less treasury.",
+      "status": "reported"
+    },
+    {
+      "id": "q3_weighted_average_diluted_shares",
+      "value": 48.1,
+      "unit": "million shares",
+      "source_id": "Q3",
+      "locator": "Note 8/p13",
+      "note": "46.9 basic plus 1.2 dilutive awards; 0.6m antidilutive awards excluded. Not current outstanding count.",
+      "status": "reported"
+    },
+    {
+      "id": "ytd_weighted_average_diluted_shares",
+      "value": 47.6,
+      "unit": "million shares",
+      "source_id": "Q3",
+      "locator": "Note 8/p13",
+      "note": "",
+      "status": "reported"
+    },
+    {
+      "id": "ceo_2027_target_compensation",
+      "value": {
+        "base": 1.15,
+        "cash_bonus_percent": 150,
+        "lti": 7.5
+      },
+      "unit": "USD million except percent",
+      "source_id": "CEO",
+      "locator": "Item 5.02",
+      "note": "Frankiewicz CEO January 1, 2027; change-of-control/protected-period severance multiple rises 2x to 3x salary plus target bonus.",
+      "status": "reported"
+    },
+    {
+      "id": "executive_chair_2027_target_compensation",
+      "value": {
+        "base": 1,
+        "cash_bonus_percent": 140,
+        "lti": 5.2
+      },
+      "unit": "USD million except percent",
+      "source_id": "CEO",
+      "locator": "Item 5.02",
+      "note": "Prising executive chair through December 31, 2027. Target compensation is not current funded debt; model future expense/cash and dilution consistently.",
+      "status": "reported"
+    },
+    {
+      "id": "new_director_annual_compensation",
+      "value": {
+        "cash": 0.12,
+        "stock": 0.18
+      },
+      "unit": "USD million",
+      "source_id": "DIRECTOR",
+      "locator": "Item 5.02",
+      "note": "Lidia Fonseca effective November 1, 2026; 2026 prorated.",
+      "status": "reported"
+    }
+  ]
+}

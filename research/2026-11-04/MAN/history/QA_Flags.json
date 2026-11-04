@@ -1,0 +1,50 @@
+[
+  {
+    "id": "NORM-PARTIAL",
+    "severity": "material",
+    "issue": "EBIT normalization removes impairments and identified current-TTM Jefferson Wells gain only. Restructuring, SBC, transformation and other items remain; net income/EPS not tax-normalized.",
+    "readiness": "Partial analysis only; not full normalized earnings"
+  },
+  {
+    "id": "PERIMETER-FX",
+    "severity": "material",
+    "issue": "Reported USD revenue is not constant FX or constant perimeter. Jefferson Wells retained-perimeter historical bridge missing.",
+    "readiness": "Reported actuals loadable; organic comparison incomplete"
+  },
+  {
+    "id": "CFO-FACTORING",
+    "severity": "material",
+    "issue": "No quantified receivable-sale/factoring reconciliation located. Zero factoring cannot be asserted. WC payroll/collection timing material.",
+    "readiness": "Reported CFO only; normalized cash generation not established"
+  },
+  {
+    "id": "SOFTWARE-SPLIT",
+    "severity": "scope_gap",
+    "issue": "Separate software capex available annually only. Quarter/TTM null; included in total capex, not incremental. Cloud implementation balances are not cash spend.",
+    "readiness": "Total-capex FCF loadable; detailed software cash bridge partial"
+  },
+  {
+    "id": "EPS-TTM",
+    "severity": "definition",
+    "issue": "TTM EPS is null; separately labeled quarterly-sum proxy2.53 (prior\u22120.47) is not a reported GAAP TTM EPS. Q4 EPS0.64 sourced directly, not annual minus YTD.",
+    "readiness": "Use sourced quarterly/year EPS; label proxy"
+  },
+  {
+    "id": "TAX-JURISDICTIONS",
+    "severity": "material",
+    "issue": "CVAE, French exceptional surtax, deferred taxes, nondeductible costs and loss-jurisdiction valuation allowances prevent blanket21% normalization.",
+    "readiness": "Do not publish normalized NI/EPS without jurisdiction-level bridge"
+  },
+  {
+    "id": "INTERIM-UNAUDITED",
+    "severity": "caveat",
+    "issue": "Interim statements unaudited; 0.1M rounding tolerance. 35 performed checks do not constitute full statement audit.",
+    "readiness": "Reported actuals with caveat"
+  },
+  {
+    "id": "MATCHED-DEFERRED-COMP",
+    "severity": "material",
+    "issue": "Annual plan investment gains are exactly offset by SGA compensation. Annual operating bridge adds21.9/21.7/23.3 while removing below-operating gains; no NI uplift. Quarterly gains not isolated in Note12, so after-plan TTM EBIT remains null, not274.9 fully normalized.",
+    "readiness": "Current TTM274.9 is before unknown matched-plan correction. Do not compare to after-plan annual EBIT as though fully consistent."
+  }
+]

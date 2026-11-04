@@ -1,0 +1,29 @@
+{
+  "riskFreeDate": "2026-11-04",
+  "riskFree10Y": 0.049,
+  "erpDate": "2026-11-01",
+  "erp": 0.0441,
+  "erpOwnReferenceRiskFree": 0.0529,
+  "betaProvider5Y": 0.76,
+  "costEquity": 0.082516,
+  "marketEquityBasic": 2182.9714558,
+  "debtCarryingProxy": 1103.4,
+  "debtWeight": 0.33575023847430535,
+  "selectedDebtCost": 0.07,
+  "selectedInterestTaxShield": 0.25,
+  "waccReference": 0.07243812084195525,
+  "baseDiscount": 0.1,
+  "selectedPremiumBasisPoints": 275.6187915804476,
+  "sources": [
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "https://stockanalysis.com/stocks/man/statistics/"
+  ],
+  "limits": [
+    "Historical beta0.76 may understate staffing cash-flow cyclicality.",
+    "Debt cost7% selected, not verified marginal bond yield.",
+    "Interest tax shield25% selected, distinct from45% operating cash tax; global tax losses and French business tax prevent assuming identical deductibility.",
+    "10% base selected risk allowance, not rounding of mechanical WACC.",
+    "Debt balance Sept30 and coverOct28 are not certified November4 capital."
+  ]
+}

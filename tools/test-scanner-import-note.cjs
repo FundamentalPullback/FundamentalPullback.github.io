@@ -1,0 +1,11 @@
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),Module=require('module');
+const filename=path.join(__dirname,'load-stock-profiles.cjs'),mod=new Module(filename,module);mod.filename=filename;mod.paths=module.paths;
+mod._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,scanAuditNote,latestScannerNotice,vEscaner,vResumen,'),filename);
+const {t,c}=mod.exports(path.resolve(__dirname,'..'));
+const fixture={schema:'fp.scanner-import.v1',rawTimestamp:'Quote on 11/4/26 17:46:27',rowCount:192,priorityCount:70,missingFields:['Stage 2','RSI'],rawFile:'research/2026-11-04/scanner/2026-11-04-Quote.csv',reportId:'A250',diagnosticFile:'research/2026-11-04/scanner/pullback-diagnostics.json',pullbackDiscrepancyCount:33,corrections:{}};
+c.window.FP_SCAN_AUDIT=c.window.FP_SCAN_AUDIT||{};c.window.FP_SCAN_AUDIT['2099-01-05']=fixture;const saved=JSON.stringify(fixture);
+for(const lang of ['es','en']){t.setLang(lang);for(const ticker of [undefined,'FUTURE']){const h=t.scanAuditNote('2099-01-05',ticker);for(const x of ['192','70','33','A250',fixture.rawFile,fixture.diagnosticFile])assert(h.includes(x));assert(h.includes(lang==='es'?'Stage 2 no consta':'Stage 2 is absent'));assert(h.includes(lang==='es'?'sin heredar':'without inheriting'));assert(!h.includes('undefined'));assert(!h.includes('workbook'));assert(!h.includes('Libro corregido'));assert(!h.includes('nueve empresas'));assert(!h.includes('200 símbolos'));}
+const legacy=t.scanAuditNote('2026-11-03');assert(legacy.includes(lang==='es'?'Libro corregido':'Corrected workbook'));
+t.S.scan=t.S.scan.concat([{ticker:'FUTURE',date:'2099-01-05',opp:90,s2:null,price:1}]);t.S.scanDate='2099-01-05';t.S.resDate='2099-01-05';
+const scanner=t.vEscaner(),overview=t.vResumen();assert(scanner.includes('Opportunity ≥85'));assert(!scanner.includes(lang==='es'?'Solo Stage 2':'Stage 2 only'));assert(overview.includes('Opportunity ≥85'));assert(!overview.includes(lang==='es'?'Empresas en Stage 2':'Companies in Stage 2'));}
+assert.equal(JSON.stringify(fixture),saved);console.log('PASS generic import note: absent Stage2 not inherited, raw PB preserved, diagnostic separate, no legacy counts/workbook; ES/EN score-only filter and overview; old audit retained.');
