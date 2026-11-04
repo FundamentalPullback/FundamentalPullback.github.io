@@ -63,3 +63,25 @@ TradingView hosts and refreshes its official Symbol Info widget. Public exchange
 Official sources: https://www.tradingview.com/widget-docs/faq/data/ , https://www.tradingview.com/widget-docs/faq/general/ , https://www.tradingview.com/widget-docs/tutorials/iframe/build-page/widget-integration/ , https://www.tradingview.com/widget-docs/markets/north-america/ . Keep the widget attribution and branding. Do not export or republish its quotes outside the widget.
 
 The historical close field is intentionally independent. Only a documented regular-session close with its source/session date fills it. The account's existing Google Sheets feed is unchanged. Google Finance documentation says quotes can be delayed up to 20 minutes; its redistribution terms do not grant a general public quote API. This release does not expand that feed or change sheet sharing.
+
+
+## Daily stock chart
+
+Each selected profile now includes an additional official Advanced Chart widget. The existing Symbol Info quote remains separate and unchanged. Both use `profileQuoteSymbol`, including explicit unavailable values and exact current-profile/full-directory fallbacks; there is no per-ticker chart list. The chart is also included for the single-result profile shown directly after a search.
+
+Initial chart configuration: `interval: D`, `range: 12M`, candlesticks, exchange timezone, regular-session display, visible volume, three `MAExp@tv-basicstudies` instances with input lengths 20, 50 and 200, and `ATR@tv-basicstudies` with length 14. TradingView's standard defaults are closing-price EMA with zero offset and RMA-smoothed ATR. Users may explore other ranges/timeframes in the provider toolbar; the surrounding caption says “Initial view” rather than claiming those are permanent settings. The chart cannot change to another symbol inside the stock profile.
+
+Only the displayed profile can mount a chart. IntersectionObserver waits until the reserved chart area is within 160 pixels of the viewport; browsers without that API load it immediately. No list-result widgets are created. Old observers are disconnected before a view render, and late callbacks cannot load detached elements. Duplicate mounts are suppressed. The existing page Refresh action reloads the visible quote/chart. The chart section is excluded from the page's profile-swipe gesture so provider panning cannot navigate to another stock. The chart reserves 600 pixels of height on desktop and 540 pixels at narrow widths to reduce layout shift.
+
+Public wording explicitly separates the latest available provider data from the documented historical close, valuation and research snapshot. US stock widget feeds may be delayed, and today's daily candle may be unfinished. There is no new real-time entitlement, market-data API, export, calculation ingestion, alert, account login or credential. Unknown identities show an unavailable message; a script failure leaves an explicit error, the source link and Refresh recovery. For an exchange restriction within its iframe, TradingView supplies its own unavailable state. Retain attribution and never substitute another ticker.
+
+Regression test: `node tools/test-stock-charts.cjs`, registered in the preparation entry point. It covers all current profiles in both languages, explicit null/unknown identities, future directory-backed profiles, chart options, lazy/repeated/refresh/detached mounts, themes, failure states and gesture exclusion. Run the full preparation entry point with the separately required canonical Stage 3.5 readback. Do not put that private readback in the repository.
+
+Primary widget references:
+- https://www.tradingview.com/widget-docs/widgets/charts/advanced-chart/
+- https://www.tradingview.com/widget-docs/widgets/charts/advanced-chart/demos/technical-analysis/
+- https://www.tradingview.com/widget-docs/tutorials/iframe/build-page/dynamic-symbols/
+- https://www.tradingview.com/support/solutions/43000592270-exponential-moving-average/
+- https://www.tradingview.com/support/solutions/43000501823-average-true-range-atr/
+
+The current official component bundle at https://widgets.tradingview-widget.com/w/en/tv-advanced-chart.js explicitly carries study objects' `id`, `overlay` and `inputs` through to the hosted Advanced Chart. Browser visual QA is still required for any change to study configuration; passing a script/static test alone cannot prove provider rendering.
