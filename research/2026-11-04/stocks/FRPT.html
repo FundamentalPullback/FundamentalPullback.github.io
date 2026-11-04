@@ -1,0 +1,898 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FRPT · A189 · Stage 3 completo</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/FRPT">← FRPT profile</a><a href="../index.html">Research index</a></nav><p class="eyebrow">A189 · November 4, 2026 · No entry approval</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">Esperar precio</span><span class="tag">No entry approval</span></div><p><strong><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/FRPT.html">Open the full readable FRPT dossier</a></strong></p>
+<h2 id="a189-publication-and-source-cutoff">A189 · Publication and source cutoff</h2>
+<p>Research cutoff: November 4, 2026, 12:04 UTC. The official Q3 release was published at 06:30:34 EST (11:30:34 UTC); the 08:00 EST (13:00 UTC) call was still future at that cutoff. No call completion, Q&amp;A or post-release quotation is claimed.</p>
+<p><strong>Good company; wait for price or stronger evidence. Central $44.38 versus $69.60; operating alternative $58.92 and joint alternative $68.34; favorable $84.79. Q3 release incorporated; call still future at the 12:04 UTC cutoff. Research complete; no Stage 3.5 or entry approval.</strong></p>
+<p>November 3 scanner: $69.60; separately documented regular close: $69.60. Equal values do not make the scanner timestamp an independently certified close.</p>
+<p><strong>Coverage and disclosed source limits:</strong> FY2023–FY2025; Q4 2025–Q3 2026; September 2025 and September 2026 TTM. Comparable EBIT, SBC, tax and cash normalization included. Reported CFO/cash-capex history complete; economic TTM FCFF is $10.725m minus undisclosed Q3 noncash finance-lease additions L, not an exact number with L assumed zero. Current award inventory remains a proxy. The source SEC check at 11:59 UTC had not located the new earnings filing; official release, prepared remarks and slides underpin current results.</p>
+<p><strong>No approved trade, Stage 3.5 entry, new quantity, buy ceiling or operative stop.</strong> A complete research dossier is not an execution authorization.</p>
+<hr />
+<h1 id="frpt-stage-3-completo-tras-resultados-q3-2026">FRPT — Stage 3 completo tras resultados Q3 2026</h1>
+<p><strong>Fecha de revisión: 4 de noviembre de 2026, después del comunicado de las 06:30:34 EST y antes de la conferencia de las 08:00 EST. Versión FRPT-S3-20261104-v 1.</strong></p>
+<p><strong>Resultado: buena empresa; esperar precio o evidencia que respalde un escenario más exigente. Investigación fundamental completa con la información publicada al corte; no aprobada una compra ni una entrada Stage 3.5.</strong> No se descarta permanentemente. No se exige un descuento universal del 15%, un crecimiento mínimo mecánico ni una rentabilidad arbitraria.</p>
+<p>Precio de referencia <strong>$69.60</strong>, cierre regular del 3 de noviembre, no cotización posterior al resultado. Nasdaq, acción ordinaria estadounidense, USD; no ADR ni conversión de divisas. Verificado con <a href="https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=FRPT%3ANMQ">historial de FT/Markit</a> y la observación del <a href="https://fundamentalpullback.github.io/data/scan-3960.js">escáner del usuario</a>. No se mezclan precios intradía/after-hours con el cierre. Cantidades en millones de USD, salvo acciones, EPS, hogares y porcentajes especificados.</p>
+<h2 id="qué-decide-la-revisión">1. Qué decide la revisión</h2>
+<ul>
+<li>El trimestre confirma progreso operativo real: ventas +10.0%, volumen +10.0%, margen bruto GAAP 44.5% y EBIT $35.130 m. El EBIT TTM normalizado después de SBC económica crece <strong>20.6%</strong>, no el crecimiento aparente del beneficio neto contaminado por impuestos/venta de inversión.</li>
+<li>La calidad de crecimiento merece vigilancia: consumo medido +12.7%, pero hogares compradores apenas +1%, frente a +9% de gasto por hogar. Parte de la brecha entre consumo y envíos tiene explicación de calendario/inventario; no prueba deterioro estructural ni garantiza recuperación.</li>
+<li>La mejora de caja existe, pero Q3 CFO cae $6.0 m; el FCF sube $6.3 m porque capex cae $12.3 m. El recorte de capex es en parte aplazamiento por productividad, no prueba de inversión recurrente mínima.</li>
+<li>DCF central <strong>$44.38</strong>, alternativa operativa plausible a coste de capital central <strong>$58.92</strong>, y alternativa conjunta con WACC 9.5%/ROIC 20% <strong>$68.34</strong>. Escenario favorable más exigente <strong>$84.79</strong>. Por tanto, $69.60 puede tener explicación económica razonable, pero requiere mejoras de demanda, margen y/o coste de capital simultáneamente; no queda respaldado por el centro de la evidencia actual.</li>
+<li>Rango de trabajo de escenarios centrales plausibles: <strong>aproximadamente $44–59</strong>. El entorno de $68 no es absurdo, pero supone adoptar la alternativa conjunta favorable de demanda/márgenes/capital. No se denomina “valor razonable” a todo el intervalo adverso–favorable $11–85.</li>
+<li>Confianza <strong>media en la dirección operativa y baja-media en el valor puntual</strong>. La amplitud es incertidumbre de hipótesis, no probabilidades ni límites de pérdida.</li>
+</ul>
+<h2 id="resultados-nuevos-guía-y-acontecimientos">2. Resultados nuevos, guía y acontecimientos</h2>
+<p>El <a href="https://investors.freshpet.com/news-releases/news-release-details/freshpet-inc-reports-third-quarter-2026-financial-results">comunicado oficial de 4 nov</a>, los <a href="https://investors.freshpet.com/static-files/c7c74ec5-1ed3-410b-8411-deca2f2f769e">comentarios preparados</a> y la <a href="https://investors.freshpet.com/static-files/f82d5c97-c5cc-4996-bcf7-5114ee716771">presentación Q3</a> ya están publicados. La conferencia y sus preguntas todavía no habían ocurrido al corte. La consulta SEC final a las 11:59 UTC no mostraba aún el 10-Q/8-K de resultados; no se inventan sus notas.</p>
+<p>Q3 ventas $317.840 m frente a $288.848 m; beneficio bruto $141.307 m frente a $114.192 m; EBIT $35.130 m frente a $24.901 m; beneficio neto $29.712 m frente a $101.663 m; EPS básico/diluido $0.61/$0.58. El desplome del beneficio neto interanual no es una caída comparable del negocio: el anterior trimestre tenía una fuerte liberación fiscal. Margen bruto ajustado 50.0% y EBITDA ajustado $64.542 m/20.3% no equivalen a márgenes GAAP.</p>
+<p>9M ventas $921.070 m (+12.8%): volumen +13.3%, precio/mix −0.5%. EBIT $61.170 m, beneficio neto $97.708 m; éste incluye ganancia de inversión $66.552 m. CFO $145.516 m y capex $80.259 m. La venta de inversión aportó $99.998 m a <strong>inversión</strong>, ya excluida del CFO; no se resta otra vez del CFO.</p>
+<p>Guía FY2026: ventas +12–13% frente a +10–12%, equivalente a <strong>$1,234.257–1,245.277 m</strong>, centro $1,239.767 m. EBITDA ajustado $215–220 m frente a $210–220 m. Capex $125–150 m frente a aproximadamente $150 m. Esto implica capex Q4 <strong>$44.741–69.741 m</strong>, muy superior a los $22.935 m de Q3. No extrapolar el último trimestre bajo.</p>
+<p>Objetivos 2027: ventas por encima de categoría, margen bruto ajustado al menos 49%, EBITDA ajustado 20–22%. Los comentarios nuevos sitúan el margen en la <strong>mitad inferior</strong> sin alivio importante de inflación. Se planean aumentos selectivos de precio en algunos artículos. Logística supone $10–12 m sobre el plan inicial FY26, frente a $8 m previsto en Q2. Q4 espera menor margen bruto secuencial por paradas planificadas y personal de Homestyle. No se presenta consenso como si fuera guía: este informe no usa una serie verificable de estimaciones sell-side.</p>
+<h2 id="negocio-crecimiento-y-motivo-del-retroceso">3. Negocio, crecimiento y motivo del retroceso</h2>
+<p>Freshpet fabrica comida refrigerada para mascotas y opera infraestructura de producción, cadena fría y refrigeradores propios en minoristas. No es software recurrente ni una marca de alimentación sin activos. Sus posibles ventajas son distribución, densidad logística, fabricación, calidad y repetición de compra. Aún debe demostrar que esas ventajas generan retornos sostenibles después de publicidad, capex y SBC. Walmart representó 25% de ventas FY25, Costco 10% y los diez principales clientes 68%: poder de negociación concentrado. Fuente: <a href="https://www.sec.gov/Archives/edgar/data/1611647/000161164726000006/frpt-20251231.htm">10-K FY2025, negocio/riesgos</a>.</p>
+<p>Q3 red: 31,164 tiendas, 40,523 refrigeradores; 25% de tiendas EE.UU./Canadá tienen más de uno. Tiendas +5%, refrigeradores +4%, capacidad cúbica +5%, puntos de distribución +14%. Ecommerce +35% y 16.9% de negocio, pero 82% se sirve mediante la red minorista; no sumar digital y fridges como mercados excluyentes. Homestyle supera $100 m de ventas <strong>retail</strong>, no ventas netas de FRPT.</p>
+<p>Panel 52 semanas: 15.5 m hogares frente a 15.3 m; gasto $122 frente a $112; MVP 2.6 m frente a 2.4 m, con $522 por año y 72% de ventas. Los 15.9 m hogares del panel Q2 usan otra ventana: no inferir una tasa de churn de la diferencia. Consumo medido Q3 +12.7% y volumen retail +14%; canales no medidos añadirían 1–2 puntos según dirección. Envios +10% soportan &gt;2 puntos de comparación de club/4 de julio y 1–2 puntos adicionales por inventario del cliente creciendo menos que sus ventas. Son explicaciones de dirección, no auditoría de sell-through.</p>
+<p>Hill’s lanzó refrigerado en especialidad en julio 2026; Blue Buffalo Love Made Fresh se lanzó nacionalmente en octubre 2025. Purina y Nom Nom también ofrecen formatos frescos/congelados. Las relaciones de veterinarios, marcas y capital de estos grupos son riesgos reales. Sus ventas comparables por producto y retorno incremental no están revelados. No asignar letras anónimas de competidores del deck a nombres sin evidencia. <a href="https://www.hillspet.com/about-us/press-releases/hills-rolls-out-science-diet-refrigerated-dog-food">Hill’s</a>, <a href="https://privacy.generalmills.com/news/press-releases/blue-buffalo-launches-love-made-fresh-nationwide-making-every-meal-a-fresh-act-of-love-for-your-dog">Blue Buffalo</a>, <a href="https://www.purina.com/purina-one/fresh-entrees-dog-food">Purina</a>, <a href="https://support.nomnomnow.com/hc/en-us/articles/360024602113-Where-to-Buy-Nom-Nom">Nom Nom</a>.</p>
+<p><strong>Causa de caída:</strong> no se ha demostrado una causa única de mercado. El cierre del 3 nov está por encima de $64.12 del 23 oct y FT muestra avance anual; estar en un escáner de pullback no prueba un nuevo desplome. Desaceleración de hogares, competencia, logística y necesidad de inversión son preocupaciones verificables del negocio, no causalidad demostrada de cada movimiento bursátil. La noticia del 4 nov no pudo causar el cierre del 3 nov. Tampoco se atribuye el movimiento a una supuesta salida del CEO: Billy Cyr sigue; el cambio es President/COO/advisor.</p>
+<h2 id="historia-completa-y-normalización-comparable">4. Historia completa y normalización comparable</h2>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/1611647/000161164726000006/frpt-20251231.htm">10-K FY25, publicado 23 feb 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1611647/000161164726000012/frpt-20260331.htm">Q1 2026, 6 may</a>, <a href="https://www.sec.gov/Archives/edgar/data/1611647/000161164726000018/frpt-20260630.htm">Q2 2026, 5 ago</a>, <a href="https://www.sec.gov/Archives/edgar/data/1611647/000161164725000030/frpt-20250930.htm">Q3 2025, 3 nov 2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/1611647/000161164724000019/frpt-20240930.htm">Q3 2024, 4 nov 2024</a>, y comunicado Q3 2026 arriba. Los tres ejercicios son 2023–25; cuatro trimestres Q4’25–Q3’26. TTM = FY anterior + 9M actual − 9M anterior. CFO/capex/SBC trimestrales se calculan por diferencias acumuladas; EPS Q4 se obtiene del comunicado, <strong>no</strong> restando EPS anual menos 9M. Diferencias de $0.001 m pueden surgir de redondeo.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>Beneficio bruto</th>
+<th>EBIT GAAP</th>
+<th>Beneficio neto</th>
+<th>EPS básico / diluido</th>
+<th>CFO</th>
+<th>Capex caja</th>
+<th>FCF caja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td>766.895</td>
+<td>250.872</td>
+<td>-30.446</td>
+<td>-33.614</td>
+<td>-0.70 / -0.70</td>
+<td>75.940</td>
+<td>239.093</td>
+<td>-163.153</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td>975.177</td>
+<td>395.956</td>
+<td>37.999</td>
+<td>46.925</td>
+<td>0.97 / 0.93</td>
+<td>154.288</td>
+<td>187.092</td>
+<td>-32.804</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td>1,102.015</td>
+<td>449.626</td>
+<td>75.672</td>
+<td>139.137</td>
+<td>2.85 / 2.64</td>
+<td>160.561</td>
+<td>148.184</td>
+<td>12.377</td>
+</tr>
+<tr class="even">
+<td>Q4 2025</td>
+<td>285.229</td>
+<td>123.456</td>
+<td>44.463</td>
+<td>33.815</td>
+<td>0.69 / 0.64</td>
+<td>55.106</td>
+<td>53.050</td>
+<td>2.056</td>
+</tr>
+<tr class="odd">
+<td>Q1 2026</td>
+<td>297.644</td>
+<td>120.674</td>
+<td>4.331</td>
+<td>48.508</td>
+<td>0.99 / 0.91</td>
+<td>40.329</td>
+<td>27.599</td>
+<td>12.730</td>
+</tr>
+<tr class="even">
+<td>Q2 2026</td>
+<td>305.587</td>
+<td>128.694</td>
+<td>21.709</td>
+<td>19.488</td>
+<td>0.40 / 0.39</td>
+<td>44.425</td>
+<td>29.725</td>
+<td>14.700</td>
+</tr>
+<tr class="odd">
+<td>Q3 2026</td>
+<td>317.840</td>
+<td>141.307</td>
+<td>35.130</td>
+<td>29.712</td>
+<td>0.61 / 0.58</td>
+<td>60.762</td>
+<td>22.935</td>
+<td>37.827</td>
+</tr>
+<tr class="even">
+<td>TTM Sep 2025</td>
+<td>1,079.494</td>
+<td>437.769</td>
+<td>50.585</td>
+<td>123.444</td>
+<td>n/d / n/d</td>
+<td>155.824</td>
+<td>153.398</td>
+<td>2.426</td>
+</tr>
+<tr class="odd">
+<td>TTM Sep 2026</td>
+<td>1,206.299</td>
+<td>514.130</td>
+<td>105.633</td>
+<td>131.523</td>
+<td>n/d / n/d</td>
+<td>200.622</td>
+<td>133.309</td>
+<td>67.313</td>
+</tr>
+</tbody>
+</table></div>
+<p>No se inventa EPS TTM multiplicando o sumando denominadores distintos. La suma indicativa de EPS trimestrales actuales es $2.69 básico/$2.52 diluido, no un EPS GAAP TTM recalculado con reglas de convertibles. La pérdida FY23 aún no permite tasas porcentuales estables desde base negativa. Crecimiento de ventas FY24 27.16%, FY25 13.01%, TTM actual 11.75%: el modelo reconoce desaceleración, no extrapola el pasado excepcional.</p>
+<h3 id="puente-homogéneo-de-beneficio-y-caja">Puente homogéneo de beneficio y caja</h3>
+<p>EBIT normalizado = EBIT GAAP + cargos específicos excluidos + SBC publicada − <strong>3% de ventas</strong> como SBC económica analítica constante. No se añade la SBC de nuevo al FCFF proyectado. El 3% no es guidance: se utiliza para evitar perpetuar las reversiones de 2025 y se tensiona en escenarios al 2.5%/4%.</p>
+<p>Cargos FY25 retirados de EBIT: crédito de distribuidor $10.680 m, asuntos legales $5.703 m e internacional $1.273 m = $17.656 m. Son cargos concretos; no se retira toda SG&amp;A. No se vuelve a cobrar ficticiamente la cuenta incobrable ni se añade $17.656 m al CFO. FY23 otros gastos se conservan por prudencia. El cash FCF es CFO menos <strong>todo</strong> capex de caja; el diagnóstico propietario resta SBC económica, sin sustituirlo por FCFF operativo.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>SBC publicada</th>
+<th>SBC analista 3%</th>
+<th>Cargos retirados EBIT</th>
+<th>EBIT normalizado</th>
+<th>FCF − SBC normalizada</th>
+<th>D&amp;A CFO</th>
+<th>Δ circulante: entrada +</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td>24.935</td>
+<td>23.007</td>
+<td>0.000</td>
+<td>-28.518</td>
+<td>-186.160</td>
+<td>58.517</td>
+<td>16.091</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td>51.807</td>
+<td>29.255</td>
+<td>0.000</td>
+<td>60.551</td>
+<td>-62.059</td>
+<td>73.615</td>
+<td>-12.211</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td>13.883</td>
+<td>33.060</td>
+<td>17.656</td>
+<td>74.151</td>
+<td>-20.683</td>
+<td>89.721</td>
+<td>-30.559</td>
+</tr>
+<tr class="even">
+<td>Q4 2025</td>
+<td>-6.373</td>
+<td>8.557</td>
+<td>0.000</td>
+<td>29.533</td>
+<td>-6.501</td>
+<td>22.923</td>
+<td>-6.091</td>
+</tr>
+<tr class="odd">
+<td>Q1 2026</td>
+<td>9.137</td>
+<td>8.929</td>
+<td>0.000</td>
+<td>4.539</td>
+<td>3.801</td>
+<td>24.990</td>
+<td>2.626</td>
+</tr>
+<tr class="even">
+<td>Q2 2026</td>
+<td>6.379</td>
+<td>9.168</td>
+<td>0.000</td>
+<td>18.920</td>
+<td>5.532</td>
+<td>24.964</td>
+<td>-8.205</td>
+</tr>
+<tr class="odd">
+<td>Q3 2026</td>
+<td>5.886</td>
+<td>9.535</td>
+<td>0.000</td>
+<td>31.481</td>
+<td>28.292</td>
+<td>23.791</td>
+<td>-4.319</td>
+</tr>
+<tr class="even">
+<td>TTM Sep 2025</td>
+<td>34.201</td>
+<td>32.385</td>
+<td>17.656</td>
+<td>70.057</td>
+<td>-29.959</td>
+<td>88.164</td>
+<td>-28.384</td>
+</tr>
+<tr class="odd">
+<td>TTM Sep 2026</td>
+<td>15.029</td>
+<td>36.189</td>
+<td>0.000</td>
+<td>84.473</td>
+<td>31.124</td>
+<td>96.668</td>
+<td>-15.989</td>
+</tr>
+</tbody>
+</table></div>
+<p>TTM normalizado: EBIT $84.473 m frente a $70.057 m, +20.6%. Beneficio después de intereses netos y un impuesto estándar del 25%, retirando inversión y efectos fiscales extraordinarios: $60.993 m frente a $49.070 m, +24.3%; es métrica del analista, no EPS ajustado del emisor. Margen EBIT GAAP actual <strong>8.76%</strong>, normalizado 7.00%. El 17.283% que arrastra el escáner coincide aproximadamente con margen <strong>neto</strong> del viejo TTM junio ($203.474/$1,177.308), no margen operativo actual.</p>
+<p>TTM CFO $200.622 m frente a $155.824 m (+28.8%); capex $133.309 m frente a $153.398 m; FCF caja $67.313 m frente a $2.426 m. Después de SBC económica constante, $31.124 m frente a −$29.959 m. Usando el mismo denominador económico actual de 48.8685 m para aislar negocio, FCF caja por acción $1.38 frente a $0.05; después de SBC $0.64 frente a −$0.61. No son cifras históricas GAAP por acción.</p>
+<p>El CFO incluye un <strong>uso</strong> de circulante TTM de $15.989 m, frente a $28.384 m anterior: parte de mejora de caja es menor absorción, no una liberación perpetua. Inventarios a septiembre $95.151 m frente a $76.766 m de diciembre; cuentas a cobrar $68.561 m frente a $63.762 m. En Q3 inventario usa $7.680 m frente a liberación de $19.225 m en Q3 anterior. Esto explica por qué margen mejor no implica CFO trimestral mejor.</p>
+<p>Como puente FCFF histórico adicional: NOPAT normalizado + D&amp;A − capex de caja − altas no monetarias de finance leases + variación de circulante publicada. FY23 −$222.190 m, FY24 −$80.275 m, FY25 −$40.645 m; TTM anterior −$48.311 m. TTM actual es <strong>$10.725 m menos L</strong>, donde L son altas de finance leases no monetarias Q3 aún no desglosadas. No se sustituye L por cero. El diagnóstico de CFO/FCF de caja anterior sí es observado y completo. Una inversión económica adicional de $10 m reduce un flujo cercano en aproximadamente $0.19 por acción a WACC central; no constituye una cota auditada de L. No se usa esta incertidumbre menor para simular una falta de historia o bloquear toda valoración.</p>
+<p>SBC FY24 incluye $2.027 m de warrants a proveedor y FY23 $5.160 m; fueron servicios y terminaron de amortizarse en FY24. FY25 SBC $13.883 m incluye Q4 negativo de $6.373 m por reversiones de probabilidad de premios, no remuneración recurrente normal. En el modelo futuro SBC sí es coste económico y las compras futuras de acciones no son gratuitas.</p>
+<h2 id="balance-reclamaciones-y-dilución-sin-doble-cómputo">5. Balance, reclamaciones y dilución sin doble cómputo</h2>
+<p>A 30 septiembre: caja $345.860 m; convertible contable $399.007 m, pero obligación principal <strong>$402.5 m</strong>, cupón 3%, vence 1 abril 2028. Finance leases $28.539 m. Operating leases $65.651 m permanecen como alquiler en márgenes; no se restan otra vez como deuda. Reserva de caja operativa <strong>$30 m es hipótesis</strong>, deja $315.860 m excedentarios. No se añaden otra vez los $100 m de venta de inversión ni las recompras ya ejecutadas. Recompras de caja 9M $102.304 m, unas 1.8 m acciones; sólo se reconocen las ya reflejadas en caja/acciones a septiembre.</p>
+<p>La caja y futura generación reducen riesgo de vencimiento, pero no equivalen a capacidad ilimitada de recompras: principal excede caja total en $56.64 m antes de reservas/leases. El modelo mantiene la obligación y supone refinanciación para la TIR ilustrativa, no presume que ésta esté contratada. El riesgo reside en coste y capacidad de financiar crecimiento/deuda si el negocio decepciona, no en insolvencia inmediata demostrada.</p>
+<p>Acciones actuales publicadas: <strong>48.329 m</strong>. Promedio básico Q3 48.426 m, diluido GAAP 54.742 m. Conversión bruta 5.776519 m = $402.5 m × 14.3516 acciones/$1,000. Una proxy de dilución ordinaria es 54.742 − 48.426 − 5.776519 = <strong>0.539481 m</strong>; denominador económico 48.868481 m. No se trata ese promedio como inventario exacto de premios al día.</p>
+<p>Los capped calls comprados compensan la opción desde el strike inicial ~$69.68 hasta cap <strong>$120.23</strong> si se mantienen las condiciones y se liquida principal en caja. Modelo coherente: resta deuda principal, no añade simultáneamente las 5.7765 m acciones brutas; valora sólo el residual por encima del cap como call de 5.7765 m acciones. Black–Scholes simplificado, 513/365.25 años, Rf 4.91%, volatilidad <strong>asumida</strong>45%, sin dividendos. Valor residual al precio de mercado $26.967 m; a valor central $3.513 m. Se resuelve implícitamente precio × acciones + opción residual = EV + caja excedentaria − deuda − finance leases. La volatilidad no es una observación de mercado y la operación supone contrapartes cumplidoras/hedge intacto; no valora en detalle cláusulas de make-whole ni terminación anticipada. La proxy de premios ordinarios puede solaparse parcialmente con gasto futuro de antiguos premios no consolidados; no hay inventario Q3 para cuantificarlo exactamente y la sensibilidad de acciones muestra su escala. No se añade una capa de dilución anual por los mismos pagos futuros.</p>
+<p>Prueba de volatilidad 30–60% y acciones ordinarias ±0.3 m: central <strong>$43.93–44.72</strong>. La diferencia de liquidación física puede alterar acciones, pero deuda/valor de cobertura deben cambiar de forma consistente. No se resta principal y toda conversión a la vez. Se mantiene historial de opciones/RSU FY25/H1 y nueva retención de Baty 58,245 RSU (21 oct, vest junio 2029) sin convertirla automáticamente en duplicado de gasto futuro; dilución máxima aislada alrededor de 0.12%. Fuente <a href="https://investors.freshpet.com/node/14466/html">8-K 23 oct</a>. No es un cambio de CEO.</p>
+<p>DTA neto actual $42.924 m no se suma al equity. NOL federal FY25 $391.1 m, de ellos $146.5 m vencen 2028–37 y $244.6 m son indefinidos con límites; la venta de inversión ha consumido atributos. Límites Section 382 y NOL actual no están cuantificados. Modelo beneficio fiscal futuro limitado <strong>$25/35/40 m</strong> según escenario, impuesto normal 25% y máximo 80% de ahorro anual hasta agotarlo. Es reserva analítica, no declaración fiscal disponible. Sin ahorro fiscal, central $43.75. No confundir DTA contable con efectivo.</p>
+<h2 id="fcff-explícito-a-diez-años">6. FCFF explícito a diez años</h2>
+<p><strong>FCFF = EBIT económico − impuesto de caja + D&amp;A − inversión total − aumento de circulante.</strong> EBIT ya descuenta SBC. No se vuelve a restar SBC después ni se añade como caja. Año 1–10 son <strong>años rodantes NTM1–NTM10</strong>, anclados en TTM septiembre 2026, no FY2027–2036. Primera venta central $1,342.370 m equivale a +11.28% sobre TTM y +8.28% sobre centro de guía FY26; es una aproximación rodante, no previsión calendario precisa. Rebasar proporcionalmente al centro FY26 eleva central a $45.45, cambio pequeño.</p>
+<p>Demanda se descompone como hogares × compra anual retail × factor de realización neta constante 0.6379. Es una identidad de modelización calibrada a $1,206.299 m/15.5 m/$122, no precio contractual, medición de ingresos de todos los canales ni retorno de cohortes. El gasto mezcla volumen/participación de cartera/precio. No se suma MVP por separado. Central hogares +4% reduciéndose a 1%; gasto +7% reduciéndose a 2.5%. Esto ya exige recuperación de hogares desde el 1% actual; no es un caso de inmovilidad.</p>
+<p>EBITDA tipo guía central 20.5% en año 1,22% en 2,23.5% en 3,24.5% en 4 y 25% desde 5. A ese margen se añade un puente <strong>0.23634 puntos</strong>: D&amp;A total CFO TTM $96.668 m menos D&amp;A de conciliación EBITDA $93.817 m = $2.851 m. Permite restar luego D&amp;A total sin duplicar su gasto. El puente se mantiene por ventas como hipótesis; no se asegura que todos los $2.851 m sean un tipo de lease. Diferencias residuales de otras rentas/intereses significan que no se denomina conciliación exacta al EBITDA GAAP futuro. SBC central 3%; D&amp;A7.8% de ventas converge a 6%; EBIT maduro 16.236%. Adverso SBC4%, EBIT8.736%; favorable SBC2.5%, EBIT20.236%.</p>
+<p>Capacidad: 16 líneas actuales y potencial 24+ documentadas, mejoras desbloquean &gt;$100 m de capacidad de ingresos según dirección. <strong>Capacidad inicial $1,500/1,600/1,650 m, utilización 82/85/88%, productividad de expansión 2/3/3.5 x y crecimiento nominal de capacidad 1.5/2/2% son hipótesis, no datos revelados.</strong> Q2 afirmaba capacidad para 2026 y buena parte 2027; justifica no comprar una planta nueva cada año, no capex cero. Expansión = déficit de capacidad para ventas/utilización dividido por productividad. Capex mayor que mantenimiento amplía capacidad; el modelo no paga expansión sin reconocer capacidad.</p>
+<p>Mantenimiento central 85/90/95% de D&amp;A primeros tres años y 100% después: hipótesis transitoria de base joven. Capex mínimo $140 m/$130 m en primeros dos años; favorable 140/140; adverso 150/140. Se incluyen fridges, tecnología, producción y reposición, sin un desglose GAAP inexistente. Δ WC =5% de incremento de ventas, no se perpetúa la liberación de caja. Desde años 8–10 la reinversión converge al retorno sostenible, evitando que la expansión final sea gratuita. Terminal: NOPAT11 × (1 − g/ROIC), WACC &gt; g. Con central, NOPAT11 $293.330 m, reinversión $48.888 m, FCFF11 $244.442 m.</p>
+<p>WACC central 10.25%: <a href="https://www.federalreserve.gov/releases/h15/">Fed H.15, edición 3 nov/observación 2 nov</a> Treasury 10 años 4.91%; ERP4.5% y beta 1.35 <strong>supuestas</strong> dan Ke 10.985%; deuda 12%, coste marginal 6%, impuesto 25% dan aproximadamente 10.21%, redondeado 10.25%. No usar el cupón viejo 3% como coste de deuda perpetuo. Beta de proveedor cercana 1.70 implicaría WACC~11.6%; se muestra 11.5%. Beta 1.35 no es estimación estadística validada y es una elección relativamente benigna frente al dato de proveedor. La tasa no se aumenta a escondidas por cada riesgo ya modelado en caja.</p>
+<p>Terminal central g 3%, ROIC18%; adverso 2%/10%; favorable 3.5%/22%. g nominalUSD está por debajo del coste de capital; retornos requieren marca/red/productividad y no están garantizados. Como control de exigencia, NOPAT TTM normalizado $63.355 m sobre PP&amp;E neto más circulante operativo corriente al cierre de aproximadamente $1,234.049 m da sólo ~5.1%; es una proxy con saldo final, no ROIC auditado sobre capital medio. El objetivo terminal 18% exige una mejora sustancial de utilización/márgenes, no una prolongación del retorno actual. El caso central invierte $1,513.960 m en diez años y su NOPAT final sobre PP&amp;E más circulante modelados se aproxima al retorno terminal. No se asume adquisición gratuita ni venta de negocio extraordinaria.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año rodante</th>
+<th>Ventas</th>
+<th>EBIT económico</th>
+<th>SBC ya incluida</th>
+<th>Impuesto caja</th>
+<th>D&amp;A total</th>
+<th>Capex total</th>
+<th>Δ WC inversión</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1,342.37</td>
+<td>133.38</td>
+<td>40.27</td>
+<td>6.67</td>
+<td>104.70</td>
+<td>140.00</td>
+<td>6.80</td>
+<td>84.61</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1,472.71</td>
+<td>172.84</td>
+<td>44.18</td>
+<td>34.89</td>
+<td>110.45</td>
+<td>130.00</td>
+<td>6.52</td>
+<td>111.89</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1,600.47</td>
+<td>216.65</td>
+<td>48.01</td>
+<td>54.16</td>
+<td>115.23</td>
+<td>109.47</td>
+<td>6.39</td>
+<td>161.86</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>1,722.67</td>
+<td>255.58</td>
+<td>51.68</td>
+<td>63.90</td>
+<td>118.86</td>
+<td>131.17</td>
+<td>6.11</td>
+<td>173.27</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>1,845.32</td>
+<td>288.54</td>
+<td>55.36</td>
+<td>72.14</td>
+<td>121.79</td>
+<td>156.38</td>
+<td>6.13</td>
+<td>175.68</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>1,957.66</td>
+<td>310.02</td>
+<td>58.73</td>
+<td>77.51</td>
+<td>125.29</td>
+<td>154.87</td>
+<td>5.62</td>
+<td>197.32</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>2,066.79</td>
+<td>331.44</td>
+<td>62.00</td>
+<td>82.86</td>
+<td>128.14</td>
+<td>155.59</td>
+<td>5.46</td>
+<td>215.68</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>2,171.37</td>
+<td>352.55</td>
+<td>65.14</td>
+<td>88.14</td>
+<td>130.28</td>
+<td>169.85</td>
+<td>5.23</td>
+<td>219.62</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>2,259.04</td>
+<td>366.79</td>
+<td>67.77</td>
+<td>91.70</td>
+<td>135.54</td>
+<td>174.52</td>
+<td>4.38</td>
+<td>231.73</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>2,338.68</td>
+<td>379.72</td>
+<td>70.16</td>
+<td>94.93</td>
+<td>140.32</td>
+<td>192.11</td>
+<td>3.98</td>
+<td>229.02</td>
+</tr>
+</tbody>
+</table></div>
+<p>Central: EV <strong>$2,287.453 m</strong> + caja 345.860 − reserva 30 − principal 402.5 − finance leases 28.539 − opción 3.513 = equity común <strong>$2,168.761 m</strong> /48.868481 m = <strong>$44.3795</strong>. Cifras no redondeadas en código/JSON; todos los años de los tres escenarios en CSV.</p>
+<h2 id="escenarios-retorno-y-expectativas-del-precio">7. Escenarios, retorno y expectativas del precio</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th>CAGR ventas 10 años</th>
+<th>Ventas año 10</th>
+<th>EBIT año 10</th>
+<th>WACC / g / ROIC</th>
+<th>Valor hoy</th>
+<th>Vs $69.60</th>
+<th>Peso terminal</th>
+<th>TIR negocio / accionista*</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>adverse</td>
+<td>2.70%</td>
+<td>1,574.90</td>
+<td>8.74%</td>
+<td>11.50% / 2.00% / 10.00%</td>
+<td>10.92</td>
+<td>-84.31%</td>
+<td>45.99%</td>
+<td>-9.08% / -13.08%</td>
+</tr>
+<tr class="even">
+<td>central</td>
+<td>6.84%</td>
+<td>2,338.68</td>
+<td>16.24%</td>
+<td>10.25% / 3.00% / 18.00%</td>
+<td>44.38</td>
+<td>-36.24%</td>
+<td>55.55%</td>
+<td>4.52% / 4.59%</td>
+</tr>
+<tr class="odd">
+<td>favorable</td>
+<td>10.23%</td>
+<td>3,195.09</td>
+<td>20.24%</td>
+<td>9.50% / 3.50% / 22.00%</td>
+<td>84.79</td>
+<td>21.83%</td>
+<td>65.78%</td>
+<td>12.07% / 12.91%</td>
+</tr>
+</tbody>
+</table></div>
+<p>*La TIR del negocio descuenta FCFF y un valor de salida del año 10 fijado con los parámetros de cada escenario contra el EV exigido hoy. No es CAGR garantizada de cotización. La TIR de accionista es una <strong>proxy de distribución</strong>: paga caja excedentaria al inicio, distribuye flujos menos intereses después de impuestos, refinancia deuda hasta el final y satisface opción residual estimada. Esa política no está anunciada y la prima de opción no equivale a un pago esperado determinista. Se muestra para ilustrar sensibilidad financiera; la principal lectura es caja del negocio. Resolver un WACC que también cambie el múltiplo terminal da ~7.82% en central, distinto del 4.52% de salida fija; no confundir ambos conceptos de rentabilidad implícita.</p>
+<h3 id="alternativa-que-evita-convertir-el-central-en-dogma">Alternativa que evita convertir el central en dogma</h3>
+<p>Añadir 1.5 puntos anuales a cada motor hogares/gasto, mantener EBITDA inicial 20.5% y llevarlo a 27% al final, con SBC3% y D&amp;A6%, produce crecimiento de ventas <strong>9.97%</strong>, $3,119.762 m de ventas y EBIT18.236% en año 10. A coste de capital 10.25%/ROIC18%, vale <strong>$58.92</strong>. Con WACC9.5%/ROIC20%, vale <strong>$68.34</strong>, sólo 1.81% bajo $69.60, TIR negocio 9.27% y proxy accionista 9.86%.</p>
+<p>Esta trayectoria es plausible en una categoría que gana participación y no requiere crecimiento imposible; también exige recuperación y persistencia de hogares, mayor participación de cartera y ejecución de margen. Es evidencia de <strong>precio casi razonable bajo un conjunto concreto de supuestos</strong>, no permiso para promover retrospectivamente esos supuestos a centrales. El actual 1% de hogares y advertencia de inflación limitan la confianza. Una entrada parcial puede ser válida bajo el plan cuando esa combinación esté respaldada; el tamaño pequeño por sí solo no crea valor.</p>
+<h3 id="inversa-conjunta-con-el-mismo-modelo">Inversa conjunta con el mismo modelo</h3>
+<p>Se desplaza crecimiento de hogares/gasto y se aumenta margen gradualmente desde cero en año 1 hasta el cambio completo en año 10. No se obliga a saltar de inmediato por encima de la guía 2027. Capex, circulante, impuestos, claims y reinversión siguen idéntica lógica. Todas las filas igualan $69.60.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th>EBIT maduro</th>
+<th>CAGR ventas requerido</th>
+<th>Ventas año 10</th>
+<th>Hogares año 10, M</th>
+<th>Compra anual retail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9.50%</td>
+<td>16.24%</td>
+<td>12.28%</td>
+<td>3,841.15</td>
+<td>25.84</td>
+<td>233.05</td>
+</tr>
+<tr class="even">
+<td>10.25%</td>
+<td>16.24%</td>
+<td>14.60%</td>
+<td>4,715.07</td>
+<td>28.65</td>
+<td>258.03</td>
+</tr>
+<tr class="odd">
+<td>11.50%</td>
+<td>16.24%</td>
+<td>18.45%</td>
+<td>6,558.90</td>
+<td>33.82</td>
+<td>303.99</td>
+</tr>
+<tr class="even">
+<td>9.50%</td>
+<td>18.24%</td>
+<td>10.54%</td>
+<td>3,285.87</td>
+<td>23.88</td>
+<td>215.67</td>
+</tr>
+<tr class="odd">
+<td>10.25%</td>
+<td>18.24%</td>
+<td>12.76%</td>
+<td>4,008.45</td>
+<td>26.40</td>
+<td>238.04</td>
+</tr>
+<tr class="even">
+<td>11.50%</td>
+<td>18.24%</td>
+<td>16.41%</td>
+<td>5,512.41</td>
+<td>30.99</td>
+<td>278.85</td>
+</tr>
+<tr class="odd">
+<td>9.50%</td>
+<td>20.24%</td>
+<td>9.03%</td>
+<td>2,864.06</td>
+<td>22.29</td>
+<td>201.44</td>
+</tr>
+<tr class="even">
+<td>10.25%</td>
+<td>20.24%</td>
+<td>11.16%</td>
+<td>3,475.65</td>
+<td>24.57</td>
+<td>221.76</td>
+</tr>
+<tr class="odd">
+<td>11.50%</td>
+<td>20.24%</td>
+<td>14.66%</td>
+<td>4,736.71</td>
+<td>28.71</td>
+<td>258.62</td>
+</tr>
+</tbody>
+</table></div>
+<p>Con WACC10.25%, el precio pide 14.60% CAGR si EBIT final 16.24%,12.76% si 18.24% o 11.16% si 20.24%. Con 9.5%/20.24% basta 9.03%. No hay una expectativa implícita única. Comparar estos crecimientos con 10% envíos/12.7% consumo recientes y una década completa, no sólo con el mejor trimestre.</p>
+<h3 id="sensibilidades-conjuntas">Sensibilidades conjuntas</h3>
+<p>En la siguiente matriz, +2 puntos significa +1 punto en hogares y +1 en compra cada año; no equivale exactamente a+2 puntos de CAGR por composición. Los cambios de margen se implementan gradualmente.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Desplazamiento anual conjunto de motores</th>
+<th>EBIT final −2 pp</th>
+<th>EBIT final igual</th>
+<th>EBIT final +2 pp</th>
+<th>EBIT final +4 pp</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-2.00%</td>
+<td>35.49</td>
+<td>39.42</td>
+<td>43.35</td>
+<td>47.27</td>
+</tr>
+<tr class="even">
+<td>0.00%</td>
+<td>39.75</td>
+<td>44.38</td>
+<td>48.99</td>
+<td>53.58</td>
+</tr>
+<tr class="odd">
+<td>2.00%</td>
+<td>44.55</td>
+<td>49.97</td>
+<td>55.37</td>
+<td>60.74</td>
+</tr>
+<tr class="even">
+<td>4.00%</td>
+<td>50.08</td>
+<td>56.42</td>
+<td>62.73</td>
+<td>69.00</td>
+</tr>
+</tbody>
+</table></div>
+<p>Sensibilidad WACC y crecimiento terminal, operación central:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC  g</th>
+<th>2.0%</th>
+<th>2.5%</th>
+<th>3.0%</th>
+<th>3.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9.00%</td>
+<td>51.54</td>
+<td>53.06</td>
+<td>54.82</td>
+<td>56.88</td>
+</tr>
+<tr class="even">
+<td>9.50%</td>
+<td>47.57</td>
+<td>48.78</td>
+<td>50.17</td>
+<td>51.77</td>
+</tr>
+<tr class="odd">
+<td>10.25%</td>
+<td>42.53</td>
+<td>43.40</td>
+<td>44.38</td>
+<td>45.50</td>
+</tr>
+<tr class="even">
+<td>11.00%</td>
+<td>38.33</td>
+<td>38.97</td>
+<td>39.67</td>
+<td>40.46</td>
+</tr>
+<tr class="odd">
+<td>11.50%</td>
+<td>35.91</td>
+<td>36.43</td>
+<td>37.00</td>
+<td>37.63</td>
+</tr>
+</tbody>
+</table></div>
+<p>Otros cambios aislados:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Cambio aislado central</th>
+<th>Valor por acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>lower_capacity_productivity</td>
+<td>43.06</td>
+</tr>
+<tr class="even">
+<td>higher_capacity_productivity</td>
+<td>45.01</td>
+</tr>
+<tr class="odd">
+<td>no_tax_shelter</td>
+<td>43.75</td>
+</tr>
+<tr class="even">
+<td>no_maintenance_holiday</td>
+<td>43.90</td>
+</tr>
+</tbody>
+</table></div>
+<p>Retorno del negocio central según precio, <strong>sin</strong> un recorte universal adicional:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Precio</th>
+<th>TIR anual del negocio, salida fija</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>40.00</td>
+<td>11.63%</td>
+</tr>
+<tr class="even">
+<td>45.00</td>
+<td>10.07%</td>
+</tr>
+<tr class="odd">
+<td>50.00</td>
+<td>8.69%</td>
+</tr>
+<tr class="even">
+<td>55.00</td>
+<td>7.47%</td>
+</tr>
+<tr class="odd">
+<td>60.00</td>
+<td>6.37%</td>
+</tr>
+<tr class="even">
+<td>65.00</td>
+<td>5.37%</td>
+</tr>
+<tr class="odd">
+<td>69.60</td>
+<td>4.52%</td>
+</tr>
+<tr class="even">
+<td>75.00</td>
+<td>3.61%</td>
+</tr>
+</tbody>
+</table></div>
+<p>A $45 el caso central aproxima 10.07% anual; a $55, 7.47%; a $60, 6.37%; a $69.60, 4.52%. El resultado refleja supuestos y salida fija, no un umbral obligatorio. Margen de seguridad frente al central = (44.38 − 69.60)/44.38 = −56.8%; no confundirlo con el potencial frente al precio de −36.2%. Frente a la alternativa de $68.34, el margen es aproximadamente −1.85%. El máximo fundamental no se calcula como “central×0.85” por defecto. Zona de <strong>revisión</strong>, no orden: alrededor de $44–45 si se mantiene el caso central; hasta ~$59 si nueva evidencia permite adoptar la alternativa operativa a coste de capital central. Cerca de $68–70 requiere además el conjunto más favorable de coste/retornos o márgenes. No elevar esos límites porque suba la cotización.</p>
+<h2 id="comparables-actuales-y-límites-de-homogeneidad">8. Comparables actuales y límites de homogeneidad</h2>
+<p>Precios cierre 3 nov 2026; estados últimos publicados. CL incluye Hill’s pero también higiene/consumo; GIS incluye Blue Buffalo pero gran negocio humano; CHWY es minorista. Son <strong>contrastes</strong>, no pares puros fresh. Rentas operativas permanecen en EBIT y se excluyen pasivos operativos del EV; equity común de fechas indicadas, sin fingir inventario de opciones al cierre.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Par / cierre 3 nov</th>
+<th>TTM hasta</th>
+<th>EV proxy con NCI libro</th>
+<th>EBIT normalizado</th>
+<th>EV/EBIT</th>
+<th>EV/ventas</th>
+<th>FCF − SBC</th>
+<th>Rend. caja − SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CL / $95.62</td>
+<td>2026-09-30</td>
+<td>82,551.30</td>
+<td>4,080.00–4,503.00</td>
+<td>18.33–20.23</td>
+<td>3.88</td>
+<td>3,620.00</td>
+<td>4.76%</td>
+</tr>
+<tr class="even">
+<td>GIS / $34.08</td>
+<td>2026-08-30, 53 weeks</td>
+<td>31,418.04</td>
+<td>2,563.20–2,734.30</td>
+<td>11.49–12.26</td>
+<td>1.72</td>
+<td>1,460.00</td>
+<td>8.01%</td>
+</tr>
+<tr class="odd">
+<td>CHWY / $22.05</td>
+<td>2026-08-02</td>
+<td>8,850.30</td>
+<td>328.20–328.20</td>
+<td>26.97–26.97</td>
+<td>0.68</td>
+<td>270.20</td>
+<td>3.05%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los EV de esta tabla son la aproximación explícita market cap + deuda financiera − caja + NCI de libro ($352 m CL y $13.4 m GIS). Los NCI son proxies contables, no valores de mercado. CL/GIS ya incluyen finance leases en deuda; no se añaden otra vez $72 m/$0.4 m antiguos. CHWY no presenta NCI ni preferentes, pero su finance lease actual no está cuantificado; históricamente inmaterial no significa cero. Se conserva esta limitación y la de premios ordinarios. No se promedian para fabricar un valor. CL acciones 794.920513 m de 30 sep; GIS534.687144 m de 16 sep; CHWY401.927249 m de 2 sep. Deuda/caja se fecha con el periodo financiero, no con el precio.</p>
+<p>CL: EBIT GAAP3,161 incluye 919 de impairment. Extremo conservador de normalización 4,080 retira sólo ese deterioro;4,503 adopta además los ajustes del emisor, incluidos reestructuración/ERISA con consecuencias reales. GIS: GAAP−206.4 no sirve como múltiplo significativo. Retirar impairments 1,802.9, valoración held-for-sale 1,055.5, neto de desinversión 5.0 y retirar MTM86.4/inversión 7.4 da 2,563.2 conservando reestructuración 137.4 y transacción/integración 33.6; endpoint emisor 2,734.3, con redondeo 0.1. Su TTM tiene 53 semanas y no se inventa ajuste proforma para venta futura de Brasil. CHWY EBIT328.2 retiene SBC297.9 y es margen de retail, no fabricante.</p>
+<p>Fuentes CL <a href="https://www.sec.gov/Archives/edgar/data/21665/000002166526000048/cl-20260930.htm">10-Q30 sep</a>/<a href="https://www.sec.gov/Archives/edgar/data/21665/000002166526000006/cl-20251231.htm">10-K25</a>/<a href="https://investor.colgatepalmolive.com/news-releases/news-release-details/colgate-palmolive-announces-3rd-quarter-2026-results">release 30 oct</a>; GIS <a href="https://www.sec.gov/Archives/edgar/data/40704/000162828026046466/gis-20260531.htm">10-K26,1 jul</a>/<a href="https://www.sec.gov/Archives/edgar/data/40704/000162828026063201/gis-20260830.htm">10-Q30 ago,23 sep</a>; CHWY <a href="https://www.sec.gov/Archives/edgar/data/1766502/000162828026061018/chwy-20260802.htm">10-Q2 ago,9 sep</a>/<a href="https://www.sec.gov/Archives/edgar/data/1766502/000176650226000034/chwy-20260201.htm">10-K,25 mar</a>. Precios <a href="https://stockanalysis.com/stocks/cl/history/">CL</a>, <a href="https://stockanalysis.com/stocks/gis/history/">GIS</a>, <a href="https://stockanalysis.com/stocks/chwy/history/">CHWY</a>.</p>
+<p>FRPT a $69.60 con claims económicos: EV ~$3,543.39 m, ventas 2.94 x, EBIT normalizadoTTM 41.95 x; beneficio normalizado~$60.99 m implica P/E ~55.8 x usando acciones económicas, no el PE del scanner basado en beneficio extraordinario viejo. Cash FCF después de SBC normalizada rinde ~0.92%. La prima frente a fabricantes maduros puede justificarse por crecimiento, pero requiere convertirlo en caja. CHWY ~27 x EBIT tiene economía distinta y tampoco valida automáticamente 40 x.</p>
+<p>Como contraste de múltiplos <strong>no sustitutivo</strong>, un intervalo 12–27 x EBIT NTM central $133.38 m abarca aproximadamente $30–71 por acción tras los mismos claims. El extremo 27 x requiere prima de crecimiento y no se adopta como valor central. Aplicarlo al EBIT TTM más bajo daría valores menores; esa diferencia demuestra cuánto depende el argumento de mejora futura. No se selecciona el mayor método porque se acerque al precio ni se ofrece un múltiplo histórico inventado sobre EPS contaminados.</p>
+<h2 id="riesgos-falsación-y-stage-3.5-separado">9. Riesgos, falsación y Stage 3.5 separado</h2>
+<p><strong>Riesgos con impacto en modelo:</strong> hogares no recuperan, gasto por hogar se enfría, rivales reducen velocidad/precio, logística/medios capturan el ahorro fabril, tecnología exige más capex o llega tarde, grandes clientes reajustan inventario, seguridad alimentaria/recall, márgenes no sostienen inflación, deuda 2028 y cobertura dilutiva, compensación normal superior 3%. El adverso no es pérdida máxima; una crisis de producto/financiación puede ser peor.</p>
+<p><strong>Qué mejora tesis/precio:</strong> consumo y nuevos hogares se sostienen de manera comparable; evidencia de márgenes 2027 hacia 20–21% pese a costes, ahorros tecnológicos netos de inversión, capacidad operativa y rentabilidad incremental medibles, cash conversion tras capex normal, no sólo deferral. <strong>Qué la invalida:</strong> varios periodos de deterioro de volumen/retención sin explicación temporal verificable, incremento persistente de inventario/impagados, retorno sobre nueva capacidad insuficiente o necesidad financiera/dilución no resuelta.</p>
+<p>Próximo evento: conferencia 4 nov 08:00 EST/13:00 UTC, futura al corte; después notas del 10-Q. Preguntas prioritarias: panel hogares 1%; calendario de inventario del cliente; alcance/coste de 100 bp tecnológicos; capex 2027 y mantenimiento; inflación/precios/elasticidad; lease del nuevo DC Bethlehem; inventario de premios y cash taxes/NOL. No se afirma haber oído respuestas que todavía no existen.</p>
+<p><strong>Stage 3 está investigado; Stage 3.5 no está aprobado.</strong> Faltan precio posterior al evento, estructura/EMA50 vigente, señal numérica y temporalidad elegidas antes de ejecutarla, soporte M y stop S, patrimonio/riesgo/capital de campaña, cantidad, vigencia y cancelaciones. No son huecos del DCF ni excusa para llamar “incompleto” a todo el análisis. No se inventan niveles técnicos con cierres desfasados. Ninguna compra, venta, orden ni cambio de stop deriva de este informe.</p>
+<h2 id="controles-diferencias-de-fuente-y-trazabilidad">10. Controles, diferencias de fuente y trazabilidad</h2>
+<ol type="1">
+<li>Comentarios preparados p 6 dicen beneficio neto $27.9 m; estado financiero $29.712 m y deck $29.7 m. Se utiliza estado, no promedio.</li>
+<li>Logística anterior 5.5% en comentarios vs subida 170 bp del deck hacia 7.1% (implica 5.4%): diferencia de redondeo/fuente preservada.</li>
+<li>Tres líneas tecnológicas ya instaladas en comentarios vs nota del deck “instaladas a final 2027”: alcance/tiempo sin aclaración. No se presupone todo 100 bp adicional a 35 bp ya previstos 2026.</li>
+<li>CFO D&amp;A distinto de conciliación EBITDA; corregido puente 2.851 m en modelo. Auditoría independiente reproduce cifras. Antes de corrección central 43.63, después 44.38; cambio+$0.75 no cambia decisión. No se conserva cifra antigua como valor vigente.</li>
+<li>No hay aún notas Q3 de nuevos leases, premios completos, NOL o impuesto de caja. Se conservan fechas, proxy de claims y sensibilidades en lugar de números inventados. Los estados publicados permiten cerrar investigación y valoración a este corte; revisión posterior no equivale a tener conclusiones futuras.</li>
+<li>No se utiliza la guía del emisor como consenso ni un consenso no verificado. Las estimaciones de capacidad, gasto, SBC, WACC, ROIC y fiscalidad se identifican como propias.</li>
+</ol>
+<p>Paquete reproducible: <code>model.py</code> y <code>model_results.json</code>, tres CSV de 10 años, <code>history.json/csv</code>, reconstrucción <code>build_post_history.py</code> y base de 51 comprobaciones históricas, fuentes brutas SEC/IR, archivos de hechos operativos, peer bridges y auditoría independiente. <code>python model.py</code>, <code>python build_comps.py</code> y <code>python build_report.py</code> regeneran valoración, contraste y este informe usando datos preservados. Los escenarios no son probabilidades, objetivos garantizados ni autorización para operar.</p>
+<h2 id="analyst-research-and-audit-downloads">Analyst research and audit downloads</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/FRPT_full_stage3_2026-11-04.md">FRPT_full_stage3_2026-11-04.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/README.md">README.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/SHA256SUMS.json">SHA256SUMS.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/adverse_10_year_fcff.csv">adverse_10_year_fcff.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/appendices/accounting_bridge.md">appendices/accounting_bridge.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/appendices/cl_normalization.md">appendices/cl_normalization.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/appendices/employee_awards.md">appendices/employee_awards.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/appendices/gis_normalization.md">appendices/gis_normalization.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/appendices/peer_claims.md">appendices/peer_claims.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/appendices/peer_evidence.md">appendices/peer_evidence.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/appendices/postprint_operating_memo.md">appendices/postprint_operating_memo.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/appendices/postprint_sources.json">appendices/postprint_sources.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/audit/da_bridge_update.json">audit/da_bridge_update.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/audit/final_audit.md">audit/final_audit.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/audit/final_checks.json">audit/final_checks.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/balance_release.json">balance_release.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/build_comps.py">build_comps.py</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/build_post_history.py">build_post_history.py</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/build_report.py">build_report.py</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/central_10_year_fcff.csv">central_10_year_fcff.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/comps.json">comps.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/favorable_10_year_fcff.csv">favorable_10_year_fcff.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/history.csv">history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/history.json">history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/model.py">model.py</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/model_results.json">model_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/pre_release/historical_pre_release.json">pre_release/historical_pre_release.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/pre_release/historical_source_map.json">pre_release/historical_source_map.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/pre_release/qa_history.json">pre_release/qa_history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/pre_release/qa_history.txt">pre_release/qa_history.txt</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/publication_manifest.json">publication_manifest.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/sources/q326_release_rows.json">sources/q326_release_rows.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FRPT/sources/q326_release_rows_clean.json">sources/q326_release_rows_clean.json</a></li>
+</ul>
+</main></body></html>

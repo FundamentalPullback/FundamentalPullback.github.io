@@ -1,0 +1,37 @@
+{
+  "current_sha256": "c824f68356ea9793d5b6d259149a6f3dbc0654183836faed50e2bfed574b56f8",
+  "checks": [
+    "Latest saved outputs match clean recalculation",
+    "Parent revised prices match independent D&A correction",
+    "Economic EBITDA bridge, EBIT and FCFF identities pass each period",
+    "Capacity target ceiling holds each period",
+    "EV/common/options/debt/cash bridge reconciles",
+    "Negative adverse IRRs returned successfully",
+    "Parent alternative joint path matches independently corrected alternative exactly"
+  ],
+  "scenarios": {
+    "adverse": {
+      "per_share": 10.921349440841542,
+      "enterprise_fixed_exit_irr": -0.09080928189992793,
+      "equity_distribution_proxy_irr": -0.1308320373600051,
+      "terminal_share": 0.45992914258710865,
+      "reverse_wacc": 0.03903452534746686
+    },
+    "central": {
+      "per_share": 44.379542133488314,
+      "enterprise_fixed_exit_irr": 0.045247613645859386,
+      "equity_distribution_proxy_irr": 0.04588189400646059,
+      "terminal_share": 0.5555192632092824,
+      "reverse_wacc": 0.07815507573186156
+    },
+    "favorable": {
+      "per_share": 84.7902219440966,
+      "enterprise_fixed_exit_irr": 0.12070559987526763,
+      "equity_distribution_proxy_irr": 0.12909578477662664,
+      "terminal_share": 0.6578256406009002,
+      "reverse_wacc": 0.10636303408169001
+    }
+  },
+  "alternative_value": 68.33802076831026,
+  "alternative_at_central_capital_cost": 58.91724159849578
+}
