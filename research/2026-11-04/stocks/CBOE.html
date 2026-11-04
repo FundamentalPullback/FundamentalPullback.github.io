@@ -1,0 +1,675 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CBOE · Stage 3 investigado · calendario y perímetro pendientes · Esperar precio</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/CBOE">← CBOE profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Stage 3 investigado · calendario y perímetro pendientes</span><span class="tag deferred">Esperar precio</span><span class="tag">No entry approved</span></div><h1 id="cboe-a208-investigación-del-4-de-noviembre-de-2026">CBOE · A208 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Investigación condicionada: central 276,60 USD frente al cierre 344,28; escenarios 122,43–468,09. Capital y venta Canadá pendientes, alta sensibilidad al descuento. Opportunity 75 bajo 85; calendario definitivo sin confirmar. Sin Stage 3.5 ni entrada.</strong></p>
+<p>Conditional research: central $276.60 versus $344.28 close; scenarios $122.43–468.09. Capital and Canada sale unresolved, high discount-rate sensitivity. Opportunity 75 below 85; final calendar unconfirmed. No Stage 3.5 or entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/CBOE.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-30, 335.53 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 344.28 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04; auditoría independiente cerrada 17:40 UTC.</p>
+<p>A042 y su escáner del 14 de octubre, 302,12 USD, se conservan. La última sesión real es 30 de octubre, 335,53 USD, distinta del cierre regular del 3 de noviembre, 344,28 USD. El modelo mantiene operaciones Canadá sin sumar cobros de venta no certificados; no es un modelo postventa limpio.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="cboe-franquicia-de-índices-sólida-precio-exigente-y-caja-de-clearing-que-no-pertenece-al-accionista">CBOE: franquicia de índices sólida, precio exigente y caja de clearing que no pertenece al accionista</h1>
+<p>Corte de información: 4 de noviembre de 2026, 17:40 UTC. Cierre regular utilizado: 3 de noviembre, <strong>344,28 USD</strong>. No se mezcla el precio intradía del 4 de noviembre. Última fila real del escáner: 30 de octubre, <strong>335,53 USD</strong>; referencia original A042: 14 de octubre, <strong>302,12 USD</strong>. Datos financieros hasta septiembre de 2026. Millones de USD salvo acciones, porcentajes y valores por acción.</p>
+<p>Estado: investigación propia y DCF condicionados, <strong>revisados por auditoría independiente, sin aprobación de entrada</strong>. No constituye aprobación de entrada, orden, sizing, stop ni Stage 3.5. La próxima fecha exacta de resultados no está confirmada por el emisor: septiembre anunció orientación 2027 con los resultados de febrero, sin día oficial. No se transforma una estimación de calendario de terceros en fecha confirmada. [S1–S4, S9]</p>
+<h2 id="conclusión-de-inversión">Conclusión de inversión</h2>
+<p>La franquicia de opciones sobre índices, datos y acceso a mercados crece con fuerza, pero a 344,28 USD no ofrece margen frente al caso central propio de <strong>276,60 USD</strong>. Los escenarios son <strong>122,43 / 276,60 / 468,09 USD</strong>. La banda no es un intervalo estadístico: depende del volumen, margen, coste de capital, reinversión y derechos de licencia. Procede esperar una mejor relación entre precio y supuestos, además de confirmar el calendario. El precio tampoco justifica una tesis bajista automática: el CAPM mecánico con beta de proveedor produce 334,31 USD y una beta alternativa aún menor puede acercar o superar el cierre.</p>
+<p>CBOE presenta TTM de ingresos netos de 2.843,8 millones (+24,59%) y EBIT normalizado conservador de 1.874,7 millones (+35,51%). La normalización elimina la ganancia de Australia y revierte deterioros identificados, pero mantiene SBC, amortización adquirida, costes CAT y realineamientos recurrentes. Es un negocio fuerte; esa calidad no convierte cualquier precio en atractivo. [S1, S2]</p>
+<p>La licencia exclusiva estadounidense de opciones estandarizadas sobre determinados índices S&amp;P se extiende hasta 2051, sujeta a términos y rescisión. El emisor espera un impacto mínimo del reajuste de royalties de 2027 sobre el crecimiento neto si se materializan volumen, precio y ejecución. Los importes por contrato están censurados y la exclusividad no cubre todos los derivados, países o plazos futuros. [S3, S4]</p>
+<p>El CFO TTM de 2.626,0 millones incluye 1.394,5 millones de movimientos de clearing/clientes. Después de retirarlos y restar capex, el proxy de caja es 1.135,1 millones, un 1,17% menos; todavía contiene impuestos y desfases regulatorios. No es caja libre distribuible, y el dato mecánico CFO menos capex de 2.529,6 millones exagera la caja corporativa. [S1, S2]</p>
+<p>A 344,28 USD, el valor central de 276,60 implica un diferencial de −19,66%; el caso favorable exige crecimiento y márgenes sostenidos junto con menor descuento. Canadá sigue pendiente de venta en la última fuente primaria, la próxima fecha de resultados no está confirmada y la valoración cambia mucho con WACC. La investigación no aprueba una entrada. [S1, S5, S8–S10]</p>
+<h2 id="qué-se-está-valorando-y-por-qué-fcff-es-utilizable">1. Qué se está valorando y por qué FCFF es utilizable</h2>
+<p>Se valora el negocio de comisiones, datos, acceso y tecnología de Cboe, no un banco financiado por depósitos de clientes. Los activos y pasivos igualados de clearing se eliminan del puente de capital; se retienen reservas operativas/regulatorias y se financia su crecimiento. Bajo esa separación, EBIT operativo, impuestos normalizados y reinversión permiten FCFF. Es una excepción sectorial justificada, no aplicar un múltiplo de caja bancaria a saldos de clientes.</p>
+<p>El denominador es <strong>revenue less cost of revenues</strong>, ingresos netos después de pagos de liquidez, routing/clearing, tasas regulatorias y royalties. Los royalties permanecen como coste económico. El bruto TTM de 5.278,4 no se mezcla con márgenes calculados sobre 2.843,8. La beta baja no prueba ausencia de riesgo: volumen, mezcla, competencia, regulación, tecnología y contrapartes pueden deteriorarse a la vez.</p>
+<p>Cboe no es únicamente una apuesta al nivel del VIX. Intervienen volumen de índices, contratos de vencimiento diario, RPC, mezcla de productos, datos y conectividad. En Q3 el ADV de índices creció 24% y el de opciones total 14%; RPC total +9% combina mezcla y precio, mientras RPC de índices +3%. La cuota de opciones pasó de 30,9% a 30,5%, de acciones estadounidenses de 9,8% a 8,9% y europea de 25,4% a 23,0%. No se atribuye todo el crecimiento a ganar cuota. [S1, S2]</p>
+<p>Ingresos netos Q3 por segmentos: opciones 469,5 (+23%), acciones norteamericanas 113,5 (+10%), Europa/APAC 73,3 (+6%), futuros 28,2 (−5%) y FX 27,7 (+23%). Data Vantage facturó 182,6 (+13%), pero no convierte toda la compañía en una suscripción recurrente. Cboe Predicts es un proyecto de lanzamiento, no ingresos ya demostrados ni parte cuantificada del caso base. [S1, S2]</p>
+<h2 id="historia-normalizada-y-calidad-del-beneficio">2. Historia normalizada y calidad del beneficio</h2>
+<p>El anexo history contiene FY2023–2025, nueve trimestres para contrastes, cuatro trimestres recientes y TTM frente a TTM comparable. Q4 se deriva de anual menos nueve meses para importes y utiliza acciones/EPS trimestrales directamente publicados. No se backsolvea el denominador de acciones a partir de EPS redondeado.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos netos</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">EBIT conservador</th>
+<th style="text-align: right;">Beneficio común</th>
+<th style="text-align: right;">EPS diluido publicado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td style="text-align: right;">1.918,0</td>
+<td style="text-align: right;">1.057,9</td>
+<td style="text-align: right;">1.043,5</td>
+<td style="text-align: right;">757,5</td>
+<td style="text-align: right;">7,13</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td style="text-align: right;">2.072,4</td>
+<td style="text-align: right;">1.098,4</td>
+<td style="text-align: right;">1.181,5</td>
+<td style="text-align: right;">761,0</td>
+<td style="text-align: right;">7,21</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td style="text-align: right;">2.429,1</td>
+<td style="text-align: right;">1.467,1</td>
+<td style="text-align: right;">1.513,8</td>
+<td style="text-align: right;">1.094,8</td>
+<td style="text-align: right;">10,42</td>
+</tr>
+<tr class="even">
+<td>Q4 2025</td>
+<td style="text-align: right;">671,1</td>
+<td style="text-align: right;">403,8</td>
+<td style="text-align: right;">428,9</td>
+<td style="text-align: right;">312,2</td>
+<td style="text-align: right;">2,97</td>
+</tr>
+<tr class="odd">
+<td>Q1 2026</td>
+<td style="text-align: right;">728,9</td>
+<td style="text-align: right;">505,6</td>
+<td style="text-align: right;">505,6</td>
+<td style="text-align: right;">384,1</td>
+<td style="text-align: right;">3,66</td>
+</tr>
+<tr class="even">
+<td>Q2 2026</td>
+<td style="text-align: right;">731,6</td>
+<td style="text-align: right;">476,0</td>
+<td style="text-align: right;">476,0</td>
+<td style="text-align: right;">351,8</td>
+<td style="text-align: right;">3,35</td>
+</tr>
+<tr class="odd">
+<td>Q3 2026</td>
+<td style="text-align: right;">712,2</td>
+<td style="text-align: right;">534,3</td>
+<td style="text-align: right;">464,2</td>
+<td style="text-align: right;">426,7</td>
+<td style="text-align: right;">4,08</td>
+</tr>
+<tr class="even">
+<td>TTM anterior</td>
+<td style="text-align: right;">2.282,5</td>
+<td style="text-align: right;">1.361,8</td>
+<td style="text-align: right;">1.383,4</td>
+<td style="text-align: right;">978,2</td>
+<td style="text-align: right;">9,31*</td>
+</tr>
+<tr class="odd">
+<td>TTM actual</td>
+<td style="text-align: right;">2.843,8</td>
+<td style="text-align: right;">1.919,7</td>
+<td style="text-align: right;">1.874,7</td>
+<td style="text-align: right;">1.474,8</td>
+<td style="text-align: right;">14,06*</td>
+</tr>
+</tbody>
+</table></div>
+<p>*EPS TTM es suma de los cuatro EPS trimestrales, no una cifra TTM informada por el emisor. Anual + nueve meses − nueve meses anterior da 14,05 por redondeo/dilución; no se presenta un EPS normalizado inventado. El EPS GAAP contiene ganancia de venta e ingresos no operativos. [S1, S2, S11–S14]</p>
+<p>Puente TTM: 1.919,7 − ganancia Australia 71,5 + deterioros 26,5 = 1.874,7. Una sensibilidad más amplia añadiría 48,1 de salidas/reorganización hasta 1.922,8, pero no es el caso principal porque estos costes reaparecen. Q3 excluyendo sólo Australia da EBIT 462,8; añadiendo deterioro 1,4, 464,2. No confundir esas dos medidas con adjusted EBIT del emisor.</p>
+<p>La amortización adquirida TTM de 62,5 y SBC de 55,2 quedan dentro del EBIT. D&amp;A total 116,6 incluye esa amortización, de modo que sólo se suma una vez al FCFF desde EBIT después de D&amp;A. Tecnología y gastos de desarrollo/software contabilizados como gastos no se capitalizan retrospectivamente para mejorar el beneficio. El capex histórico completo incluye software y mejoras; compras no monetarias no se duplican.</p>
+<p>El CAT mantiene riesgo económico: reserva nueva Q3 de 14,0, provisión total de 44,1 y notas por cobrar netas que no se consideran caja excedente. El sistema de financiación aprobado en marzo está recurrido y tiene horizonte temporal; no se presupone recuperación completa ni se inventa una obligación judicial máxima. Quedan costes de realineamiento y la revisión de cobro puede producir nuevos cargos. [S1]</p>
+<h2 id="conversión-de-caja-capital-regulatorio-y-puente-al-accionista">3. Conversión de caja, capital regulatorio y puente al accionista</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">CFO declarado</th>
+<th style="text-align: right;">Movimiento clearing/clientes</th>
+<th style="text-align: right;">CFO excluyendo ese movimiento</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">Proxy caja ex-clearing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td style="text-align: right;">1.075,6</td>
+<td style="text-align: right;">282,6</td>
+<td style="text-align: right;">793,0</td>
+<td style="text-align: right;">45,0</td>
+<td style="text-align: right;">748,0</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td style="text-align: right;">1.100,6</td>
+<td style="text-align: right;">76,0</td>
+<td style="text-align: right;">1.024,6</td>
+<td style="text-align: right;">60,9</td>
+<td style="text-align: right;">963,7</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td style="text-align: right;">1.752,6</td>
+<td style="text-align: right;">528,5</td>
+<td style="text-align: right;">1.224,1</td>
+<td style="text-align: right;">71,0</td>
+<td style="text-align: right;">1.153,1</td>
+</tr>
+<tr class="even">
+<td>TTM anterior</td>
+<td style="text-align: right;">690,1</td>
+<td style="text-align: right;">−533,2</td>
+<td style="text-align: right;">1.223,3</td>
+<td style="text-align: right;">74,8</td>
+<td style="text-align: right;">1.148,5</td>
+</tr>
+<tr class="odd">
+<td>TTM actual</td>
+<td style="text-align: right;">2.626,0</td>
+<td style="text-align: right;">1.394,5</td>
+<td style="text-align: right;">1.231,5</td>
+<td style="text-align: right;">96,4</td>
+<td style="text-align: right;">1.135,1</td>
+</tr>
+</tbody>
+</table></div>
+<p>Restar SBC al proxy actual produce 1.079,9 frente a 1.100,1 anterior. El DCF ya mantiene SBC como gasto y no vuelve a restarlo allí. Los impuestos pagados TTM fueron 864,4 frente a 331,9: parte de la debilidad de conversión responde a acuerdos fiscales y timing, no demuestra deterioro estructural. Tampoco se añade un ahorro fiscal ficticio por la diferencia de saldos de pasivos. [S1, S2]</p>
+<p>El movimiento Section 31 aporta +46,7 en los nueve meses actuales, frente a −181,8 anteriormente, pero el movimiento de cuentas a cobrar equivalente no está desglosado. Restar sólo el payable sería una sensibilidad incompleta. El emisor informa cero efectivo cobrado por Section 31 al cierre, lo que no demuestra flujo neto regulatorio cero durante el periodo. Se conserva el proxy observado con este límite, sin llamarlo FCF normalizado o distribuible.</p>
+<p>Conciliación de efectivo de septiembre: 2.662,6 caja del balance + 57,4 Canadá held-for-sale + 2.988,8 clearing restringido + 28,4 otras restricciones + 3,8 depósitos de clientes = 5.741,0 de caja total del estado de flujos. Los 2.992,6 de activos y pasivos de clearing/clientes se eliminan, no pertenecen al accionista. De inversiones financieras 41,2, 40,7 respaldan compensación diferida; sólo 0,5 se suma a caja corporativa. [S1]</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Puente central, última base observada septiembre más ajustes señalados</th>
+<th style="text-align: right;">Millones USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja corporativa más inversión financiera no igualada, sin Canadá</td>
+<td style="text-align: right;">2.663,1</td>
+</tr>
+<tr class="even">
+<td>Exclusión prudencial de toda caja extranjera restante</td>
+<td style="text-align: right;">−429,7</td>
+</tr>
+<tr class="odd">
+<td>Reserva doméstica conjunta operativa/regulatoria asumida</td>
+<td style="text-align: right;">−500,0</td>
+</tr>
+<tr class="even">
+<td>Deuda a principal, no sólo valor contable</td>
+<td style="text-align: right;">−1.450,0</td>
+</tr>
+<tr class="odd">
+<td>Reclamaciones fiscales registradas históricas</td>
+<td style="text-align: right;">−28,3</td>
+</tr>
+<tr class="even">
+<td>Recompras efectivas 1–28 octubre</td>
+<td style="text-align: right;">−8,1</td>
+</tr>
+<tr class="odd">
+<td>Residual neto de capital octubre/noviembre, supuesto no observado</td>
+<td style="text-align: right;">0,0</td>
+</tr>
+<tr class="even">
+<td>Ajuste de equity central</td>
+<td style="text-align: right;"><strong>247,0</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Los 429,7 extranjeros no se declaran todos legalmente atrapados: ciertas ganancias extranjeras se consideran reinvertidas indefinidamente y no se cuantifica qué efectivo puede repatriarse. Excluir todo el saldo es una reserva prudencial y puede infravalorar activos disponibles localmente. La sensibilidad libera ese saldo sin impuestos, no asegura disponibilidad real.</p>
+<p>El capital regulatorio mínimo total es 189,0 y el efectivo regulatorio/operativo no se observa directamente. El capital regulatorio real de 498,8 tampoco equivale a efectivo segregado. La suma estadounidense es 264,0 de capital real y 57,0 mínimo; extranjero 234,8 y 132,0. La reserva doméstica de 500 es una hipótesis que engloba los 264 y un colchón operativo, no una exigencia legal. No se resta de nuevo todo el capital regulatorio después de excluir caja extranjera. El crecimiento futuro de capital está financiado dentro de la reinversión, no se libera gratuitamente al terminal.</p>
+<p>Deuda: 650 vence el 12 de enero de 2027, 500 en 2030 y 300 en 2032. El valor contable 1.444,3 excluye descuentos/costes; se utiliza principal 1.450. Los 400 de revolver comprometido y 200 adicionales sujetos a consentimiento no son caja. No se suma una nueva deuda sin su contrapartida. La compañía parece disponer de liquidez para el vencimiento, pero no se certifica la caja disponible en enero ni una refinanciación todavía no realizada. [S1]</p>
+<p>Las reclamaciones fiscales reservadas son 24,9 no corrientes y 3,4 corrientes; no sustituyen la tasa futura de impuestos. Los arrendamientos operativos permanecen en costes y no se descuentan de nuevo como deuda financiera. Inversiones no corrientes de 39,1 y notas CAT no se añaden al equity a un valor no validado; valorar las primeras a libro es una sensibilidad de +0,37 USD/acción. Tampoco se capitalizan beneficios no operativos como si fueran EBIT.</p>
+<p>Las recompras de octubre están observadas: 8,1 millones y 29.216 acciones hasta el día 28. La autorización adicional de 550 no implica gasto ejecutado. El retiro de acciones de tesorería ya compradas no genera una segunda reducción de caja ni otra recompra. Se usan 104,7 millones diluidas Q3, frente a 104,330235 millones comunes al 23 de octubre: proxy conservador de dilución, no acciones exactas al cierre de noviembre. Se conserva SBC, sin modelar recompras gratuitas ni una contracción automática de acciones. El método de dos clases asigna beneficio a valores participantes; 104,7 no se afirma como recuento completo de toda participación económica. Se prueba un denominador hipotético de 105,1, sin afirmar que esos 0,4 millones adicionales sean una cifra exacta observada.</p>
+<p>El dividendo de 0,86, declarado el 22 de octubre, tiene registro el 30 de noviembre y pago el 15 de diciembre. No se resta ahora de caja en una valoración cum-dividend: el nuevo titular aún podría recibirlo. El residual de capital posterior a septiembre no es cero demostrado; los escenarios usan −150/0/+150 después de la recompra conocida y las sensibilidades muestran reclamaciones adicionales. [S1]</p>
+<h2 id="australia-y-canadá-perímetro-y-límites-del-pro-forma">4. Australia y Canadá: perímetro y límites del pro forma</h2>
+<p>Australia se vendió el 31 de julio. Sus ingresos netos Q3 de 2,9 se retiran del ancla futura: <strong>709,3 × 4 = 2.837,2</strong>. Es anualización de un trimestre reciente, no guía anual ni TTM pro forma exacto; el trimestre puede no representar volúmenes normalizados. El margen inicial del modelo, 65%, está cerca de Q3 sin ganancia de venta y por debajo del TTM normalizado 65,92%.</p>
+<p>La venta de Canadá permanece pendiente en el 10-Q del 30 de octubre; la búsqueda actual de anuncios primarios no encontró cierre posterior. El precio combinado aproximado de Australia y Canadá, 300 millones, no se vuelve a sumar: parte ya está en caja. La línea de ingresos por inversiones/desinversiones no es necesariamente sólo el precio australiano y no se usa para inventar el precio canadiense restante. Los activos netos held-for-sale tampoco son precio de venta.</p>
+<p>No se dispone de P&amp;L canadiense independiente comparable ni reparto final de impuestos/proceeds. Por ello el caso principal mantiene las operaciones canadienses actuales, excluye su caja held-for-sale y no añade proceeds futuros. <strong>No es un modelo postventa limpio.</strong> La sensibilidad elimina 2–3% del ancla de ingresos y añade 100 millones hipotéticos de proceeds netos; son supuestos de alcance, no términos publicados. El comprador publicó cifras combinadas en CAD y contabilidad distinta, que no se trasplantan a GAAP estadounidense. [S1, S5]</p>
+<p>La amortización de activos held-for-sale cesó desde abril; los márgenes históricos incluyen ese efecto. El modelo no afirma restaurar exactamente la amortización de Canadá o aislar toda la estructura vendida. Retiene costes económicos y exige reinversión, con una sensibilidad específica de coste adicional. El cierre canadiense requerirá rehacer el perímetro y el puente antes de considerar una entrada.</p>
+<h2 id="modelo-de-diez-años-crecimiento-comprado-con-reinversión">5. Modelo de diez años: crecimiento comprado con reinversión</h2>
+<p>Proyección explícita 2027–2036: cinco años detallados y cinco de transición. Se añade un stub de 57/365 desde el 4 de noviembre hasta fin de 2026. El primer año completo se descuenta a 1,1562 años, no a un año exacto. Aproximación de fin de año, sin fingir un calendario trimestral o de días bisiestos exacto. El stub usa run-rate actual de NOPAT y reserva de reinversión del 3% de ingresos; no es guía Q4.</p>
+<p>FCFF = NOPAT + D&amp;A − capex − inversión en working capital − retención regulatoria incremental − otra inversión económica. NOPAT se calcula desde EBIT después de SBC/amortización. D&amp;A total desciende del 4,1% al 3,0% de ingresos; capex efectivo supuesto 3,6%. Working capital absorbe 3% y retención regulatoria 6% del incremento positivo de ingresos. No se libera working capital o capital regulatorio automáticamente en contracción.</p>
+<p>La inversión neta total es el máximo entre cero, capex menos D&amp;A más working capital/retención, y <strong>incremento positivo de NOPAT dividido por ROIC</strong>. Así también se financia la mejora de margen, no sólo el crecimiento de ventas. La diferencia entre ese requisito y los usos físicos se identifica como inversión económica adicional, no se presenta como previsión contable de compras de edificios. Los ROIC del modelo son hipótesis marginales, no ROIC histórico auditado. La inversión terminal NOPAT siguiente × g/ROIC supera la necesidad física mínima en los tres casos.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Supuesto</th>
+<th>Adverso</th>
+<th>Central</th>
+<th>Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crecimiento 2027–31</td>
+<td>−5 / 0 / 2 / 3 / 3%</td>
+<td>8 / 7 / 6 / 5 / 5%</td>
+<td>12 / 10 / 9 / 8 / 7%</td>
+</tr>
+<tr class="even">
+<td>Crecimiento 2032–36</td>
+<td>3 / 2,5 / 2,5 / 2 / 2%</td>
+<td>4,5 / 4 / 3,5 / 3 / 3%</td>
+<td>6 / 5 / 4,5 / 4 / 3,5%</td>
+</tr>
+<tr class="odd">
+<td>Margen 2027 → 2036</td>
+<td>60 → 59%</td>
+<td>65 → 65%, máximo 66%</td>
+<td>66 → 68%, máximo 69%</td>
+</tr>
+<tr class="even">
+<td>Impuestos</td>
+<td>29%</td>
+<td>28%</td>
+<td>27%</td>
+</tr>
+<tr class="odd">
+<td>ROIC marginal y terminal</td>
+<td>20%</td>
+<td>30%</td>
+<td>40%</td>
+</tr>
+<tr class="even">
+<td>WACC</td>
+<td>9,5%</td>
+<td>7,5%</td>
+<td>6,75%</td>
+</tr>
+<tr class="odd">
+<td>g terminal</td>
+<td>2,0%</td>
+<td>2,5%</td>
+<td>3,0%</td>
+</tr>
+<tr class="even">
+<td>Reducción de FCFF posterior a 2051</td>
+<td>40%</td>
+<td>10%</td>
+<td>0%</td>
+</tr>
+<tr class="odd">
+<td>Reserva doméstica</td>
+<td>650</td>
+<td>500</td>
+<td>400</td>
+</tr>
+<tr class="even">
+<td>Residual neto capital no observado</td>
+<td>−150</td>
+<td>0</td>
+<td>+150</td>
+</tr>
+</tbody>
+</table></div>
+<p>El caso adverso asume una corrección del volumen/mezcla y del apalancamiento operativo, no una quiebra. El favorable requiere crecimiento de doble dígito inicial, expansión de margen y un descuento bajo; no basta con que el próximo trimestre supere consenso. No se extrapola el crecimiento TTM del 24,59% durante una década.</p>
+<h3 id="proyección-central-reconciliable">Proyección central reconciliable</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ingresos netos</th>
+<th style="text-align: right;">EBIT después de D&amp;A</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">D&amp;A</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">WC + capital regulatorio</th>
+<th style="text-align: right;">Otra inversión económica</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">3,064.18</td>
+<td style="text-align: right;">1,991.71</td>
+<td style="text-align: right;">1,434.03</td>
+<td style="text-align: right;">125.63</td>
+<td style="text-align: right;">110.31</td>
+<td style="text-align: right;">20.43</td>
+<td style="text-align: right;">348.98</td>
+<td style="text-align: right;">1,079.95</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">3,278.67</td>
+<td style="text-align: right;">2,147.53</td>
+<td style="text-align: right;">1,546.22</td>
+<td style="text-align: right;">130.42</td>
+<td style="text-align: right;">118.03</td>
+<td style="text-align: right;">19.30</td>
+<td style="text-align: right;">367.03</td>
+<td style="text-align: right;">1,172.27</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">3,475.39</td>
+<td style="text-align: right;">2,293.76</td>
+<td style="text-align: right;">1,651.50</td>
+<td style="text-align: right;">134.00</td>
+<td style="text-align: right;">125.11</td>
+<td style="text-align: right;">17.70</td>
+<td style="text-align: right;">342.13</td>
+<td style="text-align: right;">1,300.56</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">3,649.16</td>
+<td style="text-align: right;">2,408.44</td>
+<td style="text-align: right;">1,734.08</td>
+<td style="text-align: right;">136.24</td>
+<td style="text-align: right;">131.37</td>
+<td style="text-align: right;">15.64</td>
+<td style="text-align: right;">264.48</td>
+<td style="text-align: right;">1,458.83</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">3,831.62</td>
+<td style="text-align: right;">2,528.87</td>
+<td style="text-align: right;">1,820.78</td>
+<td style="text-align: right;">138.36</td>
+<td style="text-align: right;">137.94</td>
+<td style="text-align: right;">16.42</td>
+<td style="text-align: right;">273.02</td>
+<td style="text-align: right;">1,531.77</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">4,004.04</td>
+<td style="text-align: right;">2,642.67</td>
+<td style="text-align: right;">1,902.72</td>
+<td style="text-align: right;">139.70</td>
+<td style="text-align: right;">144.15</td>
+<td style="text-align: right;">15.52</td>
+<td style="text-align: right;">253.15</td>
+<td style="text-align: right;">1,629.60</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">4,164.20</td>
+<td style="text-align: right;">2,727.55</td>
+<td style="text-align: right;">1,963.84</td>
+<td style="text-align: right;">140.19</td>
+<td style="text-align: right;">149.91</td>
+<td style="text-align: right;">14.41</td>
+<td style="text-align: right;">179.59</td>
+<td style="text-align: right;">1,760.11</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">4,309.95</td>
+<td style="text-align: right;">2,801.47</td>
+<td style="text-align: right;">2,017.06</td>
+<td style="text-align: right;">139.83</td>
+<td style="text-align: right;">155.16</td>
+<td style="text-align: right;">13.12</td>
+<td style="text-align: right;">148.95</td>
+<td style="text-align: right;">1,839.66</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">4,439.25</td>
+<td style="text-align: right;">2,885.51</td>
+<td style="text-align: right;">2,077.57</td>
+<td style="text-align: right;">138.60</td>
+<td style="text-align: right;">159.81</td>
+<td style="text-align: right;">11.64</td>
+<td style="text-align: right;">168.86</td>
+<td style="text-align: right;">1,875.86</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">4,572.42</td>
+<td style="text-align: right;">2,972.07</td>
+<td style="text-align: right;">2,139.89</td>
+<td style="text-align: right;">137.17</td>
+<td style="text-align: right;">164.61</td>
+<td style="text-align: right;">11.99</td>
+<td style="text-align: right;">168.34</td>
+<td style="text-align: right;">1,932.14</td>
+</tr>
+</tbody>
+</table></div>
+<p>La tabla usa punto decimal y coma de miles para facilitar reproducción con el CSV. La identidad FCFF puede comprobarse en cada fila sin sumar dos veces amortización adquirida. Las cifras del modelo no son guidance del emisor.</p>
+<h2 id="descuento-licencia-y-terminal">6. Descuento, licencia y terminal</h2>
+<p>Treasury 10 años del 3 de noviembre 4,95%, ERP implícita NYU del 1 de noviembre 4,41% y beta de proveedor 0,41 producen Ke 6,7581%. Deuda de 1.450 sobre capitalización diluida a 344,28 implica peso 3,867%; coste marginal de deuda supuesto 5%, impuestos 28%. WACC mecánico 6,6360%. <strong>El 7,5% central es una selección prudencial con 86,4 pb de colchón, no redondeo ni estimación observada del mercado.</strong> Compensa incertidumbre no bien representada por una beta histórica baja, pero es juicio del analista y domina parte del diferencial. No se lo presenta como prima de riesgo identificada estadísticamente. [S6–S8]</p>
+<p>El ERP mensual se estimó con Treasury 5,29%; combinarlo con el Treasury diario 4,95% es una actualización híbrida, no ERP recalculada al día. La sensibilidad coherente con el Treasury mensual y una beta hipotética alternativa se publican junto al resultado central. La tasa de deuda es supuesto marginal, no el bajo cupón histórico de las notas que vencen. Todos los escenarios tienen WACC &gt; g; g no pretende crecimiento perpetuo al ritmo actual.</p>
+<p>El terminal comienza al final de 2036. Se pagan quince años adicionales de FCFF financiado hasta 2051; a partir de 2052 se aplica el recorte de cada escenario a los flujos, manteniendo su crecimiento y reinversión. Fórmula: valor Gordon × [1 − haircut × ((1+g)/(1+WACC))^15]. La identidad se comprueba contra quince flujos explícitos y la cola posterior. El recorte es una sensibilidad de pérdida/renegociación de franquicia, no una probabilidad contractual ni efecto conocido de la expiración.</p>
+<p>Se evita así asumir de forma invisible exclusividad eterna. El 10% central no significa que S&amp;P vaya a retirar la licencia: es una reserva de valor discrecional después de 2051. Una pérdida del 100% de todos los flujos posteriores es estrés extremo de valoración, no predicción de que desaparezca toda Cboe al acabar el acuerdo. La licencia está sujeta a terminación anticipada, no sólo a fecha final. [S3, S4]</p>
+<p>Central: EV 28,713.10, ajuste equity 247.00, valor 276.60 por acción. Stub descontado 191.89; terminal descontado 18,347.31, 63.9% del EV. NOPAT siguiente 2,193.39, inversión terminal 182.78 y FCFF terminal 2,010.61. El terminal pesa materialmente y no debe ocultarse.</p>
+<h2 id="sensibilidades-e-inverso-qué-exige-34428">7. Sensibilidades e inverso: qué exige 344,28</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cambio aislado sobre el caso central</th>
+<th style="text-align: right;">USD/acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CAPM mecánico, sin colchón discrecional</td>
+<td style="text-align: right;">334.31</td>
+</tr>
+<tr class="even">
+<td>CAPM con Treasury 5,29% coherente con ERP mensual</td>
+<td style="text-align: right;">309.89</td>
+</tr>
+<tr class="odd">
+<td>Beta hipotética 0,36, CAPM sin colchón</td>
+<td style="text-align: right;">352.28</td>
+</tr>
+<tr class="even">
+<td>Sin recorte posterior a 2051</td>
+<td style="text-align: right;">285.62</td>
+</tr>
+<tr class="odd">
+<td>Recorte 40% de FCFF posterior a 2051</td>
+<td style="text-align: right;">249.54</td>
+</tr>
+<tr class="even">
+<td>Ningún flujo posterior a 2051</td>
+<td style="text-align: right;">195.43</td>
+</tr>
+<tr class="odd">
+<td>Todo el efectivo extranjero restante disponible sin impuesto</td>
+<td style="text-align: right;">280.70</td>
+</tr>
+<tr class="even">
+<td>Reserva doméstica 800</td>
+<td style="text-align: right;">273.74</td>
+</tr>
+<tr class="odd">
+<td>Otra reclamación neta de 100</td>
+<td style="text-align: right;">275.65</td>
+</tr>
+<tr class="even">
+<td>Inversiones no corrientes a valor libro 39,1</td>
+<td style="text-align: right;">276.97</td>
+</tr>
+<tr class="odd">
+<td>Canadá hipotético: −2% ingresos +100 proceeds</td>
+<td style="text-align: right;">272.07</td>
+</tr>
+<tr class="even">
+<td>Canadá hipotético: −3% ingresos +100 proceeds</td>
+<td style="text-align: right;">269.33</td>
+</tr>
+<tr class="odd">
+<td>Recorte adicional 2% del ancla de ingresos netos</td>
+<td style="text-align: right;">271.12</td>
+</tr>
+<tr class="even">
+<td>Coste recurrente adicional: margen −0,5 puntos</td>
+<td style="text-align: right;">274.81</td>
+</tr>
+<tr class="odd">
+<td>Denominador hipotético 105,1 millones de acciones</td>
+<td style="text-align: right;">275.55</td>
+</tr>
+<tr class="even">
+<td>ROIC marginal/terminal 20%</td>
+<td style="text-align: right;">259.44</td>
+</tr>
+<tr class="odd">
+<td>Impuesto 30%</td>
+<td style="text-align: right;">268.98</td>
+</tr>
+<tr class="even">
+<td>Mismo calendario, sin flujo del stub</td>
+<td style="text-align: right;">274.77</td>
+</tr>
+<tr class="odd">
+<td>Sin stub y años completos a 1–10, calendario alternativo</td>
+<td style="text-align: right;">277.86</td>
+</tr>
+</tbody>
+</table></div>
+<p>El recorte del 2% de ingresos por royalties es estrés, no lectura literal de guidance; la empresa prevé un impacto mínimo sobre crecimiento bajo sus supuestos de ejecución. La disponibilidad extranjera y proceeds canadienses no están confirmados. El cambio de calendario completo puede subir valor aunque omita un flujo positivo: no se califica automáticamente de conservador.</p>
+<p>La matriz WACC/g de model/results.json deja variar WACC de 6,5 a 9,5% y g de 1,5 a 3,0%, sin mezclar escenarios operativos. No representa confianza estadística ni precio objetivo ajustable al mercado.</p>
+<p>Para reproducir 344,28 manteniendo WACC 7,5%, margen e inversión central, el inverso añade <strong>3,262 puntos porcentuales al crecimiento de cada uno de los diez años</strong>, llevando ingresos netos de 2036 a <strong>6.211,08 millones</strong> frente a 4.572,42 en base. Eso exige persistencia de volumen/datos/precio más allá de un buen Q3. Alternativamente, el inverso sólo de margen exige aproximadamente 83,89% en 2036, económicamente muy exigente; se financia el NOPAT incremental y no se crea expansión gratuita. Ningún inverso es una previsión.</p>
+<h2 id="comparables-actuales-descuento-relativo-no-equivale-a-infravaloración">8. Comparables actuales: descuento relativo no equivale a infravaloración</h2>
+<p>Cierres del 3 de noviembre; estados a septiembre; TTM anual + YTD − YTD anterior. Se usan acciones diluidas trimestrales como proxy, con acciones comunes fechadas separadas en el anexo. No se asegura capitalización exacta de esa sesión. Clearing y pasivos igualados fuera del EV. EBIT GAAP retiene SBC y amortización en todos; CBOE tiene además normalización propia explícita.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Empresa</th>
+<th style="text-align: right;">Cierre</th>
+<th style="text-align: right;">EV proxy</th>
+<th style="text-align: right;">Ingresos netos TTM</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">EV/EBIT GAAP</th>
+<th style="text-align: right;">EV/EBIT normalizado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CBOE</td>
+<td style="text-align: right;">344,28</td>
+<td style="text-align: right;">34.833,02</td>
+<td style="text-align: right;">2.843,8</td>
+<td style="text-align: right;">1.919,7</td>
+<td style="text-align: right;">18,15x</td>
+<td style="text-align: right;">18,58x</td>
+</tr>
+<tr class="even">
+<td>CME</td>
+<td style="text-align: right;">304,06</td>
+<td style="text-align: right;">110.318,98</td>
+<td style="text-align: right;">6.972,3</td>
+<td style="text-align: right;">4.577,8</td>
+<td style="text-align: right;">24,10x</td>
+<td style="text-align: right;">24,10x</td>
+</tr>
+<tr class="odd">
+<td>ICE</td>
+<td style="text-align: right;">170,93</td>
+<td style="text-align: right;">118.773,59</td>
+<td style="text-align: right;">10.912,0</td>
+<td style="text-align: right;">5.703,0</td>
+<td style="text-align: right;">20,83x</td>
+<td style="text-align: right;">20,83x</td>
+</tr>
+</tbody>
+</table></div>
+<p>El EV de pantalla CBOE usa principal de deuda y caja corporativa sin Canadá/compensación igualada, pero <strong>no</strong> las reservas prudenciales, impuestos históricos y ajustes posteriores del puente DCF. La diferencia está declarada: el múltiplo no implica que todo el efectivo sea distribuible. Las inversiones no operativas permanecen en EV, por lo que no es un EV de activos operativos perfectamente aislado. [S1, S15–S18]</p>
+<p>CME es el contraste principal, pero sus inversiones y participación en negocios no consolidados aportan ganancias fuera de EBIT. Su venta OSTTRA añade ganancia no recurrente al EPS; ICE también tiene ganancias de inversiones. Por ello P/E GAAP aproximados 24,49x CBOE, 24,92x CME y 23,29x ICE no son P/E normalizados ni base para fijar valor. EBITDA mecánico añade amortización adquirida; no reemplaza reinversión económica.</p>
+<p>ICE mezcla bolsa, renta fija/datos y tecnología hipotecaria, con mayor deuda y adquisición MarketAxess pendiente. La aprobación de accionistas del 29 de octubre no es cierre; se espera Q1 2027 sujeto a condiciones. La caja restringida de prefunding de aproximadamente 3.700 se mantiene fuera del EV principal; compensarla con deuda correspondiente produce <strong>20,18x</strong> como sensibilidad, no caja disponible para dividendos. ICE incluye intereses de colateral en ciertas partidas de ingresos, mientras CME los clasifica de otra forma: la comparación de margen/EBIT no es perfectamente homogénea.</p>
+<p>El menor múltiplo de CBOE puede reflejar composición, crecimiento, reinversión, licencias y eventos. No se aplica la mediana de dos empresas como objetivo, ni se usa el descuento relativo para anular las reservas del DCF. El anexo comps incluye fuentes, cuentas y 49 verificaciones.</p>
+<h2 id="catalizadores-invalidación-y-puertas-pendientes">9. Catalizadores, invalidación y puertas pendientes</h2>
+<ul>
+<li>Confirmación oficial del próximo resultado y su webcast. Sólo hay referencia del emisor a febrero para guía 2027; no día confirmado. Calendar gate pendiente.</li>
+<li>Volúmenes y RPC de índices/opciones, crecimiento Data Vantage y cuota. Revisión si el crecimiento se apoya sólo en mezcla temporal/volatilidad o si cae la franquicia de índices.</li>
+<li>Guía orgánica 2027 y evidencia del reajuste de royalties. Incumplir la tesis de impacto mínimo o costes mayores requiere bajar FCFF, no sólo ampliar múltiplo.</li>
+<li>Cierre canadiense: precio asignado, caja transferida, impuestos y EBITDA/EBIT perdido. Sin ello no existe puente postventa exacto.</li>
+<li>Vencimiento de deuda del 12 de enero de 2027, efectivo realmente disponible y coste de refinanciación si la hay.</li>
+<li>Cobro de notas CAT, litigio/fundación de cargos regulatorios, reservas fiscales y mayores necesidades de capital de clearing. No monetizar cuentas pendientes antes de cobrarlas.</li>
+<li>Próximos flujos de caja fuera de clearing, Section 31 y efecto de impuestos. Un EBIT fuerte no resuelve automáticamente la conversión corporativa.</li>
+</ul>
+<p>El registro antiguo no contiene un modelo fuente completo comparable que permita atribuir exactamente la diferencia con una estimación rápida anterior. Se sustituye el cálculo rápido por un modelo nuevo reproducible; no se presenta un puente exacto inexistente. No se cambia la fecha o precio de las filas del escáner. La última fila conserva QP 100 y Opportunity 75, por debajo del umbral 85 para iniciar investigación que establece el plan vigente. Este trabajo cierra un análisis fundamental pendiente autorizado; no afirma que el filtro técnico actual esté habilitado ni recalcula una señal de entrada.</p>
+<p>Confianza: alta en los importes históricos enlazados y la aritmética reproducida; moderada en normalización y márgenes; baja a moderada en valor puntual por WACC, duración de franquicia, capital disponible y venta canadiense. La investigación puede publicarse como trabajo condicionado con revisión independiente completada, pero no como calendario confirmado ni aprobación de entrada.</p>
+<h2 id="english-investment-conclusion">English investment conclusion</h2>
+<p>Cboe’s index-options and data franchise is strong, but the independent central value of $276.60 is below the November 3 close of $344.28. Bear/base/bull values are $122.43/$276.60/$468.09, with substantial discount-rate and long-duration sensitivity. The mechanical provider-beta CAPM gives $334.31, highlighting how much judgment sits in the selected 7.5% discount rate. Wait for a better price-to-assumptions balance; no entry is approved.</p>
+<p>TTM reported operating cash flow includes $1,394.5 million of clearing/customer cash movements. The $1,135.1 million ex-clearing cash-generation proxy is not distributable free cash flow. Canada remains pending in the latest primary filing, foreign cash availability is unquantified, and the next exact earnings date is unconfirmed. The licensing extension runs through 2051 subject to contractual limits; post-2051 economics are stressed explicitly rather than silently assumed perpetual.</p>
+<h2 id="fuentes-verificables">Fuentes verificables</h2>
+<p>[S1] Q3 2026 10-Q, 30 octubre: https://www.sec.gov/Archives/edgar/data/1374310/000162828026068447/cboe-20260930.htm</p>
+<p>[S2] Q3 2026 resultados y reconciliaciones: https://www.sec.gov/Archives/edgar/data/1374310/000162828026068432/cboe-20261030xex991.htm</p>
+<p>[S3] 8-K y contrato de licencia: https://www.sec.gov/Archives/edgar/data/1374310/000110465926111989/tm2626203d1_8k.htm ; orden contractual https://www.sec.gov/Archives/edgar/data/1374310/000110465926111989/tm2626203d1_ex10-2.htm</p>
+<p>[S4] Explicación económica del emisor, 29 septiembre: https://www.sec.gov/Archives/edgar/data/1374310/000110465926111989/tm2626203d1_ex99-1.htm</p>
+<p>[S5] Anuncio comprador, alcance y monedas de la venta: https://www.tmx.com/en/newsroom/press-releases?id=1347&amp;year=2026 ; últimos resultados comprador https://investors.tmx.com/financials/quarterly-results/default.aspx</p>
+<p>[S6] Treasury tipos diarios: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve</p>
+<p>[S7] ERP implícita NYU: https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm</p>
+<p>[S8] Beta y datos de mercado de proveedor, no estados financieros primarios: https://stockanalysis.com/stocks/cboe/statistics/</p>
+<p>[S9] Calendario/eventos oficial consultado: https://ir.cboe.com/events-and-presentations/default.aspx</p>
+<p>[S10] Cierres históricos proveedor: https://stockanalysis.com/stocks/cboe/history/ ; contraste https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=CBOE%3ABTQ</p>
+<p>[S11] 2025 10-K: https://www.sec.gov/Archives/edgar/data/1374310/000162828026010013/cboe-20251231.htm</p>
+<p>[S12] 2024 10-K: https://www.sec.gov/Archives/edgar/data/1374310/000162828025006984/cboe-20241231.htm</p>
+<p>[S13] Q3 2025 10-Q: https://www.sec.gov/Archives/edgar/data/1374310/000162828025047680/cboe-20250930.htm</p>
+<p>[S14] Q4 2025, acciones/EPS directos: https://www.sec.gov/Archives/edgar/data/1374310/000162828026005944/cboe-20260206xex991.htm</p>
+<p>[S15] CME Q3: https://www.sec.gov/Archives/edgar/data/1156375/000115637526000068/cme-20260930.htm</p>
+<p>[S16] ICE Q3: https://www.sec.gov/Archives/edgar/data/1571949/000157194926000015/ice-20260930.htm</p>
+<p>[S17] CME precio: https://stockanalysis.com/stocks/cme/history/</p>
+<p>[S18] ICE precio: https://chartexchange.com/symbol/nyse-ice/historical</p>
+<p>El paquete contiene código propio, datos mínimos factuales, normalizaciones y enlaces. No reproduce íntegramente filings de terceros. Los controles automáticos validan relaciones y procedencia; no garantizan que los supuestos se materialicen.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/CBOE/CBOE_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/CBOE/model/model.py">Modelo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/CBOE/model/results.json">Resultados</a></li>
+</ul>
+</main></body></html>

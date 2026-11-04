@@ -1,0 +1,275 @@
+{
+  "schema": "cboe_peer_comps.v1",
+  "valuation_date": "2026-11-04",
+  "market_price_date": "2026-11-03",
+  "market_price_basis": "Regular-session close, USD; not Nov 4 intraday and not adjusted total-return prices",
+  "financial_period_end": "2026-09-30",
+  "currency": "USD",
+  "financial_units": "millions, except per-share data; shares in millions",
+  "posture": "Screening-only peer context; no median or mechanical target price",
+  "sources": {
+    "CME_Q3": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1156375/000115637526000068/cme-20260930.htm",
+      "type": "SEC 10-Q",
+      "filed": "2026-10-23",
+      "archive_filename": "cme_q3_2026_10q.html",
+      "archived_sha256": "b44c5a049e4de82926f9c08c385a07359da3bd480feed77211a27fa07480c443"
+    },
+    "CME_Q3_RELEASE": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1156375/000115637526000065/exhibit9919302026.htm",
+      "type": "SEC 8-K Exhibit 99.1",
+      "published": "2026-10-21",
+      "archive_filename": "cme_q3_2026.html",
+      "archived_sha256": "e7416066b12db0182f3e65511cbc14c60f861fdb75beae01168ab0f8a3a543f4"
+    },
+    "CME_FY25": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1156375/000115637526000009/cme-20251231.htm",
+      "type": "SEC 10-K",
+      "filed": "2026-02-26",
+      "archive_filename": "cme_fy2025.html",
+      "archived_sha256": "6929d89f0521270817ff83b22b2bf00208860d53291dc892ed36c57723bdc13c"
+    },
+    "CME_PRICE": {
+      "url": "https://stockanalysis.com/stocks/cme/history/",
+      "type": "Secondary historical market-data page",
+      "row": "Nov 3, 2026: close 304.06",
+      "archive_filename": "peer_prices_web_20261104.json",
+      "archived_sha256": "deebef4d9a6391d6d1530ebd6f0d93f55ef62b2ac0addac88822a9d1874acbb6"
+    },
+    "CME_PRICE_CHECK": {
+      "url": "https://chartexchange.com/symbol/nasdaq-cme/historical/",
+      "type": "Secondary corroborating historical market-data page",
+      "row": "2026-11-03: close 304.06",
+      "archive_filename": "peer_prices_web_20261104.json",
+      "archived_sha256": "deebef4d9a6391d6d1530ebd6f0d93f55ef62b2ac0addac88822a9d1874acbb6"
+    },
+    "ICE_Q3": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1571949/000157194926000015/ice-20260930.htm",
+      "type": "SEC 10-Q",
+      "filed": "2026-10-29",
+      "archive_filename": "ice_q3_2026_10q.html",
+      "archived_sha256": "426857e498bbbba8db08d08aed92a1211bca77e3f02536be13ee5082cdf13640"
+    },
+    "ICE_Q3_RELEASE": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1571949/000110465926119880/tm2628301d1_ex99-1.htm",
+      "ir_url": "https://ir.theice.com/press/news-details/2026/Intercontinental-Exchange-Reports-Third-Quarter-2026/default.aspx",
+      "type": "SEC 8-K Exhibit 99.1",
+      "published": "2026-10-29",
+      "archive_filename": "ice_q3_2026.html",
+      "archived_sha256": "e563a1b04bd5811715de1d387150bf0a6b10375e95556ae699a13c024ed61792"
+    },
+    "ICE_FY25": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1571949/000110465926010646/tm264989d1_ex99-1.htm",
+      "ir_url": "https://ir.theice.com/press/news-details/2026/Intercontinental-Exchange-Reports-Strong-Full-Year-2025-Results/",
+      "type": "SEC 8-K Exhibit 99.1",
+      "published": "2026-02-05",
+      "archive_filename": "ice_fy2025.html",
+      "archived_sha256": "c5a34348aca4109da45fc135101708db4c4a62becc3ee1b46b4bf0b50d874242"
+    },
+    "ICE_PRICE": {
+      "url": "https://chartexchange.com/symbol/nyse-ice/historical",
+      "type": "Secondary historical market-data page",
+      "row": "2026-11-03: close 170.93; disregard changing headline/intraday quotes",
+      "archive_filename": "peer_prices_web_20261104.json",
+      "archived_sha256": "deebef4d9a6391d6d1530ebd6f0d93f55ef62b2ac0addac88822a9d1874acbb6"
+    },
+    "ICE_PRICE_CHECK": {
+      "url": "https://finance.yahoo.com/quote/ICE/history/",
+      "type": "Secondary historical market-data search snapshot; later full open rate-limited",
+      "row": "Nov 3, 2026: close 170.93"
+    },
+    "ICE_MKTX_VOTE": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1278021/000119312526437772/mktx-20261029.htm",
+      "type": "MarketAxess SEC 8-K",
+      "event_date": "2026-10-29",
+      "archive_filename": "ice_marketaxess_vote_20261029.html",
+      "archived_sha256": "b5cd9a492fcbf5f2e27e5e641f9d2f402cdfe122f286e120f69a39929b29681c"
+    }
+  },
+  "peers": [
+    {
+      "ticker": "CME",
+      "issuer": "CME Group Inc.",
+      "exchange": "Nasdaq",
+      "peer_role": "Core, with investment and collateral-interest comparability caveats",
+      "price": 304.06,
+      "price_source": "CME_PRICE",
+      "price_crosscheck_source": "CME_PRICE_CHECK",
+      "q3_diluted_weighted_average_shares": 358.641,
+      "shares_source": "CME_Q3",
+      "reported_actual_class_a_shares": 357.930746,
+      "reported_actual_class_b_shares": 0.003138,
+      "actual_share_count_date": "2026-10-14",
+      "actual_market_cap_on_price_date": null,
+      "periods": {
+        "fy2025": {
+          "source": "CME_FY25",
+          "net_revenue": 6520.6,
+          "gaap_ebit": 4229.5,
+          "d_and_a_ex_acquired_amortization": 107.5,
+          "acquired_intangible_amortization": 223.4,
+          "common_net_income_diluted_basis": 4021.0,
+          "diluted_eps": 11.16
+        },
+        "ytd2025": {
+          "source": "CME_Q3",
+          "net_revenue": 4871.9,
+          "gaap_ebit": 3209.9,
+          "d_and_a_ex_acquired_amortization": 81.0,
+          "acquired_intangible_amortization": 167.5,
+          "common_net_income_diluted_basis": 2853.0,
+          "diluted_eps": 7.92
+        },
+        "ytd2026": {
+          "source": "CME_Q3",
+          "net_revenue": 5323.6,
+          "gaap_ebit": 3558.2,
+          "d_and_a_ex_acquired_amortization": 82.8,
+          "acquired_intangible_amortization": 168.1,
+          "common_net_income_diluted_basis": 3233.0,
+          "diluted_eps": 8.96
+        },
+        "q32026": {
+          "source": "CME_Q3",
+          "net_revenue": 1737.3,
+          "gaap_ebit": 1141.4
+        }
+      },
+      "ebit_normalization_adjustments": [],
+      "normalization_note": "Main EBIT is GAAP. SBC, acquired amortization, restructuring, legal, strategic transaction costs and deferred compensation remain expensed; no generic adjusted-earnings addbacks.",
+      "capital": {
+        "source": "CME_Q3",
+        "as_of": "2026-09-30",
+        "short_term_debt": 0.0,
+        "long_term_debt": 3425.1,
+        "noncontrolling_interests_book": 0.0,
+        "redeemable_noncontrolling_interests": 0.0,
+        "cash_and_equivalents_ex_restricted": 2198.5,
+        "pass_through_fees_in_unrestricted_cash_reserved": 0.0,
+        "marketable_securities_not_netted": 131.0,
+        "restricted_cash_ex_client": 3.5,
+        "ficc_operating_deposit_not_netted": 225.0,
+        "ficc_deposit_source": "CME_Q3_RELEASE",
+        "clearing_client_cash_assets_excluded": 155179.7,
+        "clearing_client_cash_liabilities_excluded": 155179.7,
+        "other_matched_clearing_assets_excluded": 0.0,
+        "other_matched_clearing_liabilities_excluded": 0.0,
+        "acquisition_prefunding_restricted_cash_offset_rounded": 0.0,
+        "additional_operating_cash_reserve": 0.0,
+        "additional_operating_cash_reserve_basis": "Assumption for comparable accounting EV only, not proof all unrestricted cash is distributable. DCO/DCM capital and liquidity requirements remain; quantified total excess capital not independently established.",
+        "note": "Do not use headline $2.4bn cash: it includes $225m FICC deposit in other current assets. Exclude $131m marketable securities conservatively because fair-value table includes deferred-compensation-linked investments; no additional value assigned to strategic stakes. Debt is carrying value, not face or fair value. No operating lease liability capitalized because EBIT includes rent. $44.0m finance lease liability is separately added as financing debt.",
+        "finance_lease_liabilities": 44.0
+      },
+      "earnings_caveats": [
+        "FY2025 includes $306.1m gain on OSTTRA sale in investment income (10-K); this survives in current TTM GAAP P/E. No estimated tax-normalized P/E is presented.",
+        "CME reports net collateral interest and equity-method earnings below operating income. EV includes strategic investment value but EBIT excludes its earnings, so EV/EBIT is a group-level screening multiple, not pure fee-business EV/EBIT.",
+        "4.584m preferred shares converted to common on March 5, 2026. Q3 diluted share proxy and dated cover-page outstanding shares are separate inputs."
+      ]
+    },
+    {
+      "ticker": "ICE",
+      "issuer": "Intercontinental Exchange, Inc.",
+      "exchange": "NYSE (also registered NYSE Texas)",
+      "peer_role": "Secondary: exchanges plus fixed income/data and mortgage technology; pending MarketAxess",
+      "price": 170.93,
+      "price_source": "ICE_PRICE",
+      "price_crosscheck_source": "ICE_PRICE_CHECK",
+      "q3_diluted_weighted_average_shares": 563.0,
+      "shares_source": "ICE_Q3",
+      "reported_actual_class_a_shares": 558.858412,
+      "reported_actual_class_b_shares": 0.0,
+      "actual_share_count_date": "2026-10-26",
+      "actual_market_cap_on_price_date": null,
+      "periods": {
+        "fy2025": {
+          "source": "ICE_FY25",
+          "gross_revenue": 12640.0,
+          "section31_fee_expense": 412.0,
+          "liquidity_routing_clearing_expense": 2297.0,
+          "net_revenue": 9931.0,
+          "gaap_ebit": 4929.0,
+          "d_and_a_ex_acquired_amortization": 567.0,
+          "acquired_intangible_amortization": 993.0,
+          "common_net_income_diluted_basis": 3315.0,
+          "diluted_eps": 5.77
+        },
+        "ytd2025": {
+          "source": "ICE_Q3",
+          "gross_revenue": 9498.0,
+          "section31_fee_expense": 412.0,
+          "liquidity_routing_clearing_expense": 1659.0,
+          "net_revenue": 7427.0,
+          "gaap_ebit": 3692.0,
+          "d_and_a_ex_acquired_amortization": 416.0,
+          "acquired_intangible_amortization": 755.0,
+          "common_net_income_diluted_basis": 2464.0,
+          "diluted_eps": 4.28
+        },
+        "ytd2026": {
+          "source": "ICE_Q3",
+          "gross_revenue": 10907.0,
+          "section31_fee_expense": 571.0,
+          "liquidity_routing_clearing_expense": 1928.0,
+          "net_revenue": 8408.0,
+          "gaap_ebit": 4466.0,
+          "d_and_a_ex_acquired_amortization": 459.0,
+          "acquired_intangible_amortization": 713.0,
+          "common_net_income_diluted_basis": 3311.0,
+          "diluted_eps": 5.85
+        },
+        "q32026": {
+          "source": "ICE_Q3",
+          "net_revenue": 2765.0,
+          "gaap_ebit": 1410.0
+        }
+      },
+      "ebit_normalization_adjustments": [],
+      "normalization_note": "Main EBIT is GAAP. SBC, acquired amortization and transaction/integration costs remain expensed; no general non-GAAP addbacks. Supplemental EBITDA is mechanical GAAP EBIT plus separately disclosed D&A, not normalized earnings.",
+      "capital": {
+        "source": "ICE_Q3",
+        "as_of": "2026-09-30",
+        "short_term_debt": 2959.0,
+        "long_term_debt": 20345.0,
+        "noncontrolling_interests_book": 48.0,
+        "redeemable_noncontrolling_interests": 30.0,
+        "cash_and_equivalents_ex_restricted": 936.0,
+        "pass_through_fees_in_unrestricted_cash_reserved": 94.0,
+        "pass_through_reserve_basis": "Section 31 fees payable: 10-Q states collections enter cash and are remitted twice annually. Reserve this cash rather than treat it as available to equity.",
+        "restricted_cash_ex_client": 4486.0,
+        "restricted_investments_not_netted": 1141.0,
+        "clearing_client_cash_assets_excluded": 113274.0,
+        "clearing_client_cash_liabilities_excluded": 113274.0,
+        "other_matched_clearing_assets_excluded": 2811.0,
+        "other_matched_clearing_liabilities_excluded": 2811.0,
+        "acquisition_prefunding_restricted_cash_offset_rounded": 3700.0,
+        "prefunding_offset_basis": "10-Q Note 8 discloses $3.7bn net proceeds from August senior notes separately invested in short-term restricted cash; rounded source amount. Not distributable, not regulatory/client cash. Shown only as a separate matched-funding sensitivity, not subtracted from primary restricted-cash-excluding EV.",
+        "new_acquisition_notes_face_value": 3750.0,
+        "undrawn_marketaxess_term_loan": 2000.0,
+        "strategic_equity_investments_book_not_netted": 2994.0,
+        "additional_operating_cash_reserve": 0.0,
+        "additional_operating_cash_reserve_basis": "Assumption for comparable accounting EV only, not proof of distributability. Regulatory and own guaranty-fund/SITG cash and investments remain invested and are not excess cash.",
+        "note": "Book NCI and redeemable NCI included in EV; no market-value estimate. No operating lease debt addition because EBIT retains rent. Debt balance includes acquisition prefunding; standalone denominators exclude MarketAxess.",
+        "finance_lease_liabilities": 0.0
+      },
+      "earnings_caveats": [
+        "YTD2026 net income includes $452m fair-value investment gains versus $35m YTD2025. GAAP P/E is not a normalized earnings multiple.",
+        "OTC/Other revenue includes net interest income/fees on clearing collateral, not separately quantified here; treatment differs from CME below-operating-income presentation.",
+        "Mortgage technology acquisition amortization is material and retained; this intentionally avoids applying management adjusted EBIT on an inconsistent basis.",
+        "Strategic equity/equity-method investments of $2,994m book value are not deducted from EV because carrying value is not fair value. Their nonoperating contribution creates a numerator-denominator scope mismatch."
+      ],
+      "post_balance_sheet_event": {
+        "source": "ICE_MKTX_VOTE",
+        "event_date": "2026-10-29",
+        "description": "MarketAxess shareholders approved the merger agreement. Closing still expected Q1 2027, subject to remaining customary conditions and other regulatory approvals. Not completed as of valuation date."
+      }
+    }
+  ],
+  "reproduction": {
+    "requires_full_source_documents": false,
+    "runtime_dependencies": [
+      "Python standard library",
+      "comps_inputs.json"
+    ],
+    "source_archive_policy": "Source URLs and previously recorded archive hashes are provenance metadata. Full filings are not redistributed and are not required to reproduce the calculations."
+  }
+}
