@@ -1,0 +1,465 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TENB · Stage 3 completed · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/TENB">← TENB stock profile</a><a href="../index.html">November 4 research</a><a href="../../../#biblioteca">Research library</a></nav><p class="eyebrow">A156 · Full Stage 3 review · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag deferred">Wait for price</span><span class="tag">No entry approval</span></div><h1 id="tenb-completed-stage-3-wait-for-price">TENB: completed Stage 3, wait for price</h1>
+<p>Good company, wait for price. Stage 3 complete; $47.03 needs materially stronger combined growth and margins than the central case. Central value $19.83; central sensitivity $16–25. No approved entry.</p>
+<p>Research date: November 4, 2026 UTC. Scanner reference: November 3, 2026; $47.03. The scanner timestamp has no specified timezone. This is a completed review, not purchase approval. Stage 3.5 and an entry plan remain separate. No trade, order, new stop or authorized position size.</p>
+<h1 id="tenb-stage-3-completed-wait-for-a-better-price">TENB: Stage 3 completed, wait for a better price</h1>
+<p><strong>Research date: November 4, 2026. Evaluated price: $47.03, November 3 regular close, 4:00 p.m. EST.</strong> USD throughout; financial tables in USD millions, shares in millions. Scanner Opportunity 90 and QP 100 prioritize research, not purchase authorization. The scanner’s “Quote on 11/3/26 17:27:04” has no specified timezone. Its $47.03 happens to match the independently verified regular close [S8,S18].</p>
+<p><strong>Decision: Good company; wait for price. No Stage 3.5 approval and no trade.</strong> The business is improving, but $47.03 already requires an unusually successful combination of growth and owner-cost margin expansion. Ten-year operating FCFF yields <strong>$4.66 adverse, $19.83 central and $46.83 favorable</strong>. A central operating sensitivity range is approximately <strong>$16–25</strong>; a stronger joint operating case reaches <strong>$34</strong>, so the fair assessment is not that $20 is an exact ceiling. The favorable case can support roughly today’s price, but current evidence does not support treating that outcome as the central expectation. Scenarios are not probabilities or worst-case limits.</p>
+<p>This is a completed Stage 3 review, superseding the November 2 bounded prioritization only. Confidence is high in “not attractive at today’s price” and medium-low in a precise intrinsic value because the owner-margin recovery is young. <strong>No universal 15% discount is imposed.</strong> A reasonable-price partial could be evaluated under the plan if future evidence supports the price, but smaller size cannot repair today’s expectation gap.</p>
+<h2 id="earnings-and-source-cut-off">Earnings and source cut-off</h2>
+<p>Q3 results were released <strong>October 28, 2026, 4:05 p.m. EDT</strong>, with the call at 4:30 p.m. The full September-quarter 10-Q was filed <strong>November 3</strong>, accession 0001660280-26-000054 [S2,S3,S15]. Thus this is post-earnings research, not a company with results still pending in November 2–6. The October 28 release and the newly filed 10-Q are both incorporated. No new results date is invented.</p>
+<p>The full 10-Q, its filing date and its XBRL values were cross-checked. No essential-data blocker remains for this conclusion.</p>
+<h2 id="what-the-business-is-and-what-is-improving">What the business is and what is improving</h2>
+<p>Tenable sells vulnerability and exposure management across IT, cloud, identities, operational technology and AI systems. Its installed sensors, vulnerability research and customer workflows create switching costs and opportunities to cross-sell the broader Tenable One platform. This is a credible franchise, not a broken-company thesis. The issuer reports over 40,000 customers and over 5,000 using Tenable One; the latter was <strong>59% of Q3 new sales</strong>, not 59% of revenue [S5].</p>
+<p>The growth evidence is encouraging but does not yet prove a new 20% company-wide growth regime:</p>
+<ul>
+<li>Q3 subscription revenue <strong>$254.600m, +9.64%</strong>; recurring revenue approximately <strong>95%</strong> of total. The company uses ARR in its retention calculation but does <strong>not disclose a standalone total ARR balance/growth series in the reviewed filing and results</strong>. Subscription growth and RPO must not be relabeled ARR growth.</li>
+<li>Dollar-based net expansion <strong>107%</strong>, versus 106% in Q2 and 106% a year earlier. This measures the prior-year cohort including expansion/contraction/churn. It is not gross retention, and it does not independently establish pricing power.</li>
+<li>Short-term RPO <strong>$747.222m, +11.7%</strong>; total RPO <strong>$1,063.044m, +14.4%</strong>. Longer duration partly explains total RPO growing faster than short-term RPO; neither is immediate revenue.</li>
+<li><strong>413</strong> new enterprise-platform logos; six-figure customers <strong>2,275 versus 2,156</strong>, +5.5%, with 39 net additions in Q3 [S2,S3,S5].</li>
+</ul>
+<p>Against July guidance, Q3 revenue beat the $271.5m midpoint by $4.887m, or 1.8%, and non-GAAP operating income beat $67.5m by $7.388m, or 10.9%. FY26 revenue midpoint rose <strong>$1,078m to $1,085.5m</strong>, only 0.7%; non-GAAP EBIT midpoint rose <strong>$261m to $271.5m</strong>, 4.0%. <strong>Unlevered FCF guidance stayed $289–295m</strong>, rather than being raised with earnings. Q4 revenue guidance of $277–280m implies about 6.9% growth at midpoint against Q4 2025. These facts support real operating leverage but caution against extrapolating EPS acceleration [S3,S4].</p>
+<h2 id="financial-record-three-years-four-quarters-and-ttm">Financial record: three years, four quarters and TTM</h2>
+<p>FYs and quarterly statements are sourced to SEC filings and companyfacts. Q4 2025 = FY2025 less nine months; Q2/Q3 cash flows are cumulative differences. TTM = Q4 2025 + Q1–Q3 2026. Prior TTM is the equivalent September 2025 period. Capex includes cash capitalized software [S1,S2,S15].</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th style="text-align: right;">Revenue</th>
+<th style="text-align: right;">GAAP EBIT</th>
+<th style="text-align: right;">Net income</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Cash capex + software</th>
+<th style="text-align: right;">Cash FCF</th>
+<th style="text-align: right;">Expensed SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">798.71</td>
+<td style="text-align: right;">-52.16</td>
+<td style="text-align: right;">-78.28</td>
+<td style="text-align: right;">149.85</td>
+<td style="text-align: right;">8.76</td>
+<td style="text-align: right;">141.10</td>
+<td style="text-align: right;">145.33</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">900.02</td>
+<td style="text-align: right;">-6.86</td>
+<td style="text-align: right;">-36.30</td>
+<td style="text-align: right;">217.48</td>
+<td style="text-align: right;">10.70</td>
+<td style="text-align: right;">206.78</td>
+<td style="text-align: right;">163.51</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">999.40</td>
+<td style="text-align: right;">-9.17</td>
+<td style="text-align: right;">-36.12</td>
+<td style="text-align: right;">266.75</td>
+<td style="text-align: right;">16.58</td>
+<td style="text-align: right;">250.17</td>
+<td style="text-align: right;">191.81</td>
+</tr>
+<tr class="even">
+<td>Q42025</td>
+<td style="text-align: right;">260.53</td>
+<td style="text-align: right;">8.86</td>
+<td style="text-align: right;">-0.74</td>
+<td style="text-align: right;">83.03</td>
+<td style="text-align: right;">2.13</td>
+<td style="text-align: right;">80.90</td>
+<td style="text-align: right;">44.50</td>
+</tr>
+<tr class="odd">
+<td>Q12026</td>
+<td style="text-align: right;">262.06</td>
+<td style="text-align: right;">8.76</td>
+<td style="text-align: right;">1.41</td>
+<td style="text-align: right;">87.97</td>
+<td style="text-align: right;">5.33</td>
+<td style="text-align: right;">82.64</td>
+<td style="text-align: right;">43.85</td>
+</tr>
+<tr class="even">
+<td>Q22026</td>
+<td style="text-align: right;">268.51</td>
+<td style="text-align: right;">12.37</td>
+<td style="text-align: right;">3.81</td>
+<td style="text-align: right;">44.72</td>
+<td style="text-align: right;">5.55</td>
+<td style="text-align: right;">39.17</td>
+<td style="text-align: right;">46.35</td>
+</tr>
+<tr class="odd">
+<td>Q32026</td>
+<td style="text-align: right;">276.39</td>
+<td style="text-align: right;">16.71</td>
+<td style="text-align: right;">11.30</td>
+<td style="text-align: right;">72.52</td>
+<td style="text-align: right;">8.29</td>
+<td style="text-align: right;">64.22</td>
+<td style="text-align: right;">51.22</td>
+</tr>
+<tr class="even">
+<td>TTM2025</td>
+<td style="text-align: right;">974.60</td>
+<td style="text-align: right;">-5.05</td>
+<td style="text-align: right;">-33.51</td>
+<td style="text-align: right;">264.84</td>
+<td style="text-align: right;">17.29</td>
+<td style="text-align: right;">247.55</td>
+<td style="text-align: right;">188.02</td>
+</tr>
+<tr class="odd">
+<td>TTM2026</td>
+<td style="text-align: right;">1,067.49</td>
+<td style="text-align: right;">46.70</td>
+<td style="text-align: right;">15.78</td>
+<td style="text-align: right;">288.23</td>
+<td style="text-align: right;">21.31</td>
+<td style="text-align: right;">266.93</td>
+<td style="text-align: right;">185.92</td>
+</tr>
+</tbody>
+</table></div>
+<p>GAAP diluted EPS: FY2023 <strong>−$0.68</strong>, FY2024 <strong>−$0.31</strong>, FY2025 <strong>−$0.30</strong>; Q4 2025 <strong>−$0.01</strong>, Q1 2026 <strong>$0.01</strong>, Q2 <strong>$0.03</strong>, Q3 <strong>$0.10</strong>. Reported-quarter rounded EPS sum to $0.13, but that is not a new weighted-average share count. TTM net income/current diluted economic shares is separately about $0.14.</p>
+<p>TTM revenue grows <strong>9.53%</strong> and cash FCF <strong>7.83%</strong>. EBIT improves from <strong>−$5.048m to +$46.695m</strong> and net income from <strong>−$33.513m to +$15.781m</strong>. A percentage growth rate across a loss/near-zero base would mislead. GAAP EBIT margins progress from −6.5% in 2023 to −0.8% in 2024, −0.9% in 2025 and <strong>4.4% TTM</strong>, with <strong>6.0% in Q3</strong>. Gross margin is relatively steady, near 78%; improving expense leverage matters more than a gross-margin windfall.</p>
+<h3 id="normalization-genuine-progress-not-free-sbc">Normalization: genuine progress, not free SBC</h3>
+<p>The prior TTM includes <strong>$14.6m</strong> from accelerated former-CEO equity vesting. Removing that discrete charge changes prior EBIT to <strong>+$9.552m</strong>; current EBIT is still $46.695m. Recovery is real even after removing the favorable comparison. Restructuring and acquisition charges are disclosed, not all automatically removed from a business that has repeatedly incurred them. Acquisition amortization stays within EBIT and is included once in D&amp;A for the cash bridge.</p>
+<p>TTM expensed SBC <strong>$185.922m</strong> is <strong>17.4% of revenue</strong>. Q3 SBC rose <strong>14.1%</strong>, faster than revenue, to 18.5% of revenue. Thus no straight-line assumption that SBC quickly disappears is justified. Q3 non-GAAP EBIT $74.888m less SBC $51.217m is only $23.671m, or 8.56% of revenue, before restoring other excluded expenses. FY26 non-GAAP EBIT midpoint $271.5m less forecast SBC $185.3m leaves $86.2m, or 7.94%; restoring amortization/restructuring brings GAAP EBIT to <strong>$55.5m</strong>, or 5.11% [S3].</p>
+<p>SBC alone is not a veto. It is a recurring labor cost, and the DCF can value a business with it if margins and growth justify the price. This model keeps it in EBIT and does not additionally impose future dilution growth or hypothetical buyback spending.</p>
+<h2 id="cash-quality-reconciliation">Cash-quality reconciliation</h2>
+<p>Cash FCF is <strong>CFO less PP&amp;E less capitalized software</strong>, not CFO alone. The company’s “unlevered FCF” adds cash interest and financing costs without fully normalizing taxes, financial income, SBC or working capital; it is not the model’s FCFF.</p>
+<p>TTM cash FCF $266.925m less expensed SBC $185.922m gives <strong>$81.003m</strong>, a useful owner-cost diagnostic, not formal FCFF. Additional capitalized SBC is approximately <strong>$2.719m</strong>, so a broader all-compensation diagnostic is <strong>$78.284m</strong>. At $4.915bn basic market equity this is only about <strong>1.6%</strong>.</p>
+<p>The exact reported-to-normalized bridge is:</p>
+<ol type="1">
+<li>Cash FCF <strong>266.925</strong>.</li>
+<li>Remove expensed SBC <strong>−185.922</strong>, giving <strong>81.003</strong>.</li>
+<li>Remove TTM reported working-capital contribution <strong>−38.913</strong> and other non-D&amp;A noncash adjustments <strong>−6.389</strong>.</li>
+<li>Replace net income with EBIT taxed at 23%: <strong>+20.174</strong>, giving <strong>55.875</strong>.</li>
+<li>Include capitalized SBC as economic investment <strong>−2.719</strong>, giving <strong>53.156m normalized operating FCFF before incremental working capital</strong>.</li>
+</ol>
+<p>Equivalent formula: EBIT 46.695 ×77% + D&amp;A 41.228 − cash capex 21.308 − capitalized SBC 2.719 =53.156. This bridge removes financial income and financing expense along with tax timing rather than counting them in operating value and cash twice. It is a normalization diagnostic, not a claim that cash taxes or working capital were actually zero.</p>
+<p>Nine-month cash software investment rose <strong>$2.676m to $11.712m</strong>. Deferred commissions declined <strong>$124.629m to $115.148m</strong>: cash capitalized commissions of34.056m versus amortization 43.537m released 9.481m. The DCF does not perpetuate this release. Commission investment is included in forecast working capital, not also in PP&amp;E capex. Revenue is predominantly USD-billed, reducing direct revenue FX exposure; international expenses still face FX risk.</p>
+<p>Historical acquisitions consumed $243.3m/$29.2m/$196.2m in 2023/24/25. The forecast assumes growth from the already-owned business and expensed R&amp;D, <strong>no free future acquisitions</strong>. A new acquisition requires deducting its price and reassessing its growth/margin contribution.</p>
+<h2 id="balance-sheet-ownership-and-convertible-reconciliation">Balance sheet, ownership and convertible reconciliation</h2>
+<p>September cash plus short-term investments is <strong>$495.261m</strong>. Debt is <strong>$800m principal</strong>, not its $779.016m carrying amount. The operating-value-to-equity bridge subtracts $800m and adds $395.261m excess cash after a disclosed <strong>$100m operating-liquidity reserve</strong>, net <strong>−$404.739m</strong>. Releasing that entire reserve adds only $0.88 per modeled share. Operating lease payments remain inside operating costs, so $62.076m lease liabilities are not deducted a second time.</p>
+<p>The convertible coupon is 0.25%, maturity <strong>September 15, 2031</strong>, conversion price about <strong>$44.84</strong>, and capped-call protection extends to <strong>$64.06</strong>. Principal must be settled in cash. Therefore the model subtracts $800m and does not also add the 17.84m gross underlying conversion shares. Above the cap, residual dilution is possible; all direct scenarios here are below it. Capped-call counterparty/early-conversion risks are real, not zero. At a $47.03 stock price, loss of the hedge’s current intrinsic offset is only about $39m, or $0.35/share, but exposure grows with the stock. The separate $400m revolver was undrawn as of filing; it is liquidity, not excess cash [S2,S6,S7].</p>
+<p>Oct 30 actual basic shares: <strong>104.507623m</strong>. The economic treasury-stock share bridge at $47.03 is:</p>
+<ul>
+<li>Vested options 0.576m at $12.18: incremental <strong>0.426825m</strong>.</li>
+<li>Unvested RSUs 14.436m less $328.966m remaining compensation/price: <strong>7.441188m</strong>.</li>
+<li>PSUs 0.985m less $12.878m remaining compensation/price: <strong>0.711175m</strong>.</li>
+<li>Total <strong>113.086811m</strong>. PSU realization is a target-based assumption. Unallocated plan shares are excluded.</li>
+</ul>
+<p>This is a point-in-time economic approximation, not GAAP weighted shares. Remaining service compensation is treated as treasury-stock proceeds rather than counting every unvested share fully and charging all remaining compensation again. The model charges recurring compensation in future EBIT, keeps this denominator static and assumes no additional future share-count increase or free repurchases. For an even more generous countercheck, <strong>basic shares only</strong> produce central <strong>$21.46</strong> and favorable <strong>$50.68</strong>. Share-method uncertainty does not restore a central-value entry case.</p>
+<p>YTD cash repurchases of $454.0m exceed CFO $205.2m. EPS benefited from leverage-funded share reduction, not just operating growth. Nine-month equity grants also remain significant. Negative book equity chiefly reflects repurchases and historical losses; it is not itself proof of insolvency. Liquidity is adequate, but today’s balance is no longer a net-cash balance sheet.</p>
+<h2 id="ten-year-fcff-model">Ten-year FCFF model</h2>
+<p>Base revenue is TTM <strong>$1,067.486m</strong>. Years 1–5 are explicit next-twelve-month periods, not mislabeled calendar-year guidance. Years 6–10 linearly transition growth and margin to terminal levels. Formula: <strong>FCFF = EBIT ×(1−tax) + D&amp;A − total investment − Δoperating working capital</strong>. All forecast EBIT margins include SBC. No capitalization of expensed R&amp;D is used to raise margins.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Input</th>
+<th>Adverse</th>
+<th>Central</th>
+<th>Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Revenue growth, years 1–5</td>
+<td>6/5/4/3.5/3%</td>
+<td>10/10/9/8/7%</td>
+<td>14/14/13/12/10%</td>
+</tr>
+<tr class="even">
+<td>EBIT margins, years 1–5</td>
+<td>6.5/8/9/10/11%</td>
+<td>9/12/15/17.5/20%</td>
+<td>12/17/22/26/29%</td>
+</tr>
+<tr class="odd">
+<td>Year 10/terminal EBIT margin</td>
+<td>12%</td>
+<td>22%</td>
+<td>30%</td>
+</tr>
+<tr class="even">
+<td>Normalized tax</td>
+<td>25%</td>
+<td>23%</td>
+<td>22%</td>
+</tr>
+<tr class="odd">
+<td>WACC</td>
+<td>11.5%</td>
+<td>10.5%</td>
+<td>9.5%</td>
+</tr>
+<tr class="even">
+<td>Terminal growth</td>
+<td>2%</td>
+<td>2.5%</td>
+<td>3%</td>
+</tr>
+<tr class="odd">
+<td>Terminal incremental ROIC</td>
+<td>15%</td>
+<td>25%</td>
+<td>35%</td>
+</tr>
+<tr class="even">
+<td>D&amp;A/revenue years 1–5</td>
+<td>3.5/3.2/2.9/2.6/2.3%</td>
+<td>same</td>
+<td>same</td>
+</tr>
+<tr class="odd">
+<td>Total capex/software/revenue years 1–5</td>
+<td>3%</td>
+<td>3%</td>
+<td>3%</td>
+</tr>
+<tr class="even">
+<td>Incremental WC/commission investment per extra revenue dollar</td>
+<td>3%</td>
+<td>2%</td>
+<td>1%</td>
+</tr>
+<tr class="odd">
+<td>Year 10 revenue</td>
+<td>$1,483m</td>
+<td>$2,007m</td>
+<td>$2,558m</td>
+</tr>
+<tr class="even">
+<td>Enterprise value</td>
+<td>$931m</td>
+<td>$2,648m</td>
+<td>$5,701m</td>
+</tr>
+<tr class="odd">
+<td>Present equity value/share</td>
+<td><strong>$4.66</strong></td>
+<td><strong>$19.83</strong></td>
+<td><strong>$46.83</strong></td>
+</tr>
+<tr class="even">
+<td>Terminal share of enterprise value</td>
+<td>44.9%</td>
+<td>54.6%</td>
+<td>61.4%</td>
+</tr>
+</tbody>
+</table></div>
+<p>The central case is already an improvement case: current owner-cost margin is only 4.4% TTM/6.0% latest quarter. Reaching 22% needs considerable leverage while retaining investment and compensation. Qualys shows mature software margins above 30% are possible, but Tenable’s product breadth, sales spending and acquisition footprint differ. The favorable case requires much stronger sales execution and cost leverage, not merely continuation of Q3.</p>
+<p>WACC anchor: the November 3 Federal Reserve H.15 release gives <strong>4.91%</strong> for the November 2 10-year Treasury. A modeled beta 1.2 and equity premium 5.5% imply cost of equity about 11.5%; 85% equity/15% debt, 6.5% economic debt cost and 23% tax imply about 10.5% WACC. These are underwriting assumptions, not a falsely precise measured beta or a claim the 0.25% convertible coupon is the economic cost of capital [S9].</p>
+<p>In transition years, net investment/revenue glides from year 5 to the terminal requirement. <strong>Terminal reinvestment = NOPAT ×g/ROIC</strong>. The central terminal FCFF is 313.705m after 34.856m reinvestment. D&amp;A is 2% in years 6–10; gross investment is solved so D&amp;A, capex and ΔWC reconcile to the stated net requirement. All three cases satisfy WACC&gt;g. This avoids an abrupt free-growth terminal.</p>
+<p>Federal/state/foreign NOLs and credits exist, but jurisdiction, ownership limits and expiry prevent treating the full face amount as freely spendable cash. The base uses normalized tax rates throughout and adds no separate tax asset. Even giving full undiscounted credit to the FY25 NOL deferred-tax asset plus tax credits would add less than <strong>$2/share</strong>, before limitations. This conservative omission cannot explain the roughly $27 price/base-value gap [S1].</p>
+<h3 id="fair-range-and-combined-sensitivities">Fair range and combined sensitivities</h3>
+<p>Holding central operations fixed, WACC 9.5–11.5% and g2–3% produce <strong>$16.42–24.75</strong>. This is a sensitivity range around the central operating forecast, not the full adverse-to-favorable interval relabeled “fair.”</p>
+<p>Joint cases using 23% tax,2.5% terminal growth and 25% terminal ROIC show that the conclusion is not based on changing one variable at a time:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>First-five-year annual growth</th>
+<th>EBIT year 5/year 10</th>
+<th>WACC</th>
+<th style="text-align: right;">Present value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10%</td>
+<td>20%/22%</td>
+<td>10.5%</td>
+<td style="text-align: right;">$21.95</td>
+</tr>
+<tr class="even">
+<td>12%</td>
+<td>25%/27%</td>
+<td>10.0%</td>
+<td style="text-align: right;">$34.03</td>
+</tr>
+<tr class="odd">
+<td>10%</td>
+<td>25%/27%</td>
+<td>9.5%</td>
+<td style="text-align: right;">$32.77</td>
+</tr>
+<tr class="even">
+<td>14%</td>
+<td>29%/30%</td>
+<td>9.5%</td>
+<td style="text-align: right;">$47.44</td>
+</tr>
+</tbody>
+</table></div>
+<p>The last combination roughly supports the market. It is feasible, not impossible, but asks growth to rise materially while operating margins rise from 6% to 29% in five years. The operating evidence presently supports a recovery, not sufficient confidence in that combination to call today’s price reasonable.</p>
+<h2 id="reverse-valuation-alternative-combinations">Reverse valuation: alternative combinations</h2>
+<p>Using the same FCFF framework,10.5% WACC,2.5% terminal growth,23% tax and 25% terminal ROIC, $47.03 can be supported by these different paths. First-year margin 9% rises to year 5 margin; growth is flat for five years then fades over five years:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 30%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Growth each of first five years</th>
+<th>EBIT year 5/year 10</th>
+<th style="text-align: right;">Revenue year 10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>22.55%</td>
+<td>20%/22%</td>
+<td style="text-align: right;">$4,834m</td>
+</tr>
+<tr class="even">
+<td>18.75%</td>
+<td>25%/27%</td>
+<td style="text-align: right;">$3,862m</td>
+</tr>
+<tr class="odd">
+<td>15.68%</td>
+<td>30%/32%</td>
+<td style="text-align: right;">$3,205m</td>
+</tr>
+<tr class="even">
+<td>13.82%</td>
+<td>35%/35%</td>
+<td style="text-align: right;">$2,857m</td>
+</tr>
+</tbody>
+</table></div>
+<p>For illustration only, holding growth to 10% for five years requires roughly 43.7% operating margin by year 5 and thereafter. <strong>That is not the sole expectation embedded in the market price.</strong> Lower cost of capital and stronger joint margins/growth reduce each requirement, as shown above. Direct and reverse valuations are two views of one model, not independent confirmations.</p>
+<h2 id="comparables-useful-context-no-mechanical-averaging">Comparables: useful context, no mechanical averaging</h2>
+<p>Quotes are November 3 closes. Balance sheets are latest available statements: TENB September, QLYS/RPD June. Market EV here uses <strong>all liquid investments</strong>, no discretionary operating-cash reserve, and principal debt consistently. Forward sales use company FY26 guidance midpoint, not a mixed consensus denominator. Market multiples do not replace the owner-cost DCF.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Company</th>
+<th style="text-align: right;">Close</th>
+<th style="text-align: right;">EV/FY26 sales</th>
+<th style="text-align: right;">FY26 non-GAAP P/E</th>
+<th style="text-align: right;">Latest quarterly growth</th>
+<th style="text-align: right;">Latest GAAP EBIT margin</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TENB</td>
+<td style="text-align: right;">$47.03</td>
+<td style="text-align: right;">4.81x</td>
+<td style="text-align: right;">21.62x</td>
+<td style="text-align: right;">+9.5%</td>
+<td style="text-align: right;">6.0%</td>
+</tr>
+<tr class="even">
+<td>QLYS</td>
+<td style="text-align: right;">$210.57</td>
+<td style="text-align: right;">8.95x</td>
+<td style="text-align: right;">26.96x</td>
+<td style="text-align: right;">+11.0%</td>
+<td style="text-align: right;">34.0%</td>
+</tr>
+<tr class="odd">
+<td>RPD</td>
+<td style="text-align: right;">$14.84</td>
+<td style="text-align: right;">1.43x</td>
+<td style="text-align: right;">8.22x</td>
+<td style="text-align: right;">−1.5%</td>
+<td style="text-align: right;">1.4%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tenable lies between a much more profitable compounder and a shrinking, more leveraged turnaround. Its sales discount to Qualys is partly justified by owner margins: TENB is about <strong>111.8x TTM GAAP EBIT</strong> versus QLYS <strong>27.2x</strong>. TENB’s non-GAAP P/E hides much more SBC than GAAP EBIT. RPD has declining ARR and a $600m near-term convertible maturity within its roughly $900m debt; its low multiple is not a free-money benchmark. RPD’s earnings are still upcoming, so no unreported Q3 result is imported [S10–S13,S16,S17].</p>
+<p>Qualys and Rapid7 are closest product peers. CrowdStrike, Palo Alto Networks, hyperscalers/cloud platforms and open-source/internal tools are competitive threats but not clean valuation peers: growth, product mix and profit definitions differ. A security-platform consolidation cycle can expand Tenable One cross-sell and also strengthen bigger vendors’ bundles. AI increases exposures and opportunity, but autonomous tooling can pressure prices or commoditize parts of scanning. No unsupported claim is made that AI guarantees either outcome.</p>
+<h2 id="why-the-stock-pulled-back">Why the stock pulled back</h2>
+<p>The verified sequence is earnings October 28, close $48.72; October 29 close $51.78 (+6.28%); October 30 high $53.22; November 2 close $47.45 (−6.50%); November 3 close $47.03 (−0.89%). The high-to-close decline is <strong>11.63%</strong>. The recent retreat follows a large prior rally and occurs alongside peer weakness. The official release did not cut full-year revenue or profit guidance. Valuation digestion and sector de-risking are plausible interpretations, <strong>not a proven issuer-specific cause</strong>. No fabricated regulatory, customer-loss or earnings-warning catalyst is used [S3,S8,S12,S13].</p>
+<h2 id="decision-triggers-and-risks">Decision, triggers and risks</h2>
+<p>The Stage 3 business-quality gate passes: recurring demand, positive owner-cost cash, improving GAAP profit and adequate liquidity. <strong>The valuation/expectations gate fails at $47.03.</strong> This is a price decision, not rejection of the company or SBC as an automatic exclusion.</p>
+<p>A <strong>$17–20 research-revisit zone</strong> is a practical alert range around or modestly below today’s central estimate. It is neither an authorized buy ceiling nor a standing order. At a genuinely well-supported reasonable value, the plan permits reviewing a partial position without an automatic 15% haircut. Price falling alone would not suffice if operations deteriorated. Conversely, verified improvement in growth, retention and margins can raise the valuation without requiring the market to fall to this range.</p>
+<p>Reassess after FY26 results/guidance, a material change in financing or acquisitions, or major new operating evidence. Evidence that could support a higher central value: company-wide growth sustainably above 12%, retention reaching 110% with better large-account growth, GAAP margins improving without capitalized-cost or compensation distortions, and owner FCFF rising faster than revenue. These are research signposts, not new mechanical user rules.</p>
+<p>Thesis risks/invalidation: sustained retention deterioration or outright cohort contraction; failure of Tenable One to translate bookings mix into aggregate growth; repeated dilution/repurchases financed by debt without owner-value growth; AI/cloud competition forcing investment or price cuts; adverse cyber or product-performance incidents; and new acquisitions whose returns fail to cover cost. A material financing issue, accounting contradiction or recovery reversal would move the verdict from price-wait to watch/reject. No such hard blocker was established in the reviewed statements.</p>
+<h2 id="model-and-quality-checks">Model and quality checks</h2>
+<p>The accompanying JSON and three ten-year CSVs expose every forecast year, tax, D&amp;A, gross investment, working capital, net reinvestment, FCFF and present value. Four-quarter sums reconcile to TTM for all monetary fields. Direct and reverse share/debt assumptions match. Terminal reinvestment ties to g/ROIC. Debt is not counted with gross conversion shares; leases are not subtracted twice; SBC remains a cost with no additional future dilution assumption. The capitalized-SBC diagnostic is explicitly separate from cash capex. No trading authorization, fabricated approval, filled order or future event is recorded.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1660280/000166028026000005/tenb-20251231.htm">S1</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1660280/000166028026000054/tenb-20260930.htm">S2</a></li>
+<li><a href="https://investors.tenable.com/news-releases/news-release-details/tenable-announces-third-quarter-2026-financial-results/">S3</a></li>
+<li><a href="https://investors.tenable.com/news-releases/news-release-details/tenable-announces-second-quarter-2026-financial-results">S4</a></li>
+<li><a href="https://investors.tenable.com/static-files/9dc9ce3a-2f63-4757-958e-89eb24ce81d6">S5</a></li>
+<li><a href="https://investors.tenable.com/static-files/4c0cf94d-6b74-4b66-98d9-1e12311407ce">S6</a></li>
+<li><a href="https://investors.tenable.com/news-releases/news-release-details/tenable-announces-closing-new-400m-secured-revolving-credit">S7</a></li>
+<li><a href="https://stockanalysis.com/stocks/tenb/history/">S8</a></li>
+<li><a href="https://www.federalreserve.gov/releases/h15/">S9</a></li>
+<li><a href="https://investor.qualys.com/node/19341">S10</a></li>
+<li><a href="https://investors.rapid7.com/news/news-details/2026/Rapid7-Announces-Second-Quarter-2026-Financial-Results/default.aspx">S11</a></li>
+<li><a href="https://stockanalysis.com/stocks/qlys/history/">S12</a></li>
+<li><a href="https://stockanalysis.com/stocks/rpd/history/">S13</a></li>
+<li><a href="https://fundamentalpullback.github.io/#plan">S14</a></li>
+<li><a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0001660280.json">S15</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1107843/000110784326000035/qlys-20260630.htm">S16</a></li>
+<li><a href="https://stockanalysis.com/stocks/rpd/">S17</a></li>
+<li><a href="https://fundamentalpullback.github.io/data/scan-3960.js">S18</a></li>
+</ul>
+<h2 id="full-dossier-and-reproducible-model">Full dossier and reproducible model</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/TENB.html">Open the full TENB dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TENB/report.md">Download the full report</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TENB/model.json">Model inputs and annual forecasts</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TENB/model.py">Reproducible Python model</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TENB/adverse_10year.csv">adverse 10year.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TENB/central_10year.csv">central 10year.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TENB/favorable_10year.csv">favorable 10year.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TENB/history.json">history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/TENB/source_registry.json">source registry.json</a></li>
+</ul>
+</main></body></html>
