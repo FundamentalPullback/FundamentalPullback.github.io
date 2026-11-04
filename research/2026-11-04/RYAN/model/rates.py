@@ -1,0 +1,4 @@
+import json
+from pathlib import Path
+p=Path(__file__).parent;i=json.loads((p/'inputs.json').read_text());ke=.049+.0441*.61;d=i['opcoDebtPrincipal'];e=i['close']*(i['classA']+i['noncontrollingUnitsProxy']);w=ke*e/(e+d)+.06*(1-.26)*d/(e+d)
+o={'date':'2026-11-04','riskFree':.049,'equityRiskPremium':.0441,'betaHistoricalProvider':.61,'mechanicalCostEquity':ke,'selectedDebtCost':.06,'proxyWacc':w,'selectedBaseDiscount':.095,'limits':'Equity weights use equivalent unit price only as a rates illustration; not a certified Up-C market value. Selected premium, not rounding.','sources':['https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026','https://pages.stern.nyu.edu/~adamodar/','https://stockanalysis.com/stocks/ryan/statistics/']};(p/'rates.json').write_text(json.dumps(o,indent=2)+'\n')

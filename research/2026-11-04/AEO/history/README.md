@@ -1,0 +1,5 @@
+# AEO financial history
+
+Run python build_history.py offline. Units USD millions, EPS USD/share. numeric_observations.json contains selected primary inline-XBRL facts with URL, tag, context and period. extract_local.py was used to prepare observations from local SEC filings and is not needed in the portable package. The latest filing is preferred; among same-source facts, the most precise reported value is selected to preserve cash-flow SBC rather than rounded staff-note expense.
+
+FY2023 is 53 weeks. FY2024/FY2025 are 52 weeks. Q4=FY−9M. Q2/Q3 cash fields use accumulated differences when a direct quarter is not available. TTM26=FY25+H126−H125, prior TTM25=FY24+H125−H124. EPS is never subtracted/summed to construct Q4 or TTM. ProfitLoss is consolidated net income, NetIncomeLoss is attributable-parent income. D&A cashflow and income-statement line differ and are retained separately, not treated as acquired amortization without evidence. Owner FCF is null throughout. Refunds, claim-financing accretion and equity-method gains remain in reported history and are analyzed separately.
