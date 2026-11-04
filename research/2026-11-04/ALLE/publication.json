@@ -1,0 +1,56 @@
+{
+  "ticker": "ALLE",
+  "as_of": "2026-11-04",
+  "research_cutoff": "2026-11-04 15:43 UTC",
+  "price": 189.35,
+  "price_timestamp": "2026-11-03 16:00 America/New_York",
+  "bear": 80.29,
+  "base": 136.09,
+  "bull": 238.52,
+  "research_status": "Stage3 reconstructed; research-grade conditional on growth funding and balance/claim assumptions",
+  "decision_es": "Buena recuperación; esperar precio o evidencia. Central136,09 frente189,35. Sin entrada Stage3.5.",
+  "decision_en": "Good recovery; wait for price or evidence. Central136.09 versus189.35. No Stage3.5 entry.",
+  "buy_ceiling": null,
+  "approved_entry": false,
+  "stage35_approved": false,
+  "pros_es": [
+    "Ventas TTM +10,33% y FCF menos SBC +9,07%; la caja confirma una recuperación operativa real.",
+    "Sin devolución arancelaria, EBIT Q3 crece 13,22% y EBIT TTM 10,76%, sin convertir el extraordinario en recurrente.",
+    "La nueva nota oficial revela Overly por 88,7 M$ y permite incorporar su financiación sin contar deuda como caja gratis."
+  ],
+  "cons_es": [
+    "El central de 136,09 depende de una reinversión inicial muy baja; financiar el crecimiento al ROIC supuesto reduce el stress a 122,94.",
+    "El cierre de 189,35 USD excede el central de 136,09; el favorable de 238,52 necesita mejores hipótesis y no aprueba entrada.",
+    "Caja y claims posteriores a septiembre requieren conciliación; earnout y pensión son reservas explícitas, no saldos actuales certificados.",
+    "International cae 0,2% orgánico y el crecimiento residencial depende del precio; la recuperación no es uniforme.",
+    "El comparable industrial no confirma sobrevaloración extrema, pero tampoco sustituye el rendimiento y reinversión exigidos por el FCFF."
+  ],
+  "pros_en": [
+    "TTM revenue grew 10.33% and FCF less SBC 9.07%; cash confirms real operating recovery.",
+    "Excluding tariff refunds, Q3 EBIT grew 13.22% and TTM EBIT 10.76%, without capitalizing a one-off gain.",
+    "New official disclosure prices Overly at $88.7m and allows its funding bridge without treating debt as free cash."
+  ],
+  "cons_en": [
+    "The $136.09 central case depends on very low initial reinvestment; funding growth at the assumed ROIC reduces the stress value to $122.94.",
+    "The $189.35 close exceeds the $136.09 central case; the $238.52 favorable case requires stronger assumptions and does not approve entry.",
+    "Post-September cash and claims need reconciliation; earnout and pension adjustments are explicit reserves, not certified current balances.",
+    "International organic revenue fell 0.2% and residential growth relies on pricing; recovery is not uniform.",
+    "The industrial peer does not prove extreme overvaluation, but cannot replace FCFF reinvestment and required-return analysis."
+  ],
+  "pros_cons_evidence": {
+    "pros": [
+      "Section2; SEC history",
+      "Section3; q3/q10",
+      "Section4; q10 notes3/8"
+    ],
+    "cons": [
+      "Section5; model.json growth_funding_stress",
+      "Section6; model.json,price",
+      "Section4; q10,k25",
+      "Section1; q3",
+      "Section8; assa_report,assa_price"
+    ]
+  },
+  "growth_funding_stress": 122.94,
+  "publication_note": "Central conditioned on growth funding; stress122.94 is separate, not a new canonical estimate. Preserve historical A004177 multiple valuation and A064112 five-year FCFF, with bridge. Remove obsolete awaiting-Q3 label only; do not imply current November balance is certified or permit Stage3.5."
+}

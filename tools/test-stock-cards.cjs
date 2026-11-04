@@ -29,3 +29,29 @@ t.S.scan=originalScans.concat([{ticker:'FUTUREDAY',date:'2099-01-05',price:10,op
 for(const p of ps)for(const lang of ['es','en'])for(const inline of [true,false]){t.setLang(lang);const h=t.profileSummaryCard(p,inline);const metrics=h.match(/<dl class="stock-summary-values">([\s\S]*?)<\/dl>/)[1];a.equal((metrics.match(/<dt>/g)||[]).length,3);a(!metrics.includes('Último cierre documentado'));a(!metrics.includes('Latest documented close'));a(metrics.includes(lang==='en'?'Scanner price':'Precio del escáner'));a(metrics.includes(lang==='en'?'Estimated value':'Valor estimado'));a(metrics.includes(lang==='en'?'Bear–bull scenarios':'Escenarios bajista–alcista'));a(h.includes('profile-quote'));}
 a.equal(fresh.close.price,25);a.equal(t.profileCardData(hp).close.price,44);
 console.log('PASS three-metric summary layout in ES/EN, inline and direct cards; TradingView and historical close records preserved.');
+
+// Zero is a valid valuation result, not absent data. Prices still must be positive.
+const priorSourceSnapshot=JSON.stringify({dec:t.S.dec,lib:t.S.lib,scan:t.S.scan});
+for(const tk of ['VFC','SSL']){
+ const stock=by[tk];a(stock,'expected zero-residual fixture '+tk);const d=t.profileCardData(stock);a.equal(d.model.cons,0);a(d.model.fav>0);
+ for(const language of ['es','en'])for(const inline of [true,false]){t.setLang(language);const h=t.profileSummaryCard(stock,inline),metrics=h.match(/<dl class="stock-summary-values">([\s\S]*?)<\/dl>/)[1];a(metrics.includes(language==='es'?'0,00':'0.00'));a(h.includes('stock-summary-band'));a(!/NaN|Infinity/.test(h));}
+}
+a.equal(JSON.stringify({dec:t.S.dec,lib:t.S.lib,scan:t.S.scan}),priorSourceSnapshot);
+let zeroRow={ticker:'ZEROROW',adate:'2099-01-05',date:'2099-01-04',price:10,base:0,cons:0,fav:0,rep:'',vdate:'2099-01-05'};
+let zeroProfile=e.build({decisions:[zeroRow]})[0];a.equal(t.profileCardData(zeroProfile).model.base,0);a.equal(t.profileCardData(zeroProfile).model.cons,0);a.equal(t.profileCardData(zeroProfile).model.fav,0);
+for(const language of ['es','en']){t.setLang(language);const h=t.profileSummaryCard(zeroProfile);a(h.includes('stock-summary-band'));a(!/NaN|Infinity/.test(h));}
+// A later explicit zero is not a withdrawal; a later null still withholds the model.
+let positiveRow={...zeroRow,adate:'2099-01-03',vdate:'2099-01-03',base:20,cons:10,fav:30};a.equal(t.profileCardData(e.build({decisions:[positiveRow,zeroRow]})[0]).model.base,0);
+a.equal(t.profileCardData(e.build({decisions:[positiveRow,{...zeroRow,base:null,cons:null,fav:null}]})[0]).model,null);
+// Validate both Decisions and structured report pathways without coercing blank/false/string/negative/nonfinite input.
+for(const bad of [null,undefined,'',false,'0',NaN,Infinity,-1]){
+ const r={...zeroRow,ticker:'MISSINGROW',base:20,cons:bad,fav:30};const p=e.build({decisions:[r]})[0];a.equal(t.profileCardData(p).model.cons,null);
+ for(const language of ['es','en']){t.setLang(language);const h=t.profileSummaryCard(p);a(h.includes('<dd class="">—</dd>'));a(!h.includes('stock-summary-band'));a(!/NaN|Infinity/.test(h));}
+ a.equal(t.profileCardData(e.build({decisions:[{...r,base:bad}]})[0]).model,null);
+}
+for(const [i,bear] of [0,null,undefined,'',false,'0',NaN,Infinity,-1].entries()){
+ const tk='ZEROF'+i,report={id:'ZEROFACT'+i,date:'2099-02-01',profiles:[{ticker:tk,kind:'complete',completedAt:'2099-02-01',valuation:{base:bear===0?0:20,bear:bear,bull:30,asOf:'2099-02-01'},close:{price:0,sessionDate:'2099-01-31',priceType:'regular-close'}}]};
+ t.S.lib=t.S.lib.concat([report]);const p=t.profiles().find(x=>x.ticker===tk),d=t.profileCardData(p);a.equal(d.model.cons,bear===0?0:null);a.equal(d.model.base,bear===0?0:20);a.equal(d.close,null);
+ const noPrice=e.build({scans:[{ticker:'ZEROPRICE'+i,date:'2099-01-31',price:bear}]})[0];a.equal(t.profileCardData(noPrice).scan,null);
+}
+console.log('PASS zero valuation scenarios in VFC/SSL and future row/report fixtures, all-zero range, zero-base update, absent/invalid withholding, positive-only prices, immutable research, ES/EN inline/direct cards.');

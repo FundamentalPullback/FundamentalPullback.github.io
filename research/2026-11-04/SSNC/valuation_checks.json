@@ -1,0 +1,93 @@
+{
+  "capital_cost": {
+    "risk_free": 0.0495,
+    "erp": 0.0441,
+    "erp_source_riskfree": 0.0529,
+    "beta_provider": 1.04,
+    "beta_normalized_assumption": 1.2,
+    "debt_cost_assumption": 0.065,
+    "equity_weight": 0.722249316228924,
+    "wacc_provider_beta": 0.08241692962669506,
+    "wacc_normalized_beta": 0.08751312080200635,
+    "wacc_chosen": 0.09,
+    "same_inputs_preserve_NYU_market_return": 0.08996876847718469,
+    "same_operating_cashflows_provider_wacc_value": 79.51935545860165,
+    "same_operating_cashflows_normalized_wacc_value": 70.2704354258079
+  },
+  "migration": [
+    {
+      "step": "A119 exact reconstruction",
+      "value": 43.68499154518281,
+      "delta": null
+    },
+    {
+      "step": "WACC10 to9 only",
+      "value": 54.25057054700096,
+      "delta": 10.56557900181815
+    },
+    {
+      "step": "Reserve operatingcash150 + prior taxes99.4 + pension22.6",
+      "value": 53.120063481331805,
+      "delta": -1.130507065669157
+    },
+    {
+      "step": "Growth path4/4.5/4.5/4/3.5 only",
+      "value": 53.81605013732513,
+      "delta": 0.6959866559933232
+    },
+    {
+      "step": "Before acquired amort margin32\u201332.5; retain ordinaryDA3.5 and oldinvestment9.1",
+      "value": 66.29341906112214,
+      "delta": 12.477368923797009
+    },
+    {
+      "step": "Explicit investment funding + terminalmargin32",
+      "value": 66.28633698828283,
+      "delta": -0.007082072839310172
+    }
+  ],
+  "reverse": {
+    "margin_at_growth4pct": {
+      "required": 0.39449991069180534,
+      "value": 80.87999999999998
+    },
+    "growth_at_margin32pct": {
+      "required": 0.07740686154403453,
+      "value": 80.88000000000004
+    },
+    "joint": [
+      {
+        "margin": 0.3,
+        "required": 0.08905052075141195,
+        "value": 80.88000000000001
+      },
+      {
+        "margin": 0.32,
+        "required": 0.07740686154403453,
+        "value": 80.88000000000004
+      },
+      {
+        "margin": 0.34,
+        "required": 0.06651781120369182,
+        "value": 80.87999999999997
+      },
+      {
+        "margin": 0.36,
+        "required": 0.05629253787341282,
+        "value": 80.88000000000002
+      }
+    ]
+  },
+  "robustness": {
+    "ROIC_0.1068": 53.034782905896776,
+    "ROIC_0.13": 58.85009289413177,
+    "ROIC_0.18": 66.28633698828283,
+    "ROIC_0.23": 70.48943147628125,
+    "calendar57days_no_stub": 64.99470090082777,
+    "calendar57days_proxy_stub": 65.84383810544345,
+    "full_investments_affiliates_book_credit": 68.02615411213985,
+    "extra_claim150_above_base": 65.6628955917741,
+    "extra_shares1pct_no_free_cash": 65.6300366220622,
+    "extra_shares3pct_no_free_cash": 64.35566697891537
+  }
+}
