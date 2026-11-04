@@ -1,0 +1,426 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RELX · Stage 3 investigado · valoración condicionada · Esperar precio</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/RELX">← RELX profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Stage 3 investigado · valoración condicionada</span><span class="tag deferred">Esperar precio</span><span class="tag">No entry approved</span></div><h1 id="relx-a198-investigación-del-4-de-noviembre-de-2026">RELX · A198 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Investigación condicionada: central 25,21 USD frente al cierre 39,40; escenarios 14,07–44,21. Capital y acciones de junio, FX y recompras posteriores requieren cautela. Discrepancia entre recompras patrimoniales y caja sin resolver. Esperar precio o evidencia; sin entrada.</strong></p>
+<p>Conditional research: central $25.21 versus $39.40 close; scenarios $14.07–44.21. June capital and shares, FX and later buybacks require caution. Equity-versus-cash buyback discrepancy unresolved. Wait for price or evidence; no entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/RELX.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-11-03, 39.32 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 39.40 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04; independent review finalized before publication.</p>
+<p>A111 se conserva. Su código original no se recuperó: la reconstrucción coincide con el central redondeado, no certifica identidad del modelo original. Las cuentas completas son semestrales, no se inventan beneficios o caja trimestrales. El puente no certifica el capital de noviembre.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="relx-crecimiento-operativo-sólido-valoración-dependiente-del-coste-de-capital">RELX: crecimiento operativo sólido, valoración dependiente del coste de capital</h1>
+<p><strong>Investigación propia de 4 de noviembre de 2026. Corte: cierre regular del 3 de noviembre; último balance publicado, 30 de junio. Estado: investigación revisada independientemente y liberada con las limitaciones declaradas. Sin aprobación de entrada.</strong> Importes financieros en millones de libras salvo indicación. Un ADR representa una acción ordinaria.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>El cierre de referencia es 39,40 USD por ADR, no la cotización intradía. El DCF produce escenarios adverso/base/favorable de <strong>14,07 / 25,21 / 44,21 USD</strong>. Son supuestos alternativos, no probabilidades ni objetivos garantizados. La conclusión es esperar precio o pruebas que cambien la economía del negocio. No se actualiza ningún techo aprobado, orden, tamaño o stop.</p>
+<p>La evidencia operativa es favorable, pero el precio no queda justificado por el caso central con financiación de la reinversión. La sensibilidad al coste de capital es decisiva: sustituir la beta normalizada por el bajo estimador histórico del proveedor eleva el valor a 45,74 USD. Por tanto, no se afirma que 39,40 sea imposible; se explica qué supuestos lo sostienen y por qué no se adoptan automáticamente.</p>
+<p>Este cierre es de investigación, condicionado por un balance semestral y un denominador medio. Las recompras posteriores a junio y el dividendo pagado en septiembre requieren un puente de capital; no se combinan menos acciones actuales con la caja antigua como si las recompras fueran gratuitas. Las sensibilidades identifican el tamaño de ese problema. No es una certificación del valor liquidativo actual ni de Stage 3.5.</p>
+<h2 id="negocio-y-evidencia-vigente">1. Negocio y evidencia vigente</h2>
+<p>RELX combina información, contenidos y herramientas de decisión en Risk, Scientific Technical &amp; Medical, Legal y Exhibitions. Su ventaja potencial procede de datos propios o aportados por clientes, contenido verificado, integración en procesos y renovación de herramientas. La IA puede mejorar productos y productividad, pero también abaratar alternativas, aumentar costes de desarrollo o erosionar precios; mencionar IA no demuestra rentabilidad incremental.</p>
+<p>El comunicado del 22 de octubre mantiene crecimiento subyacente de nueve meses del 7%: Risk 8%, STM 6%, Legal 10% y Exhibitions 4%. Reafirma la perspectiva anual, sin publicar estados completos del tercer trimestre. El crecimiento subyacente excluye divisas, adquisiciones recientes, desinversiones, impresión y efectos de calendario de ferias. No se presenta ese 7% como crecimiento contable en libras. [S1/S2]</p>
+<p>En H1, las ventas reportadas aumentaron de 4.741 a 4.871, solo 2,7%; el EBIT de 1.490 a 1.585, 6,4%. Risk y Legal presentan demanda de herramientas de cumplimiento, fraude y trabajo jurídico; STM acelera su mezcla de analítica. Son afirmaciones operativas del emisor, no una medición independiente de retención, precios o retorno de IA. No se encontraron métricas homogéneas de NRR, CAC o retorno de cada producto que permitan elevar la precisión del modelo. [S2]</p>
+<p>Exhibitions merece tratamiento distinto: en H1 las ventas bajaron de 581 a 575 y el beneficio operativo ajustado de 234 a 226 pese al crecimiento subyacente. El calendario de eventos, viajes y Oriente Medio afectan la comparabilidad. El 4% subyacente de nueve meses modera el 6% del semestre. La exposición a impresión también sigue cayendo: ingresos H1 de 189 a 157. No se extrapola la mejor división a todo el grupo. [S1/S2]</p>
+<h2 id="historia-normalizada-tres-años-y-cuatro-semestres">2. Historia normalizada: tres años y cuatro semestres</h2>
+<p>RELX informa semestralmente. Se usan cuatro semestres consecutivos, no cuatro trimestres inventados. El paquete permite reconstruir H2 como año menos H1 y los TTM de junio frente al mismo periodo anterior. Los beneficios por acción derivados no se etiquetan como EPS oficialmente publicado.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT reportado</th>
+<th style="text-align: right;">Beneficio atribuible</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Caja del propietario diagnóstica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">9.161</td>
+<td style="text-align: right;">2.682</td>
+<td style="text-align: right;">1.781</td>
+<td style="text-align: right;">2.457</td>
+<td style="text-align: right;">1.868</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">9.434</td>
+<td style="text-align: right;">2.861</td>
+<td style="text-align: right;">1.934</td>
+<td style="text-align: right;">2.608</td>
+<td style="text-align: right;">2.025</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">9.590</td>
+<td style="text-align: right;">3.027</td>
+<td style="text-align: right;">2.065</td>
+<td style="text-align: right;">2.836</td>
+<td style="text-align: right;">2.235</td>
+</tr>
+<tr class="even">
+<td>H2 2024</td>
+<td style="text-align: right;">4.793</td>
+<td style="text-align: right;">1.430</td>
+<td style="text-align: right;">949</td>
+<td style="text-align: right;">1.349</td>
+<td style="text-align: right;">1.060</td>
+</tr>
+<tr class="odd">
+<td>H1 2025</td>
+<td style="text-align: right;">4.741</td>
+<td style="text-align: right;">1.490</td>
+<td style="text-align: right;">976</td>
+<td style="text-align: right;">1.414</td>
+<td style="text-align: right;">1.098</td>
+</tr>
+<tr class="even">
+<td>H2 2025</td>
+<td style="text-align: right;">4.849</td>
+<td style="text-align: right;">1.537</td>
+<td style="text-align: right;">1.089</td>
+<td style="text-align: right;">1.422</td>
+<td style="text-align: right;">1.137</td>
+</tr>
+<tr class="odd">
+<td>H1 2026</td>
+<td style="text-align: right;">4.871</td>
+<td style="text-align: right;">1.585</td>
+<td style="text-align: right;">1.173</td>
+<td style="text-align: right;">1.459</td>
+<td style="text-align: right;">1.119</td>
+</tr>
+<tr class="even">
+<td>TTM junio 2025</td>
+<td style="text-align: right;">9.534</td>
+<td style="text-align: right;">2.920</td>
+<td style="text-align: right;">1.925</td>
+<td style="text-align: right;">2.763</td>
+<td style="text-align: right;">2.158</td>
+</tr>
+<tr class="odd">
+<td>TTM junio 2026</td>
+<td style="text-align: right;">9.720</td>
+<td style="text-align: right;">3.122</td>
+<td style="text-align: right;">2.262</td>
+<td style="text-align: right;">2.881</td>
+<td style="text-align: right;">2.256</td>
+</tr>
+</tbody>
+</table></div>
+<p>En el TTM, ventas +2,0%, EBIT +6,9%, beneficio atribuible +17,5% y caja del propietario +4,5%. El beneficio no es una aproximación suficiente de caja: el semestre mejora en gastos financieros reportados y partidas no operativas, mientras aumenta el desarrollo capitalizado. El EPS diluido H1 es 65,4 peniques; el titular de 65,7 corresponde al básico. Las recompras también contribuyen al crecimiento por acción. [S2/S3/S4]</p>
+<p>Caja del propietario TTM: CFO 2.881 − PPE 21 − software 541 − principal de arrendamientos 35 + subarrendamientos 2 + dividendos de participadas 44 − SBC 64 − distribuciones minoritarias 10 = <strong>2.256</strong>. Es una medida económica después de intereses, no FCFF ni el FCF ajustado del emisor. Después de 138 de adquisiciones, da 2.118, todavía antes de otras inversiones y usos de financiación. No se descuenta esta caja a WACC restando otra vez deuda. [S2/S3]</p>
+<p>La SBC se resta aquí como coste de dilución, no como segundo pago de efectivo. En el DCF permanece dentro del EBIT y no vuelve a restarse. Los dividendos de participadas entran en este diagnóstico de caja, pero no se añaden por segunda vez al DCF que ya incorpora su contribución dentro del beneficio operativo. La participación de resultados de JV es pequeña pero la fiscalidad del grupo no constituye una valoración separada de cada participada.</p>
+<h2 id="inversión-y-normalización-contable">3. Inversión y normalización contable</h2>
+<p>La D&amp;A TTM total es 756: amortización adquirida 243 y ordinaria 513, esta última compuesta por software 372, PPE 24, derechos de uso 36 y prepublicación 81. El EBIT antes exclusivamente de amortización adquirida es 3.365, margen 34,62%; no es el beneficio ajustado del emisor, que elimina más partidas. Se mantienen SBC y costes ordinarios de desarrollo y comercialización. [S2/S3]</p>
+<p>El software capitalizado TTM asciende a 541, +12,2%, frente a su amortización de 372. No se devuelve toda amortización como si renovar el contenido y las plataformas fuera gratis. La prepublicación capitalizada suma 110, +19,6%, y figura dentro de activos corrientes: su inversión está dentro del capital circulante del CFO. Restarla de nuevo al CFO sería doble conteo. En un FCFF que parte de EBIT y añade su amortización, sí hay que presupuestar la renovación de esos activos por separado. Los 110 son capitalización revelada, no una línea auditada independiente de pagos de caja. [S2/S3/S4]</p>
+<p>La historia de adquisiciones pagadas es 124/170/260 en FY2023/24/25 y 138 TTM. No se impone ni cero perpetuo ni el pico de un solo año. El presupuesto central es 1,9% de ventas, además de inversión orgánica. Es una hipótesis de reinversión total, no permiso para suponer que cualquier compra crea valor. El modelo exige además financiar crecimiento positivo del NOPAT, incluida la expansión del margen.</p>
+<p>El ROIC ajustado del emisor fue 15,4% en FY2025, frente a 14,8%: NOPAT ajustado 2.590 sobre capital medio 16.799. Su denominador reincorpora amortización y deterioros acumulados de intangibles adquiridos y goodwill y ajusta el gross-up fiscal. No es equivalente a dividir beneficio por un patrimonio reducido por recompras. El ROIC incremental central de 18% supone mejora frente a ese historial; a 15,4% el valor baja a 24,23, y a 13% a 22,64. [S3]</p>
+<h2 id="deuda-pensiones-acciones-y-moneda">4. Deuda, pensiones, acciones y moneda</h2>
+<p>La deuda neta de junio es 8.733: deuda 8.906 menos caja 220 más pasivos de derivados de cobertura 73 menos activo de swaps 26. Incluye 119 de arrendamientos. No se sustituye por deuda menos caja simple, 8.686, sin explicar esos 47 de diferencia. Los derivados forman parte del puente financiero; no se suman otra vez como activos libres. [S2]</p>
+<p>Hay 2.311 de deuda excluyendo arrendamientos dentro de un año, más 32 de arrendamientos. Las líneas no utilizadas de 4.100 millones USD, aproximadamente 3.100 millones GBP, respaldan liquidez; 3.500 millones USD vencen en noviembre de 2030. No eliminan costes de renovación ni riesgo de financiación. El coste histórico medio de deuda H1 fue 3,6%, distinto del coste marginal nominal en GBP supuesto para el DCF. [S2]</p>
+<p>Se deducen pasivos de pensiones de 149 y minoritarios contables de 17. Corrección del A111: esos 149 no son pensiones netas. Hay activos de pensiones de 236 en otros esquemas; no se consideran caja disponible ni automáticamente compensables. Reconocerlos íntegramente sumaría unos 0,18 USD por ADR. Los minoritarios son un proxy contable, no valor de mercado independiente. [S2]</p>
+<p>Existe una discrepancia documental sin conciliación localizada: el estado de cambios en patrimonio H1 muestra recompras por 1.600, mientras la narrativa, el flujo de caja y el puente de deuda indican 1.750. La nota de 69,2 millones de acciones a precio medio de 2.529 peniques aproxima el segundo importe. La columna FY2025 del estado patrimonial también muestra 1.600 frente a 1.500 en caja. No se inventa una explicación de liquidación o anticipo. Se conserva la deuda neta 8.733 publicada y se reconoce esta limitación adicional del puente de capital; no se modifica automáticamente el balance por 150. [S2/S3]</p>
+<p>El modelo mantiene 1.794,1 millones de acciones diluidas medias H1 junto con el balance de junio. El aviso del 2 de noviembre muestra 1.740,716354 millones de acciones ordinarias con voto, no diluidas. Un aviso de transacciones pendientes de liquidación arroja otra cifra cercana; no se mezclan sus fechas. Cancelar 87 millones de acciones en tesorería el 21 de octubre no equivale a una nueva salida de caja ni a volver a reducir acciones económicas ya excluidas. [S5/S6]</p>
+<p>En junio se habían recomprado 1.750 millones GBP de los 2.250 millones anuales; en julio se comunicaban otros 100. El dividendo interino de 20,9 peniques, unos 366 millones, fue pagado en septiembre. Ya no es una distribución adicional gratuita para el comprador de noviembre. Un stress usa el recuento ordinario reciente más 7,6 millones de dilución ilustrativa H1 y añade salidas brutas de 366/766/866 millones al puente: valores 25,59/25,28/25,20. No son deuda observada: omiten caja generada, adquisiciones y cambios de divisa posteriores a junio. [S2/S5]</p>
+<p>FX de referencia: tipos ECB del 3 de noviembre, USD/EUR 1,1179 y GBP/EUR 0,83358, equivalentes a 1,34 USD/GBP. Son tipos informativos, no de ejecución. El valor operativo se calcula en GBP y solo al final se convierte al ADR. Con GBP/USD 1,20/1,30/1,40, base 22,55/24,43/26,31. [S7]</p>
+<h2 id="fcff-y-coste-de-capital">5. FCFF y coste de capital</h2>
+<p>Cinco años explícitos y cinco de convergencia. Base: ventas +5,5/+5,5/+5/+4,5/+4%; margen antes de amortización adquirida 35/35,5/36/36,5/36,5%; impuesto 23%; crecimiento terminal 2,5%; WACC GBP 8,5%. No se añade amortización adquirida a un EBIT que ya la excluye, ni se inventa su escudo fiscal. La D&amp;A ordinaria proyectada es 5,3% de ventas.</p>
+<p>Inversión bruta: PPE, software y reposición de activos arrendados 6,2%; prepublicación 1,2%; adquisiciones 1,9%; circulante incremental 8% de nuevas ventas. Reinversión neta = máximo entre esos desembolsos menos D&amp;A ordinaria y ΔNOPAT positivo/ROIC18%. No se suman ambos requisitos como dos inversiones distintas. El terminal usa el mayor entre NOPAT×g/ROIC18% y el piso operativo de reinversión; evita que el último año libere mágicamente todos los presupuestos de renovación. Los arrendamientos se tratan como financiación: deuda incluida, reemplazo presupuestado, principal no restado otra vez.</p>
+<p>El caso adverso usa crecimiento inicial 2,5–3%, margen 33,5%, impuesto 25%, WACC9,5%, g 2% y ROIC13%. El favorable exige crecimiento 7,5% inicial, margen hasta 39%, impuesto 22%, WACC7,5%, g 3% y ROIC23%. El favorable combina mejoras exigentes y financiación más barata; no es un pronóstico.</p>
+<p>Ancla nominal GBP: curva par a diez años del Bank of England, 5,3087% el 28 de octubre, último dato primario accesible en esta consulta; no se rotula como rendimiento del 3 de noviembre. Prima madura de riesgo 4,41% de NYU, usada como proxy internacional, no prima británica medida. Beta normalizada 0,85 y coste de deuda 5,8% son supuestos del analista; ponderación patrimonial 85,55% con deuda bruta. Dan WACC8,3936%, redondeado a 8,5%. [S8/S9]</p>
+<p>La búsqueda del proveedor Yahoo muestra beta mensual cinco años 0,28; el acceso directo devolvió 429. Se preserva esa limitación en vez de llamar al dato auditado. Con ese estimador y los mismos supuestos, WACC6,2432% y valor 45,74. La beta histórica de un ADR de baja covariación no prueba que su riesgo económico futuro sea tan bajo. Tampoco se oculta que una elección menos exigente del coste de capital puede explicar la cotización. [S10]</p>
+<h3 id="proyección-base-gbp-millones">Proyección base, GBP millones</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT antes amortización adquirida</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">D&amp;A ordinaria</th>
+<th style="text-align: right;">Reinversión neta</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">10.254,60</td>
+<td style="text-align: right;">3.589,11</td>
+<td style="text-align: right;">2.763,61</td>
+<td style="text-align: right;">543,49</td>
+<td style="text-align: right;">958,69</td>
+<td style="text-align: right;">1.804,92</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">10.818,60</td>
+<td style="text-align: right;">3.840,60</td>
+<td style="text-align: right;">2.957,27</td>
+<td style="text-align: right;">573,39</td>
+<td style="text-align: right;">1.075,84</td>
+<td style="text-align: right;">1.881,43</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">11.359,53</td>
+<td style="text-align: right;">4.089,43</td>
+<td style="text-align: right;">3.148,86</td>
+<td style="text-align: right;">602,06</td>
+<td style="text-align: right;">1.064,43</td>
+<td style="text-align: right;">2.084,43</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">11.870,71</td>
+<td style="text-align: right;">4.332,81</td>
+<td style="text-align: right;">3.336,26</td>
+<td style="text-align: right;">629,15</td>
+<td style="text-align: right;">1.041,12</td>
+<td style="text-align: right;">2.295,15</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">12.345,54</td>
+<td style="text-align: right;">4.506,12</td>
+<td style="text-align: right;">3.469,71</td>
+<td style="text-align: right;">654,31</td>
+<td style="text-align: right;">741,39</td>
+<td style="text-align: right;">2.728,32</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">12.802,33</td>
+<td style="text-align: right;">4.672,85</td>
+<td style="text-align: right;">3.598,09</td>
+<td style="text-align: right;">678,52</td>
+<td style="text-align: right;">713,22</td>
+<td style="text-align: right;">2.884,87</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">13.237,60</td>
+<td style="text-align: right;">4.831,73</td>
+<td style="text-align: right;">3.720,43</td>
+<td style="text-align: right;">701,59</td>
+<td style="text-align: right;">679,64</td>
+<td style="text-align: right;">3.040,79</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td style="text-align: right;">13.647,97</td>
+<td style="text-align: right;">4.981,51</td>
+<td style="text-align: right;">3.835,76</td>
+<td style="text-align: right;">723,34</td>
+<td style="text-align: right;">640,74</td>
+<td style="text-align: right;">3.195,02</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td style="text-align: right;">14.030,11</td>
+<td style="text-align: right;">5.120,99</td>
+<td style="text-align: right;">3.943,16</td>
+<td style="text-align: right;">743,60</td>
+<td style="text-align: right;">596,67</td>
+<td style="text-align: right;">3.346,49</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td style="text-align: right;">14.380,87</td>
+<td style="text-align: right;">5.249,02</td>
+<td style="text-align: right;">4.041,74</td>
+<td style="text-align: right;">762,19</td>
+<td style="text-align: right;">603,29</td>
+<td style="text-align: right;">3.438,45</td>
+</tr>
+</tbody>
+</table></div>
+<p>La D&amp;A se muestra para explicar el piso de reinversión; FCFF = NOPAT − reinversión neta, no NOPAT + D&amp;A − reinversión neta. EV 42.620,45; derechos financieros y minoritarios 8.899; equity 33.721,45. Peso del terminal 60,96%.</p>
+<h2 id="migración-respecto-al-a111-y-sensibilidad">6. Migración respecto al A111 y sensibilidad</h2>
+<p>El A111 publicó 29,59 USD. No se localizó su ejecutable original tras buscar repositorio, registros locales y nombre del archivo en Drive. Una reconstrucción de las hipótesis narradas reproduce 29,594612, sus flujos y el peso terminal aproximado. Eso valida el redondeo publicado, no prueba identidad con el archivo desaparecido. Los cambios siguientes son contables y de supuestos, no resultados trimestrales nuevos.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paso secuencial</th>
+<th style="text-align: right;">USD/ADR</th>
+<th style="text-align: right;">Cambio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A111 narrative reconstruction</td>
+<td style="text-align: right;">29,59</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr class="even">
+<td>FX updated only</td>
+<td style="text-align: right;">29,78</td>
+<td style="text-align: right;">0,18</td>
+</tr>
+<tr class="odd">
+<td>GBP WACC8 to 8.5 only</td>
+<td style="text-align: right;">26,80</td>
+<td style="text-align: right;">-2,98</td>
+</tr>
+<tr class="even">
+<td>Growth path 5.5/5.5/5/4.5/4</td>
+<td style="text-align: right;">25,88</td>
+<td style="text-align: right;">-0,91</td>
+</tr>
+<tr class="odd">
+<td>Before-acquired margins 35–36.5; ordinaryDA5.3; old investment 8.1</td>
+<td style="text-align: right;">27,12</td>
+<td style="text-align: right;">1,24</td>
+</tr>
+<tr class="even">
+<td>Fund prepublication/renewal/M&amp;A total 9.3; terminal 18</td>
+<td style="text-align: right;">27,04</td>
+<td style="text-align: right;">-0,08</td>
+</tr>
+<tr class="odd">
+<td>Fund positive incremental NOPAT and terminal investment floor</td>
+<td style="text-align: right;">25,21</td>
+<td style="text-align: right;">-1,83</td>
+</tr>
+</tbody>
+</table></div>
+<p>La reinversión central es deliberadamente explícita: una mezcla nueva de márgenes antes de amortización, inversión y ROIC no se compara con el anterior importe sin este puente. La reducción no implica deterioro observado de la compañía. Tampoco se cambian los supuestos para acercar el valor a 39,40.</p>
+<p>Sensibilidad WACC/crecimiento terminal, manteniendo todo lo demás:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th style="text-align: right;">g 2%</th>
+<th style="text-align: right;">g 2,5%</th>
+<th style="text-align: right;">g 3%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7,50%</td>
+<td style="text-align: right;">29,28</td>
+<td style="text-align: right;">32,00</td>
+<td style="text-align: right;">34,75</td>
+</tr>
+<tr class="even">
+<td>8,00%</td>
+<td style="text-align: right;">26,10</td>
+<td style="text-align: right;">28,29</td>
+<td style="text-align: right;">30,42</td>
+</tr>
+<tr class="odd">
+<td>8,50%</td>
+<td style="text-align: right;">23,41</td>
+<td style="text-align: right;">25,21</td>
+<td style="text-align: right;">26,89</td>
+</tr>
+<tr class="even">
+<td>9,00%</td>
+<td style="text-align: right;">21,11</td>
+<td style="text-align: right;">22,60</td>
+<td style="text-align: right;">23,95</td>
+</tr>
+<tr class="odd">
+<td>9,50%</td>
+<td style="text-align: right;">19,12</td>
+<td style="text-align: right;">20,37</td>
+<td style="text-align: right;">21,47</td>
+</tr>
+</tbody>
+</table></div>
+<p>Una renovación adicional equivalente al 0,5%/1% de ventas reduce el caso central a 24,50/23,80. Elevar impuesto a 25% lo reduce a 24,28. No hay ahorro fiscal perpetuo por amortización adquirida ni crecimiento financiado con inversión cero.</p>
+<p><strong>Calendario:</strong> el horizonte parte del TTM de junio y descuenta diez años completos, una convención comparable con A111. Si se desplazan los vencimientos al 3 de noviembre y se elimina proporcionalmente la parte del primer año ya transcurrida, el valor con capital de junio es 25,68. Descontar el primer año completo desde noviembre da 26,12, pero incluye caja ya transcurrida y no debe usarse como valor actual sin conciliación. La estacionalidad y el destino real de caja posterior a junio no están certificados. No se llama al conjunto automáticamente conservador.</p>
+<h2 id="qué-descuenta-el-precio">7. Qué descuenta el precio</h2>
+<p>Bajo el WACC8,5%, ROIC18% y demás convenciones centrales, sostener 39,40 requiere, en una inversión inversa, crecimiento 5,5% anual durante cinco años con margen constante de 56,57%, o margen 36,5% con crecimiento 13,53%. A margen 39%, exige 12,13%; a 42%,10,78%. Estos casos constantes cobran la inversión de la expansión del NOPAT desde el primer año, por lo que una gran mejora instantánea de margen también consume capital. No son pronósticos ni el único camino al precio.</p>
+<p>La alternativa de menor coste de capital ya mostró un valor por encima de 39,40 con los flujos centrales. Otra mezcla de márgenes, inversión y crecimiento podría producirlo. La inversión inversa usa exactamente el mismo modelo y no es prueba independiente; su utilidad es hacer visibles las exigencias, no afirmar que el mercado esté necesariamente equivocado.</p>
+<h2 id="comparables-actuales">8. Comparables actuales</h2>
+<p>Cierres estadounidenses del <strong>3 de noviembre de 2026</strong>: RELX39,40 USD; TRI110,18 USD; FDS332,59 USD. Los múltiplos se calculan en la moneda de cada emisor: RELX GBP, restantes USD. Conversión de RELX: USD/GBP =1,1179/0,83358=1,34108; ADR1:1. No se mezclan precios USD con estados GBP. <a href="https://stockanalysis.com/stocks/relx/history/">RELX</a>, <a href="https://thomsonreuters.gcs-web.com/stock-information/stock-price-performance">TRI emisor</a>, <a href="https://stockanalysis.com/stocks/tri/history/">TRI contraste</a>, <a href="https://stockanalysis.com/stocks/fds/history/">FDS</a>.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Compañía</th>
+<th>Período financiero</th>
+<th style="text-align: right;">EV/ventas</th>
+<th style="text-align: right;">EV/EBIT contable</th>
+<th style="text-align: right;">Precio/caja después de SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>RELX</td>
+<td>TTM junio 2026</td>
+<td style="text-align: right;">6,31×</td>
+<td style="text-align: right;">19,65×</td>
+<td style="text-align: right;">23,36×</td>
+</tr>
+<tr class="even">
+<td>TRI</td>
+<td>TTM septiembre 2026, continuadas</td>
+<td style="text-align: right;">6,70×</td>
+<td style="text-align: right;">26,22×</td>
+<td style="text-align: right;">28,38× estimado</td>
+</tr>
+<tr class="odd">
+<td>FDS</td>
+<td>FY agosto 2026</td>
+<td style="text-align: right;">5,24×</td>
+<td style="text-align: right;">18,53×</td>
+<td style="text-align: right;">18,98×</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Lectura:</strong> RELX cuesta menos que TRI, pero no que FDS, tanto en EBIT como en caja. TRI es el contraste más cercano para Legal y flujos profesionales; FactSet aporta suscripción de datos y herramientas financieras, sin replicar Risk, publicaciones científicas ni Exhibitions. Una prima relativa puede reflejar mezcla, márgenes y crecimiento, no prueba infravaloración. No se convierte una mediana de dos pares en precio objetivo.</p>
+<p><strong>Capital y arrendamientos.</strong> Equity usa medias diluidas reportadas: RELX H1 1.794,1 m; TRI Q3 434,017155 m; FDS Q4 35,572 m. Son proxies fechados, no capitalizaciones bursátiles exactas actuales. EV principal excluye pasivos de arrendamientos: RELX deuda neta 8.733−119, más NCI17; TRI2.747−228, más preferentes 110 (valor contable); FDS deuda nominal 1.375−caja 233,339. No incluye reservas operativas ni pensiones del DCF. Incluyendo los arrendamientos dentro de la deuda publicada, RELX EV/EBIT=19,69× y TRI26,34×. FDS deja sus arrendamientos operativos fuera de deuda. IFRS registra depreciación del derecho de uso e interés; GAAP operativo registra gasto de alquiler. La exclusión de deuda no convierte ambos EBIT en cifras perfectamente homogéneas. <a href="https://www.sec.gov/Archives/edgar/data/929869/000092986926000054/relx-20260723xex99d1.htm">RELX H1</a>, <a href="https://investors.thomsonreuters.com/news-releases/news-release-details/thomson-reuters-reports-third-quarter-2026-results">TRI Q3</a>, <a href="https://investors.thomsonreuters.com/static-files/d4676c84-359c-42c3-9f84-8c62552d49a2">TRI preferentes</a>, <a href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">FDS deuda y arrendamientos</a>.</p>
+<p><strong>Caja y perímetro.</strong> RELX2.256 incluye dividendos JV y descuenta SBC, arrendamientos netos y minoritarios; EBIT3.122 incluye 43 de JV. TRI utiliza exclusivamente continuadas: CFO2.535−capex 665−principal arrendamientos 61−preferentes 4−SBC120=1.685. SBC120 es estimación, no dato auditado: rango 100–140 implica caja 1.665–1.705 y múltiplo 28,72–28,05×. No usar caja combinada 1.927 contra ventas sin Print. EBIT IFRS1.924 contiene otras ganancias; alternativa normalizada 1.846 implica 27,33×. <a href="https://investors.thomsonreuters.com/static-files/13453a61-1934-494a-b639-ed45a69dd0e8">Reexpresión TRI</a>, <a href="https://www.sec.gov/Archives/edgar/data/929869/000110465926017277/relx-20251231xex15d2.htm">RELX anual</a>.</p>
+<p>FDS: caja 822,200−capex 114,720−SBC84,099=623,381; capex incluye software y alquiler ya está en CFO. EBIT699,957 conserva amortización adquirida, reestructuración y otros cargos. FY2026 revenue 2.476,256; crecimiento orgánico 6,7%, ASV7%; guía ASV FY2027 5–6,5%. <a href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026063888/fdsq42026earningsrelease.htm">Resultados FDS</a>.</p>
+<p>Ninguna caja es FCFF normalizado: incorpora intereses, impuestos y circulante efectivo. Los balances están fechados junio/agosto/septiembre. FDS divulga 90 m adicionales de revolver después de agosto; se señala pero no se suma deuda sin reconstruir su uso y caja. TRI no recibe gratuitamente ingresos de la venta de Print antes de su puente efectivo. Tampoco se sustituyen las acciones RELX por 1.740,716354 m ordinarias de noviembre junto con la antigua caja sin puente de recompras. Los precios son actuales, el capital reportado es histórico y las limitaciones siguen visibles.</p>
+<p>Reproducción: <code>python comps.py</code> genera <code>peers.json</code> y <code>peers.csv</code>, con entradas mínimas, fórmulas y URLs públicas. Verificaciones aritméticas incluidas.</p>
+<h2 id="confirmaciones-invalidación-y-próximo-evento">9. Confirmaciones, invalidación y próximo evento</h2>
+<p>Confirmaría la tesis operativa que el crecimiento subyacente se convierta en ventas reportadas y caja después del desarrollo, que la expansión de Legal/STM mantenga rentabilidad y que las adquisiciones sostengan retornos. La invalidarían erosión de precios o retención, inversión incremental recurrentemente mayor de lo presupuestado, adquisiciones de bajo retorno financiadas con deuda, o dificultades de financiación que obliguen a recortar inversión útil.</p>
+<p>El próximo evento con fecha verificable es el fin previsto del programa de recompra el <strong>2 de diciembre de 2026</strong>, no una publicación de resultados. El calendario IR consultado no ofrece fecha futura confirmada de resultados anuales; no se inventa febrero ni se convierte una fecha estimada de un agregador en anuncio. Antes de cualquier revisión de entrada: comprobar el anuncio anual, balance y acciones actualizados, precio real y la señal del plan. [S6/S11]</p>
+<p>Confianza media en historia y fórmulas; media-baja en valor puntual. Límites: balance semestral, capital posterior no conciliado exactamente, beta histórica con acceso directo fallido, coste marginal de deuda supuesto, ROIC incremental superior al histórico, prepublicación como capitalización y no pagos separados, minoritarios contables y comparables con diferencias de periodo/arrendamientos. La investigación no elimina esos riesgos mediante un descuento opaco.</p>
+<h2 id="fuentes-y-reproducción">10. Fuentes y reproducción</h2>
+<p>[S1] <a href="https://www.relx.com/media/press-releases/year-2026/trading-update-oct">Trading update 22 oct</a>. [S2] <a href="https://www.sec.gov/Archives/edgar/data/929869/000092986926000054/relx-20260723xex99d1.htm">Informe intermedio 2026 SEC</a>. [S3] <a href="https://www.sec.gov/Archives/edgar/data/929869/000110465926017277/relx-20251231xex15d2.htm">Anual 2025 y comparativos 2023–24</a>. [S4] <a href="https://www.sec.gov/Archives/edgar/data/929869/000092986925000055/relx-20250724xex99d1.htm">Intermedio 2025 con comparativo 2024</a>. [S5] <a href="https://www.sec.gov/Archives/edgar/data/929869/000092986926000080/relx-ex99d8.htm">Derechos de voto 2 nov</a>; <a href="https://www.sec.gov/Archives/edgar/data/929869/000092986926000080/relx-ex99d7.htm">transacciones y liquidación</a>. [S6] <a href="https://www.sec.gov/Archives/edgar/data/929869/000092986926000073/relx-ex99d1.htm">Programa de recompra 22 oct–2 dic</a>. [S7] <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html">ECB histórico USD/EUR</a>; <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-gbp.en.html">GBP/EUR</a>. [S8] <a href="https://www.bankofengland.co.uk/boeapps/database/fromshowcolumns.asp?CSVF=TT&amp;DAT=RNG&amp;FD=1&amp;FM=Jan&amp;FNY=Y&amp;FY=1995&amp;Filter=N&amp;FromSeries=1&amp;SeriesCodes=IUDMNPY&amp;TD=31&amp;TM=Dec&amp;TY=2026&amp;ToSeries=50&amp;Travel=NIxAZxSUx&amp;UsingCodes=Y&amp;VPD=Y&amp;html.x=66&amp;html.y=26&amp;title=IUDMNPY">BOE curva nominal par 10 años, serie IUDMNPY</a>. [S9] <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm">NYU prima implícita 1 nov</a>. [S10] <a href="https://finance.yahoo.com/quote/RELX/">Yahoo RELX, resultado indexado; acceso directo 429</a>. [S11] <a href="https://www.relx.com/investors/financial-calendar">Calendario RELX</a>. [S12] <a href="https://stockanalysis.com/stocks/relx/history/">Cierre ADR</a>.</p>
+<p>Se publican únicamente investigación propia, entradas numéricas mínimas, enlaces y código. No se redistribuyen filings completos. Ejecutar history/calculate.py, history/validate.py, model.py, valuation_checks.py, comps.py y qa.py. El modelo contiene treinta filas anuales y piso de inversión terminal; el historial separa datos publicados, derivados y ausentes. Las fuentes anteriores de A111 permanecen como historial, no se sobrescriben.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/RELX/RELX_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/RELX/model.py">Modelo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/RELX/model_results.json">Resultados</a></li>
+</ul>
+</main></body></html>

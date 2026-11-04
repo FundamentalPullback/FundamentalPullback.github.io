@@ -146,3 +146,8 @@ Publication is blocked if a completed current source has missing or invalidated 
 ### Zero valuation versus missing data
 
 Published numeric zero is a valid common-equity scenario, including a zero central estimate. Profile cards preserve finite nonnegative model values and display zero ranges in both languages. Null, undefined, blank, boolean, string, negative and nonfinite structured values are not treated as zero. A newer explicit zero model supersedes an older positive model; a newer withheld/null model remains unavailable. Scanner and close prices still require finite positive numbers. This display rule does not modify financial inputs, decisions or execution permission. `test-stock-cards.cjs` covers live VFC/SSL fixtures, future decision/report paths, zero-base and all-zero ranges, missing data and source immutability.
+
+
+### Fundamental-only refreshes with unchanged management
+
+A report profile may provide `scanner: {date, price, source: "published-scanner"}` to pair its new valuation with an existing scanner observation without modifying Decisiones or management. The renderer accepts the pair only when both date and price match a stored scanner row for that ticker. It does not create a scanner session, change execution eligibility, or infer a trade. An absent or invalid pair retains the existing fallback. The dated report must disclose that master-data/Sheet reconciliation is pending.

@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>EXLS · Fundamental Pullback</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">EXLS · Fundamental Pullback</h1>
+</header>
+<h1
+id="exls-ventas-fuertes-caja-más-débil-y-nuevo-coste-de-imerit">EXLS:
+ventas fuertes, caja más débil y nuevo coste de iMerit</h1>
+<p><strong>ExlService Holdings · Nasdaq · USD · 4 noviembre 2026. Cierre
+evaluado: 42,13 USD del 3 noviembre, 16:00 EST. Corte de investigación:
+4 noviembre, 15:58 UTC.</strong> No se sustituye el precio del escáner
+ni se usa una cotización intradía como cierre.</p>
+<h2 id="decisión-y-alcance">Decisión y alcance</h2>
+<p><strong>No justificar una ampliación con el crecimiento del EPS por
+sí solo.</strong> El FCFF de diez años produce <strong>31,25 USD
+central, 17,20 adverso y 57,16 favorable</strong>. El cierre supera el
+central; el favorable exige crecimiento, margen y productividad del
+capital superiores. No es un objetivo garantizado ni un techo de
+compra.</p>
+<p>Este es un refresh fundamental de una posición ya existente en el
+registro. No modifica lotes, cantidades, stops, órdenes, beneficios
+realizados ni tickets de Stage 4. A073 mantenía bloqueada una eventual
+ampliación por valoración y resultados pendientes; incorporar Q3
+resuelve solo la espera de ese resultado, no el resto de condiciones ni
+la autorización de una operación. No hay entrada Stage 3.5, orden ni
+cantidad autorizada.</p>
+<p>A003 usó EPS normalizado por múltiplo y obtuvo 27/38/49 USD, con un
+antiguo umbral 32. Esa historia se conserva; ni 32 ni el descuento fijo
+de 15% se trasladan como regla actual. La proximidad entre 31,25 y 32 no
+valida retrospectivamente el método anterior.</p>
+<p>Fuentes: <a
+href="https://ir.exlservice.com/news-releases/news-release-details/exl-reports-2026-third-quarter-results">q3</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000031/exls-20260930.htm">q10</a>,
+<a
+href="https://www.financecharts.com/stocks/EXLS/summary/price">price</a>,
+<a
+href="https://www.marketbeat.com/stocks/NASDAQ/EXLS/">price_check</a>.</p>
+<h2 id="negocio-y-evidencia-de-crecimiento">1. Negocio y evidencia de
+crecimiento</h2>
+<p>EXL combina servicios de datos, analítica, IA y operaciones digitales
+para seguros, salud, banca y otros sectores. El conocimiento del proceso
+y los sistemas del cliente dificultan sustituir al proveedor, pero esto
+no elimina competencia, presión salarial ni riesgo de automatización.
+Los contratos por resultado pueden mejorar productividad o trasladar el
+ahorro al cliente; crecimiento de uso de IA no equivale automáticamente
+a mayor margen.</p>
+<p>Q3: ingresos 633,959 M$, +19,7% publicado y +19,9% a divisa
+constante. La reconciliación de la compañía atribuye 13,9 puntos a
+clientes existentes, 6,0 a nuevos clientes, incluidos 2,9 puntos de
+iMerit, y −0,2 a divisas. No se llama orgánico al 19,7%. iMerit se
+consolidó desde el 31 de julio, no durante todo el trimestre. La
+dirección atribuye cerca de dos tercios de ventas a Data &amp; AI y
+crecimiento de esa categoría de 36% publicado y 31% orgánico; son
+definiciones comerciales de la compañía, no ventas de licencias
+recurrentes auditadas separadamente.</p>
+<p>Todos los segmentos crecieron: seguros +15,5%, salud +18,6%, banca y
+diversificados +26,8%, internacional +20,2%. Los diez mayores clientes
+representan 33,3% de ventas Q3, frente a 34,5%; ninguno supera 10%. La
+pérdida de uno relevante seguiría siendo material.</p>
+<p>La guía FY2026 sube a 2.430–2.440 M$ de ventas, 16–17% publicado y
+15% orgánico a divisa constante; EPS ajustado 2,34–2,36. No se convierte
+esa guía ajustada en EPS GAAP. Las hipótesis de divisas de la dirección
+y los costes de integración pueden alterar el resultado.</p>
+<p>Fuentes: <a
+href="https://ir.exlservice.com/news-releases/news-release-details/exl-reports-2026-third-quarter-results">q3</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000031/exls-20260930.htm">q10</a>.</p>
+<h2 id="tres-ejercicios-cuatro-trimestres-y-ttm-comparable">2. Tres
+ejercicios, cuatro trimestres y TTM comparable</h2>
+<p>Millones de USD excepto EPS. FCF = CFO − compras de propiedad y
+equipo, sin sumar ventas de activos ni restar adquisiciones como si
+fueran capex de mantenimiento. FCF−SBC es una prueba conservadora de
+coste para el accionista, no FCFF ni una definición oficial de la
+compañía.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto</th>
+<th>EPS</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td>1,630.668</td>
+<td>238.755</td>
+<td>184.558</td>
+<td>1.100</td>
+<td>211.198</td>
+<td>52.803</td>
+<td>58.437</td>
+<td>158.395</td>
+<td>99.958</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td>1,838.372</td>
+<td>263.620</td>
+<td>198.297</td>
+<td>1.210</td>
+<td>268.525</td>
+<td>46.262</td>
+<td>72.658</td>
+<td>222.263</td>
+<td>149.605</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td>2,087.679</td>
+<td>313.750</td>
+<td>251.019</td>
+<td>1.540</td>
+<td>350.717</td>
+<td>52.598</td>
+<td>79.469</td>
+<td>298.119</td>
+<td>218.650</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto</th>
+<th>EPS</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q4 FY2025</td>
+<td>542.615</td>
+<td>78.023</td>
+<td>60.246</td>
+<td>0.380</td>
+<td>117.381</td>
+<td>10.871</td>
+<td>20.751</td>
+<td>106.510</td>
+<td>85.759</td>
+</tr>
+<tr class="even">
+<td>Q1 FY2026</td>
+<td>570.351</td>
+<td>91.826</td>
+<td>67.081</td>
+<td>0.430</td>
+<td>1.719</td>
+<td>12.933</td>
+<td>22.101</td>
+<td>-11.214</td>
+<td>-33.315</td>
+</tr>
+<tr class="odd">
+<td>Q2 FY2026</td>
+<td>594.763</td>
+<td>87.295</td>
+<td>64.511</td>
+<td>0.420</td>
+<td>87.892</td>
+<td>14.507</td>
+<td>24.631</td>
+<td>73.385</td>
+<td>48.754</td>
+</tr>
+<tr class="even">
+<td>Q3 FY2026</td>
+<td>633.959</td>
+<td>88.856</td>
+<td>68.771</td>
+<td>0.450</td>
+<td>119.193</td>
+<td>16.685</td>
+<td>25.542</td>
+<td>102.508</td>
+<td>76.966</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto</th>
+<th>EPS</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TTM September 2025</td>
+<td>2,026.490</td>
+<td>306.969</td>
+<td>241.445</td>
+<td>1.480</td>
+<td>338.682</td>
+<td>51.801</td>
+<td>74.197</td>
+<td>286.881</td>
+<td>212.684</td>
+</tr>
+<tr class="even">
+<td>TTM September 2026</td>
+<td>2,341.688</td>
+<td>346.000</td>
+<td>260.609</td>
+<td>1.680</td>
+<td>326.185</td>
+<td>54.996</td>
+<td>93.025</td>
+<td>271.189</td>
+<td>178.164</td>
+</tr>
+</tbody>
+</table>
+<p>Q4 se obtiene de FY2025 menos nueve meses para importes; su EPS 0,38
+procede del comunicado anual, no de restar EPS redondeados 1,54−1,17.
+TTM EPS 1,68 es suma aproximada de cuatro EPS publicados, no un
+denominador exacto de valoración. Para PER comparable se usa beneficio
+TTM dividido entre acciones diluidas Q3 en ambas empresas. Las
+diferencias menores entre D&amp;A de resultados y de flujos no se
+ocultan: el modelo histórico usa la fila de flujos para D&amp;A y EBIT
+GAAP para resultado operativo.</p>
+<p>Ventas TTM +15,55%, EBIT +12,71%, beneficio neto +7,94%. El margen
+EBIT baja de 15,15% a 14,78%. CFO cae 3,69%, FCF 5,47% y FCF−SBC 16,23%.
+SBC crece 25,38%, de 74,197 a 93,025 M$. El negocio crece, pero el
+accionista no recibe la misma aceleración de caja.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000008/exls-20251231.htm">k25</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000031/exls-20260930.htm">q10</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000016/exls-20260331.htm">q1</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000023/exls-20260630.htm">q2</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798925000023/exls-20250930.htm">priorq3</a>,
+<a href="https://ir.exlservice.com/node/23211/pdf">fyrelease</a>.</p>
+<h2 id="calidad-de-caja-beneficio-y-recompras">3. Calidad de caja,
+beneficio y recompras</h2>
+<p>En nueve meses, CFO baja de 233,336 a 208,804 M$. La compañía
+atribuye 54,6 M$ de menor contribución de caja a cuentas por
+cobrar/anticipos, compensados parcialmente por mayores ganancias de
+caja. DSO sube de 63 a 67 días. No se diagnostica fraude ni
+incobrabilidad solo por este aumento, pero tampoco se normaliza
+automáticamente como crecimiento sin coste. La recuperación de cobros es
+una condición verificable de la tesis.</p>
+<p>Q3 EBIT aumenta 16,65%, menos que ventas; margen GAAP 14,0% frente a
+14,4%, y margen ajustado 19,3% frente a 19,4%. El beneficio neto crece
+18,24%, mientras EPS diluido calculado sin redondeos crece 25,33%. Parte
+de la diferencia son menos acciones: 152,570 M diluidas frente a 161,714
+M. Las recompras cuestan caja y no crean crecimiento operativo. En nueve
+meses, recompras de 212,439 M$ superan FCF de 164,679 M$, antes de
+153,838 M$ de adquisición neta; el aumento de deuda ayuda a financiar el
+conjunto.</p>
+<p>El tipo efectivo de nueve meses aumenta a 23,5% desde 20,3%, entre
+otros motivos por menores beneficios fiscales de SBC. La nota identifica
+esos beneficios discretos en 1,208 frente a 14,792 M$: explica parte de
+la desaceleración del neto, pero no se elimina el coste de SBC. El
+modelo usa impuesto normalizado 24%, con sensibilidad 21–27%, en lugar
+de perpetuar el 20,7% del último trimestre.</p>
+<p>Costes de adquisición reconocidos: 2,763 M$ en nueve meses, dentro de
+gastos operativos. La revalorización de contingentes de 3 M$ está en
+otros ingresos, no en EBIT: no se añade a EBIT ni se supone que hubiera
+reducido ese margen. Los costes de adquisición tampoco se añaden
+mecánicamente al EBIT para inflar la base. La senda de margen es una
+hipótesis explícita de mejora, después de SBC, formación, desarrollo y
+costes laborales recurrentes.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000031/exls-20260930.htm">q10</a>.</p>
+<h2 id="imerit-y-puente-de-capital">4. iMerit y puente de capital</h2>
+<p>La adquisición cerró el 31 de julio. Contrato: base 170 M$, más hasta
+125 M$ contingentes y 15 M$ diferidos. La contabilidad preliminar
+reconoce efectivo 161,779 M$, fair value contingente 53,100 y diferido
+15, total 229,879 M$. Los 153,838 M$ de flujo de adquisición son netos
+de caja adquirida. Ni 170, ni 229,879, ni el máximo contractual 310 son
+el mismo concepto.</p>
+<p>El pago ya realizado está en el balance de septiembre: no se resta
+otra vez al valor. El contingente total pendiente es 61,1 M$ e incluye
+53,1 de iMerit, más otros acuerdos; el diferido 15 se descuenta una sola
+vez. Llevar el componente iMerit al máximo contractual añade 71,9 M$
+respecto a su fair value actual, sensibilidad adversa de unos 0,47 USD
+por acción. El precio definitivo/PPA siguen provisionales; no hay
+proforma completa publicada ni contribución de beneficio autónomo que
+permita certificar sinergias. Goodwill añadido 163,101 M$ y vida de
+intangibles cliente/tecnología de 7/3 años hacen importante el retorno
+posterior.</p>
+<p>Puente EV→equity, M$: | Partida | Importe | Tratamiento | | — | — | —
+| | Caja no restringida | 154.066 | Sumar | | Inversión de corto plazo |
+178.612 | Sumar; depósitos y fondos, no efectivo garantizado | | Reserva
+operativa | -100 | Supuesto, no saldo separado | | Deuda nominal |
+-512.5 | 115 revolver + 397,5 term loan | | Contingentes | -61.1 |
+Incluye iMerit; no restar 53,1 otra vez | | Diferido adquisición | -15 |
+Una vez | | Reserva prestaciones jubilación | -35.643 | 35,213 no
+corriente + 0,430 proxy corriente FY25 | | Arrendamientos financieros |
+-2.432 | Pasivo financiero | | Pasivo fiscal incierto | -2.556 |
+Reconocido, no todos los riesgos fiscales posibles | | Reserva
+distribución internacional | -14.65 | Supuesto 5% × 293 M$ | | Puente
+neto | -411.20300000000003 | Sin caja futura o recompras supuestas |</p>
+<p>Se excluyen 21,008 M$ de caja restringida. No se añade la inversión a
+largo plazo 6,450 M$ como caja disponible. La reserva internacional es
+prudencial sobre toda la caja/inversión extranjera indicada, no una tasa
+real de retención ni obligación inmediata; no afirma que todo deba
+repatriarse. Mantener 100 M$ operativos y gravar hipotéticamente toda la
+caja extranjera es conservador. Sin esa reserva fiscal, valor aumenta
+alrededor de 0,10 USD por acción.</p>
+<p>La reserva de prestaciones <strong>no se etiqueta como déficit
+actuarial exacto de noviembre</strong>. El saldo no corriente de la nota
+14 es 35,213 M$; el componente corriente actualizado no está aislado
+aquí, por lo que se añade el proxy 0,430 FY2025. El déficit actuarial de
+los planes FY2025 fue 21,210 M$, distinto de todo el rubro de
+prestaciones. Se resta el rubro más amplio como reserva explícita, sin
+volver a sumar activos del plan. Requiere conciliación antes de una
+certificación transaccional; no puede afirmarse que sean 35,643 M$ de
+déficit de pensiones confirmado. La nota 20 muestra coste de servicio
+6,009 M$ y amortización de servicios pasados 1,663 M$ en nueve meses.
+Falta separar esa amortización de obligaciones anteriores del coste
+laboral normalizado: descontar el rubro amplio mientras parte de su
+amortización permanece en los gastos puede ser conservador y no
+certifica ausencia absoluta de doble cómputo. Eliminar toda la reserva
+añade 0,234 USD por acción; sustituirla por el déficit FY2025 de 21,210
+añade 0,095, solo como sensibilidad, no como dato actual.</p>
+<p>Los leases operativos conservan su gasto en EBIT y no se restan otra
+vez como deuda. Derivados de cobertura y circulante se tratan
+operativamente; su mark-to-market no se suma como activo libre. La
+obligación fiscal adquirida 12,069 M$ tiene activo de indemnización
+correspondiente; no se suman ambos como caja ni se cobra dos veces el
+mismo riesgo. La cobrabilidad del indemnizador es una limitación.
+Existen controversias fiscales y laborales cuya pérdida futura no está
+cuantificada; no equivalen a cero riesgo.</p>
+<p>El nuevo crédito es una <strong>capacidad de 1.000 M$</strong>, no
+deuda utilizada de 1.000 M$: 600 revolver y 400 term, vencimiento agosto
+2031. Deuda nominal utilizada 512,5, frente a 511,049 contable tras
+costes de emisión. Tipo efectivo Q3 aproximadamente 5,0–5,1%. Covenants
+publicados de cobertura mínima 3x y apalancamiento neto máximo 3,5x, con
+supuestos de ampliación temporal; cumplimiento a septiembre confirmado,
+no garantía futura. Los activos comprometidos y las restricciones
+reducen flexibilidad frente a una caja bruta aparentemente estable.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000031/exls-20260930.htm">q10</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000008/exls-20251231.htm">k25</a>.</p>
+<h2 id="fcff-canónico-de-diez-años">5. FCFF canónico de diez años</h2>
+<p>Base de ventas FY2026: 2.435 M$, punto medio de la guía oficial. Año
+1 es FY2027; 2026 se usa como base, no se descuenta dos veces su caja.
+Convención anual de fin de periodo, aproximación a comienzo de 2027; no
+pretende precisión diaria al cierre del 3 noviembre. Se omite caja neta
+restante de 2026 no verificada.</p>
+<p>Crecimiento años 1–5: 14/12/10/9/8%, con transición lineal al 3% en
+años 6–10. Margen EBIT: 15/15,5/16/16,5/17%, después 17%. Impuesto 24%.
+SBC y gastos recurrentes permanecen en EBIT. No se compra crecimiento
+con futuras adquisiciones sin pagar; la senda supone desarrollo del
+perímetro actual, incluido iMerit ya adquirido.</p>
+<p><strong>Reinversión financiada desde año 1.</strong> D&amp;A de
+mantenimiento modelada 1,8% de ventas, capex 2,5%, ΔNWC 18% del aumento
+de ventas. La D&amp;A de flujo TTM es 2,71%; no se devuelve toda la
+amortización adquirida como dinero gratuito. Estos ratios son hipótesis,
+no una separación auditada de mantenimiento. Para años 1–5 se toma la
+mayor reinversión entre capex−D&amp;A+ΔNWC y NOPAT×crecimiento/ROIC. Así
+no se combina crecimiento de doble dígito con reinversión casi nula. En
+años 6–10 se transita al 20/40/60/80/100% hacia NOPAT×crecimiento/ROIC;
+al llegar al 3% terminal la regla ya coincide. En los tres escenarios
+publicados domina la reinversión económica todos los años; por ello el
+blend no cambia sus cifras. La fórmula del máximo sigue disponible para
+sensibilidades donde cambien las necesidades explícitas.</p>
+<p>ROIC normalizado incremental 25%, supuesto contrastado pero no
+demostrado por ROIC histórico aproximado 26,4%: EBIT TTM×76% dividido
+por capital medio de diciembre/septiembre (patrimonio+deuda
+nominal−caja/inversión corta). Incluye goodwill; no ajusta todas las
+distorsiones de compras y recompras y no prueba retorno incremental.
+Sensibilidad 18–35%. Terminal: FCFF = NOPAT×(1−g/ROIC), nunca
+crecimiento perpetuo sin reinversión.</p>
+<p>WACC 10,2%: Treasury 10 años 4,91% observado el 2 noviembre, beta
+asumida 1,25, prima de mercado asumida 4,5%, coste de equity 10,535%;
+estructura objetivo 95/5 equity/deuda, coste deuda 5,1% y escudo 24%
+producen 10,202%. No se afirma que beta o prima sean estimaciones
+estadísticas actuales. La ponderación es objetivo de modelización, no
+porcentaje contable observado. Sensibilidad explícita del WACC ±1
+punto.</p>
+<p>Se usan 152,570075 M de acciones diluidas medias Q3 constantes. No se
+suponen recompras gratuitas. Q3 excluye 0,683007 M de premios
+antidilutivos; no se suman todos sin valorar ejercicios/proceeds. Un
+stress de 3% más acciones es un riesgo ilustrativo, no pronóstico de
+dilución. Restar SBC otra vez al FCFF duplicaría su coste retenido en
+EBIT.</p>
+<p>Fuentes: <a
+href="https://ir.exlservice.com/news-releases/news-release-details/exl-reports-2026-third-quarter-results">q3</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000031/exls-20260930.htm">q10</a>,
+<a href="https://www.federalreserve.gov/releases/h15/">rf</a>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th>Ventas</th>
+<th>Margen EBIT</th>
+<th>NOPAT</th>
+<th>Reinversión</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>2775.90</td>
+<td>15.00%</td>
+<td>316.45</td>
+<td>177.21</td>
+<td>139.24</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3109.01</td>
+<td>15.50%</td>
+<td>366.24</td>
+<td>175.80</td>
+<td>190.45</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3419.91</td>
+<td>16.00%</td>
+<td>415.86</td>
+<td>166.34</td>
+<td>249.52</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>3727.70</td>
+<td>16.50%</td>
+<td>467.45</td>
+<td>168.28</td>
+<td>299.17</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>4025.92</td>
+<td>17.00%</td>
+<td>520.15</td>
+<td>166.45</td>
+<td>353.70</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>4307.73</td>
+<td>17.00%</td>
+<td>556.56</td>
+<td>155.84</td>
+<td>400.72</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>4566.19</td>
+<td>17.00%</td>
+<td>589.95</td>
+<td>141.59</td>
+<td>448.36</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>4794.50</td>
+<td>17.00%</td>
+<td>619.45</td>
+<td>123.89</td>
+<td>495.56</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>4986.28</td>
+<td>17.00%</td>
+<td>644.23</td>
+<td>103.08</td>
+<td>541.15</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>5135.87</td>
+<td>17.00%</td>
+<td>663.55</td>
+<td>79.63</td>
+<td>583.93</td>
+</tr>
+</tbody>
+</table>
+<h2 id="escenarios-sensibilidades-y-qué-exige-el-precio">6. Escenarios,
+sensibilidades y qué exige el precio</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th>Valor USD</th>
+<th>Supuestos adicionales</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverso</td>
+<td>17.20</td>
+<td>Crecimiento primeros 5 años −5 pp; margen todos 10 años y terminal
+−2 pp; WACC11,2%; g2,5%; ROIC20%</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td>31.25</td>
+<td>Senda descrita; WACC10,2%; g3%; ROIC25%</td>
+</tr>
+<tr class="odd">
+<td>Favorable</td>
+<td>57.16</td>
+<td>Crecimiento primeros 5 años +4 pp; margen todos 10 años y terminal
++2 pp; WACC9,2%; g3,5%; ROIC30%</td>
+</tr>
+</tbody>
+</table>
+<p>Valor terminal descontado: 61.07% del EV. El favorable no es límite
+de compra. La reducción de crecimiento también reduce inversión, sin
+dejar de financiar la senda. Las combinaciones son escenarios coherentes
+de trabajo, no probabilidades calibradas.</p>
+<p>Reverse DCF con el mismo modelo, precio y puente: para alcanzar
+42,13, el crecimiento de los primeros cinco años necesita
+aproximadamente <strong>+6.74 puntos</strong> frente a base, conservando
+margen/coste de capital. Alternativamente, margen necesita <strong>+5.40
+puntos</strong> en todos los años y terminal: alrededor de 20,40% en año
+1 y 22,40% terminal. Son solves separados, no condiciones conjuntas ni
+previsiones. Reinversión sigue financiada en cada solve.</p>
+<p>Usar solo capex−D&amp;A+circulante al inicio, sin el guard de
+capital/productividad, eleva valor a <strong>33.90 USD</strong>. No se
+elige esa cifra para perseguir el precio. El impuesto 21/24/27% da
+32,59/31,25/29,91 USD. Con 3% más acciones, valor 30.34 USD.</p>
+<table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th>g terminal</th>
+<th>Valor USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9.2%</td>
+<td>2.5%</td>
+<td>35.79</td>
+</tr>
+<tr class="even">
+<td>9.2%</td>
+<td>3.0%</td>
+<td>37.62</td>
+</tr>
+<tr class="odd">
+<td>9.2%</td>
+<td>3.5%</td>
+<td>39.76</td>
+</tr>
+<tr class="even">
+<td>9.7%</td>
+<td>2.5%</td>
+<td>32.70</td>
+</tr>
+<tr class="odd">
+<td>9.7%</td>
+<td>3.0%</td>
+<td>34.19</td>
+</tr>
+<tr class="even">
+<td>9.7%</td>
+<td>3.5%</td>
+<td>35.91</td>
+</tr>
+<tr class="odd">
+<td>10.2%</td>
+<td>2.5%</td>
+<td>30.02</td>
+</tr>
+<tr class="even">
+<td>10.2%</td>
+<td>3.0%</td>
+<td>31.25</td>
+</tr>
+<tr class="odd">
+<td>10.2%</td>
+<td>3.5%</td>
+<td>32.65</td>
+</tr>
+<tr class="even">
+<td>10.7%</td>
+<td>2.5%</td>
+<td>27.68</td>
+</tr>
+<tr class="odd">
+<td>10.7%</td>
+<td>3.0%</td>
+<td>28.69</td>
+</tr>
+<tr class="even">
+<td>10.7%</td>
+<td>3.5%</td>
+<td>29.85</td>
+</tr>
+<tr class="odd">
+<td>11.2%</td>
+<td>2.5%</td>
+<td>25.61</td>
+</tr>
+<tr class="even">
+<td>11.2%</td>
+<td>3.0%</td>
+<td>26.46</td>
+</tr>
+<tr class="odd">
+<td>11.2%</td>
+<td>3.5%</td>
+<td>27.42</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>ROIC</th>
+<th>Valor USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>18%</td>
+<td>27.76</td>
+</tr>
+<tr class="even">
+<td>20%</td>
+<td>29.01</td>
+</tr>
+<tr class="odd">
+<td>25%</td>
+<td>31.25</td>
+</tr>
+<tr class="even">
+<td>30%</td>
+<td>32.74</td>
+</tr>
+<tr class="odd">
+<td>35%</td>
+<td>33.80</td>
+</tr>
+</tbody>
+</table>
+<h2 id="historia-y-cambio-de-método">7. Historia y cambio de método</h2>
+<p>A003 se reproduce exactamente con EPS×PER/1,10: 1,65×18/1,10 = 27,00;
+1,90×22/1,10 = 38,00; 2,15×25/1,10 = 48,86364. Los 49 publicados eran
+redondeo. No existía allí una serie FCFF de diez años que pueda
+conciliarse celda a celda: inventarla daría una falsa continuidad.</p>
+<p>El cambio a 31,25 combina método y evidencia nueva: FCFF financiado,
+margen GAAP después de SBC, impuestos normalizados, cobros más lentos,
+iMerit cerrado y deuda/earnouts efectivos. No se atribuyen −6,75 USD
+enteros a Q3. El método anterior imponía un múltiplo de salida sobre EPS
+futuro; el actual exige flujos e inversión de diez años y terminal.
+Cambiar el precio de 36,48 histórico a 42,13 no cambia los flujos
+intrínsecos, solo la comparación con el mercado. Los dos métodos no se
+promedian.</p>
+<h2 id="comprobación-relativa-homogénea">8. Comprobación relativa
+homogénea</h2>
+<p>Cognizant es un comparable operativo de servicios de
+tecnología/datos, no un sustituto exacto de mezcla, tamaño o
+crecimiento. Ambos publican US GAAP y cierran trimestre en septiembre.
+Precios del 3 noviembre: EXLS 42,13; CTSH 63,83. Se compara
+capitalización proxy precio×acciones diluidas Q3 con beneficio TTM y con
+CFO−capex TTM. Esto evita mezclar EPS ajustado con GAAP o añadir venta
+de inmuebles al FCF.</p>
+<p>CTSH: neto TTM = 2.230 + 1.925 − 1.582 = 2.573 M$; acciones Q3 450 M.
+CFO TTM = 2.883 + 1.836 − 2.025 = 2.694; capex = 288 + 254 − 211 = 331;
+FCF 2.363. EXLS neto TTM 260,609; acciones 152,570075; FCF 271,189. |
+Métrica | EXLS | CTSH | | — | — | — | | PER GAAP proxy | 24,66x | 11.16x
+| | Precio/FCF estándar | 23,70x | 12.16x | | Ventas Q3 interanual |
+19,7% | 4,6% | | Margen EBIT Q3 GAAP | 14,0% | 15,4% |</p>
+<p>EXLS tiene prima de crecimiento, no descuento absoluto frente al par.
+CTSH también tiene eventos de impuestos, reestructuración y beneficios
+laborales: son múltiplos GAAP publicados, no ganancias normalizadas
+equivalentes. La cifra de EPS Q3 CTSH +148% está distorsionada por
+impuesto extraordinario previo y no se usa como crecimiento recurrente.
+En EXLS, precio/(FCF−SBC) es 36,08x; no se compara ese denominador con
+FCF sin SBC del par. No se obtiene un valor medio multiplicando la
+ganancia de EXLS por el PER de CTSH.</p>
+<p>Fuentes: <a
+href="https://investors.cognizant.com/news-and-events/news/news-details/2026/Cognizant-Reports-Third-Quarter-2026-Results/default.aspx">ctsh</a>,
+<a
+href="https://cognizant.q4cdn.com/123993165/files/doc_financials/2025/ar/2025_Annual_Report_Final.pdf">ctsh_k25</a>,
+<a href="https://stockanalysis.com/stocks/ctsh/history/">ctsh_price</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000031/exls-20260930.htm">q10</a>,
+<a
+href="https://www.financecharts.com/stocks/EXLS/summary/price">price</a>.</p>
+<h2 id="riesgos-y-condiciones-de-la-próxima-revisión">9. Riesgos y
+condiciones de la próxima revisión</h2>
+<p>A favor: expansión de clientes, demanda de datos/IA y diversificación
+comercial. En contra: margen bruto/operativo más bajo, capital
+circulante, SBC creciente, integración y obligaciones contingentes.
+Automatización puede mejorar productividad pero también reducir horas
+facturables; los clientes pueden exigir precios menores. Concentración
+de personal en India y otros mercados expone salarios, divisas,
+contratación y política laboral. No se cuantifica una ley futura ni se
+afirma que un titular regulatorio ya haya cambiado sus flujos.</p>
+<p>Validación siguiente: DSO y cobros regresan a una senda sostenible;
+SBC no crece persistentemente más que ingresos; margen GAAP mejora sin
+excluir costes recurrentes; iMerit produce retorno suficiente después de
+earnouts; deuda y claims siguen conciliados. El deterioro sostenido de
+esas métricas debilita la tesis aunque EPS suba por recompras.</p>
+<p>Último resultado ya incorporado: Q3 publicado el 27 octubre;
+conferencia posterior. Antes de cualquier eventual operación hay que
+verificar próximo anuncio oficial, exclusión semanal, configuración
+técnica, riesgo/exposición y registro de posición. No se sustituye una
+fecha no anunciada por estimación de terceros. Investigación
+<strong>research-grade condicionada a reservas de capital y
+supuestos</strong>, nunca habilitación automática de una ampliación.</p>
+<p>Fuentes: <a
+href="https://ir.exlservice.com/news-releases/news-release-details/exl-reports-2026-third-quarter-results">q3</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1297989/000129798926000031/exls-20260930.htm">q10</a>.</p>
+<h2 id="evidencia-exacta-para-pros-y-contras">Evidencia exacta para pros
+y contras</h2>
+<h3 id="a-favor">A favor</h3>
+<ul>
+<li>Ingresos TTM +15,55% y crecimiento Q3 de clientes existentes y
+nuevos; la expansión no depende solo de iMerit.</li>
+<li>El nuevo 10-Q permite separar pago, earnout y deuda de iMerit sin
+restar la adquisición dos veces.</li>
+<li>El modelo financia el crecimiento desde año 1 y conserva SBC e
+impuestos normalizados.</li>
+</ul>
+<h3 id="en-contra">En contra</h3>
+<ul>
+<li>FCF TTM cae 5,47% y FCF menos SBC 16,23%; DSO sube de 63 a 67
+días.</li>
+<li>El central de 31,25 USD no respalda el cierre de 42,13; el favorable
+de 57,16 requiere hipótesis mejores.</li>
+<li>La prima frente a Cognizant exige crecimiento rentable; caja,
+earnouts y prestaciones conservan reservas explícitas.</li>
+</ul>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>TTM revenue grew 15.55% with Q3 expansion in existing and new
+clients; growth is not solely driven by iMerit.</li>
+<li>The new 10-Q separates iMerit cash paid, earnouts and debt without
+deducting the acquisition twice.</li>
+<li>The model funds growth from year 1 and retains SBC and normalized
+taxes.</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>TTM FCF fell 5.47% and FCF less SBC 16.23%; DSO rose from 63 to 67
+days.</li>
+<li>The $31.25 central case does not support the $42.13 close; the
+$57.16 favorable case requires stronger assumptions.</li>
+<li>The premium to Cognizant requires profitable growth; cash, earnouts
+and retirement benefits retain explicit reserves.</li>
+</ul>
+</body>
+</html>

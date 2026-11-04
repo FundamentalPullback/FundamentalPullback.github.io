@@ -55,3 +55,17 @@ for(const [i,bear] of [0,null,undefined,'',false,'0',NaN,Infinity,-1].entries())
  const noPrice=e.build({scans:[{ticker:'ZEROPRICE'+i,date:'2099-01-31',price:bear}]})[0];a.equal(t.profileCardData(noPrice).scan,null);
 }
 console.log('PASS zero valuation scenarios in VFC/SSL and future row/report fixtures, all-zero range, zero-base update, absent/invalid withholding, positive-only prices, immutable research, ES/EN inline/direct cards.');
+
+// Standalone fundamental updates may pair a verified stored scanner without changing decisions or management.
+const beforeFundamental=JSON.stringify({dec:t.S.dec,ges:t.S.ges,ops:t.S.ops});
+const fundFact={ticker:'FUNDFUTURE',kind:'complete',completedAt:'2099-03-01',valuation:{base:20,bear:10,bull:30,asOf:'2099-03-01'},scanner:{date:'2099-02-27',price:15,source:'published-scanner'}};
+t.S.lib=t.S.lib.concat([{id:'FUNDFUTUREREPORT',date:'2099-03-01',profiles:[fundFact]}]);
+t.S.scan=t.S.scan.concat([{ticker:'FUNDFUTURE',date:'2099-02-27',price:15},{ticker:'FUNDFUTURE',date:'2099-02-28',price:16}]);
+const legacyFund={ticker:'FUNDFUTURE',adate:'2099-02-01',date:'2099-01-31',price:12,base:13,cons:10,fav:17,rep:'',vdate:'2099-02-01',decision:'En observación'};
+let fp=e.build({scans:t.S.scan,decisions:[legacyFund],reports:t.S.lib}).find(p=>p.ticker==='FUNDFUTURE');
+a.equal(t.profileCardData(fp).scan.price,15);a.equal(t.profileCardData(fp).scan.date,'2099-02-27');a.equal(t.profileCardData(fp).model.base,20);a.equal(fp.latestReview.price,12);a.equal(fp.latestReview.decision,'En observación');
+for(const sc of [{date:'2099-02-27',price:99},{date:'2099-02-26',price:15},{date:'2099-02-27',price:0},null]){fundFact.scanner=sc;fp=e.build({scans:t.S.scan,decisions:[legacyFund],reports:t.S.lib}).find(p=>p.ticker==='FUNDFUTURE');a.equal(t.profileCardData(fp).scan.price,12);}
+fundFact.scanner={date:'2099-02-27',price:0.0000001,source:'published-scanner'};
+for(const bad of [null,undefined,'',false,true,'0.0000001',NaN,Infinity,-1,0,0.0000002]){fp=e.build({scans:t.S.scan,decisions:[legacyFund],reports:t.S.lib}).find(p=>p.ticker==='FUNDFUTURE');fp.scans=[{date:'2099-02-27',price:bad}];a.equal(t.profileCardData(fp).scan.price,12);}
+a.equal(JSON.stringify({dec:t.S.dec,ges:t.S.ges,ops:t.S.ops}),beforeFundamental);
+console.log('PASS optional standalone scanner metadata: exact stored date/price, rejected unknown/invalid pair, historical decision and management unchanged.');

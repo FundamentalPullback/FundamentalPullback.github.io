@@ -1,0 +1,111 @@
+{
+  "wacc_calibration": {
+    "risk_free_gbp_par_10y": 0.053087,
+    "risk_free_date": "2026-10-28 latest accessible BOE primary series, not Nov3",
+    "erp_mature_market_proxy": 0.0441,
+    "beta_provider_search_only": 0.28,
+    "beta_normalized_assumption": 0.85,
+    "debt_cost_assumption_not_current_bond_yield": 0.058,
+    "equity_weight": 0.8554579643504898,
+    "normalized_wacc": 0.08393578605925969,
+    "provider_beta_wacc": 0.062432139209381426,
+    "chosen_wacc": 0.085,
+    "provider_beta_value": 45.737062614851354,
+    "normalized_value": 25.81931342855467
+  },
+  "migration": [
+    {
+      "step": "A111 narrative reconstruction",
+      "value": 29.594612349600872,
+      "change": null
+    },
+    {
+      "step": "FX updated only",
+      "value": 29.778379525519608,
+      "change": 0.18376717591873515
+    },
+    {
+      "step": "GBP WACC8 to8.5 only",
+      "value": 26.7971979407204,
+      "change": -2.981181584799206
+    },
+    {
+      "step": "Growth path5.5/5.5/5/4.5/4",
+      "value": 25.882882648419194,
+      "change": -0.9143152923012074
+    },
+    {
+      "step": "Before-acquired margins35\u201336.5; ordinaryDA5.3; old investment8.1",
+      "value": 27.122928379526055,
+      "change": 1.2400457311068607
+    },
+    {
+      "step": "Fund prepublication/renewal/M&A total9.3; terminal18",
+      "value": 27.04089885742339,
+      "change": -0.08202952210266545
+    },
+    {
+      "step": "Fund positive incremental NOPAT and terminal investment floor",
+      "value": 25.20665624800732,
+      "change": -1.8342426094160693
+    }
+  ],
+  "migration_caveat": "Original executable not located. Narrative reconstruction rounds exactly to published29.59; new accounting/method changes are explicit, not new earnings.",
+  "reverse": {
+    "margin_at_growth5_5": {
+      "required": 0.565697453928119,
+      "value": 39.39999999999999
+    },
+    "growth_at_margin36_5": {
+      "required": 0.1352562172916319,
+      "value": 39.400000000000006
+    },
+    "joint": [
+      {
+        "margin": 0.35,
+        "required": 0.144270898244523,
+        "value": 39.399999999999984
+      },
+      {
+        "margin": 0.365,
+        "required": 0.1352562172916319,
+        "value": 39.400000000000006
+      },
+      {
+        "margin": 0.39,
+        "required": 0.12126123988084514,
+        "value": 39.39999999999999
+      },
+      {
+        "margin": 0.42,
+        "required": 0.10775699939863792,
+        "value": 39.39999999999997
+      }
+    ]
+  },
+  "robustness": {
+    "ROIC_0.13": 22.644497369653955,
+    "ROIC_0.154": 24.225187040953063,
+    "ROIC_0.18": 25.20665624800732,
+    "ROIC_0.23": 25.98197716101993,
+    "extra_replacement_0.005": 24.502167506119584,
+    "extra_replacement_0.01": 23.79767876423185,
+    "tax_0.225": 25.436951095181943,
+    "tax_0.25": 24.281674579091874,
+    "fx_1.2": 22.55489526635364,
+    "fx_1.3": 24.43446987188311,
+    "fx_1.4": 26.31404447741258,
+    "latest_shares_plus_gross_cash_outflow_366": 25.586001915373092,
+    "latest_shares_plus_gross_cash_outflow_766": 25.27917345464239,
+    "latest_shares_plus_gross_cash_outflow_866": 25.202466339459715,
+    "June_capital_at_latest_shares_free_buyback_NOT_BASE": 25.866749956941685,
+    "pension_fully_netted_NOT_BASE": 25.38306536528239
+  },
+  "calendar": {
+    "original_convention": "10 rolling full years discounted from June30 anchor, treated as valuation reference, not measured Nov3 balance",
+    "asof_Nov3_full_first_year_NOT_BASE": 26.116607166914125,
+    "first_year_remaining_fraction": 0.6547945205479452,
+    "asof_Nov3_proportional_remaining_year_and_old_capital": 25.67509169615414,
+    "note": "Timing sensitivity only: no observed post-June cash/debt statement; proportional intra-year cash ignores seasonality and is not current NAV."
+  }
+}
