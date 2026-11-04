@@ -1,0 +1,58 @@
+[
+  {
+    "id": "QA-WEEKS",
+    "severity": "high",
+    "status": "disclosed",
+    "issue": "53-week current TTM versus 52 prior. Q1FY2027 14 weeks. Management extra-week estimates rounded; no exact GAAP/CFO equal-week series.",
+    "treatment": "Load reported actuals. Use separate labeled revenue sensitivity only."
+  },
+  {
+    "id": "QA-SBC",
+    "severity": "high",
+    "status": "controlled",
+    "issue": "Issuer non-GAAP excludes recurring SBC and recurring restructuring.",
+    "treatment": "Core stays GAAP; FCF after SBC is separate economic cash proxy. No automatic non-GAAP substitution."
+  },
+  {
+    "id": "QA-SOFTWARE",
+    "severity": "medium",
+    "status": "open_disclosure_limit",
+    "issue": "Internal-use software and cloud capex additions not separately disclosed.",
+    "treatment": "Retain full PP&E capex; no invented zero, no second software capex deduction."
+  },
+  {
+    "id": "QA-ACQ",
+    "severity": "high",
+    "status": "disclosed",
+    "issue": "DataPelago $106m contingent consideration is accrued, unpaid and outside $78m net cash purchase. Subsequent JetStream not captured in July balance.",
+    "treatment": "Separate acquisition obligation; not ordinary working capital. No November cash certification."
+  },
+  {
+    "id": "QA-EPS",
+    "severity": "medium",
+    "status": "controlled",
+    "issue": "Quarter/annual EPS and shares direct, but TTM weighted shares built from rounded quarterly data and EPS is sum of quarters.",
+    "treatment": "TTM figures labeled derived; never infer direct Q4 share count or use annual EPS subtraction."
+  },
+  {
+    "id": "QA-TAX",
+    "severity": "medium",
+    "status": "disclosed",
+    "issue": "FY2025 14.2% tax rate affected by discrete tax items; final transition-tax payment in Q2FY2026.",
+    "treatment": "No low historical tax extrapolation; retain cash payment in base. Show $179m timing sensitivity separately."
+  },
+  {
+    "id": "QA-TAG",
+    "severity": "low",
+    "status": "resolved",
+    "issue": "Companyfacts mislabels a $287m nine-month cash-tax figure as H1FY2025.",
+    "treatment": "Direct filing tables confirm H1 $222m and 9M $287m. Conflict preserved in inputs."
+  },
+  {
+    "id": "QA-DISPOSAL",
+    "severity": "medium",
+    "status": "disclosed",
+    "issue": "Spot sold March2025; FY2024/25 segment comparison includes disposed operations. No full comparable organic historical series.",
+    "treatment": "Reported financial history loadable; do not call organic/recast."
+  }
+]

@@ -1,0 +1,357 @@
+{
+  "as_of": "2026-11-04",
+  "price_as_of": "2026-11-03 regular session close, 16:00 America/New_York",
+  "units": "USD millions and shares millions except price and multiples",
+  "rows": [
+    {
+      "ticker": "NTAP",
+      "issuer": "NetApp, Inc.",
+      "price_date": "2026-11-03",
+      "price_usd": 190.78,
+      "balance_date": "2026-07-31",
+      "ttm_end": "2026-07-31",
+      "diluted_share_proxy_m": 200.0,
+      "latest_actual_common_shares_m": 196.419005,
+      "equity_value_proxy_usdm": 38156.0,
+      "cash_usdm": 3576.0,
+      "marketable_investments_usdm": 0.0,
+      "financial_debt_usdm": 2500.0,
+      "nci_usdm": 0.0,
+      "other_claims_usdm": 106.0,
+      "enterprise_value_proxy_usdm": 37186.0,
+      "ttm_revenue_usdm": 7391,
+      "ttm_gaap_operating_ebit_usdm": 1849,
+      "ttm_normalized_operating_ebit_usdm": 1838,
+      "ttm_broader_normalized_operating_ebit_sensitivity_usdm": 1838,
+      "ttm_sbc_retained_usdm": 397,
+      "gaap_operating_margin_pct": 25.016912,
+      "normalized_operating_margin_pct": 24.868083,
+      "latest_quarter_reported_revenue_growth_pct": 29.890956,
+      "ev_revenue_x": 5.031254,
+      "ev_gaap_operating_ebit_x": 20.111412,
+      "ev_normalized_operating_ebit_x": 20.231774,
+      "ev_broader_operating_ebit_sensitivity_x": 20.231774
+    },
+    {
+      "ticker": "P",
+      "issuer": "Everpure, Inc. (formerly Pure Storage)",
+      "price_date": "2026-11-03",
+      "price_usd": 117.65,
+      "balance_date": "2026-08-02",
+      "ttm_end": "2026-08-02",
+      "diluted_share_proxy_m": 345.587,
+      "latest_actual_common_shares_m": 333.227251,
+      "equity_value_proxy_usdm": 40658.31055,
+      "cash_usdm": 385.694,
+      "marketable_investments_usdm": 622.197,
+      "financial_debt_usdm": 0,
+      "nci_usdm": 0,
+      "other_claims_usdm": 0,
+      "enterprise_value_proxy_usdm": 39650.41955,
+      "ttm_revenue_usdm": 4262.15,
+      "ttm_gaap_operating_ebit_usdm": 224.21,
+      "ttm_normalized_operating_ebit_usdm": 229.545,
+      "ttm_broader_normalized_operating_ebit_sensitivity_usdm": 229.545,
+      "ttm_sbc_retained_usdm": 549.863,
+      "gaap_operating_margin_pct": 5.260491,
+      "normalized_operating_margin_pct": 5.385662,
+      "latest_quarter_reported_revenue_growth_pct": 37.734639,
+      "ev_revenue_x": 9.302915,
+      "ev_gaap_operating_ebit_x": 176.845009,
+      "ev_normalized_operating_ebit_x": 172.734843,
+      "ev_broader_operating_ebit_sensitivity_x": 172.734843
+    },
+    {
+      "ticker": "HPE",
+      "issuer": "Hewlett Packard Enterprise Company",
+      "price_date": "2026-11-03",
+      "price_usd": 53.1,
+      "balance_date": "2026-07-31",
+      "ttm_end": "2026-07-31",
+      "diluted_share_proxy_m": 1449,
+      "latest_actual_common_shares_m": 1327.464779,
+      "equity_value_proxy_usdm": 76941.9,
+      "cash_usdm": 6216,
+      "marketable_investments_usdm": 217,
+      "financial_debt_usdm": 20244,
+      "nci_usdm": 62,
+      "other_claims_usdm": 0,
+      "enterprise_value_proxy_usdm": 90814.9,
+      "ttm_revenue_usdm": 41871,
+      "ttm_gaap_operating_ebit_usdm": 2602,
+      "ttm_normalized_operating_ebit_usdm": 2862,
+      "ttm_broader_normalized_operating_ebit_sensitivity_usdm": 3713,
+      "ttm_sbc_retained_usdm": 795,
+      "gaap_operating_margin_pct": 6.214325,
+      "normalized_operating_margin_pct": 6.83528,
+      "latest_quarter_reported_revenue_growth_pct": 33.679947,
+      "ev_revenue_x": 2.168921,
+      "ev_gaap_operating_ebit_x": 34.90196,
+      "ev_normalized_operating_ebit_x": 31.731272,
+      "ev_broader_operating_ebit_sensitivity_x": 24.458632
+    }
+  ],
+  "details": [
+    {
+      "ticker": "NTAP",
+      "ttm_metric_bridge_usdm": {
+        "revenue": 7391,
+        "gaap_ebit": 1849,
+        "sbc": 397,
+        "spot_contingent_gain_removal": -11,
+        "recurring_restructuring_retained": 75
+      },
+      "primary_normalization_addbacks_usdm": {
+        "spot_contingent_gain_removal": -11
+      },
+      "broader_sensitivity_addbacks_usdm": {},
+      "price_source_ids": [
+        "NTAP_PRICE"
+      ],
+      "limitations": [
+        "Cash field is aggregate cash and short-term investments; separate investments field is zero to avoid double-counting. Restricted cash is excluded.",
+        "July capital held unchanged: no operating cash reserve, acquisition cash reserve, or October dividend adjustment. This is gross peer EV, not the DCF equity bridge.",
+        "Latest-quarter diluted shares are a valuation proxy, not point-in-time fully diluted shares.",
+        "53-week reported TTM versus peers with different fiscal calendars; no synthetic extra-week or acquisition organic-growth adjustment.",
+        "Debt is principal, whereas HPE debt is GAAP carrying value."
+      ],
+      "post_balance_events": [
+        "Known October dividend and disclosed post-balance acquisitions are not rolled into this stale-capital comparison. Refer to companion valuation for identified cash adjustments and acquisition sensitivities.",
+        {
+          "event": "PEAK:AIO acquisition completed November 2; no consideration established. JetStream and PEAK:AIO cash usage remains outside the stale-July capital comparison; companion DCF uses an explicitly assumed combined acquisition reserve, not a deal valuation.",
+          "source_id": "NTAP_PEAKAIO"
+        }
+      ]
+    },
+    {
+      "ticker": "P",
+      "ttm_metric_bridge_usdm": {
+        "revenue": 4262.15,
+        "gaap_ebit": 224.21,
+        "sbc": 549.8629999999999,
+        "severance": 0.0,
+        "acquisition_transaction": 5.335
+      },
+      "primary_normalization_addbacks_usdm": {
+        "acquisition_transaction": 5.335
+      },
+      "broader_sensitivity_addbacks_usdm": {},
+      "price_source_ids": [
+        "P_PRICE",
+        "P_PRICE_CHECK"
+      ],
+      "limitations": [
+        "Latest quarterly diluted shares are not a current fully diluted cap table or spot treasury-stock calculation.",
+        "August cash may have changed materially through supply prepayments, repurchases and operating cash flows.",
+        "High EV/EBIT reflects only a thin current GAAP margin and is not evidence that NetApp can earn the same multiple.",
+        "Issuer non-GAAP operating earnings remove SBC and payroll costs; they are not substituted for this analysis."
+      ],
+      "post_balance_events": [
+        {
+          "event": "1touch acquisition closed May 7, 2026 for $125.9m cash; already included in Aug 2 balance, so do not subtract again.",
+          "source_id": "P_10Q"
+        },
+        {
+          "event": "Sept 23 outlook reaffirmed FY2027 revenue $5.03-5.07bn and non-GAAP operating income $940-960m; new FY2028 outlook revenue $7.0-7.3bn. No post-Aug 2 cash/share roll-forward supplied.",
+          "source_id": "P_FAM"
+        }
+      ]
+    },
+    {
+      "ticker": "HPE",
+      "ttm_metric_bridge_usdm": {
+        "revenue": 41871,
+        "gaap_ebit": 2602,
+        "sbc": 795,
+        "impairment": 260,
+        "cost_program": 211,
+        "acquisition_disposition_other": 638,
+        "transformation": 2,
+        "intangible_amortization": 1259,
+        "management_non_gaap_ebit": 5767,
+        "financing_cost": 479
+      },
+      "primary_normalization_addbacks_usdm": {
+        "impairment": 260
+      },
+      "broader_sensitivity_addbacks_usdm": {
+        "cost_program": 211,
+        "acquisition_disposition_other": 638,
+        "transformation": 2
+      },
+      "price_source_ids": [
+        "HPE_PRICE",
+        "HPE_PRICE_CHECK"
+      ],
+      "limitations": [
+        "Storage is only 10.6% of Q3 revenue; server/networking/captive-finance valuation dominates.",
+        "Consolidated EV includes captive financing debt; reported operating profit deducts financing cost. Neither this multiple nor the supplemental pre-financing-cost ratio is a clean industrial storage multiple.",
+        "Marketable-investment deduction includes $154m debt investments and $63m equity investments at reported fair value. No value assigned to unfunded pension deficit or unquantified other claims.",
+        "July balances and weighted-average shares are stale at Nov 3; Telco sale and dividends make exact current EV unavailable.",
+        "Do not average with Everpure or infer an NTAP target from a peer median.",
+        "Q3 diluted share proxy: 1,336m weighted-average basic + 76m mandatory convertible preferred if-converted + 37m employee plans treasury-stock method = 1,449m. Actual Aug27 common outstanding 1,327.464779m is a different date and concept. Preferred value is not added separately."
+      ],
+      "post_balance_events": [
+        {
+          "event": "Telco Solutions disposition completed Aug 1, one day after balance date. Terms were up to $160m including $15m performance incentive. Net cash proceeds, tax and continuing-business EBIT adjustment not established. Base remains unadjusted July balance; $0-160m gross-proceeds-only EV sensitivity is separate and not current net cash.",
+          "source_ids": [
+            "HPE_10Q",
+            "TELCO_CLOSE",
+            "TELCO_TERMS"
+          ]
+        },
+        {
+          "event": "Common dividend $0.1425 per share payable Oct 16 and preferred $0.953125 per share paid Sept 1 disclosed after balance date. Base is not a full interim cash roll-forward.",
+          "source_ids": [
+            "HPE_10Q",
+            "HPE_8K_AUG"
+          ]
+        },
+        {
+          "event": "Juniper acquired July 2, 2025. Current TTM contains a full year of Juniper; prior-year growth comparisons are not organic. H3C remaining stake sold May 2026, already reflected in July balance.",
+          "source_id": "HPE_10Q"
+        }
+      ],
+      "supplemental_sensitivities": {
+        "ev_if_full_160m_telco_gross_consideration_added_to_cash_usdm": 90654.90000000001,
+        "ev_normalized_ebit_if_full_telco_gross_proceeds_x": 31.675366876310274,
+        "normalized_ebit_before_captive_financing_cost_usdm": 3341,
+        "ev_before_captive_financing_cost_ebit_x": 27.181951511523497,
+        "note": "Sensitivities are not primary multiples or estimates of current net cash. No disposed Telco EBIT restatement or financing receivable value adjustment."
+      }
+    }
+  ],
+  "sources": {
+    "P_10K": {
+      "title": "Everpure FY2026 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000027/pstg-20260201.htm",
+      "filed": "2026-03-25",
+      "period_end": "2026-02-01"
+    },
+    "P_10Q": {
+      "title": "Everpure Q2 FY2027 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000088/pstg-20260802.htm",
+      "filed": "2026-09-04",
+      "period_end": "2026-08-02"
+    },
+    "P_Q1_RELEASE": {
+      "title": "Everpure Q1 FY2027 results and prior-year reconciliation",
+      "url": "https://investor.everpuredata.com/news-and-events/press-releases/press-release-details/2026/Everpure-Announces-First-Quarter-Fiscal-2027-Financial-Results/default.aspx",
+      "published": "2026-05-27"
+    },
+    "P_Q2_RELEASE": {
+      "title": "Everpure Q2 FY2027 results",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474432/000147443226000084/everpure-ex991q2fy2027xpre.htm",
+      "published": "2026-08-26"
+    },
+    "P_FY_RELEASE": {
+      "title": "Everpure FY2026 results, page 11 GAAP reconciliation",
+      "url": "https://s21.q4cdn.com/687136699/files/doc_financials/2026/q4/Everpure-Q4FY2026-Earnings-Press-Release.pdf",
+      "published": "2026-02-25"
+    },
+    "P_TICKER": {
+      "title": "Everpure ticker transition from PSTG to P",
+      "url": "https://www.everpuredata.com/company/newsroom/press-releases/everpure-to-change-ticker-symbol.html",
+      "published": "2026-04-07"
+    },
+    "P_FAM": {
+      "title": "Everpure financial analyst meeting outlook and capital policy",
+      "url": "https://investor.everpuredata.com/news-and-events/press-releases/press-release-details/2026/Everpures-Expanding-Business-Model-Fuels-New-Long-Term-Outlook/default.aspx",
+      "published": "2026-09-23"
+    },
+    "P_PRICE": {
+      "title": "Everpure dated Nov 3 regular-session close, S&P Global data via StockAnalysis",
+      "url": "https://stockanalysis.com/stocks/p/history/",
+      "price_date": "2026-11-03",
+      "regular_close": 117.65
+    },
+    "P_PRICE_CHECK": {
+      "title": "Everpure dated Nov 3 close, FT historical table",
+      "url": "https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=P%3ANYQ",
+      "price_date": "2026-11-03",
+      "regular_close": 117.65
+    },
+    "HPE_10K": {
+      "title": "HPE FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+      "filed": "2025-12-18",
+      "period_end": "2025-10-31"
+    },
+    "HPE_10Q": {
+      "title": "HPE Q3 FY2026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000080/hpe-20260731.htm",
+      "filed": "2026-09-03",
+      "period_end": "2026-07-31"
+    },
+    "HPE_8K_AUG": {
+      "title": "HPE post-balance preferred dividend declaration",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000074/hpe-20260804.htm",
+      "filed": "2026-08-04"
+    },
+    "HPE_8K_SEP": {
+      "title": "HPE Networking Investor Day release 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559026000084/hpe-20260930.htm",
+      "filed": "2026-09-30"
+    },
+    "HPE_PRICE": {
+      "title": "HPE dated Nov 3 regular-session close, S&P Global data via StockAnalysis",
+      "url": "https://stockanalysis.com/stocks/hpe/history/",
+      "price_date": "2026-11-03",
+      "regular_close": 53.1
+    },
+    "HPE_PRICE_CHECK": {
+      "title": "HPE dated Nov 3 close, FT historical table (search retrieval; direct open returned 403)",
+      "url": "https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=HPE%3ANYQ",
+      "price_date": "2026-11-03",
+      "regular_close": 53.1
+    },
+    "TELCO_CLOSE": {
+      "title": "HCLTech confirms acquisition of HPE Telco Solutions",
+      "url": "https://www.hcltech.com/en-us/press-releases/hcltech-completes-acquisition-hpes-telco-solutions-business",
+      "published": "2026-08-03"
+    },
+    "TELCO_TERMS": {
+      "title": "HCLTech December 2025 interim IFRS statements, note 2",
+      "url": "https://www.hcltech.com/sites/default/files/document/open/quarter-results/2026-01/IFRS_Financials_Dec-25.pdf",
+      "period_end": "2025-12-31"
+    },
+    "P_SEC_FACTS": {
+      "title": "SEC Everpure company facts, pinned input values in this file",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001474432.json"
+    },
+    "HPE_SEC_FACTS": {
+      "title": "SEC HPE company facts, pinned input values in this file",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001645590.json"
+    },
+    "NTAP_10K": {
+      "title": "NetApp 10-K period ended 2026-04-24",
+      "filing_date": "2026-06-05",
+      "period_end": "2026-04-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1002047/000119312526259683/ntap-20260424.htm",
+      "type": "filing",
+      "owner": "NetApp / SEC",
+      "retrieved_at": "2026-11-04"
+    },
+    "NTAP_10Q": {
+      "title": "NetApp 10-Q period ended 2026-07-31",
+      "filing_date": "2026-09-02",
+      "period_end": "2026-07-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1002047/000119312526380207/ntap-20260731.htm",
+      "type": "filing",
+      "owner": "NetApp / SEC",
+      "retrieved_at": "2026-11-04"
+    },
+    "NTAP_PRICE": {
+      "title": "NetApp dated Nov 3 regular close, S&P Global via StockAnalysis",
+      "url": "https://stockanalysis.com/stocks/ntap/history/",
+      "price_date": "2026-11-03",
+      "regular_close": 190.78
+    },
+    "NTAP_PEAKAIO": {
+      "title": "NetApp completes PEAK:AIO acquisition",
+      "url": "https://investors.netapp.com/news/news-details/2026/NetApp-Completes-Acquisition-of-PEAKAIO-to-Accelerate-Zettabyte-scale-AI-Deployments/default.aspx",
+      "published": "2026-11-02"
+    }
+  },
+  "qa": "PASS: TTM bridges, Everpure rolled-out severance, HPE non-GAAP less retained SBC/amortization, positive denominators."
+}
