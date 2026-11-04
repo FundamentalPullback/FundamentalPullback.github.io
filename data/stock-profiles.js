@@ -107,5 +107,72 @@
     if(exactProfile)return [exactProfile];
     return profiles.filter(function(p){return words.every(function(w){return p.search.indexOf(w)>=0;});}).sort(function(a,b){return (b.ticker===exact?1:0)-(a.ticker===exact?1:0)||a.ticker.localeCompare(b.ticker);});
   }
-  root.FP_PROFILE_ENGINE={build:build,search:search,day:day,completed:completed};
+
+  // Pros/cons are evidence selections, never inferred from price, status or word sentiment.
+  // Fingerprints are for change detection, not authentication. Every item also has an exact
+  // evidence span in the same report. A correction invalidates the whole migrated summary.
+  function balanceFingerprint(text) {
+    text=String(text||''); var h=2166136261;
+    for(var i=0;i<text.length;i++){h^=text.charCodeAt(i);h=Math.imul(h,16777619);}
+    return text.length+':'+(h>>>0).toString(16);
+  }
+  function balanceItems(items,report) {
+    if(!Array.isArray(items)||items.length>3)return null;
+    var out=[];
+    for(var i=0;i<items.length;i++) {
+      var x=items[i],text=x&&String(x.text||'').trim(),en=x&&String(x.textEn||'').trim(),ev=x&&String(x.evidence||'');
+      if(!x||!text||text.length>320||ev.length<15||String(report.text||'').indexOf(ev)<0)return null;
+      if(en&&en.length>360)return null;
+      var url=String(x.sourceUrl||'');
+      if(url&&(!/^https:\/\/[^\s<>"']+$/.test(url)||String(report.text||'').indexOf(url)<0))return null;
+      out.push({text:text,textEn:en||'',evidence:ev,sourceUrl:url});
+    }
+    return out;
+  }
+  function balanceStructured(record,report,tk,date,mode) {
+    if(!record||record.schema!=='fp.research-balance.v1'||record.ticker!==tk||record.reportId!==report.id||day(record.asOf)!==date)return null;
+    if(record.sourceFingerprint!==balanceFingerprint(report.text))return null;
+    var pros=balanceItems(record.pros,report),cons=balanceItems(record.cons,report);
+    if(!pros||!cons||(!pros.length&&!cons.length))return null;
+    return {status:'ready',sourceId:report.id,date:date,pros:pros,cons:cons,mode:mode,report:report};
+  }
+  function balanceExplicit(report,tk,date) {
+    // Only an exact ticker-scoped, polarity-labelled section is machine extractable.
+    // Business/quality/thesis/risk discussions are deliberately NOT classified by regex.
+    var lines=String(report.text||'').split(/\r?\n/),side='',pros=[],cons=[],seen={pros:0,cons:0};
+    lines.forEach(function(line){
+      var heading=/^#{1,6}\s+(Pros|Cons|Puntos a favor|Riesgos)\s*[·:]\s*([A-Z0-9.-]+)\s*$/i.exec(line);
+      if(heading){side=heading[2].toUpperCase()===tk?(/^(pros|puntos a favor)$/i.test(heading[1])?'pros':'cons'):'';if(side)seen[side]++;return;}
+      if(/^#{1,6}\s/.test(line)){side='';return;}
+      var bullet=/^[-*]\s+(.+)$/.exec(line);
+      if(side&&bullet&&bullet[1].length>=15&&bullet[1].length<=320){var item={text:bullet[1],textEn:'',evidence:bullet[1],sourceUrl:''};(side==='pros'?pros:cons).push(item);}
+    });
+    if(seen.pros!==1||seen.cons!==1||!pros.length||!cons.length||pros.length>3||cons.length>3)return null;
+    return {status:'ready',sourceId:report.id,date:date,pros:pros,cons:cons,mode:'explicit-sections',report:report};
+  }
+  function researchBalance(p) {
+    var a=p&&p.latestCompleted,latest=p&&p.latestAnalysis;
+    if(!a||!a.report||!day(a.date))return {status:'no-analysis',pros:[],cons:[]};
+    // A later incomplete/withdrawn source must not leave an older positive box looking current.
+    if(latest&&!latest.isComplete&&(String(latest.date||'')>String(a.date||'')||(latest.date===a.date&&latest.id!==a.id&&String(latest.id).localeCompare(String(a.id),undefined,{numeric:true})>0)))return {status:'newer-analysis',sourceId:latest.id,date:latest.date,pros:[],cons:[],report:latest.report};
+    var report=a.report,meta=(report.profiles||[]).find(function(x){return ticker(x.ticker)===p.ticker;}),record=meta&&meta.prosCons;
+    if(record) {
+      // Author metadata is bound to the reviewed whole report, including later corrections.
+      var direct=Object.assign({},record,{ticker:p.ticker,reportId:report.id});
+      var valid=balanceStructured(direct,report,p.ticker,a.date,'structured-report');
+      return valid||{status:'stale',sourceId:a.id,date:a.date,pros:[],cons:[],report:report};
+    }
+    var explicit=meta&&meta.prosConsSectionsFingerprint===balanceFingerprint(report.text)&&balanceExplicit(report,p.ticker,a.date);if(explicit)return explicit;
+    var unavailable=meta&&meta.prosConsUnavailable;
+    if(unavailable) {
+      if(unavailable.schema==='fp.research-balance-unavailable.v1'&&day(unavailable.asOf)===a.date&&unavailable.sourceFingerprint===balanceFingerprint(report.text)&&typeof unavailable.reason==='string'&&unavailable.reason.trim().length>=12&&unavailable.reason.length<=320)return {status:'unavailable',sourceId:a.id,date:a.date,pros:[],cons:[],report:report,reason:unavailable.reason,reasonEn:unavailable.reasonEn||''};
+      return {status:'stale',sourceId:a.id,date:a.date,pros:[],cons:[],report:report};
+    }
+    var records=root.FP_RESEARCH_BALANCE&&root.FP_RESEARCH_BALANCE.records||[],old=records.find(function(x){return x.ticker===p.ticker&&x.reportId===a.id;});
+    var migrated=balanceStructured(old,report,p.ticker,a.date,'verified-migration');
+    return migrated||{status:old?'stale':'pending',sourceId:a.id,date:a.date,pros:[],cons:[],report:report};
+  }
+
+  root.FP_PROFILE_ENGINE={build:build,search:search,day:day,completed:completed,researchBalance:researchBalance,balanceFingerprint:balanceFingerprint,balanceStructured:balanceStructured,balanceExplicit:balanceExplicit};
 })(typeof window==='undefined'?globalThis:window);
+

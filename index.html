@@ -653,6 +653,20 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 #profile-research { scroll-margin-top:180px; }
 
 
+
+/* Research balance stays in the card's flow, never in the navigation gutters. */
+.stock-summary-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;min-width:0;align-items:start}
+.stock-summary-main{display:grid;gap:16px;min-width:0}
+.stock-balance{min-width:0;border:1px solid var(--rule);border-radius:10px;padding:18px;background:var(--paper);overflow-wrap:anywhere}
+.stock-balance h3{margin:0 0 8px;font-size:1.05rem}.stock-balance h4{margin:18px 0 8px;font-size:.9rem}
+.stock-balance .balance-pros h4{color:var(--ok)}.stock-balance .balance-cons h4{color:var(--neg)}
+.stock-balance ul{padding-left:18px;margin:0;display:grid;gap:12px}.stock-balance li{font-size:.86rem;line-height:1.5}
+.stock-balance .balance-pros li{color:var(--ok)}.stock-balance .balance-cons li{color:var(--neg)}
+.stock-balance .balance-date,.stock-balance .balance-note,.stock-balance .balance-empty{font-size:.76rem;line-height:1.5;color:var(--ink-2)}
+.stock-balance .balance-note{margin-top:14px}.stock-balance .balance-source{display:inline-block;font-size:.74rem;margin-top:3px;text-underline-offset:3px}
+.stock-balance a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(min-width:1100px){.stock-summary-layout{grid-template-columns:minmax(0,1fr) 292px}.stock-summary-layout .stock-summary-values{grid-template-columns:repeat(2,minmax(0,1fr))}.stock-summary-layout .stock-summary-values>div:last-child{grid-column:1/-1}}
+
 /* One chart for the selected profile. Reserve space before its lazy iframe loads. */
 .profile-chart{border:1px solid var(--rule);border-radius:10px;padding:16px;margin:0 0 18px;min-width:0;overflow:hidden}
 .profile-chart h3{margin:0 0 6px}.profile-chart-summary,.profile-chart-note{font-size:.82rem;line-height:1.5;color:var(--ink-2)}
@@ -731,7 +745,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 <div id="calc-root"></div>
 <script src="data/manifest.js?v=20261103-stage4"></script>
 <script src="data/names.js"></script>
-<script src="data/stock-profiles.js?v=20261103"></script>
+<script src="data/stock-profiles.js?v=20261104-balance1"></script>
 <script src="data/plan.js"></script>
 
 <script>
@@ -2731,6 +2745,29 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       mounts.forEach(function(el){profileChartObserver.observe(el);});
     }else mounts.forEach(load);
   }
+
+  function profileBalancePanel(p) {
+    var d=window.FP_PROFILE_ENGINE.researchBalance(p),h='<aside class="stock-balance" aria-label="'+esc(pt('Pros y contras de ','Pros and cons for ')+p.ticker)+'"><h3>'+esc(pt('Pros y contras','Pros & cons'))+'</h3>';
+    if(d.date)h+='<p class="balance-date">'+esc(pt('Análisis: ','Research: ')+profileDate(d.date))+(d.sourceId?' · '+reportLink(d.sourceId):'')+'</p>';
+    if(d.status!=='ready') {
+      var message=d.status==='unavailable'?(lang==='en'&&d.reasonEn?d.reasonEn:d.reason):d.status==='no-analysis'?pt('Resumen pendiente: no hay un análisis completado con evidencia suficiente.','Summary pending: no completed analysis with sufficient evidence.'):
+        d.status==='newer-analysis'?pt('Resumen pendiente: hay una investigación posterior parcial o bloqueada. No se reutilizan conclusiones anteriores como si fueran actuales.','Summary pending: newer research is partial or blocked. Earlier conclusions are not reused as current.'):
+        d.status==='stale'?pt('Resumen pendiente de actualización: cambió la fuente o sus datos de respaldo.','Summary awaiting update: the source or its supporting data changed.'):
+        pt('Sin resumen disponible: el análisis aún no contiene una selección verificable de pros y contras.','No summary available: this analysis does not yet contain a verifiable selection of pros and cons.');
+      h+='<p class="balance-empty">'+esc(message)+'</p>';
+    } else {
+      function side(items,name,cls,empty) {
+        var out='<section class="'+cls+'"><h4>'+esc(name)+'</h4>';
+        if(!items.length)return out+'<p class="balance-empty">'+esc(empty)+'</p></section>';
+        out+='<ul>';items.forEach(function(x){var text=lang==='en'&&x.textEn?x.textEn:x.text;out+='<li>'+esc(text)+'</li>';});return out+'</ul></section>';
+      }
+      h+=side(d.pros,pt('+ Pros · A favor','+ Pros · Strengths'),'balance-pros',pt('Sin puntos positivos seleccionados en esta fuente.','No positive points selected from this source.'));
+      h+=side(d.cons,pt('− Cons · Riesgos','− Cons · Concerns'),'balance-cons',pt('Sin riesgos seleccionados; no significa que no existan.','No concerns selected; this does not mean there are none.'));
+      if(lang==='en'&&d.pros.concat(d.cons).some(function(x){return !x.textEn;}))h+='<p class="balance-note">Original source language retained.</p>';
+    }
+    h+='<p class="balance-note">'+esc(pt('Síntesis del análisis, no señal de entrada. Se renueva con la investigación publicada.','Research summary, not an entry signal. Updates with published research.'))+'</p></aside>';return h;
+  }
+
   function profileSummaryCard(p,inline) {
     var d=profileCardData(p),r=d.row,v=d.model,c=d.close,s=d.scan,none=pt('No disponible','Unavailable');
     var h='<section class="panel stock-summary" aria-label="'+esc(pt('Ficha de ','Stock card: ')+p.ticker)+'">'+profileNavigation(p)+'<div class="stock-summary-head"><div><p class="eyebrow">'+esc(pt('Ficha de la acción','Stock profile'))+'</p><h2 id="profile-title" tabindex="-1">'+esc(p.ticker)+'</h2><p class="profile-company">'+esc(p.company||pt('Nombre no registrado','Name not recorded'))+'</p></div><div class="profile-card-status">'+profileStatusBadge(p)+(!profileStatus(p).value?'<span class="profile-tag">'+esc(profileState(p))+'</span>':'')+'</div></div>';
@@ -2738,6 +2775,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if(d.analysis&&d.analysis.report&&(!r||String(d.analysis.date||'')>String(window.FP_PROFILE_ENGINE.day(r.adate)||''))){var meta=(d.analysis.report.profiles||[]).find(function(x){return x.ticker===p.ticker;});note=meta&&(lang==='en'&&meta.summaryEn?meta.summaryEn:meta.summary)||(!r&&v&&note)||pt('Última fuente de investigación: ','Latest research source: ')+d.analysis.report.title+'. '+pt('Consulta el informe para conocer su conclusión y límites.','Open the report for its conclusion and limits.');}
     var short=String(note||pt('No hay un comentario de análisis registrado. Consulta el historial disponible debajo.','No analysis comment is recorded. The available history is linked below.'));
     if(short.length>260){var sentence=short.match(/^(.{80,260}?[.!?])\s/);if(sentence)short=sentence[1];else{var cut=short.lastIndexOf(' ',260);short=short.slice(0,cut>150?cut:260)+'…';}}
+    h+='<div class="stock-summary-layout"><div class="stock-summary-main">';
     h+='<p class="muted stock-dates">'+esc(pt('Primer escáner: ','First scan: ')+profileDate(p.firstScan)+' · '+pt('Último análisis completado: ','Last completed analysis: ')+profileDate(p.latestCompleted&&p.latestCompleted.date))+'</p>';
     if(profileStatus(p).value)h+='<p class="muted profile-status-date">'+esc(pt('Fecha de la decisión registrada: ','Recorded decision date: ')+profileDate(window.FP_PROFILE_ENGINE.day(r.adate)))+'</p>';
     h+='<p class="stock-brief">'+esc(short)+'</p>';
@@ -2754,7 +2792,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if(c&&d.latestKnownSession&&c.date<d.latestKnownSession)h+='<p class="muted">'+esc(pt('Este cierre es anterior a la última sesión publicada de la cuenta; no se presenta como cotización actual.','This close predates the latest published account session and is not presented as a current quote.'))+'</p>';
     if(d.latestScan&&s&&d.latestScan.date>s.date)h+='<p class="muted">'+esc(pt('Escáner posterior: ','Later scanner: ')+fmtM(d.latestScan.price)+' · '+profileDate(d.latestScan.date)+'. '+pt('Se conserva aparte para no cambiar el precio histórico del análisis.','Kept separate so the analysis’s historical price is not replaced.'))+'</p>';
     if(r)h+=execLine(r);
-    h+='<div class="controls stock-summary-links">';var ids=[];if(v&&v.reportId)ids.push(v.reportId);if(r&&r.rep&&ids.indexOf(r.rep)<0)ids.push(r.rep);if(p.latestAnalysis&&p.latestAnalysis.report&&ids.indexOf(p.latestAnalysis.id)<0&&(!r||String(p.latestAnalysis.date||'')>=String(window.FP_PROFILE_ENGINE.day(r.adate)||'')))ids.push(p.latestAnalysis.id);ids.forEach(function(id){h+=reportLink(id,pt('Informe ','Report ')+id);});if(c&&c.reportId&&ids.indexOf(c.reportId)<0)h+=reportLink(c.reportId,pt('Fuente del cierre ','Close source ')+c.reportId);if(c&&c.source==='published-history')h+='<a class="btn" href="#rendimiento">'+esc(pt('Historial de cierres','Closing-price history'))+'</a>';if(inline)h+=profileLink(p.ticker,pt('Ver análisis e historial','View research and history'),profileContext());else h+='<a class="btn" href="'+esc(profileHref(p.ticker,profileContext()))+'" data-profile-history="1">'+esc(pt('Ver análisis e historial','View research and history'))+'</a>';if(v&&v.row)h+='<button type="button" class="calc-btn" data-calc="'+esc(v.row.date+'|'+v.row.ticker)+'">'+esc(t().calc.btn)+'</button>';h+='</div></section>';return h;
+    h+='<div class="controls stock-summary-links">';var ids=[];if(v&&v.reportId)ids.push(v.reportId);if(r&&r.rep&&ids.indexOf(r.rep)<0)ids.push(r.rep);if(p.latestAnalysis&&p.latestAnalysis.report&&ids.indexOf(p.latestAnalysis.id)<0&&(!r||String(p.latestAnalysis.date||'')>=String(window.FP_PROFILE_ENGINE.day(r.adate)||'')))ids.push(p.latestAnalysis.id);ids.forEach(function(id){h+=reportLink(id,pt('Informe ','Report ')+id);});if(c&&c.reportId&&ids.indexOf(c.reportId)<0)h+=reportLink(c.reportId,pt('Fuente del cierre ','Close source ')+c.reportId);if(c&&c.source==='published-history')h+='<a class="btn" href="#rendimiento">'+esc(pt('Historial de cierres','Closing-price history'))+'</a>';if(inline)h+=profileLink(p.ticker,pt('Ver análisis e historial','View research and history'),profileContext());else h+='<a class="btn" href="'+esc(profileHref(p.ticker,profileContext()))+'" data-profile-history="1">'+esc(pt('Ver análisis e historial','View research and history'))+'</a>';if(v&&v.row)h+='<button type="button" class="calc-btn" data-calc="'+esc(v.row.date+'|'+v.row.ticker)+'">'+esc(t().calc.btn)+'</button>';h+='</div></div>'+profileBalancePanel(p)+'</div></section>';return h;
   }
 
   function renderProfile(p) {

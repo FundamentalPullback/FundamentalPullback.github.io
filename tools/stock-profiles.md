@@ -114,3 +114,31 @@ All-stock URLs omit the parameter for backward compatibility. Selected scan scop
 ## Persistent profile navigation
 
 Previous/next links remain the existing filtered ticker cohort. At desktop widths (900px+) with at least 600px height, fixed controls sit in reserved side gutters outside all main panels. Phones and short landscape viewports use deliberate left/right touch swipes, with localized labeled inline links as a screen-reader, keyboard and tap alternative. No mobile controls cover the reading area. Swipe left advances, swipe right goes back, using the exact existing URL context. Passive gestures reject vertical scroll, short or slow movements, screen edges, selection, multiple touches, inputs, links, tables and quote widgets. Browser QA covers 320/375/390px, landscape, multiple depths, boundaries and browser history.
+
+
+## Evidence-backed Pros & Cons
+
+Every selected profile (including an exact one-result search) includes a compact research balance: green labelled Pros and red labelled Cons, with research date and a link to its source report. It sits to the right inside the stock card at 1100px+, outside the reserved navigation gutters. At narrower widths it follows the main card in normal document flow, never overlays it. Labels, signs and headings carry meaning independently of color. All research/status/quote/chart/navigation data remain unchanged.
+
+The engine selects the latest completed source. If a later partial or blocked analysis exists, the panel says its update is pending instead of presenting older conclusions as current. A source-text change, including an appended correction, invalidates a migrated or structured summary until its evidence selection has been reviewed against that source revision. Passing an event's time, new provider prices, and live chart data cannot update research. Missing evidence is explicitly pending; absence of a selected positive or concern does not prove no such point exists.
+
+Source order:
+1. `profiles[].prosCons` with the schema below, bound to the enclosing report and its full-text fingerprint.
+2. Exact ticker-scoped `## Pros · TICKER` and `## Cons · TICKER` sections (also Spanish `Puntos a favor` / `Riesgos`), with 1–3 short bullets per side. Author metadata must set `prosConsSectionsFingerprint` to the fingerprint of the reviewed report text. General business, thesis, growth or risks discussions are never classified by word sentiment or assumed positive headings. Mixed caveats in an explicit bullet stay intact.
+3. Audited one-time source migrations in `tools/research-balance-legacy.json`, compiled to `data/research-balance.js`. They are keyed by report and ticker, with exact whole-report fingerprint and contiguous source evidence for every bullet. Multi-company reports require company-specific evidence.
+
+Each new/revised research publication must provide short evidence-backed pros/cons as part of authoring the research (or provide reviewed `prosConsUnavailable` metadata where the source is insufficient). The site does not autonomously research companies or invent opinions. Selection, validation, compilation, refresh and display are automatic once the research is published. A generic old source cannot automatically become a reliable new conclusion.
+
+Author metadata example (derive `sourceFingerprint` using `FP_PROFILE_ENGINE.balanceFingerprint(report.text)` after final research corrections):
+
+```json
+{"ticker":"EXAMPLE","kind":"complete","completedAt":"2026-11-05","prosCons":{"schema":"fp.research-balance.v1","asOf":"2026-11-05","sourceFingerprint":"<fingerprint of reviewed report.text>","pros":[{"text":"Ingresos recurrentes crecen un 9%.","textEn":"Recurring revenue grows 9%.","evidence":"Exact contiguous statement from this report.","sourceUrl":"https://exact-source-url-already-in-this-report"}],"cons":[{"text":"Persisten las bajas de clientes.","textEn":"Customer losses remain a concern.","evidence":"Another exact contiguous statement from this report."}]}}
+```
+
+Dates must be documented analysis dates, not scanner dates or an assumed event completion. Each displayed bullet is a short paraphrase of the exact evidence and retains material caveats. Evidence spans are verified in the report; optional HTTPS source URLs must appear there as well. Use 1–3 bullets per side, at most 320 Spanish / 360 English characters each. Keep only the clearest company-specific merits and concerns. Do not turn approval status, a cheap-looking ratio, a model sensitivity or a pending condition into a factual positive. English/Spanish text is supported; explicitly scoped prose retains its original language rather than pretending to translate it.
+
+Run `node tools/build-stock-balance.cjs` then `node tools/test-stock-balance.cjs`; both are part of the normal publication preparation. The builder prints actual coverage and pending symbols. Include the compiled data, manifest and new research in the same atomic publication. The existing one-minute visible-tab publication check refreshes the current hash, without a separate index rebuild.
+
+Tests cover every current profile in both languages and inline/direct cards, exact provenance, future/new/same-ID revised sources, stale fingerprints, newer incomplete research, multi-company scope, safe links/HTML, immutability, no live-price/event inference and responsive in-flow styling. Browser geometry and rendering are checked separately before release.
+
+Publication is blocked if a completed current source has missing or invalidated summary evidence. To intentionally publish a pending summary, the report author must provide `profiles[].prosConsUnavailable` with schema `fp.research-balance-unavailable.v1`, matching `asOf`, current `sourceFingerprint`, and a concrete `reason` (12–320 characters), optionally `reasonEn`. This is an explicit editorial assessment, not a hidden success. A later partial/blocked source remains pending without being promoted to completed. The browser also fails closed if publication preparation is bypassed.

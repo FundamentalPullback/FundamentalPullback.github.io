@@ -14,3 +14,6 @@ These checks maintain the existing Fundamental Pullback website. They do not cha
 10. **Account performance is a separate publication.** Calendar history and realized account figures follow their authorized publication workflow. Do not fold new account data into a scanner/search-only release. Use the separate validated performance publisher and its instructions when authorized; do not infer daily automation from the search refresh behavior.
 
 See `tools/stock-profiles.md` for source metadata and card selection details. Older research remains accessible through stock profiles and the Library.
+
+
+11. **Keep Pros & Cons evidence current.** Author 1–3 short concrete merits and concerns with every new/revised completed analysis, in `profiles[].prosCons` (see stock-profiles.md) or explicitly ticker-scoped sections. Include exact supporting passages, research date and reviewed full-report fingerprint. This is part of the research deliverable, not an automated investment opinion generated from prices or status. Run the preparation entry point to compile and test. Review printed coverage; missing/invalidated evidence must remain visibly pending. Never reuse an old optimistic box after a newer incomplete analysis or silently re-stamp a changed report without reviewing its summary.
