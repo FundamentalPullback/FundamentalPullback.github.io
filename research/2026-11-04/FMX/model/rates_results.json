@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-03",
+  "treasury_10y": 0.0495,
+  "nyu_implied_erp_nov1_2026": 0.0441,
+  "nyu_erp_associated_treasury": 0.0529,
+  "us_default_spread_nyu": 0.0022,
+  "adjusted_dollar_rf": 0.0473,
+  "adjusted_erp": 0.0463,
+  "mexico_country_premium_july2026": 0.027201825339291618,
+  "country_proxy_not_revenue_weighted": true,
+  "sector_unlevered_cash_corrected_reference": {
+    "retail_general": 0.78,
+    "retail_grocery_food": 0.85,
+    "soft_beverages": 0.58
+  },
+  "provider_fmx_beta": 0.18,
+  "sources": [
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+    "https://stockanalysis.com/stocks/fmx/"
+  ],
+  "notes": [
+    "Country premium is Mexico proxy, not measured exposure-weighted premium for the multinational portfolio. Brazil July premium3.0984%, Chile1.0473%, Switzerland0 demonstrate imperfect proxy.",
+    "Latest monthly ERP derived at5.29% Treasury combined with Nov3 Treasury4.95%; hybrid not synchronized day-specific implied estimate. Alternative5.29% shown.",
+    "Bottom-up selected levered beta1.00 retail and0.70 KOF; not mathematically inferred company beta. Financial debt only, leases operational.",
+    "Selected USD WACC11.0% retail and10.5% KOF are prudent analyst choices, not rounding of a measured capital cost. FX drift2% annual assumption, not forward-rate forecast."
+  ],
+  "ex_kof": {
+    "beta_selected": 1,
+    "financial_debt_weight_assumed": 0.2,
+    "usd_ke_proxy": 0.12080182533929162,
+    "usd_wacc_mechanical": 0.1053514602714333,
+    "usd_wacc_selected": 0.11,
+    "selection_buffer_basis_points": 46.485397285667,
+    "mxn_wacc_selected": 0.1322000000000001,
+    "usd_wacc_using_monthly_treasury": 0.1080714602714333
+  },
+  "kof": {
+    "beta_selected": 0.7,
+    "financial_debt_weight_assumed": 0.16,
+    "usd_ke_proxy": 0.10691182533929162,
+    "usd_wacc_mechanical": 0.09708593328500495,
+    "usd_wacc_selected": 0.105,
+    "selection_buffer_basis_points": 79.14066714995046,
+    "mxn_wacc_selected": 0.1271,
+    "usd_wacc_using_monthly_treasury": 0.09994193328500495
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "required_for_reproduction": [
+    "reproduce_offline.py",
+    "ownership_minimal_inputs.json",
+    "kof_source_facts.csv",
+    "kof_history_source_facts.csv",
+    "kof_ttm_inputs.csv",
+    "kof_history_3fy_quarters.csv",
+    "capital_bridge.csv",
+    "additional_equity_bridge.csv",
+    "kof_normalization_adjustments.csv",
+    "october_dividends_bridge.csv",
+    "QA_Flags.csv"
+  ],
+  "public_files": [
+    "ownership_minimal_inputs.json",
+    "kof_source_facts.csv",
+    "kof_history_source_facts.csv",
+    "kof_ttm_inputs.csv",
+    "kof_history_3fy_quarters.csv",
+    "capital_bridge.csv",
+    "additional_equity_bridge.csv",
+    "kof_normalization_adjustments.csv",
+    "october_dividends_bridge.csv",
+    "QA_Flags.csv",
+    "reproduce_offline.py",
+    "README.md",
+    "source_index.json",
+    "Validation_Checks.csv",
+    "public_files.json",
+    "offline_test_report.json"
+  ],
+  "exclude": [
+    "All other Python extraction scripts",
+    "Complete filings and original XBRL documents",
+    "Original source directories",
+    "Generated reproduction output directories"
+  ],
+  "description": "Explicit whitelist. Only these files are intended for the public ownership subpackage."
+}

@@ -1,0 +1,74 @@
+{
+  "as_of": "2026-11-03",
+  "units": "MXN million; per ADS USD",
+  "fx": 18.59701225512121,
+  "price": 127.03,
+  "ads_m": 314.9489365,
+  "ads_nominal_m": 338.5664115,
+  "kof_fraction": 0.4722311899644656,
+  "kof_ads_m": 210.08322619999998,
+  "kof_price": 116.42,
+  "anchors": {
+    "ex_kof": {
+      "revenue": 589775.364,
+      "ebit_ifrs_management": 32617,
+      "da_total_estimated": 29126.726000000002,
+      "lease_cash_estimated": 22923.0,
+      "cash_operating_profit_after_rent_estimated": 38820.726,
+      "physical_da_ratio": 0.024229435842158163,
+      "economic_ebit_after_rent_estimated": 24530.80165667653,
+      "capex_cash": 17497.027,
+      "bottle_adjustment_estimated": 2057.004999999999
+    },
+    "kof": {
+      "revenue": 304951.352,
+      "ebit_ifrs": 44706.809,
+      "rou_da": 1130.0,
+      "lease_rent_estimated": 1535.0,
+      "insurance_gain_adjustment_estimated": 2462,
+      "economic_ebit_after_rent_estimated": 41839.809,
+      "physical_da_ratio": 0.04498182713418499,
+      "capex_cash": 19535.972999999998
+    }
+  },
+  "capital": {
+    "ex_kof_cash": 64290.71,
+    "ex_kof_investments": 6112,
+    "ex_kof_financial_debt_estimated": 54760.6488,
+    "spin_customer_reserve": 4873.208,
+    "operating_cash_reserve": 15000,
+    "pension_reserve": 5546.438,
+    "other_claims_reserve": 2618.794,
+    "ex_kof_nci_reserve": 2.5255692404753063,
+    "imperial_brady_value_in_main": 0,
+    "kof_cash": 46772.35,
+    "kof_financial_debt": 84370,
+    "kof_derivative_reserve": 2294.35,
+    "kof_nci_reserve": 15000,
+    "kof_operating_cash_reserve": 10000,
+    "kof_pension_reserve": 5719.002,
+    "known_post_september_ex_kof_dividends_estimated": -8167.935812,
+    "known_post_september_kof_dividend": -4065.110427,
+    "unknown_post_september_net_capital_change": 0
+  },
+  "rates": {
+    "usd_rf": 0.0495,
+    "mature_erp": 0.0441,
+    "country_premium_mexico_proxy": 0.027201825339291618,
+    "ex_kof_bottomup_levered_beta_selected": 1,
+    "kof_bottomup_levered_beta_selected": 0.7,
+    "fm_provider_beta_not_used": 0.18,
+    "debt_weight_assumed_ex_kof": 0.2,
+    "debt_weight_assumed_kof": 0.16,
+    "usd_cost_debt_assumed": 0.065,
+    "annual_mxn_depreciation_assumed": 0.02
+  },
+  "limitations": [
+    "Imperial Brady and other unpriced investments excluded, not worthless. Results are partial identified-asset valuations, not full FEMSA fair value.",
+    "D&A ex-KOF uses estimated TTM bottle-breakage adjustment equal to FY25 observed difference; physical DA ratio held at FY25. Interim cash lease interest uses expense proxy.",
+    "Capital Sep30 plus estimated known October dividend movements, not observed Nov3; Swiss bond adds cash and debt equally absent verified use. ASR final settlement unknown; no unverified accretion.",
+    "Ex-KOF NCI uses a book-value proxy with sensitivities; pensions are net reported deficits. Operating cash and minority value reserves are analyst assumptions.",
+    "KOF equity subtracts subsidiary NCI reserve; consolidated FEMSA NCI is not deducted again.",
+    "All cash flows are MXN nominal. USD discount rates converted with explicit FX depreciation parity; terminal growth MXN, discounted before spot conversion."
+  ]
+}

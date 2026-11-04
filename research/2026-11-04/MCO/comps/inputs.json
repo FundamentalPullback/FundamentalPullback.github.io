@@ -1,0 +1,114 @@
+{
+  "as_of": "2026-11-04",
+  "price_date": "2026-11-03",
+  "currency": "USD",
+  "units": "USD millions except price; shares millions",
+  "sources": {
+    "msci_q3": "https://www.sec.gov/Archives/edgar/data/1408198/000140819826000056/msci-20260930.htm",
+    "msci_fy25": "https://www.sec.gov/Archives/edgar/data/1408198/000140819826000011/msci-20251231.htm",
+    "spgi_q3": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000058/spgi-20260930.htm",
+    "spgi_recast": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064040/b5a1e47d-dc11-4cc6-b38d-0b4793119d9c.html",
+    "spgi_fy25": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+    "spgi_review": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000053/spgi3q2026-earningsrelease.htm",
+    "msci_price": "https://stockanalysis.com/stocks/msci/history/",
+    "spgi_price": "https://stockanalysis.com/stocks/spgi/history/"
+  },
+  "companies": [
+    {
+      "ticker": "MSCI",
+      "price": 639.78,
+      "shares": 71.5,
+      "shares_date": "2026-10-13",
+      "share_basis": "10-Q cover current actual, rounded to 0.1m",
+      "balance_date": "2026-09-30",
+      "debt_nominal": 6760,
+      "debt_carrying": 6716.9,
+      "cash_reported": 261,
+      "restricted_cash": 3.6,
+      "nci": 0,
+      "preferred": 0,
+      "FY2025": {
+        "revenue": 3134.459,
+        "ebit": 1713.567,
+        "cfo": 1588.446,
+        "physical_capex": 39.319,
+        "software_capex": 90.542,
+        "sbc": 111.343
+      },
+      "9M2025": {
+        "revenue": 2311.9,
+        "ebit": 1249.9,
+        "cfo": 1087.3,
+        "physical_capex": 26.9,
+        "software_capex": 66.7,
+        "sbc": 85.8
+      },
+      "9M2026": {
+        "revenue": 2609.8,
+        "ebit": 1446.5,
+        "cfo": 1113.7,
+        "physical_capex": 27.2,
+        "software_capex": 96.7,
+        "sbc": 100.6
+      },
+      "notes": [
+        "TTM combines FY2025 thousands precision with 9M reported million precision; displayed output should be rounded, not imply thousand-dollar accuracy.",
+        "Cash reported includes restricted cash: subtract 3.6 before netting debt. All unrestricted cash netted; company targets 225-275 of operating cash, so full cash netting is generous.",
+        "Owner FCF = CFO - physical capex - capitalized software - SBC. Operating lease cash already in CFO. Acquisitions are not recurring capex; no acquisition deduction.",
+        "No stock split adjustment identified in current filing; current actual shares, not stale diluted weighted-average 72.3m."
+      ]
+    },
+    {
+      "ticker": "SPGI",
+      "price": 466.03,
+      "shares": 289.9,
+      "shares_date": "2026-10-23",
+      "share_basis": "10-Q cover actual, excludes treasury shares",
+      "balance_date": "2026-09-30",
+      "debt_nominal": null,
+      "debt_carrying": 13062,
+      "cash_reported": 2441,
+      "restricted_cash": 0,
+      "nci": 5468,
+      "redeemable_nci": 5348,
+      "nonredeemable_nci": 120,
+      "preferred": 0,
+      "FY2025": {
+        "revenue": 13589,
+        "ebit": 6105,
+        "cfo": null,
+        "physical_capex": null,
+        "software_capex": null,
+        "sbc": null,
+        "gain_dispositions": 273
+      },
+      "9M2025": {
+        "revenue": 10117,
+        "ebit": 4476,
+        "cfo": 3317,
+        "capex_total": 133,
+        "sbc": 155,
+        "nci_cash_distributions": 234,
+        "gain_dispositions": 3
+      },
+      "9M2026": {
+        "revenue": 11074,
+        "ebit": 5627,
+        "cfo": 3661,
+        "capex_total": 93,
+        "sbc": 127,
+        "nci_cash_distributions": 269,
+        "gain_dispositions": 386
+      },
+      "notes": [
+        "Mobility spin completed July 1, 2026 (one MBGL share per SPGI share). All income bridge inputs exclude Mobility. FY2025 6105 is continuing-operations subtotal BEFORE 35 of hypothetical TSA pro-forma benefit; do not use 6140.",
+        "TTM revenue and EBIT valid on continuing basis. Capital IQ strategic review announced Oct 27 is not a disposal; entire retained business remains included.",
+        "TTM EBIT includes 656 disposition gains; also show EBIT less disposition gains. This is a limited normalization, not management adjusted EBIT.",
+        "Nominal debt not independently reconciled: 13062 is carrying amount (2448 current plus 10614 long-term), not nominal; EV explicitly carrying-debt proxy. Debt fair value 10.7bn must not be substituted.",
+        "EV adds 5348 redeemable plus 120 nonredeemable NCI to match consolidated EBIT; NCI is book/redemption-value proxy, not market value. No double count of NCI as debt.",
+        "Operating leases (521 present value) excluded from EV consistently with reported EBIT, whose operating lease costs remain expenses. No investee subtraction.",
+        "FY2025 cash flows in original 10-K include Mobility; July recast only supplies income/balance sheets. TTM continuing CFO, capex, SBC and owner yield withheld pending a clean FY2025 continuing cash-flow bridge. Verified 9M owner cash is supplied but not annualized or labelled TTM."
+      ]
+    }
+  ]
+}

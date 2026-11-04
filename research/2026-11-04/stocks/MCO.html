@@ -1,0 +1,321 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>MCO · Investigación condicionada · perímetro, capital y calendario pendientes · Esperar precio</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/MCO">← MCO profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación condicionada · perímetro, capital y calendario pendientes</span><span class="tag deferred">Esperar precio</span><span class="tag">No entry approved</span></div><h1 id="mco-a211-investigación-del-4-de-noviembre-de-2026">MCO · A211 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Primera reconstrucción FCFF condicionada: central 183,98 USD frente al cierre 503,69; escenarios 96,78–325,70. Franquicia recurrente y crecimiento operativo TTM, pero el EPS Q3 recibe ayuda de desinversiones y recompras. Perímetro, afiliadas, derivados, capital y calendario abiertos. Sin entrada.</strong></p>
+<p>First conditional FCFF reconstruction: central $183.98 versus $503.69 close; scenarios $96.78–325.70. Recurring franchise and TTM operating growth, but Q3 EPS benefits from divestitures and buybacks. Perimeter, affiliates, derivatives, capital and calendar remain open. No entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/MCO.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-30, 494.00 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 503.69 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04 18:10 UTC; revisión independiente posterior cerrada solo para investigación condicionada.</p>
+<p>A105 y A112 se preservan como revisiones de lista sin DCF anterior. Este informe es una primera reconstrucción propia, no réplica de un modelo recuperado. Escáner real del 30 de octubre: 494,00 USD; cierre regular del 3 de noviembre: 503,69 USD. No se inventa una sesión nueva. La revisión condicionada no cuenta como último análisis completo.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="moodys-crecimiento-recurrente-desinversiones-y-precio-exigente">Moody’s: crecimiento recurrente, desinversiones y precio exigente</h1>
+<p>Investigación al 4 noviembre 2026. Referencia de valoración: cierre del <strong>3 noviembre, 503,69 USD</strong>, no cotización intradía. Escáner previo del 30 octubre: <strong>494,00 USD</strong>, conservado sin fabricar una sesión nueva. Millones de USD salvo EPS y valores por acción.</p>
+<p><strong>Conclusión:</strong> Moody’s combina una franquicia de ratings difícil de replicar con datos y analítica recurrentes. Sin embargo, el avance del EPS Q3 no refleja una aceleración equivalente del beneficio operativo. La reconstrucción FCFF central resulta <strong>183,98 USD</strong>, con escenarios <strong>96,78 / 325,70</strong>. Ninguno respalda 503,69 bajo sus supuestos; no son límites ciertos del precio ni una previsión de caída.</p>
+<p>Investigación condicionada, sin certificación integral ni entrada. Quedan normalización exacta del perímetro vendido, valoración de afiliadas, relación económica de deuda y derivados, capital posterior a septiembre y siguiente fecha de resultados. No se modifican gestión, posiciones ni operaciones. Los informes A105/A112 solo eran triage, no DCF anterior que replicar. Se emplea FCFF porque ratings/analítica son servicios operativos, no intermediación bancaria financiada con depósitos; la clasificación sectorial financiera no convierte su caja en capital bancario distribuible.</p>
+<h2 id="historia-reconstruida-y-comparativos">1. Historia reconstruida y comparativos</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Período</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NI atribuible</th>
+<th style="text-align: right;">EPS básico / diluido</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">SBC</th>
+<th style="text-align: right;">Owner FCF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">5.916,0</td>
+<td style="text-align: right;">2.137,0</td>
+<td style="text-align: right;">1.607,0</td>
+<td style="text-align: right;">8,77 / 8,73</td>
+<td style="text-align: right;">2.151,0</td>
+<td style="text-align: right;">271,0</td>
+<td style="text-align: right;">193,0</td>
+<td style="text-align: right;">1.687,0</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">7.088,0</td>
+<td style="text-align: right;">2.875,0</td>
+<td style="text-align: right;">2.058,0</td>
+<td style="text-align: right;">11,32 / 11,26</td>
+<td style="text-align: right;">2.838,0</td>
+<td style="text-align: right;">317,0</td>
+<td style="text-align: right;">220,0</td>
+<td style="text-align: right;">2.301,0</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">7.718,0</td>
+<td style="text-align: right;">3.351,0</td>
+<td style="text-align: right;">2.459,0</td>
+<td style="text-align: right;">13,73 / 13,67</td>
+<td style="text-align: right;">2.901,0</td>
+<td style="text-align: right;">326,0</td>
+<td style="text-align: right;">232,0</td>
+<td style="text-align: right;">2.343,0</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Período</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NI atribuible</th>
+<th style="text-align: right;">EPS básico / diluido</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">SBC</th>
+<th style="text-align: right;">Owner FCF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q42025</td>
+<td style="text-align: right;">1.889,0</td>
+<td style="text-align: right;">770,0</td>
+<td style="text-align: right;">610,0</td>
+<td style="text-align: right;">3,43 / 3,41</td>
+<td style="text-align: right;">858,0</td>
+<td style="text-align: right;">81,0</td>
+<td style="text-align: right;">58,0</td>
+<td style="text-align: right;">719,0</td>
+</tr>
+<tr class="even">
+<td>Q12026</td>
+<td style="text-align: right;">2.079,0</td>
+<td style="text-align: right;">922,0</td>
+<td style="text-align: right;">661,0</td>
+<td style="text-align: right;">3,74 / 3,73</td>
+<td style="text-align: right;">939,0</td>
+<td style="text-align: right;">95,0</td>
+<td style="text-align: right;">58,0</td>
+<td style="text-align: right;">786,0</td>
+</tr>
+<tr class="odd">
+<td>Q22026</td>
+<td style="text-align: right;">2.185,0</td>
+<td style="text-align: right;">1.046,0</td>
+<td style="text-align: right;">878,0</td>
+<td style="text-align: right;">5,04 / 5,03</td>
+<td style="text-align: right;">779,0</td>
+<td style="text-align: right;">91,0</td>
+<td style="text-align: right;">59,0</td>
+<td style="text-align: right;">629,0</td>
+</tr>
+<tr class="even">
+<td>Q32026</td>
+<td style="text-align: right;">2.023,0</td>
+<td style="text-align: right;">906,0</td>
+<td style="text-align: right;">734,0</td>
+<td style="text-align: right;">4,25 / 4,24</td>
+<td style="text-align: right;">753,0</td>
+<td style="text-align: right;">85,0</td>
+<td style="text-align: right;">58,0</td>
+<td style="text-align: right;">610,0</td>
+</tr>
+<tr class="odd">
+<td>TTM2025</td>
+<td style="text-align: right;">7.501,0</td>
+<td style="text-align: right;">3.142,0</td>
+<td style="text-align: right;">2.244,0</td>
+<td style="text-align: right;">12,48 / 12,44</td>
+<td style="text-align: right;">2.717,0</td>
+<td style="text-align: right;">319,0</td>
+<td style="text-align: right;">228,0</td>
+<td style="text-align: right;">2.170,0</td>
+</tr>
+<tr class="even">
+<td>TTM2026</td>
+<td style="text-align: right;">8.176,0</td>
+<td style="text-align: right;">3.644,0</td>
+<td style="text-align: right;">2.883,0</td>
+<td style="text-align: right;">16,46 / 16,41</td>
+<td style="text-align: right;">3.329,0</td>
+<td style="text-align: right;">352,0</td>
+<td style="text-align: right;">233,0</td>
+<td style="text-align: right;">2.744,0</td>
+</tr>
+</tbody>
+</table></div>
+<p>TTM = Q4 anterior + Q1–Q3 actual. Flujos trimestrales se calculan restando acumulados; Q4 = año menos 9M. EPS Q4 se toma de la publicación trimestral, no por resta automática de EPS anuales; EPS TTM es suma trimestral, no anual reportado. Capex corresponde a capital additions. Owner FCF = CFO − capex − SBC; mantiene intereses, impuestos y circulante, por lo que no equivale a FCFF normalizado.</p>
+<p><a href="https://www.sec.gov/Archives/edgar/data/1059556/000162828026009136/mco-20251231.htm">10-K FY2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/1059556/000162828026066731/mco-20260930.htm">Q3 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1059556/000162828026049398/mco-20260630.htm">Q2</a>, <a href="https://www.sec.gov/Archives/edgar/data/1059556/000162828026026848/mco-20260331.htm">Q1</a>, <a href="https://www.sec.gov/Archives/edgar/data/1059556/000162828025046118/mco-20250930.htm">Q3 anterior</a>, <a href="https://www.sec.gov/Archives/edgar/data/1059556/000162828026008788/a4q25earningsrelease.htm">Q4 2025 y comparativo</a>.</p>
+<h2 id="el-eps-no-es-la-mejora-operativa">2. El EPS no es la mejora operativa</h2>
+<p>Q3 ventas 2.023 M frente a 2.007 M (+0,80 %), EBIT 906 frente a 917 (−1,20 %), NI atribuible 734 frente a 646 (+13,62 %) y EPS diluido 4,24 frente a 3,60 (+17,78 %). La diferencia importa: desinversión y menor denominador ayudan al EPS. Promedio diluido Q3 173,3 M frente a 179,6 M, no nuevas ventas.</p>
+<p>En 9M se reconocieron <strong>296 M de ganancias de desinversión fuera de EBIT</strong>: 294 por MA Regulatory Solutions y 2 de ajuste de MA Learning Solutions. Q3 aporta 115 M. El emisor revela impuesto relacionado 89 M en 9M y 34 en Q3, dejando beneficios netos 207 y 81. NI 9M sin esos 207: <strong>2.066 M frente a 1.849 M, +11,74 %</strong>, no una normalización completa de todos los demás conceptos. No se restan de nuevo las ganancias del EBIT, que ya las excluye.</p>
+<p>TTM EBIT aumenta <strong>15,98 %</strong>, con margen 44,57 % frente a 41,89 %. El DCF usa márgenes propios, no el margen ajustado empresarial que excluye D&amp;A y otros gastos. Se retienen SBC, reestructuraciones recurrentes y costes económicos de activos: cargos de reestructuración 87 / 59 / 108 M en FY2023–25 y 86 M en 9M2026 impiden tratarlos todos como irrepetibles. D&amp;A TTM 496 M contiene amortización adquirida, pero el modelo financia reposición y crecimiento en vez de sumarla gratuitamente.</p>
+<p>El cargo internacional no relacionado con impuesto sobre beneficios suma 52 M antes de impuestos en 9M, pero solo <strong>36 M son operativos</strong>; intereses/penalizaciones restantes no deben añadirse al EBIT. El coste de alquiler duplicado fue 9 M YTD. El central no agrega estos ajustes al EBIT histórico ni declara que el margen ajustado sea beneficio sostenible. Fiscalidad normalizada de proyección 25 %, frente a 24,36 % YTD y 21,34 % FY2025: evita perpetuar la tasa Q4 2025 de aproximadamente 11,06 %. <a href="https://www.sec.gov/Archives/edgar/data/1059556/000162828026066594/a3q26earningsrelease.htm">Conciliaciones oficiales</a>.</p>
+<h2 id="modelo-de-negocio-perímetro-y-riesgos">3. Modelo de negocio, perímetro y riesgos</h2>
+<p>MA registra 936 M de ventas Q3, +3 % reportado y +8 % orgánico a moneda constante. El 99 % de las ventas MA del trimestre son recurrentes y ARR 3.688 M crece 8 %. ARR no es ingreso contratado irrevocable ni efectivo cobrado. MIS genera 1.087 M, −1 %, y transaccional 714 M, −5 %: menor emisión apalancada contrasta con inversión corporativa de alta calidad. No extrapolar la financiación de IA a todos los segmentos ni todo el ciclo crediticio.</p>
+<p>La ventaja competitiva combina reputación, aceptación regulatoria, historial de ratings e integración de datos en procesos del cliente. Los riesgos incluyen litigios/conflictos de interés de ratings, sensibilidad de emisiones a tasas y spreads, presión de competidores y de IA sobre información y precios, ciberseguridad y ejecución de nuevas herramientas. La recurrencia reduce volatilidad, no elimina pérdida de clientes.</p>
+<p>Learning Solutions se vendió en Q4 2025 y Regulatory Solutions en Q2 2026. La conciliación orgánica elimina 42 M del Q3 previo y 92 M de 9M previo, pero <strong>no ofrece aquí un TTM completo pro forma de EBIT/caja del negocio retenido</strong>. No se atribuye toda variación reportada a demanda orgánica. La base TTM 8.176 M aún mezcla períodos de perímetro; pruebas de reducción de ventas de 50/100/150 M figuran en model.json, sin inventar el margen de los negocios vendidos. La contraprestación pendiente 154 M no es caja y no se añade al central.</p>
+<p>Moody’s anunció acuerdo para adquirir una participación minoritaria en PhilRatings el 14 septiembre. Esta revisión no recuperó precio público específico ni una confirmación primaria independiente del pago; no se inventa un puente posterior o una adquisición gratis. <a href="https://ir.moodys.com/press-releases/news-details/2026/Moodys-to-Acquire-Minority-Stake-in-Philippine-Rating-Services-Corporation-PhilRatings/default.aspx">Anuncio</a>.</p>
+<h2 id="caja-y-capital">4. Caja y capital</h2>
+<p>CFO TTM 3.329 M, capex 352 y SBC 233: owner FCF <strong>2.744 M</strong>, frente a 2.170 M previo. La ganancia por ventas de negocios se revierte en CFO; los 200 M de cobros por desinversiones de 9M son inversión, no CFO recurrente. Tampoco se vuelve a sumar ese efectivo ya integrado en el balance. CFO YTD mejora 428 M, con movimiento favorable de cuentas por cobrar y menor salida por pasivos acumulados: no asignar toda la mejora a rentabilidad estructural.</p>
+<p>Puente de septiembre: caja 1.513 + inversiones cortas 108 − reserva operativa supuesta 500 − deuda nominal 7.120 − minoritarios 144 − prestaciones proxy 220 − UTP 167 − intereses UTP 49 − indemnizaciones MAKS 19 − derivados netos 488 = <strong>−7.086 M USD</strong>. NCI contable es aproximación, no valor razonable certificado. Deuda 6.911 M contable no sustituye a principal 7.120; la primera contiene ajustes de swaps, descuentos y costes. Los 568 M corrientes ya están dentro del principal, no se restan otra vez.</p>
+<p>Los 488 M de derivados netos son 493 de pasivos menos 5 de activos. Se reservan separadamente como prudencia, <strong>no como certificación de coste de cancelación independiente de deuda y divisas</strong>. La interacción con swaps ligados a bonos, coberturas de inversión neta y tipos proyectados requiere afinar el valor económico conjunto. Eliminar toda la reserva cambia el central a 186,79 USD. No se afirma ausencia total de solapamiento.</p>
+<p>Los 220 M de prestaciones son rubros reconocidos de 11 corrientes más 209 no corrientes, no un nuevo déficit actuarial calculado. No se agrega el activo de prestaciones de 82 M como caja accesible. Se mantiene coste laboral en márgenes; falta separar al detalle coste de servicio, amortización y liquidación de obligaciones históricas. Quitar toda la reserva elevaría el central a 185,25. La deuda de alquiler operativo 581 M no se duplica porque rentas siguen en gastos. Reestructuración pendiente 49 M permanece dentro de pasivos operativos y del coste recurrente proyectado, sin otra deducción automática.</p>
+<p>No se agregan 489 M de afiliadas ni 154 M por cobrar como efectivo libre; a libros y sin ajustes elevarían separadamente el central a 186,80 y 184,87. La reserva de impuesto no relacionado con renta de 16 M no se descuenta por segunda vez del central, dado que el gasto operativo permanece y faltan detalles de liquidación; descontarla además reduce aproximadamente 0,09 USD. No hay certificación de capital al 4 noviembre: recompras, dividendos, FX y adquisiciones posteriores requieren reconciliación.</p>
+<p>Acciones empleadas: <strong>173,3 M diluidas promedio Q3</strong>, no acciones actuales exactas ni promesa conservadora sobre toda dilución futura. No se reduce ese denominador por recompras futuras y se conserva SBC como coste. No se cuenta a la vez caja de recompra y beneficio gratuito de menos acciones.</p>
+<h2 id="dcf-operativo-no-precio-máximo-de-compra">5. DCF operativo, no precio máximo de compra</h2>
+<p>Diez años FCFF: cinco explícitos y cinco de transición. Partida TTM 8.176 M; crecimiento central 7 / 6 / 6 / 5 / 5 %, convergencia a 2,5 % años 6–10. Margen EBIT 44 / 44,5 / 45 / 45,5 / 46 %, luego 46 %. Impuesto 25 %, D&amp;A 5,5 %, capex 4,5 %, ΔNWC 5 % del incremento de ventas. No hay adición de SBC.</p>
+<p>Reinversión = máximo de capex − D&amp;A + ΔNWC y NOPAT × crecimiento de ventas / retorno supuesto 25 %. Reserva adicional explícita permite conciliar FCFF = NOPAT + D&amp;A − capex − ΔNWC − reserva. El suelo económico domina todos los años de los tres escenarios y también financia el terminal: D&amp;A superior a capex no se convierte en beneficio permanente gratuito. El retorno supuesto no es ROIC incremental observado y usa crecimiento de ventas, no de NOPAT; expansión de margen sobre capacidad instalada es hipótesis que exige seguimiento. Como contraste, financiar el incremento positivo de NOPAT dividido por ROIC, incluyendo la evolución de margen, produce 183,57 USD con ancla histórica de margen 44,57 % y 182,83 con ancla normalizada supuesta del 44 %. No reemplaza el central. Esta alternativa también cambia la convención temporal: usa incremento absoluto de NOPAT, no NOPAT del año multiplicado por crecimiento de ventas; por eso no es una penalización unidireccional.</p>
+<p>WACC central 10 %, g 2,5 %. Referencia US Treasury diez años 4,91 % del 2 noviembre (último punto validado), beta ilustrativa 1,2 y prima 4,5 % implican Ke 10,31 %; con 8 % de deuda objetivo, coste 4,5 % e impuesto 25 %, WACC ilustrativo 9,76 %, redondeado a 10 %. No se etiqueta beta/prima como medidas econométricas verificadas. <a href="https://www.federalreserve.gov/releases/h15/">Fed H.15</a>.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th style="text-align: right;">Δ crecimiento primeros 5 años</th>
+<th style="text-align: right;">Δ margen diez años y terminal</th>
+<th style="text-align: right;">WACC / g</th>
+<th style="text-align: right;">Retorno / impuesto</th>
+<th style="text-align: right;">Valor USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Conservador</td>
+<td style="text-align: right;">−4 pp</td>
+<td style="text-align: right;">−5 pp</td>
+<td style="text-align: right;">11 / 1,5 %</td>
+<td style="text-align: right;">18 / 27 %</td>
+<td style="text-align: right;">96,78</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td style="text-align: right;">0 pp</td>
+<td style="text-align: right;">0 pp</td>
+<td style="text-align: right;">10 / 2,5 %</td>
+<td style="text-align: right;">25 / 25 %</td>
+<td style="text-align: right;">183,98</td>
+</tr>
+<tr class="odd">
+<td>Favorable</td>
+<td style="text-align: right;">+4 pp</td>
+<td style="text-align: right;">+3 pp</td>
+<td style="text-align: right;">9 / 3 %</td>
+<td style="text-align: right;">30 / 24 %</td>
+<td style="text-align: right;">325,70</td>
+</tr>
+</tbody>
+</table></div>
+<p>Peso terminal central <strong>54,03 %</strong>. Inverso: añadir <strong>21,64 pp</strong> a cada crecimiento de los cinco primeros años iguala 503,69, antes de converger a 2,5 %. Esto implicaría alrededor de 28,64 % el primer año y 26,64 % en años 4–5; no es una previsión ni una exigencia única del mercado. Barrido de margen adicional 0–35 pp no encuentra raíz; el extremo da 356,02 con márgenes poco defendibles. No se fuerza resultado.</p>
+<p>Se incluyen sensibilidades WACC/g, retorno, dilución, perímetro y capital. La incertidumbre sobre derivados o prestaciones mueve pocos dólares por acción en estas pruebas; la brecha depende sobre todo de crecimiento y tasa. No se añade descuento universal del 15 % ni se convierte automáticamente un escenario en techo de entrada.</p>
+<h2 id="a.-comparables-no-mezclar-perímetros">5A. Comparables: no mezclar perímetros</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Empresa</th>
+<th style="text-align: right;">Cierre 3 nov</th>
+<th style="text-align: right;">EBIT TTM M USD</th>
+<th style="text-align: right;">EV/EBIT</th>
+<th style="text-align: right;">Owner yield TTM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MCO</td>
+<td style="text-align: right;">503,69</td>
+<td style="text-align: right;">3.644</td>
+<td style="text-align: right;">25,50x</td>
+<td style="text-align: right;">3,14 %</td>
+</tr>
+<tr class="even">
+<td>MSCI</td>
+<td style="text-align: right;">639,78</td>
+<td style="text-align: right;">1.910,2</td>
+<td style="text-align: right;">27,35x</td>
+<td style="text-align: right;">2,90 %</td>
+</tr>
+<tr class="odd">
+<td>SPGI, continuidad</td>
+<td style="text-align: right;">466,03</td>
+<td style="text-align: right;">7.256</td>
+<td style="text-align: right;">20,84x</td>
+<td style="text-align: right;">No disponible comparable</td>
+</tr>
+<tr class="even">
+<td>SPGI, sin ganancias de desinversión</td>
+<td style="text-align: right;">466,03</td>
+<td style="text-align: right;">6.600</td>
+<td style="text-align: right;">22,91x</td>
+<td style="text-align: right;">No disponible comparable</td>
+</tr>
+</tbody>
+</table></div>
+<p>MSCI incluye software capitalizado en capex y excluye 3,6 M de caja restringida; deuda nominal 6.760 M y 71,5 M acciones efectivas de portada del 13 octubre. MCO usa promedio diluido, no exactamente la misma fecha/base de acciones. Sus múltiplos no usan todas las reservas específicas del DCF; incluyendo 488 M netos de derivados, MCO EV/EBIT sería 25,64x.</p>
+<p>SPGI ya separó Mobility el 1 julio. El EBIT de continuidad se reconstruye sin sumar beneficios hipotéticos de TSA al histórico; también se muestra sin 656 M de ganancias de ventas de activos. EV incluye 5.468 M de NCI, pero usa 13.062 M de deuda <strong>contable</strong>, cuyo nominal no está reconciliado: es proxy, no par homogéneo certificado. Capital IQ sigue dentro del grupo, pese a revisión estratégica. No se mezcla FY2025 CFO con Mobility y 9M2026 sin Mobility; por eso el owner yield TTM queda ausente, no cero. Los 3.172 M de owner cash 9M verificados no se anualizan.</p>
+<p>Las diferencias de crecimiento, ratings, índices, monetización de datos y capital impiden aplicar una media mecánica como precio objetivo MCO. Comparables acotados, no certificado de igualdad de perímetro. <a href="https://www.sec.gov/Archives/edgar/data/64040/000006404026000053/spgi3q2026-earningsrelease.htm">SPGI Q3</a>; fuentes exactas SEC/IR, precios y números en comps/inputs.json y numeric_rows.csv.</p>
+<h2 id="próximas-fechas-y-estado">6. Próximas fechas y estado</h2>
+<p>Q3 ya publicado el <strong>21 octubre</strong>. La siguiente fecha de resultados no fue confirmada en fuente primaria; estimaciones de febrero no liberan el filtro de calendario. <a href="https://ir.moodys.com/press-releases/default.aspx">IR y anuncios</a>. La revisión no atribuye las caídas o subidas recientes a una noticia sin comprobar causa.</p>
+<p>Pendientes: pro forma retenido de ganancias/caja, valoración conjunta deuda/derivados y afiliadas, seguimiento del precio frente a crecimiento exigido y calendario oficial. Auditoría independiente cerrada para investigación condicionada, sin certificación de ejecución ni valoración integral. Investigación fundamental condicionada; ningún cambio técnico, orden o gestión.</p>
+<h2 id="pros-y-contras-trazables">7. Pros y contras trazables</h2>
+<p><strong>A favor:</strong> el EBIT TTM crece 15,98 % y el owner FCF calculado alcanza 2.744 M USD, aunque no son cifras perfectamente normalizadas de perímetro.</p>
+<p><strong>A favor:</strong> MA tiene 99 % de ingresos recurrentes en Q3 y ARR de 3.688 M USD, con crecimiento del 8 %.</p>
+<p><strong>En contra:</strong> el EPS Q3 crece 17,78 %, pero el EBIT cae 1,20 %; desinversiones y recompras explican parte de la divergencia.</p>
+<p><strong>En contra:</strong> el central FCFF de 183,98 USD y el favorable de 325,70 USD no respaldan el cierre de 503,69 bajo los supuestos publicados.</p>
+<p><strong>En contra:</strong> perímetro retenido, activos de afiliadas, derivados y capital posterior al balance impiden certificar valor integral; el siguiente earnings sigue sin confirmar.</p>
+<h2 id="english-evidence-summary">English evidence summary</h2>
+<p>TTM operating EBIT rose 15.98% and derived owner FCF reached USD 2,744m, although the business perimeter is not fully normalized.</p>
+<p>MA generated 99% recurring revenue in Q3 and USD 3,688m of ARR, up 8%.</p>
+<p>Q3 diluted EPS rose 17.78%, but operating EBIT fell 1.20%; divestitures and buybacks explain part of the divergence.</p>
+<p>The USD 183.98 central FCFF case and USD 325.70 favorable case do not support the USD 503.69 close under the published assumptions.</p>
+<p>Retained perimeter, affiliate assets, derivatives and post-balance-sheet capital prevent integral certification; the next earnings date remains unconfirmed.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MCO/MCO_support.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MCO/model.py">Modelo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/MCO/model.json">Resultados</a></li>
+</ul>
+</main></body></html>

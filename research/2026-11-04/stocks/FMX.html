@@ -1,0 +1,773 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FMX · Investigación parcial · valor total no certificado · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/FMX">← FMX profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · valor total no certificado</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="fmx-a212-investigación-del-4-de-noviembre-de-2026">FMX · A212 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Investigación parcial: historia de caja y atribución KOF reconstruidas. Dos DCF de activos identificados, no valoración total de FEMSA ni cota inferior; ImperialBrady sin tasación individual. Fondos Spin no son caja libre. Opportunity 75 &lt; 85 y calendario sin confirmar. Sin entrada.</strong></p>
+<p>Partial research: historical cash flows and KOF attribution reconstructed. Two identified-asset DCFs, not total FEMSA fair value or a lower bound; standalone ImperialBrady value remains unknown. Spin funds are not free cash. Opportunity 75 &lt; 85; calendar unconfirmed. No entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/FMX.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-11-03, 127.03 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 127.03 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 de noviembre de 2026; revisión independiente cerrada solo para investigación parcial.</p>
+<p>A127 se conserva como avance documental anterior, no como valoración total. Última fila real del 3 de noviembre: 127,03 USD, QP 100 y Opportunity 75; la referencia del 26 de octubre era 124,98. El cierre regular del 3 de noviembre coincide numéricamente con la última fila, pero es una fuente distinta y no cotización actual. Los valores parciales 15,51/42,53/74,96 y el híbrido con KOF a mercado 60,39 describen activos identificados: no son valor total, intervalo completo, margen de seguridad, techo de compra ni cota inferior demostrada.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="femsa-fmx-caja-reconstruida-valoración-parcial-y-atribución-económica">FEMSA / FMX: caja reconstruida, valoración parcial y atribución económica</h1>
+<p>Fecha de investigación: 4 de noviembre de 2026. Precios: cierre regular del 3 de noviembre. Estados: septiembre de 2026; eventos posteriores expresamente identificados. MXN millones salvo indicación contraria; valores por ADS en USD. Estado: <strong>Investigación parcial revisada de forma independiente, sin aprobación de entrada.</strong></p>
+<h2 id="decisión-y-alcance">1. Decisión y alcance</h2>
+<p>El bloqueo antiguo de CFO ya no justifica dejar el expediente vacío. Hay evidencia suficiente para reconstruir caja, separar obligaciones de clientes y valorar explícitamente los negocios identificados. Pero no hay base para afirmar que el valor de ImperialBrady sea cero o que un balance de septiembre sea una conciliación exacta de noviembre. Por ello <strong>no se publica un fair value total de FEMSA ni se etiqueta Stage 3 completo</strong>.</p>
+<p>Los escenarios propios de activos identificados arrojan 15.51 / 42.53 / 74.96 USD por ADS, frente a 127,03. Son dos DCF de diez años, ex-KOF y KOF, sin valor asignado a inversiones no verificadas. No son un intervalo estadístico ni una cota inferior demostrada: algunas reservas, márgenes y asignaciones pueden variar en ambas direcciones. Con KOF al precio bursátil observado, en lugar de su DCF propio, el caso central parcial asciende a 60.39. La conclusión útil es que <strong>no está demostrado un descuento de compra</strong> bajo los supuestos explicitados, no que se haya tasado todo el grupo.</p>
+<p>La última fila real del escáner es del 3 de noviembre a 127,03 USD: QP 100 y Opportunity 75, por debajo de 85. La próxima fecha exacta de resultados no está confirmada. Esta revisión de un pendiente no habilita el filtro técnico, Stage 3.5 ni una entrada.</p>
+<p>La fila original A102 del 26 de octubre era 124,98 USD; A127 utilizó cierre 30 de octubre 126,10. Se conservan como antecedentes, separados de la observación actual. El negocio es consumo/retail diversificado con farmacia dentro del grupo; no se reclasifica toda FEMSA como empresa sanitaria. No se actualiza puntuación técnica con datos intradía.</p>
+<h2 id="negocio-calidad-y-riesgos-que-importan">2. Negocio, calidad y riesgos que importan</h2>
+<p>OXXO México mantiene una red difícil de replicar: 24.759 tiendas y ventas mismas tiendas +9,2% en el tercer trimestre. Esa escala ayuda a distribuir productos, captar tráfico y extender servicios, pero el margen operativo bajó de 9,7% a 9,3% y el crecimiento no es enteramente volumen.</p>
+<p>La densidad de locales, logística, relación con proveedores y conveniencia favorecen frecuencia de visita. La expansión aporta ventas, pero 191 aperturas y 140 cierres en el trimestre producen sólo 51 tiendas netas. Costes laborales, cierres y menor ingreso comercial comparativo presionan rentabilidad. No se añade al EBIT un supuesto coste temporal de cierres ni se transforma todo aumento del ticket en crecimiento real. [S1]</p>
+<p>Europa muestra +4,0% de ventas comparables mientras los ingresos convertidos a MXN caen 5,2%; Salud crece ventas 7,0% pero no confirma mejora proporcional del beneficio. Brasil OXXO se consolida desde febrero tras la separación de Grupo Nós, de modo que no todo crecimiento es orgánico a perímetro constante. El ex-KOF agregado incluye retail, movilidad, Europa, Salud, Spin, otros y eliminaciones; no es un estado legal independiente de OXXO. [S1,S3]</p>
+<p>Spin tiene 11,7 millones de usuarios activos y 30 millones en lealtad, pero usuarios y transacciones no son utilidad distribuible. Compropago registra pérdida de nueve meses de 906,607 y aportación de capital de 340. No se suma una valoración fintech opcional ni se elimina su pérdida del beneficio del retail. QED entró en el negocio de crédito conservando FEMSA mayoría y consolidación; el porcentaje minoritario y precio no se divulgaron en el comunicado revisado. [S4,S9]</p>
+<p>La participación de FEMSA en Coca-Cola FEMSA es 47,2231% económica y equivale a 99,2079 millones de ADS de KOF. Los derechos económicos por acción KOF son iguales. La participación permite separar el embotellador del retail, sin sumar de nuevo dividendos ni descontar dos veces la deuda.</p>
+<p>KOF aumenta volumen 5,3% e ingresos 10,9% en Q3, pero parte de la mejora de EBIT incluye recuperaciones de seguros. La estructura de franquicias, rutas y marcas ayuda, pero no elimina impuestos a bebidas, elasticidad de demanda, agua, costes de envases, divisas y dependencia comercial del sistema Coca-Cola. Se distingue crecimiento operativo de seguros no recurrentes; la normalización final figura en los inputs del modelo y el apéndice de propiedad. [S5]</p>
+<p>Los contratos de embotellado se renuevan automáticamente por periodos de diez años salvo los avisos previstos y pueden terminar por incumplimiento. El BMV KOF al 30 de septiembre actualiza Nicaragua a mayo2036 y Brasil a octubre2034; las fechas antiguas de 2026/2027 no se tratan como vigentes. Costa Rica sigue septiembre2027, Uruguay/parte de Guatemala2028 y México2033/2035. La nota interina más reciente se prioriza sobre fechas diferentes del anual. El terminal presupone continuidad renovada, no un derecho legal perpetuo; se entrega estrés de reducción20%/50% de FCFF KOF desde2028 y ausencia de terminal posterior a2036, sin atribuir probabilidades o participación territorial no documentadas. [S23,S30]</p>
+<h2 id="historia-y-calidad-de-beneficios">3. Historia y calidad de beneficios</h2>
+<p>El antiguo bloqueo de caja documental se ha cerrado: existen estados BMV para reconstruir tres ejercicios, cuatro trimestres y TTM. El CFO antes de los cinco movimientos de circulante e impuestos pagados crece 11,09% en nueve meses; es una señal mejor que la ausencia de caja, aunque no equivale a FCFF.</p>
+<h3 id="tres-ejercicios-bases-conservadas-no-mezcladas">3.1 Tres ejercicios: bases conservadas, no mezcladas</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo BMV</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT gestión</th>
+<th style="text-align: right;">CFO BMV</th>
+<th style="text-align: right;">Capex PPE+intangibles</th>
+<th style="text-align: right;">Renta pagada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">702,691.73</td>
+<td style="text-align: right;">58,985.00</td>
+<td style="text-align: right;">54,377.68</td>
+<td style="text-align: right;">38,120.00</td>
+<td style="text-align: right;">16,171.00</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">781,584.71</td>
+<td style="text-align: right;">70,667.00</td>
+<td style="text-align: right;">65,130.55</td>
+<td style="text-align: right;">47,313.00</td>
+<td style="text-align: right;">19,675.00</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">840,953.66</td>
+<td style="text-align: right;">73,971.00</td>
+<td style="text-align: right;">71,080.58</td>
+<td style="text-align: right;">42,047.00</td>
+<td style="text-align: right;">24,061.00</td>
+</tr>
+</tbody>
+</table></div>
+<p>El auditado FY2025 presenta CFO comparativo 2024 de 71.510 y 2023 de 49.679, frente a BMV 65.130,551 y 54.377,685. Los flujos de negocios discontinuados concilian algebraicamente la diferencia casi por completo; es una inferencia de presentación, no un crecimiento económico ni una cita del emisor explicando la reclasificación. El historial mantiene ambas versiones y no usa su mezcla para proyectar caja. EBIT de gestión tampoco equivale al tag bruto IFRS que incluye otras ganancias. [S2,S3]</p>
+<h3 id="cuatro-trimestres-flujo-residual-acumulado">3.2 Cuatro trimestres: flujo residual acumulado</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo residual</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT gestión</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex bruto</th>
+<th style="text-align: right;">Renta pagada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q42025_residual</td>
+<td style="text-align: right;">220,103.91</td>
+<td style="text-align: right;">24,529.00</td>
+<td style="text-align: right;">21,102.85</td>
+<td style="text-align: right;">12,490.00</td>
+<td style="text-align: right;">6,663.00</td>
+</tr>
+<tr class="even">
+<td>Q12026_BMV</td>
+<td style="text-align: right;">207,784.04</td>
+<td style="text-align: right;">14,314.00</td>
+<td style="text-align: right;">22,513.91</td>
+<td style="text-align: right;">7,249.00</td>
+<td style="text-align: right;">6,573.00</td>
+</tr>
+<tr class="odd">
+<td>Q22026_residual</td>
+<td style="text-align: right;">230,911.17</td>
+<td style="text-align: right;">19,107.00</td>
+<td style="text-align: right;">33,170.53</td>
+<td style="text-align: right;">8,554.00</td>
+<td style="text-align: right;">5,713.00</td>
+</tr>
+<tr class="even">
+<td>Q32026_residual</td>
+<td style="text-align: right;">235,927.59</td>
+<td style="text-align: right;">19,944.00</td>
+<td style="text-align: right;">33,065.45</td>
+<td style="text-align: right;">8,740.00</td>
+<td style="text-align: right;">5,509.00</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los trimestres por diferencia no se hacen pasar por las publicaciones originales individuales. Q4 2025 publicó EBIT 24.546 frente a residual 24.529; Q2 2026 ingresos publicados 231.002 frente a residual 230.911; Q3 ingresos publicados 235.609 frente a residual 235.928. Se preservan revisiones/perímetros y se emplea FY+9M−9M consistente para el TTM. El CSV detalla cada concepto, periodo, contexto y procedencia. [S1–S3]</p>
+<h3 id="ttm-y-caja-recurrente">3.3 TTM y caja recurrente</h3>
+<p>Consolidado TTM: ingresos 894.726,716; EBIT de gestión 77.894; D&amp;A de CFO 46.031; CFO BMV 109.852,734; compras de PPE/intangibles 37.033; cash rent 24.458. CFO menos inversión bruta, rentas e interés financiero separado deja 39.657,734, pero ese residuo no es FCFF ni corresponde íntegro a los accionistas FMX. Incluye KOF, sus minoritarios, impuestos de caja y movimientos de circulante. No se netean ventas de activos o seguros contra el capex del DCF.</p>
+<p>El 76,07% del aumento de CFO de nueve meses se explica por circulante y menores impuestos pagados. Spin mantiene 4.873,208 millones de MXN de obligaciones con clientes y cuentas inactivas; sus activos de respaldo no son caja excedente. Su mapeo exacto al balance consolidado sigue pendiente.</p>
+<p>El puente de nueve meses es 88.749,884 frente a 49.977,733 de CFO: mejora 38.772,151, de la que 21.655,897 es circulante y 7.839 impuestos. La tasa fiscal contable 26,7% está deprimida por la ganancia ImperialBrady sin impuesto corriente. Excluyendo esa ganancia, 13.656/(51.167−11.952)=34,82%; no es automáticamente la tasa marginal de todos los segmentos. NI 37.456−11.952=25.504 frente a 20.359 implica +25,27%, no el +12,1% normalizado descrito por el emisor; no se certifica ese porcentaje sin otro puente. [S1–S3]</p>
+<p>NI atribuible TTM directamente reportado en el BMV Q3 es 35.709,642 frente a 17.717,532. Una construcción del TTM previo con versiones históricas distintas no concilia y no se usa. No se publica un P/E ajustado basado en EPS inventado. SBC anual 2023/24/25 es 943/947/1.100; el tag interino de addback cero no demuestra que no exista gasto. Se conserva el gasto dentro del EBIT y no se agrega SBC a FCFF.</p>
+<p>Ex-KOF TTM consistente: ingresos 589.775,364 frente a 539.664,863 (+9,29%); EBIT de gestión 32.617 frente a 30.781 (+5,96%); capex bruto 17.497,027 frente a 20.494,294 (−14,62%). Es crecimiento con presión de margen, no evidencia de desaparición del negocio. El menor capex no se extrapola automáticamente como nueva rentabilidad permanente.</p>
+<h2 id="atribución-económica-y-capital">4. Atribución económica y capital</h2>
+<p>Un ADS FEMSA son diez unidades BD, cada una con una B y cuatro D; una unidad B contiene cinco B. Las D reciben 125% del dividendo B mientras estén vigentes. Así, 1.968.615.615 BD + 1.417.048.500 B×5/6, dividido por diez, da <strong>314.948.936,5 ADS equivalentes de distribución</strong>. El denominador nominal es 338.566.411,5; no son ADS flotantes ni dilución exacta. Liquidación tiene igualdad por acción, de modo que se muestra sensibilidad nominal. KOF no presenta esa preferencia económica de series. [S3,S6,S7]</p>
+<p>ImperialBrady cerró su fusión el 12 de marzo; FEMSA retiene aproximadamente 18,75%, ya sin influencia significativa y sin método de participación. Los 14.192 del antiguo 37,08% de IFS TopCo más ganancia de 11.952 <strong>no certifican</strong> un carrying value actual de 26.144. Los activos financieros no corrientes ex-KOF 30.899,215 están agrupados. Se dejan inversiones no valoradas fuera del total parcial y se muestra sensibilidad separada, sin denominarlas cero económico o techo de valor. [S2,S3,S6]</p>
+<h3 id="puente-a-equity-sin-sumar-dos-veces-caja-o-restar-dos-veces-leases">Puente a equity, sin sumar dos veces caja o restar dos veces leases</h3>
+<ul>
+<li>Caja ex-KOF 64.290,710 e inversiones separadas 6.112 al 30 de septiembre. Deuda financiera ex-KOF aproximada 54,760.65; la tabla del emisor está redondeada, no es deuda legal exacta a noviembre.</li>
+<li>Reservas ex-KOF: operación 15.000 (supuesto), fondos cliente Spin 4.873,208 (reserva prudencial por mapeo no resuelto), déficit neto de planes 5.546,438, impuesto pagadero no corriente 2.618,794. Este último no está identificado como impuesto incierto y no se etiqueta así. Minoritarios residuales 2,526 son proxy contable, no valor de mercado; sensibilidad 0–3.000. Los activos de pensión ya están neteados en la obligación y no se suman otra vez.</li>
+<li>La reserva Spin puede ser excesiva si parte de los respaldos ya queda fuera de caja/inversiones consolidadas; se muestra escenario de reserva cero. No se declara que el pasivo completo esté exactamente embebido en la caja del holding. Hay 293,529 de efectivo y 4.485,744 de reportos en la entidad regulada, bajo NIF/CNBV, no el mismo perímetro IFRS. [S4]</li>
+<li>KOF: caja 46.772,350, deuda financiera 84.370, reserva derivada de diferencia de deuda neta cubierta 2.294,350, déficit neto de planes 5.719,002 y caja operativa 10.000. Minoritarios de subsidiarias KOF se reservan a 15.000 como hipótesis, frente a libro 9.255,132 y beneficio minoritario TTM 1.431,172; no son los minoritarios de FEMSA. Sensibilidad 9.255–25.000.</li>
+<li>Las rentas completas ya se descuentan operativamente: <strong>no se restan otra vez leases ex-KOF 110.839,547 ni KOF 3.978,038</strong>. Dividendo KOF no forma parte del FCFF ex-KOF; la participación se añade una sola vez después de valorar equity KOF.</li>
+<li>El pago KOF del 13 de octubre fue 4.065,110, de los que FEMSA recibe 1.919,672. El dividendo FEMSA del 15 de octubre, aplicado a acciones de septiembre, implica salida estimada 10.087,608; ex-KOF neto −8.167,936. El DCF KOF resta su salida; al usar KOF a precio de noviembre no se descuenta de nuevo. El importe FEMSA exacto depende de acciones elegibles en octubre.</li>
+<li>El bono CHF300m liquidado el 14 de octubre suma deuda y caja si no se gastó: no crea equity gratis. No se conoce su uso neto completo ni el saldo noviembre; residual central cero con sensibilidad ±10.000, no afirmación de ausencia de movimientos. ASR hasta USD280m sigue sin liquidación final verificada; recompras ya reflejadas en septiembre no se deducen otra vez ni se anticipan acciones finales. [S1,S8]</li>
+</ul>
+<p>El puente ex-KOF central es -20,566.84; el puente KOF es -74,676.11. Se conserva separación entre hechos, estimaciones y reservas. El conjunto no es una conciliación observada de caja al 3 de noviembre.</p>
+<h2 id="dos-dcf-convención-y-financiación-del-crecimiento">5. Dos DCF: convención y financiación del crecimiento</h2>
+<p>Se eligió antes de valorar una suma de partes porque FMX consolida 100% de KOF pero posee sólo 47,2231%. Un FCFF consolidado dividido por ADS sin minoritarios sobrevaloraría FEMSA; restar patrimonio minoritario contable completo tampoco valora adecuadamente esa participación.</p>
+<p>Rentas operativas: EBIT económico = EBIT IFRS + D&amp;A ROU − renta completa; después se añade sólo depreciación física/no-ROU. Para ex-KOF, sin D&amp;A ROU interina segmentada, se parte de EBIT + D&amp;A de CFO − renta y se resta depreciación física estimada. FY2025 demuestra diferencia de 2.057,005 entre D&amp;A KOF dentro de FEMSA (incluye roturas) y standalone; se usa <strong>únicamente como proxy TTM</strong>, con sensibilidad 0–4.000. D&amp;A física ex-KOF se ancla a 13.307/549.208=2,423%; no se afirma exactitud de ese recast.</p>
+<p>El EBIT económico ex-KOF inicial estimado es 24,530.80; margen 4.16%. KOF utiliza EBIT IFRS consistente FY+9M−9M de44.706,809, menos recuperación neta de seguros TTM aproximada2.462 (Q4251.149+9M261.313), másROU1.130 menosrenta1.535: EBIT económico41.839,809. Se reduce también cada margen proyectado en2.462/304.951,352, no sólo la cifra inicial. El ajuste de seguros conserva diferencias de28 entre FY25PR y nota auditada y102 entre sumas trimestrales y9M26; es proxy, no puente IFRS exacto. Esas diferencias quedan en sensibilidad, sin borrar datos originales. El interés de lease de nota es gasto, no pago exacto: FY2025 difiere en 6; se conserva como límite y se prueba sensibilidad. No se añaden los 8.062 de otros cargos no monetarios que el comunicado mezcla con D&amp;A de nueve meses.</p>
+<p>Años 2027–2036: cinco años explícitos y cinco de transición. El TTM es proxy de salida 2026, sin crecimiento inventado en el stub. Se incluye stub de 58 días al 31 de diciembre y descuento de FY2027 a 1,159 años desde el 3 de noviembre. El stub usa caja normalizada prorrateada y no pretende captar estacionalidad Q4. La omisión aislada del stub y el acortamiento del calendario son efectos distintos.</p>
+<p>FCFF = NOPAT − reinversión neta. Reinversión elegida = máximo entre ΔNOPAT positivo/ROIC marginal y el suelo de capex físico bruto menos depreciación física más 2% del incremento positivo de ventas como circulante. Por tanto, también se financia la subida de márgenes; no se trata como beneficio gratis. El método no suma ambas medidas y duplica inversión. No libera capital en contracciones. En terminal se financia NOPAT×g/ROIC y se respeta el suelo físico/circulante, con WACC &gt; g.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Segmento/escenario</th>
+<th>Crecimiento inicial / final</th>
+<th>Margen inicial / final</th>
+<th style="text-align: right;">Impuesto</th>
+<th style="text-align: right;">ROIC marginal</th>
+<th style="text-align: right;">Capex bruto/ventas</th>
+<th style="text-align: right;">WACC USD</th>
+<th style="text-align: right;">g MXN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ex_kof bear</td>
+<td>4.0% / 3.5%</td>
+<td>4.00% / 3.60%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">13%</td>
+<td style="text-align: right;">3.6%</td>
+<td style="text-align: right;">13.0%</td>
+<td style="text-align: right;">3.5%</td>
+</tr>
+<tr class="even">
+<td>kof bear</td>
+<td>4.0% / 4.0%</td>
+<td>13.19% / 12.39%</td>
+<td style="text-align: right;">32%</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">7.0%</td>
+<td style="text-align: right;">12.0%</td>
+<td style="text-align: right;">3.5%</td>
+</tr>
+<tr class="odd">
+<td>ex_kof base</td>
+<td>8.0% / 5.0%</td>
+<td>4.20% / 4.70%</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">18%</td>
+<td style="text-align: right;">3.2%</td>
+<td style="text-align: right;">11.0%</td>
+<td style="text-align: right;">4.5%</td>
+</tr>
+<tr class="even">
+<td>kof base</td>
+<td>7.0% / 5.0%</td>
+<td>13.79% / 13.99%</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">6.5%</td>
+<td style="text-align: right;">10.5%</td>
+<td style="text-align: right;">4.5%</td>
+</tr>
+<tr class="odd">
+<td>ex_kof bull</td>
+<td>10.0% / 5.5%</td>
+<td>4.50% / 5.50%</td>
+<td style="text-align: right;">31%</td>
+<td style="text-align: right;">23%</td>
+<td style="text-align: right;">3.0%</td>
+<td style="text-align: right;">9.5%</td>
+<td style="text-align: right;">5.0%</td>
+</tr>
+<tr class="even">
+<td>kof bull</td>
+<td>9.0% / 5.5%</td>
+<td>14.19% / 14.99%</td>
+<td style="text-align: right;">29%</td>
+<td style="text-align: right;">24%</td>
+<td style="text-align: right;">6.0%</td>
+<td style="text-align: right;">9.5%</td>
+<td style="text-align: right;">5.0%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Son hipótesis del analista. La base ex-KOF crece menos que el último TTM, recupera margen gradualmente y exige capex 3,2% frente a 2,97% de caja reciente. KOF mantiene inversión física superior a depreciación y no capitaliza seguros. Bear recoge menor crecimiento, presión laboral/comercial y mayor inversión; bull necesita ejecución sostenida y capital más barato. No se aplican probabilidades inventadas.</p>
+<h3 id="coste-de-capital-y-moneda">Coste de capital y moneda</h3>
+<p>Treasury del 3 de noviembre 4,95%; ERP NYU del 1 de noviembre 4,41%, calculada originalmente con Treasury5,29%. Es una combinación de fechas, no una ERP implícita recalculada al día. Para reflejar la convención de default estadounidense 0,22%, se usa rf ajustado4,73% y ERP4,63%; se añade prima México julio2026 de2,7202% como proxy geográfico, no promedio exacto multinacional. Brasil3,0984%, Chile1,0473% y Suiza0 muestran sus limitaciones. [S10–S12]</p>
+<p>Betas seleccionadas1,00 retail y0,70 KOF se contrastan con referencias sectoriales desapalancadas sin caja0,78 retail general/0,85 alimentación/0,58 bebidas. No son estimaciones estadísticas de FMX. Beta proveedor0,18 se declara, pero no determina por sí sola todo el riesgo económico. Deuda financiera objetivo20%/16%, coste USD6,5%, impuestos33%/30% producen WACC mecánicos10,5351%/9,7086%. Los11%/10,5% elegidos añaden46,5/79,1pb por juicio, <strong>no redondeo</strong>. Se muestra sensibilidad amplia de descuentos. [S10–S13]</p>
+<p>Flujos nominales MXN se descuentan a WACC MXN=(1+WACC USD)×1,02−1: base13,22% y12,71%. El2% es depreciación cambiaria anual supuesta, no forward observado. g terminalMXN4,5% equivale a2,451% USD bajo esa misma convención. La equivalencia con traducir cada flujo a USD año por año se prueba numéricamente. Sólo después se divide a spot ECB3nov18,597012MXN/USD; no se usa el18,0609 de presentación de septiembre. [S14]</p>
+<h3 id="proyección-central-ex-kof">Proyección central: ex-KOF</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT tras rentas</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">D&amp;A física</th>
+<th style="text-align: right;">Suelo capex bruto</th>
+<th style="text-align: right;">Reinversión neta</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">636,957.39</td>
+<td style="text-align: right;">26,752.21</td>
+<td style="text-align: right;">17,923.98</td>
+<td style="text-align: right;">15,433.12</td>
+<td style="text-align: right;">20,382.64</td>
+<td style="text-align: right;">8,268.58</td>
+<td style="text-align: right;">9,655.40</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">681,544.41</td>
+<td style="text-align: right;">29,987.95</td>
+<td style="text-align: right;">20,091.93</td>
+<td style="text-align: right;">16,513.44</td>
+<td style="text-align: right;">21,809.42</td>
+<td style="text-align: right;">12,044.16</td>
+<td style="text-align: right;">8,047.77</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">722,437.08</td>
+<td style="text-align: right;">33,232.11</td>
+<td style="text-align: right;">22,265.51</td>
+<td style="text-align: right;">17,504.24</td>
+<td style="text-align: right;">23,117.99</td>
+<td style="text-align: right;">12,075.45</td>
+<td style="text-align: right;">10,190.06</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">765,783.30</td>
+<td style="text-align: right;">35,991.82</td>
+<td style="text-align: right;">24,114.52</td>
+<td style="text-align: right;">18,554.50</td>
+<td style="text-align: right;">24,505.07</td>
+<td style="text-align: right;">10,272.25</td>
+<td style="text-align: right;">13,842.26</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">807,901.38</td>
+<td style="text-align: right;">38,779.27</td>
+<td style="text-align: right;">25,982.11</td>
+<td style="text-align: right;">19,574.99</td>
+<td style="text-align: right;">25,852.84</td>
+<td style="text-align: right;">10,375.51</td>
+<td style="text-align: right;">15,606.60</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">848,296.45</td>
+<td style="text-align: right;">40,718.23</td>
+<td style="text-align: right;">27,281.21</td>
+<td style="text-align: right;">20,553.74</td>
+<td style="text-align: right;">27,145.49</td>
+<td style="text-align: right;">7,399.64</td>
+<td style="text-align: right;">19,881.57</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">890,711.27</td>
+<td style="text-align: right;">42,754.14</td>
+<td style="text-align: right;">28,645.27</td>
+<td style="text-align: right;">21,581.43</td>
+<td style="text-align: right;">28,502.76</td>
+<td style="text-align: right;">7,769.63</td>
+<td style="text-align: right;">20,875.65</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">935,246.84</td>
+<td style="text-align: right;">44,424.22</td>
+<td style="text-align: right;">29,764.23</td>
+<td style="text-align: right;">22,660.50</td>
+<td style="text-align: right;">29,927.90</td>
+<td style="text-align: right;">8,158.11</td>
+<td style="text-align: right;">21,606.12</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">982,009.18</td>
+<td style="text-align: right;">46,154.43</td>
+<td style="text-align: right;">30,923.47</td>
+<td style="text-align: right;">23,793.53</td>
+<td style="text-align: right;">31,424.29</td>
+<td style="text-align: right;">8,566.01</td>
+<td style="text-align: right;">22,357.46</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">1,031,109.64</td>
+<td style="text-align: right;">48,462.15</td>
+<td style="text-align: right;">32,469.64</td>
+<td style="text-align: right;">24,983.20</td>
+<td style="text-align: right;">32,995.51</td>
+<td style="text-align: right;">8,994.31</td>
+<td style="text-align: right;">23,475.33</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="proyección-central-kof">Proyección central: KOF</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT tras rentas</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">D&amp;A física</th>
+<th style="text-align: right;">Suelo capex bruto</th>
+<th style="text-align: right;">Reinversión neta</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">326,297.95</td>
+<td style="text-align: right;">45,005.16</td>
+<td style="text-align: right;">31,503.61</td>
+<td style="text-align: right;">14,677.48</td>
+<td style="text-align: right;">21,209.37</td>
+<td style="text-align: right;">11,078.73</td>
+<td style="text-align: right;">20,424.88</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">349,138.80</td>
+<td style="text-align: right;">48,853.80</td>
+<td style="text-align: right;">34,197.66</td>
+<td style="text-align: right;">15,704.90</td>
+<td style="text-align: right;">22,694.02</td>
+<td style="text-align: right;">13,470.24</td>
+<td style="text-align: right;">20,727.42</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">370,087.13</td>
+<td style="text-align: right;">52,525.20</td>
+<td style="text-align: right;">36,767.64</td>
+<td style="text-align: right;">16,647.20</td>
+<td style="text-align: right;">24,055.66</td>
+<td style="text-align: right;">12,849.91</td>
+<td style="text-align: right;">23,917.73</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">392,292.36</td>
+<td style="text-align: right;">56,069.01</td>
+<td style="text-align: right;">39,248.30</td>
+<td style="text-align: right;">17,646.03</td>
+<td style="text-align: right;">25,499.00</td>
+<td style="text-align: right;">12,403.32</td>
+<td style="text-align: right;">26,844.99</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">413,868.44</td>
+<td style="text-align: right;">59,566.67</td>
+<td style="text-align: right;">41,696.67</td>
+<td style="text-align: right;">18,616.56</td>
+<td style="text-align: right;">26,901.45</td>
+<td style="text-align: right;">12,241.82</td>
+<td style="text-align: right;">29,454.85</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">434,561.86</td>
+<td style="text-align: right;">62,545.00</td>
+<td style="text-align: right;">43,781.50</td>
+<td style="text-align: right;">19,547.39</td>
+<td style="text-align: right;">28,246.52</td>
+<td style="text-align: right;">10,424.17</td>
+<td style="text-align: right;">33,357.33</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">456,289.95</td>
+<td style="text-align: right;">65,215.96</td>
+<td style="text-align: right;">45,651.17</td>
+<td style="text-align: right;">20,524.76</td>
+<td style="text-align: right;">29,658.85</td>
+<td style="text-align: right;">9,568.65</td>
+<td style="text-align: right;">36,082.52</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">479,104.45</td>
+<td style="text-align: right;">67,997.66</td>
+<td style="text-align: right;">47,598.36</td>
+<td style="text-align: right;">21,550.99</td>
+<td style="text-align: right;">31,141.79</td>
+<td style="text-align: right;">10,047.09</td>
+<td style="text-align: right;">37,551.27</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">503,059.67</td>
+<td style="text-align: right;">70,894.48</td>
+<td style="text-align: right;">49,626.14</td>
+<td style="text-align: right;">22,628.54</td>
+<td style="text-align: right;">32,698.88</td>
+<td style="text-align: right;">10,549.44</td>
+<td style="text-align: right;">39,076.70</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">528,212.66</td>
+<td style="text-align: right;">73,910.99</td>
+<td style="text-align: right;">51,737.69</td>
+<td style="text-align: right;">23,759.97</td>
+<td style="text-align: right;">34,333.82</td>
+<td style="text-align: right;">11,076.91</td>
+<td style="text-align: right;">40,660.78</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="resultados-parciales-e-inverso">6. Resultados parciales e inverso</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th style="text-align: right;">EV ex-KOF MXN</th>
+<th style="text-align: right;">Equity KOF MXN</th>
+<th style="text-align: right;">47,2231% KOF MXN</th>
+<th style="text-align: right;">FMX parcial USD/ADS</th>
+<th style="text-align: right;">Denominador nominal</th>
+<th style="text-align: right;">KOF a mercado, híbrido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td style="text-align: right;">61,250.42</td>
+<td style="text-align: right;">106,159.73</td>
+<td style="text-align: right;">50,131.94</td>
+<td style="text-align: right;">15.51</td>
+<td style="text-align: right;">14.42</td>
+<td style="text-align: right;">43.62</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td style="text-align: right;">159,479.30</td>
+<td style="text-align: right;">233,316.93</td>
+<td style="text-align: right;">110,179.53</td>
+<td style="text-align: right;">42.53</td>
+<td style="text-align: right;">39.56</td>
+<td style="text-align: right;">60.39</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td style="text-align: right;">289,202.81</td>
+<td style="text-align: right;">360,894.29</td>
+<td style="text-align: right;">170,425.54</td>
+<td style="text-align: right;">74.96</td>
+<td style="text-align: right;">69.73</td>
+<td style="text-align: right;">82.54</td>
+</tr>
+</tbody>
+</table></div>
+<p>Terminal representa 50.2% del EV ex-KOF y 49.1% del EV KOF. El modelo propio KOF central implica 59.72 USD/ADS frente a116,42 cotizados; esta diferencia importante explica parte del bajo SOTP, y por eso se incluye contraste manteniendo KOF a mercado. No se afirma que el mercado pruebe el DCF.</p>
+<p>Incluso fijando KOF al cierre observado, resolver127,03 con sólo un incremento paralelo de margen ex-KOF, financiando ΔNOPAT/ROIC, exige margen inicial 25.94% y terminal 26.44%. Es un ejercicio mecánico deliberadamente restrictivo, <strong>no una previsión viable ni la única combinación de precio</strong>: el salto inicial de margen exige fuerte reinversión. El residual de activos no valorados necesario sería 390,324.76 M MXN con KOF a mercado. No se identifica ese residual con ImperialBrady ni se afirma que la cuenta contable agrupada limite su valor.</p>
+<p>ImperialBrady no tiene un valor individual actual verificado en las fuentes revisadas. La rotura de botellas incorporada a D&amp;A de KOF dentro de FEMSA y el interés de leases interino requieren aproximaciones explícitas. Las cifras de este modelo son una valoración parcial de activos identificados, no un precio justo completo de FMX.</p>
+<h3 id="sensibilidades-seleccionadas">Sensibilidades seleccionadas</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cambio aislado</th>
+<th style="text-align: right;">Valor parcial USD</th>
+<th style="text-align: right;">Híbrido KOF a mercado USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Unpriced investments illustrative MXNm 0; not independently verified FV</td>
+<td style="text-align: right;">42.53</td>
+<td style="text-align: right;">60.39</td>
+</tr>
+<tr class="even">
+<td>Unpriced investments illustrative MXNm 10000; not independently verified FV</td>
+<td style="text-align: right;">44.24</td>
+<td style="text-align: right;">62.10</td>
+</tr>
+<tr class="odd">
+<td>Unpriced investments illustrative MXNm 20000; not independently verified FV</td>
+<td style="text-align: right;">45.94</td>
+<td style="text-align: right;">63.80</td>
+</tr>
+<tr class="even">
+<td>Unpriced investments illustrative MXNm 30899.215; not independently verified FV</td>
+<td style="text-align: right;">47.80</td>
+<td style="text-align: right;">65.66</td>
+</tr>
+<tr class="odd">
+<td>Unpriced investments illustrative MXNm 50000; not independently verified FV</td>
+<td style="text-align: right;">51.06</td>
+<td style="text-align: right;">68.93</td>
+</tr>
+<tr class="even">
+<td>Spin mapping reserve MXNm 0</td>
+<td style="text-align: right;">43.36</td>
+<td style="text-align: right;">61.22</td>
+</tr>
+<tr class="odd">
+<td>Spin mapping reserve MXNm 4873.208</td>
+<td style="text-align: right;">42.53</td>
+<td style="text-align: right;">60.39</td>
+</tr>
+<tr class="even">
+<td>Spin mapping reserve MXNm 7000</td>
+<td style="text-align: right;">42.17</td>
+<td style="text-align: right;">60.03</td>
+</tr>
+<tr class="odd">
+<td>TTM KOF bottle adjustment MXNm 0; margins shifted consistently</td>
+<td style="text-align: right;">45.22</td>
+<td style="text-align: right;">63.08</td>
+</tr>
+<tr class="even">
+<td>TTM KOF bottle adjustment MXNm 2057.005; margins shifted consistently</td>
+<td style="text-align: right;">42.53</td>
+<td style="text-align: right;">60.39</td>
+</tr>
+<tr class="odd">
+<td>TTM KOF bottle adjustment MXNm 4000; margins shifted consistently</td>
+<td style="text-align: right;">39.93</td>
+<td style="text-align: right;">57.79</td>
+</tr>
+<tr class="even">
+<td>ExKOF normalized economic tax 0.3</td>
+<td style="text-align: right;">44.07</td>
+<td style="text-align: right;">61.94</td>
+</tr>
+<tr class="odd">
+<td>ExKOF normalized economic tax 0.33</td>
+<td style="text-align: right;">42.53</td>
+<td style="text-align: right;">60.39</td>
+</tr>
+<tr class="even">
+<td>ExKOF normalized economic tax 0.36</td>
+<td style="text-align: right;">40.96</td>
+<td style="text-align: right;">58.82</td>
+</tr>
+<tr class="odd">
+<td>ExKOF gross physical capex floor 0.0297</td>
+<td style="text-align: right;">43.27</td>
+<td style="text-align: right;">61.13</td>
+</tr>
+<tr class="even">
+<td>ExKOF gross physical capex floor 0.032</td>
+<td style="text-align: right;">42.53</td>
+<td style="text-align: right;">60.39</td>
+</tr>
+<tr class="odd">
+<td>ExKOF gross physical capex floor 0.038</td>
+<td style="text-align: right;">36.72</td>
+<td style="text-align: right;">54.58</td>
+</tr>
+<tr class="even">
+<td>Valuation spot MXN per USD 17; cash flows unchanged</td>
+<td style="text-align: right;">46.52</td>
+<td style="text-align: right;">62.62</td>
+</tr>
+<tr class="odd">
+<td>Valuation spot MXN per USD 18.59701225512121; cash flows unchanged</td>
+<td style="text-align: right;">42.53</td>
+<td style="text-align: right;">60.39</td>
+</tr>
+<tr class="even">
+<td>Valuation spot MXN per USD 21; cash flows unchanged</td>
+<td style="text-align: right;">37.66</td>
+<td style="text-align: right;">57.67</td>
+</tr>
+</tbody>
+</table></div>
+<p>También se entregan rejilla WACC/g, ROIC12–25%, minoritarios, impuestos históricos, caja operativa, saldo post-septiembre ±10.000 y denominador nominal. Las sensibilidades de inversiones no verificadas son escenarios, no estimaciones de un activo. No se calcula un MOS de compra a partir de la cifra parcial.</p>
+<h2 id="contraste-relativo-actual">7. Contraste relativo actual</h2>
+<p>Cierres3nov: ATD81,77CAD, WALMEX50,04MXN, KOF116,42USD. ATD se convierte con ECBUSD/CAD0,71554759. No se usan precios intradía de4nov. Las cuentas de ATD son Q1FY27 al19jul y TTM52semanas; Walmex y FEMSA hasta septiembre. [S15–S20]</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparación</th>
+<th style="text-align: right;">EV/EBIT</th>
+<th>Convención</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ATD</td>
+<td style="text-align: right;">14.84x</td>
+<td>EBIT TTM4.727,8 menos recuperación legal260,9; deuda y leases, pensión y put minoritario280</td>
+</tr>
+<tr class="even">
+<td>WALMEX</td>
+<td style="text-align: right;">11.85x</td>
+<td>EBIT reportado77.491,705; leases y pensión; sin normalización inventada de beneficio puntual</td>
+</tr>
+<tr class="odd">
+<td>FMX ex-KOF implícito</td>
+<td style="text-align: right;">19.31x</td>
+<td>KOF a mercado, derechos de distribución, no inversiones no verificadas</td>
+</tr>
+<tr class="even">
+<td>FMX ex-KOF sensibilidad</td>
+<td style="text-align: right;">18.37x</td>
+<td>deducción hipotética30.899,215 de activos no core, no valor validado</td>
+</tr>
+</tbody>
+</table></div>
+<p>ATD usa EV66.290,839 M USD, caja3.198,3 excluyendo10,6 restringida; deuda financiera10.329,3 y leases5.049,9; 918,9macciones diluidas. El pasivo de put280 sustituye al NCI de libro128,1 relacionado con Bélgica; añadir todo ese NCI es sensibilidad, no doble deducción central. La adquisición Żabka está pendiente de condiciones/aprobación en la evidencia revisada, sin proforma. Fuel bruto, tiendas propias y mezcla geográfica impiden equivalencia perfecta con OXXO. [S15,S16]</p>
+<p>WALMEX usa acciones17.137,424m, caja27.064,984, leases84.019,971 y pensiones3.953,525; no se identifica deuda financiera adicional en el balance. EV918.465,225; al añadir impuesto no corriente y otras provisiones,11,96x. El beneficio SG&amp;A puntual deQ4FY25 no está cuantificado en el release; el múltiplo reportado no se llama plenamente normalizado. P/E17,53x usa suma de EPS2,855, no la división por acciones actuales. [S17,S18]</p>
+<p>Para FEMSA el market cap agregado deducido del ADR es una asignación por derechos económicos, no capitalización observada de cada serie. Con unidades nominales, el múltiplo ex-KOF sube a21,03x. La comparación incluye leases en EV para mantener EBIT IFRS; el DCF opera con rentas y no mezcla esa deuda. El mayor múltiplo exige justificar superioridad de crecimiento/rentabilidad, no aplicar automáticamente una mediana o comprar porque una marca sea buena.</p>
+<h2 id="qué-falta-y-qué-cambiaría-la-conclusión">8. Qué falta y qué cambiaría la conclusión</h2>
+<ol type="1">
+<li>Valor individual actual y condiciones de monetización de ImperialBrady, con impuestos/costes de realización si proceden. Sin ello no existe total completo del holding.</li>
+<li>Reconciliar D&amp;A KOF/botellas de los interinos, efectivo de intereses de leases y recursos de clientes Spin contra consolidado. Los proxies son visibles y no completan la contabilidad por decreto.</li>
+<li>Capital exacto tras dividendos, ASR, bonoCHF y otros movimientos; acciones elegibles/dividendo reales. El puente mínimo conocido no certifica noviembre.</li>
+<li>Próxima fecha oficial exacta y evidencia técnica actual. La página oficial mantiene todavía la llamada28oct como upcoming; ese evento ya ocurrió. No se traslada a un día inventado de febrero2027. [S21]</li>
+<li>Para mejora fundamental: crecimiento que se convierta en margen después de salarios/rentas, caja antes de circulante e impuestos, disciplina de capex, evolución de pérdida Spin y seguros KOF fuera de beneficios recurrentes. La tesis se debilita si expansión no recupera márgenes o fondos cliente se usan como argumento de caja disponible.</li>
+</ol>
+<p>No se emite orden, precio de entrada, tamaño, stop ni aprobación. Se cierra la búsqueda de caja primaria, no todas las puertas del plan.</p>
+<h2 id="english-summary">9. English summary</h2>
+<p>FEMSA’s historical cash-flow evidence is now available and reproducible. However, most of the nine-month CFO improvement comes from working capital and lower cash taxes, and Spin customer funds are not distributable surplus cash. The analysis separates ex-KOF retail from FEMSA’s47.2231% economic KOF stake, expenses full lease rent, funds growth and translates nominal MXN cash flows consistently.</p>
+<p>The scenario outputs cover identified assets only. ImperialBrady has no independently verified current standalone value in the reviewed material; interim bottle-breakage/lease allocation and the post-quarter capital bridge retain disclosed assumptions. No complete FEMSA fair value or entry approval is issued. An alternative marks KOF at its observed closing price rather than relying on the standalone DCF. Current peer multiples do not establish a buying discount. Earnings timing remains unconfirmed and the last scanner Opportunity score75 is below85.</p>
+<h2 id="fuentes-y-reproducción">10. Fuentes y reproducción</h2>
+<p>El paquete público contiene cálculos propios, transcripciones mínimas de hechos y enlaces, no PDFs/filings completos. Python estándar reproduce historia, modelos, sensibilidades, comparables, informe y QA. Los datos históricos nulos no se sustituyen por cero. Las aproximaciones del modelo no se retroescriben como cifras observadas.</p>
+<p>[S1] https://femsa.gcs-web.com/static-files/e56d3a69-ab40-4db7-ba22-8af9a2602dd7</p>
+<p>[S2] https://annualreport.femsa.com/descargables/eng/Femsa_Estados_financieros_2025_eng.pdf</p>
+<p>[S3] https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1598706_2026-03_1.zip</p>
+<p>[S4] https://spinbyoxxowebsite.cdn.prismic.io/spinbyoxxowebsite/Hrw7b8KtckGMxOaU_COPAEstadosfinancierosQ3_26.pdf</p>
+<p>[S5] https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1597622_1.pdf</p>
+<p>[S6] https://www.sec.gov/Archives/edgar/data/1061736/000162828026027231/fmx-20251231.htm</p>
+<p>[S7] https://www.sec.gov/Archives/edgar/data/910631/000162828026025313/exhibit29-descriptionofsec.htm</p>
+<p>[S8] https://femsa.gcs-web.com/static-files/5cb60cd8-228c-40a1-9a90-b083002aa66a</p>
+<p>[S9] https://www.femsa.com/wp-content/uploads/2026/06/ENG-PR-QED-vFinal-07.06.26-Closing.pdf</p>
+<p>[S10] https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve</p>
+<p>[S11] https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm</p>
+<p>[S12] https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx</p>
+<p>[S13] https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html</p>
+<p>[S14] https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html</p>
+<p>[S15] https://corporate.couche-tard.com/image/2027_Q1_Quarterly_Report_EN.pdf</p>
+<p>[S16] https://corporate.couche-tard.com/2026-06-22-ALIMENTATION-COUCHE-TARD-ANNOUNCES-ITS-RESULTS-FOR-ITS-FOURTH-QUARTER-AND-FISCAL-YEAR-2026</p>
+<p>[S17] https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1598123_1.pdf</p>
+<p>[S18] https://files.walmex.mx/upload/files/2025/EN/Quarterly/4Q25/Walmex_Earnings_Release_4Q25.pdf</p>
+<p>[S19] https://stockanalysis.com/stocks/fmx/history/</p>
+<p>[S20] https://stockanalysis.com/stocks/kof/history/</p>
+<p>[S21] https://femsa.gcs-web.com/news-events/events</p>
+<p>[S22] https://investors.coca-colafemsa.com/assets/files/reportes_resultados_en/2025/eeff-kof-2025-eng-1.pdf</p>
+<p>[S23] https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1597620_2026-03_1.zip</p>
+<p>[S24] https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1598127_2026-03_1.zip</p>
+<p>[S25] https://stockanalysis.com/quote/tsx/ATD/history/</p>
+<p>[S26] https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=WALMEX%2A%3AMEX</p>
+<p>[S27] https://corporate.couche-tard.com/image/COTA78_ACT_Annual-Report_WEB_EN_20240626.pdf</p>
+<p>[S28] https://zabkagroup.com/zabka-group-delivers-continued-growth-in-9m-2026-surpassing-13000stores-and-further-improving-profitability/</p>
+<p>[S29] https://stockanalysis.com/stocks/fmx/</p>
+<p>[S30] https://www.sec.gov/Archives/edgar/data/910631/000162828026025313/kof-20251231.htm</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FMX/FMX_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FMX/model/model.py">Modelo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FMX/model/results.json">Resultados</a></li>
+</ul>
+</main></body></html>

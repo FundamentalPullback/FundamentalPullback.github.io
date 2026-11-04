@@ -1,0 +1,130 @@
+[
+  {
+    "issue_id": "CFO_PRESENTATION",
+    "severity": "high",
+    "affected_series": "FY2023/FY2024 CFO",
+    "finding": "Audit and BMV cash flow category presentations differ. Algebraic discontinued-flow bridges reconcile within1 M MXN.",
+    "treatment": "Keep audited and BMV series separate; no naive mixed-basis CFO growth.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "ATTRIBUTION",
+    "severity": "critical",
+    "affected_series": "All consolidated cash flows",
+    "finding": "100% of KOF consolidated, but FEMSA owns47.2% nominal economic stake; other minorities also exist.",
+    "treatment": "Use exKOF matched flow plus stake equity or consolidated valuation with correct NCI; no double counting.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "KOF_DA_BREAKAGE",
+    "severity": "critical",
+    "affected_series": "ExKOF TTM D&A",
+    "finding": "FEMSAFY25 KOF segmentD&A15,895 differs standaloneKOF13,838 by2,057; interim breakage not isolated.",
+    "treatment": "ExKOF TTM matched D&A remains missing. Do not call standalone subtraction exact.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "LEASE_MAPPING",
+    "severity": "high",
+    "affected_series": "FEMSA vsKOF lease tags",
+    "finding": "FEMSA lease-payment tag is principal+interest; KOF tag principal only with interest in financing-interest line.",
+    "treatment": "Do not subtract homonymous tags without mapped conventions. Cash rent implies no further lease-debt deduction.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "DA_ADJUSTED_EBITDA",
+    "severity": "high",
+    "affected_series": "9M2026 D&A",
+    "finding": "IR D&A plus othernoncash42,977 vsCFD&A34,915;8,062 not D&A.",
+    "treatment": "Use pure CF D&A, retain SBC/recurrent expenses; no automatic othernoncash addback.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "EPS_CLASS",
+    "severity": "high",
+    "affected_series": "EPS and share denominator",
+    "finding": "PerB/perD audit EPS, genericBMV EPS and IR pertotalunit EPS have distinct definitions. B/BD dividendrights differ.",
+    "treatment": "Use class-level ownership bridge for equityvalue perADS. Do not divide constituent shares by10 or assume totalunits/10 exact.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "NI_TTM_VERSIONS",
+    "severity": "high",
+    "affected_series": "TTM2025 attributableNI",
+    "finding": "Direct BMV9M26 priorTTM17,717.532 versus arithmetic16,286.724 from mixed FY24 and9M24 versions.",
+    "treatment": "Use direct reported TTM NI pair17,717.532/35,709.642, not mixed-source growth.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "EBIT_TAG_DEFINITION",
+    "severity": "high",
+    "affected_series": "XBRL EBIT",
+    "finding": "YTD broad-otherincome/gains differs IRoperating EBIT; tagTTM also mixesdefinitions.",
+    "treatment": "Load managementEBIT separately and retain rawXBRL for audit only.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "SBC_INTERIM",
+    "severity": "medium",
+    "affected_series": "SBC9M",
+    "finding": "Zero SBC CF addback tag does not imply zero expense; auditedFY25 expense1,100.",
+    "treatment": "Interimexpense null; no assumed zero SBC.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "CAPEX_SCOPE",
+    "severity": "high",
+    "affected_series": "Gross cash investment",
+    "finding": "TTMPPE+intang37,033, otherlongterm733.769, managementcapex38,676. Definitions/timing not fully reconciled.",
+    "treatment": "Show minimum and broader amounts. Gross capex before disposal/insurance proceeds; acquisitions separate.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "ACQUISITION_TTM_NEGATIVE",
+    "severity": "high",
+    "affected_series": "TTM cash acquirecontrol",
+    "finding": "FY25 zero less9M25 205 plus9M26 87 yields\u2212118, indicating classification/revision incompatibility.",
+    "treatment": "Raw subtraction retained audit-only. Not negative recurring acquisition cost or usable cash inflow.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "IMPERIAL_GAIN",
+    "severity": "high",
+    "affected_series": "9M2026 earnings",
+    "finding": "Consolidated25,504 ex11,952 gain is not normalized parentNI; issuer12.1% growth cannot tieprior20,359.",
+    "treatment": "Do not insert12.1% as verified or call25,504 majorityNI. Treat investment separately.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "QUARTER_REVISIONS",
+    "severity": "medium",
+    "affected_series": "Four quarters",
+    "finding": "Standalone quarterly reports differ later cumulative residuals.",
+    "treatment": "Preserve standalone and residual series with dates. TTM derived from annual and cumulative inputs.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "ROU_INTERIM",
+    "severity": "medium",
+    "affected_series": "FEMSA9M ROU depreciation and cash lease split",
+    "finding": "No separated values in available interim notes.",
+    "treatment": "Explicit null; use annual-based proxy only as labeled model assumption, not history.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "ANNUAL_ROU2023",
+    "severity": "low",
+    "affected_series": "FY2023 ROU depreciation",
+    "finding": "12,485 derived from total depreciation31,896 less PPE19,411, not a direct note12 value.",
+    "treatment": "Label derived; do not elevate to separately reported fact.",
+    "status": "open_or_documented"
+  },
+  {
+    "issue_id": "SPIN_CUSTOMER_FUNDS",
+    "severity": "critical",
+    "affected_series": "Surplus cash and investments",
+    "finding": "Spin sep26 customer liabilities4,873.208; cash293.529 and repos4,485.744. Segregation policy. IFRS consolidated mapping not established.",
+    "treatment": "Exclude customer backing assets from surplus equity cash if included. Do not subtract funds twice; regulatory balance not identical consolidatedIFRS.",
+    "status": "open_or_documented"
+  }
+]

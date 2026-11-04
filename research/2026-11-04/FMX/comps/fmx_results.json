@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "share_basis": "continuing_distribution_rights_proxy",
+      "unpriced_assets_sensitivity_mxnm": 0,
+      "market_cap_implied_mxnm": 744028.5857190972,
+      "kof_stake_market_mxnm": 214791.365208059,
+      "ex_kof_implied_ev_ifrs16": 629983.6698802786,
+      "ev_management_ebit": 19.314580429845744,
+      "ev_management_ebit_reserving_spin": 19.46398742619734
+    },
+    {
+      "share_basis": "continuing_distribution_rights_proxy",
+      "unpriced_assets_sensitivity_mxnm": 30899.215,
+      "market_cap_implied_mxnm": 744028.5857190972,
+      "kof_stake_market_mxnm": 214791.365208059,
+      "ex_kof_implied_ev_ifrs16": 599084.4548802787,
+      "ev_management_ebit": 18.36724575774224,
+      "ev_management_ebit_reserving_spin": 18.516652754093837
+    },
+    {
+      "share_basis": "equal_nominal_units_proxy",
+      "unpriced_assets_sensitivity_mxnm": 0,
+      "market_cap_implied_mxnm": 799822.0000985297,
+      "kof_stake_market_mxnm": 214791.365208059,
+      "ex_kof_implied_ev_ifrs16": 685777.0842597112,
+      "ev_management_ebit": 21.025142847585958,
+      "ev_management_ebit_reserving_spin": 21.174549843937555
+    },
+    {
+      "share_basis": "equal_nominal_units_proxy",
+      "unpriced_assets_sensitivity_mxnm": 30899.215,
+      "market_cap_implied_mxnm": 799822.0000985297,
+      "kof_stake_market_mxnm": 214791.365208059,
+      "ex_kof_implied_ev_ifrs16": 654877.8692597112,
+      "ev_management_ebit": 20.077808175482456,
+      "ev_management_ebit_reserving_spin": 20.22721517183405
+    }
+  ],
+  "limitations": [
+    "FEMSA B and BD classes not all directly marked at their own market prices; both total market caps are allocation proxies, not exact observed consolidated market capitalization.",
+    "ExKOF subtracts entire KOF equity stake once, includes only exKOF financial debt and leases; no consolidated NCI subtraction.",
+    "ImperialBrady/other noncore assets not individually priced. 30899.215 equals pooled exKOF noncurrent financial assets and is merely a sensitivity, neither a verified Imperial fair value nor its legal upper bound.",
+    "IFRS16 lease liabilities included for EBIT multiple. Rent-operating DCF excludes those liabilities because it expenses full cash rent.",
+    "Reported/management EBIT differences and ATD legal benefit/Walmex unquantified benefit prevent mechanically using median as target."
+  ]
+}

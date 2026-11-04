@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "test_date": "2026-11-04",
+  "clean_directory_inputs": 10,
+  "clean_directory_included_complete_filings": false,
+  "clean_directory_included_extraction_scripts": false,
+  "invoked_from_unrelated_working_directory": true,
+  "clean_run": {
+    "exit_code": 0,
+    "numerical_checks_passed": 273,
+    "numerical_checks_total": 273
+  },
+  "minimal_inputs_unchanged": true,
+  "missing_input_detected": true,
+  "altered_source_fact_detected": true,
+  "overwrite_inputs_refused": true,
+  "network_dependencies": false,
+  "required_files": [
+    "ownership_minimal_inputs.json",
+    "kof_source_facts.csv",
+    "kof_history_source_facts.csv",
+    "kof_ttm_inputs.csv",
+    "kof_history_3fy_quarters.csv",
+    "capital_bridge.csv",
+    "additional_equity_bridge.csv",
+    "kof_normalization_adjustments.csv",
+    "october_dividends_bridge.csv",
+    "QA_Flags.csv"
+  ],
+  "script_sha256": "f96009c6e4273380038bb6688d9082174db32460ed43d6e09e27eb40b8788bb3",
+  "limitations": "Arithmetic reproduction does not independently re-audit reported facts, source authenticity or qualitative assumptions."
+}
