@@ -1,0 +1,184 @@
+{
+  "asOf": "2026-11-04",
+  "priceDate": "2026-11-03",
+  "price": 43.87,
+  "classification": "Conditional standalone post-Aireon diagnostic assuming no Rocket Lab closing; not aggregate current value or probability-weighted merger valuation",
+  "revenueAnchor": 982.932,
+  "ebitPreAcquiredAmortAnchor": 235.648,
+  "anchorBasis": "4x Q3 revenue and [reported EBIT31.618 + selected nonrecurring transaction21.294 + disclosed intangible amort6.0]. SBC retained; future merger cash costs separately selected. Not audited pro forma annual forecast.",
+  "taxRate": 0.24,
+  "wcRatio": 0.12,
+  "capexInflation": 0.025,
+  "capital": {
+    "cash": 97.853,
+    "cashReserve": 60,
+    "debtPrincipal": 2159.458,
+    "taxReserve": 3.947,
+    "otherClaimsReserve": 25,
+    "dividendPayable": 3.921,
+    "hedgeAssetSelected": 3.7,
+    "actualShares": 106.158479,
+    "selectedAwards": 2.5,
+    "additionalMergerCashCosts": 25,
+    "terminationFee": 0
+  },
+  "scenarios": {
+    "bear": {
+      "year1Revenue": 960,
+      "growth": [
+        0,
+        0.01,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "margins": [
+        0.2,
+        0.2,
+        0.21,
+        0.22,
+        0.23,
+        0.23,
+        0.23,
+        0.23,
+        0.23,
+        0.23
+      ],
+      "wacc": 0.115,
+      "g": 0.02,
+      "roic": 0.12,
+      "maintenanceRatio": 0.09,
+      "growthCapexRatio": 0.035,
+      "replacementCost": 4500,
+      "replacementYears": [
+        2030,
+        2031,
+        2032,
+        2033,
+        2034
+      ],
+      "replacementLife": 15,
+      "physicalDa": [
+        215,
+        210,
+        205,
+        200,
+        195,
+        200,
+        220,
+        250,
+        300,
+        330
+      ]
+    },
+    "base": {
+      "year1Revenue": 1039,
+      "growth": [
+        0.05775,
+        0.06187,
+        0.06427,
+        0.06522,
+        0.06198,
+        0.04342,
+        0.04434,
+        0.04115,
+        0.035
+      ],
+      "margins": [
+        0.275,
+        0.29,
+        0.3,
+        0.32,
+        0.335,
+        0.35,
+        0.36,
+        0.37,
+        0.38,
+        0.38
+      ],
+      "wacc": 0.095,
+      "g": 0.025,
+      "roic": 0.18,
+      "maintenanceRatio": 0.075,
+      "growthCapexRatio": 0.025,
+      "replacementCost": 3500,
+      "replacementYears": [
+        2031,
+        2032,
+        2033,
+        2034,
+        2035
+      ],
+      "replacementLife": 17.5,
+      "physicalDa": [
+        215,
+        215,
+        215,
+        215,
+        215,
+        220,
+        230,
+        250,
+        280,
+        300
+      ]
+    },
+    "bull": {
+      "year1Revenue": 1080,
+      "growth": [
+        0.09,
+        0.09,
+        0.085,
+        0.08,
+        0.075,
+        0.07,
+        0.06,
+        0.05,
+        0.04
+      ],
+      "margins": [
+        0.3,
+        0.32,
+        0.34,
+        0.36,
+        0.38,
+        0.4,
+        0.41,
+        0.42,
+        0.42,
+        0.42
+      ],
+      "wacc": 0.085,
+      "g": 0.03,
+      "roic": 0.22,
+      "maintenanceRatio": 0.065,
+      "growthCapexRatio": 0.02,
+      "replacementCost": 2800,
+      "replacementYears": [
+        2032,
+        2033,
+        2034,
+        2035,
+        2036
+      ],
+      "replacementLife": 20,
+      "physicalDa": [
+        215,
+        215,
+        215,
+        215,
+        215,
+        220,
+        235,
+        255,
+        280,
+        300
+      ]
+    }
+  },
+  "capitalizedSbcOwnerChargeRatio": 0.005
+}

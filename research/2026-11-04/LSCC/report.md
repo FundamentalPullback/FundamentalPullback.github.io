@@ -1,0 +1,106 @@
+# LSCC · Investigación fundamental parcial
+
+Corte de investigación: 4 noviembre 2026, 21:36 UTC. Unidades: millones de USD salvo acciones, porcentajes y EPS. Investigación parcial revisada mediante auditoría independiente. No hay recomendación de entrada ni cierre de Stage 3 integral.
+
+## 1. Conclusión y lo que cambió
+
+Lattice ya publicó Q3 el 2 de noviembre y el 10-Q el 3 de noviembre. No se repite el antiguo triage A008/A011/A014/A025. El crecimiento no se explica únicamente por AMI: FPGA facturó 251,934 frente a 133,349, un 88,93% más. Pero las nuevas ventas no convierten el margen de segmento en beneficio atribuible al accionista. El margen GAAP consolidado Q3 fue 8,24%, muy inferior a los márgenes de segmento antes de costes no asignados.
+
+La recuperación FPGA es real en las cifras reportadas; la valoración del conjunto todavía requiere normalizar remuneración, inversión en software/IP, impuestos y costes de AMI. Valor central, rango, owner FCF y puente integral permanecen nulos. No se propone comprar, ampliar ni cambiar posiciones.
+
+## 2. Historia reconstruida desde primarias
+
+| Period | Weeks | revenue | ebit | net_income | eps_diluted | cfo | capex | software_ip_cash | fcf | cash_after_ppe_software_ip | sbc | da | tax_expense |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| FY2023 | 52.0 | 737.154 | 212.270 | 259.061 | 1.850 | 269.588 | 20.098 | 13.152 | 249.490 | 236.338 | 70.197 | 34.432 | -44.205 |
+| FY2024 | 52.0 | 509.401 | 34.457 | 61.131 | 0.440 | 140.876 | 20.985 | 16.708 | 119.891 | 103.183 | 52.985 | 38.737 | -24.902 |
+| FY2025 | 53.0 | 523.262 | 11.232 | 3.084 | 0.020 | 175.107 | 42.527 | 19.781 | 132.580 | 112.799 | 115.613 | 35.481 | 10.293 |
+| Q4FY2024 | 13 | 117.419 | -12.209 | 16.514 | 0.120 | 45.421 | 5.754 | 4.216 | 39.667 | 35.451 | 14.674 | 10.316 | -30.086 |
+| Q1FY2025 | 13 | 120.150 | 6.974 | 5.022 | 0.040 | 31.892 | 8.616 | 3.462 | 23.276 | 19.814 | 20.373 | 8.880 | 2.959 |
+| Q2FY2025 | 13 | 123.971 | 4.706 | 2.913 | 0.020 | 38.531 | 7.230 | 4.320 | 31.301 | 26.981 | 24.086 | 8.659 | 2.169 |
+| Q3FY2025 | 13 | 133.349 | -1.534 | 2.794 | 0.020 | 47.100 | 13.074 | 4.431 | 34.026 | 29.595 | 35.774 | 9.028 | -3.748 |
+| Q4FY2025 | 14 | 145.792 | 1.086 | -7.645 | -0.060 | 57.584 | 13.607 | 7.568 | 43.977 | 36.409 | 35.380 | 8.914 | 8.913 |
+| Q1FY2026 | 13 | 170.897 | 26.068 | 21.817 | 0.160 | 50.255 | 10.533 | 4.891 | 39.722 | 34.831 | 28.072 | 9.357 | 5.449 |
+| Q2FY2026 | 13 | 201.079 | 22.353 | 19.359 | 0.140 | 88.302 | 7.020 | 19.099 | 81.282 | 62.183 | 44.400 | 9.628 | -2.142 |
+| Q3FY2026 | 13 | 291.035 | 23.968 | 11.206 | 0.080 | 95.037 | 17.414 | 11.158 | 77.623 | 66.465 | 50.292 | 24.697 | 2.602 |
+| TTMQ3FY2025 | 52 | 494.889 | -2.063 | 27.243 | 0.200 | 162.944 | 34.674 | 16.429 | 128.270 | 111.841 | 94.907 | 36.883 | -28.706 |
+| TTMQ3FY2026 | 53 | 808.803 | 73.475 | 44.737 | 0.320 | 291.178 | 48.574 | 42.716 | 242.604 | 199.888 | 158.144 | 52.596 | 14.822 |
+
+
+
+El ledger enlaza cada cifra con su contexto SEC y reproduce las derivaciones. FCF en la tabla es exclusivamente CFO menos compras PPE: no descuenta software/IP ni SBC. FY2025 y TTM actual incluyen 53 semanas; Q4FY2025 tuvo 14. El EPS TTM es suma de EPS trimestrales directos, no EPS oficial TTM ni resta de EPS anual/acumulado. FY2023 y FY2024 tuvieron beneficios fiscales; no trasladarlos a una tasa perpetua.
+
+TTM actual: ingresos 808,803; EBIT 73,475; NI 44,737; CFO 291,178; PPE 48,574; software/IP 42,716. La caja después de ambas inversiones es 199,888; después de SBC 158,144 queda 41,744. Es un diagnóstico histórico de 53 semanas y perímetro mixto, no beneficio del propietario normalizado. El TTM solo incorpora AMI desde el 27 de julio, no doce meses completos.
+
+## 3. Calidad, segmentos y caja
+
+Q3: ventas 291,035, EBIT 23,968 y NI 11,206; EPS GAAP 0,08. FPGA generó 251,934 de ventas y 101,368 de beneficio de segmento; AMI 39,101 y 12,159. Los costes no asignados de 89,559 reconcilian ambos segmentos con el EBIT GAAP. Incluyen SBC, cargas asociadas, amortización y costes de adquisición: no son un residuo que pueda desaparecer por conveniencia.
+
+En nueve meses, CFO 233,594 menos PPE 34,967 y software/IP 35,148 deja 163,479. Restar SBC del estado de flujos 122,764 deja 40,715, sin certificar recurrencia. Las compras devengadas no monetarias de PPE 4,982 e IP 15,000 quedan fuera del desembolso de caja del periodo; requieren conciliar compromisos, saldos y reposición antes de afirmar inversión económica normalizada. No se presentan automáticamente como deuda adicional. Retenciones por entrega de acciones de 47,563 no sustituyen a SBC ni se restan por segunda vez al diagnóstico.
+
+La SBC Q3 fue 50,292 frente a 35,774. Los premios ligados a mercado/rendimiento incluyeron una actualización de estimaciones de 9,6 en Q2; eliminarla no demuestra que el coste futuro de retener personal sea cero. La adquisición incorpora amortización y remuneración nuevas. La amortización total de intangibles Q3 de 13,855 se compone de 6,987 en coste de ingresos, 5,891 en la línea separada operativa y 0,977 dentro de I+D; no confundir el subtotal de dos líneas de 12,878 con el total. La diferencia entre beneficio ajustado y GAAP no se convierte íntegramente en caja libre.
+
+Distribuidores concentraron aproximadamente 81% de Q3 y 89% de nueve meses. Las ubicaciones de envío no equivalen a demanda final. Los 20,4 de obligaciones de desempeño pendientes excluyen contratos cortos y royalties variables: no son backlog total ni ARR. AMI combina licencias, royalties y soporte; no es un SaaS homogéneo.
+
+## 4. AMI y el perímetro
+
+AMI cerró el 27 de julio. Contraprestación 1.589,664: acciones 582,760, efectivo a propietarios/opciones 733,492, efectivo pendiente 1,188 y cancelación de deuda de AMI 272,224. Menos caja adquirida 34,370, el desembolso neto fue 971,346. Los 272,224 cancelados no se vuelven a sumar a la deuda actual.
+
+La asignación preliminar incluye intangibles 551 y goodwill 1.054,139. Solo se identifican bases fiscales de intangibles 68 y goodwill 59,6; no se supone deducible todo el importe contable. La vida de tecnología/marca es siete años y relaciones de clientes diez: ninguna prueba por sí sola el coste de reposición económico.
+
+AMI aportó ingresos 39,1 y pérdida neta 14,4 desde cierre. El proforma ASC805 Q3 de ventas 309,894 y NI 24,761, y nueve meses 785,879/27,461, supone adquisición al comienzo del ejercicio anterior y desplaza costes de transacción 21,7 y compensación 8,6, además de financiación, amortización y políticas. No es un TTM real, una previsión ni el mismo cálculo que Article 11. No se añade la diferencia proforma al beneficio reportado ni se presupone sinergia.
+
+La PPA preliminar por sí sola no impide un escenario. Lo que falta para valorar con disciplina es una base anual combinada de EBIT y caja después de remuneración sostenible, software/IP y capital circulante; una normalización fiscal defendible; dilución futura y capital distribuible reconciliados. No hay evidencia suficiente para seleccionar esos parámetros como hechos. Una extrapolación de Q3 o de EPS ajustado ocultaría esas incógnitas.
+
+## 5. Capital y financiación
+
+Al 3 de octubre: efectivo 128,277; deuda principal 875, coste pendiente 5,920 y valor contable 869,080. Deuda nominal menos caja 746,723 es un diagnóstico, no puente integral a equity. El préstamo de 925 se redujo 50; ese prepago cubre las cuotas obligatorias de los próximos doce meses, por lo que no se añaden nuevamente. Tasa efectiva al 3 de octubre 5,76%, no cupón fijo perpetuo. Vencimiento final 30 junio 2031. Revolver no dispuesto 200 sujeto a condiciones; los 25 de term loan no usados expiraron al cierre.
+
+La caja extranjera de 82,4 no se descuenta como atrapada: la dirección afirma acceso sin gasto adicional significativo y retenciones ya provisionadas. Se conservan UTB/intereses de 1,9 y pasivos de arrendamiento 56,228 como partidas a tratar coherentemente; no se suma el lease a deuda mientras se capitaliza también el alquiler sin ajustar EBIT. Interés pagado de nueve meses 0,379 no es el coste sostenible de una financiación contratada en julio; interés contractual Q3 9,822, más amortización de costes de emisión 0,411, da gasto total de deuda 10,233 (11,147 en nueve meses).
+
+Las acciones reales al 29 de octubre son 142,225691 millones; el promedio diluido Q3 143,772 no representa automáticamente dilución futura. La contraprestación en acciones ya forma parte del capital posterior, no se suma dos veces. La liberación escalonada de restricciones de venta de acciones de AMI no equivale a emisión nueva ni prueba ventas efectivas. Falta reconciliar premios y evolución posterior al balance para un puente por acción certificado.
+
+## 6. Pares y valoración que no se afirma
+
+AMD Embedded Q3 terminó el 26 de septiembre: ingresos 1.109 frente a 857 y beneficio de segmento 453, crecimiento 29,40% y margen de segmento 40,85%. Incluye FPGA y otros productos; SBC y amortización de adquisiciones permanecen en costes corporativos no asignados. No se compara ese margen como si fuera EBIT GAAP independiente frente al 8,24% de Lattice.
+
+Microchip Q1FY2027 terminado el 30 de junio tuvo ingresos 1.484,7 y EBIT GAAP 336,8, margen 22,68%. Su margen ajustado 35,10% es otra base, y el trimestre es anterior. Es un fabricante integrado y más diversificado, no una réplica fabless de Lattice. Estos contrastes operativos no constituyen múltiplos homogéneos ni una valoración relativa cerrada.
+
+A 107,25 y con acciones del 29 de octubre, la capitalización mecánica es aproximadamente 15.253,7. Compararla con EBIT/FCF de un TTM que solo incluye dos meses de AMI sería una alerta de exigencia, no un múltiplo normalizado. No se publica WACC, DCF, inverso ni precio máximo de compra inventado. La siguiente mejora debe financiar también crecimiento de márgenes y reposición, mantener SBC como coste y conciliar deuda/caja, no valorar con CFO menos PPE únicamente.
+
+## 7. Precio, calendario y catalizadores
+
+Yahoo registra 107,25 el 4 de noviembre a las 16:00:00 ET como regularMarketPrice. Una consulta posterior de StockAnalysis muestra cierre 107,39 a las 16:00 ET. La discrepancia de 0,14 no está reconciliada; se mantiene 107,25 únicamente como referencia Yahoo, no cierre concordante entre proveedores ni base ejecutable. Referencia anterior 3 noviembre 105,92. El escáner real del 9 octubre permanece 126,05, QP90/Opportunity100; no es señal técnica actual.
+
+Guía Q4: ingresos 325–345, margen bruto ajustado 72% ±1 punto, gastos ajustados 95–101, impuesto ajustado 4–6% y EPS ajustado 0,82–0,86. No hay conciliación completa futura a GAAP, que la compañía dice no poder calcular sin esfuerzos irrazonables. Un trimestre completo de AMI y una recuperación FPGA alteran el comparativo; no anualizar la tasa combinada.
+
+El calendario IR consultado indica que habrá más eventos, pero no confirma la siguiente fecha de resultados. El evento del 2 noviembre ya ocurrió; ausencia de próxima fecha no certifica el filtro de calendario para entrar. Vigilar integración, firmware/seguridad y adopción de productos, royalties, inventarios de distribuidores, servicio de deuda, remuneración y exportaciones. No se identificó una resolución regulatoria que permita declarar riesgo cero; controles de exportación y dependencia de terceros siguen abiertos.
+
+## 8. Evidencia breve para la ficha
+
+### Pros ES
+- La facturación FPGA creció un 88,93% en Q3, por lo que la expansión no depende exclusivamente de AMI.
+- El análisis separa inversión en software/IP y SBC de la caja reportada, sin llamar owner FCF a un subtotal incompleto.
+### Contras ES
+- El TTM de 53 semanas incorpora AMI solo desde julio y no constituye una base anual combinada normalizada.
+- Remuneración, reinversión, impuestos y dilución requieren más conciliación; valor y puente integral permanecen nulos.
+- La siguiente fecha de resultados no está confirmada y el escáner de octubre no autoriza una entrada actual.
+### Pros EN
+- FPGA revenue grew 88.93% in Q3, so expansion does not depend solely on AMI.
+- The analysis separates software/IP investment and SBC from reported cash flow rather than calling an incomplete subtotal owner FCF.
+### Cons EN
+- The 53-week TTM includes AMI only from July and is not a normalized combined annual base.
+- Compensation, reinvestment, taxes and dilution require further reconciliation; valuation and the integral equity bridge remain null.
+- The next earnings date is unconfirmed and the October scanner does not authorize a current entry.
+
+## 9. Fuentes y reproducción
+
+- Q3 10-Q y notas: https://www.sec.gov/Archives/edgar/data/855658/000119312526445613/d34154d10q.htm
+- FY2025 10-K: https://www.sec.gov/Archives/edgar/data/855658/000143774926004100/lscc20260103_10k.htm
+- Resultados/guía: https://www.sec.gov/Archives/edgar/data/855658/000143774926034452/ex_1012509.htm
+- Calendario: https://ir.latticesemi.com/
+- Precio: https://finance.yahoo.com/quote/LSCC/ y https://stockanalysis.com/stocks/lscc/history/
+- AMD: https://www.sec.gov/Archives/edgar/data/2488/000000248826000191/amd-20260926.htm
+- Microchip: https://ir.microchip.com/news-events/press-releases/detail/1409/microchip-technology-announces-financial-results-for-first-quarter-of-fiscal-year-2027
+
+El paquete contiene datos numéricos, fuentes, fórmulas y comprobaciones reproducibles, no filings íntegros. No modifica gestión, operaciones, stops ni permisos del plan.

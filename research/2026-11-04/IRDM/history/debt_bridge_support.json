@@ -1,0 +1,36 @@
+{
+  "units": "USD millions",
+  "date": "2026-09-30",
+  "primary_source": "https://www.sec.gov/Archives/edgar/data/1418819/000141881926000052/irdm-20260930.htm",
+  "release_source": "https://www.sec.gov/Archives/edgar/data/1418819/000141881926000053/pressreleaseq32026.htm",
+  "reported_gross_debt_face": 2159.458,
+  "reported_debt_net_of_discount_and_issuance_costs": 2139.328,
+  "reported_discount_and_financing_costs": 20.13,
+  "cash": 97.853,
+  "reported_net_debt_face_less_cash": 2061.605,
+  "components": {
+    "legacy_term_loan": {
+      "value": 1774.72,
+      "status": "FY25 exact face retained; 2026 narrative unchanged $1774.7M; infer no legacy amortization from 3.281M cash payment matching Aireon amortization"
+    },
+    "aireon_term_loan": {
+      "value": 151.376,
+      "status": "inferred: acquisition-date principal154.657 less Q3 repayment3.281"
+    },
+    "aireon_seller_face": {
+      "value": 183.362,
+      "status": "inferred exact from 50% deferred purchase consideration and equal cash half183.362; narrative183.4"
+    },
+    "revolver": {
+      "value": 50.0,
+      "status": "reported explicit Q3 debt/liquidity note"
+    }
+  },
+  "component_sum": 2159.458,
+  "seller_note_initial_fair_value": 172.789,
+  "seller_note_discount_accretion_q3": 2.585,
+  "seller_note_inferred_carrying": 175.374,
+  "seller_note_inferred_unamortized_discount": 7.988,
+  "finance_lease_balance": null,
+  "warning": "Instrument face amounts above reconcile exactly but some components are inferred, not a published exact September instrument schedule. Gross debt already includes seller face and revolver; do not add them again. Seller carrying value must not substitute for face settlement obligation. Finance lease amount not separately found; null is not zero."
+}

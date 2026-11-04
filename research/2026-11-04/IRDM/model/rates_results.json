@@ -1,0 +1,28 @@
+{
+  "rfNov3": 0.0495,
+  "erpNov1": 0.0441,
+  "erpAssociatedRf": 0.0529,
+  "providerBeta5Y": 0.87,
+  "costEquityCAPM": 0.087867,
+  "marketEquityProxyNov3": 4657.17247373,
+  "debtNominalProxy": 2159.458,
+  "debtWeight": 0.31679258664851223,
+  "selectedDebtCost": 0.065,
+  "taxRate": 0.24,
+  "calculatedWaccProxy": 0.07568093956939168,
+  "selectedBaseDiscount": 0.095,
+  "premiumBp": 193.19060430608326,
+  "sources": [
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "https://stockanalysis.com/stocks/irdm/statistics/",
+    "https://www.sec.gov/Archives/edgar/data/1418819/000141881926000052/irdm-20260930.htm"
+  ],
+  "limitations": [
+    "Beta includes merger-period market behavior and is not a standalone business risk regression.",
+    "6.5% debt cost is selected, not a verified blended refinancing yield: legacy SOFR+2.25%, Aireon more expensive, seller loan noninterest-bearing and interest cap expires November2026.",
+    "Debt nominal is not market debt. Conditional postmerger credit amendments are not current standalone funding.",
+    "Selected9.5% includes risk premium for replacement capital, refinancing and integration; not rounding.",
+    "Different rf and ERP dates."
+  ]
+}
