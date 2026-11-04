@@ -1,0 +1,425 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CRWD · Completed Stage 3 · Fundamental Pullback</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/CRWD">← CRWD profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A172 · Research completed · November 4, 2026 UTC</p><div class="status-line"><span class="tag">Research complete</span><span class="tag">En observación</span><span class="tag">No entry approval</span></div><p>Publication: November 4, 2026 UTC. The original report’s valuation date and source cutoff are preserved below. <strong>Fundamental research complete; no approved entry, new position size, buy ceiling or stop.</strong> Publication and future economic uncertainty do not change research completion.</p>
+<p><strong>Strong business, demanding valuation: base $33.86, sensitivity $28–45. Model at $244.68 close, scanner $245.50; both post-split. SBC, infrastructure and acquisitions are funded. No loss-based prohibition and no approved purchase.</strong></p>
+<h1 id="crwd-stage-3-completo">CRWD · Stage 3 completo</h1>
+<p><strong>Fecha de corte: 3 de noviembre de 2026, cierre regular estadounidense. Moneda: USD; estados y modelo en millones salvo precios y porcentajes.</strong></p>
+<h2 id="dictamen">Dictamen</h2>
+<p><strong>Observar por valoración; no cumple la puerta fundamental de compra a este precio.</strong> CrowdStrike tiene un crecimiento de negocio sólido y una plataforma competitiva. La objeción no es que una compañía con pérdidas GAAP nunca pueda ser una inversión, ni que haya que esperar un crecimiento de EPS arbitrario. Es la enorme distancia entre el precio y la caja que corresponde a los accionistas después de remunerar al personal, financiar infraestructura y sostener las ventas.</p>
+<p>El escáner del 3/11 muestra <strong>$245,50, QP 70, Opportunity 95 y RSI 47,2</strong>. El cierre regular verificado es <strong>$244,68</strong>; el modelo utiliza este último. Todos los precios son posteriores al split 4:1 de julio. Valor central aproximado <strong>$34</strong>, intervalo central razonable <strong>$28–45</strong>, y escenarios completos <strong>$9,94 / $33,86 / $81,86</strong>. Son estimaciones de valor fundamental, no objetivos de negociación ni predicciones de la próxima cotización. La conclusión sigue siendo la misma en el escenario favorable y no depende de aplicar un descuento porcentual universal. <a href="https://stockanalysis.com/stocks/crwd/history/">Precio</a></p>
+<p>La revisión es elegible: Q2 FY27 se publicó el <strong>26/8</strong>, con 10-Q el 27/8. El siguiente trimestre había terminado el 31/10, pero no había resultados publicados ni una fecha oficial del 4–6/11 verificada al corte. El 1/12 que aparece en proveedores es una estimación y no se presenta como convocatoria confirmada. <a href="https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-second-quarter-fiscal-year-2027-financial">Resultados</a> · <a href="https://ir.crowdstrike.com/events-and-presentations">Agenda oficial</a></p>
+<h2 id="negocio-crecimiento-y-calidad">Negocio, crecimiento y calidad</h2>
+<p>Falcon combina protección de endpoints, identidad, nube, SIEM y operaciones de seguridad. Integrar módulos y telemetría reduce fricción de implantación y favorece ventas cruzadas. El crecimiento de cargas de IA y agentes amplía la necesidad de protección, aunque no convierte automáticamente el mercado potencial en ingresos contratados. Microsoft, Palo Alto, Fortinet, Zscaler y proveedores especializados compiten por presupuestos y consolidación de plataformas. La dependencia de infraestructura de terceros, la eficacia del producto y la confianza del cliente son parte central de la ventaja competitiva y de su riesgo.</p>
+<p>Q2 FY27: ingresos <strong>1.470,9</strong>, +25,8%; suscripción <strong>1.400,3</strong>, +27%; ARR <strong>5.840</strong>, +25%; nuevo ARR <strong>332,8</strong>, +51%. El ARR de cuentas Falcon Flex fue <strong>2.290</strong>, +101%. Esto mide contratos anualizados y relaciones comerciales, no caja libre, beneficio ni necesariamente ingresos incrementales nuevos: Flex también reorganiza contratos existentes. La definición de ARR supone renovación de contratos que vencen durante los próximos doce meses. El backlog no facturado de <strong>5.900</strong> no debe sumarse al valor de la empresa como si fuera efectivo.</p>
+<p>La guía FY27 vigente al corte es ingresos <strong>5.991,1–6.011,1</strong>, beneficio operativo ajustado <strong>1.497,2–1.508,4</strong> y beneficio neto ajustado <strong>1.302,7–1.311,6</strong>. El crecimiento del 34% anunciado corresponde al <strong>nuevo ARR neto</strong>, no a los ingresos totales. En Fal.Con del 2/9 la dirección adelantó los hitos de ARR a <strong>10.000 dentro de FY30 y 20.000 dentro de FY35</strong> y presentó nuevo ARR FY28 de al menos <strong>1.626</strong>. Objetivos ambiciosos, no garantías. El modelo base llega a ventas cercanas a 20.900 en el año diez, compatible en orden de magnitud con esa trayectoria, sin igualar mecánicamente ARR e ingresos. <a href="https://ir.crowdstrike.com/static-files/4be75a83-d8be-45d8-98bc-423c3b3fb84f">Presentación oficial Fal.Con</a></p>
+<h2 id="historial-y-beneficio-económico">Historial y beneficio económico</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">Beneficio neto atribuible</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex y software en efectivo</th>
+<th style="text-align: right;">CFO menos inversión</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY24, enero 2024</td>
+<td style="text-align: right;">3.055,6</td>
+<td style="text-align: right;">-19,1</td>
+<td style="text-align: right;">72,2</td>
+<td style="text-align: right;">1.166,2</td>
+<td style="text-align: right;">226,0</td>
+<td style="text-align: right;">940,2</td>
+</tr>
+<tr class="even">
+<td>FY25, enero 2025</td>
+<td style="text-align: right;">3.953,6</td>
+<td style="text-align: right;">-116,4</td>
+<td style="text-align: right;">-15,2</td>
+<td style="text-align: right;">1.381,7</td>
+<td style="text-align: right;">313,8</td>
+<td style="text-align: right;">1.067,9</td>
+</tr>
+<tr class="odd">
+<td>FY26, enero 2026</td>
+<td style="text-align: right;">4.812,0</td>
+<td style="text-align: right;">-293,3</td>
+<td style="text-align: right;">-162,5</td>
+<td style="text-align: right;">1.612,3</td>
+<td style="text-align: right;">370,9</td>
+<td style="text-align: right;">1.241,5</td>
+</tr>
+<tr class="even">
+<td>H1 FY27</td>
+<td style="text-align: right;">2.856,5</td>
+<td style="text-align: right;">-63,8</td>
+<td style="text-align: right;">33,1</td>
+<td style="text-align: right;">1.121,2</td>
+<td style="text-align: right;">271,1</td>
+<td style="text-align: right;">850,1</td>
+</tr>
+<tr class="odd">
+<td>TTM julio 2026</td>
+<td style="text-align: right;">5.396,1</td>
+<td style="text-align: right;">-133,0</td>
+<td style="text-align: right;">45,0</td>
+<td style="text-align: right;">2.016,6</td>
+<td style="text-align: right;">491,0</td>
+<td style="text-align: right;">1.525,6</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/1535527/000153552726000010/crwd-20260131.htm">10-K FY26</a> y <a href="https://www.sec.gov/Archives/edgar/data/1535527/000153552726000031/crwd-20260731.htm">10-Q Q2 FY27</a>. TTM = FY26 + H1 FY27 − H1 FY26. Se usan comparativos revisados del último informe: el 10-K corrigió la distribución temporal de SBC de ciertas adjudicaciones anteriores; no fue una revisión de ingresos. No se mezclan cifras antiguas no revisadas para calcular EBIT.</p>
+<p>Últimos cuatro trimestres, ingresos / EBIT / beneficio atribuible: Q3 FY26 <strong>1.234,2 / -62,2 / -26,8</strong>; Q4 FY26 <strong>1.305,4 / -6,9 / 38,7</strong>; Q1 FY27 <strong>1.385,6 / -30,6 / 27,8</strong>; Q2 FY27 <strong>1.470,9 / -33,2 / 5,3</strong>. La recuperación del beneficio total es real frente a pérdidas, pero no permite calcular un CAGR estable de beneficio normalizado a partir de una base negativa. Ingresos TTM crecen aproximadamente 24%; no se confunde ese crecimiento con crecimiento de caja para el propietario.</p>
+<p><strong>Ajuste decisivo de contabilidad:</strong> en febrero se amplió de cuatro a cinco años la vida de amortización de comisiones capitalizadas. Rebajó el gasto en <strong>25,5 en Q2 y 53,4 en H1</strong>, sin ahorrar ese efectivo. Restituir esa diferencia lleva el EBIT H1 de -63,8 a aproximadamente <strong>-117,2</strong>, antes de otros ajustes. Los costes netos del incidente de julio bajaron de 75,4 a 3,6 en H1; su normalización explica otra parte de la comparación favorable. Q2 incluye recuperaciones netas de 14,5. Las adquisiciones y su amortización se distinguen del coste ordinario, pero no se elimina la SBC recurrente ni la necesidad de comprar/desarrollar tecnología.</p>
+<p><strong>SBC no es caja gratis.</strong> H1: gasto SBC de <strong>674,6</strong>, más SBC capitalizada <strong>36,8</strong>, frente a ingresos de 2.856,5. El FCF simple de 850,1 cae a <strong>138,7</strong> después de ambas partidas, antes de normalizar intereses, impuestos, circulante y otros gastos capitalizados. TTM: FCF simple 1.525,6 menos SBC de resultados 1.244,0 y SBC capitalizada aproximada 65,3 deja <strong>216,3</strong>; todavía incluye ingresos financieros y efectos de cobro. El PER 6.547 del escáner, y el FCF por acción sin estos ajustes, no describen bien la rentabilidad económica.</p>
+<p>FY26 capitalizó comisiones en efectivo por <strong>703,7</strong> y amortizó 449,4. H1 FY27 capitalizó 298,4 y amortizó 207,1. El CFO ya recoge ambos efectos: no se descuentan dos veces. El DCF utiliza explícitamente la inversión neta en contratos, además del capex y software. No extrapola las entradas estacionales de anticipos como un beneficio perpetuo independiente del crecimiento.</p>
+<h2 id="capital-liquidez-y-hechos-posteriores">Capital, liquidez y hechos posteriores</h2>
+<p>A julio: efectivo no restringido <strong>5.013,8</strong>, inversiones estratégicas <strong>69,3</strong>, deuda nominal <strong>750</strong>, minoritarios <strong>37,8</strong>. Los <strong>162,8 de efectivo restringido</strong> no se suman. Las obligaciones de arrendamiento operativo de 74,0 permanecen dentro del gasto y la caja de explotación; no se vuelven a restar como deuda. Los compromisos de compras eran <strong>4.141,5</strong> y se añadieron <strong>2.900</strong> después del cierre, principalmente infraestructura y servicios futuros: requieren gasto/capex en el pronóstico, no una resta íntegra adicional de 7.041,5 a un DCF que ya los paga.</p>
+<p>Existen 1.023,9 millones de acciones emitidas al 20/8. El prospecto del 11/9 actualiza a <strong>1.026,130</strong> al 8/9, incluyendo <strong>2,118</strong> emitidas por los activos tecnológicos de XM Cyber, operación cerrada ese día. No se adquirieron los ingresos ni clientes de XM Cyber. El modelo usa <strong>1.050,118</strong> millones: guía de dilución Q3 de 1.048 más las acciones adicionales del cierre. Es una aproximación explícita, no una falsa lectura de acciones exactas de noviembre. Q2 tuvo 1.044,469 millones de diluidas medias; RSU/PSU pendientes 34,5 millones y opciones 3,4 millones. No se añade además una tasa anual arbitraria de dilución: la remuneración futura se carga como coste económico. Usar solo emitidas elevaría el valor unos 2,3%, no resolvería la brecha. <a href="https://www.sec.gov/Archives/edgar/data/1535527/000110465926107123/tm2625079-1_s3asr.htm">Prospecto y capital actualizado</a></p>
+<p>No hay clase B ni preferentes en circulación; las acciones ordinarias tienen <strong>un voto por acción</strong>. La autorización para emitir y las defensas estatutarias no equivalen a una clase de control actualmente pendiente.</p>
+<p>Puente del DCF: EV +5.013,8 efectivo +69,3 inversiones −600 caja operativa necesaria −750 deuda −37,8 minoritarios −145 componente máximo de efectivo reservado para XM Cyber = <strong>EV +3.550,3</strong>. Los 600 son una hipótesis de liquidez operativa, no un pasivo publicado; variarlos ±300 cambia el valor ±$0,29. Los 145 cubren conservadoramente el componente anunciado de efectivo/acciones, cuyo reparto final no se desglosa; no se vuelve a restar el valor de las acciones ya incorporadas. No se suman goodwill ni activos fiscales como si fueran efectivo adicional.</p>
+<p><strong>Actualización 3/11:</strong> se anunciaron acuerdos para Fiddler y Dreadnode, cierre esperado en Q4 FY27, predominantemente en efectivo y una parte en acciones con vesting. Los anuncios oficiales no publican precios. El modelo no regala sinergias ni integra ingresos no publicados. Para cualquier coste neto adicional C, el ajuste es −C/1.050,118 por acción, más el valor demostrable de su caja futura; 500 de coste sin sinergias equivale a <strong>−$0,48</strong>. Se muestra el valor del perímetro conocido antes de esa adquisición pendiente, no una falsa cifra consolidada cerrada. <a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-fiddler-to-deliver-agent-observability/">Fiddler</a> · <a href="https://ir.crowdstrike.com/node/17971/pdf">Dreadnode</a></p>
+<p>La demanda de Delta seguía en discovery en el último 10-Q, sin pérdida estimable. El caso adverso prueba 750 de coste extraordinario, <strong>no una provisión ni estimación jurídica</strong>. Bloomberg informó el 25/9 del cierre de una investigación del DOJ sin acción; no se mantiene aquella investigación como un hecho actual abierto ni se supone que ello cierre todos los asuntos de SEC/clientes. <a href="https://news.bgov.com/privacy-and-data-security/us-justice-department-closes-investigation-of-crowdstrike-deals">Información posterior sobre DOJ</a></p>
+<h2 id="fcff-diez-años-y-supuestos-explícitos">FCFF: diez años y supuestos explícitos</h2>
+<p>El año 1 aproxima los próximos doce meses desde la fecha de valoración; la base de ventas de 6.001,1 procede del punto medio FY27. No es guía de la empresa para un periodo móvil. Cinco años explícitos y cinco de moderación. FCFF = EBIT después de SBC − impuestos operativos + D&amp;A − inversión material/software − SBC capitalizada − aumento neto de costes de contrato − cambio del resto del circulante.</p>
+<p>La dirección apunta a margen operativo <strong>no GAAP</strong> 28–32% y margen FCF 34–38% en FY29; no son márgenes económicos después de SBC. Además espera capex FY28 de <strong>11–12% de ventas</strong>, incluido aquí. El modelo base pasa de margen EBIT económico 5% a 24% en diez años, por tanto concede una mejora muy significativa. Caso favorable llega al 32% después de SBC y no es una continuación de la situación actual.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hipótesis</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crecimiento ventas años 1–5</td>
+<td style="text-align: right;">16/14/12/10/8%</td>
+<td style="text-align: right;">22/21/20/18/16%</td>
+<td style="text-align: right;">27/27/25/23/21%</td>
+</tr>
+<tr class="even">
+<td>Crecimiento años 6–10</td>
+<td style="text-align: right;">6/4,5/3/2,5/2%</td>
+<td style="text-align: right;">13/10/7/5/3%</td>
+<td style="text-align: right;">18/15/12/8/5%</td>
+</tr>
+<tr class="odd">
+<td>EBIT económico años 1→10</td>
+<td style="text-align: right;">0→17%</td>
+<td style="text-align: right;">5→24%</td>
+<td style="text-align: right;">8→32%</td>
+</tr>
+<tr class="even">
+<td>WACC</td>
+<td style="text-align: right;">11,5%</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">9%</td>
+</tr>
+<tr class="odd">
+<td>Crecimiento perpetuo / ROIC terminal</td>
+<td style="text-align: right;">2% / 15%</td>
+<td style="text-align: right;">3% / 25%</td>
+<td style="text-align: right;">3,5% / 35%</td>
+</tr>
+</tbody>
+</table></div>
+<p>WACC es una hipótesis nominal de rentabilidad exigida acorde con riesgo de duración, competencia y ejecución, no un beta calculado con falsa precisión. El intervalo 9–11,5% permite probar ese riesgo sin añadir un segundo descuento general. Impuesto normalizado 21%, sin devolver impuestos por pérdidas en el caso adverso. Capex en efectivo 11,5% inicial y 5% terminal; D&amp;A 5% al inicio y 4,5% al final. La inversión neta de contratos desciende aproximadamente de 2–3% de ventas a 0,5–0,6%; el beneficio de circulante está ligado al crecimiento y se extingue con él. El terminal reinvierte NOPAT × g/ROIC. Las adquisiciones históricas ya están pagadas en el balance; no se proyecta una sucesión de adquisiciones gratuitas.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ventas base</th>
+<th style="text-align: right;">EBIT base</th>
+<th style="text-align: right;">FCFF adverso</th>
+<th style="text-align: right;">FCFF base</th>
+<th style="text-align: right;">FCFF favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">7,321</td>
+<td style="text-align: right;">366</td>
+<td style="text-align: right;">-512</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">487</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">8,859</td>
+<td style="text-align: right;">797</td>
+<td style="text-align: right;">-338</td>
+<td style="text-align: right;">483</td>
+<td style="text-align: right;">1,223</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">10,631</td>
+<td style="text-align: right;">1,382</td>
+<td style="text-align: right;">-16</td>
+<td style="text-align: right;">1,109</td>
+<td style="text-align: right;">2,156</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">12,544</td>
+<td style="text-align: right;">2,007</td>
+<td style="text-align: right;">331</td>
+<td style="text-align: right;">1,699</td>
+<td style="text-align: right;">3,229</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">14,551</td>
+<td style="text-align: right;">2,765</td>
+<td style="text-align: right;">700</td>
+<td style="text-align: right;">2,434</td>
+<td style="text-align: right;">4,458</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">16,443</td>
+<td style="text-align: right;">3,453</td>
+<td style="text-align: right;">827</td>
+<td style="text-align: right;">2,925</td>
+<td style="text-align: right;">5,627</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td style="text-align: right;">18,087</td>
+<td style="text-align: right;">3,979</td>
+<td style="text-align: right;">1,022</td>
+<td style="text-align: right;">3,331</td>
+<td style="text-align: right;">6,786</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td style="text-align: right;">19,353</td>
+<td style="text-align: right;">4,451</td>
+<td style="text-align: right;">1,202</td>
+<td style="text-align: right;">3,655</td>
+<td style="text-align: right;">7,584</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td style="text-align: right;">20,321</td>
+<td style="text-align: right;">4,877</td>
+<td style="text-align: right;">1,402</td>
+<td style="text-align: right;">3,915</td>
+<td style="text-align: right;">8,014</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td style="text-align: right;">20,930</td>
+<td style="text-align: right;">5,023</td>
+<td style="text-align: right;">1,552</td>
+<td style="text-align: right;">3,898</td>
+<td style="text-align: right;">8,045</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Resultado</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EV</td>
+<td style="text-align: right;">7,636.65</td>
+<td style="text-align: right;">32,008.70</td>
+<td style="text-align: right;">82,415.85</td>
+</tr>
+<tr class="even">
+<td>Patrimonio</td>
+<td style="text-align: right;">10,436.96</td>
+<td style="text-align: right;">35,559.01</td>
+<td style="text-align: right;">85,966.15</td>
+</tr>
+<tr class="odd">
+<td>Valor por acción</td>
+<td style="text-align: right;">9.94</td>
+<td style="text-align: right;">33.86</td>
+<td style="text-align: right;">81.86</td>
+</tr>
+<tr class="even">
+<td>Peso del terminal</td>
+<td style="text-align: right;">69.40%</td>
+<td style="text-align: right;">61.89%</td>
+<td style="text-align: right;">68.10%</td>
+</tr>
+</tbody>
+</table></div>
+<p>El terminal representa 62% del EV base: hay riesgo de duración significativo. Con los mismos flujos base, WACC 9–11% y g 2,5–3,5% producen aproximadamente <strong>$28,8–41,6</strong>. La banda central $28–45 añade variación razonable de conversión y márgenes; no se obtiene promediando los extremos. Confianza <strong>media en la dirección del diagnóstico y media-baja en el valor puntual</strong>, dada la transformación de costes y la monetización de IA.</p>
+<h2 id="valoración-inversa-combinaciones-no-una-única-tasa-obligatoria">Valoración inversa: combinaciones, no una única tasa obligatoria</h2>
+<p>Las siguientes familias, usando el mismo puente y reinversión, reproducen $244,68. Se resuelve crecimiento años 1–5 y luego se modera a 80/60/40/20% de esa tasa y g terminal. Ninguna es “lo que tiene que pasar”; ilustran compensaciones entre crecimiento, margen, duración y coste de capital.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Combinación</th>
+<th style="text-align: right;">Crecimiento años 1–5</th>
+<th style="text-align: right;">Margen EBIT año 10</th>
+<th style="text-align: right;">WACC / g</th>
+<th style="text-align: right;">Ventas año 5 / año 10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>high_margin_low_rate</td>
+<td style="text-align: right;">38.8%</td>
+<td style="text-align: right;">38%</td>
+<td style="text-align: right;">8.0% / 3.5%</td>
+<td style="text-align: right;">30,894 / 64,282</td>
+</tr>
+<tr class="even">
+<td>strong_execution</td>
+<td style="text-align: right;">48.2%</td>
+<td style="text-align: right;">32%</td>
+<td style="text-align: right;">9.0% / 3.0%</td>
+<td style="text-align: right;">42,831 / 102,983</td>
+</tr>
+<tr class="odd">
+<td>base_margin</td>
+<td style="text-align: right;">57.9%</td>
+<td style="text-align: right;">24%</td>
+<td style="text-align: right;">10.0% / 3.0%</td>
+<td style="text-align: right;">58,845 / 164,133</td>
+</tr>
+</tbody>
+</table></div>
+<p>Incluso la combinación de menor tasa de descuento y margen más generoso exige ventas muy superiores a la trayectoria comercial que hoy está documentada. También podrían sostener el precio crecimientos extraordinarios durante más de diez años, una estructura de capital distinta o negocios aún no conocidos; eso es opcionalidad, no caja demostrada.</p>
+<h2 id="comparables-fechados">Comparables fechados</h2>
+<p>Cierres regulares del 3/11. Capitalización = precio × últimas acciones emitidas publicadas; no las medias diluidas. EV sencillo = capitalización + deuda nominal − efectivo/inversiones; excluye leases operativos coherentemente con gastos de alquiler incluidos. Para CRWD se utiliza el capital emitido del 8/9. FTNT balance 30/9 y TTM a esa fecha; ZS FY julio 2026. No se presentan estos balances como posiciones diarias exactas.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Empresa</th>
+<th style="text-align: right;">Precio</th>
+<th style="text-align: right;">Capitalización</th>
+<th style="text-align: right;">Deuda neta</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">Ventas TTM</th>
+<th style="text-align: right;">EBIT TTM</th>
+<th style="text-align: right;">FCF simple</th>
+<th style="text-align: right;">FCF menos SBC</th>
+<th style="text-align: right;">EV/ventas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CRWD</td>
+<td style="text-align: right;">244.68</td>
+<td style="text-align: right;">251,073</td>
+<td style="text-align: right;">-4,264</td>
+<td style="text-align: right;">246,810</td>
+<td style="text-align: right;">5,396</td>
+<td style="text-align: right;">-133</td>
+<td style="text-align: right;">1,526</td>
+<td style="text-align: right;">282</td>
+<td style="text-align: right;">45.7x</td>
+</tr>
+<tr class="even">
+<td>FTNT</td>
+<td style="text-align: right;">128.11</td>
+<td style="text-align: right;">94,110</td>
+<td style="text-align: right;">-4,818</td>
+<td style="text-align: right;">89,291</td>
+<td style="text-align: right;">7,881</td>
+<td style="text-align: right;">2,599</td>
+<td style="text-align: right;">3,431</td>
+<td style="text-align: right;">3,127</td>
+<td style="text-align: right;">11.3x</td>
+</tr>
+<tr class="odd">
+<td>ZS</td>
+<td style="text-align: right;">225.09</td>
+<td style="text-align: right;">36,702</td>
+<td style="text-align: right;">-1,749</td>
+<td style="text-align: right;">34,953</td>
+<td style="text-align: right;">3,353</td>
+<td style="text-align: right;">-133</td>
+<td style="text-align: right;">779</td>
+<td style="text-align: right;">-43</td>
+<td style="text-align: right;">10.4x</td>
+</tr>
+</tbody>
+</table></div>
+<p>FCF simple = CFO menos capex y software; la última columna de caja resta SBC de resultados, pero no pretende sustituir un FCFF normalizado y no descuenta SBC capitalizada en esta comparación homogénea. FTNT incluye hardware y tiene márgenes GAAP mucho mayores; su FCF TTM también se beneficia de cobros y anticipos. ZS se parece más al software cloud y sigue presentando brecha entre FCF publicado y coste económico del personal. Sus convertibles de 1.725 vencen en 2028 con conversión inicial $439,52, superior al precio: se tratan como deuda, no se añade simultáneamente conversión plena. Ningún múltiplo de estos pares se traslada sin ajustes a CRWD. Con crecimiento de ventas próximo al de ZS, CRWD cotiza alrededor de cuatro veces su EV/ventas; esa prima exige algo más que buen crecimiento corriente.</p>
+<p>Fuentes de comparables: <a href="https://www.sec.gov/Archives/edgar/data/1262039/000126203926000027/ftnt-20260930.htm">FTNT Q3 2026</a>, <a href="https://www.sec.gov/Archives/edgar/data/1262039/000126203926000007/ftnt-20251231.htm">FTNT 2025</a>, <a href="https://www.sec.gov/Archives/edgar/data/1713683/000171368326000157/zs-20260731.htm">ZS 2026</a>, <a href="https://www.marketbeat.com/stocks/NASDAQ/FTNT/chart/">precio FTNT</a>, <a href="https://finance.yahoo.com/quote/ZS/history/">precio ZS</a>. No se utiliza consenso de analistas como prueba de valor: los objetivos difieren en horizonte y tratamiento de SBC y algunos proveedores mezclan cifras anteriores/posteriores al split.</p>
+<h2 id="catalizadores-invalidación-y-puertas-del-plan">Catalizadores, invalidación y puertas del plan</h2>
+<ul>
+<li><strong>Próximo trimestre publicado:</strong> comprobar ARR, cancelaciones/renovación, conversión de Flex, caja, SBC y capex. La fecha oficial debe verificarse antes de una decisión; una estimación de calendario no basta.</li>
+<li><strong>FY28 y FY29:</strong> el objetivo de capex 11–12% y márgenes no GAAP necesita traducirse en caja después del coste económico de acciones. Una caída sostenida de SBC como porcentaje de ventas y crecimiento orgánico alto modificarían el DCF favorablemente.</li>
+<li><strong>Fiddler/Dreadnode y nuevas capacidades:</strong> verificar precio, dilución, calendario y contribución incremental cuando se publiquen. Un anuncio de producto no se capitaliza automáticamente como ingresos asegurados.</li>
+<li><strong>Tesis de negocio debilitada:</strong> incidentes de disponibilidad/seguridad, peor retención, descuentos para renovar, dependencia de financiación al cliente, presión de grandes plataformas o margen cloud inferior al previsto.</li>
+<li><strong>Tesis de valoración invalidada:</strong> evidencia de crecimiento y margen conjunto radicalmente superiores al base, o una caída de precio que cambie la relación valor/riesgo. No se convierte $34 en una orden límite automática.</li>
+</ul>
+<p><strong>Stage 3:</strong> negocio con crecimiento atractivo; recuperación de beneficio económico todavía por demostrar plenamente; balance fuerte; valoración sin margen favorable a $244,68. <strong>Stage 3.5:</strong> no evaluado como señal de entrada, y no subsana la valoración. RSI/retroceso del escáner no sustituyen estructura de precio, catalizador, invalidación y riesgo por posición. Investigación terminada; no aprobación de compra, publicación de certeza inexistente ni operación ejecutada.</p>
+<h2 id="full-dossier-and-model-audit-files">Full dossier and model audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/CRWD.html">Open full CRWD dossier</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/CRWD/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/CRWD/model.json">model.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/CRWD/forecast.csv">forecast.csv</a></li>
+</ul>
+</main></body></html>
