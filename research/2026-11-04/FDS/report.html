@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>FDS | Fundamental Pullback</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">FDS | Fundamental Pullback</h1>
+</header>
+<h1
+id="fds-recuperación-prevista-reinversión-y-capital-posterior-aún-condicionan-el-valor">FDS:
+recuperación prevista, reinversión y capital posterior aún condicionan
+el valor</h1>
+<p><strong>FactSet Research Systems · NYSE · USD · 4 noviembre 2026.
+Corte: 16:10 UTC. Precio de referencia: cierre regular del 3 noviembre,
+332,59 USD.</strong> No se usa el precio intradía del 4 noviembre como
+cierre ni se cambia retrospectivamente el escáner.</p>
+<h2 id="decisión">Decisión</h2>
+<p><strong>Esperar precio o evidencia más firme.</strong> Reconstrucción
+independiente FCFF: <strong>147,32 adverso, 238,53 central y 402,59
+favorable</strong>. La base utiliza el capital de agosto y la guía del
+negocio disponible; no certifica la compañía combinada tras BCC porque
+sus términos económicos y el uso del nuevo crédito no están
+reconstruidos. El favorable no es techo de compra ni previsión
+garantizada. Sin entrada Stage 3.5, sin orden, cantidad ni stop.</p>
+<p>La caja anual mejora y la suscripción conserva buena retención. Pero
+el EBIT cae, normalizar solo reestructuración lo deja casi plano, y
+parte de la mejora de caja procede de remuneración acumulada. No se usa
+el PER de la guía ajustada como sustituto del análisis de caja.</p>
+<p>Se preserva A022: valores exploratorios publicados 198/248/295. Su
+archivo de soporte original no está recuperado; este trabajo <strong>no
+es una reproducción exacta</strong> de aquel código. Cambios de método e
+hipótesis se explican, sin inventar un puente preciso entre archivos
+ausentes.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026063888/fdsq42026earningsrelease.htm">q4</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">k26</a>,
+<a href="https://stockanalysis.com/stocks/fds/history/">price</a>, <a
+href="https://www.factset.com/newsroom/press-release/factset-marks-a-new-era-in-enterprise-real-time-market-data-as-it-acquires-bcc-group-international">bcc</a>.</p>
+<h2 id="calidad-y-evidencia-comercial">1. Calidad y evidencia
+comercial</h2>
+<p>FactSet vende datos y herramientas de trabajo para profesionales
+financieros. Integración con procesos, cobertura y distribución generan
+costes de sustitución, pero compite con otros proveedores, soluciones
+propias de clientes e IA. La demanda de datos verificados puede crecer
+con IA, mientras se intensifica la presión sobre interfaces, precios y
+costes de tecnología. No se asume que la etiqueta IA otorgue un margen
+mayor sin inversión.</p>
+<p>FY2026: ingresos +6,65%; orgánico +6,7%; ASV orgánico +7%. Retención
+anual de ASV superior a 95%, y de clientes 90% frente a 91%. ASV es una
+medida de ingresos futuros de suscripciones actualmente suministradas,
+no caja ya cobrada ni backlog irrevocable. Clientes 9.258 y usuarios
+260.671 al cierre de agosto.</p>
+<p>Guía FY2027: ventas 2.600–2.625 M$, ASV orgánico +5–6,5%, margen GAAP
+31–32%, EPS GAAP 17–17,50; los 34,75–35,25% de margen y 19,25–19,65 de
+EPS son ajustados. El modelo arranca del margen GAAP, sin aplicar el
+ajustado al negocio completo. Se conserva SBC y remuneración
+recurrente.</p>
+<p>El 10-K de octubre declara remediada a agosto la debilidad material
+previa de controles de TI sobre ingresos, cuentas por cobrar y
+diferidos; la auditoría de controles es favorable. No se arrastra como
+si siguiera abierta, pero la remediación no elimina riesgo de futuras
+deficiencias o integración.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">k26</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026063888/fdsq42026earningsrelease.htm">q4</a>.</p>
+<h2 id="historia-reproducible-3fy-4q-y-ttm-comparable">2. Historia
+reproducible: 3FY, 4Q y TTM comparable</h2>
+<p>Millones de USD salvo EPS. Capex incluye software interno
+capitalizado. FCF = CFO − capex; FCF−SBC es un proxy conservador para el
+accionista, no FCFF ni beneficio contable. Como el último corte es
+agosto, el TTM coincide con FY2026 y su comparable con FY2025; no se
+inventan meses adicionales.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto</th>
+<th>EPS</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>2,203.056</td>
+<td>701.299</td>
+<td>537.126</td>
+<td>13.910</td>
+<td>700.338</td>
+<td>85.681</td>
+<td>63.501</td>
+<td>551.156</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>2,321.748</td>
+<td>748.303</td>
+<td>597.040</td>
+<td>15.550</td>
+<td>726.260</td>
+<td>108.806</td>
+<td>61.229</td>
+<td>556.225</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>2,476.256</td>
+<td>699.957</td>
+<td>533.481</td>
+<td>14.570</td>
+<td>822.200</td>
+<td>114.720</td>
+<td>84.099</td>
+<td>623.381</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto</th>
+<th>EPS</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q1 FY2026</td>
+<td>607.621</td>
+<td>192.071</td>
+<td>152.580</td>
+<td>4.060</td>
+<td>121.284</td>
+<td>30.847</td>
+<td>18.457</td>
+<td>71.980</td>
+</tr>
+<tr class="even">
+<td>Q2 FY2026</td>
+<td>611.019</td>
+<td>184.961</td>
+<td>133.056</td>
+<td>3.590</td>
+<td>211.688</td>
+<td>25.997</td>
+<td>20.867</td>
+<td>164.824</td>
+</tr>
+<tr class="odd">
+<td>Q3 FY2026</td>
+<td>622.918</td>
+<td>166.301</td>
+<td>126.718</td>
+<td>3.500</td>
+<td>284.520</td>
+<td>30.475</td>
+<td>22.217</td>
+<td>231.828</td>
+</tr>
+<tr class="even">
+<td>Q4 FY2026</td>
+<td>634.698</td>
+<td>156.624</td>
+<td>121.127</td>
+<td>3.410</td>
+<td>204.708</td>
+<td>27.401</td>
+<td>22.558</td>
+<td>154.749</td>
+</tr>
+</tbody>
+</table>
+<p>TTM agosto 2026 frente a agosto 2025: ingresos 2.476,256 frente a
+2.321,748; EBIT 699,957 frente a 748,303; neto 533,481 frente a 597,040;
+CFO 822,200 frente a 726,260; capex 114,720 frente a 108,806; FCF
+707,480 frente a 617,454; SBC 84,099 frente a 61,229; FCF−SBC 623,381
+frente a 556,225. Los importes Q4 de flujos se reconstruyen restando
+nueve meses al ejercicio completo. EPS Q4 procede del comunicado; los
+EPS trimestrales no deben sumarse para reemplazar el denominador anual
+ponderado.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">k26</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026000223/fds-20251130.htm">q1</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026022873/fds-20260228.htm">q2</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026046549/fds-20260531.htm">q3</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026063888/fdsq42026earningsrelease.htm">q4</a>.</p>
+<h2 id="normalización-cuánto-mejora-realmente">3. Normalización: cuánto
+mejora realmente</h2>
+<p>EBIT FY2026 −6,46%, neto −10,65% y EPS −6,30%. Las recompras reducen
+acciones y amortiguan la caída del EPS, sin crear beneficio operativo.
+Los cuatro EBIT trimestrales bajan de 192,071 a 184,961, 166,301 y
+156,624 M$; la estacionalidad no permite tratar esa secuencia sola como
+pronóstico, pero tampoco respalda una afirmación de aceleración
+operativa actual.</p>
+<p>Añadir únicamente reestructuración/severance 46,2 M$ al EBIT FY2026
+da 746,157, frente a 748,562 en FY2025 añadiendo su cargo comparable
+0,259: −0,32%, prácticamente plano. La normalización no suma CEO
+onboarding 19,521, amortización adquirida 76,205, SBC ni todos los demás
+costes excluidos por la dirección. El ajuste completo de la compañía
+produce EBIT 855,308 frente a 843,432, +1,4%, y margen ajustado baja de
+36,3 a 34,5%. Incluso esa métrica no equivale a gran aceleración.</p>
+<p>FY2025 incluía ganancia de desinversión 23,238 M$ fuera de EBIT.
+Explica parte de la diferencia del beneficio neto, no se resta de EBIT
+otra vez. EBIT GAAP y neto normalizado no son intercambiables.</p>
+<p>CFO +13,21%, FCF +14,58%, FCF−SBC +12,07%. SBC +37,35%. El aumento de
+remuneración acumulada aporta 62,553 M$ al CFO, frente a 35,666 el año
+anterior; no se perpetúa una liberación de caja de esa magnitud.
+Sensibilidad: quitar toda la aportación de 62,553 al proxy deja 560,828
+M<span
+class="math inline">, <em>n</em><em>o</em>623, 381.<em>N</em><em>o</em><em>s</em><em>i</em><em>g</em><em>n</em><em>i</em><em>f</em><em>i</em><em>c</em><em>a</em><em>q</em><em>u</em><em>e</em><em>t</em><em>o</em><em>d</em><em>a</em><em>s</em><em>e</em><em>a</em><em>e</em><em>x</em><em>t</em><em>r</em><em>a</em><em>o</em><em>r</em><em>d</em><em>i</em><em>n</em><em>a</em><em>r</em><em>i</em><em>a</em><em>o</em><em>q</em><em>u</em><em>e</em><em>d</em><em>e</em><em>b</em><em>a</em><em>p</em><em>a</em><em>g</em><em>a</em><em>r</em><em>s</em><em>e</em><em>i</em><em>n</em><em>m</em><em>e</em><em>d</em><em>i</em><em>a</em><em>t</em><em>a</em><em>m</em><em>e</em><em>n</em><em>t</em><em>e</em>; <em>m</em><em>u</em><em>e</em><em>s</em><em>t</em><em>r</em><em>a</em><em>c</em><em>u</em><em>á</em><em>n</em><em>t</em><em>o</em><em>d</em><em>e</em><em>p</em><em>e</em><em>n</em><em>d</em><em>e</em><em>l</em><em>a</em><em>c</em><em>o</em><em>n</em><em>v</em><em>e</em><em>r</em><em>s</em><em>i</em><em>ó</em><em>n</em><em>d</em><em>e</em><em>l</em><em>c</em><em>a</em><em>l</em><em>e</em><em>n</em><em>d</em><em>a</em><em>r</em><em>i</em><em>o</em><em>d</em><em>e</em><em>p</em><em>a</em><em>g</em><em>o</em><em>s</em>.<em>D</em><em>i</em><em>v</em><em>i</em><em>d</em><em>e</em><em>n</em><em>d</em><em>o</em><em>s</em><em>y</em><em>r</em><em>e</em><em>c</em><em>o</em><em>m</em><em>p</em><em>r</em><em>a</em><em>s</em><em>s</em><em>u</em><em>m</em><em>a</em><em>n</em>808, 145<em>M</em></span>,
+por encima de FCF 707,480, antes de otros usos.</p>
+<p>Amortización total de intangibles en el 10-K: 155,335 M$, que incluye
+tecnología interna desarrollada; no toda es adquirida. D&amp;A total
+180,830. La conciliación ajustada elimina 76,205 de amortización
+adquirida; residual de D&amp;A 104,625 = 4,225% de ventas. El modelo
+devuelve 4% y conserva como coste económico una reserva por intangibles
+adquiridos y prudencia adicional. No se confunde residual con
+depreciación física pura ni se omite software del capex.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">k26</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026063888/fdsq42026earningsrelease.htm">q4</a>.</p>
+<h2 id="capital-de-agosto-y-lo-que-todavía-no-sabemos-de-bcc">4. Capital
+de agosto y lo que todavía no sabemos de BCC</h2>
+<p>Puente desde valor de operaciones al equity, M$: | Partida | Importe
+| Tratamiento | | — | — | — | | Caja | 233.339 | No incluye restringida
+| | Inversiones corrientes | 31.993 | Fondos de inversión; no sumar
+money markets otra vez | | Reserva de caja operativa | -100 | Supuesto
+explícito | | Deuda nominal | -1375 | No usar valor contable neto de
+costes como principal | | Contingentes de adquisiciones | -10.201 |
+Saldo fair value; separado de pagos ya realizados | | Impuestos no
+corrientes | -25.502 | Reserva por posiciones previas | | Dividendo
+declarado pendiente | -40.901 | Obligación ya contraída a agosto | |
+Reserva por litigio | -0.65 | Anclada al cargo FY2026; saldo impagado no
+certificado | | Puente total | -1286.9220000000003 | Capital fechado, no
+balance de noviembre certificado |</p>
+<p>La deuda contable es 1.370,022 M<span
+class="math inline">, <em>p</em><em>e</em><em>r</em><em>o</em><em>p</em><em>r</em><em>i</em><em>n</em><em>c</em><em>i</em><em>p</em><em>a</em><em>l</em>1.375.<em>L</em><em>o</em><em>s</em><em>a</em><em>p</em><em>r</em><em>o</em><em>x</em><em>i</em><em>m</em><em>a</em><em>d</em><em>a</em><em>m</em><em>e</em><em>n</em><em>t</em><em>e</em>500<em>M</em></span>
+corrientes se refieren a vencimiento próximo; no se suma ese principal
+otra vez sobre deuda total. Refinanciarlo puede cambiar coste e
+intereses. Intereses ya salen del puente FCFF a través del coste de
+capital y deuda, no se restan de NOPAT.</p>
+<p>Caja restringida 6,296 M$ se excluye. Fondos monetarios 25,008 ya
+están dentro de caja: no se vuelven a sumar como inversión. Fondos de
+inversión corrientes 31,993 sí son separados y se valoran a libro/fair
+value publicado, sujetos a mercado. Leases operativos conservan gasto en
+EBIT y no se descuentan otra vez como deuda. Las cuentas ordinarias de
+impuestos y remuneración se tratan operativamente; la reserva fiscal no
+corriente y dividendo son claims separados. Los 0,650 M$ por litigio se
+anclan al cargo FY2026; no se ha confirmado aquí que todo siga impagado.
+Es una reserva conservadora, no una deuda adicional exacta. No se vuelve
+a restar el pago diferido de adquisición de 15,327 ya pagado en
+FY2026.</p>
+<p><strong>BCC se adquirió después de agosto.</strong> El anuncio del 22
+septiembre no divulga términos y dice no esperar un efecto material en
+resultados; eso no informa el precio pagado ni certifica que el efecto
+en caja sea cero. El 10-K informa además 90 M$ de disposición de
+revolver posterior al balance. No se afirma que esos 90 sean el precio
+de BCC, ni se añade deuda sin mirar la caja recibida y usada.</p>
+<p>El central utiliza el negocio y capital de referencia con limitación
+explícita. Nueva disposición retenida en caja aumenta efectivo y deuda
+por igual: efecto neto cero antes de costes. Si los 90 se gastaron y no
+se atribuye valor operativo adicional, sensibilidad central 236,00. Usos
+netos 150/300 M$ dan 234,31/230,10. Son sensibilidades sin probabilidad,
+no precio supuesto ni límites del acuerdo. Un uso de 100 M$ cambia valor
+2,81 USD por acción. Nuevas acciones, pasivos, costes y contribución de
+BCC no están certificados; por tanto no hay valoración combinada actual
+completa.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">k26</a>,
+<a
+href="https://www.factset.com/newsroom/press-release/factset-marks-a-new-era-in-enterprise-real-time-market-data-as-it-acquires-bcc-group-international">bcc</a>.</p>
+<h2 id="modelo-fcff-y-financiación-del-crecimiento">5. Modelo FCFF y
+financiación del crecimiento</h2>
+<p>Año 1 FY2027: ingresos 2.612,5 M$, punto medio oficial. Años
+siguientes de crecimiento explícito: 5/5/4/4%; transición años 6–10 a
+3%. Márgenes EBIT: 31,5/31,8/32/32,3/32,5%, después 32,5%; impuestos
+20%. El comienzo supone recuperación hacia la guía, no reutiliza el
+margen ajustado. La senda no incluye futuras adquisiciones
+gratuitas.</p>
+<p>D&amp;A económica devuelta 4% de ventas, capex 4,5% incluyendo
+software, ΔNWC 8% del incremento de ventas. Son hipótesis normalizadas.
+NOPAT = EBIT×80%; FCFF = NOPAT−reinversión. En años 1–5 se usa la mayor
+reinversión entre capex−D&amp;A+ΔNWC y NOPAT×crecimiento/ROIC; no se
+combina expansión con capital gratuito. Años 6–10 transitan al
+20/40/60/80/100% hacia la regla económica. En los tres casos domina la
+inversión económica, de modo que esa mezcla no altera sus cifras.</p>
+<p>La regla de reinversión usa crecimiento de ventas, no crecimiento de
+NOPAT: la recuperación de margen se supone sobre capacidad instalada. El
+20% no es un ROIC incremental contable demostrado. ROIC de modelización
+20%, supuesto apoyado solo parcialmente por proxy histórico 18,90%: EBIT
+normalizado 746,157×80% / capital medio
+(patrimonio+deuda−caja/inversiones) de dos cierres. Incluye goodwill,
+pero las recompras y adquisiciones pueden distorsionar el cociente; no
+prueba retorno incremental. Terminal g 3%, reinversión 15% de NOPAT; el
+año 10 ya converge a esa regla.</p>
+<p>WACC 9,1%: Treasury 10 años 4,91% del 2 noviembre; beta
+<strong>asumida</strong> 1,05 y prima mercado <strong>asumida</strong>
+4,5%, coste equity 9,635%. Ponderación objetivo 90/10 equity/deuda,
+coste deuda normalizado 5%, tax 20%: 9,0715%, redondeado 9,1%. No se
+presenta beta/prima como regresión o estimación contemporánea
+verificada. El coste de deuda es hipótesis de refinanciación, no cupón
+de toda la cartera vigente.</p>
+<p>Acciones diluidas Q4 35,572 M constantes. Se mantienen SBC y costes
+recurrentes en margen; no se resta SBC otra vez al FCFF ni se financian
+recompras futuras gratis. Premios antidilutivos o aún sujetos a
+condiciones pueden crear dilución futura; las medias diluidas históricas
+no garantizan que toda esté capturada. Stress adicional de 3% de
+acciones, no pronóstico.</p>
+<p>Convención temporal: el modelo valora flujos de FY2027–36 a fin de
+cada ejercicio con referencia de inicio FY2027; los 238,53 son esa
+convención, no una precisión diaria falsa del 3 noviembre. Rodar dos
+meses el EV manteniendo el mismo puente da 242,55, sensibilidad temporal
+que tampoco certifica capital post-BCC. No se añade caja de
+septiembre/octubre no comprobada.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026063888/fdsq42026earningsrelease.htm">q4</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">k26</a>,
+<a href="https://www.federalreserve.gov/releases/h15/">rf</a>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th>Ventas</th>
+<th>Margen EBIT</th>
+<th>NOPAT</th>
+<th>Reinversión</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>2612.50</td>
+<td>31.50%</td>
+<td>658.35</td>
+<td>181.11</td>
+<td>477.24</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>2743.12</td>
+<td>31.80%</td>
+<td>697.85</td>
+<td>174.46</td>
+<td>523.39</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>2880.28</td>
+<td>32.00%</td>
+<td>737.35</td>
+<td>184.34</td>
+<td>553.01</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>2995.49</td>
+<td>32.30%</td>
+<td>774.04</td>
+<td>154.81</td>
+<td>619.23</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>3115.31</td>
+<td>32.50%</td>
+<td>809.98</td>
+<td>162.00</td>
+<td>647.98</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>3233.69</td>
+<td>32.50%</td>
+<td>840.76</td>
+<td>159.74</td>
+<td>681.02</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>3350.11</td>
+<td>32.50%</td>
+<td>871.03</td>
+<td>156.79</td>
+<td>714.24</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>3464.01</td>
+<td>32.50%</td>
+<td>900.64</td>
+<td>153.11</td>
+<td>747.53</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>3574.86</td>
+<td>32.50%</td>
+<td>929.46</td>
+<td>148.71</td>
+<td>780.75</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>3682.10</td>
+<td>32.50%</td>
+<td>957.35</td>
+<td>143.60</td>
+<td>813.75</td>
+</tr>
+</tbody>
+</table>
+<h2 id="escenarios-y-reverse-del-mismo-modelo">6. Escenarios y reverse
+del mismo modelo</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>USD</th>
+<th>Cambios frente a base</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverso</td>
+<td>147,32</td>
+<td>Crecimiento primeros 5 años −2,5 pp; margen todos 10 años y terminal
+−2,5 pp; WACC10,1%, g2%, ROIC16%</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td>238,53</td>
+<td>Senda descrita; WACC9,1%, g3%, ROIC20%</td>
+</tr>
+<tr class="odd">
+<td>Favorable</td>
+<td>402,59</td>
+<td>Crecimiento primeros 5 años +2,5 pp; margen todos 10 años y terminal
++2 pp; WACC8,1%, g3,5%, ROIC25%</td>
+</tr>
+</tbody>
+</table>
+<p>Terminal descontado: 58.85% del EV. El favorable necesita mejoras
+simultáneas, no una mera vuelta al múltiplo histórico. Impuesto
+18/20/23% da 245,40/238,53/228,23. Con 3% más acciones, 231.58. Relajar
+el guard de inversión al inicio y usar solo capex−D&amp;A+circulante
+produce 258,66, no nueva base.</p>
+<p>Para justificar 332,59 con el modelo base, el reverse exige
+aproximadamente <strong>+7,50 puntos de crecimiento en cada uno de los
+primeros cinco años</strong> manteniendo los demás supuestos.
+Alternativa separada: <strong>+11,09 puntos de margen</strong> en todos
+los años y terminal, hasta 42,59% en FY2027 y 43,59% terminal. No son
+forecasts; la inversión requerida sigue dentro de cada solve y las dos
+condiciones no se imponen juntas.</p>
+<table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th>g</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8.1%</td>
+<td>2.0%</td>
+<td>264.26</td>
+</tr>
+<tr class="even">
+<td>8.1%</td>
+<td>2.5%</td>
+<td>278.08</td>
+</tr>
+<tr class="odd">
+<td>8.1%</td>
+<td>3.0%</td>
+<td>294.54</td>
+</tr>
+<tr class="even">
+<td>8.1%</td>
+<td>3.5%</td>
+<td>314.50</td>
+</tr>
+<tr class="odd">
+<td>8.6%</td>
+<td>2.0%</td>
+<td>240.13</td>
+</tr>
+<tr class="even">
+<td>8.6%</td>
+<td>2.5%</td>
+<td>251.12</td>
+</tr>
+<tr class="odd">
+<td>8.6%</td>
+<td>3.0%</td>
+<td>264.02</td>
+</tr>
+<tr class="even">
+<td>8.6%</td>
+<td>3.5%</td>
+<td>279.38</td>
+</tr>
+<tr class="odd">
+<td>9.1%</td>
+<td>2.0%</td>
+<td>219.44</td>
+</tr>
+<tr class="even">
+<td>9.1%</td>
+<td>2.5%</td>
+<td>228.29</td>
+</tr>
+<tr class="odd">
+<td>9.1%</td>
+<td>3.0%</td>
+<td>238.53</td>
+</tr>
+<tr class="even">
+<td>9.1%</td>
+<td>3.5%</td>
+<td>250.54</td>
+</tr>
+<tr class="odd">
+<td>9.6%</td>
+<td>2.0%</td>
+<td>201.50</td>
+</tr>
+<tr class="even">
+<td>9.6%</td>
+<td>2.5%</td>
+<td>208.69</td>
+</tr>
+<tr class="odd">
+<td>9.6%</td>
+<td>3.0%</td>
+<td>216.92</td>
+</tr>
+<tr class="even">
+<td>9.6%</td>
+<td>3.5%</td>
+<td>226.45</td>
+</tr>
+<tr class="odd">
+<td>10.1%</td>
+<td>2.0%</td>
+<td>185.81</td>
+</tr>
+<tr class="even">
+<td>10.1%</td>
+<td>2.5%</td>
+<td>191.70</td>
+</tr>
+<tr class="odd">
+<td>10.1%</td>
+<td>3.0%</td>
+<td>198.38</td>
+</tr>
+<tr class="even">
+<td>10.1%</td>
+<td>3.5%</td>
+<td>206.02</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>ROIC</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>15%</td>
+<td>219.16</td>
+</tr>
+<tr class="even">
+<td>18%</td>
+<td>232.07</td>
+</tr>
+<tr class="odd">
+<td>20%</td>
+<td>238.53</td>
+</tr>
+<tr class="even">
+<td>25%</td>
+<td>250.16</td>
+</tr>
+<tr class="odd">
+<td>30%</td>
+<td>257.91</td>
+</tr>
+</tbody>
+</table>
+<h2 id="historia-comparación-y-límites-de-continuidad">7. Historia,
+comparación y límites de continuidad</h2>
+<p>A003 usó múltiplos de EPS y descuento a un año; A022 sustituyó esa
+lectura por comprobaciones operativas de diez años, pero las describió
+expresamente como exploratorias. Sus valores 198/248/295 siguen como
+historia, no como certificado actual. Del A022 se recuperan margen base
+31,5%, tasa de descuento 9% y criterios de reposición descritos solo
+parcialmente; no toda la senda numérica. No se fabrica un modelo
+anterior para que sus resultados coincidan.</p>
+<p>El nuevo 238,53 frente a 248 difiere por horizonte/modelo
+explícitamente reconstruidos, obligación de financiar crecimiento desde
+año 1, hipótesis de coste de capital, software/amortización, shares Q4 y
+reservas de capital. Los estados FY2026 ya eran conocidos en A022: no se
+atribuye el cambio a resultados trimestrales nuevos. El 10-K del 20
+octubre sí aporta evidencia adicional de controles y crédito posterior.
+El precio de mercado cambia la decisión relativa al valor, no las
+entradas del DCF para alcanzar una cifra deseada.</p>
+<h2 id="par-homogéneo-msci-como-contraste-no-sustituto">8. Par
+homogéneo: MSCI como contraste, no sustituto</h2>
+<p>Mismo dólar y US GAAP, usando precio regular del 3 noviembre y
+acciones diluidas del último trimestre como proxy de equity. FDS: FY/TTM
+agosto; MSCI: TTM septiembre. Diferencia de un mes y mezcla económica
+declaradas: MSCI tiene índices y royalties ligados a activos, con
+márgenes mucho mayores; FDS depende más de suscripciones, usuarios y
+workflows. No se traslada automáticamente la prima de MSCI.</p>
+<p>MSCI neto TTM = 1.202,305 + 1.099,0 − 917,6 = 1.383,705 M$. CFO =
+1.588,446 + 1.113,7 − 1.087,3 = 1.614,846. Capex físico 39,619 más
+software capitalizado 120,542 = 160,161. FCF 1.454,685; SBC 126,143;
+proxy después de SBC 1.328,542. Cifras trimestrales MSCI redondeadas a
+décima, por lo que los ratios son aproximados. FDS incluye software
+dentro de su capex 114,720; no se omite en MSCI para favorecer al par. |
+Métrica | FDS | MSCI | | — | — | — | | Precio 3 noviembre | 332,59 |
+639,78 | | Acciones proxy, M | 35,572 | 72,3 | | PER GAAP | 22.18x |
+33.43x | | Precio/FCF | 16.72x | 31.80x | | Precio/(FCF−SBC) | 18.98x |
+34.82x |</p>
+<p>FDS tiene descuento relativo frente a MSCI, no prueba de
+infravaloración absoluta. Los beneficios y flujos son GAAP/efectivos, no
+normalizaciones idénticas de impuestos, inversión y otras ganancias.
+Recompras, deuda, intensidad de índice/licencias y distinta rentabilidad
+pueden justificar parte de la diferencia. No se usa una media de
+múltiplos para fijar precio objetivo; el FCFF sigue siendo la referencia
+propia.</p>
+<p>Fuentes: <a href="https://ir.msci.com/node/22986/pdf">msci_q3</a>, <a
+href="https://www.sec.gov/Archives/edgar/data/1408198/000140819826000011/msci-20251231.htm">msci_k25</a>,
+<a href="https://stockanalysis.com/stocks/msci/history/">msci_price</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026063888/fdsq42026earningsrelease.htm">q4</a>,
+<a href="https://stockanalysis.com/stocks/fds/history/">price</a>.</p>
+<h2 id="qué-confirma-o-debilita-la-tesis">9. Qué confirma o debilita la
+tesis</h2>
+<p>Confirmaría recuperación: ASV orgánico dentro de guía, retención
+estable, margen GAAP recuperándose después de costes recurrentes, caja
+que no dependa permanentemente de mayores devengos y retorno razonable
+sobre BCC/LiquidityBook/Irwin. Debilitarían la tesis: pérdida sostenida
+de clientes, menor valor económico por usuario, inversión en IA sin
+precios o productividad que la paguen, restructuraciones repetidas y
+compras que consuman caja sin retorno suficiente.</p>
+<p>Catalizador oficial: Investor Day el 10 de noviembre de 2026, 09:00
+ET; materiales previstos a las 08:30 ET. No es una publicación de
+resultados trimestrales.</p>
+<p>Próximo paso concreto: conciliar términos BCC, caja/uso del revolver
+posterior, claims actuales y margen/caja del siguiente trimestre. No se
+atribuye a una fecha estimada por terceros una confirmación oficial de
+resultados. Antes de cualquier posible operación, validar próximo
+anuncio, exclusión semanal, técnica, exposición y riesgo.
+<strong>Research-grade condicionado; no capital combinado certificado ni
+Stage 3.5 aprobado.</strong></p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">k26</a>,
+<a
+href="https://www.factset.com/newsroom/press-release/factset-marks-a-new-era-in-enterprise-real-time-market-data-as-it-acquires-bcc-group-international">bcc</a>,
+<a
+href="https://factset.gcs-web.com/news-releases/news-release-details/factset-marks-new-era-enterprise-real-time-market-data-it">bcc_mirror</a>,
+<a
+href="https://investor.factset.com/news-releases/news-release-details/factset-host-investor-day-november-10-2026">investor_day</a>.</p>
+<h2 id="evidencia-exacta-para-pros-y-contras">Evidencia exacta para pros
+y contras</h2>
+<h3 id="a-favor">A favor</h3>
+<ul>
+<li>Retención de ASV superior a 95% y crecimiento orgánico de ingresos
+de 6,7% sostienen la calidad de suscripción.</li>
+<li>FCF menos SBC crece 12,07% y la debilidad material anterior de
+controles está remediada según el 10-K.</li>
+<li>FDS cotiza a múltiplos GAAP y de caja menores que MSCI, con software
+incluido en ambos capex.</li>
+</ul>
+<h3 id="en-contra">En contra</h3>
+<ul>
+<li>Añadiendo solo reestructuración, EBIT queda prácticamente plano; la
+recuperación de margen aún es una hipótesis de guía.</li>
+<li>La caja incluye 62,553 M$ de aportación de remuneración acumulada;
+no se perpetúa esa financiación.</li>
+<li>El central de 238,53 no respalda 332,59; BCC y el uso del revolver
+posterior impiden certificar capital combinado actual.</li>
+</ul>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>ASV retention above 95% and organic revenue growth of 6.7% support
+subscription quality.</li>
+<li>FCF less SBC grew 12.07%, and the prior material control weakness is
+remediated according to the 10-K.</li>
+<li>FDS trades at lower GAAP earnings and cash multiples than MSCI,
+including software in both capex figures.</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>Adding back only restructuring leaves EBIT roughly flat; margin
+recovery remains a guidance-based assumption.</li>
+<li>Cash flow includes a $62.553m benefit from accrued compensation;
+that funding is not perpetuated.</li>
+<li>The $238.53 central case does not support $332.59; BCC and
+subsequent revolver uses prevent current combined-capital
+certification.</li>
+</ul>
+</body>
+</html>

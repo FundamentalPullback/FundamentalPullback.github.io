@@ -1,0 +1,94 @@
+{
+  "wacc_calibration": {
+    "risk_free": 0.0495,
+    "risk_free_date": "2026-11-03",
+    "erp": 0.0441,
+    "erp_date": "2026-11-01",
+    "observed_beta_provider": 0.75,
+    "beta_source": "https://stockanalysis.com/stocks/rhi/statistics/",
+    "beta_observed_on": "2026-11-04",
+    "normalized_beta_assumption": 1.2,
+    "provider_beta_cost_equity": 0.08257500000000001,
+    "normalized_beta_cost_equity": 0.10242000000000001,
+    "chosen_wacc_no_financial_debt": 0.105,
+    "provider_beta_same_cashflows_value": 37.21358046171772,
+    "normalized_beta_value": 27.834035193154023
+  },
+  "robustness": {
+    "initial_terminal_roic_0.12": 24.864849423886373,
+    "initial_terminal_roic_0.1294": 25.42618418276493,
+    "initial_terminal_roic_0.15": 26.410311504713707,
+    "initial_terminal_roic_0.18": 27.159338285778816,
+    "initial_terminal_roic_0.23": 27.313972332223663,
+    "cash_reserve_0": 28.422118403437793,
+    "cash_reserve_100": 27.44509052712268,
+    "cash_reserve_150": 26.956576588965127,
+    "cash_reserve_200": 26.46806265080757,
+    "tax_0.3": 28.125750627306772,
+    "tax_0.33": 26.956576588965127,
+    "tax_0.37": 25.37139224212889,
+    "illustrative_legal_cash_loss_NOT_FORECAST_50": 26.46806265080757,
+    "illustrative_legal_cash_loss_NOT_FORECAST_100": 25.979548712650015,
+    "illustrative_legal_cash_loss_NOT_FORECAST_200": 25.002520836334906,
+    "ongoing_margin_cost_NOT_FORECAST_0.0025": 25.93230686346414,
+    "ongoing_margin_cost_NOT_FORECAST_0.005": 24.895958176860983,
+    "ongoing_margin_cost_NOT_FORECAST_0.01": 22.56120827646249,
+    "share_proxy_100.94": 27.333451908925127,
+    "share_proxy_102.350326": 26.95681336361256,
+    "share_proxy_102.351225": 26.956576588965127,
+    "share_proxy_103.351225": 26.6957516535184,
+    "charge_all_positive_nopat_growth_margin_recovery": 21.557855431221117,
+    "no_stub_same_calendar": 26.771640733607132,
+    "no_stub_one_year_discount_NOT_BASE": 27.16604398671763,
+    "trust_surplus_not_base": 27.116897093189674
+  },
+  "reinvestment_diagnostic": {
+    "first_year_positive_nopat_change": 58.058282175000016,
+    "base_reinvestment": 56.77345665,
+    "implied_delta_nopat_over_reinvestment": 1.0226307433229014,
+    "stated_roic_is_revenue_growth_proxy_not_implied_margin_return": true,
+    "all_positive_nopat_reinvestment_first_year": 322.54601208333344
+  },
+  "reverse": {
+    "constant_margin_at_growth5pct": {
+      "required": 0.10454610789144489,
+      "value": 43.729999999999976
+    },
+    "constant_growth_at_margin7pct": {
+      "required": 0.18516870496626125,
+      "value": 43.73
+    },
+    "joint": [
+      {
+        "margin": 0.065,
+        "required": 0.20941743150177966,
+        "value": 43.73
+      },
+      {
+        "margin": 0.075,
+        "required": 0.16256562350466097,
+        "value": 43.73000000000001
+      },
+      {
+        "margin": 0.085,
+        "required": 0.12104205111315214,
+        "value": 43.72999999999998
+      },
+      {
+        "margin": 0.095,
+        "required": 0.08328449682923778,
+        "value": 43.72999999999997
+      }
+    ]
+  },
+  "legacy_bridge": {
+    "A109_had_valuation": false,
+    "old_9m_before_financing_cash2026": 47.147,
+    "old_9m_before_financing_cash2025": 74.811,
+    "current_9m_after_capex_trust_before_acquisitions2025": 85.533,
+    "prior_acquisition_cash": 10.722,
+    "identity": 74.811,
+    "no_change_to_original_conclusion": "Operating recovery incomplete; newly modeled scenarios do not certify a normalized current run rate."
+  },
+  "base_terminal_weight": 0.48524363565457
+}

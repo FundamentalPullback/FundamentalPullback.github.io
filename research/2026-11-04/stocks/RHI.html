@@ -1,0 +1,443 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RHI · Stage 3 investigado · recuperación y litigio condicionados · Esperar precio</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/RHI">← RHI profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Stage 3 investigado · recuperación y litigio condicionados</span><span class="tag deferred">Esperar precio</span><span class="tag">No entry approved</span></div><h1 id="rhi-a201-investigación-del-4-de-noviembre-de-2026">RHI · A201 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Investigación condicionada: central 26,96 USD frente al cierre 43,73; escenarios 10,59–49,11 antes de la contingencia Gentry no cuantificada. Mejoría Q3 aún no confirma recuperación sostenible; esperar precio o evidencia. Sin entrada.</strong></p>
+<p>Conditional research: central $26.96 versus $43.73 close; scenarios $10.59–49.11 before unquantified Gentry litigation. Q3 improvement does not yet confirm sustainable recovery; wait for price or evidence. No entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/RHI.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-28, 41.87 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 43.73 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: Valoración 2026-11-04; cierre de referencia 2026-11-03.</p>
+<p>Se conserva la revisión anterior y la fila de referencia del autor del 28 de octubre, 41,87 USD. Existe además una observación posterior en el registro: 29 de octubre, 42,80 USD. Ninguna sustituye el cierre regular del 3 de noviembre, 43,73 USD. No se modifica ninguna sesión de escáner.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="rhi-recuperación-inicial-caja-y-riesgos-aún-por-confirmar">RHI: recuperación inicial, caja y riesgos aún por confirmar</h1>
+<p><strong>Investigación propia de 4 de noviembre de 2026. Corte de precio: cierre regular del 3 de noviembre. Balance: 30 de septiembre. Estado: investigación revisada independientemente, con límites declarados. Sin aprobación de entrada.</strong> Millones USD salvo precios, EPS y porcentajes.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>A 43,73 USD, Robert Half exige una recuperación considerable. El escenario adverso/base/favorable es <strong>10,59 / 26,96 / 49,11 USD</strong>, antes de una contingencia judicial que el emisor no puede cuantificar. La recuperación del negocio puede ser real sin que exista un descuento suficiente para comprar. Se mantiene observación y espera de precio/evidencia; no se modifica ningún techo, orden, tamaño o stop.</p>
+<p>El caso central ya supone recuperación: crecimiento inicial del 5%, margen normalizado que sube del 3,6% proyectado para 2026 al 7% y luego converge al 6,5%. No es una extrapolación del último trimestre ni un beneficio sostenible demostrado. Al exigir inversión por toda la mejora del NOPAT, incluida recuperación del margen, el valor cae a 21,56. Con beta histórica y menor descuento, sube a 37,21. Ninguno se confunde con una aprobación.</p>
+<p>El A109 era una normalización parcial, sin DCF. Este informe añade historia completa, inversión, escenarios, comparables y puente de capital. No hay una antigua valoración que promediar o un precio objetivo previo que justificar. La fila original del escáner, 41,87 USD del 28 de octubre, se conserva separada del cierre actual; también existe una fila anterior del 27 a 41,96.</p>
+<h2 id="qué-está-mejorando-y-qué-sigue-débil">1. Qué está mejorando y qué sigue débil</h2>
+<p>Robert Half combina contratación temporal especializada, selección permanente y Protiviti, consultoría de riesgos, auditoría y tecnología. La red de relaciones, evaluación de candidatos, conocimiento sectorial e integración entre contratación y consultoría pueden aportar valor. La contratación sigue siendo sensible al ciclo y a decisiones discrecionales de clientes. La mayor parte del negocio no está respaldada por contratos largos que garanticen el beneficio futuro. La IA puede ayudar a seleccionar y verificar capacidades, pero también cambiar la demanda y la intermediación. [S1/S2]</p>
+<p>En Q3, las ventas fueron 1.359,297 frente a 1.354,477, +0,36%. El EBIT sin distorsión de rendimientos del trust aumentó de 61,209 a 72,552, +18,5%, y el margen del 4,52% al 5,34%. Es una señal positiva. En nueve meses, ventas −1,97% y EBIT normalizado apenas +0,50%; el TTM operativo aún cae 12,45%. La mejora trimestral no demuestra todavía una recuperación de ciclo completa. [S1/S2]</p>
+<p>La contratación temporal registró 758,830 de ventas trimestrales, selección permanente 116,946 y Protiviti 483,521. La primera y la segunda mejoran, pero Protiviti cayó desde 498,129. En nueve meses, las horas trabajadas de contratación temporal bajaron 3,7% y las tarifas aumentaron 2%; en Protiviti la caída de horas también fue importante. No se atribuye toda la mejora de ingresos a volumen sostenible ni se extrapola un avance de tarifas aislado. [S1/S2]</p>
+<p>La guía Q4 es ventas 1.285–1.385 y EPS 0,36–0,46; punto medio 1.335 y 0,41. El margen operativo normalizado guiado es 3–5%, tasa fiscal 31–33%, acciones diluidas 100,5–101,5. La dirección advierte que en Q1 los márgenes consolidados suelen bajar 1–2 puntos respecto a Q4 por estacionalidad de Protiviti y salarios, y espera impuesto 36–40% para Q1 2027. La lectura favorable de las primeras semanas de octubre no es guía anual. [S3]</p>
+<h2 id="conciliación-de-beneficios-no-confundir-mercado-financiero-con-operación">2. Conciliación de beneficios: no confundir mercado financiero con operación</h2>
+<p>Los participantes eligen inversiones para sus planes de compensación diferida. Cuando esas inversiones suben, el pasivo y el coste de compensación suben dentro de gastos operativos, mientras el ingreso financiero compensatorio aparece debajo del EBIT. Si bajan, sucede lo contrario. El efecto neto en beneficio atribuible es nulo, pero distorsiona la lectura del EBIT reportado. [S1]</p>
+<p>EBIT normalizado = EBIT reportado + ingreso firmado de inversiones del trust. En Q3 2026: 74,848 − pérdida 2,296 = 72,552; en Q3 2025: 13,588 + ganancia 47,621 = 61,209. En nueve meses: 49,460 + 90,355 = 139,815. No se eliminan remuneraciones laborales recurrentes ni se vuelve a añadir este ajuste al beneficio neto. El enorme salto del EBIT GAAP trimestral es, por tanto, engañoso como indicador aislado de recuperación.</p>
+<p>La contracción histórica es real incluso después de ese ajuste: ventas FY2023/24/25 de 6.392,517 / 5.795,837 / 5.378,506 y EBIT normalizado 552,610 / 335,553 / 182,553. El margen de 2023 era aproximadamente 8,64%; usarlo como margen sostenible de hoy sin transición convertiría una hipótesis de recuperación en dato observado. [S4]</p>
+<h3 id="historia-de-resultados-y-caja">Historia de resultados y caja</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT normalizado</th>
+<th style="text-align: right;">Beneficio neto</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Proxy propietario después de SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">6.392,52</td>
+<td style="text-align: right;">552,61</td>
+<td style="text-align: right;">411,15</td>
+<td style="text-align: right;">636,88</td>
+<td style="text-align: right;">464,53</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">5.795,84</td>
+<td style="text-align: right;">335,55</td>
+<td style="text-align: right;">251,60</td>
+<td style="text-align: right;">410,47</td>
+<td style="text-align: right;">260,17</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">5.378,51</td>
+<td style="text-align: right;">182,55</td>
+<td style="text-align: right;">132,99</td>
+<td style="text-align: right;">319,96</td>
+<td style="text-align: right;">185,57</td>
+</tr>
+<tr class="even">
+<td>Q42025</td>
+<td style="text-align: right;">1.302,38</td>
+<td style="text-align: right;">43,44</td>
+<td style="text-align: right;">31,76</td>
+<td style="text-align: right;">182,53</td>
+<td style="text-align: right;">145,19</td>
+</tr>
+<tr class="odd">
+<td>Q12026</td>
+<td style="text-align: right;">1.300,18</td>
+<td style="text-align: right;">28,68</td>
+<td style="text-align: right;">13,79</td>
+<td style="text-align: right;">-112,34</td>
+<td style="text-align: right;">-126,88</td>
+</tr>
+<tr class="even">
+<td>Q22026</td>
+<td style="text-align: right;">1.336,37</td>
+<td style="text-align: right;">38,58</td>
+<td style="text-align: right;">26,32</td>
+<td style="text-align: right;">108,70</td>
+<td style="text-align: right;">94,30</td>
+</tr>
+<tr class="odd">
+<td>Q32026</td>
+<td style="text-align: right;">1.359,30</td>
+<td style="text-align: right;">72,55</td>
+<td style="text-align: right;">49,87</td>
+<td style="text-align: right;">66,18</td>
+<td style="text-align: right;">44,44</td>
+</tr>
+<tr class="even">
+<td>TTM2025-09</td>
+<td style="text-align: right;">5.458,50</td>
+<td style="text-align: right;">209,32</td>
+<td style="text-align: right;">155,52</td>
+<td style="text-align: right;">292,26</td>
+<td style="text-align: right;">150,87</td>
+</tr>
+<tr class="odd">
+<td>TTM2026-09</td>
+<td style="text-align: right;">5.298,22</td>
+<td style="text-align: right;">183,25</td>
+<td style="text-align: right;">121,73</td>
+<td style="text-align: right;">245,07</td>
+<td style="text-align: right;">157,04</td>
+</tr>
+</tbody>
+</table></div>
+<p>El TTM tiene ventas 5.298,220, EBIT GAAP 71,911 y normalizado 183,254, beneficio neto 121,734 y CFO 245,069. Frente al TTM anterior, ventas −2,94%, beneficio neto −21,73% y CFO −16,15%. En Q1/Q2/Q3 2026, EBIT normalizado 28,684 / 38,579 / 72,552 frente a GAAP 36,911 / −62,299 / 74,848. La pérdida GAAP de Q2 no es una pérdida operativa normalizada de la misma magnitud. [S1/S4/S5/S6]</p>
+<p>El EPS Q4 2025 de 0,32 y las acciones diluidas 99,669 proceden directamente del comunicado, no de restar EPS anual menos nueve meses. Los flujos trimestrales sí se obtienen por diferencias acumuladas. No se mezclan promedios diluidos de periodos diferentes para inventar un EPS TTM oficial. [S7]</p>
+<h2 id="caja-sostenible-desarrollo-y-distribuciones">3. Caja sostenible, desarrollo y distribuciones</h2>
+<p>CFO TTM 245,069 − capex 35,841 = FCF convencional 209,228. Tras compras y reembolsos netos de inversiones del plan, resulta 206,597; después de SBC 49,552, el proxy económico para propietarios es <strong>157,045</strong>. La SBC es un coste económico, no un segundo pago literal de caja. Esa medida mejora 4,10% por menor capex/SBC, aunque el beneficio normalizado cae. No es prueba de recuperación del beneficio.</p>
+<p>En nueve meses, CFO 62,536 frente a 137,432. Después de capex y financiación neta del trust, caja 47,147 frente a 85,533; después de SBC, solo 11,858 frente a 40,380. Q4 aporta estacionalmente mucha caja al TTM. El importe 74,811 del A109 es el 85,533 de 2025 menos adquisiciones 10,722; ambas definiciones concilian. No se presenta esa diferencia de perímetro como una corrección de estados publicados. [S1/S4]</p>
+<p>La nube no es inversión gratuita: gastos de implementación capitalizados TTM 30,456 frente a 27,166; amortización 23,405 frente a 31,742. La capitalización ya está en CFO, por lo que no se resta otra vez al proxy anterior. En un FCFF desde EBIT, se añade esa amortización y se financia el desembolso dentro del capex total. El descenso de amortización puede mejorar EBIT mientras aumenta el gasto de desarrollo en caja. [S1/S4]</p>
+<p>Dividendos pagados en nueve meses: 179,841, más 6,770 de recompras, frente a 47,147 antes de esas distribuciones. La caja corporativa baja de 464,435 a 321,291. No hay deuda financiera en el balance, pero distribuir más que la caja del periodo no equivale a crear valor y no justifica perpetuar la recompra. El DCF no reduce automáticamente las acciones futuras ni suma dividendos aparte de los flujos a propietarios. [S1]</p>
+<h2 id="capital-trusts-y-acciones">4. Capital, trusts y acciones</h2>
+<p>La caja corporativa es 321,291. El caso central reserva 150 para operar y añade solo 171,291 al valor empresarial. La reserva es una hipótesis explícita, aproximadamente diez días de ventas anuales, no un requisito regulatorio medido. A reserva 100/200, el valor pasa a 27,45/26,47. Considerar toda la caja excedentaria elevaría el valor a 28,42, sin solucionar el descuento al precio.</p>
+<p>Los activos del trust, 844,170, respaldan obligaciones 827,761 y se mantienen para el beneficio de los empleados. No se suman como caja corporativa y no se deduce de nuevo todo el pasivo una vez excluidos los activos emparejados. Tampoco se da crédito al superávit 16,409: reconocerlo íntegramente sumaría aproximadamente 0,16 por acción, sin probar disponibilidad jurídica o económica. [S1]</p>
+<p>Arrendamientos operativos: 64,531 corrientes y 179,441 no corrientes. Se conserva el gasto de alquiler en EBIT y CFO, y no se añaden esos 243,972 a deuda financiera. Algunos agregadores los llaman deuda; trasladar su EV sin ajustar el gasto operativo produciría una convención distinta. El modelo no capitaliza alquileres ni duplica su principal.</p>
+<p>El balance muestra 102,350326 millones de acciones emitidas/en circulación; la portada declara 102,351225, una diferencia de 899 acciones que no altera materialmente el resultado. Se usa la cifra mayor como proxy de capital fechado. Las acciones diluidas medias Q3 son 100,940: 99,963 básicas más 0,977 de dilución potencial. Las restringidas ya emitidas no se añaden otra vez al recuento actual. No se afirma que el proxy sea un recuento diluido exacto de noviembre. A 100,940 o 103,351225, el valor sería 27,33 o 26,70. [S1]</p>
+<h2 id="riesgo-judicial-no-cuantificado">5. Riesgo judicial no cuantificado</h2>
+<p>El 10-Q describe Gentry: una decisión provisional de responsabilidad consideró compensables determinadas entrevistas y atribuyó responsabilidad por salarios, daños liquidados y algunas sanciones PAGA. No es una sentencia final de importe conocido. Las audiencias sobre medidas cautelares están fijadas para el 11 de diciembre de 2026 y la fase de daños para el 3 de mayo de 2027. La compañía pretende defenderse y recurrir; declara que no puede estimar un rango de pérdida y no ha provisionado importe. [S1]</p>
+<p>Dorff añade otro procedimiento: denegada la certificación de clase, quedan reclamaciones individuales y PAGA, con juicio individual sobre clasificación previsto para el 11 de enero de 2027 y otras reclamaciones para julio. No se convierte ausencia de provisión en ausencia de riesgo. Tampoco se inventa una probabilidad, una condena esperada o asesoramiento jurídico.</p>
+<p>Los valores publicados son <strong>anteriores a esa contingencia no cuantificada</strong>. Sensibilidades ilustrativas de salida única de 50/100/200 reducen el valor a 26,47/25,98/25,00. No son estimaciones de daños. Un mayor coste operativo permanente de 0,25/0,5/1 punto de ventas reduce a 25,93/24,90/22,56. Una reclamación puede afectar más que un pago puntual si cambia la economía del servicio; ningún stress garantiza cubrir todos los desenlaces.</p>
+<h2 id="modelo-de-recuperación-y-reinversión">6. Modelo de recuperación y reinversión</h2>
+<p>Punto de partida FY2026 proyectado: nueve meses reportados 3.995,841 más punto medio Q4 1.335 = ventas 5.330,841. EBIT normalizado 139,815 más 4% de ese Q4 = 193,215. No son resultados anuales publicados. No se añade otra vez crecimiento de todo el año sobre un TTM que ya incorpora Q3.</p>
+<p>Base FY2027–31: ventas +5/+5/+4/+3,5/+3%; márgenes normalizados 5/6/6,5/7/7%; impuesto 33%. Durante los siguientes cinco años crecimiento converge a 2,5% y margen a 6,5%. El margen final queda por debajo de 2023, pero muy por encima del nivel reciente. Es hipótesis de recuperación, no valoración de una rentabilidad estable demostrada.</p>
+<p>SBC, alquileres, costes laborales ordinarios y amortización de nube permanecen en EBIT. D&amp;A ordinaria proyectada 1,3% de ventas; capex PPE+nube 1,4%; presupuesto de adquisiciones 0,2%; circulante 15% del aumento de ventas. No se financia el crecimiento con liberación perpetua de circulante ni con descenso ilimitado de inversión.</p>
+<p>Reinversión neta central = máximo entre capex+nube+adquisiciones+circulante menos D&amp;A y NOPAT×crecimiento de ventas/ROIC18%. El retorno del 18% es un proxy de inversión asociada al crecimiento de ingresos, no el retorno marginal total cuando mejora el margen. La recuperación del margen central supone aprovechar capacidad y costes existentes. En el primer año, ΔNOPAT 58,06 y reinversión 56,77 implican un retorno incremental contable de aproximadamente 102%, no 18%.</p>
+<p>Por eso se incluye un stress material: cobrar ΔNOPAT positivo/18% exige 322,55 de inversión en el primer año y reduce el valor de 26,96 a <strong>21,56</strong>. La diferencia no se oculta ni se llama irrelevante. El central solo es defendible como recuperación con capacidad existente; si el negocio necesita financiar esa mejora como crecimiento nuevo, la referencia inferior es más pertinente. Ninguna de las dos ofrece descuento frente a 43,73.</p>
+<p>ROIC histórico diagnóstico: equity + deuda financiera − caja − activos trust + obligaciones trust, con goodwill y sin capitalizar alquileres. Capital medio septiembre 2025/26: 891,108. A impuesto analítico 30%, NOPAT128,278 y ROIC14,40%; reservando 100/200 de caja operativa baja a 12,94%/11,76%. Usar el impuesto efectivo da 12,93% sin reserva. El ROIC18% central supone mejora; no está certificado por el historial. El terminal emplea 15%, financiando el mayor entre NOPAT×g/ROIC y el piso de inversión operativa.</p>
+<p>Adverso: margen 3–4% y final 3,5%, crecimiento 0–2%, impuesto 35%, WACC11,5%, g 2%, ROIC12%. Favorable: crecimiento 8% inicial, margen hasta 9% y final 8,5%, impuesto 30%, WACC9,5%, g 3%, ROIC23% inicial/20% final. El favorable se acerca al margen de 2023 y exige recuperación y financiación favorables simultáneamente, no una repetición asegurada del pico.</p>
+<h3 id="proyección-central">Proyección central</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT normalizado</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">D&amp;A</th>
+<th style="text-align: right;">Reinversión neta</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">5.597,38</td>
+<td style="text-align: right;">279,87</td>
+<td style="text-align: right;">187,51</td>
+<td style="text-align: right;">72,77</td>
+<td style="text-align: right;">56,77</td>
+<td style="text-align: right;">130,74</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">5.877,25</td>
+<td style="text-align: right;">352,64</td>
+<td style="text-align: right;">236,27</td>
+<td style="text-align: right;">76,40</td>
+<td style="text-align: right;">65,63</td>
+<td style="text-align: right;">170,64</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">6.112,34</td>
+<td style="text-align: right;">397,30</td>
+<td style="text-align: right;">266,19</td>
+<td style="text-align: right;">79,46</td>
+<td style="text-align: right;">59,15</td>
+<td style="text-align: right;">207,04</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">6.326,27</td>
+<td style="text-align: right;">442,84</td>
+<td style="text-align: right;">296,70</td>
+<td style="text-align: right;">82,24</td>
+<td style="text-align: right;">57,69</td>
+<td style="text-align: right;">239,01</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">6.516,06</td>
+<td style="text-align: right;">456,12</td>
+<td style="text-align: right;">305,60</td>
+<td style="text-align: right;">84,71</td>
+<td style="text-align: right;">50,93</td>
+<td style="text-align: right;">254,67</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">6.705,03</td>
+<td style="text-align: right;">462,65</td>
+<td style="text-align: right;">309,97</td>
+<td style="text-align: right;">87,17</td>
+<td style="text-align: right;">49,94</td>
+<td style="text-align: right;">260,03</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">6.892,77</td>
+<td style="text-align: right;">468,71</td>
+<td style="text-align: right;">314,03</td>
+<td style="text-align: right;">89,61</td>
+<td style="text-align: right;">48,85</td>
+<td style="text-align: right;">265,18</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">7.078,87</td>
+<td style="text-align: right;">474,28</td>
+<td style="text-align: right;">317,77</td>
+<td style="text-align: right;">92,03</td>
+<td style="text-align: right;">49,15</td>
+<td style="text-align: right;">268,62</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">7.262,92</td>
+<td style="text-align: right;">479,35</td>
+<td style="text-align: right;">321,17</td>
+<td style="text-align: right;">94,42</td>
+<td style="text-align: right;">49,40</td>
+<td style="text-align: right;">271,77</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">7.444,50</td>
+<td style="text-align: right;">483,89</td>
+<td style="text-align: right;">324,21</td>
+<td style="text-align: right;">96,78</td>
+<td style="text-align: right;">49,57</td>
+<td style="text-align: right;">274,64</td>
+</tr>
+</tbody>
+</table></div>
+<p>FCFF = NOPAT − reinversión neta. La D&amp;A mostrada explica el piso de reinversión; no se suma otra vez a esa identidad. EV 2.587,75; caja excedentaria 171,291; equity previo a contingencia 2.759,04. Terminal 48,52% del EV.</p>
+<h2 id="descuento-calendario-y-sensibilidad">7. Descuento, calendario y sensibilidad</h2>
+<p>Treasury nominal diez años del 3 de noviembre 4,95%; prima implícita NYU del 1 de noviembre 4,41%; beta normalizada supuesta 1,20. Sin deuda financiera, el coste patrimonial resultante es 10,242%, redondeado a WACC10,5%. La prima NYU publicada emplea Treasury 5,29% en su propia estimación mensual. Combinarla con Treasury 4,95% del 3 de noviembre es una calibración híbrida temporal explícita, no una prima implícita recalculada al mismo día. Es un juicio de riesgo de recuperación cíclica, no una beta medida. La beta de cinco años publicada por el proveedor el 4 de noviembre es 0,75: con ella, coste 8,2575% y valor 37,21. Se mantiene esta alternativa visible y no se usa la ficha Schwab de marzo como si fuera actual. [S8/S9/S10]</p>
+<p>El año 2027 se descuenta a 1+57/365 años desde el 4 de noviembre, fecha de valoración, usando el cierre del 3 de noviembre como referencia de precio. Los 57 días hasta diciembre no se cuentan desde ese cierre. Se incorpora un stub aproximado del resto de Q4: ventas 1.335, margen 4%, impuesto 32%, D&amp;A trimestral aproximada 17,22, capex+nube 17,5 y circulante 5; solo 57/92 del flujo trimestral, a 57/365 años. Su valor es 0,18 por acción. No captura una liberación extraordinaria del circulante de fin de año. La cifra de caja sigue siendo septiembre: no se inventa un balance de octubre ni se da por cobrada caja posterior.</p>
+<p>Sin stub, conservando calendario, el valor es 26,77. Sin stub pero descontando 2027 a un solo año sería 27,17. Ambas omisiones tienen signos distintos; no se presenta la combinación como automáticamente conservadora. La temporada de Q4 es importante para caja histórica, por lo que este stub es una aproximación explícita y no un estado de caja proyectado certificado.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th style="text-align: right;">g 2%</th>
+<th style="text-align: right;">g 2,5%</th>
+<th style="text-align: right;">g 3%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8,50%</td>
+<td style="text-align: right;">34,55</td>
+<td style="text-align: right;">35,73</td>
+<td style="text-align: right;">37,02</td>
+</tr>
+<tr class="even">
+<td>9,50%</td>
+<td style="text-align: right;">29,96</td>
+<td style="text-align: right;">30,72</td>
+<td style="text-align: right;">31,51</td>
+</tr>
+<tr class="odd">
+<td>10,50%</td>
+<td style="text-align: right;">26,45</td>
+<td style="text-align: right;">26,96</td>
+<td style="text-align: right;">27,46</td>
+</tr>
+<tr class="even">
+<td>11,50%</td>
+<td style="text-align: right;">23,69</td>
+<td style="text-align: right;">24,03</td>
+<td style="text-align: right;">24,36</td>
+</tr>
+<tr class="odd">
+<td>12,50%</td>
+<td style="text-align: right;">21,46</td>
+<td style="text-align: right;">21,69</td>
+<td style="text-align: right;">21,90</td>
+</tr>
+</tbody>
+</table></div>
+<p>Impuesto 30% da 28,13; impuesto 37%,25,37. Usar ROIC inicial y terminal 12,94% da 25,43. No se mezclan valores de sensibilidades individuales como si fueran escenarios compatibles ni se llama al rango adverso–favorable «valor justo certificado».</p>
+<h2 id="valoración-inversa">8. Valoración inversa</h2>
+<p>Con el resto de convenciones centrales y crecimiento 5% durante cinco años,43,73 exige un margen constante aproximado 10,45%, incluyendo el terminal. Con margen 7%, exige crecimiento inicial 18,52% anual. Combinaciones: margen 8,5% con crecimiento 12,10%, o margen 9,5% con crecimiento 8,33%. No son la única explicación del precio: menor descuento y una recuperación más intensa podrían combinarse de otro modo.</p>
+<p>Estos cálculos usan el mismo modelo y la misma hipótesis de capacidad existente, no son evidencia independiente ni estimaciones de consenso. El último trimestre o los breves datos de octubre no prueban esos márgenes. La referencia favorable 49,11 requiere varias mejoras simultáneas y sigue antes de una contingencia judicial no cuantificada.</p>
+<h2 id="comparables">9. Comparables</h2>
+<h1 id="rhi-comparable-valuation-contrast-4-november-2026">RHI: comparable valuation contrast, 4 November 2026</h1>
+<p>All dollar amounts are USD millions unless per share. Prices are the <strong>3 November regular-session close</strong>, not the live 4 November quote. Primary financials and price-page snapshots are saved under <code>sources/</code>. Reproduce with <code>python calculate_peers.py</code>; minimal inputs are <code>peers_inputs.json</code>, outputs <code>peers.json</code> and <code>peers.csv</code>.</p>
+<h2 id="usable-pricelatest-reported-balance-comparison">Usable price/latest-reported-balance comparison</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Company</th>
+<th style="text-align: right;">Price</th>
+<th style="text-align: right;">Shares used (m)</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">TTM revenue</th>
+<th style="text-align: right;">Operating EBIT used</th>
+<th style="text-align: right;">EV/sales</th>
+<th style="text-align: right;">EV/EBIT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Robert Half, RHI</td>
+<td style="text-align: right;">43.73</td>
+<td style="text-align: right;">102.351225</td>
+<td style="text-align: right;">4,154.528</td>
+<td style="text-align: right;">5,298.220</td>
+<td style="text-align: right;">183.254 normalized</td>
+<td style="text-align: right;">0.784 x</td>
+<td style="text-align: right;">22.67 x</td>
+</tr>
+<tr class="even">
+<td>ManpowerGroup, MAN</td>
+<td style="text-align: right;">45.46</td>
+<td style="text-align: right;">48.1</td>
+<td style="text-align: right;">3,057.126</td>
+<td style="text-align: right;">18,923.700</td>
+<td style="text-align: right;">303.200 GAAP</td>
+<td style="text-align: right;">0.162 x</td>
+<td style="text-align: right;">10.08 x</td>
+</tr>
+<tr class="odd">
+<td>Everforth, EFOR, formerly ASGN</td>
+<td style="text-align: right;">34.25</td>
+<td style="text-align: right;">41.1</td>
+<td style="text-align: right;">2,659.175</td>
+<td style="text-align: right;">3,986.800</td>
+<td style="text-align: right;">181.600 GAAP</td>
+<td style="text-align: right;">0.667 x</td>
+<td style="text-align: right;">14.64 x</td>
+</tr>
+</tbody>
+</table></div>
+<p>TTMs end 30 September 2026: FY2025 + nine months 2026 − nine months 2025. EV = price × disclosed share proxy + financial debt + noncontrolling interests − corporate cash. These are consistent valuation estimates, not exact real-time enterprise values: balance sheets lag prices and share proxies differ. Cash is gross reported corporate cash, not a claim that all cash can be distributed. A $100 m operating-cash reserve would increase EV by $100 m for any company.</p>
+<p><strong>Interpretation:</strong> RHI does not look cheap on depressed trailing operating earnings against these two alternatives, even after correcting its unusually distorted GAAP operating income. RHI’s cleaner financial-debt position and specialized staffing/Protiviti mix may merit a premium, but the price already requires stronger earnings recovery or durable quality advantages. MAN’s low sales multiple reflects its very low 1.60% operating margin and larger temporary-staffing payroll pass-through, not a direct valuation arbitrage. EFOR’s 4.56% GAAP operating margin and technology/digital engineering plus federal-business mix are different again. Do not use a median multiple to create a price target.</p>
+<h3 id="rhi-use-the-correct-compensation-plan-reconciliation">RHI: use the correct compensation-plan reconciliation</h3>
+<ul>
+<li>GAAP TTM operating EBIT is <strong>71.911</strong>, not 130.704. It equals 76.461 +49.460 −54.010.</li>
+<li>Matched trust investment income =111.343; operating expenses include the associated plan remeasurement. Adding that signed investment income back to operating EBIT gives 183.254, a 3.46% operating margin. This is a classification normalization, not permission to remove recurring employee compensation.</li>
+<li>EV/GAAP operating EBIT is 57.77 x; EV/normalized EBIT is 22.67 x. Headline comparisons must label the adjustment and cannot silently mix the two.</li>
+<li>Corporate cash 321.291; financial borrowings zero. Trust assets 844.170 and related obligations 827.761 are excluded together; the 16.409 surplus is not credited as freely available cash.</li>
+<li>Issued share count 102.351225 is the cover proxy requested for consistency with the parent valuation. Balance-sheet issued count 102.350326 differs by 899 shares, only ~$0.039 m EV. Do not add all issued restricted shares again. Quarterly diluted EPS shares 100.940 are period weighted and are not the same measure.</li>
+<li>Owner-cash proxy 157.045, after net trust funding and SBC charge, gives <strong>3.51% of equity value</strong>. This is not a peer-comparable cash yield; peer owner cash was not normalized here.</li>
+</ul>
+<h3 id="man-impairment-rolls-out-recurring-restructuring-stays">MAN: impairment rolls out; recurring restructuring stays</h3>
+<ul>
+<li>FY25 revenue 17,957.1 +9M26 14,210.6 −9M25 13,244.0 =18,923.7.</li>
+<li>FY25 EBIT150.1 +9M26 222.6 −9M25 69.5 =303.2.</li>
+<li>FY25 goodwill impairment 88.7 was entirely in 9M25. Therefore TTM impairment =88.7 +0 −88.7 = <strong>zero</strong>. Adding 88.7 again would overstate current normalized earnings.</li>
+<li>TTM restructuring =64.2 +30.6 −51.6 =<strong>43.2</strong>, retained in EBIT. FY24 restructuring 53.6 and FY23 149.2 reinforce that this is a recurring business burden rather than an automatic addback.</li>
+<li>Cash 233.1; debt carrying values 540.6 current +562.8 long-term =1,103.4; NCI0.2. The current block includes short-term borrowings 35.3 and current maturities 505.3. Q3 does not offer a complete face-value/deferred-cost bridge, so debt is explicitly book value rather than invented principal. Compare with principal conventions for EFOR/KFY knowing this limitation.</li>
+<li>Shares 48.1 are Q3 diluted weighted shares, versus 46.9 basic weighted shares. This conservative diluted proxy is not a verified point-in-time market-cap count.</li>
+<li>Deferred-compensation assets 194.1 are excluded from unrestricted cash. No asset-only credit is taken; no full peer compensation remeasurement normalization has been attempted. RHI normalized-versus-peer GAAP is therefore an explicitly approximate operating comparison.</li>
+</ul>
+<h3 id="efor-current-ticker-principal-debt-acquisition-caveat">EFOR: current ticker, principal debt, acquisition caveat</h3>
+<ul>
+<li>The company changed from ASGN Incorporated to Everforth on 24 April 2026; the Q3 cover lists <strong>EFOR</strong>. Both the old Stockanalysis ASGN URL and current EFOR history show Nov 3 close 34.25; use the current EFOR source/link.</li>
+<li>FY25 revenue 3,980.4 +9M26 3,006.7 −9M25 3,000.3 =3,986.8. EBIT230.3 +125.4 −174.1 =181.6.</li>
+<li>Debt principal is 373 revolver +485 term loan +541 notes =<strong>1,399</strong>. Do not use only the 1,391 long-term balance: it excludes 5 current principal and 3 unamortized deferred loan costs. Cash 147.5; no separately reported NCI.</li>
+<li>September 30 and October 23 outstanding shares are 41.1 m rounded; Q3 diluted shares also 41.1 m. No extra duplication of employee awards.</li>
+<li>All deferred compensation balances were distributed by September 30; no asset-only retirement-plan cash adjustment.</li>
+<li>Quinnox was acquired in March 2026 for 290 cash. September debt/cash include the transaction but the TTM includes only post-acquisition Quinnox results, not twelve months. This can overstate EV/TTM relative to a full pro forma denominator; no unsupported pro forma earnings are added.</li>
+<li>Retain amortization and acquisition/integration/strategic-planning costs in GAAP EBIT. Nine-month such SG&amp;A costs 30.9 versus 15.8 prior year include go-to-market changes, back-office outsourcing and ERP implementation, not simply a one-off deal fee.</li>
+</ul>
+<h2 id="kfy-operating-contrast-only-not-a-clean-current-multiple">KFY: operating contrast only, not a clean current multiple</h2>
+<p>The latest reported July 31 quarter predates the <strong>completed September 1 AMS acquisition</strong>. Do not rank KFY as a current 9.14 x EV/EBIT stock using pre-deal cash, debt and share count.</p>
+<p>Legacy operating TTM ending 31 July 2026: - Revenue 2,938.641 +764.622 −715.543 =<strong>2,987.720</strong>; fee revenue 2,955.352. Use total revenue consistently for EV/sales; fees exclude reimbursed expenses. - GAAP operating EBIT374.743 +93.380 −83.448 =<strong>384.675</strong>, a 12.88% total-revenue margin. It is not normalized for all retirement-plan investment effects. - Mechanical July-balance/current-price illustration:51.347 diluted shares ×76.12, cash 800.852, notes 400 principal (book 398.778), NCI6.890 =&gt;EV3,514.572, sales 1.176 x, EBIT9.136 x. These historical-balance ratios are present in machine outputs for auditability and are <strong>ineligible for a current comparable ranking</strong>.</p>
+<p>Known subsequent transaction effects from Q1 Note 13 and the September 1 8-K: - AMS closed for approximately 1.2 bn: approximately 0.9 bn cash plus <strong>3.118628 m issued shares</strong>. 8-K item 2.01 specifies cash as approximately£473 m plus$326 m, so the USD cash amount remains rounded pending transaction accounting. - Borrowed 600 term loan;406 used to redeem 400 notes plus interest/fees; remaining 194 plus 440 revolver funded part of AMS. Approximately 300 cash on hand was used. The old 400 notes cannot remain in the post-deal debt bridge. - An explicitly illustrative transaction-only bridge using 1,040 principal,500.852 residual cash,54.465628 shares and unchanged NCI gives EV approximately<strong>4,691.962</strong>. This is not the November balance sheet: it omits interim cash flow, acquisition cash, purchase accounting and any later changes. <strong>No post-deal EV/EBIT or EV/sales is computed</strong>, because a matching consolidated/pro forma operating denominator has not been established. - The September 1 8-K says acquired-company financials/pro forma information will be furnished by amendment within the allowed 71-day period. The saved submissions list available through November 4 contains no corresponding 8-K/A. Do not infer absence forever or invent a combined run rate.</p>
+<h3 id="kfy-assetobligation-sensitivity-july-basis-only">KFY asset/obligation sensitivity, July basis only</h3>
+<p>Marketable securities 250.217 + COLI net cash surrender value 304.906 =555.123. These support compensation/retirement obligations, including 531.991 separately disclosed noncurrent obligations. The difference 23.132 is <strong>only a partial-balance arithmetic surplus</strong>, not proven distributable cash: current benefit obligations, legal restrictions, taxes and surrender costs can matter. Marketable assets are held in trust for ECAP; vested 235.2 plus unvested 18.6 are disclosed. COLI304.906 is already net of policy loans~72.1, so do not add these loans again without grossing up the corresponding asset.</p>
+<p>Base convention excludes the plan assets and corresponding obligations together, crediting no surplus. A purely mechanical surplus-credit sensitivity reduces legacy EV by 23.132 to 3,491.440. A10% haircut to the 555.123 assets creates a 32.380 partial-balance deficit and increases EV to 3,546.952. Neither is a full pension actuarial valuation; the exercise demonstrates why subtracting the entire 555.123 as free cash would be wrong. No full owner-cash comparison is asserted for KFY.</p>
+<h2 id="common-lease-and-normalization-conventions">Common lease and normalization conventions</h2>
+<p>Operating lease liabilities are not financial debt for these EVs, and operating lease expense stays in EBIT. Do not append lease liabilities to these EVs while leaving the earnings treatment unchanged, and do not compare these EV/EBIT ratios with management EBITDA multiples as if equivalent. Different business mix, acquisition timing, share bases and retirement accounting prevent precision rankings; multiples are a contrast to the RHI thesis, not an independent intrinsic valuation.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>RHI Q3: https://www.sec.gov/Archives/edgar/data/315213/000031521326000053/rhi-20260930.htm</li>
+<li>RHI FY25: https://www.sec.gov/Archives/edgar/data/315213/000031521326000006/rhi-20251231.htm</li>
+<li>MAN Q3: https://www.sec.gov/Archives/edgar/data/871763/000119312526441750/man-20260930.htm</li>
+<li>MAN FY25: https://www.sec.gov/Archives/edgar/data/871763/000119312526064113/man-20251231.htm</li>
+<li>EFOR Q3: https://www.sec.gov/Archives/edgar/data/890564/000089056426000056/asgn-20260930.htm</li>
+<li>EFOR FY25: https://www.sec.gov/Archives/edgar/data/890564/000089056426000013/asgn-20251231.htm</li>
+<li>KFY Q1FY27 and subsequent events: https://www.sec.gov/Archives/edgar/data/56679/000005667926000031/kfy-20260731.htm</li>
+<li>KFY FY26: https://www.sec.gov/Archives/edgar/data/56679/000005667926000021/kfy-20260430.htm</li>
+<li>KFY AMS closing: https://www.sec.gov/Archives/edgar/data/56679/000119312526378508/d122525d8k.htm</li>
+<li>Prices: https://stockanalysis.com/stocks/rhi/history/ ; https://stockanalysis.com/stocks/man/history/ ; https://stockanalysis.com/stocks/efor/history/ ; https://stockanalysis.com/stocks/kfy/history/</li>
+</ul>
+<h2 id="confirmaciones-e-invalidación">10. Confirmaciones e invalidación</h2>
+<p>La evidencia necesaria es recuperación sostenida de volumen/horas y colocaciones, Protiviti creciendo sin sacrificar margen, mejora acumulada del EBIT normalizado y conversión en caja después de desarrollo y financiación de planes. Más EPS por un trimestre o caída de amortización no bastan. La recuperación se debilitaría con pérdida persistente de horas, deterioro de cobro, costes salariales no recuperables, nuevas necesidades de inversión superiores al modelo o efectos adversos judiciales sobre la economía del servicio.</p>
+<p>Próximas fechas primarias: presentación de inversores disponible el 13 de noviembre y fireside chat J.P. Morgan el 17 de noviembre, anunciados por la compañía el 3 de noviembre después del cierre. No son resultados. Audiencia Gentry el 11 de diciembre según el 10-Q, sujeta a cambios del procedimiento. No se encontró fecha confirmada para los resultados Q4; no se inventa una. [S11/S1]</p>
+<p>Confianza media en la historia y fórmulas, baja-media en el valor puntual de recuperación. El central depende de capacidad existente para recuperar margen, normalización fiscal, reserva operativa y retornos incrementales; la litigación no tiene rango medible. El paquete permite discutir y auditar esas hipótesis. No convierte la falta de evidencia de una recuperación completa en certeza de deterioro permanente, ni transforma un caso favorable en autorización de compra.</p>
+<h2 id="fuentes-y-reproducción">11. Fuentes y reproducción</h2>
+<p>[S1] <a href="https://www.sec.gov/Archives/edgar/data/315213/000031521326000053/rhi-20260930.htm">10-Q septiembre 2026</a>. [S2] <a href="https://www.sec.gov/Archives/edgar/data/315213/000031521326000049/rhiq32026ex991.htm">Resultados Q3 en SEC</a>. [S3] <a href="https://www.roberthalf.com/content/dam/roberthalf/documents/us/en/indexed/investor-center/quarterly-conference-calls/RH_Q3%202026%20Prepared%20Remarks.pdf">Comentarios preparados Q3 del emisor</a>. [S4] <a href="https://www.sec.gov/Archives/edgar/data/315213/000031521326000006/rhi-20251231.htm">10-K2025 y comparativos</a>. [S5] <a href="https://www.sec.gov/Archives/edgar/data/315213/000031521326000046/rhi-20260630.htm">10-Q junio 2026</a>; <a href="https://www.sec.gov/Archives/edgar/data/315213/000031521326000026/rhi-20260331.htm">10-Q marzo 2026</a>. [S6] <a href="https://www.sec.gov/Archives/edgar/data/315213/000031521325000074/rhi-20250930.htm">10-Q septiembre 2025</a>. [S7] <a href="https://www.sec.gov/Archives/edgar/data/315213/000031521326000003/rhiq42025ex991.htm">Q4 2025 EPS y acciones directos</a>. [S8] <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">Treasury diario</a>. [S9] <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm">NYU ERP</a>. [S10] <a href="https://stockanalysis.com/stocks/rhi/statistics/">Beta y estadísticas del proveedor</a>; <a href="https://stockanalysis.com/stocks/rhi/history/">cierre regular</a>. [S11] <a href="https://www.prnewswire.com/news-releases/robert-half-to-participate-in-the-jp-morgan-ultimate-services-investor-conference-302928368.html">Anuncio del emisor de conferencia de inversores</a>; <a href="https://www.roberthalf.com/us/en/about/investor-center">centro IR</a>.</p>
+<p>Se publican únicamente análisis propio, entradas mínimas y enlaces. No se incluyen filings completos. Reproducir con history/calculate.py, history/validate.py, model.py, valuation_checks.py, calculate_peers.py y qa.py. Las fuentes ausentes permanecen como límites; los nulos del historial no son cero. Una auditoría aritmética no certifica las hipótesis de recuperación ni el resultado de un litigio.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/RHI/RHI_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/RHI/model.py">Modelo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/RHI/model_results.json">Resultados</a></li>
+</ul>
+</main></body></html>

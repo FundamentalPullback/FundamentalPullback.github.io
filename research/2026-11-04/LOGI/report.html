@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LOGI | Fundamental Pullback</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">LOGI | Fundamental Pullback</h1>
+</header>
+<h1 id="logi-actualización-fundamental-y-reconstrucción-fcff">LOGI —
+actualización fundamental y reconstrucción FCFF</h1>
+<p>Corte de investigación: 4 noviembre 2026, 16:25 UTC. Precio de
+referencia: cierre regular Nasdaq del 3 noviembre, <strong>92,85
+USD</strong>. No es cotización intradía del 4 noviembre. Dólares
+nominales; cifras financieras en millones salvo EPS y precio. LOGI son
+acciones ordinarias de una compañía suiza cotizadas en USD; no mezclar
+LOGN en CHF ni aplicar un ratio ADR inventado.</p>
+<p><strong>Conclusión: esperar precio o mejor evidencia.</strong> La
+empresa tiene marca, distribución, generación de caja y balance sin
+préstamos dispuestos, pero el FCFF central nuevo es <strong>65,80
+USD</strong> frente a 92,85. Adverso <strong>41,67</strong>; favorable
+<strong>98,90</strong>, escenario exigente y no techo garantizado. La
+bajada desde la referencia histórica de 111,82 no prueba por sí sola
+infravaloración. Investigación condicionada a las reservas de capital,
+fiscalidad y calendario detalladas aquí; no Stage 3.5 aprobado ni
+instrucción de compra.</p>
+<h2 id="negocio-calidad-y-límites">1. Negocio, calidad y límites</h2>
+<p>Periféricos de trabajo, colaboración por vídeo, creación y gaming
+combinan marca, diseño, distribución y software de apoyo. No son
+ingresos contractuales recurrentes de software: dependen de renovación
+de hardware, promociones, innovación, competencia y demanda
+discrecional. La investigación y el marketing permanecen en gastos, no
+se capitalizan para fabricar margen.</p>
+<p>Q2 FY2027: ventas 1.218,838, EBIT 200,556, neto 180,035, EPS 1,25.
+Frente al año anterior, ventas +2,76%, EBIT +4,84%, neto +5,49%; EPS
++8,70% redondeado, ayudado por menos acciones. Once trimestres de
+crecimiento y 19 productos lanzados para la campaña no garantizan
+rentabilidad futura. Margen bruto GAAP 44,9% vs 43,4%; el resultado no
+GAAP excluye costes que este modelo conserva, especialmente SBC.</p>
+<p>Proveedor: la fábrica reabrió en septiembre, pero la capacidad sigue
+por debajo de lo requerido. El emisor espera producción completa al
+final del año natural y que el efecto quede mayormente resuelto en Q4.
+Guía Q3: ventas 1.360–1.430, −4% a +1% USD, −5% a 0% constante; incluye
+perjuicio de 70–80 M$ por el incidente. EBIT no GAAP 220–255 sin
+conciliación futura a GAAP. La reducción del riesgo frente a los
+anteriores hasta 200 M$ no equivale a recuperación completada.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000063/logi-20260930.htm">q2</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000059/exhibit991q2fy27.htm">release_sec</a>.</p>
+<h2 id="tres-ejercicios-cuatro-trimestres-y-ttm">2. Tres ejercicios,
+cuatro trimestres y TTM</h2>
+<p>Ejercicios terminan en marzo. Flujos trimestrales derivados de
+diferencias YTD; Q4 ingresos/EBIT/neto son FY menos nueve meses, EPS y
+acciones se toman del comunicado Q4, no se restan EPS acumulados. FCF =
+CFO−capex; FCF−SBC es proxy económico, no dividendo distribuible
+garantizado.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto</th>
+<th>EPS</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2024</td>
+<td>4,298.467</td>
+<td>587.336</td>
+<td>612.143</td>
+<td>3.870</td>
+<td>1,145.116</td>
+<td>55.897</td>
+<td>82.889</td>
+<td>1,006.330</td>
+</tr>
+<tr class="even">
+<td>FY2025</td>
+<td>4,554.900</td>
+<td>654.855</td>
+<td>631.529</td>
+<td>4.130</td>
+<td>842.557</td>
+<td>56.128</td>
+<td>89.913</td>
+<td>696.516</td>
+</tr>
+<tr class="odd">
+<td>FY2026</td>
+<td>4,840.761</td>
+<td>775.194</td>
+<td>711.187</td>
+<td>4.800</td>
+<td>1,037.207</td>
+<td>61.562</td>
+<td>112.392</td>
+<td>863.253</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto</th>
+<th>EPS</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q3 FY2026</td>
+<td>1,421.479</td>
+<td>286.014</td>
+<td>251.039</td>
+<td>1.690</td>
+<td>480.532</td>
+<td>14.890</td>
+<td>23.435</td>
+<td>442.207</td>
+</tr>
+<tr class="even">
+<td>Q4 FY2026</td>
+<td>1,085.523</td>
+<td>135.795</td>
+<td>143.463</td>
+<td>0.980</td>
+<td>202.793</td>
+<td>13.839</td>
+<td>25.817</td>
+<td>163.137</td>
+</tr>
+<tr class="odd">
+<td>Q1 FY2027</td>
+<td>1,227.234</td>
+<td>258.551</td>
+<td>235.697</td>
+<td>1.630</td>
+<td>166.708</td>
+<td>16.798</td>
+<td>29.632</td>
+<td>120.278</td>
+</tr>
+<tr class="even">
+<td>Q2 FY2027</td>
+<td>1,218.838</td>
+<td>200.556</td>
+<td>180.035</td>
+<td>1.250</td>
+<td>163.561</td>
+<td>14.716</td>
+<td>28.549</td>
+<td>120.296</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TTM septiembre</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TTM September 2025</td>
+<td>4,684.408</td>
+<td>693.845</td>
+<td>660.898</td>
+<td>854.408</td>
+<td>59.848</td>
+<td>103.179</td>
+<td>794.560</td>
+<td>691.381</td>
+</tr>
+<tr class="even">
+<td>TTM September 2026</td>
+<td>4,953.074</td>
+<td>880.916</td>
+<td>810.234</td>
+<td>1,013.594</td>
+<td>60.243</td>
+<td>107.433</td>
+<td>953.351</td>
+<td>845.918</td>
+</tr>
+</tbody>
+</table>
+<p>TTM ventas +5,74%, EBIT +26,96%, neto +22,60%, CFO +18,63%, FCF
++19,98%, SBC +4,12%, FCF−SBC +22,35%. La comparación anual mejora, pero
+H1 CFO cae a 330,269 desde 353,882: inventarios consumen 65,242 frente a
+1,780; cuentas por cobrar consumen 248,745 frente a 235,859. No
+extrapolar liberación de circulante ni la caja estacional del trimestre
+navideño. La caja reportada puede exceder NOPAT sostenible durante un
+periodo sin que sea perpetua.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000021/logi-20260331.htm">k26</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000011/logi-20251231.htm">q3prev</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297525000080/logi-20250930.htm">q2prev</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000050/logi-20260630.htm">q1</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000063/logi-20260930.htm">q2</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000014/exhibit991q4fy26.htm">q4</a>.</p>
+<h2 id="aranceles-impuestos-y-normalización">3. Aranceles, impuestos y
+normalización</h2>
+<p>Los 61 M$ de devolución arancelaria se reconocieron íntegramente como
+menor coste de ventas en Q1 FY2027. La caja se recibió 15 M$ en Q1 y 46
+M$ en Q2. Por tanto se retiran <strong>una sola vez</strong> del EBIT
+TTM: 880,916−61 = <strong>819,916</strong>, margen 16,55%, crecimiento
+de EBIT normalizado +18,17% frente al TTM previo. No hay devolución
+nueva de 46 M$ de beneficio en Q2 ni crédito por cobrar adicional de 61
+M$ al cierre.</p>
+<p>FCF−SBC reportado 845,918; quitar los 61 completos deja 784,918 como
+sensibilidad prudente <strong>antes del efecto fiscal</strong>, no
+conciliación exacta después de impuestos. El FCFF no parte de ese flujo:
+proyecta ventas, EBIT, impuestos y reinversión. No se resta nuevamente
+61 en el puente de caja, ya cobrada y legítimamente en balance. SBC TTM
+107,433 sigue siendo coste; no se añade al FCFF ni se interpreta la
+recompra como generación de caja.</p>
+<p>Impuesto normalizado supuesto 18%; sensibilidades 15/18/21%. H1 tasa
+efectiva 15,86%, Q2 17,60%, sensibles a geografía y beneficios de
+remuneración. El emisor espera impacto FY27 de minimis de OBBBA y de los
+complementos Pillar Two; no es una exención fiscal permanente. El
+impuesto atribuible específicamente al reembolso no está conciliado
+aquí, por eso no se inventa una corrección exacta del flujo
+histórico.</p>
+<p>D&amp;A TTM 73,813 incluye depreciación 66,188 y amortización 7,625.
+Se devuelve 1,3% de ventas como D&amp;A económica, por debajo de
+depreciación/ventas de 1,336%; no toda amortización adquirida. Capex
+1,5%, por encima del capex TTM 1,216%; no se supone inversión cero por
+modelo ligero. Restructuración y gastos ordinarios se conservan en la
+base de margen normalizada.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000063/logi-20260930.htm">q2</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000021/logi-20260331.htm">k26</a>.</p>
+<h2 id="puente-de-capital-y-dilución">4. Puente de capital y
+dilución</h2>
+<p>Septiembre: efectivo 1.507,647; ningún préstamo dispuesto en revolver
+de 750 M$ ni líneas bancarias. El límite disponible no es deuda ni
+efectivo. Del efectivo se reserva <strong>250 M<span
+class="math inline">* * <em>p</em><em>a</em><em>r</em><em>a</em><em>o</em><em>p</em><em>e</em><em>r</em><em>a</em><em>c</em><em>i</em><em>ó</em><em>n</em>, <em>h</em><em>i</em><em>p</em><em>ó</em><em>t</em><em>e</em><em>s</em><em>i</em><em>s</em><em>a</em><em>n</em><em>a</em><em>l</em><em>í</em><em>t</em><em>i</em><em>c</em><em>a</em>; <em>s</em><em>e</em><em>r</em><em>e</em><em>s</em><em>t</em><em>a</em><em>n</em><em>i</em><em>m</em><em>p</em><em>u</em><em>e</em><em>s</em><em>t</em><em>o</em><em>n</em><em>o</em><em>c</em><em>o</em><em>r</em><em>r</em><em>i</em><em>e</em><em>n</em><em>t</em><em>e</em> * *97, 390 * *, <em>o</em><em>b</em><em>l</em><em>i</em><em>g</em><em>a</em><em>c</em><em>i</em><em>o</em><em>n</em><em>e</em><em>s</em><em>d</em><em>e</em><em>p</em><em>r</em><em>e</em><em>s</em><em>t</em><em>a</em><em>c</em><em>i</em><em>o</em><em>n</em><em>e</em><em>s</em> * *58, 151 * *, <em>r</em><em>e</em><em>c</em><em>o</em><em>m</em><em>p</em><em>r</em><em>a</em><em>p</em><em>e</em><em>n</em><em>d</em><em>i</em><em>e</em><em>n</em><em>t</em><em>e</em><em>d</em><em>e</em><em>p</em><em>a</em><em>g</em><em>o</em> * *32 * *, <em>y</em> * *50 * *<em>d</em><em>e</em><em>r</em><em>e</em><em>s</em><em>e</em><em>r</em><em>v</em><em>a</em><em>h</em><em>i</em><em>p</em><em>o</em><em>t</em><em>é</em><em>t</em><em>i</em><em>c</em><em>a</em><em>p</em><em>o</em><em>r</em><em>c</em><em>o</em><em>s</em><em>t</em><em>e</em><em>s</em><em>d</em><em>e</em><em>r</em><em>e</em><em>p</em><em>a</em><em>t</em><em>r</em><em>i</em><em>a</em><em>c</em><em>i</em><em>ó</em><em>n</em>.<em>P</em><em>u</em><em>e</em><em>n</em><em>t</em><em>e</em><em>n</em><em>e</em><em>t</em><em>o</em> * * + 1.020, 106<em>M</em></span></strong>.</p>
+<p>La obligación de prestaciones es rubro de balance, no valoración
+actuarial nueva a septiembre; el déficit agregado FY26 era 61,813, con
+una parte corriente. La parte corriente actual no está separada en el
+extracto y puede exigir reserva adicional. Service cost permanece en
+EBIT; componentes de pensión no operativos están fuera de EBIT. No se
+afirma un puente transaccional exacto. El impuesto no corriente recoge
+exposición fiscal: no se suman también los 131,4 M$ de beneficios
+fiscales brutos inciertos de marzo, que no son un segundo pasivo
+independiente.</p>
+<p>Los 33,187 de activos de remuneración diferida igualan sus 33,187 de
+obligación, sin suma neta. No se añaden 36,317 de inversiones privadas
+ni activos fiscales diferidos. Arrendamientos operativos siguen como
+coste y no se resta además toda deuda de alquiler. El nuevo alquiler
+anunciado de 40 M$ nominales desde 2029 no se transforma en deuda
+inmediata; futura ocupación debe caber en los márgenes. Dividendos
+235,343 ya pagados no se descuentan de nuevo. Autorización de recompras
+restante 1.100 M$ no es obligación contractual.</p>
+<p>Capex pendiente 11,159 está divulgado; no se resta en base además del
+capex futuro normalizado para evitar posible duplicación. Deducirlo todo
+adicionalmente reduce el central en 0,078 USD; sensibilidad explícita.
+La empresa sí desglosa la localización: 66% de caja en EE.UU., 12% en
+Suiza y 12% en China, incluido Hong Kong; declara que no espera impacto
+fiscal material por repatriación adicional al reconocido ni inhibición
+significativa de acceso. Por ello los 50 M$ son únicamente estrés
+conservador del analista, no obligación identificada ni una necesidad
+fiscal demostrada; pueden solaparse con impuestos ya reconocidos,
+incluidos los 97,390 descontados. Se muestran reservas0/50/100 para
+transparentar esa prudencia y el caso sin reserva extra. No se aplica al
+accionista un impuesto personal o retención suiza universal dentro del
+valor empresarial.</p>
+<p>Denominador 143,770 M de acciones diluidas medias Q2, fijo y sin
+presumir recompras futuras. Excluye 0,8 M de equivalentes antidilutivos
+y ciertas unidades de rendimiento no devengadas; no garantiza dilución
+máxima. Sensibilidad +3% de acciones. Acciones emitidas menos
+autocartera = 142,200601 M al cierre; cancelar 4,6 M de títulos ya en
+autocartera no reduce otra vez las acciones económicas. No se suman
+premios sin valorar condiciones/proceeds.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000063/logi-20260930.htm">q2</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000021/logi-20260331.htm">k26</a>.</p>
+<h2 id="fcff-reproducible-y-supuestos">5. FCFF reproducible y
+supuestos</h2>
+<p>Horizonte de diez años: cinco explícitos y cinco de transición. Año1
+representa los doce meses siguientes al balance de septiembre, no todo
+FY27 incluyendo H1 ya realizado. Ventas de partida TTM 4.953,074;
+crecimiento 3/5/5/4/4%, después transición lineal hasta 2,5%. No es guía
+anual del emisor. Margen EBIT 16,5/17/17/17/17%, después 17%.
+Recuperación modesta sobre margen TTM sin devolución 16,55%, con riesgo
+real de suministro y promociones.</p>
+<p>NOPAT=EBIT×82%. ΔNWC=12% del aumento de ventas, hipótesis prudente
+aunque el circulante neto corriente puede ser negativo. Inversión
+explícita=capex−D&amp;A+ΔNWC. Se usa la mayor entre ella y
+NOPAT×crecimiento de ventas/ROIC25% durante años1–5; transición
+20/40/60/80/100% a regla económica años6–10. El crecimiento de margen se
+supone atendido por capacidad existente: el 25% no es retorno
+incremental contable demostrado. El suelo de reinversión es reserva
+analítica, no presupuesto de dirección. El campo
+additional_reinvestment_reserve reconcilia
+FCFF=NOPAT+D&amp;A−capex−ΔNWC−reserva: en año1 central, 662,221 de FCFF
+explícito menos54,796 de reserva deja607,425.</p>
+<p>Terminal NOPAT×(1−g/ROIC), con g2,5%, reinversión10% de NOPAT; sin
+salto a inversión nula. WACC10,5% nominal USD: Treasury10 años 4,91% de
+2 noviembre más beta <strong>supuesta</strong> 1,24×prima
+<strong>supuesta</strong>4,5%=10,49%, redondeado. No beta de regresión
+ni consenso. Sin deuda financiera dispuesta, no beneficio fiscal de
+deuda imaginaria. No añadir de nuevo interés de la caja, pues FCFF
+excluye ingreso financiero y puente añade solo caja neta conservada.</p>
+<p>Fuentes: <a
+href="https://www.federalreserve.gov/releases/h15/">rf</a>, <a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000063/logi-20260930.htm">q2</a>.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>USD</th>
+<th>Hipótesis adicionales</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverso</td>
+<td>41,67</td>
+<td>Crecimiento primeros5 −3pp limitado a0; margen10años+terminal −3pp;
+WACC12%, g1,5%, ROIC18%</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td>65,80</td>
+<td>Senda descrita; WACC10,5%, g2,5%, ROIC25%</td>
+</tr>
+<tr class="odd">
+<td>Favorable</td>
+<td>98,90</td>
+<td>Creccimiento primeros5 +3pp; margen10años+terminal +2pp; WACC9,5%,
+g3%, ROIC30%</td>
+</tr>
+</tbody>
+</table>
+<p>PV terminal representa 49.73% del EV central. El precio exige,
+manteniendo lo demás, +9.88 pp de crecimiento en cada uno de los cinco
+años iniciales, o +7.82 pp de margen en diez años y terminal. Son
+alternativas aisladas, no probabilidades ni pronóstico: implican
+aproximadamente 12,88% de crecimiento inicial o margen inicial24,32% y
+terminal24,82%, muy superiores a base.</p>
+<p>Sin suelo de reinversión, sensibilidad explícita de 68.77; no central
+alternativo gratuito. Mayor dilución3%: 63.89. Deducir además capex
+pendiente: 65.73.</p>
+<table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th>g</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9.5%</td>
+<td>1.5%</td>
+<td>70.30</td>
+</tr>
+<tr class="even">
+<td>9.5%</td>
+<td>2.0%</td>
+<td>72.29</td>
+</tr>
+<tr class="odd">
+<td>9.5%</td>
+<td>2.5%</td>
+<td>74.55</td>
+</tr>
+<tr class="even">
+<td>9.5%</td>
+<td>3.0%</td>
+<td>77.15</td>
+</tr>
+<tr class="odd">
+<td>10.0%</td>
+<td>1.5%</td>
+<td>66.35</td>
+</tr>
+<tr class="even">
+<td>10.0%</td>
+<td>2.0%</td>
+<td>68.01</td>
+</tr>
+<tr class="odd">
+<td>10.0%</td>
+<td>2.5%</td>
+<td>69.88</td>
+</tr>
+<tr class="even">
+<td>10.0%</td>
+<td>3.0%</td>
+<td>72.01</td>
+</tr>
+<tr class="odd">
+<td>10.5%</td>
+<td>1.5%</td>
+<td>62.84</td>
+</tr>
+<tr class="even">
+<td>10.5%</td>
+<td>2.0%</td>
+<td>64.24</td>
+</tr>
+<tr class="odd">
+<td>10.5%</td>
+<td>2.5%</td>
+<td>65.80</td>
+</tr>
+<tr class="even">
+<td>10.5%</td>
+<td>3.0%</td>
+<td>67.57</td>
+</tr>
+<tr class="odd">
+<td>11.0%</td>
+<td>1.5%</td>
+<td>59.71</td>
+</tr>
+<tr class="even">
+<td>11.0%</td>
+<td>2.0%</td>
+<td>60.89</td>
+</tr>
+<tr class="odd">
+<td>11.0%</td>
+<td>2.5%</td>
+<td>62.21</td>
+</tr>
+<tr class="even">
+<td>11.0%</td>
+<td>3.0%</td>
+<td>63.68</td>
+</tr>
+<tr class="odd">
+<td>12.0%</td>
+<td>1.5%</td>
+<td>54.35</td>
+</tr>
+<tr class="even">
+<td>12.0%</td>
+<td>2.0%</td>
+<td>55.22</td>
+</tr>
+<tr class="odd">
+<td>12.0%</td>
+<td>2.5%</td>
+<td>56.16</td>
+</tr>
+<tr class="even">
+<td>12.0%</td>
+<td>3.0%</td>
+<td>57.21</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Impuesto</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>15%</td>
+<td>67.95</td>
+</tr>
+<tr class="even">
+<td>18%</td>
+<td>65.80</td>
+</tr>
+<tr class="odd">
+<td>21%</td>
+<td>63.66</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Reserva repatriación M$</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>66.15</td>
+</tr>
+<tr class="even">
+<td>50</td>
+<td>65.80</td>
+</tr>
+<tr class="odd">
+<td>100</td>
+<td>65.46</td>
+</tr>
+</tbody>
+</table>
+<h2 id="continuidad-y-contraste-de-pares">6. Continuidad y contraste de
+pares</h2>
+<p>A108 del 28 octubre conservaba FCFE exploratorio 41,54/76,60/120,42
+con flujo inicial650/750/825, crecimiento0/5/8%, tasas12/10,5/9,5%,
+terminal2/2,5/3%. El soporte ejecutable original no se ha recuperado:
+<strong>reconstrucción nueva, no réplica exacta del archivo
+original</strong>. Aplicando los supuestos divulgados a 143,770 M de
+acciones Q2 se obtienen 41,53785/76,60471/120,42231, que reproducen las
+cifras publicadas redondeadas; ese chequeo no recupera el fichero
+original. No sustituir la historia ni llamar vigente a su anterior
+umbral75. El central cambia porque se modela NOPAT operativo después de
+reinversión financiada, no porque se aplique otro descuento discrecional
+al mismo FCFE. No existe descuento universal15% ni máximo de compra
+automático.</p>
+<p>Par: Corsair, misma moneda y US GAAP, <strong>ambos TTM
+junio2026</strong> para no comparar junio del par con septiembre LOGI.
+Precio regular3nov: LOGI92,85/CRSR12,31; denominador diluido trimestral
+junio145,038/109,193, proxy y no capitalización actual exacta. Beneficio
+atribuible común CRSR33,295 frente LOGI800,869; respeta asignación a
+minoritarios y títulos participantes. PER16,82x/40,37x. No se aplica la
+prima del par a LOGI.</p>
+<p>CFO/capex/FCF−SBC: LOGI1.078,870/62,084/907,590;
+CRSR105,744/16,029/62,631. Precio/FCF13,24x/14,98x y
+precio/(FCF−SBC)14,84x/21,46x son <strong>ratios de caja
+consolidada</strong>, no caja común totalmente asignada por minoritarios
+en Corsair. Ambos tienen efectos de aranceles/circulante, con
+normalización distinta. Corsair es mucho menor, más gaming/componentes,
+con menores márgenes y otra estructura de deuda. La muestra única no
+demuestra valoración sectorial. Q3 de Corsair está confirmado para5nov
+después del cierre: refrescar antes de usarlo en una decisión posterior,
+no fingir que ya publicó.</p>
+<p>Fuentes: <a
+href="https://www.sec.gov/Archives/edgar/data/1743759/000119312526067833/crsr-20251231.htm">crsr_k</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1743759/000119312526337981/crsr-20260630.htm">crsr_q</a>,
+<a href="https://stockanalysis.com/stocks/crsr/history/">peer_price</a>,
+<a href="https://stockanalysis.com/stocks/logi/history/">price</a>, <a
+href="https://corsair.gcs-web.com/news-releases/news-release-details/corsair-gaming-report-third-quarter-2026-financial-results">peer_event</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000050/logi-20260630.htm">q1</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000021/logi-20260331.htm">k26</a>.</p>
+<h2 id="qué-falta-y-qué-cambiaría-la-tesis">7. Qué falta y qué cambiaría
+la tesis</h2>
+<p>Confirmaría la tesis: fábrica funcionando a capacidad normal, ventas
+Q3 dentro de guía, crecimiento con margen sin devolución excepcional,
+inventarios y cobros normalizados, conversión de caja menos dependiente
+de circulante. La debilitarían otro retraso de suministro, promociones
+que erosionen margen, inventario obsoleto, nuevas cargas arancelarias,
+menor innovación o rentabilidad insuficiente de inversión.</p>
+<p>Q2 se publicó27oct y el 10-Q28oct: no está pendiente ese evento.
+<strong>Próxima fecha de resultados no confirmada en fuente primaria
+consultada</strong>; no asignar fecha por extrapolación ni certificar
+calendario Stage3.5. Reservas concretas: impuesto de devolución no
+conciliado, coste real de repatriación, parte corriente de prestaciones
+y par a refrescar tras5nov. Aun si estos importes cambiasen
+moderadamente, el precio requiere supuestos operativos superiores al
+caso central. No se modifican posición, stop, lote ni otras reglas de
+operación.</p>
+<p>Fuentes: <a
+href="https://ir.logitech.com/events-presentations/all-events-presentations/default.aspx">events</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/1032975/000103297526000063/logi-20260930.htm">q2</a>.</p>
+<h2 id="evidencia-exacta-para-pros-y-contras">Evidencia exacta para pros
+y contras</h2>
+<h3 id="a-favor">A favor</h3>
+<ul>
+<li>La marca y la distribución se apoyan en once trimestres de
+crecimiento; Q2 mantiene margen bruto GAAP de 44,9%.</li>
+<li>El EBIT TTM sin devolución arancelaria crece 18,17%, con SBC
+conservada como coste.</li>
+<li>No hay préstamos dispuestos y el puente conserva más de 1.020 M$
+tras reservas explícitas.</li>
+</ul>
+<h3 id="en-contra">En contra</h3>
+<ul>
+<li>El central FCFF de 65,80 no respalda el cierre de 92,85; el
+favorable de 98,90 no es un techo garantizado.</li>
+<li>H1 CFO cae mientras inventarios consumen 65,242 M$; la mejora TTM no
+elimina riesgo de circulante.</li>
+<li>El proveedor sigue bajo capacidad requerida y Q3 incluye 70–80 M$ de
+ventas afectadas; fiscalidad y próximo calendario conservan
+reservas.</li>
+</ul>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>Brand and distribution support eleven quarters of growth; Q2 GAAP
+gross margin is 44.9%.</li>
+<li>TTM EBIT excluding the tariff refund grew 18.17%, retaining SBC as
+an expense.</li>
+<li>No borrowings are drawn, and the bridge retains more than $1,020m
+after explicit reserves.</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>The $65.80 central FCFF case does not support the $92.85 close; the
+$98.90 favorable case is not a guaranteed ceiling.</li>
+<li>First-half CFO declined as inventory consumed $65.242m; stronger TTM
+cash does not remove working-capital risk.</li>
+<li>Supplier capacity remains below requirements and Q3 includes $70–80m
+of affected sales; tax and the next earnings date remain qualified.</li>
+</ul>
+</body>
+</html>
