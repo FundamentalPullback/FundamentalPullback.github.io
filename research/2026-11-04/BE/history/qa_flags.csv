@@ -1,0 +1,9 @@
+flag,detail
+ISSUER_EPS_SCALE_ERROR,"Q3 2025 10-Q comparative Q3/9M 2024 EPS has erroneous inline scale=3 although displayed -0.06/-0.59. Use displayed USD/share, corroborated by original 2024 filing, not raw scaled -60/-590."
+SOFTWARE_NOT_SEPARATELY_DISCLOSED,"No standalone capitalized software cash line identified. Null, not zero. Do not add a fabricated software deduction."
+DA_COMBINED,"Cash-flow row labelled Depreciation and amortization is tagged us-gaap:Depreciation. Preserve combined D&A. Separate intangible amortization is unavailable, not zero."
+EPS_TTM_NOT_ADDITIVE,"No TTM EPS or shares fabricated. Quarter EPS/shares direct only, never FY minus YTD."
+SBC_DEFINITIONS,"Cash-flow SBC and income-statement allocated SBC differ; use cash-flow row for cash-flow proxy. Customer warrant consideration is separate, not employee SBC."
+FINANCING_OBLIGATIONS,Show failed sale-leaseback financing obligations separately from recourse/nonrecourse debt and operating leases.
+ROUNDING,Quarter/YTD statements in thousands may differ by $1k from direct earnings release; retain latest filing and tolerance $3.1k.
+FCF_PROXY,"FCF PPE excludes affiliate cash investments, financing-obligation repayments, NCI payouts and dilution. It is not cash distributable to common holders."

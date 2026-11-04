@@ -1,0 +1,108 @@
+{
+  "ticker": "KSS",
+  "company": "Kohl's Corporation",
+  "researchDate": "2026-11-04",
+  "valuationDate": "2026-11-04",
+  "status": "partial_conditioned_audited",
+  "readyForPublication": true,
+  "fairValue": null,
+  "fairValueTotal": null,
+  "bear": null,
+  "base": null,
+  "bull": null,
+  "conditionalDcfCases": null,
+  "cashRentEconomicScenarios": {
+    "bear": {
+      "equityResidualPerShare": -5.014873438997281,
+      "positiveConditionalPrice": null,
+      "fairValueTotal": null
+    },
+    "base": {
+      "equityResidualPerShare": 11.498763141784051,
+      "positiveConditionalPrice": 11.498763141784051,
+      "fairValueTotal": null
+    },
+    "bull": {
+      "equityResidualPerShare": 29.32983903066851,
+      "positiveConditionalPrice": 29.32983903066851,
+      "fairValueTotal": null
+    }
+  },
+  "scenarioScope": "FCFF after full cash rent with selected capital/share proxies. Negative adverse residual is a funding/value deficit, not a negative stock price; no certified total fair value.",
+  "scanPrice": 22,
+  "scanDate": "2026-10-21",
+  "scanQuality": 100,
+  "scanOpportunity": 100,
+  "scanRsi": 69.5,
+  "scanStage2Historical": true,
+  "scanStage2Current": null,
+  "latestClose": 25.37,
+  "latestCloseDate": "2026-11-04",
+  "priorClose": 23.62,
+  "priorCloseDate": "2026-11-03",
+  "nextEvent": {
+    "date": "2026-11-24",
+    "time": "09:00 America/New_York",
+    "confirmed": true,
+    "type": "Q3FY2026 earnings conference call; exact release time not separately certified",
+    "sourceUrl": "https://investors.kohls.com/events-and-presentations/events/event-details/2026/Q3-2026-Kohls-Corporation-Earnings-Conference-Call/default.aspx"
+  },
+  "sources": {
+    "q2": "https://www.sec.gov/Archives/edgar/data/885639/000119312526381893/kss-20260801.htm",
+    "fy25": "https://www.sec.gov/Archives/edgar/data/885639/000119312526115982/kss-20260131.htm",
+    "release": "https://www.sec.gov/Archives/edgar/data/885639/000119312526365860/d171200dex991.htm",
+    "price": "https://stockanalysis.com/stocks/kss/history/",
+    "calendar": "https://investors.kohls.com/events-and-presentations/events/event-details/2026/Q3-2026-Kohls-Corporation-Earnings-Conference-Call/default.aspx"
+  },
+  "confidence": {
+    "history": "high for reported facts and arithmetic, limited normalization",
+    "rent": "TTM cash-rent bridge reconciled; future renewals selected",
+    "currentCapital": "dated balances and selected reserves; not fully reconciled",
+    "valuation": "conditional economic scenarios only"
+  },
+  "limitations": [
+    "Reported FCF includes circulation/tariff effects and low capex, not sustainable yield proved.",
+    "Capital and dilution current to November not reconciled;118m shares is quarterly diluted weighted-average proxy.",
+    "Tax receivable, UTB and deferred compensation claims unresolved;100m reserve selected, not measured.",
+    "Full cash-rent approach does not deduct lease liabilities twice; tax timing and future lease renewals remain assumptions.",
+    "Physical maintenance floor100% residualDDA selected; sensitivity75–125%, not company guidance.",
+    "Margin recovery financing materially affects inverse; full-funding inverse has large initial negative FCFF without financing/dilution modeled.",
+    "Macy valuation peer not fully cash-rent homogeneous; no median target.",
+    "Historical technical filters do not authorize current entry."
+  ],
+  "entryApproved": false,
+  "stage3Complete": false,
+  "stage35Approved": false,
+  "latestCompletedEligible": false,
+  "decisionEs": "Esperar evidencia y precio; caja histórica fuerte pero recuperación recurrente insuficiente, sin entrada.",
+  "decisionEn": "Wait for evidence and price; strong historical cash but unproven recurring recovery, no entry.",
+  "pros": [
+    {
+      "textEs": "Deuda nominal baja a1.342 M y revolver sin disponer en agosto; progreso financiero, sin olvidar compromisos de renta e inversión.",
+      "textEn": "Nominal debt falls to $1,342m with no revolver drawn in August; financial progress does not remove rent and reinvestment commitments.",
+      "evidence": "La deuda nominal se reduce a 1.342 M y no hay revolver dispuesto al cierre de agosto. Es progreso financiero, aunque los grandes compromisos de alquiler y la necesidad de reinversión no desaparecen."
+    },
+    {
+      "textEs": "FCF TTM calculado1.034 M frente480 M; caja mayor, aunque principalmente por circulante y menor capex, no mejora repetible demostrada.",
+      "textEn": "Calculated TTM FCF is $1,034m versus $480m; cash improved, mainly through working capital and lower capex, not proven recurring growth.",
+      "evidence": "El FCF TTM calculado asciende a 1.034 M frente a 480 M, pero 398 M de la mejora proceden de mayor contribución del circulante y 109 M de menor capex. La mejora de caja no demuestra que pueda repetirse indefinidamente."
+    }
+  ],
+  "cons": [
+    {
+      "textEs": "EBIT parcialmente normalizado496 M frente521 M; Q2 sin IEEPA queda161 M, igual al previo ajustado por litigio y cargos.",
+      "textEn": "Partially normalized EBIT is $496m versus $521m; Q2 excluding IEEPA is $161m, flat against the prior quarter adjusted for litigation and charges.",
+      "evidence": "La normalización parcial de EBIT deja 496 M frente a 521 M. En Q2, retirar unos 100 M de IEEPA deja 161 M, igual al trimestre previo después de retirar su acuerdo legal y cargos: la recuperación de margen reportada no es toda orgánica."
+    },
+    {
+      "textEs": "Cierre25,37 frente central condicionado11,50 y favorable29,33; adverso es déficit económico, no cotización negativa ni valor total.",
+      "textEn": "The $25.37 close compares with conditional central $11.50 and favorable $29.33; the adverse case is an economic deficit, not a negative stock price or total fair value.",
+      "evidence": "El escenario central condicionado produce 11,50 USD por acción proxy; el favorable, 29,33 USD. El adverso deja déficit económico, no una cotización negativa. El cierre de 25,37 USD exige una recuperación mayor que la ruta central, sin convertir estos casos en valor total certificado."
+    },
+    {
+      "textEs": "Capital, dilución, fiscalidad y reposición siguen condicionados; la mejora debe sostener caja después de pagar toda la renta.",
+      "textEn": "Capital, dilution, taxes and replacement investment remain conditional; recovery must sustain cash after paying all rent.",
+      "evidence": "La tesis necesita estabilizar ventas y demostrar que el ahorro de costos, la rentabilidad de Sephora y la inversión en tiendas sostienen caja después de pagar toda la renta. Capital actual, dilución, contingencias fiscales y reposición física mantienen condicionada la conclusión."
+    }
+  ]
+}

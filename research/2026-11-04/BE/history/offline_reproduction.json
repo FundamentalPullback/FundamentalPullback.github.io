@@ -1,0 +1,23 @@
+{
+  "pass_all": true,
+  "files_identical": {
+    "history.json": true,
+    "history.csv": true,
+    "ledger.csv": true,
+    "validation_checks.csv": true,
+    "conflicts.csv": true,
+    "source_index.csv": true,
+    "qa_flags.csv": true,
+    "qa.txt": true,
+    "checksums.txt": true
+  },
+  "dependencies": "Python standard library only",
+  "inputs": [
+    "numeric_inputs.json",
+    "rebuild_history.py"
+  ],
+  "network_required": false,
+  "filings_required": false,
+  "companyfacts_required": false,
+  "cwd_independent": true
+}

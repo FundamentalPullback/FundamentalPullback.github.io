@@ -1,0 +1,297 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FCX · Investigación parcial · activos, participaciones e inversión pendientes · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/FCX">← FCX profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · activos, participaciones e inversión pendientes</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="fcx-a241-investigación-del-4-de-noviembre-de-2026">FCX · A241 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Recuperación de Grasberg y Bagdad aprobado el 4 de noviembre: inversión estimada de 4.500 millones antes de la producción futura. Menor volumen, precios elevados, minoritarios y derechos mineros impiden certificar caja atribuible o una terminal perpetua. Sin valoración total, owner FCF, puente integral ni entrada.</strong></p>
+<p>Grasberg recovery and Bagdad approved November 4: estimated investment of 4,500 million before future production. Lower volumes, high prices, minority interests and mining rights prevent certification of attributable cash or a perpetual terminal value. No total valuation, owner FCF, complete bridge or entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/FCX.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-13, 71.575 USD</strong>. Referencia documental disputada, no cierre certificado: <strong>4 de noviembre, 62.60 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04 21:52 UTC.</p>
+<p>Se mantienen las listas previas y el escáner real del 13 de octubre a 71,575, QP80/Opportunity85. El historial de esa sesión muestra 72,42 sin ajustar o 72,26 ajustado, discrepancia no resuelta. La referencia del 4 de noviembre también difiere: Yahoo 62,60 a las 16:02:43 ET frente a StockAnalysis 62,64 a las 16:00; no se certifica cierre único. Bagdad ya fue aprobado, no es un evento futuro. Deuda neta consolidada 5.063 difiere de la métrica de política 1.826; esa exclusión no elimina deuda. CFO TTM 6.192 por acumulados recientes difiere en 25 de la ruta con Q4 directo; no se inventa una reclasificación. Morenci ya está incluido proporcionalmente al 72% y el MOU indonesio no sustituye una licencia IUPK definitiva.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="fcx-cobre-recuperación-operativa-e-inversión-nueva">FCX · Cobre, recuperación operativa e inversión nueva</h1>
+<p>Corte de investigación: 4 noviembre 2026, 21:52 UTC. Importes en millones USD salvo precios y unidades indicadas. Investigación parcial; auditoría independiente completada, con las reservas indicadas. Sin valoración por acción, owner FCF, puente integral ni entrada aprobada.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>El beneficio crece, pero no basta con extrapolar precios de metales elevados o tratar toda la caja consolidada como propia de FCX. Q3 combina cobre más caro, menor volumen, recuperación gradual de Grasberg y costes del incidente de septiembre 2025. Hoy la compañía aprobó Bagdad: una inversión adicional de 4.500 que debe financiarse antes de reconocer su producción futura.</p>
+<p>La investigación incorpora esa noticia y no repite las listas A005/A008/A011/A014. El último 10-Q identificado en submissions SEC al corte es junio; septiembre procede del comunicado y anexos del 8-K del 27octubre. No se simula que exista un 10-Q Q3 ni se trasladan a septiembre automáticamente las notas de junio. La siguiente fase requiere valoración por activos/participaciones, precios de ciclo, calendario de inversión y derechos mineros finitos, no un DCF consolidado perpetuo simplificado.</p>
+<h2 id="historia-y-alcance">Historia y alcance</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NI atribuible</th>
+<th style="text-align: right;">EPS directo</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">PPE</th>
+<th style="text-align: right;">SBC</th>
+<th style="text-align: right;">CFO−PPE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2019</td>
+<td style="text-align: right;">14,402.000</td>
+<td style="text-align: right;">1,091.000</td>
+<td style="text-align: right;">-239.000</td>
+<td style="text-align: right;">-0.170</td>
+<td style="text-align: right;">1,482.000</td>
+<td style="text-align: right;">2,652.000</td>
+<td style="text-align: right;">63.000</td>
+<td style="text-align: right;">-1,170.000</td>
+</tr>
+<tr class="even">
+<td>FY2020</td>
+<td style="text-align: right;">14,198.000</td>
+<td style="text-align: right;">2,437.000</td>
+<td style="text-align: right;">599.000</td>
+<td style="text-align: right;">0.410</td>
+<td style="text-align: right;">3,017.000</td>
+<td style="text-align: right;">1,961.000</td>
+<td style="text-align: right;">99.000</td>
+<td style="text-align: right;">1,056.000</td>
+</tr>
+<tr class="odd">
+<td>FY2021</td>
+<td style="text-align: right;">22,845.000</td>
+<td style="text-align: right;">8,366.000</td>
+<td style="text-align: right;">4,306.000</td>
+<td style="text-align: right;">2.900</td>
+<td style="text-align: right;">7,715.000</td>
+<td style="text-align: right;">2,115.000</td>
+<td style="text-align: right;">98.000</td>
+<td style="text-align: right;">5,600.000</td>
+</tr>
+<tr class="even">
+<td>FY2022</td>
+<td style="text-align: right;">22,780.000</td>
+<td style="text-align: right;">7,037.000</td>
+<td style="text-align: right;">3,468.000</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">5,139.000</td>
+<td style="text-align: right;">3,469.000</td>
+<td style="text-align: right;">95.000</td>
+<td style="text-align: right;">1,670.000</td>
+</tr>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">22,855.000</td>
+<td style="text-align: right;">6,225.000</td>
+<td style="text-align: right;">1,848.000</td>
+<td style="text-align: right;">1.280</td>
+<td style="text-align: right;">5,279.000</td>
+<td style="text-align: right;">4,824.000</td>
+<td style="text-align: right;">109.000</td>
+<td style="text-align: right;">455.000</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">25,455.000</td>
+<td style="text-align: right;">6,864.000</td>
+<td style="text-align: right;">1,889.000</td>
+<td style="text-align: right;">1.300</td>
+<td style="text-align: right;">7,160.000</td>
+<td style="text-align: right;">4,808.000</td>
+<td style="text-align: right;">109.000</td>
+<td style="text-align: right;">2,352.000</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">25,915.000</td>
+<td style="text-align: right;">6,518.000</td>
+<td style="text-align: right;">2,204.000</td>
+<td style="text-align: right;">1.520</td>
+<td style="text-align: right;">5,610.000</td>
+<td style="text-align: right;">4,494.000</td>
+<td style="text-align: right;">121.000</td>
+<td style="text-align: right;">1,116.000</td>
+</tr>
+<tr class="even">
+<td>Q4_2024</td>
+<td style="text-align: right;">5,720.000</td>
+<td style="text-align: right;">1,243.000</td>
+<td style="text-align: right;">274.000</td>
+<td style="text-align: right;">0.190</td>
+<td style="text-align: right;">1,436.000</td>
+<td style="text-align: right;">1,239.000</td>
+<td style="text-align: right;">15.000</td>
+<td style="text-align: right;">197.000</td>
+</tr>
+<tr class="odd">
+<td>Q1_2025</td>
+<td style="text-align: right;">5,728.000</td>
+<td style="text-align: right;">1,303.000</td>
+<td style="text-align: right;">352.000</td>
+<td style="text-align: right;">0.240</td>
+<td style="text-align: right;">1,058.000</td>
+<td style="text-align: right;">1,172.000</td>
+<td style="text-align: right;">54.000</td>
+<td style="text-align: right;">-114.000</td>
+</tr>
+<tr class="even">
+<td>Q2_2025</td>
+<td style="text-align: right;">7,582.000</td>
+<td style="text-align: right;">2,432.000</td>
+<td style="text-align: right;">772.000</td>
+<td style="text-align: right;">0.530</td>
+<td style="text-align: right;">2,195.000</td>
+<td style="text-align: right;">1,261.000</td>
+<td style="text-align: right;">20.000</td>
+<td style="text-align: right;">934.000</td>
+</tr>
+<tr class="odd">
+<td>Q3_2025</td>
+<td style="text-align: right;">6,972.000</td>
+<td style="text-align: right;">1,972.000</td>
+<td style="text-align: right;">674.000</td>
+<td style="text-align: right;">0.460</td>
+<td style="text-align: right;">1,689.000</td>
+<td style="text-align: right;">1,056.000</td>
+<td style="text-align: right;">24.000</td>
+<td style="text-align: right;">633.000</td>
+</tr>
+<tr class="even">
+<td>Q4_2025</td>
+<td style="text-align: right;">5,633.000</td>
+<td style="text-align: right;">811.000</td>
+<td style="text-align: right;">406.000</td>
+<td style="text-align: right;">0.280</td>
+<td style="text-align: right;">668.000</td>
+<td style="text-align: right;">1,005.000</td>
+<td style="text-align: right;">23.000</td>
+<td style="text-align: right;">-337.000</td>
+</tr>
+<tr class="odd">
+<td>Q1_2026</td>
+<td style="text-align: right;">6,234.000</td>
+<td style="text-align: right;">2,137.000</td>
+<td style="text-align: right;">881.000</td>
+<td style="text-align: right;">0.610</td>
+<td style="text-align: right;">1,495.000</td>
+<td style="text-align: right;">973.000</td>
+<td style="text-align: right;">68.000</td>
+<td style="text-align: right;">522.000</td>
+</tr>
+<tr class="even">
+<td>Q2_2026</td>
+<td style="text-align: right;">7,029.000</td>
+<td style="text-align: right;">2,003.000</td>
+<td style="text-align: right;">984.000</td>
+<td style="text-align: right;">0.680</td>
+<td style="text-align: right;">2,048.000</td>
+<td style="text-align: right;">1,104.000</td>
+<td style="text-align: right;">35.000</td>
+<td style="text-align: right;">944.000</td>
+</tr>
+<tr class="odd">
+<td>Q3_2026</td>
+<td style="text-align: right;">7,546.000</td>
+<td style="text-align: right;">2,353.000</td>
+<td style="text-align: right;">1,174.000</td>
+<td style="text-align: right;">0.810</td>
+<td style="text-align: right;">1,981.000</td>
+<td style="text-align: right;">1,159.000</td>
+<td style="text-align: right;">28.000</td>
+<td style="text-align: right;">822.000</td>
+</tr>
+<tr class="even">
+<td>TTM_Q3_2025</td>
+<td style="text-align: right;">26,002.000</td>
+<td style="text-align: right;">6,950.000</td>
+<td style="text-align: right;">2,072.000</td>
+<td style="text-align: right;">1.420</td>
+<td style="text-align: right;">6,378.000</td>
+<td style="text-align: right;">4,728.000</td>
+<td style="text-align: right;">113.000</td>
+<td style="text-align: right;">1,650.000</td>
+</tr>
+<tr class="odd">
+<td>TTM_Q3_2026</td>
+<td style="text-align: right;">26,442.000</td>
+<td style="text-align: right;">7,304.000</td>
+<td style="text-align: right;">3,445.000</td>
+<td style="text-align: right;">2.380</td>
+<td style="text-align: right;">6,192.000</td>
+<td style="text-align: right;">4,241.000</td>
+<td style="text-align: right;">154.000</td>
+<td style="text-align: right;">1,951.000</td>
+</tr>
+</tbody>
+</table></div>
+<p>El EPS directo de FY 2022 no se retuvo en el conjunto reproducible y permanece nulo, no cero; ese año se utiliza solo como contexto del ciclo.</p>
+<p>Ledger de datos publicados y fórmulas, con ciclo FY2019–2025, últimos cuatro trimestres y TTM comparativo. Se separan beneficio consolidado y atribuible. EPS TTM es suma de trimestres directos, no EPS publicado TTM ni resta de EPS acumulados. CFO menos capex consolidado no es flujo libre atribuible a los accionistas de FCX.</p>
+<p>TTM septiembre 2026: ventas 26.442, EBIT7.304, NI consolidado 5.031 y atribuible 3.445. CFO6.192−capex 4.241=1.951 consolidado, antes de minoritarios y SBC154. La historia marca una diferencia no conciliada de 25 en CFO: Q4 original 2025 publicó 693, mientras FY5.610 menos 9Mcomparativo actualizado 4.942 implica 668. Se usa la base acumulada reciente coherente para TTM, sin ocultar el Q4 directo ni afirmar una reclasificación o revisión verificada. La alternativa que suma el Q4 publicado da CFO TTM 6.217 y CFO−capex 1.976; ambas rutas quedan visibles. No se concluye irregularidad contable a partir de esa diferencia.</p>
+<h2 id="beneficio-precios-y-volúmenes">Beneficio, precios y volúmenes</h2>
+<p>Q3 ingresos 7.546 y EBIT2.353, margen 31,18%; NI atribuible 1.174, EPS0,81. Las ventas de cobre 749 millones de libras bajaron 23,34% frente a 977, mientras el precio realizado 6,54 subió 39,74% frente a 4,68. La producción 832 difiere de las ventas: no multiplicar producción por precio y llamarlo ingreso reconocido. Las ventas de oro 105 mil onzas frente a 336 también reflejan la recuperación y el calendario de refino; unas 60 mil onzas se desplazaron a Q4, no desaparecieron ni son ingreso garantizado.</p>
+<p>En nueve meses se reconoció ganancia de seguro 699 por el incidente de mud rush y se cobró 699. El efecto después de impuestos y participación ajena fue 207 atribuible a FCX, no 699. Las conciliaciones ajustadas de la empresa separan esa ganancia junto con costes de recuperación, DD&amp;A y otros conceptos; no se resta nuevamente el seguro a su resultado ajustado sin revisar la conciliación.</p>
+<p>Costes de instalación ociosa, recuperación y restauración fueron 244 en Q3 y 934 en nueve meses, más DD&amp;A asociada 236 acumulada. No se eliminan todos para valorar capacidad normal sin financiar rehabilitación y ramp-up. El coste neto de caja por libra 2,07 no incluye todos esos costes y depende de créditos por subproductos; coste de producción/entrega 3,24 tampoco representa capex, fiscalidad y rendimiento del accionista.</p>
+<p>El EBIT Q3 incluye ajustes de precios provisionales de ventas previas 52 y liberación de beneficios intercompañía 24. Son efectos distintos, sensibles a precios y embarques; no confundirlos con crecimiento estructural ni aplicar automáticamente toda la diferencia como addback. La guía fiscal 2026 de 30% consolidado depende de precios/volúmenes y mezcla jurisdiccional; Perú 40%, Indonesia 36% y EEUU10% estimados no justifican una tasa universal permanente.</p>
+<h2 id="caja-puentes-útiles-no-owner-fcf">Caja: puentes útiles, no owner FCF</h2>
+<p>Nueve meses CFO5.524−capex 3.236=2.288 consolidado. Excluir el cobro extraordinario de seguro 699 deja 1.589. Restar además distribuciones efectivas a minoritarios 625, principal de finance leases 32 y SBC131 da 801 como diagnóstico de desembolsos, no owner FCF: las distribuciones reales no equivalen al derecho económico de minoritarios sobre caja generada, y su calendario puede solaparse con los fondos del seguro. No se extrapola 801 ni se usa como ancla de DCF.</p>
+<p>Los inventarios absorbieron 601 y se mantuvieron diferencias entre producción, refino y ventas. El capital de crecimiento no es caja libre actual aunque la política lo llame discrecional. La guía 2026 de CFO8.500 y capex 4.400 se anunció antes de la aprobación Bagdad y supone precios Q4 cobre 6,50, oro 4.000 y molibdeno 32. No es consenso, hecho realizado ni previsión normalizada para los siguientes doce meses. La distribución de hasta 50% de caja disponible de la política tiene condiciones y discreción del consejo, no compromiso de dividendos.</p>
+<h2 id="participaciones-y-balance">Participaciones y balance</h2>
+<p>PTFI se consolida al 100%, pero FCX posee 48,76%. Su economía atribuible fue aproximadamente 81% hasta 2022 y 48,76% desde 2023, por lo que el beneficio accionista de 2021–2022 no es un run-rate comparable con la estructura actual. Cerro Verde pasó de 55,08% a 55,66% en mayo, con desembolso 107. Morenci se incluye ya por consolidación proporcional 72%: no volver a multiplicar ese EBIT/caja por 72%. Además, PTFI posee 66% de PT Smelting, por lo que hay participaciones ajenas anidadas. No aplicar un único porcentaje de propiedad a todo el grupo.</p>
+<p>Balance septiembre: deuda contable 9.398 y caja 4.335 dan deuda neta consolidada 5.063. El indicador de política de 1.826 excluye 3.237 de deuda de instalaciones downstream de PTFI. Esa exclusión no cancela la deuda y no es el puente al equity. La caja restringida de 424 se presenta aparte; no sumarla como disponible.</p>
+<p>La empresa publica caja neta disponible aproximadamente 3.300 después de participación ajena y retenciones, con redondeos, frente a 4.300 de caja consolidada. No deducir nuevamente minoritarios/impuestos de los 3.300. Ni esa cifra redondeada ni el patrimonio contable de minoritarios 12.632 representan una valoración de las participaciones ajenas. Los saldos posteriores a septiembre y el reparto de activos/pasivos siguen por conciliar.</p>
+<p>Obligaciones ambientales y ARO:374 corrientes más 5.609 no corrientes=5.983. Pagos 151 y cargos 237 en nueve meses exigen separar gasto recurrente y obligaciones históricas antes de sumar una reserva al puente; no duplicar automáticamente valor presente de obligación y todos sus pagos en DCF. Leases de largo plazo 958 excluyen corriente y no se hacen pasar por saldo total. Dividendo común pendiente 218 al balance: al comparar con precio posterior al pago del 2noviembre habría que conciliarlo una sola vez, no presentar caja de septiembre como saldo posterior actual.</p>
+<p>Revolver FCX3.000, prácticamente libre salvo cartas de crédito 5; PTFI1.750 con 250 dispuestos y Cerro Verde 350 no dispuesto. Facilidades extendidas a 2031. Vencimientos de notas PTFI700 en abril 2027 y FCX600 en segundo semestre 2027, entre otros; capacidad de crédito no es efectivo libre.</p>
+<h2 id="bagdad-grasberg-y-derechos">Bagdad, Grasberg y derechos</h2>
+<p>El 4noviembre el consejo aprobó 4.500 para expansión/modernización Bagdad, operación totalmente propia. Plan:20% en 2027 (900),30–35% en 2028 (1.350–1.575), resto 2029–2030. Producción inicial objetivo mediados 2030, incremento anual a largo plazo 225 millones de libras de cobre y 12 millones de molibdeno. Son estimaciones de proyecto, expuestas a costes y ejecución. No añadir 225 desde 2027 ni contabilizar todo 4.500 como gasto ya realizado; tampoco mantener el crecimiento sin esa inversión.</p>
+<p>Kucing Liar es otro proyecto: aproximadamente 1.600 invertidos y 4.000 adicionales estimados hasta 2033; calendario de inicio bajo revisión. Su producción permite continuidad y no equivale íntegramente a aumento neto sobre minas que se agotan. La vida de reservas de Bagdad no determina la de todos los activos.</p>
+<p>El molino de PTFI tuvo throughput Q3 de 141 mil toneladas diarias, equivalente al 67% de capacidad, con objetivo 80% a mediados 2027 y aproximadamente plena capacidad a fin 2027. El smelter reinició en agosto; riesgos de agua, manejo de material y seguridad subsisten. El MOU de febrero plantea extender derechos más allá de 2041, mantener 48,76% hasta 2041 y aproximadamente 37% desde 2042, pero requiere licencia IUPK modificada y formalización. No tratar un MOU como concesión definitiva ni perpetuar 48,76% en terminal. El cumplimiento de condiciones de licencias existentes también debe revisarse.</p>
+<h2 id="pares-operativos-y-límites-de-valoración">Pares operativos y límites de valoración</h2>
+<p>Southern Copper Q3 reporta ventas 4.696,6 y EBIT2.815,1, margen 59,94%. CFO2.224,3 menos inversión 515,8 da 1.708,5 antes de otras partidas. Su coste neto 0,09 por libra está reducido por créditos de subproductos favorecidos por precios altos, no prueba coste económico casi cero. Mezcla, leyes, propiedad y capex difieren. Tiene dividendo efectivo y de acciones anunciado para noviembre, relevante si se construye comparación por acción; aquí no se calcula múltiplo.</p>
+<p>BHP Copper FY terminadojunio 2026: ingresos 29.031 y Underlying EBITDA18.187. Es EBITDA ajustado y un periodo/perímetro distinto, no EBIT GAAP de FCX. El auge de precios ayuda a ambos, pero no demuestra que los precios actuales sean permanentes. Pares homogéneos, valor de minoritarios y obligaciones por activo siguen pendientes.</p>
+<p>Faltan escenarios coherentes de cobre/oro/molibdeno de ciclo, producción por activos y ley, reposición/expansión/rehabilitación, impuestos locales, restricciones de distribución y derechos mineros. No se publica un rango, WACC ni inverso improvisado que dependa de mantener precios máximos o de una terminal perpetua sin concesión. La cotización por debajo del escáner antiguo no sustituye esos pasos.</p>
+<h2 id="precio-calendario-y-ficha">Precio, calendario y ficha</h2>
+<p>Referencia Yahoo regularMarketPrice 62,60, timestamp 4nov 16:02:43ET, frente a StockAnalysis cierre 62,64 a 16:00. Difieren y los tiempos no son idénticos: no cierre único certificado. Escáner real 13oct 71,575 frente a historial 72,42 sin ajustar y 72,26 ajustado: ninguna comparación resuelve la diferencia. Mantener fecha y fuente, no reemplazar silenciosamente el dato histórico. QP80/Opportunity 85 y Stage 2 antiguos no son autorización técnica actual.</p>
+<p>Q3 ya publicado 27octubre. La siguiente fecha exacta no se identificó en las fuentes oficiales revisadas; no se inventa enero. La aprobación Bagdad ya ocurrió, no es evento pendiente. Catalizadores: nuevo presupuesto capex, actualización operativa, formalización IUPK y próximos resultados, cada uno con incertidumbres propias.</p>
+<h3 id="pros-es">Pros ES</h3>
+<ul>
+<li>La recuperación de Grasberg y los proyectos propios ofrecen crecimiento potencial, con inversión y calendario identificados.</li>
+<li>El balance distingue deuda consolidada de la métrica de política y caja atribuible de caja total. ### Contras ES</li>
+<li>El beneficio depende de metales más caros mientras los volúmenes vendidos caen; el seguro no es caja recurrente.</li>
+<li>Bagdad requiere nueva inversión y los derechos y participaciones de Indonesia impiden una terminal perpetua simplificada.</li>
+<li>Falta el 10-Q de septiembre, el cierre de precios discrepa y no hay valoración integral ni entrada aprobada. ### Pros EN</li>
+<li>Grasberg recovery and owned projects offer potential growth with identified investment and timing requirements.</li>
+<li>The balance-sheet review distinguishes consolidated debt from the policy metric and attributable cash from total cash. ### Cons EN</li>
+<li>Earnings depend on higher metal prices while sales volumes decline; insurance proceeds are not recurring cash flow.</li>
+<li>Bagdad requires new investment and Indonesia rights and ownership prevent a simplified perpetual terminal value.</li>
+<li>The September 10-Q is unavailable, closing-price references disagree, and no integral valuation or entry is approved.</li>
+</ul>
+<h2 id="fuentes-y-soporte">Fuentes y soporte</h2>
+<ul>
+<li>Q3: <a href="https://www.sec.gov/Archives/edgar/data/831259/000083125926000045/a3q2026exhibit991.htm" class="uri">https://www.sec.gov/Archives/edgar/data/831259/000083125926000045/a3q2026exhibit991.htm</a></li>
+<li>Q2: <a href="https://www.sec.gov/Archives/edgar/data/831259/000083125926000036/fcx-20260630.htm" class="uri">https://www.sec.gov/Archives/edgar/data/831259/000083125926000036/fcx-20260630.htm</a></li>
+<li>FY2025: <a href="https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm" class="uri">https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm</a></li>
+<li>Bagdad4nov: <a href="https://investors.fcx.com/investors/news-releases/news-release-details/2026/Freeport-Announces-Plans-to-Boost-U-S--Copper--Molybdenum-Production/default.aspx" class="uri">https://investors.fcx.com/investors/news-releases/news-release-details/2026/Freeport-Announces-Plans-to-Boost-U-S--Copper--Molybdenum-Production/default.aspx</a></li>
+<li>IR/calendario: <a href="https://investors.fcx.com/investors/default.aspx" class="uri">https://investors.fcx.com/investors/default.aspx</a></li>
+<li>Precios: <a href="https://finance.yahoo.com/quote/FCX/" class="uri">https://finance.yahoo.com/quote/FCX/</a> y <a href="https://stockanalysis.com/stocks/fcx/history/" class="uri">https://stockanalysis.com/stocks/fcx/history/</a></li>
+<li>SCCO: <a href="https://www.sec.gov/Archives/edgar/data/1001838/000110465926117588/scco-ex99d1.htm" class="uri">https://www.sec.gov/Archives/edgar/data/1001838/000110465926117588/scco-ex99d1.htm</a></li>
+<li>BHP: <a href="https://www.sec.gov/Archives/edgar/data/811809/000119312526354647/bhp-20260630.htm" class="uri">https://www.sec.gov/Archives/edgar/data/811809/000119312526354647/bhp-20260630.htm</a></li>
+</ul>
+<p>Datos, conciliaciones y límites reproducibles; no se modifican posiciones, operaciones ni reglas del plan.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FCX/support.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FCX/analysis.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/FCX/analysis.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>

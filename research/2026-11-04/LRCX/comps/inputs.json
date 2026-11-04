@@ -1,0 +1,217 @@
+{
+  "cut": "2026-11-04 16:00 America/New_York",
+  "periods": "US GAAP TTM ended September2026; balance September, share count dated below",
+  "sources": {
+    "KLAC_FY": "https://ir.kla.com/sec-filings/annual-reports/content/0000319201-26-000027/klac-20260630.htm",
+    "KLAC_Q1": "https://ir.kla.com/sec-filings/all-sec-filings/content/0000319201-26-000032/exhibit991earningsrelease0.htm",
+    "KLAC_10Q": "https://ir.kla.com/sec-filings/all-sec-filings/content/0000319201-26-000034/klac-20260930.htm",
+    "LRCX_FY": "https://investor.lamresearch.com/2026-07-29-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-June-28%2C-2026",
+    "LRCX_Q1": "https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27%2C-2026",
+    "LRCX_10Q": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000054/lrcx-20260927.htm",
+    "KLAC_PRICE": "https://stockanalysis.com/stocks/klac/history/",
+    "LRCX_PRICE": "https://stockanalysis.com/stocks/lrcx/history/",
+    "ASML_FY": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+    "ASML_Q3": "https://investor.asml.com/static-files/d310262b-d037-485d-83b5-92c93cc462f0",
+    "ASML_BOOK_Q3": "https://investor.asml.com/static-files/78b1af6f-9c6e-4e5c-b229-a418251687ff",
+    "ASML_BOOK_PRIOR": "https://investor.asml.com/static-files/8eb7be33-3fef-490d-a21c-f02161a47268",
+    "ASML_PRICE": "https://stockanalysis.com/stocks/asml/history/",
+    "FX": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
+  },
+  "inputs": {
+    "KLAC": {
+      "period": "2026-09-30",
+      "fy_end": "2026-06-30",
+      "prior_q": "2025-09-30",
+      "sales": [
+        13579476,
+        4136015,
+        3209696
+      ],
+      "cogs": [
+        5255060,
+        1577791,
+        1243070
+      ],
+      "rd": [
+        1532118,
+        395096,
+        360461
+      ],
+      "sga": [
+        1131518,
+        301458,
+        268988
+      ],
+      "cfo": [
+        4143079,
+        1530939,
+        1161591
+      ],
+      "capex": [
+        375945,
+        194756,
+        95894
+      ],
+      "sbc": [
+        310171,
+        84073,
+        70182
+      ],
+      "cash": 1531950,
+      "short_investments": 3209241,
+      "principal_debt": 5950000,
+      "carrying_debt": 5723289,
+      "shares_m": 1302.962435,
+      "shares_date": "2026-10-26",
+      "diluted_wavg_m": 1311.064,
+      "price": 149.83,
+      "ebit": [
+        5660780,
+        1861670,
+        1337177
+      ]
+    },
+    "LRCX": {
+      "period": "2026-09-27",
+      "fy_end": "2026-06-28",
+      "prior_q": "2025-09-28",
+      "sales": [
+        23232690,
+        8219418,
+        5324173
+      ],
+      "ebit": [
+        8199795,
+        3283727,
+        1829088
+      ],
+      "cfo": [
+        5857657,
+        3497652,
+        1778964
+      ],
+      "capex": [
+        966405,
+        257697,
+        185121
+      ],
+      "sbc": [
+        386381,
+        114696,
+        97241
+      ],
+      "cash": 7437384,
+      "short_investments": 0,
+      "principal_debt": 3750000,
+      "carrying_debt_incl_finance_leases": 3735444,
+      "shares_m": 1249.171,
+      "shares_date": "2026-10-20",
+      "diluted_wavg_m": 1255.768,
+      "price": 221.43
+    }
+  },
+  "ASML": {
+    "currency": "EUR millions",
+    "series": {
+      "2025-12-31": {
+        "sales": 9718.1,
+        "ebit": 3431.1,
+        "net_income": 2839.6,
+        "eps_basic": 7.35,
+        "eps_diluted": 7.34,
+        "cfo": 11410.3,
+        "capex_ppe": 447.9,
+        "capex_intangible": 22.5,
+        "sbc": 55.6,
+        "da": 255.2,
+        "working_capital_change": 7640.7,
+        "equity_gain": 0.0,
+        "tax": -618.7,
+        "pretax": 3442.3,
+        "capex": 470.4,
+        "fcf": 10939.9
+      },
+      "2026-03-29": {
+        "sales": 8766.9,
+        "ebit": 3157.8,
+        "net_income": 2756.7,
+        "eps_basic": 7.15,
+        "eps_diluted": 7.15,
+        "cfo": -2185.6,
+        "capex_ppe": 402.4,
+        "capex_intangible": 19.9,
+        "sbc": 31.1,
+        "da": 259.4,
+        "working_capital_change": -5158.1,
+        "equity_gain": 0.0,
+        "tax": -546.6,
+        "pretax": 3198.7,
+        "capex": 422.3,
+        "fcf": -2607.9
+      },
+      "2026-06-28": {
+        "sales": 9326.5,
+        "ebit": 3456.1,
+        "net_income": 2917.6,
+        "eps_basic": 7.59,
+        "eps_diluted": 7.58,
+        "cfo": 1703.0,
+        "capex_ppe": 299.4,
+        "capex_intangible": 86.6,
+        "sbc": 58.5,
+        "da": 246.9,
+        "working_capital_change": -1614.7,
+        "equity_gain": 0.0,
+        "tax": -609.6,
+        "pretax": 3486.1,
+        "capex": 386.0,
+        "fcf": 1317.0
+      },
+      "2026-09-27": {
+        "sales": 11662.0,
+        "ebit": 5172.8,
+        "net_income": 4960.4,
+        "eps_basic": 12.95,
+        "eps_diluted": 12.93,
+        "cfo": 11797.6,
+        "capex_ppe": 413.3,
+        "capex_intangible": 33.9,
+        "sbc": 73.2,
+        "da": 262.9,
+        "working_capital_change": 7009.0,
+        "equity_gain": 509.7,
+        "tax": -925.0,
+        "pretax": 5750.7,
+        "capex": 447.2,
+        "fcf": 11350.4
+      }
+    },
+    "priceUSD": 1496.33,
+    "eurusd": 1.1267,
+    "fxDate": "2026-11-04",
+    "sharesProxy": 383.5,
+    "sharesBasis": "Q3 diluted weighted average, not actual November outstanding",
+    "cash": 8030.9,
+    "shortInvestments": 4704.2,
+    "debtProxy": 2765.6000000000004,
+    "debtBasis": "FY2025 nominal less9M repayments, not exact September reported principal",
+    "limits": [
+      "Debt proxy uses FY2025 nominal obligations less 9M cash repayments; not exact reported September principal/current debt.",
+      "Post-period buybacks through October30 only; no October CFO, new borrowing, FX or November1-4 trading reconciled. Not current cash balance.",
+      "Dividend November4 proxy uses diluted Q3 weighted shares, not actual registered entitled shares.",
+      "Keep Q3 diluted383.5 shares; do not award lower share count without full settlement/capital bridge.",
+      "Strategic loan/equity assets excluded from distributable bridge, not asserted worthless.",
+      "Tax174.5 is FY2025 proxy, not certified September liability."
+    ]
+  },
+  "limits": [
+    "No relative median or automatic target price. Semiconductor capital equipment peers have different end-markets and geography.",
+    "Standard EV uses balance-date gross cash rather than selected operating cash reserves; it is not DCF equity bridge.",
+    "KLAC debt uses principal, finance lease breakdown not separately reconciled in this panel; sensitivity adds50M.",
+    "LRCX debt includes15M selected finance lease proxy plus0.147M other financing; not exact September lease.",
+    "ASML strategic assets, tax claims, post-period dividends and buybacks omitted from standard panel consistently with balance-date cash; share denominator is diluted-average proxy.",
+    "Reported owner FCF proxies subtract expense SBC from CFO less cash capex. Unreported capitalized SBC can remain; not certified full owner FCFF.",
+    "ASML aggregate working capital sensitivity includes taxes/other items, not clean recurring adjustment.",
+    "All closes November4, FX ECB November4; financial periods and shareholder dates remain different."
+  ]
+}

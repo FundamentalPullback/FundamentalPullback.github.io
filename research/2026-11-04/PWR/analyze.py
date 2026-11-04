@@ -1,0 +1,6 @@
+from pathlib import Path
+import json
+p=Path(__file__).parent;f=json.loads((p/'facts/inputs.json').read_text())
+o={k:None for k in ['bear','base','bull','buy_ceiling','owner_fcf','equity_bridge','normalized_fcff','normalized_ebit','wacc']}
+o.update({'status':'Audited partial factual research; unresolved limitations retained','cash_ex_jv_and_captive':f['cash']-f['cash_jv_domestic']-f['cash_jv_foreign']-f['cash_captive'],'separate_restricted_cash':f['restricted_current']+f['restricted_noncurrent'],'gross_debt_before_discount':sum(f[k] for k in ['senior_notes_principal','revolver','lease_financing_transactions','other_debt','finance_leases']),'contingent_consideration':f['contingent_consideration_current']+f['contingent_consideration_noncurrent'],'contract_liabilities_balance_change':f['contract_liabilities_sep26']-f['contract_liabilities_dec25'],'contract_assets_balance_change':f['contract_assets_sep26']-f['contract_assets_dec25'],'price_difference':f['price_alternative']-f['price'],'scanner_vs_same_date_close_difference':f['scanner_price']-f['scanner_date_market_close'],'integral_jv_equity_earnings_inside_ebit':f['integral_jv_equity_earnings_9m26'],'next_earnings_date':None,'approved_entry':False,'latestCompleted':False})
+(p/'analysis.json').write_text(json.dumps(o,indent=2)+'\n')

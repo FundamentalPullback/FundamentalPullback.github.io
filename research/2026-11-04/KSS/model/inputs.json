@@ -1,0 +1,138 @@
+{
+  "valuationDate": "2026-11-04",
+  "latestClose": 25.37,
+  "anchor": {
+    "revenue": 15430,
+    "reportedEbit": 592,
+    "ieepaBenefitRemoved": 100,
+    "closureChargesAdded": 4,
+    "normalizedEbitBeforeRent": 496,
+    "fullCashRentAdjustment": -149,
+    "ebitAfterFullCashRent": 347,
+    "ddaReported": 697,
+    "leaseDdaExcluded": 116,
+    "ddaResidual": 581,
+    "fullCashRent": 537
+  },
+  "capital": {
+    "cashAugust1": 821,
+    "operatingCashReserveSelected": 500,
+    "notesPrincipal": 1342,
+    "septemberDividendProxy": 14.172055625,
+    "unreconciledClaimReserveSelected": 100,
+    "sharesProxy": 118,
+    "coverSharesAugust28": 113.376445,
+    "financeAndFinancingLiabilitiesNotDeductedAgain": 2387,
+    "operatingLeaseLiabilitiesNotDeductedAgain": 2709,
+    "taxReceivableNotAdded": 258,
+    "grossUtbNotSeparatelyDeducted": 178,
+    "utbInterestNotSeparatelyDeducted": 20
+  },
+  "tax": 0.26,
+  "workingCapitalPerIncrementalRevenue": 0.1,
+  "physicalCapexToResidualDdaFloor": 1.0,
+  "otherInvestingAnnualStress": 0,
+  "rentalCashFactor": 1.0,
+  "cases": {
+    "bear": {
+      "firstRevenue": 14500,
+      "growth": [
+        -0.04,
+        -0.04,
+        -0.03,
+        -0.03,
+        -0.02,
+        -0.02,
+        -0.02,
+        -0.02,
+        -0.02
+      ],
+      "margins": [
+        0.015,
+        0.012,
+        0.01,
+        0.008,
+        0.006,
+        0.005,
+        0.005,
+        0.005,
+        0.005,
+        0.005
+      ],
+      "wacc": 0.135,
+      "terminalGrowth": -0.01,
+      "marginalRoic": 0.08
+    },
+    "base": {
+      "firstRevenue": 15300,
+      "growth": [
+        0,
+        0.005,
+        0.01,
+        0.01,
+        0.015,
+        0.015,
+        0.015,
+        0.015,
+        0.015
+      ],
+      "margins": [
+        0.023,
+        0.025,
+        0.027,
+        0.029,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03
+      ],
+      "wacc": 0.11,
+      "terminalGrowth": 0.01,
+      "marginalRoic": 0.12
+    },
+    "bull": {
+      "firstRevenue": 15600,
+      "growth": [
+        0.03,
+        0.03,
+        0.03,
+        0.025,
+        0.025,
+        0.025,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "margins": [
+        0.03,
+        0.035,
+        0.04,
+        0.043,
+        0.045,
+        0.045,
+        0.045,
+        0.045,
+        0.045,
+        0.045
+      ],
+      "wacc": 0.095,
+      "terminalGrowth": 0.02,
+      "marginalRoic": 0.16
+    }
+  },
+  "limitations": [
+    "Forward twelve-month periods ending4November2027\u20132036, not fiscal-year forecasts; no omitted fiscal stub claimed conservative.",
+    "All margins are AFTER full recurring cash rent, with replacement/renewal cost continuing in terminal. Lease liabilities not deducted again.",
+    "Tax26% selected on economic cash-rent earnings; actual tax treatment/timing not certified.",
+    "Physical capex floor100% residualDDA is selected maintenance discipline, not reported guidance or exact replacement schedule.",
+    "Shares118 are latest quarterly diluted weighted-average proxy, not a fully reconciled current diluted cap table.",
+    "Cash/capital are August balances plus identified selected adjustments, not observed November balances.",
+    "Tax receivable, UTB, deferred compensation and other claims remain unresolved; reserve100 is selected, not a measured liability.",
+    "Future SBC stays in operating margins; capitalized SBC is not separately isolated. Potential overlap of outstanding awards and future compensation is not fully reconciled.",
+    "This model yields conditional economic scenarios only. Total fair value remains null.",
+    "Base funds every positive NOPAT gain at selected marginal ROIC, including margin recovery. Efficiency sensitivity exempts margin-driven improvement from incremental growth capital, but never waives physical capex/WC floors."
+  ],
+  "marginRecoveryCapitalFundingFraction": 1.0
+}

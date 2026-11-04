@@ -1,0 +1,470 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KSS · Investigación parcial · recuperación y capital condicionados · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/KSS">← KSS profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · recuperación y capital condicionados</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="kss-a244-investigación-del-4-de-noviembre-de-2026">KSS · A244 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Mayor FCF histórico por circulante y menor capex no prueba recuperación recurrente. Casos económicos del dossier después de toda la renta: central 11,50 y favorable 29,33; el adverso es déficit, no precio negativo ni valor cero. Sin valoración total ni entrada.</strong></p>
+<p>Higher historical FCF from working capital and lower capex does not prove recurring recovery. Dossier economic cases after all cash rent: central 11.50 and favorable 29.33; the adverse case is a deficit, not a negative price or zero value. No total valuation or entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/KSS.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-21, 22 USD</strong>. Cierre regular de referencia: <strong>4 de noviembre, 25.37 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 noviembre 2026; paquete final auditado antes de esta publicación.</p>
+<p>Se conserva el escáner del 21 de octubre a 22, QP100/Opportunity100/RSI69,5 y Stage 2 Sí histórico. Cierre del 4 de noviembre 25,37 frente a 23,62 el 3 de noviembre. La normalización parcial deja EBIT 496 millones frente a 521; retirar IEEPA evita atribuir a recuperación un beneficio no recurrente. El modelo conserva toda la renta y no vuelve a deducir pasivos por leasing. Capital, acciones proxy, reservas fiscales y reposición siguen condicionados. Los totales y rangos de ficha quedan vacíos.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="kohls-kss-auditar-la-caja-antes-de-comprar-el-rendimiento-del-escáner">Kohl’s (KSS): auditar la caja antes de comprar el rendimiento del escáner</h1>
+<p>Corte: 4 de noviembre de 2026, después del cierre regular a las 21:00 UTC. USD millones salvo acción. Investigación y FCFF después de renta completa condicionados; capital actual no certificado. No hay valor total aprobado, Stage 3 integral ni entrada.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>La caja histórica ha mejorado, pero el negocio aún no demuestra una recuperación proporcional del beneficio recurrente. La relación FCF/precio del escáner mezcla efectivo liberado por circulante, menor inversión, incentivos fiscales y denominadores de acciones que no coinciden con dilución actual. No es una rentabilidad sostenible ya probada.</p>
+<p>El FCF TTM calculado asciende a 1.034 M frente a 480 M, pero 398 M de la mejora proceden de mayor contribución del circulante y 109 M de menor capex. La mejora de caja no demuestra que pueda repetirse indefinidamente.</p>
+<p>La normalización parcial de EBIT deja 496 M frente a 521 M. En Q2, retirar unos 100 M de IEEPA deja 161 M, igual al trimestre previo después de retirar su acuerdo legal y cargos: la recuperación de margen reportada no es toda orgánica.</p>
+<p>La deuda nominal se reduce a 1.342 M y no hay revolver dispuesto al cierre de agosto. Es progreso financiero, aunque los grandes compromisos de alquiler y la necesidad de reinversión no desaparecen.</p>
+<p>El escenario central condicionado produce 11,50 USD por acción proxy; el favorable, 29,33 USD. El adverso deja déficit económico, no una cotización negativa. El cierre de 25,37 USD exige una recuperación mayor que la ruta central, sin convertir estos casos en valor total certificado.</p>
+<p>La tesis necesita estabilizar ventas y demostrar que el ahorro de costos, la rentabilidad de Sephora y la inversión en tiendas sostienen caja después de pagar toda la renta. Capital actual, dilución, contingencias fiscales y reposición física mantienen condicionada la conclusión.</p>
+<h2 id="registro-mercado-y-calendario">Registro, mercado y calendario</h2>
+<p>Último escáner original: 21 de octubre, 22,00 USD, Quality 100, Opportunity 100 y RSI 69,5; Stage 2 «Sí» histórico. Ese mismo día el cierre de mercado fue 22,16 USD, sin que se haya identificado la causa de la diferencia. No se modifica el CSV ni se hereda su aprobación técnica.</p>
+<p>Cierre regular 4 de noviembre: 25,37 USD frente a 23,62 USD el día previo. La página de estadísticas conservaba 25,05 intradía: se utiliza la tabla de cierres, no esa cotización ni el after-hours. Opportunity 100 no sustituye valoración ni señal actual.</p>
+<p>La llamada oficial Q3 FY2026 está fijada para el 24 de noviembre a las 09:00 ET. La fuente confirma la llamada, no un minuto exacto de publicación del comunicado. La fecha de septiembre del último dividendo no es un próximo catalizador. Fuentes: <a href="https://stockanalysis.com/stocks/kss/history/" class="uri">https://stockanalysis.com/stocks/kss/history/</a> y <a href="https://investors.kohls.com/events-and-presentations/events/event-details/2026/Q3-2026-Kohls-Corporation-Earnings-Conference-Call/default.aspx" class="uri">https://investors.kohls.com/events-and-presentations/events/event-details/2026/Q3-2026-Kohls-Corporation-Earnings-Conference-Call/default.aspx</a></p>
+<h2 id="negocio-y-calidad-económica">Negocio y calidad económica</h2>
+<p>Kohl’s opera aproximadamente 1.151 tiendas al cierre de agosto y canal digital. Vende marcas propias y nacionales a un cliente de valor; compite en precio, conveniencia y surtido. La base de locales y clientes aporta escala, pero las ventas llevan varios años descendiendo. Un pequeño cambio en margen tiene gran impacto porque renta, personal e infraestructura no caen automáticamente con el tráfico.</p>
+<p>En Sephora, Kohl’s es principal en la venta, posee inventario y financia capex. Las partes comparten por igual el beneficio operativo del acuerdo, incluyendo depreciación; la parte de Sephora se registra en costo de mercancía. No se puede atribuir a KSS todo el beneficio de beauty ni valorar Sephora otra vez por separado mientras sus ventas y costos ya están en el FCFF.</p>
+<p>Los otros ingresos incluyen la participación neta en ingresos de tarjetas gestionadas por un tercero, después de servicio y pérdidas crediticias, además de otras partidas. No se presenta la cartera crediticia como activo bancario propio ni se extrapola other revenue sin considerar impagos, regulaciones y el contrato. Los ingresos de tarjetas y las marcas distinguen a KSS de una inmobiliaria: el valor de locales no puede sumarse a un DCF que sigue utilizándolos gratis.</p>
+<p>La propiedad de inmuebles puede tener valor, pero una venta y arrendamiento posterior requiere deducir impuestos/costos y financiar renta futura. Este modelo no añade una tasación inmobiliaria no realizada ni trata la diferencia entre activo y pasivo de failed sale-leasebacks como ganancia económica inmediata.</p>
+<h2 id="historia-financiera-y-caja">Historia financiera y caja</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Período</th>
+<th style="text-align: right;">Ventas totales</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">NI</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">FCF</th>
+<th style="text-align: right;">EPS diluido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">17.476</td>
+<td style="text-align: right;">717</td>
+<td style="text-align: right;">317</td>
+<td style="text-align: right;">1.168</td>
+<td style="text-align: right;">577</td>
+<td style="text-align: right;">591</td>
+<td style="text-align: right;">2,85</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">16.221</td>
+<td style="text-align: right;">433</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">648</td>
+<td style="text-align: right;">466</td>
+<td style="text-align: right;">182</td>
+<td style="text-align: right;">0,98</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">15.527</td>
+<td style="text-align: right;">624</td>
+<td style="text-align: right;">272</td>
+<td style="text-align: right;">1.380</td>
+<td style="text-align: right;">372</td>
+<td style="text-align: right;">1.008</td>
+<td style="text-align: right;">2,38</td>
+</tr>
+<tr class="even">
+<td>Q12026</td>
+<td style="text-align: right;">3.167</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">-14</td>
+<td style="text-align: right;">-74</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">-158</td>
+<td style="text-align: right;">-0,13</td>
+</tr>
+<tr class="odd">
+<td>Q22026</td>
+<td style="text-align: right;">3.515</td>
+<td style="text-align: right;">261</td>
+<td style="text-align: right;">151</td>
+<td style="text-align: right;">552</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">490</td>
+<td style="text-align: right;">1,28</td>
+</tr>
+<tr class="even">
+<td>Q32025</td>
+<td style="text-align: right;">3.575</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">124</td>
+<td style="text-align: right;">108</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0,07</td>
+</tr>
+<tr class="odd">
+<td>Q42025</td>
+<td style="text-align: right;">5.173</td>
+<td style="text-align: right;">212</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">750</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">686</td>
+<td style="text-align: right;">1,07</td>
+</tr>
+<tr class="even">
+<td>TTM2025Q2</td>
+<td style="text-align: right;">15.886</td>
+<td style="text-align: right;">563</td>
+<td style="text-align: right;">209</td>
+<td style="text-align: right;">907</td>
+<td style="text-align: right;">427</td>
+<td style="text-align: right;">480</td>
+<td style="text-align: right;">n/d</td>
+</tr>
+<tr class="odd">
+<td>TTM2026Q2</td>
+<td style="text-align: right;">15.430</td>
+<td style="text-align: right;">592</td>
+<td style="text-align: right;">270</td>
+<td style="text-align: right;">1.352</td>
+<td style="text-align: right;">318</td>
+<td style="text-align: right;">1.034</td>
+<td style="text-align: right;">n/d</td>
+</tr>
+</tbody>
+</table></div>
+<p>Períodos fiscales: FY2025 termina el 31 de enero de 2026; FY2023 tiene 53 semanas. Q4 se reconstruye desde año menos nueve meses; cash flows de Q2 desde semestre menos Q1. Los archivos incluyen TTM previo y estados de apoyo. No se inventan EPS ni acciones diluidas GAAP de Q4 por una resta de promedios.</p>
+<p>El EBIT GAAP TTM es 592 M frente a 563 M. Se retiran aproximadamente 100 M de IEEPA y se añaden 4 M de cargos restantes, obteniendo 496 M. Es normalización parcial, no garantía de margen recurrente. En FY2025, el EBIT de 624 M contenía una ganancia legal de 129 M y cargos de 15 M, quedando 510 M; FY2024, 433 más 76 de cargos, 509 M. Esas ganancias no pueden perpetuarse como mejora del negocio.</p>
+<p>TTM: CFO 1.352 M y capex efectivo 318 M; FCF simple 1.034 M. Previo: CFO 907 y capex 427, FCF 480. El cambio de 554 se explica por +445 de CFO y 109 menos de capex. Dentro del CFO, la contribución operativa de circulante sin operating leases pasa de −41 a +357 M, una mejora de 398 M. CFO antes de esa contribución sólo sube de 948 a 995 M.</p>
+<p>Después de SBC de 36 M quedan 998 M; después además del principal de leases/financing de 81 M y otros flujos netos de inversión de 22 M, quedan 895 M. Esta última cifra sigue siendo una conciliación histórica, no FCF sostenible. No incluye ingresos de nuevas financiaciones o venta de activos como generación recurrente.</p>
+<p>En Q2 se recibieron unos 150 M de IEEPA, pero sólo unos 100 M redujeron costo de mercancía. El resto combina inventario, proveedores y valor al cliente; no se declara que sean exactamente 50 M de inventario pendiente. Restar a la vez todo el reembolso y toda la liberación de circulante puede duplicar ajustes. Se muestran diagnósticos separados y el DCF se construye desde beneficio sin IEEPA, no desde un FCF inflado menos ajustes superpuestos.</p>
+<p>FCF 1.034 M dividido por 9,19 USD del escáner implica aproximadamente 112,514 millones de acciones. No coincide con 118 millones de promedio diluido Q2 ni prueba un denominador actual. El rendimiento de caja crudo no se acepta como verificado sin ese puente. Tampoco se añade SBC gratis al FCFF: permanece como costo dentro de los márgenes.</p>
+<h2 id="alquileres-un-solo-tratamiento-económico">Alquileres: un solo tratamiento económico</h2>
+<p>El modelo trata TODA la renta cash como costo operativo recurrente. Se parte del EBIT parcialmente normalizado y se elimina la D&amp;A de finance leases/financing assets para sustituirla por pagos íntegros de renta, incluido principal; también se convierte el gasto de operating leases a caja.</p>
+<p>TTM: D&amp;A de activos alquilados 116 M; gasto operating 272 M frente a cash 269 M; cash finance/financing 268 M. Ajuste = +116 +272 −269 −268 = −149 M. El EBIT después de renta completa queda 347 M y la D&amp;A residual de activos propios/software, 697−116=581 M. El cash rent total es 537 M. FY2025 ofrecía un ajuste de −167 M, pero se usa el TTM mejor conciliado.</p>
+<p>Por tanto, NO se restan otra vez los 2.387 M de finance leases/financing obligations ni los 2.709 M de operating leases al EV después de renta. Sus pagos no son gratis: ya reducen los flujos, permanecen en el terminal y se someten a estrés. Tampoco se añaden sus activos al valor por separado.</p>
+<p>Las obligaciones de failed sale-leaseback de 452 M son reales aunque el activo correspondiente sea 34 M. Su diferente contabilidad no elimina pagos. La renta completa evita confundir principal con capex o sumar deudas de alquiler a un FCFF que ya las ha pagado. La conversión fiscal no es exacta por decreto: 26% sobre beneficio económico después de renta es una hipótesis normalizada, con sensibilidad 23–29%, no prueba de la deducción tributaria efectiva de cada cuota.</p>
+<h2 id="capital-acciones-y-limitaciones-del-puente">Capital, acciones y limitaciones del puente</h2>
+<p>Caja al 1 de agosto: 821 M. Notas nominales 1.342 M frente a 1.325 M contables; revolver cero. La portada recoge 113,376445 millones de acciones al 28 de agosto, no al 4 de noviembre. El modelo usa 118 millones, promedio diluido Q2, como proxy conservadora y prueba otros denominadores. No es una cap table spot fully diluted certificada; premios y compensación futura pueden solaparse.</p>
+<p>La recompra anunciada de hasta 100 M no se da por ejecutada ni reduce automáticamente caja y acciones. Los 8-K de agosto–octubre examinados no acreditan un nuevo balance o ejecución. El dividendo de 0,125 USD anunciado para septiembre implica 14,172 M usando el conteo de portada, sólo pro forma identificada, no importe efectivo Q3 confirmado.</p>
+<p>Puente seleccionado: caja 821 menos reserva operativa 500, notas 1.342, dividendo proxy 14,172 y reserva adicional de claims no conciliados 100 = −1.135,172 M. Las reservas 500/100 son supuestos, no restricciones contractuales o pasivos medidos. Se muestran sensibilidades; caja ajustada por estos renglones no pretende ser caja real de noviembre.</p>
+<p>FY2025 divulga UTB brutos 178 M e intereses/sanciones 20 M, mientras 168 M que afectarían ETR no es otro claim sumable. El receivable fiscal de largo plazo 258 M, mayormente ligado a NOL 2020, no se añade como caja sin resolver solapamientos y recuperación. La compensación diferida actual y su eventual activo compensatorio no están separados. No se convierte todo other liabilities en deuda ni se considera cero por falta de desglose. La reserva seleccionada y las pruebas no cierran esas incertidumbres; por ello valor total y rango agregado quedan nulos.</p>
+<h2 id="dcf-condicionado-a-diez-años-después-de-toda-renta">DCF condicionado a diez años, después de toda renta</h2>
+<p>Diez períodos prospectivos de doce meses terminan el 4 de noviembre de 2027–2036. No son guías fiscales, y no hay un stub omitido que se llame automáticamente conservador. Los tres caminos son hipótesis del analista. La guía FY2026 de margen 3,5–4,0% incluye IEEPA y usa otra definición antes de convertir toda renta: no se reutiliza como margen limpio.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th style="text-align: right;">Ventas año1</th>
+<th style="text-align: right;">Margen renta año1/final</th>
+<th style="text-align: right;">ROIC marginal</th>
+<th style="text-align: right;">Descuento / g</th>
+<th style="text-align: right;">EV operativo</th>
+<th style="text-align: right;">Residuo equity</th>
+<th>Lectura por acción proxy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td style="text-align: right;">14.500</td>
+<td style="text-align: right;">1,5/0,5%</td>
+<td style="text-align: right;">8,0%</td>
+<td style="text-align: right;">13,5/-1,0%</td>
+<td style="text-align: right;">543,4</td>
+<td style="text-align: right;">-591,8</td>
+<td>Déficit 5,01; no precio negativo</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td style="text-align: right;">15.300</td>
+<td style="text-align: right;">2,3/3,0%</td>
+<td style="text-align: right;">12,0%</td>
+<td style="text-align: right;">11,0/1,0%</td>
+<td style="text-align: right;">2.492,0</td>
+<td style="text-align: right;">1.356,9</td>
+<td>11,50 USD condicionado</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td style="text-align: right;">15.600</td>
+<td style="text-align: right;">3,0/4,5%</td>
+<td style="text-align: right;">16,0%</td>
+<td style="text-align: right;">9,5/2,0%</td>
+<td style="text-align: right;">4.596,1</td>
+<td style="text-align: right;">3.460,9</td>
+<td>29,33 USD condicionado</td>
+</tr>
+</tbody>
+</table></div>
+<p>La base comienza con ventas 15.300 M y margen después de toda renta de 2,3%, cercano al ancla 347/15.430=2,25%, y llega a 3,0%. El favorable requiere recuperación hasta 4,5% y crecimiento; el adverso contempla erosión de ventas y margen. Los márgenes incorporan renta recurrente y SBC, no locales gratuitos ni remuneración gratuita.</p>
+<p>D&amp;A residual se calibra con 581/15.430. El piso físico seleccionado es capex igual al 100% de esa D&amp;A, con prueba 75–125%; no es la guía de capex ni una medición exacta de mantenimiento. El capex reciente de 318 M está muy por debajo de esa D&amp;A y no se perpetúa automáticamente como cosecha de activos sin reposición. Reinversión neta = máximo entre financiación de aumentos positivos de NOPAT al ROIC marginal seleccionado y capex físico menos D&amp;A más necesidad de circulante. No se libera caja ficticia al caer ventas o beneficios.</p>
+<p>El costo de financiar recuperación de margen también es incierto. La base financia todo aumento de NOPAT, incluso margen; la alternativa de eficiencias permite recuperar margen sin ese capital incremental, pero mantiene el piso físico y el circulante. No se presenta una de esas hipótesis como hecho universal.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT después renta</th>
+<th style="text-align: right;">Impuesto</th>
+<th style="text-align: right;">D&amp;A residual</th>
+<th style="text-align: right;">Capex bruto implícito</th>
+<th style="text-align: right;">ΔWC</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">15.300,0</td>
+<td style="text-align: right;">351,9</td>
+<td style="text-align: right;">91,5</td>
+<td style="text-align: right;">576,1</td>
+<td style="text-align: right;">606,3</td>
+<td style="text-align: right;">0,0</td>
+<td style="text-align: right;">230,2</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">15.300,0</td>
+<td style="text-align: right;">382,5</td>
+<td style="text-align: right;">99,5</td>
+<td style="text-align: right;">576,1</td>
+<td style="text-align: right;">764,8</td>
+<td style="text-align: right;">0,0</td>
+<td style="text-align: right;">94,3</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">15.376,5</td>
+<td style="text-align: right;">415,2</td>
+<td style="text-align: right;">107,9</td>
+<td style="text-align: right;">579,0</td>
+<td style="text-align: right;">772,8</td>
+<td style="text-align: right;">7,6</td>
+<td style="text-align: right;">105,8</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">15.530,3</td>
+<td style="text-align: right;">450,4</td>
+<td style="text-align: right;">117,1</td>
+<td style="text-align: right;">584,8</td>
+<td style="text-align: right;">786,5</td>
+<td style="text-align: right;">15,4</td>
+<td style="text-align: right;">116,1</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">15.685,6</td>
+<td style="text-align: right;">470,6</td>
+<td style="text-align: right;">122,3</td>
+<td style="text-align: right;">590,6</td>
+<td style="text-align: right;">699,6</td>
+<td style="text-align: right;">15,5</td>
+<td style="text-align: right;">223,7</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">15.920,9</td>
+<td style="text-align: right;">477,6</td>
+<td style="text-align: right;">124,2</td>
+<td style="text-align: right;">599,5</td>
+<td style="text-align: right;">619,5</td>
+<td style="text-align: right;">23,5</td>
+<td style="text-align: right;">309,9</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">16.159,7</td>
+<td style="text-align: right;">484,8</td>
+<td style="text-align: right;">126,0</td>
+<td style="text-align: right;">608,5</td>
+<td style="text-align: right;">628,8</td>
+<td style="text-align: right;">23,9</td>
+<td style="text-align: right;">314,6</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">16.402,1</td>
+<td style="text-align: right;">492,1</td>
+<td style="text-align: right;">127,9</td>
+<td style="text-align: right;">617,6</td>
+<td style="text-align: right;">638,2</td>
+<td style="text-align: right;">24,2</td>
+<td style="text-align: right;">319,3</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">16.648,1</td>
+<td style="text-align: right;">499,4</td>
+<td style="text-align: right;">129,9</td>
+<td style="text-align: right;">626,9</td>
+<td style="text-align: right;">647,8</td>
+<td style="text-align: right;">24,6</td>
+<td style="text-align: right;">324,1</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">16.897,8</td>
+<td style="text-align: right;">506,9</td>
+<td style="text-align: right;">131,8</td>
+<td style="text-align: right;">636,3</td>
+<td style="text-align: right;">657,5</td>
+<td style="text-align: right;">25,0</td>
+<td style="text-align: right;">328,9</td>
+</tr>
+</tbody>
+</table></div>
+<p>La tabla concilia FCFF = NOPAT + D&amp;A residual − capex bruto implícito − Δcirculante − otros flujos de inversión de estrés. El capex bruto implícito incorpora el mayor requerimiento de crecimiento o mantenimiento, no la suma de ambos cuando duplican la misma inversión. El terminal conserva el mismo piso físico, la renta recurrente y el costo del crecimiento. No se añade una liquidación inmobiliaria a una perpetuidad operativa.</p>
+<p>Descuento: Treasury 10Y de 4 noviembre 4,90%, ERP de 1 noviembre 4,41% (su referencia propia de tipo libre 5,29%), beta histórica proveedor 1,33. Coste de equity aproximado 10,77%; coste de notas seleccionado 10%, no rendimiento marginal verificado, y estructura después de renta dan WACC proxy 9,69%. Base 11% añade un colchón discrecional de unos 131 puntos básicos; no es redondeo. Adverso 13,5%, favorable 9,5%. No se usa el WACC automático del agregador.</p>
+<h2 id="sensibilidad-e-inverso">Sensibilidad e inverso</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sensibilidad de base</th>
+<th>Entradas</th>
+<th>Resultados económicos por acción proxy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>marginRecoveryCapitalFundingFraction</td>
+<td>0 / 0.5 / 1</td>
+<td>15,76 / 13,63 / 11,50</td>
+</tr>
+<tr class="even">
+<td>physicalCapexToResidualDdaFloor</td>
+<td>0.75 / 1 / 1.25</td>
+<td>11,50 / 11,50 / 3,60</td>
+</tr>
+<tr class="odd">
+<td>rentalCashFactor</td>
+<td>0.9 / 1 / 1.1</td>
+<td>12,08 / 11,50 / 8,64</td>
+</tr>
+<tr class="even">
+<td>tax</td>
+<td>0.23 / 0.26 / 0.29</td>
+<td>12,35 / 11,50 / 10,64</td>
+</tr>
+<tr class="odd">
+<td>workingCapitalPerIncrementalRevenue</td>
+<td>0.05 / 0.1 / 0.2</td>
+<td>11,50 / 11,50 / 11,37</td>
+</tr>
+<tr class="even">
+<td>otherInvestingAnnualStress</td>
+<td>0 / 22 / 44</td>
+<td>11,50 / 11,25 / 10,08</td>
+</tr>
+<tr class="odd">
+<td>capital.operatingCashReserveSelected</td>
+<td>300 / 500 / 800</td>
+<td>13,19 / 11,50 / 8,96</td>
+</tr>
+<tr class="even">
+<td>capital.unreconciledClaimReserveSelected</td>
+<td>0 / 100 / 250</td>
+<td>12,35 / 11,50 / 10,23</td>
+</tr>
+<tr class="odd">
+<td>capital.sharesProxy</td>
+<td>113.376445 / 118 / 124</td>
+<td>11,97 / 11,50 / 10,94</td>
+</tr>
+<tr class="even">
+<td>cases.base.wacc</td>
+<td>0.095 / 0.11 / 0.125</td>
+<td>15,96 / 11,50 / 8,25</td>
+</tr>
+<tr class="odd">
+<td>cases.base.terminalGrowth</td>
+<td>0 / 0.01 / 0.02</td>
+<td>11,31 / 11,50 / 11,71</td>
+</tr>
+<tr class="even">
+<td>cases.base.marginalRoic</td>
+<td>0.08 / 0.12 / 0.16</td>
+<td>8,30 / 11,50 / 13,10</td>
+</tr>
+</tbody>
+</table></div>
+<p>Financiar toda la recuperación de margen produce base 11,50 USD; si esa recuperación proviene de eficiencias sin capital incremental sobre los pisos físicos/circulante, la base pasa a 15,76 USD. Subir el piso físico de 100% a 125% de D&amp;A reduce a 3,60 USD, mientras 75% no cambia la base porque domina la financiación económica: no implica que el capex sea irrelevante.</p>
+<p>El inverso depende mucho de ese tratamiento. Financiando todos los aumentos de NOPAT, alcanzar 25,37 requiere elevar los márgenes de todos los años unos 8,32 puntos, hasta 10,62% inicial y 11,32% terminal. Si las eficiencias no necesitan ese capital extra, manteniendo mantenimiento y circulante, el umbral baja a unos 3,38% inicial y 4,08% terminal. No es honesto citar sólo el inverso más exigente: ambos son condiciones del modelo, no consenso ni previsión. El primer inverso además produce aproximadamente −6.676 M de FCFF inicial: descontar ese costo no demuestra capacidad de financiarlo, ni modela nueva deuda o dilución necesaria. No es un plan ejecutable. La evidencia que falta es cuánto margen puede recuperarse y con qué inversión, no una promesa de que el precio tiene que converger.</p>
+<h2 id="comparables">Comparables</h2>
+<p>Contraste Q2 operativo, con IEEPA y partidas identificadas retiradas; no márgenes después de renta cash homogéneos: | Compañía | Crecimiento ventas | EBIT ajustado parcial | EBIT previo comparable parcial | Margen actual parcial | |—|—:|—:|—:|—:| | KSS | -0,87% | 161,0 | 161,0 | 4,58% | | URBN | 10,44% | 193,1 | 174,4 | 11,62% | | ANF | 4,81% | 152,7 | 168,1 | 12,06% |</p>
+<p>URBN/Nuuly y ANF tienen modelos y mezcla distintos; no se traslada su margen a KSS. Las compras de ropa de alquiler Nuuly ya están en CFO y no se vuelven a deducir. Este contraste no cambia gestión de posiciones.</p>
+<p>KSS: <a href="https://www.sec.gov/Archives/edgar/data/885639/000119312526381893/kss-20260801.htm" class="uri">https://www.sec.gov/Archives/edgar/data/885639/000119312526381893/kss-20260801.htm</a> URBN: <a href="https://www.sec.gov/Archives/edgar/data/912615/000119312526386468/urbn-20260731.htm" class="uri">https://www.sec.gov/Archives/edgar/data/912615/000119312526386468/urbn-20260731.htm</a> ANF: <a href="https://www.sec.gov/Archives/edgar/data/1018840/000101884026000041/q22026pressrelease.htm" class="uri">https://www.sec.gov/Archives/edgar/data/1018840/000101884026000041/q22026pressrelease.htm</a></p>
+<p>Macy’s ofrece un contraste de departamento más cercano, también imperfecto. TTM al1 de agosto: ingresos22.781 M, operating income1.144 M; quitando ganancias de activos39 y acuerdo interchange328, y añadiendo cargos199, quedan976 M. Retirar95 M de IEEPA bruto da881 M, conservando gasto de reinversión financiado por ese reembolso: es sensibilidad, no normalización neta certificada. Cierres y perímetro tampoco son constantes.</p>
+<p>Cierre Macy’s4nov25,69; acciones261,176646 millones de agosto, deuda financiera contable2.433 y caja1.294 dan EV sin leases7.848,6 M. Ratio indicativo frente881 M≈8,91x. No se homogeneizó renta cash TTM: no entra en mediana objetivo. KSS con la misma convención básica exleases y notas contables daEV 3.380,4 M; frenteEBIT496 da6,82x, pero frente347 después de toda renta da9,74x. Cambiar la definición cambia la aparente baratura. No se concluye valor relativo con métricas desiguales.</p>
+<p>Macy’s fuentes: <a href="https://www.sec.gov/Archives/edgar/data/794367/000162828026061320/m-20260801.htm" class="uri">https://www.sec.gov/Archives/edgar/data/794367/000162828026061320/m-20260801.htm</a> y <a href="https://s202.q4cdn.com/285121676/files/doc_financials/2025/ar/Macy-s-Inc-2025-Annual-Report.pdf" class="uri">https://s202.q4cdn.com/285121676/files/doc_financials/2025/ar/Macy-s-Inc-2025-Annual-Report.pdf</a> y <a href="https://stockanalysis.com/stocks/m/history/" class="uri">https://stockanalysis.com/stocks/m/history/</a> .</p>
+<p>No hay mediana de múltiplos aplicada como precio objetivo. La conciliación completa de rentas, capital y ajustes de pares sigue pendiente antes de certificar Stage3 integral.</p>
+<h2 id="próximas-comprobaciones">Próximas comprobaciones</h2>
+<ul>
+<li>Q3 del 24 de noviembre: ventas comparables, tráfico, margen excluyendo IEEPA y saldo de inventario/proveedores; no confundir reembolsos con avance operativo.</li>
+<li>Verificar caja, recompra realmente ejecutada, acciones/premios y pago de dividendos; conciliar impuestos y compensación diferida.</li>
+<li>Medir reposición física y cash rent, incluida renovación de locales, frente al ahorro de corto plazo en capex.</li>
+<li>Confirmar si Sephora y el resto del surtido elevan rentabilidad después de compartir beneficios y financiar inventario/capital.</li>
+<li>Revalidar todos los filtros técnicos y riesgo del plan. El escáner histórico no autoriza entrada hoy.</li>
+</ul>
+<h2 id="fuentes-principales">Fuentes principales</h2>
+<ul>
+<li>Q2: <a href="https://www.sec.gov/Archives/edgar/data/885639/000119312526381893/kss-20260801.htm" class="uri">https://www.sec.gov/Archives/edgar/data/885639/000119312526381893/kss-20260801.htm</a></li>
+<li>FY2025: <a href="https://www.sec.gov/Archives/edgar/data/885639/000119312526115982/kss-20260131.htm" class="uri">https://www.sec.gov/Archives/edgar/data/885639/000119312526115982/kss-20260131.htm</a></li>
+<li>Release Q2: <a href="https://www.sec.gov/Archives/edgar/data/885639/000119312526365860/d171200dex991.htm" class="uri">https://www.sec.gov/Archives/edgar/data/885639/000119312526365860/d171200dex991.htm</a></li>
+<li>Q1: <a href="https://www.sec.gov/Archives/edgar/data/885639/000119312526257402/kss-20260502.htm" class="uri">https://www.sec.gov/Archives/edgar/data/885639/000119312526257402/kss-20260502.htm</a></li>
+<li>Q3 previo: <a href="https://www.sec.gov/Archives/edgar/data/885639/000119312525306677/kss-20251101.htm" class="uri">https://www.sec.gov/Archives/edgar/data/885639/000119312525306677/kss-20251101.htm</a></li>
+<li>Treasury: <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" class="uri">https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve</a></li>
+<li>ERP: <a href="https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm" class="uri">https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm</a></li>
+<li>Beta: <a href="https://stockanalysis.com/stocks/kss/statistics/" class="uri">https://stockanalysis.com/stocks/kss/statistics/</a></li>
+</ul>
+<p>Paquete propio reproducible con hechos mínimos, fuentes y cálculos; filings completos excluidos. Ningún resultado autoriza una operación.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/KSS/KSS_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/KSS/model/model.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/KSS/model/results.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>

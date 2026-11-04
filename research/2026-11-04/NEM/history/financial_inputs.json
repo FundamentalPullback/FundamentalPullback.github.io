@@ -1,0 +1,1084 @@
+{
+  "units": "USD millions",
+  "sources": {
+    "fy25": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm",
+      "raw_path": "../sources/history_fy25.htm"
+    },
+    "q326": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164727/000116472726000043/nem-20260930.htm",
+      "raw_path": "../sources/history_q326.htm"
+    },
+    "q226": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164727/000116472726000036/nem-20260630.htm",
+      "raw_path": "../sources/history_q226.htm"
+    },
+    "q126": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164727/000116472726000019/nem-20260331.htm",
+      "raw_path": "../sources/history_q126.htm"
+    },
+    "q325": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1164727/000116472725000046/nem-20250930.htm",
+      "raw_path": "../sources/history_q325.htm"
+    }
+  },
+  "periods": [
+    {
+      "period": "FY2023",
+      "start": "2023-01-01",
+      "end": "2023-12-31",
+      "source_id": "fy25",
+      "values": {
+        "revenue": 11812.0,
+        "operating_costs_total": 13512.0,
+        "ni_consolidated": -2467.0,
+        "ni_parent": -2494.0,
+        "nci_income": 27.0,
+        "cfo": 2763.0,
+        "cfo_continuing": 2754.0,
+        "capex_cash": 2666.0,
+        "dda": 2108.0,
+        "sbc_expense": 80.0,
+        "reclamation_expense": 1533.0,
+        "reclamation_cf_adjustment": 1506.0,
+        "reclamation_cf_liability_change": -275.0,
+        "asset_sale_loss_gain": 0.0,
+        "impairment_separate_line": 1891.0,
+        "mining_asset_sale_proceeds": 0.0,
+        "affiliate_equity_income": 63.0,
+        "pretax_before_equity_income": -2031.0,
+        "nonoperating_income_expense": -331.0,
+        "capex_development_accrual": 1171,
+        "capex_sustaining_accrual": 1574,
+        "sbc_capitalized": null,
+        "capex_sustaining_cash": null,
+        "capex_development_cash": null
+      },
+      "evidence": {
+        "revenue": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "operating_costs_total": {
+          "tag": "us-gaap:CostsAndExpenses",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_consolidated": {
+          "tag": "us-gaap:ProfitLoss",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_parent": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nci_income": {
+          "tag": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo_continuing": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_cash": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "dda": {
+          "tag": "us-gaap:DepreciationDepletionAndAmortization",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "sbc_expense": {
+          "tag": "us-gaap:AllocatedShareBasedCompensationExpense",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_expense": {
+          "tag": "nem:ReclamationAndMineShutdownProvisionAndEnvironmentalRemediationExpense",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_adjustment": {
+          "tag": "nem:EnvironmentalRemediationCosts",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_liability_change": {
+          "tag": "us-gaap:IncreaseDecreaseInAssetRetirementObligations",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "asset_sale_loss_gain": {
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsToBeDisposedOf",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "impairment_separate_line": {
+          "tag": "nem:ImpairmentGoodwillLongLivedAssetAndOtherAssets",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "mining_asset_sale_proceeds": {
+          "tag": "us-gaap:ProceedsFromSaleOfOtherProductiveAssets",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "affiliate_equity_income": {
+          "tag": "us-gaap:IncomeLossFromEquityMethodInvestments",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "pretax_before_equity_income": {
+          "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nonoperating_income_expense": {
+          "tag": "us-gaap:NonoperatingIncomeExpense",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_split": {
+          "source_id": "fy25",
+          "section": "MD&A Liquidity and Capital Resources, Capital expenditures",
+          "basis": "manually transcribed accrual-basis totals, NOT cash split"
+        }
+      }
+    },
+    {
+      "period": "FY2024",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "source_id": "fy25",
+      "values": {
+        "revenue": 18682.0,
+        "operating_costs_total": 14155.0,
+        "ni_consolidated": 3381.0,
+        "ni_parent": 3348.0,
+        "nci_income": 33.0,
+        "cfo": 6363.0,
+        "cfo_continuing": 6318.0,
+        "capex_cash": 3402.0,
+        "dda": 2576.0,
+        "sbc_expense": 89.0,
+        "reclamation_expense": 328.0,
+        "reclamation_cf_adjustment": 302.0,
+        "reclamation_cf_liability_change": -433.0,
+        "asset_sale_loss_gain": 1114.0,
+        "impairment_separate_line": 78.0,
+        "mining_asset_sale_proceeds": 560.0,
+        "affiliate_equity_income": 133.0,
+        "pretax_before_equity_income": 4577.0,
+        "nonoperating_income_expense": 50.0,
+        "capex_development_accrual": 1419,
+        "capex_sustaining_accrual": 1905,
+        "sbc_capitalized": null,
+        "capex_sustaining_cash": null,
+        "capex_development_cash": null
+      },
+      "evidence": {
+        "revenue": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "operating_costs_total": {
+          "tag": "us-gaap:CostsAndExpenses",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_consolidated": {
+          "tag": "us-gaap:ProfitLoss",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_parent": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nci_income": {
+          "tag": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo_continuing": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_cash": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "dda": {
+          "tag": "us-gaap:DepreciationDepletionAndAmortization",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "sbc_expense": {
+          "tag": "us-gaap:AllocatedShareBasedCompensationExpense",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_expense": {
+          "tag": "nem:ReclamationAndMineShutdownProvisionAndEnvironmentalRemediationExpense",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_adjustment": {
+          "tag": "nem:EnvironmentalRemediationCosts",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_liability_change": {
+          "tag": "us-gaap:IncreaseDecreaseInAssetRetirementObligations",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "asset_sale_loss_gain": {
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsToBeDisposedOf",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "impairment_separate_line": {
+          "tag": "nem:ImpairmentGoodwillLongLivedAssetAndOtherAssets",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "mining_asset_sale_proceeds": {
+          "tag": "us-gaap:ProceedsFromSaleOfOtherProductiveAssets",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "affiliate_equity_income": {
+          "tag": "us-gaap:IncomeLossFromEquityMethodInvestments",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "pretax_before_equity_income": {
+          "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nonoperating_income_expense": {
+          "tag": "us-gaap:NonoperatingIncomeExpense",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_split": {
+          "source_id": "fy25",
+          "section": "MD&A Liquidity and Capital Resources, Capital expenditures",
+          "basis": "manually transcribed accrual-basis totals, NOT cash split"
+        }
+      }
+    },
+    {
+      "period": "FY2025",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "source_id": "fy25",
+      "values": {
+        "revenue": 22669.0,
+        "operating_costs_total": 11708.0,
+        "ni_consolidated": 7167.0,
+        "ni_parent": 7085.0,
+        "nci_income": 82.0,
+        "cfo": 10334.0,
+        "cfo_continuing": 10334.0,
+        "capex_cash": 3035.0,
+        "dda": 2521.0,
+        "sbc_expense": 99.0,
+        "reclamation_expense": 249.0,
+        "reclamation_cf_adjustment": 219.0,
+        "reclamation_cf_liability_change": -803.0,
+        "asset_sale_loss_gain": -1066.0,
+        "impairment_separate_line": 842.0,
+        "mining_asset_sale_proceeds": 2811.0,
+        "affiliate_equity_income": 421.0,
+        "pretax_before_equity_income": 11342.0,
+        "nonoperating_income_expense": 381.0,
+        "capex_development_accrual": 1312,
+        "capex_sustaining_accrual": 1755,
+        "sbc_capitalized": null,
+        "capex_sustaining_cash": null,
+        "capex_development_cash": null
+      },
+      "evidence": {
+        "revenue": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "operating_costs_total": {
+          "tag": "us-gaap:CostsAndExpenses",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_consolidated": {
+          "tag": "us-gaap:ProfitLoss",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_parent": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nci_income": {
+          "tag": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo_continuing": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_cash": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "dda": {
+          "tag": "us-gaap:DepreciationDepletionAndAmortization",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "sbc_expense": {
+          "tag": "us-gaap:AllocatedShareBasedCompensationExpense",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_expense": {
+          "tag": "nem:ReclamationAndMineShutdownProvisionAndEnvironmentalRemediationExpense",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_adjustment": {
+          "tag": "nem:EnvironmentalRemediationCosts",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_liability_change": {
+          "tag": "us-gaap:IncreaseDecreaseInAssetRetirementObligations",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "asset_sale_loss_gain": {
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsToBeDisposedOf",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "impairment_separate_line": {
+          "tag": "nem:ImpairmentGoodwillLongLivedAssetAndOtherAssets",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "mining_asset_sale_proceeds": {
+          "tag": "us-gaap:ProceedsFromSaleOfOtherProductiveAssets",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "affiliate_equity_income": {
+          "tag": "us-gaap:IncomeLossFromEquityMethodInvestments",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "pretax_before_equity_income": {
+          "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nonoperating_income_expense": {
+          "tag": "us-gaap:NonoperatingIncomeExpense",
+          "source_id": "fy25",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_split": {
+          "source_id": "fy25",
+          "section": "MD&A Liquidity and Capital Resources, Capital expenditures",
+          "basis": "manually transcribed accrual-basis totals, NOT cash split"
+        }
+      }
+    },
+    {
+      "period": "9M2024",
+      "start": "2024-01-01",
+      "end": "2024-09-30",
+      "source_id": "q325",
+      "values": {
+        "revenue": 13030.0,
+        "operating_costs_total": 10463.0,
+        "ni_consolidated": 1960.0,
+        "ni_parent": 1945.0,
+        "nci_income": 15.0,
+        "cfo": 3852.0,
+        "cfo_continuing": 3807.0,
+        "capex_cash": 2527.0,
+        "dda": 1887.0,
+        "sbc_expense": 66.0,
+        "reclamation_expense": 324.0,
+        "reclamation_cf_adjustment": 306.0,
+        "reclamation_cf_liability_change": -273.0,
+        "asset_sale_loss_gain": 846.0,
+        "impairment_separate_line": 0,
+        "mining_asset_sale_proceeds": 330.0,
+        "affiliate_equity_income": 64.0,
+        "pretax_before_equity_income": 2523.0,
+        "nonoperating_income_expense": -44.0,
+        "capex_development_accrual": 1065,
+        "capex_sustaining_accrual": 1407,
+        "sbc_capitalized": null,
+        "capex_sustaining_cash": null,
+        "capex_development_cash": null
+      },
+      "evidence": {
+        "revenue": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "operating_costs_total": {
+          "tag": "us-gaap:CostsAndExpenses",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_consolidated": {
+          "tag": "us-gaap:ProfitLoss",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_parent": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nci_income": {
+          "tag": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo_continuing": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_cash": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "dda": {
+          "tag": "us-gaap:DepreciationDepletionAndAmortization",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "sbc_expense": {
+          "tag": "us-gaap:AllocatedShareBasedCompensationExpense",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_expense": {
+          "tag": "nem:ReclamationAndMineShutdownProvisionAndEnvironmentalRemediationExpense",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_adjustment": {
+          "tag": "nem:EnvironmentalRemediationCosts",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_liability_change": {
+          "tag": "us-gaap:IncreaseDecreaseInAssetRetirementObligations",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "asset_sale_loss_gain": {
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsToBeDisposedOf",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "impairment_separate_line": {
+          "source_id": "q325",
+          "basis": "statement contains no separate impairment line; minor write-downs may remain within Other expense"
+        },
+        "mining_asset_sale_proceeds": {
+          "tag": "us-gaap:ProceedsFromSaleOfOtherProductiveAssets",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "affiliate_equity_income": {
+          "tag": "us-gaap:IncomeLossFromEquityMethodInvestments",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "pretax_before_equity_income": {
+          "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nonoperating_income_expense": {
+          "tag": "us-gaap:NonoperatingIncomeExpense",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_split": {
+          "source_id": "q325",
+          "section": "MD&A Liquidity and Capital Resources, Capital expenditures",
+          "basis": "manually transcribed accrual-basis totals, NOT cash split"
+        }
+      }
+    },
+    {
+      "period": "9M2025",
+      "start": "2025-01-01",
+      "end": "2025-09-30",
+      "source_id": "q326",
+      "values": {
+        "revenue": 15851.0,
+        "operating_costs_total": 7958.0,
+        "ni_consolidated": 5820.0,
+        "ni_parent": 5784.0,
+        "nci_income": 36.0,
+        "cfo": 6713.0,
+        "cfo_continuing": 6713.0,
+        "capex_cash": 2227.0,
+        "dda": 1856.0,
+        "sbc_expense": 71.0,
+        "reclamation_expense": 299.0,
+        "reclamation_cf_adjustment": 282.0,
+        "reclamation_cf_liability_change": -527.0,
+        "asset_sale_loss_gain": -1074.0,
+        "impairment_separate_line": 0,
+        "mining_asset_sale_proceeds": 2789.0,
+        "affiliate_equity_income": 250.0,
+        "pretax_before_equity_income": 8096.0,
+        "nonoperating_income_expense": 203.0,
+        "capex_development_accrual": 1001,
+        "capex_sustaining_accrual": 1232,
+        "sbc_capitalized": null,
+        "capex_sustaining_cash": null,
+        "capex_development_cash": null
+      },
+      "evidence": {
+        "revenue": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "operating_costs_total": {
+          "tag": "us-gaap:CostsAndExpenses",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_consolidated": {
+          "tag": "us-gaap:ProfitLoss",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_parent": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nci_income": {
+          "tag": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo_continuing": {
+          "basis": "no discontinued operating cash flows in period",
+          "source_id": "q326"
+        },
+        "capex_cash": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "dda": {
+          "tag": "us-gaap:DepreciationDepletionAndAmortization",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "sbc_expense": {
+          "tag": "us-gaap:AllocatedShareBasedCompensationExpense",
+          "source_id": "q325",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_expense": {
+          "tag": "nem:ReclamationAndMineShutdownProvisionAndEnvironmentalRemediationExpense",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_adjustment": {
+          "tag": "nem:EnvironmentalRemediationCosts",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_liability_change": {
+          "tag": "us-gaap:IncreaseDecreaseInAssetRetirementObligations",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "asset_sale_loss_gain": {
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsToBeDisposedOf",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "impairment_separate_line": {
+          "source_id": "q326",
+          "basis": "statement contains no separate impairment line; minor write-downs may remain within Other expense"
+        },
+        "mining_asset_sale_proceeds": {
+          "tag": "us-gaap:ProceedsFromSaleOfOtherProductiveAssets",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "affiliate_equity_income": {
+          "tag": "us-gaap:IncomeLossFromEquityMethodInvestments",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "pretax_before_equity_income": {
+          "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nonoperating_income_expense": {
+          "tag": "us-gaap:NonoperatingIncomeExpense",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_split": {
+          "source_id": "q326",
+          "section": "MD&A Liquidity and Capital Resources, Capital expenditures",
+          "basis": "manually transcribed accrual-basis totals, NOT cash split"
+        }
+      }
+    },
+    {
+      "period": "9M2026",
+      "start": "2026-01-01",
+      "end": "2026-09-30",
+      "source_id": "q326",
+      "values": {
+        "revenue": 19788.0,
+        "operating_costs_total": 9063.0,
+        "ni_consolidated": 8093.0,
+        "ni_parent": 7939.0,
+        "nci_income": 154.0,
+        "cfo": 9477.0,
+        "cfo_continuing": 9477.0,
+        "capex_cash": 2216.0,
+        "dda": 1868.0,
+        "sbc_expense": null,
+        "reclamation_expense": 358.0,
+        "reclamation_cf_adjustment": 339.0,
+        "reclamation_cf_liability_change": -714.0,
+        "asset_sale_loss_gain": -5.0,
+        "impairment_separate_line": 0,
+        "mining_asset_sale_proceeds": 99.0,
+        "affiliate_equity_income": 496.0,
+        "pretax_before_equity_income": 10792.0,
+        "nonoperating_income_expense": 67.0,
+        "capex_development_accrual": 967,
+        "capex_sustaining_accrual": 1383,
+        "sbc_capitalized": null,
+        "capex_sustaining_cash": null,
+        "capex_development_cash": null
+      },
+      "evidence": {
+        "revenue": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "operating_costs_total": {
+          "tag": "us-gaap:CostsAndExpenses",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_consolidated": {
+          "tag": "us-gaap:ProfitLoss",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_parent": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nci_income": {
+          "tag": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo_continuing": {
+          "basis": "no discontinued operating cash flows in period",
+          "source_id": "q326"
+        },
+        "capex_cash": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "dda": {
+          "tag": "us-gaap:DepreciationDepletionAndAmortization",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "sbc_expense": {
+          "status": "not separately extracted/disclosed"
+        },
+        "reclamation_expense": {
+          "tag": "nem:ReclamationAndMineShutdownProvisionAndEnvironmentalRemediationExpense",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_adjustment": {
+          "tag": "nem:EnvironmentalRemediationCosts",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_liability_change": {
+          "tag": "us-gaap:IncreaseDecreaseInAssetRetirementObligations",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "asset_sale_loss_gain": {
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsToBeDisposedOf",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "impairment_separate_line": {
+          "source_id": "q326",
+          "basis": "statement contains no separate impairment line; minor write-downs may remain within Other expense"
+        },
+        "mining_asset_sale_proceeds": {
+          "tag": "us-gaap:ProceedsFromSaleOfOtherProductiveAssets",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "affiliate_equity_income": {
+          "tag": "us-gaap:IncomeLossFromEquityMethodInvestments",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "pretax_before_equity_income": {
+          "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nonoperating_income_expense": {
+          "tag": "us-gaap:NonoperatingIncomeExpense",
+          "source_id": "q326",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_split": {
+          "source_id": "q326",
+          "section": "MD&A Liquidity and Capital Resources, Capital expenditures",
+          "basis": "manually transcribed accrual-basis totals, NOT cash split"
+        }
+      }
+    },
+    {
+      "period": "H12026",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "source_id": "q226",
+      "values": {
+        "revenue": 13425.0,
+        "operating_costs_total": 5863.0,
+        "ni_consolidated": 5579.0,
+        "ni_parent": 5464.0,
+        "nci_income": 115.0,
+        "cfo": 6709.0,
+        "cfo_continuing": 6709.0,
+        "capex_cash": 1360.0,
+        "dda": 1236.0,
+        "sbc_expense": null,
+        "reclamation_expense": 159.0,
+        "reclamation_cf_adjustment": 149.0,
+        "reclamation_cf_liability_change": -458.0,
+        "asset_sale_loss_gain": -5.0,
+        "impairment_separate_line": 0,
+        "mining_asset_sale_proceeds": 100.0,
+        "affiliate_equity_income": 353.0,
+        "pretax_before_equity_income": 7582.0,
+        "nonoperating_income_expense": 20.0,
+        "capex_development_accrual": 580,
+        "capex_sustaining_accrual": 840,
+        "sbc_capitalized": null,
+        "capex_sustaining_cash": null,
+        "capex_development_cash": null
+      },
+      "evidence": {
+        "revenue": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "operating_costs_total": {
+          "tag": "us-gaap:CostsAndExpenses",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_consolidated": {
+          "tag": "us-gaap:ProfitLoss",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_parent": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nci_income": {
+          "tag": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo_continuing": {
+          "basis": "no discontinued operating cash flows in period",
+          "source_id": "q226"
+        },
+        "capex_cash": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "dda": {
+          "tag": "us-gaap:DepreciationDepletionAndAmortization",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "sbc_expense": {
+          "status": "not separately extracted/disclosed"
+        },
+        "reclamation_expense": {
+          "tag": "nem:ReclamationAndMineShutdownProvisionAndEnvironmentalRemediationExpense",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_adjustment": {
+          "tag": "nem:EnvironmentalRemediationCosts",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_liability_change": {
+          "tag": "us-gaap:IncreaseDecreaseInAssetRetirementObligations",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "asset_sale_loss_gain": {
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsToBeDisposedOf",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "impairment_separate_line": {
+          "source_id": "q226",
+          "basis": "statement contains no separate impairment line; minor write-downs may remain within Other expense"
+        },
+        "mining_asset_sale_proceeds": {
+          "tag": "us-gaap:ProceedsFromSaleOfOtherProductiveAssets",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "affiliate_equity_income": {
+          "tag": "us-gaap:IncomeLossFromEquityMethodInvestments",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "pretax_before_equity_income": {
+          "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nonoperating_income_expense": {
+          "tag": "us-gaap:NonoperatingIncomeExpense",
+          "source_id": "q226",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_split": {
+          "source_id": "q226",
+          "section": "MD&A Liquidity and Capital Resources, Capital expenditures",
+          "basis": "manually transcribed accrual-basis totals, NOT cash split"
+        }
+      }
+    },
+    {
+      "period": "Q12026",
+      "start": "2026-01-01",
+      "end": "2026-03-31",
+      "source_id": "q126",
+      "values": {
+        "revenue": 7307.0,
+        "operating_costs_total": 2841.0,
+        "ni_consolidated": 3328.0,
+        "ni_parent": 3262.0,
+        "nci_income": 66.0,
+        "cfo": 3785.0,
+        "cfo_continuing": 3785.0,
+        "capex_cash": 641.0,
+        "dda": 632.0,
+        "sbc_expense": null,
+        "reclamation_expense": 78.0,
+        "reclamation_cf_adjustment": 75.0,
+        "reclamation_cf_liability_change": -209.0,
+        "asset_sale_loss_gain": 0.0,
+        "impairment_separate_line": 0,
+        "mining_asset_sale_proceeds": 91.0,
+        "affiliate_equity_income": 149.0,
+        "pretax_before_equity_income": 4583.0,
+        "nonoperating_income_expense": 117.0,
+        "capex_development_accrual": 263,
+        "capex_sustaining_accrual": 393,
+        "sbc_capitalized": null,
+        "capex_sustaining_cash": null,
+        "capex_development_cash": null
+      },
+      "evidence": {
+        "revenue": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "operating_costs_total": {
+          "tag": "us-gaap:CostsAndExpenses",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_consolidated": {
+          "tag": "us-gaap:ProfitLoss",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "ni_parent": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nci_income": {
+          "tag": "us-gaap:NetIncomeLossAttributableToNoncontrollingInterest",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "cfo_continuing": {
+          "basis": "no discontinued operating cash flows in period",
+          "source_id": "q126"
+        },
+        "capex_cash": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "dda": {
+          "tag": "us-gaap:DepreciationDepletionAndAmortization",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "sbc_expense": {
+          "status": "not separately extracted/disclosed"
+        },
+        "reclamation_expense": {
+          "tag": "nem:ReclamationAndMineShutdownProvisionAndEnvironmentalRemediationExpense",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_adjustment": {
+          "tag": "nem:EnvironmentalRemediationCosts",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "reclamation_cf_liability_change": {
+          "tag": "us-gaap:IncreaseDecreaseInAssetRetirementObligations",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "asset_sale_loss_gain": {
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsToBeDisposedOf",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "impairment_separate_line": {
+          "source_id": "q126",
+          "basis": "statement contains no separate impairment line; minor write-downs may remain within Other expense"
+        },
+        "mining_asset_sale_proceeds": {
+          "tag": "us-gaap:ProceedsFromSaleOfOtherProductiveAssets",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "affiliate_equity_income": {
+          "tag": "us-gaap:IncomeLossFromEquityMethodInvestments",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "pretax_before_equity_income": {
+          "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "nonoperating_income_expense": {
+          "tag": "us-gaap:NonoperatingIncomeExpense",
+          "source_id": "q126",
+          "basis": "unsegmented inline XBRL fact; first statement occurrence"
+        },
+        "capex_split": {
+          "source_id": "q126",
+          "section": "MD&A Liquidity and Capital Resources, Capital expenditures",
+          "basis": "manually transcribed accrual-basis totals, NOT cash split"
+        }
+      }
+    }
+  ]
+}

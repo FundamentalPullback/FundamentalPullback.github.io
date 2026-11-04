@@ -20,7 +20,7 @@ def main():
     subprocess.run([sys.executable, str(ROOT / 'tools/refresh-tradingview-symbols.py'),
                     '--site-root', str(ROOT)], check=True)
     subprocess.run(['node', str(ROOT / 'tools/build-stock-balance.cjs')], check=True)
-    for test in ('test-stock-profiles.cjs', 'test-stock-cards.cjs', 'test-stock-balance.cjs', 'test-stock-quotes.cjs', 'test-stock-charts.cjs', 'test-stock-navigation.cjs', 'test-stock-status.cjs', 'test-research-workspace.cjs', 'test-stock-scan-filter.cjs', 'test-floating-navigation.cjs'):
+    for test in ('test-stock-profiles.cjs', 'test-stock-cards.cjs', 'test-stock-balance.cjs', 'test-stock-quotes.cjs', 'test-stock-charts.cjs', 'test-stock-navigation.cjs', 'test-stock-status.cjs', 'test-research-workspace.cjs', 'test-stock-scan-filter.cjs', 'test-floating-navigation.cjs', 'test-stage4-nov4.cjs'):
         subprocess.run(['node', str(ROOT / 'tools' / test)], check=True)
     path = ROOT / 'data/manifest.js'
     prefix = 'window.FP_MANIFEST='

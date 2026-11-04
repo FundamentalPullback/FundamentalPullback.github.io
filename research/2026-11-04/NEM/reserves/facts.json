@@ -1,0 +1,268 @@
+{
+  "as_of": "2026-11-04",
+  "sources": {
+    "FY25_10K": "https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm",
+    "Q326_10Q": "https://www.sec.gov/Archives/edgar/data/1164727/000116472726000043/nem-20260930.htm",
+    "Q326_release": "https://www.sec.gov/Archives/edgar/data/1164727/000116472726000041/newmontq32026earningsrelea.htm",
+    "November2026IssuerPresentation": "https://files.quartr.com/conference-calls/2984fb6d92440d7545c90e0de8743738-2026-11-03-22-23-13.pdf?ref=U0E="
+  },
+  "reserves": {
+    "date": "2025-12-31",
+    "basis": "attributable ownership; contained metal before metallurgical recovery losses, NOT consolidated production basis",
+    "gold_moz": 118.2,
+    "gold_proven_moz": 16.5,
+    "gold_probable_moz": 101.8,
+    "copper_million_tonnes": 12.5,
+    "copper_proven_million_tonnes": 0.2,
+    "copper_probable_million_tonnes": 12.3,
+    "weighted_recovery_gold_pct": 81,
+    "weighted_recovery_copper_pct": 87,
+    "reference": "FY25 10-K Item 2 pp71-75; rounding means subtotals do not precisely add",
+    "gold_by_asset_moz": {
+      "Lihir": 16.0,
+      "Wafi-Golpu": 5.1,
+      "Cadia": 13.5,
+      "Tanami": 5.3,
+      "Boddington": 10.2,
+      "Ahafo South": 4.1,
+      "Ahafo North": 4.7,
+      "Merian": 4.5,
+      "Cerro Negro": 3.0,
+      "Pueblo Viejo": 8.2,
+      "NuevaUnion": 5.1,
+      "Norte Abierto": 10.8,
+      "Yanacocha": 0.5,
+      "Penasquito": 3.2,
+      "Red Chris": 3.6,
+      "Brucejack": 2.9,
+      "NGM": 17.4
+    },
+    "copper_by_asset_million_tonnes": {
+      "Wafi-Golpu": 2.3,
+      "Cadia": 2.9,
+      "Boddington": 0.5,
+      "NuevaUnion": 4.4,
+      "Norte Abierto": 1.2,
+      "Red Chris": 0.9,
+      "NGM": 0.1
+    },
+    "not_operating_reserve_cautions": [
+      "Wafi-Golpu, NuevaUnion, Norte Abierto explicitly undeveloped",
+      "Pueblo Viejo reserves included but equity-method sales excluded from consolidated revenue",
+      "Lundin/Fruta del Norte not a row in Newmont reserve table",
+      "Red Chris contains underground project reserves that require major investment; not all current production inventory"
+    ],
+    "consolidated_reserves": "No separately reported consolidated total located. Do not label 118.2 Moz as consolidated. Reconcile site ownership and operational vs undeveloped perimeter explicitly."
+  },
+  "reserve_prices": {
+    "gold_standard_usd_oz": 2000,
+    "copper_standard_usd_lb": 3.75,
+    "gold_exceptions_usd_oz": {
+      "Wafi-Golpu": 1200,
+      "NuevaUnion": 1300,
+      "Norte Abierto": 1700,
+      "Red Chris underground": 1300,
+      "NGM": 1500,
+      "Pueblo Viejo": 1500
+    },
+    "copper_exceptions_usd_lb": {
+      "Wafi-Golpu": 3.0,
+      "NuevaUnion": 3.0,
+      "Norte Abierto": 3.5,
+      "Red Chris underground": 3.0
+    },
+    "NGM_copper": {
+      "value": 3.25,
+      "unit_in_source": "per ounce",
+      "caution": "Source footnote appears internally inconsistent; do not silently assert corrected unit."
+    },
+    "gold_sensitivity": {
+      "+100_usd_oz_moz": 6.4,
+      "-100_usd_oz_moz": -2.8
+    },
+    "reference": "FY25 10-K Item 2 reserve table footnotes pp73-75"
+  },
+  "resources": {
+    "gold_MI_moz": 88.1,
+    "gold_inferred_moz": 60.6,
+    "standard_gold_price_usd_oz": 2300,
+    "exclusive_of_reserves": true,
+    "reference": "FY25 10-K Item 2 pp78-79; Risk Factors resources conversion uncertainty",
+    "caution": "Resources are not reserves; economic/legal feasibility and conversion uncertain; additional exploration/development capital and recoveries required."
+  },
+  "accounting_perimeter": {
+    "NGM": {
+      "ownership_pct": 38.5,
+      "method": "proportionate consolidation",
+      "sales_included": true
+    },
+    "Red Chris": {
+      "ownership_pct": 70,
+      "method": "proportionate consolidation"
+    },
+    "Merian": {
+      "ownership_pct": 75,
+      "method": "consolidation with 25% noncontrolling interest"
+    },
+    "Pueblo Viejo": {
+      "ownership_pct": 40,
+      "method": "equity method",
+      "sales_included": false
+    },
+    "Lundin Gold": {
+      "ownership_pct": 32,
+      "method": "equity method, quarterly lag",
+      "sales_included": false
+    },
+    "reference": "Q326 release p4 footnotes 1/9; FY25 10-K segment and property descriptions; Q326 10-Q Note 12"
+  },
+  "NGM_transaction": {
+    "agreement_date": "2026-08-10",
+    "properties_contributed": [
+      "Barrick Fourmile",
+      "Newmont Fiberline",
+      "Newmont Mike"
+    ],
+    "cash_usd_bn": 1.95,
+    "payment_timing": "within 30 days after Fourmile contribution",
+    "expected_close": "Q4 2026; pending as of Q3 report",
+    "ownership_after_pct": 38.5,
+    "accounting": "Fourmile recognized at consideration including cash plus 61.5% fair value of Fiberline/Mike; Fiberline/Mike zero prior carrying value implies expected noncash gain",
+    "reference": "Q326 10-Q Note 17 Other Commitments and Contingencies"
+  },
+  "Red_Chris_block_cave": {
+    "ownership_pct": 70,
+    "basis": "all disclosed project metrics 100% unless explicitly derived",
+    "FID_expected": "early 2027, not yet approved",
+    "commercial_expected": 2033,
+    "construction_expected": 2027,
+    "development_capex_real_usd_bn": [
+      4.2,
+      4.8
+    ],
+    "includes_contingency": true,
+    "net_of_expected_grant_CAD_m": 500,
+    "grant_finalized": false,
+    "excludes": "open-pit-to-block-cave transition costs",
+    "NEM_derived_share_real_net_capex_usd_bn": [
+      2.94,
+      3.36
+    ],
+    "initial_cave_life_years": 13,
+    "first_phase_gold_moz": 3.0,
+    "first_phase_copper_kt_min": 850,
+    "2035_2040_gold_koz_pa": [
+      275,
+      325
+    ],
+    "2035_2040_copper_kt_pa": [
+      65,
+      85
+    ],
+    "potential_life_years": 70,
+    "potential_life_caution": "Subsequent macro blocks, East Ridge and exploration not included in first-phase metrics; approvals/studies/capital required",
+    "reference": "Q326 release pp7-8"
+  },
+  "Tanami_Expansion_2": {
+    "life": "beyond 2040",
+    "capex_usd_bn": [
+      1.7,
+      1.8
+    ],
+    "capex_since_approval_through_2025_usd_bn": 1.304,
+    "historical_capex_excludes": "capitalized interest and capitalized depreciation/amortization",
+    "latest_commercial_target": "toward end of H1 2027; accelerated from H2 2027",
+    "shaft": "1460 meters; construction complete Q3 2026",
+    "reference": "FY25 10-K Our Global Project Pipeline p5; Q326 release p7"
+  },
+  "Cadia_panel_caves": {
+    "project_gold_moz": 5,
+    "project_copper_million_tonnes": 1.1,
+    "PC23_PC12_capex_usd_bn": [
+      2.0,
+      2.4
+    ],
+    "PC12_last_drawbell_expected": 2029,
+    "PC23": "final drawbell fired September 2026; all material development spend expected complete Q4 2026",
+    "reference": "FY25 10-K pipeline p5; Q326 release p7"
+  },
+  "guidance": {
+    "2026_attributable_gold_koz": 5260,
+    "2026_attributable_sustaining_capex_usd_m": 1950,
+    "2026_attributable_development_capex_usd_m": 1400,
+    "2026_capex_excludes": "noncash capitalized interest",
+    "2027_gold_growth": "low-to-mid single digit percent",
+    "2027_sustaining": "largely in line with 2026",
+    "2027_development_change_usd_m": 500,
+    "2027_capex_basis": "gross; excludes prospective Canada grant",
+    "reference": "Q326 release pp5-6"
+  },
+  "closure": {
+    "2026_expected_cash_usd_m": 850,
+    "2026_Yanacocha_water_plants_cash_usd_m": 550,
+    "9m26_cash_usd_m": 714,
+    "9m26_Yanacocha_water_plants_cash_usd_m": 531,
+    "water_plants_total_estimate_usd_bn": 1.8,
+    "water_plants_spent_to_date_usd_bn": 1.3,
+    "water_plants_completion": 2027,
+    "expected_cash_decline": "approximately $200m per year sequentially through 2028",
+    "Sep26_total_liability_usd_m": 6773,
+    "Sep26_current_liability_usd_m": 678,
+    "Sep26_noncurrent_liability_usd_m": 6095,
+    "Sep26_Yanacocha_reclamation_liability_usd_m": 3387,
+    "2026_accretion_guidance_usd_m": 385,
+    "reference": "Q326 release pp5-7; Q326 10-Q Note 6 pp20-21 and Note 17",
+    "caveats": [
+      "Accretion is not cash payment; liability book value is not a substitute for annual cash schedule.",
+      "AISC excludes reclamation adjustments/accretion at closed sites; cash obligations remain.",
+      "Yanacocha comprehensive water/closure studies may cause material additional liability.",
+      "If explicitly forecasting closure cash, do not also subtract same complete ARO without adjustment."
+    ]
+  },
+  "Penasquito_stream": {
+    "silver_production_streamed_pct": 25,
+    "counterparty": "Wheaton Precious Metals",
+    "price": "lesser of market and fixed contract price; annual inflation adjustment up to 1.65%",
+    "2025_non_cash_revenue_amortization_usd_m": 84,
+    "Dec25_liability_usd_m": 691,
+    "reference": "FY25 10-K Note 5 Silver Streaming Agreement",
+    "caution": "Do not price all silver at spot or treat noncash stream-liability amortization as cash revenue."
+  },
+  "Ghana_fiscal": {
+    "reference": "Q326 10-Q MD&A Ghanaian Stability Agreement and Royalty; FY25 Item2 Ahafo South",
+    "royalty_pct": [
+      5,
+      12
+    ],
+    "royalty_effective": "early March 2026, price-linked sliding scale",
+    "CIT_max_pct": 35,
+    "GSL_revenue_pct": 1,
+    "GSL_effective": "April 1, 2026; Q1 rate 3%",
+    "dividend_WHT_pct": 8,
+    "government_free_carried_pct": 10,
+    "government_payment": "1/9th of dividends paid to NEM parent; 0.6% revenue advance if annual average gold exceeds $1,300/oz",
+    "AhafoSouth_FrancoNevada": "2% NSR on gold from former Moydow areas only",
+    "caution": "Do not double count fiscal charges embedded in forecast cash operating costs."
+  },
+  "november2026Presentation": {
+    "document": "Issuer Investor Presentation November2026, public distributor copy dated2026-11-03",
+    "verifiedOn": "2026-11-04",
+    "reserveLifeYearsAsPresented": {
+      "Lihir": 15,
+      "Cadia": 30,
+      "Tanami": 11,
+      "Boddington": 14,
+      "Ahafo South": 8,
+      "Ahafo North": 18,
+      "Merian": 21,
+      "Cerro Negro": 10,
+      "Yanacocha": 3,
+      "Penasquito": 8,
+      "Red Chris": 2,
+      "Brucejack": 11
+    },
+    "reference": "Site Facts slides17–28; reserve-life indicators, not annual recoverable mine production/cash schedules. RedChris current reserve-life differs from proposed13-year block-cave phase.",
+    "NGM": "Slide4 refers to amended agreement; no statement of closing identified, not proof transaction has not closed.",
+    "RedChris": "Slide13/endnotes reiterate real4200–4800 at100%, pending grant, no final investment decision, early2027 full-funds target."
+  }
+}
