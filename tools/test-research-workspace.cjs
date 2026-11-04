@@ -33,5 +33,6 @@ for(const lang of ['en','es']){
  t.S.resDate='2026-10-23';assert.equal(t.profileRoute('resumen'),'revision');assert.equal(t.S.reviewDate,'2026-10-23');assert.equal(t.S.reviewPanel,'overview');
  t.S.retro=t.PARTS.retro(F.retro);h=t.vRetro();assert(h.includes('outcome-cutoff'));assert(h.includes(lang==='en'?'Published outcomes through:':'Resultados publicados hasta:'));
 }
-assert.deepEqual(counts,{approvals:3,waiting:193});assert.equal(JSON.stringify([t.S.dec,t.S.ops,t.S.ges]),before,'Consolidation must not mutate decisions, trades or management rows');
+assert.deepEqual(counts,{approvals:4,waiting:192});assert.equal(JSON.stringify([t.S.dec,t.S.ops,t.S.ges]),before,'Consolidation must not mutate decisions, trades or management rows');
 console.log('PASS research workspaces: four research menu items; legacy aliases; shared dated overview/scanner; audit/source labels and sorting; saved approval/waiting/all history, latest/all switching, search, profile context, execution/expiry/valuation/reason/returns; unchanged source data, EN/ES and distinct Hindsight cutoff.');
+
