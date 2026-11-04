@@ -584,8 +584,10 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 @media(max-width:640px) { .profile-results,.profile-metrics { grid-template-columns:minmax(0,1fr); } .profile-hero,.profile-home { align-items:flex-start; flex-direction:column; } .profile-metrics>div { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 10px; } .profile-metrics dd { margin:0; font-size:1rem; } .profile-metrics small { grid-column:1/-1; } .profile-search .controls { align-items:flex-start; } }
 
 
-.profile-search .profile-filters { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:end; gap:12px; }
+.profile-search .profile-filters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:end; gap:12px; }
 .profile-filters>label { display:grid; gap:5px; min-width:0; }
+.profile-filters .profile-scan-number { grid-column:3; }
+.profile-filters input[type="number"] { font:inherit; color:var(--ink); background:var(--sheet); border:1px solid var(--rule); border-radius:6px; padding:6px 8px; min-height:44px; width:100%; min-width:0; }
 .profile-filters select { width:100%; min-width:0; max-width:100%; min-height:44px; }
 .profile-filters select:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
 .profile-results-count { grid-column:1/-1; }
@@ -594,7 +596,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 .profile-result-tags,.profile-card-status { display:flex; flex-wrap:wrap; align-items:flex-start; gap:6px; }
 .profile-result-tags .pill,.profile-card-status .pill { white-space:normal; overflow-wrap:anywhere; }
 .profile-card-status { justify-content:flex-end; max-width:45%; }
-@media(max-width:640px) { .profile-search .profile-filters { grid-template-columns:minmax(0,1fr); } .profile-card-status { max-width:100%; justify-content:flex-start; } }
+@media(max-width:640px) { .profile-search .profile-filters { grid-template-columns:minmax(0,1fr); } .profile-filters .profile-scan-number { grid-column:1; } .profile-card-status { max-width:100%; justify-content:flex-start; } }
 
 /* Adjacent stocks always come from the same URL-backed search results. */
 .profile-navigation { display:grid; grid-template-columns:minmax(110px,auto) minmax(0,1fr) minmax(110px,auto); align-items:center; gap:16px; padding-bottom:16px; border-bottom:1px solid var(--rule); }
@@ -634,6 +636,18 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 
 .profile-quote{border:1px solid var(--rule);border-radius:10px;padding:16px;margin:6px 0 18px;min-width:0}.profile-quote h3{margin:0 0 10px}.profile-quote-mount{min-width:0;width:100%;min-height:180px}.profile-quote-note{font-size:.82rem;line-height:1.5;margin:12px 0 6px}.tradingview-widget-copyright{font-size:13px;text-align:center;padding-top:4px}.tradingview-widget-copyright a{color:var(--ink-2)}
 @media(max-width:600px){.profile-quote{border:0;border-top:1px solid var(--rule);border-radius:0;padding:14px 0;margin-left:-8px;margin-right:-8px}.profile-quote h3,.profile-quote-note,.profile-quote>.more-link{margin-left:8px;margin-right:8px}}
+/* Unified research workspaces. Archive tables remain horizontally scrollable. */
+.saved-views { display:flex; flex-wrap:wrap; gap:8px; }
+.saved-views a { text-decoration:none; padding:7px 12px; }
+.saved-views [aria-current="page"] { background:var(--ink); color:var(--sheet); border-color:var(--ink); }
+.daily-workspace p,.decision-execution p,.outcome-cutoff p { margin:0; }
+.daily-workspace .controls { justify-content:space-between; }
+.decision-date { display:block; font-weight:400; white-space:normal; max-width:180px; color:var(--ink-2); font-size:.73rem; margin-top:5px; }
+.decision-execution { min-width:230px; max-width:320px; font-size:.8rem; }
+.decision-execution .exec { margin:6px 0; }
+.decision-archive,.profile-decision-history { min-width:0; }
+.decision-archive details .cards { margin-top:12px; }
+@media(max-width:600px) { .nav-sub[data-group="invest"] { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); } .saved-views { gap:6px; } .saved-views .chip { font-size:.76rem; } .daily-workspace .controls { align-items:flex-start; gap:12px; } .decision-archive .sec-head { align-items:flex-start; } }
 </style>
 </head>
 <body>
@@ -665,6 +679,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 <main class="wrap viz" id="main">
   <section id="v-inicio"></section>
   <section id="v-cartera" hidden></section>
+  <section id="v-revision" hidden></section>
   <section id="v-resumen" hidden></section>
   <section id="v-posiciones" hidden></section>
   <section id="v-escaner" hidden></section>
@@ -725,7 +740,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         kDot: "precio", kVal: "valor estimado", ofVal: "del valor", below: "por debajo", above: "por encima", noClose: "No hay valoraciones en el último análisis.",
         posTitle: "Posiciones abiertas", seePos: "Ver posiciones", repTitle: "Últimos informes", seeLib: "Abrir la biblioteca", libLoading: "Cargando la biblioteca…", weight: "del total" },
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
-      tabs: { fichas: "Buscar acciones", inicio: "Hoy", posiciones: "Posiciones", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca", plan: "Plan" },
+      tabs: { fichas: "Buscar acciones", inicio: "Hoy", posiciones: "Posiciones", revision: "Revisión diaria", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca", plan: "Plan" },
       plan: { title: "Plan de trading", lede: "Las reglas con las que se toman las decisiones de esta web, en su edición vigente. Cada sección indica desde cuándo rige.", edition: "Edición vigente: {v}, {d}", sumTitle: "Resumen", sumLede: "Las cinco etapas en una pantalla. Toca una para ir a su detalle.", fullTitle: "Plan completo", intro: "Introducción y orden de aplicación", since: "Vigente desde", isNew: "Nuevo", open: "Abrir todo", close: "Cerrar todo", logTitle: "Historial de versiones", pdf: "Descargar el PDF de esta edición", none: "El plan no se ha podido cargar." },
       valHelp: "Valor estimado: lo que el informe calcula que vale la acción en el escenario central. Techo del informe: el precio máximo de compra que fijó el informe de cada empresa (puede venir de la valoración, de la técnica o de un evento); no es un descuento fijo del plan, no autoriza una orden por sí solo, y si el informe no fija techo no se muestra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado. Los escenarios «si va mal» y «si va bien» no son límites garantizados.",
       whatMeans: "¿Qué significa cada número?", trRet: "Rentabilidad", trEx: "Frente al SPY",
@@ -868,7 +883,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         kDot: "price", kVal: "estimated value", ofVal: "of value", below: "below", above: "above", noClose: "No valuations in the latest analysis.",
         posTitle: "Open positions", seePos: "See positions", repTitle: "Latest reports", seeLib: "Open the library", libLoading: "Loading the library…", weight: "of total" },
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
-      tabs: { fichas: "Find a stock", inicio: "Today", posiciones: "Positions", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library", plan: "Plan" },
+      tabs: { fichas: "Find a stock", inicio: "Today", posiciones: "Positions", revision: "Daily review", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library", plan: "Plan" },
       plan: { title: "Trading plan", lede: "The rules behind the decisions on this site, in their current edition. Each section shows when it took effect.", edition: "Current edition: {v}, {d}", sumTitle: "Summary", sumLede: "The five stages on one screen. Tap one to go to its detail.", fullTitle: "Full plan", intro: "Introduction and order of application", since: "In force since", isNew: "New", open: "Open all", close: "Close all", logTitle: "Version history", pdf: "Download this edition's PDF (Spanish)", none: "The plan couldn't be loaded." },
       valHelp: "Estimated value: what the report calculates the share is worth in the central case. Report ceiling: the max. buy price set by each company's report (it can come from the valuation, the technicals or an event); it isn't a fixed plan discount, it doesn't authorize an order on its own, and if the report sets no ceiling none is shown. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value. The badly/well scenarios are not guaranteed limits.",
       whatMeans: "What does each number mean?", trRet: "Return", trEx: "Vs SPY",
@@ -1028,8 +1043,8 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null, eq: null,
     err: { scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null },
     loadedAt: null,
-    view: "inicio", profileTicker: null, profileQ: "", profileFilter: "all", profileStatus: "all", profileSort: "ticker", profileContextValid: true, profileRefreshStatus: "",
-    scanDate: null, onlyS2: true, scanQ: "",
+    view: "inicio", profileTicker: null, profileQ: "", profileFilter: "all", profileStatus: "all", profileScans: "all", profileScanCustom: false, profileView: "all", profileHistory: "latest", profileSort: "ticker", profileContextValid: true, profileRefreshStatus: "",
+    reviewDate: null, reviewPanel: "overview", scanDate: null, onlyS2: true, scanQ: "",
     anaFilter: "all", rejFilter: "all", rejQ: "", anaQ: "", resDate: null, anaDate: null, latestOnly: true,
     retroHz: "corte", retroGrp: "A", calMode: "m", calMonth: null, calYear: null, calSel: null,
     lib: null, libState: "idle", libQ: "", libCat: "all", libSel: null,
@@ -1038,11 +1053,11 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   var GROUPS = [
     { id: "inicio", views: ["inicio"] },
     { id: "cartera", views: ["cartera", "posiciones", "operaciones", "rendimiento"] },
-    { id: "invest", views: ["fichas", "resumen", "escaner", "analisis", "aprobadas", "descartadas", "retro"] },
+    { id: "invest", views: ["fichas", "revision", "analisis", "retro"] },
     { id: "plan", views: ["plan", "biblioteca"] }
   ];
   function navGroupOf(v) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i].views.indexOf(v) >= 0) return GROUPS[i].id; return "inicio"; }
-  var VIEWS = ["fichas", "inicio", "resumen", "cartera", "posiciones", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca", "plan"];
+  var VIEWS = ["revision", "fichas", "inicio", "resumen", "cartera", "posiciones", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca", "plan"];
 
   /* ---------- parsing ---------- */
   function num(v) {
@@ -1219,7 +1234,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     return null;
   }
 
-  function vResumen() {
+  function vResumen(embedded) {
     var R = t().res, C = t().col;
     var g = guard(["scan", "dec"]);
     if (g) return head(t().tabs.resumen, "") + g;
@@ -1242,7 +1257,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     var trades = (S.ops || []).filter(function (r) { return r.ticker && isoDay(r.date) === d; });
 
     var sel = '<label class="inline" for="res-date">' + esc(t().date) + ' <select id="res-date">' + dates.map(function (x) { return '<option value="' + esc(x) + '"' + (x === d ? " selected" : "") + ">" + esc(fmtD(x)) + "</option>"; }).join("") + "</select></label>";
-    var h = head(t().tabs.resumen, R.lede, sel) + scannerNoticeArchive(d) + scanAuditNote(d);
+    var h = (embedded ? "" : head(t().tabs.resumen, R.lede, sel)) + scannerNoticeArchive(d) + scanAuditNote(d);
     var delta = prev ? curT.length - Object.keys(prev).length : null;
     function fig(v, label, sub, cls, subCls) { return '<div class="fig"><b class="' + (cls || "") + '">' + esc(v) + "</b>" + (sub ? '<small class="' + (subCls || "") + '">' + esc(sub) + "</small>" : "") + "<span>" + esc(label) + "</span></div>"; }
     var ready = decs.filter(function (r) { return r.decision === "Apta para Stage 3.5"; }).length;
@@ -1403,7 +1418,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     return h + '<p><a href="#biblioteca/' + esc(a.reportId) + '">' + esc(pt('Método, límites y fuentes', 'Method, limits and sources')) + '</a> · <a href="' + esc(a.rawFile) + '">' + esc(pt('CSV original', 'Original CSV')) + '</a> · <a href="' + esc(a.workbookFile) + '">' + esc(pt('Libro corregido', 'Corrected workbook')) + '</a></p></section>';
   }
 
-  function vEscaner() {
+  function vEscaner(embedded) {
     var g = guard(["scan"]);
     if (g) return head(t().scanTitle, t().scanLede) + g;
     var dates = scanDates();
@@ -1428,7 +1443,45 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       dates.map(function (d) { return '<option value="' + esc(d) + '"' + (d === S.scanDate ? " selected" : "") + ">" + esc(fmtD(d)) + "</option>"; }).join("") +
       '</select></label><button type="button" class="chip" id="only-s2" aria-pressed="' + S.onlyS2 + '">' + esc(t().onlyS2) + '</button>' +
       '<input type="search" id="scan-q" placeholder="' + esc(t().search) + '" aria-label="' + esc(t().search) + '" value="' + esc(S.scanQ) + '"><span class="status">' + rows.length + "</span></div>";
-    return head(t().scanTitle, t().scanLede) + scanAuditNote(S.scanDate) + ctl + table("scan", cols, rows);
+    if (embedded) ctl = ctl.replace(/<label class="inline" for="scan-date">[\s\S]*?<\/label>/, '');
+    return (embedded ? '<p class="lede">'+esc(t().scanLede)+'</p>' : head(t().scanTitle, t().scanLede)) + scanAuditNote(S.scanDate) + ctl + table("scan", cols, rows);
+  }
+
+
+  function dailyHash(panel) {
+    var q=new URLSearchParams();
+    if(S.reviewDate)q.set('date',S.reviewDate);
+    q.set('panel',panel||S.reviewPanel);
+    if(S.scanQ)q.set('q',S.scanQ);
+    if(!S.onlyS2)q.set('stage2','0');
+    ['scan','res'].forEach(function(k){var sort=S.sort[k];if(sort){q.set(k+'Sort',sort.key);q.set(k+'Dir',sort.dir);}});
+    return '#revision?'+q;
+  }
+  function updateDailyUrl() { if(S.view==='revision')history.replaceState(history.state,'',dailyHash()); }
+  function vRevision() {
+    var h=head(t().tabs.revision,pt('Un día, dos vistas: qué cambió y la lista detallada del escáner.','One day, two views: what changed and the detailed scanner list.'));
+    var g=guard(['scan','dec']);if(g)return h+g;
+    var dates=scanDates();
+    if(!S.reviewDate||dates.indexOf(S.reviewDate)<0)S.reviewDate=dates[0];
+    S.resDate=S.scanDate=S.reviewDate;
+    h+='<section class="panel daily-workspace"><div class="controls"><label class="inline" for="review-date">'+esc(t().date)+' <select id="review-date">'+dates.map(function(d){return '<option value="'+esc(d)+'"'+(d===S.reviewDate?' selected':'')+'>'+esc(fmtD(d))+'</option>';}).join('')+'</select></label><nav class="saved-views" aria-label="'+esc(pt('Vistas de la revisión diaria','Daily review views'))+'">'+[['overview',pt('Resumen del día','Day overview')],['scanner',pt('Lista del escáner','Scanner list')]].map(function(x){return '<a class="chip" href="'+esc(dailyHash(x[0]))+'"'+(S.reviewPanel===x[0]?' aria-current="page"':'')+'>'+esc(x[1])+'</a>';}).join('')+'</nav></div><p class="muted">'+esc(pt('La fecha se comparte entre ambas vistas. Los scores del escáner no autorizan una compra.','Both views share this date. Scanner scores do not authorize a purchase.'))+'</p></section>';
+    return h+(S.reviewPanel==='scanner'?vEscaner(true):vResumen(true));
+  }
+  function researchRoute(hash) {
+    var split=hash.indexOf('?'),route=split<0?hash:hash.slice(0,split),params=new URLSearchParams(split<0?'':hash.slice(split+1));
+    if(route==='aprobadas'||route==='descartadas')return profileRoute('fichas?view='+(route==='aprobadas'?'approvals':'waiting'));
+    if(['revision','resumen','escaner'].indexOf(route)<0)return null;
+    if(route==='revision') {
+      S.reviewDate=params.get('date')||null;
+      S.reviewPanel=params.get('panel')==='scanner'?'scanner':'overview';
+      S.scanQ=params.get('q')||'';S.onlyS2=params.get('stage2')!=='0';
+      ['scan','res'].forEach(function(k){var key=params.get(k+'Sort'),dir=params.get(k+'Dir');S.sort[k]={key:key&&/^[a-zA-Z]+$/.test(key)?key:'opp',dir:key&&dir==='asc'?'asc':'desc'};});
+    } else {
+      S.reviewPanel=route==='escaner'?'scanner':'overview';
+      S.reviewDate=params.get('date')||(route==='escaner'?S.scanDate:S.resDate)||S.reviewDate;
+    }
+    S.resDate=S.scanDate=S.reviewDate;
+    return 'revision';
   }
 
   function decCols(extra) {
@@ -1756,7 +1809,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       .catch(function () { S.liveError = true; /* retain last complete read, visibly marked */ })
       .finally(function () {
         clearTimeout(timeout); livePending = false;
-        if (["inicio", "cartera", "posiciones", "resumen", "aprobadas"].indexOf(S.view) >= 0 && !(document.activeElement && /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName))) render();
+        if ((["inicio", "cartera", "posiciones", "resumen", "aprobadas", "revision"].indexOf(S.view) >= 0 || (S.view === "fichas" && S.profileView === "approvals" && !S.profileTicker)) && !(document.activeElement && /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName))) render();
       });
   }
   function livePanel(open, cash) {
@@ -2324,6 +2377,8 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     var rows = S.retroGrp === "all" ? all : all.filter(function (r) { return r.grp === S.retroGrp; });
     var rej = rows;
     var h = head(R.title, R.lede);
+    var cutoff=(S.retro||[]).map(function(r){return isoDay(r.edate);}).filter(Boolean).sort().pop();
+    h+='<section class="panel outcome-cutoff"><b>'+esc(pt('Resultados publicados hasta: ','Published outcomes through: ')+profileDate(cutoff))+'</b><p class="muted">'+esc(pt('Este corte pertenece a la retrospectiva; puede ser anterior al escáner y a los precios actuales de la cuenta.','This cutoff belongs to Hindsight; it may be earlier than the scanner and current account prices.'))+'</p></section>';
     h += '<div class="controls"><span class="muted">' + esc(R.hzLbl) + "</span>" + ["5", "10", "corte"].map(function (k) {
       var n = S.retro.filter(function (r) { return r.hz === k; }).length;
       return '<button type="button" class="chip" data-chip="rhz|' + k + '" aria-pressed="' + (hz === k) + '">' + esc(R.hz[k] + " · " + n) + "</button>";
@@ -2383,11 +2438,11 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   }
   /* Search and navigation share one result builder and URL-backed context. The
      current search order is ticker A–Z; keep its explicit version in saved links. */
-  function profileContext() { return {q:S.profileQ,filter:S.profileFilter,status:S.profileStatus,sort:S.profileSort}; }
+  function profileContext() { return {q:S.profileQ,filter:S.profileFilter,status:S.profileStatus,sort:S.profileSort,scans:S.profileScans,view:S.profileView,history:S.profileHistory}; }
   function profileParams(context) {
     var params=new URLSearchParams();
     if(context.q)params.set('q',context.q);
-    params.set('filter',context.filter);if(context.status&&context.status!=='all')params.set('status',context.status);params.set('sort',context.sort);
+    params.set('filter',context.filter);if(context.status&&context.status!=='all')params.set('status',context.status);params.set('sort',context.sort);if(context.scans!==undefined&&context.scans!=='all')params.set('scans',context.scans);if(context.view&&context.view!=='all')params.set('view',context.view);if(context.history==='all')params.set('history','all');
     return params.toString();
   }
   function profileSearchHash() { return '#fichas?'+profileParams(profileContext()); }
@@ -2410,9 +2465,45 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   }
   function profileStatusCaution() { return pt('El estado corresponde a la última decisión registrada y puede ser histórico. No indica las posiciones actuales ni autoriza entradas.','Status is the latest recorded decision and may be historical. It does not indicate current holdings or authorize entry.'); }
   function profileResults(all,ignoreStatus) {
-    if(!S.profileContextValid)return [];
-    return window.FP_PROFILE_ENGINE.search(all,S.profileQ).filter(function(p){return (S.profileFilter==='all'||(S.profileFilter==='complete'?!!p.latestCompleted:!p.latestCompleted))&&(ignoreStatus||S.profileStatus==='all'||profileStatus(p).key===S.profileStatus);});
+    if(!S.profileContextValid||!profileScanValid())return [];
+    var scanned=S.profileScans==='all'?null:profileScanCohort().tickers;
+    var cohort=null;if(S.profileView!=='all'){cohort=new Set(profileDecisionRows().map(function(r){return r.ticker;}));}
+    return window.FP_PROFILE_ENGINE.search(all,S.profileQ).filter(function(p){return (!scanned||scanned.has(p.ticker))&&(!cohort||cohort.has(p.ticker))&&(S.profileFilter==='all'||(S.profileFilter==='complete'?!!p.latestCompleted:!p.latestCompleted))&&(ignoreStatus||S.profileStatus==='all'||profileStatus(p).key===S.profileStatus);});
   }
+
+  function profileScanValid() {
+    return S.profileScans==='all'||S.profileScans==='any'||(/^[1-9]\d*$/.test(String(S.profileScans))&&Number.isSafeInteger(Number(S.profileScans)));
+  }
+  function profileScanCohort() {
+    var days=Array.from(new Set((S.scan||[]).map(function(r){return window.FP_PROFILE_ENGINE.day(r.date);}).filter(Boolean))).sort().reverse();
+    var valid=profileScanValid(),requested=(S.profileScans==='all'||S.profileScans==='any')?null:Number(S.profileScans),selected=requested!==null&&valid?days.slice(0,requested):days;
+    var tickers=S.profileScans==='all'?null:new Set();
+    if(tickers&&valid){var accepted=new Set(selected);(S.scan||[]).forEach(function(r){if(accepted.has(window.FP_PROFILE_ENGINE.day(r.date)))tickers.add(r.ticker);});}
+    return {days:days,selected:valid?selected:[],requested:requested,tickers:tickers,valid:valid};
+  }
+  function profileScanLabel() {
+    return S.profileScans==='all'?pt('Sin filtro de escáner','No scan restriction'):S.profileScans==='any'?pt('Todos los escáneres','All scanner sessions'):S.profileScans==='1'?pt('Último escáner','Latest scan'):pt('Últimos ','Last ')+S.profileScans+pt(' escáneres',' scans');
+  }
+  function profileScanControls() {
+    var custom=S.profileScanCustom||(S.profileScans!=='all'&&S.profileScans!=='any'&&S.profileScans!=='1'),cohort=profileScanCohort();
+    var h='<label for="profile-scans">'+esc(pt('Escáneres incluidos','Scans included'))+'<select id="profile-scans" aria-describedby="profile-scans-note"><option value="all"'+(S.profileScans==='all'?' selected':'')+'>'+esc(pt('Todas las acciones · sin filtro','All stocks · no scan filter'))+'</option><option value="any"'+(S.profileScans==='any'?' selected':'')+'>'+esc(pt('Todos los escáneres','All scanner sessions'))+'</option><option value="1"'+(S.profileScans==='1'&&!custom?' selected':'')+'>'+esc(pt('Último escáner','Latest scan'))+'</option><option value="custom"'+(custom?' selected':'')+'>'+esc(pt('Últimos N escáneres…','Last N scans…'))+'</option></select></label>';
+    if(custom)h+='<label class="profile-scan-number" for="profile-scan-count">'+esc(pt('Número de escáneres','Number of scans'))+'<input id="profile-scan-count" type="number" min="1" step="1" inputmode="numeric" value="'+esc(S.profileScans)+'" aria-invalid="'+!cohort.valid+'" aria-describedby="profile-scans-note"></label>';
+    return h;
+  }
+  function profileScanNote() {
+    var c=profileScanCohort(),note;
+    if(!c.valid)note=pt('Introduce un número entero de 1 o más. No se amplían los resultados con un valor no válido.','Enter a whole number of 1 or more. An invalid value does not broaden the results.');
+    else if(S.profileScans==='all')note=pt('Todo el historial publicado, incluidas empresas sin aparición de escáner registrada.','All published history, including companies without a recorded scanner appearance.');
+    else if(!c.days.length)note=pt('No hay sesiones de escáner publicadas disponibles.','No published scanner sessions are available.');
+    else if(S.profileScans==='any')note=pt('Incluye acciones de cualquiera de las ','Includes stocks from any of the ')+c.days.length+pt(' sesiones publicadas, sin duplicados. Las empresas sin registro de escáner siguen disponibles en «Todas las acciones».',' published sessions, with no duplicates. Companies without a scanner record remain available under “All stocks”.');
+    else {
+      note=c.selected.length===1?pt('Incluye las acciones del último escáner publicado, sin duplicados. ','Includes stocks in the latest published scan, with no duplicates. '):pt('Incluye acciones que aparecieron en cualquiera de las últimas ','Includes stocks appearing in any of the last ')+c.selected.length+pt(' sesiones publicadas, sin duplicados. ',' published sessions, with no duplicates. ');
+      if(c.requested>c.days.length)note+=pt('Se solicitaron ','Requested ')+c.requested+pt('; hay ','; ')+c.days.length+pt(' disponibles. ',' are available. ');
+      note+=profileDate(c.selected[c.selected.length-1])+' → '+profileDate(c.selected[0])+'. '+pt('Se cuentan sesiones publicadas, no días naturales. No exige pasar Stage 2 ni autoriza una compra.','Counts published sessions, not calendar days. Appearance does not imply passing Stage 2 or authorize a purchase.');
+    }
+    return '<p class="muted profile-status-note'+(!c.valid?' neg':'')+'" id="profile-scans-note" role="status">'+esc(note)+'</p>';
+  }
+
   function profileStatusOptions(all) {
     var candidates=profileResults(all,true),counts=Object.create(null),keys=DEC_ORDER.map(function(value){return 'decision:'+value;});
     keys.push('none');
@@ -2435,7 +2526,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       return row?'<a'+attrs+' href="'+esc(profileHref(row.ticker,context))+'" rel="'+direction+'">'+content+'</a>':'<button type="button"'+attrs+' disabled>'+content+'</button>';
     }
     var status=index>=0?(index+1)+' '+pt('de','of')+' '+rows.length:pt('Fuera de estos resultados','Not in these results');
-    var detail=profileFilterLabel()+' · '+profileStatusLabel(S.profileStatus)+' · Ticker A–Z'+(S.profileQ.trim()?' · '+pt('Búsqueda: ','Search: ')+S.profileQ:'');
+    var detail=(S.profileView!=='all'?profileViewLabel(S.profileView)+' · ':'')+profileFilterLabel()+' · '+profileScanLabel()+' · '+profileStatusLabel(S.profileStatus)+' · Ticker A–Z'+(S.profileQ.trim()?' · '+pt('Búsqueda: ','Search: ')+S.profileQ:'');
     var h='<nav class="profile-navigation" aria-label="'+esc(pt('Navegar por los resultados de acciones','Browse stock results'))+'">'+step('prev',index>0?rows[index-1]:null)+'<div class="profile-nav-context"><strong role="status" aria-live="polite" aria-atomic="true">'+esc(status)+'</strong><small>'+esc(detail)+'</small></div>'+step('next',index>=0&&index<rows.length-1?rows[index+1]:null)+'</nav>';
     if(index<0)h+='<p class="muted profile-nav-notice">'+esc(S.profileContextValid?pt('Esta acción ya no aparece en esta búsqueda con los datos publicados actuales. Vuelve a los resultados para elegir otra.','This stock is no longer in this search with the current published data. Return to the results to choose another.'):pt('No se reconoce el filtro o el orden de este enlace. Vuelve al buscador para elegir los resultados.','This link’s filter or sort order is not supported. Return to search to choose the results.'))+'</p>';
     return h;
@@ -2444,6 +2535,40 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   function profileDate(d) { return d ? fmtD(d) : pt('No consta','Not recorded'); }
   function profileState(p) { return p.latestCompleted ? pt('Análisis completado','Completed analysis') : (p.hasResearch ? pt('Revisión parcial o pendiente','Partial or pending review') : (p.reports.length ? pt('Seguimiento documentado','Documented follow-up') : pt('Solo escáner','Scanner only'))); }
   function reportLink(id,label) { return '<a class="btn" href="#biblioteca/'+encodeURIComponent(id)+'">'+esc(label||id)+' →</a>'; }
+
+  function profileViewLabel(view) {
+    return view==='approvals'?pt('Historial de aprobaciones','Approval history'):view==='waiting'?pt('En espera y descartadas','Waiting & rejected'):view==='history'?pt('Todas las decisiones','All decisions'):pt('Todas las acciones','All stocks');
+  }
+  function profileDecisionRows() {
+    var rows=S.profileHistory==='all'?(S.dec||[]):latestPerTicker(S.dec||[]);
+    return rows.filter(function(r){return S.profileView==='approvals'?isApproved(r.decision):S.profileView==='waiting'?(!isApproved(r.decision)&&r.decision!=='En cartera'):true;});
+  }
+  function profileSavedViews() {
+    return '<nav class="saved-views" aria-label="'+esc(pt('Vistas guardadas','Saved views'))+'">'+['all','approvals','waiting','history'].map(function(v){var context=profileContext();context.view=v;return '<a class="chip" href="#fichas?'+esc(profileParams(context))+'"'+(S.profileView===v?' aria-current="page"':'')+'>'+esc(profileViewLabel(v))+'</a>';}).join('')+'</nav>';
+  }
+  function decisionArchiveTable(rows,id) {
+    if(!S.sort[id])S.sort[id]={key:'adate',dir:'desc'};
+    var C=t().col;
+    var cols=[
+      labelled({key:'ticker',cell:function(r){return '<td class="t">'+esc(r.ticker)+'<small class="decision-date">'+esc(depthLabel(r.depth))+'</small></td>';}},C.ticker),
+      labelled({key:'adate',cell:function(r){return '<td>'+esc(profileDate(isoDay(r.adate||r.date)))+'<small class="decision-date">'+esc(pt('Escáner: ','Scan: ')+profileDate(isoDay(r.date)))+'</small></td>';}},pt('Fecha de revisión','Review date')),
+      labelled({key:'decision',cell:function(r){return '<td>'+profileStatusBadge({latestReview:r})+'</td>';}},pt('Decisión en esa fecha','Decision at that date')),
+      labelled({key:'expiry',cell:function(r){var status=isApproved(r.decision)?approvalStatus(r):null;return '<td class="decision-execution">'+(status?'<p>'+esc(status.label)+'</p>':'')+execLine(r)+'<p class="muted">'+esc(pt('Vencimiento: ','Expiry: ')+profileDate(isoDay(r.expiry)))+'</p><p class="muted">'+esc(pt('Registro histórico; no es autorización actual de compra.','Historical record; not current purchase authorization.'))+'</p></td>';}},pt('Ejecución y vigencia','Execution and validity')),
+      labelled(cM('price'),C.priceScan),labelled({key:'base',num:true,cell:function(r){return '<td class="n">'+esc(fmtM(r.base))+vLab(r)+'</td>';}},C.baseEst),labelled(cM('maxc'),C.maxc),labelled(cP('mos',true),C.mos),
+      labelled({key:'why',cell:function(r){return '<td class="why">'+esc(whyOf(r))+srcLine(r)+(r.rep?'<p>'+esc(pt('Informe: ','Report: ')+r.rep)+'</p>':'')+'</td>';}},C.why),
+      labelled({key:'next',cell:function(r){return '<td class="why">'+esc(nextOf(r)||'—')+'</td>';}},C.next),
+      labelled(cP('r3',true),C.r3),labelled(cP('x3',true),C.x3)
+    ];
+    return '<p class="muted">'+esc(pt('Toca una fila para abrir condiciones, valoración, fuentes y retornos a 3, 6 y 12 meses. Desliza la tabla para comparar columnas. Un guion indica un dato no disponible, no cero.','Open a row for conditions, valuation, sources and 3-, 6- and 12-month returns. Scroll the table to compare columns. A dash means unavailable, not zero.'))+'</p>'+table(id,cols,rows,{click:true});
+  }
+  function profileDecisionArchive(shown) {
+    var tickers=new Set(shown.map(function(p){return p.ticker;})),rows=profileDecisionRows().filter(function(r){return tickers.has(r.ticker);});
+    var h='<section class="panel decision-archive"><div class="sec-head"><div><h3>'+esc(profileViewLabel(S.profileView))+'</h3><p class="lede">'+esc(rows.length+' '+pt('registros de decisión · ','decision records · ')+shown.length+' '+pt('empresas','companies'))+'</p></div><label class="inline" for="profile-history">'+esc(pt('Comparar','Compare'))+' <select id="profile-history"><option value="latest"'+(S.profileHistory==='latest'?' selected':'')+'>'+esc(pt('Última decisión por empresa','Latest decision per company'))+'</option><option value="all"'+(S.profileHistory==='all'?' selected':'')+'>'+esc(pt('Todas las decisiones históricas','All historical decisions'))+'</option></select></label></div><p class="muted">'+esc(pt('Esta vista filtra los registros de decisión, no las posiciones actuales. El filtro «Estado registrado» usa la última decisión de cada empresa. Las aprobaciones antiguas no autorizan nuevas compras.','This view filters decision records, not current holdings. The “Recorded status” filter uses each company’s latest decision. Past approvals do not authorize new purchases.'))+'</p><p><a class="btn" href="#posiciones">'+esc(pt('Ver posiciones actuales','View current holdings'))+'</a></p>';
+    if(!rows.length)return h+notice(pt('Sin decisiones coincidentes','No matching decisions'),pt('Prueba otra vista, búsqueda o filtro, o compara todas las decisiones históricas.','Try another view, search or filter, or compare all historical decisions.'))+'</section>';
+    if(S.profileView==='approvals'&&S.profileHistory==='latest')h+='<details><summary>'+esc(pt('Ver tarjetas de valoración y condiciones','View valuation and condition cards'))+'</summary><div class="cards">'+rows.map(card).join('')+'</div></details>';
+    return h+decisionArchiveTable(rows,'archive')+'</section>';
+  }
+
   function vFichas() {
     var h=head(pt('Buscar acciones','Find a stock'),pt('Una ficha por empresa: apariciones en el escáner, análisis y fuentes. El archivo se actualiza con cada publicación de datos.','One company profile: scanner appearances, research and sources. The archive updates with each data publication.'));
     var g=guard(['scan','dec']); if(g)return h+g;
@@ -2455,7 +2580,9 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       return renderProfile(p);
     }
     var shown=profileResults(all);
-    h+='<section class="profile-search panel"><label for="profile-q">'+esc(pt('Ticker o nombre de empresa','Ticker or company name'))+'</label><input type="search" id="profile-q" autocomplete="off" spellcheck="false" placeholder="'+esc(pt('Por ejemplo: HPE, Nutanix, Estée Lauder…','For example: HPE, Nutanix, Estée Lauder…'))+'" value="'+esc(S.profileQ)+'"><div class="controls profile-filters"><label for="profile-filter">'+esc(pt('Análisis','Research'))+' <select id="profile-filter"><option value="all"'+(S.profileFilter==='all'?' selected':'')+'>'+esc(pt('Todas las acciones','All stocks'))+'</option><option value="complete"'+(S.profileFilter==='complete'?' selected':'')+'>'+esc(pt('Con análisis completado','With completed analysis'))+'</option><option value="other"'+(S.profileFilter==='other'?' selected':'')+'>'+esc(pt('Sin análisis completo registrado','No completed analysis recorded'))+'</option></select></label>'+profileStatusSelect(all)+'<span class="profile-results-count" role="status" aria-live="polite">'+shown.length+' '+esc(pt('resultados de','results from'))+' '+all.length+' '+esc(pt('acciones','stocks'))+'</span></div><p class="muted">'+esc(pt('Incluye todo el historial publicado, no solo el último escáner. «Solo escáner» no implica que exista un análisis.','Includes the entire published history, not just the latest scan. “Scanner only” does not mean research has been completed.'))+'</p><p class="muted profile-status-note" id="profile-status-note">'+esc(profileStatusCaution()+' '+pt('Los recuentos respetan la búsqueda y el filtro de análisis.','Counts respect the search and research filter.'))+'</p></section>';
+    h+=profileSavedViews();
+    h+='<section class="profile-search panel"><label for="profile-q">'+esc(pt('Ticker o nombre de empresa','Ticker or company name'))+'</label><input type="search" id="profile-q" autocomplete="off" spellcheck="false" placeholder="'+esc(pt('Por ejemplo: HPE, Nutanix, Estée Lauder…','For example: HPE, Nutanix, Estée Lauder…'))+'" value="'+esc(S.profileQ)+'"><div class="controls profile-filters"><label for="profile-filter">'+esc(pt('Análisis','Research'))+' <select id="profile-filter"><option value="all"'+(S.profileFilter==='all'?' selected':'')+'>'+esc(pt('Todas las acciones','All stocks'))+'</option><option value="complete"'+(S.profileFilter==='complete'?' selected':'')+'>'+esc(pt('Con análisis completado','With completed analysis'))+'</option><option value="other"'+(S.profileFilter==='other'?' selected':'')+'>'+esc(pt('Sin análisis completo registrado','No completed analysis recorded'))+'</option></select></label>'+profileStatusSelect(all)+profileScanControls()+'<span class="profile-results-count" role="status" aria-live="polite">'+shown.length+' '+esc(pt('resultados de','results from'))+' '+all.length+' '+esc(pt('acciones','stocks'))+'</span></div>'+profileScanNote()+'<p class="muted profile-status-note" id="profile-status-note">'+esc(profileStatusCaution()+' '+pt('Los recuentos respetan la búsqueda, los escáneres y el filtro de análisis.','Counts respect the search, scans and research filter.'))+'</p></section>';
+    if(S.profileView!=='all')return h+profileDecisionArchive(shown)+profileFreshness();
     if(!shown.length) return h+notice(pt('Sin resultados','No results'),pt('Prueba otro ticker, parte del nombre o una combinación de filtros distinta. No hay una ficha en los datos publicados para esta búsqueda.','Try another ticker, company name, or combination of filters. No profile in the published data matches this search.'));
     if(shown.length===1 && S.profileQ.trim())return h+profileSummaryCard(shown[0],true)+profileFreshness();
     h+='<div class="profile-results">'+shown.map(function(p){var a=p.latestCompleted;return '<a class="profile-result" href="'+esc(profileHref(p.ticker,profileContext()))+'"><div><b class="tick">'+esc(p.ticker)+'</b><span class="profile-co">'+esc(p.company||pt('Nombre no registrado','Company name not recorded'))+'</span></div><div class="profile-result-tags">'+profileStatusBadge(p)+'<span class="profile-tag '+(a?'profile-complete':'')+'">'+esc(profileState(p))+'</span></div><div class="profile-result-dates"><span>'+esc(pt('Primer escáner: ','First scan: ')+profileDate(p.firstScan))+'</span><span>'+esc(pt('Último análisis completo: ','Last completed analysis: ')+profileDate(a&&a.date))+'</span></div><span class="profile-arrow" aria-hidden="true">→</span></a>';}).join('')+'</div>';
@@ -2579,19 +2706,24 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     if(m)h+='<section class="panel"><h3>'+esc(pt('Seguimiento de la posición','Position follow-up'))+'</h3><p class="muted">'+esc(profileDate(window.FP_PROFILE_ENGINE.day(m.date))+' · '+(lang==='en'&&m.stateEn?m.stateEn:m.state))+'</p><p>'+esc(lang==='en'&&m.noteEn?m.noteEn:m.note)+'</p><p>'+ (m.rep?reportLink(m.rep):'')+'</p><p class="muted">'+esc(pt('Gestión y ejecución se conservan aparte del análisis fundamental.','Management and execution are kept separate from fundamental research.'))+'</p></section>';
     h+='<section class="panel"><h3>'+esc(pt('Historial del escáner','Scanner history'))+'</h3><p class="muted">'+esc(pt('Fechas en las que apareció en el escáner publicado. No implican que pasara todos los filtros ni que se analizara ese día.','Dates when the stock appeared in the published scanner. They do not imply all filters passed or analysis was completed that day.'))+'</p>'+(p.scanDates.length?'<div class="profile-scan-dates">'+p.scanDates.slice().reverse().map(function(d){return '<a class="chip" href="#escaner" data-profile-scan="'+esc(d)+'" data-profile-scan-ticker="'+esc(p.ticker)+'">'+esc(fmtD(d))+'</a>';}).join('')+'</div>':'<p>'+esc(pt('No hay una aparición de escáner verificable en el archivo disponible.','No scanner appearance is verifiable in the available archive.'))+'</p>')+'</section>';
     h+='<section class="panel"><h3>'+esc(pt('Informes vinculados','Linked reports'))+' · '+p.reports.length+'</h3><p class="muted">'+esc(pt('Fuentes enlazadas en los registros o que identifican el ticker en el título. La categoría distingue valoración, seguimiento y gestión. Los informes originales conservan su idioma.','Sources linked by records or naming the ticker in their title. Categories distinguish valuation, follow-up and management. Original reports retain their language.'))+'</p>'+profileReports(p.reports)+'</section>';
-    if(p.decisions.length)h+='<details class="panel"><summary>'+esc(pt('Historial de revisiones','Review history'))+' · '+p.decisions.length+'</summary><div class="profile-history">'+p.decisions.map(function(d){return '<div><b>'+esc(profileDate(window.FP_PROFILE_ENGINE.day(d.adate)))+'</b> · '+esc(depthLabel(d.depth))+'<p>'+profileStatusBadge({latestReview:d})+'</p><p>'+esc(whyOf(d))+'</p><small>'+esc(pt('Escáner asociado: ','Associated scan: ')+profileDate(window.FP_PROFILE_ENGINE.day(d.date)))+'</small> '+(d.rep?reportLink(d.rep):'')+'</div>';}).join('')+'</div></details>';
+    if(p.decisions.length)h+='<details class="panel profile-decision-history"><summary>'+esc(pt('Historial de revisiones','Review history'))+' · '+p.decisions.length+'</summary>'+decisionArchiveTable(p.decisions,'profilehistory')+'</details>';
     if(p.mentions.length)h+='<details class="panel"><summary>'+esc(pt('Otras menciones en la biblioteca','Other library mentions'))+' · '+p.mentions.length+'</summary><p class="muted">'+esc(pt('Coincidencias de texto, no necesariamente análisis de esta empresa. Los tickers cortos pueden coincidir con palabras o abreviaturas. Estas menciones no establecen la fecha del análisis.','Text matches, not necessarily research about this company. Short tickers may match words or abbreviations. These mentions do not establish the analysis date.'))+'</p>'+profileReports(p.mentions)+'</details>';
     h+='<details class="panel"><summary>'+esc(pt('Cómo se construye esta ficha','How this profile is built'))+'</summary><p>'+esc(pt('Se reúne el historial publicado de Escáner, Decisiones, Gestión, Operaciones y Biblioteca. Para análisis completado se exige profundidad explícita de Stage 3 completo o revisión completada, o metadatos explícitos del informe. Una revisión limitada o de Stage 4 no reemplaza el análisis fundamental anterior.','The profile combines published Scanner, Decisions, Management, Trades and Library history. Completed analysis requires explicit full Stage 3 or completed-review depth, or explicit report metadata. Limited or Stage 4 reviews do not replace earlier fundamental analysis.'))+'</p><p>'+esc(pt('La fecha proviene de la fecha de valoración explícita, del informe vinculado o, si no existe informe, del registro de análisis. Si falta, se muestra «No consta». La primera fecha de escáner se limita al archivo disponible.','Dates come from the explicit valuation date, linked report, or, if no report exists, the analysis record. Missing dates show “Not recorded”. The first scanner date is limited to the available archive.'))+'</p></details>';
     return h+profileFreshness();
   }
   function profileReports(rows) { return rows.length?'<div class="profile-report-list">'+rows.map(function(x){var r=x.report;return '<a href="#biblioteca/'+encodeURIComponent(r.id)+'"><span>'+esc(profileDate(x.date)+' · '+r.id)+'</span><b>'+esc(r.title)+'</b><small>'+esc(t().lib.cat[r.cat]||r.cat)+'</small></a>';}).join('')+'</div>':'<p class="muted">'+esc(pt('No hay informes vinculados.','No linked reports.'))+'</p>'; }
   function profileRoute(hash) {
+    var research=researchRoute(hash);if(research)return research;
     if(/^ficha\//.test(hash)||/^fichas(?:\?|$)/.test(hash)) {
       var split=hash.indexOf('?'),route=split<0?hash:hash.slice(0,split),params=new URLSearchParams(split<0?'':hash.slice(split+1));
       var filter=params.get('filter')||'all',sort=params.get('sort')||'ticker';
       S.profileQ=params.get('q')||'';
       S.profileStatus=params.get('status')||'all';
-      S.profileContextValid=['all','complete','other'].indexOf(filter)>=0&&sort==='ticker';
+      S.profileScans=params.has('scans')?params.get('scans'):'all';
+      S.profileScanCustom=S.profileScans!=='all'&&S.profileScans!=='any'&&S.profileScans!=='1';
+      S.profileView=['all','approvals','waiting','history'].indexOf(params.get('view'))>=0?params.get('view'):'all';
+      S.profileHistory=params.get('history')==='all'?'all':'latest';
+      S.profileContextValid=['all','complete','other'].indexOf(filter)>=0&&sort==='ticker'&&profileScanValid();
       S.profileFilter=['all','complete','other'].indexOf(filter)>=0?filter:'all';
       S.profileSort='ticker';
       S.profileTicker=null;
@@ -2766,7 +2898,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       li(C.next, esc(nextOf(r) || "—"), "txt") +
       "</dl>" +
       "<details><summary>" + esc(t().whatMeans) + "</summary><p>" + esc(t().valHelp) + "</p></details>" +
-      '<p>' + profileLink(r.ticker, pt("Ver ficha e historial", "View profile and history")) + "</p>" +
+      '<p>' + profileLink(r.ticker, pt("Ver ficha e historial", "View profile and history"), S.view === "fichas" ? profileContext() : null) + "</p>" +
       "<h3>" + esc(t().tracking) + "</h3>" +
       '<table class="dr-track"><thead><tr><th></th><th>' + esc(t().trRet) + "</th><th>" + esc(t().trEx) + "</th></tr></thead><tbody>" +
       [["3m", "r3", "x3"], ["6m", "r6", "x6"], ["12m", "r12", "x12"]].map(function (z) {
@@ -2799,7 +2931,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       var target = g.id === cg ? g.views[0] : (S.lastIn[g.id] || g.views[0]);
       return '<button class="tab" type="button" data-view="' + target + '" aria-selected="' + (g.id === cg) + '"' + (g.id === cg ? ' aria-current="true"' : "") + ">" + esc(t().navGroups[g.id]) + "</button>";
     }).join("") + "</div>" +
-      '<div class="nav-sub"' + (sub.length > 1 ? "" : " hidden") + ">" + sub.map(function (v) {
+      '<div class="nav-sub" data-group="'+esc(cg)+'"' + (sub.length > 1 ? "" : " hidden") + ">" + sub.map(function (v) {
         return '<button class="sub" type="button" id="tab-' + v + '" data-view="' + v + '" aria-controls="v-' + v + '"' + (S.view === v ? ' aria-current="page"' : "") + ">" + esc(t().tabs[v]) + "</button>";
       }).join("") + "</div>";
     var st = document.getElementById("status");
@@ -2807,7 +2939,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     else if (S.loadedAt) st.textContent = t().updated + " · " + new Intl.DateTimeFormat(loc(), { hour: "2-digit", minute: "2-digit" }).format(new Date(S.loadedAt));
     else st.textContent = S.err.dec || S.err.scan ? "" : t().loading;
   }
-  var RENDER = { fichas: vFichas, inicio: vInicio, posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca, plan: vPlan };
+  var RENDER = { revision: vRevision, fichas: vFichas, inicio: vInicio, posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca, plan: vPlan };
   /* fade on the right edge of a table while there are more columns to scroll to */
   function markScroll(root) {
     [].forEach.call(root.querySelectorAll(".tbl-outer"), function (o) {
@@ -2836,7 +2968,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
           if(!navFocus || navFocus.disabled)navFocus=document.getElementById("profile-title");
           if(navFocus)navFocus.focus({preventScroll:true});
         }
-        if (focusId === "profile-filter" || focusId === "profile-status") { var filterFocus=document.getElementById(focusId); if(filterFocus)filterFocus.focus({preventScroll:true}); }
+        if (focusId === "profile-scans" || focusId === "profile-scan-count" || focusId === "profile-filter" || focusId === "profile-status" || focusId === "profile-history" || focusId === "review-date") { var filterFocus=document.getElementById(focusId); if(filterFocus)filterFocus.focus({preventScroll:true}); }
         if (focusId === "profile-q" || focusId === "scan-q" || focusId === "lib-q" || focusId === "rej-q" || focusId === "ana-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
       }
     });
@@ -2853,7 +2985,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     var tab = e.target.closest("[data-view]");
     if (tab) { go(tab.getAttribute("data-view")); return; }
     var s = e.target.closest("[data-sort]");
-    if (s) { var p = s.getAttribute("data-sort").split("|"); var cur = S.sort[p[0]]; S.sort[p[0]] = { key: p[1], dir: cur && cur.key === p[1] && cur.dir === "desc" ? "asc" : "desc" }; render(); return; }
+    if (s) { var p = s.getAttribute("data-sort").split("|"); var cur = S.sort[p[0]]; S.sort[p[0]] = { key: p[1], dir: cur && cur.key === p[1] && cur.dir === "desc" ? "asc" : "desc" }; updateDailyUrl(); render(); return; }
     var cl = e.target.closest("[data-cal]");
     if (cl) {
       if (cl.disabled) return;
@@ -2872,7 +3004,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       render(); return;
     }
     var rd = e.target.closest("[data-resdate]");
-    if (rd) { S.resDate = rd.getAttribute("data-resdate"); render(); return; }
+    if (rd) { S.reviewDate = S.scanDate = S.resDate = rd.getAttribute("data-resdate"); updateDailyUrl(); render(); return; }
     var lo = e.target.closest("[data-libopen]");
     if (lo) { closeDrawer(); S.libSel = lo.getAttribute("data-libopen"); location.hash="biblioteca/"+encodeURIComponent(S.libSel); return; }
     var gv = e.target.closest("[data-goview]");
@@ -2887,7 +3019,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     if (cc) { openCalc(cc.getAttribute("data-calc")); return; }
     var op = e.target.closest("[data-open]");
     if (op) { openDetail(op.getAttribute("data-open")); return; }
-    if (e.target.id === "only-s2") { S.onlyS2 = !S.onlyS2; render(); return; }
+    if (e.target.id === "only-s2") { S.onlyS2 = !S.onlyS2; updateDailyUrl(); render(); return; }
     if (e.target.closest("[data-allow]")) { loadOnce(); return; }
     var pg = e.target.closest("[data-plango]");
     if (pg) { planGo(pg.getAttribute("data-plango")); return; }
@@ -2897,11 +3029,12 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   document.addEventListener("keydown", function (e) {
     if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("tr.click, .plrow.click, div.card")) { e.preventDefault(); openDetail(e.target.getAttribute("data-open")); }
   });
-  document.addEventListener("change", function (e) { if(e.target.id === "profile-status") { S.profileStatus=e.target.value; S.profileContextValid=true; history.replaceState(history.state,"",profileSearchHash()); render(); } if(e.target.id === "profile-filter") { S.profileFilter=e.target.value; S.profileContextValid=true; history.replaceState(history.state,"",profileSearchHash()); render(); }  if (e.target.id === "scan-date") { S.scanDate = e.target.value; render(); } if (e.target.id === "res-date") { S.resDate = e.target.value; render(); } if (e.target.id === "ana-date") { S.anaDate = e.target.value; S.anaFilter = "all"; render(); } });
+  document.addEventListener("change", function (e) { if(e.target.id==='profile-scans'){S.profileScanCustom=e.target.value==='custom';S.profileScans=e.target.value==='custom'?'2':e.target.value;S.profileContextValid=profileScanValid();history.replaceState(history.state,'',profileSearchHash());render();} if(e.target.id==='profile-scan-count'){clearTimeout(libT);S.profileScans=e.target.value;S.profileContextValid=profileScanValid();history.replaceState(history.state,'',profileSearchHash());render();} if(e.target.id==='review-date'){S.reviewDate=S.resDate=S.scanDate=e.target.value;updateDailyUrl();render();} if(e.target.id==='profile-history'){S.profileHistory=e.target.value;history.replaceState(history.state,'',profileSearchHash());render();} if(e.target.id === "profile-status") { S.profileStatus=e.target.value; S.profileContextValid=profileScanValid(); history.replaceState(history.state,"",profileSearchHash()); render(); } if(e.target.id === "profile-filter") { S.profileFilter=e.target.value; S.profileContextValid=profileScanValid(); history.replaceState(history.state,"",profileSearchHash()); render(); }  if (e.target.id === "scan-date") { S.scanDate = e.target.value; render(); } if (e.target.id === "res-date") { S.resDate = e.target.value; render(); } if (e.target.id === "ana-date") { S.anaDate = e.target.value; S.anaFilter = "all"; render(); } });
   var libT;
   document.addEventListener("input", function (e) {
-    if(e.target.id === "profile-q") { S.profileQ=e.target.value; S.profileContextValid=true; history.replaceState(history.state,"",profileSearchHash()); clearTimeout(libT); libT=setTimeout(render,120); }
-    if (e.target.id === "scan-q") { S.scanQ = e.target.value; render(); }
+    if(e.target.id==='profile-scan-count'){S.profileScans=e.target.value;S.profileContextValid=profileScanValid();history.replaceState(history.state,'',profileSearchHash());clearTimeout(libT);libT=setTimeout(render,250);}
+    if(e.target.id === "profile-q") { S.profileQ=e.target.value; S.profileContextValid=profileScanValid(); history.replaceState(history.state,"",profileSearchHash()); clearTimeout(libT); libT=setTimeout(render,120); }
+    if (e.target.id === "scan-q") { S.scanQ = e.target.value; updateDailyUrl(); render(); }
     if (e.target.id === "rej-q" || e.target.id === "ana-q") { S[e.target.id === "rej-q" ? "rejQ" : "anaQ"] = e.target.value; clearTimeout(libT); libT = setTimeout(render, 150); }
     if (e.target.id === "lib-q") { S.libQ = e.target.value; clearTimeout(libT); libT = setTimeout(render, 180); }
   });
@@ -2916,8 +3049,9 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   if (VIEWS.indexOf(hash) >= 0) S.view = hash;
   function go(v) {
     if (VIEWS.indexOf(v) < 0) return;
+    if (v === "revision") { var target=dailyHash();if(location.hash!==target){location.hash=target;return;} S.view=v;render();window.scrollTo(0,0);return; }
     if (location.hash !== "#" + v) { location.hash = v; return; }   /* hashchange renders */
-    S.view = v; render(); window.scrollTo(0, 0);
+    S.view = profileRoute(v); render(); window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", function () {
     var v = (location.hash || "").replace("#", ""), pa = null;
@@ -3107,6 +3241,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
+
 
 
 

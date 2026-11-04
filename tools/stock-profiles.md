@@ -93,3 +93,19 @@ Option counts apply the current search and completed-analysis filter **before** 
 URLs add `status=decision%3AEn+observaci%C3%B3n` (for example), or `status=none` for no recorded decision. Exact source labels are prefixed with `decision:` so even literal future values `all`, `none`, `constructor`, or `__proto__` cannot collide with control values. Default all-status URLs omit the new parameter, preserving earlier links. Search changes, filter changes, inline cards, profile arrows, Back to results, reload, and browser history retain the combined criteria.
 
 The status select uses a native associated label and description, a 44px minimum height, visible focus, and focus restoration after render. Search controls stack at narrow widths. Run `node tools/test-stock-status.cjs` in addition to the four existing suites. Publication preparation now runs each of those five suites once. Status tests include canonical source counts, all combinations of query/analysis/status in ES/EN, exact neighbors, URL/history compatibility, focus, source immutability, historical-approval caveats, no-decision research labels, neutral escaped future values, disappearing categories, and subsequent published decisions.
+
+
+## Research workspaces
+
+The Research menu contains Find a stock, Daily review, Analysis and Hindsight. Daily review (`#revision`) keeps one selected date across its overview and scanner panes. Its URL stores the panel, query, Stage 2 filter and both sort orders. Legacy `#resumen` and `#escaner` links still open the appropriate pane, including links from stock scanner history.
+
+Find a stock has saved `view=approvals`, `view=waiting` and `view=history` contexts. `history=all` compares all matching historical decision records; the default compares each company's latest decision. The existing recorded-status filter always uses the company's latest decision and is separate from holdings or current entry authorization. Source Decisions, Operations, Management and account data are unchanged. Legacy `#aprobadas` and `#descartadas` open the corresponding saved views.
+
+The decision comparison and per-company history tables retain execution/expiry warnings, dated valuations, report sources, next event, reasons, return/excess fields and row-detail/calculation access. Hindsight retains its independent outcome cutoff. Run `node tools/test-research-workspace.cjs` alongside the stock-profile regression suites before publication.
+
+
+## Scanner-session filter
+
+The default All stocks option preserves the full directory with no scan restriction. All scanner sessions (`scans=any`) includes the union of tickers appearing in any valid published scan session. Latest scan (`scans=1`) and Last N scans (`scans=N`) use the newest N distinct published scan dates, not calendar days. The set is a union without duplicate tickers; it is not a requirement to appear in every session or to pass Stage 2. The filter intersects with search, research depth, recorded status and saved decision views.
+
+All-stock URLs omit the parameter for backward compatibility. Selected scan scope flows through profiles, previous/next, Back, reload and history. Invalid/zero/fractional/unsafe counts return no cohort with a validation message; oversized N uses the available sessions and retains the requested value so later publications expand the window automatically. Empty scan data returns no scanner-filtered records, while unrestricted All stocks still exposes research-only records. Custom input mode stays visible while the user types a first digit 1. Run `node tools/test-stock-scan-filter.cjs` with the six other suites.
