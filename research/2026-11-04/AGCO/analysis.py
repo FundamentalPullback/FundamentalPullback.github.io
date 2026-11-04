@@ -1,0 +1,5 @@
+from pathlib import Path
+import json
+p=Path(__file__).parent;f=json.loads((p/'facts/inputs.json').read_text())
+a={'ticker':'AGCO','status':'partial_observation','bear':None,'base':None,'bull':None,'owner_fcf':None,'equity_bridge':None,'next_earnings_date':None,'q3_revenue_growth':f['q3_sales']/f['q3_prior_sales']-1,'q3_ebit_growth':f['q3_ebit']/f['q3_prior_ebit']-1,'q3_ebit_ex_identified_na_ieepa':f['q3_ebit']-f['q3_na_ieepa'],'q3_na_ebit_ex_identified_ieepa':f['q3_na_ebit']-f['q3_na_ieepa'],'nine_month_cfo_less_ppe':f['cfo9']-f['ppe9'],'prior_nine_month_cfo_less_ppe':f['prior_cfo9']-f['prior_ppe9'],'nominal_debt_diagnostic':f['debt_carrying']+f['debt_costs'],'nominal_net_debt_diagnostic':f['debt_carrying']+f['debt_costs']-f['cash'],'finance_jv_sale_gain_tie':f['finance_joint_venture_sale_proceeds']-f['finance_jv_carrying_sold'],'identified_buyback_cash':f['asr_cash']+f['tafe_buyback_may']+f['tafe_buyback_aug'],'price_to_fy26_adjusted_guidance_diagnostic':f['price']/5.5,'calendar_note':'Next earnings unconfirmed; dividend and CNH peer dates are not AGCO earnings.'}
+(p/'analysis.json').write_text(json.dumps(a,indent=2)+'\n')
