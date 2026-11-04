@@ -1,0 +1,6 @@
+import json
+from pathlib import Path
+P=Path(__file__).resolve().parent;x=json.loads((P/'inputs.json').read_text());p=x['psx'];v=x['vlo'];m=json.loads((P/'mpc/outputs.json').read_text());model=json.loads((P.parent/'model/results.json').read_text())
+pev=p['price']*p['sharesActualMillions']+p['debtCarrying']-p['cash']+p['nciBook'];vev=v['price']*v['sharesOct23Millions']+v['debtNominal']+v['financeLease']-v['cashExRestricted']+v['nciBookProxy'];clean=p['ttmPretaxPlusInterest']-p['ttmDispositionGains'];core=clean-p['ttmEquityIncome'];jv=model['base']['jvEquityValue']
+out={'PSX':{'evBookNci':pev,'preInterestPretaxTtm':p['ttmPretaxPlusInterest'],'evOverPreInterestPretax':pev/p['ttmPretaxPlusInterest'],'exDispositionGainsDenominator':clean,'evOverExDispositionGains':pev/clean,'coreExJvDenominator':core,'modelDependentCoreEv':pev-jv,'modelDependentCoreMultiple':(pev-jv)/core,'multipleWithoutNciInvalidForConsolidatedEarnings':(pev-p['nciBook'])/clean},'VLO':{'evNominalDebtBookNci':vev,'ebitTtm':v['ttmEbit'],'evEbit':vev/v['ttmEbit'],'nciZeroSensitivityNotFullConsolidatedEv':(vev-v['nciBookProxy'])/v['ttmEbit']},'MPC':m,'noMedianTarget':True,'notNormalizedCycleMultiples':True}
+(P/'outputs.json').write_text(json.dumps(out,indent=2)+'\n');print(out)

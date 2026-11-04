@@ -1,0 +1,508 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PSX · Investigación condicionada · ciclo, JV, capital y calendario pendientes · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/PSX">← PSX profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación condicionada · ciclo, JV, capital y calendario pendientes</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="psx-a215-investigación-del-4-de-noviembre-de-2026">PSX · A215 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>DCF cíclico condicionado: 11,50/172,67/371,73 USD frente al cierre 271,94. Se separan operación y equity de JV, sin perpetuar el pico de refino. Opportunity 70 y Stage 2 No; capital, fiscalidad, minorías, pares y calendario pendientes. Sin entrada.</strong></p>
+<p>Cycle-conditional DCF: $11.50/$172.67/$371.73 versus $271.94 close. Operations and affiliate equity are valued separately without perpetuating peak refining margins. Opportunity 70 and Stage 2 No; capital, tax, minorities, peers and calendar remain open. No entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/PSX.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-11-03, 271.94 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 271.94 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 de noviembre de 2026; mercado al cierre del 3 de noviembre, estados de septiembre publicados el 28 de octubre.</p>
+<p>A105 se preserva: escáner del 27 de octubre 268,25 USD, QP90/Opportunity85. Última observación real: 3 de noviembre 271,94 USD, QP90/Opportunity70, Stage 2 No. Coincide numéricamente con el cierre regular documentado del 3 de noviembre, pero son referencias distintas, no una cotización actual. No se reutiliza el Opportunity85 antiguo. Es investigación condicionada, no último Stage 3 integral completo ni entrada. Los escenarios no son probabilidades, suelo liquidativo ni techo absoluto.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="phillips-66-psx-valorar-el-ciclo-no-anualizar-un-trimestre-extraordinario">Phillips 66 (PSX): valorar el ciclo, no anualizar un trimestre extraordinario</h1>
+<p>Investigación propia del 4 de noviembre de 2026. Corte de mercado: cierre del 3 de noviembre, <strong>$271,94</strong>. Estados: septiembre de 2026, publicados el 28 de octubre. USD millones salvo acciones, porcentajes y datos por barril. <strong>Investigación revisada de forma independiente y condicionada; no aprobación de entrada, Stage 3.5 ni confirmación técnica.</strong></p>
+<h2 id="conclusión-y-separación-del-registro">1. Conclusión y separación del registro</h2>
+<p>El DCF de dos componentes produce <strong>$11.50 / $172.67 / $371.73</strong> por acción en escenarios adverso/base/favorable. Son hipótesis de un negocio cíclico, no un intervalo estadístico ni un suelo liquidativo. El cierre de referencia supera el central en aproximadamente 57.49%; el potencial calculado desde ese cierre hasta el central es -36.50%. La amplitud y el extremo adverso reflejan normalización de márgenes, gastos fijos y deuda, no una predicción de insolvencia.</p>
+<p>La fila original A105 es del 27 de octubre: $268,25, QP 90, Opportunity 85, RSI 44,5. La última observación real del 3 de noviembre es $271,94, QP 90, Opportunity 70, RSI 47,2 y s2 «No». No se reutiliza el 85 antiguo como filtro vigente. La caída intradía observada el 4 nov no sustituye el cierre ni da señal técnica. Fuente de precio: https://stockanalysis.com/stocks/psx/history/ . El registro se conserva sin reescribir sus observaciones históricas.</p>
+<p>El negocio genera caja considerable en condiciones favorables, pero EPS trimestral 14,08 y margen 38 $/bbl no son una renta perpetua. Esperar mejor relación precio/valor y nueva confirmación de condiciones operativas y del plan. No se plantea orden, tamaño de posición ni stop.</p>
+<h2 id="negocio-y-ventajas-con-límites">2. Negocio y ventajas con límites</h2>
+<p>PSX combina diez refinerías estadounidenses/europeas, logística y NGL, comercialización, renovables y el 50% de CPChem. Infraestructura integrada, acceso a feedstocks y capacidad comercial aportan ventajas prácticas; no eliminan exposición a cracks, transporte, energía, utilización, paradas y regulación. El 98% de utilización de crudo, producción de destilados 41% y productos limpios 86% del Q3 respaldan ejecución fuerte, no una ventaja que permita fijar precios indefinidamente. Midstream reportó fraccionamiento 1.003 MBD, wellhead 4,6 Bcf/d y Freeport 105% de utilización. <a href="https://www.sec.gov/Archives/edgar/data/1534701/000153470126000035/psx-2026930_ex991.htm">Resultados Q3</a>.</p>
+<p>WRB pasó de 50% equity method a 100% consolidado el 1 oct 2025. La compra restante consumió aproximadamente 1.300 más 450 de deuda asumida/repagada; el impairment 948 del Q3 previo no es caja recuperable. Los Ángeles cesó combustible en Q4 2025 y todavía estaba siendo desactivada. Lindsey se adquirió como activos e infraestructura por 115 en abril 2026: PP&amp;E 202 incluye ARO 87; no se supone una nueva refinería operativa a plena capacidad. Por ello el crecimiento bruto de ingresos, barrels y CFO no prueba crecimiento orgánico. <a href="https://www.sec.gov/Archives/edgar/data/1534701/000153470126000006/psx-20251231.htm">10-K</a>; <a href="https://www.sec.gov/Archives/edgar/data/1534701/000153470126000037/psx-20260930.htm">10-Q</a>.</p>
+<p>La dirección comunicó más de 50 de sinergias cercanas de WRB, Coastal Bend a 350 MBD a comienzos de 2027 y operación plena esperada de Golden Triangle/Ras Laffan en 2027. Son objetivos, no fechas garantizadas ni flujos ya percibidos. Western Gateway tiene decisión final de inversión y expectativa 2029, pero no se añade valor por un proyecto completo sin presupuesto y participación detallados. El modelo financia crecimiento normalizado y muestra sensibilidad de capital, sin fingir un presupuesto proforma de cada proyecto.</p>
+<h2 id="historia-y-normalización">3. Historia y normalización</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">NI atribuible</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">CFO sin WC</th>
+<th style="text-align: right;">Capex/inversiones</th>
+<th style="text-align: right;">Equity income</th>
+<th style="text-align: right;">Dividendos JV en CFO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">147,399.00</td>
+<td style="text-align: right;">7,015.00</td>
+<td style="text-align: right;">7,029.00</td>
+<td style="text-align: right;">8,844.00</td>
+<td style="text-align: right;">2,155.00</td>
+<td style="text-align: right;">2,017.00</td>
+<td style="text-align: right;">1,195.00</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">143,153.00</td>
+<td style="text-align: right;">2,117.00</td>
+<td style="text-align: right;">4,191.00</td>
+<td style="text-align: right;">4,806.00</td>
+<td style="text-align: right;">1,859.00</td>
+<td style="text-align: right;">1,779.00</td>
+<td style="text-align: right;">1,368.00</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">132,376.00</td>
+<td style="text-align: right;">4,403.00</td>
+<td style="text-align: right;">4,962.00</td>
+<td style="text-align: right;">6,143.00</td>
+<td style="text-align: right;">2,233.00</td>
+<td style="text-align: right;">762.00</td>
+<td style="text-align: right;">882.00</td>
+</tr>
+<tr class="even">
+<td>Q4 2025</td>
+<td style="text-align: right;">34,108.00</td>
+<td style="text-align: right;">2,906.00</td>
+<td style="text-align: right;">2,752.00</td>
+<td style="text-align: right;">2,044.00</td>
+<td style="text-align: right;">682.00</td>
+<td style="text-align: right;">119.00</td>
+<td style="text-align: right;">99.00</td>
+</tr>
+<tr class="odd">
+<td>Q1 2026</td>
+<td style="text-align: right;">32,540.00</td>
+<td style="text-align: right;">207.00</td>
+<td style="text-align: right;">-2,264.00</td>
+<td style="text-align: right;">699.00</td>
+<td style="text-align: right;">582.00</td>
+<td style="text-align: right;">252.00</td>
+<td style="text-align: right;">166.00</td>
+</tr>
+<tr class="even">
+<td>Q2 2026</td>
+<td style="text-align: right;">51,004.00</td>
+<td style="text-align: right;">3,847.00</td>
+<td style="text-align: right;">7,259.00</td>
+<td style="text-align: right;">4,317.00</td>
+<td style="text-align: right;">726.00</td>
+<td style="text-align: right;">635.00</td>
+<td style="text-align: right;">121.00</td>
+</tr>
+<tr class="odd">
+<td>Q3 2026</td>
+<td style="text-align: right;">50,540.00</td>
+<td style="text-align: right;">5,616.00</td>
+<td style="text-align: right;">7,281.00</td>
+<td style="text-align: right;">6,185.00</td>
+<td style="text-align: right;">680.00</td>
+<td style="text-align: right;">561.00</td>
+<td style="text-align: right;">209.00</td>
+</tr>
+<tr class="even">
+<td>TTM Sep2025</td>
+<td style="text-align: right;">131,953.00</td>
+<td style="text-align: right;">1,505.00</td>
+<td style="text-align: right;">3,408.00</td>
+<td style="text-align: right;">5,000.00</td>
+<td style="text-align: right;">2,057.00</td>
+<td style="text-align: right;">858.00</td>
+<td style="text-align: right;">1,106.00</td>
+</tr>
+<tr class="odd">
+<td>TTM Sep2026</td>
+<td style="text-align: right;">168,192.00</td>
+<td style="text-align: right;">12,576.00</td>
+<td style="text-align: right;">15,028.00</td>
+<td style="text-align: right;">13,245.00</td>
+<td style="text-align: right;">2,670.00</td>
+<td style="text-align: right;">1,567.00</td>
+<td style="text-align: right;">595.00</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los archivos de historia incluyen 3 ejercicios fiscales (FY), cuatro trimestres, 9M comparativos y TTM frente al anterior, además de los seis segmentos. Q4 se obtiene restando 9M del FY; TTM = FY25 + 9M26 − 9M25. No son ajustes proforma de perímetro. La reproducción valida suma de segmentos a PBT y NI = PBT − impuestos − minorías. Fuentes y hechos mínimos están en history/source_facts.json.</p>
+<p>NI ajustado del emisor FY25 fue 2.632, no 4.403 GAAP; FY24 fue 2.604. TTM ajustado 10.609 sigue siendo cíclico. FY25 contiene ganancias de disposición 2.984, impairments 1.060 y depreciación acelerada LA 964. Esta última persiste en el ajustado del emisor; quitarla de earnings comparables no autoriza sumarla otra vez a CFO, que ya añade D&amp;A. FY24 LA 253 y FY25 LA 964 tampoco se convierten en capacidad futura. El corte de activos vendidos exige retirar sus beneficios, no solo sus pérdidas.</p>
+<p>CFO TTM 15.028 menos capex 2.670 = 12.358 es residual consolidado, no FCFF ni caja íntegramente distribuible al común. Excluyendo el efecto WC 1.783, el residual baja a 10.575, aún con cracks altos. Q1/Q2/Q3 26 CFO: −2.264/7.259/7.281; sin WC: 699/4.317/6.185: prueba de volatilidad real de conversión. Los cash taxes FY25 fueron 200 frente gasto 892; no se perpetúa esa baja caja fiscal. SBC FY23/24/25 = 297/210/220 permanece como coste. No se inventa SBC trimestral a partir de movimientos de patrimonio. <a href="https://www.sec.gov/Archives/edgar/data/1534701/000153470126000006/psx-20251231.htm">Historia anual</a>; <a href="https://www.sec.gov/Archives/edgar/data/1534701/000153470126000037/psx-20260930.htm">intermedia</a>.</p>
+<p>EPS diluido de Q4 2025/Q1/Q2/Q3 2026: 7,17/0,51/9,55/14,08. La suma de los cuatro EPS publicados es 31,31, frente a 3,66 del período previo; no es un EPS TTM recalculado con un denominador único. No se utiliza para el DCF.</p>
+<h3 id="refining-puente-económico-y-cambio-de-perímetro">Refining: puente económico y cambio de perímetro</h3>
+<p>Margen realizado FY23/FY24/FY25: 17,26/8,84/10,88 $/bbl. Q2 26: 24,08 y Q3 26: 38,00. El puente de Q3 es: 6031 PBT + 96 otros impuestos + 249 D&amp;A/impairment + 55 SG&amp;A + 1166 opex + 1 pérdida JV − 161 otros ingresos + 15 margen JV = 7452. Dividido entre 196,088 millones de barriles procesados resulta 38,004, redondeado a 38,00. No confundir estos inputs con crudo exclusivamente. La medida incluye participación proporcional en pequeñas afiliadas y ajustes especiales, de modo que no es GAAP EBIT por barril.</p>
+<p>El modelo excluye ingresos JV de los segmentos consolidados. Parte de un volumen de flota retenida de 765 millones de barriles en 2027 base, frente 777,96 anualizados del Q3. Selecciona margen 25 en 2027 y 15 en 2031 en dólares reales de 2027; después solo inflación del 2%, no 38 perpetuo. Costes cash refinación 5.500 y D&amp;A 1.000 en 2027: el gasto trimestral 96 + 55 + 1166 anualiza 5.225, pero turnarounds 79 Q3 frente 123 Q2 justifican no fijar un trimestre especialmente eficiente para siempre. Otros ingresos 161 no se perpetúan automáticamente. Estos supuestos no son guidance ni una media estadística de ciclos idénticos.</p>
+<p>Midstream ex JV parte de 2.550 EBIT frente 2.331 TTM consolidado ex equity; marketing 650 frente 83 Q3 ex JV, afectado por trading y cambios de perímetro; corporate −550 frente a −1.602 PBT TTM que incluye 1.138 de interés consolidado. Son normalizaciones seleccionadas, no puentes exactos al resultado reportado. No se suma otra vez el ingreso financiero al FCFF. Marketing tiene sensibilidad 300–1000 y Midstream 2200–2900.</p>
+<h3 id="renewable-fuels-y-la-fecha-de-los-créditos">Renewable Fuels y la fecha de los créditos</h3>
+<p>El beneficio del segmento en Q3, 191 frente a una pérdida previa de 43, depende de créditos regulatorios y condiciones del feedstock. Other income aumentó 288 Q3, principalmente por trading y Clean Fuel Production credits; no se identificó el importe 45Z individual. La IRS confirma elegibilidad del crédito para combustible vendido hasta 31 dic 2029, con restricciones de origen de feedstock. No se presume una extensión: en el escenario base, el EBIT de renovables de 250 en 2027 cae a 0 en 2030 y permanece en 0 en el terminal; favorable llega a 200 por economía operativa/otros programas, no por continuidad asumida de 45Z. Estrés de −250 adicional muestra que ni ese equilibrio está asegurado. <a href="https://www.irs.gov/credits-deductions/clean-fuel-production-credit">IRS 45Z</a>; <a href="https://www.irs.gov/irb/2026-41_irb">boletín actualizado</a>.</p>
+<h2 id="cpchem-y-afiliadas-valor-de-equity-no-doble-consolidación">4. CPChem y afiliadas: valor de equity, no doble consolidación</h2>
+<p>Equity earnings TTM 1.567 frente dividendos 595; devoluciones de capital 91 se mantienen aparte. CPChem es 50%, con ingresos de equity 9M 828 y capex 100%: 787 (parte PSX: 394), autofinanciado. Sus estados completos no son públicos en el portal consultado y PSX no separa los dividendos específicos CPChem. No se adjudican todos los 595 a CPChem. La información seleccionada de CPChem muestra NI 2023/24/25 de 1.173/1.726/593 a 100%, ilustrando ciclo y no distribución garantizada. <a href="https://www.cpchem.com/who-we-are/financials">CPChem</a>.</p>
+<p>Se usa un DCF de <strong>equity de todas las afiliadas</strong>: earnings normalizados menos impuesto incremental de PSX menos capital retenido. Los beneficios de una LLC no son todos netos del impuesto de PSX: las afiliadas combinadas reconocieron 111 de impuesto sobre 2.416 PBT en 2025, pero no se puede reconstruir una tasa propietaria exacta desde esos agregados. Base selecciona 20% adicional, sensibilidad 0–30%; es hipótesis, no una obligación fiscal medida. Se grava el beneficio atribuible, no solo el dividendo, porque puede existir pass-through sin caja distribuida.</p>
+<p>Base supone equity earnings 1.300 en 2027 y 1.500 reales en 2031. Retención mínima 40% de earnings en 2027 y 25% en 2028; después se financia todo aumento positivo del beneficio después del impuesto PSX a ROE 10%. Si el requisito supera la caja, el modelo permite contribución negativa; no crea deuda JV gratis. En terminal, retención = g × beneficio después de impuesto / ROE. Ke 11%, no WACC 9,5%. No se añaden los 11.425 de inversiones equity JV registrados a diciembre de 2025 ni se resta otra vez deuda o capex JV. Con esta disciplina el valor base JV es 8,936.31, frente a 4,840.65/16,683.65 en extremos. Esta aproximación no reemplaza estados individuales ni acuerdos de distribución.</p>
+<h2 id="dcf-operativo-55-reinversión-y-descuento">5. DCF operativo: 5+5, reinversión y descuento</h2>
+<p>2027–2031 normalizan el ciclo; 2032–2036 son fase madura. FCFF = NOPAT + D&amp;A − capex − ΔWC. Impuesto 24%, sin repetir cash tax 200 de FY25. D&amp;A consolidada 2.400 en 2027 frente 591 Q3 × 4 ≈2.364 y 2.552 TTM con 239 LA en Q4 25. El mantenimiento/reemplazo mínimo es 125% de D&amp;A, no D&amp;A igual a capex. Capex 2027 mínimo: 3.000; aumenta con 2% de inflación. No se añade SBC a FCFF.</p>
+<p>La reinversión neta es el máximo entre (i) 25% D&amp;A + WC positivo, (ii) suma de aumentos positivos de NOPAT de cada segmento/ROIC y (iii) suelo de capex menos D&amp;A + WC. Las caídas de refining no financian mágicamente la expansión de Midstream: se usan aumentos por segmento, no solo la variación consolidada. La primera anualidad parte de activos ya operando y contrasta con el run-rate Q3 actual, no con un año deprimido que exigiría inversiones ficticias por simple recuperación del precio. La sensibilidad usando un ancla de 10.000 NOPAT muestra el coste de otra lectura. No se confunde ese ancla de capacidad con pronóstico de persistencia del trimestre.</p>
+<p>Ingresos 150.000 en 2027 y 2% de crecimiento son proxy para WC, no tesis de volumen/growth orgánico: refinado es pass-through de commodities. Se invierte 1,5% del aumento de ventas, no se supone liberación de WC cuando bajan. Un estrés de ±2.000 de capital posterior cubre parte de volatilidad del petróleo/collateral, sin pretender estimar su distribución. No existe plan proforma completo de adquisiciones, Western Gateway o nuevo cierre de instalaciones; gastos adicionales requieren revisar la valoración.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Hipótesis</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Volumen 2027, millones bbl</td>
+<td style="text-align: right;">730</td>
+<td style="text-align: right;">765</td>
+<td style="text-align: right;">790</td>
+</tr>
+<tr class="even">
+<td>Cambio anual de volumen</td>
+<td style="text-align: right;">−1%</td>
+<td style="text-align: right;">−0,25%</td>
+<td style="text-align: right;">0%</td>
+</tr>
+<tr class="odd">
+<td>Margen 2027, $/bbl</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td>Margen 2031 real 2027, $/bbl</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td>Cash cost refining 2027</td>
+<td style="text-align: right;">5.700</td>
+<td style="text-align: right;">5.500</td>
+<td style="text-align: right;">5.250</td>
+</tr>
+<tr class="even">
+<td>WACC</td>
+<td style="text-align: right;">10,50%</td>
+<td style="text-align: right;">9,50%</td>
+<td style="text-align: right;">8,75%</td>
+</tr>
+<tr class="odd">
+<td>Ke afiliadas</td>
+<td style="text-align: right;">12%</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">10%</td>
+</tr>
+<tr class="even">
+<td>g terminal</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">1,5%</td>
+<td style="text-align: right;">2%</td>
+</tr>
+<tr class="odd">
+<td>ROIC operativo</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">12%</td>
+<td style="text-align: right;">15%</td>
+</tr>
+<tr class="even">
+<td>ROE afiliadas</td>
+<td style="text-align: right;">8%</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">12,5%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Treasury 10Y, 3 nov: 4,95%; ERP mensual, 1 nov: 4,41% fue calculada con Treasury 5,29%, por tanto la combinación no es un ERP diario sincronizado. Beta 5Y del proveedor: 0,67 da Ke 7,90%; se selecciona beta 1 para reconocer riesgo cíclico, spread de deuda 150 pb, peso deuda 15% e impuesto 24%: WACC mecánico 8,6913%. El 9,5% elegido añade 80,87 pb discrecionales, no es redondeo ni coste cotizado de bonos. El Ke JV 11% refleja riesgo de distribución y dependencia de acuerdos. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">Treasury</a>; <a href="https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm">ERP</a>; <a href="https://stockanalysis.com/stocks/psx/statistics/">beta</a>.</p>
+<p>FY2027 se descuenta 423/365 años desde 3 nov, no automáticamente un año. Stub restante 58 días usa prorrata estimada del primer flujo proyectado, sin afirmación sobre estacionalidad o caja real Oct–Nov. Con stub central: 172.67; sin stub: 168.00; descuento erróneo de una anualidad da 175.90. Capital de septiembre no absorbe automáticamente caja posterior desconocida.</p>
+<p>El terminal adopta crecimiento uniforme maduro g y exige reinversión = max(g × NOPAT / ROIC, 25% D&amp;A + WC, suelo de capex terminal menos D&amp;A más WC). Ya no perpetúa distintos crecimientos reales de cada segmento. Es una hipótesis de negocio en marcha con renovación de activos, no vida infinita de la misma refinería. Terminal representa 41.06% del valor operativo + JV base. Refining con declive, capital regulatorio y energía alternativa pueden hacer insuficiente este reemplazo: sensibilidad de mantenimiento 10/25/50% D&amp;A y escenario adverso se conservan.</p>
+<h3 id="tabla-base-reproducible">Tabla base reproducible</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">EBIT ex JV</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">D&amp;A</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">ΔWC</th>
+<th style="text-align: right;">FCFF</th>
+<th style="text-align: right;">Flujo equity JV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">15,525.00</td>
+<td style="text-align: right;">11,799.00</td>
+<td style="text-align: right;">2,400.00</td>
+<td style="text-align: right;">3,000.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">11,199.00</td>
+<td style="text-align: right;">520.00</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">13,807.88</td>
+<td style="text-align: right;">10,493.99</td>
+<td style="text-align: right;">2,448.00</td>
+<td style="text-align: right;">3,137.79</td>
+<td style="text-align: right;">45.00</td>
+<td style="text-align: right;">9,759.19</td>
+<td style="text-align: right;">485.60</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">12,026.97</td>
+<td style="text-align: right;">9,140.50</td>
+<td style="text-align: right;">2,496.96</td>
+<td style="text-align: right;">3,213.86</td>
+<td style="text-align: right;">45.90</td>
+<td style="text-align: right;">8,377.70</td>
+<td style="text-align: right;">528.77</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">10,180.62</td>
+<td style="text-align: right;">7,737.27</td>
+<td style="text-align: right;">2,546.90</td>
+<td style="text-align: right;">3,291.98</td>
+<td style="text-align: right;">46.82</td>
+<td style="text-align: right;">6,945.37</td>
+<td style="text-align: right;">573.47</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">8,357.33</td>
+<td style="text-align: right;">6,351.57</td>
+<td style="text-align: right;">2,597.84</td>
+<td style="text-align: right;">3,372.23</td>
+<td style="text-align: right;">47.75</td>
+<td style="text-align: right;">5,529.42</td>
+<td style="text-align: right;">619.75</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">8,554.07</td>
+<td style="text-align: right;">6,501.09</td>
+<td style="text-align: right;">2,649.79</td>
+<td style="text-align: right;">3,922.50</td>
+<td style="text-align: right;">48.71</td>
+<td style="text-align: right;">5,179.67</td>
+<td style="text-align: right;">1,065.11</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">8,756.66</td>
+<td style="text-align: right;">6,655.06</td>
+<td style="text-align: right;">2,702.79</td>
+<td style="text-align: right;">4,013.08</td>
+<td style="text-align: right;">49.68</td>
+<td style="text-align: right;">5,295.08</td>
+<td style="text-align: right;">1,086.42</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">8,965.30</td>
+<td style="text-align: right;">6,813.63</td>
+<td style="text-align: right;">2,756.85</td>
+<td style="text-align: right;">4,106.05</td>
+<td style="text-align: right;">50.68</td>
+<td style="text-align: right;">5,413.75</td>
+<td style="text-align: right;">1,108.14</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">9,180.22</td>
+<td style="text-align: right;">6,976.97</td>
+<td style="text-align: right;">2,811.98</td>
+<td style="text-align: right;">4,201.46</td>
+<td style="text-align: right;">51.69</td>
+<td style="text-align: right;">5,535.80</td>
+<td style="text-align: right;">1,130.31</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">9,401.63</td>
+<td style="text-align: right;">7,145.24</td>
+<td style="text-align: right;">2,868.22</td>
+<td style="text-align: right;">4,299.40</td>
+<td style="text-align: right;">52.72</td>
+<td style="text-align: right;">5,661.34</td>
+<td style="text-align: right;">1,152.91</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="puente-de-capital-y-acciones">6. Puente de capital y acciones</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Componente base</th>
+<th style="text-align: right;">Efecto equity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DCF operaciones</td>
+<td style="text-align: right;">78,892.52</td>
+</tr>
+<tr class="even">
+<td>DCF equity JV</td>
+<td style="text-align: right;">8,936.31</td>
+</tr>
+<tr class="odd">
+<td>Caja de septiembre</td>
+<td style="text-align: right;">+5.848</td>
+</tr>
+<tr class="even">
+<td>Deuda financiera carrying</td>
+<td style="text-align: right;">−18.530</td>
+</tr>
+<tr class="odd">
+<td>Reserva operativa de caja seleccionada</td>
+<td style="text-align: right;">−3.000</td>
+</tr>
+<tr class="even">
+<td>Minorías, proxy económico</td>
+<td style="text-align: right;">−1.200</td>
+</tr>
+<tr class="odd">
+<td>Employee benefits no corrientes</td>
+<td style="text-align: right;">−484</td>
+</tr>
+<tr class="even">
+<td>Pensión/otros beneficios corrientes, proxy FY25</td>
+<td style="text-align: right;">−35</td>
+</tr>
+<tr class="odd">
+<td>ARO/ambiental no corriente</td>
+<td style="text-align: right;">−1.081</td>
+</tr>
+<tr class="even">
+<td>ARO/ambiental corriente, proxy FY25</td>
+<td style="text-align: right;">−205</td>
+</tr>
+<tr class="odd">
+<td>Propel accrued</td>
+<td style="text-align: right;">−947</td>
+</tr>
+<tr class="even">
+<td>UTB/interés fiscal, último FY</td>
+<td style="text-align: right;">−89</td>
+</tr>
+<tr class="odd">
+<td>Remesas de receivables, prudencia</td>
+<td style="text-align: right;">−269</td>
+</tr>
+<tr class="even">
+<td>Capital neto posterior desconocido</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>Equity calculado</td>
+<td style="text-align: right;">67,836.83</td>
+</tr>
+<tr class="even">
+<td>Acciones equivalentes, millones</td>
+<td style="text-align: right;">392.86</td>
+</tr>
+<tr class="odd">
+<td>Valor por acción</td>
+<td style="text-align: right;">172.67</td>
+</tr>
+</tbody>
+</table></div>
+<p>La caja operativa 3.000 y minorías 1.200 son hipótesis, no saldos «restringidos» ni tasaciones. NCI book 1.172 / NI TTM 88 sirven de controles, sensibilidad 880–2.000; no sumar minority income como beneficio del común. Acciones: 390,072362 emitidas menos tesorería al 30 de septiembre de 2026 + 0,848 vested unissued proxy + 1,942 dilución incremental Q3 = 392,862362. Se conserva SBC en expense, sin proyectar nuevas recompras ni incrementar acciones arbitrariamente. Sensibilidad usando 398,953 weighted Q3: 170.04. No es una cap table fully diluted observada el 3 nov.</p>
+<p>Deuda 18.530 incluye 1.045 corriente + 17.485 no corriente; notas junior siguen siendo deuda, no 50% equity por tratamiento de agencias. Repagos 458 + 34 del 1 oct reducen deuda y caja por igual. Capacidad no utilizada: 6.400 no es caja. Dividendo 1,33 declarado el 16 oct, record 17 nov / pago 1 dic, no se resta como pagado. Autorización de recompra no es obligación ni acciones ya retiradas.</p>
+<p>Propel: importe 947 acumulado está expresamente reconocido en Note 12, frente 867 dic 25. Sentencia 833 de 5 ago 25 e interés 10% están contenidos en el caso, no se suman ambos otra vez. Apelación abierta; se elimina su interés específico del beneficio normalizado de marketing y se reserva 947, con estrés 1.500/2.000. Exposición puede exceder provisión; no se afirma victoria judicial. <a href="https://www.sec.gov/Archives/edgar/data/1534701/000153470126000037/psx-20260930.htm">Note 12</a>.</p>
+<p>Employee 484 abarca una categoría más amplia que el déficit actuarial individual: no se etiqueta como pensión neta exacta. Proxy corriente 35 usa FY25; no compensa automáticamente 199 de activo de pensiones extranjero. ARO/ambiental 1.081 ya incluye componente ambiental: no añadir 472 otra vez. Corriente 205 viene de FY25 y se somete a 0–400. Los pagos de pasivos existentes se reservan fuera del DCF; el modelo no inserta además un cronograma de esos mismos pagos. Nuevas obligaciones y mantenimiento siguen como riesgo económico. UTB 88 + 1 último FY no equivale a deferred tax 7.692 como deuda. Los escenarios no aplican beneficio fiscal automático a estas reservas.</p>
+<p>Ventas de receivables 9M: 856 consisten en 592 cash + 264 repago no monetario; no son 856 de CFO extra. Remesas garantizadas 269 incluyen 244 por cobrar; reserva 269 es prudencia por capital de circulación, no clasificación probada como deuda financiera. Residual guarantees de leases 404 + 174 y cartas de crédito 2.211 son contingencias, no deuda utilizada por sumarlas todas. Leases operativos permanecen como gasto en FCFF, no se capitalizan además. No se agregan ganancias hipotéticas por redevelopment LA ni ventas no cerradas.</p>
+<p>Los impuestos sobre renta y otros impuestos devengados aumentaron de 1.362 a 2.687 entre diciembre y septiembre. El 24% recurrente del DCF no liquida por sí solo esos devengos históricos. No se resta automáticamente todo el saldo como deuda: incluye obligaciones operativas y puede solaparse con la reserva de caja operativa 3.000, sin conciliación exacta del solapamiento. Se añade sensibilidad de reserva histórica adicional 0 / 1.325 / 2.687, que da valores base de 172.67 / 169.30 / 165.83. No se presenta como una deuda fiscal determinada. Separadamente, elevar el suelo anual de capex de 3.000 a 4.000 / 5.000, con inflación posterior, reduce el central a 146.42 / 113.67; el suelo incrementado continúa también en el terminal, no desaparece en 2037; no se afirma que esos importes sean presupuestos publicados.</p>
+<h2 id="comparables-actuales-útiles-para-detectar-trampas-no-fijar-target">7. Comparables actuales: útiles para detectar trampas, no fijar target</h2>
+<p>Cierres 3 nov: PSX 271,94; VLO 387,65; MPC 427,34; MPLX 57,50. Fecha acciones/capital puede diferir y se etiqueta. No se aplica mediana a EPS/EBIT pico.</p>
+<p>PSX EV con NCI book = 119.930,28. PBT + interés TTM 16.930 da 7,08x, pero contiene JV 1.567 y ganancias 2.103. Quitando disposiciones, denominador 14.827 y 8,09x. Si además se retira JV del denominador (13.260) y su DCF base del numerador, el múltiplo core es 8,37x: <strong>depende del modelo JV</strong>, no una observación pura. Tampoco elimina todo trading/credit income del ciclo.</p>
+<p>VLO EV aproximado 112.436,54 / EBIT TTM 17.575 = 6,40x. Incluye deuda nominal 8.635 + finance leases 2.422, caja 9.840 excluyendo 181 restricted, NCI book 3.110. Minority book de DGD no es fair value y puede distorsionar comparación; no atribuir todo EBIT consolidado al común. <a href="https://www.sec.gov/Archives/edgar/data/1035002/000162828026067679/vlo-20260930.htm">VLO Q3</a>; <a href="https://www.sec.gov/Archives/edgar/data/1035002/000162828026011499/vlo-20251231.htm">VLO FY25</a>; <a href="https://stockanalysis.com/stocks/vlo/history/">cierre</a>.</p>
+<p>MPC EBIT TTM 21.870 = 8.291 FY25 + 19.176 9M26 − 5.597 9M25. Market cap 116.357,11, net debt carrying 19.413 y minoría MPLX cotizada ≈21.045: EV 156.815,11 / EBIT = 7,17x. Incluyendo 224 de book NCI de subsidiarias MPLX, 7,18x; residual NCI no conciliado y unidades públicas: 366 millones redondeadas. Omitir MPLX daría 6,21x, incorrecto. Deuda principal + leases 33.492 vs 33.022 carrying implica sensibilidad 470; VLO usa nominal y PSX carrying, límite declarado. Venta anunciada 4.200 aún no cerrada no se resta. <a href="https://www.sec.gov/Archives/edgar/data/1510295/000151029526000071/mpc-20260930.htm">MPC Q3</a>; <a href="https://www.sec.gov/Archives/edgar/data/1552000/000155200026000047/mplx-20260930.htm">MPLX Q3</a>; <a href="https://ir.marathonpetroleum.com/investor/news-releases/news-details/2026/Marathon-Petroleum-Corp--Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx">MPC FY25</a>; <a href="https://ir.mplx.com/CorporateProfile/stock-information/stock-information/default.aspx">MPLX precio</a>; <a href="https://www.investing.com/equities/marathon-petroleum-corp.-historical-data">MPC precio</a>.</p>
+<p>Los tres usan US GAAP y leases operativos como gasto, pero perímetro, JV/minorías, gains y mix midstream no son idénticos. Es contraste relativo con ajustes y límites, <strong>no conjunto homogéneo plenamente normalizado</strong> ni arbitraje. Los múltiplos bajos de trailing earnings pueden ser señal de pico, no automáticamente descuento.</p>
+<h2 id="inverso-sensibilidades-y-falsadores">8. Inverso, sensibilidades y falsadores</h2>
+<p>Manteniendo el resto del base, el precio 271,94 exige margen refinero 2031 de <strong>22.22$/bbl en dólares 2027</strong>, frente a 15 central y 17,26 realizado FY23. Es una solución mecánica, no consenso. El barrido 0–60 verificó monotonicidad y todas las raíces dentro del rango; no se presupone que un modelo con reinversión siempre sea monótono. El margen luego crece con inflación, no se compara directamente con un valor nominal de 2036.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Margen maduro real 2027</th>
+<th style="text-align: right;">Valor base con ese margen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8.84</td>
+<td style="text-align: right;">82.43</td>
+</tr>
+<tr class="even">
+<td>10.88</td>
+<td style="text-align: right;">113.29</td>
+</tr>
+<tr class="odd">
+<td>12.00</td>
+<td style="text-align: right;">129.91</td>
+</tr>
+<tr class="even">
+<td>15.00</td>
+<td style="text-align: right;">172.67</td>
+</tr>
+<tr class="odd">
+<td>17.26</td>
+<td style="text-align: right;">203.74</td>
+</tr>
+<tr class="even">
+<td>20.00</td>
+<td style="text-align: right;">241.41</td>
+</tr>
+<tr class="odd">
+<td>25.00</td>
+<td style="text-align: right;">300.46</td>
+</tr>
+<tr class="even">
+<td>30.00</td>
+<td style="text-align: right;">321.72</td>
+</tr>
+<tr class="odd">
+<td>38.00</td>
+<td style="text-align: right;">355.74</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hay matrices completas WACC/g, costes, mantenimiento, impuestos, capital, JV tax/ROE/Ke y calendario en model/sensitivities.json. El modelo no convierte los percentiles de esas matrices en probabilidades. Las reservas de capital no eliminan la exposición a cola legal, cierre, accidentes, collateral y cambios de demanda.</p>
+<p>Qué mejoraría la tesis: caja repetible después de mantenimiento y sin WC extraordinario; midstream creciendo con retornos y capital previsto; contratos JV/proyectos convirtiendo utilidad en cobros; margen maduro superior al central respaldado por años de oferta/demanda, no una interrupción temporal. Qué la debilita: spreads normalizados con costes fijos altos, menores beneficios de créditos desde 2030, overruns GTP/Ras Laffan/Coastal, otras obligaciones LA/Lindsey, mayor capital circulante y cobros JV insuficientes.</p>
+<h2 id="calendario-y-próximos-controles">9. Calendario y próximos controles</h2>
+<p>Q3 ya publicado el 28 oct 2026 y 10-Q presentado. Dividendo: record 17 nov, pago 1 dic; no confundirlo con earnings. Próxima fecha exacta de resultados <strong>no confirmada en una fuente primaria localizada</strong>; la página de eventos no pudo verificarse de forma fiable durante esta consulta. No usar un calendario estimado de proveedor como confirmación final. Fuente de eventos para próxima revisión: https://investor.phillips66.com/events-and-presentations/default.aspx . Coastal Bend Q4 / early 2027 y polímeros 2027 son ventanas de proyecto, no citas exactas.</p>
+<p>Estado: investigación con DCF revisada de forma independiente, con límites explícitos. La puerta de calendario que exija fecha oficial definitiva permanece pendiente; s2 «No» y Opportunity 70 no se convierten en aprobación. Confianza media-baja en valor central y baja en extremos; confianza mayor en historia y puentes contables que en normalización del ciclo, capacidad de distribución JV o valor económico de minorías.</p>
+<h2 id="english-decision-summary">English decision summary</h2>
+<p>Phillips 66 generated exceptional Q3 cash flow, but $38/bbl refining margins and $14.08 quarterly EPS are not perpetual earnings. This analysis separates retained-fleet operating FCFF from affiliate equity cash flows, funds reinvestment, reserves disclosed liabilities, and does not double-count JV debt or capex. Current scanner Opportunity 70 and s2 “No” do not qualify an entry. The next exact earnings date remains unconfirmed. Current market multiples reflect peak-cycle earnings and materially different minority structures. The model is conditional research, not an order, entry approval or verified November cash-capital statement.</p>
+<h2 id="reproduction-and-limitations">Reproduction and limitations</h2>
+<p>All calculations run offline using the Python standard library. Original factual extracts and source URLs are included; full third-party filings are excluded. Run reproduce.py. History is reported/perimeter-aware rather than fabricated proforma. Model assumptions are deliberately visible. No proprietary consensus, plant-level cash budget, exact current JV tax split, full CPChem financials, precise NCI valuation or complete post-September capital reconciliation is claimed. These limits are not solved by running more formula checks.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/PSX/PSX_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/PSX/model/model.py">Modelo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/PSX/model/results.json">Resultados</a></li>
+</ul>
+</main></body></html>
