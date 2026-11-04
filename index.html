@@ -583,6 +583,19 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 .profile-home p { color:var(--ink-2); margin-top:5px; }
 @media(max-width:640px) { .profile-results,.profile-metrics { grid-template-columns:minmax(0,1fr); } .profile-hero,.profile-home { align-items:flex-start; flex-direction:column; } .profile-metrics>div { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 10px; } .profile-metrics dd { margin:0; font-size:1rem; } .profile-metrics small { grid-column:1/-1; } .profile-search .controls { align-items:flex-start; } }
 
+
+.profile-search .profile-filters { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:end; gap:12px; }
+.profile-filters>label { display:grid; gap:5px; min-width:0; }
+.profile-filters select { width:100%; min-width:0; max-width:100%; min-height:44px; }
+.profile-filters select:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.profile-results-count { grid-column:1/-1; }
+.profile-status-note,.profile-status-date { font-size:.8rem; }
+.profile-status-neutral { background:var(--paper); color:var(--ink-2); }
+.profile-result-tags,.profile-card-status { display:flex; flex-wrap:wrap; align-items:flex-start; gap:6px; }
+.profile-result-tags .pill,.profile-card-status .pill { white-space:normal; overflow-wrap:anywhere; }
+.profile-card-status { justify-content:flex-end; max-width:45%; }
+@media(max-width:640px) { .profile-search .profile-filters { grid-template-columns:minmax(0,1fr); } .profile-card-status { max-width:100%; justify-content:flex-start; } }
+
 /* Adjacent stocks always come from the same URL-backed search results. */
 .profile-navigation { display:grid; grid-template-columns:minmax(110px,auto) minmax(0,1fr) minmax(110px,auto); align-items:center; gap:16px; padding-bottom:16px; border-bottom:1px solid var(--rule); }
 .profile-navigation .profile-nav-step { min-height:44px; display:flex; align-items:center; justify-content:center; gap:7px; white-space:nowrap; }
@@ -1015,7 +1028,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null, eq: null,
     err: { scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null },
     loadedAt: null,
-    view: "inicio", profileTicker: null, profileQ: "", profileFilter: "all", profileSort: "ticker", profileContextValid: true, profileRefreshStatus: "",
+    view: "inicio", profileTicker: null, profileQ: "", profileFilter: "all", profileStatus: "all", profileSort: "ticker", profileContextValid: true, profileRefreshStatus: "",
     scanDate: null, onlyS2: true, scanQ: "",
     anaFilter: "all", rejFilter: "all", rejQ: "", anaQ: "", resDate: null, anaDate: null, latestOnly: true,
     retroHz: "corte", retroGrp: "A", calMode: "m", calMonth: null, calYear: null, calSel: null,
@@ -2370,18 +2383,47 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   }
   /* Search and navigation share one result builder and URL-backed context. The
      current search order is ticker A–Z; keep its explicit version in saved links. */
-  function profileContext() { return {q:S.profileQ,filter:S.profileFilter,sort:S.profileSort}; }
+  function profileContext() { return {q:S.profileQ,filter:S.profileFilter,status:S.profileStatus,sort:S.profileSort}; }
   function profileParams(context) {
     var params=new URLSearchParams();
     if(context.q)params.set('q',context.q);
-    params.set('filter',context.filter);params.set('sort',context.sort);
+    params.set('filter',context.filter);if(context.status&&context.status!=='all')params.set('status',context.status);params.set('sort',context.sort);
     return params.toString();
   }
   function profileSearchHash() { return '#fichas?'+profileParams(profileContext()); }
   function profileHref(ticker,context) { return '#ficha/'+encodeURIComponent(ticker)+(context?'?'+profileParams(context):''); }
-  function profileResults(all) {
+  // Status is the latest recorded Decisions row, not holdings or entry eligibility.
+  // Prefix source values so future labels cannot collide with "all" or "none".
+  function profileStatus(p) {
+    var value=String(p.latestReview&&p.latestReview.decision||'').trim();
+    return {key:value?'decision:'+value:'none',value:value,known:DEC_ORDER.indexOf(value)>=0};
+  }
+  function profileStatusLabel(key) {
+    if(key==='all')return pt('Todos los estados','All statuses');
+    if(key==='none')return pt('Sin decisión registrada','No recorded decision');
+    var value=key.indexOf('decision:')===0?key.slice(9):key;
+    return DEC_ORDER.indexOf(value)>=0?decLabel(value):pt('Otro estado registrado: ','Other recorded status: ')+value;
+  }
+  function profileStatusBadge(p) {
+    var status=profileStatus(p),label=profileStatusLabel(status.key);
+    return '<span class="pill '+(status.known?DEC_CLASS[status.value]:'profile-status-neutral')+'" data-profile-status="'+esc(status.key)+'" aria-label="'+esc(pt('Estado registrado: ','Recorded status: ')+label)+'">'+esc(label)+'</span>';
+  }
+  function profileStatusCaution() { return pt('El estado corresponde a la última decisión registrada y puede ser histórico. No indica las posiciones actuales ni autoriza entradas.','Status is the latest recorded decision and may be historical. It does not indicate current holdings or authorize entry.'); }
+  function profileResults(all,ignoreStatus) {
     if(!S.profileContextValid)return [];
-    return window.FP_PROFILE_ENGINE.search(all,S.profileQ).filter(function(p){return S.profileFilter==='all'||(S.profileFilter==='complete'?!!p.latestCompleted:!p.latestCompleted);});
+    return window.FP_PROFILE_ENGINE.search(all,S.profileQ).filter(function(p){return (S.profileFilter==='all'||(S.profileFilter==='complete'?!!p.latestCompleted:!p.latestCompleted))&&(ignoreStatus||S.profileStatus==='all'||profileStatus(p).key===S.profileStatus);});
+  }
+  function profileStatusOptions(all) {
+    var candidates=profileResults(all,true),counts=Object.create(null),keys=DEC_ORDER.map(function(value){return 'decision:'+value;});
+    keys.push('none');
+    var extra=[];all.forEach(function(p){var key=profileStatus(p).key;if(keys.indexOf(key)<0&&extra.indexOf(key)<0)extra.push(key);});extra.sort().forEach(function(key){keys.push(key);});
+    candidates.forEach(function(p){var key=profileStatus(p).key;counts[key]=(counts[key]||0)+1;});
+    var options=[{key:'all',label:profileStatusLabel('all'),count:candidates.length}].concat(keys.map(function(key){return {key:key,label:profileStatusLabel(key),count:counts[key]||0};}));
+    if(!options.some(function(option){return option.key===S.profileStatus;}))options.push({key:S.profileStatus,label:pt('Estado no disponible: ','Unavailable status: ')+profileStatusLabel(S.profileStatus),count:0,unavailable:true});
+    return options;
+  }
+  function profileStatusSelect(all) {
+    return '<label for="profile-status">'+esc(pt('Estado registrado','Recorded status'))+'<select id="profile-status" aria-describedby="profile-status-note">'+profileStatusOptions(all).map(function(option){return '<option value="'+esc(option.key)+'"'+(S.profileStatus===option.key?' selected':'')+'>'+esc(option.label+' · '+option.count)+'</option>';}).join('')+'</select></label>';
   }
   function profileFilterLabel() { return S.profileFilter==='complete'?pt('Con análisis completado','With completed analysis'):S.profileFilter==='other'?pt('Sin análisis completo registrado','No completed analysis recorded'):pt('Todas las acciones','All stocks'); }
   function profileNavigation(p) {
@@ -2393,7 +2435,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       return row?'<a'+attrs+' href="'+esc(profileHref(row.ticker,context))+'" rel="'+direction+'">'+content+'</a>':'<button type="button"'+attrs+' disabled>'+content+'</button>';
     }
     var status=index>=0?(index+1)+' '+pt('de','of')+' '+rows.length:pt('Fuera de estos resultados','Not in these results');
-    var detail=profileFilterLabel()+' · Ticker A–Z'+(S.profileQ.trim()?' · '+pt('Búsqueda: ','Search: ')+S.profileQ:'');
+    var detail=profileFilterLabel()+' · '+profileStatusLabel(S.profileStatus)+' · Ticker A–Z'+(S.profileQ.trim()?' · '+pt('Búsqueda: ','Search: ')+S.profileQ:'');
     var h='<nav class="profile-navigation" aria-label="'+esc(pt('Navegar por los resultados de acciones','Browse stock results'))+'">'+step('prev',index>0?rows[index-1]:null)+'<div class="profile-nav-context"><strong role="status" aria-live="polite" aria-atomic="true">'+esc(status)+'</strong><small>'+esc(detail)+'</small></div>'+step('next',index>=0&&index<rows.length-1?rows[index+1]:null)+'</nav>';
     if(index<0)h+='<p class="muted profile-nav-notice">'+esc(S.profileContextValid?pt('Esta acción ya no aparece en esta búsqueda con los datos publicados actuales. Vuelve a los resultados para elegir otra.','This stock is no longer in this search with the current published data. Return to the results to choose another.'):pt('No se reconoce el filtro o el orden de este enlace. Vuelve al buscador para elegir los resultados.','This link’s filter or sort order is not supported. Return to search to choose the results.'))+'</p>';
     return h;
@@ -2413,10 +2455,10 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       return renderProfile(p);
     }
     var shown=profileResults(all);
-    h+='<section class="profile-search panel"><label for="profile-q">'+esc(pt('Ticker o nombre de empresa','Ticker or company name'))+'</label><input type="search" id="profile-q" autocomplete="off" spellcheck="false" placeholder="'+esc(pt('Por ejemplo: HPE, Nutanix, Estée Lauder…','For example: HPE, Nutanix, Estée Lauder…'))+'" value="'+esc(S.profileQ)+'"><div class="controls"><label for="profile-filter">'+esc(pt('Mostrar','Show'))+' <select id="profile-filter"><option value="all"'+(S.profileFilter==='all'?' selected':'')+'>'+esc(pt('Todas las acciones','All stocks'))+'</option><option value="complete"'+(S.profileFilter==='complete'?' selected':'')+'>'+esc(pt('Con análisis completado','With completed analysis'))+'</option><option value="other"'+(S.profileFilter==='other'?' selected':'')+'>'+esc(pt('Sin análisis completo registrado','No completed analysis recorded'))+'</option></select></label><span role="status" aria-live="polite">'+shown.length+' '+esc(pt('resultados de','results from'))+' '+all.length+' '+esc(pt('acciones','stocks'))+'</span></div><p class="muted">'+esc(pt('Incluye todo el historial publicado, no solo el último escáner. «Solo escáner» no implica que exista un análisis.','Includes the entire published history, not just the latest scan. “Scanner only” does not mean research has been completed.'))+'</p></section>';
-    if(!shown.length) return h+notice(pt('Sin resultados','No results'),pt('Prueba otro ticker o parte del nombre. No hay una ficha en los datos publicados para esta búsqueda.','Try another ticker or part of the company name. No profile in the published data matches this search.'));
+    h+='<section class="profile-search panel"><label for="profile-q">'+esc(pt('Ticker o nombre de empresa','Ticker or company name'))+'</label><input type="search" id="profile-q" autocomplete="off" spellcheck="false" placeholder="'+esc(pt('Por ejemplo: HPE, Nutanix, Estée Lauder…','For example: HPE, Nutanix, Estée Lauder…'))+'" value="'+esc(S.profileQ)+'"><div class="controls profile-filters"><label for="profile-filter">'+esc(pt('Análisis','Research'))+' <select id="profile-filter"><option value="all"'+(S.profileFilter==='all'?' selected':'')+'>'+esc(pt('Todas las acciones','All stocks'))+'</option><option value="complete"'+(S.profileFilter==='complete'?' selected':'')+'>'+esc(pt('Con análisis completado','With completed analysis'))+'</option><option value="other"'+(S.profileFilter==='other'?' selected':'')+'>'+esc(pt('Sin análisis completo registrado','No completed analysis recorded'))+'</option></select></label>'+profileStatusSelect(all)+'<span class="profile-results-count" role="status" aria-live="polite">'+shown.length+' '+esc(pt('resultados de','results from'))+' '+all.length+' '+esc(pt('acciones','stocks'))+'</span></div><p class="muted">'+esc(pt('Incluye todo el historial publicado, no solo el último escáner. «Solo escáner» no implica que exista un análisis.','Includes the entire published history, not just the latest scan. “Scanner only” does not mean research has been completed.'))+'</p><p class="muted profile-status-note" id="profile-status-note">'+esc(profileStatusCaution()+' '+pt('Los recuentos respetan la búsqueda y el filtro de análisis.','Counts respect the search and research filter.'))+'</p></section>';
+    if(!shown.length) return h+notice(pt('Sin resultados','No results'),pt('Prueba otro ticker, parte del nombre o una combinación de filtros distinta. No hay una ficha en los datos publicados para esta búsqueda.','Try another ticker, company name, or combination of filters. No profile in the published data matches this search.'));
     if(shown.length===1 && S.profileQ.trim())return h+profileSummaryCard(shown[0],true)+profileFreshness();
-    h+='<div class="profile-results">'+shown.map(function(p){var a=p.latestCompleted;return '<a class="profile-result" href="'+esc(profileHref(p.ticker,profileContext()))+'"><div><b class="tick">'+esc(p.ticker)+'</b><span class="profile-co">'+esc(p.company||pt('Nombre no registrado','Company name not recorded'))+'</span></div><span class="profile-tag '+(a?'profile-complete':'')+'">'+esc(profileState(p))+'</span><div class="profile-result-dates"><span>'+esc(pt('Primer escáner: ','First scan: ')+profileDate(p.firstScan))+'</span><span>'+esc(pt('Último análisis completo: ','Last completed analysis: ')+profileDate(a&&a.date))+'</span></div><span class="profile-arrow" aria-hidden="true">→</span></a>';}).join('')+'</div>';
+    h+='<div class="profile-results">'+shown.map(function(p){var a=p.latestCompleted;return '<a class="profile-result" href="'+esc(profileHref(p.ticker,profileContext()))+'"><div><b class="tick">'+esc(p.ticker)+'</b><span class="profile-co">'+esc(p.company||pt('Nombre no registrado','Company name not recorded'))+'</span></div><div class="profile-result-tags">'+profileStatusBadge(p)+'<span class="profile-tag '+(a?'profile-complete':'')+'">'+esc(profileState(p))+'</span></div><div class="profile-result-dates"><span>'+esc(pt('Primer escáner: ','First scan: ')+profileDate(p.firstScan))+'</span><span>'+esc(pt('Último análisis completo: ','Last completed analysis: ')+profileDate(a&&a.date))+'</span></div><span class="profile-arrow" aria-hidden="true">→</span></a>';}).join('')+'</div>';
     return h+profileFreshness();
   }
   function profileFreshness() { return '<p class="muted profile-foot">'+esc(pt('Datos publicados: ','Published data: ')+(window.FP_MANIFEST&&window.FP_MANIFEST.generated||pt('fecha no disponible','date unavailable')))+'. '+esc(pt('Se comprueban nuevas publicaciones cada minuto mientras la página está visible. Los nuevos tickers y análisis se incorporan automáticamente cuando se publican en la web.','New publications are checked every minute while the page is visible. New tickers and analyses are included automatically once published on the website.'))+' <button class="more-link" data-profile-refresh="1">'+esc(pt('Comprobar ahora','Check now'))+'</button><span role="status" id="profile-refresh-status">'+esc(S.profileRefreshStatus||'')+'</span></p>'; }
@@ -2491,15 +2533,16 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   }
   function profileSummaryCard(p,inline) {
     var d=profileCardData(p),r=d.row,v=d.model,c=d.close,s=d.scan,none=pt('No disponible','Unavailable');
-    var h='<section class="panel stock-summary" aria-label="'+esc(pt('Ficha de ','Stock card: ')+p.ticker)+'">'+profileNavigation(p)+'<div class="stock-summary-head"><div><p class="eyebrow">'+esc(pt('Ficha de la acción','Stock profile'))+'</p><h2 id="profile-title" tabindex="-1">'+esc(p.ticker)+'</h2><p class="profile-company">'+esc(p.company||pt('Nombre no registrado','Name not recorded'))+'</p></div><div>'+ (r?pill(r.decision):'<span class="profile-tag">'+esc(profileState(p))+'</span>')+'</div></div>';
-    var note=r?whyOf(r):v?(lang==='en'&&v.summaryEn?v.summaryEn:v.summary):'';
+    var h='<section class="panel stock-summary" aria-label="'+esc(pt('Ficha de ','Stock card: ')+p.ticker)+'">'+profileNavigation(p)+'<div class="stock-summary-head"><div><p class="eyebrow">'+esc(pt('Ficha de la acción','Stock profile'))+'</p><h2 id="profile-title" tabindex="-1">'+esc(p.ticker)+'</h2><p class="profile-company">'+esc(p.company||pt('Nombre no registrado','Name not recorded'))+'</p></div><div class="profile-card-status">'+profileStatusBadge(p)+(!profileStatus(p).value?'<span class="profile-tag">'+esc(profileState(p))+'</span>':'')+'</div></div>';
+    var note=(r?whyOf(r):v?(lang==='en'&&v.summaryEn?v.summaryEn:v.summary):'')||'';
     if(d.analysis&&d.analysis.report&&(!r||String(d.analysis.date||'')>String(window.FP_PROFILE_ENGINE.day(r.adate)||''))){var meta=(d.analysis.report.profiles||[]).find(function(x){return x.ticker===p.ticker;});note=meta&&(lang==='en'&&meta.summaryEn?meta.summaryEn:meta.summary)||(!r&&v&&note)||pt('Última fuente de investigación: ','Latest research source: ')+d.analysis.report.title+'. '+pt('Consulta el informe para conocer su conclusión y límites.','Open the report for its conclusion and limits.');}
     var short=String(note||pt('No hay un comentario de análisis registrado. Consulta el historial disponible debajo.','No analysis comment is recorded. The available history is linked below.'));
     if(short.length>260){var sentence=short.match(/^(.{80,260}?[.!?])\s/);if(sentence)short=sentence[1];else{var cut=short.lastIndexOf(' ',260);short=short.slice(0,cut>150?cut:260)+'…';}}
     h+='<p class="muted stock-dates">'+esc(pt('Primer escáner: ','First scan: ')+profileDate(p.firstScan)+' · '+pt('Último análisis completado: ','Last completed analysis: ')+profileDate(p.latestCompleted&&p.latestCompleted.date))+'</p>';
+    if(profileStatus(p).value)h+='<p class="muted profile-status-date">'+esc(pt('Fecha de la decisión registrada: ','Recorded decision date: ')+profileDate(window.FP_PROFILE_ENGINE.day(r.adate)))+'</p>';
     h+='<p class="stock-brief">'+esc(short)+'</p>';
     if(r&&note.length>short.length)h+='<details class="stock-note"><summary>'+esc(pt('Leer comentario completo','Read full comment'))+'</summary><p>'+esc(note)+'</p></details>';
-    h+='<p class="stock-caution">'+esc(pt('Registro de investigación, no autorización de compra. Los valores son modelos fechados, no precios objetivo garantizados.','Research record, not permission to buy. Values are dated models, not guaranteed price targets.'))+'</p>';
+    h+='<p class="stock-caution">'+esc(profileStatusCaution()+' '+pt('Los valores son modelos fechados, no precios objetivo garantizados.','Values are dated models, not guaranteed price targets.'))+'</p>';
     function tile(label,value,sub,cls){return '<div><dt>'+esc(label)+'</dt><dd class="'+(cls||'')+'">'+esc(value)+'</dd><small>'+esc(sub)+'</small></div>';}
     var vLabel=v?(lang==='en'&&v.labelEn?v.labelEn:v.label):r?(lang==='en'&&r.vlabEn?r.vlabEn:r.vlab):'';
     h+=profileQuotePanel(p);
@@ -2532,11 +2575,11 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       else h+='<p class="muted">'+esc(pt('Fecha tomada del registro de análisis; no hay un informe enlazado disponible.','Date taken from the analysis record; no linked report is available.'))+'</p>';
     } else h+='<p>'+esc(pt('No hay un análisis fundamental completado verificable en el archivo. Los registros parciales, pendientes, de escáner o de gestión no se presentan como análisis completos.','No verifiable completed fundamental analysis is recorded in the archive. Partial, pending, scanner or management records are not presented as completed analyses.'))+'</p>';
     h+='</section>';
-    if(r && (!a || r!==a.row || window.FP_PROFILE_ENGINE.day(r.adate)!==a.date))h+='<section class="panel"><h3>'+esc(pt('Última revisión registrada','Latest recorded review'))+'</h3><p class="muted">'+esc(profileDate(window.FP_PROFILE_ENGINE.day(r.adate))+' · '+depthLabel(r.depth))+'</p><p>'+pill(r.decision)+'</p><p>'+esc(whyOf(r))+'</p>'+(nextOf(r)?'<p><b>'+esc(pt('Próximo paso: ','Next step: '))+'</b>'+esc(nextOf(r))+'</p>':'')+'<p>'+ (r.rep?reportLink(r.rep):'')+'</p><p class="muted">'+esc(pt('Fecha del registro de revisión. Puede reutilizar un análisis anterior y no equivale a una nueva valoración.','Review-record date. It may reuse an earlier analysis and does not necessarily mean a new valuation.'))+'</p></section>';
+    if(r && (!a || r!==a.row || window.FP_PROFILE_ENGINE.day(r.adate)!==a.date))h+='<section class="panel"><h3>'+esc(pt('Última revisión registrada','Latest recorded review'))+'</h3><p class="muted">'+esc(profileDate(window.FP_PROFILE_ENGINE.day(r.adate))+' · '+depthLabel(r.depth))+'</p><p>'+profileStatusBadge({latestReview:r})+'</p><p>'+esc(whyOf(r))+'</p>'+(nextOf(r)?'<p><b>'+esc(pt('Próximo paso: ','Next step: '))+'</b>'+esc(nextOf(r))+'</p>':'')+'<p>'+ (r.rep?reportLink(r.rep):'')+'</p><p class="muted">'+esc(pt('Fecha del registro de revisión. Puede reutilizar un análisis anterior y no equivale a una nueva valoración.','Review-record date. It may reuse an earlier analysis and does not necessarily mean a new valuation.'))+'</p></section>';
     if(m)h+='<section class="panel"><h3>'+esc(pt('Seguimiento de la posición','Position follow-up'))+'</h3><p class="muted">'+esc(profileDate(window.FP_PROFILE_ENGINE.day(m.date))+' · '+(lang==='en'&&m.stateEn?m.stateEn:m.state))+'</p><p>'+esc(lang==='en'&&m.noteEn?m.noteEn:m.note)+'</p><p>'+ (m.rep?reportLink(m.rep):'')+'</p><p class="muted">'+esc(pt('Gestión y ejecución se conservan aparte del análisis fundamental.','Management and execution are kept separate from fundamental research.'))+'</p></section>';
     h+='<section class="panel"><h3>'+esc(pt('Historial del escáner','Scanner history'))+'</h3><p class="muted">'+esc(pt('Fechas en las que apareció en el escáner publicado. No implican que pasara todos los filtros ni que se analizara ese día.','Dates when the stock appeared in the published scanner. They do not imply all filters passed or analysis was completed that day.'))+'</p>'+(p.scanDates.length?'<div class="profile-scan-dates">'+p.scanDates.slice().reverse().map(function(d){return '<a class="chip" href="#escaner" data-profile-scan="'+esc(d)+'" data-profile-scan-ticker="'+esc(p.ticker)+'">'+esc(fmtD(d))+'</a>';}).join('')+'</div>':'<p>'+esc(pt('No hay una aparición de escáner verificable en el archivo disponible.','No scanner appearance is verifiable in the available archive.'))+'</p>')+'</section>';
     h+='<section class="panel"><h3>'+esc(pt('Informes vinculados','Linked reports'))+' · '+p.reports.length+'</h3><p class="muted">'+esc(pt('Fuentes enlazadas en los registros o que identifican el ticker en el título. La categoría distingue valoración, seguimiento y gestión. Los informes originales conservan su idioma.','Sources linked by records or naming the ticker in their title. Categories distinguish valuation, follow-up and management. Original reports retain their language.'))+'</p>'+profileReports(p.reports)+'</section>';
-    if(p.decisions.length)h+='<details class="panel"><summary>'+esc(pt('Historial de revisiones','Review history'))+' · '+p.decisions.length+'</summary><div class="profile-history">'+p.decisions.map(function(d){return '<div><b>'+esc(profileDate(window.FP_PROFILE_ENGINE.day(d.adate)))+'</b> · '+esc(depthLabel(d.depth))+'<p>'+pill(d.decision)+'</p><p>'+esc(whyOf(d))+'</p><small>'+esc(pt('Escáner asociado: ','Associated scan: ')+profileDate(window.FP_PROFILE_ENGINE.day(d.date)))+'</small> '+(d.rep?reportLink(d.rep):'')+'</div>';}).join('')+'</div></details>';
+    if(p.decisions.length)h+='<details class="panel"><summary>'+esc(pt('Historial de revisiones','Review history'))+' · '+p.decisions.length+'</summary><div class="profile-history">'+p.decisions.map(function(d){return '<div><b>'+esc(profileDate(window.FP_PROFILE_ENGINE.day(d.adate)))+'</b> · '+esc(depthLabel(d.depth))+'<p>'+profileStatusBadge({latestReview:d})+'</p><p>'+esc(whyOf(d))+'</p><small>'+esc(pt('Escáner asociado: ','Associated scan: ')+profileDate(window.FP_PROFILE_ENGINE.day(d.date)))+'</small> '+(d.rep?reportLink(d.rep):'')+'</div>';}).join('')+'</div></details>';
     if(p.mentions.length)h+='<details class="panel"><summary>'+esc(pt('Otras menciones en la biblioteca','Other library mentions'))+' · '+p.mentions.length+'</summary><p class="muted">'+esc(pt('Coincidencias de texto, no necesariamente análisis de esta empresa. Los tickers cortos pueden coincidir con palabras o abreviaturas. Estas menciones no establecen la fecha del análisis.','Text matches, not necessarily research about this company. Short tickers may match words or abbreviations. These mentions do not establish the analysis date.'))+'</p>'+profileReports(p.mentions)+'</details>';
     h+='<details class="panel"><summary>'+esc(pt('Cómo se construye esta ficha','How this profile is built'))+'</summary><p>'+esc(pt('Se reúne el historial publicado de Escáner, Decisiones, Gestión, Operaciones y Biblioteca. Para análisis completado se exige profundidad explícita de Stage 3 completo o revisión completada, o metadatos explícitos del informe. Una revisión limitada o de Stage 4 no reemplaza el análisis fundamental anterior.','The profile combines published Scanner, Decisions, Management, Trades and Library history. Completed analysis requires explicit full Stage 3 or completed-review depth, or explicit report metadata. Limited or Stage 4 reviews do not replace earlier fundamental analysis.'))+'</p><p>'+esc(pt('La fecha proviene de la fecha de valoración explícita, del informe vinculado o, si no existe informe, del registro de análisis. Si falta, se muestra «No consta». La primera fecha de escáner se limita al archivo disponible.','Dates come from the explicit valuation date, linked report, or, if no report exists, the analysis record. Missing dates show “Not recorded”. The first scanner date is limited to the available archive.'))+'</p></details>';
     return h+profileFreshness();
@@ -2547,6 +2590,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       var split=hash.indexOf('?'),route=split<0?hash:hash.slice(0,split),params=new URLSearchParams(split<0?'':hash.slice(split+1));
       var filter=params.get('filter')||'all',sort=params.get('sort')||'ticker';
       S.profileQ=params.get('q')||'';
+      S.profileStatus=params.get('status')||'all';
       S.profileContextValid=['all','complete','other'].indexOf(filter)>=0&&sort==='ticker';
       S.profileFilter=['all','complete','other'].indexOf(filter)>=0?filter:'all';
       S.profileSort='ticker';
@@ -2792,7 +2836,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
           if(!navFocus || navFocus.disabled)navFocus=document.getElementById("profile-title");
           if(navFocus)navFocus.focus({preventScroll:true});
         }
-        if (focusId === "profile-filter") { var filterFocus=document.getElementById(focusId); if(filterFocus)filterFocus.focus({preventScroll:true}); }
+        if (focusId === "profile-filter" || focusId === "profile-status") { var filterFocus=document.getElementById(focusId); if(filterFocus)filterFocus.focus({preventScroll:true}); }
         if (focusId === "profile-q" || focusId === "scan-q" || focusId === "lib-q" || focusId === "rej-q" || focusId === "ana-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
       }
     });
@@ -2853,7 +2897,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   document.addEventListener("keydown", function (e) {
     if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("tr.click, .plrow.click, div.card")) { e.preventDefault(); openDetail(e.target.getAttribute("data-open")); }
   });
-  document.addEventListener("change", function (e) { if(e.target.id === "profile-filter") { S.profileFilter=e.target.value; S.profileContextValid=true; history.replaceState(history.state,"",profileSearchHash()); render(); }  if (e.target.id === "scan-date") { S.scanDate = e.target.value; render(); } if (e.target.id === "res-date") { S.resDate = e.target.value; render(); } if (e.target.id === "ana-date") { S.anaDate = e.target.value; S.anaFilter = "all"; render(); } });
+  document.addEventListener("change", function (e) { if(e.target.id === "profile-status") { S.profileStatus=e.target.value; S.profileContextValid=true; history.replaceState(history.state,"",profileSearchHash()); render(); } if(e.target.id === "profile-filter") { S.profileFilter=e.target.value; S.profileContextValid=true; history.replaceState(history.state,"",profileSearchHash()); render(); }  if (e.target.id === "scan-date") { S.scanDate = e.target.value; render(); } if (e.target.id === "res-date") { S.resDate = e.target.value; render(); } if (e.target.id === "ana-date") { S.anaDate = e.target.value; S.anaFilter = "all"; render(); } });
   var libT;
   document.addEventListener("input", function (e) {
     if(e.target.id === "profile-q") { S.profileQ=e.target.value; S.profileContextValid=true; history.replaceState(history.state,"",profileSearchHash()); clearTimeout(libT); libT=setTimeout(render,120); }
