@@ -1,0 +1,27 @@
+{
+  "rfNov3": 0.0495,
+  "erpNov1": 0.0441,
+  "erpAssociatedRf": 0.0529,
+  "betaProvider5Y": 1.14,
+  "costEquityCAPM": 0.099774,
+  "equityMarketProxyNov3": 152175.44999999998,
+  "debtCarryingProxy": 20106,
+  "debtWeight": 0.11670438111590077,
+  "selectedCostDebt": 0.048,
+  "tax": 0.24,
+  "calculatedWaccProxy": 0.09238731290165018,
+  "selectedBaseWacc": 0.0975,
+  "selectedPremiumBp": 51.12687098349819,
+  "sources": [
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "https://stockanalysis.com/stocks/etn/statistics/",
+    "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/etn-20260930.htm"
+  ],
+  "limitations": [
+    "Rate and ERP dates differ; beta is provider estimate not own regression.",
+    "Carrying debt is not market debt. Selected4.8% cost of debt is a financing proxy; coupons vary3.55\u20135.45% on new2026notes, not one verified refinancing yield.",
+    "9.75% is chosen above calculated proxy, not a rounding identity.",
+    "Operating leases remain operating expense, no lease debt double-counting."
+  ]
+}

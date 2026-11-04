@@ -1,0 +1,34 @@
+# Eaton factual history as of November 4, 2026
+
+## Reproduction and source trail
+Run `python reproduce.py` from any directory. Python standard library only; reads the immutable `source_ledger.json` and writes normalized/QA outputs. No network or HTML dependencies. `source_manifest.json` provides SEC URLs, raw-file paths and SHA-256 hashes. Full HTML and the optional extraction script reside outside this deliverable in `../sources/`.
+
+`selected_inputs.json/csv` links every selected datum to source filing, SEC URL, fact ID, XBRL tag, period, context/dimensions, units and value. `source_ledger.json` retains all parsed source facts. Later-file comparable disclosures take precedence; facts with segment/acquisition dimensions never silently become consolidated facts. Latest comparative reporting can recast historical presentation.
+
+## Conventions and missing data
+- All money is USD millions. FY is calendar year. Full-year history is FY2023–FY2025. Last four quarters are Q4FY2025–Q3FY2026. TTM September 2026 = FY2025 + 9M2026 − 9M2025; prior TTM = FY2024 + 9M2025 − 9M2024.
+- The normalized Q4, Q2 and Q3 rows use annual/YTD differencing, including the income statement for a consistent arithmetic bridge. Reported standalone quarter income facts are separately in `quarter_income_direct`. Rounding can differ by $1–2m: Q3 reported pretax $1,370m plus net interest $198m is EBIT $1,568m; YTD-differenced EBIT is $1,567m. Q4 direct figures are unavailable in these inputs; its direct row remains null rather than pretending they were separately disclosed.
+- GAAP EBIT is calculated from reported pretax income plus net interest expense. This is a GAAP-derived calculation, not a separately reported GAAP subtotal. It includes other nonoperating income/expense. A separate calculated operating-income subtotal = revenue − cost of revenue − SG&A − R&D. Corporate and segment profit are not conflated with GAAP EBIT.
+- CFO is reported operating cash flow. Gross capex is cash purchases of PP&E, not net of asset sales. FCF here = CFO − gross capex. Acquisition spending is separately preserved, not capex.
+- Intangible amortization is the corporate reconciliation's reported total intangible-asset amortization expense. The precise acquired-versus-other intangible split is NOT separately established; do not relabel the entire line as proven acquired amortization. Other D&A = total D&A minus disclosed intangible amortization, and is not assumed to be maintenance capex or all depreciation. Reported depreciation is separately retained where available.
+- SBC expense is $97m/$108m/$126m in FY2023/2024/2025, summed from disclosed RSU/restricted-stock, performance-share and stock-option expense. Quarterly/TTM SBC expense is null. Separate CFO SBC addbacks and capitalized SBC are not isolated in these source statements and remain null, not zero. Equity issuance movements are not substituted for SBC expense. No SBC, restructuring, transaction or amortization addback is made to normalized EBIT or FCF.
+- Cash taxes are $727m/$752m/$909m in FY2023/2024/2025. Quarter/TTM cash taxes remain null. Reported tax expense and effective rates are retained. `deferred_tax_cf` is the XBRL increase/decrease convention; `deferred_tax_cash_flow_contribution` flips it into the actual CFO contribution sign.
+- Working-capital cash use is positive in `wc_increase_cash_use`; cash inflow positive in `wc_cash_flow_contribution`. Annual WC combines the nine disclosed cash-flow components. Interim total WC is directly disclosed. Balance-sheet trade WC is receivables + inventory − payables; it is a partial operating-WC proxy and is not equated with the cash-flow WC line. Acquisition/FX/noncash changes prevent that shortcut.
+- `segments_normalized` combines historical Vehicle and eMobility for a comparable Mobility presentation when the newer combined segment is not available. The original segment disclosures remain in `segment_source_ledger`. This is only a presentation bridge, not a separation pro forma.
+
+## Interpretation
+Revenue grew from $23,196m in 2023 to $27,448m in 2025; GAAP-derived EBIT rose from $3,978m to $5,173m. CFO rose from $3,624m to $4,472m, while gross capex rose from $757m to $919m. Annual EBIT margin expanded from 17.15% to 18.85%.
+
+TTM revenue is $31,984m versus $26,633m (+20.1%); EBIT is $5,490m versus $5,017m (+9.4%). EBIT margin fell to 17.16% from 18.84%. CFO is $4,908m versus $4,104m (+19.6%), but gross capex is $1,113m versus $782m (+42.3%). FCF is $3,795m versus $3,322m (+14.2%). Intangible amortization increased to $830m from $471m. WC cash outflow improved to $455m from $875m; that $420m benefit matters when interpreting cash conversion.
+
+This is reported, changing-perimeter history, not organic growth or a pro-forma continuing-core history. Q3 Note 2 states Boyd Thermal closed March 12, 2026 for $9.55bn net cash acquired, Ultra PCS January 23, 2026 for $1.53bn net, and Fibrebond April 1, 2025 for $1.43bn net. The 9M2026 acquisition cash-flow line is $11.079bn. A separately cited $11bn Boyd headline should not replace the filed net-cash figure without reconciling the bases.
+
+The same note discloses actual post-acquisition contributions through September 2026: Boyd $1,058m revenue/$257m segment operating profit; Ultra $166m revenue/$47m segment operating profit. Fibrebond's comparative April–September 2025 contribution was $323m revenue/$106m segment operating profit. These are actual acquiree contribution facts, despite the XBRL taxonomy's 'ProFormaInformation' prefix. They are NOT consolidated as-if-owned-since-January pro-forma figures. No separate consolidated acquisition pro-forma series was identified in these filings, so none is fabricated.
+
+Mobility remains included. Q3 Note 2 describes the pending Dana Reverse Morris Trust arrangement, with definitive agreements June 10, 2026 and supplemental agreement October 16, 2026. Removing Mobility, using sale proceeds, or adding a full year of acquired earnings would be a separate valuation scenario, not historical normalization.
+
+## QA
+`qa.json/csv`: 42 checks, all passing at a $2m rounding tolerance: NI/tax reconciliation, parent/NCI income, EBIT/operating-income reconciliation, segment/corporate reconciliation to EBIT, and parent/NCI equity. Source reported figures are independently rounded, so zero residual is not required. Source omissions remain null; passing reconciliations do not turn missing SBC or cash taxes into observed data.
+
+## FY2025 amortization disclosure precision
+Note6 lists amortization461, whereas corporate segment reconciliation and MD&A report486. The history uses486 for the corporate bridge and discloses this25 difference without an invented explanation. Model anchor uses directQ3FY2026, so it does not depend on resolving that FY2025 discrepancy.

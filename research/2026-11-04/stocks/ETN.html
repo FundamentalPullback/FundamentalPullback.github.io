@@ -1,0 +1,526 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ETN · Investigación parcial · Mobility y COL sin valor total conciliado · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/ETN">← ETN profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · Mobility y COL sin valor total conciliado</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="etn-a232-investigación-del-4-de-noviembre-de-2026">ETN · A232 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>La demanda eléctrica crece, pero deuda, adquisiciones y derechos del canje Mobility impiden certificar valor total actual. Los casos del dossier conservan un perímetro contrafactual, sin separación Mobility ni compra COL. No son un rango integral ni autorizan entrada.</strong></p>
+<p>Electrical demand grows, but debt, acquisitions and Mobility exchange rights prevent certification of current total value. Dossier cases retain a counterfactual perimeter without the Mobility separation or COL acquisition. They are not a total valuation range or entry approval.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/ETN.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-13, 423.49 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 391.70 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 noviembre 2026; paquete final auditado antes de esta publicación.</p>
+<p>Las listas previas y el escáner del 13 de octubre a 423,49 se preservan; el cierre del 3 de noviembre de 391,70 es una referencia separada. Boyd ya está en caja y deuda de septiembre y no se vuelve a restar su compra. Mobility contempla un canje voluntario, no una distribución uniforme de 50,1% por acción Eaton. Los casos 58,39/180,92/373,71 se mantienen solo en el dossier, sin valor total, cotas ni probabilidades. COL y SPAN excluidas no se valoran a cero; amortización, reinversión y capital conservan límites explícitos.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="etn-eaton-electrificación-fuerte-perímetro-y-derechos-todavía-abiertos">ETN | Eaton | Electrificación fuerte, perímetro y derechos todavía abiertos</h1>
+<p>Investigación al 4 noviembre 2026; precios al cierre 3 noviembre. USD millones salvo acciones en millones y datos por acción. Investigación parcial revisada; sin aprobación de entrada. <strong>Investigación parcial: valor total actual y escenarios agregados nulos.</strong> El dossier presenta un DCF contrafactual del perímetro consolidado actual sin separación Mobility ni compra COL; no es un precio objetivo del título tras las operaciones propuestas. Sin entrada ni Stage 3 integral.</p>
+<h2 id="resultado-y-datos-del-escáner">1. Resultado y datos del escáner</h2>
+<p>Última fila real del registro: <strong>13 octubre, 423,49; QP 90, Opportunity 85, RSI 48,1 y Stage 2 Sí histórico</strong>. Se conserva literalmente, sin afirmar que sea un cierre de mercado ni una señal vigente. Para los cálculos se usa cierre <strong>3 noviembre de 391,70</strong>, con fecha y fuente separadas. La gran variación posterior del título no se incorpora a una cotización intradía mezclada con cierres. <a href="https://stockanalysis.com/stocks/etn/history/">Historial</a>.</p>
+<p>Eaton creció 28% en ventas Q3, con 19% orgánico y fuerte demanda eléctrica. El backlog firme de 26.200 millones ayuda a visibilidad, pero no convierte pedidos en caja ni elimina el coste de capacidad.</p>
+<p>La deuda contable alcanza 20.106 millones tras las compras y el TTM incorpora solo parte de los negocios adquiridos. El aumento de ventas no equivale a crecimiento comparable del beneficio ni a caja libre sin necesidades de inversión.</p>
+<p>Mobility se separaría mediante un canje voluntario de acciones y combinación con Dana. El ratio y denominador final no están fijados; sumar 50,1% de SpinCo a cada acción Eaton sería incorrecto. No hay valoración total actual certificada.</p>
+<p>Los casos de perímetro constante arrojan <strong>58.39/180.92/373.71</strong>. No se promedian ni se convierten en valor actual total de ETN. El favorable se aproxima al cierre bajo supuestos exigentes; un estrés conjunto más optimista lo supera. El análisis no demuestra margen de seguridad, pero tampoco afirma que el precio sea imposible o que el mercado de electrificación carezca de crecimiento.</p>
+<h2 id="negocio-demanda-y-calidad-de-resultado">2. Negocio, demanda y calidad de resultado</h2>
+<p>Eaton suministra distribución y protección eléctrica, calidad de energía, soluciones de centros de datos, equipos y servicios aeroespaciales y componentes de movilidad. Electrificación y mayor densidad energética elevan contenido por instalación; redes, fábricas, edificios y aviación diversifican el negocio. La capacidad para entregar sistemas fiables, certificaciones y relaciones de canal ayudan, pero competidores como Schneider, ABB y Hubbell también invierten. No se presume poder de fijación ilimitado de precios ni crecimiento perpetuo de gasto AI.</p>
+<p>Q3 ventas <strong>8.947</strong>, crecimiento 28%: 19% orgánico, 8% adquisiciones y 1% divisas. Segmentos publican margen de <strong>25,3%</strong>, pero no es margen EBIT consolidado: coste corporativo, amortización y otros conceptos importan. Beneficio pretax 1.370 más interés neto 198 da EBIT calculado <strong>1.568</strong>, margen 17,53%. La resta ventas−coste−SG&amp;A−I+D da 1.589, con redondeo y otros gastos fuera de ese subtotal. EPS GAAP 2,77 frente a ajustado 3,68: ajustes incluyen 0,62 por amortización y 0,30 por adquisiciones/divestitures, parcialmente compensados por ingreso de reestructuración. No se adopta automáticamente el ajustado como beneficio económico sostenible. <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000037/etn09302026exhibit99.htm">Comunicado</a> y <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/etn-20260930.htm">10-Q</a>.</p>
+<p>La guía FY26 de EPS GAAP 10,39–10,49 y ajustado 13,70–13,80 no es un FCFF ni una valoración. El backlog firme es aproximadamente <strong>26.200</strong>, con 72% dirigido a entrega en doce meses. La empresa distingue pedidos abiertos históricamente sujetos a liberaciones de cliente de compromisos firmes incluidos en backlog. Incluso estos pueden sufrir retrasos y requieren inventarios, personal y capex. La tesis favorable exige convertir pedidos en caja y rentabilidad después de corporativo y capital, no solo elevar ventas.</p>
+<p>En Q3 la empresa atribuye 360 pb de presión de margen bruto a materias primas/salarios y 210 pb a amortización, compensados parcialmente por 200 pb de volumen. Es evidencia de que la fuerte demanda no elimina inflación de costes. La refutación de la tesis sería menor conversión de backlog, cancelaciones, competencia que comprima precio, integración deficiente, más financiación de inventario o inversión que no genere retornos suficientes.</p>
+<h2 id="historia-reproducible-y-perímetro">3. Historia reproducible y perímetro</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT calculado GAAP</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex bruto caja</th>
+<th style="text-align: right;">FCF bruto</th>
+<th style="text-align: right;">Amortización intangible divulgada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">23,196.00</td>
+<td style="text-align: right;">3,978.00</td>
+<td style="text-align: right;">3,624.00</td>
+<td style="text-align: right;">757.00</td>
+<td style="text-align: right;">2,867.00</td>
+<td style="text-align: right;">450.00</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">24,878.00</td>
+<td style="text-align: right;">4,696.00</td>
+<td style="text-align: right;">4,327.00</td>
+<td style="text-align: right;">808.00</td>
+<td style="text-align: right;">3,519.00</td>
+<td style="text-align: right;">425.00</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">27,448.00</td>
+<td style="text-align: right;">5,173.00</td>
+<td style="text-align: right;">4,472.00</td>
+<td style="text-align: right;">919.00</td>
+<td style="text-align: right;">3,553.00</td>
+<td style="text-align: right;">486.00</td>
+</tr>
+<tr class="even">
+<td>Q4FY2025</td>
+<td style="text-align: right;">7,055.00</td>
+<td style="text-align: right;">1,365.00</td>
+<td style="text-align: right;">1,965.00</td>
+<td style="text-align: right;">392.00</td>
+<td style="text-align: right;">1,573.00</td>
+<td style="text-align: right;">121.00</td>
+</tr>
+<tr class="odd">
+<td>Q1FY2026</td>
+<td style="text-align: right;">7,451.00</td>
+<td style="text-align: right;">1,213.00</td>
+<td style="text-align: right;">507.00</td>
+<td style="text-align: right;">193.00</td>
+<td style="text-align: right;">314.00</td>
+<td style="text-align: right;">140.00</td>
+</tr>
+<tr class="even">
+<td>Q2FY2026</td>
+<td style="text-align: right;">8,531.00</td>
+<td style="text-align: right;">1,345.00</td>
+<td style="text-align: right;">1,127.00</td>
+<td style="text-align: right;">253.00</td>
+<td style="text-align: right;">874.00</td>
+<td style="text-align: right;">255.00</td>
+</tr>
+<tr class="odd">
+<td>Q3FY2026</td>
+<td style="text-align: right;">8,947.00</td>
+<td style="text-align: right;">1,567.00</td>
+<td style="text-align: right;">1,309.00</td>
+<td style="text-align: right;">275.00</td>
+<td style="text-align: right;">1,034.00</td>
+<td style="text-align: right;">314.00</td>
+</tr>
+<tr class="even">
+<td>TTM_2025Q3</td>
+<td style="text-align: right;">26,633.00</td>
+<td style="text-align: right;">5,017.00</td>
+<td style="text-align: right;">4,104.00</td>
+<td style="text-align: right;">782.00</td>
+<td style="text-align: right;">3,322.00</td>
+<td style="text-align: right;">471.00</td>
+</tr>
+<tr class="odd">
+<td>TTM_2026Q3</td>
+<td style="text-align: right;">31,984.00</td>
+<td style="text-align: right;">5,490.00</td>
+<td style="text-align: right;">4,908.00</td>
+<td style="text-align: right;">1,113.00</td>
+<td style="text-align: right;">3,795.00</td>
+<td style="text-align: right;">830.00</td>
+</tr>
+</tbody>
+</table></div>
+<p>TTM ventas aumentan 20,1%, pero EBIT calculado solo 9,4%; margen cae de 18,84% a 17,16%. FCF bruto aumenta 14,2%. La inversión fija crece 42,3%, más que ingresos. El consumo de circulante TTM baja de 875 a 455; esta mejora de 420 ayuda a caja y no debe extrapolarse como ingreso recurrente. El histórico contiene tres ejercicios, cuatro trimestres y TTM contra anterior, con procedencia numérica, signos y fórmulas. <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm">10-K</a>.</p>
+<p>EBIT es pretax más interés neto, no subtotal GAAP separado: conserva otros ingresos/gastos no operativos. Se ofrece también subtotal operativo. El trimestre derivado de nueve menos seis meses da EBIT Q3 <strong>1.567</strong>, frente a <strong>1.568</strong> divulgado directamente; diferencia de redondeo, no un ajuste oculto. La ancla del modelo usa el trimestre directo y la tabla histórica usa la resta documentada.</p>
+<p>EPS diluido publicado FY23/FY24/FY25 es <strong>8,02/9,50/10,45</strong>; nueve meses2026 baja a <strong>7,10</strong> desde7,54, aunque ventas crecen. El EPS incorpora financiación, impuestos y amortización; no se suma una variación de EPS a un DCF de flujos. No se fabrica un EPS TTM exacto sumando cocientes con denominadores diferentes.</p>
+<p>SBC anual es <strong>97/108/126</strong> en FY23/24/25. Gasto trimestral completo, SBC del estado de flujos y capitalizado no están aislados en las fuentes revisadas: permanecen <strong>null</strong>, no cero. No se inventa FCF del propietario restando una cifra trimestral desconocida ni se confunden emisiones netas de acciones con SBC. El DCF conserva remuneración en márgenes. Tampoco añade reestructuración o costes de adquisición al EBIT ancla.</p>
+<p>La amortización divulgada es de intangibles, sin reconciliación completa de adquirido frente a otro. FY25 contiene una discrepancia documental: Note 6 muestra 461, mientras reconciliación corporativa y MD&amp;A muestran 486. Se utiliza 486 en la serie consistente con el puente corporativo, sin inventar explicación para los 25. El modelo trabaja antes de amortización intangible divulgada, no afirma que toda sea adquirida. I+D y gasto de negocio permanecen en margen; suelo de inversión y sensibilidad de carga adicional de reposición intangible 0,5/1/2 puntos de ventas evitan asumir renovación gratuita. No se suma un escudo fiscal automático por amortización contable.</p>
+<h3 id="adquisiciones-ya-pagadas">Adquisiciones ya pagadas</h3>
+<p>Boyd Thermal cerró <strong>12 marzo por 9.549 netos de caja</strong>, no se vuelve a restar la compra del puente porque la caja/deuda de septiembre ya la incorpora. Ultra PCS cerró <strong>23 enero por 1.529 netos</strong>. Salida conjunta de adquisiciones en nueve meses, <strong>11.079</strong>, no es mantenimiento ordinario ni una segunda deuda. Fibrebond cerró abril de 2025 y también altera comparabilidad.</p>
+<p>Boyd aporta desde cierre 1.058 de ventas y 257 de <strong>beneficio de segmento</strong>; Ultra, 166 y 47. No son beneficios GAAP consolidados ni una cuenta anual proforma. El precio asignado a Boyd incluye intangibles 7.142 y goodwill 3.771, con medición todavía provisional; goodwill no deducible según la nota. Una revisión contable del precio no genera efectivo ni justifica sumar goodwill al valor por DCF. <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/etn-20260930.htm">Adquisiciones, Note 2</a>.</p>
+<h2 id="mobility-canje-y-financiación-no-dividendo-uniforme">4. Mobility: canje y financiación, no dividendo uniforme</h2>
+<p>El acuerdo de 10 junio, modificado 16 octubre, prevé separar Mobility mediante <strong>split-off</strong> y combinarla con Dana por Reverse Morris Trust. Los accionistas que participen entregarán acciones Eaton a cambio de SpinCo; las acciones ETN aceptadas se amortizan. Solo si quedan acciones SpinCo sin colocar existiría distribución residual pro rata a ETN remanente. Por tanto el <strong>50,1%</strong> colectivo previsto para antiguos titulares Eaton no corresponde automáticamente a cada acción ETN actual. Canje plenamente suscrito puede dejar sin distribución SpinCo a quien no participe.</p>
+<p>El prospecto preliminar no fija todavía descuento, límite superior, ratio, fechas de valoración ni vencimiento; no hay ratio mínimo. Hay prorrateo por sobresuscripción y condiciones para lotes pequeños. Los 98.079.878 títulos SpinCo estimados en proforma no permiten inventar un derecho final por acción ETN ni reducir el denominador por una cantidad arbitraria. <a href="https://www.sec.gov/Archives/edgar/data/2142558/000119312526425388/d128758ds4.htm">S-1/S-4, 19 octubre</a>.</p>
+<p>El cobro anunciado aproximado de <strong>1.100</strong> para entidades Eaton está sujeto a caja/deuda, impuestos, true-up, ajustes por recompras Dana y rutas de venta directa. La página 153 proforma muestra 1.101+301−245−363=<strong>794</strong> como pago SpinCo. Los 245/363 son compras directas de Royal Precision/Specified Assets a entidades Eaton, <strong>no ingresos perdidos del grupo</strong>. Sustituir todo el cobro por 794 o sumar todo sin reconciliar impuestos/rutas sería erróneo.</p>
+<p>Financiación prevista: puente original 2.600 menos 350 reemplazados por Term A 350, dando <strong>2.250+350=2.600</strong>, no 2.950. Revolver 1.200 no dispuesto no es caja. Proforma de junio incluye refinanciación Dana de 1.111 y otros usos; no es deuda de ETN ya desembolsada en septiembre. La ausencia de condición de financiación en el merger no garantiza fondos. No se añaden simultáneamente 1.100 de efectivo, 50,1% de equity combinado y el valor de Mobility retenida.</p>
+<p>Fecha esperada actualizada: <strong>primeros cuatro meses de 2027</strong>, no fecha firme. Outside date 10 junio 2027, con extensión condicional de tres meses. Aprobación de accionistas Dana, reguladores, registro efectivo, solvencia, reservas distribuibles y opiniones fiscales siguen siendo condiciones. Una fecha de filing no certifica que estén cumplidas. Si falla el RMT, Eaton pretende spin-off independiente: ni el fracaso equivale a conservar indefinidamente el perímetro. El DCF siguiente es deliberadamente un <strong>contrafactual analítico</strong>, no ese desenlace pronosticado. <a href="https://www.sec.gov/Archives/edgar/data/1551182/000095014226002933/eh260851075_425.htm">Actualización 3 noviembre</a>.</p>
+<h2 id="col-y-capital-separar-hechos-de-reservas-elegidas">5. COL y capital: separar hechos de reservas elegidas</h2>
+<p>COL Group se contrató el 25 septiembre por <strong>810 millones EUR</strong>, 921 USD a FX de septiembre, con cierre esperado Q1 2027 y sujeto a autorizaciones. No está incorporado en el balance/EBIT modelado. La sensibilidad usa 905,499 USD a FX ECB 3 noviembre 1,1179 y valores hipotéticos del activo adquirido; no llama cero a su negocio ni suma beneficio sin pagar la compra. Hace falta un FCFF standalone y financiación para incorporar el cierre al valor total. <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/etn-20260930.htm">Note 2</a> y <a href="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.xml">ECB</a>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente seleccionado, antes de operaciones pendientes</th>
+<th style="text-align: right;">USD millones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja más inversión corta al 30 septiembre</td>
+<td style="text-align: right;">818</td>
+</tr>
+<tr class="even">
+<td>Reserva operativa elegida</td>
+<td style="text-align: right;">−500</td>
+</tr>
+<tr class="odd">
+<td>Deuda contable, corto más largo</td>
+<td style="text-align: right;">−20.106</td>
+</tr>
+<tr class="even">
+<td>Reserva elegida diferencia nominal/costes de deuda</td>
+<td style="text-align: right;">−150</td>
+</tr>
+<tr class="odd">
+<td>Pensiones más otros beneficios postempleo</td>
+<td style="text-align: right;">−780</td>
+</tr>
+<tr class="even">
+<td>Reserva fiscal histórica seleccionada</td>
+<td style="text-align: right;">−1.518</td>
+</tr>
+<tr class="odd">
+<td>Minoritarios económicos seleccionados</td>
+<td style="text-align: right;">−100</td>
+</tr>
+<tr class="even">
+<td>Reestructuración pendiente</td>
+<td style="text-align: right;">−93</td>
+</tr>
+<tr class="odd">
+<td>Puente total</td>
+<td style="text-align: right;">-22,429.00</td>
+</tr>
+</tbody>
+</table></div>
+<p>La reserva de 150 no es conciliación exacta de nominal: FY25 tenía costes/descuentos y ajustes de cobertura, y las emisiones de marzo recibieron menos efectivo que principal. Se prueba 0/150/300, sin afirmar que deuda contable sea toda la reclamación contractual. La deuda incluye financiación de compras cerradas; no se añade otra vez el precio de Boyd. Los 8.000 de delayed-draw se cancelaron sin disposición; el revolver 4.000 no se suma a caja. Papel comercial 1.592 ya está en deuda corta. Arrendamiento financiero FY25 25 ya estaba en deuda; no se agrega duplicado. Arrendamientos operativos permanecen en gastos, sin restar pasivo y retener simultáneamente el coste completo como si fuera otra deuda.</p>
+<p>Reserva fiscal 1.518 = UTB bruto FY25 1.300 más intereses/penalizaciones 218, último desglose disponible, <strong>no obligación exacta actual</strong>. El 27 octubre IRS notificó 290 de impuestos y 120 de sanciones sobre 2014–2016, pendientes de litigio; pueden solaparse con reservas. No se añaden 410 automáticamente al caso central. Se prueba 0/1.000/1.518/1.928/2.500. La tasa futura de 24% grava beneficios nuevos; no liquida por arte de fórmula disputas históricas. El recurso debe presentarse antes o el 25 enero de 2027. No se ofrece opinión jurídica sobre resultado. <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm">Fiscalidad FY25</a> y <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/etn-20260930.htm">Note 11 Q3</a>.</p>
+<p>Minoría contable 47 frente a beneficio atribuible de cuatro millones en nueve meses motiva una reserva económica elegida 100, con variantes 47/100/200; no es tasación de sus contratos. Pensiones 623 y otros beneficios 157 se deducen sin presumir transferibilidad de superávits de otros planes. Se conserva gasto de servicio en márgenes; algunos conceptos no operativos de pensión pueden permanecer en el EBIT calculado, por lo que no es una conciliación actuarial exacta.</p>
+<p>SCF proveedores <strong>763</strong>, frente a 543 al inicio del año, forma parte de proveedores y CFO. No se resta todo como deuda adicional mientras ya financia el circulante. Una retirada de financiación se prueba como salida extra 763, sin afirmar que sea pérdida demostrada. Arrendamiento sintético de fábrica previsto 185, inicio H1 2027 y garantía residual aproximada 85%, presenta compromiso adicional: uso, valor residual y clasificación no están plenamente conciliados. La sensibilidad de capital deduce157,25 adicionales como estrés de esa garantía, sin convertirla en deuda vencida cierta ni certificar ausencia de solapamiento con capex/arrendamiento modelado.</p>
+<p>Inversiones no cotizadas: la compra de aproximadamente7% de SPAN por75 el15enero forma parte de los92 de inversiones realizadas en nueve meses. El puente no añade su valor porque no está económicamente conciliado; <strong>excluir no significa que valgan cero</strong>. Se muestran adiciones hipotéticas92/250, sin tratar coste como valor razonable ni deducir otra vez efectivo ya gastado. No se añade ingreso futuro de SPAN al margen industrial ni se presume cobro inmediato de su inversión. <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/etn-20260930.htm">Note2 y cash flow</a>.</p>
+<p>Acciones publicadas <strong>388,5 al 30 septiembre</strong>, más proxy elegido de un millón de premios netos, total 389,5. El proxy se basa en diferencia Q3 diluida−básica, no es un puente exacto de premios; se prueba hasta cinco millones. No hubo recompras en nueve meses y el programa autorizado no es activo ni reducción gratuita de acciones. Dividendo declarado 1,10, registro 10 noviembre/pago 27 noviembre: no estaba pagado al cierre usado. El análisis es cum-dividend; no se resta el pago futuro olvidando el derecho económico del accionista. No se confunde la fecha de registro con una nueva fecha de resultados. <a href="https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-declares-quarterly-dividend-payable-November-26.html">Dividendo primario</a>.</p>
+<h2 id="dcf-contrafactual-financiado-no-valor-total-actual">6. DCF contrafactual financiado, no valor total actual</h2>
+<p>Se mantienen los negocios hoy consolidados, incluida Mobility, y se excluye COL. No hay ingresos de separación ni deuda SpinCo añadida. Ancla: Q3 directo anualizado, ingresos <strong>35.788</strong> y EBIT anterior a amortización intangible <strong>7.528</strong> =4×(1.370+198+314). Es una aproximación de ritmo actual con negocios adquiridos presentes todo el trimestre, <strong>no guía ni proforma anual</strong>. Usar TTM parcial 31.984/6.320 como ancla alternativa reduce base a <strong>170.18</strong>, porque cambia reinversión inicial; puede cobrar expansión adquirida ya pagada. Se muestran ambas sin declarar una exacta.</p>
+<p>Periodos anuales 3 noviembre 2027–2036, no ejercicios fiscales exactos ni stub diciembre inventado. Márgenes después de SBC y antes de la amortización intangible seleccionada; impuesto 24%, frente a tasas históricas favorecidas por jurisdicción/beneficios fiscales. No se suma automáticamente deducción fiscal contable. D&amp;A residual elegido 1,8% de ventas no se llama mantenimiento observado. Capex piso 4% base al inicio y 3,5% final, y circulante 25% del incremento positivo de ingresos. Se comparan reinversión física (capex−D&amp;A+circulante) y aumento positivo de NOPAT/ROIC; se carga la mayor. El margen adicional también requiere financiación. La misma restricción física y económica sigue en terminal. El suelo económico ΔNOPAT/ROIC domina los diez años base y favorables, y seis adversos; por eso variar circulante15–35% puede no alterar el valor. No implica que el circulante sea irrelevante: está financiado dentro del mayor requisito de inversión, y un suelo físico superior sí reduce FCFF.</p>
+<p>Rf 10Y 3 noviembre 4,95%, ERP 1 noviembre 4,41% y beta proveedor 1,14 producen coste de equity <strong>9.9774%</strong>. Con deuda contable y coste elegido4,8%, WACC proxy <strong>9.2387%</strong>. Base9,75% añade colchón discrecional, no es redondeo; ERP y rf no son sincrónicos y deuda libro no es mercado. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">Treasury</a>, <a href="https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm">ERP</a> y <a href="https://stockanalysis.com/stocks/etn/statistics/">beta</a>.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Supuesto</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ingresos año1</td>
+<td style="text-align: right;">34.000</td>
+<td style="text-align: right;">37.000</td>
+<td style="text-align: right;">40.000</td>
+</tr>
+<tr class="even">
+<td>Crecimientos años2–5</td>
+<td style="text-align: right;">−3/3/4/4%</td>
+<td style="text-align: right;">10/8/7/6%</td>
+<td style="text-align: right;">15/12/10/8%</td>
+</tr>
+<tr class="odd">
+<td>Crecimientos años6–10</td>
+<td style="text-align: right;">3,5/3/2,5/2,5/2,5%</td>
+<td style="text-align: right;">5/4,5/4/3,5/3,5%</td>
+<td style="text-align: right;">7/6/5,5/5/4,5%</td>
+</tr>
+<tr class="even">
+<td>Margen año1→10</td>
+<td style="text-align: right;">19→19%</td>
+<td style="text-align: right;">22,5→24%</td>
+<td style="text-align: right;">24→27%</td>
+</tr>
+<tr class="odd">
+<td>ROIC incremental</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">25%</td>
+</tr>
+<tr class="even">
+<td>WACC / g terminal</td>
+<td style="text-align: right;">11% / 2,5%</td>
+<td style="text-align: right;">9,75% / 3%</td>
+<td style="text-align: right;">8,75% / 3,5%</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año base</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT preintangibles después SBC</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">Inversión neta</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">37,000.00</td>
+<td style="text-align: right;">8,325.00</td>
+<td style="text-align: right;">6,327.00</td>
+<td style="text-align: right;">3,028.60</td>
+<td style="text-align: right;">3,298.40</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">40,700.00</td>
+<td style="text-align: right;">9,361.00</td>
+<td style="text-align: right;">7,114.36</td>
+<td style="text-align: right;">3,936.80</td>
+<td style="text-align: right;">3,177.56</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">43,956.00</td>
+<td style="text-align: right;">10,329.66</td>
+<td style="text-align: right;">7,850.54</td>
+<td style="text-align: right;">3,680.91</td>
+<td style="text-align: right;">4,169.63</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">47,032.92</td>
+<td style="text-align: right;">11,287.90</td>
+<td style="text-align: right;">8,578.80</td>
+<td style="text-align: right;">3,641.32</td>
+<td style="text-align: right;">4,937.49</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">49,854.90</td>
+<td style="text-align: right;">11,965.17</td>
+<td style="text-align: right;">9,093.53</td>
+<td style="text-align: right;">2,573.64</td>
+<td style="text-align: right;">6,519.89</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">52,347.64</td>
+<td style="text-align: right;">12,563.43</td>
+<td style="text-align: right;">9,548.21</td>
+<td style="text-align: right;">2,273.38</td>
+<td style="text-align: right;">7,274.83</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">54,703.28</td>
+<td style="text-align: right;">13,128.79</td>
+<td style="text-align: right;">9,977.88</td>
+<td style="text-align: right;">2,148.35</td>
+<td style="text-align: right;">7,829.53</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">56,891.42</td>
+<td style="text-align: right;">13,653.94</td>
+<td style="text-align: right;">10,376.99</td>
+<td style="text-align: right;">1,995.58</td>
+<td style="text-align: right;">8,381.42</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">58,882.61</td>
+<td style="text-align: right;">14,131.83</td>
+<td style="text-align: right;">10,740.19</td>
+<td style="text-align: right;">1,815.97</td>
+<td style="text-align: right;">8,924.21</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">60,943.51</td>
+<td style="text-align: right;">14,626.44</td>
+<td style="text-align: right;">11,116.10</td>
+<td style="text-align: right;">1,879.53</td>
+<td style="text-align: right;">9,236.56</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th style="text-align: right;">EV</th>
+<th style="text-align: right;">Residuo equity contrafactual</th>
+<th style="text-align: right;">Por acción seleccionada</th>
+<th style="text-align: right;">Terminal/EV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td style="text-align: right;">45,170.87</td>
+<td style="text-align: right;">22,741.87</td>
+<td style="text-align: right;">58.39</td>
+<td style="text-align: right;">47.7%</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td style="text-align: right;">92,895.43</td>
+<td style="text-align: right;">70,466.43</td>
+<td style="text-align: right;">180.92</td>
+<td style="text-align: right;">61.2%</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td style="text-align: right;">167,990.36</td>
+<td style="text-align: right;">145,561.36</td>
+<td style="text-align: right;">373.71</td>
+<td style="text-align: right;">71.9%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sensibilidades-y-qué-exige-el-precio">7. Sensibilidades y qué exige el precio</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Cambio aislado base</th>
+<th style="text-align: right;">Valor contrafactual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reserva fiscal 0</td>
+<td style="text-align: right;">184.81</td>
+</tr>
+<tr class="even">
+<td>Reserva fiscal 1000</td>
+<td style="text-align: right;">182.25</td>
+</tr>
+<tr class="odd">
+<td>Reserva fiscal 1518</td>
+<td style="text-align: right;">180.92</td>
+</tr>
+<tr class="even">
+<td>Reserva fiscal 1928</td>
+<td style="text-align: right;">179.86</td>
+</tr>
+<tr class="odd">
+<td>Reserva fiscal 2500</td>
+<td style="text-align: right;">178.39</td>
+</tr>
+<tr class="even">
+<td>Ajuste deuda 0</td>
+<td style="text-align: right;">181.30</td>
+</tr>
+<tr class="odd">
+<td>Ajuste deuda 150</td>
+<td style="text-align: right;">180.92</td>
+</tr>
+<tr class="even">
+<td>Ajuste deuda 300</td>
+<td style="text-align: right;">180.53</td>
+</tr>
+<tr class="odd">
+<td>Premios netos 0</td>
+<td style="text-align: right;">181.38</td>
+</tr>
+<tr class="even">
+<td>Premios netos 1</td>
+<td style="text-align: right;">180.92</td>
+</tr>
+<tr class="odd">
+<td>Premios netos 3</td>
+<td style="text-align: right;">179.99</td>
+</tr>
+<tr class="even">
+<td>Premios netos 5</td>
+<td style="text-align: right;">179.08</td>
+</tr>
+<tr class="odd">
+<td>Circulante/ventas 0.15</td>
+<td style="text-align: right;">180.92</td>
+</tr>
+<tr class="even">
+<td>Circulante/ventas 0.25</td>
+<td style="text-align: right;">180.92</td>
+</tr>
+<tr class="odd">
+<td>Circulante/ventas 0.35</td>
+<td style="text-align: right;">180.92</td>
+</tr>
+</tbody>
+</table></div>
+<p>Subir el capex en dos puntos de ventas de forma recurrente, incluido terminal, reduce base a <strong>160.69</strong>. Una carga adicional permanente de reposición intangible de dos puntos de margen deja <strong>164.42</strong>. El archivo de pruebas contiene malla WACC/g, ROIC, impuestos, capital y sensibilidad COL con inversión financiada. No se interpreta el activo COL hipotético cero como cota inferior garantizada ni se afirma que la compra vaya a destruir todo el efectivo.</p>
+<p>Inverso al cierre391,70: conservando otras variables base, requiere aproximadamente <strong>12.27 puntos</strong> más de crecimiento cada año2–10, o <strong>29.30 puntos</strong> más de margen. Son experimentos separados, no consenso ni guía. Ambos barridos son monótonos y financian incremento de beneficios. Un estrés conjunto de trayectoria favorable, margen28% y WACC8% produce <strong>476.66</strong>; por ello un entorno de ejecución excepcional puede justificar más que los casos centrales. No se obliga al modelo a rechazar el precio.</p>
+<h2 id="contraste-operativo-y-de-valoración">8. Contraste operativo y de valoración</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Pantalla contemporánea</th>
+<th style="text-align: right;">Eaton</th>
+<th style="text-align: right;">Hubbell</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EV convencional</td>
+<td style="text-align: right;">171.510,45</td>
+<td style="text-align: right;">28.514,60</td>
+</tr>
+<tr class="even">
+<td>EV/ventas TTM</td>
+<td style="text-align: right;">5,36x</td>
+<td style="text-align: right;">4,32x</td>
+</tr>
+<tr class="odd">
+<td>EV/EBIT pretax+interés neto</td>
+<td style="text-align: right;">31,24x</td>
+<td style="text-align: right;">21,80x</td>
+</tr>
+<tr class="even">
+<td>EV/subtotal operativo</td>
+<td style="text-align: right;">30,98x</td>
+<td style="text-align: right;">21,40x</td>
+</tr>
+</tbody>
+</table></div>
+<p>EV usa precio3nov por acciones efectivas fechadas, deuda contable, caja/inversión corta y minoría libro. No incluye todas las reservas económicas del DCF. Hubbell usa52,835035 millones de acciones22oct, deuda5.120,2 y caja/inversión355 a septiembre; su TTM ventas6.593,7 y beneficio operativo1.332,6 se reconstruyen FY25+9M26−9M25. El EBIT pretax más interés neto es1.308,2, diferente de operativo. No se sustituye por EBITDA ajustado para homogeneizar artificialmente. <a href="https://hubbell.gcs-web.com/news-releases/news-release-details/hubbell-reports-third-quarter-2026-results">HUBB Q3</a>, <a href="https://hubbell.gcs-web.com/news-releases/news-release-details/hubbell-reports-fourth-quarter-and-full-year-2025-results">FY25</a>, <a href="https://www.sec.gov/Archives/edgar/data/48898/000162828026067729/hubb-20260930.htm">10-Q</a> y <a href="https://stockanalysis.com/stocks/hubb/history/">precio</a>.</p>
+<p>Hubbell también financió una adquisición reciente: NSI cerró9junio, mientras TTM solo recoge parte de su resultado. Por eso sus ratios tampoco representan perímetro constante. Eaton cotiza por encima en estas pantallas, pero mezcla, crecimiento, amortización, capital y separación difieren; no se aplica una mediana como objetivo. SBC trimestral no conciliado impide llamar a FCF un rendimiento homogéneo del propietario.</p>
+<p>ABB Q3 tiene ventas9.701, resultado operativo1.846 y margen19,03%, frente a Operational EBITA20,8%; Electrification marca25,6% de EBITA operacional, otra definición. Robotics está discontinuado con venta esperadaQ4; Rotork y JV Mitsubishi están pendientes. No se suman sus beneficios futuros ni cobros anunciados a resultados actuales. Se utiliza contraste operativo, no un múltiplo bursátil sin conciliar acciones/ADR, CHF y perímetro. <a href="https://www.abb.com/global/en/news/139696/q3-2026-results">ABB Q3</a> y <a href="https://search.abb.com/library/Download.aspx?Action=Launch&amp;DocumentID=9AKK108473A4463&amp;DocumentPartId=&amp;LanguageCode=en">detalle financiero</a>.</p>
+<h2 id="calendario-y-cierre-de-investigación">9. Calendario y cierre de investigación</h2>
+<p>Q3 se publicó efectivamente el <strong>3 noviembre</strong>, con 10-Q ese mismo día. La página de eventos consultada todavía no confirma siguiente resultado trimestral: queda pendiente el requisito de calendario confirmado. Registro de dividendo10 noviembre y pago27 noviembre son eventos distintos. COLQ1 y Mobilityprimeros4meses2027 son ventanas sujetas a condiciones, no días cerrados de ejecución. <a href="https://www.eaton.com/us/en-us/company/investor-relations/financial-presentations-webcasts.html">Calendario del emisor</a>.</p>
+<p>Para una conclusión operable faltan: ratio/cap/aceptación del canje, denominador ETN posterior, caja neta de impuestos/ventas directas, costes retenidos y standalone de negocios, financiación combinada y destino del derecho SpinCo; además cierre/FCFF de COL, capital posterior, premios netos y alcance fiscal. El dossier avanza historia, riesgos y exigencias de valoración, sin sustituir estas incógnitas por cifras aparentes.</p>
+<p>Conclusión ES: <strong>Esperar; investigación parcial y perímetro contrafactual.</strong> La demanda eléctrica es fuerte y el negocio adquirido amplía capacidades, pero capital, inversión y derechos de separación impiden certificar hoy valor total por acción. Casos centrales no prueban margen de seguridad; no entrada.</p>
+<p>Conclusion EN: <strong>Wait; partial research with a counterfactual perimeter.</strong> Electrical demand is strong and acquisitions expand capabilities, but capital, reinvestment and separation rights prevent a certified current total per-share valuation. Central cases do not establish a margin of safety; no entry approval.</p>
+<h2 id="fuentes-y-reproducción">Fuentes y reproducción</h2>
+<p>Las tablas se basan en <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm">10-K FY25</a>, <a href="https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/etn-20260930.htm">10-Q Q3</a> y trimestres previos identificados en history/source_manifest.json. Los documentos íntegros no forman parte de la publicación. Ejecutar reproduce.py regenera historia, DCF, sensibilidades y QA offline con Python estándar. Los hechos conservan periodo, unidad, tag y URL; supuestos y carencias se distinguen. Reproducir un cálculo no valida su desenlace económico.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/ETN/ETN_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/ETN/model/model.py">Cálculo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/ETN/model/results.json">Resultados y límites</a></li>
+</ul>
+</main></body></html>

@@ -1,0 +1,794 @@
+period,start,end,metric,value,unit,basis,source_ids,formula,comparability
+FY24,,2024-01-28,accrued_liabilities,172.105,USD million,fact_source_reported,L0514,,comparable
+FY24,2023-01-30,2024-01-28,acquired_amortization,48.629,USD million,derived_calculation,"L0181,L0255",1 * FY24.acquired_technology_amortization + 1 * FY24.acquired_customer_trade_amortization,comparable
+FY24,2023-01-30,2024-01-28,acquired_customer_trade_amortization,14.913,USD million,fact_source_reported,L0181,,comparable
+FY24,2023-01-30,2024-01-28,acquired_technology_amortization,33.716,USD million,fact_source_reported,L0255,,comparable
+FY24,,2024-01-28,assets,1373.735,USD million,fact_source_reported,L0510,,comparable
+FY24,2023-01-30,2024-01-28,basic_shares,64.127,million shares,fact_source_reported,L0202,,comparable
+FY24,2023-01-30,2024-01-28,capex_intangibles,1.915,USD million,fact_source_reported,L0252,,comparable
+FY24,2023-01-30,2024-01-28,capex_ppe,29.185,USD million,fact_source_reported,L0249,,comparable
+FY24,,2024-01-28,cash,128.585,USD million,fact_source_reported,L0496,,comparable
+FY24,2023-01-30,2024-01-28,cfo,-93.92,USD million,fact_source_reported,L0246,,comparable
+FY24,2023-01-30,2024-01-28,consolidated_net_income,-1092.029,USD million,fact_source_reported,L0190,,comparable
+FY24,,2024-01-28,current_assets,534.197,USD million,fact_source_reported,L0502,,comparable
+FY24,,2024-01-28,current_liabilities,217.156,USD million,fact_source_reported,L0518,,comparable
+FY24,2023-01-30,2024-01-28,da_cf,77.968,USD million,fact_source_reported,L0240,,comparable
+FY24,,2024-01-28,debt_current,0.0,USD million,fact_source_reported,L0516,,comparable
+FY24,,2024-01-28,debt_long_term,1371.039,USD million,fact_source_reported,L0520,,comparable
+FY24,2023-01-30,2024-01-28,diluted_shares,64.127,million shares,fact_source_reported,L0205,,comparable
+FY24,2023-01-30,2024-01-28,ebit,-944.322,USD million,fact_source_reported,L0184,,comparable
+FY24,2023-01-30,2024-01-28,ebit_margin_pct,-108.697934,percent,derived_calculation,"L0175,L0184",100 * ebit / revenue,comparable
+FY24,2023-01-30,2024-01-28,eps_basic,-17.03,USD/share,fact_source_reported,L0196,,comparable
+FY24,2023-01-30,2024-01-28,eps_diluted,-17.03,USD/share,fact_source_reported,L0199,,comparable
+FY24,,2024-01-28,equity,-307.25,USD million,fact_source_reported,L0235,,comparable
+FY24,2023-01-30,2024-01-28,fcf_less_sbc_proxy,-163.275,USD million,derived_calculation,"L0243,L0246,L0249",1 * FY24.cfo + -1 * FY24.capex_ppe + -1 * FY24.sbc_cf,comparable
+FY24,2023-01-30,2024-01-28,fcf_margin_pct,-14.170229,percent,derived_calculation,"L0175,L0246,L0249",100 * fcf_ppe / revenue,comparable
+FY24,2023-01-30,2024-01-28,fcf_ppe,-123.105,USD million,derived_calculation,"L0246,L0249",1 * FY24.cfo + -1 * FY24.capex_ppe,comparable
+FY24,2023-01-30,2024-01-28,fcf_ppe_and_intangibles,-125.02,USD million,derived_calculation,"L0246,L0249,L0252",1 * FY24.cfo + -1 * FY24.capex_ppe + -1 * FY24.capex_intangibles,comparable
+FY24,,2024-01-28,goodwill,541.227,USD million,fact_source_reported,L0506,,comparable
+FY24,2023-01-30,2024-01-28,gross_profit,296.25,USD million,fact_source_reported,L0178,,comparable
+FY24,2023-01-30,2024-01-28,intangible_amortization_total,48.629,USD million,fact_source_reported,L0258,,comparable
+FY24,,2024-01-28,intangibles,35.566,USD million,fact_source_reported,L0508,,comparable
+FY24,,2024-01-28,inventory,144.992,USD million,fact_source_reported,L0500,,comparable
+FY24,,2024-01-28,liabilities,1680.985,USD million,derived_calculation,"L0235,L0524",1 * FY24.liabilities_and_equity + -1 * FY24.equity,comparable
+FY24,,2024-01-28,liabilities_and_equity,1373.735,USD million,fact_source_reported,L0524,,comparable
+FY24,,2024-01-28,net_debt_carrying,1242.454,USD million,derived_calculation,"L0496,L0516,L0520",1 * FY24.debt_current + 1 * FY24.debt_long_term + -1 * FY24.cash,comparable
+FY24,2023-01-30,2024-01-28,net_income,-1092.03,USD million,fact_source_reported,L0193,,comparable
+FY24,,2024-01-28,payables,45.051,USD million,fact_source_reported,L0512,,comparable
+FY24,,2024-01-28,ppe,153.618,USD million,fact_source_reported,L0504,,comparable
+FY24,,2024-01-28,receivables,134.322,USD million,fact_source_reported,L0498,,comparable
+FY24,2023-01-30,2024-01-28,revenue,868.758,USD million,fact_source_reported,L0175,,comparable
+FY24,2023-01-30,2024-01-28,sbc_cf,40.17,USD million,fact_source_reported,L0243,,comparable
+FY24,2023-01-30,2024-01-28,sbc_pct_revenue,4.623842,USD million,derived_calculation,"L0175,L0243",100 * sbc_cf / revenue,comparable
+FY24,2023-01-30,2024-01-28,sbc_pnl,40.17,USD million,fact_source_reported,L0261,,comparable
+FY24,2023-01-30,2024-01-28,tax_expense,50.519,USD million,fact_source_reported,L0187,,comparable
+FY24,,2024-01-28,total_debt_carrying,1371.039,USD million,derived_calculation,"L0516,L0520",1 * FY24.debt_current + 1 * FY24.debt_long_term,comparable
+FY25,,2025-01-26,accrued_liabilities,178.201,USD million,fact_source_reported,L0225,,comparable
+FY25,2024-01-29,2025-01-26,acquired_amortization,9.99,USD million,derived_calculation,"L0180,L0254",1 * FY25.acquired_technology_amortization + 1 * FY25.acquired_customer_trade_amortization,comparable
+FY25,2024-01-29,2025-01-26,acquired_customer_trade_amortization,0.884,USD million,fact_source_reported,L0180,,comparable
+FY25,2024-01-29,2025-01-26,acquired_technology_amortization,9.106,USD million,fact_source_reported,L0254,,comparable
+FY25,,2025-01-26,assets,1419.264,USD million,fact_source_reported,L0221,,comparable
+FY25,2024-01-29,2025-01-26,basic_shares,71.606,million shares,fact_source_reported,L0201,,comparable
+FY25,2024-01-29,2025-01-26,capex_intangibles,6.341,USD million,fact_source_reported,L0251,,comparable
+FY25,2024-01-29,2025-01-26,capex_ppe,7.861,USD million,fact_source_reported,L0248,,comparable
+FY25,,2025-01-26,cash,151.743,USD million,fact_source_reported,L0207,,comparable
+FY25,2024-01-29,2025-01-26,cfo,57.987,USD million,fact_source_reported,L0245,,comparable
+FY25,2024-01-29,2025-01-26,consolidated_net_income,-161.896,USD million,fact_source_reported,L0189,,comparable
+FY25,,2025-01-26,current_assets,585.461,USD million,fact_source_reported,L0213,,comparable
+FY25,,2025-01-26,current_liabilities,283.034,USD million,fact_source_reported,L0229,,comparable
+FY25,2024-01-29,2025-01-26,da_cf,43.499,USD million,fact_source_reported,L0239,,comparable
+FY25,,2025-01-26,debt_current,45.594,USD million,fact_source_reported,L0227,,comparable
+FY25,,2025-01-26,debt_long_term,505.933,USD million,fact_source_reported,L0231,,comparable
+FY25,2024-01-29,2025-01-26,diluted_shares,71.606,million shares,fact_source_reported,L0204,,comparable
+FY25,2024-01-29,2025-01-26,ebit,49.934,USD million,fact_source_reported,L0183,,comparable
+FY25,2024-01-29,2025-01-26,ebit_margin_pct,5.491555,percent,derived_calculation,"L0174,L0183",100 * ebit / revenue,comparable
+FY25,2024-01-29,2025-01-26,eps_basic,-2.26,USD/share,fact_source_reported,L0195,,comparable
+FY25,2024-01-29,2025-01-26,eps_diluted,-2.26,USD/share,fact_source_reported,L0198,,comparable
+FY25,,2025-01-26,equity,542.426,USD million,fact_source_reported,L0078,,comparable
+FY25,2024-01-29,2025-01-26,fcf_less_sbc_proxy,-17.91,USD million,derived_calculation,"L0242,L0245,L0248",1 * FY25.cfo + -1 * FY25.capex_ppe + -1 * FY25.sbc_cf,comparable
+FY25,2024-01-29,2025-01-26,fcf_margin_pct,5.512671,percent,derived_calculation,"L0174,L0245,L0248",100 * fcf_ppe / revenue,comparable
+FY25,2024-01-29,2025-01-26,fcf_ppe,50.126,USD million,derived_calculation,"L0245,L0248",1 * FY25.cfo + -1 * FY25.capex_ppe,comparable
+FY25,2024-01-29,2025-01-26,fcf_ppe_and_intangibles,43.785,USD million,derived_calculation,"L0245,L0248,L0251",1 * FY25.cfo + -1 * FY25.capex_ppe + -1 * FY25.capex_intangibles,comparable
+FY25,,2025-01-26,goodwill,533.091,USD million,fact_source_reported,L0217,,comparable
+FY25,2024-01-29,2025-01-26,gross_profit,456.528,USD million,fact_source_reported,L0177,,comparable
+FY25,2024-01-29,2025-01-26,intangible_amortization_total,10.282,USD million,fact_source_reported,L0257,,comparable
+FY25,,2025-01-26,intangibles,33.111,USD million,fact_source_reported,L0219,,comparable
+FY25,,2025-01-26,inventory,163.593,USD million,fact_source_reported,L0211,,comparable
+FY25,,2025-01-26,liabilities,876.838,USD million,derived_calculation,"L0078,L0233",1 * FY25.liabilities_and_equity + -1 * FY25.equity,comparable
+FY25,,2025-01-26,liabilities_and_equity,1419.264,USD million,fact_source_reported,L0233,,comparable
+FY25,,2025-01-26,net_debt_carrying,399.784,USD million,derived_calculation,"L0207,L0227,L0231",1 * FY25.debt_current + 1 * FY25.debt_long_term + -1 * FY25.cash,comparable
+FY25,2024-01-29,2025-01-26,net_income,-161.896,USD million,fact_source_reported,L0192,,comparable
+FY25,,2025-01-26,payables,59.239,USD million,fact_source_reported,L0223,,comparable
+FY25,,2025-01-26,ppe,126.19,USD million,fact_source_reported,L0215,,comparable
+FY25,,2025-01-26,receivables,162.523,USD million,fact_source_reported,L0209,,comparable
+FY25,2024-01-29,2025-01-26,revenue,909.287,USD million,fact_source_reported,L0174,,comparable
+FY25,2024-01-29,2025-01-26,sbc_cf,68.036,USD million,fact_source_reported,L0242,,comparable
+FY25,2024-01-29,2025-01-26,sbc_pct_revenue,7.482346,USD million,derived_calculation,"L0174,L0242",100 * sbc_cf / revenue,comparable
+FY25,2024-01-29,2025-01-26,sbc_pnl,68.036,USD million,fact_source_reported,L0260,,comparable
+FY25,2024-01-29,2025-01-26,tax_expense,-22.012,USD million,fact_source_reported,L0186,,comparable
+FY25,,2025-01-26,total_debt_carrying,551.527,USD million,derived_calculation,"L0227,L0231",1 * FY25.debt_current + 1 * FY25.debt_long_term,comparable
+FY26,,2026-01-25,accrued_liabilities,191.802,USD million,fact_source_reported,L0062,,comparable
+FY26,2025-01-27,2026-01-25,acquired_amortization,9.824,USD million,derived_calculation,"L0179,L0253",1 * FY26.acquired_technology_amortization + 1 * FY26.acquired_customer_trade_amortization,comparable
+FY26,2025-01-27,2026-01-25,acquired_customer_trade_amortization,0.631,USD million,fact_source_reported,L0179,,comparable
+FY26,2025-01-27,2026-01-25,acquired_technology_amortization,9.193,USD million,fact_source_reported,L0253,,comparable
+FY26,,2026-01-25,assets,1410.337,USD million,fact_source_reported,L0058,,comparable
+FY26,,2026-01-25,assets_held_for_sale,0.0,USD million,fact_source_reported,L0048,,comparable
+FY26,2025-01-27,2026-01-25,basic_shares,88.374,million shares,fact_source_reported,L0200,,comparable
+FY26,2025-01-27,2026-01-25,capex_intangibles,6.022,USD million,fact_source_reported,L0250,,comparable
+FY26,2025-01-27,2026-01-25,capex_ppe,9.783,USD million,fact_source_reported,L0247,,comparable
+FY26,,2026-01-25,cash,195.179,USD million,fact_source_reported,L0042,,comparable
+FY26,2025-01-27,2026-01-25,cfo,181.168,USD million,fact_source_reported,L0244,,comparable
+FY26,2025-01-27,2026-01-25,consolidated_net_income,-40.376,USD million,fact_source_reported,L0188,,comparable
+FY26,,2026-01-25,current_assets,655.12,USD million,fact_source_reported,L0050,,comparable
+FY26,,2026-01-25,current_liabilities,275.936,USD million,fact_source_reported,L0068,,comparable
+FY26,2025-01-27,2026-01-25,da_cf,40.807,USD million,fact_source_reported,L0238,,comparable
+FY26,,2026-01-25,debt_current,0.0,USD million,fact_source_reported,L0064,,comparable
+FY26,,2026-01-25,debt_long_term,491.234,USD million,fact_source_reported,L0070,,comparable
+FY26,2025-01-27,2026-01-25,diluted_shares,88.374,million shares,fact_source_reported,L0203,,comparable
+FY26,2025-01-27,2026-01-25,ebit,32.565,USD million,fact_source_reported,L0182,,comparable
+FY26,2025-01-27,2026-01-25,ebit_margin_pct,3.101502,percent,derived_calculation,"L0173,L0182",100 * ebit / revenue,comparable
+FY26,2025-01-27,2026-01-25,eps_basic,-0.46,USD/share,fact_source_reported,L0194,,comparable
+FY26,2025-01-27,2026-01-25,eps_diluted,-0.46,USD/share,fact_source_reported,L0197,,comparable
+FY26,,2026-01-25,equity,549.718,USD million,fact_source_reported,L0072,,comparable
+FY26,2025-01-27,2026-01-25,fcf_less_sbc_proxy,113.662,USD million,derived_calculation,"L0241,L0244,L0247",1 * FY26.cfo + -1 * FY26.capex_ppe + -1 * FY26.sbc_cf,comparable
+FY26,2025-01-27,2026-01-25,fcf_margin_pct,16.32277,percent,derived_calculation,"L0173,L0244,L0247",100 * fcf_ppe / revenue,comparable
+FY26,2025-01-27,2026-01-25,fcf_ppe,171.385,USD million,derived_calculation,"L0244,L0247",1 * FY26.cfo + -1 * FY26.capex_ppe,comparable
+FY26,2025-01-27,2026-01-25,fcf_ppe_and_intangibles,165.363,USD million,derived_calculation,"L0244,L0247,L0250",1 * FY26.cfo + -1 * FY26.capex_ppe + -1 * FY26.capex_intangibles,comparable
+FY26,,2026-01-25,goodwill,457.925,USD million,fact_source_reported,L0054,,comparable
+FY26,2025-01-27,2026-01-25,gross_profit,542.144,USD million,fact_source_reported,L0176,,comparable
+FY26,2025-01-27,2026-01-25,intangible_amortization_total,10.867,USD million,fact_source_reported,L0256,,comparable
+FY26,,2026-01-25,intangibles,40.015,USD million,fact_source_reported,L0056,,comparable
+FY26,,2026-01-25,inventory,195.737,USD million,fact_source_reported,L0046,,comparable
+FY26,,2026-01-25,liabilities,860.619,USD million,derived_calculation,"L0072,L0074",1 * FY26.liabilities_and_equity + -1 * FY26.equity,comparable
+FY26,,2026-01-25,liabilities_and_equity,1410.337,USD million,fact_source_reported,L0074,,comparable
+FY26,,2026-01-25,liabilities_held_for_sale,0.0,USD million,fact_source_reported,L0066,,comparable
+FY26,,2026-01-25,net_debt_carrying,296.055,USD million,derived_calculation,"L0042,L0064,L0070",1 * FY26.debt_current + 1 * FY26.debt_long_term + -1 * FY26.cash,comparable
+FY26,2025-01-27,2026-01-25,net_income,-40.376,USD million,fact_source_reported,L0191,,comparable
+FY26,,2026-01-25,payables,84.134,USD million,fact_source_reported,L0060,,comparable
+FY26,,2026-01-25,ppe,109.345,USD million,fact_source_reported,L0052,,comparable
+FY26,,2026-01-25,receivables,160.552,USD million,fact_source_reported,L0044,,comparable
+FY26,2025-01-27,2026-01-25,revenue,1049.975,USD million,fact_source_reported,L0173,,comparable
+FY26,2025-01-27,2026-01-25,sbc_cf,57.723,USD million,fact_source_reported,L0241,,comparable
+FY26,2025-01-27,2026-01-25,sbc_pct_revenue,5.497559,USD million,derived_calculation,"L0173,L0241",100 * sbc_cf / revenue,comparable
+FY26,2025-01-27,2026-01-25,sbc_pnl,57.723,USD million,fact_source_reported,L0259,,comparable
+FY26,2025-01-27,2026-01-25,tax_expense,19.832,USD million,fact_source_reported,L0185,,comparable
+FY26,,2026-01-25,total_debt_carrying,491.234,USD million,derived_calculation,"L0064,L0070",1 * FY26.debt_current + 1 * FY26.debt_long_term,comparable
+Q3FY25,,2024-10-27,accrued_liabilities,171.622,USD million,fact_source_reported,L0613,,comparable
+Q3FY25,2024-07-29,2024-10-27,acquired_amortization,2.429,USD million,derived_calculation,"L0271,L0355",1 * Q3FY25.acquired_technology_amortization + 1 * Q3FY25.acquired_customer_trade_amortization,comparable
+Q3FY25,2024-07-29,2024-10-27,acquired_customer_trade_amortization,0.148,USD million,fact_source_reported,L0271,,comparable
+Q3FY25,2024-07-29,2024-10-27,acquired_technology_amortization,2.281,USD million,fact_source_reported,L0355,,comparable
+Q3FY25,,2024-10-27,assets,1379.004,USD million,fact_source_reported,L0609,,comparable
+Q3FY25,2024-07-29,2024-10-27,basic_shares,75.319,million shares,fact_source_reported,L0295,,comparable
+Q3FY25,2024-07-29,2024-10-27,capex_intangibles,0.93,USD million,derived_calculation,"L0345,L0445",1 * 9MFY25.capex_intangibles + -1 * H1FY25.capex_intangibles,comparable
+Q3FY25,2024-07-29,2024-10-27,capex_ppe,0.483,USD million,derived_calculation,"L0343,L0443",1 * 9MFY25.capex_ppe + -1 * H1FY25.capex_ppe,comparable
+Q3FY25,,2024-10-27,cash,136.504,USD million,fact_source_reported,L0595,,comparable
+Q3FY25,2024-07-29,2024-10-27,cfo,29.575,USD million,derived_calculation,"L0341,L0441",1 * 9MFY25.cfo + -1 * H1FY25.cfo,comparable
+Q3FY25,2024-07-29,2024-10-27,consolidated_net_income,-7.586,USD million,fact_source_reported,L0283,,comparable
+Q3FY25,,2024-10-27,current_assets,557.786,USD million,fact_source_reported,L0601,,comparable
+Q3FY25,,2024-10-27,current_liabilities,235.491,USD million,fact_source_reported,L0615,,comparable
+Q3FY25,2024-07-29,2024-10-27,da_cf,10.14,USD million,derived_calculation,"L0337,L0437",1 * 9MFY25.da_cf + -1 * H1FY25.da_cf,comparable
+Q3FY25,,2024-10-27,debt_long_term,1190.304,USD million,fact_source_reported,L0617,,comparable
+Q3FY25,2024-07-29,2024-10-27,diluted_shares,75.319,million shares,fact_source_reported,L0299,,comparable
+Q3FY25,2024-07-29,2024-10-27,ebit,17.785,USD million,fact_source_reported,L0275,,comparable
+Q3FY25,2024-07-29,2024-10-27,ebit_margin_pct,7.509765,percent,derived_calculation,"L0263,L0275",100 * ebit / revenue,comparable
+Q3FY25,2024-07-29,2024-10-27,eps_basic,-0.1,USD/share,fact_source_reported,L0287,,comparable
+Q3FY25,2024-07-29,2024-10-27,eps_diluted,-0.1,USD/share,fact_source_reported,L0291,,comparable
+Q3FY25,,2024-10-27,equity,-139.684,USD million,fact_source_reported,L0334,,comparable
+Q3FY25,2024-07-29,2024-10-27,fcf_less_sbc_proxy,10.687,USD million,derived_calculation,"L0339,L0341,L0343,L0439,L0441,L0443",1 * Q3FY25.cfo + -1 * Q3FY25.capex_ppe + -1 * Q3FY25.sbc_cf,comparable
+Q3FY25,2024-07-29,2024-10-27,fcf_margin_pct,12.284176,percent,derived_calculation,"L0263,L0341,L0343,L0441,L0443",100 * fcf_ppe / revenue,comparable
+Q3FY25,2024-07-29,2024-10-27,fcf_ppe,29.092,USD million,derived_calculation,"L0341,L0343,L0441,L0443",1 * Q3FY25.cfo + -1 * Q3FY25.capex_ppe,comparable
+Q3FY25,2024-07-29,2024-10-27,fcf_ppe_and_intangibles,28.162,USD million,derived_calculation,"L0341,L0343,L0345,L0441,L0443,L0445",1 * Q3FY25.cfo + -1 * Q3FY25.capex_ppe + -1 * Q3FY25.capex_intangibles,comparable
+Q3FY25,,2024-10-27,goodwill,541.283,USD million,fact_source_reported,L0605,,comparable
+Q3FY25,2024-07-29,2024-10-27,gross_profit,120.968,USD million,fact_source_reported,L0267,,comparable
+Q3FY25,2024-07-29,2024-10-27,intangible_amortization_total,2.462,USD million,fact_source_reported,L0359,,comparable
+Q3FY25,,2024-10-27,intangibles,36.813,USD million,fact_source_reported,L0607,,comparable
+Q3FY25,,2024-10-27,inventory,163.451,USD million,fact_source_reported,L0599,,comparable
+Q3FY25,,2024-10-27,liabilities,1518.688,USD million,derived_calculation,"L0334,L0621",1 * Q3FY25.liabilities_and_equity + -1 * Q3FY25.equity,comparable
+Q3FY25,,2024-10-27,liabilities_and_equity,1379.004,USD million,fact_source_reported,L0621,,comparable
+Q3FY25,2024-07-29,2024-10-27,net_income,-7.586,USD million,fact_source_reported,L0347,,comparable
+Q3FY25,,2024-10-27,payables,63.869,USD million,fact_source_reported,L0611,,comparable
+Q3FY25,,2024-10-27,ppe,133.164,USD million,fact_source_reported,L0603,,comparable
+Q3FY25,,2024-10-27,receivables,142.456,USD million,fact_source_reported,L0597,,comparable
+Q3FY25,2024-07-29,2024-10-27,revenue,236.825,USD million,fact_source_reported,L0263,,comparable
+Q3FY25,2024-07-29,2024-10-27,sbc_cf,18.405,USD million,derived_calculation,"L0339,L0439",1 * 9MFY25.sbc_cf + -1 * H1FY25.sbc_cf,comparable
+Q3FY25,2024-07-29,2024-10-27,sbc_pct_revenue,7.771561,USD million,derived_calculation,"L0263,L0339,L0439",100 * sbc_cf / revenue,comparable
+Q3FY25,2024-07-29,2024-10-27,sbc_pnl,18.405,USD million,fact_source_reported,L0351,,comparable
+Q3FY25,2024-07-29,2024-10-27,tax_expense,4.007,USD million,fact_source_reported,L0279,,comparable
+Q4FY25,,2025-01-26,accrued_liabilities,178.201,USD million,fact_source_reported,L0225,,comparable
+Q4FY25,2024-10-28,2025-01-26,acquired_amortization,2.412,USD million,derived_calculation,"L0180,L0254,L0273,L0357",1 * Q4FY25.acquired_technology_amortization + 1 * Q4FY25.acquired_customer_trade_amortization,comparable
+Q4FY25,2024-10-28,2025-01-26,acquired_customer_trade_amortization,0.147,USD million,derived_calculation,"L0180,L0273",1 * FY25.acquired_customer_trade_amortization + -1 * 9MFY25.acquired_customer_trade_amortization,comparable
+Q4FY25,2024-10-28,2025-01-26,acquired_technology_amortization,2.265,USD million,derived_calculation,"L0254,L0357",1 * FY25.acquired_technology_amortization + -1 * 9MFY25.acquired_technology_amortization,comparable
+Q4FY25,,2025-01-26,assets,1419.264,USD million,fact_source_reported,L0221,,comparable
+Q4FY25,2024-10-28,2025-01-26,basic_shares,81.3,million shares,fact_source_reported,L0827,,comparable_rounded
+Q4FY25,2024-10-28,2025-01-26,capex_intangibles,0.393,USD million,derived_calculation,"L0251,L0345",1 * FY25.capex_intangibles + -1 * 9MFY25.capex_intangibles,comparable
+Q4FY25,2024-10-28,2025-01-26,capex_ppe,2.633,USD million,derived_calculation,"L0248,L0343",1 * FY25.capex_ppe + -1 * 9MFY25.capex_ppe,comparable
+Q4FY25,,2025-01-26,cash,151.743,USD million,fact_source_reported,L0207,,comparable
+Q4FY25,2024-10-28,2025-01-26,cfo,33.496,USD million,derived_calculation,"L0245,L0341",1 * FY25.cfo + -1 * 9MFY25.cfo,comparable
+Q4FY25,2024-10-28,2025-01-26,consolidated_net_income,39.1,USD million,fact_source_reported,L0824,,comparable_rounded
+Q4FY25,,2025-01-26,current_assets,585.461,USD million,fact_source_reported,L0213,,comparable
+Q4FY25,,2025-01-26,current_liabilities,283.034,USD million,fact_source_reported,L0229,,comparable
+Q4FY25,2024-10-28,2025-01-26,da_cf,10.288,USD million,derived_calculation,"L0239,L0337",1 * FY25.da_cf + -1 * 9MFY25.da_cf,comparable
+Q4FY25,,2025-01-26,debt_current,45.594,USD million,fact_source_reported,L0227,,comparable
+Q4FY25,,2025-01-26,debt_long_term,505.933,USD million,fact_source_reported,L0231,,comparable
+Q4FY25,2024-10-28,2025-01-26,diluted_shares,90.3,million shares,fact_source_reported,L0828,,comparable_rounded
+Q4FY25,2024-10-28,2025-01-26,ebit,21.238,USD million,derived_calculation,"L0183,L0277",1 * FY25.ebit + -1 * 9MFY25.ebit,comparable
+Q4FY25,2024-10-28,2025-01-26,ebit_margin_pct,8.461287,percent,derived_calculation,"L0174,L0183,L0265,L0277",100 * ebit / revenue,comparable
+Q4FY25,2024-10-28,2025-01-26,eps_basic,0.48,USD/share,fact_source_reported,L0825,,comparable
+Q4FY25,2024-10-28,2025-01-26,eps_diluted,0.43,USD/share,fact_source_reported,L0826,,comparable
+Q4FY25,,2025-01-26,equity,542.426,USD million,fact_source_reported,L0078,,comparable
+Q4FY25,2024-10-28,2025-01-26,fcf_less_sbc_proxy,13.604,USD million,derived_calculation,"L0242,L0245,L0248,L0339,L0341,L0343",1 * Q4FY25.cfo + -1 * Q4FY25.capex_ppe + -1 * Q4FY25.sbc_cf,comparable
+Q4FY25,2024-10-28,2025-01-26,fcf_margin_pct,12.295918,percent,derived_calculation,"L0174,L0245,L0248,L0265,L0341,L0343",100 * fcf_ppe / revenue,comparable
+Q4FY25,2024-10-28,2025-01-26,fcf_ppe,30.863,USD million,derived_calculation,"L0245,L0248,L0341,L0343",1 * Q4FY25.cfo + -1 * Q4FY25.capex_ppe,comparable
+Q4FY25,2024-10-28,2025-01-26,fcf_ppe_and_intangibles,30.47,USD million,derived_calculation,"L0245,L0248,L0251,L0341,L0343,L0345",1 * Q4FY25.cfo + -1 * Q4FY25.capex_ppe + -1 * Q4FY25.capex_intangibles,comparable
+Q4FY25,,2025-01-26,goodwill,533.091,USD million,fact_source_reported,L0217,,comparable
+Q4FY25,2024-10-28,2025-01-26,gross_profit,130.504,USD million,derived_calculation,"L0177,L0269",1 * FY25.gross_profit + -1 * 9MFY25.gross_profit,comparable
+Q4FY25,2024-10-28,2025-01-26,intangible_amortization_total,2.623,USD million,derived_calculation,"L0257,L0361",1 * FY25.intangible_amortization_total + -1 * 9MFY25.intangible_amortization_total,comparable
+Q4FY25,,2025-01-26,intangibles,33.111,USD million,fact_source_reported,L0219,,comparable
+Q4FY25,,2025-01-26,inventory,163.593,USD million,fact_source_reported,L0211,,comparable
+Q4FY25,,2025-01-26,liabilities,876.838,USD million,derived_calculation,"L0078,L0233",1 * Q4FY25.liabilities_and_equity + -1 * Q4FY25.equity,comparable
+Q4FY25,,2025-01-26,liabilities_and_equity,1419.264,USD million,fact_source_reported,L0233,,comparable
+Q4FY25,,2025-01-26,net_debt_carrying,399.784,USD million,derived_calculation,"L0207,L0227,L0231",1 * Q4FY25.debt_current + 1 * Q4FY25.debt_long_term + -1 * Q4FY25.cash,comparable
+Q4FY25,2024-10-28,2025-01-26,net_income,39.1,USD million,fact_source_reported,L0823,,comparable_rounded
+Q4FY25,,2025-01-26,payables,59.239,USD million,fact_source_reported,L0223,,comparable
+Q4FY25,,2025-01-26,ppe,126.19,USD million,fact_source_reported,L0215,,comparable
+Q4FY25,,2025-01-26,receivables,162.523,USD million,fact_source_reported,L0209,,comparable
+Q4FY25,2024-10-28,2025-01-26,revenue,251.002,USD million,derived_calculation,"L0174,L0265",1 * FY25.revenue + -1 * 9MFY25.revenue,comparable
+Q4FY25,2024-10-28,2025-01-26,sbc_cf,17.259,USD million,derived_calculation,"L0242,L0339",1 * FY25.sbc_cf + -1 * 9MFY25.sbc_cf,comparable
+Q4FY25,2024-10-28,2025-01-26,sbc_pct_revenue,6.876041,USD million,derived_calculation,"L0174,L0242,L0265,L0339",100 * sbc_cf / revenue,comparable
+Q4FY25,2024-10-28,2025-01-26,sbc_pnl,17.259,USD million,derived_calculation,"L0260,L0353",1 * FY25.sbc_pnl + -1 * 9MFY25.sbc_pnl,comparable
+Q4FY25,2024-10-28,2025-01-26,tax_expense,-33.19,USD million,derived_calculation,"L0186,L0281",1 * FY25.tax_expense + -1 * 9MFY25.tax_expense,comparable
+Q4FY25,,2025-01-26,total_debt_carrying,551.527,USD million,derived_calculation,"L0227,L0231",1 * Q4FY25.debt_current + 1 * Q4FY25.debt_long_term,comparable
+Q1FY26,,2025-04-27,accrued_liabilities,166.816,USD million,fact_source_reported,L0687,,comparable
+Q1FY26,2025-01-27,2025-04-27,acquired_amortization,2.352,USD million,derived_calculation,"L0110,L0170",1 * Q1FY26.acquired_technology_amortization + 1 * Q1FY26.acquired_customer_trade_amortization,comparable
+Q1FY26,2025-01-27,2025-04-27,acquired_customer_trade_amortization,0.147,USD million,fact_source_reported,L0110,,comparable
+Q1FY26,2025-01-27,2025-04-27,acquired_technology_amortization,2.205,USD million,fact_source_reported,L0170,,comparable
+Q1FY26,,2025-04-27,assets,1431.955,USD million,fact_source_reported,L0683,,comparable
+Q1FY26,2025-01-27,2025-04-27,basic_shares,86.441,million shares,fact_source_reported,L0122,,comparable
+Q1FY26,2025-01-27,2025-04-27,capex_intangibles,0.529,USD million,fact_source_reported,L0164,,comparable
+Q1FY26,2025-01-27,2025-04-27,capex_ppe,1.65,USD million,fact_source_reported,L0162,,comparable
+Q1FY26,,2025-04-27,cash,156.474,USD million,fact_source_reported,L0669,,comparable
+Q1FY26,2025-01-27,2025-04-27,cfo,27.824,USD million,fact_source_reported,L0160,,comparable
+Q1FY26,2025-01-27,2025-04-27,consolidated_net_income,19.345,USD million,fact_source_reported,L0116,,comparable
+Q1FY26,,2025-04-27,current_assets,598.039,USD million,fact_source_reported,L0675,,comparable
+Q1FY26,,2025-04-27,current_liabilities,235.951,USD million,fact_source_reported,L0691,,comparable
+Q1FY26,2025-01-27,2025-04-27,da_cf,10.19,USD million,fact_source_reported,L0156,,comparable
+Q1FY26,,2025-04-27,debt_current,0.0,USD million,fact_source_reported,L0689,,comparable
+Q1FY26,,2025-04-27,debt_long_term,542.643,USD million,fact_source_reported,L0693,,comparable
+Q1FY26,2025-01-27,2025-04-27,diluted_shares,89.579,million shares,fact_source_reported,L0124,,comparable
+Q1FY26,2025-01-27,2025-04-27,ebit,35.967,USD million,fact_source_reported,L0112,,comparable
+Q1FY26,2025-01-27,2025-04-27,ebit_margin_pct,14.326058,percent,derived_calculation,"L0106,L0112",100 * ebit / revenue,comparable
+Q1FY26,2025-01-27,2025-04-27,eps_basic,0.22,USD/share,fact_source_reported,L0118,,comparable
+Q1FY26,2025-01-27,2025-04-27,eps_diluted,0.22,USD/share,fact_source_reported,L0120,,comparable
+Q1FY26,,2025-04-27,equity,568.815,USD million,fact_source_reported,L0076,,comparable
+Q1FY26,2025-01-27,2025-04-27,fcf_less_sbc_proxy,19.339,USD million,derived_calculation,"L0158,L0160,L0162",1 * Q1FY26.cfo + -1 * Q1FY26.capex_ppe + -1 * Q1FY26.sbc_cf,comparable
+Q1FY26,2025-01-27,2025-04-27,fcf_margin_pct,10.425396,percent,derived_calculation,"L0106,L0160,L0162",100 * fcf_ppe / revenue,comparable
+Q1FY26,2025-01-27,2025-04-27,fcf_ppe,26.174,USD million,derived_calculation,"L0160,L0162",1 * Q1FY26.cfo + -1 * Q1FY26.capex_ppe,comparable
+Q1FY26,2025-01-27,2025-04-27,fcf_ppe_and_intangibles,25.645,USD million,derived_calculation,"L0160,L0162,L0164",1 * Q1FY26.cfo + -1 * Q1FY26.capex_ppe + -1 * Q1FY26.capex_intangibles,comparable
+Q1FY26,,2025-04-27,goodwill,533.8,USD million,fact_source_reported,L0679,,comparable
+Q1FY26,2025-01-27,2025-04-27,gross_profit,131.289,USD million,fact_source_reported,L0108,,comparable
+Q1FY26,2025-01-27,2025-04-27,intangible_amortization_total,2.488,USD million,fact_source_reported,L0172,,comparable
+Q1FY26,,2025-04-27,intangibles,36.493,USD million,fact_source_reported,L0681,,comparable
+Q1FY26,,2025-04-27,inventory,170.244,USD million,fact_source_reported,L0673,,comparable
+Q1FY26,,2025-04-27,liabilities,863.14,USD million,derived_calculation,"L0076,L0695",1 * Q1FY26.liabilities_and_equity + -1 * Q1FY26.equity,comparable
+Q1FY26,,2025-04-27,liabilities_and_equity,1431.955,USD million,fact_source_reported,L0695,,comparable
+Q1FY26,,2025-04-27,net_debt_carrying,386.169,USD million,derived_calculation,"L0669,L0689,L0693",1 * Q1FY26.debt_current + 1 * Q1FY26.debt_long_term + -1 * Q1FY26.cash,comparable
+Q1FY26,2025-01-27,2025-04-27,net_income,19.345,USD million,fact_source_reported,L0166,,comparable
+Q1FY26,,2025-04-27,payables,69.135,USD million,fact_source_reported,L0685,,comparable
+Q1FY26,,2025-04-27,ppe,120.234,USD million,fact_source_reported,L0677,,comparable
+Q1FY26,,2025-04-27,receivables,165.748,USD million,fact_source_reported,L0671,,comparable
+Q1FY26,2025-01-27,2025-04-27,revenue,251.06,USD million,fact_source_reported,L0106,,comparable
+Q1FY26,2025-01-27,2025-04-27,sbc_cf,6.835,USD million,fact_source_reported,L0158,,comparable
+Q1FY26,2025-01-27,2025-04-27,sbc_pct_revenue,2.722457,USD million,derived_calculation,"L0106,L0158",100 * sbc_cf / revenue,comparable
+Q1FY26,2025-01-27,2025-04-27,sbc_pnl,6.835,USD million,fact_source_reported,L0168,,comparable
+Q1FY26,2025-01-27,2025-04-27,tax_expense,8.653,USD million,fact_source_reported,L0114,,comparable
+Q1FY26,,2025-04-27,total_debt_carrying,542.643,USD million,derived_calculation,"L0689,L0693",1 * Q1FY26.debt_current + 1 * Q1FY26.debt_long_term,comparable
+Q2FY26,,2025-07-27,accrued_liabilities,172.239,USD million,fact_source_reported,L0420,,comparable
+Q2FY26,2025-04-28,2025-07-27,acquired_amortization,2.362,USD million,derived_calculation,"L0010,L0098",1 * Q2FY26.acquired_technology_amortization + 1 * Q2FY26.acquired_customer_trade_amortization,comparable
+Q2FY26,2025-04-28,2025-07-27,acquired_customer_trade_amortization,0.148,USD million,fact_source_reported,L0010,,comparable
+Q2FY26,2025-04-28,2025-07-27,acquired_technology_amortization,2.214,USD million,fact_source_reported,L0098,,comparable
+Q2FY26,,2025-07-27,assets,1405.885,USD million,fact_source_reported,L0416,,comparable
+Q2FY26,2025-04-28,2025-07-27,basic_shares,86.707,million shares,fact_source_reported,L0034,,comparable
+Q2FY26,2025-04-28,2025-07-27,capex_intangibles,2.25,USD million,derived_calculation,"L0088,L0164",1 * H1FY26.capex_intangibles + -1 * Q1FY26.capex_intangibles,comparable
+Q2FY26,2025-04-28,2025-07-27,capex_ppe,2.884,USD million,derived_calculation,"L0086,L0162",1 * H1FY26.capex_ppe + -1 * Q1FY26.capex_ppe,comparable
+Q2FY26,,2025-07-27,cash,168.56,USD million,fact_source_reported,L0402,,comparable
+Q2FY26,2025-04-28,2025-07-27,cfo,44.395,USD million,derived_calculation,"L0084,L0160",1 * H1FY26.cfo + -1 * Q1FY26.cfo,comparable
+Q2FY26,2025-04-28,2025-07-27,consolidated_net_income,-27.064,USD million,fact_source_reported,L0022,,comparable
+Q2FY26,,2025-07-27,current_assets,614.869,USD million,fact_source_reported,L0408,,comparable
+Q2FY26,,2025-07-27,current_liabilities,243.111,USD million,fact_source_reported,L0424,,comparable
+Q2FY26,2025-04-28,2025-07-27,da_cf,10.314,USD million,derived_calculation,"L0080,L0156",1 * H1FY26.da_cf + -1 * Q1FY26.da_cf,comparable
+Q2FY26,,2025-07-27,debt_current,0.0,USD million,fact_source_reported,L0422,,comparable
+Q2FY26,,2025-07-27,debt_long_term,518.937,USD million,fact_source_reported,L0426,,comparable
+Q2FY26,2025-04-28,2025-07-27,diluted_shares,86.707,million shares,fact_source_reported,L0038,,comparable
+Q2FY26,2025-04-28,2025-07-27,ebit,-16.192,USD million,fact_source_reported,L0014,,comparable
+Q2FY26,2025-04-28,2025-07-27,ebit_margin_pct,-6.285983,percent,derived_calculation,"L0002,L0014",100 * ebit / revenue,comparable
+Q2FY26,2025-04-28,2025-07-27,eps_basic,-0.31,USD/share,fact_source_reported,L0026,,comparable
+Q2FY26,2025-04-28,2025-07-27,eps_diluted,-0.31,USD/share,fact_source_reported,L0030,,comparable
+Q2FY26,,2025-07-27,equity,552.892,USD million,fact_source_reported,L0077,,comparable
+Q2FY26,2025-04-28,2025-07-27,fcf_less_sbc_proxy,24.214,USD million,derived_calculation,"L0082,L0084,L0086,L0158,L0160,L0162",1 * Q2FY26.cfo + -1 * Q2FY26.capex_ppe + -1 * Q2FY26.sbc_cf,comparable
+Q2FY26,2025-04-28,2025-07-27,fcf_margin_pct,16.115207,percent,derived_calculation,"L0002,L0084,L0086,L0160,L0162",100 * fcf_ppe / revenue,comparable
+Q2FY26,2025-04-28,2025-07-27,fcf_ppe,41.511,USD million,derived_calculation,"L0084,L0086,L0160,L0162",1 * Q2FY26.cfo + -1 * Q2FY26.capex_ppe,comparable
+Q2FY26,2025-04-28,2025-07-27,fcf_ppe_and_intangibles,39.261,USD million,derived_calculation,"L0084,L0086,L0088,L0160,L0162,L0164",1 * Q2FY26.cfo + -1 * Q2FY26.capex_ppe + -1 * Q2FY26.capex_intangibles,comparable
+Q2FY26,,2025-07-27,goodwill,492.195,USD million,fact_source_reported,L0412,,comparable
+Q2FY26,2025-04-28,2025-07-27,gross_profit,134.105,USD million,fact_source_reported,L0006,,comparable
+Q2FY26,2025-04-28,2025-07-27,intangible_amortization_total,2.656,USD million,fact_source_reported,L0102,,comparable
+Q2FY26,,2025-07-27,intangibles,34.652,USD million,fact_source_reported,L0414,,comparable
+Q2FY26,,2025-07-27,inventory,183.295,USD million,fact_source_reported,L0406,,comparable
+Q2FY26,,2025-07-27,liabilities,852.993,USD million,derived_calculation,"L0077,L0430",1 * Q2FY26.liabilities_and_equity + -1 * Q2FY26.equity,comparable
+Q2FY26,,2025-07-27,liabilities_and_equity,1405.885,USD million,fact_source_reported,L0430,,comparable
+Q2FY26,,2025-07-27,net_debt_carrying,350.377,USD million,derived_calculation,"L0402,L0422,L0426",1 * Q2FY26.debt_current + 1 * Q2FY26.debt_long_term + -1 * Q2FY26.cash,comparable
+Q2FY26,2025-04-28,2025-07-27,net_income,-27.064,USD million,fact_source_reported,L0090,,comparable
+Q2FY26,,2025-07-27,payables,70.872,USD million,fact_source_reported,L0418,,comparable
+Q2FY26,,2025-07-27,ppe,115.644,USD million,fact_source_reported,L0410,,comparable
+Q2FY26,,2025-07-27,receivables,153.505,USD million,fact_source_reported,L0404,,comparable
+Q2FY26,2025-04-28,2025-07-27,revenue,257.589,USD million,fact_source_reported,L0002,,comparable
+Q2FY26,2025-04-28,2025-07-27,sbc_cf,17.297,USD million,derived_calculation,"L0082,L0158",1 * H1FY26.sbc_cf + -1 * Q1FY26.sbc_cf,comparable
+Q2FY26,2025-04-28,2025-07-27,sbc_pct_revenue,6.714961,USD million,derived_calculation,"L0002,L0082,L0158",100 * sbc_cf / revenue,comparable
+Q2FY26,2025-04-28,2025-07-27,sbc_pnl,17.297,USD million,fact_source_reported,L0094,,comparable
+Q2FY26,2025-04-28,2025-07-27,tax_expense,4.793,USD million,fact_source_reported,L0018,,comparable
+Q2FY26,,2025-07-27,total_debt_carrying,518.937,USD million,derived_calculation,"L0422,L0426",1 * Q2FY26.debt_current + 1 * Q2FY26.debt_long_term,comparable
+Q3FY26,,2025-10-26,accrued_liabilities,179.93,USD million,fact_source_reported,L0320,,comparable
+Q3FY26,2025-07-28,2025-10-26,acquired_amortization,2.363,USD million,derived_calculation,"L0270,L0354",1 * Q3FY26.acquired_technology_amortization + 1 * Q3FY26.acquired_customer_trade_amortization,comparable
+Q3FY26,2025-07-28,2025-10-26,acquired_customer_trade_amortization,0.148,USD million,fact_source_reported,L0270,,comparable
+Q3FY26,2025-07-28,2025-10-26,acquired_technology_amortization,2.215,USD million,fact_source_reported,L0354,,comparable
+Q3FY26,,2025-10-26,assets,1405.873,USD million,fact_source_reported,L0316,,comparable
+Q3FY26,2025-07-28,2025-10-26,basic_shares,87.682,million shares,fact_source_reported,L0294,,comparable
+Q3FY26,2025-07-28,2025-10-26,capex_intangibles,2.635,USD million,derived_calculation,"L0088,L0344",1 * 9MFY26.capex_intangibles + -1 * H1FY26.capex_intangibles,comparable
+Q3FY26,2025-07-28,2025-10-26,capex_ppe,2.819,USD million,derived_calculation,"L0086,L0342",1 * 9MFY26.capex_ppe + -1 * H1FY26.capex_ppe,comparable
+Q3FY26,,2025-10-26,cash,164.67,USD million,fact_source_reported,L0302,,comparable
+Q3FY26,2025-07-28,2025-10-26,cfo,47.462,USD million,derived_calculation,"L0084,L0340",1 * 9MFY26.cfo + -1 * H1FY26.cfo,comparable
+Q3FY26,2025-07-28,2025-10-26,consolidated_net_income,-2.862,USD million,fact_source_reported,L0282,,comparable
+Q3FY26,,2025-10-26,current_assets,620.85,USD million,fact_source_reported,L0308,,comparable
+Q3FY26,,2025-10-26,current_liabilities,255.142,USD million,fact_source_reported,L0324,,comparable
+Q3FY26,2025-07-28,2025-10-26,da_cf,10.129,USD million,derived_calculation,"L0080,L0336",1 * 9MFY26.da_cf + -1 * H1FY26.da_cf,comparable
+Q3FY26,,2025-10-26,debt_current,0.0,USD million,fact_source_reported,L0322,,comparable
+Q3FY26,,2025-10-26,debt_long_term,490.486,USD million,fact_source_reported,L0326,,comparable
+Q3FY26,2025-07-28,2025-10-26,diluted_shares,87.682,million shares,fact_source_reported,L0298,,comparable
+Q3FY26,2025-07-28,2025-10-26,ebit,31.057,USD million,fact_source_reported,L0274,,comparable
+Q3FY26,2025-07-28,2025-10-26,ebit_margin_pct,11.633099,percent,derived_calculation,"L0262,L0274",100 * ebit / revenue,comparable
+Q3FY26,2025-07-28,2025-10-26,eps_basic,-0.03,USD/share,fact_source_reported,L0286,,comparable
+Q3FY26,2025-07-28,2025-10-26,eps_diluted,-0.03,USD/share,fact_source_reported,L0290,,comparable
+Q3FY26,,2025-10-26,equity,565.656,USD million,fact_source_reported,L0328,,comparable
+Q3FY26,2025-07-28,2025-10-26,fcf_less_sbc_proxy,27.505,USD million,derived_calculation,"L0082,L0084,L0086,L0338,L0340,L0342",1 * Q3FY26.cfo + -1 * Q3FY26.capex_ppe + -1 * Q3FY26.sbc_cf,comparable
+Q3FY26,2025-07-28,2025-10-26,fcf_margin_pct,16.722041,percent,derived_calculation,"L0084,L0086,L0262,L0340,L0342",100 * fcf_ppe / revenue,comparable
+Q3FY26,2025-07-28,2025-10-26,fcf_ppe,44.643,USD million,derived_calculation,"L0084,L0086,L0340,L0342",1 * Q3FY26.cfo + -1 * Q3FY26.capex_ppe,comparable
+Q3FY26,2025-07-28,2025-10-26,fcf_ppe_and_intangibles,42.008,USD million,derived_calculation,"L0084,L0086,L0088,L0340,L0342,L0344",1 * Q3FY26.cfo + -1 * Q3FY26.capex_ppe + -1 * Q3FY26.capex_intangibles,comparable
+Q3FY26,,2025-10-26,goodwill,492.064,USD million,fact_source_reported,L0312,,comparable
+Q3FY26,2025-07-28,2025-10-26,gross_profit,138.478,USD million,fact_source_reported,L0266,,comparable
+Q3FY26,2025-07-28,2025-10-26,intangible_amortization_total,2.667,USD million,fact_source_reported,L0358,,comparable
+Q3FY26,,2025-10-26,intangibles,33.178,USD million,fact_source_reported,L0314,,comparable
+Q3FY26,,2025-10-26,inventory,185.726,USD million,fact_source_reported,L0306,,comparable
+Q3FY26,,2025-10-26,liabilities,840.217,USD million,derived_calculation,"L0328,L0330",1 * Q3FY26.liabilities_and_equity + -1 * Q3FY26.equity,comparable
+Q3FY26,,2025-10-26,liabilities_and_equity,1405.873,USD million,fact_source_reported,L0330,,comparable
+Q3FY26,,2025-10-26,net_debt_carrying,325.816,USD million,derived_calculation,"L0302,L0322,L0326",1 * Q3FY26.debt_current + 1 * Q3FY26.debt_long_term + -1 * Q3FY26.cash,comparable
+Q3FY26,2025-07-28,2025-10-26,net_income,-2.862,USD million,fact_source_reported,L0346,,comparable
+Q3FY26,,2025-10-26,payables,75.212,USD million,fact_source_reported,L0318,,comparable
+Q3FY26,,2025-10-26,ppe,110.98,USD million,fact_source_reported,L0310,,comparable
+Q3FY26,,2025-10-26,receivables,164.755,USD million,fact_source_reported,L0304,,comparable
+Q3FY26,2025-07-28,2025-10-26,revenue,266.971,USD million,fact_source_reported,L0262,,comparable
+Q3FY26,2025-07-28,2025-10-26,sbc_cf,17.138,USD million,derived_calculation,"L0082,L0338",1 * 9MFY26.sbc_cf + -1 * H1FY26.sbc_cf,comparable
+Q3FY26,2025-07-28,2025-10-26,sbc_pct_revenue,6.419424,USD million,derived_calculation,"L0082,L0262,L0338",100 * sbc_cf / revenue,comparable
+Q3FY26,2025-07-28,2025-10-26,sbc_pnl,17.138,USD million,fact_source_reported,L0350,,comparable
+Q3FY26,2025-07-28,2025-10-26,tax_expense,7.323,USD million,fact_source_reported,L0278,,comparable
+Q3FY26,,2025-10-26,total_debt_carrying,490.486,USD million,derived_calculation,"L0322,L0326",1 * Q3FY26.debt_current + 1 * Q3FY26.debt_long_term,comparable
+Q4FY26,,2026-01-25,accrued_liabilities,191.802,USD million,fact_source_reported,L0062,,comparable
+Q4FY26,2025-10-27,2026-01-25,acquired_amortization,2.747,USD million,derived_calculation,"L0179,L0253,L0272,L0356",1 * Q4FY26.acquired_technology_amortization + 1 * Q4FY26.acquired_customer_trade_amortization,comparable
+Q4FY26,2025-10-27,2026-01-25,acquired_customer_trade_amortization,0.188,USD million,derived_calculation,"L0179,L0272",1 * FY26.acquired_customer_trade_amortization + -1 * 9MFY26.acquired_customer_trade_amortization,comparable
+Q4FY26,2025-10-27,2026-01-25,acquired_technology_amortization,2.559,USD million,derived_calculation,"L0253,L0356",1 * FY26.acquired_technology_amortization + -1 * 9MFY26.acquired_technology_amortization,comparable
+Q4FY26,,2026-01-25,assets,1410.337,USD million,fact_source_reported,L0058,,comparable
+Q4FY26,,2026-01-25,assets_held_for_sale,0.0,USD million,fact_source_reported,L0048,,comparable
+Q4FY26,2025-10-27,2026-01-25,basic_shares,92.6,million shares,fact_source_reported,L0821,,comparable_rounded
+Q4FY26,2025-10-27,2026-01-25,capex_intangibles,0.608,USD million,derived_calculation,"L0250,L0344",1 * FY26.capex_intangibles + -1 * 9MFY26.capex_intangibles,comparable
+Q4FY26,2025-10-27,2026-01-25,capex_ppe,2.43,USD million,derived_calculation,"L0247,L0342",1 * FY26.capex_ppe + -1 * 9MFY26.capex_ppe,comparable
+Q4FY26,,2026-01-25,cash,195.179,USD million,fact_source_reported,L0042,,comparable
+Q4FY26,2025-10-27,2026-01-25,cfo,61.487,USD million,derived_calculation,"L0244,L0340",1 * FY26.cfo + -1 * 9MFY26.cfo,comparable
+Q4FY26,2025-10-27,2026-01-25,consolidated_net_income,-29.8,USD million,fact_source_reported,L0818,,comparable_rounded
+Q4FY26,,2026-01-25,current_assets,655.12,USD million,fact_source_reported,L0050,,comparable
+Q4FY26,,2026-01-25,current_liabilities,275.936,USD million,fact_source_reported,L0068,,comparable
+Q4FY26,2025-10-27,2026-01-25,da_cf,10.174,USD million,derived_calculation,"L0238,L0336",1 * FY26.da_cf + -1 * 9MFY26.da_cf,comparable
+Q4FY26,,2026-01-25,debt_current,0.0,USD million,fact_source_reported,L0064,,comparable
+Q4FY26,,2026-01-25,debt_long_term,491.234,USD million,fact_source_reported,L0070,,comparable
+Q4FY26,2025-10-27,2026-01-25,diluted_shares,92.6,million shares,fact_source_reported,L0822,,comparable_rounded
+Q4FY26,2025-10-27,2026-01-25,ebit,-18.267,USD million,derived_calculation,"L0182,L0276",1 * FY26.ebit + -1 * 9MFY26.ebit,comparable
+Q4FY26,2025-10-27,2026-01-25,ebit_margin_pct,-6.658162,percent,derived_calculation,"L0173,L0182,L0264,L0276",100 * ebit / revenue,comparable
+Q4FY26,2025-10-27,2026-01-25,eps_basic,-0.32,USD/share,fact_source_reported,L0819,,comparable
+Q4FY26,2025-10-27,2026-01-25,eps_diluted,-0.32,USD/share,fact_source_reported,L0820,,comparable
+Q4FY26,,2026-01-25,equity,549.718,USD million,fact_source_reported,L0072,,comparable
+Q4FY26,2025-10-27,2026-01-25,fcf_less_sbc_proxy,42.604,USD million,derived_calculation,"L0241,L0244,L0247,L0338,L0340,L0342",1 * Q4FY26.cfo + -1 * Q4FY26.capex_ppe + -1 * Q4FY26.sbc_cf,comparable
+Q4FY26,2025-10-27,2026-01-25,fcf_margin_pct,21.52576,percent,derived_calculation,"L0173,L0244,L0247,L0264,L0340,L0342",100 * fcf_ppe / revenue,comparable
+Q4FY26,2025-10-27,2026-01-25,fcf_ppe,59.057,USD million,derived_calculation,"L0244,L0247,L0340,L0342",1 * Q4FY26.cfo + -1 * Q4FY26.capex_ppe,comparable
+Q4FY26,2025-10-27,2026-01-25,fcf_ppe_and_intangibles,58.449,USD million,derived_calculation,"L0244,L0247,L0250,L0340,L0342,L0344",1 * Q4FY26.cfo + -1 * Q4FY26.capex_ppe + -1 * Q4FY26.capex_intangibles,comparable
+Q4FY26,,2026-01-25,goodwill,457.925,USD million,fact_source_reported,L0054,,comparable
+Q4FY26,2025-10-27,2026-01-25,gross_profit,138.272,USD million,derived_calculation,"L0176,L0268",1 * FY26.gross_profit + -1 * 9MFY26.gross_profit,comparable
+Q4FY26,2025-10-27,2026-01-25,intangible_amortization_total,3.055,USD million,derived_calculation,"L0256,L0360",1 * FY26.intangible_amortization_total + -1 * 9MFY26.intangible_amortization_total,comparable
+Q4FY26,,2026-01-25,intangibles,40.015,USD million,fact_source_reported,L0056,,comparable
+Q4FY26,,2026-01-25,inventory,195.737,USD million,fact_source_reported,L0046,,comparable
+Q4FY26,,2026-01-25,liabilities,860.619,USD million,derived_calculation,"L0072,L0074",1 * Q4FY26.liabilities_and_equity + -1 * Q4FY26.equity,comparable
+Q4FY26,,2026-01-25,liabilities_and_equity,1410.337,USD million,fact_source_reported,L0074,,comparable
+Q4FY26,,2026-01-25,liabilities_held_for_sale,0.0,USD million,fact_source_reported,L0066,,comparable
+Q4FY26,,2026-01-25,net_debt_carrying,296.055,USD million,derived_calculation,"L0042,L0064,L0070",1 * Q4FY26.debt_current + 1 * Q4FY26.debt_long_term + -1 * Q4FY26.cash,comparable
+Q4FY26,2025-10-27,2026-01-25,net_income,-29.8,USD million,fact_source_reported,L0817,,comparable_rounded
+Q4FY26,,2026-01-25,payables,84.134,USD million,fact_source_reported,L0060,,comparable
+Q4FY26,,2026-01-25,ppe,109.345,USD million,fact_source_reported,L0052,,comparable
+Q4FY26,,2026-01-25,receivables,160.552,USD million,fact_source_reported,L0044,,comparable
+Q4FY26,2025-10-27,2026-01-25,revenue,274.355,USD million,derived_calculation,"L0173,L0264",1 * FY26.revenue + -1 * 9MFY26.revenue,comparable
+Q4FY26,2025-10-27,2026-01-25,sbc_cf,16.453,USD million,derived_calculation,"L0241,L0338",1 * FY26.sbc_cf + -1 * 9MFY26.sbc_cf,comparable
+Q4FY26,2025-10-27,2026-01-25,sbc_pct_revenue,5.996975,USD million,derived_calculation,"L0173,L0241,L0264,L0338",100 * sbc_cf / revenue,comparable
+Q4FY26,2025-10-27,2026-01-25,sbc_pnl,16.453,USD million,derived_calculation,"L0259,L0352",1 * FY26.sbc_pnl + -1 * 9MFY26.sbc_pnl,comparable
+Q4FY26,2025-10-27,2026-01-25,tax_expense,-0.937,USD million,derived_calculation,"L0185,L0280",1 * FY26.tax_expense + -1 * 9MFY26.tax_expense,comparable
+Q4FY26,,2026-01-25,total_debt_carrying,491.234,USD million,derived_calculation,"L0064,L0070",1 * Q4FY26.debt_current + 1 * Q4FY26.debt_long_term,comparable
+Q1FY27,,2026-04-26,accrued_liabilities,183.404,USD million,fact_source_reported,L0143,,comparable
+Q1FY27,2026-01-26,2026-04-26,acquired_amortization,2.078,USD million,derived_calculation,"L0109,L0169",1 * Q1FY27.acquired_technology_amortization + 1 * Q1FY27.acquired_customer_trade_amortization,comparable
+Q1FY27,2026-01-26,2026-04-26,acquired_customer_trade_amortization,0.328,USD million,fact_source_reported,L0109,,comparable
+Q1FY27,2026-01-26,2026-04-26,acquired_technology_amortization,1.75,USD million,fact_source_reported,L0169,,comparable
+Q1FY27,,2026-04-26,assets,1438.943,USD million,fact_source_reported,L0139,,comparable
+Q1FY27,2026-01-26,2026-04-26,basic_shares,92.905,million shares,fact_source_reported,L0121,,comparable
+Q1FY27,2026-01-26,2026-04-26,capex_intangibles,5.274,USD million,fact_source_reported,L0163,,comparable
+Q1FY27,2026-01-26,2026-04-26,capex_ppe,8.172,USD million,fact_source_reported,L0161,,comparable
+Q1FY27,,2026-04-26,cash,163.31,USD million,fact_source_reported,L0125,,comparable
+Q1FY27,2026-01-26,2026-04-26,cfo,36.183,USD million,fact_source_reported,L0159,,comparable
+Q1FY27,2026-01-26,2026-04-26,consolidated_net_income,26.563,USD million,fact_source_reported,L0115,,comparable
+Q1FY27,,2026-04-26,current_assets,648.701,USD million,fact_source_reported,L0131,,comparable
+Q1FY27,,2026-04-26,current_liabilities,273.717,USD million,fact_source_reported,L0145,,comparable
+Q1FY27,2026-01-26,2026-04-26,da_cf,9.161,USD million,fact_source_reported,L0155,,comparable
+Q1FY27,,2026-04-26,debt_current,0.0,USD million,derived_calculation,"L0141,L0143,L0145","Current liabilities less the two disclosed current-liability components; residual is zero, corroborating no current debt",comparable
+Q1FY27,,2026-04-26,debt_long_term,491.982,USD million,fact_source_reported,L0147,,comparable
+Q1FY27,2026-01-26,2026-04-26,diluted_shares,98.028,million shares,fact_source_reported,L0123,,comparable
+Q1FY27,2026-01-26,2026-04-26,ebit,25.791,USD million,fact_source_reported,L0111,,comparable
+Q1FY27,2026-01-26,2026-04-26,ebit_margin_pct,8.862338,percent,derived_calculation,"L0105,L0111",100 * ebit / revenue,comparable
+Q1FY27,2026-01-26,2026-04-26,eps_basic,0.29,USD/share,fact_source_reported,L0117,,comparable
+Q1FY27,2026-01-26,2026-04-26,eps_diluted,0.27,USD/share,fact_source_reported,L0119,,comparable
+Q1FY27,,2026-04-26,equity,573.322,USD million,fact_source_reported,L0075,,comparable
+Q1FY27,2026-01-26,2026-04-26,fcf_less_sbc_proxy,1.565,USD million,derived_calculation,"L0157,L0159,L0161",1 * Q1FY27.cfo + -1 * Q1FY27.capex_ppe + -1 * Q1FY27.sbc_cf,comparable
+Q1FY27,2026-01-26,2026-04-26,fcf_margin_pct,9.625178,percent,derived_calculation,"L0105,L0159,L0161",100 * fcf_ppe / revenue,comparable
+Q1FY27,2026-01-26,2026-04-26,fcf_ppe,28.011,USD million,derived_calculation,"L0159,L0161",1 * Q1FY27.cfo + -1 * Q1FY27.capex_ppe,comparable
+Q1FY27,2026-01-26,2026-04-26,fcf_ppe_and_intangibles,22.737,USD million,derived_calculation,"L0159,L0161,L0163",1 * Q1FY27.cfo + -1 * Q1FY27.capex_ppe + -1 * Q1FY27.capex_intangibles,comparable
+Q1FY27,,2026-04-26,goodwill,470.85,USD million,fact_source_reported,L0135,,comparable
+Q1FY27,2026-01-26,2026-04-26,gross_profit,151.464,USD million,fact_source_reported,L0107,,comparable
+Q1FY27,2026-01-26,2026-04-26,intangible_amortization_total,2.354,USD million,fact_source_reported,L0171,,comparable
+Q1FY27,,2026-04-26,intangibles,59.286,USD million,fact_source_reported,L0137,,comparable
+Q1FY27,,2026-04-26,inventory,204.715,USD million,fact_source_reported,L0129,,comparable
+Q1FY27,,2026-04-26,liabilities,865.621,USD million,derived_calculation,"L0075,L0151",1 * Q1FY27.liabilities_and_equity + -1 * Q1FY27.equity,comparable
+Q1FY27,,2026-04-26,liabilities_and_equity,1438.943,USD million,fact_source_reported,L0151,,comparable
+Q1FY27,,2026-04-26,net_debt_carrying,328.672,USD million,derived_calculation,"L0125,L0141,L0143,L0145,L0147",1 * Q1FY27.debt_current + 1 * Q1FY27.debt_long_term + -1 * Q1FY27.cash,comparable
+Q1FY27,2026-01-26,2026-04-26,net_income,26.563,USD million,fact_source_reported,L0165,,comparable
+Q1FY27,,2026-04-26,payables,90.313,USD million,fact_source_reported,L0141,,comparable
+Q1FY27,,2026-04-26,ppe,106.719,USD million,fact_source_reported,L0133,,comparable
+Q1FY27,,2026-04-26,receivables,174.789,USD million,fact_source_reported,L0127,,comparable
+Q1FY27,2026-01-26,2026-04-26,revenue,291.018,USD million,fact_source_reported,L0105,,comparable
+Q1FY27,2026-01-26,2026-04-26,sbc_cf,26.446,USD million,fact_source_reported,L0157,,comparable
+Q1FY27,2026-01-26,2026-04-26,sbc_pct_revenue,9.08741,USD million,derived_calculation,"L0105,L0157",100 * sbc_cf / revenue,comparable
+Q1FY27,2026-01-26,2026-04-26,sbc_pnl,26.446,USD million,fact_source_reported,L0167,,comparable
+Q1FY27,2026-01-26,2026-04-26,tax_expense,0.112,USD million,fact_source_reported,L0113,,comparable
+Q1FY27,,2026-04-26,total_debt_carrying,491.982,USD million,derived_calculation,"L0141,L0143,L0145,L0147",1 * Q1FY27.debt_current + 1 * Q1FY27.debt_long_term,comparable
+Q2FY27,,2026-07-26,accrued_liabilities,155.178,USD million,fact_source_reported,L0061,,comparable
+Q2FY27,2026-04-27,2026-07-26,acquired_amortization,2.26,USD million,derived_calculation,"L0009,L0097",1 * Q2FY27.acquired_technology_amortization + 1 * Q2FY27.acquired_customer_trade_amortization,comparable
+Q2FY27,2026-04-27,2026-07-26,acquired_customer_trade_amortization,0.396,USD million,fact_source_reported,L0009,,comparable
+Q2FY27,2026-04-27,2026-07-26,acquired_technology_amortization,1.864,USD million,fact_source_reported,L0097,,comparable
+Q2FY27,,2026-07-26,assets,1647.041,USD million,fact_source_reported,L0057,,comparable
+Q2FY27,,2026-07-26,assets_held_for_sale,132.235,USD million,fact_source_reported,L0047,,comparable
+Q2FY27,2026-04-27,2026-07-26,basic_shares,93.278,million shares,fact_source_reported,L0033,,comparable
+Q2FY27,2026-04-27,2026-07-26,capex_intangibles,0.712,USD million,derived_calculation,"L0087,L0163",1 * H1FY27.capex_intangibles + -1 * Q1FY27.capex_intangibles,comparable
+Q2FY27,2026-04-27,2026-07-26,capex_ppe,7.491,USD million,derived_calculation,"L0085,L0161",1 * H1FY27.capex_ppe + -1 * Q1FY27.capex_ppe,comparable
+Q2FY27,,2026-07-26,cash,204.051,USD million,fact_source_reported,L0041,,comparable
+Q2FY27,2026-04-27,2026-07-26,cfo,68.888,USD million,derived_calculation,"L0083,L0159",1 * H1FY27.cfo + -1 * Q1FY27.cfo,comparable
+Q2FY27,2026-04-27,2026-07-26,consolidated_net_income,160.121,USD million,fact_source_reported,L0021,,comparable
+Q2FY27,,2026-07-26,current_assets,742.841,USD million,fact_source_reported,L0049,,comparable
+Q2FY27,,2026-07-26,current_liabilities,437.399,USD million,fact_source_reported,L0067,,comparable
+Q2FY27,2026-04-27,2026-07-26,da_cf,9.754,USD million,derived_calculation,"L0079,L0155",1 * H1FY27.da_cf + -1 * Q1FY27.da_cf,comparable
+Q2FY27,,2026-07-26,debt_current,143.362,USD million,fact_source_reported,L0063,,comparable
+Q2FY27,,2026-07-26,debt_long_term,349.368,USD million,fact_source_reported,L0069,,comparable
+Q2FY27,2026-04-27,2026-07-26,diluted_shares,100.841,million shares,fact_source_reported,L0037,,comparable
+Q2FY27,2026-04-27,2026-07-26,ebit,55.772,USD million,fact_source_reported,L0013,,comparable
+Q2FY27,2026-04-27,2026-07-26,ebit_margin_pct,16.313756,percent,derived_calculation,"L0001,L0013",100 * ebit / revenue,comparable
+Q2FY27,2026-04-27,2026-07-26,eps_basic,1.72,USD/share,fact_source_reported,L0025,,comparable
+Q2FY27,2026-04-27,2026-07-26,eps_diluted,1.59,USD/share,fact_source_reported,L0029,,comparable
+Q2FY27,,2026-07-26,equity,748.872,USD million,fact_source_reported,L0071,,comparable
+Q2FY27,2026-04-27,2026-07-26,fcf_less_sbc_proxy,37.551,USD million,derived_calculation,"L0081,L0083,L0085,L0157,L0159,L0161",1 * Q2FY27.cfo + -1 * Q2FY27.capex_ppe + -1 * Q2FY27.sbc_cf,comparable
+Q2FY27,2026-04-27,2026-07-26,fcf_margin_pct,17.959113,percent,derived_calculation,"L0001,L0083,L0085,L0159,L0161",100 * fcf_ppe / revenue,comparable
+Q2FY27,2026-04-27,2026-07-26,fcf_ppe,61.397,USD million,derived_calculation,"L0083,L0085,L0159,L0161",1 * Q2FY27.cfo + -1 * Q2FY27.capex_ppe,comparable
+Q2FY27,2026-04-27,2026-07-26,fcf_ppe_and_intangibles,60.685,USD million,derived_calculation,"L0083,L0085,L0087,L0159,L0161,L0163",1 * Q2FY27.cfo + -1 * Q2FY27.capex_ppe + -1 * Q2FY27.capex_intangibles,comparable
+Q2FY27,,2026-07-26,goodwill,478.21,USD million,fact_source_reported,L0053,,comparable
+Q2FY27,2026-04-27,2026-07-26,gross_profit,183.764,USD million,fact_source_reported,L0005,,comparable
+Q2FY27,2026-04-27,2026-07-26,intangible_amortization_total,2.537,USD million,fact_source_reported,L0101,,comparable
+Q2FY27,,2026-07-26,intangibles,44.633,USD million,fact_source_reported,L0055,,comparable
+Q2FY27,,2026-07-26,inventory,170.795,USD million,fact_source_reported,L0045,,comparable
+Q2FY27,,2026-07-26,liabilities,898.169,USD million,derived_calculation,"L0071,L0073",1 * Q2FY27.liabilities_and_equity + -1 * Q2FY27.equity,comparable
+Q2FY27,,2026-07-26,liabilities_and_equity,1647.041,USD million,fact_source_reported,L0073,,comparable
+Q2FY27,,2026-07-26,liabilities_held_for_sale,70.693,USD million,fact_source_reported,L0065,,comparable
+Q2FY27,,2026-07-26,net_debt_carrying,288.679,USD million,derived_calculation,"L0041,L0063,L0069",1 * Q2FY27.debt_current + 1 * Q2FY27.debt_long_term + -1 * Q2FY27.cash,comparable
+Q2FY27,2026-04-27,2026-07-26,net_income,160.121,USD million,fact_source_reported,L0089,,comparable
+Q2FY27,,2026-07-26,payables,68.166,USD million,fact_source_reported,L0059,,comparable
+Q2FY27,,2026-07-26,ppe,105.213,USD million,fact_source_reported,L0051,,comparable
+Q2FY27,,2026-07-26,receivables,169.882,USD million,fact_source_reported,L0043,,comparable
+Q2FY27,2026-04-27,2026-07-26,revenue,341.871,USD million,fact_source_reported,L0001,,comparable
+Q2FY27,2026-04-27,2026-07-26,sbc_cf,23.846,USD million,derived_calculation,"L0081,L0157",1 * H1FY27.sbc_cf + -1 * Q1FY27.sbc_cf,comparable
+Q2FY27,2026-04-27,2026-07-26,sbc_pct_revenue,6.975146,USD million,derived_calculation,"L0001,L0081,L0157",100 * sbc_cf / revenue,comparable
+Q2FY27,2026-04-27,2026-07-26,sbc_pnl,23.846,USD million,fact_source_reported,L0093,,comparable
+Q2FY27,2026-04-27,2026-07-26,tax_expense,-101.361,USD million,fact_source_reported,L0017,,comparable
+Q2FY27,,2026-07-26,total_debt_carrying,492.73,USD million,derived_calculation,"L0063,L0069",1 * Q2FY27.debt_current + 1 * Q2FY27.debt_long_term,comparable
+H1FY25,,2024-07-28,accrued_liabilities,148.913,USD million,fact_source_reported,L0781,,comparable
+H1FY25,2024-01-29,2024-07-28,acquired_amortization,5.149,USD million,derived_calculation,"L0373,L0457",1 * H1FY25.acquired_technology_amortization + 1 * H1FY25.acquired_customer_trade_amortization,comparable
+H1FY25,2024-01-29,2024-07-28,acquired_customer_trade_amortization,0.589,USD million,fact_source_reported,L0373,,comparable
+H1FY25,2024-01-29,2024-07-28,acquired_technology_amortization,4.56,USD million,fact_source_reported,L0457,,comparable
+H1FY25,,2024-07-28,assets,1368.0,USD million,fact_source_reported,L0777,,comparable
+H1FY25,2024-01-29,2024-07-28,basic_shares,64.895,million shares,fact_source_reported,L0397,,comparable
+H1FY25,2024-01-29,2024-07-28,capex_intangibles,5.018,USD million,fact_source_reported,L0445,,comparable
+H1FY25,2024-01-29,2024-07-28,capex_ppe,4.745,USD million,fact_source_reported,L0443,,comparable
+H1FY25,,2024-07-28,cash,115.928,USD million,fact_source_reported,L0763,,comparable
+H1FY25,2024-01-29,2024-07-28,cfo,-5.084,USD million,fact_source_reported,L0441,,comparable
+H1FY25,2024-01-29,2024-07-28,consolidated_net_income,-193.454,USD million,fact_source_reported,L0385,,comparable
+H1FY25,,2024-07-28,current_assets,541.743,USD million,fact_source_reported,L0769,,comparable
+H1FY25,,2024-07-28,current_liabilities,224.673,USD million,fact_source_reported,L0783,,comparable
+H1FY25,2024-01-29,2024-07-28,da_cf,23.071,USD million,fact_source_reported,L0437,,comparable
+H1FY25,,2024-07-28,debt_long_term,1192.865,USD million,fact_source_reported,L0785,,comparable
+H1FY25,2024-01-29,2024-07-28,diluted_shares,64.895,million shares,fact_source_reported,L0401,,comparable
+H1FY25,2024-01-29,2024-07-28,ebit,10.911,USD million,fact_source_reported,L0377,,comparable
+H1FY25,2024-01-29,2024-07-28,ebit_margin_pct,2.588858,percent,derived_calculation,"L0365,L0377",100 * ebit / revenue,comparable
+H1FY25,2024-01-29,2024-07-28,eps_basic,-2.98,USD/share,fact_source_reported,L0389,,comparable
+H1FY25,2024-01-29,2024-07-28,eps_diluted,-2.98,USD/share,fact_source_reported,L0393,,comparable
+H1FY25,,2024-07-28,equity,-141.437,USD million,fact_source_reported,L0333,,comparable
+H1FY25,2024-01-29,2024-07-28,fcf_less_sbc_proxy,-42.201,USD million,derived_calculation,"L0439,L0441,L0443",1 * H1FY25.cfo + -1 * H1FY25.capex_ppe + -1 * H1FY25.sbc_cf,comparable
+H1FY25,2024-01-29,2024-07-28,fcf_margin_pct,-2.332131,percent,derived_calculation,"L0365,L0441,L0443",100 * fcf_ppe / revenue,comparable
+H1FY25,2024-01-29,2024-07-28,fcf_ppe,-9.829,USD million,derived_calculation,"L0441,L0443",1 * H1FY25.cfo + -1 * H1FY25.capex_ppe,comparable
+H1FY25,2024-01-29,2024-07-28,fcf_ppe_and_intangibles,-14.847,USD million,derived_calculation,"L0441,L0443,L0445",1 * H1FY25.cfo + -1 * H1FY25.capex_ppe + -1 * H1FY25.capex_intangibles,comparable
+H1FY25,,2024-07-28,goodwill,541.104,USD million,fact_source_reported,L0773,,comparable
+H1FY25,2024-01-29,2024-07-28,gross_profit,205.056,USD million,fact_source_reported,L0369,,comparable
+H1FY25,2024-01-29,2024-07-28,intangible_amortization_total,5.198,USD million,fact_source_reported,L0461,,comparable
+H1FY25,,2024-07-28,intangibles,35.354,USD million,fact_source_reported,L0775,,comparable
+H1FY25,,2024-07-28,inventory,156.011,USD million,fact_source_reported,L0767,,comparable
+H1FY25,,2024-07-28,liabilities,1509.437,USD million,derived_calculation,"L0333,L0789",1 * H1FY25.liabilities_and_equity + -1 * H1FY25.equity,comparable
+H1FY25,,2024-07-28,liabilities_and_equity,1368.0,USD million,fact_source_reported,L0789,,comparable
+H1FY25,2024-01-29,2024-07-28,net_income,-193.454,USD million,fact_source_reported,L0449,,comparable
+H1FY25,,2024-07-28,payables,75.76,USD million,fact_source_reported,L0779,,comparable
+H1FY25,,2024-07-28,ppe,139.525,USD million,fact_source_reported,L0771,,comparable
+H1FY25,,2024-07-28,receivables,152.976,USD million,fact_source_reported,L0765,,comparable
+H1FY25,2024-01-29,2024-07-28,revenue,421.46,USD million,fact_source_reported,L0365,,comparable
+H1FY25,2024-01-29,2024-07-28,sbc_cf,32.372,USD million,fact_source_reported,L0439,,comparable
+H1FY25,2024-01-29,2024-07-28,sbc_pct_revenue,7.680919,USD million,derived_calculation,"L0365,L0439",100 * sbc_cf / revenue,comparable
+H1FY25,2024-01-29,2024-07-28,sbc_pnl,32.372,USD million,fact_source_reported,L0453,,comparable
+H1FY25,2024-01-29,2024-07-28,tax_expense,7.171,USD million,fact_source_reported,L0381,,comparable
+H1FY26,,2025-07-27,accrued_liabilities,172.239,USD million,fact_source_reported,L0420,,comparable
+H1FY26,2025-01-27,2025-07-27,acquired_amortization,4.714,USD million,derived_calculation,"L0012,L0100",1 * H1FY26.acquired_technology_amortization + 1 * H1FY26.acquired_customer_trade_amortization,comparable
+H1FY26,2025-01-27,2025-07-27,acquired_customer_trade_amortization,0.295,USD million,fact_source_reported,L0012,,comparable
+H1FY26,2025-01-27,2025-07-27,acquired_technology_amortization,4.419,USD million,fact_source_reported,L0100,,comparable
+H1FY26,,2025-07-27,assets,1405.885,USD million,fact_source_reported,L0416,,comparable
+H1FY26,2025-01-27,2025-07-27,basic_shares,86.574,million shares,fact_source_reported,L0036,,comparable
+H1FY26,2025-01-27,2025-07-27,capex_intangibles,2.779,USD million,fact_source_reported,L0088,,comparable
+H1FY26,2025-01-27,2025-07-27,capex_ppe,4.534,USD million,fact_source_reported,L0086,,comparable
+H1FY26,,2025-07-27,cash,168.56,USD million,fact_source_reported,L0402,,comparable
+H1FY26,2025-01-27,2025-07-27,cfo,72.219,USD million,fact_source_reported,L0084,,comparable
+H1FY26,2025-01-27,2025-07-27,consolidated_net_income,-7.719,USD million,fact_source_reported,L0024,,comparable
+H1FY26,,2025-07-27,current_assets,614.869,USD million,fact_source_reported,L0408,,comparable
+H1FY26,,2025-07-27,current_liabilities,243.111,USD million,fact_source_reported,L0424,,comparable
+H1FY26,2025-01-27,2025-07-27,da_cf,20.504,USD million,fact_source_reported,L0080,,comparable
+H1FY26,,2025-07-27,debt_current,0.0,USD million,fact_source_reported,L0422,,comparable
+H1FY26,,2025-07-27,debt_long_term,518.937,USD million,fact_source_reported,L0426,,comparable
+H1FY26,2025-01-27,2025-07-27,diluted_shares,86.574,million shares,fact_source_reported,L0040,,comparable
+H1FY26,2025-01-27,2025-07-27,ebit,19.775,USD million,fact_source_reported,L0016,,comparable
+H1FY26,2025-01-27,2025-07-27,ebit_margin_pct,3.88775,percent,derived_calculation,"L0004,L0016",100 * ebit / revenue,comparable
+H1FY26,2025-01-27,2025-07-27,eps_basic,-0.09,USD/share,fact_source_reported,L0028,,comparable
+H1FY26,2025-01-27,2025-07-27,eps_diluted,-0.09,USD/share,fact_source_reported,L0032,,comparable
+H1FY26,,2025-07-27,equity,552.892,USD million,fact_source_reported,L0077,,comparable
+H1FY26,2025-01-27,2025-07-27,fcf_less_sbc_proxy,43.553,USD million,derived_calculation,"L0082,L0084,L0086",1 * H1FY26.cfo + -1 * H1FY26.capex_ppe + -1 * H1FY26.sbc_cf,comparable
+H1FY26,2025-01-27,2025-07-27,fcf_margin_pct,13.306819,percent,derived_calculation,"L0004,L0084,L0086",100 * fcf_ppe / revenue,comparable
+H1FY26,2025-01-27,2025-07-27,fcf_ppe,67.685,USD million,derived_calculation,"L0084,L0086",1 * H1FY26.cfo + -1 * H1FY26.capex_ppe,comparable
+H1FY26,2025-01-27,2025-07-27,fcf_ppe_and_intangibles,64.906,USD million,derived_calculation,"L0084,L0086,L0088",1 * H1FY26.cfo + -1 * H1FY26.capex_ppe + -1 * H1FY26.capex_intangibles,comparable
+H1FY26,,2025-07-27,goodwill,492.195,USD million,fact_source_reported,L0412,,comparable
+H1FY26,2025-01-27,2025-07-27,gross_profit,265.394,USD million,fact_source_reported,L0008,,comparable
+H1FY26,2025-01-27,2025-07-27,intangible_amortization_total,5.145,USD million,fact_source_reported,L0104,,comparable
+H1FY26,,2025-07-27,intangibles,34.652,USD million,fact_source_reported,L0414,,comparable
+H1FY26,,2025-07-27,inventory,183.295,USD million,fact_source_reported,L0406,,comparable
+H1FY26,,2025-07-27,liabilities,852.993,USD million,derived_calculation,"L0077,L0430",1 * H1FY26.liabilities_and_equity + -1 * H1FY26.equity,comparable
+H1FY26,,2025-07-27,liabilities_and_equity,1405.885,USD million,fact_source_reported,L0430,,comparable
+H1FY26,,2025-07-27,net_debt_carrying,350.377,USD million,derived_calculation,"L0402,L0422,L0426",1 * H1FY26.debt_current + 1 * H1FY26.debt_long_term + -1 * H1FY26.cash,comparable
+H1FY26,2025-01-27,2025-07-27,net_income,-7.719,USD million,fact_source_reported,L0092,,comparable
+H1FY26,,2025-07-27,payables,70.872,USD million,fact_source_reported,L0418,,comparable
+H1FY26,,2025-07-27,ppe,115.644,USD million,fact_source_reported,L0410,,comparable
+H1FY26,,2025-07-27,receivables,153.505,USD million,fact_source_reported,L0404,,comparable
+H1FY26,2025-01-27,2025-07-27,revenue,508.649,USD million,fact_source_reported,L0004,,comparable
+H1FY26,2025-01-27,2025-07-27,sbc_cf,24.132,USD million,fact_source_reported,L0082,,comparable
+H1FY26,2025-01-27,2025-07-27,sbc_pct_revenue,4.744333,USD million,derived_calculation,"L0004,L0082",100 * sbc_cf / revenue,comparable
+H1FY26,2025-01-27,2025-07-27,sbc_pnl,24.132,USD million,fact_source_reported,L0096,,comparable
+H1FY26,2025-01-27,2025-07-27,tax_expense,13.446,USD million,fact_source_reported,L0020,,comparable
+H1FY26,,2025-07-27,total_debt_carrying,518.937,USD million,derived_calculation,"L0422,L0426",1 * H1FY26.debt_current + 1 * H1FY26.debt_long_term,comparable
+H1FY27,,2026-07-26,accrued_liabilities,155.178,USD million,fact_source_reported,L0061,,comparable
+H1FY27,2026-01-26,2026-07-26,acquired_amortization,4.338,USD million,derived_calculation,"L0011,L0099",1 * H1FY27.acquired_technology_amortization + 1 * H1FY27.acquired_customer_trade_amortization,comparable
+H1FY27,2026-01-26,2026-07-26,acquired_customer_trade_amortization,0.724,USD million,fact_source_reported,L0011,,comparable
+H1FY27,2026-01-26,2026-07-26,acquired_technology_amortization,3.614,USD million,fact_source_reported,L0099,,comparable
+H1FY27,,2026-07-26,assets,1647.041,USD million,fact_source_reported,L0057,,comparable
+H1FY27,,2026-07-26,assets_held_for_sale,132.235,USD million,fact_source_reported,L0047,,comparable
+H1FY27,2026-01-26,2026-07-26,basic_shares,93.092,million shares,fact_source_reported,L0035,,comparable
+H1FY27,2026-01-26,2026-07-26,capex_intangibles,5.986,USD million,fact_source_reported,L0087,,comparable
+H1FY27,2026-01-26,2026-07-26,capex_ppe,15.663,USD million,fact_source_reported,L0085,,comparable
+H1FY27,,2026-07-26,cash,204.051,USD million,fact_source_reported,L0041,,comparable
+H1FY27,2026-01-26,2026-07-26,cfo,105.071,USD million,fact_source_reported,L0083,,comparable
+H1FY27,2026-01-26,2026-07-26,consolidated_net_income,186.684,USD million,fact_source_reported,L0023,,comparable
+H1FY27,,2026-07-26,current_assets,742.841,USD million,fact_source_reported,L0049,,comparable
+H1FY27,,2026-07-26,current_liabilities,437.399,USD million,fact_source_reported,L0067,,comparable
+H1FY27,2026-01-26,2026-07-26,da_cf,18.915,USD million,fact_source_reported,L0079,,comparable
+H1FY27,,2026-07-26,debt_current,143.362,USD million,fact_source_reported,L0063,,comparable
+H1FY27,,2026-07-26,debt_long_term,349.368,USD million,fact_source_reported,L0069,,comparable
+H1FY27,2026-01-26,2026-07-26,diluted_shares,99.439,million shares,fact_source_reported,L0039,,comparable
+H1FY27,2026-01-26,2026-07-26,ebit,81.563,USD million,fact_source_reported,L0015,,comparable
+H1FY27,2026-01-26,2026-07-26,ebit_margin_pct,12.88741,percent,derived_calculation,"L0003,L0015",100 * ebit / revenue,comparable
+H1FY27,2026-01-26,2026-07-26,eps_basic,2.01,USD/share,fact_source_reported,L0027,,comparable
+H1FY27,2026-01-26,2026-07-26,eps_diluted,1.88,USD/share,fact_source_reported,L0031,,comparable
+H1FY27,,2026-07-26,equity,748.872,USD million,fact_source_reported,L0071,,comparable
+H1FY27,2026-01-26,2026-07-26,fcf_less_sbc_proxy,39.116,USD million,derived_calculation,"L0081,L0083,L0085",1 * H1FY27.cfo + -1 * H1FY27.capex_ppe + -1 * H1FY27.sbc_cf,comparable
+H1FY27,2026-01-26,2026-07-26,fcf_margin_pct,14.126964,percent,derived_calculation,"L0003,L0083,L0085",100 * fcf_ppe / revenue,comparable
+H1FY27,2026-01-26,2026-07-26,fcf_ppe,89.408,USD million,derived_calculation,"L0083,L0085",1 * H1FY27.cfo + -1 * H1FY27.capex_ppe,comparable
+H1FY27,2026-01-26,2026-07-26,fcf_ppe_and_intangibles,83.422,USD million,derived_calculation,"L0083,L0085,L0087",1 * H1FY27.cfo + -1 * H1FY27.capex_ppe + -1 * H1FY27.capex_intangibles,comparable
+H1FY27,,2026-07-26,goodwill,478.21,USD million,fact_source_reported,L0053,,comparable
+H1FY27,2026-01-26,2026-07-26,gross_profit,335.228,USD million,fact_source_reported,L0007,,comparable
+H1FY27,2026-01-26,2026-07-26,intangible_amortization_total,4.891,USD million,fact_source_reported,L0103,,comparable
+H1FY27,,2026-07-26,intangibles,44.633,USD million,fact_source_reported,L0055,,comparable
+H1FY27,,2026-07-26,inventory,170.795,USD million,fact_source_reported,L0045,,comparable
+H1FY27,,2026-07-26,liabilities,898.169,USD million,derived_calculation,"L0071,L0073",1 * H1FY27.liabilities_and_equity + -1 * H1FY27.equity,comparable
+H1FY27,,2026-07-26,liabilities_and_equity,1647.041,USD million,fact_source_reported,L0073,,comparable
+H1FY27,,2026-07-26,liabilities_held_for_sale,70.693,USD million,fact_source_reported,L0065,,comparable
+H1FY27,,2026-07-26,net_debt_carrying,288.679,USD million,derived_calculation,"L0041,L0063,L0069",1 * H1FY27.debt_current + 1 * H1FY27.debt_long_term + -1 * H1FY27.cash,comparable
+H1FY27,2026-01-26,2026-07-26,net_income,186.684,USD million,fact_source_reported,L0091,,comparable
+H1FY27,,2026-07-26,payables,68.166,USD million,fact_source_reported,L0059,,comparable
+H1FY27,,2026-07-26,ppe,105.213,USD million,fact_source_reported,L0051,,comparable
+H1FY27,,2026-07-26,receivables,169.882,USD million,fact_source_reported,L0043,,comparable
+H1FY27,2026-01-26,2026-07-26,revenue,632.889,USD million,fact_source_reported,L0003,,comparable
+H1FY27,2026-01-26,2026-07-26,sbc_cf,50.292,USD million,fact_source_reported,L0081,,comparable
+H1FY27,2026-01-26,2026-07-26,sbc_pct_revenue,7.946417,USD million,derived_calculation,"L0003,L0081",100 * sbc_cf / revenue,comparable
+H1FY27,2026-01-26,2026-07-26,sbc_pnl,50.292,USD million,fact_source_reported,L0095,,comparable
+H1FY27,2026-01-26,2026-07-26,tax_expense,-101.249,USD million,fact_source_reported,L0019,,comparable
+H1FY27,,2026-07-26,total_debt_carrying,492.73,USD million,derived_calculation,"L0063,L0069",1 * H1FY27.debt_current + 1 * H1FY27.debt_long_term,comparable
+9MFY25,,2024-10-27,accrued_liabilities,171.622,USD million,fact_source_reported,L0613,,comparable
+9MFY25,2024-01-29,2024-10-27,acquired_amortization,7.578,USD million,derived_calculation,"L0273,L0357",1 * 9MFY25.acquired_technology_amortization + 1 * 9MFY25.acquired_customer_trade_amortization,comparable
+9MFY25,2024-01-29,2024-10-27,acquired_customer_trade_amortization,0.737,USD million,fact_source_reported,L0273,,comparable
+9MFY25,2024-01-29,2024-10-27,acquired_technology_amortization,6.841,USD million,fact_source_reported,L0357,,comparable
+9MFY25,,2024-10-27,assets,1379.004,USD million,fact_source_reported,L0609,,comparable
+9MFY25,2024-01-29,2024-10-27,basic_shares,68.385,million shares,fact_source_reported,L0297,,comparable
+9MFY25,2024-01-29,2024-10-27,capex_intangibles,5.948,USD million,fact_source_reported,L0345,,comparable
+9MFY25,2024-01-29,2024-10-27,capex_ppe,5.228,USD million,fact_source_reported,L0343,,comparable
+9MFY25,,2024-10-27,cash,136.504,USD million,fact_source_reported,L0595,,comparable
+9MFY25,2024-01-29,2024-10-27,cfo,24.491,USD million,fact_source_reported,L0341,,comparable
+9MFY25,2024-01-29,2024-10-27,consolidated_net_income,-201.04,USD million,fact_source_reported,L0285,,comparable
+9MFY25,,2024-10-27,current_assets,557.786,USD million,fact_source_reported,L0601,,comparable
+9MFY25,,2024-10-27,current_liabilities,235.491,USD million,fact_source_reported,L0615,,comparable
+9MFY25,2024-01-29,2024-10-27,da_cf,33.211,USD million,fact_source_reported,L0337,,comparable
+9MFY25,,2024-10-27,debt_long_term,1190.304,USD million,fact_source_reported,L0617,,comparable
+9MFY25,2024-01-29,2024-10-27,diluted_shares,68.385,million shares,fact_source_reported,L0301,,comparable
+9MFY25,2024-01-29,2024-10-27,ebit,28.696,USD million,fact_source_reported,L0277,,comparable
+9MFY25,2024-01-29,2024-10-27,ebit_margin_pct,4.359206,percent,derived_calculation,"L0265,L0277",100 * ebit / revenue,comparable
+9MFY25,2024-01-29,2024-10-27,eps_basic,-2.94,USD/share,fact_source_reported,L0289,,comparable
+9MFY25,2024-01-29,2024-10-27,eps_diluted,-2.94,USD/share,fact_source_reported,L0293,,comparable
+9MFY25,,2024-10-27,equity,-139.684,USD million,fact_source_reported,L0334,,comparable
+9MFY25,2024-01-29,2024-10-27,fcf_less_sbc_proxy,-31.514,USD million,derived_calculation,"L0339,L0341,L0343",1 * 9MFY25.cfo + -1 * 9MFY25.capex_ppe + -1 * 9MFY25.sbc_cf,comparable
+9MFY25,2024-01-29,2024-10-27,fcf_margin_pct,2.92624,percent,derived_calculation,"L0265,L0341,L0343",100 * fcf_ppe / revenue,comparable
+9MFY25,2024-01-29,2024-10-27,fcf_ppe,19.263,USD million,derived_calculation,"L0341,L0343",1 * 9MFY25.cfo + -1 * 9MFY25.capex_ppe,comparable
+9MFY25,2024-01-29,2024-10-27,fcf_ppe_and_intangibles,13.315,USD million,derived_calculation,"L0341,L0343,L0345",1 * 9MFY25.cfo + -1 * 9MFY25.capex_ppe + -1 * 9MFY25.capex_intangibles,comparable
+9MFY25,,2024-10-27,goodwill,541.283,USD million,fact_source_reported,L0605,,comparable
+9MFY25,2024-01-29,2024-10-27,gross_profit,326.024,USD million,fact_source_reported,L0269,,comparable
+9MFY25,2024-01-29,2024-10-27,intangible_amortization_total,7.659,USD million,fact_source_reported,L0361,,comparable
+9MFY25,,2024-10-27,intangibles,36.813,USD million,fact_source_reported,L0607,,comparable
+9MFY25,,2024-10-27,inventory,163.451,USD million,fact_source_reported,L0599,,comparable
+9MFY25,,2024-10-27,liabilities,1518.688,USD million,derived_calculation,"L0334,L0621",1 * 9MFY25.liabilities_and_equity + -1 * 9MFY25.equity,comparable
+9MFY25,,2024-10-27,liabilities_and_equity,1379.004,USD million,fact_source_reported,L0621,,comparable
+9MFY25,2024-01-29,2024-10-27,net_income,-201.04,USD million,fact_source_reported,L0349,,comparable
+9MFY25,,2024-10-27,payables,63.869,USD million,fact_source_reported,L0611,,comparable
+9MFY25,,2024-10-27,ppe,133.164,USD million,fact_source_reported,L0603,,comparable
+9MFY25,,2024-10-27,receivables,142.456,USD million,fact_source_reported,L0597,,comparable
+9MFY25,2024-01-29,2024-10-27,revenue,658.285,USD million,fact_source_reported,L0265,,comparable
+9MFY25,2024-01-29,2024-10-27,sbc_cf,50.777,USD million,fact_source_reported,L0339,,comparable
+9MFY25,2024-01-29,2024-10-27,sbc_pct_revenue,7.713528,USD million,derived_calculation,"L0265,L0339",100 * sbc_cf / revenue,comparable
+9MFY25,2024-01-29,2024-10-27,sbc_pnl,50.777,USD million,fact_source_reported,L0353,,comparable
+9MFY25,2024-01-29,2024-10-27,tax_expense,11.178,USD million,fact_source_reported,L0281,,comparable
+9MFY26,,2025-10-26,accrued_liabilities,179.93,USD million,fact_source_reported,L0320,,comparable
+9MFY26,2025-01-27,2025-10-26,acquired_amortization,7.077,USD million,derived_calculation,"L0272,L0356",1 * 9MFY26.acquired_technology_amortization + 1 * 9MFY26.acquired_customer_trade_amortization,comparable
+9MFY26,2025-01-27,2025-10-26,acquired_customer_trade_amortization,0.443,USD million,fact_source_reported,L0272,,comparable
+9MFY26,2025-01-27,2025-10-26,acquired_technology_amortization,6.634,USD million,fact_source_reported,L0356,,comparable
+9MFY26,,2025-10-26,assets,1405.873,USD million,fact_source_reported,L0316,,comparable
+9MFY26,2025-01-27,2025-10-26,basic_shares,86.944,million shares,fact_source_reported,L0296,,comparable
+9MFY26,2025-01-27,2025-10-26,capex_intangibles,5.414,USD million,fact_source_reported,L0344,,comparable
+9MFY26,2025-01-27,2025-10-26,capex_ppe,7.353,USD million,fact_source_reported,L0342,,comparable
+9MFY26,,2025-10-26,cash,164.67,USD million,fact_source_reported,L0302,,comparable
+9MFY26,2025-01-27,2025-10-26,cfo,119.681,USD million,fact_source_reported,L0340,,comparable
+9MFY26,2025-01-27,2025-10-26,consolidated_net_income,-10.581,USD million,fact_source_reported,L0284,,comparable
+9MFY26,,2025-10-26,current_assets,620.85,USD million,fact_source_reported,L0308,,comparable
+9MFY26,,2025-10-26,current_liabilities,255.142,USD million,fact_source_reported,L0324,,comparable
+9MFY26,2025-01-27,2025-10-26,da_cf,30.633,USD million,fact_source_reported,L0336,,comparable
+9MFY26,,2025-10-26,debt_current,0.0,USD million,fact_source_reported,L0322,,comparable
+9MFY26,,2025-10-26,debt_long_term,490.486,USD million,fact_source_reported,L0326,,comparable
+9MFY26,2025-01-27,2025-10-26,diluted_shares,86.944,million shares,fact_source_reported,L0300,,comparable
+9MFY26,2025-01-27,2025-10-26,ebit,50.832,USD million,fact_source_reported,L0276,,comparable
+9MFY26,2025-01-27,2025-10-26,ebit_margin_pct,6.553725,percent,derived_calculation,"L0264,L0276",100 * ebit / revenue,comparable
+9MFY26,2025-01-27,2025-10-26,eps_basic,-0.12,USD/share,fact_source_reported,L0288,,comparable
+9MFY26,2025-01-27,2025-10-26,eps_diluted,-0.12,USD/share,fact_source_reported,L0292,,comparable
+9MFY26,,2025-10-26,equity,565.656,USD million,fact_source_reported,L0328,,comparable
+9MFY26,2025-01-27,2025-10-26,fcf_less_sbc_proxy,71.058,USD million,derived_calculation,"L0338,L0340,L0342",1 * 9MFY26.cfo + -1 * 9MFY26.capex_ppe + -1 * 9MFY26.sbc_cf,comparable
+9MFY26,2025-01-27,2025-10-26,fcf_margin_pct,14.48235,percent,derived_calculation,"L0264,L0340,L0342",100 * fcf_ppe / revenue,comparable
+9MFY26,2025-01-27,2025-10-26,fcf_ppe,112.328,USD million,derived_calculation,"L0340,L0342",1 * 9MFY26.cfo + -1 * 9MFY26.capex_ppe,comparable
+9MFY26,2025-01-27,2025-10-26,fcf_ppe_and_intangibles,106.914,USD million,derived_calculation,"L0340,L0342,L0344",1 * 9MFY26.cfo + -1 * 9MFY26.capex_ppe + -1 * 9MFY26.capex_intangibles,comparable
+9MFY26,,2025-10-26,goodwill,492.064,USD million,fact_source_reported,L0312,,comparable
+9MFY26,2025-01-27,2025-10-26,gross_profit,403.872,USD million,fact_source_reported,L0268,,comparable
+9MFY26,2025-01-27,2025-10-26,intangible_amortization_total,7.812,USD million,fact_source_reported,L0360,,comparable
+9MFY26,,2025-10-26,intangibles,33.178,USD million,fact_source_reported,L0314,,comparable
+9MFY26,,2025-10-26,inventory,185.726,USD million,fact_source_reported,L0306,,comparable
+9MFY26,,2025-10-26,liabilities,840.217,USD million,derived_calculation,"L0328,L0330",1 * 9MFY26.liabilities_and_equity + -1 * 9MFY26.equity,comparable
+9MFY26,,2025-10-26,liabilities_and_equity,1405.873,USD million,fact_source_reported,L0330,,comparable
+9MFY26,,2025-10-26,net_debt_carrying,325.816,USD million,derived_calculation,"L0302,L0322,L0326",1 * 9MFY26.debt_current + 1 * 9MFY26.debt_long_term + -1 * 9MFY26.cash,comparable
+9MFY26,2025-01-27,2025-10-26,net_income,-10.581,USD million,fact_source_reported,L0348,,comparable
+9MFY26,,2025-10-26,payables,75.212,USD million,fact_source_reported,L0318,,comparable
+9MFY26,,2025-10-26,ppe,110.98,USD million,fact_source_reported,L0310,,comparable
+9MFY26,,2025-10-26,receivables,164.755,USD million,fact_source_reported,L0304,,comparable
+9MFY26,2025-01-27,2025-10-26,revenue,775.62,USD million,fact_source_reported,L0264,,comparable
+9MFY26,2025-01-27,2025-10-26,sbc_cf,41.27,USD million,fact_source_reported,L0338,,comparable
+9MFY26,2025-01-27,2025-10-26,sbc_pct_revenue,5.320905,USD million,derived_calculation,"L0264,L0338",100 * sbc_cf / revenue,comparable
+9MFY26,2025-01-27,2025-10-26,sbc_pnl,41.27,USD million,fact_source_reported,L0352,,comparable
+9MFY26,2025-01-27,2025-10-26,tax_expense,20.769,USD million,fact_source_reported,L0280,,comparable
+9MFY26,,2025-10-26,total_debt_carrying,490.486,USD million,derived_calculation,"L0322,L0326",1 * 9MFY26.debt_current + 1 * 9MFY26.debt_long_term,comparable
+TTM_Q2FY26,,2025-07-27,accrued_liabilities,172.239,USD million,fact_source_reported,L0420,,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,acquired_amortization,9.555,USD million,derived_calculation,"L0012,L0100,L0180,L0254,L0373,L0457",1 * TTM_Q2FY26.acquired_technology_amortization + 1 * TTM_Q2FY26.acquired_customer_trade_amortization,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,acquired_customer_trade_amortization,0.59,USD million,derived_calculation,"L0012,L0180,L0373",1 * FY25.acquired_customer_trade_amortization + 1 * H1FY26.acquired_customer_trade_amortization + -1 * H1FY25.acquired_customer_trade_amortization,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,acquired_technology_amortization,8.965,USD million,derived_calculation,"L0100,L0254,L0457",1 * FY25.acquired_technology_amortization + 1 * H1FY26.acquired_technology_amortization + -1 * H1FY25.acquired_technology_amortization,comparable
+TTM_Q2FY26,,2025-07-27,assets,1405.885,USD million,fact_source_reported,L0416,,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,basic_shares,,million shares,missing_required_source,,,unavailable
+TTM_Q2FY26,2024-07-29,2025-07-27,capex_intangibles,4.102,USD million,derived_calculation,"L0088,L0251,L0445",1 * FY25.capex_intangibles + 1 * H1FY26.capex_intangibles + -1 * H1FY25.capex_intangibles,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,capex_ppe,7.65,USD million,derived_calculation,"L0086,L0248,L0443",1 * FY25.capex_ppe + 1 * H1FY26.capex_ppe + -1 * H1FY25.capex_ppe,comparable
+TTM_Q2FY26,,2025-07-27,cash,168.56,USD million,fact_source_reported,L0402,,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,cfo,135.29,USD million,derived_calculation,"L0084,L0245,L0441",1 * FY25.cfo + 1 * H1FY26.cfo + -1 * H1FY25.cfo,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,consolidated_net_income,23.839,USD million,derived_calculation,"L0024,L0189,L0385",1 * FY25.consolidated_net_income + 1 * H1FY26.consolidated_net_income + -1 * H1FY25.consolidated_net_income,comparable
+TTM_Q2FY26,,2025-07-27,current_assets,614.869,USD million,fact_source_reported,L0408,,comparable
+TTM_Q2FY26,,2025-07-27,current_liabilities,243.111,USD million,fact_source_reported,L0424,,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,da_cf,40.932,USD million,derived_calculation,"L0080,L0239,L0437",1 * FY25.da_cf + 1 * H1FY26.da_cf + -1 * H1FY25.da_cf,comparable
+TTM_Q2FY26,,2025-07-27,debt_current,0.0,USD million,fact_source_reported,L0422,,comparable
+TTM_Q2FY26,,2025-07-27,debt_long_term,518.937,USD million,fact_source_reported,L0426,,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,diluted_shares,,million shares,missing_required_source,,,unavailable
+TTM_Q2FY26,2024-07-29,2025-07-27,ebit,58.798,USD million,derived_calculation,"L0016,L0183,L0377",1 * FY25.ebit + 1 * H1FY26.ebit + -1 * H1FY25.ebit,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,ebit_margin_pct,5.900594,percent,derived_calculation,"L0004,L0016,L0174,L0183,L0365,L0377",100 * ebit / revenue,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,eps_basic,0.29,USD/share,derived_calculation,"L0026,L0118,L0287,L0825","Sum of four directly reported quarterly EPS; analytical sum, not issuer-reported annual GAAP EPS",comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,eps_diluted,0.24,USD/share,derived_calculation,"L0030,L0120,L0291,L0826","Sum of four directly reported quarterly EPS; analytical sum, not issuer-reported annual GAAP EPS",comparable
+TTM_Q2FY26,,2025-07-27,equity,552.892,USD million,fact_source_reported,L0077,,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,fcf_less_sbc_proxy,67.844,USD million,derived_calculation,"L0082,L0084,L0086,L0242,L0245,L0248,L0439,L0441,L0443",1 * TTM_Q2FY26.cfo + -1 * TTM_Q2FY26.capex_ppe + -1 * TTM_Q2FY26.sbc_cf,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,fcf_margin_pct,12.809139,percent,derived_calculation,"L0004,L0084,L0086,L0174,L0245,L0248,L0365,L0441,L0443",100 * fcf_ppe / revenue,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,fcf_ppe,127.64,USD million,derived_calculation,"L0084,L0086,L0245,L0248,L0441,L0443",1 * TTM_Q2FY26.cfo + -1 * TTM_Q2FY26.capex_ppe,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,fcf_ppe_and_intangibles,123.538,USD million,derived_calculation,"L0084,L0086,L0088,L0245,L0248,L0251,L0441,L0443,L0445",1 * TTM_Q2FY26.cfo + -1 * TTM_Q2FY26.capex_ppe + -1 * TTM_Q2FY26.capex_intangibles,comparable
+TTM_Q2FY26,,2025-07-27,goodwill,492.195,USD million,fact_source_reported,L0412,,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,gross_profit,516.866,USD million,derived_calculation,"L0008,L0177,L0369",1 * FY25.gross_profit + 1 * H1FY26.gross_profit + -1 * H1FY25.gross_profit,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,intangible_amortization_total,10.229,USD million,derived_calculation,"L0104,L0257,L0461",1 * FY25.intangible_amortization_total + 1 * H1FY26.intangible_amortization_total + -1 * H1FY25.intangible_amortization_total,comparable
+TTM_Q2FY26,,2025-07-27,intangibles,34.652,USD million,fact_source_reported,L0414,,comparable
+TTM_Q2FY26,,2025-07-27,inventory,183.295,USD million,fact_source_reported,L0406,,comparable
+TTM_Q2FY26,,2025-07-27,liabilities,852.993,USD million,derived_calculation,"L0077,L0430",1 * TTM_Q2FY26.liabilities_and_equity + -1 * TTM_Q2FY26.equity,comparable
+TTM_Q2FY26,,2025-07-27,liabilities_and_equity,1405.885,USD million,fact_source_reported,L0430,,comparable
+TTM_Q2FY26,,2025-07-27,net_debt_carrying,350.377,USD million,derived_calculation,"L0402,L0422,L0426",1 * TTM_Q2FY26.debt_current + 1 * TTM_Q2FY26.debt_long_term + -1 * TTM_Q2FY26.cash,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,net_income,23.839,USD million,derived_calculation,"L0092,L0192,L0449",1 * FY25.net_income + 1 * H1FY26.net_income + -1 * H1FY25.net_income,comparable
+TTM_Q2FY26,,2025-07-27,payables,70.872,USD million,fact_source_reported,L0418,,comparable
+TTM_Q2FY26,,2025-07-27,ppe,115.644,USD million,fact_source_reported,L0410,,comparable
+TTM_Q2FY26,,2025-07-27,receivables,153.505,USD million,fact_source_reported,L0404,,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,revenue,996.476,USD million,derived_calculation,"L0004,L0174,L0365",1 * FY25.revenue + 1 * H1FY26.revenue + -1 * H1FY25.revenue,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,sbc_cf,59.796,USD million,derived_calculation,"L0082,L0242,L0439",1 * FY25.sbc_cf + 1 * H1FY26.sbc_cf + -1 * H1FY25.sbc_cf,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,sbc_pct_revenue,6.000747,USD million,derived_calculation,"L0004,L0082,L0174,L0242,L0365,L0439",100 * sbc_cf / revenue,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,sbc_pnl,59.796,USD million,derived_calculation,"L0096,L0260,L0453",1 * FY25.sbc_pnl + 1 * H1FY26.sbc_pnl + -1 * H1FY25.sbc_pnl,comparable
+TTM_Q2FY26,2024-07-29,2025-07-27,tax_expense,-15.737,USD million,derived_calculation,"L0020,L0186,L0381",1 * FY25.tax_expense + 1 * H1FY26.tax_expense + -1 * H1FY25.tax_expense,comparable
+TTM_Q2FY26,,2025-07-27,total_debt_carrying,518.937,USD million,derived_calculation,"L0422,L0426",1 * TTM_Q2FY26.debt_current + 1 * TTM_Q2FY26.debt_long_term,comparable
+TTM_Q2FY27,,2026-07-26,accrued_liabilities,155.178,USD million,fact_source_reported,L0061,,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,acquired_amortization,9.448,USD million,derived_calculation,"L0011,L0012,L0099,L0100,L0179,L0253",1 * TTM_Q2FY27.acquired_technology_amortization + 1 * TTM_Q2FY27.acquired_customer_trade_amortization,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,acquired_customer_trade_amortization,1.06,USD million,derived_calculation,"L0011,L0012,L0179",1 * FY26.acquired_customer_trade_amortization + 1 * H1FY27.acquired_customer_trade_amortization + -1 * H1FY26.acquired_customer_trade_amortization,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,acquired_technology_amortization,8.388,USD million,derived_calculation,"L0099,L0100,L0253",1 * FY26.acquired_technology_amortization + 1 * H1FY27.acquired_technology_amortization + -1 * H1FY26.acquired_technology_amortization,comparable
+TTM_Q2FY27,,2026-07-26,assets,1647.041,USD million,fact_source_reported,L0057,,comparable
+TTM_Q2FY27,,2026-07-26,assets_held_for_sale,132.235,USD million,fact_source_reported,L0047,,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,basic_shares,,million shares,missing_required_source,,,unavailable
+TTM_Q2FY27,2025-07-28,2026-07-26,capex_intangibles,9.229,USD million,derived_calculation,"L0087,L0088,L0250",1 * FY26.capex_intangibles + 1 * H1FY27.capex_intangibles + -1 * H1FY26.capex_intangibles,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,capex_ppe,20.912,USD million,derived_calculation,"L0085,L0086,L0247",1 * FY26.capex_ppe + 1 * H1FY27.capex_ppe + -1 * H1FY26.capex_ppe,comparable
+TTM_Q2FY27,,2026-07-26,cash,204.051,USD million,fact_source_reported,L0041,,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,cfo,214.02,USD million,derived_calculation,"L0083,L0084,L0244",1 * FY26.cfo + 1 * H1FY27.cfo + -1 * H1FY26.cfo,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,consolidated_net_income,154.027,USD million,derived_calculation,"L0023,L0024,L0188",1 * FY26.consolidated_net_income + 1 * H1FY27.consolidated_net_income + -1 * H1FY26.consolidated_net_income,comparable
+TTM_Q2FY27,,2026-07-26,current_assets,742.841,USD million,fact_source_reported,L0049,,comparable
+TTM_Q2FY27,,2026-07-26,current_liabilities,437.399,USD million,fact_source_reported,L0067,,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,da_cf,39.218,USD million,derived_calculation,"L0079,L0080,L0238",1 * FY26.da_cf + 1 * H1FY27.da_cf + -1 * H1FY26.da_cf,comparable
+TTM_Q2FY27,,2026-07-26,debt_current,143.362,USD million,fact_source_reported,L0063,,comparable
+TTM_Q2FY27,,2026-07-26,debt_long_term,349.368,USD million,fact_source_reported,L0069,,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,diluted_shares,,million shares,missing_required_source,,,unavailable
+TTM_Q2FY27,2025-07-28,2026-07-26,ebit,94.353,USD million,derived_calculation,"L0015,L0016,L0182",1 * FY26.ebit + 1 * H1FY27.ebit + -1 * H1FY26.ebit,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,ebit_margin_pct,8.035411,percent,derived_calculation,"L0003,L0004,L0015,L0016,L0173,L0182",100 * ebit / revenue,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,eps_basic,1.66,USD/share,derived_calculation,"L0025,L0117,L0286,L0819","Sum of four directly reported quarterly EPS; analytical sum, not issuer-reported annual GAAP EPS",comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,eps_diluted,1.51,USD/share,derived_calculation,"L0029,L0119,L0290,L0820","Sum of four directly reported quarterly EPS; analytical sum, not issuer-reported annual GAAP EPS",comparable
+TTM_Q2FY27,,2026-07-26,equity,748.872,USD million,fact_source_reported,L0071,,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,fcf_less_sbc_proxy,109.225,USD million,derived_calculation,"L0081,L0082,L0083,L0084,L0085,L0086,L0241,L0244,L0247",1 * TTM_Q2FY27.cfo + -1 * TTM_Q2FY27.capex_ppe + -1 * TTM_Q2FY27.sbc_cf,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,fcf_margin_pct,16.445711,percent,derived_calculation,"L0003,L0004,L0083,L0084,L0085,L0086,L0173,L0244,L0247",100 * fcf_ppe / revenue,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,fcf_ppe,193.108,USD million,derived_calculation,"L0083,L0084,L0085,L0086,L0244,L0247",1 * TTM_Q2FY27.cfo + -1 * TTM_Q2FY27.capex_ppe,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,fcf_ppe_and_intangibles,183.879,USD million,derived_calculation,"L0083,L0084,L0085,L0086,L0087,L0088,L0244,L0247,L0250",1 * TTM_Q2FY27.cfo + -1 * TTM_Q2FY27.capex_ppe + -1 * TTM_Q2FY27.capex_intangibles,comparable
+TTM_Q2FY27,,2026-07-26,goodwill,478.21,USD million,fact_source_reported,L0053,,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,gross_profit,611.978,USD million,derived_calculation,"L0007,L0008,L0176",1 * FY26.gross_profit + 1 * H1FY27.gross_profit + -1 * H1FY26.gross_profit,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,intangible_amortization_total,10.613,USD million,derived_calculation,"L0103,L0104,L0256",1 * FY26.intangible_amortization_total + 1 * H1FY27.intangible_amortization_total + -1 * H1FY26.intangible_amortization_total,comparable
+TTM_Q2FY27,,2026-07-26,intangibles,44.633,USD million,fact_source_reported,L0055,,comparable
+TTM_Q2FY27,,2026-07-26,inventory,170.795,USD million,fact_source_reported,L0045,,comparable
+TTM_Q2FY27,,2026-07-26,liabilities,898.169,USD million,derived_calculation,"L0071,L0073",1 * TTM_Q2FY27.liabilities_and_equity + -1 * TTM_Q2FY27.equity,comparable
+TTM_Q2FY27,,2026-07-26,liabilities_and_equity,1647.041,USD million,fact_source_reported,L0073,,comparable
+TTM_Q2FY27,,2026-07-26,liabilities_held_for_sale,70.693,USD million,fact_source_reported,L0065,,comparable
+TTM_Q2FY27,,2026-07-26,net_debt_carrying,288.679,USD million,derived_calculation,"L0041,L0063,L0069",1 * TTM_Q2FY27.debt_current + 1 * TTM_Q2FY27.debt_long_term + -1 * TTM_Q2FY27.cash,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,net_income,154.027,USD million,derived_calculation,"L0091,L0092,L0191",1 * FY26.net_income + 1 * H1FY27.net_income + -1 * H1FY26.net_income,comparable
+TTM_Q2FY27,,2026-07-26,payables,68.166,USD million,fact_source_reported,L0059,,comparable
+TTM_Q2FY27,,2026-07-26,ppe,105.213,USD million,fact_source_reported,L0051,,comparable
+TTM_Q2FY27,,2026-07-26,receivables,169.882,USD million,fact_source_reported,L0043,,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,revenue,1174.215,USD million,derived_calculation,"L0003,L0004,L0173",1 * FY26.revenue + 1 * H1FY27.revenue + -1 * H1FY26.revenue,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,sbc_cf,83.883,USD million,derived_calculation,"L0081,L0082,L0241",1 * FY26.sbc_cf + 1 * H1FY27.sbc_cf + -1 * H1FY26.sbc_cf,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,sbc_pct_revenue,7.143751,USD million,derived_calculation,"L0003,L0004,L0081,L0082,L0173,L0241",100 * sbc_cf / revenue,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,sbc_pnl,83.883,USD million,derived_calculation,"L0095,L0096,L0259",1 * FY26.sbc_pnl + 1 * H1FY27.sbc_pnl + -1 * H1FY26.sbc_pnl,comparable
+TTM_Q2FY27,2025-07-28,2026-07-26,tax_expense,-94.863,USD million,derived_calculation,"L0019,L0020,L0185",1 * FY26.tax_expense + 1 * H1FY27.tax_expense + -1 * H1FY26.tax_expense,comparable
+TTM_Q2FY27,,2026-07-26,total_debt_carrying,492.73,USD million,derived_calculation,"L0063,L0069",1 * TTM_Q2FY27.debt_current + 1 * TTM_Q2FY27.debt_long_term,comparable

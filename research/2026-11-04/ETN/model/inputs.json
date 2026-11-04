@@ -1,0 +1,126 @@
+{
+  "asOf": "2026-11-04",
+  "priceDate": "2026-11-03",
+  "price": 391.7,
+  "units": "USD million, shares million, per-share USD",
+  "classification": "Counterfactual current-perimeter DCF: no Mobility separation, no COL acquisition. Not expected actual transaction outcome or total current intrinsic value.",
+  "revenueAnchor": 35788,
+  "ebitPreIntangibleAmortAnchor": 7528,
+  "anchorBasis": "4 times Q3 revenue and (pretax + net interest + disclosed intangible amortization), full-quarter acquired perimeter, not a forecast or pro forma annual filing",
+  "common": {
+    "taxRate": 0.24,
+    "physicalDaRatio": 0.018,
+    "workingCapitalRatio": 0.25,
+    "releaseWorkingCapital": false,
+    "acquisitionTaxShield": 0
+  },
+  "capital": {
+    "cashAndShortInvestments": 818,
+    "operatingCashReserve": 500,
+    "debtCarrying": 20106,
+    "selectedDebtFaceAdjustment": 150,
+    "pensionAndOtherBenefits": 780,
+    "historicTaxReserve": 1518,
+    "nciEconomicClaim": 100,
+    "restructuringPayable": 93,
+    "unverifiedInvestmentsAdded": 0,
+    "postBalanceNetAdjustment": 0,
+    "actualShares": 388.5,
+    "selectedNetAwards": 1.0
+  },
+  "scenarios": {
+    "bear": {
+      "year1Revenue": 34000,
+      "growth": [
+        -0.03,
+        0.03,
+        0.04,
+        0.04,
+        0.035,
+        0.03,
+        0.025,
+        0.025,
+        0.025
+      ],
+      "margins": [
+        0.19,
+        0.18,
+        0.185,
+        0.19,
+        0.19,
+        0.19,
+        0.19,
+        0.19,
+        0.19,
+        0.19
+      ],
+      "wacc": 0.11,
+      "g": 0.025,
+      "roic": 0.15,
+      "capexStart": 0.04,
+      "capexEnd": 0.035
+    },
+    "base": {
+      "year1Revenue": 37000,
+      "growth": [
+        0.1,
+        0.08,
+        0.07,
+        0.06,
+        0.05,
+        0.045,
+        0.04,
+        0.035,
+        0.035
+      ],
+      "margins": [
+        0.225,
+        0.23,
+        0.235,
+        0.24,
+        0.24,
+        0.24,
+        0.24,
+        0.24,
+        0.24,
+        0.24
+      ],
+      "wacc": 0.0975,
+      "g": 0.03,
+      "roic": 0.2,
+      "capexStart": 0.04,
+      "capexEnd": 0.035
+    },
+    "bull": {
+      "year1Revenue": 40000,
+      "growth": [
+        0.15,
+        0.12,
+        0.1,
+        0.08,
+        0.07,
+        0.06,
+        0.055,
+        0.05,
+        0.045
+      ],
+      "margins": [
+        0.24,
+        0.255,
+        0.265,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.27
+      ],
+      "wacc": 0.0875,
+      "g": 0.035,
+      "roic": 0.25,
+      "capexStart": 0.045,
+      "capexEnd": 0.035
+    }
+  }
+}

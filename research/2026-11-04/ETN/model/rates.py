@@ -1,0 +1,6 @@
+from pathlib import Path
+import json
+rf=.0495;erp=.0441;beta=1.14;ke=rf+erp*beta;equity=388.5*391.70;debt=20106;wd=debt/(equity+debt);kd=.048;tax=.24;wacc=ke*(1-wd)+kd*(1-tax)*wd
+x={'rfNov3':rf,'erpNov1':erp,'erpAssociatedRf':.0529,'betaProvider5Y':beta,'costEquityCAPM':ke,'equityMarketProxyNov3':equity,'debtCarryingProxy':debt,'debtWeight':wd,'selectedCostDebt':kd,'tax':tax,'calculatedWaccProxy':wacc,'selectedBaseWacc':.0975,'selectedPremiumBp':(.0975-wacc)*10000,'sources':['https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve','https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm','https://stockanalysis.com/stocks/etn/statistics/','https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/etn-20260930.htm'],'limitations':['Rate and ERP dates differ; beta is provider estimate not own regression.','Carrying debt is not market debt. Selected4.8% cost of debt is a financing proxy; coupons vary3.55–5.45% on new2026notes, not one verified refinancing yield.','9.75% is chosen above calculated proxy, not a rounding identity.','Operating leases remain operating expense, no lease debt double-counting.']}
+(Path(__file__).parent/'rates_results.json').write_text(json.dumps(x,indent=2)+'\n')
+print(wacc)
