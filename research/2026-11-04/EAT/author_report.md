@@ -1,0 +1,157 @@
+# EAT — Chili’s mejora; el precio exige sostener márgenes y reinversión
+
+Investigación al 4 noviembre 2026, 23:08 UTC. USD millones salvo precios y acciones. FCFF exploratorio condicionado; auditoría independiente concluida para este alcance condicionado. No valoración integral ni aprobación Stage 3.5 o entrada.
+
+## 1. Lectura del nuevo escáner
+
+EAT aparece el 4 noviembre a 220,44, QP 90 y Opportunity 100. No había expediente propio localizado en el registro vigente. El Q1 FY2027 y el 10-Q se publicaron el 28 octubre. Se investiga información publicada, no se anticipa un evento inexistente.
+
+Yahoo registra precio regular de 220,44 a las 21:00:02 UTC del 4 noviembre; StockAnalysis publica cierre 220,74. Se conserva la diferencia de 0,30, sin cierre único certificado. El CSV no aporta todas las condiciones de Stage 1 ni una señal Stage 2. Un RSI de 60,4 es contexto, no veto ni señal de compra.
+
+El negocio mejora de manera comprobable. El modelo exploratorio produce escenarios de **54,31 / 117,08 / 217,39 USD por acción**. El favorable no es un techo ni una garantía; depende de crecimiento y margen elevados, coste de capital supuesto y reinversión financiada. No hay colchón frente al central, y el precio actual se aproxima incluso al favorable. La conclusión es **esperar precio o evidencia**, sin precio máximo de compra, cantidad ni orden. Los tipos de descuento no están calibrados con beta, estructura de capital y primas independientes: estos números no certifican una valoración integral.
+
+## 2. Negocio y sostenibilidad del crecimiento
+
+Brinker opera y franquicia Chili’s y Maggiano’s. Al 23 septiembre tenía 1.174 restaurantes propios y 467 franquiciados. No es una franquicia de capital ligero: la mayoría de la actividad exige personal, locales, equipamiento, mantenimiento y marketing propios.
+
+Las ventas comparables del trimestre aumentan 9,1 % en conjunto, con Chili’s +10,1 % y Maggiano’s −3,4 %. El primer negocio gana tráfico y precio; el segundo conserva debilidad. Los restaurantes adquiridos no se cuentan como aperturas orgánicas. El EBIT consolidado de 151,0 frente a 117,9 incorpora costes corporativos: no se usa el margen de restaurante non-GAAP de 17,7 % como si fuera margen EBIT disponible para accionistas.
+
+La guía FY2027 incluye una semana 53 en el cuarto trimestre, con efecto estimado de aproximadamente 2 % en ingresos y 0,70 en EPS ajustado. No se capitaliza ese efecto como crecimiento perpetuo. La guía actual de ingresos es 6.230–6.330 y EPS ajustado 13,30–13,90, con capex de 265–285 y acciones diluidas medias de 42–43 millones. No es una guía de caja del propietario ni de beneficio GAAP íntegramente conciliado hacia delante.
+
+## 3. Historia comparable
+
+| Periodo | Ventas | EBIT | NI | EPS | CFO | PPE | D&A | SBC | CFO−PPE |
+|---|---|---|---|---|---|---|---|---|---|
+| FY2024 | 4,415.100 | 229.600 | 155.300 | 3.400 | 421.900 | 198.900 | 167.900 | 25.900 | 223.000 |
+| FY2025 | 5,384.200 | 512.000 | 383.100 | 8.320 | 679.000 | 265.300 | 204.300 | 31.400 | 413.700 |
+| FY2026 | 5,807.400 | 619.900 | 487.000 | 10.870 | 789.400 | 231.900 | 216.600 | 32.200 | 557.500 |
+| Q2FY2025 | 1,358.200 | 156.000 | 118.500 | 2.610 | 218.200 | 49.300 | 47.700 | 7.200 | 168.900 |
+| Q3FY2025 | 1,425.100 | 156.900 | 119.100 | 2.560 | 212.000 | 79.600 | 54.700 | 8.800 | 132.400 |
+| Q4FY2025 | 1,461.900 | 142.700 | 107.000 | n/d | 186.000 | 79.900 | 55.600 | 8.300 | 106.100 |
+| Q2FY2026 | 1,452.200 | 168.400 | 128.500 | 2.860 | 218.900 | 63.700 | 54.600 | 8.100 | 155.200 |
+| Q3FY2026 | 1,470.200 | 166.600 | 127.900 | 2.870 | 232.100 | 51.200 | 55.000 | 8.000 | 180.900 |
+| Q4FY2026 | 1,535.800 | 167.000 | 131.100 | n/d | 217.600 | 58.400 | 53.400 | 8.200 | 159.200 |
+| Q1FY2026 | 1,349.200 | 117.900 | 99.500 | 2.170 | 120.800 | 58.600 | 53.600 | 7.900 | 62.200 |
+| Q1FY2027 | 1,475.600 | 151.000 | 113.300 | 2.640 | 169.100 | 63.400 | 55.700 | 8.300 | 105.700 |
+| TTMSeptember2025 | 5,594.400 | 573.500 | 444.100 | n/d | 737.000 | 267.400 | 211.600 | 32.200 | 469.600 |
+| TTMSeptember2026 | 5,933.800 | 653.000 | 500.800 | n/d | 837.700 | 236.700 | 218.700 | 32.600 | 601.000 |
+
+
+Los FY2024–FY2026 y el TTM actual contienen 52 semanas; Q1 FY2027 contiene 13. El TTM compara cuatro trimestres completos, no cuatro veces el trimestre más reciente. EPS derivados de Q4 y TTM quedan nulos para no confundir promedios de acciones; el soporte mantiene EPS anuales y de Q1/Q2/Q3 publicados.
+
+Ventas TTM 5.933,8 frente a 5.594,4, +6,07 %; EBIT 653,0 frente a 573,5, +13,86 %. CFO 837,7 frente a 737,0. Restando PPE, el subtotal es 601,0 frente a 469,6; después de SBC, 568,4 frente a 437,4. No se llama a ese subtotal owner FCF: faltan inversión no monetaria mediante finance leases, capital de crecimiento y normalización fiscal.
+
+La base operativa modelada es EBIT 648,8: se retiran 4,2 de ganancia neta de modificaciones de leases en el TTM. Se mantienen SBC, depreciación, amortización y los demás costes operativos ordinarios o de recurrencia incierta. No se añaden indiscriminadamente impairments, litigios, cierres y reorganización. En FY2026, el conjunto de otros cargos netos fue 8,6 frente a 41,8 en FY2025: parte de la mejora procede de una base anterior con más costes, no de una tasa extrapolable indefinidamente.
+
+La pérdida de extinción de deuda de 17,6 del Q1 está en intereses, debajo de EBIT. No se suma a EBIT y no es idéntica a la prima de rescate pagada. El rescate de los bonos de principal 350 a 104,125 %, más interés devengado, produjo una salida total de 378,9 y se financió con revolver. No se resta de nuevo del balance de septiembre.
+
+El tipo GAAP Q1 de 10,8 % y el FY2026 de 16,2 % incluyen créditos FICA y beneficios extraordinarios por acciones. El FY2026 muestra créditos FICA 57,8 y beneficio fiscal extraordinario de acciones de 21,3, entre otros ajustes. Los créditos FICA están vinculados al negocio y no se eliminan todos como si fueran irrepetibles. El modelo utiliza 22 % central, 24 % adverso y 20 % favorable como supuestos prudentes de caja fiscal, no previsiones legales; se muestra sensibilidad al 26 %.
+
+## 4. Caja e inversión
+
+Q1 CFO 169,1 menos PPE 63,4 da 105,7. La recompra ordinaria del programa de 125 supera ese subtotal; los pagos totales por acciones de 165,2 incluyen aproximadamente 40,2 de retenciones de empleados. No se confunden las recompras del programa con toda la salida por acciones. La remuneración recurrente mediante SBC permanece en EBIT proyectado.
+
+El TTM de activos adquiridos mediante nuevos finance leases es 20,7: 24,5 del FY2026 más 15,3 del Q1 actual menos 19,1 del comparable. No está en PPE pagado en efectivo. El modelo deduce inversión nueva equivalente a 0,5 % de ventas en cada año, además del capex pagado. Es una hipótesis, ligeramente superior a la proporción TTM, no una guía de la compañía. Conserva la deuda financiera existente en el puente y financia nuevos activos sin añadir préstamos futuros como caja gratuita.
+
+Las rentas de operating leases permanecen dentro de los márgenes proyectados. Por coherencia no se resta además toda la obligación operativa de 1.314,3 del valor de empresa. La amortización de finance leases, 26,4 en FY2026 y 6,7 en Q1, está dentro de D&A; la inversión nueva de esos activos se deduce separadamente. No se mezcla un múltiplo que capitaliza leases con un beneficio que ya deduce íntegramente su renta.
+
+El capital circulante no se libera automáticamente por vender más. El modelo reserva 1 % del incremento de ventas, pese a que restaurantes pueden tener cobro rápido y proveedores financiando parte de la actividad. Los 47,3 de tarjetas regalo son obligaciones de servicio; el breakage trimestral de 2,8 ya está en ingresos y no se suma como caja adicional.
+
+## 5. Puente de capital y límites
+
+El puente condicionado es **−559,3**:
+
+- Caja publicada 30,7.
+- Revolver nominal −375,0 y finance leases −109,8, incluyendo su vencimiento corriente de 33,8.
+- Reserva fiscal histórica −3,1 y accesorios históricos −0,4, ambos del 24 junio, no un saldo fiscal actual certificado.
+- Caja operativa mínima supuesta −30,0.
+- Recompras posteriores al trimestre divulgadas −65,0.
+- Estrés de garantías residuales de leases −6,7.
+
+El 10-Q informa recompras posteriores de 0,3 millones de acciones por 65. El puente reserva esa salida, pero no inventa si se financió con caja, deuda o flujo posterior. Se conserva como denominador 43,0 millones de acciones diluidas medias de Q1, sin restarle además las acciones recompradas. El cover muestra 41,542701 millones de acciones básicas al 22 octubre; no son equivalentes a un denominador diluido al 4 noviembre. La aproximación es deliberadamente cauta, no una garantía frente a dilución futura; se excluyeron menos de 0,1 millones de premios antidilutivos en Q1.
+
+La reserva de 6,7 usa el importe divulgado de garantías de locales vendidos. No significa que se vaya a pagar todo: hay indemnizaciones y contraparte, aunque se recibieron avisos de impago y existen procedimientos. La sensibilidad sin esa reserva evita presentarla como obligación cierta adicional. Las cartas de crédito de 35,6 son respaldo de seguros, no otro préstamo íntegro; 31,6 reducen capacidad del revolver. La reserva corriente de seguros de 49,9 es operativa y no se resta de nuevo íntegra encima de los costes proyectados.
+
+El revolver vence el 1 mayo 2030, con disponibilidad 593,4 al corte y cumplimiento de covenants declarado. El tipo puntual de 5,15 % no es WACC ni coste perpetuo garantizado. No se deduce que la reducción del cupón garantice financiación barata indefinida.
+
+La compra de 12 Chili’s el 27 agosto costó 27,1, ya reflejada en balance y flujo, con seis inmuebles incluidos y seis locales arrendados. No se resta dos veces del capital. Aunque el emisor la considera no material para información proforma, no equivale a una adquisición sin capital ni integración. Otros cambios de caja/deuda después del 23 septiembre no se han reconstruido; la valoración sigue condicionada.
+
+## 6. Modelo FCFF a diez años
+
+Año 1 significa próximos doce meses modelados, no el resto de FY2027. Se parte de ventas TTM y EBIT ancla 648,8. Cinco años explícitos de crecimiento seguido de cinco años de convergencia; no se extrapola la semana extra de FY2027.
+
+| Supuesto | Adverso | Central | Favorable |
+|---|---:|---:|---:|
+| Crecimiento anual años 1–5 | 1,5 % | 6,0 % | 9,0 % |
+| Margen EBIT año 5 | 8,5 % | 11,5 % | 13,5 % |
+| Margen EBIT año 10 y terminal | 8,0 % | 10,5 % | 12,0 % |
+| Impuesto | 24 % | 22 % | 20 % |
+| Tipo de descuento supuesto | 12,5 % | 10,5 % | 9,0 % |
+| Crecimiento terminal | 1,5 % | 2,0 % | 2,5 % |
+| Retorno incremental supuesto | 12 % | 15 % | 20 % |
+
+La inversión física anual es PPE pagado del 4,5 % de ventas más nuevos activos finance lease del 0,5 %, menos D&A del 3,7 %, más 1 % del incremento de ventas en circulante. El suelo económico es el aumento positivo de NOPAT dividido por el retorno incremental supuesto. **Se usa el mayor de ambos**, financiando también la mejora de margen y sin liberar capital por una caída de NOPAT. La reserva adicional queda identificada en cada fila. El terminal conserva el mismo máximo, no elimina inversión al terminar el año 10.
+
+FCFF = NOPAT + D&A − capex pagado − nuevos activos finance lease − aumento de circulante − reserva adicional de reinversión. SBC está dentro de EBIT; no se añade de nuevo a caja. No se suman nuevas deudas para financiar artificialmente el valor.
+
+El central genera FCFF de 302,53 en el año 1, por debajo del subtotal histórico de caja: financiar crecimiento y normalizar impuestos tiene coste. El favorable empieza en 225,97 por la inversión requerida para expandirse. El valor terminal representa 51,45 % del EV central y 65,10 % del favorable. El suelo físico domina todos los años del adverso y los años 8–10 de los otros casos; el económico domina sus años iniciales.
+
+El retorno incremental, la inversión y las tasas son hipótesis, no ROIC empíricamente demostrado ni WACC calibrado. Los escenarios ilustran lo que debe ocurrir, no probabilidades estadísticas ni un intervalo garantizado. Las ventas del año 1 no se fuerzan a una guía fiscal con semanas y fechas distintas.
+
+## 7. Sensibilidad, precio implícito y pares
+
+| Escenario | EV operativo | Puente | Patrimonio | USD/acción |
+|---|---:|---:|---:|---:|
+| bear | 2,894.456 | -559.300 | 2,335.156 | 54.3059 |
+| base | 5,593.601 | -559.300 | 5,034.301 | 117.0768 |
+| bull | 9,906.932 | -559.300 | 9,347.632 | 217.3868 |
+
+| Sensibilidad central | USD/acción |
+|---|---:|
+| Capex pagado +1 punto de ventas | 103.3230 |
+| Márgenes −1 punto todos los años | 106.0635 |
+| Márgenes +1 punto todos los años | 124.3243 |
+| Impuesto 26 % | 109.5671 |
+| Sin reserva de recompras posteriores | 118.5884 |
+| Sin estrés de garantías | 117.2326 |
+
+
+A igualdad del resto de hipótesis centrales, igualar 220,44 requiere elevar todos los márgenes proyectados en aproximadamente **16,82 puntos porcentuales**: el margen final sería aproximadamente 27,32 %, frente al 10,5 % central. La reinversión correspondiente se descuenta como coste del escenario; no se ha asegurado su financiación. Esa raíz exige un FCFF inicial de aproximadamente −4.373,47 millones, muy superior a la caja de 30,7 y a los 593,4 disponibles en el revolver. Deuda adicional o dilución no modeladas podrían ser necesarias: no es una trayectoria ejecutable ni aprobada. No es una previsión ni un margen alcanzable demostrado; revela lo exigente de esa vía concreta, no prueba que toda combinación posible sea inviable. Cambiar crecimiento, descuento o retorno puede producir otra respuesta.
+
+Darden Q1 FY2027 terminó el 30 agosto: ingresos 3.200,3, EBIT 319,3 frente a 339,2 y margen de aproximadamente 9,98 %. Su CFO de operaciones continuadas menos PPE es 103,7 frente a 168,4. La comparación es operativa, no un múltiplo objetivo: cambia mezcla de marcas, semana fiscal y perímetro de Bahama Breeze discontinuado. Las ventas comparables DRI son 3,1 % en calendario fiscal y 3,2 % en calendario comparable, frente a 9,1 % de Brinker; esa ventaja no demuestra permanencia.
+
+Texas Roadhouse publica Q3 el 5 noviembre, según su calendario primario. No se inventa ese resultado ni se utiliza como si ya hubiera ocurrido. El contraste de pares y un WACC fundamentado quedan abiertos antes de certificar una valoración integral.
+
+## 8. Qué reabrir
+
+Revisar persistencia de tráfico frente a precio, costes laborales/alimentos/seguros y mantenimiento, recuperación o deterioro de Maggiano’s, financiación de locales, liquidaciones de garantías y saldo de acciones/caja posterior. Confirmar próxima convocatoria de EAT, aún no localizada. Revalidar Stage 1/2/3.5 y cartera antes de cualquier decisión; no se modifica ninguna operación existente.
+
+### Pros ES
+- El EBIT TTM aumenta un 13,86 % y el CFO menos PPE pasa de 469,6 a 601,0 millones.
+- Chili’s registra ventas comparables del 10,1 %, respaldadas por tráfico y precio, aunque Maggiano’s sigue débil.
+- El modelo financia crecimiento y mejora de margen, incluye nuevos activos finance lease y mantiene inversión en el terminal.
+### Contras ES
+- El precio de referencia 220,44 supera ampliamente el central exploratorio de 117,08 y se aproxima al escenario favorable exigente.
+- Las recompras posteriores, las garantías y el capital histórico no constituyen un balance actual íntegramente conciliado.
+- El coste de capital no está calibrado, la próxima fecha de resultados sigue sin confirmar y los cierres publicados discrepan.
+### Pros EN
+- TTM EBIT rises 13.86%, and cash from operations less PPE increases from $469.6 million to $601.0 million.
+- Chili’s delivers 10.1% comparable sales growth, supported by traffic and pricing, although Maggiano’s remains weak.
+- The model funds growth and margin improvement, includes new finance-lease assets and retains terminal reinvestment.
+### Cons EN
+- The $220.44 reference price is well above the exploratory $117.08 central case and close to the demanding favorable scenario.
+- Subsequent buybacks, guarantees and historical capital do not constitute a fully reconciled current balance sheet.
+- The discount rate is uncalibrated, the next earnings date remains unconfirmed and reported closes differ.
+
+## Fuentes
+
+- Q1 FY2027 y notas: https://www.sec.gov/Archives/edgar/data/703351/000070335126000040/eat-20260923.htm
+- FY2026 e historia: https://www.sec.gov/Archives/edgar/data/703351/000070335126000029/eat-20260624.htm
+- Resultado y guía: https://www.sec.gov/Archives/edgar/data/703351/000070335126000036/fy27q1ex991-earningsrelease.htm
+- Calendario EAT: https://investors.brinker.com/events-and-presentations/default.aspx
+- Referencia Yahoo: https://query1.finance.yahoo.com/v8/finance/chart/EAT?range=1mo&interval=1d
+- Contraste de precio: https://stockanalysis.com/stocks/eat/history/
+- DRI: https://investor.darden.com/news/news-details/2026/Darden-Restaurants-Reports-Fiscal-2027-First-Quarter-Results-Declares-Quarterly-Dividend-and-Reaffirms-Fiscal-2027-Outlook/default.aspx
+- TXRH: https://investor.texasroadhouse.com/overview/default.aspx
+
+El soporte conserva observaciones SEC con accession y fechas, historia, hipótesis, proyecciones, sensibilidades y QA reproducibles. Los datos observados se separan de supuestos y reservas. No se distribuyen filings íntegros.

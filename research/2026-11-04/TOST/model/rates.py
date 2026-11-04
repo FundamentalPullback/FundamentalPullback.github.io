@@ -1,0 +1,4 @@
+import json
+from pathlib import Path
+x={'riskFree10Y':.049,'riskFreeDate':'2026-11-04','erp':.0441,'erpDate':'2026-11-01','beta5Y':1.71,'costEquityReference':.049+1.71*.0441,'selectedDiscount':.125,'debtWeight':0,'sources':['https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve','https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm','https://stockanalysis.com/stocks/tost/statistics/'],'limits':['Historical beta is unstable and not a forecast. Selected12.5% is near the mechanical12.4411%, not an issuer WACC. ERP reference uses its own different underlying risk-free convention; combining daily Treasury is a stated analytical assumption. Pending FTC/perimeter/cash-funding risks are not certified priced by beta.']}
+(Path(__file__).parent/'rates_results.json').write_text(json.dumps(x,indent=2)+'\n')

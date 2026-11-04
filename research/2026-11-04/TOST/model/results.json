@@ -1,0 +1,918 @@
+{
+  "cases": {
+    "base": {
+      "assumptions": {
+        "capex": 0.01,
+        "capitalizedSbc": 0.0017,
+        "commissionFunding": 0.012,
+        "da": 0.0065,
+        "discount": 0.125,
+        "growth": [
+          0.2,
+          0.18,
+          0.16,
+          0.14,
+          0.12
+        ],
+        "loanFunding": 0.014,
+        "margins": [
+          0.085,
+          0.095,
+          0.105,
+          0.115,
+          0.125
+        ],
+        "roic": 0.2,
+        "tax": 0.25,
+        "terminalGrowth": 0.03,
+        "workingCapital": 0.1
+      },
+      "bridge": 1365,
+      "conditionalResidualPerShare": 14.600067167388678,
+      "enterpriseValue": 7489.736294779426,
+      "peakCumulativeCashDeficit": 526.797292799999,
+      "rows": [
+        {
+          "capex": 85.824,
+          "capitalizedSbc": 14.590079999999999,
+          "commissionFunding": 102.9888,
+          "da": 55.785599999999995,
+          "ebit": 729.504,
+          "economicNetInvestment": 830.6400000000002,
+          "fcff": -283.51200000000017,
+          "growth": 0.2,
+          "loanFunding": 120.1536,
+          "margin": 0.085,
+          "nopat": 547.128,
+          "physicalNetInvestment": 410.81088,
+          "pv": -252.01066666666682,
+          "reinvestment": 830.6400000000002,
+          "revenue": 8582.4,
+          "workingCapital": 143.03999999999996,
+          "year": 1
+        },
+        {
+          "capex": 101.27231999999998,
+          "capitalizedSbc": 17.216294399999995,
+          "commissionFunding": 121.52678399999998,
+          "da": 65.82700799999998,
+          "ebit": 962.0870399999999,
+          "economicNetInvestment": 872.1863999999994,
+          "fcff": -150.62111999999945,
+          "growth": 0.18,
+          "loanFunding": 141.78124799999998,
+          "margin": 0.095,
+          "nopat": 721.5652799999999,
+          "physicalNetInvestment": 470.4528383999998,
+          "pv": -119.00927999999956,
+          "reinvestment": 872.1863999999994,
+          "revenue": 10127.231999999998,
+          "workingCapital": 154.48319999999987,
+          "year": 2
+        },
+        {
+          "capex": 117.47589119999998,
+          "capitalizedSbc": 19.970901503999993,
+          "commissionFunding": 140.97106943999998,
+          "da": 76.35932927999998,
+          "ebit": 1233.4968575999997,
+          "economicNetInvestment": 1017.7868159999991,
+          "fcff": -92.66417279999939,
+          "growth": 0.16,
+          "loanFunding": 164.46624767999995,
+          "margin": 0.105,
+          "nopat": 925.1226431999997,
+          "physicalNetInvestment": 528.5604925439998,
+          "pv": -65.08101025185142,
+          "reinvestment": 1017.7868159999991,
+          "revenue": 11747.589119999997,
+          "workingCapital": 162.03571199999988,
+          "year": 3
+        },
+        {
+          "capex": 133.92251596799997,
+          "capitalizedSbc": 22.766827714559994,
+          "commissionFunding": 160.70701916159996,
+          "da": 87.04963537919998,
+          "ebit": 1540.1089336319997,
+          "economicNetInvestment": 1149.7952851199993,
+          "fcff": 5.286415104000298,
+          "growth": 0.14,
+          "loanFunding": 187.49152235519998,
+          "margin": 0.115,
+          "nopat": 1155.0817002239996,
+          "physicalNetInvestment": 582.30449750016,
+          "pv": 3.3002829242470995,
+          "reinvestment": 1149.7952851199993,
+          "revenue": 13392.251596799997,
+          "workingCapital": 164.46624768000004,
+          "year": 4
+        },
+        {
+          "capex": 149.99321788415998,
+          "capitalizedSbc": 25.498847040307197,
+          "commissionFunding": 179.991861460992,
+          "da": 97.49559162470399,
+          "ebit": 1874.9152235519998,
+          "economicNetInvestment": 1255.5235872000014,
+          "fcff": 150.6628304639985,
+          "growth": 0.12,
+          "loanFunding": 209.990505037824,
+          "margin": 0.125,
+          "nopat": 1406.186417664,
+          "physicalNetInvestment": 628.6858589601793,
+          "pv": 83.6071674142543,
+          "reinvestment": 1255.5235872000014,
+          "revenue": 14999.321788415999,
+          "workingCapital": 160.70701916160016,
+          "year": 5
+        },
+        {
+          "capex": 165.29252610834433,
+          "capitalizedSbc": 28.09972943841853,
+          "commissionFunding": 179.08460995888743,
+          "da": 107.4401419704238,
+          "ebit": 2066.156576354304,
+          "economicNetInvestment": 717.1550730086403,
+          "fcff": 832.4623592570877,
+          "growth": 0.102,
+          "loanFunding": 203.36284495203535,
+          "margin": 0.125,
+          "nopat": 1549.617432265728,
+          "physicalNetInvestment": 621.3926507291052,
+          "pv": 410.62886135072375,
+          "reinvestment": 717.1550730086403,
+          "revenue": 16529.252610834432,
+          "workingCapital": 152.99308224184333,
+          "year": 6
+        },
+        {
+          "capex": 179.17709830144526,
+          "capitalizedSbc": 30.460106711245693,
+          "commissionFunding": 168.6309876161623,
+          "da": 116.46511389593941,
+          "ebit": 2239.7137287680657,
+          "economicNetInvestment": 650.8393215516071,
+          "fcff": 1028.9459750244423,
+          "growth": 0.08399999999999999,
+          "loanFunding": 187.37622709885602,
+          "margin": 0.125,
+          "nopat": 1679.7852965760494,
+          "physicalNetInvestment": 588.0250277627792,
+          "pv": 451.15410729495824,
+          "reinvestment": 650.8393215516071,
+          "revenue": 17917.709830144526,
+          "workingCapital": 138.8457219310094,
+          "year": 7
+        },
+        {
+          "capex": 191.00278678934066,
+          "capitalizedSbc": 32.47047375418791,
+          "commissionFunding": 145.0582224717341,
+          "da": 124.15181141307141,
+          "ebit": 2387.534834866758,
+          "economicNetInvestment": 554.3291478700962,
+          "fcff": 1236.3219782799724,
+          "growth": 0.06599999999999999,
+          "loanFunding": 157.8325995289378,
+          "margin": 0.125,
+          "nopat": 1790.6511261500686,
+          "physicalNetInvestment": 520.4691560100829,
+          "pv": 481.84949732060676,
+          "reinvestment": 554.3291478700962,
+          "revenue": 19100.278678934064,
+          "workingCapital": 118.25688487895387,
+          "year": 8
+        },
+        {
+          "capex": 200.170920555229,
+          "capitalizedSbc": 34.029056494388925,
+          "commissionFunding": 105.37066013105499,
+          "da": 130.11109836089884,
+          "ebit": 2502.1365069403623,
+          "economicNetInvestment": 429.75627027601604,
+          "fcff": 1446.8461099292558,
+          "growth": 0.048,
+          "loanFunding": 111.43812187013368,
+          "margin": 0.125,
+          "nopat": 1876.6023802052719,
+          "physicalNetInvestment": 412.5789983487912,
+          "pv": 501.2445215315986,
+          "reinvestment": 429.75627027601604,
+          "revenue": 20017.0920555229,
+          "workingCapital": 91.68133765888342,
+          "year": 9
+        },
+        {
+          "capex": 206.17604817188587,
+          "capitalizedSbc": 35.049928189220594,
+          "commissionFunding": 47.94990042721292,
+          "da": 134.0144313117258,
+          "ebit": 2577.200602148573,
+          "economicNetInvestment": 281.49035703078994,
+          "fcff": 1651.41009458064,
+          "growth": 0.03,
+          "loanFunding": 46.61678749568961,
+          "margin": 0.125,
+          "nopat": 1932.9004516114298,
+          "physicalNetInvestment": 261.82950913885185,
+          "pv": 508.54537682871455,
+          "reinvestment": 281.49035703078994,
+          "revenue": 20617.604817188585,
+          "workingCapital": 60.05127616656864,
+          "year": 10
+        }
+      ],
+      "scenario": "base",
+      "selectedLiquidBridgeCoversModeledDeficit": true,
+      "shares": 606.4859971711456,
+      "terminal": {
+        "commissionStockYear10": 1646.2799146676437,
+        "economicNetInvestment": 298.6331197739659,
+        "fcff": 1692.2543453858068,
+        "loanStockYear10": 1600.5097040186765,
+        "nopat": 1990.8874651597728,
+        "physicalNetInvestment": 269.68439441301746,
+        "pv": 5485.507437032841,
+        "reinvestment": 298.6331197739659,
+        "revenue": 21236.132961704243,
+        "value": 17813.20363564007
+      },
+      "terminalPvFraction": 0.732403281121714
+    },
+    "bear": {
+      "assumptions": {
+        "capex": 0.01,
+        "capitalizedSbc": 0.0017,
+        "commissionFunding": 0.016,
+        "da": 0.0065,
+        "discount": 0.145,
+        "growth": [
+          0.12,
+          0.1,
+          0.08,
+          0.06,
+          0.05
+        ],
+        "loanFunding": 0.02,
+        "margins": [
+          0.065,
+          0.07,
+          0.075,
+          0.08,
+          0.08
+        ],
+        "roic": 0.15,
+        "tax": 0.25,
+        "terminalGrowth": 0.025,
+        "workingCapital": 0.1
+      },
+      "bridge": 1365,
+      "conditionalResidualPerShare": 5.664286236013365,
+      "enterpriseValue": 2070.3102861113607,
+      "peakCumulativeCashDeficit": 43.36972800000052,
+      "rows": [
+        {
+          "capex": 80.1024,
+          "capitalizedSbc": 13.617408000000001,
+          "commissionFunding": 128.16384000000002,
+          "da": 52.06656,
+          "ebit": 520.6656,
+          "economicNetInvestment": 63.3280000000002,
+          "fcff": -25.34668800000003,
+          "growth": 0.12,
+          "loanFunding": 160.2048,
+          "margin": 0.065,
+          "nopat": 390.49920000000003,
+          "physicalNetInvestment": 415.84588800000006,
+          "pv": -22.136845414847187,
+          "reinvestment": 415.84588800000006,
+          "revenue": 8010.240000000001,
+          "workingCapital": 85.82400000000007,
+          "year": 1
+        },
+        {
+          "capex": 88.11264000000001,
+          "capitalizedSbc": 14.9791488,
+          "commissionFunding": 140.98022400000002,
+          "da": 57.273216000000005,
+          "ebit": 616.7884800000002,
+          "economicNetInvestment": 480.6144000000006,
+          "fcff": -18.023040000000492,
+          "growth": 0.1,
+          "loanFunding": 176.22528000000003,
+          "margin": 0.07,
+          "nopat": 462.5913600000001,
+          "physicalNetInvestment": 443.1264768000001,
+          "pv": -13.747289334681254,
+          "reinvestment": 480.6144000000006,
+          "revenue": 8811.264000000001,
+          "workingCapital": 80.10240000000005,
+          "year": 2
+        },
+        {
+          "capex": 95.16165120000002,
+          "capitalizedSbc": 16.177480704,
+          "commissionFunding": 152.25864192000003,
+          "da": 61.855073280000006,
+          "ebit": 713.712384,
+          "economicNetInvestment": 484.6195199999996,
+          "fcff": 50.664768000000436,
+          "growth": 0.08,
+          "loanFunding": 190.32330240000005,
+          "margin": 0.075,
+          "nopat": 535.2842880000001,
+          "physicalNetInvestment": 462.5561149440001,
+          "pv": 33.75122951648998,
+          "reinvestment": 484.6195199999996,
+          "revenue": 9516.165120000001,
+          "workingCapital": 70.49011200000005,
+          "year": 3
+        },
+        {
+          "capex": 100.87135027200002,
+          "capitalizedSbc": 17.148129546240003,
+          "commissionFunding": 161.39416043520004,
+          "da": 65.5663776768,
+          "ebit": 806.9708021760001,
+          "economicNetInvestment": 466.29209088000005,
+          "fcff": 132.54114779136,
+          "growth": 0.06,
+          "loanFunding": 201.74270054400003,
+          "margin": 0.08,
+          "nopat": 605.2281016320001,
+          "physicalNetInvestment": 472.68695384064006,
+          "pv": 77.11320974856606,
+          "reinvestment": 472.68695384064006,
+          "revenue": 10087.135027200002,
+          "workingCapital": 57.096990720000036,
+          "year": 4
+        },
+        {
+          "capex": 105.91491778560003,
+          "capitalizedSbc": 18.005536023552004,
+          "commissionFunding": 169.46386845696006,
+          "da": 68.84469656064002,
+          "ebit": 847.3193422848002,
+          "economicNetInvestment": 201.7427005440004,
+          "fcff": 148.68437030092787,
+          "growth": 0.05,
+          "loanFunding": 211.82983557120005,
+          "margin": 0.08,
+          "nopat": 635.4895067136001,
+          "physicalNetInvestment": 486.80513641267225,
+          "pv": 75.55059422228193,
+          "reinvestment": 486.80513641267225,
+          "revenue": 10591.491778560003,
+          "workingCapital": 50.4356751360001,
+          "year": 5
+        },
+        {
+          "capex": 110.68108908595202,
+          "capitalizedSbc": 18.815785144611844,
+          "commissionFunding": 151.08814064332802,
+          "da": 71.94270790586882,
+          "ebit": 885.4487126876162,
+          "economicNetInvestment": 190.64685201408037,
+          "fcff": 221.59983874000903,
+          "growth": 0.045000000000000005,
+          "loanFunding": 186.18267580416006,
+          "margin": 0.08,
+          "nopat": 664.0865345157122,
+          "physicalNetInvestment": 442.48669577570314,
+          "pv": 98.34143018321132,
+          "reinvestment": 442.48669577570314,
+          "revenue": 11068.108908595203,
+          "workingCapital": 47.661713003519985,
+          "year": 6
+        },
+        {
+          "capex": 115.1083326493901,
+          "capitalizedSbc": 19.568416550396318,
+          "commissionFunding": 129.6615813507023,
+          "da": 74.82041622210356,
+          "ebit": 920.8666611951209,
+          "economicNetInvestment": 177.0897425375233,
+          "fcff": 299.5855092451968,
+          "growth": 0.04,
+          "loanFunding": 157.2741366883779,
+          "margin": 0.08,
+          "nopat": 690.6499958963407,
+          "physicalNetInvestment": 391.06448665114385,
+          "pv": 116.11341447208663,
+          "reinvestment": 391.06448665114385,
+          "revenue": 11510.83326493901,
+          "workingCapital": 44.272435634380784,
+          "year": 7
+        },
+        {
+          "capex": 119.13712429211876,
+          "capitalizedSbc": 20.253311129660187,
+          "commissionFunding": 104.114979139886,
+          "da": 77.43913078987718,
+          "ebit": 953.09699433695,
+          "economicNetInvestment": 161.1516657091458,
+          "fcff": 384.72940876878084,
+          "growth": 0.035,
+          "loanFunding": 123.73913678485751,
+          "margin": 0.08,
+          "nopat": 714.8227457527125,
+          "physicalNetInvestment": 330.0933369839317,
+          "pv": 130.23013528141627,
+          "reinvestment": 330.0933369839317,
+          "revenue": 11913.712429211875,
+          "workingCapital": 40.287916427286476,
+          "year": 8
+        },
+        {
+          "capex": 122.71123802088232,
+          "capitalizedSbc": 20.860910463549992,
+          "commissionFunding": 73.61460662938819,
+          "da": 79.7623047135735,
+          "ebit": 981.6899041670586,
+          "economicNetInvestment": 142.96454915054255,
+          "fcff": 478.556820402036,
+          "growth": 0.030000000000000002,
+          "loanFunding": 84.54502003537522,
+          "margin": 0.08,
+          "nopat": 736.2674281252939,
+          "physicalNetInvestment": 257.7106077232579,
+          "pv": 141.47644229976746,
+          "reinvestment": 257.7106077232579,
+          "revenue": 12271.123802088232,
+          "workingCapital": 35.74113728763569,
+          "year": 9
+        },
+        {
+          "capex": 125.77901897140437,
+          "capitalizedSbc": 21.38243322513874,
+          "commissionFunding": 37.618501064386614,
+          "da": 81.75636233141283,
+          "ebit": 1006.232151771235,
+          "economicNetInvestment": 122.71123802088218,
+          "fcff": 581.9210411979896,
+          "growth": 0.025,
+          "loanFunding": 39.051672195699275,
+          "margin": 0.08,
+          "nopat": 754.6741138284262,
+          "physicalNetInvestment": 172.75307263043663,
+          "pv": 150.24817101873222,
+          "reinvestment": 172.75307263043663,
+          "revenue": 12577.901897140437,
+          "workingCapital": 30.677809505220466,
+          "year": 10
+        }
+      ],
+      "scenario": "bear",
+      "selectedLiquidBridgeCoversModeledDeficit": true,
+      "shares": 606.4859971711456,
+      "terminal": {
+        "commissionStockYear10": 1542.3585436398512,
+        "economicNetInvestment": 128.92349444568947,
+        "fcff": 596.4690672279391,
+        "loanStockYear10": 1601.1185600236702,
+        "nopat": 773.5409666741368,
+        "physicalNetInvestment": 177.07189944619768,
+        "pv": 1283.3697941183373,
+        "reinvestment": 177.07189944619768,
+        "revenue": 12892.349444568947,
+        "value": 4970.575560232826
+      },
+      "terminalPvFraction": 0.6198924879655965
+    },
+    "bull": {
+      "assumptions": {
+        "capex": 0.01,
+        "capitalizedSbc": 0.0017,
+        "commissionFunding": 0.01,
+        "da": 0.0065,
+        "discount": 0.105,
+        "growth": [
+          0.24,
+          0.22,
+          0.2,
+          0.18,
+          0.16
+        ],
+        "loanFunding": 0.01,
+        "margins": [
+          0.095,
+          0.115,
+          0.135,
+          0.155,
+          0.17
+        ],
+        "roic": 0.25,
+        "tax": 0.25,
+        "terminalGrowth": 0.03,
+        "workingCapital": 0.1
+      },
+      "bridge": 1365,
+      "conditionalResidualPerShare": 33.666303035967495,
+      "enterpriseValue": 19053.141367834713,
+      "peakCumulativeCashDeficit": 939.3764052479997,
+      "rows": [
+        {
+          "capex": 88.6848,
+          "capitalizedSbc": 15.076415999999998,
+          "commissionFunding": 88.6848,
+          "da": 57.64511999999999,
+          "ebit": 842.5056,
+          "economicNetInvestment": 1003.5167999999999,
+          "fcff": -371.6375999999999,
+          "growth": 0.24,
+          "loanFunding": 88.6848,
+          "margin": 0.095,
+          "nopat": 631.8792,
+          "physicalNetInvestment": 395.133696,
+          "pv": -336.32361990950216,
+          "reinvestment": 1003.5167999999999,
+          "revenue": 8868.48,
+          "workingCapital": 171.64799999999997,
+          "year": 1
+        },
+        {
+          "capex": 108.195456,
+          "capitalizedSbc": 18.393227519999996,
+          "commissionFunding": 108.195456,
+          "da": 70.3270464,
+          "ebit": 1244.247744,
+          "economicNetInvestment": 1205.226432,
+          "fcff": -272.040624,
+          "growth": 0.22,
+          "loanFunding": 108.195456,
+          "margin": 0.115,
+          "nopat": 933.185808,
+          "physicalNetInvestment": 467.75910911999995,
+          "pv": -222.7969320857476,
+          "reinvestment": 1205.226432,
+          "revenue": 10819.5456,
+          "workingCapital": 195.10656,
+          "year": 2
+        },
+        {
+          "capex": 129.8345472,
+          "capitalizedSbc": 22.071873024,
+          "commissionFunding": 129.8345472,
+          "da": 84.39245568,
+          "ebit": 1752.7663872,
+          "economicNetInvestment": 1525.5559296000001,
+          "fcff": -210.98113920000014,
+          "growth": 0.2,
+          "loanFunding": 129.8345472,
+          "margin": 0.135,
+          "nopat": 1314.5747904,
+          "physicalNetInvestment": 543.573970944,
+          "pv": -156.37121078361128,
+          "reinvestment": 1525.5559296000001,
+          "revenue": 12983.45472,
+          "workingCapital": 216.39091200000004,
+          "year": 3
+        },
+        {
+          "capex": 153.204765696,
+          "capitalizedSbc": 26.044810168319998,
+          "commissionFunding": 153.204765696,
+          "da": 99.5830977024,
+          "ebit": 2374.673868288,
+          "economicNetInvestment": 1865.7224432639996,
+          "fcff": -84.71704204799971,
+          "growth": 0.18,
+          "loanFunding": 153.204765696,
+          "margin": 0.155,
+          "nopat": 1781.0054012159999,
+          "physicalNetInvestment": 619.77819451392,
+          "pv": -56.82267457643213,
+          "reinvestment": 1865.7224432639996,
+          "revenue": 15320.4765696,
+          "workingCapital": 233.70218495999998,
+          "year": 4
+        },
+        {
+          "capex": 177.71752820735998,
+          "capitalizedSbc": 30.211979795251192,
+          "commissionFunding": 177.71752820735998,
+          "da": 115.51639333478398,
+          "ebit": 3021.19797952512,
+          "economicNetInvestment": 1939.5723337113595,
+          "fcff": 326.32615093248023,
+          "growth": 0.16,
+          "loanFunding": 177.71752820735998,
+          "margin": 0.17,
+          "nopat": 2265.8984846438398,
+          "physicalNetInvestment": 692.9757961961469,
+          "pv": 198.07993658973334,
+          "reinvestment": 1939.5723337113595,
+          "revenue": 17771.752820735997,
+          "workingCapital": 245.1276251135998,
+          "year": 5
+        },
+        {
+          "capex": 201.5316769871462,
+          "capitalizedSbc": 34.26038508781485,
+          "commissionFunding": 186.72921579208702,
+          "da": 130.99559004164502,
+          "ebit": 3426.0385087814857,
+          "economicNetInvestment": 1214.521587769097,
+          "fcff": 1355.007293817017,
+          "growth": 0.134,
+          "loanFunding": 180.72601579208703,
+          "margin": 0.17,
+          "nopat": 2569.528881586114,
+          "physicalNetInvestment": 710.3931914153524,
+          "pv": 744.3341842555049,
+          "reinvestment": 1214.521587769097,
+          "revenue": 20153.16769871462,
+          "workingCapital": 238.14148779786228,
+          "year": 6
+        },
+        {
+          "capex": 223.29709810175802,
+          "capitalizedSbc": 37.96050667729886,
+          "commissionFunding": 183.1556835781381,
+          "da": 145.1431137661427,
+          "ebit": 3796.0506677298868,
+          "economicNetInvestment": 1110.0364768452037,
+          "fcff": 1737.0015239522113,
+          "growth": 0.108,
+          "loanFunding": 173.21954533813812,
+          "margin": 0.17,
+          "nopat": 2847.038000797415,
+          "physicalNetInvestment": 690.1439310753086,
+          "pv": 863.503800456001,
+          "reinvestment": 1110.0364768452037,
+          "revenue": 22329.709810175802,
+          "workingCapital": 217.6542111461182,
+          "year": 7
+        },
+        {
+          "capex": 241.6074601461022,
+          "capitalizedSbc": 41.07326822483737,
+          "commissionFunding": 161.66186628494128,
+          "da": 157.04484909496642,
+          "ebit": 4107.3268224837375,
+          "economicNetInvestment": 933.8284642615527,
+          "fcff": 2146.6666526012505,
+          "growth": 0.082,
+          "loanFunding": 149.8568508435333,
+          "margin": 0.17,
+          "nopat": 3080.495116862803,
+          "physicalNetInvestment": 620.2582168478896,
+          "pv": 965.7537109729292,
+          "reinvestment": 933.8284642615527,
+          "revenue": 24160.74601461022,
+          "workingCapital": 183.10362044344186,
+          "year": 8
+        },
+        {
+          "capex": 255.13747791428395,
+          "capitalizedSbc": 43.37337124542827,
+          "commissionFunding": 117.47413263443877,
+          "da": 165.83936064428457,
+          "ebit": 4337.337124542828,
+          "economicNetInvestment": 690.0309061772714,
+          "fcff": 2562.9719372298496,
+          "growth": 0.055999999999999994,
+          "loanFunding": 106.19598558951171,
+          "margin": 0.17,
+          "nopat": 3253.002843407121,
+          "physicalNetInvestment": 491.64178442119567,
+          "pv": 1043.4781241606076,
+          "reinvestment": 690.0309061772714,
+          "revenue": 25513.747791428395,
+          "workingCapital": 135.30017768181753,
+          "year": 9
+        },
+        {
+          "capex": 262.79160225171245,
+          "capitalizedSbc": 44.67457238279112,
+          "commissionFunding": 48.019739861788956,
+          "da": 170.8145414636131,
+          "ebit": 4467.457238279112,
+          "economicNetInvestment": 390.36034120885233,
+          "fcff": 2960.2325875004817,
+          "growth": 0.03,
+          "loanFunding": 40.12906483999891,
+          "margin": 0.17,
+          "nopat": 3350.592928709334,
+          "physicalNetInvestment": 301.34168124696345,
+          "pv": 1090.6943288737593,
+          "reinvestment": 390.36034120885233,
+          "revenue": 26279.160225171247,
+          "workingCapital": 76.54124337428512,
+          "year": 10
+        }
+      ],
+      "scenario": "bull",
+      "selectedLiquidBridgeCoversModeledDeficit": true,
+      "shares": 606.4859971711456,
+      "terminal": {
+        "commissionStockYear10": 1648.6777352547542,
+        "economicNetInvestment": 414.1332859884737,
+        "fcff": 3036.9774305821406,
+        "loanStockYear10": 1377.7645595066292,
+        "nopat": 3451.1107165706144,
+        "physicalNetInvestment": 310.3819316843725,
+        "pv": 14919.61171988147,
+        "reinvestment": 414.1332859884737,
+        "revenue": 27067.535031926385,
+        "value": 40493.03240776188
+      },
+      "terminalPvFraction": 0.783052591268156
+    }
+  },
+  "inverseEfficiencyOnly": {
+    "bracket": [
+      -0.05,
+      0.5
+    ],
+    "efficiencyMargin": true,
+    "firstYearFcff": 1052.7296340914556,
+    "marginShiftPp": 14.237082309399945,
+    "monotonicGridChecks": 1000,
+    "residualError": 0.0,
+    "terminalMargin": 0.26737082309399945,
+    "year10Revenue": 20617.604817188585
+  },
+  "inverseFinanced": {
+    "bracket": [
+      -0.05,
+      0.5
+    ],
+    "efficiencyMargin": false,
+    "firstYearFcff": -6965.910493070929,
+    "marginShiftPp": 25.95388427895433,
+    "monotonicGridChecks": 1000,
+    "residualError": 7.105427357601002e-15,
+    "terminalMargin": 0.3845388427895433,
+    "year10Revenue": 20617.604817188585
+  },
+  "sensitivities": {
+    "capitalizedSbc": [
+      {
+        "input": 0,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.0017,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.003,
+        "value": 14.59138831617123
+      }
+    ],
+    "commissionFunding": [
+      {
+        "input": 0.006,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.012,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.018,
+        "value": 14.550514418639771
+      }
+    ],
+    "discount": [
+      {
+        "input": 0.105,
+        "value": 19.864226176828293
+      },
+      {
+        "input": 0.115,
+        "value": 16.89609998582264
+      },
+      {
+        "input": 0.125,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.135,
+        "value": 12.781060513213372
+      },
+      {
+        "input": 0.145,
+        "value": 11.312090081074997
+      }
+    ],
+    "historicalNolUpperBound": {
+      "amount": 334.53,
+      "value": 15.151654510806928
+    },
+    "legalCashStress": [
+      {
+        "input": 0,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 100,
+        "value": 14.435182898887124
+      },
+      {
+        "input": 300,
+        "value": 14.105414361884016
+      },
+      {
+        "input": 600,
+        "value": 13.610761556379353
+      }
+    ],
+    "legalMarginMinus100bp": 13.782557720697087,
+    "loanFunding": [
+      {
+        "input": 0,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.007,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.014,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.025,
+        "value": 14.349675723712851
+      }
+    ],
+    "operatingCashReserve": [
+      {
+        "input": 300,
+        "value": 14.929835704391786
+      },
+      {
+        "input": 500,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 800,
+        "value": 14.105414361884016
+      }
+    ],
+    "persistentLoansAndCommissions": null,
+    "roic": [
+      {
+        "input": 0.15,
+        "value": 11.513648408973141
+      },
+      {
+        "input": 0.2,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.25,
+        "value": 16.092579306091213
+      }
+    ],
+    "shares": [
+      {
+        "input": 595,
+        "value": 14.881909739125087
+      },
+      {
+        "input": 606.4859971711456,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 614,
+        "value": 14.421394616904603
+      }
+    ],
+    "tax": [
+      {
+        "input": 0.21,
+        "value": 15.258701668846944
+      },
+      {
+        "input": 0.25,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.28,
+        "value": 14.106083877443792
+      }
+    ],
+    "terminalGrowth": [
+      {
+        "input": 0.02,
+        "value": 13.876209131074978
+      },
+      {
+        "input": 0.025,
+        "value": 14.278054880354938
+      },
+      {
+        "input": 0.03,
+        "value": 14.600067167388678
+      },
+      {
+        "input": 0.035,
+        "value": 14.953158132834332
+      }
+    ]
+  }
+}
