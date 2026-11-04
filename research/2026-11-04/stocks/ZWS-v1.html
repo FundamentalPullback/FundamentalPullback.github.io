@@ -1,0 +1,505 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ZWS · Stage 3 investigado · capital y perímetro condicionados · Esperar precio</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/ZWS">← ZWS profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Stage 3 investigado · capital y perímetro condicionados</span><span class="tag deferred">Esperar precio</span><span class="tag">No entry approved</span></div><h1 id="zws-a203-investigación-del-4-de-noviembre-de-2026">ZWS · A203 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>Nuevo FCFF condicionado: central 20,28 USD frente al cierre 44,12; escenarios 12,40–35,53. Mejora operativa real, con devolución arancelaria normalizada y reinversión financiada. Capital contractual, garantías y flujos discontinuados conservan límites. Esperar precio o evidencia; sin entrada.</strong></p>
+<p>New conditional FCFF: central $20.28 versus $44.12 close; scenarios $12.40–35.53. Real operating improvement, with tariff refunds normalized and growth funded. Covenant cash, warranties and discontinued cash flows remain qualified. Wait for price or evidence; no entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/ZWS.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-27, 49.15 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 44.12 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 2026-11-04 16:40 UTC.</p>
+<p>Se conserva A107 y sus valores FCFE 20,35/34,71/53,15 USD. La reconstrucción de esos supuestos coincide redondeada, pero no se recuperó el archivo original. El nuevo FCFF no se promedia con el anterior ni convierte el escenario favorable en un techo garantizado.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="zws-calidad-operativa-y-reconstrucción-fcff">ZWS — calidad operativa y reconstrucción FCFF</h1>
+<p>Corte: 4 noviembre 2026, 16:40 UTC. Precio: cierre regular 3 noviembre <strong>44,12 USD</strong>, verificado en históricos; no confundir44,67 del2nov con3nov ni usar4nov intradía. Datos en millones USD excepto EPS/precio; acciones diluidas en millones.</p>
+<p><strong>Conclusión: buena evolución, esperar precio o evidencia.</strong> Nuevo FCFF central <strong>20,28</strong>, adverso <strong>12,40</strong>, favorable <strong>35,53</strong>. Son escenarios propios, no objetivos de consenso ni límites garantizados. La valoración es prudente y sensible a la reinversión y a conservar amortización de adquisiciones. El favorable tampoco respalda44,12 bajo estos supuestos. No entrada ni aprobación Stage3.5; el antiguo34,71 queda como historia de otro método, no promedio con el nuevo.</p>
+<h2 id="negocio-y-resultados-que-importan">1. Negocio y resultados que importan</h2>
+<p>Zurn Elkay ofrece equipos de control y seguridad del agua, flujo, higiene y agua filtrada. Productos especificados por profesionales, marcas, distribución y base instalada apoyan la calidad; construcción, inversión de clientes, promociones, competencia y concentración de distribución impiden tratarlos como suscripciones garantizadas. Su sistema operativo y productividad aparecen en los márgenes, pero la integración y las mejoras recurrentes tienen costes.</p>
+<p>Q3 ventas495,1 vs455,4: +8,72%, con7% de crecimiento core y aproximadamente2% adquirido comunicados. Neto de continuadas76,1 vs59,6, EPS0,45 vs0,35. EBIT108,2 vs77,5, pero incluye1,5 de devolución arancelaria: sin ella106,7, +37,68%. EBITDA ajustado140,1 y28,3% de ventas no es EBIT distribuible; excluye SBC y otros costes. No se utiliza como flujo final del DCF.</p>
+<p>Guía Q4 ventas430–437 y EBITDA ajustado120–123; FCF anual superior a350 excluyendo efecto neto de reembolsos. No se confunde guía no GAAP con beneficio GAAP. Resultados27oct y llamada28oct ya ocurrieron: retirar la etiqueta histórica de evento pendiente, pero no atribuir conclusiones a una transcripción no revisada.</p>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026067577/zws-20260930.htm">q3</a>, <a href="https://investors.zurnelkay.com/news/news-details/2026/Zurn-Elkay-Water-Solutions-Reports-Third-Quarter-2026-Financial-Results/default.aspx">release</a>.</p>
+<h2 id="tres-años-cuatro-trimestres-y-ttm">2. Tres años, cuatro trimestres y TTM</h2>
+<p>Ejercicios naturales. Beneficio/EPS de operaciones continuadas; CFO consolidado incluye flujos de discontinuadas no desglosados por el emisor. No se inventa un flujo puro del perímetro retenido. Q4EPS/acciones del comunicado, no resta de EPS acumulados. Otros importes Q4 y flujos trimestrales se calculan por diferencias FY/YTD.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto continuo</th>
+<th>EPS continuo</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td>1,530.500</td>
+<td>191.400</td>
+<td>104.200</td>
+<td>0.590</td>
+<td>253.900</td>
+<td>21.300</td>
+<td>40.000</td>
+<td>192.600</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td>1,566.500</td>
+<td>244.600</td>
+<td>158.900</td>
+<td>0.910</td>
+<td>293.500</td>
+<td>21.800</td>
+<td>37.900</td>
+<td>233.800</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td>1,695.900</td>
+<td>278.900</td>
+<td>192.400</td>
+<td>1.120</td>
+<td>346.500</td>
+<td>29.900</td>
+<td>40.600</td>
+<td>276.000</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto continuo</th>
+<th>EPS continuo</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q4 FY2025</td>
+<td>407.200</td>
+<td>60.400</td>
+<td>41.700</td>
+<td>0.240</td>
+<td>91.700</td>
+<td>9.200</td>
+<td>11.500</td>
+<td>71.000</td>
+</tr>
+<tr class="even">
+<td>Q1 FY2026</td>
+<td>433.000</td>
+<td>82.100</td>
+<td>58.900</td>
+<td>0.350</td>
+<td>46.100</td>
+<td>3.400</td>
+<td>11.700</td>
+<td>31.000</td>
+</tr>
+<tr class="odd">
+<td>Q2 FY2026</td>
+<td>491.000</td>
+<td>152.300</td>
+<td>112.500</td>
+<td>0.670</td>
+<td>162.300</td>
+<td>2.900</td>
+<td>9.200</td>
+<td>150.200</td>
+</tr>
+<tr class="even">
+<td>Q3 FY2026</td>
+<td>495.100</td>
+<td>108.200</td>
+<td>76.100</td>
+<td>0.450</td>
+<td>112.200</td>
+<td>9.800</td>
+<td>10.600</td>
+<td>91.800</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TTM septiembre</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Neto continuo</th>
+<th>CFO</th>
+<th>Capex</th>
+<th>SBC</th>
+<th>FCF</th>
+<th>FCF−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TTM September 2025</td>
+<td>1,659.400</td>
+<td>267.800</td>
+<td>186.800</td>
+<td>318.400</td>
+<td>29.800</td>
+<td>37.800</td>
+<td>288.600</td>
+<td>250.800</td>
+</tr>
+<tr class="even">
+<td>TTM September 2026</td>
+<td>1,826.300</td>
+<td>403.000</td>
+<td>289.200</td>
+<td>412.300</td>
+<td>25.300</td>
+<td>43.000</td>
+<td>387.000</td>
+<td>344.000</td>
+</tr>
+</tbody>
+</table></div>
+<p>TTM ventas+10,06%, EBIT+50,49%, neto continuo+54,82%, CFO+29,49%, FCF+34,10%, SBC+13,76%, FCF−SBC+37,16%. La normalización reduce sensiblemente ese ritmo, pero no borra toda la mejora. En9M, cuentas por cobrar consumen76,6 frente29,4; proveedores aportan22,8 frente10,3. La mayor caja no autoriza perpetuar cobros/impuestos favorables.</p>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026006372/zws-20251231.htm">k25</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828025046770/zws-20250930.htm">q3prev</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026026281/zws-20260331.htm">q1</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026050162/zws-20260630.htm">q2</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026067577/zws-20260930.htm">q3</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026005012/ex991earningsrelease123125.htm">q4</a>.</p>
+<h2 id="aranceles-lifo-pensiones-y-caja-normalizada">3. Aranceles, LIFO, pensiones y caja normalizada</h2>
+<p>Devoluciones IEEPA recibidas y reconocidas:49,1 en9M, de ellas1,5 enQ3. No se reconocen recuperaciones adicionales aún inciertas. EBITTTM403,0−49,1=<strong>353,9</strong>, margen19,38%; frente267,8 delTTM previo, +32,15%. Se conserva SBC43,0 y reestructuración8,3: el emisor espera seguir incurriendo en iniciativas de eficiencia. El beneficio por liquidación de pensión estadounidense de2025 fue no operativo: no se resta de nuevo del EBIT.</p>
+<p>FCFTTM reportado387,0. Reembolso de caja <strong>neto de impuestos pagados40,4</strong>, no49,1: normalizado346,6; menosSBC43,0 = <strong>303,6</strong>, frente250,8 previo (+21,05%). El comunicado permite reconciliar directamente264,1 de FCF9M ajustado +82,5 deQ4FY25. No deducir49,1 otra vez del flujo ni de caja final. EnQ3, CFO112,2−capex9,8=102,4 reportado; la conciliación añade7,2 para excluir el efecto neto negativo del calendario de devolución/impuestos, dando109,6. No presentar109,6 como CFO−capex sin ajuste.</p>
+<p>LIFO merece atención: ajusteTTM pasa de18,2 del9M previo y20,4FY25 a−2,2 en9Mactual, conTTM neto0. Mejora frente al periodo anterior no se convierte en otra devolución a sumar. El margen futuro se fija sobre EBIT normalizado con sus costes, no sobre EBITDA ajustado28,3%. Neto de discontinuadasTTM1,4 se excluye del beneficio operativo; sus flujos no se separan del CFO publicado. Por eso303,6 sigue siendo proxy, no flujo continuo certificado al céntimo.</p>
+<p>D&amp;A85,9 = depreciación26,7 + amortización59,2. El modelo devuelve D&amp;A económica1,4% de ventas, próxima a depreciación1,46%, no todos los intangibles. Capex2% supera1,39%TTM. Conservar amortización de adquisiciones es prudente: presupone un coste económico de renovar esos activos y no perpetúa adquisiciones gratis. Se presenta sensibilidad explícita retirando esa carga proporcional, no afirmación de que toda amortización sea caja recurrente.</p>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026067577/zws-20260930.htm">q3</a>, <a href="https://investors.zurnelkay.com/news/news-details/2026/Zurn-Elkay-Water-Solutions-Reports-Third-Quarter-2026-Financial-Results/default.aspx">release</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026006372/zws-20251231.htm">k25</a>.</p>
+<h2 id="intellihot-y-capital">4. Intellihot y capital</h2>
+<p>Intellihot se adquirió21julio; resultados incluidos después20julio. Contraprestación neta de efectivo adquirido107,3, caja adquirida2,1, desembolso bruto implícito109,4. No volver a restar107,3 de la caja de septiembre. PPA preliminar: goodwill55,0 no deducible, intangibles44,5, activo fiscal8,5, otros activos netos12,7 y garantías adquiridas13,4. La compra no aporta un año entero al TTM, y la senda futura permite maduración limitada; no asume nuevas compras sin inversión. No se publica proforma completo porque el emisor no lo considera material.</p>
+<p>Deuda contable500,3 incluye term loan477,4 neto de costes2,9 y finance leases22,9. Deuda nominal usada <strong>503,2</strong>:480,3 de préstamo más22,9 de leasing financiero. No usar valor razonable507,5 ni deducir dos veces deuda corriente. Alquiler operativo sigue como gasto, sin restar otra vez pasivo completo. Revolver no dispuesto es disponibilidad, no caja.</p>
+<p>Caja reportada307,1, pero la definición contractual de caja elegible es269,5. El puente usa269,5 por prudencia y señala recorte37,6: <strong>no se afirma que los37,6 sean jurídicamente efectivo restringido</strong>, pues el balance muestra caja ordinaria y la diferencia depende de la definición contractual. Sensibilidad con caja íntegra visible. Además se retienen100 de caja operativa como hipótesis.</p>
+<p>Otras deducciones: prestaciones10,4 (corriente1,1 + no corriente9,3), déficit neto de remuneración diferida5,2 (obligaciones26,3 menos activos21,1), impuesto incierto0,7, indemnidades fiscales8,3 y reserva de garantías adquiridas13,4. Las indemnidades figuran como obligación corriente separada enNota12: se deducen una vez, sin presumir que estén incluidas en0,7 ni asignarles un origen específico no probado. Excluir8,3 aumentaría0,0494 USD por acción; sensibilidad visible. Esa última conserva el importe inicial de la compra, no un saldo actual separado certificado: parte de los pagos2,0 agregados podría corresponderle. Retirar toda la reserva es sensibilidad, no corrección factual. La obligación total de garantía23,0 no se deduce entera además de gastos futuros normales. Los activos del trust no se añaden como caja libre; se usan solo para compensar su obligación específica.</p>
+<p>Puente neto <strong>−371,7</strong>. No se resta todo impuesto diferido166,9 como deuda inmediata además de impuestos futuros normalizados, ni se monetizan activos fiscales. El plan estadounidense ya liquidado no recibe una segunda provisión;10,4 refleja obligaciones que permanecen. Rentabilidad futura presupone costes laborales normales, no liberación de reservas. Reestructuración devengada1,6 y costes similares se conservan en margen y financiación operativa; no se suman más ajustes favorables.</p>
+<p>Denominador168,105 M de acciones diluidasQ3 fijo. No presumir recompras futuras ni reducirlo por la diferencia con165,383297 M de acciones efectivas al cierre. Nota7 excluye0,1 M de acciones antidilutivas enQ3; la media diluida no garantiza ausencia de dilución futura. Sensibilidad+3%. La operación de adquisición y la recompra ya efectuadas están reflejadas en los saldos, no se duplican como usos posteriores.</p>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026067577/zws-20260930.htm">q3</a>.</p>
+<h2 id="modelo-fcff-de-diez-años">5. Modelo FCFF de diez años</h2>
+<p>Partida: ventasTTM1.826,3. Año1 son doce meses posteriores al balance de septiembre; no todo2026 mezclando9Mrealizados con futuro. Crecimiento6/6/5/4/4%; transición lineal años6–10 a2,5%. La guíaQ4 no se annualiza mecánicamente. Margen20/20,5/21/21/21%, después21%, sobre19,38%TTM sin reembolso. SBC, coste de amortización conservado y reestructuración recurrente siguen dentro.</p>
+<p>Impuesto25%, sensibilidad22/25/28%; frente tasa9M24,9%, no reducción gratuita. NOPAT=EBIT×75%. Capex2%, D&amp;A1,4%, ΔNWC15% de incremento de ventas. Inversión explícita=capex−D&amp;A+ΔNWC. Suelo económico=NOPAT×crecimiento de ventas/ROIC15%; se usa mayor de ambas años1–5 y transición20/40/60/80/100% a regla económica años6–10. ROIC15% es supuesto de financiación del crecimiento, no retorno incremental medido. Proxy histórico13,64%: NOPAT normalizado265,425 dividido por capital medio1.946,45 (patrimonio+deuda nominal−caja reportada+reserva operativa100 en ambos cierres). Incluye goodwill; el desfase entre compra completa deIntellihot y beneficio parcial limita la comparación. La expansión de margen se supone sobre capacidad existente; si exige más capital, el valor baja.</p>
+<p>Año1: NOPAT290,382, D&amp;A27,102, capex38,718, ΔNWC16,437; FCFF directo262,330. Reserva adicional88,101 lleva reinversión total116,153 y FCFF174,229. El campo additional_reinvestment_reserve permite comprobar exactamenteFCFF=NOPAT+D&amp;A−capex−ΔNWC−reserva. No esconder esa prudencia dentro de un margen de seguridad posterior.</p>
+<p>Terminal reinversiónNOPAT×2,5%/15%=16,67%NOPAT. WACC9,4%USD: Treasury4,91%2nov + beta supuesta1,05×prima supuesta4,5% daKe9,635%; financiación95%equity/5%deuda, coste de deuda supuesto5,9%, impuesto25% da9,3745%, redondeado9,4. Pesos y beta son hipótesis, no medición de mercado. La deuda nominal se resta una vez y el FCFF excluye intereses.</p>
+<p>Fuentes: <a href="https://www.federalreserve.gov/releases/h15/">rf</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026067577/zws-20260930.htm">q3</a>.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>USD</th>
+<th>Cambios respecto a base</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverso</td>
+<td>12,40</td>
+<td>Crecimiento primeros5 −3pp; margen10años+terminal −3pp; WACC10,4%, g1,5%, ROIC12%</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td>20,28</td>
+<td>Senda explicada; WACC9,4%, g2,5%, ROIC15%</td>
+</tr>
+<tr class="odd">
+<td>Favorable</td>
+<td>35,53</td>
+<td>Crecimiento primeros5 +3pp; margen10años+terminal +2,5pp; WACC8,4%, g3%, ROIC20%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Peso terminal 57.01% delEV central. Precio44,12 requiere, por separado, +24.33pp de crecimiento en primeros5 o +22.19pp de margen en10años+terminal, manteniendo el resto. El primer caso implica alrededor30,33% de crecimiento inicial y puede producir FCFF inicial negativo por la inversión exigida: requiere financiación, no un escenario viable ya demostrado. La alternativa de margen implica aproximadamente42,19% inicial/43,19%terminal, muy por encima de lo observado. El ejercicio mide exigencia, no pronostica.</p>
+<p>Sin suelo económico, sensibilidad 22.57; eliminar proporcionalmente toda amortizaciónTTM59,2 de los márgenes, manteniendo reinversión, 23.76. Son supuestos menos prudentes separados, no recomendación de eliminar costes ni autorización para ignorar reposición. Dilución+3%: 19.69.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC</th>
+<th>g</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8.4%</td>
+<td>1.5%</td>
+<td>22.72</td>
+</tr>
+<tr class="even">
+<td>8.4%</td>
+<td>2.0%</td>
+<td>23.50</td>
+</tr>
+<tr class="odd">
+<td>8.4%</td>
+<td>2.5%</td>
+<td>24.39</td>
+</tr>
+<tr class="even">
+<td>8.4%</td>
+<td>3.0%</td>
+<td>25.44</td>
+</tr>
+<tr class="odd">
+<td>8.9%</td>
+<td>1.5%</td>
+<td>20.87</td>
+</tr>
+<tr class="even">
+<td>8.9%</td>
+<td>2.0%</td>
+<td>21.48</td>
+</tr>
+<tr class="odd">
+<td>8.9%</td>
+<td>2.5%</td>
+<td>22.17</td>
+</tr>
+<tr class="even">
+<td>8.9%</td>
+<td>3.0%</td>
+<td>22.98</td>
+</tr>
+<tr class="odd">
+<td>9.4%</td>
+<td>1.5%</td>
+<td>19.25</td>
+</tr>
+<tr class="even">
+<td>9.4%</td>
+<td>2.0%</td>
+<td>19.73</td>
+</tr>
+<tr class="odd">
+<td>9.4%</td>
+<td>2.5%</td>
+<td>20.28</td>
+</tr>
+<tr class="even">
+<td>9.4%</td>
+<td>3.0%</td>
+<td>20.90</td>
+</tr>
+<tr class="odd">
+<td>9.9%</td>
+<td>1.5%</td>
+<td>17.83</td>
+</tr>
+<tr class="even">
+<td>9.9%</td>
+<td>2.0%</td>
+<td>18.21</td>
+</tr>
+<tr class="odd">
+<td>9.9%</td>
+<td>2.5%</td>
+<td>18.65</td>
+</tr>
+<tr class="even">
+<td>9.9%</td>
+<td>3.0%</td>
+<td>19.13</td>
+</tr>
+<tr class="odd">
+<td>10.4%</td>
+<td>1.5%</td>
+<td>16.57</td>
+</tr>
+<tr class="even">
+<td>10.4%</td>
+<td>2.0%</td>
+<td>16.88</td>
+</tr>
+<tr class="odd">
+<td>10.4%</td>
+<td>2.5%</td>
+<td>17.22</td>
+</tr>
+<tr class="even">
+<td>10.4%</td>
+<td>3.0%</td>
+<td>17.60</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>ROIC</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>12%</td>
+<td>18.70</td>
+</tr>
+<tr class="even">
+<td>15%</td>
+<td>20.28</td>
+</tr>
+<tr class="odd">
+<td>18%</td>
+<td>21.33</td>
+</tr>
+<tr class="even">
+<td>20%</td>
+<td>21.86</td>
+</tr>
+<tr class="odd">
+<td>25%</td>
+<td>22.81</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Impuesto</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>22%</td>
+<td>21.18</td>
+</tr>
+<tr class="even">
+<td>25%</td>
+<td>20.28</td>
+</tr>
+<tr class="odd">
+<td>28%</td>
+<td>19.38</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente: sensibilidad</th>
+<th>USD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>exclude_tax_indemnities</td>
+<td>20.33</td>
+</tr>
+<tr class="even">
+<td>use_full_reported_cash</td>
+<td>20.50</td>
+</tr>
+<tr class="odd">
+<td>remove_acquired_warranty_reserve</td>
+<td>20.36</td>
+</tr>
+<tr class="even">
+<td>cash_reserve50</td>
+<td>20.58</td>
+</tr>
+<tr class="odd">
+<td>cash_reserve150</td>
+<td>19.98</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="por-qué-cambia-a107">6. Por qué cambia A107</h2>
+<p>A107FCFE20,35/34,71/53,15 parte de270/310/350 de caja, crecimiento3/7/10%, Ke10,5/9,5/9%, terminal2/2,5/3%. Recalculando hipótesis divulgadas y168,105 M acciones se obtiene20,34644/34,70513/53,14576: reproduce cifras redondeadas. No se ha recuperado el fichero ejecutable original y no se declara réplica del archivo.</p>
+<p>El antiguo310 de caja inicial implícitamente financiaba crecimiento con un flujo cercano al FCF normalizado actual. El nuevo modelo parte de NOPAT operativo y explicita inversión, fiscalidad, capital y amortización retenida. Es una diferencia metodológica relevante, no deterioro inventado del negocio: la mejora sin reembolso sigue siendo fuerte. No promediar ambos modelos ni conservar34 como orden automática; no hay descuento universal15%.</p>
+<h2 id="par-a.-o.-smith-contraste-delimitado">7. Par A. O. Smith: contraste delimitado</h2>
+<p>AmbosUSGAAP, USD, TTMseptiembre2026 y precios regulares3nov. Acciones diluidasQ3 como proxy de equity:168,105 ZWS y136,097723 AOS. AOSprecio63,84. AOS netoTTM546,2+369,2−420,8=494,6; CFO616,8+429,4−433,7=612,5; capex70,8+33,2−53,2=50,8; SBC13,8+12,7−11,3=15,2. No omitir SBC ni capex.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Ratio reportado</th>
+<th>ZWS</th>
+<th>AOS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PER continuo/reportado</td>
+<td>25.65x</td>
+<td>17.57x</td>
+</tr>
+<tr class="even">
+<td>Precio/FCF</td>
+<td>19.16x</td>
+<td>15.47x</td>
+</tr>
+<tr class="odd">
+<td>Precio/(FCF−SBC)</td>
+<td>21.56x</td>
+<td>15.90x</td>
+</tr>
+</tbody>
+</table></div>
+<p>AOS también reconoce beneficios de devoluciones IEEPA propios que compensan parcialmente acero/flete; su ratio reportado no está limpio de extraordinarios. ZWSprecio/(FCF−SBC−reembolso neto)24,43x; no mezclar ese ratio normalizado con AOS reportado como si ambos ajustes fueran idénticos. AOS tiene mezcla residencial, calentadores, China y márgenes distintos; ZWScrece más y cotiza con prima. No trasladar mecánicamente múltiplo ni sacar mediana de un solo par.</p>
+<p>AOS anunció27oct acuerdo para vender81% de China; prevé clasificar como discontinuada desdeQ4 y reexpresar historia. Los datosTTM de septiembre aquí aún incluyenChina: no añadimos producto de venta ni eliminamos beneficios antes de tener perímetro comparable. ZWSCFO contiene flujos de discontinuadas no desglosados, mientras el neto usado es continuo. Por tanto homogeneidad de fechas/divisa/norma sí, homogeneidad económica perfecta no. Contraste de plausibilidad, no valoración del negocio retenido de AOS.</p>
+<p>Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/91142/000009114226000008/aos-20251231.htm">aos_k</a>, <a href="https://www.sec.gov/Archives/edgar/data/91142/000009114226000104/aos-20260930.htm">aos_q</a>, <a href="https://aosmith.gcs-web.com/news-releases/news-release-details/o-smith-reports-third-quarter-2026-results">peer_release</a>, <a href="https://stockanalysis.com/stocks/aos/history/">peer_price</a>, <a href="https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=ZWS%3ANYQ">price</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026067577/zws-20260930.htm">q3</a>.</p>
+<h2 id="seguimiento-riesgos-y-límites">8. Seguimiento, riesgos y límites</h2>
+<p>Confirmaría valor adicional: crecimiento core y margen sin devoluciones, conversión de caja sin devengos persistentes, integración rentable deIntellihot y reinversión menor de la modelizada sin deterioro competitivo. Debilitarían la tesis: menor construcción/demanda, concentración de distribuidores, precio insuficiente ante costes, garantías deIntellihot mayores, nuevos aranceles o adquisiciones de bajo retorno. Calidad de agua y normativa pueden favorecer demanda, pero no se afirma aprobación regulatoria universal ni inmunidad jurídica.</p>
+<p>Pendientes acotados: diferencia contractual de caja37,6, desglose de flujos discontinuados, saldo remanente específico de garantías adquiridas, actualización del PPA y confirmación primaria del próximo anuncio. Q3ya realizado; próxima fecha no confirmada en la fuente de eventos consultada. <strong>Investigación condicionada, no certificación transaccional ni Stage3.5 aprobado.</strong> No modificar posición, stop, lote, scanner o gestión de riesgo por este informe.</p>
+<p>Fuentes: <a href="https://investors.zurnelkay.com/events-and-presentations/default.aspx">events</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026067577/zws-20260930.htm">q3</a>, <a href="https://www.sec.gov/Archives/edgar/data/1439288/000162828026006372/zws-20251231.htm">k25</a>.</p>
+<h2 id="evidencia-exacta-para-pros-y-contras">Evidencia exacta para pros y contras</h2>
+<h3 id="a-favor">A favor</h3>
+<ul>
+<li>Ventas Q3 crecen 8,72% y EBIT TTM sin devolución arancelaria aumenta 32,15%; la mejora operativa no depende solo del extraordinario.</li>
+<li>La caja económica tras SBC y devolución neta suma 303,6 M$, un 21,05% más que el TTM previo.</li>
+<li>La compra de Intellihot amplía la oferta, con desembolso y garantías adquiridas identificados en el puente.</li>
+</ul>
+<h3 id="en-contra">En contra</h3>
+<ul>
+<li>El FCFF central20,28 y favorable35,53 no respaldan44,12 bajo los supuestos de reinversión explicitados.</li>
+<li>El flujo reportado incluye40,4 M$ netos de devolución arancelaria; usar387 como caja recurrente sobrevalora la base.</li>
+<li>Persisten límites en caja contractual, garantías adquiridas y flujos discontinuados; el par AOS tampoco tiene aún el perímetro China reexpresado.</li>
+</ul>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>Q3 sales grew8.72% and TTM EBIT excluding tariff refunds rose32.15%; operating progress is not just a windfall.</li>
+<li>Cash after SBC and net tariff refunds is$303.6m, up21.05% from the prior TTM.</li>
+<li>Intellihot expands the offering, with purchase cash and acquired warranties explicitly identified.</li>
+</ul>
+<h3 id="cons">Cons</h3>
+<ul>
+<li>Central FCFF20.28 and favorable35.53 do not support44.12 under the stated reinvestment assumptions.</li>
+<li>Reported cash includes$40.4m of net tariff refunds; treating387 as recurring cash overstates the starting point.</li>
+<li>Covenant cash, acquired warranties and discontinued cash flows remain qualified; AOS has not yet recast its China perimeter.</li>
+</ul>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/ZWS/ZWS_support.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/ZWS/model.py">Modelo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/ZWS/model.json">Resultados</a></li>
+</ul>
+</main></body></html>
