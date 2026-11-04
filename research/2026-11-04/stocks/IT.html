@@ -1,0 +1,757 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>IT · Stage3.5 waiting · No entry approved</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/IT">← IT profile</a><a href="../index.html">Overnight research</a><a href="../../../#biblioteca">Library</a></nav><p class="eyebrow">A185 · Stage3.5 assessment 2026-11-04 10:28 UTC</p><p><strong>IT · Stage 3.5: awaiting post-earnings structure. No entry approved; quantity 0.</strong> Assessment as of November 4, 2026, 10:28 UTC. The $184.45 observed low is not an operative stop; no buy signal or maximum is approved. The $213.50 premarket print is dated 09:21 UTC and not independently cross-verified.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/IT.html">Open the full IT dossier</a></p>
+<h2 id="dated-correction-a185-november-4-2026">Dated correction: A185, November 4, 2026</h2>
+<p>Updates only <strong>IT</strong> in historical <strong>A153</strong>. The original shared report and unrelated issuer components must remain unchanged.</p>
+<p><strong>Reasonable-price candidate for separate technical review, not entry approval. Central $213.76, alternative calibration $203.44 and recovery $243.96 versus $204.22. Original $188.58 reproduced; return calibration and claims revised. Thin cushion remains; removing excess-cash credit lowers value to $196.05.</strong></p>
+<p>Prepared November4,2026 after10:00UTC. Source cutoff is retained below; later event completion has not been verified.</p>
+<p><strong>Price audit:</strong> November3 scanner $204.22; separately sourced regular close $204.22. Scanner header timezone is not certified.</p>
+<p><strong>Coverage and source limits:</strong> FY2023–FY2025; Q4 2025 and Q1–Q3 2026; September2025/2026 TTM. Raw owner-cash growth normalized for tax timing and capex; capital claims estimated explicitly.</p>
+<p><strong>Next review:</strong> Proceed only to separate Stage3.5 technical, event, execution and portfolio assessment. No stop, buy ceiling, size or order authorized.</p>
+<p><strong>No entry approved.</strong> No new position, quantity, buy ceiling or stop. No universal15/20/25% valuation-discount rule.</p>
+<hr />
+<h1 id="gartner-it-completed-stage-3-remediation-and-dated-valuation-revision">Gartner (IT): completed Stage 3 remediation and dated valuation revision</h1>
+<p><strong>4 November 2026, before the US market opens. USD millions except per-share amounts.</strong> Research cutoff: November 3 SEC 10-Q, earnings release and supplement, with November 3 closing quotations. This revision supersedes A153’s categorical valuation-based refusal to consider Stage 3.5. It does <strong>not</strong> approve an entry, establish a stop, or alter the investment plan.</p>
+<h2 id="decision-and-what-changed">Decision and what changed</h2>
+<p>At <strong>$204.22</strong>, Gartner is approximately reasonably priced under a sourced cost-of-capital framework, rather than clearly too expensive under every defensible framework. Revised central FCFF value is <strong>$213.76</strong>; holding the return implied by NYU’s own risk-free assumption constant instead gives <strong>$203.44</strong>. A credible operating recovery gives <strong>$243.96</strong>. Bear/base/bull are <strong>$116.85 / $213.76 / $310.36</strong>. These are conditional scenarios, not statistical confidence intervals, price targets with a deadline, or loss limits.</p>
+<p>The fundamental disposition is <strong>eligible to be considered for Stage 3.5 at a reasonable price, with a thin cushion; no current entry approval</strong>. A partial purchase could be considered only if the separate technical, portfolio, event and execution checks pass. Neither growth of 15% nor a 15/20/25% discount is a universal admission rule. Nor does a merely positive DCF upside compel purchase. The central upside is only 4.67%, and loss of excess-cash credit moves value to $196.05.</p>
+<p>The old model was not arithmetically broken: its $188.58 central value and $194.00 same-mechanics update reproduce exactly. The material change is the explicit return calibration, partially offset by newly quantified capital claims. This is an analyst revision, not a change in reported results or an attempt to force a buy conclusion.</p>
+<h2 id="scope-evidence-and-audit-findings">Scope, evidence and audit findings</h2>
+<ul>
+<li><strong>Unsupported assumption, material:</strong> original 10.5% equity hurdle had no beta/ERP calibration. It was a stated research-required return, not a mathematical error. It now appears as a sensitivity, alongside a current calibrated framework.</li>
+<li><strong>Incomplete claims, modest:</strong> pension deficit, net deferred compensation and possible past-tax cash obligations were described vaguely. We quantify them and show alternative treatment; combined central deduction $194.061m, or $3.03/share.</li>
+<li><strong>Not comparable without normalization:</strong> raw TTM owner cash growth 7.10% benefits from tax timing and lower property capex. A consistent tax-and-reinvestment diagnostic is approximately flat, not 7.1% sustainable growth.</li>
+<li><strong>Missing current comparables, repaired:</strong> prior report explicitly used October 27 peer quotes. The peer table below now uses November 3 closes, with fiscal periods, share proxies and accounting differences disclosed.</li>
+<li><strong>Missing decision output, repaired:</strong> joint growth/margin/discount-rate reverse cases replace an exclusive reliance on one-variable requirements.</li>
+</ul>
+<p>The financial model is suitable for fundamental research with the caveats disclosed here. It cannot by itself support a current trade. No original source report has been silently overwritten.</p>
+<h2 id="results-and-business-assessment">Results and business assessment</h2>
+<p>The November 3 earnings event has occurred and is incorporated. FY2026 guidance is at least $6,405m revenue,$1,615m adjusted EBITDA,$14.65 adjusted EPS and $1,235m free cash flow. Guidance includes about $177m SBC,$181m D&amp;A,$95m capex and 22% adjusted tax. The model does not mistake adjusted earnings for unencumbered cash.</p>
+<p>Contract-value growth accelerated from 1.7% in Q2 to 2.5% in Q3, with 1.1% sequential growth. Q3 revenue fell 1.3% reported but rose 2.4% excluding Digital Markets; adjusted EBITDA excluding that business grew 7.5%. This supports a modest recovery, not high-growth extrapolation. Global wallet retention remains 99%, below 100%; enterprise-client count 12,680 is below 13,218 a year earlier. Global client retention improved to 85.4% from 84.7%, but weaker customer counts and AI-assisted alternatives to advisory research remain real risks. Gartner has recurring subscription economics and a trusted research/network franchise; those attributes do not eliminate competitive substitution or customer-budget risk. [S1–S3]</p>
+<h2 id="three-fiscal-years-four-quarters-and-both-ttm-periods">Three fiscal years, four quarters and both TTM periods</h2>
+<p>The following values are independently reconstructed from SEC companyfacts tied to the underlying 10-K and 10-Q statements. FY25+9 M26−9 M25 constructs current TTM; FY24+9 M25−9 M24 constructs prior TTM. Quarterly CFO/capex/SBC are differences of cumulative dollar amounts. EPS is never differenced. Source-ledger rows retain accession, filing date, tag and period.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Revenue</th>
+<th>GAAP EBIT</th>
+<th>GAAP NI</th>
+<th>CFO</th>
+<th>Capex/software</th>
+<th>SBC</th>
+<th>D&amp;A</th>
+<th>CFO−capex−SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td>5,906.956</td>
+<td>1,236.894</td>
+<td>882.000</td>
+<td>1,155.737</td>
+<td>103.124</td>
+<td>129.841</td>
+<td>191.103</td>
+<td>922.772</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td>6,267.411</td>
+<td>1,156.287</td>
+<td>1,254.000</td>
+<td>1,484.922</td>
+<td>101.737</td>
+<td>154.784</td>
+<td>202.315</td>
+<td>1,228.401</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td>6,497.226</td>
+<td>1,025.711</td>
+<td>729.000</td>
+<td>1,290.365</td>
+<td>115.142</td>
+<td>155.877</td>
+<td>200.309</td>
+<td>1,019.346</td>
+</tr>
+<tr class="even">
+<td>Q4_2025</td>
+<td>1,752.570</td>
+<td>334.239</td>
+<td>241.921</td>
+<td>294.544</td>
+<td>23.832</td>
+<td>32.159</td>
+<td>47.857</td>
+<td>238.553</td>
+</tr>
+<tr class="odd">
+<td>Q1_2026</td>
+<td>1,511.041</td>
+<td>316.092</td>
+<td>222.344</td>
+<td>391.039</td>
+<td>20.423</td>
+<td>45.870</td>
+<td>45.431</td>
+<td>324.746</td>
+</tr>
+<tr class="even">
+<td>Q2_2026</td>
+<td>1,675.943</td>
+<td>378.520</td>
+<td>275.498</td>
+<td>398.288</td>
+<td>19.923</td>
+<td>40.990</td>
+<td>45.183</td>
+<td>337.375</td>
+</tr>
+<tr class="odd">
+<td>Q3_2026</td>
+<td>1,504.791</td>
+<td>281.111</td>
+<td>214.419</td>
+<td>294.433</td>
+<td>19.273</td>
+<td>38.423</td>
+<td>45.081</td>
+<td>236.737</td>
+</tr>
+<tr class="even">
+<td>TTM_2025</td>
+<td>6,459.775</td>
+<td>1,009.267</td>
+<td>885.937</td>
+<td>1,331.176</td>
+<td>115.251</td>
+<td>153.912</td>
+<td>203.674</td>
+<td>1,062.013</td>
+</tr>
+<tr class="odd">
+<td>TTM_2026</td>
+<td>6,444.345</td>
+<td>1,309.962</td>
+<td>954.182</td>
+<td>1,378.304</td>
+<td>83.451</td>
+<td>157.442</td>
+<td>183.552</td>
+<td>1,137.411</td>
+</tr>
+</tbody>
+</table></div>
+<p>Capex is Gartner’s <strong>Payments For Capital Improvements</strong>, including relevant capitalized software; it is not an omitted software investment line. Research and advisory-content investment remains in operating payroll and expense. SBC is deducted once from CFO-based owner cash because CFO adds it back; the EBIT model retains its economic cost once. No additional perpetual dilution haircut is layered onto the same SBC expense.</p>
+<h3 id="profit-and-cash-normalization">Profit and cash normalization</h3>
+<p>FY2023 EBIT removes $135.410m sale gain; FY2025 adds back the $150m Digital Markets impairment;2026 removes $6.785m sale gain. Normalized pretax profit also removes $3.077m and $300m event-cancellation insurance receipts in 2023 and 2024. A24% recurring tax rate is applied, with SBC, ordinary expenses and acquired amortization retained. Disposal proceeds are investing cash, so they are not subtracted again from CFO. The impairment was already reversed in cash flow and is not added to CFO again.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>Revenue ex Digital Markets</th>
+<th>Normalized EBIT</th>
+<th>NI at 24% tax</th>
+<th>Tax/capex-normalized owner cash*</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2023</td>
+<td>5,535.945</td>
+<td>1,101.484</td>
+<td>766.568</td>
+<td>987.009</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td>5,970.812</td>
+<td>1,156.287</td>
+<td>826.404</td>
+<td>975.517</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td>6,269.812</td>
+<td>1,175.711</td>
+<td>849.770</td>
+<td>965.244</td>
+</tr>
+<tr class="even">
+<td>Q4_2025</td>
+<td>1,702.583</td>
+<td>334.239</td>
+<td>238.515</td>
+<td>n/d</td>
+</tr>
+<tr class="odd">
+<td>Q1_2026</td>
+<td>1,491.649</td>
+<td>310.693</td>
+<td>218.130</td>
+<td>n/d</td>
+</tr>
+<tr class="even">
+<td>Q2_2026</td>
+<td>1,675.943</td>
+<td>378.520</td>
+<td>269.513</td>
+<td>n/d</td>
+</tr>
+<tr class="odd">
+<td>Q3_2026</td>
+<td>1,504.791</td>
+<td>279.725</td>
+<td>193.264</td>
+<td>n/d</td>
+</tr>
+<tr class="even">
+<td>TTM_2025</td>
+<td>6,218.583</td>
+<td>1,159.267</td>
+<td>840.508</td>
+<td>1,034.576</td>
+</tr>
+<tr class="odd">
+<td>TTM_2026</td>
+<td>6,374.966</td>
+<td>1,303.177</td>
+<td>919.422</td>
+<td>1,040.072</td>
+</tr>
+</tbody>
+</table></div>
+<p>*The cash column is an analyst diagnostic, not a newly reported subtotal. Formula: CFO−capex−SBC−gross insurance receipt+cash taxes paid−24%× normalized pretax profit; then replace actual capex with 1.7% of revenue, consistently with the explicit forecast. Annual tax payments are reported exactly. Current/prior TTM taxes are reconstructed as a bounded estimate from the supplement’s rounded cash-tax/revenue ratios of 3.4%/3.6% (page 12). Quarter-specific cash-tax payments are not disclosed in the reviewed filings; no false precise normalized-quarter cash amounts are supplied. Exact quarterly CFO, investment and SBC, plus normalized quarterly profit, are provided above. [S2–S5]</p>
+<p>TTM bridge, current versus prior: - Normalized EBIT <strong>1,303.177 vs 1,159.267</strong>, +12.41%; normalized NI <strong>919.422 vs 840.508</strong>, +9.39%. - Raw CFO−capex−SBC <strong>1,137.411 vs 1,062.013</strong>, +7.10%. - Cash tax estimate <strong>219.108±3.222 vs 232.552±3.230</strong>; tax-timing-normalized owner cash <strong>1,066.175±3.222 vs 1,029.141±3.230</strong>, about+3.60%. - At 1.7% reinvestment, <strong>1,040.072±3.222 vs 1,034.576±3.230</strong>, about+0.53%. Rounding alone gives approximately−0.09% to+1.16% growth; this does not incorporate uncertainty in disposed-business cash or working-capital timing.</p>
+<p>The comparison still includes the small historical cash contribution of Digital Markets. Its separate CFO/tax/SBC carve-out was not published, so an exact ongoing-business cash growth rate cannot be asserted. Revenue can be reconciled exactly: ongoing TTM revenue is <strong>6,374.966 vs 6,218.583</strong>, +2.51%; removed disposed revenue is 69.379 vs 241.192. The prospective model instead starts from the current guidance run-rate, avoiding perpetual capitalization of the sold business. Sale cash 99.764m is already within the balance sheet and is not credited twice.</p>
+<p>The recent capex trough is important:9 M capex declined 31.691m, approximately 22m related to real estate. Replacing it with a normalized charge is a sensitivity, not a claim that next year’s exact expenditure is known. The model’s 3% growth therefore needs modest continued commercial improvement rather than relying on the raw cash-growth headline.</p>
+<h2 id="equity-and-other-capital-claims">Equity and other capital claims</h2>
+<ul>
+<li>Cash September 30 <strong>1,633.137</strong>; management-supported operating reserve <strong>500</strong>; excess-cash credit <strong>1,133.137</strong>. Approximately 66% of cash is outside the US. No-excess-cash sensitivity is $196.05, not a claim that foreign cash is worthless.</li>
+<li>Principal debt <strong>3,000</strong>, not carrying value net of issuance fees. Fixed-rate maturities:800 in 2028,600 in 2029,800 in 2030,350 in 2031,450 in 2035;1,000 undrawn revolver. Ratings BBB-/Baa 3. No imminent maturity wall, but refinancing at higher rates matters.</li>
+<li><strong>64m diluted shares</strong> are the supplement’s September point-in-time figure. October 30 basic shares 63.081351m are useful for an approximate current market capitalization, not a free reduction in the DCF denominator while retaining pre-buyback cash. No future repurchases are assumed.</li>
+<li>Pension deficit <strong>36.960</strong> is the latest full annual actuarial disclosure (obligation 81.795 less assets 44.835). Net deferred compensation <strong>7.336</strong> is September liability 192.857 less related assets 185.521. Related assets are netted against their obligations, never separately treated as excess cash.</li>
+<li>Past-tax reserve <strong>149.765</strong> uses the last separately disclosed long-term tax-payable balance as a cash-claim proxy, not a proven September settlement amount. Gross unrecognized tax benefits 293.2 are not automatically debt: they can involve deferred-tax/refund attributes. We do <strong>not</strong> subtract both figures. Zero incremental tax reserve gives $216.10; a deliberately conservative alternative gross 293.2 plus last disclosed 25.9 interest/penalties, replacing 149.765, gives $211.11. Ordinary current income-tax payable remains working capital. No duplicate deferred-tax liability deduction or deferred-tax-asset credit is added.</li>
+<li>Operating leases stay in operating costs and cash. They are not also deducted as financing debt. Ordinary working capital is handled in forecast cash flows; unrestricted cash, pension assets and equity claims are not interchanged. [S2–S4]</li>
+</ul>
+<h2 id="current-return-calibration-and-why-it-matters">Current return calibration and why it matters</h2>
+<p>Official November 3 US10-year Treasury is <strong>4.95%</strong>. NYU Damodaran’s November 1 implied ERP is <strong>4.41%</strong>, trailing 12 months with adjusted payout. The market-data page reports <strong>0.91 five-year monthly beta</strong> for IT at November 3; this is a provider estimate, not an independently reconstructed regression. Central beta is normalized to <strong>1.0</strong>, rather than taking the low historical estimate literally during a business transition.</p>
+<p>Cost of equity=4.95%+1.0×4.41%=<strong>9.36%</strong>. Marginal debt cost <strong>6.25%</strong> is an analyst refinancing assumption (Treasury+130 bp), supported directionally by investment-grade credit ratings, not an observed bond yield. With 24% tax and equity weight $204.22×64 versus 3,000 debt, <strong>WACC=8.4994%</strong>. Legacy fixed coupons are not used as a perpetual marginal borrowing cost. [S6–S8]</p>
+<p>An important date/method bridge is explicit: NYU’s ERP page uses its own 5.29% Treasury assumption. Rolling its 4.41% premium to the latest official 4.95% yield is the central convention, not a synchronized daily ERP estimate. Preserving NYU’s combined 9.70% market return instead yields <strong>8.7759% WACC and $203.44</strong>. Using provider beta 0.91 without normalization gives $227.06. The old 10.5% equity hurdle, with its original 5.5% debt cost, yields 9.3202% WACC and $185.55 after the newly quantified claims. These are defensible rate sensitivities, not a reason to present one cent-precise intrinsic value as certain.</p>
+<h2 id="ten-year-fcff-and-terminal-economics">Ten-year FCFF and terminal economics</h2>
+<p>Start revenue 6,405; first-five-year growth 3%; then 2.9/2.8/2.7/2.6/2.5%. Adjusted EBITDA margin starts 1615/6405 and converges 25.2% inyear 5. Subtract SBC 177/6405 and D&amp;A181/6405 to obtain EBIT; tax 24%; capex 1.7% of revenue; operating working capital 2% of incremental revenue. The first-five-year negative net reinvestment reflects acquired-amortization addbacks exceeding physical/software investment, while content and sales investment is already expensed.</p>
+<p>Years 6–10 blend that explicit cash formula toward NOPAT×growth/20% incremental ROIC, at 20/40/60/80/100% weights. Terminal FCFF=NOPAT11×(1−2.5%/20%). This funds ongoing growth rather than granting a free perpetuity. Incremental ROIC 20% is an analytical terminal assumption, not historical book ROIC. Terminal PV is<strong>53.11%</strong> of operating EV.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Revenue</th>
+<th>EBIT after SBC</th>
+<th>NOPAT</th>
+<th>Initial capex</th>
+<th>Net reinvestment after transition</th>
+<th>FCFF</th>
+<th>PV FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.000</td>
+<td>6,597.150</td>
+<td>1,294.516</td>
+<td>983.832</td>
+<td>112.152</td>
+<td>-70.435</td>
+<td>1,054.268</td>
+<td>971.681</td>
+</tr>
+<tr class="even">
+<td>2.000</td>
+<td>6,795.065</td>
+<td>1,333.152</td>
+<td>1,013.196</td>
+<td>115.516</td>
+<td>-72.549</td>
+<td>1,085.744</td>
+<td>922.302</td>
+</tr>
+<tr class="odd">
+<td>3.000</td>
+<td>6,998.916</td>
+<td>1,372.942</td>
+<td>1,043.436</td>
+<td>118.982</td>
+<td>-74.725</td>
+<td>1,118.161</td>
+<td>875.432</td>
+</tr>
+<tr class="even">
+<td>4.000</td>
+<td>7,208.884</td>
+<td>1,413.918</td>
+<td>1,074.578</td>
+<td>122.551</td>
+<td>-76.967</td>
+<td>1,151.545</td>
+<td>830.943</td>
+</tr>
+<tr class="odd">
+<td>5.000</td>
+<td>7,425.150</td>
+<td>1,456.118</td>
+<td>1,106.650</td>
+<td>126.228</td>
+<td>-79.276</td>
+<td>1,185.925</td>
+<td>788.716</td>
+</tr>
+<tr class="even">
+<td>6.000</td>
+<td>7,640.480</td>
+<td>1,498.345</td>
+<td>1,138.742</td>
+<td>129.888</td>
+<td>-32.352</td>
+<td>1,171.094</td>
+<td>717.840</td>
+</tr>
+<tr class="odd">
+<td>7.000</td>
+<td>7,854.413</td>
+<td>1,540.299</td>
+<td>1,170.627</td>
+<td>133.525</td>
+<td>15.062</td>
+<td>1,155.565</td>
+<td>652.835</td>
+</tr>
+<tr class="even">
+<td>8.000</td>
+<td>8,066.482</td>
+<td>1,581.887</td>
+<td>1,202.234</td>
+<td>137.130</td>
+<td>62.749</td>
+<td>1,139.485</td>
+<td>593.322</td>
+</tr>
+<tr class="odd">
+<td>9.000</td>
+<td>8,276.211</td>
+<td>1,623.016</td>
+<td>1,233.492</td>
+<td>140.696</td>
+<td>110.485</td>
+<td>1,123.007</td>
+<td>538.935</td>
+</tr>
+<tr class="even">
+<td>10.000</td>
+<td>8,483.116</td>
+<td>1,663.591</td>
+<td>1,264.329</td>
+<td>144.213</td>
+<td>158.041</td>
+<td>1,106.288</td>
+<td>489.322</td>
+</tr>
+</tbody>
+</table></div>
+<p>The FCFF decline during the transition is a modeling reinvestment catch-up, not a prediction that revenue or profit declines. At the same calibrated discount rate, retaining the old no-transition mechanics gives $219.54 instead of $213.76. Terminal ROIC 15/20/25/30% gives $206.29/$213.76/$218.24/$221.23. The baseline is deliberately checked against a less restrictive case rather than hiding conservatism in a second blanket discount.</p>
+<p>Operating EV <strong>15,741.431</strong> + excess cash 1,133.137 − principal debt 3,000 − other claims 194.061 =equity 13,680.507 /64 =<strong>$213.758</strong>. Original EV13,936.116 and $188.582 are reproduced before the calibration and claims revision.</p>
+<h3 id="scenarios-and-recovery">Scenarios and recovery</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Five-year growth%</th>
+<th>Year 5 EBITDA margin%</th>
+<th>WACC%</th>
+<th>g%</th>
+<th>Year 1 FCFF</th>
+<th>Year 10 FCFF</th>
+<th>Value/share</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td>1.000</td>
+<td>24.000</td>
+<td>10.500</td>
+<td>2.000</td>
+<td>979.141</td>
+<td>860.899</td>
+<td>116.849</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>3.000</td>
+<td>25.200</td>
+<td>8.499</td>
+<td>2.500</td>
+<td>1,054.268</td>
+<td>1,106.288</td>
+<td>213.758</td>
+</tr>
+<tr class="odd">
+<td>recovery</td>
+<td>4.500</td>
+<td>26.000</td>
+<td>8.499</td>
+<td>2.500</td>
+<td>1,075.895</td>
+<td>1,274.229</td>
+<td>243.960</td>
+</tr>
+<tr class="even">
+<td>bull</td>
+<td>6.000</td>
+<td>27.000</td>
+<td>8.500</td>
+<td>3.000</td>
+<td>1,127.159</td>
+<td>1,546.070</td>
+<td>310.364</td>
+</tr>
+</tbody>
+</table></div>
+<p>Bear retains only 1% growth,24% EBITDA margin,3% SBC,25% tax,2% capex,5% incremental working capital,15% terminal ROIC and 10.5% WACC. Bull uses 6% growth,27% margin,2.5% SBC,23% tax,25% terminal ROIC and 8.5% WACC. The recovery case uses 4.5% growth and 26% margin with the <strong>same base</strong> tax, SBC, reinvestment, capital claims and discount rate. It therefore does not rely on multiple expansion or cheaper capital to generate its $243.96 value. It requires renewed contract growth and wallet retention above 100%; it is credible but not yet proven.</p>
+<p>No probabilities are assigned to these scenarios. The $116.85–$310.36 span is not an 80%/95% confidence interval. Confidence is high in historical arithmetic, moderate in recurring franchise durability, and lower in precise future growth, competitive response and intrinsic value. The base/recovery distinction identifies what actual operating improvement would change the judgment.</p>
+<h2 id="joint-reverse-valuation">Joint reverse valuation</h2>
+<p>At $204.22, the market can be supported by several combinations, not solely the old 4.32% growth requirement. Each row solves first-five-year growth jointly with the displayed margin and WACC; all other base assumptions, capital claims and terminal rules are held constant.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC%</th>
+<th>Year 5 EBITDA margin%</th>
+<th>Five-year growth needed for $204.22</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>8.499</td>
+<td>24.000</td>
+<td>3.277</td>
+</tr>
+<tr class="even">
+<td>8.499</td>
+<td>25.200</td>
+<td>2.268</td>
+</tr>
+<tr class="odd">
+<td>8.499</td>
+<td>26.000</td>
+<td>1.632</td>
+</tr>
+<tr class="even">
+<td>8.499</td>
+<td>27.000</td>
+<td>0.873</td>
+</tr>
+<tr class="odd">
+<td>9.000</td>
+<td>24.000</td>
+<td>4.717</td>
+</tr>
+<tr class="even">
+<td>9.000</td>
+<td>25.200</td>
+<td>3.690</td>
+</tr>
+<tr class="odd">
+<td>9.000</td>
+<td>26.000</td>
+<td>3.043</td>
+</tr>
+<tr class="even">
+<td>9.000</td>
+<td>27.000</td>
+<td>2.271</td>
+</tr>
+</tbody>
+</table></div>
+<p>At 8.50% WACC,2.27% growth and 25.2% margin support price; at 9%, the same margin needs 3.69%. At 9%,3.04% growth with 26% margin also works. These combinations are plausible around a modest recovery; the price does not require 15% business growth. Conversely,1% growth with margin pressure is not protected by the central estimate. The machine-readable grid includes 8–9.5% WACC and 24–27% margins, plus a separate two-dimensional operating grid and WACC/terminal-growth matrix.</p>
+<h2 id="current-peers-with-comparable-definitions">Current peers, with comparable definitions</h2>
+<p>All prices are November 3 regular-session US-dollar closes. Financial periods are not forced to match by inventing quarter data. The table uses explicitly dated diluted share proxies, not vendor stale market-cap screens; approximate basic market caps using the latest disclosed basic counts are IT$12,882.47m and FDS$11,725.68m. Later unreported repurchases may change actual November 3 counts.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ticker</th>
+<th>Nov 3 close</th>
+<th>Diluted shares proxy</th>
+<th>Equity proxy</th>
+<th>Cash</th>
+<th>Net debt ex operating leases</th>
+<th>EV proxy</th>
+<th>Owner cash</th>
+<th>Equity/owner cash</th>
+<th>EV/EBIT diagnostic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IT</td>
+<td>204.220</td>
+<td>64.000</td>
+<td>13,070.080</td>
+<td>1,633.137</td>
+<td>1,366.863</td>
+<td>14,436.943</td>
+<td>1,137.411</td>
+<td>11.491</td>
+<td>11.078</td>
+</tr>
+<tr class="even">
+<td>FDS</td>
+<td>332.590</td>
+<td>35.572</td>
+<td>11,830.891</td>
+<td>233.339</td>
+<td>1,141.661</td>
+<td>12,972.552</td>
+<td>623.381</td>
+<td>18.979</td>
+<td>18.533</td>
+</tr>
+<tr class="odd">
+<td>TRI</td>
+<td>110.180</td>
+<td>434.017</td>
+<td>47,820.010</td>
+<td>1,394.000</td>
+<td>2,519.000</td>
+<td>50,449.010</td>
+<td>1,686.000</td>
+<td>28.363</td>
+<td>27.329</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>FDS:</strong> FY ended August 31, filed October 20. Cash 233.339, principal debt 1,375 versus 1,370.022 book debt, FY CFO 822.200, capex/internal-use software 114.720, SBC 84.099, owner cash 623.381. Shares 35.572m are Q4 diluted weighted average; October 15 basic 35.255660m are separately disclosed. Reported EBIT 699.957 retains 46.200 restructuring,19.521 CEO onboarding and 0.887 operating impairment. Adjusted operating income 855.308 removes these and acquired amortization; it is not silently compared to IT’s post-amortization EBIT. Organic ASV growth 7% and FY organic revenue 6.7% exceed IT’s CV/ongoing growth, justifying some premium rather than guaranteeing convergence. [S9–S10]</li>
+<li><strong>TRI:</strong> continuing TTMSeptember; Global Print excluded. Continuing CFO 2,535−capex 665−lease principal 61−preferred dividends 4+other investing receipt 1=FCF 1,806. SBC 120 is an <strong>analyst estimate</strong>, not separately disclosed current TTM expense;100–140 produces owner cash 1,666–1,706 and an equity/cash range about 28.0–28.7 x. Latest Q3 diluted average 434.017155m is used, not a claimed current point count. Net debt 2,747 includes 228 leases; adjusted non-lease net obligation 2,519 retains hedge/collateral/debt-cost adjustments. The table adds 110 preferred capital to EV but gives no unclosed Print-sale proceeds or retained-JV credit. Therefore its EV/continuing-profit multiple is conservatively scope-mismatched, not a clean apples-to-apples target for IT. IFRS lease accounting and different profit exclusions also limit the EBIT comparison. Q3 organic revenue growth 10% is materially faster. [S11]</li>
+<li><strong>IT:</strong> standard peer EV uses all cash; the investment DCF additionally retains 500 operating cash and 194.061 claims. At the DCF-equivalent claims boundary, implied market EV is 15,131.004, around 11.61× normalized EBIT rather than the table’s 11.08×. Price/raw owner cash 11.49× becomes about 12.57× using tax/capex-normalized owner cash 1,040.072. The lower multiple is meaningful but partly compensates for weaker growth and disruption risk.</li>
+</ul>
+<p>Peer multiples corroborate a reasonable price; they do not justify transplanting TRI’s or FDS’s multiple onto Gartner. No stale October 27 quote is presented as current. [S8–S12]</p>
+<h2 id="catalysts-failure-conditions-and-stage-3.5-boundary">Catalysts, failure conditions and Stage 3.5 boundary</h2>
+<p>Watch the next contract-value release, client count and wallet retention, actual conversion of improved sales productivity into recurring subscriptions, and whether cash capex normalizes without destroying owner cash. The next official earnings date was not verified from an issuer announcement; third-party estimated dates are not promoted to scheduled events.</p>
+<p>A sustained move from 2.5% contract growth toward 4–5% with wallet retention above 100% would support the recovery case. Renewed CV deceleration, ongoing client erosion, price pressure from AI alternatives, or retention below 100% with margin protection through underinvestment would weaken it. Acquisitions, large new repurchases or debt issuance require a fresh cash/share/claims bridge rather than extrapolation.</p>
+<p>The adverse fair value is <strong>not a stop-loss</strong>. Even bull upside divided by adverse-value downside is only about 1.21:1; this ratio is not the plan’s chart-based reward/risk gate. No current technical invalidation, volume confirmation, portfolio concentration or executable entry/stop package was independently certified here. Stage 3 research is completed; Stage 3.5 and a trade authorization remain separate.</p>
+<h2 id="source-register-and-reproducibility">Source register and reproducibility</h2>
+<p>[S1] <a href="https://investor.gartner.com/static-files/7b280338-ac38-407c-9c3f-c0766d3411db">Gartner November 3 earnings release</a>. [S2] <a href="https://investor.gartner.com/static-files/8e3808a2-ca31-409e-8318-28ed0600f9c7">Gartner Q3 supplement, especially pages 11–12 and guidance/reconciliations</a>. [S3] <a href="https://www.sec.gov/Archives/edgar/data/749251/000074925126000307/it-20260930.htm">September 2026 10-Q, statements and notes</a>. [S4] <a href="https://www.sec.gov/Archives/edgar/data/749251/000074925126000112/it-20251231.htm">FY2025 10-K, comparative statements, pension, tax and debt notes</a>. [S5] <a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0000749251.json">SEC companyfacts, CIK749251</a>; individual historical accessions and fiscal dates are retained in source_tieout.csv and source maps. [S6] <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">US Treasury daily yield curve, November 3,2026</a>. [S7] <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm">NYU Damodaran November 1 implied ERP update</a>. [S8] <a href="https://finance.yahoo.com/quote/IT/">IT price and five-year monthly beta, retrieved November 4</a>; <a href="https://stockanalysis.com/stocks/it/history/">November 3 regular close cross-check</a>. [S9] <a href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026066391/fds-20260831.htm">FactSet FY2026 10-K filed October 20</a>. [S10] <a href="https://www.sec.gov/Archives/edgar/data/1013237/000162828026063888/fdsq42026earningsrelease.htm">FactSet FY2026 earnings reconciliation</a>. [S11] <a href="https://investors.thomsonreuters.com/static-files/781f0447-2b5b-4b54-884d-d4ebc5dadf28">Thomson Reuters Q3 release with balance-sheet, debt and FCF reconciliations</a>; <a href="https://investors.thomsonreuters.com/static-files/d4676c84-359c-42c3-9f84-8c62552d49a2">FY25</a>; <a href="https://investors.thomsonreuters.com/static-files/13453a61-1934-494a-b639-ed45a69dd0e8">Print recast</a>. [S12] <a href="https://stockanalysis.com/stocks/fds/history/">FDS November 3 price</a>; <a href="https://stockanalysis.com/stocks/tri/history/">TRI November 3 NASDAQ price</a>.</p>
+<p>Package: model.py, history.py, peers.py; exact sourced history JSON/CSV and source_tieout.csv; ten-year forecasts for every case; model_results.json, joint_reverse.csv, operating_grid.csv, sensitivity.csv and peer data. Run the three scripts offline from the package directory, then qa.py. Public numerical facts and source links are provided; archived full third-party documents need not be republished. Inputs labeled estimates remain estimates after calculation.</p>
+<h2 id="full-dossier-and-analyst-audit-files">Full dossier and analyst audit files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/source_report.md">source_report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_base.csv">forecast_base.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_base_ROIC15.csv">forecast_base_ROIC15.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_base_ROIC25.csv">forecast_base_ROIC25.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_base_ROIC30.csv">forecast_base_ROIC30.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_base_high_tax_reserve.csv">forecast_base_high_tax_reserve.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_base_no_excess_cash.csv">forecast_base_no_excess_cash.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_base_no_tax_cash_reserve.csv">forecast_base_no_tax_cash_reserve.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_base_no_transition.csv">forecast_base_no_transition.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_bear.csv">forecast_bear.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_bull.csv">forecast_bull.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_calibrated_wacc_before_claims.csv">forecast_calibrated_wacc_before_claims.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_observed_beta_not_normalized.csv">forecast_observed_beta_not_normalized.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_old_mechanics_updated.csv">forecast_old_mechanics_updated.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_old_wacc_new_claims.csv">forecast_old_wacc_new_claims.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_original_base_reproduced.csv">forecast_original_base_reproduced.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_preserve_NYU_market_return.csv">forecast_preserve_NYU_market_return.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/forecast_recovery.csv">forecast_recovery.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/history.csv">history.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/history.json">history.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/joint_reverse.csv">joint_reverse.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/model_results.json">model_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/operating_grid.csv">operating_grid.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/peers.csv">peers.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/peers.json">peers.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/publication_metadata.json">publication_metadata.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/qa_results.json">qa_results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/sensitivity.csv">sensitivity.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/source_tieout.csv">source_tieout.csv</a></li>
+</ul>
+<h1 id="stage-3.5-technical-assessment">Stage 3.5 technical assessment</h1>
+<h1 id="it-stage-3.5-review-opened-entry-not-approved">IT: Stage 3.5 review opened, entry not approved</h1>
+<p><strong>4 November 2026, 10:28 UTC / 05:28 EST. Paper-trading research only. No order, fill, holding, cash change or new protective stop is recorded.</strong></p>
+<h2 id="decision">Decision</h2>
+<p><strong>Move Gartner (NYSE: IT) to Stage 3.5: awaiting a valid post-earnings setup.</strong> The revised Stage 3 analysis supports evaluating a small initial position at a reasonable price around the reviewed <strong>$204.22</strong>. Stage 3.5 is the correct next stage. It is not a reason to manufacture a tight stop or treat a premarket rebound as an entry signal.</p>
+<p><strong>Current executable quantity: zero.</strong> No numeric entry signal, technical maximum, operative stop or size is approved. These blanks reflect the assessment’s negative execution conclusion, not unfinished fundamental research. The existing wide structure cannot deliver the requested 3:1 at the reviewed price, even against the old annual high.</p>
+<h2 id="price-and-events-with-clocks-kept-separate">Price and events, with clocks kept separate</h2>
+<ul>
+<li>Last completed regular session: November 3, <strong>open/high $208.00, low $185.00, close $204.22</strong>, down <strong>13.19%</strong> from $235.26. Daily OHLC agrees between Yahoo daily history and StockAnalysis. Yahoo quote metadata gives a different low of $185.06; daily OHLC is used consistently for the calculations.</li>
+<li>StockAnalysis, fetched November 4 around 10:27 UTC, displays <strong>$213.50 at 04:21 EST / 09:21 UTC</strong>, +4.54% versus the regular close. This is a dated premarket print, <strong>not a current executable quote or confirmation candle</strong>. The separately retrieved Yahoo intraday feed ends November 3 and does not corroborate that premarket trade. Do not relabel $204.22 as the latest premarket price, nor claim $213.50 is independently cross-verified.</li>
+<li>The preliminary fundamental case is thin: revised central FCFF value <strong>$213.76</strong>, alternate rate calibration <strong>$203.44</strong>, no-excess-cash sensitivity <strong>$196.05</strong>, operating recovery <strong>$243.96</strong>. At $213.50, the central price-to-value gap is only <strong>0.12%</strong>, versus 4.67% at $204.22. Neither gap is an annual shareholder return, and fair value is not automatically a buy ceiling.</li>
+<li>Gartner’s official events page confirms the Q3 call was <strong>November 3 at 08:00 EST</strong>. The next earnings date is not announced in the issuer pages checked; do not invent one. The new Q3 results and September 10-Q are incorporated in the revised fundamental report. No future event-free guarantee is asserted.</li>
+</ul>
+<p>Sources: <a href="https://stockanalysis.com/stocks/it/">StockAnalysis quote</a>, <a href="https://stockanalysis.com/stocks/it/history/">daily history</a>, <a href="https://investor.gartner.com/ir-events-presentations">official Gartner events</a>, <a href="https://investor.gartner.com/static-files/7b280338-ac38-407c-9c3f-c0766d3411db">Q3 release</a>, <a href="https://www.sec.gov/Archives/edgar/data/749251/000074925126000307/it-20260930.htm">September 10-Q</a>.</p>
+<h2 id="technical-assessment-constructive-larger-trend-damaged-immediate-structure">Technical assessment: constructive larger trend, damaged immediate structure</h2>
+<p>Completed November 3 daily data, no premarket bars in the averages:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Measure</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EMA20</td>
+<td style="text-align: right;">$213.79</td>
+</tr>
+<tr class="even">
+<td>EMA50</td>
+<td style="text-align: right;">$199.20</td>
+</tr>
+<tr class="odd">
+<td>EMA200</td>
+<td style="text-align: right;">$193.89</td>
+</tr>
+<tr class="even">
+<td>EMA200 change over 20 sessions</td>
+<td style="text-align: right;">+2.24%</td>
+</tr>
+<tr class="odd">
+<td>Wilder ATR14</td>
+<td style="text-align: right;">$11.37</td>
+</tr>
+<tr class="even">
+<td>RSI14, context only</td>
+<td style="text-align: right;">46.96</td>
+</tr>
+<tr class="odd">
+<td>Latest regular-session volume</td>
+<td style="text-align: right;">Approximately 3.23m</td>
+</tr>
+<tr class="even">
+<td>Average volume, latest 20 sessions</td>
+<td style="text-align: right;">Approximately 1.12m</td>
+</tr>
+</tbody>
+</table></div>
+<p>Price is above EMA50/200; EMA20 &gt; EMA50 &gt; EMA200, and EMA200 rises. This supports continuing the Stage 3.5 study, but the earnings gap broke the late-October price structure. An intraday recovery from $185 to $204.22 is not the same as a stable new base. Elevated volume accompanies that disruption and is not standalone bullish confirmation.</p>
+<p><strong>Observed levels, not adopted stop/target instructions:</strong> - Broad relevant low candidate <strong>M = $184.45</strong>, October 5, alongside November 3’s $185.00 event low. - November 3 high <strong>$208.00</strong> is the first recovery checkpoint. - Broken October 29 low <strong>$214.85</strong> is now an overhead reference, not an intact support/stop. - Prior gap boundary <strong>$228.51</strong> and November 2 high <strong>$237.54</strong> are additional overhead references. - Annual high <strong>$256.90</strong> is a distant historical reference, not a price objective justified merely to pass arithmetic.</p>
+<p><strong>Operative manual stop S remains unset.</strong> For an entry based on the broad $184.45 structure, S would need independent placement at/below that structure. Setting S = $184.45 produces an optimistic upper bound on reward/risk; a real buffer, costs and slippage make it worse. A stop near EMA50 is not justified simply because it produces a nicer ratio.</p>
+<h2 id="requested-31-check">Requested 3:1 check</h2>
+<p>Using the optimistic S = $184.45 only as a diagnostic:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Reference entry</th>
+<th style="text-align: right;">To $214.85</th>
+<th style="text-align: right;">To $228.51</th>
+<th style="text-align: right;">To $237.54</th>
+<th style="text-align: right;">To $256.90</th>
+<th style="text-align: right;">Price needed for exactly 3R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>$204.22 regular close</td>
+<td style="text-align: right;">0.54R</td>
+<td style="text-align: right;">1.23R</td>
+<td style="text-align: right;">1.69R</td>
+<td style="text-align: right;">2.66R</td>
+<td style="text-align: right;">$263.53</td>
+</tr>
+<tr class="even">
+<td>$213.50 dated premarket print</td>
+<td style="text-align: right;">0.05R</td>
+<td style="text-align: right;">0.52R</td>
+<td style="text-align: right;">0.83R</td>
+<td style="text-align: right;">1.49R</td>
+<td style="text-align: right;">$300.65</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are not target prices. They demonstrate why chasing either level is not presently supported by the requested 3:1 assessment. Even using the generous $237.54 reference, the theoretical entry cap is <strong>$197.72 before costs</strong>, below the latest EMA50 of $199.20. It cannot simply become a standing limit order: a future completed close must satisfy the EMA50 rule or a documented recovery review. Using the much farther annual high raises the mathematical cap to $202.56, but does not supply a continuation thesis across the intervening resistance. This is not a universal obligation to sell at first resistance.</p>
+<p>The original request’s 3:1 study is kept distinct from the plan itself. No new universal return/discount rule is introduced.</p>
+<h2 id="account-capacity">Account capacity</h2>
+<p>Individual account figures and holdings are omitted from this public research copy. Current capital, cash, pending orders and campaign-risk capacity must be reconciled privately before any future approved entry. The approved quantity remains zero.</p>
+<h2 id="prospective-workflow-and-expiry">Prospective workflow and expiry</h2>
+<ol type="1">
+<li><strong>Route under study:</strong> B, small initial entry at a reasonable price, or A after a genuine stabilizing pullback. Do not require an automatic 15% discount. Route C above $208.00 is only a recovery observation for now: it does not overcome the current stop-distance problem.</li>
+<li><strong>Timeframe chosen for this review:</strong> completed regular-session daily bars. A close above $208.00 is a predeclared monitoring checkpoint, <strong>not an armed buy signal</strong>. Do not change to a 15-minute signal after seeing the price; a later separately specified intraday plan would need its own advance levels and intact daily structure.</li>
+<li><strong>Next assessment:</strong> after the November 4 regular close, <strong>16:00 EST / 21:00 UTC</strong>. Inspect the actual post-event base and updated averages, then either keep waiting or record a new independent M/S, signal, target rationale and technical max. Today’s monitoring levels expire at that close and must be re-evaluated, not automatically rolled into an order.</li>
+<li><strong>Stop monitoring for entry and reassess immediately</strong> on a break of the $184.45–185 broad support area, a material fundamental update, a new pending exit condition, or evidence the long trend has deteriorated. A print above the reviewed fundamental price is not permission to raise a ceiling. At $213.50 the price/risk judgment requires renewed review.</li>
+<li>Only after all prerequisites pass should the record contain a final fundamental maximum, technical maximum, valid-zone cancellation, actual M/S, future numerical buy signal, reserve, quantity, and DAY/regular-session validity. No order is proposed in this assessment.</li>
+</ol>
+<p>The promotion is complete at the research-workflow level: <strong>IT is in Stage 3.5, waiting for structure and a price-valid prospective entry plan.</strong></p>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/IT_Stage35_ticket_public.json">Public technical ticket</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/IT/IT_Stage35_assessment_public.md">Public assessment</a></li>
+</ul>
+</main></body></html>
