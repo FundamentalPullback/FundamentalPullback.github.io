@@ -1,3 +1,25 @@
+## Decisión de entrada · 4 de noviembre de 2026, 13:19 UTC
+
+**IT sigue apta para la revisión Stage 3.5, pero la ejecución está suspendida: no entrar, cantidad 0. No existe un intervalo ejecutable aprobado.**
+
+Con S = 184,45 USD solo como hipótesis optimista sin colchón y T = 237,54 USD como recuperación generosa, no objetivo aprobado, el límite matemático de 3:1 es **197,72 USD**. La confirmación diaria elegida exigiría al menos **199,21 USD**, por encima de la EMA50 previa de 199,2027. No se solapan. Costes y un colchón bajo el soporte reducen aún más el límite. Esto es una prueba del marco diario elegido, no una regla universal para cualquier entrada intradía futura.
+
+**197,72 no es una orden ni un precio de compra. 199–201 es solo zona de observación.** La próxima revisión será al cierre regular del 4 de noviembre, **21:00 UTC / 16:00 EST**. Un cierre por encima de **208 y de la EMA50 actualizada** abre una nueva evaluación, no autoriza entrar. Una ruptura bajo **184,45** invalida el soporte observado; no ejecuta un stop, porque no se ha adoptado ninguno.
+
+El cierre regular de referencia sigue siendo **204,22 USD del 3 de noviembre**. El print premercado **208,30 USD del 4 de noviembre a las 07:50:41 EST / 12:50:41 UTC** es histórico y retrasado, no una cotización actual ni una señal de sesión regular. No se modifica el modelo: central **213,76**, calibración alternativa **203,44**, sensibilidades operativas **200,81 / 200,73** y sin caja excedente **196,05**. Ninguno es un techo de compra aprobado.
+
+### Entry assessment in English
+
+**No approved entry or executable range; quantity 0.** The selected daily-close framework has no overlap between its optimistic diagnostic 3R bound of **$197.72** and minimum confirmation of **$199.21**. Hypothetical S = $184.45 is not an operative stop; $237.54 is a generous recovery scenario, not an approved target. Neither $197.72 nor the $199–201 observation area is a standing order. At the November 4 regular close, a close above $208 and updated EMA50 triggers reassessment only. A break below $184.45 invalidates the observed support. The $208.30 print is dated **07:50:41 EST**, not live; the prior regular close is $204.22. Fundamental values remain unchanged.
+
+With hypothetical S = $184.45 and generous recovery reference T = $237.54, gross reward/risk is only **1.69 at the $204.22 prior close and 1.23 at the historical $208.30 print**. These are diagnostic inputs, not an approved target or protective stop.
+
+[Análisis técnico completo, fuentes y cálculo / Full technical assessment, sources and calculation](https://fundamentalpullback.github.io/research/2026-11-04/IT/entry-decision.html) · [Datos del diagnóstico / Diagnostic data](https://fundamentalpullback.github.io/research/2026-11-04/IT/IT_entry_analysis_public_2026-11-04.json).
+
+Las versiones anteriores que siguen conservan su fecha de corte; este comentario posterior las complementa sin convertir referencias históricas en cotizaciones actuales. / Earlier sections below retain their original cutoffs.
+
+**Alcance de publicación / Publication scope:** este suplemento de la web está pendiente de sincronización de comentarios con el diario en Sheets. Se conservan sin cambios la decisión registrada, los datos de valoración y la ejecución suspendida. / This website commentary supplement is pending journal-spreadsheet commentary sync. Recorded eligibility, valuation data and suspended execution are unchanged.
+
 ## Share-count precision correction · November 4, 2026, 11:15 UTC
 
 [Official Q3 supplement, slide 33](https://investor.gartner.com/static-files/8e3808a2-ca31-409e-8318-28ed0600f9c7) reports **63.9 million diluted shares: 63.6 million basic plus 0.3 million awards**. The model's **64.0 million is rounded**, not the exact disclosed point-in-time count. Holding equity value and every other input constant, using 63.9 rather than 64.0 million would add approximately **$0.33 per share**. This is a denominator-only sensitivity, not a full model recalibration. The archived model and published central value of **$213.76 remain unchanged**. This source precision was verified by the reviewing analyst.

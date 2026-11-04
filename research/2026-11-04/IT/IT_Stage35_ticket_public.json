@@ -1,8 +1,8 @@
 {
   "ticker": "IT",
-  "as_of_utc": "2026-11-04T10:28:00Z",
+  "as_of_utc": "2026-11-04T13:19:00Z",
   "stage": "Stage 3.5",
-  "status": "Await post-earnings structure; no entry approved",
+  "status": "No executable entry range under selected daily framework; no entry approved",
   "reference_close": 204.22,
   "reference_close_date": "2026-11-03",
   "fundamental_reference_value": 213.757922,
@@ -20,10 +20,10 @@
   "monitoring_expiry_utc": "2026-11-04T21:00:00Z",
   "trade_authorized": false,
   "scope": "Public technical assessment; paper-trading research only. Individual account details omitted.",
-  "publication_correction_utc": "2026-11-04T11:07:00Z",
+  "publication_correction_utc": "2026-11-04T13:19:00Z",
   "eligibility": "Apta para Stage 3.5",
   "execution_status": "Suspended; no entry approved",
-  "price_reference_scope": "November 3 regular close only; no verified current premarket quote",
+  "price_reference_scope": "November 3 regular close $204.22; historical delayed November 4 premarket $208.30 at 12:50:41 UTC, not current/live",
   "fundamental_no_excess_cash_value": 196.05,
   "event_correction": {
     "ex_federal_cv_growth_prior_pct": 3.3,
@@ -48,11 +48,26 @@
       "value": 200.73
     }
   ],
-  "sensitivity_caveat": "Underlying sensitivity calculation files not located or independently rerun in this publication correction; not a new central case.",
+  "sensitivity_caveat": "Operating sensitivities $200.81/$200.73 were independently reproduced by the entry-review analyst; values unchanged, not approved ceilings.",
   "publication": {
     "eligibility": "ready",
     "execution": "suspended",
     "executionConditionEs": "Stage 3.5: esperar estructura post-resultados; requiere ficha nueva antes de cualquier entrada.",
     "executionConditionEn": "Stage 3.5: await post-earnings structure; a new plan is required before any entry."
-  }
+  },
+  "entry_assessment_url": "https://fundamentalpullback.github.io/research/2026-11-04/IT/entry-decision.html",
+  "entry_range": null,
+  "diagnostic_only": {
+    "optimistic_hypothetical_S": 184.45,
+    "generous_recovery_T": 237.54,
+    "gross_three_R_bound": 197.7225,
+    "minimum_selected_daily_confirmation": 199.21,
+    "observation_zone": [
+      199,
+      201
+    ],
+    "not_order_or_operative_stop": true
+  },
+  "monitoring_reassessment_condition": "Completed daily close above $208 and recalculated EMA50; reassess only, not entry approval",
+  "observed_support_invalidation": 184.45
 }

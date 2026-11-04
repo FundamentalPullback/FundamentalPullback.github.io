@@ -1,0 +1,199 @@
+{
+  "ticker": "IT",
+  "assessment_cutoff_utc": "2026-11-04T13:19:00Z",
+  "calculation_snapshot_utc": "2026-11-04T13:18:00Z",
+  "status": "No entry approved; public dated diagnostic only",
+  "historical_premarket_quote": {
+    "price": 208.3,
+    "timestamp_utc": "2026-11-04T12:50:41Z",
+    "timestamp_est": "2026-11-04 07:50:41 EST",
+    "providers": [
+      "Yahoo Finance",
+      "StockAnalysis"
+    ],
+    "executable": false,
+    "label": "Historical delayed print, not current/live or a regular-session confirmation"
+  },
+  "technicals": {
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/IT?range=5y&interval=1d",
+    "sessions": 1254,
+    "from": "2021-11-04",
+    "through": "2026-11-03",
+    "latest": {
+      "date": "2026-11-03",
+      "open": 208.0,
+      "volume": 3226000,
+      "low": 185.0,
+      "high": 208.0,
+      "close": 204.22000122070312
+    },
+    "EMA20": 213.7908520672996,
+    "SMA20": 212.39600067138673,
+    "EMA20_20d_change": 0.15184596197700806,
+    "EMA50": 199.2027212743558,
+    "SMA50": 197.09740051269532,
+    "EMA50_20d_change": 0.10815280027366225,
+    "EMA200": 193.89182082751515,
+    "SMA200": 169.17064998626708,
+    "EMA200_20d_change": 0.02242104109493881,
+    "Wilder_ATR14": 11.374353353941768,
+    "volume20": 1123260,
+    "volume1_to_avg20": 2.8719975784769334,
+    "high252": 256.8999938964844,
+    "yearly_ranges": {
+      "2021": {
+        "low": 302.54998779296875,
+        "high": 341.6400146484375
+      },
+      "2022": {
+        "low": 221.38999938964844,
+        "high": 358.25
+      },
+      "2023": {
+        "low": 292.6000061035156,
+        "high": 469.5799865722656
+      },
+      "2024": {
+        "low": 411.1499938964844,
+        "high": 559.0
+      },
+      "2025": {
+        "low": 222.5399932861328,
+        "high": 584.010009765625
+      },
+      "2026": {
+        "low": 124.25,
+        "high": 252.6300048828125
+      }
+    }
+  },
+  "unchanged_valuation_checks": {
+    "base": 213.75792168783087,
+    "growth_2pct": 200.8131179330228,
+    "margin_24pct": 200.72724619821156,
+    "base_no_excess_cash": 196.0526560628309
+  },
+  "valuation_note": "Conditional values and sensitivities, not order limits; existing A185 valuation unchanged.",
+  "rr_diagnostics": [
+    {
+      "diagnostic_entry": 204.22,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 208,
+      "gross_reward_risk": 0.19119878603945367,
+      "mathematical_3R_bound_not_order": 190.33749999999998
+    },
+    {
+      "diagnostic_entry": 204.22,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 214.85,
+      "gross_reward_risk": 0.5376833586241775,
+      "mathematical_3R_bound_not_order": 192.04999999999998
+    },
+    {
+      "diagnostic_entry": 204.22,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 228.51,
+      "gross_reward_risk": 1.2286292362164886,
+      "mathematical_3R_bound_not_order": 195.46499999999997
+    },
+    {
+      "diagnostic_entry": 204.22,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 237.54,
+      "gross_reward_risk": 1.6853818917551835,
+      "mathematical_3R_bound_not_order": 197.72249999999997
+    },
+    {
+      "diagnostic_entry": 204.22,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 243.96,
+      "gross_reward_risk": 2.010116337885685,
+      "mathematical_3R_bound_not_order": 199.3275
+    },
+    {
+      "diagnostic_entry": 204.22,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 256.9,
+      "gross_reward_risk": 2.664643399089527,
+      "mathematical_3R_bound_not_order": 202.56249999999997
+    },
+    {
+      "diagnostic_entry": 208.3,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 208,
+      "gross_reward_risk": -0.012578616352201722,
+      "mathematical_3R_bound_not_order": 190.33749999999998
+    },
+    {
+      "diagnostic_entry": 208.3,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 214.85,
+      "gross_reward_risk": 0.2746331236897265,
+      "mathematical_3R_bound_not_order": 192.04999999999998
+    },
+    {
+      "diagnostic_entry": 208.3,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 228.51,
+      "gross_reward_risk": 0.847379454926623,
+      "mathematical_3R_bound_not_order": 195.46499999999997
+    },
+    {
+      "diagnostic_entry": 208.3,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 237.54,
+      "gross_reward_risk": 1.2259958071278807,
+      "mathematical_3R_bound_not_order": 197.72249999999997
+    },
+    {
+      "diagnostic_entry": 208.3,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 243.96,
+      "gross_reward_risk": 1.495178197064988,
+      "mathematical_3R_bound_not_order": 199.3275
+    },
+    {
+      "diagnostic_entry": 208.3,
+      "hypothetical_unbuffered_stop": 184.45,
+      "upside_reference_not_approved_target": 256.9,
+      "gross_reward_risk": 2.0377358490566,
+      "mathematical_3R_bound_not_order": 202.56249999999997
+    }
+  ],
+  "diagnostic_caveats": {
+    "hypothetical_stop": 184.45,
+    "generous_recovery_reference_not_base_target": 237.54,
+    "bound_exact": 197.7225,
+    "bound_rounded_down_not_order": 197.72,
+    "observation_only_zone": [
+      199,
+      201
+    ],
+    "prior_ema50": 199.2027212743558,
+    "cent_grid_daily_confirmation_threshold": 199.21,
+    "no_overlap_under_selected_daily_framework": true,
+    "validity": "The test assumes a new completed daily close at the diagnostic entry price. It is not a universal rule against future intraday setups; none is approved here."
+  },
+  "reassessment": {
+    "scheduled_at_cutoff_utc": "2026-11-04T21:00:00Z",
+    "timeframe": "Completed regular-session daily bars",
+    "recovery_condition": "Daily close above 208.00 and above recalculated EMA50 triggers reassessment only, not entry",
+    "support_invalidation": "Observed break below 184.45 invalidates this broad support reference; reassess, not a stop-execution instruction"
+  },
+  "operative_stop": null,
+  "approved_target": null,
+  "entry_range": null,
+  "buy_signal": null,
+  "quantity": 0,
+  "trade_authorized": false,
+  "sources": [
+    "https://finance.yahoo.com/quote/IT/",
+    "https://stockanalysis.com/stocks/it/",
+    "https://stockanalysis.com/stocks/it/history/",
+    "https://fundamentalpullback.github.io/research/2026-11-04/stocks/IT.html",
+    "https://investor.gartner.com/static-files/8e3808a2-ca31-409e-8318-28ed0600f9c7",
+    "https://stockanalysis.com/stocks/it/transcripts/723649-q3-2026/",
+    "https://www.sec.gov/Archives/edgar/data/749251/000074925126000307/it-20260930.htm",
+    "https://fundamentalpullback.github.io/data/plan/Plan_Completo_2026-10-30.pdf"
+  ]
+}
