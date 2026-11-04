@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 def main():
     subprocess.run([sys.executable, str(ROOT / 'tools/refresh-tradingview-symbols.py'),
                     '--site-root', str(ROOT)], check=True)
-    for test in ('test-stock-profiles.cjs', 'test-stock-cards.cjs', 'test-stock-quotes.cjs'):
+    for test in ('test-stock-profiles.cjs', 'test-stock-cards.cjs', 'test-stock-quotes.cjs', 'test-stock-navigation.cjs', 'test-stock-navigation.cjs'):
         subprocess.run(['node', str(ROOT / 'tools' / test)], check=True)
     path = ROOT / 'data/manifest.js'
     prefix = 'window.FP_MANIFEST='

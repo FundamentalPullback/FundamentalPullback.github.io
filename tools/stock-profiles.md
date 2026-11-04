@@ -63,3 +63,17 @@ The normal manifest refresh and new-publication behavior remains unchanged. New 
 
 
 The main summary card intentionally omits a documented-close tile. Its three numeric tiles are the dated scanner price, estimated value and bear/bull scenarios. The provider quote is shown separately above them. Historical close records, source reports, provenance and conflict checks remain intact; they are not presented as the latest market close. At narrow widths the scenario tile spans both columns.
+
+## Previous and next within search results
+
+The stock card's previous/next controls use the same result builder as **Find a stock**. They retain the company/ticker query, the all/completed/no-completed-analysis filter, and the existing ticker A–Z order. The center shows the current position and cohort description. The first previous button and last next button are natively disabled; navigation never wraps.
+
+Search state is encoded in the hash, for example `#fichas?q=holdings&filter=complete&sort=ticker` and `#ficha/WMG?q=holdings&filter=complete&sort=ticker`. Every result link, adjacent-stock link, and **Back to results** link carries these criteria. Search edits replace the current list's history entry, while opening or stepping between profiles creates normal browser history entries. Reload, copied links, Back, and Forward restore the criteria without depending on session storage. A legacy/direct `#ficha/WMG` bookmark explicitly uses **All stocks · Ticker A–Z**, not a previous search left in memory. Links specifying an unsupported filter/order disable cohort navigation until the user returns to search.
+
+An exact ticker (or any nonempty query with one match) still shows its card inline. Its navigation displays **1 of 1**, with both arrows disabled, and **View research and history** retains that one-result context. No results shows the existing empty state, with no fabricated neighbors.
+
+Each publication recomputes the results from the same criteria using current published data. Newly published profiles and completed analyses enter automatically; removed or no-longer-matching profiles leave automatically. If the current ticker disappears or no longer belongs to its saved results, both arrows are disabled with an explanation and a return-to-results link. The page never silently jumps to a different stock. The existing publication reload preserves the full hash.
+
+The controls use native links and disabled buttons, translated English/Spanish labels, visible focus outlines, and at least 44px target height. At narrow widths the result context occupies its own row above the two controls. Below 421px, visible button labels shorten to the arrow and ticker while full translated accessible labels remain. Keyboard focus survives filter changes and stepping through profiles; at an endpoint it moves to the newly opened stock's heading. No global arrow-key shortcuts intercept typing or browser navigation. Each stock change re-renders and mounts the existing TradingView quote for the newly selected symbol; it does not retain a previous stock's widget.
+
+Run the existing profile/card/quote suites plus `node tools/test-stock-navigation.cjs`. The navigation suite covers all currently published profiles in all/completed/other cohorts, both languages, A–Z adjacency and boundaries, multi-result queries, one/zero results, special-character URL encoding, direct/invalid links, state restoration, and changing publications (new profiles, new completions, removed/current-out-of-cohort symbols).

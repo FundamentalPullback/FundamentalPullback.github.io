@@ -583,6 +583,19 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
 .profile-home p { color:var(--ink-2); margin-top:5px; }
 @media(max-width:640px) { .profile-results,.profile-metrics { grid-template-columns:minmax(0,1fr); } .profile-hero,.profile-home { align-items:flex-start; flex-direction:column; } .profile-metrics>div { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 10px; } .profile-metrics dd { margin:0; font-size:1rem; } .profile-metrics small { grid-column:1/-1; } .profile-search .controls { align-items:flex-start; } }
 
+/* Adjacent stocks always come from the same URL-backed search results. */
+.profile-navigation { display:grid; grid-template-columns:minmax(110px,auto) minmax(0,1fr) minmax(110px,auto); align-items:center; gap:16px; padding-bottom:16px; border-bottom:1px solid var(--rule); }
+.profile-navigation .profile-nav-step { min-height:44px; display:flex; align-items:center; justify-content:center; gap:7px; white-space:nowrap; }
+.profile-nav-step>span[aria-hidden] { font-size:1.2rem; }
+.profile-nav-step:disabled { opacity:.4; cursor:not-allowed; }
+.profile-nav-step:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.profile-nav-context { min-width:0; text-align:center; }
+.profile-nav-context strong { display:block; font-size:.95rem; }
+.profile-nav-context small { display:block; margin-top:4px; font-size:.74rem; color:var(--ink-2); overflow-wrap:anywhere; }
+.profile-nav-notice { margin:12px 0; font-size:.83rem; }
+@media(max-width:640px) { .profile-navigation { grid-template-columns:1fr 1fr; gap:10px; } .profile-nav-context { grid-column:1/-1; grid-row:1; } .profile-nav-step { min-width:0; } }
+@media(max-width:420px) { .profile-nav-label { display:none; } .profile-nav-step b { white-space:normal; overflow-wrap:anywhere; } }
+
 /* The searchable stock card reuses the existing valuation visual language. */
 .stock-summary { border-top:3px solid var(--accent); display:grid; gap:16px; min-width:0; }
 .stock-summary p,.stock-summary h2 { margin:0; }
@@ -1002,7 +1015,7 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null, eq: null,
     err: { scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null },
     loadedAt: null,
-    view: "inicio", profileTicker: null, profileQ: "", profileFilter: "all", profileRefreshStatus: "",
+    view: "inicio", profileTicker: null, profileQ: "", profileFilter: "all", profileSort: "ticker", profileContextValid: true, profileRefreshStatus: "",
     scanDate: null, onlyS2: true, scanQ: "",
     anaFilter: "all", rejFilter: "all", rejQ: "", anaQ: "", resDate: null, anaDate: null, latestOnly: true,
     retroHz: "corte", retroGrp: "A", calMode: "m", calMonth: null, calYear: null, calSel: null,
@@ -2355,7 +2368,37 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     }
     return profileCache;
   }
-  function profileLink(tk,label) { return '<a class="btn" href="#ficha/'+encodeURIComponent(tk)+'">'+esc(label||tk)+'</a>'; }
+  /* Search and navigation share one result builder and URL-backed context. The
+     current search order is ticker A–Z; keep its explicit version in saved links. */
+  function profileContext() { return {q:S.profileQ,filter:S.profileFilter,sort:S.profileSort}; }
+  function profileParams(context) {
+    var params=new URLSearchParams();
+    if(context.q)params.set('q',context.q);
+    params.set('filter',context.filter);params.set('sort',context.sort);
+    return params.toString();
+  }
+  function profileSearchHash() { return '#fichas?'+profileParams(profileContext()); }
+  function profileHref(ticker,context) { return '#ficha/'+encodeURIComponent(ticker)+(context?'?'+profileParams(context):''); }
+  function profileResults(all) {
+    if(!S.profileContextValid)return [];
+    return window.FP_PROFILE_ENGINE.search(all,S.profileQ).filter(function(p){return S.profileFilter==='all'||(S.profileFilter==='complete'?!!p.latestCompleted:!p.latestCompleted);});
+  }
+  function profileFilterLabel() { return S.profileFilter==='complete'?pt('Con análisis completado','With completed analysis'):S.profileFilter==='other'?pt('Sin análisis completo registrado','No completed analysis recorded'):pt('Todas las acciones','All stocks'); }
+  function profileNavigation(p) {
+    var rows=profileResults(profiles()),index=rows.findIndex(function(x){return x.ticker===p.ticker;}),context=profileContext();
+    function step(direction,row) {
+      var label=direction==='prev'?pt('Acción anterior','Previous stock'):pt('Acción siguiente','Next stock'),arrow=direction==='prev'?'←':'→';
+      var content='<span aria-hidden="true">'+arrow+'</span><span class="profile-nav-label">'+esc(direction==='prev'?pt('Anterior','Previous'):pt('Siguiente','Next'))+'</span>'+(row?'<b>'+esc(row.ticker)+'</b>':'');
+      var attrs=' id="profile-'+direction+'" class="btn profile-nav-step" aria-label="'+esc(label+(row?': '+row.ticker:''))+'"';
+      return row?'<a'+attrs+' href="'+esc(profileHref(row.ticker,context))+'" rel="'+direction+'">'+content+'</a>':'<button type="button"'+attrs+' disabled>'+content+'</button>';
+    }
+    var status=index>=0?(index+1)+' '+pt('de','of')+' '+rows.length:pt('Fuera de estos resultados','Not in these results');
+    var detail=profileFilterLabel()+' · Ticker A–Z'+(S.profileQ.trim()?' · '+pt('Búsqueda: ','Search: ')+S.profileQ:'');
+    var h='<nav class="profile-navigation" aria-label="'+esc(pt('Navegar por los resultados de acciones','Browse stock results'))+'">'+step('prev',index>0?rows[index-1]:null)+'<div class="profile-nav-context"><strong role="status" aria-live="polite" aria-atomic="true">'+esc(status)+'</strong><small>'+esc(detail)+'</small></div>'+step('next',index>=0&&index<rows.length-1?rows[index+1]:null)+'</nav>';
+    if(index<0)h+='<p class="muted profile-nav-notice">'+esc(S.profileContextValid?pt('Esta acción ya no aparece en esta búsqueda con los datos publicados actuales. Vuelve a los resultados para elegir otra.','This stock is no longer in this search with the current published data. Return to the results to choose another.'):pt('No se reconoce el filtro o el orden de este enlace. Vuelve al buscador para elegir los resultados.','This link’s filter or sort order is not supported. Return to search to choose the results.'))+'</p>';
+    return h;
+  }
+  function profileLink(tk,label,context) { return '<a class="btn" href="'+esc(profileHref(tk,context))+'">'+esc(label||tk)+'</a>'; }
   function profileDate(d) { return d ? fmtD(d) : pt('No consta','Not recorded'); }
   function profileState(p) { return p.latestCompleted ? pt('Análisis completado','Completed analysis') : (p.hasResearch ? pt('Revisión parcial o pendiente','Partial or pending review') : (p.reports.length ? pt('Seguimiento documentado','Documented follow-up') : pt('Solo escáner','Scanner only'))); }
   function reportLink(id,label) { return '<a class="btn" href="#biblioteca/'+encodeURIComponent(id)+'">'+esc(label||id)+' →</a>'; }
@@ -2366,14 +2409,14 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     if(S.libState!=='ok') return h+notice(pt('Cargando el archivo de investigación','Loading research archive'),S.libState==='fail'?pt('No se pudo cargar toda la biblioteca. Reintenta para evitar mostrar fichas incompletas.','The full library could not be loaded. Retry to avoid incomplete profiles.'):t().loading,S.libState==='fail'?'<button class="btn" data-libretry="1">'+esc(t().retry)+'</button>':'');
     var all=profiles(), p=S.profileTicker && all.find(function(x){return x.ticker===S.profileTicker;});
     if(S.profileTicker) {
-      if(!p)return h+'<section class="panel"><h3>'+esc(pt('No hay una ficha para ','No profile found for ')+S.profileTicker)+'</h3><p>'+esc(pt('No aparece en los datos publicados. Puedes buscar otro ticker o nombre.','It does not appear in the published data. Search for another ticker or company.'))+'</p><a class="btn" href="#fichas">'+esc(pt('Volver al buscador','Back to search'))+'</a></section>';
+      if(!p)return h+'<section class="panel">'+profileNavigation({ticker:S.profileTicker})+'<h3>'+esc(pt('No hay una ficha para ','No profile found for ')+S.profileTicker)+'</h3><p>'+esc(pt('No aparece en los datos publicados. Puedes buscar otro ticker o nombre.','It does not appear in the published data. Search for another ticker or company.'))+'</p><a class="btn" href="'+esc(profileSearchHash())+'">'+esc(pt('Volver a los resultados','Back to results'))+'</a></section>';
       return renderProfile(p);
     }
-    var matches=window.FP_PROFILE_ENGINE.search(all,S.profileQ), shown=matches.filter(function(p){return S.profileFilter==='all'||(S.profileFilter==='complete'?!!p.latestCompleted:!p.latestCompleted);});
+    var shown=profileResults(all);
     h+='<section class="profile-search panel"><label for="profile-q">'+esc(pt('Ticker o nombre de empresa','Ticker or company name'))+'</label><input type="search" id="profile-q" autocomplete="off" spellcheck="false" placeholder="'+esc(pt('Por ejemplo: HPE, Nutanix, Estée Lauder…','For example: HPE, Nutanix, Estée Lauder…'))+'" value="'+esc(S.profileQ)+'"><div class="controls"><label for="profile-filter">'+esc(pt('Mostrar','Show'))+' <select id="profile-filter"><option value="all"'+(S.profileFilter==='all'?' selected':'')+'>'+esc(pt('Todas las acciones','All stocks'))+'</option><option value="complete"'+(S.profileFilter==='complete'?' selected':'')+'>'+esc(pt('Con análisis completado','With completed analysis'))+'</option><option value="other"'+(S.profileFilter==='other'?' selected':'')+'>'+esc(pt('Sin análisis completo registrado','No completed analysis recorded'))+'</option></select></label><span role="status" aria-live="polite">'+shown.length+' '+esc(pt('resultados de','results from'))+' '+all.length+' '+esc(pt('acciones','stocks'))+'</span></div><p class="muted">'+esc(pt('Incluye todo el historial publicado, no solo el último escáner. «Solo escáner» no implica que exista un análisis.','Includes the entire published history, not just the latest scan. “Scanner only” does not mean research has been completed.'))+'</p></section>';
     if(!shown.length) return h+notice(pt('Sin resultados','No results'),pt('Prueba otro ticker o parte del nombre. No hay una ficha en los datos publicados para esta búsqueda.','Try another ticker or part of the company name. No profile in the published data matches this search.'));
     if(shown.length===1 && S.profileQ.trim())return h+profileSummaryCard(shown[0],true)+profileFreshness();
-    h+='<div class="profile-results">'+shown.map(function(p){var a=p.latestCompleted;return '<a class="profile-result" href="#ficha/'+encodeURIComponent(p.ticker)+'"><div><b class="tick">'+esc(p.ticker)+'</b><span class="profile-co">'+esc(p.company||pt('Nombre no registrado','Company name not recorded'))+'</span></div><span class="profile-tag '+(a?'profile-complete':'')+'">'+esc(profileState(p))+'</span><div class="profile-result-dates"><span>'+esc(pt('Primer escáner: ','First scan: ')+profileDate(p.firstScan))+'</span><span>'+esc(pt('Último análisis completo: ','Last completed analysis: ')+profileDate(a&&a.date))+'</span></div><span class="profile-arrow" aria-hidden="true">→</span></a>';}).join('')+'</div>';
+    h+='<div class="profile-results">'+shown.map(function(p){var a=p.latestCompleted;return '<a class="profile-result" href="'+esc(profileHref(p.ticker,profileContext()))+'"><div><b class="tick">'+esc(p.ticker)+'</b><span class="profile-co">'+esc(p.company||pt('Nombre no registrado','Company name not recorded'))+'</span></div><span class="profile-tag '+(a?'profile-complete':'')+'">'+esc(profileState(p))+'</span><div class="profile-result-dates"><span>'+esc(pt('Primer escáner: ','First scan: ')+profileDate(p.firstScan))+'</span><span>'+esc(pt('Último análisis completo: ','Last completed analysis: ')+profileDate(a&&a.date))+'</span></div><span class="profile-arrow" aria-hidden="true">→</span></a>';}).join('')+'</div>';
     return h+profileFreshness();
   }
   function profileFreshness() { return '<p class="muted profile-foot">'+esc(pt('Datos publicados: ','Published data: ')+(window.FP_MANIFEST&&window.FP_MANIFEST.generated||pt('fecha no disponible','date unavailable')))+'. '+esc(pt('Se comprueban nuevas publicaciones cada minuto mientras la página está visible. Los nuevos tickers y análisis se incorporan automáticamente cuando se publican en la web.','New publications are checked every minute while the page is visible. New tickers and analyses are included automatically once published on the website.'))+' <button class="more-link" data-profile-refresh="1">'+esc(pt('Comprobar ahora','Check now'))+'</button><span role="status" id="profile-refresh-status">'+esc(S.profileRefreshStatus||'')+'</span></p>'; }
@@ -2441,14 +2484,14 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
       var link=document.createElement('a');link.href='https://www.tradingview.com/';link.target='_blank';link.rel='noopener nofollow';link.textContent=pt('Cotizaciones por TradingView','Quotes by TradingView');credit.appendChild(link);wrap.appendChild(credit);
       var script=document.createElement('script');script.type='text/javascript';script.src='https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js';script.async=true;
       var siteTheme=document.documentElement.getAttribute('data-theme');var dark=siteTheme==='dark'||(siteTheme!=='light'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
-      script.textContent=JSON.stringify({symbol:symbol,width:'100%',locale:lang==='en'?'en':'es',colorTheme:dark?'dark':'light',isTransparent:true});
+      script.textContent=JSON.stringify({symbol:symbol,width:'100%',locale:lang==='en'?'en':'es',colorTheme:dark?'dark':'light',isTransparent:false});
       script.onerror=function(){if(el.isConnected)el.innerHTML='<p class="muted">'+esc(pt('No se pudo cargar la cotización. Utiliza el enlace a la fuente.','The quote could not load. Use the source link.'))+'</p>';};
       el.innerHTML='';wrap.appendChild(script);el.appendChild(wrap);
     });
   }
   function profileSummaryCard(p,inline) {
     var d=profileCardData(p),r=d.row,v=d.model,c=d.close,s=d.scan,none=pt('No disponible','Unavailable');
-    var h='<section class="panel stock-summary" aria-label="'+esc(pt('Ficha de ','Stock card: ')+p.ticker)+'"><div class="stock-summary-head"><div><p class="eyebrow">'+esc(pt('Ficha de la acción','Stock profile'))+'</p><h2>'+esc(p.ticker)+'</h2><p class="profile-company">'+esc(p.company||pt('Nombre no registrado','Name not recorded'))+'</p></div><div>'+ (r?pill(r.decision):'<span class="profile-tag">'+esc(profileState(p))+'</span>')+'</div></div>';
+    var h='<section class="panel stock-summary" aria-label="'+esc(pt('Ficha de ','Stock card: ')+p.ticker)+'">'+profileNavigation(p)+'<div class="stock-summary-head"><div><p class="eyebrow">'+esc(pt('Ficha de la acción','Stock profile'))+'</p><h2 id="profile-title" tabindex="-1">'+esc(p.ticker)+'</h2><p class="profile-company">'+esc(p.company||pt('Nombre no registrado','Name not recorded'))+'</p></div><div>'+ (r?pill(r.decision):'<span class="profile-tag">'+esc(profileState(p))+'</span>')+'</div></div>';
     var note=r?whyOf(r):v?(lang==='en'&&v.summaryEn?v.summaryEn:v.summary):'';
     if(d.analysis&&d.analysis.report&&(!r||String(d.analysis.date||'')>String(window.FP_PROFILE_ENGINE.day(r.adate)||''))){var meta=(d.analysis.report.profiles||[]).find(function(x){return x.ticker===p.ticker;});note=meta&&(lang==='en'&&meta.summaryEn?meta.summaryEn:meta.summary)||(!r&&v&&note)||pt('Última fuente de investigación: ','Latest research source: ')+d.analysis.report.title+'. '+pt('Consulta el informe para conocer su conclusión y límites.','Open the report for its conclusion and limits.');}
     var short=String(note||pt('No hay un comentario de análisis registrado. Consulta el historial disponible debajo.','No analysis comment is recorded. The available history is linked below.'));
@@ -2467,12 +2510,12 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
     if(c&&d.latestKnownSession&&c.date<d.latestKnownSession)h+='<p class="muted">'+esc(pt('Este cierre es anterior a la última sesión publicada de la cuenta; no se presenta como cotización actual.','This close predates the latest published account session and is not presented as a current quote.'))+'</p>';
     if(d.latestScan&&s&&d.latestScan.date>s.date)h+='<p class="muted">'+esc(pt('Escáner posterior: ','Later scanner: ')+fmtM(d.latestScan.price)+' · '+profileDate(d.latestScan.date)+'. '+pt('Se conserva aparte para no cambiar el precio histórico del análisis.','Kept separate so the analysis’s historical price is not replaced.'))+'</p>';
     if(r)h+=execLine(r);
-    h+='<div class="controls stock-summary-links">';var ids=[];if(v&&v.reportId)ids.push(v.reportId);if(r&&r.rep&&ids.indexOf(r.rep)<0)ids.push(r.rep);if(p.latestAnalysis&&p.latestAnalysis.report&&ids.indexOf(p.latestAnalysis.id)<0&&(!r||String(p.latestAnalysis.date||'')>=String(window.FP_PROFILE_ENGINE.day(r.adate)||'')))ids.push(p.latestAnalysis.id);ids.forEach(function(id){h+=reportLink(id,pt('Informe ','Report ')+id);});if(c&&c.reportId&&ids.indexOf(c.reportId)<0)h+=reportLink(c.reportId,pt('Fuente del cierre ','Close source ')+c.reportId);if(c&&c.source==='published-history')h+='<a class="btn" href="#rendimiento">'+esc(pt('Historial de cierres','Closing-price history'))+'</a>';if(inline)h+=profileLink(p.ticker,pt('Ver análisis e historial','View research and history'));else h+='<a class="btn" href="#ficha/'+encodeURIComponent(p.ticker)+'" data-profile-history="1">'+esc(pt('Ver análisis e historial','View research and history'))+'</a>';if(v&&v.row)h+='<button type="button" class="calc-btn" data-calc="'+esc(v.row.date+'|'+v.row.ticker)+'">'+esc(t().calc.btn)+'</button>';h+='</div></section>';return h;
+    h+='<div class="controls stock-summary-links">';var ids=[];if(v&&v.reportId)ids.push(v.reportId);if(r&&r.rep&&ids.indexOf(r.rep)<0)ids.push(r.rep);if(p.latestAnalysis&&p.latestAnalysis.report&&ids.indexOf(p.latestAnalysis.id)<0&&(!r||String(p.latestAnalysis.date||'')>=String(window.FP_PROFILE_ENGINE.day(r.adate)||'')))ids.push(p.latestAnalysis.id);ids.forEach(function(id){h+=reportLink(id,pt('Informe ','Report ')+id);});if(c&&c.reportId&&ids.indexOf(c.reportId)<0)h+=reportLink(c.reportId,pt('Fuente del cierre ','Close source ')+c.reportId);if(c&&c.source==='published-history')h+='<a class="btn" href="#rendimiento">'+esc(pt('Historial de cierres','Closing-price history'))+'</a>';if(inline)h+=profileLink(p.ticker,pt('Ver análisis e historial','View research and history'),profileContext());else h+='<a class="btn" href="'+esc(profileHref(p.ticker,profileContext()))+'" data-profile-history="1">'+esc(pt('Ver análisis e historial','View research and history'))+'</a>';if(v&&v.row)h+='<button type="button" class="calc-btn" data-calc="'+esc(v.row.date+'|'+v.row.ticker)+'">'+esc(t().calc.btn)+'</button>';h+='</div></section>';return h;
   }
 
   function renderProfile(p) {
     var completed=p.latestCompleted, a=p.latestAnalysis, r=p.latestReview, m=p.latestManagement, unknown=pt('No consta','Not recorded');
-    var h='<div class="controls"><a class="btn" href="#fichas">← '+esc(pt('Buscar otra acción','Find another stock'))+'</a><span class="muted">'+esc(pt('Enlace permanente de la ficha','Permanent profile link'))+'</span></div>';
+    var h='<div class="controls"><a class="btn" href="'+esc(profileSearchHash())+'">← '+esc(pt('Volver a los resultados','Back to results'))+'</a><span class="muted">'+esc(pt('Enlace permanente de la ficha','Permanent profile link'))+'</span></div>';
     h+=profileSummaryCard(p,false);
     function metric(label,value,note){return '<div><dt>'+esc(label)+'</dt><dd>'+esc(value)+'</dd><small>'+esc(note)+'</small></div>';}
     h+='<dl class="profile-metrics">'+metric(pt('Primer escáner registrado','First recorded scan'),profileDate(p.firstScan),pt('Primera aparición en el archivo disponible','First appearance in the available archive'))+metric(pt('Último escáner','Latest scan'),profileDate(p.lastScan),p.scanDates.length+' '+pt('fechas registradas','recorded dates'))+metric(pt('Último análisis completado','Last completed analysis'),profileDate(completed&&completed.date),completed?(completed.id+' · '+pt('fecha de la fuente del análisis','analysis source date')):pt('No se sustituye por una fecha de escáner','Never replaced with a scanner date'))+'</dl>';
@@ -2500,8 +2543,17 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   }
   function profileReports(rows) { return rows.length?'<div class="profile-report-list">'+rows.map(function(x){var r=x.report;return '<a href="#biblioteca/'+encodeURIComponent(r.id)+'"><span>'+esc(profileDate(x.date)+' · '+r.id)+'</span><b>'+esc(r.title)+'</b><small>'+esc(t().lib.cat[r.cat]||r.cat)+'</small></a>';}).join('')+'</div>':'<p class="muted">'+esc(pt('No hay informes vinculados.','No linked reports.'))+'</p>'; }
   function profileRoute(hash) {
-    if(/^ficha\//.test(hash)) { try { S.profileTicker=decodeURIComponent(hash.slice(6)).toUpperCase(); } catch(e) { S.profileTicker=hash.slice(6).toUpperCase(); } return 'fichas'; }
-    if(/^fichas(?:\?|$)/.test(hash)) { S.profileTicker=null; S.profileQ=new URLSearchParams(hash.split('?')[1]||'').get('q')||''; return 'fichas'; }
+    if(/^ficha\//.test(hash)||/^fichas(?:\?|$)/.test(hash)) {
+      var split=hash.indexOf('?'),route=split<0?hash:hash.slice(0,split),params=new URLSearchParams(split<0?'':hash.slice(split+1));
+      var filter=params.get('filter')||'all',sort=params.get('sort')||'ticker';
+      S.profileQ=params.get('q')||'';
+      S.profileContextValid=['all','complete','other'].indexOf(filter)>=0&&sort==='ticker';
+      S.profileFilter=['all','complete','other'].indexOf(filter)>=0?filter:'all';
+      S.profileSort='ticker';
+      S.profileTicker=null;
+      if(/^ficha\//.test(route)) { try { S.profileTicker=decodeURIComponent(route.slice(6)).toUpperCase(); } catch(e) { S.profileTicker=route.slice(6).toUpperCase(); } }
+      return 'fichas';
+    }
     if(/^biblioteca\//.test(hash)) { try{S.libSel=decodeURIComponent(hash.slice(11));}catch(e){S.libSel=null;}return 'biblioteca'; }
     return hash;
   }
@@ -2735,6 +2787,12 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
         if (v === "cartera" || v === "inicio") drawEquity();
         markScroll(el);
         if(v === "fichas")mountProfileQuotes(el);
+        if(v === "fichas" && (focusId === "profile-prev" || focusId === "profile-next")) {
+          var navFocus=document.getElementById(focusId);
+          if(!navFocus || navFocus.disabled)navFocus=document.getElementById("profile-title");
+          if(navFocus)navFocus.focus({preventScroll:true});
+        }
+        if (focusId === "profile-filter") { var filterFocus=document.getElementById(focusId); if(filterFocus)filterFocus.focus({preventScroll:true}); }
         if (focusId === "profile-q" || focusId === "scan-q" || focusId === "lib-q" || focusId === "rej-q" || focusId === "ana-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
       }
     });
@@ -2795,10 +2853,10 @@ nav.tabs { flex-direction: column; gap: 0; overflow: visible; }
   document.addEventListener("keydown", function (e) {
     if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("tr.click, .plrow.click, div.card")) { e.preventDefault(); openDetail(e.target.getAttribute("data-open")); }
   });
-  document.addEventListener("change", function (e) { if(e.target.id === "profile-filter") { S.profileFilter=e.target.value; render(); }  if (e.target.id === "scan-date") { S.scanDate = e.target.value; render(); } if (e.target.id === "res-date") { S.resDate = e.target.value; render(); } if (e.target.id === "ana-date") { S.anaDate = e.target.value; S.anaFilter = "all"; render(); } });
+  document.addEventListener("change", function (e) { if(e.target.id === "profile-filter") { S.profileFilter=e.target.value; S.profileContextValid=true; history.replaceState(history.state,"",profileSearchHash()); render(); }  if (e.target.id === "scan-date") { S.scanDate = e.target.value; render(); } if (e.target.id === "res-date") { S.resDate = e.target.value; render(); } if (e.target.id === "ana-date") { S.anaDate = e.target.value; S.anaFilter = "all"; render(); } });
   var libT;
   document.addEventListener("input", function (e) {
-    if(e.target.id === "profile-q") { S.profileQ=e.target.value; history.replaceState(null,"","#fichas"+(S.profileQ?"?q="+encodeURIComponent(S.profileQ):"")); clearTimeout(libT); libT=setTimeout(render,120); }
+    if(e.target.id === "profile-q") { S.profileQ=e.target.value; S.profileContextValid=true; history.replaceState(history.state,"",profileSearchHash()); clearTimeout(libT); libT=setTimeout(render,120); }
     if (e.target.id === "scan-q") { S.scanQ = e.target.value; render(); }
     if (e.target.id === "rej-q" || e.target.id === "ana-q") { S[e.target.id === "rej-q" ? "rejQ" : "anaQ"] = e.target.value; clearTimeout(libT); libT = setTimeout(render, 150); }
     if (e.target.id === "lib-q") { S.libQ = e.target.value; clearTimeout(libT); libT = setTimeout(render, 180); }
