@@ -1,0 +1,1252 @@
+{
+  "method": "10-year FCFF with funded margin growth and separate loan/NWC physical floor. All forecast inputs are analyst assumptions. Strategic investments excluded from bridge, not written off as fact.",
+  "inputs": {
+    "price": 142.57,
+    "price_date": "2026-11-03",
+    "cash": 1868,
+    "marketable_short": 2859,
+    "marketable_long": 524,
+    "operating_cash_ratio": 0.05,
+    "tax_stress": 24,
+    "net_loan_book": 2350,
+    "noncash_revenue_9m": 38,
+    "revenue_9m": 10495,
+    "diluted_share_proxy_components_m": {
+      "actual_A_B": 1286.38291,
+      "all_options_no_proceeds": 11.821761,
+      "RSUs": 4.344951,
+      "DSUs": 0.006168
+    },
+    "scenarios": {
+      "bear": {
+        "g": [
+          0.18,
+          0.15,
+          0.12,
+          0.1,
+          0.08,
+          0.07,
+          0.06,
+          0.05,
+          0.04,
+          0.03
+        ],
+        "m": [
+          0.14,
+          0.14,
+          0.14,
+          0.14,
+          0.14,
+          0.14,
+          0.14,
+          0.14,
+          0.14,
+          0.14
+        ],
+        "w": 0.11,
+        "tg": 0.02,
+        "roic": 0.15,
+        "tax": 0.25
+      },
+      "base": {
+        "g": [
+          0.28,
+          0.24,
+          0.2,
+          0.17,
+          0.15,
+          0.13,
+          0.1,
+          0.08,
+          0.06,
+          0.04
+        ],
+        "m": [
+          0.16,
+          0.17,
+          0.18,
+          0.19,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        "w": 0.1,
+        "tg": 0.03,
+        "roic": 0.2,
+        "tax": 0.25
+      },
+      "bull": {
+        "g": [
+          0.35,
+          0.3,
+          0.26,
+          0.23,
+          0.2,
+          0.17,
+          0.14,
+          0.11,
+          0.08,
+          0.05
+        ],
+        "m": [
+          0.18,
+          0.2,
+          0.22,
+          0.24,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "w": 0.09,
+        "tg": 0.035,
+        "roic": 0.25,
+        "tax": 0.25
+      }
+    },
+    "primary_source": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000068/shop-20260930.htm",
+    "assumption_note": "Forecast growth/margins/discount/tax/ROIC, operating cash and reserve choices are analyst assumptions, not issuer forecasts or audited parameters. Rental costs stay in EBIT; no duplicate lease debt subtraction. Strategic investments excluded, not assumed economically worthless. Loan book treated as operating asset, not added to bridge."
+  },
+  "historical_anchor": {
+    "period": "TTM2026Q3",
+    "kind": "TTM",
+    "revenue": 14167,
+    "gross_profit": 6728,
+    "gaap_ebit": 2069,
+    "gaap_net_income": 2126,
+    "da": 28,
+    "sbc": 515,
+    "cfo": 2682,
+    "ppe_cash_signed": -21,
+    "lending_originations_cash_signed": -5902,
+    "lending_repayments_cash": 5113,
+    "mca_presentation_shift": 67,
+    "intangible_cash_spend": 99,
+    "direct_diluted_eps": null,
+    "sum_reported_quarterly_diluted_eps": 1.64,
+    "source_tables": "sum of four quarterly records",
+    "cash_method": "sum additive quarterly items; EPS sum separately labeled, not GAAP TTM EPS",
+    "mca_cash_flow_already_in_cfo": null,
+    "ppe_cash_spend": 21,
+    "net_investing_lending_funding": 789,
+    "cfo_minus_ppe": 2661,
+    "cfo_minus_ppe_legacy_presentation": 2594,
+    "cash_after_ppe_and_investing_lending": 1872,
+    "cash_after_ppe_lending_intangibles": 1773,
+    "cash_after_ppe_lending_intangibles_sbc": 1258,
+    "operating_margin_pct": 14.6044
+  },
+  "noncash_revenue_ratio": 0.003620771796093378,
+  "loan_ratio": 0.16587844991882544,
+  "cases": {
+    "bear": {
+      "value": 17.6983103151205,
+      "ev": 18534.386574176933,
+      "bridge": 4518.65,
+      "shares": 1302.5557900000001,
+      "pv_explicit": 6988.39675117113,
+      "pv_terminal": 11545.989823005802,
+      "terminal_share": 0.6229496604485564,
+      "terminal": {
+        "revenue": 33284.48814397583,
+        "nopat": 3404.4846031781285,
+        "fcff": 2950.553322754378,
+        "physical_reinvestment": 307.31270948189865,
+        "economic_reinvestment": 453.9312804237505,
+        "reinvestment": 453.9312804237505
+      },
+      "rows": [
+        {
+          "year": 1,
+          "growth": 0.18,
+          "revenue": 16717.059999999998,
+          "margin": 0.14,
+          "gaap_ebit": 2340.3884,
+          "noncash_revenue_deduction": 60.52865936160075,
+          "nopat": 1709.8948054787993,
+          "capex": 133.73647999999997,
+          "da": 50.15118,
+          "delta_nwc": 127.50299999999989,
+          "delta_net_loans": 422.9999999999996,
+          "physical_reinvestment": 634.0882999999994,
+          "economic_reinvestment": 1310.7760733682699,
+          "additional_reinvestment_reserve": 676.6877733682704,
+          "fcff": 399.11873211052944,
+          "present_value": 359.5664253248013
+        },
+        {
+          "year": 2,
+          "growth": 0.15,
+          "revenue": 19224.618999999995,
+          "margin": 0.14,
+          "gaap_ebit": 2691.4466599999996,
+          "noncash_revenue_deduction": 69.60795826584086,
+          "nopat": 1966.379026300619,
+          "capex": 153.79695199999998,
+          "da": 57.673856999999984,
+          "delta_nwc": 125.37794999999988,
+          "delta_net_loans": 415.9499999999996,
+          "physical_reinvestment": 637.4510449999995,
+          "economic_reinvestment": 1709.894805478798,
+          "additional_reinvestment_reserve": 1072.4437604787986,
+          "fcff": 256.48422082182105,
+          "present_value": 208.16834739211185
+        },
+        {
+          "year": 3,
+          "growth": 0.12,
+          "revenue": 21531.573279999997,
+          "margin": 0.14,
+          "gaap_ebit": 3014.4202591999997,
+          "noncash_revenue_deduction": 77.96091325774178,
+          "nopat": 2202.3445094566937,
+          "capex": 172.25258623999997,
+          "da": 64.59471984,
+          "delta_nwc": 115.3477140000001,
+          "delta_net_loans": 382.6740000000003,
+          "physical_reinvestment": 605.6795804000004,
+          "economic_reinvestment": 1573.103221040498,
+          "additional_reinvestment_reserve": 967.4236406404976,
+          "fcff": 629.2412884161956,
+          "present_value": 460.09580684862766
+        },
+        {
+          "year": 4,
+          "growth": 0.1,
+          "revenue": 23684.730607999998,
+          "margin": 0.14,
+          "gaap_ebit": 3315.8622851200003,
+          "noncash_revenue_deduction": 85.75700458351595,
+          "nopat": 2422.578960402363,
+          "capex": 189.477844864,
+          "da": 71.054191824,
+          "delta_nwc": 107.65786640000006,
+          "delta_net_loans": 357.1624000000002,
+          "physical_reinvestment": 583.2439194400002,
+          "economic_reinvestment": 1468.2296729711288,
+          "additional_reinvestment_reserve": 884.9857535311286,
+          "fcff": 954.3492874312342,
+          "present_value": 628.6594357841636
+        },
+        {
+          "year": 5,
+          "growth": 0.08,
+          "revenue": 25579.50905664,
+          "margin": 0.14,
+          "gaap_ebit": 3581.1312679296,
+          "noncash_revenue_deduction": 92.61756495019723,
+          "nopat": 2616.385277234552,
+          "capex": 204.63607245312,
+          "da": 76.73852716992,
+          "delta_nwc": 94.73892243200008,
+          "delta_net_loans": 314.3029120000002,
+          "physical_reinvestment": 536.9393797152003,
+          "economic_reinvestment": 1292.0421122145945,
+          "additional_reinvestment_reserve": 755.1027324993942,
+          "fcff": 1324.3431650199577,
+          "present_value": 785.9332100863687
+        },
+        {
+          "year": 6,
+          "growth": 0.07,
+          "revenue": 27370.0746906048,
+          "margin": 0.14,
+          "gaap_ebit": 3831.8104566846723,
+          "noncash_revenue_deduction": 99.10079449671105,
+          "nopat": 2799.532246640971,
+          "capex": 218.96059752483842,
+          "da": 82.1102240718144,
+          "delta_nwc": 89.52828169824006,
+          "delta_net_loans": 297.0162518400002,
+          "physical_reinvestment": 523.3949069912643,
+          "economic_reinvestment": 1220.9797960427932,
+          "additional_reinvestment_reserve": 697.5848890515289,
+          "fcff": 1578.552450598178,
+          "present_value": 843.9586019978206
+        },
+        {
+          "year": 7,
+          "growth": 0.06,
+          "revenue": 29012.27917204109,
+          "margin": 0.14,
+          "gaap_ebit": 4061.719084085753,
+          "noncash_revenue_deduction": 105.04684216651371,
+          "nopat": 2967.5041814394294,
+          "capex": 232.09823337632872,
+          "da": 87.03683751612327,
+          "delta_nwc": 82.11022407181446,
+          "delta_net_loans": 272.4063338304002,
+          "physical_reinvestment": 499.57795376242007,
+          "economic_reinvestment": 1119.8128986563886,
+          "additional_reinvestment_reserve": 620.2349448939685,
+          "fcff": 1847.6912827830408,
+          "present_value": 889.956047082069
+        },
+        {
+          "year": 8,
+          "growth": 0.05,
+          "revenue": 30462.893130643144,
+          "margin": 0.14,
+          "gaap_ebit": 4264.805038290041,
+          "noncash_revenue_deduction": 110.2991842748394,
+          "nopat": 3115.8793905114007,
+          "capex": 243.70314504514516,
+          "da": 91.38867939192943,
+          "delta_nwc": 72.53069793010273,
+          "delta_net_loans": 240.62559488352002,
+          "physical_reinvestment": 465.4707584668385,
+          "economic_reinvestment": 989.1680604798088,
+          "additional_reinvestment_reserve": 523.6973020129703,
+          "fcff": 2126.711330031592,
+          "present_value": 922.8363960779124
+        },
+        {
+          "year": 9,
+          "growth": 0.04,
+          "revenue": 31681.40885586887,
+          "margin": 0.14,
+          "gaap_ebit": 4435.397239821642,
+          "noncash_revenue_deduction": 114.71115164583298,
+          "nopat": 3240.514566131857,
+          "capex": 253.45127084695096,
+          "da": 95.04422656760661,
+          "delta_nwc": 60.92578626128634,
+          "delta_net_loans": 202.125499702157,
+          "physical_reinvestment": 421.45833024278767,
+          "economic_reinvestment": 830.9011708030419,
+          "additional_reinvestment_reserve": 409.4428405602542,
+          "fcff": 2409.6133953288154,
+          "present_value": 941.9775658268562
+        },
+        {
+          "year": 10,
+          "growth": 0.03,
+          "revenue": 32631.851121544936,
+          "margin": 0.14,
+          "gaap_ebit": 4568.459157016291,
+          "noncash_revenue_deduction": 118.15248619520797,
+          "nopat": 3337.730003115813,
+          "capex": 261.05480897235947,
+          "da": 97.89555336463481,
+          "delta_nwc": 47.522113283803264,
+          "delta_net_loans": 157.65788976768218,
+          "physical_reinvestment": 368.33925865921015,
+          "economic_reinvestment": 648.1029132263727,
+          "additional_reinvestment_reserve": 279.7636545671626,
+          "fcff": 2689.62708988944,
+          "present_value": 947.2449147503987
+        }
+      ]
+    },
+    "base": {
+      "value": 39.842642237910084,
+      "ev": 47378.61433588834,
+      "bridge": 4518.65,
+      "shares": 1302.5557900000001,
+      "pv_explicit": 9219.643187985766,
+      "pv_terminal": 38158.97114790257,
+      "terminal_share": 0.8054049634583323,
+      "terminal": {
+        "revenue": 55340.8480781183,
+        "nopat": 8150.844775297892,
+        "fcff": 6928.2180590032085,
+        "physical_reinvestment": 624.6720996225539,
+        "economic_reinvestment": 1222.6267162946835,
+        "reinvestment": 1222.6267162946835
+      },
+      "rows": [
+        {
+          "year": 1,
+          "growth": 0.28,
+          "revenue": 18133.760000000002,
+          "margin": 0.16,
+          "gaap_ebit": 2901.4016000000006,
+          "noncash_revenue_deduction": 65.65820676512627,
+          "nopat": 2126.807544926156,
+          "capex": 145.07008000000002,
+          "da": 54.40128000000001,
+          "delta_nwc": 198.3380000000001,
+          "delta_net_loans": 658.0000000000003,
+          "physical_reinvestment": 947.0068000000005,
+          "economic_reinvestment": 3067.6457522629858,
+          "additional_reinvestment_reserve": 2120.638952262985,
+          "fcff": -940.8382073368298,
+          "present_value": -855.3074612152998
+        },
+        {
+          "year": 2,
+          "growth": 0.24,
+          "revenue": 22485.8624,
+          "margin": 0.17,
+          "gaap_ebit": 3822.5966080000007,
+          "noncash_revenue_deduction": 81.41617638875655,
+          "nopat": 2805.885323708433,
+          "capex": 179.88689920000002,
+          "da": 67.4575872,
+          "delta_nwc": 217.60512,
+          "delta_net_loans": 721.92,
+          "physical_reinvestment": 1051.954432,
+          "economic_reinvestment": 3395.388893911386,
+          "additional_reinvestment_reserve": 2343.434461911386,
+          "fcff": -589.5035702029527,
+          "present_value": -487.1930332255807
+        },
+        {
+          "year": 3,
+          "growth": 0.2,
+          "revenue": 26983.034880000003,
+          "margin": 0.18,
+          "gaap_ebit": 4856.946278400001,
+          "noncash_revenue_deduction": 97.69941166650787,
+          "nopat": 3569.4351500501193,
+          "capex": 215.86427904,
+          "da": 80.94910464000002,
+          "delta_nwc": 224.85862400000008,
+          "delta_net_loans": 745.9840000000002,
+          "physical_reinvestment": 1105.7577984000002,
+          "economic_reinvestment": 3817.749131708431,
+          "additional_reinvestment_reserve": 2711.9913333084305,
+          "fcff": -248.3139816583116,
+          "present_value": -186.56196969069237
+        },
+        {
+          "year": 4,
+          "growth": 0.17,
+          "revenue": 31570.1508096,
+          "margin": 0.19,
+          "gaap_ebit": 5998.328653824,
+          "noncash_revenue_deduction": 114.3083116498142,
+          "nopat": 4413.015256630639,
+          "capex": 252.5612064768,
+          "da": 94.7104524288,
+          "delta_nwc": 229.35579647999987,
+          "delta_net_loans": 760.9036799999996,
+          "physical_reinvestment": 1148.1102305279994,
+          "economic_reinvestment": 4217.900532902597,
+          "additional_reinvestment_reserve": 3069.7903023745976,
+          "fcff": 195.114723728042,
+          "present_value": 133.2659816460911
+        },
+        {
+          "year": 5,
+          "growth": 0.15,
+          "revenue": 36305.67343104,
+          "margin": 0.2,
+          "gaap_ebit": 7261.134686208,
+          "noncash_revenue_deduction": 131.45455839728632,
+          "nopat": 5347.260095858035,
+          "capex": 290.44538744832,
+          "da": 108.91702029312,
+          "delta_nwc": 236.77613107199997,
+          "delta_net_loans": 785.5211519999999,
+          "physical_reinvestment": 1203.8256502271997,
+          "economic_reinvestment": 4671.224196136982,
+          "additional_reinvestment_reserve": 3467.398545909782,
+          "fcff": 676.0358997210533,
+          "present_value": 419.76510529028263
+        },
+        {
+          "year": 6,
+          "growth": 0.13,
+          "revenue": 41025.4109770752,
+          "margin": 0.2,
+          "gaap_ebit": 8205.08219541504,
+          "noncash_revenue_deduction": 148.54365098893354,
+          "nopat": 6042.40390831958,
+          "capex": 328.2032878166016,
+          "da": 123.07623293122559,
+          "delta_nwc": 235.9868773017599,
+          "delta_net_loans": 782.9027481599996,
+          "physical_reinvestment": 1224.0166803471357,
+          "economic_reinvestment": 3475.719062307726,
+          "additional_reinvestment_reserve": 2251.70238196059,
+          "fcff": 2566.6848460118545,
+          "present_value": 1448.8266822377855
+        },
+        {
+          "year": 7,
+          "growth": 0.1,
+          "revenue": 45127.95207478272,
+          "margin": 0.2,
+          "gaap_ebit": 9025.590414956545,
+          "noncash_revenue_deduction": 163.3980160878269,
+          "nopat": 6646.644299151538,
+          "capex": 361.02361659826175,
+          "da": 135.38385622434816,
+          "delta_nwc": 205.12705488537614,
+          "delta_net_loans": 680.5231580160005,
+          "physical_reinvestment": 1111.2899732752903,
+          "economic_reinvestment": 3021.2019541597874,
+          "additional_reinvestment_reserve": 1909.911980884497,
+          "fcff": 3625.4423449917504,
+          "present_value": 1860.4251715098862
+        },
+        {
+          "year": 8,
+          "growth": 0.08,
+          "revenue": 48738.18824076534,
+          "margin": 0.2,
+          "gaap_ebit": 9747.637648153068,
+          "noncash_revenue_deduction": 176.46985737485306,
+          "nopat": 7178.375843083661,
+          "capex": 389.9055059261227,
+          "da": 146.21456472229602,
+          "delta_nwc": 180.51180829913102,
+          "delta_net_loans": 598.8603790540805,
+          "physical_reinvestment": 1023.0631285570382,
+          "economic_reinvestment": 2658.657719660614,
+          "additional_reinvestment_reserve": 1635.5945911035758,
+          "fcff": 4519.718123423047,
+          "present_value": 2108.4818610445363
+        },
+        {
+          "year": 9,
+          "growth": 0.06,
+          "revenue": 51662.47953521126,
+          "margin": 0.2,
+          "gaap_ebit": 10332.495907042254,
+          "noncash_revenue_deduction": 187.05804881734426,
+          "nopat": 7609.078393668682,
+          "capex": 413.2998362816901,
+          "da": 154.9874386056338,
+          "delta_nwc": 146.21456472229622,
+          "delta_net_loans": 485.0769070338054,
+          "physical_reinvestment": 889.603869432158,
+          "economic_reinvestment": 2153.5127529251076,
+          "additional_reinvestment_reserve": 1263.9088834929496,
+          "fcff": 5455.5656407435745,
+          "present_value": 2313.692395114108
+        },
+        {
+          "year": 10,
+          "growth": 0.04,
+          "revenue": 53728.97871661971,
+          "margin": 0.2,
+          "gaap_ebit": 10745.795743323943,
+          "noncash_revenue_deduction": 194.54037077003804,
+          "nopat": 7913.441529415428,
+          "capex": 429.8318297329577,
+          "da": 161.18693614985915,
+          "delta_nwc": 103.3249590704225,
+          "delta_net_loans": 342.7876809705553,
+          "physical_reinvestment": 714.7575336240764,
+          "economic_reinvestment": 1521.8156787337284,
+          "additional_reinvestment_reserve": 807.0581451096521,
+          "fcff": 6391.625850681699,
+          "present_value": 2464.248455274649
+        }
+      ]
+    },
+    "bull": {
+      "value": 91.97201599542923,
+      "ev": 115280.03195281897,
+      "bridge": 4518.65,
+      "shares": 1302.5557900000001,
+      "pv_explicit": 17214.77972319554,
+      "pv_terminal": 98065.25222962342,
+      "terminal_share": 0.8506698911200762,
+      "terminal": {
+        "revenue": 80348.72942235017,
+        "nopat": 14847.19345668237,
+        "fcff": 12768.586372746837,
+        "physical_reinvestment": 988.3084496456081,
+        "economic_reinvestment": 2078.607083935532,
+        "reinvestment": 2078.607083935532
+      },
+      "rows": [
+        {
+          "year": 1,
+          "growth": 0.35,
+          "revenue": 19125.45,
+          "margin": 0.18,
+          "gaap_ebit": 3442.581,
+          "noncash_revenue_deduction": 69.2488899475941,
+          "nopat": 2529.9990825393043,
+          "capex": 153.0036,
+          "da": 57.37635,
+          "delta_nwc": 247.92250000000004,
+          "delta_net_loans": 822.5000000000001,
+          "physical_reinvestment": 1166.0497500000001,
+          "economic_reinvestment": 4066.8827522629817,
+          "additional_reinvestment_reserve": 2900.8330022629816,
+          "fcff": -1536.8836697236775,
+          "present_value": -1409.9850180951169
+        },
+        {
+          "year": 2,
+          "growth": 0.3,
+          "revenue": 24863.085000000003,
+          "margin": 0.2,
+          "gaap_ebit": 4972.617000000001,
+          "noncash_revenue_deduction": 90.02355693187233,
+          "nopat": 3661.9450823010966,
+          "capex": 198.90468,
+          "da": 74.58925500000001,
+          "delta_nwc": 286.8817500000001,
+          "delta_net_loans": 951.7500000000003,
+          "physical_reinvestment": 1362.9471750000005,
+          "economic_reinvestment": 4527.783999047169,
+          "additional_reinvestment_reserve": 3164.836824047169,
+          "fcff": -865.8389167460728,
+          "present_value": -728.75929361676
+        },
+        {
+          "year": 3,
+          "growth": 0.26,
+          "revenue": 31327.487100000002,
+          "margin": 0.22,
+          "gaap_ebit": 6892.047162000001,
+          "noncash_revenue_deduction": 113.42968173415913,
+          "nopat": 5083.963110199381,
+          "capex": 250.61989680000002,
+          "da": 93.98246130000001,
+          "delta_nwc": 323.220105,
+          "delta_net_loans": 1072.3049999999998,
+          "physical_reinvestment": 1552.1625405,
+          "economic_reinvestment": 5688.072111593137,
+          "additional_reinvestment_reserve": 4135.909571093138,
+          "fcff": -604.1090013937564,
+          "present_value": -466.4829910324451
+        },
+        {
+          "year": 4,
+          "growth": 0.23,
+          "revenue": 38532.809133,
+          "margin": 0.24,
+          "gaap_ebit": 9247.87419192,
+          "noncash_revenue_deduction": 139.51850853301573,
+          "nopat": 6831.266762540238,
+          "capex": 308.262473064,
+          "da": 115.59842739900002,
+          "delta_nwc": 360.26610165000005,
+          "delta_net_loans": 1195.20765,
+          "physical_reinvestment": 1748.1377973150002,
+          "economic_reinvestment": 6989.214609363429,
+          "additional_reinvestment_reserve": 5241.076812048429,
+          "fcff": -157.94784682319096,
+          "present_value": -111.89423672301236
+        },
+        {
+          "year": 5,
+          "growth": 0.2,
+          "revenue": 46239.370959600004,
+          "margin": 0.25,
+          "gaap_ebit": 11559.842739900001,
+          "noncash_revenue_deduction": 167.4222102396189,
+          "nopat": 8544.315397245286,
+          "capex": 369.9149676768,
+          "da": 138.7181128788,
+          "delta_nwc": 385.3280913300001,
+          "delta_net_loans": 1278.3525300000003,
+          "physical_reinvestment": 1894.8774761280006,
+          "economic_reinvestment": 6852.194538820189,
+          "additional_reinvestment_reserve": 4957.317062692189,
+          "fcff": 1692.1208584250962,
+          "present_value": 1099.762455300569
+        },
+        {
+          "year": 6,
+          "growth": 0.17,
+          "revenue": 54100.064022732004,
+          "margin": 0.25,
+          "gaap_ebit": 13525.016005683001,
+          "noncash_revenue_deduction": 195.88398598035408,
+          "nopat": 9996.849014776984,
+          "capex": 432.80051218185605,
+          "da": 162.30019206819603,
+          "delta_nwc": 393.0346531566,
+          "delta_net_loans": 1303.9195806,
+          "physical_reinvestment": 1967.45455387026,
+          "economic_reinvestment": 5810.134470126795,
+          "additional_reinvestment_reserve": 3842.6799162565353,
+          "fcff": 4186.714544650189,
+          "present_value": 2496.4010899449013
+        },
+        {
+          "year": 7,
+          "growth": 0.14,
+          "revenue": 61674.07298591449,
+          "margin": 0.25,
+          "gaap_ebit": 15418.518246478623,
+          "noncash_revenue_deduction": 223.30774401760368,
+          "nopat": 11396.407876845764,
+          "capex": 493.39258388731594,
+          "da": 185.0222189577435,
+          "delta_nwc": 378.70044815912445,
+          "delta_net_loans": 1256.3648664840014,
+          "physical_reinvestment": 1943.4356795726983,
+          "economic_reinvestment": 5598.235448275118,
+          "additional_reinvestment_reserve": 3654.79976870242,
+          "fcff": 5798.172428570646,
+          "present_value": 3171.7988759344857
+        },
+        {
+          "year": 8,
+          "growth": 0.11,
+          "revenue": 68458.22101436509,
+          "margin": 0.25,
+          "gaap_ebit": 17114.555253591272,
+          "noncash_revenue_deduction": 247.87159585954012,
+          "nopat": 12650.012743298801,
+          "capex": 547.6657681149208,
+          "da": 205.37466304309527,
+          "delta_nwc": 339.2074014225298,
+          "delta_net_loans": 1125.3439589792406,
+          "physical_reinvestment": 1806.842465473596,
+          "economic_reinvestment": 5014.419465812149,
+          "additional_reinvestment_reserve": 3207.577000338553,
+          "fcff": 7635.593277486652,
+          "present_value": 3832.0467912666236
+        },
+        {
+          "year": 9,
+          "growth": 0.08,
+          "revenue": 73934.8786955143,
+          "margin": 0.25,
+          "gaap_ebit": 18483.719673878575,
+          "noncash_revenue_deduction": 267.70132352830336,
+          "nopat": 13662.013762762703,
+          "capex": 591.4790295641144,
+          "da": 221.8046360865429,
+          "delta_nwc": 273.8328840574606,
+          "delta_net_loans": 908.4594868850603,
+          "physical_reinvestment": 1551.9667644200922,
+          "economic_reinvestment": 4048.0040778556067,
+          "additional_reinvestment_reserve": 2496.0373134355145,
+          "fcff": 9614.009684907096,
+          "present_value": 4426.5571314699855
+        },
+        {
+          "year": 10,
+          "growth": 0.05,
+          "revenue": 77631.62263029002,
+          "margin": 0.25,
+          "gaap_ebit": 19407.905657572504,
+          "noncash_revenue_deduction": 281.0863897047185,
+          "nopat": 14345.114450900837,
+          "capex": 621.0529810423202,
+          "da": 232.89486789087005,
+          "delta_nwc": 184.83719673878588,
+          "delta_net_loans": 613.2101536474155,
+          "physical_reinvestment": 1186.2054635376517,
+          "economic_reinvestment": 2732.402752552538,
+          "additional_reinvestment_reserve": 1546.1972890148863,
+          "fcff": 11612.7116983483,
+          "present_value": 4905.33491874631
+        }
+      ]
+    }
+  },
+  "inverse_margin_shift": null,
+  "inverse_margin_scan": [
+    {
+      "delta": 0.0,
+      "value": 39.842642237910084
+    },
+    {
+      "delta": 0.005,
+      "value": 40.64899104594009
+    },
+    {
+      "delta": 0.01,
+      "value": 41.455339853970116
+    },
+    {
+      "delta": 0.015,
+      "value": 42.26168866200013
+    },
+    {
+      "delta": 0.02,
+      "value": 43.06803747003015
+    },
+    {
+      "delta": 0.025,
+      "value": 43.874386278060165
+    },
+    {
+      "delta": 0.03,
+      "value": 44.68073508609018
+    },
+    {
+      "delta": 0.035,
+      "value": 45.487083894120204
+    },
+    {
+      "delta": 0.04,
+      "value": 46.29343270215021
+    },
+    {
+      "delta": 0.045,
+      "value": 47.099781510180236
+    },
+    {
+      "delta": 0.05,
+      "value": 47.90613031821025
+    },
+    {
+      "delta": 0.055,
+      "value": 48.71247912624027
+    },
+    {
+      "delta": 0.06,
+      "value": 49.518827934270284
+    },
+    {
+      "delta": 0.065,
+      "value": 50.32517674230029
+    },
+    {
+      "delta": 0.07,
+      "value": 51.13152555033031
+    },
+    {
+      "delta": 0.075,
+      "value": 51.93787435836033
+    },
+    {
+      "delta": 0.08,
+      "value": 52.74422316639034
+    },
+    {
+      "delta": 0.085,
+      "value": 53.55057197442037
+    },
+    {
+      "delta": 0.09,
+      "value": 54.35692078245038
+    },
+    {
+      "delta": 0.095,
+      "value": 55.16326959048039
+    },
+    {
+      "delta": 0.1,
+      "value": 55.96961839851042
+    },
+    {
+      "delta": 0.105,
+      "value": 56.77596720654043
+    },
+    {
+      "delta": 0.11,
+      "value": 57.582316014570445
+    },
+    {
+      "delta": 0.115,
+      "value": 58.38866482260047
+    },
+    {
+      "delta": 0.12,
+      "value": 59.19501363063046
+    },
+    {
+      "delta": 0.125,
+      "value": 60.00136243866049
+    },
+    {
+      "delta": 0.13,
+      "value": 60.807711246690516
+    },
+    {
+      "delta": 0.135,
+      "value": 61.614060054720525
+    },
+    {
+      "delta": 0.14,
+      "value": 62.42040886275054
+    },
+    {
+      "delta": 0.145,
+      "value": 63.22675767078055
+    },
+    {
+      "delta": 0.15,
+      "value": 64.03310647881057
+    },
+    {
+      "delta": 0.155,
+      "value": 64.83945528684059
+    },
+    {
+      "delta": 0.16,
+      "value": 65.64580409487061
+    },
+    {
+      "delta": 0.165,
+      "value": 66.45215290290062
+    },
+    {
+      "delta": 0.17,
+      "value": 67.25850171093064
+    },
+    {
+      "delta": 0.175,
+      "value": 68.06485051896065
+    },
+    {
+      "delta": 0.18,
+      "value": 68.87119932699068
+    },
+    {
+      "delta": 0.185,
+      "value": 69.67754813502071
+    },
+    {
+      "delta": 0.19,
+      "value": 70.4838969430507
+    },
+    {
+      "delta": 0.195,
+      "value": 71.29024575108073
+    },
+    {
+      "delta": 0.2,
+      "value": 72.09659455911074
+    },
+    {
+      "delta": 0.205,
+      "value": 72.90294336714075
+    },
+    {
+      "delta": 0.21,
+      "value": 73.70929217517079
+    },
+    {
+      "delta": 0.215,
+      "value": 74.51564098320081
+    },
+    {
+      "delta": 0.22,
+      "value": 75.32198979123082
+    },
+    {
+      "delta": 0.225,
+      "value": 76.12833859926083
+    },
+    {
+      "delta": 0.23,
+      "value": 76.93468740729087
+    },
+    {
+      "delta": 0.235,
+      "value": 77.74103621532088
+    },
+    {
+      "delta": 0.24,
+      "value": 78.54738502335088
+    },
+    {
+      "delta": 0.245,
+      "value": 79.35373383138091
+    },
+    {
+      "delta": 0.25,
+      "value": 80.16008263941092
+    },
+    {
+      "delta": 0.255,
+      "value": 80.96643144744093
+    },
+    {
+      "delta": 0.26,
+      "value": 81.77278025547096
+    },
+    {
+      "delta": 0.265,
+      "value": 82.57912906350097
+    },
+    {
+      "delta": 0.27,
+      "value": 83.38547787153098
+    },
+    {
+      "delta": 0.275,
+      "value": 84.191826679561
+    },
+    {
+      "delta": 0.28,
+      "value": 84.99817548759101
+    },
+    {
+      "delta": 0.285,
+      "value": 85.80452429562104
+    },
+    {
+      "delta": 0.29,
+      "value": 86.61087310365104
+    },
+    {
+      "delta": 0.295,
+      "value": 87.41722191168105
+    },
+    {
+      "delta": 0.3,
+      "value": 88.22357071971108
+    },
+    {
+      "delta": 0.305,
+      "value": 89.02991952774109
+    },
+    {
+      "delta": 0.31,
+      "value": 89.8362683357711
+    },
+    {
+      "delta": 0.315,
+      "value": 90.64261714380113
+    },
+    {
+      "delta": 0.32,
+      "value": 91.44896595183114
+    },
+    {
+      "delta": 0.325,
+      "value": 92.25531475986116
+    },
+    {
+      "delta": 0.33,
+      "value": 93.06166356789119
+    },
+    {
+      "delta": 0.335,
+      "value": 93.8680123759212
+    },
+    {
+      "delta": 0.34,
+      "value": 94.67436118395122
+    },
+    {
+      "delta": 0.345,
+      "value": 95.48070999198121
+    },
+    {
+      "delta": 0.35,
+      "value": 96.28705880001127
+    },
+    {
+      "delta": 0.355,
+      "value": 97.09340760804128
+    },
+    {
+      "delta": 0.36,
+      "value": 97.89975641607127
+    },
+    {
+      "delta": 0.365,
+      "value": 98.70610522410128
+    },
+    {
+      "delta": 0.37,
+      "value": 99.51245403213133
+    },
+    {
+      "delta": 0.375,
+      "value": 100.31880284016133
+    },
+    {
+      "delta": 0.38,
+      "value": 101.12515164819135
+    },
+    {
+      "delta": 0.385,
+      "value": 101.93150045622136
+    },
+    {
+      "delta": 0.39,
+      "value": 102.73784926425141
+    },
+    {
+      "delta": 0.395,
+      "value": 103.54419807228139
+    },
+    {
+      "delta": 0.4,
+      "value": 104.35054688031144
+    },
+    {
+      "delta": 0.405,
+      "value": 105.15689568834144
+    },
+    {
+      "delta": 0.41,
+      "value": 105.96324449637144
+    },
+    {
+      "delta": 0.415,
+      "value": 106.76959330440145
+    },
+    {
+      "delta": 0.42,
+      "value": 107.57594211243148
+    },
+    {
+      "delta": 0.425,
+      "value": 108.38229092046149
+    },
+    {
+      "delta": 0.43,
+      "value": 109.18863972849152
+    },
+    {
+      "delta": 0.435,
+      "value": 109.99498853652153
+    },
+    {
+      "delta": 0.44,
+      "value": 110.80133734455154
+    },
+    {
+      "delta": 0.445,
+      "value": 111.60768615258156
+    },
+    {
+      "delta": 0.45,
+      "value": 112.41403496061156
+    },
+    {
+      "delta": 0.455,
+      "value": 113.22038376864161
+    },
+    {
+      "delta": 0.46,
+      "value": 114.02673257667162
+    },
+    {
+      "delta": 0.465,
+      "value": 114.8330813847016
+    },
+    {
+      "delta": 0.47,
+      "value": 115.63943019273161
+    },
+    {
+      "delta": 0.475,
+      "value": 116.44577900076169
+    },
+    {
+      "delta": 0.48,
+      "value": 117.25212780879167
+    },
+    {
+      "delta": 0.485,
+      "value": 118.05847661682171
+    },
+    {
+      "delta": 0.49,
+      "value": 118.86482542485169
+    },
+    {
+      "delta": 0.495,
+      "value": 119.67117423288174
+    },
+    {
+      "delta": 0.5,
+      "value": 120.47752304091173
+    },
+    {
+      "delta": 0.505,
+      "value": 121.2838718489418
+    },
+    {
+      "delta": 0.51,
+      "value": 122.09022065697177
+    },
+    {
+      "delta": 0.515,
+      "value": 122.8965694650018
+    },
+    {
+      "delta": 0.52,
+      "value": 123.70291827303181
+    },
+    {
+      "delta": 0.525,
+      "value": 124.50926708106186
+    },
+    {
+      "delta": 0.53,
+      "value": 125.31561588909183
+    },
+    {
+      "delta": 0.535,
+      "value": 126.1219646971219
+    },
+    {
+      "delta": 0.54,
+      "value": 126.92831350515186
+    },
+    {
+      "delta": 0.545,
+      "value": 127.73466231318194
+    },
+    {
+      "delta": 0.55,
+      "value": 128.54101112121194
+    },
+    {
+      "delta": 0.555,
+      "value": 129.34735992924195
+    },
+    {
+      "delta": 0.56,
+      "value": 130.15370873727196
+    },
+    {
+      "delta": 0.565,
+      "value": 130.96005754530196
+    },
+    {
+      "delta": 0.57,
+      "value": 131.76640635333197
+    },
+    {
+      "delta": 0.575,
+      "value": 132.57275516136198
+    },
+    {
+      "delta": 0.58,
+      "value": 133.379103969392
+    },
+    {
+      "delta": 0.585,
+      "value": 134.185452777422
+    },
+    {
+      "delta": 0.59,
+      "value": 134.99180158545207
+    },
+    {
+      "delta": 0.595,
+      "value": 135.79815039348205
+    },
+    {
+      "delta": 0.6,
+      "value": 136.6044992015121
+    }
+  ],
+  "sensitivities": {
+    "loan_book_ratio_double": 39.842642237910084,
+    "capex_1_5pct": 39.842642237910084,
+    "nwc_10pct": 39.842642237910084,
+    "strategic_book_after_25pct_haircut": 42.980127811560635,
+    "additional_tax_stress_100": 39.76587009443053,
+    "cash_revenue_no_adjustment": 40.560815406812374,
+    "w0.09_g0.02": 44.816781516001946,
+    "w0.09_g0.03": 48.608155102321035,
+    "w0.09_g0.035": 51.00335001906088,
+    "w0.1_g0.02": 37.42505572645474,
+    "w0.1_g0.03": 39.842642237910084,
+    "w0.1_g0.035": 41.31687452370838,
+    "w0.11_g0.02": 31.807861504649416,
+    "w0.11_g0.03": 33.399213507130526,
+    "w0.11_g0.035": 34.34332654389662,
+    "w0.12_g0.02": 27.42333623712192,
+    "w0.12_g0.03": 28.494838881614726,
+    "w0.12_g0.035": 29.11650474593238
+  }
+}

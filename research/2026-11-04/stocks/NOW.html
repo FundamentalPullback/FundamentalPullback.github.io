@@ -1,0 +1,506 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NOW · Investigación condicionada · capital, calendario y escáner pendientes · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/NOW">← NOW profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación condicionada · capital, calendario y escáner pendientes</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="now-a219-investigación-del-4-de-noviembre-de-2026">NOW · A219 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>DCF condicionado después de SBC: 21,61/56,39/125,93 USD frente al cierre 109,16. Crecimiento y márgenes futuros requieren reinversión. Last 123,73 del escáner no concilia con cierre 28 oct 150,13; Stage 2 ausente. Capital, pares y calendario abiertos. Sin entrada.</strong></p>
+<p>Conditional after-SBC DCF: $21.61/$56.39/$125.93 versus $109.16 close. Future growth and margins require reinvestment. Scanner Last $123.73 does not reconcile with the October 28 close $150.13; Stage 2 is missing. Capital, peers and calendar remain open. No entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/NOW.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-10-28, 123.73 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 109.16 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 de noviembre de 2026; datos Q3 y mercado al cierre del 3 de noviembre, revisión independiente posterior.</p>
+<p>A098 se preserva: 23 de octubre, 158,87 USD, QP90/Opportunity100, RSI 70 y s2 Sí. Última fila real: 28 de octubre, 123,73 USD, QP100/Opportunity100, RSI 56,5 y s2 vacío. A112 documentó cierre 28 oct 150,13 distinto del Last 123,73; no se inventa una explicación ni se corrige el dato original. El cierre regular del 3 de noviembre es 109,16 USD. No latestCompleted ni aprobación técnica; favorable 125,93 es un escenario condicionado, no techo absoluto ni predicción.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="servicenow-now-crecimiento-fuerte-pero-la-remuneración-en-acciones-y-las-compras-también-cuestan">ServiceNow (NOW): crecimiento fuerte, pero la remuneración en acciones y las compras también cuestan</h1>
+<p>Investigación propia del 4 de noviembre de 2026. Precio de referencia: <strong>109,16 USD, cierre del 3 de noviembre</strong>. Estados financieros: septiembre de 2026, publicados tras resultados del 28 de octubre. Cifras en USD millones, salvo acciones y porcentajes. <strong>Investigación revisada y condicionada; sin aprobación de entrada ni Stage 3.5.</strong></p>
+<h2 id="conclusión-y-observaciones-del-registro">1. Conclusión y observaciones del registro</h2>
+<p>El modelo de FCFF después de SBC produce <strong>21,61 / 56,39 / 125,93 USD</strong> por acción en escenarios adverso/base/favorable. Frente a 109,16 de cierre, el potencial calculado al central es -48,34%. El rango no tiene probabilidades asignadas ni es un intervalo estadístico. El favorable requiere crecimiento más prolongado, margen más alto después de SBC, reinversión eficiente y menor descuento; no basta con que el negocio siga creciendo cerca del 20% durante un trimestre.</p>
+<p>El atractivo comercial de la plataforma no demuestra que la acción esté barata después de una caída. Esperar mejor relación precio/valor o evidencia que sostenga una trayectoria más favorable. No se propone compra, venta, tamaño de posición ni stop. La valoración refleja supuestos explícitos sobre integración, capital y márgenes, no un consenso o una predicción puntual.</p>
+<p>A098 registró el 23 de octubre 158,87, QP 90, Opportunity 100, RSI 70 y s2 «Sí». La última fila real es del 28 de octubre: Last 123,73, QP 100, Opportunity 100, RSI 56,5 y <strong>s2 vacío</strong>, no «Sí» ni «No». A112 ya documentó el contraste entre ese Last CSV 123,73 y cierre 150,13. La discrepancia no tiene conciliación primaria de fecha/ajuste: se conserva el registro literalmente, sin llamarlo cierre de esa sesión ni heredar el s2 anterior. El cierre separado del 3 de noviembre es 109,16. <a href="https://stockanalysis.com/stocks/now/history/">Precios históricos</a>. El split 5:1 de diciembre de 2025 no explica por sí solo una diferencia entre dos cotizaciones de octubre de 2026.</p>
+<h2 id="franquicia-visibilidad-y-lo-que-no-demuestra-el-backlog">2. Franquicia, visibilidad y lo que no demuestra el backlog</h2>
+<p>ServiceNow integra workflows, datos y controles de acceso en una plataforma empresarial. La implantación en procesos críticos, costes de migración, ecosistema de integradores y contratos recurrentes respaldan continuidad comercial. El Q3 registró ingresos 4.106 (+20,5%), suscripción 3.988 (+21%), cRPO 13.650 (+20,5%) y RPO 29.700 (+22%). Hubo 19 operaciones con más de 5 de nuevo ACV y 680 clientes con ACV superior a 5, aproximadamente 23% más. La empresa elevó su objetivo de ACV de IA de 2026 a 1.700. <strong>ACV no es ingreso reconocido ni caja del año</strong>. <a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000092/erq3fy26.htm">Resultados Q3</a>.</p>
+<p>La renovación del 98% es una medida basada en ACV de cuentas perdidas frente a renovadas, no retención neta de dólares ni porcentaje de clientes. Generalmente no refleja aumentos o reducciones de compra si la cuenta sigue activa. Por tanto, una reducción de asientos o consumo puede deteriorar la economía sin aparecer inmediatamente como churn en ese 98%. Los contratos cloud se reconocen durante el plazo; self-hosted puede reconocer una parte sustancial al entregar el software. No todos los ingresos de suscripción tienen idéntica cadencia. <a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000096/now-20260930.htm">Definiciones y reconocimiento</a>.</p>
+<p>cRPO es la parte de obligaciones a reconocer en 12 meses, no ARR, cobro garantizado ni cartera íntegramente no cancelable en todo escenario. Los contratos federales de 12 meses, con mayor contratación en Q3, generan variabilidad de cRPO posterior hasta renovarse. La guía de Q4 es crecimiento cRPO 18,5%, frente al 20,5% observado en Q3; no se etiqueta toda diferencia como pérdida de demanda sin separar moneda, duración y renovación federal. La guía de suscripción Q4 es 4.245–4.255, +22,5–23% reportado y 21,5% en moneda constante. No se ha verificado una previsión primaria de crecimiento para 2027.</p>
+<p>La IA puede ampliar monetización y gobierno de procesos, pero también cambiar precios por asiento, interfaces, competencia y costes de inferencia. Las alianzas anunciadas con OpenAI, Google y NVIDIA son hechos comerciales, no garantías de ingresos incrementales. El modelo no capitaliza por separado una cartera de IA además de los ingresos consolidados, ni convierte declaraciones promocionales en una ventaja permanente.</p>
+<h2 id="historia-crecimiento-de-ventas-no-equivale-a-crecimiento-de-caja-económica">3. Historia: crecimiento de ventas no equivale a crecimiento de caja económica</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">NI</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex PP&amp;E</th>
+<th style="text-align: right;">SBC en P&amp;L</th>
+<th style="text-align: right;">FCF simple menos SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">8.971,00</td>
+<td style="text-align: right;">762,00</td>
+<td style="text-align: right;">1.731,00</td>
+<td style="text-align: right;">3.398,00</td>
+<td style="text-align: right;">694,00</td>
+<td style="text-align: right;">1.604,00</td>
+<td style="text-align: right;">1.100,00</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">10.984,00</td>
+<td style="text-align: right;">1.364,00</td>
+<td style="text-align: right;">1.425,00</td>
+<td style="text-align: right;">4.267,00</td>
+<td style="text-align: right;">852,00</td>
+<td style="text-align: right;">1.746,00</td>
+<td style="text-align: right;">1.669,00</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">13.278,00</td>
+<td style="text-align: right;">1.824,00</td>
+<td style="text-align: right;">1.748,00</td>
+<td style="text-align: right;">5.444,00</td>
+<td style="text-align: right;">868,00</td>
+<td style="text-align: right;">1.955,00</td>
+<td style="text-align: right;">2.621,00</td>
+</tr>
+<tr class="even">
+<td>Q4-2025</td>
+<td style="text-align: right;">3.568,00</td>
+<td style="text-align: right;">443,00</td>
+<td style="text-align: right;">401,00</td>
+<td style="text-align: right;">2.238,00</td>
+<td style="text-align: right;">238,00</td>
+<td style="text-align: right;">494,00</td>
+<td style="text-align: right;">1.506,00</td>
+</tr>
+<tr class="odd">
+<td>Q1-2026</td>
+<td style="text-align: right;">3.770,00</td>
+<td style="text-align: right;">503,00</td>
+<td style="text-align: right;">469,00</td>
+<td style="text-align: right;">1.670,00</td>
+<td style="text-align: right;">141,00</td>
+<td style="text-align: right;">558,00</td>
+<td style="text-align: right;">971,00</td>
+</tr>
+<tr class="even">
+<td>Q2-2026</td>
+<td style="text-align: right;">3.987,00</td>
+<td style="text-align: right;">162,00</td>
+<td style="text-align: right;">298,00</td>
+<td style="text-align: right;">587,00</td>
+<td style="text-align: right;">114,00</td>
+<td style="text-align: right;">655,00</td>
+<td style="text-align: right;">-182,00</td>
+</tr>
+<tr class="odd">
+<td>Q3-2026</td>
+<td style="text-align: right;">4.106,00</td>
+<td style="text-align: right;">385,00</td>
+<td style="text-align: right;">277,00</td>
+<td style="text-align: right;">839,00</td>
+<td style="text-align: right;">91,00</td>
+<td style="text-align: right;">633,00</td>
+<td style="text-align: right;">115,00</td>
+</tr>
+<tr class="even">
+<td>TTM-September-2025</td>
+<td style="text-align: right;">12.667,00</td>
+<td style="text-align: right;">1.755,00</td>
+<td style="text-align: right;">1.731,00</td>
+<td style="text-align: right;">4.841,00</td>
+<td style="text-align: right;">883,00</td>
+<td style="text-align: right;">1.915,00</td>
+<td style="text-align: right;">2.043,00</td>
+</tr>
+<tr class="odd">
+<td>TTM-September-2026</td>
+<td style="text-align: right;">15.431,00</td>
+<td style="text-align: right;">1.493,00</td>
+<td style="text-align: right;">1.445,00</td>
+<td style="text-align: right;">5.334,00</td>
+<td style="text-align: right;">584,00</td>
+<td style="text-align: right;">2.340,00</td>
+<td style="text-align: right;">2.410,00</td>
+</tr>
+</tbody>
+</table></div>
+<p>La historia incluye 436 observaciones con fuente primaria y 457 filas derivadas, tres ejercicios, cuatro trimestres, TTM frente al anterior y balances. TTM = FY2025 + 9M2026 − 9M2025. EBIT GAAP se reconcilia como 1.824 + 1.050 − 1.381 = 1.493; no se sustituye por el operating income estandarizado de un proveedor. Ingresos TTM 15.431 frente a 12.667; EBIT 1.493 frente a 1.755: crecimiento no implica apalancamiento operativo favorable en este corte. <a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm">10-K</a>; <a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000096/now-20260930.htm">10-Q</a>.</p>
+<p>SBC de P&amp;L TTM 2.340 frente a 1.915. El ajuste de SBC en CFO es 2.323, no exactamente 2.340; se preservan ambos sin forzarlos a coincidir. CFO 5.334 − capex 584 = 4.750; restar el coste económico P&amp;L de SBC deja 2.410, frente a 2.043 anterior. <strong>Este último es una aproximación de propietario, no FCFF exacto</strong>: conserva interés, impuestos y circulante reportados. El cash withholding 456 sobre liquidaciones netas de equity en 9M no se resta otra vez si se reconoce el coste completo de remuneración; tampoco convierte SBC en coste nulo.</p>
+<p>En 9M26, CFO 3.096 cayó frente a 3.206, mientras capex 346 bajó frente a 630. El FCF ajustado del emisor 3.121 añade 371 de cash costs de combinaciones/otros relacionados a CFO menos capex 2.750. En Q3, FCF simple 839 − 91 = 748 frente FCF ajustado 822, por un addback 74. La guía anual 36% de margen FCF utiliza esa definición ajustada, no caja económica después de remunerar empleados con acciones. <a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000092/erq3fy26.htm">Conciliación del emisor</a>.</p>
+<p>FY2023 NI 1.731 incluye gasto fiscal negativo 723 y liberación de valuation allowance aproximadamente 1.050; no perpetuar ese margen neto. En 9M26 hubo beneficio discreto 51 por liberar una allowance de California y ganancias no realizadas 367 en inversiones estratégicas. Los shortfalls fiscales de SBC también afectan al tipo efectivo. El DCF usa 25% normalizado, sensibilidad 20–30%, sin convertir activos fiscales 804 en caja adicional automática.</p>
+<h3 id="da-software-y-comisiones">D&amp;A, software y comisiones</h3>
+<p>D&amp;A total en CFO TTM 1.267; amortización adquirida 535; depreciación PP&amp;E 608. El residuo 124 <strong>no está clasificado de forma concluyente</strong>, y no se añade a FCFF como si fuera depreciación física. PP&amp;E incluye software: gross software 170 en septiembre frente a 126 en diciembre. Los 584 de capex son compras totales PP&amp;E; no se inventa una partida separada de internal-use software. Software vendido/arrendado/comercializado se lleva a R&amp;D porque la ventana de capitalización fue inmaterial, según política anual.</p>
+<p>Comisiones capitalizadas pagadas 885 frente amortización 686: diferencia 199, no un beneficio gratis. El margen operativo mantiene la amortización de comisiones; el DCF resta solo la inversión neta adicional necesaria, sin volver a restar toda la comisión en efectivo y su amortización. El modelo selecciona 10% del incremento de ventas como inversión neta en comisiones, frente al 199/2.764 ≈ 7,2% observado, cuya base mezcla adquisiciones y calendarios. Es una hipótesis, no un ratio contractual fijo.</p>
+<h2 id="adquisiciones-no-mezclar-crecimiento-gastos-y-contraprestación">4. Adquisiciones: no mezclar crecimiento, gastos y contraprestación</h2>
+<p>Moveworks cerró el 15 de diciembre de 2025 por 2.407: equity 1.467, efectivo 905, préstamo preexistente 31 y awards precombinación 4. Casi todo FY25 excluye su actividad. Armis cerró el 20 de abril de 2026 por 7.637 en efectivo y Veza el 2 de marzo de 2026 por 1.237 sustancialmente en efectivo; otras cinco compras de 2026 sumaron 612. El desembolso neto por adquisiciones 9M fue 9.167. Es capital consumido, no gasto operativo ajustable ni un pago futuro que restar de nuevo a la caja de septiembre.</p>
+<p>La empresa no presenta proforma operativo 2026 porque considera inmateriales los efectos sobre resultados consolidados, pero esa afirmación no hace inmateriales deuda, goodwill o amortización: goodwill subió de 3.578 a 10.012 y activos intangibles netos de 1.121 a 3.594. No se inventa crecimiento orgánico exacto a partir de esa frase. El retorno de estas compras debe probarse con beneficios/caja, no con el importe del goodwill.</p>
+<p>Los gastos de adquisición 9M de 118 se registraron en G&amp;A. Además, 211 de compensación diferida para empleados clave se reconocieron en activos y se amortizan a R&amp;D durante el servicio: <strong>es un prepago, no deuda adicional de 211</strong>. No se eliminan automáticamente todos los 371 de cash costs ajustados ni toda la retención por ser «no recurrentes». Severance 9M de 167, pagos 153 y pasivo 34 se distinguen; el programa esperado hasta 2026 no asegura que nunca vuelva a haber reestructuración. <a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000096/now-20260930.htm">Note 5 y Note 15</a>.</p>
+<p>El modelo normaliza gradualmente el margen después de SBC y de gastos operativos de integración, pero antes de amortización adquirida. No pronostica compras nuevas de 9.167 cada año ni supone que nuevas adquisiciones sean gratis: cualquier deal material futuro obliga a rehacer crecimiento, capital y dilución. La reinversión genérica para crecimiento no equivale a un presupuesto detallado de M&amp;A.</p>
+<h2 id="construcción-del-dcf-beneficio-después-de-sbc-y-crecimiento-financiado">5. Construcción del DCF: beneficio después de SBC y crecimiento financiado</h2>
+<p>Ancla 2026 de ingresos 16.233 = 9M reportado 11.863 + punto medio de la guía de suscripción Q4 de 4.250 + 120 seleccionados para otros servicios. <strong>No es guía de ingresos totales de la compañía</strong>. Margen normalizado inicial = (1.493 EBIT GAAP + 535 amortización adquirida)/15.431 = 13,14%; no incorpora addback de SBC, severance o todos los costes de compra.</p>
+<p>Se proyectan diez años 2027–2036: cinco de expansión y cinco de desaceleración. Margen aquí significa beneficio operativo <strong>después de SBC, R&amp;D y amortización de comisiones, antes de amortización adquirida</strong>. El margen 2027 base del 15% sube al 20% en 2031 y al 23% en 2036. Como lectura de sus exigencias, SBC económico memo parte del 15% de ventas y termina en el 12%; el margen antes de SBC implícito termina en el 35%, no en el 23%. Estos porcentajes futuros son selección analítica, no guidance ni una reclasificación de SBC como caja.</p>
+<p>Los nuevos Leadership Awards del 26 de octubre suman 126,55 de valor objetivo para cinco directivos nombrados; el total de todos los receptores y el número exacto de shares no se divulgaron aquí. Vesting 25%/35%/40% en 2027/28/29, condicionado al empleo. Se carga económicamente 126,55 en tres importes iguales en 2027–2029 <strong>adicionales</strong> al margen operativo seleccionado, sin afirmar que sea el calendario GAAP de reconocimiento. No se deduce a la vez 126,55 del puente de equity ni se estima un número de acciones con un precio de concesión supuesto. <a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000096/now-20260930.htm">10-Q, Item 5</a>.</p>
+<p>La amortización adquirida se presenta como memo GAAP: 783/730/702/649 en 2027–2030 según el calendario reportado; los 533 restantes se distribuyen 300/150/83 únicamente para presentación. <strong>Cambiar ese memo a cero no cambia el valor</strong>. Se grava el beneficio antes de amortización al 25% y no se atribuye un tax shield desconocido a activos adquiridos. Eso no prueba que todas las deducciones fiscales sean cero; evita inventarlas. R&amp;D y sustitución del producto siguen como coste operativo, no se asume que una tecnología dure para siempre gratis.</p>
+<p>FCFF = NOPAT + depreciación PP&amp;E − capex PP&amp;E − inversión neta en comisiones − ΔWC − otra reinversión para crecimiento. Depreciación PP&amp;E del 4% de ventas y capex en efectivo mínimo del 4,5%; comisiones netas del 10% del incremento de ventas y otro WC del 2% del incremento. El capex en efectivo nunca cae por debajo de la depreciación PP&amp;E: la sensibilidad del 3,5% queda limitada por el suelo de reposición del 4%, sin liberación perpetua de activos. No se asume liberación cuando ventas caen, ni financiación perpetua adicional gratis por deferred revenue. La reinversión neta es el máximo entre ese suelo físico/comisiones/WC y <strong>aumento positivo de NOPAT/ROIC</strong>; se financia también la expansión de margen, no solo las ventas. El excedente es otra inversión de crecimiento explícita, no un capex anunciado por la empresa.</p>
+<p>ROIC incremental del 35% en el caso base es una exigencia optimista de inversión orgánica ligera, no el retorno histórico incluyendo Armis/Moveworks ni una prueba de que esas compras ya rentan un 35%. R&amp;D y comercialización ya están en el margen; ROIC modela capital adicional no expensado. Sensibilidad 15–100% permite evaluar esta selección. El crecimiento no queda gratis por llamar al negocio «capital-efficient».</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Hipótesis</th>
+<th style="text-align: right;">Adverso</th>
+<th style="text-align: right;">Base</th>
+<th style="text-align: right;">Favorable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crecimiento 2027</td>
+<td style="text-align: right;">12%</td>
+<td style="text-align: right;">18%</td>
+<td style="text-align: right;">22%</td>
+</tr>
+<tr class="even">
+<td>Crecimiento 2031</td>
+<td style="text-align: right;">6%</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">15%</td>
+</tr>
+<tr class="odd">
+<td>Crecimiento 2036</td>
+<td style="text-align: right;">2%</td>
+<td style="text-align: right;">3%</td>
+<td style="text-align: right;">5%</td>
+</tr>
+<tr class="even">
+<td>Margen 2027 después de SBC, antes de nuevos Awards</td>
+<td style="text-align: right;">12%</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">17%</td>
+</tr>
+<tr class="odd">
+<td>Margen 2031</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">24%</td>
+</tr>
+<tr class="even">
+<td>Margen 2036</td>
+<td style="text-align: right;">18%</td>
+<td style="text-align: right;">23%</td>
+<td style="text-align: right;">28%</td>
+</tr>
+<tr class="odd">
+<td>WACC</td>
+<td style="text-align: right;">10,5%</td>
+<td style="text-align: right;">9,5%</td>
+<td style="text-align: right;">8,5%</td>
+</tr>
+<tr class="even">
+<td>g terminal</td>
+<td style="text-align: right;">2%</td>
+<td style="text-align: right;">3%</td>
+<td style="text-align: right;">3,5%</td>
+</tr>
+<tr class="odd">
+<td>ROIC incremental</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">50%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Treasury 10Y del 3 de noviembre al 4,95%, ERP del 1 de noviembre al 4,41% y beta 5Y de 0,99 dan Ke del 9,3159%. El ERP mensual usó Treasury al 5,29%, por lo que no es una prima implícita sincronizada con el 3 de noviembre. Peso de deuda seleccionado del 7%, spread de 120 pb, Kd del 6,15% e impuestos del 25% producen un WACC mecánico del 8,99%; se elige el 9,5%, colchón discrecional de 51,33 pb, no redondeo. No se presenta el 4,05% del commercial paper de septiembre como coste de deuda fijo para siempre. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">Treasury</a>; <a href="https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm">ERP</a>; <a href="https://stockanalysis.com/stocks/now/statistics/">beta</a>.</p>
+<p>FY2027 se descuenta 423/365 años desde el 3 de noviembre. Stub de 58 días usa flujo anual normalizado del ancla 2026, no el Q4 estacional de cobros; base 56,39 con él frente a 56,18 sin él. Descontar incorrectamente la primera anualidad a un año daría 57,23. Es estimación temporal, no caja verificada de octubre/noviembre.</p>
+<p>Terminal: NOPAT crece a g y reinversión = max(g × NOPAT/ROIC, capex neto físico + comisiones + WC de la expansión). Da FCFF terminal base de 7.020,51. Su valor actual supone 70,94% del EV, de modo que duración del crecimiento, margen y descuento dominan. No se usa un múltiplo de salida para ocultar el supuesto.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th style="text-align: right;">Ingresos</th>
+<th style="text-align: right;">EBIT antes de amortización adquirida, después de SBC</th>
+<th style="text-align: right;">NOPAT</th>
+<th style="text-align: right;">Depreciación PP&amp;E</th>
+<th style="text-align: right;">Capex PP&amp;E</th>
+<th style="text-align: right;">Comisiones netas</th>
+<th style="text-align: right;">WC</th>
+<th style="text-align: right;">Otra reinversión</th>
+<th style="text-align: right;">FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td style="text-align: right;">19.154,94</td>
+<td style="text-align: right;">2.831,06</td>
+<td style="text-align: right;">2.123,29</td>
+<td style="text-align: right;">766,20</td>
+<td style="text-align: right;">861,97</td>
+<td style="text-align: right;">292,19</td>
+<td style="text-align: right;">58,44</td>
+<td style="text-align: right;">1.048,57</td>
+<td style="text-align: right;">628,32</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td style="text-align: right;">22.411,28</td>
+<td style="text-align: right;">3.599,65</td>
+<td style="text-align: right;">2.699,74</td>
+<td style="text-align: right;">896,45</td>
+<td style="text-align: right;">1.008,51</td>
+<td style="text-align: right;">325,63</td>
+<td style="text-align: right;">65,13</td>
+<td style="text-align: right;">1.144,17</td>
+<td style="text-align: right;">1.052,75</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td style="text-align: right;">25.772,97</td>
+<td style="text-align: right;">4.468,09</td>
+<td style="text-align: right;">3.351,07</td>
+<td style="text-align: right;">1.030,92</td>
+<td style="text-align: right;">1.159,78</td>
+<td style="text-align: right;">336,17</td>
+<td style="text-align: right;">67,23</td>
+<td style="text-align: right;">1.328,67</td>
+<td style="text-align: right;">1.490,13</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td style="text-align: right;">29.123,46</td>
+<td style="text-align: right;">5.460,65</td>
+<td style="text-align: right;">4.095,49</td>
+<td style="text-align: right;">1.164,94</td>
+<td style="text-align: right;">1.310,56</td>
+<td style="text-align: right;">335,05</td>
+<td style="text-align: right;">67,01</td>
+<td style="text-align: right;">1.579,24</td>
+<td style="text-align: right;">1.968,57</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td style="text-align: right;">32.327,04</td>
+<td style="text-align: right;">6.465,41</td>
+<td style="text-align: right;">4.849,06</td>
+<td style="text-align: right;">1.293,08</td>
+<td style="text-align: right;">1.454,72</td>
+<td style="text-align: right;">320,36</td>
+<td style="text-align: right;">64,07</td>
+<td style="text-align: right;">1.606,99</td>
+<td style="text-align: right;">2.696,00</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td style="text-align: right;">35.236,47</td>
+<td style="text-align: right;">7.258,71</td>
+<td style="text-align: right;">5.444,03</td>
+<td style="text-align: right;">1.409,46</td>
+<td style="text-align: right;">1.585,64</td>
+<td style="text-align: right;">290,94</td>
+<td style="text-align: right;">58,19</td>
+<td style="text-align: right;">1.174,63</td>
+<td style="text-align: right;">3.744,09</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td style="text-align: right;">37.879,21</td>
+<td style="text-align: right;">8.030,39</td>
+<td style="text-align: right;">6.022,79</td>
+<td style="text-align: right;">1.515,17</td>
+<td style="text-align: right;">1.704,56</td>
+<td style="text-align: right;">264,27</td>
+<td style="text-align: right;">52,85</td>
+<td style="text-align: right;">1.147,07</td>
+<td style="text-align: right;">4.369,20</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td style="text-align: right;">40.151,96</td>
+<td style="text-align: right;">8.753,13</td>
+<td style="text-align: right;">6.564,85</td>
+<td style="text-align: right;">1.606,08</td>
+<td style="text-align: right;">1.806,84</td>
+<td style="text-align: right;">227,28</td>
+<td style="text-align: right;">45,46</td>
+<td style="text-align: right;">1.075,23</td>
+<td style="text-align: right;">5.016,13</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td style="text-align: right;">41.958,80</td>
+<td style="text-align: right;">9.398,77</td>
+<td style="text-align: right;">7.049,08</td>
+<td style="text-align: right;">1.678,35</td>
+<td style="text-align: right;">1.888,15</td>
+<td style="text-align: right;">180,68</td>
+<td style="text-align: right;">36,14</td>
+<td style="text-align: right;">956,91</td>
+<td style="text-align: right;">5.665,56</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td style="text-align: right;">43.217,56</td>
+<td style="text-align: right;">9.940,04</td>
+<td style="text-align: right;">7.455,03</td>
+<td style="text-align: right;">1.728,70</td>
+<td style="text-align: right;">1.944,79</td>
+<td style="text-align: right;">125,88</td>
+<td style="text-align: right;">25,18</td>
+<td style="text-align: right;">792,72</td>
+<td style="text-align: right;">6.295,17</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="capital-compromisos-y-denominador">6. Capital, compromisos y denominador</h2>
+<p>Caja 2.393 + valores corrientes 2.214 + valores no corrientes 2.354 = 6.961; efectivo restringido 12 excluido. Inversiones estratégicas 2.050 son principalmente privadas, no caja: se aplica recuperación seleccionada del 50% neta de liquidez/impuestos = 1.025, sensibilidad 0/50/100%; no una tasación ni probabilidad demostrada. Ganancias contables 367 no entran de nuevo en operación ni se suman aparte. Deuda principal 7.600 frente a valor contable de 7.524: diferencias de descuento y costes no hacen desaparecer el principal.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente base</th>
+<th style="text-align: right;">USD millones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EV por DCF</td>
+<td style="text-align: right;">60.554,96</td>
+</tr>
+<tr class="even">
+<td>Caja y valores negociables</td>
+<td style="text-align: right;">6.961,00</td>
+</tr>
+<tr class="odd">
+<td>Valor seleccionado inversiones privadas</td>
+<td style="text-align: right;">1.025,00</td>
+</tr>
+<tr class="even">
+<td>Deuda principal</td>
+<td style="text-align: right;">−7.600,00</td>
+</tr>
+<tr class="odd">
+<td>Reserva operativa de caja</td>
+<td style="text-align: right;">−1.500,00</td>
+</tr>
+<tr class="even">
+<td>UTB registrado</td>
+<td style="text-align: right;">−197,00</td>
+</tr>
+<tr class="odd">
+<td>Severance pendiente</td>
+<td style="text-align: right;">−34,00</td>
+</tr>
+<tr class="even">
+<td>Capital posterior desconocido</td>
+<td style="text-align: right;">0,00</td>
+</tr>
+<tr class="odd">
+<td>Equity</td>
+<td style="text-align: right;">59.209,96</td>
+</tr>
+<tr class="even">
+<td>Acciones seleccionadas, millones</td>
+<td style="text-align: right;">1.050,00</td>
+</tr>
+<tr class="odd">
+<td>Valor por acción</td>
+<td style="text-align: right;">56,39</td>
+</tr>
+</tbody>
+</table></div>
+<p>La reserva de 1.500 es prudencia analítica, no caja legalmente restringida identificada. El pasivo de deferred revenue de 7.733 no se resta íntegro como deuda: el coste de prestar el servicio permanece en FCFF y no se añade financiación futura gratis por crecimiento del pasivo. Arrendamientos operativos de 891 permanecen como gasto operativo, no como deuda añadida además del gasto. Financiación de proveedores de 18 sigue en cuentas por pagar, no nueva financiación financiera sumada otra vez. UTB 197 está registrado; DTA 804 no se suma como caja. Otros pasivos amplios no permiten certificar un puente actuarial/fiscal completo de cada jurisdicción.</p>
+<p>El préstamo Armis de 4.000 de abril se repagó en mayo con notas: no contar préstamo y notas simultáneamente. Notas de 5.500 y commercial paper de 2.100, con 62 días de vencimiento ponderado en septiembre, requieren gestión de liquidez; revolver de 3.000 no utilizado no es activo. ASR de 2.000 de enero se liquidó en Q1 con 18,5 millones de acciones a 107,97 de media; las 1,6 millones adicionales por 225 y la reserva de recompra de 4.200 ya están reflejadas o son autorización, no nuevas acciones retiradas a imputar al modelo.</p>
+<p>Las 1.037,917 millones de acciones son las emitidas menos tesorería del 30 de septiembre; media ponderada diluida Q3 de 1.043,011. Base usa 1.050 millones, guía diluida Q4, no tabla de capitalización exacta del 3 de noviembre. Sensibilidades 1.037,917/1.043,011/1.050/1.070/1.090. Los 41,808 millones de RSU y 6,9 de opciones no se agregan indiscriminadamente encima de un denominador diluido que ya captura parte. La remuneración futura se mantiene como coste económico; no se supone que buybacks eliminen ese coste sin consumir capital. Todos los datos históricos de acciones/EPS se ajustan al split 5:1 del 18 de diciembre de 2025.</p>
+<p>Compromisos cloud: 262 para el resto de 2026, 432 en 2027, 606 en 2028, 737 en 2029 y 2.800 en 2030; equipamiento IT de 1.600 hasta 2030. Los pagos no coinciden necesariamente con consumo de servicios. Leases no iniciados 355. No se resta todo como deuda además de costes/capex, pero la caída de capex actual no demuestra ausencia de necesidades de compute. Se estresa capex hasta el 6% de ventas y capital adicional. Las cifras son obligaciones contractuales, no gasto añadido automáticamente al margen ya modelado. <a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000096/now-20260930.htm">Note 18</a>.</p>
+<p>La investigación del DOJ relacionada con contratación y posible conflicto en un contrato gubernamental sigue abierta, sin resultado ni importe estimable. No se afirma que haya fraude probado, cierre favorable o una multa concreta. Un impacto sobre contratos/gobierno podría exceder una reserva monetaria arbitraria; sensibilidad adicional de 250/500 solo ilustra capital, no estima ese caso.</p>
+<h2 id="comparables-con-sbc-retenida-sin-target-de-mediana">7. Comparables con SBC retenida, sin target de mediana</h2>
+<p>NOW, como referencia propia: EV de 113.938,01972 millones = 109,16 × 1.037,917 + 7.600 − 6.961. Con SBC retenida, equivale a 76,3148x EBIT GAAP y 56,1825x EBIT antes de amortización adquirida. Las inversiones privadas no se deducen del EV principal; la sensibilidad de recuperación del 50%, equivalente a 1.025, reduce el EV, pero no constituye una valoración probada. El cálculo usa las acciones al cierre de septiembre, frente a los 1.050 millones de la guía usados en el DCF: la diferencia es intencional. Es un screen con balance fechado, no un EV exacto de noviembre. Cálculo exacto en comps/now_screen.json. <a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000096/now-20260930.htm">10-Q de NOW</a>; <a href="https://stockanalysis.com/stocks/now/history/">precio histórico</a>.</p>
+<p>CRM y WDAY son referencias de software empresarial con diferencias de producto, crecimiento y adquisiciones. Cierres del 3 de noviembre: CRM 222,20 y WDAY 197,94. Sus últimos balances publicados son de julio de 2026 y acciones de portada de agosto, mientras NOW ya tiene septiembre. La comparación usa tasas de amortización adquirida separadas y <strong>retiene SBC</strong>; no mezcla EBITDA no GAAP sin remuneración con GAAP de NOW.</p>
+<p>CRM: EBIT TTM GAAP 8.735, amortización adquirida 1.995; EV aproximado de 211.601 da 24,22x GAAP y 19,72x antes de amortización. Incluye 633 de arrendamientos financieros además del principal financiero. WDAY: EBIT 1.085, amortización 134; EV 47.301 da 43,59x/38,80x. Usar acciones diluidas trimestrales en vez de acciones de portada produce CRM 24,17x/19,68x y WDAY 44,56x/39,66x, no valores intrínsecos.</p>
+<p>CRM cerró Contentful el 1 de septiembre y Fin el 10 de septiembre después del balance: costes acordados en efectivo aproximados de 1.500 + 3.600, pero ajustes de cierre, efectivo adquirido y beneficios no están conciliados. La sensibilidad de pago solo produce 24,81x/20,20x y <strong>no es un EV normalizado completo</strong>. ASR final de CRM no verificado; Braze anunciada con EV de ~5.660 sigue pendiente y no se mezcla con los cierres. WDAY tiene un puente de financiación posterior: 43,62x/38,83x, sin certificar todos los movimientos. Son screens de precio actual y balance fechado, no comparables homogéneos actuales certificados. La mediana no fija target.</p>
+<p>Fuentes completas y cálculos en comps: <a href="https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm">CRM 10-Q</a>, <a href="https://investor.salesforce.com/stock-info/">CRM IR</a>, <a href="https://investor.workday.com/home/default.aspx">WDAY IR</a>. Los URLs exactos de filings y cierres usados en el paquete se verifican en comps/sources.json; cualquier cambio de perímetro exige revisar la resolución de EV.</p>
+<h2 id="inversos-y-sensibilidad-qué-tendría-que-cambiar">8. Inversos y sensibilidad: qué tendría que cambiar</h2>
+<p>Con el resto del caso base constante, 109,16 exige una subida paralela de margen de 21,30 puntos: 2027 36,30% y 2036 44,30%, después de SBC. Alternativamente, manteniendo márgenes y descuento, exige añadir 9,08 puntos al crecimiento de cada uno de los diez años, desde 27,08% en 2027 hasta 12,08% en 2036, manteniendo g terminal del 3%. Estas soluciones de un solo eje son mecánicas, no consenso de mercado ni escenarios recomendados; el mercado puede combinar crecimiento, margen y descuento. El salto final del segundo inverso hasta el 3% también es una simplificación explícita.</p>
+<p>Ambos barridos verificaron monotonicidad y todas las raíces en rangos declarados; financiación del incremento de NOPAT sigue activa. No se elimina capex para alcanzar el precio. El escenario favorable 125,93 muestra que una combinación más optimista puede soportar 109,16, aunque no es el central ni tiene probabilidad asignada.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>ROIC incremental base alternativo</th>
+<th style="text-align: right;">Valor por acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>15,00%</td>
+<td style="text-align: right;">37,89</td>
+</tr>
+<tr class="even">
+<td>20,00%</td>
+<td style="text-align: right;">45,98</td>
+</tr>
+<tr class="odd">
+<td>25,00%</td>
+<td style="text-align: right;">50,84</td>
+</tr>
+<tr class="even">
+<td>35,00%</td>
+<td style="text-align: right;">56,39</td>
+</tr>
+<tr class="odd">
+<td>50,00%</td>
+<td style="text-align: right;">60,55</td>
+</tr>
+<tr class="even">
+<td>75,00%</td>
+<td style="text-align: right;">63,38</td>
+</tr>
+<tr class="odd">
+<td>100,00%</td>
+<td style="text-align: right;">64,55</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hay matrices WACC/g, márgenes, comisiones, capex, impuestos, acciones, caja, inversiones privadas y calendario. La principal incertidumbre es la duración/calidad del crecimiento después de remunerar capital y talento, no una décima de EPS. No confundir una sensibilidad de capital con una fecha de cierre o multa confirmada.</p>
+<h2 id="confirmaciones-pendientes-y-falsadores">9. Confirmaciones pendientes y falsadores</h2>
+<p>Q3 ya publicado el 28 de octubre; próxima fecha exacta de earnings <strong>no confirmada en fuente primaria localizada</strong>. El registro técnico vigente tiene s2 ausente y discrepancia de precio; Opportunity 100 histórico no libera esa puerta ni una entrada. Revisar el próximo anuncio oficial de resultados y la ejecución Q4 frente a guía, sin convertir ventanas estimadas en citas confirmadas. <a href="https://investor.servicenow.com/events-and-presentations/default.aspx">Eventos IR</a>.</p>
+<p>Mejoraría la tesis: caja después de SBC y capex creciendo de forma persistente; acuerdos AI convertidos en ingresos y cash sin dilución/costes desproporcionados; retorno de Armis/Veza demostrable; márgenes después de SBC e inversión compatibles con el caso favorable. La debilitarían presión de precios/downsells oculta en renovación, menor cRPO renovado, altos pagos cloud, nuevas compras costosas o SBC persistentemente elevado. No se infiere automáticamente ninguna de esas causas de la caída del precio.</p>
+<p>Confianza: alta en conciliaciones históricas observadas; media en normalización contable; media-baja en valor puntual y capital posterior a septiembre. No hay proforma orgánico completo, escudo fiscal de intangibles probado, final captable actual ni valoración independiente de inversiones privadas. El residuo D&amp;A de 124 sigue sin clasificar. Los pares tienen limitaciones de perímetro. Investigación condicionada, no certificación integral del plan técnico/calendario.</p>
+<h2 id="english-summary">English summary</h2>
+<p>ServiceNow has strong subscription growth and a sticky workflow platform, but stock-based compensation and acquisitions consume real shareholder value. The model retains SBC, funds margin expansion and commissions, and does not invent an acquired-amortization tax shield. Reported and adjusted FCF are not interchangeable with owner cash flow. September capital, stale peer balances and the unresolved scanner-price discrepancy remain explicit. Next exact earnings date is unconfirmed and the latest s2 field is missing. This is conditional research, not entry approval or an order.</p>
+<h2 id="reproduction">Reproduction</h2>
+<p>Run reproduce.py with standard Python 3. Own factual extracts and HTTPS sources are included; full third-party filings and private extraction scripts are excluded. The ten-year model, terminal reinvestment, tax-shield neutrality check, inverse scans and all history/comparables regenerate offline. Arithmetic checks do not remove the stated forecasting and source limitations.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/NOW/NOW_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/NOW/model/model.py">Modelo reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/NOW/model/results.json">Resultados</a></li>
+</ul>
+</main></body></html>

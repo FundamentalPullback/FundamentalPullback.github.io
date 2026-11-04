@@ -1,0 +1,59 @@
+{
+  "as_of": "2026-11-04",
+  "units": "USD millions except share prices, actual share counts and multiples",
+  "methodology": {
+    "earnings": "GAAP operating income, FY plus current YTD minus prior YTD. SBC and all other reported operating costs retained. Separate intangible-amortization-only sensitivity is not company adjusted EBIT or EBITDA.",
+    "capital": "Price times dated actual shares (not weighted-average shares), plus financial debt principal and finance leases, less unrestricted cash. Operating leases excluded from EV and their expense retained in EBIT. No netting of restricted cash.",
+    "qualification": "PFGC September principal debt unavailable from release, so exact principal EV null; separately label carrying-value proxy. USFD uses June capital and July shares, with October refinancing disclosed. No synchronized current EV or price target."
+  },
+  "peers": [
+    {
+      "ticker": "USFD",
+      "price_date": "2026-11-03",
+      "close_usd": 101.36,
+      "shares_date": "2026-07-31",
+      "capital_date": "2026-06-27",
+      "ttm_end": "2026-06-27",
+      "market_cap_m": 21927.282083,
+      "ttm_gaap_ebit_m": 1262,
+      "ttm_intangible_amortization_m": 57,
+      "ttm_ebit_plus_intangible_amortization_m": 1319,
+      "principal_based_ev_m": 27129.282083,
+      "principal_based_ev_to_gaap_ebit": 21.497054,
+      "principal_based_ev_to_ebit_plus_amortization": 20.568068,
+      "carrying_debt_ev_proxy_m": 27108.282083,
+      "carrying_debt_ev_proxy_to_gaap_ebit": 21.480414,
+      "carrying_debt_ev_proxy_to_ebit_plus_amortization": 20.552147,
+      "limitations": [
+        "June27 capital and July31 shares are stale for Nov3 close. October2 refinancing810 is replacement financing, not incremental debt to add mechanically. Net debt after refinancing and subsequent buybacks is unverified.",
+        "Q3 results scheduled Nov5; June is latest published financial period verified as of Nov4.",
+        "Outstanding-check cash overdraft168 is operating working capital, excluded from financial debt; do not double count."
+      ]
+    },
+    {
+      "ticker": "PFGC",
+      "price_date": "2026-11-03",
+      "close_usd": 96.51,
+      "shares_date": "2026-09-30",
+      "capital_date": "2026-09-26",
+      "ttm_end": "2026-09-26",
+      "market_cap_m": 15227.940178,
+      "ttm_gaap_ebit_m": 935.0,
+      "ttm_intangible_amortization_m": 266.3,
+      "ttm_ebit_plus_intangible_amortization_m": 1201.3,
+      "principal_based_ev_m": null,
+      "principal_based_ev_to_gaap_ebit": null,
+      "principal_based_ev_to_ebit_plus_amortization": null,
+      "carrying_debt_ev_proxy_m": 22141.140178,
+      "carrying_debt_ev_proxy_to_gaap_ebit": 23.680364,
+      "carrying_debt_ev_proxy_to_ebit_plus_amortization": 18.430983,
+      "limitations": [
+        "Nov3 close precedes Nov4 earnings release. Combining this price with new September earnings is an explicitly retrospective mixed-information snapshot, not contemporaneously tradable valuation.",
+        "September principal debt/discounts/fees are unverified without Q1 10-Q debt note. Carrying-value EV is a provisional proxy, not exact principal-based EV. Do not carry June fee balance24.2 forward as fact.",
+        "Proxy provides Sep30 actual shares, not Nov3 actual shares.",
+        "Business mix includes large Convenience and Specialty operations, unlike a pure broadline restaurant-foodservice peer."
+      ]
+    }
+  ],
+  "conclusion": "Context only. No peer median, implied SYY target, or claim of synchronized current capital. PFGC exact principal EV is unresolved."
+}

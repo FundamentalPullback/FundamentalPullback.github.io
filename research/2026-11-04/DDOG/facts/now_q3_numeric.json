@@ -1,0 +1,86 @@
+{
+  "source": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000096/now-20260930.htm",
+  "rows": [
+    {
+      "period": "Q3-2026",
+      "metric": "revenue",
+      "value": 4106.0,
+      "unit": "USD million",
+      "basis": "observed",
+      "inputs": [
+        "revenue_2026-07-01_2026-09-30"
+      ]
+    },
+    {
+      "period": "Q3-2026",
+      "metric": "ebit_gaap",
+      "value": 385.0,
+      "unit": "USD million",
+      "basis": "observed",
+      "inputs": [
+        "ebit_gaap_2026-07-01_2026-09-30"
+      ]
+    },
+    {
+      "period": "Q3-2026",
+      "metric": "sbc_pnl",
+      "value": 633,
+      "unit": "USD million",
+      "basis": "observed",
+      "inputs": [
+        "sbc_pnl_2026-07-01_2026-09-30"
+      ]
+    },
+    {
+      "period": "Q3-2026",
+      "metric": "capex_ppe",
+      "value": 91.0,
+      "unit": "USD million",
+      "basis": "derived",
+      "inputs": [
+        {
+          "observation": "capex_ppe_2026-01-01_2026-09-30",
+          "coefficient": 1
+        },
+        {
+          "observation": "capex_ppe_2026-01-01_2026-06-30",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "period": "Q3-2026",
+      "metric": "cfo",
+      "value": 839.0,
+      "unit": "USD million",
+      "basis": "derived",
+      "inputs": [
+        {
+          "observation": "cfo_2026-01-01_2026-09-30",
+          "coefficient": 1
+        },
+        {
+          "observation": "cfo_2026-01-01_2026-06-30",
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "period": "Q3-2026",
+      "metric": "sbc_cfo",
+      "value": 630.0,
+      "unit": "USD million",
+      "basis": "derived",
+      "inputs": [
+        {
+          "observation": "sbc_cfo_2026-01-01_2026-09-30",
+          "coefficient": 1
+        },
+        {
+          "observation": "sbc_cfo_2026-01-01_2026-06-30",
+          "coefficient": -1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,676 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SYY · Investigación parcial · JRD pendiente y sin valor actual certificado · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/SYY">← SYY profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación parcial · JRD pendiente y sin valor actual certificado</span><span class="tag deferred">En observación</span><span class="tag">No entry approved</span></div><h1 id="syy-a221-investigación-del-4-de-noviembre-de-2026">SYY · A221 · Investigación del 4 de noviembre de 2026</h1>
+<p><strong>JRD sigue pendiente. Casos separados de cierre y ruptura suponen resolución inmediata: no son valor actual, rango agregado ni objetivo probabilístico. FCF anunciado de JRD es EBITDA menos capex, no caja distribuible. Capital y condiciones pendientes; valores nulos y sin entrada.</strong></p>
+<p>JRD remains pending. Separate closing and failure cases assume immediate resolution: they are not current fair value, an aggregate range or a probability-weighted target. JRD headline FCF is EBITDA less capex, not distributable cash. Capital and conditions remain open; no current values or entry.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-04/stocks/SYY.html">Perfil / Profile</a></p>
+<p>Escáner original: <strong>2026-11-02, 81.74 USD</strong>. Cierre regular de referencia: <strong>3 de noviembre, 74.11 USD</strong>. No son cotizaciones actuales ni se modifica la fecha del escáner. Corte de fuentes: 4 de noviembre de 2026, Q1 FY2027 y 10-Q nuevos; revisión independiente cerrada para alcance parcial.</p>
+<p>A102/A105/A112/A118/A119 se preservan. Referencia original 26 de octubre, 82,00 USD, y última observación real 2 de noviembre, 81,74 USD, QP90/Opportunity90 y Stage 2 Sí histórico. El cierre regular del 3 de noviembre, posterior al resultado Q1, es 74,11 USD. Ni el cierre hipotético central 37,07 ni la ruptura regulatoria central 42,34 son valor actual ni límites agregados; no se asigna probabilidad a ninguno. Las 91,5 millones de acciones al vendedor se emitirían solo al cerrar. El escrow de 60 millones está incluido en los 21.600; la retención/compensación de 45/90 millones se somete a sensibilidad. JRD pendiente no equivale a transacción cerrada. Sin aprobación de entrada.</p>
+<p><strong>Publicación web; conciliación con el diario en Sheets pendiente. / Website publication; journal-spreadsheet reconciliation pending.</strong> Se mantienen los registros anteriores. No hay entrada, techo ni stop aprobados; cantidad nueva 0.</p>
+<h1 id="sysco-y-jrd-análisis-económico-condicionado">Sysco y JRD análisis económico condicionado</h1>
+<p><strong>Fecha de investigación: 4 de noviembre de 2026. Referencia bursátil: cierre del 3 de noviembre, 74,11 USD. Estado: PARTIAL, investigación condicionada. Revisión independiente completada; sin aprobación de entrada.</strong></p>
+<h2 id="conclusión-para-el-inversor">Conclusión para el inversor</h2>
+<p>Sysco ofrece escala comercial y una plataforma de distribución consolidada, pero el crecimiento reciente de ventas no se ha convertido en crecimiento del beneficio operativo. La adquisición pendiente de Jetro Restaurant Depot, o JRD, altera tanto el perímetro económico como la deuda y la dilución. Por ello, este informe separa dos contrafactuales económicos: fracaso regulatorio inmediato y cierre inmediato. Ninguno representa el valor actual completo de la acción mientras la operación sigue pendiente.</p>
+<p>Bajo los supuestos centrales, el resultado condicionado es <strong>42.34 USD por acción si ocurre el fracaso regulatorio modelizado</strong> y <strong>37.07 USD si se materializa el cierre modelizado</strong>. Son comparaciones teóricas con 74,11 USD, no precios objetivo, probabilidades, intervalos estadísticos ni niveles de entrada. El valor razonable actual total permanece sin calcular: <strong>totalCurrentFairValue = null</strong>. No se declara completada una Stage 3 ni se habilita una compra.</p>
+<p>La conclusión económica es prudente: con reinversión financiada, impuestos normalizados y costos de transacción, los escenarios centrales no justifican el precio de referencia. El caso alcista sí puede hacerlo, pero exige simultáneamente mejores márgenes, retornos incrementales superiores y descuentos menores. La diferencia entre resultados describe sensibilidad a supuestos, no certeza sobre un desplome o recuperación.</p>
+<p>El escáner del 2 de noviembre marcaba 81,74 USD, QP 90, oportunidad 90, RSI 53 y s2 «Sí». Es un registro anterior al evento, no una autorización técnica vigente. El cierre utilizado es de una fuente secundaria de mercado; las cuentas y condiciones contractuales proceden de documentos primarios. No se incorpora una cotización intradía del 4 de noviembre. <a href="https://stockanalysis.com/stocks/syy/history/">Histórico de mercado SYY</a>.</p>
+<h2 id="negocio-y-calidad-del-crecimiento">Negocio y calidad del crecimiento</h2>
+<p>La tesis favorable depende de convertir la escala de compras, la densidad logística y el servicio a clientes en márgenes y retornos sostenibles. El riesgo es que inflación, salarios, combustible, competencia y debilidad del restaurante absorban las mejoras. El volumen local estadounidense y la productividad importan más que un incremento nominal de ventas aislado. JRD aporta un formato cash and carry de margen mayor, pero no constituye una extensión sin fricciones de la distribución de Sysco.</p>
+<p>La guía FY2027 contempla 53 semanas, ventas creciendo entre 6% y 7%, ahora hacia la parte baja del rango, crecimiento de EPS ajustado entre 9% y 11%, volumen local estadounidense del 2,5% y 100 millones de ahorros de inteligencia artificial incluidos. Estas expectativas no se trasladan directamente al DCF: una semana adicional no es crecimiento perpetuo, EPS ajustado no es FCFF y el ahorro anunciado necesita contrastarse con los costos de implantación. El modelo usa diez periodos analíticos anuales que terminan el 3 de noviembre, no ejercicios fiscales denominados FY2027 a FY2036. <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000046/syy2027q1pressrelease.htm">Resultados Q1 FY2027</a>.</p>
+<h2 id="historial-financiero-y-conversión-de-caja">Historial financiero y conversión de caja</h2>
+<p>Las tablas usan coma para separar miles y punto decimal. Todos los importes siguientes están expresados en millones de USD, salvo precio por acción y porcentajes. FY24, FY25, FY26 y el TTM son periodos de 52 semanas. El TTM termina el 26 de septiembre de 2026. Los cuatro trimestres mostrados lo componen; las series históricas conservan también los comparativos anteriores.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT GAAP</th>
+<th>Beneficio neto</th>
+<th>CFO</th>
+<th>Capex bruto</th>
+<th>D&amp;A¹</th>
+<th>SBC</th>
+<th>CFO−capex</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY24</td>
+<td>78,844</td>
+<td>3,202</td>
+<td>1,955</td>
+<td>2,989</td>
+<td>832</td>
+<td>873</td>
+<td>104</td>
+<td>2,157</td>
+</tr>
+<tr class="even">
+<td>FY25</td>
+<td>81,370</td>
+<td>3,088</td>
+<td>1,828</td>
+<td>2,510</td>
+<td>906</td>
+<td>945</td>
+<td>93</td>
+<td>1,604</td>
+</tr>
+<tr class="odd">
+<td>FY26</td>
+<td>84,553</td>
+<td>3,095</td>
+<td>1,757</td>
+<td>2,638</td>
+<td>700</td>
+<td>976</td>
+<td>118</td>
+<td>1,938</td>
+</tr>
+<tr class="even">
+<td>Q2FY26</td>
+<td>20,762</td>
+<td>692</td>
+<td>389</td>
+<td>525</td>
+<td>140</td>
+<td>240</td>
+<td>33</td>
+<td>385</td>
+</tr>
+<tr class="odd">
+<td>Q3FY26</td>
+<td>20,519</td>
+<td>619</td>
+<td>340</td>
+<td>852</td>
+<td>161</td>
+<td>251</td>
+<td>31</td>
+<td>691</td>
+</tr>
+<tr class="even">
+<td>Q4FY26</td>
+<td>22,124</td>
+<td>983</td>
+<td>551</td>
+<td>1,175</td>
+<td>239</td>
+<td>252</td>
+<td>23</td>
+<td>936</td>
+</tr>
+<tr class="odd">
+<td>Q1FY27</td>
+<td>21,744</td>
+<td>717</td>
+<td>526</td>
+<td>278</td>
+<td>97</td>
+<td>262</td>
+<td>28</td>
+<td>181</td>
+</tr>
+<tr class="even">
+<td>TTM</td>
+<td>85,149</td>
+<td>3,012</td>
+<td>1,807</td>
+<td>2,830</td>
+<td>637</td>
+<td>1,005</td>
+<td>115</td>
+<td>2,193</td>
+</tr>
+</tbody>
+</table></div>
+<p>¹ D&amp;A excluye amortización de costos financieros. Las cifras trimestrales de caja se derivan por diferencias de acumulados y Q4 por anual menos nueve meses. Las pequeñas diferencias de redondeo no se corrigen artificialmente. No se calculan EPS ni acciones medias mediante resta. Fuentes: <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000033/syy-20260627.htm">10-K FY2026</a> y <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000050/syy-20260926.htm">10-Q Q1 FY2027</a>.</p>
+<p>Las ventas TTM de 85.149 superan en 3,8% las 82.034 del periodo previo; EBIT de 3.012 cae 2,2% y beneficio neto de 1.807 cae 0,4%. La divergencia impide interpretar el crecimiento comercial como mejora automática de calidad. El EBIT inicial económico del DCF, 3.180, suma al EBIT GAAP los 168 de amortización adquirida, manteniendo el costo de compensación en acciones. No es el EBIT ajustado que publica la compañía.</p>
+<p>SBC en la historia sigue el ajuste del estado de flujos de caja: Q4 derivado es 118 anual menos 95 en nueve meses = 23. La conciliación EBITDA del comunicado Q1 posterior muestra 24 para Q4; esa diferencia de 1 no se fuerza a cero ni se trata como un dato idéntico. El residual después de SBC es una aproximación, no FCFF certificado. El modelo parte de EBIT con remuneración expensada y no depende de sustituir 23 por 24. <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000046/syy2027q1pressrelease.htm">Conciliación trimestral</a>.</p>
+<p>CFO menos capex bruto mejora de 1.599 a 2.193. Restar analíticamente SBC deja 2.078 frente a 1.505. Sin embargo, el capex baja 307, los impuestos pagados bajan de 645 a 485 y la salida de capital circulante operativo básico se reduce de 325 a 35. Una parte importante de la mejora responde a intensidad inversora y movimientos de caja, no a expansión de EBIT. La definición corporativa de FCF añade ventas de inmovilizado: 201 en el TTM, elevando el indicador a 2.394. Ese efectivo existe, pero no se capitaliza como producción recurrente ilimitada.</p>
+<p>Q1 FY2027 contiene una ganancia de 234 en coberturas de tipos condicionadas a la operación, registrada bajo EBIT. Su EBIT GAAP sigue siendo 717. La amortización de financiación puente de 90 está en intereses. Ninguna de estas partidas debe convertir un resultado operativo débil en mejora estructural. La amortización adquirida de 168 es parte de D&amp;A total de 1.005, por lo que no se añade dos veces al flujo. <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000050/syy-20260926.htm">10-Q, estados y notas de financiación</a>.</p>
+<h2 id="jrd-tiene-caja-verificable-pero-requiere-normalización">JRD tiene caja verificable pero requiere normalización</h2>
+<p>Las cuentas combinadas incluyen Warehouse Realty LLC, con operaciones intragrupo eliminadas. El inmobiliario ya participa en ventas, gastos y capex del perímetro valorado. Añadir una tasación de propiedades al DCF sin ajustar alquileres y flujos de una eventual venta y arrendamiento posterior duplicaría valor.</p>
+<p>En FY2025 JRD produjo ventas de 15.812,2, EBIT de 1.940,9, CFO de 1.218,7 y capex de 137,2. Su CFO menos capex fue <strong>1.081,4</strong>, no 1.900. El LTM a junio de 2026, calculado como FY2025 menos primer semestre de 2025 más primer semestre de 2026, registra ventas de 16.009,2, EBIT de 2.073,3, CFO de 1.421,6 y capex de 168,5, dejando 1.253,2. Las ventas exactas difieren ligeramente del cuadro pro forma redondeado a 16.008; se conserva la diferencia sin forzar la conciliación. <a href="https://www.sec.gov/Archives/edgar/data/2134688/000110465926114738/tm2626990-1_424b3.htm">Prospecto, cuentas combinadas F-5, F-8, F-24 y F-27</a>.</p>
+<p>Los aproximadamente 1.900 promocionados como FCF son EBITDA ajustado menos capex, antes de intereses, impuestos y circulante. Solo en FY2025 los impuestos pagados fueron 505,6 y los intereses pagados externos y relacionados sumaron 283,3. Ese indicador informa sobre capex, pero no equivale a efectivo distribuible ni FCFF después de impuestos. <a href="https://investors.sysco.com/~/media/Files/S/Sysco-IR/documents/events-and-presentations/2026-jetro-restaurant-depot-acquisition-investor-presentation.pdf">Presentación de adquisición, diapositivas 5 y 6</a>.</p>
+<p>El margen EBIT del primer semestre subió de 12,02% a 13,37%, sin que las notas revisadas expliquen íntegramente su recurrencia. El semestre también recibió 148,4 de caja de proveedores. D&amp;A LTM de 66,5 queda por debajo del capex de 168,5. Por eso se normalizan margen y reinversión, sin convertir el semestre fuerte en una renta perpetua.</p>
+<p>El prospecto también estima 45 anuales de compensación por premios de retención en efectivo y acciones que requieren servicio posterior al cierre. Son distintos de los 118 pagaderos por el vendedor y de la integración seleccionada de 200/150/50. Los márgenes futuros JRD se definen después de remuneración, pero no existe un puente verificado que demuestre que esos 45 estén absorbidos exactamente. Por ello, se mantiene esa limitación y un stress que carga 45 o 90 anuales adicionales antes de impuestos: el cierre central baja de 37,07 a 36,41 o 35,74. El stress mantiene ese costo económico durante el horizonte y su continuación terminal, sin afirmar que el contrato garantice un gasto perpetuo de 45. No se añade simultáneamente como deuda de cierre. <a href="https://www.sec.gov/Archives/edgar/data/2134688/000110465926114738/tm2626990-1_424b3.htm">Prospecto, ajuste pro forma de retención</a>.</p>
+<p>La contabilidad pro forma elimina una reserva LIFO de 410,7, incorpora impuestos y mejora el EBIT anual 43 por alineación FIFO. Introduce además depreciación anual de 91 y amortización intangible de 626, revirtiendo depreciación histórica de 66. Son ajustes contables que exigen distinguir gasto no monetario, capex y deducciones fiscales efectivas. El modelo no presupone una deducción fiscal automática por toda la nueva amortización. Los arrendamientos operativos permanecen como gasto, excluidos de deuda financiera para evitar doble descuento. <a href="https://www.sec.gov/Archives/edgar/data/2134688/000110465926114738/tm2626990-1_424b3.htm">Prospecto, ajustes pro forma y notas fiscales</a>.</p>
+<h2 id="precio-de-compra-y-financiación-sin-duplicaciones">Precio de compra y financiación sin duplicaciones</h2>
+<p>La base económica es 21.600 de efectivo libre de caja y deuda, más 91,5 millones de acciones nuevas para vendedores. La ilustración del prospecto reconcilia 15.578 a titulares, 5.812 para deuda JRD, 92 de EAUs y 118 de retención a vendedores. Suman 21.600: no corresponde añadir otra vez los 5.812 al precio ni descontar de nuevo esa deuda retirada del patrimonio combinado.</p>
+<p>El contrato ajusta el pago por caja contractual, deuda, gastos del vendedor y capital circulante. El pago al vendedor se reduce en 60 de escrow y esos 60 se pagan a la cuenta de depósito: (21.600 − 60) + 60 = 21.600 antes de otros ajustes. Por ello, los 60 ya están dentro de la base económica modelizada de 21.600, no se añaden otra vez ni se incluyen en la reserva de ajustes de 300. No representan un descuento ni un activo libre adicional. La caja adquirida aumenta el pago correspondiente al vendedor: los 283 de caja histórica JRD no son valor gratuito adicional. La definición contractual incluye partidas distintas de caja contable y un límite especificado en una carta no pública. No es posible cerrar el ajuste exacto con documentación pública. <a href="https://www.sec.gov/Archives/edgar/data/96021/000095014226000922/eh260755710_ex0201.htm">Contrato, apartados 1.1, 2.11, 2.13 y 5.14</a>.</p>
+<p>La caja Sysco de septiembre, 3.171, y deuda contable de 13.820 ya incluyen financiación anticipada. El tramo de 1.500 millones CAD, aproximadamente 1.100 USD entonces, está dentro del balance. En octubre se emitieron principales de 10.750 USD senior, 3.900 USD junior y 1.000 EUR junior. Los ingresos netos aproximados fueron 10.640, 3.800 y 990 respectivamente. El puente reserva <strong>222</strong> por diferencias de financiación: una aproximación, no una conciliación exacta de todos los gastos y cambios de divisa. Los instrumentos junior siguen siendo deuda económica, no patrimonio común gratuito. <a href="https://www.sec.gov/Archives/edgar/data/96021/000110465926114079/tm2625144d27_8k.htm">8-K de financiación de octubre</a>.</p>
+<p>El compromiso diferido de 3.750 no se trata como préstamo dispuesto. El antiguo puente de 19.000 fue cancelado el 8 de octubre y no se suma a deuda permanente. Los 126 pagados por financiación puente hasta septiembre ya afectaron la caja: cobrarlos de nuevo duplicaría costos. La reserva seleccionada de gastos futuros del comprador es <strong>100</strong>, no los 240 pro forma completos, que pueden incluir importes ya incurridos. Se añade una reserva hipotética de ajustes de cierre de 300. Ninguna sustituye el estado final de fondos.</p>
+<p>Las emisiones de deuda y la caja correspondiente se compensan conceptualmente antes de aplicar el uso de adquisición; no generan valor por sí mismas. Falta un balance completo de noviembre con movimientos posteriores, coberturas, impuestos, gastos y potenciales disposiciones. El colchón adicional de 200 para diferencias entre valor contable, principal y coberturas reconoce esta incertidumbre, sin afirmar una reconciliación certificada. <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000050/syy-20260926.htm">10-Q, notas 4, 8 y 15</a>.</p>
+<h2 id="pasivos-y-acciones-que-condicionan-el-puente">Pasivos y acciones que condicionan el puente</h2>
+<p>El modelo usa 494 millones de acciones en fracaso y 585,5 en cierre. La portada del 10-Q registra 492,270756 millones al 16 de octubre; las 482,945241 millones diluidas medias del trimestre infraponderan la emisión tardía de septiembre y no son el denominador adecuado para una valoración futura. Las 12,345679 millones emitidas en septiembre ya existen y permanecen en fracaso salvo recompra real. Las 91,5 millones del vendedor solo aparecen si cierra la operación.</p>
+<p>Se reserva caja operativa de 1.500 y déficit bruto de pensiones de junio de 401, formado por SERP de 317 e internacional de 84. No se monetizan automáticamente el activo de 23 del plan financiado estadounidense ni los seguros de vida de 88. Se deducen 92 por posiciones fiscales inciertas e intereses. El litigio fiscal adicional de 131 tiene solapamientos no reconciliados, por lo que no se presenta como una obligación incremental exacta independiente.</p>
+<p>La reserva fiscal temporal de 126 puede solaparse parcialmente con los 1.500 de caja operativa. Se hace visible y se somete a sensibilidad, en vez de ocultar una prudencia potencialmente duplicada. Tampoco se confunden los 182 de créditos fiscales comprados en octubre con su precio efectivo de adquisición no verificado; pagar el crédito y reconocer después el ahorro requiere una sola conciliación. Caja restringida, derivados condicionados, cuentas cedidas y financiación de proveedores exigen seguimiento, no adiciones mecánicas de efectivo libre. <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000050/syy-20260926.htm">10-Q</a> y <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000033/syy-20260627.htm">10-K sobre pensiones</a>.</p>
+<h2 id="construcción-del-dcf-y-costo-de-capital">Construcción del DCF y costo de capital</h2>
+<p>La fórmula es FCFF = NOPAT + depreciación física − capex bruto − inversión en circulante − otra reinversión. NOPAT parte de EBIT después de SBC y antes de amortización adquirida, con impuestos normalizados del 25% para Sysco y 27,5% para JRD. No se resta el interés de financiación dentro de FCFF y luego otra vez deuda en el puente.</p>
+<p>La reinversión neta es el mayor de dos requisitos: capex menos depreciación más circulante, o incremento positivo de NOPAT dividido por ROIC incremental. Así se financia también la expansión de margen. El capex físico tiene un mínimo de 1,2% de ventas, depreciación física de 0,983% para Sysco y 0,42% para JRD, y circulante de 7% y 2% del incremento de ventas respectivamente. «Otra inversión» completa el requisito económico: no es una afirmación de gasto contable específico ya anunciado. La misma disciplina se aplica al crecimiento de ahorros y al terminal. El 0,983% aproxima (1.005 menos 168) dividido por 85.149: no certifica un desglose físico puro, pues puede incluir software y activos con arrendamiento financiero. El capex futuro es gasto económico bruto de reposición y expansión, también cuando normalmente se financia mediante leasing; no replica exclusivamente los 637 de PP&amp;E pagados históricamente. La deuda actual ya incluye arrendamientos financieros y no se vuelve a sumarlos.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Supuesto</th>
+<th>Bajista</th>
+<th>Central</th>
+<th>Alcista</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SYY margen año 1</td>
+<td>3.5%</td>
+<td>4.0%</td>
+<td>4.3%</td>
+</tr>
+<tr class="even">
+<td>SYY margen año 10</td>
+<td>3.7%</td>
+<td>4.4%</td>
+<td>4.8%</td>
+</tr>
+<tr class="odd">
+<td>SYY WACC</td>
+<td>9.5%</td>
+<td>8.5%</td>
+<td>7.5%</td>
+</tr>
+<tr class="even">
+<td>SYY ROIC incremental</td>
+<td>9.0%</td>
+<td>12.0%</td>
+<td>16.0%</td>
+</tr>
+<tr class="odd">
+<td>JRD margen año 1</td>
+<td>11.5%</td>
+<td>12.5%</td>
+<td>13.5%</td>
+</tr>
+<tr class="even">
+<td>JRD margen año 10</td>
+<td>11.0%</td>
+<td>13.0%</td>
+<td>14.0%</td>
+</tr>
+<tr class="odd">
+<td>JRD WACC</td>
+<td>10.5%</td>
+<td>9.0%</td>
+<td>8.0%</td>
+</tr>
+<tr class="even">
+<td>JRD ROIC incremental</td>
+<td>10.0%</td>
+<td>15.0%</td>
+<td>20.0%</td>
+</tr>
+<tr class="odd">
+<td>Crecimiento terminal ambos</td>
+<td>1.5%</td>
+<td>2.5%</td>
+<td>3.0%</td>
+</tr>
+</tbody>
+</table></div>
+<p>En el caso central, Sysco crece 4% inicialmente y converge a 2,5%; su margen pasa de 4% a 4,4%. JRD crece 5% inicialmente y converge a 2,5%, con margen de 12,5% a 13%. Son hipótesis analíticas, no guía empresarial. La tabla completa permite reconstruir el flujo, incluidos depreciación y recursos necesarios para mejorar rentabilidad.</p>
+<p>La referencia libre de riesgo es 4,95% al 3 de noviembre. Con prima de riesgo de mercado de 4,41%, beta histórica de 0,64, deuda marginal seleccionada de 6,2%, peso de deuda de 35% e impuesto de 25%, el WACC mecánico resulta 6,68%. La prima mensual utiliza otra fecha de Treasury, y la beta histórica no describe necesariamente el riesgo posterior a la compra. Se seleccionan 8,5% para Sysco y 9% para JRD por incertidumbre de normalización y ejecución. Son juicios explícitos; los cupones de financiación no forman un único spread homogéneo. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">Treasury</a>, <a href="https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm">prima académica de Damodaran</a>, <a href="https://stockanalysis.com/stocks/syy/statistics/">beta secundaria</a> y <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000050/syy-20260926.htm">financiación primaria</a>.</p>
+<h3 id="proyección-central-de-sysco">Proyección central de Sysco</h3>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fin 3 noviembre</th>
+<th>Ventas</th>
+<th>Margen</th>
+<th>NOPAT</th>
+<th>D&amp;A físico</th>
+<th>Capex</th>
+<th>ΔWC</th>
+<th>Otra inversión</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td>88,555</td>
+<td>4.00%</td>
+<td>2,657</td>
+<td>870</td>
+<td>1,063</td>
+<td>238</td>
+<td>1,833</td>
+<td>393</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td>92,097</td>
+<td>4.08%</td>
+<td>2,815</td>
+<td>905</td>
+<td>1,105</td>
+<td>248</td>
+<td>869</td>
+<td>1,497</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td>95,551</td>
+<td>4.15%</td>
+<td>2,974</td>
+<td>939</td>
+<td>1,147</td>
+<td>242</td>
+<td>878</td>
+<td>1,647</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td>98,895</td>
+<td>4.22%</td>
+<td>3,134</td>
+<td>972</td>
+<td>1,187</td>
+<td>234</td>
+<td>882</td>
+<td>1,803</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td>102,109</td>
+<td>4.30%</td>
+<td>3,293</td>
+<td>1,004</td>
+<td>1,225</td>
+<td>225</td>
+<td>881</td>
+<td>1,966</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td>105,172</td>
+<td>4.32%</td>
+<td>3,408</td>
+<td>1,034</td>
+<td>1,262</td>
+<td>214</td>
+<td>512</td>
+<td>2,453</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td>108,328</td>
+<td>4.34%</td>
+<td>3,526</td>
+<td>1,065</td>
+<td>1,300</td>
+<td>221</td>
+<td>531</td>
+<td>2,539</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td>111,307</td>
+<td>4.36%</td>
+<td>3,640</td>
+<td>1,094</td>
+<td>1,336</td>
+<td>209</td>
+<td>497</td>
+<td>2,693</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td>114,089</td>
+<td>4.38%</td>
+<td>3,748</td>
+<td>1,121</td>
+<td>1,369</td>
+<td>195</td>
+<td>459</td>
+<td>2,847</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td>116,942</td>
+<td>4.40%</td>
+<td>3,859</td>
+<td>1,150</td>
+<td>1,403</td>
+<td>200</td>
+<td>474</td>
+<td>2,932</td>
+</tr>
+</tbody>
+</table></div>
+<p>El primer periodo Sysco produce FCFF de 392,91 pese a NOPAT de aproximadamente 2.657. Financiar todo el incremento de NOPAT al 12% de retorno, incluida la mejora de margen desde el ancla de 3.180 sobre ventas de 85.149, exige una elevada inversión analítica inicial. No es capex anunciado ni una predicción puntual de CFO. Su diferencia frente al FCF histórico de 2.193 refleja tanto esta disciplina conservadora como normalización de impuestos, circulante e inversión. Una sensibilidad alternativa financia solo crecimiento de ventas y supone que la mejora de margen procede de esfuerzo de eficiencia ya reconocido en gastos, sin capital adicional. Eleva el cierre a 42.37 y el fracaso a 48.59. No es ahorro comprobado ni sustituye el caso central; cuantifica el costo de la hipótesis conservadora de reinversión.</p>
+<h3 id="proyección-central-de-jrd">Proyección central de JRD</h3>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fin 3 noviembre</th>
+<th>Ventas</th>
+<th>Margen</th>
+<th>NOPAT</th>
+<th>D&amp;A físico</th>
+<th>Capex</th>
+<th>ΔWC</th>
+<th>Otra inversión</th>
+<th>FCFF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2027</td>
+<td>16,810</td>
+<td>12.50%</td>
+<td>1,523</td>
+<td>71</td>
+<td>202</td>
+<td>16</td>
+<td>0</td>
+<td>1,376</td>
+</tr>
+<tr class="even">
+<td>2028</td>
+<td>17,650</td>
+<td>12.62%</td>
+<td>1,616</td>
+<td>74</td>
+<td>212</td>
+<td>17</td>
+<td>460</td>
+<td>1,001</td>
+</tr>
+<tr class="odd">
+<td>2029</td>
+<td>18,488</td>
+<td>12.75%</td>
+<td>1,709</td>
+<td>78</td>
+<td>222</td>
+<td>17</td>
+<td>462</td>
+<td>1,086</td>
+</tr>
+<tr class="even">
+<td>2030</td>
+<td>19,320</td>
+<td>12.88%</td>
+<td>1,803</td>
+<td>81</td>
+<td>232</td>
+<td>17</td>
+<td>462</td>
+<td>1,174</td>
+</tr>
+<tr class="odd">
+<td>2031</td>
+<td>20,093</td>
+<td>13.00%</td>
+<td>1,894</td>
+<td>84</td>
+<td>241</td>
+<td>15</td>
+<td>430</td>
+<td>1,291</td>
+</tr>
+<tr class="even">
+<td>2032</td>
+<td>20,847</td>
+<td>13.00%</td>
+<td>1,965</td>
+<td>88</td>
+<td>250</td>
+<td>15</td>
+<td>296</td>
+<td>1,491</td>
+</tr>
+<tr class="odd">
+<td>2033</td>
+<td>21,576</td>
+<td>13.00%</td>
+<td>2,034</td>
+<td>91</td>
+<td>259</td>
+<td>15</td>
+<td>276</td>
+<td>1,575</td>
+</tr>
+<tr class="even">
+<td>2034</td>
+<td>22,224</td>
+<td>13.00%</td>
+<td>2,095</td>
+<td>93</td>
+<td>267</td>
+<td>13</td>
+<td>220</td>
+<td>1,688</td>
+</tr>
+<tr class="odd">
+<td>2035</td>
+<td>22,835</td>
+<td>13.00%</td>
+<td>2,152</td>
+<td>96</td>
+<td>274</td>
+<td>12</td>
+<td>194</td>
+<td>1,768</td>
+</tr>
+<tr class="even">
+<td>2036</td>
+<td>23,406</td>
+<td>13.00%</td>
+<td>2,206</td>
+<td>98</td>
+<td>281</td>
+<td>11</td>
+<td>165</td>
+<td>1,847</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las tablas redondean a millones; los archivos calculan con precisión completa. El FCFF terminal incorpora reinversión sostenible, no solo crecimiento sobre el último flujo. En el caso central, el valor presente terminal constituye aproximadamente 65% del EV Sysco y 58% del EV JRD. Esa dependencia obliga a leer WACC, crecimiento y ROIC conjuntamente.</p>
+<h2 id="dos-resultados-económicos-separados">Dos resultados económicos separados</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso operativo</th>
+<th>EV SYY</th>
+<th>EV JRD</th>
+<th>Sinergias netas VP</th>
+<th>Fracaso regulatorio $/acc.</th>
+<th>Cierre $/acc.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bajista</td>
+<td>23,911</td>
+<td>12,872</td>
+<td>-337</td>
+<td>18.64</td>
+<td>2.15</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td>35,617</td>
+<td>21,052</td>
+<td>227</td>
+<td>42.34</td>
+<td>37.07</td>
+</tr>
+<tr class="odd">
+<td>Alcista</td>
+<td>56,053</td>
+<td>31,386</td>
+<td>1,561</td>
+<td>83.70</td>
+<td>91.90</td>
+</tr>
+</tbody>
+</table></div>
+<p>El puente central antes de costos específicos de fracaso es:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente SYY central</th>
+<th>USD millones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EV SYY</td>
+<td>35,617.4</td>
+</tr>
+<tr class="even">
+<td>Caja septiembre</td>
+<td>3,171.0</td>
+</tr>
+<tr class="odd">
+<td>Deuda contable septiembre</td>
+<td>-13,820.0</td>
+</tr>
+<tr class="even">
+<td>Colchón principal y coberturas</td>
+<td>-200.0</td>
+</tr>
+<tr class="odd">
+<td>Caja operativa reservada</td>
+<td>-1,500.0</td>
+</tr>
+<tr class="even">
+<td>Déficit pensiones bruto junio</td>
+<td>-401.0</td>
+</tr>
+<tr class="odd">
+<td>UTB e intereses</td>
+<td>-92.0</td>
+</tr>
+<tr class="even">
+<td>Reserva temporal fiscal</td>
+<td>-126.0</td>
+</tr>
+<tr class="odd">
+<td>Costo financiación octubre aproximado</td>
+<td>-222.0</td>
+</tr>
+<tr class="even">
+<td>Equity antes de costos de fracaso</td>
+<td>22,427.4</td>
+</tr>
+</tbody>
+</table></div>
+<p>El fracaso regulatorio añade 1.164 de comisión contractual condicional, prima de rescate de aproximadamente 148,7 y reserva de otros costos de 200, total 1.512,7. La prima aplica 1% a 14.867,9 de principal elegible aproximado. Incluye CAD valorado aproximadamente en 1.100 USD y EUR convertido a 1,1179 USD por euro al 3 de noviembre; no certifica un pago futuro. Los 2.000 senior USD con vencimiento 2036 no se rescatan automáticamente bajo esa cláusula. Intereses devengados, cobertura y costos reales de cancelación siguen requiriendo conciliación. <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000050/syy-20260926.htm">10-Q, rescate especial</a> y <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">referencia cambiaria BCE</a>.</p>
+<p>El cierre central suma EV Sysco, EV JRD y 226,7 de sinergias netas presentes, aplica el puente de capital de −13.190 y resta 21.600, 100 y 300. El patrimonio resultante de 21.706,4 se divide entre 585,5 millones de acciones. El escenario central supone ahorros anuales de 0, 75 y después 125, frente al objetivo corporativo de 250, con integración de 200, 150 y 50. Los ahorros se gravan y requieren reinversión; por eso su valor no equivale a capitalizar 125 íntegros desde el primer día.</p>
+<p>Frente a 74,11, las diferencias centrales teóricas son aproximadamente −42,9% en fracaso y −50,0% en cierre. No son retornos esperados: falta ponderación de probabilidad, calendario completo y capital actual. Tampoco resulta válido inferir una probabilidad de éxito interpolando dos valores centrales que quedan por debajo del mercado.</p>
+<h2 id="sensibilidades-y-qué-exigiría-el-precio">Sensibilidades y qué exigiría el precio</h2>
+<p>Con supuestos operativos centrales y crecimiento terminal de 2,5%, bajar WACC a 7,5% para Sysco y 8% para JRD eleva los valores a 58,56 y 57,97; subirlos a 9,5% y 10% los reduce a 30,82 y 22,09. El ROIC incremental Sysco de 8% en vez de 12% reduce fracaso a 27,52 y cierre a 24,57. Un menor requisito físico de capex no siempre cambia valor porque domina la reinversión requerida por crecimiento de NOPAT. Subir capex Sysco a 1,8% sí reduce el cierre a 31,79.</p>
+<p>Reducir caja operativa reservada de 1.500 a 500 eleva el cierre a 38,78; aumentarla a 2.500 lo baja a 35,37. Eliminar la reserva fiscal temporal de 126 produce 37,29, mostrando que ese posible solapamiento no explica la distancia al precio. Ajustes de cierre de cero frente a 1.000 generan 37,59 frente a 35,88. Añadir 500 de deterioro neto de capital posterior a septiembre resta aproximadamente 0,85 por acción combinada. La diferencia de costos futuros del comprador entre cero y 240 lleva el cierre de 37,24 a 36,83.</p>
+<p>Duplicar el ahorro central a 250 eleva el cierre solo a 37,89 bajo la misma financiación de reinversión. La inversión inversa encuentra que alcanzar 74,11 exige subir <strong>4.41 puntos porcentuales</strong> de forma paralela todos los márgenes de Sysco y JRD, manteniendo los demás supuestos centrales. Implica aproximadamente 8,41% inicial y 8,81% final en Sysco, y 16,91% y 17,41% en JRD. Es una prueba mecánica de exigencia, no una previsión ni el único camino posible.</p>
+<p>La sensibilidad temporal descuenta estáticamente el valor neto de la operación y añade costos de carry separados. En el centro, retrasarla doce meses sin carry cambia el cierre a 37,18; con 250 de carry, a 36,75. Que el primer efecto sea ligeramente positivo refleja el descuento de un valor neto de adquisición negativo en ese caso, no una tesis de que todo retraso beneficia al accionista. No sustituye una proyección mensual de financiación y cierre.</p>
+<h2 id="comparables-con-fechas-y-definiciones-visibles">Comparables con fechas y definiciones visibles</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Empresa</th>
+<th>EV/EBIT GAAP</th>
+<th>EV/(EBIT + amortización adquirida)</th>
+<th>Fecha capital</th>
+<th>Calificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>USFD</td>
+<td>21.50x</td>
+<td>20.57x</td>
+<td>2026-06-27</td>
+<td>Principal histórico</td>
+</tr>
+<tr class="even">
+<td>PFGC</td>
+<td>23.68x</td>
+<td>18.43x</td>
+<td>2026-09-26</td>
+<td>Proxy deuda contable</td>
+</tr>
+</tbody>
+</table></div>
+<p>USFD usa cotización del 3 de noviembre, capital de junio y acciones de julio. Su refinanciación de octubre sustituye deuda; no se añade íntegramente como endeudamiento incremental. PFGC usa cotización del 3 de noviembre anterior a resultados publicados el 4: combina retrospectivamente precio y nueva información. Sin nota completa de deuda de septiembre, su EV basado en principal exacto permanece nulo; el cuadro usa un proxy contable. <a href="https://www.sec.gov/Archives/edgar/data/1665918/000166591826000045/usfd-20260627.htm">USFD 10-Q</a>, <a href="https://www.sec.gov/Archives/edgar/data/1665918/000166591826000048/usfd-20261002.htm">USFD refinanciación</a> y <a href="https://www.sec.gov/Archives/edgar/data/1618673/000119312526446175/pfgc-ex99_1.htm">PFGC resultados</a>.</p>
+<p>Como referencia separada, SYY registra un EV proxy de 47.131,2 con capital contable de septiembre, equivalente a 15,65x EBIT GAAP y 14,82x antes de amortización adquirida. Añadir únicamente la aproximación de costos de octubre de 222 lleva esos múltiplos a 15,72x y 14,89x. No es deuda neta observada en noviembre y su EV exacto basado en principal sigue sin determinarse. Excluye operaciones JRD y acciones del vendedor. La aparente diferencia frente a comparables no demuestra infravaloración: financiación anticipada, perímetros y riesgo de adquisición difieren. <a href="https://www.sec.gov/Archives/edgar/data/96021/000009602126000050/syy-20260926.htm">10-Q Sysco</a>.</p>
+<p>El ranking cambia al añadir solo amortización adquirida: PFGC pasa de mayor a menor múltiplo frente a USFD. La mezcla de Convenience y Specialty tampoco es idéntica a distribución de restaurantes. Se mantienen SBC y demás costos operativos; no se compara EBIT GAAP con EBITDA ajustado. No se calcula una mediana, un múltiplo objetivo para Sysco ni un EV actual sincronizado. Los comparables aportan contexto de mercado, no resuelven el puente de adquisición.</p>
+<h2 id="catalizadores-y-condiciones-para-avanzar">Catalizadores y condiciones para avanzar</h2>
+<p>La última fuente primaria mantiene la operación pendiente y espera cierre en Q3 FY2027, equivalente a Q1 calendario 2027. No se verificó anuncio primario de autorización ni cierre. Completar financiación, responder requerimientos o lograr efectividad del S-4 no equivale a autorización antitrust. El contrato contiene una fecha límite del 30 de septiembre de 2027, prorrogable automáticamente al 30 de marzo de 2028 bajo determinadas condiciones. La comisión de 1.164 corresponde a rutas regulatorias y contractuales específicas, no a cualquier terminación. <a href="https://www.sec.gov/Archives/edgar/data/2134688/000110465926114738/tm2626990-1_424b3.htm">Prospecto y condiciones</a>.</p>
+<p>Antes de convertir esta investigación en valoración actual se necesitan: resolución regulatoria y remedios, fecha y fondos finales de cierre, deuda y caja actualizadas, costos y divisas conciliados, denominador diluido, calidad recurrente del margen JRD y necesidades de inversión de nuevas tiendas. La fecha exacta del próximo resultado Sysco no está confirmada aquí. USFD sí anunció resultados para el 5 de noviembre, útiles para contexto sectorial. <a href="https://ir.usfoods.com/newsroom/news/news-details/2026/US-Foods-to-Host-Third-Quarter-2026-Financial-Results-Conference-Call-and-Webcast/default.aspx">Calendario USFD</a>.</p>
+<p>La evidencia que mejoraría la tesis sería crecimiento de volumen acompañado de margen y caja después de inversión, ahorros verificables sin deterioro de servicio y desapalancamiento financiado con efectivo recurrente. La debilitarían presión persistente de margen, capex insuficiente para sostener operaciones, costos adicionales de cierre, remedios materiales o crecimiento adquirido que exija retornos inferiores. Hasta resolver estas cuestiones, el informe permanece <strong>PARTIAL, con revisión independiente completada</strong>, sin instrucción de negociación.</p>
+<h2 id="english-summary">English summary</h2>
+<p>Sysco is a conditional research case, not a completed current valuation. At the November 3 reference close of $74.11, the central immediate regulatory-failure counterfactual yields <strong>$42.34 per share</strong>, while immediate closing with JRD yields <strong>$37.07</strong>. These are separate economic cases without assigned probabilities. Total current fair value remains null; neither result is a price target, entry level or expected return.</p>
+<p>Historical operating performance is weaker than revenue growth suggests. TTM sales rose 3.8%, but GAAP operating profit fell 2.2%. Cash conversion benefited from lower capex, lower cash taxes and reduced working-capital outflows. JRD’s advertised roughly $1.9 billion “FCF” means adjusted EBITDA less capex; its FY2025 CFO less capex was $1.081 billion. Warehouse Realty is already included and cannot be added again.</p>
+<p>The DCF retains stock compensation, funds all positive NOPAT growth including margin expansion, applies physical capex floors, and separates operating cash flow from financing. The acquisition bridge avoids double-counting seller debt and acquired cash. October financing costs are approximated at $222 million; future buyer costs are a selected $100 million reserve. Final closing adjustments, current capital, regulatory outcomes and timing remain unresolved. Peer multiples are dated and definition-sensitive, not a synchronized valuation benchmark. <strong>Status: PARTIAL; Independently reviewed. No trading action.</strong></p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SYY/SYY_research_20261104_FINAL.zip">Paquete de investigación propio</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SYY/model/model.py">Reconstrucción reproducible</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-04/SYY/model/results.json">Resultados</a></li>
+</ul>
+</main></body></html>

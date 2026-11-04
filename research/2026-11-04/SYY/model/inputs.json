@@ -1,0 +1,250 @@
+{
+  "valuationDate": "2026-11-03",
+  "price": 74.11,
+  "unit": "USD million, shares millions",
+  "forecastPeriodMeaning": "Ten analytical twelve-month periods ending each November3, not company fiscal years; fiscal2027 53rd week is not perpetuated.",
+  "sharesStandalone": 494,
+  "conditionalSellerShares": 91.5,
+  "capital": {
+    "cashSeptember": 3171,
+    "debtCarryingSeptember": 13820,
+    "bookToPrincipalAndHedgeReserve": 200,
+    "operatingCashReserve": 1500,
+    "pensionGrossDeficitJune": 401,
+    "utbAndInterest": 92,
+    "historicalTaxTimingReserve": 126,
+    "octoberFinancingCostReserve": 222,
+    "postSeptemberOtherNetCapital": 0
+  },
+  "transaction": {
+    "economicCashFreeDebtFreeBase": 21600,
+    "buyerCostReserve": 100,
+    "closingAdjustmentReserve": 300,
+    "conditionalRegulatoryFailureFee": 1164,
+    "specialRedemptionEligiblePrincipalProxy": 14867.9,
+    "redemptionPremiumFraction": 0.01,
+    "failureOtherCostReserve": 200,
+    "JrdCashNotAddedFree": true,
+    "sellerDebtNotDeductedTwice": true,
+    "economicBaseIncludesEscrow": 60,
+    "escrowMeaning": "Seller base21600 minus escrow60 plus separately funded escrow60 totals21600 before other adjustments. No additional60 deduction or free asset."
+  },
+  "businesses": {
+    "syy": {
+      "revenueAnchor": 85149,
+      "ebitAnchor": 3180,
+      "tax": 0.25,
+      "daRatio": 0.00983,
+      "grossCapexRatio": 0.012,
+      "wcPerIncrementalRevenue": 0.07
+    },
+    "jrd": {
+      "revenueAnchor": 16009.1701,
+      "ebitAnchor": 2073.3487,
+      "tax": 0.275,
+      "daRatio": 0.0042,
+      "grossCapexRatio": 0.012,
+      "wcPerIncrementalRevenue": 0.02
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "syy": {
+        "growth": [
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.018,
+          0.017,
+          0.016,
+          0.015
+        ],
+        "margin1": 0.035,
+        "margin5": 0.036,
+        "margin10": 0.037,
+        "wacc": 0.095,
+        "g": 0.015,
+        "roic": 0.09
+      },
+      "jrd": {
+        "growth": [
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.018,
+          0.017,
+          0.016,
+          0.015
+        ],
+        "margin1": 0.115,
+        "margin5": 0.11,
+        "margin10": 0.11,
+        "wacc": 0.105,
+        "g": 0.015,
+        "roic": 0.1
+      },
+      "synergyAnnual": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "integrationAnnual": [
+        250,
+        200,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "base": {
+      "syy": {
+        "growth": [
+          0.04,
+          0.04,
+          0.0375,
+          0.035,
+          0.0325,
+          0.03,
+          0.03,
+          0.0275,
+          0.025,
+          0.025
+        ],
+        "margin1": 0.04,
+        "margin5": 0.043,
+        "margin10": 0.044,
+        "wacc": 0.085,
+        "g": 0.025,
+        "roic": 0.12
+      },
+      "jrd": {
+        "growth": [
+          0.05,
+          0.05,
+          0.0475,
+          0.045,
+          0.04,
+          0.0375,
+          0.035,
+          0.03,
+          0.0275,
+          0.025
+        ],
+        "margin1": 0.125,
+        "margin5": 0.13,
+        "margin10": 0.13,
+        "wacc": 0.09,
+        "g": 0.025,
+        "roic": 0.15
+      },
+      "synergyAnnual": [
+        0,
+        75,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125
+      ],
+      "integrationAnnual": [
+        200,
+        150,
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "bull": {
+      "syy": {
+        "growth": [
+          0.055,
+          0.05,
+          0.045,
+          0.04,
+          0.04,
+          0.0375,
+          0.035,
+          0.0325,
+          0.03,
+          0.03
+        ],
+        "margin1": 0.043,
+        "margin5": 0.047,
+        "margin10": 0.048,
+        "wacc": 0.075,
+        "g": 0.03,
+        "roic": 0.16
+      },
+      "jrd": {
+        "growth": [
+          0.07,
+          0.065,
+          0.06,
+          0.055,
+          0.05,
+          0.045,
+          0.04,
+          0.035,
+          0.03,
+          0.03
+        ],
+        "margin1": 0.135,
+        "margin5": 0.14,
+        "margin10": 0.14,
+        "wacc": 0.08,
+        "g": 0.03,
+        "roic": 0.2
+      },
+      "synergyAnnual": [
+        50,
+        150,
+        250,
+        250,
+        250,
+        250,
+        250,
+        250,
+        250,
+        250
+      ],
+      "integrationAnnual": [
+        150,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

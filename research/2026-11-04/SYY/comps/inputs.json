@@ -1,0 +1,105 @@
+{
+  "as_of": "2026-11-04",
+  "price_date": "2026-11-03",
+  "methodology": {
+    "earnings": "GAAP operating income, FY plus current YTD minus prior YTD. SBC and all other reported operating costs retained. Separate intangible-amortization-only sensitivity is not company adjusted EBIT or EBITDA.",
+    "capital": "Price times dated actual shares (not weighted-average shares), plus financial debt principal and finance leases, less unrestricted cash. Operating leases excluded from EV and their expense retained in EBIT. No netting of restricted cash.",
+    "qualification": "PFGC September principal debt unavailable from release, so exact principal EV null; separately label carrying-value proxy. USFD uses June capital and July shares, with October refinancing disclosed. No synchronized current EV or price target."
+  },
+  "peers": [
+    {
+      "ticker": "USFD",
+      "close_usd": 101.36,
+      "shares_outstanding": 216330723,
+      "shares_date": "2026-07-31",
+      "ttm_end": "2026-06-27",
+      "ebit": {
+        "fy": 1199,
+        "current_ytd": 659,
+        "prior_ytd": 596,
+        "source_ids": [
+          "usfd_fy25",
+          "usfd_q226"
+        ]
+      },
+      "intangible_amortization": {
+        "fy": 56,
+        "current_ytd": 28,
+        "prior_ytd": 27,
+        "source_ids": [
+          "usfd_fy25",
+          "usfd_q226"
+        ]
+      },
+      "capital": {
+        "date": "2026-06-27",
+        "financial_debt_carrying_m": 4646,
+        "financial_debt_principal_m": 4667,
+        "finance_leases_m": 591,
+        "unrestricted_cash_m": 56,
+        "bridge": "5237 reported total debt minus591 finance leases plus21 deferred costs =4667 financial principal; adding finance leases gives5258.",
+        "source_ids": [
+          "usfd_q226",
+          "usfd_oct8k"
+        ]
+      },
+      "limitations": [
+        "June27 capital and July31 shares are stale for Nov3 close. October2 refinancing810 is replacement financing, not incremental debt to add mechanically. Net debt after refinancing and subsequent buybacks is unverified.",
+        "Q3 results scheduled Nov5; June is latest published financial period verified as of Nov4.",
+        "Outstanding-check cash overdraft168 is operating working capital, excluded from financial debt; do not double count."
+      ],
+      "price_source_ids": [
+        "usfd_price",
+        "usfd_price_check"
+      ]
+    },
+    {
+      "ticker": "PFGC",
+      "close_usd": 96.51,
+      "shares_outstanding": 157786138,
+      "shares_date": "2026-09-30",
+      "ttm_end": "2026-09-26",
+      "ebit": {
+        "fy": 887.5,
+        "current_ytd": 272.2,
+        "prior_ytd": 224.7,
+        "source_ids": [
+          "pfgc_fy26",
+          "pfgc_q127_release"
+        ]
+      },
+      "intangible_amortization": {
+        "fy": 272,
+        "current_ytd": 61,
+        "prior_ytd": 66.7,
+        "source_ids": [
+          "pfgc_fy26",
+          "pfgc_q127_release"
+        ]
+      },
+      "capital": {
+        "date": "2026-09-26",
+        "financial_debt_carrying_m": 5170,
+        "financial_debt_principal_m": null,
+        "finance_leases_m": 1779.1,
+        "unrestricted_cash_m": 35.9,
+        "bridge": "Debt5170 is reported carrying value, not verified principal. Finance leases263.8+1515.3=1779.1. Restricted cash10.7 excluded.",
+        "source_ids": [
+          "pfgc_q127_release",
+          "pfgc_fy26",
+          "pfgc_proxy"
+        ]
+      },
+      "limitations": [
+        "Nov3 close precedes Nov4 earnings release. Combining this price with new September earnings is an explicitly retrospective mixed-information snapshot, not contemporaneously tradable valuation.",
+        "September principal debt/discounts/fees are unverified without Q1 10-Q debt note. Carrying-value EV is a provisional proxy, not exact principal-based EV. Do not carry June fee balance24.2 forward as fact.",
+        "Proxy provides Sep30 actual shares, not Nov3 actual shares.",
+        "Business mix includes large Convenience and Specialty operations, unlike a pure broadline restaurant-foodservice peer."
+      ],
+      "price_source_ids": [
+        "pfgc_price",
+        "pfgc_price_check"
+      ]
+    }
+  ]
+}
