@@ -1,3 +1,11 @@
+## Stage 3 historical reconciliation pending / Stage 3: conciliación histórica pendiente
+
+**Update 2026-11-04 05:18 UTC: historical reconciliation of three fiscal years, four quarters and TTM versus prior TTM is pending. The complete-research label is temporarily withdrawn until the supplement is verified. Prior values and conclusion are retained; no entry approval.**
+
+**Actualización 2026-11-04 05:18 UTC: conciliación histórica pendiente de tres ejercicios, cuatro trimestres y TTM frente al TTM anterior. Se retira temporalmente la etiqueta de investigación completa hasta verificar el anexo. Valores y conclusión previos conservados; no hay aprobación de entrada.**
+
+Earlier completion statements in the original report below are superseded by this dated notice. This is a historical-evidence gap, separate from future Stage 3.5 entry checks.
+
 # RCL and CCL: completed Fundamental Pullback Stage 3 reviews
 
 Research cutoff: November 4, 2026, approximately 04:15 UTC. Reference prices are the November 3 scanner inputs supplied for this task, not live executable quotes: RCL $313.46; CCL $29.16. Opportunity score 90 is a screening input, not a valuation result. Dollar figures are US dollars; financial amounts are billions unless otherwise stated.

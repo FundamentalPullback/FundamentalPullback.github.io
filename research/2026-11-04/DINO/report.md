@@ -1,3 +1,11 @@
+## Stage 3 historical reconciliation pending / Stage 3: conciliación histórica pendiente
+
+**Update 2026-11-04 05:18 UTC: historical reconciliation of three fiscal years, four quarters and TTM versus prior TTM is pending. The complete-research label is temporarily withdrawn until the supplement is verified. Prior values and conclusion are retained; no entry approval.**
+
+**Actualización 2026-11-04 05:18 UTC: conciliación histórica pendiente de tres ejercicios, cuatro trimestres y TTM frente al TTM anterior. Se retira temporalmente la etiqueta de investigación completa hasta verificar el anexo. Valores y conclusión previos conservados; no hay aprobación de entrada.**
+
+Earlier completion statements in the original report below are superseded by this dated notice. This is a historical-evidence gap, separate from future Stage 3.5 entry checks.
+
 # HF Sinclair: completed Fundamental Pullback Stage 3
 
 Research date: **November 3, 2026 ET** (overnight session is November 4 UTC). Financial statements: September 30, 2026; latest earnings released October 28. Scanner: November 3, export timezone unspecified, **$113.56**, Opportunity 95. Independently checked regular close: **$113.36 at 4 p.m. EST**. The $0.20 mismatch is preserved rather than silently presented as the same quote. [Q3 results](https://investor.hfsinclair.com/investor-relations/press-releases/press-releases-details/2026/HF-Sinclair-Reports-2026-Third-Quarter-Results-and-Announces-Regular-Cash-Dividend/default.aspx); [dated price history](https://stockanalysis.com/stocks/dino/history/)
