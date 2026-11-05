@@ -1,0 +1,1163 @@
+{
+  "method": "Independent array/product reconstruction and explicit calendar-day discounting; no author code executed/imported.",
+  "models": {
+    "adverse": {
+      "value": 13.92796638308962,
+      "equity": 1885.8466482703345,
+      "ev": 3627.1466482703345,
+      "value_without_stub": 13.366253286984564,
+      "stub_fcff": 78.125,
+      "stub_pv": 76.05595321262463,
+      "stub_days": 90,
+      "days": [
+        455,
+        821,
+        1186,
+        1551,
+        1916,
+        2282,
+        2647,
+        3012,
+        3377,
+        3743
+      ],
+      "factors": [
+        0.8731087005574845,
+        0.7828236332606594,
+        0.7020839760185286,
+        0.6296717273708776,
+        0.5647280066106526,
+        0.5063314907487794,
+        0.45410896031280656,
+        0.4072726101460149,
+        0.36526691492916136,
+        0.3274959615820852
+      ],
+      "fcff": [
+        355.2625,
+        364.05249999999995,
+        376.79287250000004,
+        384.32872995,
+        392.01530454899995,
+        393.95944799339395,
+        395.82455105374413,
+        397.60667445731104,
+        399.301752976599,
+        400.90559196687565
+      ],
+      "row_pvs": [
+        310.1827797318033,
+        284.9889007476262,
+        264.54023806024253,
+        242.00093526587207,
+        221.38202149882463,
+        199.4740745970614,
+        179.74747534529916,
+        161.9343081177059,
+        145.85171943556838,
+        131.29496234482704
+      ],
+      "pv_terminal": 1409.6932799128795,
+      "terminal_weight": 0.3886507540534969,
+      "year1_reinvestment": 29.299999999999986,
+      "year1_nopat": 384.5625
+    },
+    "central": {
+      "value": 30.382219611940354,
+      "equity": 4113.752535456724,
+      "ev": 5855.052535456724,
+      "value_without_stub": 29.61199200931802,
+      "stub_fcff": 106.76875,
+      "stub_pv": 104.288817395064,
+      "stub_days": 90,
+      "days": [
+        455,
+        821,
+        1186,
+        1551,
+        1916,
+        2282,
+        2647,
+        3012,
+        3377,
+        3743
+      ],
+      "factors": [
+        0.8879753281151511,
+        0.8070395335560148,
+        0.7336723032327406,
+        0.6669748211206732,
+        0.6063407464733392,
+        0.5510749428686745,
+        0.5009772207897041,
+        0.45543383708154916,
+        0.4140307609832265,
+        0.3762933289272811
+      ],
+      "fcff": [
+        441.258,
+        464.85036,
+        490.317334,
+        508.19594202,
+        523.4418202806,
+        527.1278515482308,
+        530.0718239885002,
+        532.2491344332255,
+        533.6374827766482,
+        534.2170374654272
+      ],
+      "row_pvs": [
+        391.82621733343535,
+        375.15261770774555,
+        359.73224775071697,
+        338.9538975230415,
+        317.3841040443025,
+        290.4869506764284,
+        265.55390920068805,
+        242.4042655782572,
+        220.94233308318908,
+        201.02230739753566
+      ],
+      "pv_terminal": 2747.30486776632,
+      "terminal_weight": 0.4692195076183063,
+      "year1_reinvestment": 38.676000000000045,
+      "year1_nopat": 479.934
+    },
+    "favorable": {
+      "value": 50.35297429504012,
+      "equity": 6817.792719548433,
+      "ev": 8559.092719548433,
+      "value_without_stub": 49.42357176687799,
+      "stub_fcff": 128.54375000000002,
+      "stub_pv": 125.84110231315154,
+      "stub_days": 90,
+      "days": [
+        455,
+        821,
+        1186,
+        1551,
+        1916,
+        2282,
+        2647,
+        3012,
+        3377,
+        3743
+      ],
+      "factors": [
+        0.8981420923294439,
+        0.8237890486874174,
+        0.7557697694379976,
+        0.6933667609522913,
+        0.6361162944516433,
+        0.5834551587508368,
+        0.5352799621567309,
+        0.49108253408874397,
+        0.45053443494380174,
+        0.4132367659115784
+      ],
+      "fcff": [
+        438.4745,
+        490.09524000000005,
+        543.509176625,
+        584.7259718146876,
+        625.5770144085001,
+        638.2428349313959,
+        649.7136511474125,
+        659.9067879662994,
+        668.7459697868517,
+        676.162178424257
+      ],
+      "row_pvs": [
+        393.81240486310674,
+        403.7350915258316,
+        410.76780510531216,
+        405.42955312183074,
+        397.93973229965735,
+        372.3860745764817,
+        347.7786985988984,
+        324.06869769685375,
+        301.2930876188639,
+        279.4150718437676
+      ],
+      "pv_terminal": 4796.625399984677,
+      "terminal_weight": 0.5604128331300213,
+      "year1_reinvestment": 50.689000000000036,
+      "year1_nopat": 489.1635
+    }
+  },
+  "sensitivity": [
+    {
+      "wacc": 0.09,
+      "g": 0.02,
+      "value": 35.667704271878065
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.025,
+      "value": 36.87898438554258
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.03,
+      "value": 38.278959911821666
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.02,
+      "value": 32.44889313600527
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.025,
+      "value": 33.40016312917038
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.03,
+      "value": 34.48607686488325
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.02,
+      "value": 29.631314377013787
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.025,
+      "value": 30.382219611940354
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.03,
+      "value": 31.229940773873185
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.02,
+      "value": 27.14422495031651
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.025,
+      "value": 27.73887290190073
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.03,
+      "value": 28.403417156750518
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.02,
+      "value": 24.932599302586812
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.025,
+      "value": 25.404137175758034
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.03,
+      "value": 25.926145334975697
+    }
+  ],
+  "stub_sensitivity": [
+    {
+      "q4_fcff": 0,
+      "value_at_oct2": 29.61199200931802
+    },
+    {
+      "q4_fcff": 50,
+      "value_at_oct2": 29.972690997843376
+    },
+    {
+      "q4_fcff": 100,
+      "value_at_oct2": 30.333389986368733
+    },
+    {
+      "q4_fcff": 150,
+      "value_at_oct2": 30.69408897489409
+    },
+    {
+      "q4_fcff": 200,
+      "value_at_oct2": 31.054787963419447
+    }
+  ],
+  "reinvestment_sensitivity": [
+    {
+      "minimum_reinvestment_nopat": 0,
+      "value_at_oct2": 30.382219611940354
+    },
+    {
+      "minimum_reinvestment_nopat": 0.1,
+      "value_at_oct2": 29.86689006622787
+    },
+    {
+      "minimum_reinvestment_nopat": 0.15,
+      "value_at_oct2": 28.935874341300913
+    },
+    {
+      "minimum_reinvestment_nopat": 0.2,
+      "value_at_oct2": 28.00485861637396
+    }
+  ],
+  "conditional_equity_carry": 30.703375704902722,
+  "treasury_primary": {
+    "value_percent": 4.95,
+    "observation": "2026-11-03",
+    "published": "2026-11-04T16:15:00-05:00",
+    "publisher": "Board of Governors of the Federal Reserve",
+    "coverage": "10-year Treasury constant maturity"
+  },
+  "checks": {
+    "adverse_value": {
+      "independent": 13.92796638308962,
+      "reported": 13.927966383089622,
+      "error": -1.7763568394002505e-15,
+      "pass_": true
+    },
+    "adverse_equity": {
+      "independent": 1885.8466482703345,
+      "reported": 1885.846648270335,
+      "error": -4.547473508864641e-13,
+      "pass_": true
+    },
+    "adverse_ev": {
+      "independent": 3627.1466482703345,
+      "reported": 3627.146648270335,
+      "error": -4.547473508864641e-13,
+      "pass_": true
+    },
+    "adverse_value_without_stub": {
+      "independent": 13.366253286984564,
+      "reported": 13.366253286984568,
+      "error": -3.552713678800501e-15,
+      "pass_": true
+    },
+    "adverse_pv_terminal": {
+      "independent": 1409.6932799128795,
+      "reported": 1409.6932799128795,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_terminal_weight": {
+      "independent": 0.3886507540534969,
+      "reported": 0.38865075405349686,
+      "error": 5.551115123125783e-17,
+      "pass_": true
+    },
+    "adverse_stub_fcff": {
+      "independent": 78.125,
+      "reported": 78.125,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_stub_pv": {
+      "independent": 76.05595321262463,
+      "reported": 76.05595321262462,
+      "error": 1.4210854715202004e-14,
+      "pass_": true
+    },
+    "adverse_row_fcff_0": {
+      "independent": 355.2625,
+      "reported": 355.26250000000005,
+      "error": -5.684341886080802e-14,
+      "pass_": true
+    },
+    "adverse_row_pv_0": {
+      "independent": 310.1827797318033,
+      "reported": 310.1827797318034,
+      "error": -1.1368683772161603e-13,
+      "pass_": true
+    },
+    "adverse_discount_years_0": {
+      "independent": 1.2465753424657535,
+      "reported": 1.2465753424657535,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_fcff_1": {
+      "independent": 364.05249999999995,
+      "reported": 364.05249999999995,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_pv_1": {
+      "independent": 284.9889007476262,
+      "reported": 284.9889007476262,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_discount_years_1": {
+      "independent": 2.249315068493151,
+      "reported": 2.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_fcff_2": {
+      "independent": 376.79287250000004,
+      "reported": 376.79287250000004,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_pv_2": {
+      "independent": 264.54023806024253,
+      "reported": 264.54023806024253,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_discount_years_2": {
+      "independent": 3.249315068493151,
+      "reported": 3.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_fcff_3": {
+      "independent": 384.32872995,
+      "reported": 384.32872995,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_pv_3": {
+      "independent": 242.00093526587207,
+      "reported": 242.0009352658721,
+      "error": -2.842170943040401e-14,
+      "pass_": true
+    },
+    "adverse_discount_years_3": {
+      "independent": 4.249315068493151,
+      "reported": 4.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_fcff_4": {
+      "independent": 392.01530454899995,
+      "reported": 392.01530454900006,
+      "error": -1.1368683772161603e-13,
+      "pass_": true
+    },
+    "adverse_row_pv_4": {
+      "independent": 221.38202149882463,
+      "reported": 221.38202149882468,
+      "error": -5.684341886080802e-14,
+      "pass_": true
+    },
+    "adverse_discount_years_4": {
+      "independent": 5.249315068493151,
+      "reported": 5.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_fcff_5": {
+      "independent": 393.95944799339395,
+      "reported": 393.9594479933941,
+      "error": -1.7053025658242404e-13,
+      "pass_": true
+    },
+    "adverse_row_pv_5": {
+      "independent": 199.4740745970614,
+      "reported": 199.47407459706145,
+      "error": -5.684341886080802e-14,
+      "pass_": true
+    },
+    "adverse_discount_years_5": {
+      "independent": 6.252054794520548,
+      "reported": 6.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_fcff_6": {
+      "independent": 395.82455105374413,
+      "reported": 395.82455105374424,
+      "error": -1.1368683772161603e-13,
+      "pass_": true
+    },
+    "adverse_row_pv_6": {
+      "independent": 179.74747534529916,
+      "reported": 179.74747534529922,
+      "error": -5.684341886080802e-14,
+      "pass_": true
+    },
+    "adverse_discount_years_6": {
+      "independent": 7.252054794520548,
+      "reported": 7.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_fcff_7": {
+      "independent": 397.60667445731104,
+      "reported": 397.6066744573111,
+      "error": -5.684341886080802e-14,
+      "pass_": true
+    },
+    "adverse_row_pv_7": {
+      "independent": 161.9343081177059,
+      "reported": 161.93430811770594,
+      "error": -2.842170943040401e-14,
+      "pass_": true
+    },
+    "adverse_discount_years_7": {
+      "independent": 8.252054794520548,
+      "reported": 8.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_fcff_8": {
+      "independent": 399.301752976599,
+      "reported": 399.301752976599,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_pv_8": {
+      "independent": 145.85171943556838,
+      "reported": 145.85171943556838,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_discount_years_8": {
+      "independent": 9.252054794520548,
+      "reported": 9.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_fcff_9": {
+      "independent": 400.90559196687565,
+      "reported": 400.90559196687565,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_row_pv_9": {
+      "independent": 131.29496234482704,
+      "reported": 131.29496234482704,
+      "error": 0.0,
+      "pass_": true
+    },
+    "adverse_discount_years_9": {
+      "independent": 10.254794520547945,
+      "reported": 10.254794520547945,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_value": {
+      "independent": 30.382219611940354,
+      "reported": 30.382219611940354,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_equity": {
+      "independent": 4113.752535456724,
+      "reported": 4113.752535456724,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_ev": {
+      "independent": 5855.052535456724,
+      "reported": 5855.052535456724,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_value_without_stub": {
+      "independent": 29.61199200931802,
+      "reported": 29.61199200931802,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_pv_terminal": {
+      "independent": 2747.30486776632,
+      "reported": 2747.30486776632,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_terminal_weight": {
+      "independent": 0.4692195076183063,
+      "reported": 0.4692195076183063,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_stub_fcff": {
+      "independent": 106.76875,
+      "reported": 106.76874999999998,
+      "error": 1.4210854715202004e-14,
+      "pass_": true
+    },
+    "central_stub_pv": {
+      "independent": 104.288817395064,
+      "reported": 104.28881739506399,
+      "error": 1.4210854715202004e-14,
+      "pass_": true
+    },
+    "central_row_fcff_0": {
+      "independent": 441.258,
+      "reported": 441.2579999999999,
+      "error": 5.684341886080802e-14,
+      "pass_": true
+    },
+    "central_row_pv_0": {
+      "independent": 391.82621733343535,
+      "reported": 391.8262173334353,
+      "error": 5.684341886080802e-14,
+      "pass_": true
+    },
+    "central_discount_years_0": {
+      "independent": 1.2465753424657535,
+      "reported": 1.2465753424657535,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_fcff_1": {
+      "independent": 464.85036,
+      "reported": 464.85036,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_pv_1": {
+      "independent": 375.15261770774555,
+      "reported": 375.15261770774555,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_discount_years_1": {
+      "independent": 2.249315068493151,
+      "reported": 2.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_fcff_2": {
+      "independent": 490.317334,
+      "reported": 490.31733399999996,
+      "error": 5.684341886080802e-14,
+      "pass_": true
+    },
+    "central_row_pv_2": {
+      "independent": 359.73224775071697,
+      "reported": 359.73224775071697,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_discount_years_2": {
+      "independent": 3.249315068493151,
+      "reported": 3.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_fcff_3": {
+      "independent": 508.19594202,
+      "reported": 508.19594202,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_pv_3": {
+      "independent": 338.9538975230415,
+      "reported": 338.9538975230415,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_discount_years_3": {
+      "independent": 4.249315068493151,
+      "reported": 4.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_fcff_4": {
+      "independent": 523.4418202806,
+      "reported": 523.4418202806,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_pv_4": {
+      "independent": 317.3841040443025,
+      "reported": 317.3841040443025,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_discount_years_4": {
+      "independent": 5.249315068493151,
+      "reported": 5.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_fcff_5": {
+      "independent": 527.1278515482308,
+      "reported": 527.1278515482308,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_pv_5": {
+      "independent": 290.4869506764284,
+      "reported": 290.4869506764284,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_discount_years_5": {
+      "independent": 6.252054794520548,
+      "reported": 6.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_fcff_6": {
+      "independent": 530.0718239885002,
+      "reported": 530.0718239885002,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_pv_6": {
+      "independent": 265.55390920068805,
+      "reported": 265.55390920068805,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_discount_years_6": {
+      "independent": 7.252054794520548,
+      "reported": 7.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_fcff_7": {
+      "independent": 532.2491344332255,
+      "reported": 532.2491344332257,
+      "error": -1.1368683772161603e-13,
+      "pass_": true
+    },
+    "central_row_pv_7": {
+      "independent": 242.4042655782572,
+      "reported": 242.40426557825725,
+      "error": -5.684341886080802e-14,
+      "pass_": true
+    },
+    "central_discount_years_7": {
+      "independent": 8.252054794520548,
+      "reported": 8.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_fcff_8": {
+      "independent": 533.6374827766482,
+      "reported": 533.6374827766483,
+      "error": -1.1368683772161603e-13,
+      "pass_": true
+    },
+    "central_row_pv_8": {
+      "independent": 220.94233308318908,
+      "reported": 220.9423330831891,
+      "error": -2.842170943040401e-14,
+      "pass_": true
+    },
+    "central_discount_years_8": {
+      "independent": 9.252054794520548,
+      "reported": 9.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_fcff_9": {
+      "independent": 534.2170374654272,
+      "reported": 534.2170374654272,
+      "error": 0.0,
+      "pass_": true
+    },
+    "central_row_pv_9": {
+      "independent": 201.02230739753566,
+      "reported": 201.02230739753568,
+      "error": -2.842170943040401e-14,
+      "pass_": true
+    },
+    "central_discount_years_9": {
+      "independent": 10.254794520547945,
+      "reported": 10.254794520547945,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_value": {
+      "independent": 50.35297429504012,
+      "reported": 50.35297429504012,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_equity": {
+      "independent": 6817.792719548433,
+      "reported": 6817.792719548433,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_ev": {
+      "independent": 8559.092719548433,
+      "reported": 8559.092719548433,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_value_without_stub": {
+      "independent": 49.42357176687799,
+      "reported": 49.42357176687799,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_pv_terminal": {
+      "independent": 4796.625399984677,
+      "reported": 4796.625399984677,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_terminal_weight": {
+      "independent": 0.5604128331300213,
+      "reported": 0.5604128331300213,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_stub_fcff": {
+      "independent": 128.54375000000002,
+      "reported": 128.54375,
+      "error": 2.842170943040401e-14,
+      "pass_": true
+    },
+    "favorable_stub_pv": {
+      "independent": 125.84110231315154,
+      "reported": 125.84110231315151,
+      "error": 2.842170943040401e-14,
+      "pass_": true
+    },
+    "favorable_row_fcff_0": {
+      "independent": 438.4745,
+      "reported": 438.4745,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_pv_0": {
+      "independent": 393.81240486310674,
+      "reported": 393.8124048631067,
+      "error": 5.684341886080802e-14,
+      "pass_": true
+    },
+    "favorable_discount_years_0": {
+      "independent": 1.2465753424657535,
+      "reported": 1.2465753424657535,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_fcff_1": {
+      "independent": 490.09524000000005,
+      "reported": 490.09524000000005,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_pv_1": {
+      "independent": 403.7350915258316,
+      "reported": 403.73509152583154,
+      "error": 5.684341886080802e-14,
+      "pass_": true
+    },
+    "favorable_discount_years_1": {
+      "independent": 2.249315068493151,
+      "reported": 2.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_fcff_2": {
+      "independent": 543.509176625,
+      "reported": 543.509176625,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_pv_2": {
+      "independent": 410.76780510531216,
+      "reported": 410.76780510531216,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_discount_years_2": {
+      "independent": 3.249315068493151,
+      "reported": 3.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_fcff_3": {
+      "independent": 584.7259718146876,
+      "reported": 584.7259718146876,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_pv_3": {
+      "independent": 405.42955312183074,
+      "reported": 405.42955312183074,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_discount_years_3": {
+      "independent": 4.249315068493151,
+      "reported": 4.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_fcff_4": {
+      "independent": 625.5770144085001,
+      "reported": 625.5770144085,
+      "error": 1.1368683772161603e-13,
+      "pass_": true
+    },
+    "favorable_row_pv_4": {
+      "independent": 397.93973229965735,
+      "reported": 397.9397322996573,
+      "error": 5.684341886080802e-14,
+      "pass_": true
+    },
+    "favorable_discount_years_4": {
+      "independent": 5.249315068493151,
+      "reported": 5.249315068493151,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_fcff_5": {
+      "independent": 638.2428349313959,
+      "reported": 638.2428349313959,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_pv_5": {
+      "independent": 372.3860745764817,
+      "reported": 372.3860745764817,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_discount_years_5": {
+      "independent": 6.252054794520548,
+      "reported": 6.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_fcff_6": {
+      "independent": 649.7136511474125,
+      "reported": 649.7136511474125,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_pv_6": {
+      "independent": 347.7786985988984,
+      "reported": 347.7786985988985,
+      "error": -5.684341886080802e-14,
+      "pass_": true
+    },
+    "favorable_discount_years_6": {
+      "independent": 7.252054794520548,
+      "reported": 7.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_fcff_7": {
+      "independent": 659.9067879662994,
+      "reported": 659.9067879662994,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_pv_7": {
+      "independent": 324.06869769685375,
+      "reported": 324.06869769685375,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_discount_years_7": {
+      "independent": 8.252054794520548,
+      "reported": 8.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_fcff_8": {
+      "independent": 668.7459697868517,
+      "reported": 668.7459697868518,
+      "error": -1.1368683772161603e-13,
+      "pass_": true
+    },
+    "favorable_row_pv_8": {
+      "independent": 301.2930876188639,
+      "reported": 301.293087618864,
+      "error": -5.684341886080802e-14,
+      "pass_": true
+    },
+    "favorable_discount_years_8": {
+      "independent": 9.252054794520548,
+      "reported": 9.252054794520548,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_fcff_9": {
+      "independent": 676.162178424257,
+      "reported": 676.162178424257,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_row_pv_9": {
+      "independent": 279.4150718437676,
+      "reported": 279.4150718437676,
+      "error": 0.0,
+      "pass_": true
+    },
+    "favorable_discount_years_9": {
+      "independent": 10.254794520547945,
+      "reported": 10.254794520547945,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_0": {
+      "independent": 35.667704271878065,
+      "reported": 35.667704271878065,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_1": {
+      "independent": 36.87898438554258,
+      "reported": 36.87898438554258,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_2": {
+      "independent": 38.278959911821666,
+      "reported": 38.278959911821666,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_3": {
+      "independent": 32.44889313600527,
+      "reported": 32.44889313600527,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_4": {
+      "independent": 33.40016312917038,
+      "reported": 33.40016312917038,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_5": {
+      "independent": 34.48607686488325,
+      "reported": 34.48607686488325,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_6": {
+      "independent": 29.631314377013787,
+      "reported": 29.631314377013794,
+      "error": -7.105427357601002e-15,
+      "pass_": true
+    },
+    "sensitivity_7": {
+      "independent": 30.382219611940354,
+      "reported": 30.382219611940354,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_8": {
+      "independent": 31.229940773873185,
+      "reported": 31.229940773873185,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_9": {
+      "independent": 27.14422495031651,
+      "reported": 27.1442249503165,
+      "error": 1.0658141036401503e-14,
+      "pass_": true
+    },
+    "sensitivity_10": {
+      "independent": 27.73887290190073,
+      "reported": 27.73887290190073,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_11": {
+      "independent": 28.403417156750518,
+      "reported": 28.40341715675051,
+      "error": 7.105427357601002e-15,
+      "pass_": true
+    },
+    "sensitivity_12": {
+      "independent": 24.932599302586812,
+      "reported": 24.932599302586812,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_13": {
+      "independent": 25.404137175758034,
+      "reported": 25.404137175758034,
+      "error": 0.0,
+      "pass_": true
+    },
+    "sensitivity_14": {
+      "independent": 25.926145334975697,
+      "reported": 25.926145334975697,
+      "error": 0.0,
+      "pass_": true
+    },
+    "stub_sensitivity_0": {
+      "independent": 29.61199200931802,
+      "reported": 29.61199200931802,
+      "error": 0.0,
+      "pass_": true
+    },
+    "stub_sensitivity_1": {
+      "independent": 29.972690997843376,
+      "reported": 29.972690997843376,
+      "error": 0.0,
+      "pass_": true
+    },
+    "stub_sensitivity_2": {
+      "independent": 30.333389986368733,
+      "reported": 30.333389986368733,
+      "error": 0.0,
+      "pass_": true
+    },
+    "stub_sensitivity_3": {
+      "independent": 30.69408897489409,
+      "reported": 30.69408897489409,
+      "error": 0.0,
+      "pass_": true
+    },
+    "stub_sensitivity_4": {
+      "independent": 31.054787963419447,
+      "reported": 31.054787963419447,
+      "error": 0.0,
+      "pass_": true
+    },
+    "reinvestment_sensitivity_0": {
+      "independent": 30.382219611940354,
+      "reported": 30.382219611940354,
+      "error": 0.0,
+      "pass_": true
+    },
+    "reinvestment_sensitivity_1": {
+      "independent": 29.86689006622787,
+      "reported": 29.86689006622787,
+      "error": 0.0,
+      "pass_": true
+    },
+    "reinvestment_sensitivity_2": {
+      "independent": 28.935874341300913,
+      "reported": 28.93587434130092,
+      "error": -7.105427357601002e-15,
+      "pass_": true
+    },
+    "reinvestment_sensitivity_3": {
+      "independent": 28.00485861637396,
+      "reported": 28.00485861637396,
+      "error": 0.0,
+      "pass_": true
+    },
+    "conditional_equity_carry": {
+      "independent": 30.703375704902722,
+      "reported": 30.703375704902722,
+      "error": 0.0,
+      "pass_": true
+    }
+  },
+  "source_checks": {
+    "treasury_value": true,
+    "treasury_date": true,
+    "treasury_publication": true,
+    "publisher": true,
+    "stub_days": true,
+    "carry_days": true,
+    "current_fair_value_null": true,
+    "fundamental_false": true,
+    "entry_false": true,
+    "publication_not_claimed": true
+  },
+  "all_checks_pass": true,
+  "formula_comparisons": 139
+}

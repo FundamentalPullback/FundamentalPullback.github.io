@@ -1,0 +1,13 @@
+VNT · Revisión limitada posterior a resultados
+
+Abrir primero report/VNT_Q3_2026_revision_limitada.html.
+
+El modelo conserva base económica del 2 de octubre, con información del 5 de noviembre. No representa un valor actual plenamente conciliado; current_fair_value sigue vacío. No hay entrada, stop, tamaño ni precio máximo aprobados.
+
+La revisión independiente pasó 139 comparaciones numéricas y diez controles de fuente, fechas y estado. El acta original conserva su propia referencia histórica de mercado. market_refresh.json aporta el precio más reciente, $39.22 a las 17:39 UTC; no modifica las hipótesis ni los cálculos económicos.
+
+Para reproducir el modelo: ejecutar python calc/model.py desde este paquete. Los datos base y el código conservan exactamente los hashes auditados. El archivo generado mantiene la referencia de mercado histórica del modelo; la actualización de mercado se entrega separada.
+
+Quedan pendientes revisión visual permitida y comprobación de vigencia cerca de las 15:00 ET antes de publicar.
+
+Se incluyen solo análisis propios, resultados numéricos, enlaces y la observación primaria XML de Treasury. No se incluyen informes completos ni transcripciones de terceros.

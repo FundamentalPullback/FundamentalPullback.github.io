@@ -1,0 +1,28 @@
+// Offline exact A288 research-only successor, including rendering and negative controls.
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto'),Module=require('module'),vm=require('vm');
+const root=path.resolve(__dirname,'..'),sha=b=>crypto.createHash('sha256').update(b).digest('hex'),clone=x=>JSON.parse(JSON.stringify(x));
+const filename=path.join(__dirname,'load-stock-profiles.cjs'),m=new Module(filename,module);m.filename=filename;m.paths=module.paths;m._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,profileCardData,'),filename);
+const a=m.exports(root),contract=require('./vnt-contract.cjs'),c=contract.validate(root,a);
+for(const [f,h] of Object.entries(c.priorDataHashes))assert.equal(sha(fs.readFileSync(root+'/data/'+f)),h,'Prior data unchanged '+f);
+for(const [f,h] of Object.entries(c.priorResearchHashes))assert.equal(sha(fs.readFileSync(root+'/'+f)),h,'Prior research unchanged '+f);
+const r=a.reports.find(r=>r.id==='A288'),p=a.profiles.find(p=>p.ticker==='VNT'),meta=r.profiles[0],d=a.t.profileCardData(p),folder=root+'/research/2026-11-05/VNT-post-earnings/',v=c.sourceVerification.VNT,full=fs.readFileSync(folder+'website_report.md','utf8'),body=fs.readFileSync(folder+'report/VNT_Q3_2026_revision_limitada.html','utf8'),ed=JSON.parse(fs.readFileSync(folder+'editorial_metadata.json'));
+assert.equal(r.schema,'fp.post-earnings-supplement.v1');assert.equal(meta.kind,'partial');assert.equal(meta.earningsUpdateComplete,true);
+for(const k of ['stage3Complete','latestCompletedEligible','fundamentalApproved','stage35Complete','stage35Approved','entryApproved','postResultsDailyTrendVerified'])assert.equal(meta[k],false,k);
+for(const k of ['currentPrice','fairValue','maxPrice','approvedQuantity','signal','entryPrice','quantity','maximumConditioned','fundamentalMaximum','technicalMaximum','operativeStop','currentQP','currentOpportunity'])assert.equal(meta[k],null,k);
+for(const k of ['bear','base','bull'])assert.equal(meta.valuation[k],null);
+assert.equal(meta.valuation.status,'unavailable');assert(!meta.close);assert(!r.entryPlan);assert.equal(p.latestAnalysis.id,'A288');assert.equal(p.latestAnalysis.isComplete,false);assert.equal(p.latestReview.rep,'A288');assert.equal(p.latestReview.decision,'En observación');assert.equal(p.latestCompleted,null);assert.equal(d.model,null);assert(p.reports.some(r=>r.id==='A135')||p.decisions.some(r=>r.rep==='A135'));assert.equal(d.scan.date,'2026-11-04');assert(!d.close||d.close.price!==39.22);
+assert.equal(full,r.text);assert(!full.includes('<!DOCTYPE'));assert(full.includes('report/VNT_Q3_2026_revision_limitada.html'));assert(full.length<body.length/2);
+for(const s of ['17:39 UTC / 12:39 ET','13.93 / 30.38 / 50.35','Not current fair value, stock-price downside or a buy ceiling','Not live, a regular close or an executable quote','November 3 observation, released November 4','4.90%','October 2, 2026','A135'])assert(full.includes(s),s);
+for(const x of [...ed.pros,...ed.risks]){assert(full.includes(x.report_quote));assert(full.includes(x.text_es));assert(full.includes(x.text_en));assert(full.includes(x.source_url));}
+for(const x of [...meta.prosCons.pros,...meta.prosCons.cons])assert(x.sourceUrl.endsWith('/report/VNT_Q3_2026_revision_limitada.html'),'Analytical evidence attributed to preserved report');
+assert.equal(meta.prosCons.sourceFingerprint,a.engine.balanceFingerprint(full));assert(a.engine.balanceStructured({...meta.prosCons,ticker:'VNT',reportId:'A288'},r,'VNT','2026-11-05','test'));
+for(const [f,h] of Object.entries(v.publicFileSha256))assert.equal(sha(fs.readFileSync(folder+f)),h,'Frozen source '+f);
+assert.equal(sha(fs.readFileSync(folder+'VNT_PUBLIC_FINAL_20261105.zip')),v.archiveSha256);assert.equal(sha(fs.readFileSync(folder+'editorial_metadata.json')),v.editorialSha256);
+const before=JSON.stringify({reports:a.reports,dec:a.t.S.dec,ops:a.t.S.ops,ges:a.t.S.ges,acct:a.t.S.acct,hist:a.t.S.hist});
+for(const lang of ['es','en'])for(const inline of [true,false]){a.t.setLang(lang);const out=a.t.profileSummaryCard(p,inline),metrics=out.match(/<dl class="stock-summary-values">([\s\S]*?)<\/dl>/)[1];assert(out.includes(lang==='es'?meta.summary:meta.summaryEn));assert(out.includes('#biblioteca/A288'));assert(metrics.includes('<dd class="stock-estimate">—</dd>'));assert(!metrics.includes('39.22'));assert(!/NaN|undefined|Infinity/.test(out));}
+assert.equal(JSON.stringify({reports:a.reports,dec:a.t.S.dec,ops:a.t.S.ops,ges:a.t.S.ges,acct:a.t.S.acct,hist:a.t.S.hist}),before);
+for(const mutate of [r=>r.push({id:'A289'}),r=>r.push(clone(r.find(x=>x.id==='A288'))),r=>r.find(x=>x.id==='A135').title+='edited',r=>r.find(x=>x.id==='A288').profiles[0].valuation.base=30.38]){const bad={...a,reports:clone(a.reports)};mutate(bad.reports);assert.throws(()=>contract.validate(root,bad),'Fail closed on unpinned mutations');}
+const count=a.reports.length;vm.runInContext(fs.readFileSync(root+'/'+c.library,'utf8'),a.c);assert.equal(a.c.window.FP_LIB.reports.length,count);
+const walk=dir=>fs.readdirSync(dir).flatMap(n=>fs.statSync(path.join(dir,n)).isDirectory()?walk(path.join(dir,n)):[path.join(dir,n)]);
+for(const f of walk(folder)){if(f.endsWith('.zip'))continue;assert(!/\/workspace\/|\/agent_notes\/|\/user_notes\/|\/home\/agent\/|file:\/\/|BEGIN PRI[V]ATE KEY|Bea[r]er /i.test(fs.readFileSync(f,'utf8')),'Private data '+f);assert(!/\.(pdf|png|jpg)$/i.test(f));}
+console.log('PASS A288: exact frozen sources, historical preservation, limited research only, ES/EN rendering and evidence, dated quote and economic anchor, null valuation and trade metrics, no approval, idempotence and fail-closed mutation controls.');

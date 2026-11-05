@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:cb="http://www.cbwiki.net/wiki/index.php/Specification_1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/02/22-rdf-syntax-ns# rdf.xsd">
+
+  <channel rdf:about="http://www.federalreserve.gov/releases/H15">
+    <title>FRB:Data:H.15 Selected Interest Rates</title>
+    <link>http://www.federalreserve.gov/releases/H15/about.htm</link>
+    <description>FRB:Data:H.15 Selected Interest Rates</description>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://www.federalreserve.gov/releases/H15#1"/>
+      </rdf:Seq>
+    </items>
+    <dc:language>en</dc:language>
+    <dc:date>2026-11-04T16:15:00-05:00</dc:date>
+    <dc:publisher>Board of Governors of the Federal Reserve</dc:publisher>
+  </channel>
+
+  <item rdf:about="http://www.federalreserve.gov/releases/H15#1">
+    <title>US: H15 4.95 2026-11-03 FRB 10-year Treasury constant maturity</title>
+    <link>http://www.federalreserve.gov/releases/H15#1</link>
+    <description>10-year Treasury constant maturity</description>
+    <dc:date>2026-11-03T12:00:00-05:00</dc:date>
+    <dc:language>en</dc:language>
+    <dc:creator>FRB</dc:creator>
+    <cb:statistics>
+      <cb:country>US</cb:country>
+      <cb:institutionAbbrev>FRB</cb:institutionAbbrev>
+      <cb:otherStatistic>
+        <cb:value decimals="2" unit_mult="1" units="Percent:_Per_Year">4.95</cb:value>
+        <cb:topic>H15</cb:topic>
+        <cb:coverage>10-year Treasury constant maturity</cb:coverage>
+        <cb:observationPeriod frequency="business">2026-11-03</cb:observationPeriod>
+        <cb:dataType/>
+      </cb:otherStatistic>
+    </cb:statistics>
+  </item>
+
+</rdf:RDF>

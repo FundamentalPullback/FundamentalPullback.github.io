@@ -1,0 +1,74 @@
+{
+  "ticker": "VNT",
+  "version": "V2",
+  "audit_timestamp_utc": "2026-11-05T17:35:12.290827+00:00",
+  "decision": "Observación sin aprobación fundamental",
+  "content_review_pass": true,
+  "limited_publication_eligible_after_gates": true,
+  "fundamental_approved": false,
+  "entry_approved": false,
+  "current_fair_value": null,
+  "economic_anchor_date": "2026-10-02",
+  "information_date": "2026-11-05",
+  "formula_comparisons": 139,
+  "formula_pass": true,
+  "source_controls": {
+    "treasury_value": true,
+    "treasury_date": true,
+    "treasury_publication": true,
+    "publisher": true,
+    "stub_days": true,
+    "carry_days": true,
+    "current_fair_value_null": true,
+    "fundamental_false": true,
+    "entry_false": true,
+    "publication_not_claimed": true
+  },
+  "maximum_formula_error": 4.547473508864641e-13,
+  "indicative_anchored_values": {
+    "adverse": 13.92796638308962,
+    "central": 30.382219611940354,
+    "favorable": 50.35297429504012
+  },
+  "treasury": {
+    "value_percent": 4.95,
+    "observation": "2026-11-03",
+    "published": "2026-11-04T16:15:00-05:00",
+    "publisher": "Board of Governors of the Federal Reserve",
+    "coverage": "10-year Treasury constant maturity"
+  },
+  "resolved_for_limited_research": [
+    "Partial-normalization labels",
+    "Working-capital explanation",
+    "R&D arithmetic bridge",
+    "DCF calendar and modeled Q4 stub",
+    "Primary Treasury source"
+  ],
+  "unresolved_before_fundamental_approval": [
+    "Retained-business perimeter",
+    "Full operating FCFF normalization",
+    "Economic reinvestment support",
+    "Current share and award inventory",
+    "Transaction footnotes and balance claims",
+    "Current capital and valuation-date bridge"
+  ],
+  "publication_gates": [
+    "Permitted visual QA",
+    "Near-delivery quote, filings/news and technical refresh",
+    "Replace pending-audit wording with qualified limited-audit outcome"
+  ],
+  "trade_or_publication_authorization": false,
+  "certificate_scope": "Exact hashed inputs only. Economic/formula/decision revisions require recheck; recency updates must preserve model dates and update affected comparisons.",
+  "original_independent_certificate_sha256": "cffe57c743cc73eb33acc7f34b6b2ef4df6745fbeeb0421a97d93688645df511",
+  "original_audited_report_sha256": "7f55b0d955af7072fff63ca706b69dbaa5fdd50bea5be6281c4d6ed11dc1b0d2",
+  "public_audit_report_sha256": "5cae39dc07e2c148775e67ad8fa959a885917b8aa76888975d51966c731eed50",
+  "public_independent_results_sha256": "8336dd490151975a90e045100d25b4f5b1129b6e987748a7a206ebe0d66513f4",
+  "audited_unchanged_public_inputs": {
+    "calc/model.py": "cc01513f572b0427f7e13da2f5cea62dcfc7f111ede500dd05c3a7aed09ca30b",
+    "calc/baseline_v1.json": "6439d2135a4977020299864ff7da5b6bbabc779744d5f46ee42a566504a89624",
+    "calc/calculations.json": "158b0295d83eb807f12966391af0ee62cdefb9201f262ce5c8e62d0aa6ce56c8",
+    "sources/h15_xml.txt": "f33aa23ec2fb9b4a897087fe9690e192b8642c5dd7de43cd0462ec008d539ec7"
+  },
+  "publication_ready": false,
+  "certificate_note": "Public extract of independent certificate; original preserved. Exact model inputs unchanged. Later text and market-only changes have their own delta certificate."
+}

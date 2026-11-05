@@ -1,0 +1,77 @@
+{
+  "ticker": "VNT",
+  "timestamp_utc": "2026-11-05T17:50:00Z",
+  "scope": "Editorial audit-state update and separately dated market/technical context only; not economic re-underwriting",
+  "before_report_sha256": "7f55b0d955af7072fff63ca706b69dbaa5fdd50bea5be6281c4d6ed11dc1b0d2",
+  "after_report_sha256": "1c9f8f3c947d219594e428430d59341e91145a70dee785d91584819636c2eb44",
+  "independent_certificate_sha256": "cffe57c743cc73eb33acc7f34b6b2ef4df6745fbeeb0421a97d93688645df511",
+  "original_audited_hashes_verified": 18,
+  "all_original_audited_hashes_match": true,
+  "unchanged_public_model_checks": {
+    "calc/model.py": true,
+    "calc/baseline_v1.json": true,
+    "calc/calculations.json": true,
+    "sources/h15_xml.txt": true
+  },
+  "exact_replacement_only_check": true,
+  "current_fair_value_null": true,
+  "no_fundamental_approval": true,
+  "no_entry_approval": true,
+  "publication_ready": false,
+  "visual_qa": "Pending; no restricted renderer retries",
+  "raw_third_party_full_reports_included": false,
+  "internal_paths_found": false,
+  "changes": [
+    {
+      "reason": "Refresh verified quote; model economics unchanged",
+      "before": "<strong>$39.75</strong><small>5 noviembre, 11:49 ET / 16:49 UTC; intradía",
+      "after": "<strong>$39.22</strong><small>5 noviembre, 12:39 ET / 17:39 UTC; intradía"
+    },
+    {
+      "reason": "Qualified completed limited audit; no fundamental approval",
+      "before": "V1 tuvo 35 comprobaciones aritméticas correctas, pero no fue apta para publicar. V2 corrige etiquetas, amplía puentes y fecha el DCF; su revisión independiente y visual siguen pendientes.",
+      "after": "V2 supera 139 comprobaciones numéricas independientes y diez controles de fuentes, fechas y estado. Es apta como investigación limitada, sin aprobación fundamental. La revisión visual y la actualización final de vigencia siguen pendientes."
+    },
+    {
+      "reason": "Market timestamp separate from October2 anchor",
+      "before": "La comparación con $39.75 de noviembre es orientativa, no un margen de seguridad actual validado.",
+      "after": "La comparación con $39.22 observado el 5 de noviembre a las 17:39 UTC es orientativa, no un margen de seguridad actual validado."
+    },
+    {
+      "reason": "Refresh only price-dependent multiples",
+      "before": "A $39.75, el EPS ajustado FY2026 central de $3.62 da ~11.0x; EV / EBITDA ajustado TTM es ~9.7x",
+      "after": "A $39.22, el EPS ajustado FY2026 central de $3.62 da ~10.8x; EV / EBITDA ajustado TTM es ~9.6x"
+    },
+    {
+      "reason": "Preserve historical audited reverse model, distinguish newer quote",
+      "before": "La inversa V1 exigía terminar en margen ~25.85% o empezar con crecimiento ~7.83%, manteniendo el resto fijo.",
+      "after": "La inversa V1, calculada con $39.75 a las 16:49 UTC, exigía terminar en margen ~25.85% o empezar con crecimiento ~7.83%, manteniendo el resto fijo."
+    },
+    {
+      "reason": "Refresh limited technical context; no invented score or entry",
+      "before": "Scanner 4 noviembre: QP 90, Opportunity 90, $37.58. No es condición técnica actual después del gap. Revisar tendencia larga y señal diaria cerca de la entrega.",
+      "after": "Scanner 4 noviembre: QP 90, Opportunity 90, $37.58; no se recalculan esos scores. Con cierres completos hasta el día 4, EMA20 ~34.68, EMA50 ~33.40 y EMA200 ~33.65; esta última sube ~0.15 en veinte sesiones. El precio está sobre EMA200, pero EMA50 sigue debajo: recuperación con tendencia larga aún no aprobada. Son EMAs convencionales reconstruidas, no una réplica exacta del scanner. La cotización del día 5 es intradía y no constituye señal de cierre."
+    },
+    {
+      "reason": "Record recency refresh without claiming final delivery freshness",
+      "before": "Antes de las 15:00 ET: actualizar precio, filings/noticias y condiciones técnicas. El precio guardado sigue siendo el de las 11:49 ET; esta V2 no pretende ser una cotización nueva.",
+      "after": "Precio actualizado a las 12:39 ET; SEC y noticias del emisor revisados aproximadamente a las 12:46 ET. Antes de las 15:00 ET hay que volver a comprobar vigencia y condiciones técnicas. No se atribuye a este informe una cotización futura."
+    },
+    {
+      "reason": "Primary SEC and issuer news refresh; no new material information",
+      "before": "La captura SEC renovada alrededor de las 17:15 UTC aún muestra el 8-K como último informe, sin 10-Q Q3. Es el estado de esa captura, no una garantía sobre publicaciones posteriores.",
+      "after": "La captura SEC renovada alrededor de las 17:43 UTC aún muestra el 8-K como último informe, sin 10-Q Q3. El feed primario de noticias del emisor, revisado a las 17:46 UTC, sigue encabezado por los resultados de las 06:30 ET; no se identificó anuncio material posterior. El texto financiero del comunicado sigue igual; solo cambia la presentación del email de contacto. Son capturas fechadas, no garantía sobre publicaciones posteriores."
+    },
+    {
+      "reason": "Replace pending audit narrowly; preserve visual and economic gates",
+      "before": "La auditoría aritmética V1 no equivale a aprobación de V2. Falta revisión independiente de las nuevas fórmulas y revisión visual por un medio permitido; no se ha repetido el render restringido.",
+      "after": "La revisión independiente V2 reproduce 139 comparaciones y diez controles adicionales, con error numérico máximo de 4.55 × 10⁻¹³. Respalda el uso limitado del contenido, no una valoración actual completa ni una compra. Los ajustes editoriales y de mercado posteriores se documentan en un certificado de cambios; las fórmulas, hipótesis y fechas del modelo no cambian. Sigue pendiente la revisión visual por un medio permitido."
+    }
+  ],
+  "market_computations": {
+    "adjusted_pe": 10.834254143646408,
+    "ev_adjusted_ebitda": 9.567777777777778
+  },
+  "new_price_market_asof": "2026-11-05T17:39:00Z",
+  "new_financial_information_found": false
+}
