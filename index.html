@@ -1057,6 +1057,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     }
   };
   var DEC_EN = {
+    "Apta Stage 3 condicional · Stage 3.5 pendiente": "Conditionally eligible Stage 3 · Stage 3.5 pending",
     "Apta para Stage 3.5": "Ready for Stage 3.5",
     "Aprobada Stage 3, bloqueada": "Passed Stage 3, blocked",
     "Esperar precio": "Wait for price",
@@ -1067,6 +1068,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   var DEPTH_EN = { "Stage 3 completo": "Full Stage 3", "Stage 3 rápido": "Quick Stage 3", "Stage 1": "Stage 1", "Revisión de lista": "List review" };
   Object.assign(DEPTH_EN, {'Stage 3 revisado · valoración no certificada': 'Completed Stage 3 review · valuation uncertified', 'Stage 3 completo · valoración condicional': 'Full Stage 3 · conditional valuation', 'Aplazada por resultados': 'Deferred for earnings', 'Pendiente · fecha no confirmada': 'Pending · date unconfirmed', 'Exclusión sectorial': 'Sector exclusion', 'Exclusión por operación': 'Transaction exclusion', 'Revisión acotada · no Stage 3 completo': 'Limited review · not full Stage 3', 'Investigación aplazada': 'Research deferred', 'Stage 3 completo · screen-grade': 'Full Stage 3 · screen-grade', 'Stage 3 bloqueado': 'Stage 3 blocked', 'Gestión Stage 4': 'Stage 4 management', 'Stage 3 bloqueado · normalización pendiente': 'Stage 3 blocked · normalization pending'});
   var DEC_CLASS = {
+    "Apta Stage 3 condicional · Stage 3.5 pendiente": "d-watch",
     "Apta para Stage 3.5": "d-ok",
     "Aprobada Stage 3, bloqueada": "d-hold",
     "Esperar precio": "d-wait",
@@ -1074,7 +1076,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     "Descartada": "d-out",
     "En cartera": "d-held"
   };
-  var DEC_ORDER = ["Apta para Stage 3.5", "Aprobada Stage 3, bloqueada", "En cartera", "Esperar precio", "En observación", "Descartada"];
+  var DEC_ORDER = ["Apta Stage 3 condicional · Stage 3.5 pendiente","Apta para Stage 3.5", "Aprobada Stage 3, bloqueada", "En cartera", "Esperar precio", "En observación", "Descartada"];
   var DEC_VAR = { "d-ok": "--ok", "d-hold": "--hold", "d-wait": "--wait", "d-watch": "--watch", "d-out": "--out", "d-held": "--ink-2" };
 
   var lang = "es";
@@ -1188,7 +1190,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   /* valuation source kept apart from the latest review of the row */
   function vSrc(r) { var c = String(r.calc || "").match(/\b[Ii]nforme\s+(A\d{2,4})\b/); return { id: r.vrep || (c && c[1]) || (r.base !== null ? r.rep : "") || "", d: isoDay(r.vdate) || "" }; }
   function vLab(r) { var x = lang === "en" && r.vlabEn ? r.vlabEn : r.vlab; return x ? '<small class="muted" style="display:block;font-size:0.72rem;color:var(--ink-2)">' + esc(x) + "</small>" : ""; }
-  function groupOf(d) { if (d === "En cartera") return "held"; if (isApproved(d)) return "ok"; if (d === "Esperar precio") return "wait"; if (d === "En observación") return "watch"; return "out"; }
+  function groupOf(d) { if (d === "En cartera") return "held"; if (isApproved(d)) return "ok"; if (d === "Esperar precio") return "wait"; if (d === "En observación" || d === "Apta Stage 3 condicional · Stage 3.5 pendiente") return "watch"; return "out"; }
 
   /* ---------- valuation band ---------- */
   function band(r) {
@@ -1652,7 +1654,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if (!S.sort.rej) S.sort.rej = { key: "date", dir: "desc" };
     var rows = (S.latestOnly ? latestPerTicker(S.dec) : S.dec).filter(function (r) { return !isApproved(r.decision) && r.decision !== "En cartera"; });
     var counts = {}; rows.forEach(function (r) { counts[r.decision] = (counts[r.decision] || 0) + 1; });
-    var opts = [{ v: "all", l: t().all + " · " + rows.length }].concat(["Esperar precio", "En observación", "Descartada"].filter(function (d) { return counts[d]; }).map(function (d) { return { v: d, l: decLabel(d) + " · " + counts[d] }; }));
+    var opts = [{ v: "all", l: t().all + " · " + rows.length }].concat(["Apta Stage 3 condicional · Stage 3.5 pendiente", "Esperar precio", "En observación", "Descartada"].filter(function (d) { return counts[d]; }).map(function (d) { return { v: d, l: decLabel(d) + " · " + counts[d] }; }));
     if (S.rejFilter !== "all") rows = rows.filter(function (r) { return r.decision === S.rejFilter; });
     rows = rows.filter(qMatch(S.rejQ));
     var C = t().col;

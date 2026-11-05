@@ -1,0 +1,61 @@
+{
+  "artifact_type": "deterministic_support_for_HTML_research",
+  "banker_formula_workbook": false,
+  "all_steps_passed": true,
+  "steps": [
+    {
+      "step": "beta.py",
+      "exit_code": 0,
+      "stdout": "{'beta': np.float64(0.8066808261280106), 'beta_standard_error': np.float64(0.2903772185983381), 'beta_95pct_low': np.float64(0.22498535800603026), 'beta_95pct_high': np.float64(1.388376294249991), 'monthly_alpha': np.float64(-0.006819043940959578), 'r_squared': np.float64(0.12112099987602938), 'n': 58, 'first_price_month': '2021-12', 'last_price_month': '2026-10', 'method': 'OLS monthly simple adjusted-close returns CTSH on SPY; incomplete November 2026 excluded; market returns not excess returns'}\n",
+      "stderr": ""
+    },
+    {
+      "step": "technical.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"date\": \"2026-11-04\",\n  \"close\": 65.78,\n  \"high_252\": 87.03,\n  \"pullback_pct\": -24.41686774675399,\n  \"volume_20\": 6891512.75,\n  \"ema20\": 64.88679578733823,\n  \"ema50\": 62.135907211446444,\n  \"ema200\": 60.760660873308645,\n  \"ema200_20_sessions_ago\": 59.72033445995544,\n  \"ema200_slope_20_pct\": 1.7419969642848976,\n  \"atr14\": 2.8296044767928317,\n  \"rsi14\": 53.66667507883633,\n  \"day_change_pct\": 3.054989816700626,\n  \"day_volume_ratio\": 1.5746684935031137,\n  \"history_sessions\": 501,\n  \"overlap_rows\": 50,\n  \"max_overlap_ohlc_difference\": 0.0,\n  \"method\": \"Split-adjusted, not dividend-total-return OHLC. Yahoo older daily rows; replace 50 recent rows with StockAnalysis same-price-basis history, all 50 overlap OHLC rows agree at the stored precision; latest StockAnalysis values used. EMA recursively seeded at first close with >500 observations; Wilder ATR and RSI.\",\n  \"long_trend_supportive\": true,\n  \"technical_entry_approved\": false,\n  \"source_latest\": \"https://stockanalysis.com/stocks/ctsh/history/\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "value.py",
+      "exit_code": 0,
+      "stdout": "{'base': {'per_share': 79.34024040034222, 'wacc': 0.08517569896180917, 'terminal_pct_ev': 0.596516846458563, 'stub_fcff': 832.22}, 'bear': {'per_share': 51.76139942051113, 'wacc': 0.09517569896180916, 'terminal_pct_ev': 0.5096435442188291, 'stub_fcff': 682.19}, 'bull': {'per_share': 109.1152593638308, 'wacc': 0.08017569896180916, 'terminal_pct_ev': 0.6186209695057215, 'stub_fcff': 982.25}, 'owned_business_crosscheck': {'per_share': 84.95400366693178, 'wacc': 0.08517569896180917, 'terminal_pct_ev': 0.5095131543876985, 'stub_fcff': 832.22}}\n{'beta_raw': 0.8066808261280106, 'beta_normalized': 0.871120550752007, 'equity_market': 29524.0653565, 'debt_weight': 0.04994197245358081, 'cost_equity': 0.08741641628816352, 'cost_debt': 0.0575, 'wacc': 0.08517569896180917, 'shares': 448.830425}\n",
+      "stderr": ""
+    },
+    {
+      "step": "sensitivity.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"wacc_terminal_g\": [\n    {\n      \"wacc\": 0.075,\n      \"g\": 0.02,\n      \"value\": 93.23280343235271\n    },\n    {\n      \"wacc\": 0.075,\n      \"g\": 0.025,\n      \"value\": 96.76814988932443\n    },\n    {\n      \"wacc\": 0.075,\n      \"g\": 0.03,\n      \"value\": 101.04824821263341\n    },\n    {\n      \"wacc\": 0.08,\n      \"g\": 0.02,\n      \"value\": 84.79982420424685\n    },\n    {\n      \"wacc\": 0.08,\n      \"g\": 0.025,\n      \"value\": 87.39179000795738\n    },\n    {\n      \"wacc\": 0.08,\n      \"g\": 0.03,\n      \"value\": 90.46677129383569\n    },\n    {\n      \"wacc\": 0.08517569896180917,\n      \"g\": 0.02,\n      \"value\": 77.44995010873008\n    },\n    {\n      \"wacc\": 0.08517569896180917,\n      \"g\": 0.025,\n      \"value\": 79.34024040034222\n    },\n    {\n      \"wacc\": 0.08517569896180917,\n      \"g\": 0.03,\n      \"value\": 81.54233506829426\n    },\n    {\n      \"wacc\": 0.09,\n      \"g\": 0.02,\n      \"value\": 71.59133629674855\n    },\n    {\n      \"wacc\": 0.09,\n      \"g\": 0.025,\n      \"value\": 73.00056059774549\n    },\n    {\n      \"wacc\": 0.09,\n      \"g\": 0.03,\n      \"value\": 74.61738161013952\n    },\n    {\n      \"wacc\": 0.095,\n      \"g\": 0.02,\n      \"value\": 66.32709701406253\n    },\n    {\n      \"wacc\": 0.095,\n      \"g\": 0.025,\n      \"value\": 67.36180030613524\n    },\n    {\n      \"wacc\": 0.095,\n      \"g\": 0.03,\n      \"value\": 68.53146630769372\n    },\n    {\n      \"wacc\": 0.1,\n      \"g\": 0.02,\n      \"value\": 61.73223167437331\n    },\n    {\n      \"wacc\": 0.1,\n      \"g\": 0.025,\n      \"value\": 62.483688059359565\n    },\n    {\n      \"wacc\": 0.1,\n      \"g\": 0.03,\n      \"value\": 63.32085078227652\n    }\n  ],\n  \"same_wacc_tests\": {\n    \"organic_2pct\": 77.24377363726371,\n    \"margins_minus_50bp\": 76.48207705673863,\n    \"acquisition_multiple_3_5\": 77.21624503956589,\n    \"capex_1_8pct\": 78.76941791317421,\n    \"terminal_roic_10pct\": 76.30505430797538,\n    \"tax_27pct\": 78.10696598619636,\n    \"further_5_DSO_days\": 78.71589556591368,\n    \"moderate_combined\": 70.64548111847508,\n    \"moderate_combined_with_5_DSO_days\": 70.02113628404652,\n    \"operating_bear_at_base_wacc\": 60.324229870358415,\n    \"owned_business_only_committed_dyflex\": 84.95400366693178,\n    \"new_deals_opening_day\": 79.57998420248916,\n    \"new_deals_year_end\": 79.08977370067205,\n    \"zero_inherited_growth\": 78.87114004711809,\n    \"beta_raw_no_shrink\": 83.35765631914174,\n    \"beta_one\": 72.3073020817603\n  },\n  \"bridge_tests\": {\n    \"cash_reserve_800\": 78.67183651484359,\n    \"postsept_buybacks_150\": 79.16199936420925,\n    \"postsept_buybacks_0\": 79.49620130695857,\n    \"pension_0\": 79.91952376777436,\n    \"pension_400\": 79.02831858710952,\n    \"no_incremental_dilution\": 79.65970955665438,\n    \"diluted_450\": 79.1340307077506\n  },\n  \"stub_tests\": {\n    \"0\": 77.40445799435882,\n    \"730\": 79.01027749023142,\n    \"880\": 79.34024040034222,\n    \"1030\": 79.67020331045302\n  },\n  \"reverse\": {\n    \"wacc_at_price\": 0.09654570228595229,\n    \"organic_growth_at_price\": -0.010099942713336262,\n    \"parallel_margin_change_at_price\": -0.02372194792626041,\n    \"acquisition_multiple_at_price\": 6.1928723823996,\n    \"terminal_roic_at_price\": 0.06337349760880073\n  },\n  \"legacy_approx_reconstruction\": {\n    \"per_share\": 66.48489592485268,\n    \"published\": 66.47,\n    \"warning\": \"Reconstruction from preserved narrative, not the unavailable original executable; small rounding/convention difference.\"\n  },\n  \"new_model_at_10pct\": 62.483688059359565\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "supplement.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"combined_risk_tests\": {\n    \"moderate_wacc9\": 64.83150992449053,\n    \"moderate_beta1\": 64.1960882404219,\n    \"moderate_beta1_plus5DSO\": 63.57531607369725,\n    \"moderate_same_month_Rf5_29\": 66.10061777253513\n  },\n  \"additional_checks\": {\n    \"without_economic_Q4_stub\": 77.50956217999278,\n    \"cash_conversion_FCFF_2027_before_new_MA\": 2725.1772618,\n    \"historical_cash_enterprise_proxy_TTM\": 2143.36,\n    \"beta1_wacc\": 0.0905754332924715,\n    \"ERP_month_Rf_sensitivity_wacc\": 0.0888809252692402,\n    \"extra_cash_drag_300_per_year_first5_then_fade_value\": 75.99367851502134\n  },\n  \"migration_bridge\": [\n    {\n      \"step\": \"Approximate A120 narrative reconstruction\",\n      \"value\": 66.48489592485268\n    },\n    {\n      \"step\": \"Same old operating assumptions, only WACC8.51757%\",\n      \"value\": 84.11705603514235,\n      \"change\": 17.632160110289675\n    },\n    {\n      \"step\": \"New growth/cohorts/tax/reinvestment/terminal and timed acquisition cash, no Q4stub; old capital/share bridge\",\n      \"value\": 78.0969994106891,\n      \"change\": -6.020056624453261\n    },\n    {\n      \"step\": \"Add estimated economic Q4stub\",\n      \"value\": 79.92291959663949,\n      \"change\": 1.8259201859503946\n    },\n    {\n      \"step\": \"New pension/earnout/capital-return reserve and current diluted denominator\",\n      \"value\": 79.34024040034222,\n      \"change\": -0.5826791962972635\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "peer_check.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "step": "qa.py",
+      "exit_code": 0,
+      "stdout": "QA 156 PASS\n",
+      "stderr": ""
+    },
+    {
+      "step": "write_report.py",
+      "exit_code": 0,
+      "stdout": "Words 3823\n",
+      "stderr": ""
+    },
+    {
+      "step": "render_html.py",
+      "exit_code": 0,
+      "stdout": "HTML rendered; live visual check still required by publisher\n",
+      "stderr": ""
+    }
+  ]
+}

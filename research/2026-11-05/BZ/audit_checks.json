@@ -1,0 +1,1004 @@
+{
+  "auditStatus": "passed_with_caveats",
+  "publicationVerdict": "ready_as_dated_supplement_only",
+  "asOfUTC": "2026-11-05T02:03:27Z",
+  "scope": {
+    "reviewed": [
+      "report.md",
+      "summary.json",
+      "calculate_update.py",
+      "inputs/prior_audit_BZ.json",
+      "inputs/prior_prices.csv",
+      "prior_model/model.json",
+      "prior_model/forecast_base.csv",
+      "prior_A174.md",
+      "return_update.json",
+      "technicals.json",
+      "structure_tests.json",
+      "zhipu_quote_delta.json",
+      "capital_update/evidence.json",
+      "capital_update/findings.md",
+      "saved primary reports",
+      "canonical plan"
+    ],
+    "notCertified": [
+      "new full Stage3 valuation",
+      "current consolidated balance sheet or exact dilution",
+      "complete independently refreshed latest technical history",
+      "Stage3.5 execution approval",
+      "portfolio fit or trade size"
+    ],
+    "noExternalPublication": true,
+    "noTrade": true
+  },
+  "currentPrice": 17.46,
+  "previousCapturedPrice": 17.45,
+  "mathCheckCount": 107,
+  "mathChecks": [
+    {
+      "check": "Capital bridge reconstructed from individual components",
+      "status": "pass",
+      "details": {
+        "independent": 2883.482719412962,
+        "reported": 2883.482719412962,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Economic diluted ADS denominator",
+      "status": "pass",
+      "details": {
+        "independent": 460.10766300000006,
+        "reported": 460.10766300000006,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Year 1 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 358.40898516892094,
+        "reported": 358.40898516892094,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Year 2 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 405.383294249205,
+        "reported": 405.383294249205,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Year 3 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 447.0377797780758,
+        "reported": 447.0377797780758,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Year 4 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 488.3878509956624,
+        "reported": 488.38785099566235,
+        "absolute_difference": 5.684341886080802e-14
+      }
+    },
+    {
+      "check": "Year 5 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 520.531944252797,
+        "reported": 520.531944252797,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Year 6 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 541.1235334872077,
+        "reported": 541.1235334872077,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Year 7 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 557.5784477218684,
+        "reported": 557.5784477218684,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Year 8 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 569.426469210863,
+        "reported": 569.4264692108632,
+        "absolute_difference": 1.1368683772161603e-13
+      }
+    },
+    {
+      "check": "Year 9 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 576.304541023849,
+        "reported": 576.304541023849,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Year 10 distributable FCFF reconstructed",
+      "status": "pass",
+      "details": {
+        "independent": 577.9745386505783,
+        "reported": 577.9745386505782,
+        "absolute_difference": 1.1368683772161603e-13
+      }
+    },
+    {
+      "check": "Terminal reinvestment and currency",
+      "status": "pass",
+      "details": {
+        "independent": 6218.333134130443,
+        "reported": 6218.333134130442,
+        "absolute_difference": 9.094947017729282e-13
+      }
+    },
+    {
+      "check": "Historical operating EV",
+      "status": "pass",
+      "details": {
+        "independent": 4719.515246861738,
+        "reported": 4719.515246861738,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Historical A174 base value",
+      "status": "pass",
+      "details": {
+        "independent": 16.524388915197658,
+        "reported": 16.524388915197658,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Declared dividend deducted once",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "No additional RMB600m investment deduction",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Prior audit reproduction delay0_yield0.00_fxloss0.00",
+      "status": "pass",
+      "details": {
+        "independent": 0.1112172173790474,
+        "reported": 0.11121721737904744,
+        "absolute_difference": 4.163336342344337e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay0_yield0.00_fxloss0.01",
+      "status": "pass",
+      "details": {
+        "independent": 0.1112172173790474,
+        "reported": 0.11121721737904744,
+        "absolute_difference": 4.163336342344337e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay0_yield0.02_fxloss0.00",
+      "status": "pass",
+      "details": {
+        "independent": 0.1112172173790474,
+        "reported": 0.11121721737904744,
+        "absolute_difference": 4.163336342344337e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay0_yield0.02_fxloss0.01",
+      "status": "pass",
+      "details": {
+        "independent": 0.1112172173790474,
+        "reported": 0.11121721737904744,
+        "absolute_difference": 4.163336342344337e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay0_yield0.04_fxloss0.00",
+      "status": "pass",
+      "details": {
+        "independent": 0.1112172173790474,
+        "reported": 0.11121721737904744,
+        "absolute_difference": 4.163336342344337e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay0_yield0.04_fxloss0.01",
+      "status": "pass",
+      "details": {
+        "independent": 0.1112172173790474,
+        "reported": 0.11121721737904744,
+        "absolute_difference": 4.163336342344337e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay3_yield0.00_fxloss0.00",
+      "status": "pass",
+      "details": {
+        "independent": 0.09220331976116505,
+        "reported": 0.09220331976116503,
+        "absolute_difference": 2.7755575615628914e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay3_yield0.00_fxloss0.01",
+      "status": "pass",
+      "details": {
+        "independent": 0.09072512465115674,
+        "reported": 0.09072512465115656,
+        "absolute_difference": 1.8041124150158794e-16
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay3_yield0.02_fxloss0.00",
+      "status": "pass",
+      "details": {
+        "independent": 0.09550485535796127,
+        "reported": 0.09550485535796127,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay3_yield0.02_fxloss0.01",
+      "status": "pass",
+      "details": {
+        "independent": 0.09397776633008607,
+        "reported": 0.09397776633008592,
+        "absolute_difference": 1.5265566588595902e-16
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay3_yield0.04_fxloss0.00",
+      "status": "pass",
+      "details": {
+        "independent": 0.09885701284945697,
+        "reported": 0.09885701284945692,
+        "absolute_difference": 5.551115123125783e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay3_yield0.04_fxloss0.01",
+      "status": "pass",
+      "details": {
+        "independent": 0.09728003412283917,
+        "reported": 0.09728003412283914,
+        "absolute_difference": 2.7755575615628914e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay10_yield0.00_fxloss0.00",
+      "status": "pass",
+      "details": {
+        "independent": 0.0732554955593847,
+        "reported": 0.0732554955593846,
+        "absolute_difference": 9.71445146547012e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay10_yield0.00_fxloss0.01",
+      "status": "pass",
+      "details": {
+        "independent": 0.0709138336921505,
+        "reported": 0.07091383369215032,
+        "absolute_difference": 1.8041124150158794e-16
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay10_yield0.02_fxloss0.00",
+      "status": "pass",
+      "details": {
+        "independent": 0.08005894457309073,
+        "reported": 0.0800589445730907,
+        "absolute_difference": 2.7755575615628914e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay10_yield0.02_fxloss0.01",
+      "status": "pass",
+      "details": {
+        "independent": 0.0775277628331606,
+        "reported": 0.07752776283316065,
+        "absolute_difference": 5.551115123125783e-17
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay10_yield0.04_fxloss0.00",
+      "status": "pass",
+      "details": {
+        "independent": 0.08687264629127278,
+        "reported": 0.08687264629127289,
+        "absolute_difference": 1.1102230246251565e-16
+      }
+    },
+    {
+      "check": "Prior audit reproduction delay10_yield0.04_fxloss0.01",
+      "status": "pass",
+      "details": {
+        "independent": 0.08415602518796911,
+        "reported": 0.08415602518796905,
+        "absolute_difference": 5.551115123125783e-17
+      }
+    },
+    {
+      "check": "Original 17.45 IRR 0 0",
+      "status": "pass",
+      "details": {
+        "independent": 0.1066242151303127,
+        "reported": 0.10662421513031262,
+        "absolute_difference": 8.326672684688674e-17
+      }
+    },
+    {
+      "check": "Original 17.45 IRR 3 0.02",
+      "status": "pass",
+      "details": {
+        "independent": 0.09056045651138174,
+        "reported": 0.09056045651138189,
+        "absolute_difference": 1.5265566588595902e-16
+      }
+    },
+    {
+      "check": "Original 17.45 IRR 3 0.04",
+      "status": "pass",
+      "details": {
+        "independent": 0.09379083743229713,
+        "reported": 0.09379083743229721,
+        "absolute_difference": 8.326672684688674e-17
+      }
+    },
+    {
+      "check": "Original 17.45 IRR 10 0.02",
+      "status": "pass",
+      "details": {
+        "independent": 0.07488987390770907,
+        "reported": 0.07488987390770918,
+        "absolute_difference": 1.1102230246251565e-16
+      }
+    },
+    {
+      "check": "Original 17.45 IRR 10 0.04",
+      "status": "pass",
+      "details": {
+        "independent": 0.08143423715669776,
+        "reported": 0.08143423715669773,
+        "absolute_difference": 2.7755575615628914e-17
+      }
+    },
+    {
+      "check": "Current 17.46 IRR 0 0",
+      "status": "pass",
+      "details": {
+        "independent": 0.1064878638120261,
+        "reported": 0.10648786381202602,
+        "absolute_difference": 8.326672684688674e-17
+      }
+    },
+    {
+      "check": "Current 17.46 IRR 3 0.02",
+      "status": "pass",
+      "details": {
+        "independent": 0.09045837977740069,
+        "reported": 0.09045837977740068,
+        "absolute_difference": 1.3877787807814457e-17
+      }
+    },
+    {
+      "check": "Current 17.46 IRR 3 0.04",
+      "status": "pass",
+      "details": {
+        "independent": 0.09368663058498056,
+        "reported": 0.0936866305849805,
+        "absolute_difference": 5.551115123125783e-17
+      }
+    },
+    {
+      "check": "Current 17.46 IRR 10 0.02",
+      "status": "pass",
+      "details": {
+        "independent": 0.0748109367811967,
+        "reported": 0.07481093678119677,
+        "absolute_difference": 6.938893903907228e-17
+      }
+    },
+    {
+      "check": "Current 17.46 IRR 10 0.04",
+      "status": "pass",
+      "details": {
+        "independent": 0.08135280512378934,
+        "reported": 0.0813528051237894,
+        "absolute_difference": 5.551115123125783e-17
+      }
+    },
+    {
+      "check": "Price sensitivity 15.5 0.02",
+      "status": "pass",
+      "details": {
+        "independent": 0.09149712189520921,
+        "reported": 0.09149712189520909,
+        "absolute_difference": 1.249000902703301e-16
+      }
+    },
+    {
+      "check": "Price sensitivity 15.5 0.04",
+      "status": "pass",
+      "details": {
+        "independent": 0.09858702083239597,
+        "reported": 0.09858702083239612,
+        "absolute_difference": 1.5265566588595902e-16
+      }
+    },
+    {
+      "check": "Price sensitivity 16 0.02",
+      "status": "pass",
+      "details": {
+        "independent": 0.08699186193139577,
+        "reported": 0.08699186193139574,
+        "absolute_difference": 2.7755575615628914e-17
+      }
+    },
+    {
+      "check": "Price sensitivity 16 0.04",
+      "status": "pass",
+      "details": {
+        "independent": 0.09392964824569516,
+        "reported": 0.09392964824569516,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Price sensitivity 16.5 0.02",
+      "status": "pass",
+      "details": {
+        "independent": 0.08266477045847953,
+        "reported": 0.08266477045847964,
+        "absolute_difference": 1.1102230246251565e-16
+      }
+    },
+    {
+      "check": "Price sensitivity 16.5 0.04",
+      "status": "pass",
+      "details": {
+        "independent": 0.0894593717770781,
+        "reported": 0.08945937177707808,
+        "absolute_difference": 2.7755575615628914e-17
+      }
+    },
+    {
+      "check": "Price sensitivity 17 0.02",
+      "status": "pass",
+      "details": {
+        "independent": 0.07850319953316164,
+        "reported": 0.07850319953316165,
+        "absolute_difference": 1.3877787807814457e-17
+      }
+    },
+    {
+      "check": "Price sensitivity 17 0.04",
+      "status": "pass",
+      "details": {
+        "independent": 0.08516274550724258,
+        "reported": 0.08516274550724268,
+        "absolute_difference": 9.71445146547012e-17
+      }
+    },
+    {
+      "check": "Price sensitivity 17.46 0.02",
+      "status": "pass",
+      "details": {
+        "independent": 0.0748109367811967,
+        "reported": 0.07481093678119677,
+        "absolute_difference": 6.938893903907228e-17
+      }
+    },
+    {
+      "check": "Price sensitivity 17.46 0.04",
+      "status": "pass",
+      "details": {
+        "independent": 0.08135280512378934,
+        "reported": 0.0813528051237894,
+        "absolute_difference": 5.551115123125783e-17
+      }
+    },
+    {
+      "check": "No duplicate dates",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Dates strictly ascending",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Adjusted OHLC same corporate-action basis",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Last historical session",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "raw EMA20",
+      "status": "pass",
+      "details": {
+        "independent": 16.421708264706428,
+        "reported": 16.421708264706425,
+        "absolute_difference": 3.552713678800501e-15
+      }
+    },
+    {
+      "check": "raw EMA50",
+      "status": "pass",
+      "details": {
+        "independent": 15.992189185128519,
+        "reported": 15.992189185128533,
+        "absolute_difference": 1.4210854715202004e-14
+      }
+    },
+    {
+      "check": "raw EMA200",
+      "status": "pass",
+      "details": {
+        "independent": 16.02311299064757,
+        "reported": 16.023112990647647,
+        "absolute_difference": 7.815970093361102e-14
+      }
+    },
+    {
+      "check": "raw EMA200 change",
+      "status": "pass",
+      "details": {
+        "independent": 0.6054155709621423,
+        "reported": 0.6054155709620757,
+        "absolute_difference": 6.661338147750939e-14
+      }
+    },
+    {
+      "check": "raw Wilder ATR14",
+      "status": "pass",
+      "details": {
+        "independent": 0.5186842098869237,
+        "reported": 0.5186842098869237,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "raw Wilder RSI14",
+      "status": "pass",
+      "details": {
+        "independent": 68.68761502857045,
+        "reported": 68.68761502857046,
+        "absolute_difference": 1.4210854715202004e-14
+      }
+    },
+    {
+      "check": "raw 252 session high",
+      "status": "pass",
+      "details": {
+        "independent": 22.485000610351562,
+        "reported": 22.485000610351562,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "dividend_adjusted EMA20",
+      "status": "pass",
+      "details": {
+        "independent": 16.388053543578657,
+        "reported": 16.388053543578657,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "dividend_adjusted EMA50",
+      "status": "pass",
+      "details": {
+        "independent": 15.808815194082987,
+        "reported": 15.808815194083,
+        "absolute_difference": 1.2434497875801753e-14
+      }
+    },
+    {
+      "check": "dividend_adjusted EMA200",
+      "status": "pass",
+      "details": {
+        "independent": 15.576697592591529,
+        "reported": 15.5766975925916,
+        "absolute_difference": 7.105427357601002e-14
+      }
+    },
+    {
+      "check": "dividend_adjusted EMA200 change",
+      "status": "pass",
+      "details": {
+        "independent": 1.2694599322908395,
+        "reported": 1.2694599322908173,
+        "absolute_difference": 2.220446049250313e-14
+      }
+    },
+    {
+      "check": "dividend_adjusted Wilder ATR14",
+      "status": "pass",
+      "details": {
+        "independent": 0.5168202949211306,
+        "reported": 0.5168202949211305,
+        "absolute_difference": 1.1102230246251565e-16
+      }
+    },
+    {
+      "check": "dividend_adjusted Wilder RSI14",
+      "status": "pass",
+      "details": {
+        "independent": 69.52636733730031,
+        "reported": 69.52636733730033,
+        "absolute_difference": 1.4210854715202004e-14
+      }
+    },
+    {
+      "check": "dividend_adjusted 252 session high",
+      "status": "pass",
+      "details": {
+        "independent": 21.672291181503518,
+        "reported": 21.672291181503518,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Average 20 session volume",
+      "status": "pass",
+      "details": {
+        "independent": 4385149.45,
+        "reported": 4385149.45,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Diagnostic RR 17.74",
+      "status": "pass",
+      "details": {
+        "independent": 0.17230769230769083,
+        "reported": 0.17230769230769083,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Diagnostic RR 18.63614404963545",
+      "status": "pass",
+      "details": {
+        "independent": 0.7237809536218156,
+        "reported": 0.7237809536218156,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Diagnostic RR 21.672291181503518",
+      "status": "pass",
+      "details": {
+        "independent": 2.592179188617549,
+        "reported": 2.592179188617549,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Zhipu quote delta per ADS",
+      "status": "pass",
+      "details": {
+        "independent": 0.013036350236763658,
+        "reported": 0.013036350236763658,
+        "absolute_difference": 0.0
+      }
+    },
+    {
+      "check": "Eight treasury products",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Total treasury principal RMB600m",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "RMB300m per distributor",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Seven maturities passed, not seven verified redemptions",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity oct23_wealth_management.pdf",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity oct23_wealth_management.txt",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity oct23_products_page2.png",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity hkex_results.html",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity hkex_results.txt",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity hkex_stockid.jsonp",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity sec_submissions.json",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity event-calendar.html",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity event-calendar.txt",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity shareholder_return_policy.pdf",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity shareholder_return_policy.txt",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity q2_2026.html",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity q2_2026.txt",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity interim_2026.pdf",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity interim_2026.txt",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity annual_2025.html",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity annual_2025.txt",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity september_monthly.html",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity september_monthly.txt",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity oct2_changes.html",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Saved source integrity oct2_changes.txt",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Live HKEX PDF identical to saved original",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "No entry or current total-value certification",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Historical Stage3 retained",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "check": "Checkpoint is prospective only",
+      "status": "pass",
+      "details": null
+    }
+  ],
+  "qualitativeChecks": [
+    {
+      "check": "primary_oct23_terms",
+      "status": "pass",
+      "details": "Full six-page HKEX notice reviewed and redownload hash matched; page2 inspected visually; eight products/RMB600m, stated rates and maturities verified."
+    },
+    {
+      "check": "governance_claim_classification",
+      "status": "pass",
+      "details": "Delayed disclosure acknowledged; management assertions of inadvertence and no loss not presented as independently proven."
+    },
+    {
+      "check": "capital_repatriation_channels",
+      "status": "pass",
+      "details": "2025 loan repayments, service-fee payments and Hong Kong dividends tied to 20-F; no aggregation as shareholder dividends."
+    },
+    {
+      "check": "combined_dividend_buyback_policy",
+      "status": "pass",
+      "details": "2026–2028 target covers combined distributions and repurchases with board discretion; not minimum cash dividend or mandated NAV liquidation."
+    },
+    {
+      "check": "no_double_counting",
+      "status": "pass",
+      "details": "Prior bridge and operating forecast retained; no additional600m deduction, repeated declared dividend deduction or added future buyback yield."
+    },
+    {
+      "check": "china_vie_no_blanket_exclusion",
+      "status": "pass",
+      "details": "Canonical plan excludes Real Estate and Healthcare; VIE risks require analysis, not automatic ineligibility."
+    },
+    {
+      "check": "whole_equity_vs_operating_rate",
+      "status": "pass",
+      "details": "Fixed-terminal equity IRR distinguished from operating discount rate. No automatic12% equity hurdle or uniform15% discount."
+    },
+    {
+      "check": "technical_series_consistency",
+      "status": "pass_with_caveat",
+      "details": "Raw and adjusted OHLC internally consistent. Archive+current provider bar disclosed. Yahoo current close cell null; metadata supports17.46; volume differs."
+    },
+    {
+      "check": "price_revision",
+      "status": "corrected",
+      "details": "StockAnalysis direct page and Yahoo metadata support17.46;17.45 historical diagnostic retained and reproduced."
+    },
+    {
+      "check": "recent_lows",
+      "status": "corrected",
+      "details": "Oct28 minimum15.835 is below Oct22 minimum15.930. Narrative no longer asserts uninterrupted higher lows."
+    },
+    {
+      "check": "future_checkpoint_only",
+      "status": "pass",
+      "details": "17.74 only opens prospective review. No signal, approved stop, maxima or shares."
+    },
+    {
+      "check": "no_retroactive_signal",
+      "status": "pass",
+      "details": "Breakout before defining this review not promoted into a historical authorization; no invented volume threshold or15minute switch."
+    },
+    {
+      "check": "calendar_and_capital_cutoff",
+      "status": "pass_with_caveat",
+      "details": "Official events/news and SEC refreshed successfully with no Q3 date/new capital return. Repeat HKEX search503; saved official01:43 search supports no October monthly return at its cutoff."
+    },
+    {
+      "check": "historical_completion_retained",
+      "status": "pass",
+      "details": "A174 remains historical completed Stage3. Supplement-only false completion flags and null valuation must not overwrite the historical record."
+    },
+    {
+      "check": "no_current_total_value_or_entry",
+      "status": "pass",
+      "details": "No new complete valuation certified. Bear/base/bull/current total value null; entry false, quantity0, stop/maxima null."
+    },
+    {
+      "check": "favorable_and_adverse_evidence_balanced",
+      "status": "pass",
+      "details": "Real repatriation and >USD300m buybacks plus declared dividend explicitly counter blanket trapped-cash thesis; control lapse is adverse but no arbitrary impairment."
+    },
+    {
+      "check": "rendered_report_review",
+      "status": "pass",
+      "details": "Regenerated HTML and rendered seven-page PDF. All seven page images inspected; tables and links readable, no clipped or overlapping content. Browser-native screenshot unavailable; print-render visual inspection used."
+    },
+    {
+      "check": "scope_and_no_external_action",
+      "status": "pass",
+      "details": "Only local supplement and audit files changed; no external publication, order or trade executed."
+    },
+    {
+      "check": "forecast_csv_model_tieout",
+      "status": "pass",
+      "details": "All fields in all10 forecast_base.csv rows agree with the source model."
+    }
+  ],
+  "blockingPublicationIssuesRemaining": [],
+  "entryBlockersRemain": [
+    "No approved current capital-return underwriting",
+    "No prospectively confirmed entry with valuation/technical maxima and operative stop",
+    "Current portfolio and risk-budget worksheet missing",
+    "Q3 date unconfirmed; no explicit event-risk decision"
+  ],
+  "sourceLimitations": [
+    "Eight treasury products do not disclose enough to infer all portfolio guarantees, taxes, realizations or net fund flows",
+    "Post-June asset rollovers and current entity/currency location unavailable",
+    "Latest daily Yahoo close null; volume differences disclosed",
+    "No live reconfirmation of HKEX title search after HTTP503; original official cutoff preserved"
+  ],
+  "historicalA174Preserved": true,
+  "summaryInvariants": {
+    "historicalStage3Complete": true,
+    "stage3Complete": false,
+    "stage35Complete": false,
+    "entryApproved": false,
+    "latestCompletedEligible": false,
+    "fairValue": null,
+    "fairValueTotal": null,
+    "bear": null,
+    "base": null,
+    "bull": null,
+    "maximumConditioned": null,
+    "operativeStop": null,
+    "approvedQuantity": 0,
+    "checkpointIsBuySignal": false
+  },
+  "artifactSha256": {
+    "report.md": "f674b03c4724a09377bdf293a9f585797983260d5848b41a22617d1173c76d7f",
+    "report.html": "916520321b5e4ff222ae4281bf98653484987c5393a6e45ce614220e81cd6215",
+    "independent_audit.md": "1c855d11949f5e964358f980816781d8603a08c21f382315fa112b325cf09cf9",
+    "summary.json": "2b5b12b4cdbce112575447398a02ed54a49fe1143bd8d436f243536547de7815",
+    "calculate_update.py": "0f0eb31e35ca8a4cd474a776a6d15dde022bc29a53c2b0ffd16c97d72fdbc46f",
+    "return_update.json": "1b9d7ae1c0b512cebd59ed983b101ae94a12d7abeaf966079d6352053274d612",
+    "technicals.json": "e7bda25d25dc370139f14dc8efa15e0709015de133542929365f632cba60eea0",
+    "structure_tests.json": "861b97142041e65a5d93448ef8a147998ed27581095b107dae84dbaf475df94f",
+    "zhipu_quote_delta.json": "c9c1a0b33c7d81d0c56daf5ab5ce1c1fce3fceb7507e75079edf4a00364a8a6e",
+    "prior_A174.md": "ae9717809b4a212c47b8f2cf30317d0956aedf5db2e58492104bfbcac8e7931a",
+    "prior_model/model.json": "b2a9120fc261b47678a3bee245cb2fb799f272dbd7398808a0a9936636fccfbb",
+    "inputs/prior_prices.csv": "cea5488b544bcc5ec0f418f24ff1f51f8d8f031d07c33808db916d089300a9e4",
+    "audit_math.json": "0e9816aa012a10366477a9f26672753ef30a6414ee9fa75080ed188d95440b8d"
+  }
+}

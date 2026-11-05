@@ -1,0 +1,1 @@
+Independent audit. From package root run: python independent_audit/audit.py . ; python independent_audit/technical_audit.py . ; python independent_audit/final_report_check.py . ; These scripts do not import value.py. Original audit snapshot hashes are recorded in final_report_audit.json. No order or Stage3.5 is approved.

@@ -1,0 +1,43 @@
+{
+  "status": "PASS_WITH_MATERIAL_ASSUMPTION_CAVEATS",
+  "core_model_numerical_checks": 264,
+  "all_numerical_checks_pass": true,
+  "base_value": 79.34024040034213,
+  "bear_value": 51.76139942051113,
+  "bull_value": 109.1152593638307,
+  "owned_committed_dyflex_value": 84.95400366693168,
+  "price": 65.78,
+  "fundamental_posture": "Conditional reasonable-price Stage3 candidate supported; robust-discount/downside-protection claim unsupported. No Stage3.5 technical entry or order approval.",
+  "blocking_core_model_issues": [],
+  "corrected_issues": [
+    "DyFlex consideration source omission",
+    "Acquisition purchase cash timing",
+    "Owned-case fade D&A presentation",
+    "Q3 release before-open timing",
+    "Old-high trigger replaced by distinct prospective setup",
+    "True full economic Q4 stub exclusion clarified",
+    "Q2 FCF per share rounds0.98, not0.99",
+    "TTM current-share FCF proxy rounds5.26, not5.27"
+  ],
+  "required_disclosures": [
+    "Noisy beta and mixed-date riskfree/ERP inputs",
+    "Moderate operating plus beta1 sensitivity near/below price",
+    "Material cash-conversion normalization",
+    "Approximate target economics, pension, post-September cash and dilution",
+    "Terminal value near60% EV"
+  ],
+  "final_report_control_review": "PASS:22 report/control checks,156 author numerical checks and23 source checks. Latest dynamically calculated FCF/share paragraph and publication metadata independently checked. Conditional analytical release only.",
+  "snapshot_hashes": {
+    "value.py": "5b298e8ca4c91229ca661ae62b6f9382f401a75c332904018f06a593c1a91536",
+    "model/inputs.json": "70d098d3d4722f34fe2627432c00faf90da988f7da5fa38838bd4bbcaa8ba553",
+    "results.json": "4920d7ae468fbb86f370b442637f96fb1fd459794d8484252fc847007bc0d7b7",
+    "beta_estimate.json": "d60e1d6786cf6a3cc1efead0cd4ac81e246a76b79c5c32898ad13063fb010be0",
+    "source_review/source_review.md": "1fda8bb359e4917c8ae1fdde4ddd3ac1a18d257df9224b2285e5b97fdcc9339c"
+  },
+  "prospective_technical_plan_review": "Old66.10 recovery/breakout proposal withdrawn. Prospective A pullback-stabilization under65.25 is coherently specified; no present signal orStage3.5 approval. Genuine66.77 breakout cannot fit66.50 fundamental cap.",
+  "release_status": "PASS_FOR_CONDITIONAL_ANALYTICAL_RELEASE",
+  "final_report_hashes": {
+    "report.md": "ec81c5da81b05c4ac5a175582354d038f40df93a7306d9b234fcc8eb7108c421",
+    "report.html": "8e2cf902a8d10fe4bd7f7f5980358c2f387335213e411ec27926d239ad3702fa"
+  }
+}

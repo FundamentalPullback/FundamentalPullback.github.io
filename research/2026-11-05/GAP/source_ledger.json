@@ -1,0 +1,104 @@
+{
+  "as_of_utc": "2026-11-05T01:43:00Z",
+  "scope": "GAP fundamental gate clarification; no valuation or execution approval",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "canonical_user_plan",
+      "facts": "Stage3 negative normalized growth remains observation until recovery demonstrated; recurring costs retained; current FCFF policy; long-term trend and Stage3.5 requirements"
+    },
+    {
+      "id": "S2",
+      "type": "primary_10K",
+      "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026018573/gap-20260131.htm",
+      "facts": "FY2023-25 sales, EBIT, net income, CFO, capex, D&A and SBC; FY2023 53-week calendar; prior costs and reinvestment"
+    },
+    {
+      "id": "S3",
+      "type": "primary_earnings_release",
+      "url": "https://investors.gapinc.com/press-releases/news-details/2025/Gap-Inc--Reports-Second-Quarter-Fiscal-2025-Results/default.aspx",
+      "facts": "H1FY2024/25 sales, EBIT, net income, CFO, capex, D&A; prior TTM inputs"
+    },
+    {
+      "id": "S4",
+      "type": "primary_earnings_release",
+      "url": "https://investors.gapinc.com/press-releases/news-details/2025/Gap-Inc--Reports-Third-Quarter-Fiscal-2025-Results-Raises-Full-Year-Outlook-for-Operating-Margin/default.aspx",
+      "facts": "Q3FY2025 sales3942, EBIT334, net income236; 9MCFO607 and capex327"
+    },
+    {
+      "id": "S5",
+      "type": "primary_earnings_release",
+      "url": "https://investors.gapinc.com/press-releases/news-details/2026/Gap-Inc--Reports-First-Quarter-Fiscal-2026-Results-Raises-Full-Year-Earnings-Per-Share-Outlook/default.aspx",
+      "facts": "Q1FY2026 sales3497, EBIT445, adjustedEBIT182, NI339/adjusted145, CFO213, capex135; litigation313, associateddonation50, aftertax232/38"
+    },
+    {
+      "id": "S6",
+      "type": "primary_earnings_release",
+      "url": "https://investors.gapinc.com/press-releases/news-details/2026/Gap-Inc--Reports-Second-Quarter-Fiscal-2026-Results/default.aspx",
+      "facts": "Q2/H1FY2026 financials, 417netEBITtariff adjustment, Q2netincome501/adjusted190, 311aftertax adjustment; FY2026/Q3outlook and cashreceived95+5"
+    },
+    {
+      "id": "S7",
+      "type": "primary_10Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm",
+      "facts": "Grossrefund512, vendorliability95, cashrefund95, refundreceivable417, interestcash5; H1SBC85, cash taxes233, cashflow details and liquidity"
+    },
+    {
+      "id": "S8",
+      "type": "primary_event_announcement",
+      "url": "https://investors.gapinc.com/press-releases/news-details/2026/Gap-Inc--to-Report-Third-Quarter-Fiscal-2026-Results-on-November-19/default.aspx",
+      "facts": "Q3FY2026 earnings release19Nov2026 13:15Pacific; call14:00Pacific"
+    },
+    {
+      "id": "S9",
+      "type": "market_data_secondary_SPGlobal",
+      "url": "https://stockanalysis.com/stocks/gap/history/",
+      "facts": "Nov4 regular close23.75 16:00EST; OHLC22.49/23.77/22.49/23.75; volume6556367; afterhours23.70 separate"
+    },
+    {
+      "id": "S10",
+      "type": "secondary_earnings_transcript",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/08/31/gap-gap-q2-2026-earnings-call-transcript/",
+      "facts": "Management August improvement counterevidence and tariff relief/OldNavy Q3 outlook; narrative only, primary accounting prevails"
+    },
+    {
+      "id": "S11",
+      "type": "provided_prior_research",
+      "facts": "lib.reportsA031,A032,A118; FP.decGAP rows; noGAPops/ges row in provided snapshot"
+    },
+    {
+      "id": "S12",
+      "type": "primary_historical_earnings_reconciliation",
+      "url": "https://investors.gapinc.com/press-releases/news-details/2024/Gap-Inc.-Reports-Fourth-Quarter-and-Fiscal-2023-Results-Provides-Fiscal-2024-Outlook/default.aspx",
+      "corroboration_url": "https://investors.gapinc.com/press-releases/news-details/2025/Gap-Inc.-Reports-Fourth-Quarter-and-Fiscal-2024-Results-Provides-Fiscal-2025-Outlook/default.aspx",
+      "facts": "FY2023 EBIT 560 plus 93 restructuring costs less 47 building-sale gain equals 606 company-adjusted. Historical bridge only; not a blanket authorization to exclude recurring restructuring. Neither TTM includes FY2023."
+    },
+    {
+      "id": "S13",
+      "type": "provided_parsed_scanner_snapshot",
+      "facts": "GAP Last 23.54 and Opportunity 90 independently checked in the local parsed November 4 record. This is not certification of a regular-session close and does not refresh the original scanner CSV."
+    }
+  ],
+  "derivations": {
+    "normalized_H1_2026_EBIT": "1121−313+50−417=441; S5/S6/S7",
+    "normalized_TTM_EBIT": "1115+441−552=1004; S2/S3/S5/S6",
+    "prior_TTM_EBIT": "1112+552−498=1166; S2/S3",
+    "normalized_EBIT_TTM_growth": "1004/1166−1=−13.8937%",
+    "cash_bridge": "261−(313−50)−(95+5)=−102 before cash tax normalization; S5/S6/S7; diagnostic only",
+    "TTM_cash_bridge": "823+261−127−263−100=594 before cash tax normalization; S2/S3/S5/S6/S7; diagnostic only",
+    "H2_guide_requirement": "FY26sales(15366×1.01–1.015)×margin(7.4–7.6%) minus441; compare1115−552; company guided sales andmargin, EBIT/H2 ranges analyst-derived",
+    "Q4FY2025": "FY2025minusH1FY2025minusQ3FY2025; S2/S3/S4",
+    "Q3FY2025_CFO_capex": "9MFY2025minusH1FY2025; S3/S4",
+    "Q2FY2026_CFO_capex": "H1FY2026minusQ1FY2026; S5/S6",
+    "FY2023_company_adjusted_EBIT": "560 + 93 − 47 = 606; S12. Not used in current or prior TTM.",
+    "tariff_cash_accrual_bridge": "417 net EBIT gain − 417 refund receivable + 95 vendor liability = 95 refund cash; plus 5 interest cash, before cash-tax effects. S7."
+  },
+  "limitations": [
+    "No full FCFF model, current technical certification or Stage 3.5 approval.",
+    "Cash tax attributable to unusual items is not allocated; cash residuals are not sustainable FCF.",
+    "The dynamic official news index was not fully extracted. Targeted official searches and the confirmed upcoming Q3 event were used.",
+    "Independent audit passed for fundamental-gate clarification only. The parsed scanner record was checked; the original CSV was not reimported."
+  ],
+  "audit_as_of_utc": "2026-11-05T01:51:25.238952+00:00",
+  "audit_status": "ready_with_scope_limits"
+}

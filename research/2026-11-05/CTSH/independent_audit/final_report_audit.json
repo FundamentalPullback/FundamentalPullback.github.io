@@ -1,0 +1,60 @@
+{
+  "status": "PASS_FOR_CONDITIONAL_ANALYTICAL_RELEASE",
+  "date_utc": "2026-11-05",
+  "report_checks": {
+    "independent_264_checks": true,
+    "author_156_checks": true,
+    "primary_source_23_checks": true,
+    "nine_step_run_log_pass": true,
+    "regular_close_65_78": true,
+    "core_values_present": true,
+    "combined_risk_disclosed": true,
+    "stub_economics_exact": true,
+    "dyflex_terms_repaired": true,
+    "earnings_timing_repaired": true,
+    "obsolete_trigger_removed": true,
+    "current_resistance_not_overridden": true,
+    "prospective_A_labeled_not_validated": true,
+    "prior20_excludes_signal": true,
+    "technical_price_max_65_25": true,
+    "expiration_unambiguous": true,
+    "stage35_not_approved": true,
+    "P_cash_not_verified": true,
+    "not_formula_workbook": true,
+    "legacy_preserved": true,
+    "new_FCF_per_share_paragraph": true,
+    "publication_metadata_consistent": true
+  },
+  "report_check_count": 22,
+  "all_report_checks_pass": true,
+  "scope": "Core economics, source corrections, report/HTML numerical and claim tie-out, prospective setup coherence. Not a trade or Stage3.5 approval.",
+  "final_values": {
+    "base": 79.34024040034213,
+    "bear": 51.76139942051113,
+    "bull": 109.1152593638307,
+    "owned_business_crosscheck": 84.95400366693168
+  },
+  "snapshot_hashes": {
+    "value.py": "5b298e8ca4c91229ca661ae62b6f9382f401a75c332904018f06a593c1a91536",
+    "model/inputs.json": "70d098d3d4722f34fe2627432c00faf90da988f7da5fa38838bd4bbcaa8ba553",
+    "results.json": "4920d7ae468fbb86f370b442637f96fb1fd459794d8484252fc847007bc0d7b7",
+    "beta_estimate.json": "d60e1d6786cf6a3cc1efead0cd4ac81e246a76b79c5c32898ad13063fb010be0",
+    "technical.json": "7cab003f12f00360e975cdaa0f937b610b82612021de64c0044881da06783bf0",
+    "sensitivity.json": "19a4736885eb7194e34ff3441d7a92234daef004745666c6ad751f72b7b446cd",
+    "QA.json": "8e5bf797c15a82bde1bd48bc6181e866128b3739d7edb0fd2645c2441ed40018",
+    "source_review/validation_checks.json": "76b3c9d7d6c95c8e8878de6eb6b22681ff07e8db1b85aa41ddf7f3382ec98c8b",
+    "source_review/source_review.md": "1fda8bb359e4917c8ae1fdde4ddd3ac1a18d257df9224b2285e5b97fdcc9339c",
+    "report.md": "ec81c5da81b05c4ac5a175582354d038f40df93a7306d9b234fcc8eb7108c421",
+    "report.html": "8e2cf902a8d10fe4bd7f7f5980358c2f387335213e411ec27926d239ad3702fa",
+    "reproduce_all.py": "6b64a05fdc1ffaacbdd563a4d058f3f47680064b4f6515a9910068f665f7c065",
+    "run_log.json": "2232183a83c7d5ef8aba0be07755799cf2405dd48f30ddc25181b4319001d6cc",
+    "source_review/financials.json": "a46db5b3b012e99d899550954691d7f68d9f17e1d21c3f1ae9b3b1bc21991aa8",
+    "publication_record.json": "83524bc0b26bfaafa43d494ea60247b239f43c54fc7d6cfcabf1a2491fd916c9"
+  },
+  "limitations": [
+    "Stage3 classification is conditional reasonable price, not robust cheapness",
+    "No portfolio P, cash, orders, actual signal or executable quantity verified",
+    "Technical setup is prospective analyst judgment, not empirically validated",
+    "Report footer changes require updated hash but do not by themselves change analytical conclusions"
+  ]
+}

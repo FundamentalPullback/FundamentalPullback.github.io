@@ -1,0 +1,153 @@
+{
+  "as_of_utc": "2026-11-05T01:51:25.273150+00:00",
+  "verdict": "ready_with_scope_limits",
+  "scope": "Independent factual, arithmetic and canonical-plan audit of GAP fundamental-gate clarification only. Not a full valuation, sustainable-FCF certification, technical certification or execution audit.",
+  "pass_count": 21,
+  "fail_count": 0,
+  "checks": [
+    {
+      "check": "Three annual reported statements tie to primary 10-K",
+      "status": "pass",
+      "evidence": "S2; 10-K consolidated income and cash-flow statements, saved web_gap_annualnumbers.json and web_gap_finalchecks.json",
+      "detail": null
+    },
+    {
+      "check": "FY2023 company adjustment is explicit and kept outside both TTM periods",
+      "status": "pass",
+      "evidence": "S12; official FY2023 release lines 80–85 and FY2024 comparison lines 705–758",
+      "detail": "Company-adjusted EBIT is not a certification of a restructuring-free economic run rate."
+    },
+    {
+      "check": "Four quarterly reported statements and cumulative-to-quarter bridges",
+      "status": "pass",
+      "evidence": "S2/S3/S4/S5/S6; Q3 and Q2 cash-flow figures derived from cumulative statements",
+      "detail": null
+    },
+    {
+      "check": "Q1 identified EBIT adjustment",
+      "status": "pass",
+      "evidence": "S5; Q1 FY2026 adjusted EBIT and legal-settlement/donation reconciliation",
+      "detail": null
+    },
+    {
+      "check": "Tariff EBIT adjustment is gross refund less vendor charge",
+      "status": "pass",
+      "evidence": "S6/S7; Q2 FY2026 release and 10-Q Note 1 lines 520–521",
+      "detail": null
+    },
+    {
+      "check": "Tariff cash is distinct from accrued net EBIT",
+      "status": "pass",
+      "evidence": "S7; 512 claim, 95 received, 417 receivable, 95 vendor liability and 5 interest received",
+      "detail": null
+    },
+    {
+      "check": "Normalized H1 and current TTM EBIT",
+      "status": "pass",
+      "evidence": "S2/S3/S5/S6; annual plus current half-year less prior half-year, independently checked against four quarters",
+      "detail": null
+    },
+    {
+      "check": "Prior TTM EBIT is comparable and excludes first-half FY2024",
+      "status": "pass",
+      "evidence": "S2/S3; FY2024 1112 + H1 FY2025 552 − H1 FY2024 498",
+      "detail": "FY2023 is not present. Q2 FY2024 incremental card revenue is removed with all of H1 FY2024."
+    },
+    {
+      "check": "Normalized EBIT growth and current quarter declines",
+      "status": "pass",
+      "evidence": "S2/S3/S5/S6; independent recomputation",
+      "detail": {
+        "ttm_growth": -0.13893653516295024,
+        "q1_growth": -0.30000000000000004,
+        "q2_growth": -0.113013698630137
+      }
+    },
+    {
+      "check": "Adjusted net income comparison also falls",
+      "status": "pass",
+      "evidence": "S5/S6; corroborating adjusted net income, not substituted for operating performance",
+      "detail": null
+    },
+    {
+      "check": "Reported FCF, current and prior TTM",
+      "status": "pass",
+      "evidence": "S2/S3/S4/S5/S6; CFO less purchases of property and equipment only",
+      "detail": null
+    },
+    {
+      "check": "Cash residuals remain diagnostics before cash-tax normalization",
+      "status": "pass",
+      "evidence": "S5/S6/S7 plus report §4",
+      "detail": "No sustainable-FCF growth or negativity conclusion may be inferred from −102 or 594."
+    },
+    {
+      "check": "Guidance endpoint calculations and H2 requirement",
+      "status": "pass",
+      "evidence": "S6; official adjusted guidance, analyst-derived EBIT endpoint combinations",
+      "detail": {
+        "ebit_low": 1148.4548399999999,
+        "ebit_high": 1185.3332399999997,
+        "implied_h2_ebit_low": 707.4548399999999,
+        "implied_h2_ebit_high": 744.3332399999997,
+        "implied_h2_ebit_growth_low": 0.25658053285967997,
+        "implied_h2_ebit_growth_high": 0.32208390763765493
+      }
+    },
+    {
+      "check": "Guidance is recognized as positive counterevidence",
+      "status": "pass",
+      "evidence": "S6/S10; report §§5 and 7",
+      "detail": "No required numeric recovery threshold or rule requiring the next earnings print has been invented."
+    },
+    {
+      "check": "Plan supports temporary observation for negative normalized TTM growth",
+      "status": "pass",
+      "evidence": "S1; Stage 3 §5, plan lines 343–346",
+      "detail": null
+    },
+    {
+      "check": "No invented mandatory EMA crossover",
+      "status": "pass",
+      "evidence": "S1; long-term trend precision limit, plan lines 74–81",
+      "detail": null
+    },
+    {
+      "check": "Nov. 4 regular close and extended-hours quote are separated",
+      "status": "pass",
+      "evidence": "S9; StockAnalysis historical page, supplied by S&P Global, saved web_gapq2.json",
+      "detail": null
+    },
+    {
+      "check": "Scanner Last differs from regular close",
+      "status": "pass",
+      "evidence": "Local parsed November 4 scanner snapshot: archived parsed November 4 scanner record",
+      "detail": "Parsed local record verified. It is not a certified regular-session closing quote."
+    },
+    {
+      "check": "Official November 19 event and time-zone conversion",
+      "status": "pass",
+      "evidence": "S8; Oct. 29 official event announcement",
+      "detail": "Times are approximate; Nov. 19 uses PST/EST."
+    },
+    {
+      "check": "Legacy model is not a current target or approval",
+      "status": "pass",
+      "evidence": "Report §§1 and 6; A032 original diagnostic disclaimers",
+      "detail": "An earlier fundamental gate may stop this review without constructing an otherwise unnecessary DCF."
+    },
+    {
+      "check": "No portfolio action or public publication performed",
+      "status": "pass",
+      "evidence": "Audit mandate and local-only edits",
+      "detail": "Ready status is limited to releasing this clarification through the parent workflow. It does not authorize trades, shared-site writes, or external communications."
+    }
+  ],
+  "source_files_sha256": {
+    "GAP_gate_review.md": "538e45cfd26145ff5550b91951ca1f9e9056eadb1e740a29803685be51bdee7d",
+    "calculate.py": "f0f7f9ff26dc771eb18b1e6569669dc6125d4a3b8cf2aa6f48300521972829c6",
+    "calculations.json": "27085db888986cf98244a32c2df6480269447939fafc88bc89a8d7b983da1bbf",
+    "source_ledger.json": "5b52652f09b53c736f02a4aad01918fafddf7c7e35b4c07eb914639fe1da5e97"
+  },
+  "source_files_sha256_note": "Hashes refer to the original independently audited research files. The release calculator only changes its output path to a portable relative path; release source ledger removes local paths and capture filenames. Release hashes appear separately in manifest.json."
+}

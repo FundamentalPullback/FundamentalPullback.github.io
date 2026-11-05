@@ -1,0 +1,59 @@
+{
+  "calculated": {
+    "close": 65.78,
+    "ema20": 64.88679578726874,
+    "ema50": 62.1359072104089,
+    "ema200": 60.760660878499905,
+    "ema200_20_sessions_ago": 59.72033446629607,
+    "atr14": 2.8296044828246707,
+    "rsi14": 53.66667505256164,
+    "high_252": 87.02999877929688,
+    "volume_20": 6891512.75
+  },
+  "errors": {
+    "close": 0.0,
+    "ema20": -6.94910795573378e-11,
+    "ema50": -1.0375416081842559e-09,
+    "ema200": 5.19126075460008e-09,
+    "ema200_20_sessions_ago": 6.340634683965618e-09,
+    "atr14": 6.031839028253216e-09,
+    "rsi14": -2.6274690867467143e-08,
+    "high_252": -1.2207031261368684e-06,
+    "volume_20": 0.0
+  },
+  "rows": 501,
+  "overlap_rows": 50,
+  "max_source_ohlc_difference": 3.662109378410605e-06,
+  "status": "Independent indicator reproduction; no technical entry authorization",
+  "prior20_volume_excluding_last": 6607285.25,
+  "latest_volume_vs_prior20": 1.6424064633807054,
+  "prospective_trigger_review": {
+    "old_Oct30_high": 66.06,
+    "Nov2_high": 66.33,
+    "latest_Nov4_high": 66.77,
+    "proposed_entry_cap": 66.5,
+    "finding": "A 66.10 close threshold is below two subsequent rebound highs. It must not be described as a current resistance breakout. A genuine breakout above66.77 does not fit the66.50 cap. Wait for a new structure or explicitly justify a different pullback/recovery setup; do not raise the cap to manufacture compatibility.",
+    "technical_entry_approved": false,
+    "historical_proposal_withdrawn": true
+  },
+  "revised_prospective_setup_review": {
+    "type": "Analyst-defined A pullback/stabilization, not statistically validated",
+    "low_test": [
+      62.5,
+      64.0
+    ],
+    "close_above": 64.75,
+    "close_max": 65.25,
+    "also_requires": "Close above open and EMA50; volume at least prior20 sessions excluding signal day",
+    "last_signal_date": "2026-11-09",
+    "last_proposed_DAY_order_date": "2026-11-10",
+    "fundamental_cap": 66.5,
+    "technical_cap": 65.25,
+    "reference_low": 61.55,
+    "proposed_manual_stop": 61.2,
+    "review": "Coherently specified prospectively; old-high selection concern resolved",
+    "current_signal_approved": false,
+    "stage35_approved": false,
+    "order_approved": false
+  }
+}

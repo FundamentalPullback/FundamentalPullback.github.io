@@ -1,0 +1,180 @@
+{
+  "wacc_terminal_g": [
+    {
+      "wacc": 0.075,
+      "g": 0.02,
+      "value": 93.23280343235271
+    },
+    {
+      "wacc": 0.075,
+      "g": 0.025,
+      "value": 96.76814988932443
+    },
+    {
+      "wacc": 0.075,
+      "g": 0.03,
+      "value": 101.04824821263341
+    },
+    {
+      "wacc": 0.08,
+      "g": 0.02,
+      "value": 84.79982420424685
+    },
+    {
+      "wacc": 0.08,
+      "g": 0.025,
+      "value": 87.39179000795738
+    },
+    {
+      "wacc": 0.08,
+      "g": 0.03,
+      "value": 90.46677129383569
+    },
+    {
+      "wacc": 0.08517569896180917,
+      "g": 0.02,
+      "value": 77.44995010873008
+    },
+    {
+      "wacc": 0.08517569896180917,
+      "g": 0.025,
+      "value": 79.34024040034222
+    },
+    {
+      "wacc": 0.08517569896180917,
+      "g": 0.03,
+      "value": 81.54233506829426
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.02,
+      "value": 71.59133629674855
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.025,
+      "value": 73.00056059774549
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.03,
+      "value": 74.61738161013952
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.02,
+      "value": 66.32709701406253
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.025,
+      "value": 67.36180030613524
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.03,
+      "value": 68.53146630769372
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.02,
+      "value": 61.73223167437331
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.025,
+      "value": 62.483688059359565
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.03,
+      "value": 63.32085078227652
+    }
+  ],
+  "same_wacc_tests": {
+    "organic_2pct": 77.24377363726371,
+    "margins_minus_50bp": 76.48207705673863,
+    "acquisition_multiple_3_5": 77.21624503956589,
+    "capex_1_8pct": 78.76941791317421,
+    "terminal_roic_10pct": 76.30505430797538,
+    "tax_27pct": 78.10696598619636,
+    "further_5_DSO_days": 78.71589556591368,
+    "moderate_combined": 70.64548111847508,
+    "moderate_combined_with_5_DSO_days": 70.02113628404652,
+    "operating_bear_at_base_wacc": 60.324229870358415,
+    "owned_business_only_committed_dyflex": 84.95400366693178,
+    "new_deals_opening_day": 79.57998420248916,
+    "new_deals_year_end": 79.08977370067205,
+    "zero_inherited_growth": 78.87114004711809,
+    "beta_raw_no_shrink": 83.35765631914174,
+    "beta_one": 72.3073020817603
+  },
+  "bridge_tests": {
+    "cash_reserve_800": 78.67183651484359,
+    "postsept_buybacks_150": 79.16199936420925,
+    "postsept_buybacks_0": 79.49620130695857,
+    "pension_0": 79.91952376777436,
+    "pension_400": 79.02831858710952,
+    "no_incremental_dilution": 79.65970955665438,
+    "diluted_450": 79.1340307077506
+  },
+  "stub_tests": {
+    "0": 77.40445799435882,
+    "730": 79.01027749023142,
+    "880": 79.34024040034222,
+    "1030": 79.67020331045302
+  },
+  "reverse": {
+    "wacc_at_price": 0.09654570228595229,
+    "organic_growth_at_price": -0.010099942713336262,
+    "parallel_margin_change_at_price": -0.02372194792626041,
+    "acquisition_multiple_at_price": 6.1928723823996,
+    "terminal_roic_at_price": 0.06337349760880073
+  },
+  "legacy_approx_reconstruction": {
+    "per_share": 66.48489592485268,
+    "published": 66.47,
+    "warning": "Reconstruction from preserved narrative, not the unavailable original executable; small rounding/convention difference."
+  },
+  "new_model_at_10pct": 62.483688059359565,
+  "combined_risk_tests": {
+    "moderate_wacc9": 64.83150992449053,
+    "moderate_beta1": 64.1960882404219,
+    "moderate_beta1_plus5DSO": 63.57531607369725,
+    "moderate_same_month_Rf5_29": 66.10061777253513
+  },
+  "additional_checks": {
+    "without_economic_Q4_stub": 77.50956217999278,
+    "cash_conversion_FCFF_2027_before_new_MA": 2725.1772618,
+    "historical_cash_enterprise_proxy_TTM": 2143.36,
+    "beta1_wacc": 0.0905754332924715,
+    "ERP_month_Rf_sensitivity_wacc": 0.0888809252692402,
+    "extra_cash_drag_300_per_year_first5_then_fade_value": 75.99367851502134
+  },
+  "migration_bridge": [
+    {
+      "step": "Approximate A120 narrative reconstruction",
+      "value": 66.48489592485268
+    },
+    {
+      "step": "Same old operating assumptions, only WACC8.51757%",
+      "value": 84.11705603514235,
+      "change": 17.632160110289675
+    },
+    {
+      "step": "New growth/cohorts/tax/reinvestment/terminal and timed acquisition cash, no Q4stub; old capital/share bridge",
+      "value": 78.0969994106891,
+      "change": -6.020056624453261
+    },
+    {
+      "step": "Add estimated economic Q4stub",
+      "value": 79.92291959663949,
+      "change": 1.8259201859503946
+    },
+    {
+      "step": "New pension/earnout/capital-return reserve and current diluted denominator",
+      "value": 79.34024040034222,
+      "change": -0.5826791962972635
+    }
+  ]
+}

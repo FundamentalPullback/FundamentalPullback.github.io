@@ -1,0 +1,100 @@
+[
+  {
+    "range": "Fleet!A5:F99",
+    "source_id": "S04",
+    "source_url": "https://www.torm.com/about/our-fleet/default.aspx",
+    "evidence_label": "reported",
+    "note": "95 buques individuales. Fechas medias anuales estimadas, no entregas exactas."
+  },
+  {
+    "range": "Fleet!A100:F113",
+    "source_id": "S01",
+    "source_url": "https://s202.q4cdn.com/126069760/files/content_files/TORM-Q3-2026-Report.pdf",
+    "evidence_label": "reported",
+    "note": "14 contratos MR y calendario S03. La etiqueta committed identifica los pedidos en modeled_fleet.json."
+  },
+  {
+    "range": "Bridge!B6:D13",
+    "source_id": "S01",
+    "source_url": "https://s202.q4cdn.com/126069760/files/content_files/TORM-Q3-2026-Report.pdf",
+    "evidence_label": "reported",
+    "note": "Caja no restringida, reserva propia de 75, activos financieros de 25,7 y deuda nominal de 1.150,3 MUSD. JV y settlement son hipótesis."
+  },
+  {
+    "range": "Bridge!B15:D15",
+    "source_id": "S01",
+    "source_url": "https://s202.q4cdn.com/126069760/files/content_files/TORM-Q3-2026-Report.pdf",
+    "evidence_label": "reported",
+    "note": "104,7 millones es un proxy de dilución basado en 102,7 actuales y efecto de 2,0 millones. No es un cap table exacto a 37,64."
+  },
+  {
+    "range": "Bridge!B17:D17",
+    "source_id": "S09",
+    "source_url": "https://stockanalysis.com/stocks/trmd/history/",
+    "evidence_label": "market_data",
+    "note": "Cierre regular revisado de 37,64 USD, no after-hours."
+  },
+  {
+    "range": "Historical!A5:E12",
+    "source_id": "S05",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1655891/000110465923032987/trmd-20221231x20f.htm",
+    "evidence_label": "reported",
+    "note": "Historia all-charter 2018–2025 compilada de S02, S05, S06, S07 y S08."
+  },
+  {
+    "range": "Assumptions!B5:D6",
+    "source_id": "S17",
+    "source_url": "",
+    "evidence_label": "analyst_estimate",
+    "note": "WACC e inflación de juicio. Fuentes de mercado S10, S11 y S12 con fechas no sincronizadas."
+  },
+  {
+    "range": "Assumptions!B7:D12",
+    "source_id": "S17",
+    "source_url": "",
+    "evidence_label": "analyst_estimate",
+    "note": "Vida económica, costes, días y capital operativo de juicio. La vida contable procede de S02."
+  },
+  {
+    "range": "Assumptions!B14:D14",
+    "source_id": "S01",
+    "source_url": "https://s202.q4cdn.com/126069760/files/content_files/TORM-Q3-2026-Report.pdf",
+    "evidence_label": "reported",
+    "note": "G&A TTM de 109,4 MUSD conserva SBC. La proyección del motor añade inflación."
+  },
+  {
+    "range": "Assumptions!B19:D20",
+    "source_id": "S01",
+    "source_url": "https://s202.q4cdn.com/126069760/files/content_files/TORM-Q3-2026-Report.pdf",
+    "evidence_label": "reported",
+    "note": "Guidance anual menos nueve meses para Q4: puntos mínimo, medio y máximo."
+  },
+  {
+    "range": "Assumptions!B25:D33",
+    "source_id": "S17",
+    "source_url": "",
+    "evidence_label": "analyst_estimate",
+    "note": "Tarifas proyectadas del analista. Referencias de ciclo S02 y S05–S08; no consenso."
+  },
+  {
+    "range": "Base FCFF!D5:R165",
+    "source_id": "S17",
+    "source_url": "",
+    "evidence_label": "analyst_estimate",
+    "note": "Motor reproducible value.py a partir de flota, capital e hipótesis; no son valores reportados."
+  },
+  {
+    "range": "Terminal!B5:D21",
+    "source_id": "S17",
+    "source_url": "",
+    "evidence_label": "analyst_estimate",
+    "note": "Capital sostenible por añadas; no extrapolación conveniente del último año."
+  },
+  {
+    "range": "Sensitivity!A5:F9",
+    "source_id": "S17",
+    "source_url": "",
+    "evidence_label": "analyst_estimate",
+    "note": "Reejecuciones del motor, no fórmulas vivas de sensibilidad en Excel."
+  }
+]
