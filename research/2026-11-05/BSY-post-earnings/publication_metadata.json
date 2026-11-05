@@ -1,0 +1,77 @@
+{
+  "id": "BSY-POST-20261105-v2-public",
+  "supersedes": "BSY-POST-20261105-v1",
+  "ticker": "BSY",
+  "issuer": "Bentley Systems Incorporated",
+  "as_of": "2026-11-05T16:14:40Z",
+  "price": 47.09,
+  "price_currency": "USD",
+  "scanner_date": "2026-11-04",
+  "scanner_price": 43.64,
+  "scanner_qp": 100,
+  "scanner_opportunity": 100,
+  "price_pullback_to_prior_high": 0.06789390340459223,
+  "decision_es": "En observación; perímetro y valoración completa pendientes",
+  "decision_en": "Watchlist; full issuer perimeter and valuation remain incomplete",
+  "depth": "Post-earnings review with historical normalization and partial counterfactual 10-year operating FCFF",
+  "approved_stage3": false,
+  "approved_stage35": false,
+  "approved_fair_value": null,
+  "approved_maximum_price": null,
+  "new_order_quantity": 0,
+  "model_scope": "Partial retained operating business counterfactual excluding Cohesive, Eliis contribution and cost, Naviam equity/warrants, existing investments and financing hedge; neither issuer fair value nor stock-price downside",
+  "partial_counterfactual_outputs_per_share": {
+    "adverso": 12.928280275320963,
+    "central": 23.905889941202478,
+    "favorable": 41.58942824956323
+  },
+  "partial_counterfactual_base_sensitivity": [
+    19.47267044567944,
+    30.853007651207207
+  ],
+  "required_next_evidence": [
+    "Q3 10-Q and post-quarter acquisition/divestiture economics",
+    "Current DCP cash liability and diluted-share decomposition",
+    "Existing investments and financing hedge value/classification/tax treatment",
+    "Term-loan conditional maturity liquidity test and any Q3 amendments",
+    "Evidence-backed capital cost, reinvestment and cash-tax assumptions",
+    "Homogeneous normalised peer comparison",
+    "Prospective technical plan only if Stage 3 is approved"
+  ],
+  "prior_record": "A119 BSY observation; no prior DCF value to replace",
+  "replaces_status": "deferred_earnings_2026-11-05",
+  "publication_status": "Public delivery package prepared; not yet published; permitted publisher visual QA pending",
+  "files": {
+    "hero": "BSY_resultados_20261105.html",
+    "model": "model_calc.py",
+    "model_results": "model_results.json",
+    "history": "metrics.json",
+    "sources": "sources.json",
+    "qa": "qa_log.json",
+    "reproduction": "reproduce_public.py",
+    "source_notes": "source_notes.json",
+    "public_audit": "audit/AUDIT_PUBLICO.html",
+    "manifest": "manifest.json"
+  },
+  "qa_status": "pass",
+  "visual_qa_status": "blocked",
+  "independent_audit": {
+    "id": "BSY-AUDIT-20261105-v2",
+    "status": "pass_for_partial_research_only",
+    "passed": 326,
+    "failed": 0,
+    "findings_A1_to_A5": "closed",
+    "certificate_path": "audit/source_certificate_v2.json",
+    "certificate_sha256": "e9035240a4f79cdb1fc911641bd7541acbee260eb4f89bfb9d947521ea185f6d",
+    "certified_at": "2026-11-05T17:09:00Z",
+    "visual_qa": "pending permitted publisher QA",
+    "public_package_certificate": "audit/public_package_certificate.json"
+  },
+  "quote_source_id": "S13",
+  "public_files": [
+    "BSY_resultados_20261105.html",
+    "audit/AUDIT_PUBLICO.html"
+  ],
+  "economics_changed": false,
+  "source_audited_version": "BSY-POST-20261105-v2"
+}

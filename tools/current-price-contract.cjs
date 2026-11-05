@@ -9,12 +9,13 @@ function validate(root,loaded){
  assert.equal(sha(fs.readFileSync(root+'/index.html')),c.indexSha256,'Exact reviewed application successor');
  assert.equal(sha(fs.readFileSync(root+'/data/stock-profiles.js')),c.engineSha256,'Exact separate-review engine');
  assert.equal(sha(fs.readFileSync(root+'/data/lib-current-price-reviews.js')),c.librarySha256,'Exact new source chunk');
- assert.equal(loaded.reports.length,Object.keys(c.historicalReportHashes).length+3,'Only three new records');
+ require('./trp-bsy-contract.cjs').validate(root,loaded);
+ assert.equal(loaded.reports.length,Object.keys(c.historicalReportHashes).length+5,'Only three current-price and two pinned partial research records');
  assert.equal(new Set(loaded.reports.map(r=>r.id)).size,loaded.reports.length,'Unique report IDs');
  for(const [id,h] of Object.entries({...c.historicalReportHashes,...c.newReportHashes})){const r=loaded.reports.find(r=>r.id===id);assert(r,'Required '+id);assert.equal(sha(JSON.stringify(r)),h,'Exact historical or newly audited report '+id);}
  return c;
 }
 function legacy(root,loaded){
- const c=validate(root,loaded);delete loaded.c.window.FP_ENTRY_OBSERVATION_FOLLOWUPS;delete loaded.c.window.FP_MANIFEST.entryObservationFollowupFile;loaded.c.window.FP_MANIFEST.libraryFiles=loaded.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!=='data/entry-observation-followups.js');loaded.reports=loaded.reports.filter(r=>!c.ids.includes(r.id));loaded.t.S.lib=loaded.reports;loaded.profiles=loaded.t.profiles();return loaded;
+ const c=validate(root,loaded);require('./trp-bsy-contract.cjs').legacy(root,loaded);delete loaded.c.window.FP_ENTRY_OBSERVATION_FOLLOWUPS;delete loaded.c.window.FP_MANIFEST.entryObservationFollowupFile;loaded.c.window.FP_MANIFEST.libraryFiles=loaded.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!=='data/entry-observation-followups.js');loaded.reports=loaded.reports.filter(r=>!c.ids.includes(r.id));loaded.t.S.lib=loaded.reports;loaded.profiles=loaded.t.profiles();return loaded;
 }
 module.exports={validate,legacy};

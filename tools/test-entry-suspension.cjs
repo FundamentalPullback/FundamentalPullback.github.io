@@ -72,10 +72,11 @@ const prior=path.resolve(process.env.CTSH_SUSPENSION_BASELINE||path.join(root,'.
  const earnings={"rows":769,"bytes":1267420,"sha256":"f72f9d0726c75c28a41df117efed1c2cdb5cadcb27e4e83d0d7190b5d8777385","appendRows":3,"appendSha256":"faa2e47ef8e9107ca5f29ec78a3ed76689b244d86e810f5dd9af134685ec8bae","librarySha256":"efd9b1f065c3a2a6efb4ce1f29c7a72dd7aae89a80d54bb7335914433a46a199"};
  for(const f of fs.readdirSync(path.join(root,'data'))){
   if(f==='manifest.js'||f==='entry-plan-followups.js'||ledgerSnapshots[f]||fs.statSync(path.join(root,'data',f)).isDirectory())continue;
-  if(f==='lib-current-price-reviews.js'){assert.equal(sha(path.join(root,'data',f)),JSON.parse(fs.readFileSync(path.join(root,'tools/current-price-contract.json'))).librarySha256,'Exact current-price successor library');}
+  if(f==='lib-trp-bsy-earnings.js'){assert.equal(sha(path.join(root,'data',f)),JSON.parse(fs.readFileSync(root+'/tools/trp-bsy-contract.json')).librarySha256,'Exact two-record partial research successor');}
+  else if(f==='lib-current-price-reviews.js'){assert.equal(sha(path.join(root,'data',f)),JSON.parse(fs.readFileSync(path.join(root,'tools/current-price-contract.json'))).librarySha256,'Exact current-price successor library');}
   else if(f==='stock-profiles.js'){assert.equal(sha(path.join(root,'data',f)),JSON.parse(fs.readFileSync(path.join(root,'tools/current-price-contract.json'))).engineSha256,'Exact separate price-review engine');}
   else if(f==='dec.js'){
-   const b=fs.readFileSync(path.join(root,'data',f)),prefix='window.FP=window.FP||{};FP.dec=';
+   const b=require('./trp-bsy-contract.cjs').priorDecisionBytes(root),prefix='window.FP=window.FP||{};FP.dec=';
    const rows=JSON.parse(b.toString('utf8').slice(prefix.length,-2));
    assert.equal(rows.length,earnings.rows+earnings.appendRows,'Only exact three earnings decision rows appended');
    assert.equal(crypto.createHash('sha256').update(Buffer.concat([b.subarray(0,earnings.bytes-3),Buffer.from('];\n')])).digest('hex'),earnings.sha256,'Exact prior decision byte prefix');

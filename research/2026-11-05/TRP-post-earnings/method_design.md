@@ -1,0 +1,23 @@
+# TRP valuation design, recorded before calculating scenario values
+
+Information date: 5 November 2026. Canonical rule S3-FCFF-20261030-v1. No prior TRP valuation exists in this task.
+
+The primary valuation remains a 10-year operating FCFF DCF (five detailed years 2027–2031 and five transition years 2032–2036). It values consolidated operating assets, including the full controlled subsidiaries, but removes equity-accounted investee income and sales-type lease income from operating EBIT. Those cash flow perimeters require distinct treatment:
+
+- Equity-accounted ventures are valued at TC Energy's economic share using distributions minus actual required equity contributions, discounted at equity cost. Their debt is already serviced before distributions, so neither their debt nor their book equity is added to/subtracted from this value again.
+- Mexico sales-type lease receivables are valued as a separate finite financial asset. Lease income is removed from recurring core EBIT to prevent both perpetuating interest income and adding the underlying receivable. Latest complete total balance of C$9.366bn at 31 December 2025 is the base reference. September 2026 long-term balance C$8.391bn is verified; exact updated current lease principal versus other current assets is not separately disclosed in the retrieved interim tables. Therefore C$9.366bn is a transparent provisional asset-value reference, tested ±15%, not a fresh fair value or a substitute for the missing contract cash flow update.
+- All consolidated debt, including 100% of subordinated notes, preferred capital, affiliate financing and factoring obligations, is deducted once. Rating agency 50% hybrid equity credit is not common equity.
+- Non-controlling claims in controlled entities are deducted separately. The latest C$9.773bn book balance is a provisional reference, varied ±30%; it is not represented as fair value. Pending October Indigenous participation economics are not known in sufficient detail to update the fair claim. This uncertainty prevents a final entry approval; a smaller position or arbitrary extra discount cannot cure it.
+- Operating leases remain operating expense and are not deducted again as debt. Restricted assets, pension surpluses and unclosed asset sale proceeds are not excess cash.
+- All equity growth pays for reinvestment. Core years 1–5 include gross consolidated capital spending excluding JV contributions. Years 6–10 converge to capex minus D&A plus working capital equal to NOPAT × growth / incremental ROIC. Terminal uses the same formula. JV years 1–5 subtract cash contributions; years 6–10 converge to earnings × (1 − growth / equity ROE). No free buybacks.
+
+This is a sector-specific decomposition within FCFF, not a switch to EBITDA multiples or a dividend model because it produces a preferred price. The model is an indicative assessment with explicit unresolved financial-asset/NCI bridges; the conclusion will not claim the entry checklist is complete.
+
+
+## V2 correction following independent review, 5 November 2026
+
+The prior version is retained separately, outside this public delivery. Add C$933m declared dividends payable and C$904m accrued interest from the 30 September balance as financing claims, deducted once. Forecast FCFF starts before interest and forecast operating working capital excludes financing; the remaining-2026 FCFF stub excludes those financing payments. Do not also deduct actual payments from a later cash roll-forward without removing the claim. The common dividend was paid 30 October, so a November ex-dividend quote cannot retain it through September cash. No complete October/November balance roll-forward has been established. Do not subtract post-September debt issues or repayments without their matching cash entries.
+
+The CGL C$199m received October 2025 is a verified one-off inside current TTM cash, not current-year profit. Keep reported CFO and cash residual unchanged, then show a partial/illustrative cash adjustment separately: 8,596−199=8,397 and 1,767−199=1,568. Precise CFO subline is not explicitly isolated in the note; do not call this fully normalized CFO or assign it mechanically to the JV distributions row. For symmetry show the optional C$78m after-tax third-party settlement addback: residual1,646, not automatically accepted because repeatability is unresolved. JV distribution assumption remains1,900, not retrospectively described as a source-derived2,120−199.
+
+Future TGNH minority step-ups need valuation, not only today's13.01% ownership. CGL Indigenous participation concerns an interest in the holder of TC Energy's35% JV stake; map it once in the JV economic cash claim, not both there and in consolidated NCI.

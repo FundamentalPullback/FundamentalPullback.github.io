@@ -1,0 +1,65 @@
+{
+  "id": "BSY-PUBLIC-PACKAGE-AUDIT-20261105-v2",
+  "verified_at": "2026-11-05T17:20:38Z",
+  "package_id": "BSY-POST-20261105-v2-public",
+  "relative_paths_base": "package root",
+  "source_audit_certificate": "audit/source_certificate_v2.json",
+  "source_audit_certificate_sha256": "e9035240a4f79cdb1fc911641bd7541acbee260eb4f89bfb9d947521ea185f6d",
+  "source_independent_calculation_checks": {
+    "passed": 326,
+    "failed": 0,
+    "findings_A1_to_A5": "closed"
+  },
+  "public_reproduction_checks": {
+    "passed": 39,
+    "failed": 0,
+    "exact_calculated_output_files": 8,
+    "fcff_component_identities": 30,
+    "frozen_quote_check": 1
+  },
+  "core_verification": {
+    "unchanged_certified_files": 10,
+    "changed_source_ledger": "sources.json; editorial sanitization only, documented in PUBLIC_DELTA.json",
+    "metrics_script_formula_ast": "identical to audited source",
+    "economic_changes": false,
+    "quote_refreshed": false
+  },
+  "editorial_review": "PASS: only public labels, relative references, selected source facts, provenance sanitization and QA wording changed. Main report, model and numerical outputs retain certified hashes.",
+  "publication_posture": "Content suitable only for partial counterfactual research. Full issuer valuation and technical entry remain unapproved.",
+  "approved_stage3": false,
+  "approved_stage35": false,
+  "approved_issuer_fair_value": null,
+  "approved_buy_ceiling": null,
+  "order_quantity": 0,
+  "visual_qa": "Not performed; permitted publisher visual QA remains pending.",
+  "delivery_privacy_review": "No absolute execution paths, raw retrieval identifiers, full third-party documents, or private source-cache files detected in reviewed package.",
+  "frozen_quote": {
+    "usd": 47.09,
+    "trade_timestamp": "2026-11-05T16:14:40Z",
+    "status": "historical intraday observation; not live or closing data"
+  },
+  "frozen_files_sha256": {
+    "BSY_resultados_20261105.html": "7be34753796dd02bab8ebfe9eb3be2f7e105dfa4c619efb567539f4d70b808c9",
+    "PUBLIC_DELTA.json": "847c3f05461617de77402e773f33a48e4e683b24cd6a1f92a0a679c3de6fcf2a",
+    "README.md": "4329f512b8ebecab8f3eefa4789db909fdf3f83eaf9a57d1edc2fd812c6bafad",
+    "annual.csv": "f4a4e7bc0111c48a6be1674540f6ade6cba9b3e3a39794d6a55b9f632fb254c2",
+    "audit/AUDIT_PUBLICO.html": "1bfe9b2cb2cf42ae97d741dbaa2b0715cfdb055eaaf5b1ed1339c4fce8c28854",
+    "audit/source_certificate_v2.json": "e9035240a4f79cdb1fc911641bd7541acbee260eb4f89bfb9d947521ea185f6d",
+    "build_metrics.py": "306849ba551baec8c8e1195d48c7c9c7568e1e1c671c73d612beea9ade9b71ce",
+    "fcff_adverso.csv": "6d4d40bdff10357bf977b5c3ded79ca5c66cdb7e2a82c65761ac4ae0f727082f",
+    "fcff_central.csv": "342ec44cb8ee6898b9ed3687c7b36072e7cedebaed956357122dc89740dfe962",
+    "fcff_favorable.csv": "e88eea87e97efb3d1b427557bc83cadd0efd07b14597fdcfbbb5c9a0320ba564",
+    "metrics.json": "54ca631f8fcaa2b2803b16207d8bd094641b6ed72e19db957e077d9d72c5a124",
+    "model_calc.py": "f3fc33956b7501b7098e6b7521a05da4884abf655b0b0695a651152274b2313b",
+    "model_results.json": "dfb47fb8ef7e34073f0a156fdd585268efa99941ebe8c00110db49201da1a759",
+    "publication_metadata.json": "5affb3ce79604bb3b8545d81f5f7ba83da35f974b6ebbba03556746f1868f455",
+    "qa_log.json": "d5f8cf6472d1f4893d25fb1d4e72e0395ff34779df5aefbf64ce9281d9878849",
+    "quarters.csv": "4e6cb7c46b621c13aec3b79abb9e6af579ffe2ffcb1f3dc0fee462d994f47be0",
+    "reproduce_public.py": "e9be4b1617cae7e338aa3492594ddc8e240abce69abdd6c91ba66dea93d57c82",
+    "reproduction_result.json": "22e71ed91f356f158160760eed4fdbf83fbd913b634aec2a53d30ec64af9ccbb",
+    "source_notes.json": "33d8344e79c0dd12c1c4acd134a7ea3e440d8dfe4ca44561bcf84ac17f7d5f5c",
+    "sources.json": "915ea658315d0c16630c2f89b204bcb65883d0c2b7422b922847008e227a4c2f",
+    "ttm.csv": "d5b392b407cf04519923926c44734f93f5aa2a0e48be36fff7929dbfd62fe453"
+  },
+  "packaging_after_certificate": "Only add privacy_scan.json and manifest.json, then create ZIP. Changing frozen files requires another check. No publication or transaction is certified."
+}

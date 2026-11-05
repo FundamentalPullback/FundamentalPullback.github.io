@@ -1,0 +1,683 @@
+{
+  "analytical_checks": [
+    {
+      "check": "Cash flow bridge ties",
+      "result": "PASS",
+      "detail": "-22.521 million CFO change"
+    },
+    {
+      "check": "Quarterly revenue ties TTM",
+      "result": "PASS",
+      "detail": "1647.997"
+    },
+    {
+      "check": "Quarterly FCF ties TTM",
+      "result": "PASS",
+      "detail": "489.264"
+    },
+    {
+      "check": "Debt equity bridge",
+      "result": "PASS",
+      "detail": "1165 - 100.874 + 116.672 + 0.048"
+    },
+    {
+      "check": "adverso ten years",
+      "result": "PASS",
+      "detail": "5 explicit plus 5 transition"
+    },
+    {
+      "check": "adverso discount above growth",
+      "result": "PASS",
+      "detail": "required for perpetuity"
+    },
+    {
+      "check": "adverso terminal reinvestment",
+      "result": "PASS",
+      "detail": "g / ROIC"
+    },
+    {
+      "check": "adverso present-value tie",
+      "result": "PASS",
+      "detail": "EV PV of explicit and terminal"
+    },
+    {
+      "check": "adverso FCFF definition",
+      "result": "PASS",
+      "detail": "NOPAT less economic reinvestment"
+    },
+    {
+      "check": "adverso Y1 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y1 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso Y1 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "adverso Y2 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y2 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso Y2 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "adverso Y3 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y3 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso Y3 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "adverso Y4 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y4 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso Y4 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "adverso Y5 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y5 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso Y5 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "adverso Y6 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y6 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso Y7 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y7 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso Y8 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y8 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso Y9 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y9 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso Y10 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "adverso Y10 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central ten years",
+      "result": "PASS",
+      "detail": "5 explicit plus 5 transition"
+    },
+    {
+      "check": "central discount above growth",
+      "result": "PASS",
+      "detail": "required for perpetuity"
+    },
+    {
+      "check": "central terminal reinvestment",
+      "result": "PASS",
+      "detail": "g / ROIC"
+    },
+    {
+      "check": "central present-value tie",
+      "result": "PASS",
+      "detail": "EV PV of explicit and terminal"
+    },
+    {
+      "check": "central FCFF definition",
+      "result": "PASS",
+      "detail": "NOPAT less economic reinvestment"
+    },
+    {
+      "check": "central Y1 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y1 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central Y1 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "central Y2 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y2 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central Y2 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "central Y3 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y3 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central Y3 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "central Y4 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y4 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central Y4 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "central Y5 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y5 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central Y5 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "central Y6 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y6 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central Y7 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y7 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central Y8 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y8 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central Y9 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y9 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "central Y10 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "central Y10 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable ten years",
+      "result": "PASS",
+      "detail": "5 explicit plus 5 transition"
+    },
+    {
+      "check": "favorable discount above growth",
+      "result": "PASS",
+      "detail": "required for perpetuity"
+    },
+    {
+      "check": "favorable terminal reinvestment",
+      "result": "PASS",
+      "detail": "g / ROIC"
+    },
+    {
+      "check": "favorable present-value tie",
+      "result": "PASS",
+      "detail": "EV PV of explicit and terminal"
+    },
+    {
+      "check": "favorable FCFF definition",
+      "result": "PASS",
+      "detail": "NOPAT less economic reinvestment"
+    },
+    {
+      "check": "favorable Y1 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y1 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable Y1 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "favorable Y2 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y2 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable Y2 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "favorable Y3 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y3 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable Y3 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "favorable Y4 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y4 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable Y4 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "favorable Y5 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y5 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable Y5 original 5 percent assumption",
+      "result": "PASS",
+      "detail": "5% holds in years 1-5 only"
+    },
+    {
+      "check": "favorable Y6 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y6 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable Y7 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y7 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable Y8 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y8 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable Y9 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y9 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "favorable Y10 effective investment identity",
+      "result": "PASS",
+      "detail": "NOPAT + D&A - effective capex - delta NWC = FCFF"
+    },
+    {
+      "check": "favorable Y10 transition bridge",
+      "result": "PASS",
+      "detail": "Actual reinvestment minus reference components"
+    },
+    {
+      "check": "adverso V1 unchanged price",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "adverso V1 unchanged ev",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "adverso V1 unchanged equity",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "adverso V1 unchanged bridge",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "adverso V1 unchanged shares",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "adverso V1 unchanged terminal_weight",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "adverso V1 unchanged all cash flows",
+      "result": "PASS",
+      "detail": "All ten annual FCFFs unchanged"
+    },
+    {
+      "check": "central V1 unchanged price",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "central V1 unchanged ev",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "central V1 unchanged equity",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "central V1 unchanged bridge",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "central V1 unchanged shares",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "central V1 unchanged terminal_weight",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "central V1 unchanged all cash flows",
+      "result": "PASS",
+      "detail": "All ten annual FCFFs unchanged"
+    },
+    {
+      "check": "favorable V1 unchanged price",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "favorable V1 unchanged ev",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "favorable V1 unchanged equity",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "favorable V1 unchanged bridge",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "favorable V1 unchanged shares",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "favorable V1 unchanged terminal_weight",
+      "result": "PASS",
+      "detail": "Disclosure remediation, no economic change"
+    },
+    {
+      "check": "favorable V1 unchanged all cash flows",
+      "result": "PASS",
+      "detail": "All ten annual FCFFs unchanged"
+    },
+    {
+      "check": "2023 historical FCF per share",
+      "result": "PASS",
+      "detail": "Explicit weighted-average basic shares, not model denominator"
+    },
+    {
+      "check": "2024 historical FCF per share",
+      "result": "PASS",
+      "detail": "Explicit weighted-average basic shares, not model denominator"
+    },
+    {
+      "check": "2025 historical FCF per share",
+      "result": "PASS",
+      "detail": "Explicit weighted-average basic shares, not model denominator"
+    },
+    {
+      "check": "Q4 2025 historical FCF per share",
+      "result": "PASS",
+      "detail": "Explicit weighted-average basic shares, not model denominator"
+    },
+    {
+      "check": "Q1 2026 historical FCF per share",
+      "result": "PASS",
+      "detail": "Explicit weighted-average basic shares, not model denominator"
+    },
+    {
+      "check": "Q2 2026 historical FCF per share",
+      "result": "PASS",
+      "detail": "Explicit weighted-average basic shares, not model denominator"
+    },
+    {
+      "check": "Q3 2026 historical FCF per share",
+      "result": "PASS",
+      "detail": "Explicit weighted-average basic shares, not model denominator"
+    },
+    {
+      "check": "TTM Sep2025 historical FCF per share",
+      "result": "PASS",
+      "detail": "Explicit weighted-average basic shares, not model denominator"
+    },
+    {
+      "check": "TTM Sep2026 historical FCF per share",
+      "result": "PASS",
+      "detail": "Explicit weighted-average basic shares, not model denominator"
+    },
+    {
+      "check": "Frozen price evidence ledger",
+      "result": "PASS",
+      "detail": "Source S13, trade time 2026-11-05 16:14:40Z"
+    },
+    {
+      "check": "Reverse margin tie",
+      "result": "PASS",
+      "detail": "One-variable margin solution"
+    },
+    {
+      "check": "Reverse growth tie",
+      "result": "PASS",
+      "detail": "Alternative one-variable growth solution"
+    },
+    {
+      "check": "Higher WACC lowers value",
+      "result": "PASS",
+      "detail": "Monotonicity"
+    },
+    {
+      "check": "Higher investment lowers value",
+      "result": "PASS",
+      "detail": "Monotonicity"
+    },
+    {
+      "check": "No fake approvals",
+      "result": "PASS",
+      "detail": "Explicit conditioned scope"
+    }
+  ],
+  "analytical_status": "pass",
+  "independent_audit": {
+    "id": "BSY-AUDIT-20261105-v2",
+    "status": "pass_for_partial_research_only",
+    "passed": 326,
+    "failed": 0,
+    "findings_A1_to_A5": "closed",
+    "certificate_path": "audit/source_certificate_v2.json",
+    "certificate_sha256": "e9035240a4f79cdb1fc911641bd7541acbee260eb4f89bfb9d947521ea185f6d",
+    "certified_at": "2026-11-05T17:09:00Z",
+    "visual_qa": "pending permitted publisher QA",
+    "public_package_certificate": "audit/public_package_certificate.json"
+  },
+  "visual_qa": {
+    "status": "not_rendered",
+    "reason": "Visual rendering unavailable; permitted publisher visual review remains pending.",
+    "verified_visually": false
+  },
+  "limitations": [
+    "Eliis purchase consideration and balance sheet after October transactions not disclosed in reviewed primary packet.",
+    "Naviam interest/warrants value unavailable; excluded, not valued at zero permanently.",
+    "2026 normalized starting sales are counterfactual ex-Cohesive, ex-Eliis analyst proxy, not guidance.",
+    "WACC is an analyst hurdle assumption, not observed cost of capital.",
+    "No homogeneous peer valuation set completed.",
+    "Existing investments of USD42.265m and financing hedge value are excluded pending classification, value and tax review; not permanently assumed worthless.",
+    "USD550m term loan has conditional maturity 91 days before outstanding convertible debt unless liquidity tests are met; approximately April1 2027 for July1 2027 notes.",
+    "311m shares use cash settlement of converts; Q3 award split requires Q3 10-Q."
+  ],
+  "static_html_checks": "HTML parsing, source anchors, image alternative text and absence of private paths/tool identifiers checked; no claim of visual rendering"
+}

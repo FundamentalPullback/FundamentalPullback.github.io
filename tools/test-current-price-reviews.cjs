@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,'..'),base=path.resolve(root,'../../morning_ea
 const filename=path.join(__dirname,'load-stock-profiles.cjs'),mod=new Module(filename,module);mod.filename=filename;mod.paths=module.paths;
 mod._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,isEntryPlan,entryPlanStatus,entryPlanCompose,entryPlanFollowups,vEntradas,entryPlanRoute,'),filename);
 const a=mod.exports(root),before=require('./load-stock-profiles.cjs')(base),c=require('./current-price-contract.cjs').validate(root,a),get=(x,t)=>x.profiles.find(p=>p.ticker===t),records=Object.fromEntries(c.ids.map(id=>[id,a.reports.find(r=>r.id===id)]));
-for(const [f,h] of Object.entries(c.priorDataHashes))assert.equal(sha(fs.readFileSync(root+'/data/'+f)),h,'All historical data exact: '+f);
+for(const [f,h] of Object.entries(c.priorDataHashes))assert.equal(sha(f==='dec.js'?require('./trp-bsy-contract.cjs').priorDecisionBytes(root):fs.readFileSync(root+'/data/'+f)),h,'All historical data exact: '+f);
 assert(!a.reports.some(r=>r.id==='A279'),'Paused TRMD remains unpublished');
 const originalReports=JSON.stringify(a.reports),originalState=JSON.stringify({dec:a.t.S.dec,ges:a.t.S.ges,ops:a.t.S.ops,acct:a.t.S.acct,hist:a.t.S.hist});
 for(const tk of ['IT','HURN','CTSH']){
@@ -42,7 +42,7 @@ for(const lang of ['es','en']){
  a.t.entryPlanRoute('entradas/CTSH-20261105-B-V3');out=a.t.vEntradas();assert(out.includes('12:00'));assert(out.includes('observation_registration_public.json'));assert(!out.includes('entry-state--activated'));assert(out.includes(lang==='es'?'Oportunidad no ejecutada terminada':'Unfilled opportunity ended'));
  a.t.entryPlanRoute('entradas/CTSH-20261105-B-V2');assert(a.t.vEntradas().includes('entry-state--suspended'));
 }
-const pending=JSON.parse(fs.readFileSync(root+'/tools/pending-web-commentary.json'));assert.deepEqual(pending.pending.slice(0,-3),c.priorPending.pending);assert.deepEqual(pending.pending.slice(-3).map(r=>r.reportId),c.ids);
+const pending=require('./trp-bsy-contract.cjs').priorPending(root);assert.deepEqual(pending.pending.slice(0,-3),c.priorPending.pending);assert.deepEqual(pending.pending.slice(-3).map(r=>r.reportId),c.ids);
 assert.equal(JSON.stringify(a.reports),originalReports);assert.equal(JSON.stringify({dec:a.t.S.dec,ges:a.t.S.ges,ops:a.t.S.ops,acct:a.t.S.acct,hist:a.t.S.hist}),originalState,'Render cannot change ledgers');
 for(const mutate of [r=>r.push({id:'A286'}),r=>r.push(clone(r.find(x=>x.id==='A283'))),r=>r.find(x=>x.id==='A268').title+='edited',r=>r.find(x=>x.id==='A285').profiles[0].entryApproved=true]){const bad={...a,reports:clone(a.reports)};mutate(bad.reports);assert.throws(()=>require('./current-price-contract.cjs').validate(root,bad));}
 console.log('PASS exact A283/A284/A285 sources, clean public ZIPs, original models and all historical data; separate dated price context, unchanged completed research and ES/EN summaries.');

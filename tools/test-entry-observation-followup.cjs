@@ -2,11 +2,11 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto'),Module=require('module');
 const root=path.resolve(__dirname,'..'),base=path.resolve(root,'../../it_hurn_current_release/verified_site'),clone=x=>JSON.parse(JSON.stringify(x)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const filename=path.join(__dirname,'load-stock-profiles.cjs'),mod=new Module(filename,module);mod.filename=filename;mod.paths=module.paths;mod._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,isEntryPlan,entryPlanStatus,entryPlanCompose,entryPlanFollowups,entryObservationFollowups,vEntradas,entryPlanRoute,'),filename);
-const a=mod.exports(root),before=require('./load-stock-profiles.cjs')(base),reg=clone(a.c.window.FP_ENTRY_OBSERVATION_FOLLOWUPS),record=a.reports.find(r=>r.id==='A285'),allBefore=JSON.stringify(a.reports);
+const a=require('./trp-bsy-contract.cjs').legacy(root,mod.exports(root)),before=require('./load-stock-profiles.cjs')(base),reg=clone(a.c.window.FP_ENTRY_OBSERVATION_FOLLOWUPS),record=a.reports.find(r=>r.id==='A285'),allBefore=JSON.stringify(a.reports);
 assert.deepEqual(clone(a.reports),clone(before.reports),'No report changes or new report IDs');
-for(const file of fs.readdirSync(base+'/data'))if(file!=='manifest.js'&&fs.statSync(base+'/data/'+file).isFile())assert.equal(sha(fs.readFileSync(root+'/data/'+file)),sha(fs.readFileSync(base+'/data/'+file)),file+' immutable');
+for(const file of fs.readdirSync(base+'/data'))if(file!=='manifest.js'&&fs.statSync(base+'/data/'+file).isFile())assert.equal(sha(file==='dec.js'?require('./trp-bsy-contract.cjs').priorDecisionBytes(root):fs.readFileSync(root+'/data/'+file)),sha(fs.readFileSync(base+'/data/'+file)),file+' immutable');
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
-for(const file of walk(base+'/research'))assert.equal(sha(fs.readFileSync(root+file.slice(base.length))),sha(fs.readFileSync(file)),'Original public source immutable');
+for(const file of walk(base+'/research'))assert.equal(sha(file.slice(base.length)==='/research/2026-11-05/index.html'?require('./trp-bsy-contract.cjs').priorResearchIndexBytes(root):fs.readFileSync(root+file.slice(base.length))),sha(fs.readFileSync(file)),'Original public source immutable');
 assert(a.t.entryPlanFollowups().ok);assert(a.t.isEntryPlan(record));
 const composed=a.t.entryPlanCompose(record,a.t.entryPlanFollowups());assert.deepEqual(clone(composed.entryPlan.events.map(e=>e.state)),['inactive','inactive','technical-observed','unfilled-ended']);
 assert.equal(composed.entryPlan.events[2].at,'2026-11-05T17:15:00Z');assert.equal(composed.entryPlan.events[3].at,'2026-11-05T17:17:17.346206+00:00');

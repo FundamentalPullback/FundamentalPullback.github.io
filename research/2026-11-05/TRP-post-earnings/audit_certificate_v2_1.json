@@ -1,0 +1,57 @@
+{
+  "issued_at_utc": "2026-11-05T16:45:41.344195+00:00",
+  "package_version": "TRP-POST-Q326-v2.1",
+  "package_path": ".",
+  "audit_verdict": "Ready with caveats for publication as observation; not ready for investment decision",
+  "publication_approved_as_observation": true,
+  "entry_approved": false,
+  "fair_value_decision_grade": false,
+  "current_November_balance_bridge_certified": false,
+  "mechanical_checks": 539,
+  "mechanical_failures": 0,
+  "source_manifest_files_verified": 30,
+  "source_remote_revalidation_performed": false,
+  "values_usd": {
+    "adverse": 7.786814151228412,
+    "base": 30.159182055506975,
+    "favorable": 77.89044287270467
+  },
+  "resolved": {
+    "A02": "Dividend933 and accrued interest904 included once; September balance date and missing October/November roll-forward disclosed. No double deduction of later payments.",
+    "A03": "Reported8596/1767 retained; CGL199 exclusion marked partial/illustrative, exact cash subline uncertain, potential78 settlement addback considered symmetrically.",
+    "A05_publication": "Dossier and payload now identify homogeneous peer/history contrast as incomplete.",
+    "A04_publication": "Dossier identifies CGL holder-level economic rights separately and future TGNH participation changes."
+  },
+  "open_decision_blockers": [
+    "Updated lease total, finite cash flows and coherent tax/ownership treatment",
+    "JV-specific recurring distributions and required equity contributions",
+    "Economic value of NCI and CGL holder-level rights",
+    "Complete September-November cash/debt/claims roll-forward",
+    "Homogeneous peer and historical multiples; reconcile wide DCF contrast"
+  ],
+  "publication_conditions": [
+    "Preserve observation status, entry_approved=false and fair_value_decision_grade=false.",
+    "Label all scenario values indicative, low confidence and not a maximum authorized purchase price.",
+    "Preserve reported-versus-partial-adjustment cash distinction and September balance date.",
+    "Preserve dated analytical price and historical scanner-score provenance.",
+    "No claim that Stage3 is fully completed, current equity bridge certified or numerical fair value validated."
+  ],
+  "permitted_post_audit_edits_without_new_analytical_review": [
+    "Replace audit_status pending with publication_pass_with_caveats in delivery metadata.",
+    "Replace boilerplate pending-independent-audit text with a statement that arithmetic and publication-as-observation were audited; valuation remains provisional."
+  ],
+  "reviewed_hashes": {
+    "dossier_es.md": "4035d63c64abb68a8cbf37ebaaacaf5515715ab225d49c14c32622dbbf556acc",
+    "publication_payload.json": "b9ae902e85f774ab94cc4507e34a6b5a4c7e6883f82c04cea9b1a9557d3e7b08",
+    "model.py": "39e3195e8bce77dec2976832529fdf3c1b093548603a0814a6c301977bcb5dde",
+    "model_output.json": "30a868cf165c39e05e954f6d39951c796f9d12fafa5e16a4d35ff6f568892822",
+    "sources.json": "fd7f3c0fbd1002933111055b42c8680050b7a934a9406f8d69e6c12874927d6a",
+    "self_checks.json": "900a8dfb8c6a71b99adbd25a0668f439996421a014492e7039e0c65421983beb",
+    "method_design.md": "305f8b988039a81d6088c0d296f13836522712b67e5a2c2777cbb1f6f28f0815",
+    "manifest_sha256.json": "b69558769faad3c1da1515a7f742b7b9a81e60d8f2a00df4caa4a6d3967c4276"
+  },
+  "public_copy": true,
+  "original_certificate_sha256": "12c4594b54a819084ad9191df0a872971948fa29fe45d28370676a0fb959464c",
+  "reviewed_hashes_scope": "These hashes identify the original frozen analytical V2.1 files before permitted audit-status and public-delivery editorial changes. Current public-file hashes are in PUBLIC_MANIFEST.json.",
+  "source_manifest_scope": "The 30-file original audit included source documents not redistributed here. The public package has its own file manifest. Omitted source PDFs remain available via official URLs in sources.json."
+}

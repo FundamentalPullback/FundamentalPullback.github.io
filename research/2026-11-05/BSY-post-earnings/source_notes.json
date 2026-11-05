@@ -1,0 +1,63 @@
+{
+  "purpose": "Selected facts verified against cited primary sources; analyst paraphrases, not reproductions of third-party reports.",
+  "price_snapshot": {
+    "source_id": "S13",
+    "security": "Bentley Systems, Nasdaq BSY",
+    "currency": "USD",
+    "price": 47.09,
+    "trade_timestamp": "2026-11-05T16:14:40Z",
+    "status": "Frozen intraday observation, not live data or closing price",
+    "provider_limit": "Underlying feed and public quote URL were not supplied by the retrieved snapshot."
+  },
+  "verified_facts": [
+    {
+      "source_id": "S1",
+      "locator": "Consolidated Balance Sheets, September30 2026",
+      "facts": {
+        "investments_carrying_value_usd_m": 42.265,
+        "cash_and_cash_equivalents_usd_m": 150.874,
+        "cash_classified_held_for_sale_usd_m": 12.464
+      },
+      "treatment": "Investment carrying amount is not certified fair value; investment and financing hedge values remain excluded from the partial bridge."
+    },
+    {
+      "source_id": "S4",
+      "locator": "Notes10 and17: term loan in Note10; financing hedge value in Note17",
+      "facts": {
+        "term_loan_initial_principal_usd_m": 550,
+        "contractual_maturity": "2029-10-18",
+        "conditional_maturity_days_before_convertible": 91,
+        "convertible_maturity": "2027-07-01",
+        "derived_conditional_check_date": "2027-04-01",
+        "swap_asset_june2026_usd_m": 22.768
+      },
+      "caveat": "Early maturity depends on liquidity requirements. Fulfilment is not certified. The June swap amount is stale for September and is not added automatically."
+    },
+    {
+      "source_id": "S2",
+      "locator": "Liquidity and capital structure slide",
+      "facts": {
+        "swap_notional_usd_m": 200,
+        "swap_expiry_year": 2030
+      },
+      "caveat": "Notional is not fair value."
+    },
+    {
+      "source_id": "S3",
+      "locator": "Annual statements/EPS note",
+      "facts": {
+        "weighted_average_basic_shares_m": {
+          "2023": 312.358823,
+          "2024": 314.886615,
+          "2025": 314.690707
+        },
+        "diluted_eps_usd": {
+          "2023": 1.0,
+          "2024": 0.72,
+          "2025": 0.85
+        }
+      }
+    }
+  ],
+  "full_sources": "Use sources.json links. Full third-party filings, transcripts and retrieved text are intentionally not bundled."
+}

@@ -1,0 +1,4099 @@
+{
+  "method": "Independent reviewer script. No import or execution of author model.py. No modification to reviewed files.",
+  "scenario_summaries": {
+    "adverse": {
+      "core_ev": 65539.29295979175,
+      "jv_equity_value": 12930.417468672491,
+      "lease_value": 7961.099999999999,
+      "nci_value": 8307.05,
+      "net_financial_claims": 66796,
+      "equity": 11327.760428464244,
+      "value_usd": 7.786814151228412,
+      "value_cad": 10.871171236529985,
+      "core_terminal_weight": 0.706083620245299,
+      "total_terminal_weight": 0.6262301004682612,
+      "terminal_fcff": 4944.858814760537,
+      "core_terminal_value": 94187.78694781977,
+      "jv_terminal_value": 20659.100962868128
+    },
+    "base": {
+      "core_ev": 90278.87343055508,
+      "jv_equity_value": 20797.78046798132,
+      "lease_value": 9366,
+      "nci_value": 9773,
+      "net_financial_claims": 66796,
+      "equity": 43873.6538985364,
+      "value_usd": 30.159182055506975,
+      "value_cad": 42.10523406769328,
+      "core_terminal_weight": 0.7313020432343735,
+      "total_terminal_weight": 0.6566479908544391,
+      "terminal_fcff": 5446.318279776002,
+      "core_terminal_value": 128148.66540649415,
+      "jv_terminal_value": 31346.788843799524
+    },
+    "favorable": {
+      "core_ev": 148784.26712140033,
+      "jv_equity_value": 32278.479759555143,
+      "lease_value": 10770.9,
+      "nci_value": 11727.6,
+      "net_financial_claims": 66796,
+      "equity": 113310.04688095546,
+      "value_usd": 77.89044287270467,
+      "value_cad": 108.74284729458297,
+      "core_terminal_weight": 0.7909437587580554,
+      "total_terminal_weight": 0.7255595786178446,
+      "terminal_fcff": 6379.183053426604,
+      "core_terminal_value": 212639.43511422013,
+      "jv_terminal_value": 46982.96499106966
+    }
+  },
+  "check_count": 539,
+  "failed_checks": [],
+  "maximum_abs_difference": 2.9103830456733704e-11,
+  "checks": [
+    {
+      "check": "adverse_core_ev",
+      "independent": 65539.29295979175,
+      "package": 65539.29295979174,
+      "difference": 1.4551915228366852e-11,
+      "pass": true
+    },
+    {
+      "check": "adverse_jv_equity_value",
+      "independent": 12930.417468672491,
+      "package": 12930.41746867249,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_lease_value",
+      "independent": 7961.099999999999,
+      "package": 7961.099999999999,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_nci_value",
+      "independent": 8307.05,
+      "package": 8307.05,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_net_financial_claims",
+      "independent": 66796,
+      "package": 66796,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_equity",
+      "independent": 11327.760428464244,
+      "package": 11327.76042846423,
+      "difference": 1.4551915228366852e-11,
+      "pass": true
+    },
+    {
+      "check": "adverse_value_usd",
+      "independent": 7.786814151228412,
+      "package": 7.786814151228402,
+      "difference": 9.769962616701378e-15,
+      "pass": true
+    },
+    {
+      "check": "adverse_value_cad",
+      "independent": 10.871171236529985,
+      "package": 10.871171236529971,
+      "difference": 1.4210854715202004e-14,
+      "pass": true
+    },
+    {
+      "check": "adverse_core_terminal_weight",
+      "independent": 0.706083620245299,
+      "package": 0.7060836202452989,
+      "difference": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "check": "adverse_total_terminal_weight",
+      "independent": 0.6262301004682612,
+      "package": 0.6262301004682611,
+      "difference": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "check": "adverse_terminal_fcff",
+      "independent": 4944.858814760537,
+      "package": 4944.858814760535,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_core_terminal_value",
+      "independent": 94187.78694781977,
+      "package": 94187.78694781974,
+      "difference": 2.9103830456733704e-11,
+      "pass": true
+    },
+    {
+      "check": "adverse_jv_terminal_value",
+      "independent": 20659.100962868128,
+      "package": 20659.100962868128,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_year",
+      "independent": 2027,
+      "package": 2027,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_revenue",
+      "independent": 15672.800000000001,
+      "package": 15672.800000000001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_ebit",
+      "independent": 6504.212,
+      "package": 6504.212,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_nopat",
+      "independent": 4813.1168800000005,
+      "package": 4813.1168800000005,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_da",
+      "independent": 3134.5600000000004,
+      "package": 3134.5600000000004,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_capex",
+      "independent": 5900,
+      "package": 5900.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_delta_wc",
+      "independent": 6.028000000000011,
+      "package": 6.028000000000011,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_net_reinvestment",
+      "independent": 2771.4679999999994,
+      "package": 2771.4679999999994,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_fcff",
+      "independent": 2041.648880000001,
+      "package": 2041.648880000001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2027_jv_net_equity_cash",
+      "independent": 612.9999999999998,
+      "package": 612.9999999999998,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_year",
+      "independent": 2028,
+      "package": 2028,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_revenue",
+      "independent": 16299.712000000001,
+      "package": 16299.712000000001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_ebit",
+      "independent": 6764.38048,
+      "package": 6764.38048,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_nopat",
+      "independent": 5005.6415552,
+      "package": 5005.6415552,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_da",
+      "independent": 3259.9424000000004,
+      "package": 3259.9424000000004,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_capex",
+      "independent": 6200,
+      "package": 6200.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_delta_wc",
+      "independent": 6.269120000000003,
+      "package": 6.269120000000003,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_net_reinvestment",
+      "independent": 2946.3267199999996,
+      "package": 2946.3267199999996,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_fcff",
+      "independent": 2059.3148352000003,
+      "package": 2059.3148352000003,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2028_jv_net_equity_cash",
+      "independent": 628.2049999999997,
+      "package": 628.2049999999997,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_year",
+      "independent": 2029,
+      "package": 2029,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_revenue",
+      "independent": 16951.70048,
+      "package": 16951.700480000003,
+      "difference": -3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_ebit",
+      "independent": 7034.9556992,
+      "package": 7034.955699200001,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_nopat",
+      "independent": 5205.867217408,
+      "package": 5205.867217408,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_da",
+      "independent": 3390.340096,
+      "package": 3390.340096000001,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_capex",
+      "independent": 6400,
+      "package": 6400.000000000001,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_delta_wc",
+      "independent": 6.519884799999982,
+      "package": 6.5198848000000185,
+      "difference": -3.6415315207705135e-14,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_net_reinvestment",
+      "independent": 3016.1797888,
+      "package": 3016.1797888,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_fcff",
+      "independent": 2189.687428608,
+      "package": 2189.687428608,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2029_jv_net_equity_cash",
+      "independent": 645.6921749999995,
+      "package": 645.6921749999995,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_year",
+      "independent": 2030,
+      "package": 2030,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_revenue",
+      "independent": 17629.768499200003,
+      "package": 17629.768499200003,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_ebit",
+      "independent": 7316.353927168001,
+      "package": 7316.353927168001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_nopat",
+      "independent": 5414.101906104321,
+      "package": 5414.101906104321,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_da",
+      "independent": 3525.953699840001,
+      "package": 3525.953699840001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_capex",
+      "independent": 6550,
+      "package": 6550.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_delta_wc",
+      "independent": 6.780680192000037,
+      "package": 6.780680192,
+      "difference": 3.6415315207705135e-14,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_net_reinvestment",
+      "independent": 3030.8269803519993,
+      "package": 3030.8269803519993,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_fcff",
+      "independent": 2383.2749257523215,
+      "package": 2383.2749257523215,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2030_jv_net_equity_cash",
+      "independent": 665.5414011249995,
+      "package": 665.5414011249991,
+      "difference": 4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_year",
+      "independent": 2031,
+      "package": 2031,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_revenue",
+      "independent": 18334.959239168005,
+      "package": 18334.959239168005,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_ebit",
+      "independent": 7609.008084254722,
+      "package": 7609.008084254722,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_nopat",
+      "independent": 5630.665982348494,
+      "package": 5630.665982348494,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_da",
+      "independent": 3666.9918478336012,
+      "package": 3666.9918478336012,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_capex",
+      "independent": 6700,
+      "package": 6700.000000000002,
+      "difference": -1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_delta_wc",
+      "independent": 7.0519073996800214,
+      "package": 7.0519073996800214,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_net_reinvestment",
+      "independent": 3040.060059566079,
+      "package": 3040.060059566081,
+      "difference": -1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_fcff",
+      "independent": 2590.6059227824153,
+      "package": 2590.6059227824135,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2031_jv_net_equity_cash",
+      "independent": 687.8353501643742,
+      "package": 687.8353501643737,
+      "difference": 4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_year",
+      "independent": 2032,
+      "package": 2032,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_revenue",
+      "independent": 18995.017771778053,
+      "package": 18995.017771778053,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_ebit",
+      "independent": 7882.932375287892,
+      "package": 7882.932375287892,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_nopat",
+      "independent": 5833.36995771304,
+      "package": 5833.36995771304,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_da",
+      "independent": 3799.003554355611,
+      "package": 3799.003554355611,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_capex",
+      "independent": 6836.443890000076,
+      "package": 6836.443890000079,
+      "difference": -2.7284841053187847e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_delta_wc",
+      "independent": 6.600585326100481,
+      "package": 6.600585326100481,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_net_reinvestment",
+      "independent": 3044.0409209705654,
+      "package": 3044.040920970568,
+      "difference": -2.7284841053187847e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_fcff",
+      "independent": 2789.3290367424747,
+      "package": 2789.329036742472,
+      "difference": 2.7284841053187847e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2032_jv_net_equity_cash",
+      "independent": 817.9180876509326,
+      "package": 817.9180876509323,
+      "difference": 3.410605131648481e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_year",
+      "independent": 2033,
+      "package": 2033,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_revenue",
+      "independent": 19602.858340474955,
+      "package": 19602.85834047495,
+      "difference": 3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_ebit",
+      "independent": 8135.186211297106,
+      "package": 8135.186211297105,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_nopat",
+      "independent": 6020.0377963598585,
+      "package": 6020.037796359858,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_da",
+      "independent": 3920.5716680949913,
+      "package": 3920.5716680949904,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_capex",
+      "independent": 6826.994392380788,
+      "package": 6826.994392380788,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_delta_wc",
+      "independent": 6.078405686969018,
+      "package": 6.078405686968981,
+      "difference": 3.6415315207705135e-14,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_net_reinvestment",
+      "independent": 2912.5011299727653,
+      "package": 2912.501129972766,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_fcff",
+      "independent": 3107.536666387093,
+      "package": 3107.5366663870914,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2033_jv_net_equity_cash",
+      "independent": 975.5460788335588,
+      "package": 975.5460788335588,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_year",
+      "independent": 2034,
+      "package": 2034,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_revenue",
+      "independent": 20151.73837400825,
+      "package": 20151.73837400825,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_ebit",
+      "independent": 8362.971425213424,
+      "package": 8362.971425213424,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_nopat",
+      "independent": 6188.598854657934,
+      "package": 6188.598854657934,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_da",
+      "independent": 4030.3476748016506,
+      "package": 4030.3476748016506,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_capex",
+      "independent": 6660.077610237957,
+      "package": 6660.077610237959,
+      "difference": -1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_delta_wc",
+      "independent": 5.488800335332963,
+      "package": 5.488800335332999,
+      "difference": -3.6415315207705135e-14,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_net_reinvestment",
+      "independent": 2635.2187357716393,
+      "package": 2635.218735771641,
+      "difference": -1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_fcff",
+      "independent": 3553.3801188862944,
+      "package": 3553.3801188862926,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2034_jv_net_equity_cash",
+      "independent": 1161.5927923105437,
+      "package": 1161.5927923105437,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_year",
+      "independent": 2035,
+      "package": 2035,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_revenue",
+      "independent": 20635.380094984448,
+      "package": 20635.380094984448,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_ebit",
+      "independent": 8563.682739418546,
+      "package": 8563.682739418546,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_nopat",
+      "independent": 6337.125227169724,
+      "package": 6337.125227169724,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_da",
+      "independent": 4127.07601899689,
+      "package": 4127.07601899689,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_capex",
+      "independent": 6326.826677303396,
+      "package": 6326.8266773033965,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_delta_wc",
+      "independent": 4.836417209761967,
+      "package": 4.836417209761967,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_net_reinvestment",
+      "independent": 2204.5870755162678,
+      "package": 2204.5870755162687,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_fcff",
+      "independent": 4132.538151653456,
+      "package": 4132.538151653455,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2035_jv_net_equity_cash",
+      "independent": 1376.5158992885692,
+      "package": 1376.5158992885697,
+      "difference": -4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_year",
+      "independent": 2036,
+      "package": 2036,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_revenue",
+      "independent": 21048.08769688414,
+      "package": 21048.087696884137,
+      "difference": 3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_ebit",
+      "independent": 8734.956394206918,
+      "package": 8734.956394206916,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_nopat",
+      "independent": 6463.86773171312,
+      "package": 6463.867731713118,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_da",
+      "independent": 4209.617539376828,
+      "package": 4209.617539376827,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_capex",
+      "independent": 5821.45739628611,
+      "package": 5821.4573962861095,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_delta_wc",
+      "independent": 4.127076018996922,
+      "package": 4.1270760189968865,
+      "difference": 3.552713678800501e-14,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_net_reinvestment",
+      "independent": 1615.9669329282792,
+      "package": 1615.9669329282792,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_fcff",
+      "independent": 4847.90079878484,
+      "package": 4847.900798784838,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "adverse_2036_jv_net_equity_cash",
+      "independent": 1620.3216441465197,
+      "package": 1620.3216441465202,
+      "difference": -4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "base_core_ev",
+      "independent": 90278.87343055508,
+      "package": 90278.87343055508,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_jv_equity_value",
+      "independent": 20797.78046798132,
+      "package": 20797.780467981323,
+      "difference": -3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "base_lease_value",
+      "independent": 9366,
+      "package": 9366,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_nci_value",
+      "independent": 9773,
+      "package": 9773,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_net_financial_claims",
+      "independent": 66796,
+      "package": 66796,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_equity",
+      "independent": 43873.6538985364,
+      "package": 43873.6538985364,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_value_usd",
+      "independent": 30.159182055506975,
+      "package": 30.15918205550697,
+      "difference": 3.552713678800501e-15,
+      "pass": true
+    },
+    {
+      "check": "base_value_cad",
+      "independent": 42.10523406769328,
+      "package": 42.10523406769328,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_core_terminal_weight",
+      "independent": 0.7313020432343735,
+      "package": 0.7313020432343735,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_total_terminal_weight",
+      "independent": 0.6566479908544391,
+      "package": 0.6566479908544391,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_terminal_fcff",
+      "independent": 5446.318279776002,
+      "package": 5446.318279776002,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_core_terminal_value",
+      "independent": 128148.66540649415,
+      "package": 128148.66540649415,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_jv_terminal_value",
+      "independent": 31346.788843799524,
+      "package": 31346.78884379953,
+      "difference": -7.275957614183426e-12,
+      "pass": true
+    },
+    {
+      "check": "base_2027_year",
+      "independent": 2027,
+      "package": 2027,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2027_revenue",
+      "independent": 15898.849999999999,
+      "package": 15898.849999999999,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2027_ebit",
+      "independent": 6757.01125,
+      "package": 6757.01125,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2027_nopat",
+      "independent": 5067.7584375,
+      "package": 5067.7584375,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2027_da",
+      "independent": 3100.27575,
+      "package": 3100.27575,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2027_capex",
+      "independent": 5750,
+      "package": 5750.000000000001,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2027_delta_wc",
+      "independent": 8.288499999999985,
+      "package": 8.288499999999985,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2027_net_reinvestment",
+      "independent": 2658.0127500000003,
+      "package": 2658.0127500000012,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2027_fcff",
+      "independent": 2409.7456874999993,
+      "package": 2409.7456874999984,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2027_jv_net_equity_cash",
+      "independent": 814.0,
+      "package": 814.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2028_year",
+      "independent": 2028,
+      "package": 2028,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2028_revenue",
+      "independent": 16773.28675,
+      "package": 16773.286749999996,
+      "difference": 3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "base_2028_ebit",
+      "independent": 7128.646868749999,
+      "package": 7128.646868749998,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2028_nopat",
+      "independent": 5346.4851515625,
+      "package": 5346.485151562499,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2028_da",
+      "independent": 3270.79091625,
+      "package": 3270.790916249999,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2028_capex",
+      "independent": 6000,
+      "package": 5999.999999999998,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "base_2028_delta_wc",
+      "independent": 8.744367500000008,
+      "package": 8.74436749999997,
+      "difference": 3.730349362740526e-14,
+      "pass": true
+    },
+    {
+      "check": "base_2028_net_reinvestment",
+      "independent": 2737.95345125,
+      "package": 2737.953451249999,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2028_fcff",
+      "independent": 2608.5317003124997,
+      "package": 2608.5317003124997,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2028_jv_net_equity_cash",
+      "independent": 934.8400000000001,
+      "package": 934.8400000000001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2029_year",
+      "independent": 2029,
+      "package": 2029,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2029_revenue",
+      "independent": 17695.817521249995,
+      "package": 17695.817521249995,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2029_ebit",
+      "independent": 7520.722446531247,
+      "package": 7520.722446531247,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2029_nopat",
+      "independent": 5640.541834898436,
+      "package": 5640.541834898436,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2029_da",
+      "independent": 3450.684416643749,
+      "package": 3450.684416643749,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2029_capex",
+      "independent": 6200,
+      "package": 6200.000000000001,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2029_delta_wc",
+      "independent": 9.225307712499962,
+      "package": 9.225307712499998,
+      "difference": -3.552713678800501e-14,
+      "pass": true
+    },
+    {
+      "check": "base_2029_net_reinvestment",
+      "independent": 2758.540891068751,
+      "package": 2758.540891068752,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2029_fcff",
+      "independent": 2882.0009438296847,
+      "package": 2882.000943829684,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2029_jv_net_equity_cash",
+      "independent": 1012.9304000000006,
+      "package": 1012.9304000000002,
+      "difference": 4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2030_year",
+      "independent": 2030,
+      "package": 2030,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2030_revenue",
+      "independent": 18669.087484918746,
+      "package": 18669.087484918746,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2030_ebit",
+      "independent": 7934.362181090467,
+      "package": 7934.362181090467,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2030_nopat",
+      "independent": 5950.77163581785,
+      "package": 5950.77163581785,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2030_da",
+      "independent": 3640.4720595591557,
+      "package": 3640.4720595591557,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2030_capex",
+      "independent": 6350,
+      "package": 6350.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2030_delta_wc",
+      "independent": 9.732699636687503,
+      "package": 9.732699636687503,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2030_net_reinvestment",
+      "independent": 2719.2606400775317,
+      "package": 2719.2606400775317,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2030_fcff",
+      "independent": 3231.510995740319,
+      "package": 3231.510995740319,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2030_jv_net_equity_cash",
+      "independent": 1098.7062240000005,
+      "package": 1098.7062240000005,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_year",
+      "independent": 2031,
+      "package": 2031,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_revenue",
+      "independent": 19695.887296589277,
+      "package": 19695.887296589277,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_ebit",
+      "independent": 8370.752101050442,
+      "package": 8370.752101050442,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_nopat",
+      "independent": 6278.064075787832,
+      "package": 6278.064075787832,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_da",
+      "independent": 3840.6980228349094,
+      "package": 3840.6980228349094,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_capex",
+      "independent": 6500,
+      "package": 6500.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_delta_wc",
+      "independent": 10.267998116705312,
+      "package": 10.267998116705312,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_net_reinvestment",
+      "independent": 2669.569975281796,
+      "package": 2669.569975281796,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_fcff",
+      "independent": 3608.494100506036,
+      "package": 3608.494100506036,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2031_jv_net_equity_cash",
+      "independent": 1242.6285974400012,
+      "package": 1242.6285974400007,
+      "difference": 4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2032_year",
+      "independent": 2032,
+      "package": 2032,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2032_revenue",
+      "independent": 20660.98577412215,
+      "package": 20660.98577412215,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2032_ebit",
+      "independent": 8780.918954001912,
+      "package": 8780.918954001912,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2032_nopat",
+      "independent": 6585.689215501434,
+      "package": 6585.689215501434,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2032_da",
+      "independent": 4028.8922259538194,
+      "package": 4028.8922259538194,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2032_capex",
+      "independent": 7017.939475434687,
+      "package": 7017.939475434687,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2032_delta_wc",
+      "independent": 9.650984775328725,
+      "package": 9.650984775328725,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2032_net_reinvestment",
+      "independent": 2998.698234256196,
+      "package": 2998.698234256196,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2032_fcff",
+      "independent": 3586.990981245238,
+      "package": 3586.990981245238,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2032_jv_net_equity_cash",
+      "independent": 1290.6909750237055,
+      "package": 1290.6909750237055,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2033_year",
+      "independent": 2033,
+      "package": 2033,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2033_revenue",
+      "independent": 21549.4081624094,
+      "package": 21549.4081624094,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2033_ebit",
+      "independent": 9158.498469023994,
+      "package": 9158.498469023994,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2033_nopat",
+      "independent": 6868.873851767996,
+      "package": 6868.873851767996,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2033_da",
+      "independent": 4202.134591669833,
+      "package": 4202.134591669833,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2033_capex",
+      "independent": 7334.25427359019,
+      "package": 7334.254273590189,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2033_delta_wc",
+      "independent": 8.884223882872503,
+      "package": 8.884223882872503,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2033_net_reinvestment",
+      "independent": 3141.0039058032294,
+      "package": 3141.0039058032285,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2033_fcff",
+      "independent": 3727.8699459647664,
+      "package": 3727.8699459647673,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2033_jv_net_equity_cash",
+      "independent": 1384.7558348610903,
+      "package": 1384.75583486109,
+      "difference": 2.2737367544323206e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2034_year",
+      "independent": 2034,
+      "package": 2034,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2034_revenue",
+      "independent": 22346.736264418545,
+      "package": 22346.736264418545,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2034_ebit",
+      "independent": 9497.362912377881,
+      "package": 9497.362912377881,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2034_nopat",
+      "independent": 7123.022184283411,
+      "package": 7123.022184283411,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2034_da",
+      "independent": 4357.6135715616165,
+      "package": 4357.6135715616165,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2034_capex",
+      "independent": 7420.081261737758,
+      "package": 7420.081261737758,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2034_delta_wc",
+      "independent": 7.973281020091454,
+      "package": 7.973281020091454,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2034_net_reinvestment",
+      "independent": 3070.4409711962326,
+      "package": 3070.4409711962326,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2034_fcff",
+      "independent": 4052.581213087178,
+      "package": 4052.581213087178,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2034_jv_net_equity_cash",
+      "independent": 1530.195127766577,
+      "package": 1530.1951277665767,
+      "difference": 2.2737367544323206e-13,
+      "pass": true
+    },
+    {
+      "check": "base_2035_year",
+      "independent": 2035,
+      "package": 2035,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2035_revenue",
+      "independent": 23039.485088615518,
+      "package": 23039.485088615518,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2035_ebit",
+      "independent": 9791.781162661595,
+      "package": 9791.781162661595,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2035_nopat",
+      "independent": 7343.835871996196,
+      "package": 7343.835871996196,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2035_da",
+      "independent": 4492.699592280026,
+      "package": 4492.699592280026,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2035_capex",
+      "independent": 7251.979378219387,
+      "package": 7251.979378219387,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2035_delta_wc",
+      "independent": 6.927488241969732,
+      "package": 6.927488241969732,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2035_net_reinvestment",
+      "independent": 2766.207274181331,
+      "package": 2766.207274181331,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2035_fcff",
+      "independent": 4577.628597814865,
+      "package": 4577.628597814865,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2035_jv_net_equity_cash",
+      "independent": 1730.681186461149,
+      "package": 1730.681186461149,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_year",
+      "independent": 2036,
+      "package": 2036,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_revenue",
+      "independent": 23615.472215830905,
+      "package": 23615.472215830905,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_ebit",
+      "independent": 10036.575691728134,
+      "package": 10036.575691728134,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_nopat",
+      "independent": 7527.431768796101,
+      "package": 7527.431768796101,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_da",
+      "independent": 4605.017082087026,
+      "package": 4605.017082087026,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_capex",
+      "independent": 6813.20773104902,
+      "package": 6813.20773104902,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_delta_wc",
+      "independent": 5.759871272153869,
+      "package": 5.759871272153869,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_net_reinvestment",
+      "independent": 2213.950520234148,
+      "package": 2213.950520234148,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_fcff",
+      "independent": 5313.481248561953,
+      "package": 5313.481248561953,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "base_2036_jv_net_equity_cash",
+      "independent": 1987.8451461921652,
+      "package": 1987.8451461921657,
+      "difference": -4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_core_ev",
+      "independent": 148784.26712140033,
+      "package": 148784.2671214003,
+      "difference": 2.9103830456733704e-11,
+      "pass": true
+    },
+    {
+      "check": "favorable_jv_equity_value",
+      "independent": 32278.479759555143,
+      "package": 32278.479759555146,
+      "difference": -3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_lease_value",
+      "independent": 10770.9,
+      "package": 10770.9,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_nci_value",
+      "independent": 11727.6,
+      "package": 11727.6,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_net_financial_claims",
+      "independent": 66796,
+      "package": 66796,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_equity",
+      "independent": 113310.04688095546,
+      "package": 113310.04688095543,
+      "difference": 2.9103830456733704e-11,
+      "pass": true
+    },
+    {
+      "check": "favorable_value_usd",
+      "independent": 77.89044287270467,
+      "package": 77.89044287270464,
+      "difference": 2.842170943040401e-14,
+      "pass": true
+    },
+    {
+      "check": "favorable_value_cad",
+      "independent": 108.74284729458297,
+      "package": 108.74284729458294,
+      "difference": 2.842170943040401e-14,
+      "pass": true
+    },
+    {
+      "check": "favorable_core_terminal_weight",
+      "independent": 0.7909437587580554,
+      "package": 0.7909437587580556,
+      "difference": -1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "check": "favorable_total_terminal_weight",
+      "independent": 0.7255595786178446,
+      "package": 0.7255595786178447,
+      "difference": -1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "check": "favorable_terminal_fcff",
+      "independent": 6379.183053426604,
+      "package": 6379.183053426603,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_core_terminal_value",
+      "independent": 212639.43511422013,
+      "package": 212639.4351142201,
+      "difference": 2.9103830456733704e-11,
+      "pass": true
+    },
+    {
+      "check": "favorable_jv_terminal_value",
+      "independent": 46982.96499106966,
+      "package": 46982.964991069675,
+      "difference": -1.4551915228366852e-11,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_year",
+      "independent": 2027,
+      "package": 2027,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_revenue",
+      "independent": 16124.900000000001,
+      "package": 16124.900000000001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_ebit",
+      "independent": 7094.956000000001,
+      "package": 7094.956000000001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_nopat",
+      "independent": 5392.166560000001,
+      "package": 5392.166560000001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_da",
+      "independent": 3063.731,
+      "package": 3063.731,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_capex",
+      "independent": 5600,
+      "package": 5600.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_delta_wc",
+      "independent": 10.549000000000015,
+      "package": 10.549000000000015,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_net_reinvestment",
+      "independent": 2546.8179999999998,
+      "package": 2546.8179999999998,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_fcff",
+      "independent": 2845.348560000001,
+      "package": 2845.348560000001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2027_jv_net_equity_cash",
+      "independent": 1107.5,
+      "package": 1107.5,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_year",
+      "independent": 2028,
+      "package": 2028,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_revenue",
+      "independent": 17253.643,
+      "package": 17253.643000000004,
+      "difference": -3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_ebit",
+      "independent": 7591.60292,
+      "package": 7591.602920000002,
+      "difference": -1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_nopat",
+      "independent": 5769.618219200001,
+      "package": 5769.6182192000015,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_da",
+      "independent": 3278.1921700000003,
+      "package": 3278.1921700000007,
+      "difference": -4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_capex",
+      "independent": 5800,
+      "package": 5800.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_delta_wc",
+      "independent": 11.287429999999986,
+      "package": 11.287430000000022,
+      "difference": -3.552713678800501e-14,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_net_reinvestment",
+      "independent": 2533.0952599999996,
+      "package": 2533.095259999999,
+      "difference": 4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_fcff",
+      "independent": 3236.522959200001,
+      "package": 3236.5229592000023,
+      "difference": -1.3642420526593924e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2028_jv_net_equity_cash",
+      "independent": 1276.8125,
+      "package": 1276.8125,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_year",
+      "independent": 2029,
+      "package": 2029,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_revenue",
+      "independent": 18461.39801,
+      "package": 18461.398010000004,
+      "difference": -3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_ebit",
+      "independent": 8123.015124400001,
+      "package": 8123.015124400002,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_nopat",
+      "independent": 6173.4914945440005,
+      "package": 6173.491494544001,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_da",
+      "independent": 3507.6656219,
+      "package": 3507.665621900001,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_capex",
+      "independent": 6000,
+      "package": 6000.000000000001,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_delta_wc",
+      "independent": 12.077550100000009,
+      "package": 12.077550100000009,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_net_reinvestment",
+      "independent": 2504.4119281999997,
+      "package": 2504.4119281999997,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_fcff",
+      "independent": 3669.079566344001,
+      "package": 3669.0795663440017,
+      "difference": -9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2029_jv_net_equity_cash",
+      "independent": 1408.8234374999997,
+      "package": 1408.8234374999997,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_year",
+      "independent": 2030,
+      "package": 2030,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_revenue",
+      "independent": 19753.695870700005,
+      "package": 19753.695870700005,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_ebit",
+      "independent": 8691.626183108003,
+      "package": 8691.626183108003,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_nopat",
+      "independent": 6605.635899162082,
+      "package": 6605.635899162082,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_da",
+      "independent": 3753.202215433001,
+      "package": 3753.202215433001,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_capex",
+      "independent": 6200,
+      "package": 6200.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_delta_wc",
+      "independent": 12.922978607000042,
+      "package": 12.922978607000005,
+      "difference": 3.730349362740526e-14,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_net_reinvestment",
+      "independent": 2459.720763173999,
+      "package": 2459.720763173999,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_fcff",
+      "independent": 4145.915135988083,
+      "package": 4145.915135988083,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2030_jv_net_equity_cash",
+      "independent": 1604.4851953124999,
+      "package": 1604.4851953124994,
+      "difference": 4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_year",
+      "independent": 2031,
+      "package": 2031,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_revenue",
+      "independent": 21136.454581649006,
+      "package": 21136.454581649006,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_ebit",
+      "independent": 9300.040015925562,
+      "package": 9300.040015925562,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_nopat",
+      "independent": 7068.030412103428,
+      "package": 7068.030412103428,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_da",
+      "independent": 4015.926370513311,
+      "package": 4015.926370513311,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_capex",
+      "independent": 6400,
+      "package": 6400.0,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_delta_wc",
+      "independent": 13.827587109490015,
+      "package": 13.827587109490015,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_net_reinvestment",
+      "independent": 2397.901216596179,
+      "package": 2397.901216596179,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_fcff",
+      "independent": 4670.129195507248,
+      "package": 4670.129195507248,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2031_jv_net_equity_cash",
+      "independent": 1764.8215849609373,
+      "package": 1764.821584960937,
+      "difference": 4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_year",
+      "independent": 2032,
+      "package": 2032,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_revenue",
+      "independent": 22446.914765711244,
+      "package": 22446.914765711244,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_ebit",
+      "independent": 9876.642496912948,
+      "package": 9876.642496912948,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_nopat",
+      "independent": 7506.24829765384,
+      "package": 7506.24829765384,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_da",
+      "independent": 4264.913805485136,
+      "package": 4264.913805485136,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_capex",
+      "independent": 7218.57662963798,
+      "package": 7218.57662963798,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_delta_wc",
+      "independent": 13.104601840622381,
+      "package": 13.104601840622381,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_net_reinvestment",
+      "independent": 2966.7674259934656,
+      "package": 2966.7674259934656,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_fcff",
+      "independent": 4539.480871660375,
+      "package": 4539.480871660375,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2032_jv_net_equity_cash",
+      "independent": 1763.8928391192412,
+      "package": 1763.8928391192405,
+      "difference": 6.821210263296962e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_year",
+      "independent": 2033,
+      "package": 2033,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_revenue",
+      "independent": 23659.048163059655,
+      "package": 23659.04816305965,
+      "difference": 3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_ebit",
+      "independent": 10409.981191746248,
+      "package": 10409.981191746247,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_nopat",
+      "independent": 7911.585705727149,
+      "package": 7911.585705727148,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_da",
+      "independent": 4495.219150981335,
+      "package": 4495.219150981334,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_capex",
+      "independent": 7800.437959240206,
+      "package": 7800.437959240204,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_delta_wc",
+      "independent": 12.121333973484107,
+      "package": 12.12133397348407,
+      "difference": 3.730349362740526e-14,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_net_reinvestment",
+      "independent": 3317.340142232355,
+      "package": 3317.340142232354,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_fcff",
+      "independent": 4594.245563494794,
+      "package": 4594.245563494794,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2033_jv_net_equity_cash",
+      "independent": 1806.8887660978953,
+      "package": 1806.8887660978949,
+      "difference": 4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_year",
+      "independent": 2034,
+      "package": 2034,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_revenue",
+      "independent": 24747.3643785604,
+      "package": 24747.364378560396,
+      "difference": 3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_ebit",
+      "independent": 10888.840326566577,
+      "package": 10888.840326566575,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_nopat",
+      "independent": 8275.518648190598,
+      "package": 8275.518648190597,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_da",
+      "independent": 4701.999231926476,
+      "package": 4701.999231926476,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_capex",
+      "independent": 8096.058089243486,
+      "package": 8096.0580892434855,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_delta_wc",
+      "independent": 10.883162155007449,
+      "package": 10.883162155007449,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_net_reinvestment",
+      "independent": 3404.9420194720183,
+      "package": 3404.9420194720174,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_fcff",
+      "independent": 4870.57662871858,
+      "package": 4870.57662871858,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2034_jv_net_equity_cash",
+      "independent": 1903.059012360024,
+      "package": 1903.059012360024,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_year",
+      "independent": 2035,
+      "package": 2035,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_revenue",
+      "independent": 25687.764224945695,
+      "package": 25687.76422494569,
+      "difference": 3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_ebit",
+      "independent": 11302.616258976106,
+      "package": 11302.616258976104,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_nopat",
+      "independent": 8589.988356821841,
+      "package": 8589.98835682184,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_da",
+      "independent": 4880.675202739682,
+      "package": 4880.6752027396815,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_capex",
+      "independent": 8063.9956348436235,
+      "package": 8063.995634843623,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_delta_wc",
+      "independent": 9.40399846385295,
+      "package": 9.40399846385295,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_net_reinvestment",
+      "independent": 3192.724430567794,
+      "package": 3192.724430567794,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_fcff",
+      "independent": 5397.263926254047,
+      "package": 5397.263926254045,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2035_jv_net_equity_cash",
+      "independent": 2059.5539623284935,
+      "package": 2059.553962328494,
+      "difference": -4.547473508864641e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_year",
+      "independent": 2036,
+      "package": 2036,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_revenue",
+      "independent": 26458.39715169407,
+      "package": 26458.397151694062,
+      "difference": 7.275957614183426e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_ebit",
+      "independent": 11641.69474674539,
+      "package": 11641.694746745387,
+      "difference": 3.637978807091713e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_nopat",
+      "independent": 8847.688007526496,
+      "package": 8847.688007526494,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_da",
+      "independent": 5027.095458821873,
+      "package": 5027.095458821872,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_capex",
+      "independent": 7673.695531812337,
+      "package": 7673.695531812336,
+      "difference": 9.094947017729282e-13,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_delta_wc",
+      "independent": 7.706329267483743,
+      "package": 7.7063292674837065,
+      "difference": 3.6415315207705135e-14,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_net_reinvestment",
+      "independent": 2654.3064022579483,
+      "package": 2654.3064022579483,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_fcff",
+      "independent": 6193.381605268548,
+      "package": 6193.381605268546,
+      "difference": 1.8189894035458565e-12,
+      "pass": true
+    },
+    {
+      "check": "favorable_2036_jv_net_equity_cash",
+      "independent": 2280.7264558771685,
+      "package": 2280.7264558771685,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0575_0.015",
+      "independent": 41.77261473301468,
+      "package": 41.77261473301468,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0575_0.02",
+      "independent": 45.84191770292559,
+      "package": 45.84191770292559,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0575_0.025",
+      "independent": 51.01244570730688,
+      "package": 51.01244570730688,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0575_0.03",
+      "independent": 57.87292365829005,
+      "package": 57.872923658290034,
+      "difference": 1.4210854715202004e-14,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0625_0.015",
+      "independent": 33.02514277792426,
+      "package": 33.02514277792425,
+      "difference": 7.105427357601002e-15,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0625_0.02",
+      "independent": 35.795270049441214,
+      "package": 35.79527004944121,
+      "difference": 7.105427357601002e-15,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0625_0.025",
+      "independent": 39.18137028629622,
+      "package": 39.18137028629622,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0625_0.03",
+      "independent": 43.45901290568896,
+      "package": 43.45901290568896,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0675_0.015",
+      "independent": 25.975586217921133,
+      "package": 25.975586217921133,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0675_0.02",
+      "independent": 27.892530923794194,
+      "package": 27.892530923794187,
+      "difference": 7.105427357601002e-15,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0675_0.025",
+      "independent": 30.159182055506975,
+      "package": 30.15918205550697,
+      "difference": 3.552713678800501e-15,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0675_0.03",
+      "independent": 32.9090538662286,
+      "package": 32.9090538662286,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0725_0.015",
+      "independent": 20.179694188762433,
+      "package": 20.179694188762433,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0725_0.02",
+      "independent": 21.519971060200444,
+      "package": 21.519971060200444,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0725_0.025",
+      "independent": 23.057846093540956,
+      "package": 23.05784609354096,
+      "difference": -3.552713678800501e-15,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0725_0.03",
+      "independent": 24.85849259123351,
+      "package": 24.858492591233496,
+      "difference": 1.4210854715202004e-14,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0775_0.015",
+      "independent": 15.335438061194807,
+      "package": 15.335438061194807,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0775_0.02",
+      "independent": 16.277387629860744,
+      "package": 16.27738762986074,
+      "difference": 3.552713678800501e-15,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0775_0.025",
+      "independent": 17.327673785298096,
+      "package": 17.327673785298103,
+      "difference": -7.105427357601002e-15,
+      "pass": true
+    },
+    {
+      "check": "sensitivity_0.0775_0.03",
+      "independent": 18.517361336134492,
+      "package": 18.51736133613448,
+      "difference": 1.0658141036401503e-14,
+      "pass": true
+    },
+    {
+      "check": "reverse_wacc",
+      "independent": 0.053253505852179917,
+      "package": 0.053253505852179917,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "reverse_rev_growth",
+      "independent": 0.2191808871012727,
+      "package": 0.21918088710127248,
+      "difference": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "check": "reverse_margin",
+      "independent": 0.6265065682373177,
+      "package": 0.6265065682373177,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_year",
+      "independent": 2023,
+      "package": 2023,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_revenue",
+      "independent": 13267,
+      "package": 13267,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_segmented_ebit",
+      "independent": 5097,
+      "package": 5097,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_common_net",
+      "independent": 2217,
+      "package": 2217,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_eps",
+      "independent": 2.15,
+      "package": 2.15,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_comp_eps",
+      "independent": 3.78,
+      "package": 3.78,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_cfo_total",
+      "independent": 7268,
+      "package": 7268,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_cfo_discontinued",
+      "independent": 1026,
+      "package": 1026,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_core_capex",
+      "independent": 7958,
+      "package": 7958,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_development",
+      "independent": 142,
+      "package": 142,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_jv_contribution",
+      "independent": 4149,
+      "package": 4149,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_cfo_cont",
+      "independent": 6242,
+      "package": 6242,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_cash_reinvestment",
+      "independent": 12249,
+      "package": 12249,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2023_fcf_before_nci_preferred",
+      "independent": -6007,
+      "package": -6007,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_year",
+      "independent": 2024,
+      "package": 2024,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_revenue",
+      "independent": 13771,
+      "package": 13771,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_segmented_ebit",
+      "independent": 7964,
+      "package": 7964,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_common_net",
+      "independent": 4199,
+      "package": 4199,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_eps",
+      "independent": 4.05,
+      "package": 4.05,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_comp_eps",
+      "independent": 3.73,
+      "package": 3.73,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_cfo_total",
+      "independent": 7696,
+      "package": 7696,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_cfo_discontinued",
+      "independent": 670,
+      "package": 670,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_core_capex",
+      "independent": 6181,
+      "package": 6181,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_development",
+      "independent": 50,
+      "package": 50,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_jv_contribution",
+      "independent": 1546,
+      "package": 1546,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_cfo_cont",
+      "independent": 7026,
+      "package": 7026,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_cash_reinvestment",
+      "independent": 7777,
+      "package": 7777,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024_fcf_before_nci_preferred",
+      "independent": -751,
+      "package": -751,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_year",
+      "independent": 2025,
+      "package": 2025,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_revenue",
+      "independent": 15239,
+      "package": 15239,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_segmented_ebit",
+      "independent": 8036,
+      "package": 8036,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_common_net",
+      "independent": 3612,
+      "package": 3612,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_eps",
+      "independent": 3.47,
+      "package": 3.47,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_comp_eps",
+      "independent": 3.51,
+      "package": 3.51,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_cfo_total",
+      "independent": 7346,
+      "package": 7346,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_cfo_discontinued",
+      "independent": -185,
+      "package": -185,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_core_capex",
+      "independent": 5270,
+      "package": 5270,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_development",
+      "independent": 16,
+      "package": 16,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_jv_contribution",
+      "independent": 1051,
+      "package": 1051,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_cfo_cont",
+      "independent": 7531,
+      "package": 7531,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_cash_reinvestment",
+      "independent": 6337,
+      "package": 6337,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025_fcf_before_nci_preferred",
+      "independent": 1194,
+      "package": 1194,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_revenue",
+      "independent": 3577,
+      "package": 3577,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_common_net",
+      "independent": 1069,
+      "package": 1069,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_eps",
+      "independent": 1.03,
+      "package": 1.03,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_comp_eps",
+      "independent": 1.05,
+      "package": 1.05,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_comp_common_net",
+      "independent": 1094,
+      "package": 1094,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_cfo_total",
+      "independent": 2084,
+      "package": 2084,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_cfo_discontinued",
+      "independent": -54,
+      "package": -54,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_core_capex",
+      "independent": 1640,
+      "package": 1640,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_development",
+      "independent": 9,
+      "package": 9,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_jv_contribution",
+      "independent": 658,
+      "package": 658,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_cfo_cont",
+      "independent": 2138,
+      "package": 2138,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_cash_reinvestment",
+      "independent": 2307,
+      "package": 2307,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2024Q4_fcf_before_nci_preferred",
+      "independent": -169,
+      "package": -169,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_revenue",
+      "independent": 3623,
+      "package": 3623,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_common_net",
+      "independent": 978,
+      "package": 978,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_eps",
+      "independent": 0.94,
+      "package": 0.94,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_comp_eps",
+      "independent": 0.95,
+      "package": 0.95,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_comp_common_net",
+      "independent": 983,
+      "package": 983,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_cfo_total",
+      "independent": 1359,
+      "package": 1359,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_cfo_discontinued",
+      "independent": -56,
+      "package": -56,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_core_capex",
+      "independent": 1560,
+      "package": 1560,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_development",
+      "independent": 4,
+      "package": 4,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_jv_contribution",
+      "independent": 245,
+      "package": 245,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_cfo_cont",
+      "independent": 1415,
+      "package": 1415,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_cash_reinvestment",
+      "independent": 1809,
+      "package": 1809,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q1_fcf_before_nci_preferred",
+      "independent": -394,
+      "package": -394,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_revenue",
+      "independent": 3744,
+      "package": 3744,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_common_net",
+      "independent": 862,
+      "package": 862,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_eps",
+      "independent": 0.83,
+      "package": 0.83,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_comp_eps",
+      "independent": 0.82,
+      "package": 0.82,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_comp_common_net",
+      "independent": 848,
+      "package": 848,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_cfo_total",
+      "independent": 2173,
+      "package": 2173,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_cfo_discontinued",
+      "independent": 3,
+      "package": 3,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_core_capex",
+      "independent": 1109,
+      "package": 1109,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_development",
+      "independent": 6,
+      "package": 6,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_jv_contribution",
+      "independent": 264,
+      "package": 264,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_cfo_cont",
+      "independent": 2170,
+      "package": 2170,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_cash_reinvestment",
+      "independent": 1379,
+      "package": 1379,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q2_fcf_before_nci_preferred",
+      "independent": 791,
+      "package": 791,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_revenue",
+      "independent": 3704,
+      "package": 3704,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_common_net",
+      "independent": 813,
+      "package": 813,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_eps",
+      "independent": 0.78,
+      "package": 0.78,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_comp_eps",
+      "independent": 0.77,
+      "package": 0.77,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_comp_common_net",
+      "independent": 805,
+      "package": 805,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_cfo_total",
+      "independent": 1920,
+      "package": 1920,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_cfo_discontinued",
+      "independent": 12,
+      "package": 12,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_core_capex",
+      "independent": 1255,
+      "package": 1255,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_development",
+      "independent": 2,
+      "package": 2,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_jv_contribution",
+      "independent": 249,
+      "package": 249,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_cfo_cont",
+      "independent": 1908,
+      "package": 1908,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_cash_reinvestment",
+      "independent": 1506,
+      "package": 1506,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q3_fcf_before_nci_preferred",
+      "independent": 402,
+      "package": 402,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_revenue",
+      "independent": 4168,
+      "package": 4168,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_common_net",
+      "independent": 959,
+      "package": 959,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_eps",
+      "independent": 0.92,
+      "package": 0.92,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_comp_eps",
+      "independent": 0.98,
+      "package": 0.98,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_comp_common_net",
+      "independent": 1018,
+      "package": 1018,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_cfo_total",
+      "independent": 1894,
+      "package": 1894,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_cfo_discontinued",
+      "independent": -144,
+      "package": -144,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_core_capex",
+      "independent": 1346,
+      "package": 1346,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_development",
+      "independent": 4,
+      "package": 4,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_jv_contribution",
+      "independent": 293,
+      "package": 293,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_cfo_cont",
+      "independent": 2038,
+      "package": 2038,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_cash_reinvestment",
+      "independent": 1643,
+      "package": 1643,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2025Q4_fcf_before_nci_preferred",
+      "independent": 395,
+      "package": 395,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_revenue",
+      "independent": 3861,
+      "package": 3861,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_common_net",
+      "independent": 899,
+      "package": 899,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_eps",
+      "independent": 0.86,
+      "package": 0.86,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_comp_eps",
+      "independent": 0.99,
+      "package": 0.99,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_comp_common_net",
+      "independent": 1031,
+      "package": 1031,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_cfo_total",
+      "independent": 2603,
+      "package": 2603,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_cfo_discontinued",
+      "independent": 168,
+      "package": 168,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_core_capex",
+      "independent": 1070,
+      "package": 1070,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_development",
+      "independent": 4,
+      "package": 4,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_jv_contribution",
+      "independent": 233,
+      "package": 233,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_cfo_cont",
+      "independent": 2435,
+      "package": 2435,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_cash_reinvestment",
+      "independent": 1307,
+      "package": 1307,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q1_fcf_before_nci_preferred",
+      "independent": 1128,
+      "package": 1128,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_revenue",
+      "independent": 3957,
+      "package": 3957,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_common_net",
+      "independent": 987,
+      "package": 987,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_eps",
+      "independent": 0.95,
+      "package": 0.95,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_comp_eps",
+      "independent": 0.94,
+      "package": 0.94,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_comp_common_net",
+      "independent": 984,
+      "package": 984,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_cfo_total",
+      "independent": 2217,
+      "package": 2217,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_cfo_discontinued",
+      "independent": -2,
+      "package": -2,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_core_capex",
+      "independent": 889,
+      "package": 889,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_development",
+      "independent": 5,
+      "package": 5,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_jv_contribution",
+      "independent": 229,
+      "package": 229,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_cfo_cont",
+      "independent": 2219,
+      "package": 2219,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_cash_reinvestment",
+      "independent": 1123,
+      "package": 1123,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q2_fcf_before_nci_preferred",
+      "independent": 1096,
+      "package": 1096,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_revenue",
+      "independent": 4030,
+      "package": 4030,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_common_net",
+      "independent": 1026,
+      "package": 1026,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_eps",
+      "independent": 0.98,
+      "package": 0.98,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_comp_eps",
+      "independent": 0.94,
+      "package": 0.94,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_comp_common_net",
+      "independent": 983,
+      "package": 983,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_cfo_total",
+      "independent": 1782,
+      "package": 1782,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_cfo_discontinued",
+      "independent": -122,
+      "package": -122,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_core_capex",
+      "independent": 1194,
+      "package": 1194,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_development",
+      "independent": 5,
+      "package": 5,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_jv_contribution",
+      "independent": 213,
+      "package": 213,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_cfo_cont",
+      "independent": 1904,
+      "package": 1904,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_cash_reinvestment",
+      "independent": 1412,
+      "package": 1412,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "history_2026Q3_fcf_before_nci_preferred",
+      "independent": 492,
+      "package": 492,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_revenue",
+      "independent": 14648,
+      "package": 14648,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_common_net",
+      "independent": 3722,
+      "package": 3722,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_eps",
+      "independent": 3.58,
+      "package": 3.58,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_comp_eps",
+      "independent": 3.59,
+      "package": 3.59,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_comp_common_net",
+      "independent": 3730,
+      "package": 3730,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_cfo_total",
+      "independent": 7536,
+      "package": 7536,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_cfo_discontinued",
+      "independent": -95,
+      "package": -95,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_cfo_cont",
+      "independent": 7631,
+      "package": 7631,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_cash_reinvestment",
+      "independent": 7001,
+      "package": 7001,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2025Q3_fcf_before_nci_preferred",
+      "independent": 630,
+      "package": 630,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_revenue",
+      "independent": 16016,
+      "package": 16016,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_common_net",
+      "independent": 3871,
+      "package": 3871,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_eps",
+      "independent": 3.71,
+      "package": 3.71,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_comp_eps",
+      "independent": 3.8499999999999996,
+      "package": 3.8499999999999996,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_comp_common_net",
+      "independent": 4016,
+      "package": 4016,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_cfo_total",
+      "independent": 8496,
+      "package": 8496,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_cfo_discontinued",
+      "independent": -100,
+      "package": -100,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_cfo_cont",
+      "independent": 8596,
+      "package": 8596,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_cash_reinvestment",
+      "independent": 5485,
+      "package": 5485,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "TTM_2026Q3_fcf_before_nci_preferred",
+      "independent": 3111,
+      "package": 3111,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "common_cash_residual",
+      "independent": 1767,
+      "package": 1767,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "V2_cgl_one_off_cash",
+      "independent": 199,
+      "package": 199,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "V2_cfo_cont_less_cgl_one_off",
+      "independent": 8397,
+      "package": 8397,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "V2_fcf_before_nci_preferred_less_cgl_one_off",
+      "independent": 2912,
+      "package": 2912,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "V2_common_cash_residual_less_cgl_one_off",
+      "independent": 1568,
+      "package": 1568,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "V2_common_dividend_cash_coverage_less_cgl_one_off",
+      "independent": 0.43591882123992215,
+      "package": 0.43591882123992215,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "V2_third_party_settlement_cash_net_of_tax",
+      "independent": 78,
+      "package": 78,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "V2_common_cash_residual_illustrative_ex_cgl_plus_settlement",
+      "independent": 1646,
+      "package": 1646,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "V2_illustrative_cash_coverage_ex_cgl_plus_settlement",
+      "independent": 0.4576035585209897,
+      "package": 0.4576035585209897,
+      "difference": 0.0,
+      "pass": true
+    },
+    {
+      "check": "V2_dividends_payable",
+      "independent": 933,
+      "package": 933,
+      "difference": 0,
+      "pass": true
+    },
+    {
+      "check": "V2_accrued_interest",
+      "independent": 904,
+      "package": 904,
+      "difference": 0,
+      "pass": true
+    }
+  ],
+  "source_hashes": [
+    {
+      "id": "M4",
+      "file": "price_history.json",
+      "expected": "98030c57a4b83f3416d71b47f2010b1973a7c76391dbe97bcaf12ae5d1ef947d",
+      "actual": "98030c57a4b83f3416d71b47f2010b1973a7c76391dbe97bcaf12ae5d1ef947d",
+      "pass": true
+    }
+  ],
+  "annual": [
+    {
+      "year": 2023,
+      "revenue": 13267,
+      "segmented_ebit": 5097,
+      "common_net": 2217,
+      "eps": 2.15,
+      "comp_eps": 3.78,
+      "cfo_total": 7268,
+      "cfo_discontinued": 1026,
+      "core_capex": 7958,
+      "development": 142,
+      "jv_contribution": 4149,
+      "cfo_cont": 6242,
+      "cash_reinvestment": 12249,
+      "fcf_before_nci_preferred": -6007
+    },
+    {
+      "year": 2024,
+      "revenue": 13771,
+      "segmented_ebit": 7964,
+      "common_net": 4199,
+      "eps": 4.05,
+      "comp_eps": 3.73,
+      "cfo_total": 7696,
+      "cfo_discontinued": 670,
+      "core_capex": 6181,
+      "development": 50,
+      "jv_contribution": 1546,
+      "cfo_cont": 7026,
+      "cash_reinvestment": 7777,
+      "fcf_before_nci_preferred": -751
+    },
+    {
+      "year": 2025,
+      "revenue": 15239,
+      "segmented_ebit": 8036,
+      "common_net": 3612,
+      "eps": 3.47,
+      "comp_eps": 3.51,
+      "cfo_total": 7346,
+      "cfo_discontinued": -185,
+      "core_capex": 5270,
+      "development": 16,
+      "jv_contribution": 1051,
+      "cfo_cont": 7531,
+      "cash_reinvestment": 6337,
+      "fcf_before_nci_preferred": 1194
+    }
+  ],
+  "quarters": [
+    {
+      "quarter": "2024Q4",
+      "revenue": 3577,
+      "common_net": 1069,
+      "eps": 1.03,
+      "comp_eps": 1.05,
+      "comp_common_net": 1094,
+      "cfo_total": 2084,
+      "cfo_discontinued": -54,
+      "core_capex": 1640,
+      "development": 9,
+      "jv_contribution": 658,
+      "cfo_cont": 2138,
+      "cash_reinvestment": 2307,
+      "fcf_before_nci_preferred": -169
+    },
+    {
+      "quarter": "2025Q1",
+      "revenue": 3623,
+      "common_net": 978,
+      "eps": 0.94,
+      "comp_eps": 0.95,
+      "comp_common_net": 983,
+      "cfo_total": 1359,
+      "cfo_discontinued": -56,
+      "core_capex": 1560,
+      "development": 4,
+      "jv_contribution": 245,
+      "cfo_cont": 1415,
+      "cash_reinvestment": 1809,
+      "fcf_before_nci_preferred": -394
+    },
+    {
+      "quarter": "2025Q2",
+      "revenue": 3744,
+      "common_net": 862,
+      "eps": 0.83,
+      "comp_eps": 0.82,
+      "comp_common_net": 848,
+      "cfo_total": 2173,
+      "cfo_discontinued": 3,
+      "core_capex": 1109,
+      "development": 6,
+      "jv_contribution": 264,
+      "cfo_cont": 2170,
+      "cash_reinvestment": 1379,
+      "fcf_before_nci_preferred": 791
+    },
+    {
+      "quarter": "2025Q3",
+      "revenue": 3704,
+      "common_net": 813,
+      "eps": 0.78,
+      "comp_eps": 0.77,
+      "comp_common_net": 805,
+      "cfo_total": 1920,
+      "cfo_discontinued": 12,
+      "core_capex": 1255,
+      "development": 2,
+      "jv_contribution": 249,
+      "cfo_cont": 1908,
+      "cash_reinvestment": 1506,
+      "fcf_before_nci_preferred": 402
+    },
+    {
+      "quarter": "2025Q4",
+      "revenue": 4168,
+      "common_net": 959,
+      "eps": 0.92,
+      "comp_eps": 0.98,
+      "comp_common_net": 1018,
+      "cfo_total": 1894,
+      "cfo_discontinued": -144,
+      "core_capex": 1346,
+      "development": 4,
+      "jv_contribution": 293,
+      "cfo_cont": 2038,
+      "cash_reinvestment": 1643,
+      "fcf_before_nci_preferred": 395
+    },
+    {
+      "quarter": "2026Q1",
+      "revenue": 3861,
+      "common_net": 899,
+      "eps": 0.86,
+      "comp_eps": 0.99,
+      "comp_common_net": 1031,
+      "cfo_total": 2603,
+      "cfo_discontinued": 168,
+      "core_capex": 1070,
+      "development": 4,
+      "jv_contribution": 233,
+      "cfo_cont": 2435,
+      "cash_reinvestment": 1307,
+      "fcf_before_nci_preferred": 1128
+    },
+    {
+      "quarter": "2026Q2",
+      "revenue": 3957,
+      "common_net": 987,
+      "eps": 0.95,
+      "comp_eps": 0.94,
+      "comp_common_net": 984,
+      "cfo_total": 2217,
+      "cfo_discontinued": -2,
+      "core_capex": 889,
+      "development": 5,
+      "jv_contribution": 229,
+      "cfo_cont": 2219,
+      "cash_reinvestment": 1123,
+      "fcf_before_nci_preferred": 1096
+    },
+    {
+      "quarter": "2026Q3",
+      "revenue": 4030,
+      "common_net": 1026,
+      "eps": 0.98,
+      "comp_eps": 0.94,
+      "comp_common_net": 983,
+      "cfo_total": 1782,
+      "cfo_discontinued": -122,
+      "core_capex": 1194,
+      "development": 5,
+      "jv_contribution": 213,
+      "cfo_cont": 1904,
+      "cash_reinvestment": 1412,
+      "fcf_before_nci_preferred": 492
+    }
+  ],
+  "ttm": {
+    "2025Q3": {
+      "revenue": 14648,
+      "common_net": 3722,
+      "eps": 3.58,
+      "comp_eps": 3.59,
+      "comp_common_net": 3730,
+      "cfo_total": 7536,
+      "cfo_discontinued": -95,
+      "cfo_cont": 7631,
+      "cash_reinvestment": 7001,
+      "fcf_before_nci_preferred": 630
+    },
+    "2026Q3": {
+      "revenue": 16016,
+      "common_net": 3871,
+      "eps": 3.71,
+      "comp_eps": 3.8499999999999996,
+      "comp_common_net": 4016,
+      "cfo_total": 8496,
+      "cfo_discontinued": -100,
+      "cfo_cont": 8596,
+      "cash_reinvestment": 5485,
+      "fcf_before_nci_preferred": 3111
+    }
+  },
+  "reverse": {
+    "wacc": 0.053253505852179917,
+    "rev_growth": 0.2191808871012727,
+    "margin": 0.6265065682373177
+  },
+  "illustrative_audit_sensitivities": {
+    "unit_CAD1bn_USD_per_share": 0.6874098547901676,
+    "NCI_30pct_USD_per_share": 2.015416953259292,
+    "lease_15pct_USD_per_share": 0.9657421049947063,
+    "debt_fair_value_difference_USD_per_share": 1.2256517710908688,
+    "stub_250_USD_per_share": 0.1718524636975419,
+    "omitted_dividends_payable_USD_per_share": 0.6413533945192263,
+    "accrued_interest_USD_per_share": 0.6214185087303115,
+    "zero_NCI_base_USD": 36.87723856637128,
+    "price_gap_equity_CADm": 49782.26265746359,
+    "coverage_residual": 0.49124270225187655,
+    "coverage_pre_NCI_pref": 0.8648874061718098,
+    "growth_comparable_eps": 0.07242339832869082,
+    "growth_comparable_income": 0.07667560321715827,
+    "CFO_growth": 0.12645786921766478,
+    "PE_comparable": 23.345692987012985,
+    "dividend_yield": 0.03905167056704962,
+    "core_anchor_sales_margin_vs_claim": -5.25
+  },
+  "price_source": {
+    "symbol": "TRP",
+    "currency": "USD",
+    "exchange": "NYSE",
+    "raw_price": 64.1,
+    "raw_price_time": "2026-11-05T15:55:27+00:00",
+    "analytical_price_64_38": "stated in sources.json; raw quote response not retained in this package"
+  },
+  "technicals": {
+    "last_date": "2026-11-04T14:30:00+00:00",
+    "close": 62.61000061035156,
+    "high252": 71.47000122070312,
+    "avg_volume20": 2245685.0,
+    "ema": {
+      "20": {
+        "last": 62.30911781436879,
+        "ten_before": 60.71167636618817,
+        "twenty_before": 60.019960620893315
+      },
+      "50": {
+        "last": 62.15846596694717,
+        "ten_before": 61.65530600340665,
+        "twenty_before": 61.97068280212864
+      },
+      "200": {
+        "last": 62.005990793854004,
+        "ten_before": 61.88596837856784,
+        "twenty_before": 61.98288313921632
+      }
+    },
+    "pullback": 0.12396810492546961
+  }
+}
