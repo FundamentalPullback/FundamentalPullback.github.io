@@ -1,0 +1,86 @@
+# HRI — recuperación de alquileres, financiación de flota todavía por cerrar
+
+Corte: 4 de noviembre de 2026, 23:44 UTC. USD millones salvo cotizaciones, EPS y ratios. Investigación factual parcial; auditoría independiente completada para este alcance parcial. No valoración integral ni aprobación de entrada.
+
+## 1. Dictamen y alcance
+
+La actividad mejora, pero el EBITDA no mide la caja que queda después de renovar la flota y atender la deuda. El expediente avanza la historia, el beneficio, los cobros y las obligaciones; no certifica owner FCF, un puente de equity ni un valor por acción. No hay escenarios de valoración ni precio de compra. La decisión es observación fundamental hasta demostrar reposición y desapalancamiento sostenibles, no rechazo definitivo de la compañía.
+
+El escáner del 4 de noviembre trae Last 158,41, QP 90 y Opportunity 90. StockAnalysis muestra 158,10 para el cierre regular de esa fecha. Se conservan las dos referencias, sin fabricar un cierre único certificado ni explicar causalmente la caída. Stage 2 no figura en el CSV; los filtros técnicos y fundamentales que faltan no se dan por aprobados.
+
+## 2. Negocio, historia y perímetro
+
+Herc alquila equipos y vende flota usada, equipos nuevos y servicios auxiliares. Sus resultados dependen de utilización, precio, mezcla, financiación y valor residual. Las ventas ordinarias de flota usada forman parte del ciclo de reposición: no son por definición extraordinarias ni caja gratuita.
+
+H&E se incorpora a los resultados desde el 2 de junio de 2025. El TTM octubre de 2025–septiembre de 2026 ya contiene doce meses posteriores a esa incorporación, mientras FY2025 y el comparativo de nueve meses de 2025 sólo contienen una fracción. Esto no convierte el crecimiento interanual de nueve meses en orgánico: los alquileres suben un 21,1 % reportado, pero la compañía comunica un 4 % sobre base proforma con H&E. No se atribuye causalmente toda mejora a sinergias. La apertura contable de H&E quedó finalizada en Q2 de 2026; goodwill se redujo 12 M por ajustes de valoración. La administración afirma haber completado la integración, pero subsiste la necesidad de comprobar la conversión económica.
+
+{HISTORY_TABLE}
+
+El TTM anterior presenta ingresos 4.118, EBIT 286, beneficio neto −69 y CFO 1.101; la proxy tras compras y disposiciones es 229 frente a 299 actuales. Incluye aproximadamente cuatro meses de H&E frente a doce en el TTM actual y costes de transacción 187 frente a 23: no es un crecimiento comparable limpio.
+
+El TTM actual presenta ingresos 4.916, EBIT 653 y beneficio neto 123; CFO 1.266 menos capex de flota 1.318 y otros activos 141, más disposiciones 461 y 31, deja 299. Restar SBC 28 deja una proxy de 271, sin certificar reposición ni owner FCF. La suma de los cuatro EPS trimestrales publicados es 3,67; no se etiqueta como EPS GAAP TTM recalculado.
+
+Las cifras trimestrales derivadas se identifican en el soporte. EPS de un trimestre no se obtiene restando EPS acumulados cuando cambian acciones y dilución; los huecos quedan como n/d. La contabilidad del EBIT se reconstruye antes de intereses y otros resultados no operativos, reteniendo costes de transacción y resultados de disposición incluidos en explotación.
+
+## 3. Calidad del beneficio
+
+Q3: ingresos 1.364, alquileres 1.254 y EBIT reconstruido 247, frente a 1.304, 1.122 y 172. El margen EBIT pasa del 13,19 % al 18,11 %. La utilización monetaria mejora del 39,9 % al 43,5 %, con flota media a coste original sólo un 1,7 % mayor. Son señales operativas favorables, aunque la combinación de grandes proyectos y especialidades puede cambiar la mezcla de riesgo y rendimiento.
+
+En nueve meses el EBIT reconstruido es 493 frente a 263. Una comparación limitada que añade costes de transacción 9/185 y elimina la pérdida anterior de activos en venta de 48 deja 502 frente a 496. No es un EBIT normalizado integral: todavía contiene diferencias de perímetro, depreciación, reestructuración, mezcla y gastos de integración. Evita presentar toda la subida GAAP como mejora recurrente.
+
+La conciliación non-GAAP de nueve meses añade 93 de amortización de adquisiciones y 37 del ajuste de valor de flota vendida, pero resta 32 por efecto neto de prolongar vidas útiles y revalorar la flota adquirida. No se añaden sólo los ajustes favorables ni se interpreta la depreciación como reposición física exacta. El aumento de vidas útiles puede mejorar el beneficio sin mejorar los cobros. SBC de 22 permanece como coste económico y no se sustituye por los pagos de retenciones de empleados.
+
+Los costes operativos directos representan el 44,6 % de alquileres frente al 43,0 % anterior. Transporte, combustible, nuevas sucursales y compensación de personal limitan el apalancamiento operativo. No se eliminan como extraordinarios por ser incómodos. Los impuestos pagados son 10 frente a provisión 22; créditos, ajustes de declaraciones y evaluaciones extranjeras impiden extrapolar automáticamente esa tasa de caja.
+
+La guía elevada incluye alquileres de 4.475–4.550 y EBITDA ajustado de 2.100–2.150, pero también capex neto de alquileres de 1.000–1.100 y bruto de 1.450–1.600, superiores a la guía anterior. Son objetivos de la administración, no caja garantizada.
+
+## 4. Caja, flota y reposición
+
+Nueve meses: CFO 951 − compras de flota pagadas 1.056 − capex no alquiler 107 = −212. Al añadir ventas de flota cobradas 319 resulta 107; con ventas de otros activos 26 resulta el FCF publicado de 133, idéntico al del año anterior. Tras restar SBC queda una proxy de 111 frente a 105, no owner FCF. La venta de Cinelease por 99 del comparativo y adquisiciones por 4.256 se muestran separadas y no forman parte de ese FCF.
+
+Las compras de equipos pendientes en proveedores son 252 al cierre, frente a 19 en diciembre y 66 en septiembre anterior. El aumento de 233 frente al inicio del año es financiación temporal relevante. Una prueba mecánica de pagar ese aumento, sin CFO compensatorio, llevaría el FCF de 133 a −100; no es una corrección de la cifra publicada ni prueba de que todo venza inmediatamente. Compras pagadas más ese aumento serían 1.289, antes de conciliar divisas, cambios de perímetro y otros movimientos no monetarios. Se necesita una conciliación de adiciones devengadas, pagos y bajas antes de llamarlo capex económico exacto. Además, se adquirieron equipos mediante finance leases por 24 frente a 10 anteriores, fuera del capex pagado. Por eso 1.289 tampoco equivale al total de adiciones económicas. No se suman esos 24 otra vez al pasivo de finance leases de 86, que ya refleja movimientos del periodo. No se resta otra vez el cambio de cuentas a pagar operativo de −22, que pertenece al CFO.
+
+Los cambios operativos en activos y pasivos consumen 166: cobros pendientes −260, otros activos +11, proveedores −22 y pasivos acumulados/otros +105. Son cambios operativos, no sólo capital circulante corriente homogéneo. La provisión por cuentas a cobrar de 79 frente a 58 exige vigilar el riesgo de cobro.
+
+La flota tiene coste contable bruto 9.144, neto 6.190 y coste original aproximado comunicado de 10.000; no son medidas intercambiables. Su edad media aumenta de 45 a 46 meses. Reparaciones ordinarias ya se cargan a resultados; sustituciones importantes se capitalizan. Un modelo no puede borrar capex de mantenimiento porque la depreciación sea no monetaria, ni añadir simultáneamente la ganancia de venta y todos los cobros de disposición sin reconciliar el valor contable dado de baja. Faltan reposición por clase, vidas económicas, residual de ciclo y necesidades de crecimiento para certificar FCFF/FCFE.
+
+## 5. Capital, arrendamientos y riesgos
+
+El principal de notas 4.750, ABL 1.950, term loan 744, securitización de cuentas a cobrar 550 y finance leases 86 suma 8.080. Menos costes de emisión 49 coincide con deuda contable 8.031. Las obligaciones por ventas con arrendamiento que no calificaron como venta son otros 99 brutos, 97 contables; los activos permanecen en balance. Con caja 66, el subtotal nominal de deuda y esa financiación menos caja asciende a 8.113. No es un puente integral de equity ni una medida de caja distribuible.
+
+Los operating leases de 1.502 se mantienen separados: no se suman a deuda sin cambiar coherentemente el tratamiento de alquileres en los flujos. La liquidez de 2.100 suma caja y disponibilidad ABL 2.034; esa línea es capacidad de endeudamiento con garantía, no dinero sobrante. Las cuentas a cobrar y buena parte de los activos están gravados. La facilidad AR vence el 31 de agosto de 2027; su clasificación a largo plazo depende de intención y capacidad de renovar o refinanciar con ABL, no de una renovación ya firmada.
+
+El principal a tipo variable ABL/term/AR suma 3.244. Una subida de un punto porcentual equivale mecánicamente a 32,44 de interés anual antes de impuestos, sin amortizaciones ni coberturas nuevas; no es una previsión. No hay incumplimiento declarado: se cumplían los convenios a septiembre. El mantenimiento de liquidez evita activar una prueba de cobertura fija 1:1 del ABL; no significa ausencia de restricciones sobre dividendos, inversión y deuda.
+
+La cuenta a cobrar contingente de Cinelease de 32 es un valor razonable de nivel 3, vinculado a ingresos de 2027/2028 y cobros posteriores potencialmente diferidos a 2031. No es efectivo garantizado y no se suma a un puente que aquí queda nulo. Cartas de crédito bancarias de 16 y con surety de 39 no son automáticamente deuda usada. Litigios, indemnizaciones, riesgos ambientales y prestaciones requieren revisión adicional para cerrar reservas de capital; la ausencia de pérdida estimable no equivale a pérdida cero.
+
+El anual de diciembre de 2025 registra déficit de pensiones de 8, beneficios fiscales no reconocidos de 17 y una exposición potencial de unos 73 vinculada a venta o liquidación de filiales extranjeras. Son datos históricos y de distinta naturaleza, no reservas actuales que deban sumarse mecánicamente ni un impuesto de repatriación federal ordinario. No se convierten en un puente transaccional actual.
+
+Las acciones de balance de 33,4 y el promedio diluido de Q3 de 33,5 son históricos y distintos. No certifican toda la dilución al precio actual. El dividendo de 0,70 pagado en septiembre ya está en la caja histórica; no se descuenta de nuevo. No se ha conciliado un balance de capital posterior al 30 de septiembre.
+
+## 6. Contraste sectorial, sin múltiplo objetivo
+
+United Rentals, fuente primaria del 21 de octubre, presenta nueve meses de ingresos 13.288 y EBIT 3.416, margen del 25,71 %, frente a 11.891/2.921 y 24,56 %. Su CFO 4.934 menos flota pagada 4.339 y otros activos 280, más ventas de flota 1.028, otros activos 44 e indemnizaciones por equipos dañados 34, reproduce FCF publicado 1.421. Antes de las dos últimas partidas serían 1.343; menos SBC 122, la proxy sobre FCF publicado es 1.299. No es owner FCF ni una valoración transferible a Herc.
+
+URI también comunica capex de flota devengado de 4.746 frente a pagos 4.339: el desfase de 407 demuestra por qué pagos y compras no deben confundirse en este sector. Su apalancamiento neto comunicado de 1,8x contrasta con 3,90x de Herc, pero ambos usan EBITDA ajustado y definiciones/perímetros propios. No se construye un múltiplo objetivo, ni se equiparan márgenes, rentabilidad de flota, deuda o mezcla de especialidades.
+
+## 7. Condiciones pendientes y calendario
+
+Resultados Q3 publicados el 27 de octubre, con conferencia ese día a las 08:30 ET. No se ha confirmado una fecha primaria exacta para los próximos resultados. No se rellena con una estimación de proveedor ni se elimina por ello el filtro de calendario para una entrada.
+
+El 8-K del 26 de octubre anuncia una sucesión efectiva el 1 de enero de 2027: Aaron Birnbaum pasará a CEO y Lawrence Silber a presidente ejecutivo. Es un evento de gestión verificable, no una previsión de resultados ni una razón demostrada para el movimiento bursátil.
+
+Para completar Stage 3: conciliar adiciones y pagos de flota, reposición sostenible y residuales; normalizar impuestos y circulante; verificar capital y obligaciones posteriores al balance, reservas y dilución; obtener valoración coherente con arrendamientos y rentabilidad de reinversión, WACC y terminal calibrados, y comparables homogéneos. Para entrada se necesitan además filtros técnicos y calendario vigentes. No hay autorización de ampliación, compra ni cambio de gestión.
+
+## 8. Pros y contras para la ficha
+
+- ES favorable: Los alquileres Q3 crecen un 12 % y la utilización monetaria sube al 43,5 %, con mejora del margen EBIT reportado.
+- EN favorable: Q3 rental revenue grows 12% and dollar utilization reaches 43.5%, alongside a higher reported EBIT margin.
+- ES riesgo: El FCF de nueve meses permanece en 133 M mientras las compras de flota pendientes en proveedores suben a 252 M; no se certifica caja del propietario.
+- EN risk: Nine-month FCF stays at $133m while unpaid fleet purchases rise to $252m; owner cash flow is not certified.
+- ES riesgo: El subtotal de deuda nominal y financiación menos caja es 8.113 M, antes de cerrar otras obligaciones; la liquidez incluye crédito disponible.
+- EN risk: Nominal debt and financing less cash total $8,113m before other obligations are reconciled; liquidity includes undrawn credit.
+
+## Fuentes
+
+{SOURCE_LIST}
