@@ -1,0 +1,82 @@
+{
+  "schema": "fp.observed-entry-review.v1",
+  "ticker": "CTSH",
+  "proposal_id": "CTSH-20261105-B-V2",
+  "report_id": "A278",
+  "recorded_at": "2026-11-05T14:49:13.130989+00:00",
+  "session_date": "2026-11-05",
+  "session_type": "regular",
+  "currency": "USD",
+  "bar_start": "2026-11-05T09:30:00-05:00",
+  "bar_end": "2026-11-05T09:45:00-05:00",
+  "bar_start_label_explained": "Yahoo labels the interval by its start; the 09:45 row is the following incomplete interval and is excluded.",
+  "observed_ohlcv": {
+    "open": 67.12000274658203,
+    "high": 67.8572006225586,
+    "low": 66.4052963256836,
+    "close": 66.59750366210938,
+    "volume": 401797
+  },
+  "minute_bar_count": 15,
+  "minute_reaggregation_matches_15m": true,
+  "independent_provider_matches_exact_ohlc": false,
+  "signal_close_gt_65_26_lte_65_78": false,
+  "regular_high_gt_fundamental_cap_66_50": true,
+  "M_breached": false,
+  "evaluator_output": {
+    "status": "suspended",
+    "reason": "fundamental cap exceeded; documented new review required"
+  },
+  "status": "suspended_requires_documented_new_review",
+  "latest_observed_quote": {
+    "source": "Yahoo Finance",
+    "price": 67.26,
+    "timestamp": "2026-11-05T09:46:35-05:00",
+    "session_type": "regular",
+    "executable_bid_ask": false
+  },
+  "independent_breach_corroboration": {
+    "source": "StockAnalysis",
+    "price": 66.81,
+    "timestamp_display": "2026-11-05 09:42 AM EST",
+    "open_display": 67.18,
+    "high_display": 67.39,
+    "low_display": 66.81,
+    "exact_ohlc_matches_yahoo": false,
+    "explanation": "Different source/time/coverage. Both reported regular prints above 66.50; not independent verification of the same 15-minute OHLC."
+  },
+  "data_caveats": [
+    "Yahoo intraday 1m and 15m are same-provider consistency, not independent feeds.",
+    "Yahoo metadata day low 66.53 differs from bar low 66.4052963; use the preserved bar data for this 15-minute interval. Both alternatives remain above the 61.55 structural invalidation and both sources corroborate regular price above 66.50.",
+    "Request timestamp is request start, not completion. Snapshot was available before this recorded_at.",
+    "No real-time executable bid/ask, account reconciliation, or broker orders certified."
+  ],
+  "actions": {
+    "entry_approved": false,
+    "orders_submitted": false,
+    "automatic_rearm_permitted": false,
+    "valuation_changed": false,
+    "required_next_step": "No entry under B V2. New documented evaluation required before any reactivation; a return to the band alone does not reactivate."
+  },
+  "sources": [
+    {
+      "provider": "yahoo15",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=15m&includePrePost=false",
+      "request_started_at": "2026-11-05T14:46:31.242440+00:00",
+      "snapshot_sha256": "0a1fb0cfd53387c59f1798b46f19e5e837af930e1c782dedf89fdae3799d8041"
+    },
+    {
+      "provider": "yahoo1",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=1m&includePrePost=false",
+      "request_started_at": "2026-11-05T14:46:31.243535+00:00",
+      "snapshot_sha256": "122dd509298b3e02871caf22221b6ce4dfffc113369e9b2aa7c515e040fb35b4"
+    },
+    {
+      "provider": "sa",
+      "url": "https://stockanalysis.com/stocks/ctsh/",
+      "request_started_at": "2026-11-05T14:46:31.244109+00:00",
+      "snapshot_sha256": "aa687c8e64bef393b24a78873d2d6e100dcdfef9f146c6dbb937427dec9a5e7d"
+    }
+  ],
+  "report_clause": "B V2 section Señal B y ventana exacta, item 6: if price trades above 66.50 during this regular session, suspend and conduct recorded new evaluation before reactivation."
+}

@@ -1,0 +1,121 @@
+{
+  "verified_at_UTC": "2026-11-05T14:50:30.704766+00:00",
+  "decision": "B_proposal_suspended_pending_new_documented_review",
+  "entry_approved": false,
+  "orders_sent_by_auditor": false,
+  "fills_assumed": false,
+  "window": {
+    "start_EST": "2026-11-05T09:30:00-05:00",
+    "end_EST": "2026-11-05T09:45:00-05:00",
+    "start_UTC": "2026-11-05T14:30:00+00:00",
+    "end_UTC": "2026-11-05T14:45:00+00:00",
+    "timestamps_label_bar_starts": true,
+    "one_minute_bar_count": 15
+  },
+  "yahoo_one_minute_aggregate": {
+    "open": 67.12000274658203,
+    "high": 67.8572006225586,
+    "low": 66.4052963256836,
+    "close": 66.59750366210938,
+    "volume": 401797
+  },
+  "yahoo_direct_15minute": {
+    "volume": 401797,
+    "open": 67.12000274658203,
+    "high": 67.8572006225586,
+    "close": 66.59750366210938,
+    "low": 66.4052963256836
+  },
+  "aggregate_minus_direct": {
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0,
+    "volume": 0
+  },
+  "regular_fundamental_cap_breach": true,
+  "first_close_qualifies": false,
+  "entry_interval": "(65.26,65.78]",
+  "fundamental_cap": 66.5,
+  "independent_provider_corroboration": {
+    "regular_price_above_cap": true,
+    "source": "StockAnalysis",
+    "price": 66.81,
+    "time_EST": "Nov 5, 2026, 9:42 AM EST",
+    "market_status": "open",
+    "exact_first_bar_OHLC_confirmed": false
+  },
+  "latest_yahoo_snapshot_quote": {
+    "price": 67.26,
+    "time_EST": "2026-11-05T09:46:35-05:00",
+    "executable_bid_ask_verified": false
+  },
+  "discrepancies_and_limits": {
+    "Yahoo_meta_day_low": 66.53,
+    "Yahoo_completed_bar_low": 66.4052963256836,
+    "SA_snapshot_OHL": {
+      "open": 67.18,
+      "high": 67.39,
+      "low": 66.81
+    },
+    "full_OHLC_independent_provider_confirmation": false,
+    "explanation": "Yahoo 1m and15m agreement is same-provider internal confirmation, not independent-provider validation. SA snapshot is earlier and differs in OHL. Yahoo meta day low also differs from its completed-bar low. These discrepancies do not change the separately corroborated regular price above66.50."
+  },
+  "timestamp_semantics": "fetch.py records retrievedAt before starting the HTTP request. Treat it as request-start time, not response completion. Source-file mtimes are later than Yahoo09:46:35 quote timestamp.",
+  "sources": [
+    {
+      "key": "yahoo15",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=15m&includePrePost=false",
+      "request_start_UTC": "2026-11-05T14:46:31.242440+00:00",
+      "sha256": "0a1fb0cfd53387c59f1798b46f19e5e837af930e1c782dedf89fdae3799d8041",
+      "local_snapshot_saved_at_UTC": "2026-11-05T14:46:38.374392+00:00"
+    },
+    {
+      "key": "yahoo1",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=1m&includePrePost=false",
+      "request_start_UTC": "2026-11-05T14:46:31.243535+00:00",
+      "sha256": "122dd509298b3e02871caf22221b6ce4dfffc113369e9b2aa7c515e040fb35b4",
+      "local_snapshot_saved_at_UTC": "2026-11-05T14:46:38.225804+00:00"
+    },
+    {
+      "key": "sa",
+      "url": "https://stockanalysis.com/stocks/ctsh/",
+      "request_start_UTC": "2026-11-05T14:46:31.244109+00:00",
+      "sha256": "aa687c8e64bef393b24a78873d2d6e100dcdfef9f146c6dbb937427dec9a5e7d",
+      "local_snapshot_saved_at_UTC": "2026-11-05T14:46:40.323721+00:00"
+    }
+  ],
+  "checks": {
+    "source_hash_yahoo15": true,
+    "source_hash_yahoo1": true,
+    "source_hash_sa": true,
+    "fifteen_contiguous_minutes": true,
+    "window_is_completed_0930_0945": true,
+    "all_OHLCV_present": true,
+    "aggregate_matches_15m_open": true,
+    "aggregate_matches_15m_high": true,
+    "aggregate_matches_15m_low": true,
+    "aggregate_matches_15m_close": true,
+    "aggregate_matches_15m_volume": true,
+    "first_open_above_fundamental_cap": true,
+    "regular_high_above_fundamental_cap": true,
+    "close_outside_entry_interval": true,
+    "SA_market_open": true,
+    "SA_regular_0942_above_cap": true,
+    "observed_review_OHLCV_matches_independent": true,
+    "observed_review_status_is_suspension_not_terminal_cancel": true,
+    "observed_review_not_approved": true,
+    "observed_review_no_submitted_order": true,
+    "observed_review_no_automatic_rearm": true,
+    "observed_review_M_intact": true,
+    "observed_review_preserves_cross_provider_limit": true
+  },
+  "pass": true,
+  "checks_count": 23,
+  "observed_review_verified": {
+    "json_sha256": "70fa6100aa93f32f03c875badc45684f722d0624ee23a952d7a5d5da1cf99d06",
+    "markdown_sha256": "cb6de4ec5d6173d9b744fff8d3fc61d6a98b2dcfc9f15bb77075bdc28607e153",
+    "status": "suspended_requires_documented_new_review",
+    "not_a_terminal_cancellation": true
+  }
+}
