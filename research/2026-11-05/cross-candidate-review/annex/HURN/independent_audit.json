@@ -1,0 +1,126 @@
+{
+  "reviewed_at_utc": "2026-11-05T19:28:27.792756+00:00",
+  "ticker": "HURN",
+  "verdict": "PASS_WITH_CAVEATS_DOCUMENTATION_ONLY",
+  "entry_approved": false,
+  "approved_quantity": 0,
+  "checks_count": 26,
+  "failures": [],
+  "checks": [
+    {
+      "check": "base_upside",
+      "passed": true
+    },
+    {
+      "check": "base_discount",
+      "passed": true
+    },
+    {
+      "check": "bear_upside",
+      "passed": true
+    },
+    {
+      "check": "bear_discount",
+      "passed": true
+    },
+    {
+      "check": "bull_upside",
+      "passed": true
+    },
+    {
+      "check": "bull_discount",
+      "passed": true
+    },
+    {
+      "check": "wc_4_5pct_no_strategic_upside",
+      "passed": true
+    },
+    {
+      "check": "wc_4_5pct_no_strategic_discount",
+      "passed": true
+    },
+    {
+      "check": "wacc8_no_strategic_upside",
+      "passed": true
+    },
+    {
+      "check": "wacc8_no_strategic_discount",
+      "passed": true
+    },
+    {
+      "check": "wc4_5_no_strategic_wacc8_upside",
+      "passed": true
+    },
+    {
+      "check": "wc4_5_no_strategic_wacc8_discount",
+      "passed": true
+    },
+    {
+      "check": "moderate_stress_wacc9_wc10_margin_minus_50bps_upside",
+      "passed": true
+    },
+    {
+      "check": "moderate_stress_wacc9_wc10_margin_minus_50bps_discount",
+      "passed": true
+    },
+    {
+      "check": "WACC8_only_upside",
+      "passed": true
+    },
+    {
+      "check": "WACC8_only_discount",
+      "passed": true
+    },
+    {
+      "check": "no_extra_strategic_reserve_upside",
+      "passed": true
+    },
+    {
+      "check": "no_extra_strategic_reserve_discount",
+      "passed": true
+    },
+    {
+      "check": "business_services_proxy_upside",
+      "passed": true
+    },
+    {
+      "check": "business_services_proxy_discount",
+      "passed": true
+    },
+    {
+      "check": "business_services_no_extra_reserve_upside",
+      "passed": true
+    },
+    {
+      "check": "business_services_no_extra_reserve_discount",
+      "passed": true
+    },
+    {
+      "check": "model_hash_results.json",
+      "passed": true
+    },
+    {
+      "check": "model_hash_analysis.json",
+      "passed": true
+    },
+    {
+      "check": "model_hash_assumptions.json",
+      "passed": true
+    },
+    {
+      "check": "model_hash_value.py",
+      "passed": true
+    }
+  ],
+  "caveats": [
+    "Actualización de precio sobre modelo preservado, no nueva valoración completa.",
+    "Observación sin aprobación fundamental, Stage3.5, techo, stop ni cantidad.",
+    "Sensibilidades cercanas al precio no prueban sobrevaloración inequívoca ni seleccionan automáticamente una base superior.",
+    "815m corresponde a deuda financiera; caja25,6m reservada como operativa. No confundir con deuda neta contable."
+  ],
+  "file_hashes": {
+    "report.md": "b5621830e67fb6a5a8cffaa5a8312945d3413d0d9684f5f958ddc4c1fa737c75",
+    "report.html": "75db25e7d9cc1fe933b42a6d050ec13c5eb410d2d55c2b319176523af1063440",
+    "current_comparison.json": "f974358b74797b66bd4c6c548e1e06a2a45556a56d56e5d77ba6fe83d5795034"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "ticker": "UNFI",
+  "quote": {
+    "price": 46.365,
+    "currency": "USD",
+    "market_time_UTC": "2026-11-05T19:12:32+00:00",
+    "request_started_at": "2026-11-05T19:14:15.473008+00:00",
+    "response_received_at": "2026-11-05T19:14:22.301869+00:00",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/UNFI?range=1d&interval=15m&includePrePost=false",
+    "source_sha256": "56e122feef60203620fb47c488de5e4dd83099597b7a131ba60b18e445ea9874",
+    "executable_bid_ask_verified": false
+  },
+  "unchanged_model_hashes": {
+    "model.py": "7c940d426bc78ab7e1d74aeb516a2a61e4b8b2e7522881c1e7a073f02a32a1cb",
+    "model_inputs.json": "28b06fd1ab0683e3986f8c7d282737ca88dcf5c4ad5cd8df0b47f18d06520c80",
+    "model_results.json": "7da9aebd71a825ebb043e6e3d72fd487c917b802966f70762d014d2bd831bba8"
+  },
+  "economic_model_changed": false,
+  "intraday_observed": {
+    "low": 46.099998474121094,
+    "high": 49.459999084472656,
+    "previous_close": 48.29
+  },
+  "scenarios": {
+    "base": {
+      "value": 43.71005558478062,
+      "return_pct": -5.726182282366832,
+      "MOS_pct": -6.073990022890308
+    },
+    "bear": {
+      "value": 9.529952662834335,
+      "return_pct": -79.44580467414141,
+      "MOS_pct": -386.5186810509344
+    },
+    "bull": {
+      "value": 66.92411834684316,
+      "return_pct": 44.341892261065794,
+      "MOS_pct": 30.720043617598048
+    },
+    "limited_two_year_value": {
+      "value": 46.80312244041437,
+      "return_pct": 0.9449421771042132,
+      "MOS_pct": 0.9360966054607678
+    },
+    "limited_two_year_plus_later_shield_value": {
+      "value": 47.423476784805445,
+      "return_pct": 2.2829219989333405,
+      "MOS_pct": 2.2319679124508607
+    },
+    "persistent_margin_value": {
+      "value": 69.03485648883445,
+      "return_pct": 48.89433082893226,
+      "MOS_pct": 32.83827567962139
+    }
+  },
+  "reverse_margin": {
+    "parallel_addition": 0.0004757411109399144,
+    "addition_basis_points": 4.757411109399144,
+    "Y1_margin": 0.012475741110939916,
+    "terminal_margin": 0.014475741110939914,
+    "warning": "Sustained all-curve shift, including terminal. This is not an updated forecast or proof of cash conversion."
+  },
+  "capital_bridge": {
+    "date": "2026-08-01",
+    "deductions": 1610,
+    "shares_millions": 62.153154,
+    "post_balance_change_assumed": 0,
+    "current_capital_certified": false
+  },
+  "change_from_old_price_pct": -3.986332574031881,
+  "finite_cash_bridge_stress": {
+    "base_finite_cash_value": 46.80312244041437,
+    "plus100_net_debt_value": 45.194193632071034,
+    "full_target_awards_value": 44.16365009406161,
+    "plus100_net_debt_and_full_awards_value": 42.64545717844165,
+    "scope": "Existing economic assumptions with explicit alternative bridge/dilution. No extra SBC deduction."
+  }
+}

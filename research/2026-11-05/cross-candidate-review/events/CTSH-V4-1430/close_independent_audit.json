@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "independent_review": true,
+  "separate_market_capture": true,
+  "independent_market_provider": false,
+  "checks": {
+    "15_complete_minutes": true,
+    "aggregates_match": true,
+    "bar_close_valid": true,
+    "no_new_cap_breach": true,
+    "no_M_loss": true,
+    "no_observed_postsignal_band_breach": true,
+    "source_hash_yahoo15": true,
+    "source_hash_yahoo1": true,
+    "source_hash_sa": true
+  },
+  "bar": {
+    "t": "2026-11-05T19:30:00+00:00",
+    "close": 66.7300033569336,
+    "volume": 146053,
+    "high": 66.7300033569336,
+    "low": 66.36499786376953,
+    "open": 66.3949966430664
+  },
+  "minute_aggregate": {
+    "open": 66.3949966430664,
+    "high": 66.7300033569336,
+    "low": 66.36499786376953,
+    "close": 66.7300033569336,
+    "volume": 146053
+  },
+  "quote": 66.75,
+  "quote_at_utc": "2026-11-05T19:46:46+00:00",
+  "source_snapshots": [
+    {
+      "key": "yahoo15",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=15m&includePrePost=false",
+      "request_started_at": "2026-11-05T19:46:42.567477+00:00",
+      "response_received_at": "2026-11-05T19:46:48.001544+00:00",
+      "sha256": "a9084f5a4e4a60c665f4a606266d57ceee79714bf7682e7e1df4e5c8ca2839b7"
+    },
+    {
+      "key": "yahoo1",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=1m&includePrePost=false",
+      "request_started_at": "2026-11-05T19:46:42.568671+00:00",
+      "response_received_at": "2026-11-05T19:46:48.079456+00:00",
+      "sha256": "5c99d8d04234bd62f5ddc25a75071175b4d524816733eac6c787baa03367a73c"
+    },
+    {
+      "key": "sa",
+      "url": "https://stockanalysis.com/stocks/ctsh/",
+      "request_started_at": "2026-11-05T19:46:42.569531+00:00",
+      "response_received_at": "2026-11-05T19:46:48.404425+00:00",
+      "sha256": "8ea162fc9956da53f4c2365252f7ef6598dbf893a591ac5f32d45573d209f6a0"
+    }
+  ],
+  "technical_condition_observed": true,
+  "account_verified": false,
+  "entryApproved": false,
+  "order_or_fill_inferred": false,
+  "reviewed_at_utc": "2026-11-05T19:47:21.880840+00:00"
+}

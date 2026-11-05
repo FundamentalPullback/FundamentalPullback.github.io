@@ -1,0 +1,73 @@
+{
+  "ticker": "CTSH",
+  "quote": {
+    "price": 66.435,
+    "currency": "USD",
+    "market_time_UTC": "2026-11-05T19:14:15+00:00",
+    "request_started_at": "2026-11-05T19:14:15.487846+00:00",
+    "response_received_at": "2026-11-05T19:14:22.186433+00:00",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=15m&includePrePost=false",
+    "source_sha256": "02d43085709dd43c8e97c1c9631bfbc9daabc59a3c880948ae7757b6d1acaabf",
+    "executable_bid_ask_verified": false
+  },
+  "unchanged_model_hashes": {
+    "model/inputs.json": "70d098d3d4722f34fe2627432c00faf90da988f7da5fa38838bd4bbcaa8ba553",
+    "results.json": "4920d7ae468fbb86f370b442637f96fb1fd459794d8484252fc847007bc0d7b7",
+    "sensitivity.json": "19a4736885eb7194e34ff3441d7a92234daef004745666c6ad751f72b7b446cd",
+    "value.py": "5b298e8ca4c91229ca661ae62b6f9382f401a75c332904018f06a593c1a91536"
+  },
+  "economic_model_changed": false,
+  "intraday_observed": {
+    "low": 66.04129791259766,
+    "high": 67.93499755859375,
+    "previous_close": 65.78
+  },
+  "scenarios": {
+    "base": {
+      "value": 79.34024040034222,
+      "return_pct": 19.425363739508118,
+      "MOS_pct": 16.265693594100274
+    },
+    "bear": {
+      "value": 51.76139942051113,
+      "return_pct": -22.087153728439635,
+      "MOS_pct": -28.348539150342724
+    },
+    "bull": {
+      "value": 109.1152593638308,
+      "return_pct": 64.24363567973327,
+      "MOS_pct": 39.114840227359004
+    },
+    "combined_moderate_stress": {
+      "value": 63.57531607369725,
+      "return_pct": -4.3044839712542355,
+      "MOS_pct": -4.498104143104498
+    },
+    "moderate_same_wacc": {
+      "value": 70.02113628404652,
+      "return_pct": 5.397962345219409,
+      "MOS_pct": 5.121505411593241
+    },
+    "cash_drag_300m": {
+      "value": 75.99367851502134,
+      "return_pct": 14.38801612857883,
+      "MOS_pct": 12.578254799354028
+    }
+  },
+  "S": 61.2,
+  "M": 61.55,
+  "fundamental_maximum": 67.5,
+  "proposed_B_floor": 65.78,
+  "risk_at_current": {
+    "E": 66.435,
+    "R": 5.234999999999999,
+    "stop_pct": 7.879882592007225,
+    "base_R": 2.465184412672822
+  },
+  "risk_at_maximum": {
+    "E": 67.5,
+    "R": 6.3,
+    "stop_pct": 9.333333333333334,
+    "base_R": 1.8794032381495596
+  }
+}

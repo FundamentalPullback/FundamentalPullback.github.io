@@ -1,0 +1,84 @@
+{
+  "observation_registered_before_start": true,
+  "new_ceiling_breach_after_review": false,
+  "evaluated_at_UTC": "2026-11-05T19:45:14.925745+00:00",
+  "proposal_id": "CTSH-20261105-B-V4",
+  "window_start_UTC": "2026-11-05T19:30:00+00:00",
+  "window_end_UTC": "2026-11-05T19:45:00+00:00",
+  "15m_bar": {
+    "t": "2026-11-05T19:30:00+00:00",
+    "close": 66.7300033569336,
+    "high": 66.7300033569336,
+    "open": 66.3949966430664,
+    "volume": 146053,
+    "low": 66.36499786376953
+  },
+  "one_minute_count": 15,
+  "one_minute_full_window": true,
+  "one_minute_aggregate": {
+    "open": 66.3949966430664,
+    "high": 66.7300033569336,
+    "low": 66.36499786376953,
+    "close": 66.7300033569336,
+    "volume": 146053
+  },
+  "ohlc_reconciles_same_provider": true,
+  "independent_OHLC_corroboration": false,
+  "source_market_time_UTC": "2026-11-05T19:45:04+00:00",
+  "source_regular_price": 66.71,
+  "source_quote_after_window": true,
+  "close_within_proposed_band": true,
+  "intrabar_high_exceeded_cap": false,
+  "intrabar_low_below_M": false,
+  "current_price_within_band": true,
+  "observed_postsignal_one_minute_breach": false,
+  "observed_postsignal_bars": [
+    {
+      "t": "2026-11-05T19:45:04+00:00",
+      "close": 66.70999908447266,
+      "volume": 0,
+      "open": 66.70999908447266,
+      "high": 66.70999908447266,
+      "low": 66.70999908447266
+    }
+  ],
+  "technical_candidate_only": true,
+  "entryApproved": false,
+  "account_reverified": false,
+  "order_sent": false,
+  "execution_window_end_UTC": "2026-11-05T21:00:00+00:00",
+  "execution_validity": "DAY regular, until range/conditions loss or session close; no automatic15-minute expiry",
+  "caveats": [
+    "OHLC15m versus1m reconciliation uses the same provider, not independent market feeds.",
+    "A source timestamp is not an executable bid/ask.",
+    "Candidate is not approval: latest thesis, structure, account, order and current-price checks remain required.",
+    "Report pre-signal intrabar high separately; V4 requires a documented reassessment and new future window after a new ceiling breach; no automatic return-to-range rearm.",
+    "No bar that began before the recorded future start may qualify."
+  ],
+  "source_snapshots": [
+    {
+      "key": "yahoo15",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=15m&includePrePost=false",
+      "request_started_at": "2026-11-05T19:45:08.049827+00:00",
+      "response_received_at": "2026-11-05T19:45:14.904835+00:00",
+      "file": "yahoo15_2026-11-05T194508.049827_0000.json",
+      "sha256": "982e8c4725cc6e178bf1386808c9484ae18582e172dc6e57f9e80f69edd90ef0"
+    },
+    {
+      "key": "yahoo1",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=1m&includePrePost=false",
+      "request_started_at": "2026-11-05T19:45:08.051008+00:00",
+      "response_received_at": "2026-11-05T19:45:14.907451+00:00",
+      "file": "yahoo1_2026-11-05T194508.051008_0000.json",
+      "sha256": "05ea753c56283fa0b56194f2a4717cf614ec0b8f5265ab9734ee61c0a28bac47"
+    },
+    {
+      "key": "sa",
+      "url": "https://stockanalysis.com/stocks/ctsh/",
+      "request_started_at": "2026-11-05T19:45:08.051753+00:00",
+      "response_received_at": "2026-11-05T19:45:14.392173+00:00",
+      "file": "sa_2026-11-05T194508.051753_0000.html",
+      "sha256": "bcab064fe11ff42f096617e630fb9c6823bc7728f5521177c6ecaef21d95bc55"
+    }
+  ]
+}

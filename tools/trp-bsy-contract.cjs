@@ -27,6 +27,6 @@ function validate(root,loaded){
 }
 function legacy(root,loaded){
  const c=validate(root,loaded),old=priorDecisionBytes(root).toString(),prefix='window.FP=window.FP||{};FP.dec=';
- loaded.reports=loaded.reports.filter(r=>!c.ids.includes(r.id)&&r.id!=="A288");loaded.t.S.lib=loaded.reports;loaded.t.S.dec=loaded.t.PARTS.dec(JSON.parse(old.slice(prefix.length,-2)));loaded.c.window.FP_MANIFEST.libraryFiles=loaded.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!==c.library&&f!=="data/lib-vnt-earnings.js");loaded.profiles=loaded.t.profiles();return loaded;
+ loaded.reports=loaded.reports.filter(r=>!c.ids.includes(r.id)&&r.id!=="A288"&&r.id!=="A289");loaded.t.S.lib=loaded.reports;loaded.t.S.dec=loaded.t.PARTS.dec(JSON.parse(old.slice(prefix.length,-2)));loaded.c.window.FP_MANIFEST.libraryFiles=loaded.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!==c.library&&f!=="data/lib-vnt-earnings.js"&&f!=="data/lib-cross-candidate-review.js");loaded.profiles=loaded.t.profiles();return loaded;
 }
 module.exports={validate,priorDecisionBytes,priorPending,priorResearchIndexBytes,legacy};

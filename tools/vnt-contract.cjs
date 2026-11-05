@@ -14,8 +14,9 @@ function priorPending(root){
  assert.deepEqual({...p,pending:p.pending.slice(0,-1)},c.priorPending,'All prior reconciliation state preserved');
  assert.deepEqual(p.pending.slice(-1).map(x=>x.reportId),c.ids,'Only exact new reconciliation markers');return clone(c.priorPending);
 }
-function priorResearchIndexBytes(root){const c=contract(root),s=fs.readFileSync(root+'/research/2026-11-05/index.html','utf8');assert.equal(s.split(c.researchIndexAppend).length,2);const old=Buffer.from(s.replace(c.researchIndexAppend,''));assert.equal(sha(old),c.priorResearchIndexSha256,'Exact prior research index');return old;}
+function priorResearchIndexBytes(root){const c=contract(root),s=require('./cross-review-contract.cjs').priorResearchIndexBytes(root).toString();assert.equal(s.split(c.researchIndexAppend).length,2);const old=Buffer.from(s.replace(c.researchIndexAppend,''));assert.equal(sha(old),c.priorResearchIndexSha256,'Exact prior research index');return old;}
 function validate(root,loaded){
+ loaded=require("./cross-review-contract.cjs").project(root,loaded);
  const c=contract(root);assert.deepEqual(c.ids,['A288']);assert.equal(sha(fs.readFileSync(root+'/'+c.library)),c.librarySha256);
  assert.equal(sha(fs.readFileSync(root+'/index.html')),c.indexSha256,'UI and trading controls unchanged');
  assert.equal(loaded.reports.length,Object.keys(c.priorReportHashes).length+1);assert.equal(new Set(loaded.reports.map(x=>x.id)).size,loaded.reports.length);
@@ -28,5 +29,5 @@ function legacy(root,loaded){
  const c=validate(root,loaded),old=priorDecisionBytes(root).toString(),prefix='window.FP=window.FP||{};FP.dec=';
  loaded.reports=loaded.reports.filter(r=>!c.ids.includes(r.id));loaded.t.S.lib=loaded.reports;loaded.t.S.dec=loaded.t.PARTS.dec(JSON.parse(old.slice(prefix.length,-2)));loaded.c.window.FP_MANIFEST.libraryFiles=loaded.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!==c.library);loaded.profiles=loaded.t.profiles();return loaded;
 }
-function project(root,loaded){validate(root,loaded);const c=contract(root);return {...loaded,reports:loaded.reports.filter(r=>!c.ids.includes(r.id)),c:{...loaded.c,window:{...loaded.c.window,FP_MANIFEST:{...loaded.c.window.FP_MANIFEST,libraryFiles:loaded.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!==c.library)}}}};}
+function project(root,loaded){loaded=require("./cross-review-contract.cjs").project(root,loaded);validate(root,loaded);const c=contract(root);return {...loaded,reports:loaded.reports.filter(r=>!c.ids.includes(r.id)),c:{...loaded.c,window:{...loaded.c.window,FP_MANIFEST:{...loaded.c.window.FP_MANIFEST,libraryFiles:loaded.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!==c.library)}}}};}
 module.exports={project,validate,priorDecisionBytes,priorPending,priorResearchIndexBytes,legacy};

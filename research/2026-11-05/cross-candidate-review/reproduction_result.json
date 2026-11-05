@@ -1,0 +1,2080 @@
+{
+  "status": "PASS",
+  "checks": 518,
+  "failures": 0,
+  "scope": "Public overlay arithmetic, source-data consistency and70-name coverage. Not a full underlying-model, live-market, account or order audit.",
+  "checks_detail": [
+    {
+      "name": "seventy_unique",
+      "passed": true
+    },
+    {
+      "name": "scope_count_sum",
+      "passed": true
+    },
+    {
+      "name": "no_individual_mutations",
+      "passed": true
+    },
+    {
+      "name": "no_new_entry",
+      "passed": true
+    },
+    {
+      "name": "G_same_quote",
+      "passed": true
+    },
+    {
+      "name": "G_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "G_not_approved",
+      "passed": true
+    },
+    {
+      "name": "G_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "G_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "G_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "WK_same_quote",
+      "passed": true
+    },
+    {
+      "name": "WK_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "WK_not_approved",
+      "passed": true
+    },
+    {
+      "name": "WK_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "WK_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "WK_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "VCYT_same_quote",
+      "passed": true
+    },
+    {
+      "name": "VCYT_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "VCYT_not_approved",
+      "passed": true
+    },
+    {
+      "name": "VCYT_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "VCYT_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "VCYT_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "MKTX_same_quote",
+      "passed": true
+    },
+    {
+      "name": "MKTX_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "MKTX_not_approved",
+      "passed": true
+    },
+    {
+      "name": "MKTX_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "MKTX_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "MKTX_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "NCNO_same_quote",
+      "passed": true
+    },
+    {
+      "name": "NCNO_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "NCNO_not_approved",
+      "passed": true
+    },
+    {
+      "name": "NCNO_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "NCNO_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "NCNO_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "WDAY_same_quote",
+      "passed": true
+    },
+    {
+      "name": "WDAY_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "WDAY_not_approved",
+      "passed": true
+    },
+    {
+      "name": "WDAY_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "WDAY_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "WDAY_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "AEO_same_quote",
+      "passed": true
+    },
+    {
+      "name": "AEO_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "AEO_not_approved",
+      "passed": true
+    },
+    {
+      "name": "AEO_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "AEO_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "AEO_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "BSY_same_quote",
+      "passed": true
+    },
+    {
+      "name": "BSY_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "BSY_not_approved",
+      "passed": true
+    },
+    {
+      "name": "BSY_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "BSY_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "BSY_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "EAT_same_quote",
+      "passed": true
+    },
+    {
+      "name": "EAT_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "EAT_not_approved",
+      "passed": true
+    },
+    {
+      "name": "EAT_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "EAT_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "EAT_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "FRPT_same_quote",
+      "passed": true
+    },
+    {
+      "name": "FRPT_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "FRPT_not_approved",
+      "passed": true
+    },
+    {
+      "name": "FRPT_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "FRPT_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "FRPT_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "OPCH_same_quote",
+      "passed": true
+    },
+    {
+      "name": "OPCH_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "OPCH_not_approved",
+      "passed": true
+    },
+    {
+      "name": "OPCH_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "OPCH_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "OPCH_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "LMT_same_quote",
+      "passed": true
+    },
+    {
+      "name": "LMT_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "LMT_not_approved",
+      "passed": true
+    },
+    {
+      "name": "LMT_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "LMT_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "LMT_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "RMD_same_quote",
+      "passed": true
+    },
+    {
+      "name": "RMD_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "RMD_not_approved",
+      "passed": true
+    },
+    {
+      "name": "RMD_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "RMD_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "RMD_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "TDC_same_quote",
+      "passed": true
+    },
+    {
+      "name": "TDC_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "TDC_not_approved",
+      "passed": true
+    },
+    {
+      "name": "TDC_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "TDC_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "TDC_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "TEL_same_quote",
+      "passed": true
+    },
+    {
+      "name": "TEL_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "TEL_not_approved",
+      "passed": true
+    },
+    {
+      "name": "TEL_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "TEL_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "TEL_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "TRI_same_quote",
+      "passed": true
+    },
+    {
+      "name": "TRI_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "TRI_not_approved",
+      "passed": true
+    },
+    {
+      "name": "TRI_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "TRI_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "TRI_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "TRP_same_quote",
+      "passed": true
+    },
+    {
+      "name": "TRP_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "TRP_not_approved",
+      "passed": true
+    },
+    {
+      "name": "TRP_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "TRP_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "TRP_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "UHS_same_quote",
+      "passed": true
+    },
+    {
+      "name": "UHS_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "UHS_not_approved",
+      "passed": true
+    },
+    {
+      "name": "UHS_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "UHS_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "UHS_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "GDDY_same_quote",
+      "passed": true
+    },
+    {
+      "name": "GDDY_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "GDDY_not_approved",
+      "passed": true
+    },
+    {
+      "name": "GDDY_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "GDDY_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "GDDY_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "WAY_same_quote",
+      "passed": true
+    },
+    {
+      "name": "WAY_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "WAY_not_approved",
+      "passed": true
+    },
+    {
+      "name": "WAY_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "WAY_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "WAY_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "QGEN_same_quote",
+      "passed": true
+    },
+    {
+      "name": "QGEN_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "QGEN_not_approved",
+      "passed": true
+    },
+    {
+      "name": "QGEN_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "QGEN_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "QGEN_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "SNPS_same_quote",
+      "passed": true
+    },
+    {
+      "name": "SNPS_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "SNPS_not_approved",
+      "passed": true
+    },
+    {
+      "name": "SNPS_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "SNPS_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "SNPS_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "CTSH_same_quote",
+      "passed": true
+    },
+    {
+      "name": "CTSH_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "CTSH_not_approved",
+      "passed": true
+    },
+    {
+      "name": "CTSH_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "CTSH_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "CTSH_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "UNFI_same_quote",
+      "passed": true
+    },
+    {
+      "name": "UNFI_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "UNFI_not_approved",
+      "passed": true
+    },
+    {
+      "name": "UNFI_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "UNFI_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "UNFI_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "IT_same_quote",
+      "passed": true
+    },
+    {
+      "name": "IT_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "IT_not_approved",
+      "passed": true
+    },
+    {
+      "name": "IT_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "IT_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "IT_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "ECO_same_quote",
+      "passed": true
+    },
+    {
+      "name": "ECO_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "ECO_not_approved",
+      "passed": true
+    },
+    {
+      "name": "ECO_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "ECO_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "ECO_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "RNG_same_quote",
+      "passed": true
+    },
+    {
+      "name": "RNG_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "RNG_not_approved",
+      "passed": true
+    },
+    {
+      "name": "RNG_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "RNG_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "RNG_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "SSL_same_quote",
+      "passed": true
+    },
+    {
+      "name": "SSL_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "SSL_not_approved",
+      "passed": true
+    },
+    {
+      "name": "SSL_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "SSL_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "SSL_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "HURN_same_quote",
+      "passed": true
+    },
+    {
+      "name": "HURN_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "HURN_not_approved",
+      "passed": true
+    },
+    {
+      "name": "HURN_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "HURN_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "HURN_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "AFRM_same_quote",
+      "passed": true
+    },
+    {
+      "name": "AFRM_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "AFRM_not_approved",
+      "passed": true
+    },
+    {
+      "name": "AFRM_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "AFRM_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "AFRM_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "TRMD_same_quote",
+      "passed": true
+    },
+    {
+      "name": "TRMD_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "TRMD_not_approved",
+      "passed": true
+    },
+    {
+      "name": "TRMD_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "TRMD_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "TRMD_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "CRWD_same_quote",
+      "passed": true
+    },
+    {
+      "name": "CRWD_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "CRWD_not_approved",
+      "passed": true
+    },
+    {
+      "name": "CRWD_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "CRWD_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "CRWD_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "BR_same_quote",
+      "passed": true
+    },
+    {
+      "name": "BR_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "BR_not_approved",
+      "passed": true
+    },
+    {
+      "name": "BR_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "BR_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "BR_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "BZ_same_quote",
+      "passed": true
+    },
+    {
+      "name": "BZ_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "BZ_not_approved",
+      "passed": true
+    },
+    {
+      "name": "BZ_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "BZ_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "BZ_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "DG_same_quote",
+      "passed": true
+    },
+    {
+      "name": "DG_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "DG_not_approved",
+      "passed": true
+    },
+    {
+      "name": "DG_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "DG_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "DG_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "FA_same_quote",
+      "passed": true
+    },
+    {
+      "name": "FA_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "FA_not_approved",
+      "passed": true
+    },
+    {
+      "name": "FA_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "FA_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "FA_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "LW_same_quote",
+      "passed": true
+    },
+    {
+      "name": "LW_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "LW_not_approved",
+      "passed": true
+    },
+    {
+      "name": "LW_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "LW_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "LW_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "UL_same_quote",
+      "passed": true
+    },
+    {
+      "name": "UL_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "UL_not_approved",
+      "passed": true
+    },
+    {
+      "name": "UL_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "UL_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "UL_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "BAH_same_quote",
+      "passed": true
+    },
+    {
+      "name": "BAH_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "BAH_not_approved",
+      "passed": true
+    },
+    {
+      "name": "BAH_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "BAH_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "BAH_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "FLS_same_quote",
+      "passed": true
+    },
+    {
+      "name": "FLS_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "FLS_not_approved",
+      "passed": true
+    },
+    {
+      "name": "FLS_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "FLS_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "FLS_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "GAP_same_quote",
+      "passed": true
+    },
+    {
+      "name": "GAP_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "GAP_not_approved",
+      "passed": true
+    },
+    {
+      "name": "GAP_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "GAP_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "GAP_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "GME_same_quote",
+      "passed": true
+    },
+    {
+      "name": "GME_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "GME_not_approved",
+      "passed": true
+    },
+    {
+      "name": "GME_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "GME_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "GME_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "HRI_same_quote",
+      "passed": true
+    },
+    {
+      "name": "HRI_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "HRI_not_approved",
+      "passed": true
+    },
+    {
+      "name": "HRI_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "HRI_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "HRI_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "ROK_same_quote",
+      "passed": true
+    },
+    {
+      "name": "ROK_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "ROK_not_approved",
+      "passed": true
+    },
+    {
+      "name": "ROK_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "ROK_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "ROK_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "TYL_same_quote",
+      "passed": true
+    },
+    {
+      "name": "TYL_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "TYL_not_approved",
+      "passed": true
+    },
+    {
+      "name": "TYL_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "TYL_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "TYL_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "UNH_same_quote",
+      "passed": true
+    },
+    {
+      "name": "UNH_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "UNH_not_approved",
+      "passed": true
+    },
+    {
+      "name": "UNH_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "UNH_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "UNH_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "VNT_same_quote",
+      "passed": true
+    },
+    {
+      "name": "VNT_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "VNT_not_approved",
+      "passed": true
+    },
+    {
+      "name": "VNT_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "VNT_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "VNT_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "YOU_same_quote",
+      "passed": true
+    },
+    {
+      "name": "YOU_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "YOU_not_approved",
+      "passed": true
+    },
+    {
+      "name": "YOU_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "YOU_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "YOU_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "GWRE_same_quote",
+      "passed": true
+    },
+    {
+      "name": "GWRE_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "GWRE_not_approved",
+      "passed": true
+    },
+    {
+      "name": "GWRE_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "GWRE_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "GWRE_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "PTGX_same_quote",
+      "passed": true
+    },
+    {
+      "name": "PTGX_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "PTGX_not_approved",
+      "passed": true
+    },
+    {
+      "name": "PTGX_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "PTGX_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "PTGX_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "PYPL_same_quote",
+      "passed": true
+    },
+    {
+      "name": "PYPL_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "PYPL_not_approved",
+      "passed": true
+    },
+    {
+      "name": "PYPL_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "PYPL_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "PYPL_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "QLYS_same_quote",
+      "passed": true
+    },
+    {
+      "name": "QLYS_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "QLYS_not_approved",
+      "passed": true
+    },
+    {
+      "name": "QLYS_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "QLYS_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "QLYS_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "HTHT_same_quote",
+      "passed": true
+    },
+    {
+      "name": "HTHT_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "HTHT_not_approved",
+      "passed": true
+    },
+    {
+      "name": "HTHT_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "HTHT_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "HTHT_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "IMAX_same_quote",
+      "passed": true
+    },
+    {
+      "name": "IMAX_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "IMAX_not_approved",
+      "passed": true
+    },
+    {
+      "name": "IMAX_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "IMAX_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "IMAX_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "ISRG_same_quote",
+      "passed": true
+    },
+    {
+      "name": "ISRG_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "ISRG_not_approved",
+      "passed": true
+    },
+    {
+      "name": "ISRG_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "ISRG_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "ISRG_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "ADSK_same_quote",
+      "passed": true
+    },
+    {
+      "name": "ADSK_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "ADSK_not_approved",
+      "passed": true
+    },
+    {
+      "name": "ADSK_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "ADSK_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "ADSK_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "AUPH_same_quote",
+      "passed": true
+    },
+    {
+      "name": "AUPH_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "AUPH_not_approved",
+      "passed": true
+    },
+    {
+      "name": "AUPH_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "AUPH_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "AUPH_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "SPGI_same_quote",
+      "passed": true
+    },
+    {
+      "name": "SPGI_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "SPGI_not_approved",
+      "passed": true
+    },
+    {
+      "name": "SPGI_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "SPGI_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "SPGI_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "TENB_same_quote",
+      "passed": true
+    },
+    {
+      "name": "TENB_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "TENB_not_approved",
+      "passed": true
+    },
+    {
+      "name": "TENB_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "TENB_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "TENB_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "TOST_same_quote",
+      "passed": true
+    },
+    {
+      "name": "TOST_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "TOST_not_approved",
+      "passed": true
+    },
+    {
+      "name": "TOST_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "TOST_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "TOST_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "LYFT_same_quote",
+      "passed": true
+    },
+    {
+      "name": "LYFT_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "LYFT_not_approved",
+      "passed": true
+    },
+    {
+      "name": "LYFT_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "LYFT_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "LYFT_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "CNX_same_quote",
+      "passed": true
+    },
+    {
+      "name": "CNX_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "CNX_not_approved",
+      "passed": true
+    },
+    {
+      "name": "CNX_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "CNX_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "CNX_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "LNG_same_quote",
+      "passed": true
+    },
+    {
+      "name": "LNG_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "LNG_not_approved",
+      "passed": true
+    },
+    {
+      "name": "LNG_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "LNG_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "LNG_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "AVTR_same_quote",
+      "passed": true
+    },
+    {
+      "name": "AVTR_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "AVTR_not_approved",
+      "passed": true
+    },
+    {
+      "name": "AVTR_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "AVTR_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "AVTR_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "SPSC_same_quote",
+      "passed": true
+    },
+    {
+      "name": "SPSC_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "SPSC_not_approved",
+      "passed": true
+    },
+    {
+      "name": "SPSC_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "SPSC_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "SPSC_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "STNG_same_quote",
+      "passed": true
+    },
+    {
+      "name": "STNG_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "STNG_not_approved",
+      "passed": true
+    },
+    {
+      "name": "STNG_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "STNG_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "STNG_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "SWKS_same_quote",
+      "passed": true
+    },
+    {
+      "name": "SWKS_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "SWKS_not_approved",
+      "passed": true
+    },
+    {
+      "name": "SWKS_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "SWKS_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "SWKS_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "TSLA_same_quote",
+      "passed": true
+    },
+    {
+      "name": "TSLA_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "TSLA_not_approved",
+      "passed": true
+    },
+    {
+      "name": "TSLA_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "TSLA_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "TSLA_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "RYAN_same_quote",
+      "passed": true
+    },
+    {
+      "name": "RYAN_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "RYAN_not_approved",
+      "passed": true
+    },
+    {
+      "name": "RYAN_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "RYAN_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "RYAN_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "CDNS_same_quote",
+      "passed": true
+    },
+    {
+      "name": "CDNS_historical_gate",
+      "passed": true
+    },
+    {
+      "name": "CDNS_not_approved",
+      "passed": true
+    },
+    {
+      "name": "CDNS_quote_not_analysis",
+      "passed": true
+    },
+    {
+      "name": "CDNS_explicit_market_status",
+      "passed": true
+    },
+    {
+      "name": "CDNS_no_executable_claim",
+      "passed": true
+    },
+    {
+      "name": "LMT_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "LMT_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "LMT_bear_upside",
+      "passed": true
+    },
+    {
+      "name": "LMT_bear_discount",
+      "passed": true
+    },
+    {
+      "name": "LMT_base_upside",
+      "passed": true
+    },
+    {
+      "name": "LMT_base_discount",
+      "passed": true
+    },
+    {
+      "name": "LMT_bull_upside",
+      "passed": true
+    },
+    {
+      "name": "LMT_bull_discount",
+      "passed": true
+    },
+    {
+      "name": "LMT_same_business_wacc7_upside",
+      "passed": true
+    },
+    {
+      "name": "LMT_same_business_wacc7_discount",
+      "passed": true
+    },
+    {
+      "name": "LMT_same_business_wacc6_5_upside",
+      "passed": true
+    },
+    {
+      "name": "LMT_same_business_wacc6_5_discount",
+      "passed": true
+    },
+    {
+      "name": "LMT_operating_stress_same_wacc_upside",
+      "passed": true
+    },
+    {
+      "name": "LMT_operating_stress_same_wacc_discount",
+      "passed": true
+    },
+    {
+      "name": "LMT_operating_stress_wacc7_upside",
+      "passed": true
+    },
+    {
+      "name": "LMT_operating_stress_wacc7_discount",
+      "passed": true
+    },
+    {
+      "name": "HRI_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "HRI_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "HRI_bear_upside",
+      "passed": true
+    },
+    {
+      "name": "HRI_base_upside",
+      "passed": true
+    },
+    {
+      "name": "HRI_base_discount",
+      "passed": true
+    },
+    {
+      "name": "HRI_bull_upside",
+      "passed": true
+    },
+    {
+      "name": "HRI_bull_discount",
+      "passed": true
+    },
+    {
+      "name": "HRI_guided_conversion_upside",
+      "passed": true
+    },
+    {
+      "name": "HRI_guided_conversion_discount",
+      "passed": true
+    },
+    {
+      "name": "HRI_enhanced_margin_conversion_upside",
+      "passed": true
+    },
+    {
+      "name": "HRI_enhanced_margin_conversion_discount",
+      "passed": true
+    },
+    {
+      "name": "HRI_joint_favorable_sensitivity_upside",
+      "passed": true
+    },
+    {
+      "name": "HRI_joint_favorable_sensitivity_discount",
+      "passed": true
+    },
+    {
+      "name": "LNG_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "LNG_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "LNG_bear_upside",
+      "passed": true
+    },
+    {
+      "name": "LNG_bear_discount",
+      "passed": true
+    },
+    {
+      "name": "LNG_base_upside",
+      "passed": true
+    },
+    {
+      "name": "LNG_base_discount",
+      "passed": true
+    },
+    {
+      "name": "LNG_bull_upside",
+      "passed": true
+    },
+    {
+      "name": "LNG_bull_discount",
+      "passed": true
+    },
+    {
+      "name": "LNG_same_wacc_operating_downside_upside",
+      "passed": true
+    },
+    {
+      "name": "LNG_same_wacc_operating_downside_discount",
+      "passed": true
+    },
+    {
+      "name": "LNG_same_wacc_operating_upside_upside",
+      "passed": true
+    },
+    {
+      "name": "LNG_same_wacc_operating_upside_discount",
+      "passed": true
+    },
+    {
+      "name": "LNG_tax_21pct_from_start_upside",
+      "passed": true
+    },
+    {
+      "name": "LNG_tax_21pct_from_start_discount",
+      "passed": true
+    },
+    {
+      "name": "LNG_no_terminal_haircut_upside",
+      "passed": true
+    },
+    {
+      "name": "LNG_no_terminal_haircut_discount",
+      "passed": true
+    },
+    {
+      "name": "CQP_no_duplicate_cashflow_change",
+      "passed": true
+    },
+    {
+      "name": "CQP_base_plus_change",
+      "passed": true
+    },
+    {
+      "name": "HURN_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "HURN_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "HURN_base_upside",
+      "passed": true
+    },
+    {
+      "name": "HURN_base_discount",
+      "passed": true
+    },
+    {
+      "name": "HURN_bear_upside",
+      "passed": true
+    },
+    {
+      "name": "HURN_bear_discount",
+      "passed": true
+    },
+    {
+      "name": "HURN_bull_upside",
+      "passed": true
+    },
+    {
+      "name": "HURN_bull_discount",
+      "passed": true
+    },
+    {
+      "name": "HURN_wc_4_5pct_no_strategic_upside",
+      "passed": true
+    },
+    {
+      "name": "HURN_wc_4_5pct_no_strategic_discount",
+      "passed": true
+    },
+    {
+      "name": "HURN_wacc8_no_strategic_upside",
+      "passed": true
+    },
+    {
+      "name": "HURN_wacc8_no_strategic_discount",
+      "passed": true
+    },
+    {
+      "name": "HURN_wc4_5_no_strategic_wacc8_upside",
+      "passed": true
+    },
+    {
+      "name": "HURN_wc4_5_no_strategic_wacc8_discount",
+      "passed": true
+    },
+    {
+      "name": "HURN_moderate_stress_wacc9_wc10_margin_minus_50bps_upside",
+      "passed": true
+    },
+    {
+      "name": "HURN_moderate_stress_wacc9_wc10_margin_minus_50bps_discount",
+      "passed": true
+    },
+    {
+      "name": "HURN_same_cashflows_wacc8_upside",
+      "passed": true
+    },
+    {
+      "name": "HURN_same_cashflows_wacc8_discount",
+      "passed": true
+    },
+    {
+      "name": "HURN_no_extra_strategic_investment_upside",
+      "passed": true
+    },
+    {
+      "name": "HURN_no_extra_strategic_investment_discount",
+      "passed": true
+    },
+    {
+      "name": "WDAY_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "WDAY_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "WDAY_base_upside",
+      "passed": true
+    },
+    {
+      "name": "FRPT_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "FRPT_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "FRPT_base_upside",
+      "passed": true
+    },
+    {
+      "name": "ECO_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "ECO_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "ECO_base_upside",
+      "passed": true
+    },
+    {
+      "name": "QLYS_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "QLYS_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "QLYS_base_upside",
+      "passed": true
+    },
+    {
+      "name": "ADSK_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "ADSK_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "ADSK_base_upside",
+      "passed": true
+    },
+    {
+      "name": "TENB_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "TENB_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "TENB_base_upside",
+      "passed": true
+    },
+    {
+      "name": "CNX_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "CNX_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "CNX_base_upside",
+      "passed": true
+    },
+    {
+      "name": "SPSC_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "SPSC_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "SPSC_base_upside",
+      "passed": true
+    },
+    {
+      "name": "CDNS_economic_quote",
+      "passed": true
+    },
+    {
+      "name": "CDNS_economic_not_approval",
+      "passed": true
+    },
+    {
+      "name": "CDNS_base_upside",
+      "passed": true
+    }
+  ]
+}

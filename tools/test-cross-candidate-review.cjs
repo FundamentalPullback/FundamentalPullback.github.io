@@ -1,0 +1,8 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert/strict'),crypto=require('crypto');
+const root=path.resolve(__dirname,'..'),a=require('./load-stock-profiles.cjs')(root),C=require('./cross-review-contract.cjs'),c=C.validate(root,a),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+assert.equal(a.profiles.length,549);assert.equal(sha(JSON.stringify(a.profiles)),'ab7e46e8b55069dc5f4de786300a7689edfceb454f004a036b2aa96938d235a9','Exact complete 549-profile baseline including mentions and all decisions');
+const r=a.reports.find(x=>x.id==='A289');assert.equal(r.type,'cross-candidate-review');assert.equal(r.profiles.length,0);assert(r.text.includes('/report.html'));assert(r.text.includes('/source.zip'));
+for(const mutate of [rs=>rs.push({id:'A290'}),rs=>rs.push(JSON.parse(JSON.stringify(r))),rs=>rs.find(x=>x.id==='A289').text+=' CTSH',rs=>rs.find(x=>x.id==='A289').profiles.push({ticker:'CTSH',kind:'complete'}),rs=>rs.find(x=>x.id==='A268').title+=' changed']){const bad={...a,reports:JSON.parse(JSON.stringify(a.reports))};mutate(bad.reports);assert.throws(()=>C.validate(root,bad));}
+const bad={...a,c:{...a.c,window:{...a.c.window,FP_MANIFEST:JSON.parse(JSON.stringify(a.c.window.FP_MANIFEST))}}};bad.c.window.FP_MANIFEST.libraryFiles.push('data/unpinned.js');assert.throws(()=>C.validate(root,bad));
+const n=a.reports.length;vm.runInContext(fs.readFileSync(root+'/'+c.library,'utf8'),a.c);assert.equal(a.c.window.FP_LIB.reports.length,n);
+console.log('PASS A289: all 549 profiles identical, pinned original package, historical source preservation, exact successor manifest/record, duplicate/arbitrary/history/profile/mention tamper controls and idempotence.');

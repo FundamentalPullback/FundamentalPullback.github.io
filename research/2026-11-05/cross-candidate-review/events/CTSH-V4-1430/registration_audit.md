@@ -1,0 +1,1 @@
+Independent review: PASS. The CTSH V4 observation interval is14:30–14:45 EST on5 November2026, registered at14:22:01 EST before its start. All11 checks pass. Thresholds65.78/67.50, M61.55 and S61.20 match the frozen documentary proposal. This records observation only, not a signal, verified account, order or fill. The V3 history is unchanged.

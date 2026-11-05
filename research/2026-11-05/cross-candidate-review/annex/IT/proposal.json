@@ -1,0 +1,49 @@
+{
+  "schema": "prospective_entry_reassessment",
+  "ticker": "IT",
+  "version": "Afternoon B research proposal; separate from A283",
+  "research_parameters_frozen_at_utc": "2026-11-05T18:39:52.504200+00:00",
+  "status": "DOCUMENTARY_REVIEW_PASSED_NON_ACTIVE",
+  "active": false,
+  "entry_approved": false,
+  "approved_quantity": 0,
+  "future_window_start_utc": null,
+  "fundamental_maximum": 208,
+  "technical_maximum": 201.8,
+  "effective_maximum": 201.8,
+  "signal": {
+    "timeframe": "15m completed regular session",
+    "close_strictly_above": 200,
+    "close_at_or_below": 201.8,
+    "starts_after_review_communication_and_registration": true,
+    "past_bars_ineligible": true,
+    "first_signal_only": true
+  },
+  "order_price_band_after_signal": {
+    "strictly_above": 197.9,
+    "at_or_below": 201.8
+  },
+  "M": 184.45,
+  "S_manual": 183,
+  "research_floor_review": "Any new regular trade at or below197.90 after this parameter freeze invalidates the proposed consolidation hypothesis; do not lower floor to rescue it. Recheck before release.",
+  "price_precision": "Compare USD prices rounded to nearest cent;197.8999939 represents197.90. Threshold197.90 is inclusive for invalidation.",
+  "expiry": "2026-11-05T16:00:00-05:00",
+  "last_eligible_close": "2026-11-05T15:45:00-05:00",
+  "order_type_if_separately_authorized": "LIMIT DAY regular session; not an order instruction",
+  "before_signal": [
+    "No current fundamental invalidation, reached stop, pending exit or account conflict.",
+    "Price above201.80 suspends buying until a documented current reassessment of price, thesis, structure and risk. Return inside the band alone does not reactivate observation. After reassessment register a fresh future bar before its start; a full new DCF is not automatically required.",
+    "Price at or below197.90 invalidates hypothesis; no automatic rearm."
+  ],
+  "after_signal": [
+    "Price at or below197.90 or above201.80 ends unfilled opportunity/remnant; no automatic rearm.",
+    "Material thesis/structure change, reached stop, pending exit or account/order conflict prevents buying.",
+    "Expiry16:00ET; no automatic overnight renewal."
+  ],
+  "position_management": "197.90 only cancels proposal/remnant. Executed positions use unchanged manualS183 and Stage4; M184.45 is not a second intraday stop. No fill inferred.",
+  "sizing": "Initial B up to25% of campaign C and25% of B after aggregate risk/costs/reserve. Dimension at201.80 withS183. Public account not verified; approved quantity0.",
+  "boundary_timing": "A bar spanning the research freeze cannot date a possible floor breach by itself; use finer timestamps or disclose uncertainty.",
+  "monitoring_capacity_confirmed": false,
+  "latest_price_check_at_utc": "2026-11-05T19:14:09.715194+00:00",
+  "latest_price": 198.56
+}

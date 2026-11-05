@@ -2,6 +2,7 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 function validate(root,loaded){
+ loaded=require("./cross-review-contract.cjs").project(root,loaded);
  const c=JSON.parse(fs.readFileSync(path.join(root,'tools/current-price-contract.json')));
  assert.deepEqual(c.ids,['A283','A284','A285']);
  assert.equal(sha(fs.readFileSync(root+'/data/entry-observation-followups.js')),c.observationFollowupSha256,'Exact audited observation registry');
