@@ -1,0 +1,682 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A266 · Conciliación del escáner del 4 de noviembre</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../#escaner">Escáner / Scanner</a><a href="../../#biblioteca/A266">A266</a><a href="../2026-11-04/index.html">Research index</a></nav><div class="status-line"><span class="tag">70 tratamientos explícitos</span><span class="tag deferred">0 nuevos Stage 3 completos</span><span class="tag">0 entradas</span></div><h1 id="conciliación-del-escáner-del-4-de-noviembre-de-2026">Conciliación del escáner del 4 de noviembre de 2026</h1>
+<p>Corte UTC: 2026-11-05T00:51:34.192968+00:00. El universo conserva Opportunity ≥85.</p>
+<p><strong>192 filas recibidas; 70 cumplen el umbral y 122 quedan fuera de esta revisión. Las 70 elegibles tienen un tratamiento explícito, pero esto no significa que sus análisis estén completos.</strong></p>
+<h2 id="estado-del-trabajo">Estado del trabajo</h2>
+<ul>
+<li>11: Evento de resultados del 5 de noviembre, revisión después de publicación. G, WK, BSY, TDC, TRP, AFRM, FA, ROK, VNT, IMAX, LYFT.</li>
+<li>11: Exclusión sectorial sanitaria. VCYT, OPCH, RMD, UHS, WAY, QGEN, UNH, PTGX, ISRG, AUPH, AVTR.</li>
+<li>1: Operación corporativa fuera de entrada ordinaria. MKTX.</li>
+<li>29: Expediente previo: no duplicar por aparición en escáner. NCNO, WDAY, FRPT, TRI, GDDY, SNPS, CTSH, UNFI, ECO, RNG, SSL, CRWD, BR, BZ, LW, FLS, GAP, GME, TYL, PYPL, QLYS, HTHT, ADSK, SPGI, TENB, CNX, SPSC, TSLA, CDNS.</li>
+<li>13: Investigación nueva parcial, no Stage 3 completo. AEO, EAT, LMT, HURN, TRMD, BAH, HRI, YOU, GWRE, LNG, STNG, SWKS, RYAN.</li>
+<li>2: Posición cerrada: sin reapertura automática. TEL, DG.</li>
+<li>1: Revisión específica de Stage 3.5 en expediente separado. IT.</li>
+<li>2: Actualización parcial o suplemento posterior al evento. UL, TOST.</li>
+</ul>
+<p><strong>Nuevos Stage 3 completos: 0. Entradas aprobadas: 0.</strong> Hay 13 investigaciones nuevas y 2 actualizaciones/suplementos, todos parciales o condicionados. La auditoría de un alcance parcial no certifica una valoración integral. UL conserva su Stage 3 histórico fechado antes del evento, no un valor actualizado.</p>
+<p>Los 29 expedientes previos no se contabilizan como completos por defecto. Se conservan sus limitaciones; no se reinicia un DCF simplemente porque un valor vuelve al escáner.</p>
+<h2 id="trabajo-pendiente-dentro-del-umbral">Trabajo pendiente dentro del umbral</h2>
+<ul>
+<li><p><strong>AEO:</strong> Normalizar el beneficio arancelario, la caja, los arrendamientos y el capital actual.</p></li>
+<li><p><strong>EAT:</strong> Calibrar el coste de capital y conciliar recompras, garantías, arrendamientos y capital. El FCFF sigue siendo exploratorio.</p></li>
+<li><p><strong>LMT:</strong> Conciliar contratos, pensiones, financiación de programas, apoyo a ULA y la adquisición de Ultra Maritime.</p></li>
+<li><p><strong>HURN:</strong> Normalizar la conversión de caja, inversión en software, pagos de adquisiciones, inversiones y capital.</p></li>
+<li><p><strong>TRMD:</strong> Modelar el ciclo de fletes, reposición de flota, financiación de la nueva sociedad conjunta y hechos posteriores. El NAV del emisor no es valor intrínseco.</p></li>
+<li><p><strong>UL:</strong> Reconciliar capex y costes posteriores al Investor Event sin duplicarlos. Las valoraciones históricas no son valores actuales.</p></li>
+<li><p><strong>BAH:</strong> Conciliar adquisiciones, impuestos, inversiones, pensiones, incentivos y capital actual.</p></li>
+<li><p><strong>HRI:</strong> Cerrar reposición de flota, compras pendientes de pago, arrendamientos, comparabilidad con H&amp;E y deuda.</p></li>
+<li><p><strong>YOU:</strong> Conciliar caja por entidad, obligaciones TRA, activos fiscales, dilución y financiación. La liquidación de pasivos comerciales no es un ajuste recurrente de caja.</p></li>
+<li><p><strong>GWRE:</strong> Valorar la compra de HX y cerrar capital, dilución, impuestos y caja posterior. Los casos del negocio anterior no valoran la empresa combinada.</p></li>
+<li><p><strong>TOST:</strong> Reconciliar financiación de préstamos, comisiones, software, capital y contingencia FTC. La reconstrucción no sustituye un puente exacto al modelo anterior.</p></li>
+<li><p><strong>LNG:</strong> Completar FCFF/SOTP a diez años, escenarios, valoración inversa y comparables; conciliar proyectos, minoritarios CQP y caja por entidad.</p></li>
+<li><p><strong>STNG:</strong> Construir FCFF a diez años con ciclo, reinversión terminal, coste de capital e inverso; cerrar dilución, inversiones y caja posterior.</p></li>
+<li><p><strong>SWKS:</strong> Conciliar el balance y capital combinados con Qorvo y la caja de ambos perímetros. Los residuos ilustrativos del modelo no son precios objetivo.</p></li>
+<li><p><strong>RYAN:</strong> Conciliar TRA de la matriz, activos fiscales, amortización y reposición, incentivos, dilución y movimientos posteriores. ## Reglas que no cambian</p></li>
+<li><p>El umbral es Opportunity 85, no 80. NXPI y VRSK no pasan a investigación profunda en esta ronda.</p></li>
+<li><p>QP y RSI no sustituyen los criterios del plan ni son vetos automáticos. Precio del CSV no equivale a cierre regular certificado.</p></li>
+<li><p>El filtro técnico correcto requiere precio &gt; EMA50 y EMA20 &gt; EMA50. No se ha certificado en esta conciliación; no se usa EMA50 &gt; EMA200 como sustituto.</p></li>
+<li><p>Los importes ilustrativos, EV operativos y residuos de capital condicionado no se elevan a valores razonables o máximos de compra.</p></li>
+<li><p>No hay margen de seguridad universal ni descuento que subsane información esencial faltante.</p></li>
+<li><p>Las exclusiones sanitarias, el tratamiento de MKTX y las posiciones cerradas TEL/DG se preservan.</p></li>
+</ul>
+<h2 id="próximos-eventos-y-publicación">Próximos eventos y publicación</h2>
+<p>La cola de eventos del 5 de noviembre contiene G, WK, BSY, TDC, TRP, AFRM, FA, ROK, VNT, IMAX y LYFT. El calendario separado distingue publicación, llamada y certeza del horario. Hay nueve fechas de publicación confirmadas por separado; TRP e IMAX solo confirman la fecha de la llamada. TC Energy presenta además un conflicto entre 08:30 ET y 07:30 Alberta, equivalentes a 13:30 o 14:30 UTC. No se certifica una de esas horas como definitiva.</p>
+<p>La existencia del paquete local y su SHA256 se comprueban en el registro. La publicación efectiva solo se marca como verificada tras comprobarla en la web; este informe no la presupone.</p>
+<h2 id="orden-de-continuación">Orden de continuación</h2>
+<ol type="1">
+<li>Incorporar cada comunicado real y llamada del 5 de noviembre, empezando por los eventos de la mañana. FA y VNT tienen modelos previos que reutilizar; ROK y BSY necesitan el trabajo de valoración pendiente.</li>
+<li>Mantener abiertas las limitaciones de los 15 expedientes parciales. Separar trabajo analítico todavía realizable de evidencia futura no disponible. No declarar que todo depende de un futuro resultado.</li>
+<li>Auditar las reconstrucciones y las traducciones a capital antes de cambiar las tarjetas de valor o marcar Stage 3 como terminado.</li>
+<li>Verificar la publicación y evitar duplicar dossiers existentes o reabrir posiciones.</li>
+</ol>
+<h2 id="english-summary">English summary</h2>
+<p>The November 4 scanner contains 192 rows. Exactly 70 meet Opportunity ≥85; the other 122 are outside this research round. All 70 have an explicit treatment, not completed analysis: 13 new partial dossiers, 2 partial/event updates, 29 existing dossiers, 11 deferred earnings events, 11 healthcare exclusions, one corporate-transaction exclusion, two closed positions and one separate Stage 3.5 review. Zero newly completed Stage 3 analyses and zero entries approved. Historical UL values remain explicitly pre-event. The event calendar distinguishes releases from calls and retains the TC Energy timing conflict. Spreadsheet synchronization remains pending.</p>
+<h2 id="tratamiento-de-las-70-filas-treatment-of-all-70-rows">Tratamiento de las 70 filas / Treatment of all 70 rows</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 25%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th style="text-align: right;">Opportunity</th>
+<th>Tratamiento</th>
+<th>Informe asociado</th>
+<th>Próximo paso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/G">G</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/WK">WK</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/VCYT">VCYT</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/MKTX">MKTX</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Operación corporativa fuera de entrada ordinaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/NCNO">NCNO</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/WDAY">WDAY</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/AEO">AEO</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A258">A258</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/BSY">BSY</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/EAT">EAT</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A252">A252</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/FRPT">FRPT</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/OPCH">OPCH</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/LMT">LMT</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A256">A256</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/RMD">RMD</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/TDC">TDC</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/TEL">TEL</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Posición cerrada: sin reapertura automática</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/TRI">TRI</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/TRP">TRP</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/UHS">UHS</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/GDDY">GDDY</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/WAY">WAY</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/QGEN">QGEN</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/SNPS">SNPS</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/CTSH">CTSH</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/UNFI">UNFI</a></td>
+<td style="text-align: right;">100.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/IT">IT</a></td>
+<td style="text-align: right;">95.0</td>
+<td>Revisión específica de Stage 3.5 en expediente separado</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/ECO">ECO</a></td>
+<td style="text-align: right;">95.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/RNG">RNG</a></td>
+<td style="text-align: right;">95.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/SSL">SSL</a></td>
+<td style="text-align: right;">95.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/HURN">HURN</a></td>
+<td style="text-align: right;">95.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A249">A249</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/AFRM">AFRM</a></td>
+<td style="text-align: right;">95.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/TRMD">TRMD</a></td>
+<td style="text-align: right;">95.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A254">A254</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/CRWD">CRWD</a></td>
+<td style="text-align: right;">95.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/BR">BR</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/BZ">BZ</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/DG">DG</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Posición cerrada: sin reapertura automática</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/FA">FA</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/LW">LW</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/UL">UL</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Actualización parcial o suplemento posterior al evento</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A264">A264</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/BAH">BAH</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A257">A257</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/FLS">FLS</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/GAP">GAP</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/GME">GME</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/HRI">HRI</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A260">A260</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/ROK">ROK</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/TYL">TYL</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/UNH">UNH</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/VNT">VNT</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/YOU">YOU</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A253">A253</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/GWRE">GWRE</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A261">A261</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/PTGX">PTGX</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/PYPL">PYPL</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/QLYS">QLYS</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/HTHT">HTHT</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/IMAX">IMAX</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/ISRG">ISRG</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/ADSK">ADSK</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/AUPH">AUPH</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/SPGI">SPGI</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/TENB">TENB</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/TOST">TOST</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Actualización parcial o suplemento posterior al evento</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A251">A251</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/LYFT">LYFT</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Evento de resultados del 5 de noviembre, revisión después de publicación</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Verificar el comunicado primario y actualizar o construir el expediente tras publicarse; una convocatoria no es un resultado.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/CNX">CNX</a></td>
+<td style="text-align: right;">85.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/LNG">LNG</a></td>
+<td style="text-align: right;">85.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A265">A265</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/AVTR">AVTR</a></td>
+<td style="text-align: right;">85.0</td>
+<td>Exclusión sectorial sanitaria</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Mantener el tratamiento del expediente, sin inferir entrada a partir del score.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/SPSC">SPSC</a></td>
+<td style="text-align: right;">85.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/STNG">STNG</a></td>
+<td style="text-align: right;">85.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A263">A263</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/SWKS">SWKS</a></td>
+<td style="text-align: right;">85.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A262">A262</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/TSLA">TSLA</a></td>
+<td style="text-align: right;">85.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://fundamentalpullback.github.io/#ficha/RYAN">RYAN</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Investigación nueva parcial, no Stage 3 completo</td>
+<td><a href="https://fundamentalpullback.github.io/#biblioteca/A259">A259</a></td>
+<td>Cerrar las limitaciones del dossier dentro de las reglas vigentes; no completar la valoración con descuentos arbitrarios.</td>
+</tr>
+<tr class="even">
+<td><a href="https://fundamentalpullback.github.io/#ficha/CDNS">CDNS</a></td>
+<td style="text-align: right;">90.0</td>
+<td>Expediente previo: no duplicar por aparición en escáner</td>
+<td>Expediente o tratamiento anterior</td>
+<td>Conservar el expediente y sus límites; reabrir solo ante nueva evidencia o el trabajo incompleto ya identificado. Existente no significa necesariamente completo.</td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="agenda-de-resultados-del-5-de-noviembre-de-2026">Agenda de resultados del 5 de noviembre de 2026</h1>
+<p>Horas de Nueva York (ET, UTC−5). Se separan la publicación y la llamada. Ningún evento aprueba una entrada.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Empresa</th>
+<th>Publicación de resultados</th>
+<th>Llamada ET</th>
+<th>Llamada UTC</th>
+<th>Trabajo posterior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://investors.vontier.com/press-releases/press-releases-details/2026/Vontier-Schedules-Third-Quarter-2026-Earnings-Call/default.aspx">VNT</a></td>
+<td>Por la mañana; minuto no anunciado.</td>
+<td>08:00</td>
+<td>13:00</td>
+<td>Actualizar el modelo previo condicionado.</td>
+</tr>
+<tr class="even">
+<td><a href="https://investors.bentley.com/news-releases/news-release-details/bentley-systems-announce-third-quarter-2026-results-november-5">BSY</a></td>
+<td>Antes de apertura y de la llamada.</td>
+<td>08:15</td>
+<td>13:15</td>
+<td>Completar la valoración pendiente.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://investors.fadv.com/news-releases/news-release-details/first-advantage-release-third-quarter-2026-financial-results-and">FA</a></td>
+<td>Antes de la llamada; minuto no anunciado.</td>
+<td>08:30</td>
+<td>13:30</td>
+<td>Actualizar el modelo previo.</td>
+</tr>
+<tr class="even">
+<td><a href="https://imaxcorporation.gcs-web.com/news-releases/news-release-details/imax-corporation-announce-third-quarter-2026-financial-results">IMAX</a></td>
+<td>Sin fecha/hora de publicación separada confirmada.</td>
+<td>08:30</td>
+<td>13:30</td>
+<td>No se localizó dossier propio en los registros revisados.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.rockwellautomation.com/en-hu/company/news/press-releases/Rockwell-Automation-to-Report-Fourth-Quarter-and-Full-Year-Fiscal-2026-Results-and-Introduce-Fiscal-2027-Guidance.html">ROK</a></td>
+<td>Antes de apertura.</td>
+<td>08:30</td>
+<td>13:30</td>
+<td>Construir la valoración con FY2026 y guía FY2027.</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.tcenergy.com/announcements/2026/2026-10-16-tc-energy-to-host-third-quarter-2026-conference-call-on-nov.-5">TRP</a></td>
+<td>Sin fecha/hora de publicación separada confirmada.</td>
+<td>08:30 explícita / 09:30 implícita por Alberta</td>
+<td>13:30 / 14:30; conflicto</td>
+<td>No se localizó dossier propio en los registros revisados.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://investor.teradata.com/news-events/investor-news/news-details/2026/Teradata-Announces-2026-Third-Quarter-Earnings-Release-Date/default.aspx">TDC</a></td>
+<td>Después del cierre; minuto no anunciado.</td>
+<td>16:30</td>
+<td>21:30</td>
+<td>Actualizar el modelo previo A122.</td>
+</tr>
+<tr class="even">
+<td><a href="https://investors.affirm.com/node/13966/pdf">AFRM</a></td>
+<td>Después del cierre; minuto no anunciado.</td>
+<td>17:00</td>
+<td>22:00</td>
+<td>No se localizó dossier propio en los registros revisados.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://media.genpact.com/2026-10-08-Genpact-to-Report-Third-Quarter-2026-Results">G</a></td>
+<td>Después del cierre; minuto no anunciado.</td>
+<td>17:00</td>
+<td>22:00</td>
+<td>Actualizar el modelo previo A121.</td>
+</tr>
+<tr class="even">
+<td><a href="https://investor.lyft.com/news-events-presentations/press-releases/detail/208/lyft-to-announce-third-quarter-2026-financial-results">LYFT</a></td>
+<td>Después del cierre; minuto no anunciado.</td>
+<td>17:00</td>
+<td>22:00</td>
+<td>No se localizó dossier propio en los registros revisados.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://investor.workiva.com/news-releases/news-release-details/workiva-sets-date-third-quarter-2026-financial-release-and">WK</a></td>
+<td>Después del cierre; minuto no anunciado.</td>
+<td>17:00</td>
+<td>22:00</td>
+<td>Actualizar el modelo previo A122.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>TC Energy:</strong> el emisor publica 08:30 ET y 07:30 Alberta, que no son equivalentes el 5 de noviembre. La discrepancia sigue abierta.</p>
+<p><strong>IMAX:</strong> se confirma la llamada del 5 de noviembre, no una ventana independiente de publicación. No se localizó un comunicado real del 4 de noviembre en las fuentes consultadas.</p>
+<p>A las 00:47:43 UTC del 5 de noviembre, aún era el 4 de noviembre en Estados Unidos. La búsqueda de los siete nombres de tarde/TRP/IMAX no localizó resultados nuevos; esta observación es limitada a las fuentes accesibles, no prueba universal de ausencia. Para VNT, BSY, FA y ROK se reconfirmó la convocatoria, sin afirmar una comprobación exhaustiva de no publicación.</p>
+<p>Antes de valorar: obtener comunicado, estados completos, presentación y llamada; conciliar beneficio recurrente, caja, reinversión, deuda, dilución y hechos posteriores. Reutilizar modelos existentes sin heredar una señal de compra.</p>
+<h2 id="datos-y-reproducción">Datos y reproducción</h2>
+<ul>
+<li><a href="scanner-reconciliation/scanner_reconciliation_20261105.zip">Paquete auditado de conciliación</a></li>
+<li><a href="scanner-reconciliation/publication_input.json">Clasificación estructurada de las 70 filas</a></li>
+<li><a href="../2026-11-04/scanner/2026-11-04-Quote.csv">CSV original, sin cambios</a></li>
+</ul>
+</main></body></html>

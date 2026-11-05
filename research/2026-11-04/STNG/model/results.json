@@ -1,0 +1,388 @@
+{
+  "valuation": null,
+  "bear": null,
+  "base": null,
+  "bull": null,
+  "ownerFCF": null,
+  "certifiedEquityBridge": null,
+  "entryApproved": false,
+  "historicalCashBridge": {
+    "Oct26Cash": 2051.865,
+    "principalDebt": 655,
+    "netCash": 1396.8649999999998,
+    "remainingCapexIncludingJV": 1295.8999999999999,
+    "cashLessDebtAndAllCommitments": 100.96499999999992,
+    "declaredDividendProxy": 38.309138250000004,
+    "selectedOperatingReserve": 250,
+    "afterDividendAndSelectedReserve": -187.34413825000007,
+    "pendingSalesGross": 143,
+    "notNAV": true,
+    "notAvailableCashCertification": true
+  },
+  "convertible": {
+    "conversionPrice": 99.21520770703734,
+    "fullConversionShares": 6.0978555000000005,
+    "physicalTotalShares": 57.1767065,
+    "examples": [
+      {
+        "hypotheticalGrossAssetValue": 4000,
+        "notAnEstimatedEV": true,
+        "parOnlyPerShare": 65.48698599347898,
+        "fullConversionPerShare": 69.08407709702551,
+        "defaultCombinationPerShare": 65.48698599347898,
+        "incrementalSharesUnderCombination": 0,
+        "optionTimeValueIncluded": false
+      },
+      {
+        "hypotheticalGrossAssetValue": 6000,
+        "notAnEstimatedEV": true,
+        "parOnlyPerShare": 104.64213456955012,
+        "fullConversionPerShare": 104.06335663982324,
+        "defaultCombinationPerShare": 104.06335663982324,
+        "incrementalSharesUnderCombination": 0.28408954495798344,
+        "optionTimeValueIncluded": false
+      },
+      {
+        "hypotheticalGrossAssetValue": 8000,
+        "notAnEstimatedEV": true,
+        "parOnlyPerShare": 143.79728314562126,
+        "fullConversionPerShare": 139.04263618262098,
+        "defaultCombinationPerShare": 139.04263618262098,
+        "incrementalSharesUnderCombination": 1.746672175157233,
+        "optionTimeValueIncluded": false
+      }
+    ]
+  },
+  "earningsQuality": {
+    "reportedEBIT": 269.1,
+    "vesselGain": 152.55,
+    "EBITExVesselGain": 116.55000000000001,
+    "EBITDAPostSBCExVesselGain": 151.758,
+    "reportedNI": 224.316,
+    "lessVesselGain": -152.55,
+    "addFinancialLiabilityFairValueLoss": 55.593,
+    "issuerAdjustedNIRebuilt": 127.359,
+    "issuerAdjustedDilutedEPSRebuilt": 2.4861617732732304,
+    "adjustedEPSUsesDifferentDenominator": true
+  },
+  "economicBreakEvenCases": {
+    "bear": {
+      "postSale72": {
+        "fleetCount": 72,
+        "TCERevenue": 469.53988999999996,
+        "operatingCost": 224.399445,
+        "GNAIncludingSBC": 160,
+        "drydockProxy": 28.8,
+        "annualEconomicReplacementCharge": 134.6184,
+        "preTaxEconomicSurplus": -78.27795500000003,
+        "selectedTaxStress": 0.0,
+        "economicSurplusAfterSelectedTax": -78.27795500000003,
+        "uniformDailyTCEBreakEven": 21854.243661971836,
+        "notActualFCFF": true,
+        "notOwnerCash": true,
+        "notFairValue": true
+      },
+      "afterAllDirectNewbuild89": {
+        "fleetCount": 89,
+        "TCERevenue": 604.6398899999999,
+        "operatingCost": 284.76277999999996,
+        "GNAIncludingSBC": 160,
+        "drydockProxy": 35.6,
+        "annualEconomicReplacementCharge": 183.1248,
+        "preTaxEconomicSurplus": -58.84769000000003,
+        "selectedTaxStress": 0.0,
+        "economicSurplusAfterSelectedTax": -58.84769000000003,
+        "uniformDailyTCEBreakEven": 21387.912012987013,
+        "notActualFCFF": true,
+        "notOwnerCash": true,
+        "notFairValue": true
+      }
+    },
+    "base": {
+      "postSale72": {
+        "fleetCount": 72,
+        "TCERevenue": 710.6898899999999,
+        "operatingCost": 224.399445,
+        "GNAIncludingSBC": 160,
+        "drydockProxy": 28.8,
+        "annualEconomicReplacementCharge": 134.6184,
+        "preTaxEconomicSurplus": 162.87204499999984,
+        "selectedTaxStress": 3.257440899999997,
+        "economicSurplusAfterSelectedTax": 159.61460409999984,
+        "uniformDailyTCEBreakEven": 21854.243661971836,
+        "notActualFCFF": true,
+        "notOwnerCash": true,
+        "notFairValue": true
+      },
+      "afterAllDirectNewbuild89": {
+        "fleetCount": 89,
+        "TCERevenue": 918.9398899999999,
+        "operatingCost": 284.76277999999996,
+        "GNAIncludingSBC": 160,
+        "drydockProxy": 35.6,
+        "annualEconomicReplacementCharge": 183.1248,
+        "preTaxEconomicSurplus": 255.45230999999984,
+        "selectedTaxStress": 5.109046199999997,
+        "economicSurplusAfterSelectedTax": 250.34326379999985,
+        "uniformDailyTCEBreakEven": 21387.912012987013,
+        "notActualFCFF": true,
+        "notOwnerCash": true,
+        "notFairValue": true
+      }
+    },
+    "bull": {
+      "postSale72": {
+        "fleetCount": 72,
+        "TCERevenue": 1110.73989,
+        "operatingCost": 224.399445,
+        "GNAIncludingSBC": 160,
+        "drydockProxy": 28.8,
+        "annualEconomicReplacementCharge": 134.6184,
+        "preTaxEconomicSurplus": 562.922045,
+        "selectedTaxStress": 11.2584409,
+        "economicSurplusAfterSelectedTax": 551.6636041,
+        "uniformDailyTCEBreakEven": 21854.243661971836,
+        "notActualFCFF": true,
+        "notOwnerCash": true,
+        "notFairValue": true
+      },
+      "afterAllDirectNewbuild89": {
+        "fleetCount": 89,
+        "TCERevenue": 1446.73989,
+        "operatingCost": 284.76277999999996,
+        "GNAIncludingSBC": 160,
+        "drydockProxy": 35.6,
+        "annualEconomicReplacementCharge": 183.1248,
+        "preTaxEconomicSurplus": 783.2523100000001,
+        "selectedTaxStress": 15.665046200000003,
+        "economicSurplusAfterSelectedTax": 767.5872638000001,
+        "uniformDailyTCEBreakEven": 21387.912012987013,
+        "notActualFCFF": true,
+        "notOwnerCash": true,
+        "notFairValue": true
+      }
+    }
+  },
+  "breakEvenSensitivity": [
+    {
+      "GNA": 125,
+      "lifeYears": 20,
+      "breakEvenDailyTCE": 21800.10281690141,
+      "surplus": 160.93309609999986
+    },
+    {
+      "GNA": 125,
+      "lifeYears": 25,
+      "breakEvenDailyTCE": 20445.792957746482,
+      "surplus": 193.91460409999985
+    },
+    {
+      "GNA": 125,
+      "lifeYears": 30,
+      "breakEvenDailyTCE": 19542.919718309862,
+      "surplus": 215.90227609999985
+    },
+    {
+      "GNA": 160,
+      "lifeYears": 20,
+      "breakEvenDailyTCE": 23208.55352112676,
+      "surplus": 126.63309609999986
+    },
+    {
+      "GNA": 160,
+      "lifeYears": 25,
+      "breakEvenDailyTCE": 21854.243661971836,
+      "surplus": 159.61460409999984
+    },
+    {
+      "GNA": 160,
+      "lifeYears": 30,
+      "breakEvenDailyTCE": 20951.370422535212,
+      "surplus": 181.60227609999984
+    },
+    {
+      "GNA": 190,
+      "lifeYears": 20,
+      "breakEvenDailyTCE": 24415.796981891348,
+      "surplus": 97.23309609999986
+    },
+    {
+      "GNA": 190,
+      "lifeYears": 25,
+      "breakEvenDailyTCE": 23061.487122736424,
+      "surplus": 130.21460409999986
+    },
+    {
+      "GNA": 190,
+      "lifeYears": 30,
+      "breakEvenDailyTCE": 22158.6138832998,
+      "surplus": 152.20227609999984
+    }
+  ],
+  "otherSensitivity": [
+    {
+      "variable": "salvage",
+      "value": 0,
+      "breakEvenDailyTCE": 22456.159154929577,
+      "surplus": 144.95615609999987
+    },
+    {
+      "variable": "salvage",
+      "value": 0.1,
+      "breakEvenDailyTCE": 21854.243661971836,
+      "surplus": 159.61460409999984
+    },
+    {
+      "variable": "salvage",
+      "value": 0.2,
+      "breakEvenDailyTCE": 21252.32816901409,
+      "surplus": 174.27305209999986
+    },
+    {
+      "variable": "days",
+      "value": 330,
+      "breakEvenDailyTCE": 23178.743277848916,
+      "surplus": 120.08140409999982
+    },
+    {
+      "variable": "days",
+      "value": 350,
+      "breakEvenDailyTCE": 21854.243661971836,
+      "surplus": 159.61460409999984
+    },
+    {
+      "variable": "days",
+      "value": 360,
+      "breakEvenDailyTCE": 21247.181338028175,
+      "surplus": 179.3812040999999
+    },
+    {
+      "variable": "cost_scale",
+      "value": 0.8,
+      "breakEvenDailyTCE": 20770.795774647893,
+      "surplus": 185.99981049999985
+    },
+    {
+      "variable": "cost_scale",
+      "value": 1,
+      "breakEvenDailyTCE": 21854.243661971836,
+      "surplus": 159.61460409999984
+    },
+    {
+      "variable": "cost_scale",
+      "value": 1.2,
+      "breakEvenDailyTCE": 22937.691549295778,
+      "surplus": 133.22939769999985
+    },
+    {
+      "variable": "opex_scale",
+      "value": 0.9,
+      "breakEvenDailyTCE": 20951.227786720323,
+      "surplus": 181.60574970999988
+    },
+    {
+      "variable": "opex_scale",
+      "value": 1,
+      "breakEvenDailyTCE": 21854.243661971836,
+      "surplus": 159.61460409999984
+    },
+    {
+      "variable": "opex_scale",
+      "value": 1.15,
+      "breakEvenDailyTCE": 23208.7674748491,
+      "surplus": 126.62788568499987
+    },
+    {
+      "variable": "tax",
+      "value": 0,
+      "breakEvenDailyTCE": 21854.243661971836,
+      "surplus": 162.87204499999984
+    },
+    {
+      "variable": "tax",
+      "value": 0.02,
+      "breakEvenDailyTCE": 21854.243661971836,
+      "surplus": 159.61460409999984
+    },
+    {
+      "variable": "tax",
+      "value": 0.1,
+      "breakEvenDailyTCE": 21854.243661971836,
+      "surplus": 146.58484049999987
+    }
+  ],
+  "q4BookingArithmetic": [
+    {
+      "case": "zero_unfixed",
+      "unfixedSpotDailyRates": {
+        "LR2": 0,
+        "MR": 0,
+        "Handy": 0
+      },
+      "TCEByClass": {
+        "LR2": 114.58475,
+        "MR": 82.029206,
+        "Handy": 19.6014
+      },
+      "TCERevenue": 216.215356,
+      "notGuidance": true,
+      "notGuaranteedMinimum": true
+    },
+    {
+      "case": "weaker",
+      "unfixedSpotDailyRates": {
+        "LR2": 35000,
+        "MR": 22000,
+        "Handy": 18000
+      },
+      "TCEByClass": {
+        "LR2": 134.67475,
+        "MR": 116.064746,
+        "Handy": 33.01662
+      },
+      "TCERevenue": 283.756116,
+      "notGuidance": true,
+      "notGuaranteedMinimum": true
+    },
+    {
+      "case": "q3_spot_reference",
+      "unfixedSpotDailyRates": {
+        "LR2": 72283,
+        "MR": 31183,
+        "Handy": 24253
+      },
+      "TCEByClass": {
+        "LR2": 156.075192,
+        "MR": 130.27148981000002,
+        "Handy": 37.676918369999996
+      },
+      "TCERevenue": 324.02360018,
+      "notGuidance": true,
+      "notGuaranteedMinimum": true
+    },
+    {
+      "case": "booked_rates_persist",
+      "unfixedSpotDailyRates": {
+        "LR2": 181000,
+        "MR": 56000,
+        "Handy": 40000
+      },
+      "TCEByClass": {
+        "LR2": 218.47875,
+        "MR": 168.665126,
+        "Handy": 49.413
+      },
+      "TCERevenue": 436.556876,
+      "notGuidance": true,
+      "notGuaranteedMinimum": true
+    }
+  ],
+  "limits": [
+    "No ten-year FCFF DCF or reverse valuation: fleet cohort replacement schedule, normalized forward rates, JV ownership economics and award dilution are not closed.",
+    "Economic replacement charge is an analytical smoothing proxy. It is not actual capex or a certified economic life; do not deduct it a second time on top of scheduled newbuild/replacement capex.",
+    "All total valuation fields stay null. Scenario labels refer to daily-rate diagnostics, never equity prices.",
+    "Two sales are pending;72vessel scope is conditional. Existing time-charter contracts are not repriced by these normalized uniform-rate exercises. They are neither next-year guidance nor cash forecasts.",
+    "G&A and tax estimates are analyst stress assumptions. US shipping tax exemptions and their potential loss require separate modeling.",
+    "Price date is November4. Draft completed November5 UTC using sources through November4."
+  ]
+}

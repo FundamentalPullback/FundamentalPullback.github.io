@@ -9,3 +9,8 @@ const legacy=t.scanAuditNote('2026-11-03');assert(legacy.includes(lang==='es'?'L
 t.S.scan=t.S.scan.concat([{ticker:'FUTURE',date:'2099-01-05',opp:90,s2:null,price:1}]);t.S.scanDate='2099-01-05';t.S.resDate='2099-01-05';
 const scanner=t.vEscaner(),overview=t.vResumen();assert(scanner.includes('Opportunity ≥85'));assert(!scanner.includes(lang==='es'?'Solo Stage 2':'Stage 2 only'));assert(overview.includes('Opportunity ≥85'));assert(!overview.includes(lang==='es'?'Empresas en Stage 2':'Companies in Stage 2'));}
 assert.equal(JSON.stringify(fixture),saved);console.log('PASS generic import note: absent Stage2 not inherited, raw PB preserved, diagnostic separate, no legacy counts/workbook; ES/EN score-only filter and overview; old audit retained.');
+const reconciled=Object.assign({},fixture,{reconciliationReportId:'A999',reconciliationSummaryEs:'15 investigaciones parciales; cero entradas.',reconciliationSummaryEn:'15 partial dossiers; zero entries.'});
+c.window.FP_SCAN_AUDIT['2099-01-05']=reconciled;
+for(const l of ['es','en']){t.setLang(l);const h=t.scanAuditNote('2099-01-05');assert(h.includes('#biblioteca/A999'));assert(h.includes(l==='es'?'15 investigaciones parciales':'15 partial dossiers'));assert(t.latestScannerNotice().includes('#biblioteca/A999'));}
+reconciled.reconciliationReportId='javascript:alert(1)';assert(!t.scanAuditNote('2099-01-05').includes('javascript:'));assert(!t.latestScannerNotice().includes('javascript:'));assert(!t.scanAuditNote('2026-11-03').includes('A999'));
+console.log('PASS optional reconciliation links in ES/EN scanner and latest notice; generic future IDs, invalid ID rejection, and unchanged historical sessions.');

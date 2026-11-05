@@ -1,0 +1,173 @@
+{
+  "as_of": "2026-11-04",
+  "currency": "USD",
+  "amount_unit": "millions unless stated",
+  "status": "partial_conditioned",
+  "actual_combined_fair_value": null,
+  "actual_maximum_purchase_price": null,
+  "closing_actual": {
+    "date": "2026-10-05",
+    "cash_and_marketable_securities": null,
+    "debt_carrying_value": null,
+    "net_debt": null,
+    "shares_outstanding": null,
+    "reason": "Actual consolidated closing balance sheet not established from primary sources reviewed; October 5 closing 8-K deferred acquired financials and pro formas."
+  },
+  "standalone_reported": {
+    "date": "2026-10-02",
+    "cash_and_marketable_securities": 2606.1,
+    "debt_carrying_value": 2472.8,
+    "net_debt": -133.3,
+    "Q4_weighted_average_diluted_shares": 151.5,
+    "source": "https://www.sec.gov/Archives/edgar/data/4127/000000412726000052/q426earningsreleaseformex9.htm",
+    "warning": "August debt proceeds already included; acquisition closed after this period."
+  },
+  "ownership": {
+    "legacy_skyworks_fully_diluted_fraction_approx": 0.63,
+    "legacy_qorvo_fully_diluted_fraction_approx": 0.37,
+    "Q1_FY27_guided_diluted_shares": 241,
+    "share_guidance_not_point_in_time_actual": true,
+    "qorvo_cash_per_common_share_USD": 32.5,
+    "skyworks_share_per_qorvo_common_share": 0.96,
+    "unvested_award_conversion": "0.960 + 32.50 / pre-close five-trading-day VWAP; not the same as common-share exchange",
+    "sources": [
+      "close_8k",
+      "https://investors.skyworksinc.com/news-releases/news-release-details/skyworks-completes-combination-qorvo",
+      "https://www.sec.gov/Archives/edgar/data/4127/000000412726000052/q426earningsreleaseformex9.htm"
+    ]
+  },
+  "august_new_debt": {
+    "date": "2026-08-10",
+    "tranches": [
+      {
+        "principal": 800,
+        "coupon": 0.05,
+        "maturity_year": 2028
+      },
+      {
+        "principal": 600,
+        "coupon": 0.0575,
+        "maturity_year": 2032
+      },
+      {
+        "principal": 600,
+        "coupon": 0.0625,
+        "maturity_year": 2036
+      }
+    ],
+    "total_principal": 2000,
+    "derived_annual_coupon": 112,
+    "derived_weighted_coupon": 0.056,
+    "source": "august_financing"
+  },
+  "exchange_settlement": {
+    "date": "2026-10-07",
+    "source": "exchange_8k",
+    "series": [
+      {
+        "maturity_year": 2029,
+        "coupon": 0.04375,
+        "old_principal": 850,
+        "accepted_and_cancelled": 779.384,
+        "new_principal": 778.096,
+        "old_residual": 70.616
+      },
+      {
+        "maturity_year": 2031,
+        "coupon": 0.03375,
+        "old_principal": 700,
+        "accepted_and_cancelled": 647.096,
+        "new_principal": 646.805,
+        "old_residual": 52.904
+      }
+    ],
+    "new_total": 1424.901,
+    "old_residual_total": 123.52,
+    "qorvo_related_principal_total": 1548.421,
+    "principal_reduction": 1.579,
+    "warning": "New issuance replaces tendered Qorvo debt; do not add new exchange notes to the original full Qorvo balance."
+  },
+  "combined_face_debt_reconstruction": {
+    "legacy_skyworks": 500,
+    "august_financing": 2000,
+    "qorvo_related_after_exchange": 1548.421,
+    "sum": 4048.421,
+    "status": "reconstructed contractual note principal, not reported consolidated GAAP debt",
+    "excluded": "Other possible debt, purchase accounting, issuance costs, and post-close movements not verified",
+    "sources": [
+      "august_prospectus",
+      "august_financing",
+      "exchange_8k"
+    ]
+  },
+  "illustrative_proforma": {
+    "balance_date": "2026-07-03",
+    "qorvo_balance_date": "2026-06-27",
+    "filed_date": "2026-08-03",
+    "source": "july_proforma",
+    "cash_bridge": {
+      "skyworks": 790,
+      "qorvo": 1329,
+      "cash_merger_consideration": -2867,
+      "net_new_financing": 1987,
+      "result": 1239
+    },
+    "marketable_securities_current": 9,
+    "marketable_securities_noncurrent": 14,
+    "cash_and_marketable_securities": 1262,
+    "debt_bridge": {
+      "skyworks_carrying": 497,
+      "qorvo_carrying": 1549,
+      "merger_fair_value_and_exchange_adjustment": -102,
+      "new_financing_net_carrying": 1987,
+      "result": 3931
+    },
+    "net_debt_cash_only": 2692,
+    "net_debt_all_marketable": 2669,
+    "net_debt_cash_and_current_marketable": 2683,
+    "stockholders_equity": 11138,
+    "total_assets": 17961,
+    "unrounded_prospectus_equity": 11137.6,
+    "not_closing_actual": true,
+    "warning": "Pro forma acquisition accounting estimates; not an actual October equity bridge. Cash excludes later operating movements, final consideration changes and final transaction accounting."
+  },
+  "qorvo_historical": {
+    "source_latest_quarter": "qorvo_q127",
+    "source_full_year": "qorvo_fy26",
+    "Q1_FY27_ended_2026_06_27": {
+      "CFO": 139.493,
+      "capex": 24.144,
+      "FCF_calculated": 115.349,
+      "SBC": 34.411,
+      "depreciation": 34.912,
+      "intangible_amortization": 15.225,
+      "cash": 1328.943,
+      "debt_carrying": 1549.138
+    },
+    "Q1_FY26_ended_2025_06_28": {
+      "CFO": 182.945,
+      "capex": 37.543,
+      "SBC": 42.475,
+      "depreciation": 39.466,
+      "intangible_amortization": 27.994
+    },
+    "FY26_ended_2026_03_28": {
+      "CFO": 808.631,
+      "capex": 129.07,
+      "FCF_calculated": 679.561,
+      "SBC": 136.07,
+      "depreciation": 151.338,
+      "intangible_amortization": 111.051
+    },
+    "TTM_calculated_ended_2026_06_27": {
+      "CFO": 765.179,
+      "capex": 115.671,
+      "FCF": 649.508,
+      "SBC": 128.006,
+      "depreciation": 146.784,
+      "intangible_amortization": 98.282,
+      "formula": "FY26 plus June2026 quarter minus June2025 quarter"
+    },
+    "warning": "Do not combine June TTM cash flow with Skyworks October FY2026 and label matched-period combined FY2026. September Qorvo full cash flow not established."
+  }
+}

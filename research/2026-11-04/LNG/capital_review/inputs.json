@@ -1,0 +1,122 @@
+{
+  "as_of": "2026-09-30",
+  "units": "USD millions unless stated",
+  "source_urls": {
+    "q3": "https://www.sec.gov/Archives/edgar/data/3570/000000357026000038/lng-20260930.htm",
+    "annual": "https://www.sec.gov/Archives/edgar/data/3570/000000357026000005/lng-20251231.htm",
+    "release": "https://lngir.cheniere.com/news-events/press-releases/detail/349/cheniere-reports-third-quarter-2026-results-raises-full",
+    "notes_pricing": "https://www.sec.gov/Archives/edgar/data/3570/000119312526444411/d119932dex992.htm",
+    "cqp_q3": "https://www.sec.gov/Archives/edgar/data/1383650/000138365026000038/cqp-20260930.htm",
+    "cqp_annual": "https://www.sec.gov/Archives/edgar/data/1383650/000138365026000005/cqp-20251231.htm"
+  },
+  "cqp": {
+    "lp_pct": 48.6,
+    "gp_economic_pct": 2,
+    "gp_owned_pct": 100,
+    "idr_owned_pct": 100,
+    "outside_lp_pct": 49.4,
+    "idr_tiers": [
+      {
+        "lp_distribution_upper_usd": 0.489,
+        "gp_including_idr_fraction": 0.02
+      },
+      {
+        "lp_distribution_upper_usd": 0.531,
+        "gp_including_idr_fraction": 0.15
+      },
+      {
+        "lp_distribution_upper_usd": 0.638,
+        "gp_including_idr_fraction": 0.25
+      },
+      {
+        "lp_distribution_upper_usd": null,
+        "gp_including_idr_fraction": 0.5
+      }
+    ],
+    "common_units_2026_10_23": 484057704,
+    "parent_common_units_2026_02_20": 239872502,
+    "parent_gp_units_2026_02_20": 9878316,
+    "ownership_denominator_note": "48.6% and 49.4% are portions of total partnership securities; parent common-unit share approximately 49.5545%.",
+    "tier_note": "Marginal GP-inclusive percentages. Exact source and dated unit denominators in capital_methodology.md and waterfall.py. No complete equity valuation."
+  },
+  "debt": {
+    "spl": 4973,
+    "cqp_issuer": 9550,
+    "cqp_including_spl": 14523,
+    "cch": 4865,
+    "parent": 4750,
+    "consolidated_nominal": 24138,
+    "debt_discount_and_costs": 207,
+    "consolidated_carrying": 23931
+  },
+  "cash": {
+    "consolidated": 1663,
+    "cqp": 569,
+    "outside_cqp_not_parent_excess": 1094,
+    "restricted": 393,
+    "cqp_restricted": 35,
+    "parent_available_excess": null
+  },
+  "leases": {
+    "operating_pv": 2370,
+    "finance_pv": 1385,
+    "operating_undiscounted": 2871,
+    "finance_undiscounted": 1839,
+    "future_start_minimum_undiscounted_approx": 6000
+  },
+  "project_cash_spend_ytd_ex_capitalized_interest": {
+    "stage3_approx": 1100,
+    "trains8_9": 709,
+    "spl_expansion": 203,
+    "gregory": 245
+  },
+  "trains8_9": {
+    "capacity_mtpa_approx": 5,
+    "overall_progress_pct": 58.6,
+    "construction_progress_pct": 14.5,
+    "expected_completion": "2H 2028",
+    "original_epc_price_approx": 2900,
+    "verified_current_all_in_remaining_capex": null
+  },
+  "stage3": {
+    "all_7_operating": true,
+    "final_substantial_completion": "2026-08",
+    "capacity_mtpa_more_than": 10
+  },
+  "contractual_capex_at_2025_12_31_not_current_remaining": {
+    "total": 2400,
+    "due_2026": 1500,
+    "due_2027_2030": 900
+  },
+  "notes_priced_2026_11_02": {
+    "principal": 1200,
+    "coupon_pct": 5.8,
+    "issue_price_pct": 99.313,
+    "expected_close": "2026-11-17",
+    "pre_fee_proceeds": 1191.756,
+    "annual_coupon": 69.6,
+    "add_to_current_debt_or_cash": false
+  },
+  "shares": {
+    "actual_outstanding_2026_10_23": 204203914,
+    "issued_2026_09_30_millions_rounded": 279.6,
+    "treasury_2026_09_30_millions_rounded": 74.5,
+    "q3_weighted_basic_millions": 206.3,
+    "q3_weighted_dilutive_unvested_millions": 0.6,
+    "q3_weighted_diluted_millions": 206.9,
+    "current_fully_diluted": null,
+    "nonvested_2025_12_31_millions_rounded": {
+      "rsu_equity": 1.1,
+      "rsu_liability": 0.1,
+      "psu_equity": 0.3,
+      "psu_liability": 0.4
+    },
+    "ungranted_plan_capacity_2025_12_31_millions_not_current_dilution": 7.5
+  },
+  "spl_phase1": {
+    "epc_approx": 4700,
+    "conditional_loan_commitments": 3250,
+    "loan_approx_share_total_cost_pct": 50,
+    "inferred_total_cost_approx_not_exact_budget": 6500
+  }
+}

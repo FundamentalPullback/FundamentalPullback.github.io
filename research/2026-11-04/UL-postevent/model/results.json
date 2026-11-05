@@ -1,0 +1,145 @@
+{
+  "cash_cost_capex_sensitivities": [
+    {
+      "capex_interpretation": "legacy_unchanged",
+      "cost_reserve_eur_bn": 4,
+      "delta_vs_frozen_fade": 0.0,
+      "mechanical_package_per_adr_usd": 61.66946936897446
+    },
+    {
+      "capex_interpretation": "excludes_leases",
+      "cost_reserve_eur_bn": 4,
+      "delta_vs_frozen_fade": -0.2272717641175035,
+      "mechanical_package_per_adr_usd": 61.44219760485696
+    },
+    {
+      "capex_interpretation": "includes_leases",
+      "cost_reserve_eur_bn": 4,
+      "delta_vs_frozen_fade": 0.22727176411748218,
+      "mechanical_package_per_adr_usd": 61.89674113309194
+    },
+    {
+      "capex_interpretation": "legacy_unchanged",
+      "cost_reserve_eur_bn": 5,
+      "delta_vs_frozen_fade": -0.49251262869649537,
+      "mechanical_package_per_adr_usd": 61.176956740277966
+    },
+    {
+      "capex_interpretation": "excludes_leases",
+      "cost_reserve_eur_bn": 5,
+      "delta_vs_frozen_fade": -0.7197843928139989,
+      "mechanical_package_per_adr_usd": 60.94968497616046
+    },
+    {
+      "capex_interpretation": "includes_leases",
+      "cost_reserve_eur_bn": 5,
+      "delta_vs_frozen_fade": -0.2652408645790132,
+      "mechanical_package_per_adr_usd": 61.40422850439545
+    }
+  ],
+  "checks": [
+    {
+      "name": "legacy deal reproduction",
+      "passed": true
+    },
+    {
+      "name": "legacy direct reproduction",
+      "passed": true
+    },
+    {
+      "name": "positive marginal cost reduces value",
+      "passed": true
+    },
+    {
+      "name": "includes vs excludes lease bracket",
+      "passed": true
+    }
+  ],
+  "fixed_fx": 1.1179,
+  "legacy": {
+    "deal_fade": 61.66946936897446,
+    "deal_original": 62.4885948755273,
+    "direct_fade": 66.51665790542,
+    "direct_original": 67.26375496007486
+  },
+  "limitations": [
+    "First three post-close model periods are a timing proxy, not literal2027-29 calendar periods. Old0.67-year stub and postclose discounting retained solely for like-for-like attribution.",
+    "Capex reverts to old3.2% plus0.8% leases after3 periods; no management post2029 guidance inferred.",
+    "Aggregate\u20ac5bn reserve may overlap recurring restructuring and old\u20ac0.12/0.06bn stranded costs retained here. No\u20ac1.2bn or\u20ac0.5-0.6bn additional charge made.",
+    "No future acquisitions or acquired growth added; not management all-in cash allocation.",
+    "Current shares, FX, pension, NCI, nonoperating assets and MKC carveout have not been fully rebuilt.",
+    "Annual ongoing restructuring .6% is an analytical baseline, not event forecast."
+  ],
+  "margin_sensitivities": [
+    {
+      "analyst_margin_endpoint": 0.22,
+      "mechanical_package_per_adr_usd": 65.8515804003726,
+      "model_year_reached": 5
+    },
+    {
+      "analyst_margin_endpoint": 0.22,
+      "mechanical_package_per_adr_usd": 65.03268567461608,
+      "model_year_reached": 10
+    },
+    {
+      "analyst_margin_endpoint": 0.225,
+      "mechanical_package_per_adr_usd": 67.29331434867025,
+      "model_year_reached": 5
+    },
+    {
+      "analyst_margin_endpoint": 0.225,
+      "mechanical_package_per_adr_usd": 66.31693986796058,
+      "model_year_reached": 10
+    },
+    {
+      "analyst_margin_endpoint": 0.23,
+      "mechanical_package_per_adr_usd": 68.73504829696795,
+      "model_year_reached": 5
+    },
+    {
+      "analyst_margin_endpoint": 0.23,
+      "mechanical_package_per_adr_usd": 67.60119406130508,
+      "model_year_reached": 10
+    }
+  ],
+  "price_change": {
+    "new_close": 66.92,
+    "prior_close": 64.81,
+    "return": 0.03255670421231294
+  },
+  "reverse_margin_diagnostic": {
+    "analyst_margin_endpoint_year10": 0.22734790018660134,
+    "held_fixed": "5% initial revenue growth,7.5% HPC WACC,19% terminal ROIC,2.5% terminal growth; \u20ac5bn aggregate reserve;3.6% capex plus0.8% leases for first3 model periods; all other legacy inputs frozen",
+    "meaning": "Conditional reverse diagnostic, not a uniquely market-implied margin or management forecast.",
+    "price": 66.92
+  },
+  "scope": "Frozen-legacy attribution only; every mechanical package value is NOT current fair value, target or entry. Inputs date before event; no complete postevent capital/calendar reconciliation.",
+  "shares": 2.1624292850000004,
+  "three_year_cash_illustration": [
+    {
+      "calendar_label": 2027,
+      "capex_at_event_3p6": 1.5233399999999997,
+      "capex_at_legacy_3p2": 1.35408,
+      "illustrative_sales": 42.315,
+      "increment_if_comparable": 0.16926,
+      "legacy_recurring_restructuring": 0.25389
+    },
+    {
+      "calendar_label": 2028,
+      "capex_at_event_3p6": 1.5995069999999998,
+      "capex_at_legacy_3p2": 1.421784,
+      "illustrative_sales": 44.430749999999996,
+      "increment_if_comparable": 0.177723,
+      "legacy_recurring_restructuring": 0.2665845
+    },
+    {
+      "calendar_label": 2029,
+      "capex_at_event_3p6": 1.6794823499999998,
+      "capex_at_legacy_3p2": 1.4928732,
+      "illustrative_sales": 46.6522875,
+      "increment_if_comparable": 0.18660915,
+      "legacy_recurring_restructuring": 0.279913725
+    }
+  ],
+  "units": "EURbn except FoodsUSD, sharesbn and ADRUSD"
+}

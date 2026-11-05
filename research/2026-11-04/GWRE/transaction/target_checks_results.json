@@ -1,0 +1,154 @@
+{
+  "passed": true,
+  "count": 23,
+  "checks": [
+    {
+      "check": "year_jan2026 gross profit",
+      "actual": 26829779,
+      "expected": 26829779,
+      "passed": true
+    },
+    {
+      "check": "year_jan2026 EBIT",
+      "actual": -6153648,
+      "expected": -6153648,
+      "passed": true
+    },
+    {
+      "check": "year_jan2026 PBT",
+      "actual": -4850447,
+      "expected": -4850447,
+      "passed": true
+    },
+    {
+      "check": "year_jan2026 net income",
+      "actual": -4541497,
+      "expected": -4541497,
+      "passed": true
+    },
+    {
+      "check": "year_jan2026 CFO sum",
+      "actual": 1914824,
+      "expected": 1914824,
+      "passed": true
+    },
+    {
+      "check": "year_jan2026 cash rollforward",
+      "actual": 35181787,
+      "expected": 35181787,
+      "passed": true
+    },
+    {
+      "check": "year_jan2026 raw CFO-capex",
+      "actual": 1671584,
+      "expected": 1671584,
+      "passed": true
+    },
+    {
+      "check": "two_months_mar2026 gross profit",
+      "actual": 5870972,
+      "expected": 5870972,
+      "passed": true
+    },
+    {
+      "check": "two_months_mar2026 EBIT",
+      "actual": 60223,
+      "expected": 60223,
+      "passed": true
+    },
+    {
+      "check": "two_months_mar2026 PBT",
+      "actual": 257095,
+      "expected": 257095,
+      "passed": true
+    },
+    {
+      "check": "two_months_mar2026 net income",
+      "actual": 257095,
+      "expected": 257095,
+      "passed": true
+    },
+    {
+      "check": "two_months_mar2026 CFO sum",
+      "actual": 7350685,
+      "expected": 7350685,
+      "passed": true
+    },
+    {
+      "check": "two_months_mar2026 cash rollforward",
+      "actual": 42778930,
+      "expected": 42778930,
+      "passed": true
+    },
+    {
+      "check": "two_months_mar2026 raw CFO-capex",
+      "actual": 7323347,
+      "expected": 7323347,
+      "passed": true
+    },
+    {
+      "check": "March revenue ex transition",
+      "actual": 7664528,
+      "expected": 7664528,
+      "passed": true
+    },
+    {
+      "check": "March EBIT ex transition only",
+      "actual": -144493,
+      "expected": -144493,
+      "passed": true
+    },
+    {
+      "check": "March EBIT ex transition and FX gain",
+      "actual": -588767,
+      "expected": -588767,
+      "passed": true
+    },
+    {
+      "check": "March cash flow before debtor/creditor movements",
+      "actual": 129944,
+      "expected": 129944,
+      "passed": true
+    },
+    {
+      "check": "Jan cash flow before debtor/creditor movements",
+      "actual": -5187867,
+      "expected": -5187867,
+      "passed": true
+    },
+    {
+      "check": "March CFO-capex after all lease cash",
+      "actual": 7233024,
+      "expected": 7233024,
+      "passed": true
+    },
+    {
+      "check": "March no debtor/creditor movement cash after capex and leases",
+      "actual": 12283,
+      "expected": 12283,
+      "passed": true
+    },
+    {
+      "check": "Lease balance split",
+      "actual": 1932883,
+      "expected": 1932883,
+      "passed": true
+    },
+    {
+      "check": "ROU carrying value",
+      "actual": 1926638,
+      "expected": 1926638,
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "March is a two-month stub; January is a full year. Neither combining them into 14 months nor multiplying March CFO by six yields TTM or normalized annual cash flow.",
+    "Revenue transition increases March professional-services revenue GBP204,716 and decreases deferred income equivalently. Prior comparatives are not restated. Exclusion is an analytical bridge, not a complete restatement to prior GAAP.",
+    "Section 20 changes EBIT and moves lease principal and interest cash to financing. Full old-basis EBIT needs rent/accrual details not disclosed; lease-adjusted CFO subtraction is a cash comparability bridge only.",
+    "Management strategic report says March operating profit GBP0.6m, but the audited P&L and arithmetic establish GBP60,223. Use statement figure.",
+    "OCR misreads March administration as GBP6,810,749 and cash FX as GBP184,446; visually verified amounts are GBP5,810,749 and GBP154,446.",
+    "Large debtor collection and creditor/deferred-income timing dominate CFO. Annual-billing seasonality is plausible, not established quantitatively by these two statements alone.",
+    "No direct reconciliation to US GAAP, post-close purchase accounting, Guidewire fiscal periods, consideration or acquisition-date cash is provided. Do not use historical cash as closing cash.",
+    "No target fair value, standalone DCF or durable post-synergy margin is supported by these accounts alone."
+  ]
+}
