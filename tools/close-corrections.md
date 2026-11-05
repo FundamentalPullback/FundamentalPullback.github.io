@@ -1,0 +1,13 @@
+# Dated regular-close corrections
+
+This is a display-only provenance layer. It does not change archived reports, scanner observations, valuation models, research completion, trading status, permissions, limits, stops, holdings or quantities. It is not a live market feed.
+
+`data/close-corrections.js` is loaded through the normal `manifest.files` loader and sets `window.FP_CLOSE_CORRECTIONS` to an array. An absent or invalid catalog preserves the ordinary same-session conflict guard. Corrections are not library reports and cannot create a new latest-analysis record.
+
+Each `fp.regular-close-correction.v1` record names the ticker, exact regular session, USD currency, correction timestamp, predecessor and replacement. Both endpoints require the exact existing report ID, price, source URL and dated source record. Each timestamp is labeled `source-retrieved-at` or `preserved-local-file-mtime`; a local file modification timestamp is not an independently logged retrieval time. The correction must include bilingual provenance, a public explanation URL and evidence matching the replacement URL, record timestamp and timestamp basis. The replacement record must be later, but a newer timestamp alone never selects a price. A separately reviewed source record must explicitly authorize the predecessor-to-replacement relationship.
+
+At runtime, both endpoint reports must exist uniquely, both exact price facts must exist for the ticker/session/currency/source, and report/source chronology must be consistent. More than one correction record for a ticker/session is ambiguous and disables correction for that session. Only the exactly matched predecessor facts are removed from the temporary candidate list. No source data is mutated. All unrelated facts, including a different fact in the same report, remain subject to the normal conflict guard. Published history is never superseded by this schema.
+
+Keep the historical source captures and reports unchanged. Publish only verified public links, dates and narrow facts in the catalog and explanatory page; never publish private audit paths or complete third-party captures. Author and independently audit the correction before publication. The publisher advances only the manifest publication timestamp and does not imply that quote listings or market data were refreshed.
+
+Run `node tools/test-close-corrections.cjs` as well as the full normal UI and Stage 3.5 checks. It tests backward compatibility, strict source identity, dates and currency, invalid and duplicate records, reversed source order, unrelated current conflicts, published-history protection, bilingual provenance and unchanged research/trading state.
