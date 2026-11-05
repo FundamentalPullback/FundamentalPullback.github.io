@@ -1,0 +1,50 @@
+{
+  "audited_at_utc": "2026-11-05T11:41:24.902274+00:00",
+  "verdict": "delta_approved_for_prospective_research_publication_only",
+  "scope": "Exact quarter-hour boundary and expired-candidate labeling correction, plus sourced premarket quote note. No approval of a trade or complete execution engine.",
+  "base_report_sha256": "916b3617b4d62e2e561b7f498e83279073ea2699cc68de9b807630b6186dcc5b",
+  "new_report_sha256": "f6e362172cd049fa52bae5e2b051010ef37eb5ffadb62759440f1afa65789a68",
+  "evaluator_sha256": "95c5a383dd489d31d6b80a50ca08030101379bfc02008937835758cbe6c030e7",
+  "independent_delta_checks": {
+    "pass": true,
+    "count": 229,
+    "synthetic_not_market_data": true
+  },
+  "author_evaluator_tests": {
+    "pass": true,
+    "count": 22,
+    "synthetic_not_market_data": true
+  },
+  "preserved": {
+    "valuation": true,
+    "proposal_levels_and_logic": true,
+    "risk_calculations": true,
+    "regular_close": true
+  },
+  "quote_note": {
+    "source": "StockAnalysis",
+    "retrieved_at_UTC": "2026-11-05T11:30:46.174739Z",
+    "price": 67.44,
+    "quote_timestamp_EST": "2026-11-05T06:22:00-05:00",
+    "executable_quote_verified": false,
+    "contemporaneous_independent_corroboration": false,
+    "premarket_does_not_trigger_regular_only_suspension": true,
+    "no_entry_at_this_indicative_price": true
+  },
+  "limitations": [
+    "Synthetic checks are not observed signals, fills or evidence of trading advantage.",
+    "Evaluator still requires trustworthy complete chronological input and separate current quote, account, risk and supervision checks; this is not a full data-ingestion or order-engine audit.",
+    "No screenshot/rendered visual QA claimed.",
+    "No cap, valuation, trade, portfolio or general rule changes."
+  ],
+  "hashes_sha256": {
+    "report.md": "f6e362172cd049fa52bae5e2b051010ef37eb5ffadb62759440f1afa65789a68",
+    "report.html": "58df8e1fd2a3b519a5d19fce130a6bbb0f245e1cc48b3b31fc47bf67f81447fb",
+    "results.json": "d90555cfcdf3dc74f09adead3e89d3ce537b252878815891b8ea0105f12696ae",
+    "evaluate_signal.py": "95c5a383dd489d31d6b80a50ca08030101379bfc02008937835758cbe6c030e7",
+    "signal_tests.json": "617af9e1a33a2c41357debef151fe5967d33e629cc0d998d51874a1237fbf84f",
+    "boundary_delta_tests_independent.json": "576d9bf7fc84c6cc06b6abc64942618563998bb1497221cf27cded10974b1cdb",
+    "quote_update.json": "bfba3b537b127f2bb45f9a12646f8214cb9d47f3bfd2c16d0c543cfd4cb3ec29",
+    "source_register.json": "ef5735eab782594e3fd43ddd6f30a84877e7fa0e843303e7bf231df38983f16c"
+  }
+}

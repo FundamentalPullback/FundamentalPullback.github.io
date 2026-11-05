@@ -1,0 +1,237 @@
+{
+  "as_of": "2026-11-05T10:43:21Z",
+  "market_session": "premarket",
+  "last_regular_close": {
+    "price": 65.78,
+    "date": "2026-11-04",
+    "time": "16:00:00 EST",
+    "currency": "USD"
+  },
+  "extended_quotes": [
+    {
+      "source": "StockAnalysis",
+      "price": 65.75,
+      "timestamp": "2026-11-05T05:01:00-05:00",
+      "type": "premarket",
+      "is_executable": false
+    },
+    {
+      "source": "Yahoo chart",
+      "price": 66.0103,
+      "timestamp": "2026-11-05T04:31:06-05:00",
+      "type": "premarket",
+      "volume": 0,
+      "is_executable": false
+    }
+  ],
+  "current_executable_price": null,
+  "technical": {
+    "date": "2026-11-04",
+    "open": 64.16,
+    "high": 66.77,
+    "low": 63.89,
+    "close": 65.78,
+    "volume": 10845173.0,
+    "ema20": 64.88679578733823,
+    "ema50": 62.135907211446444,
+    "ema200": 60.760660873308645,
+    "atr14": 2.8296044767928317,
+    "rsi14": 53.66667507883633,
+    "history_sessions": 501,
+    "ema200_20_sessions_ago": 59.72033445995544,
+    "ema200_slope20_pct": 1.7419969642848976,
+    "volume20_prior_for_Nov5": 6891179.0,
+    "high252": 87.03,
+    "overlap_rows": 50,
+    "max_overlap_ohlc_difference": 0.0
+  },
+  "stage3": {
+    "report": "A268",
+    "fundamental_cap": 66.5,
+    "base": 79.34024040034222,
+    "stress": 63.58,
+    "status": "conditional reasonable price"
+  },
+  "proposal": {
+    "version": "B-20261105-before-open",
+    "route": "B",
+    "supersedes": "Analyst-defined A proposal within A268 and unpublished first Stage3.5 draft; A inactive, A268 economics unchanged",
+    "timeframe": "complete 15-minute regular-session bar",
+    "decision_defined_before_regular_open": true,
+    "regular_signal_date": "2026-11-05",
+    "regular_session": "09:30-16:00 America/New_York (EST, UTC-5)",
+    "bar_close_times": "09:45,10:00,...,15:45 EST",
+    "selection": "first chronologically qualifying complete regular-session 15-minute bar; bars anchored at09:30",
+    "confirmation_close_gt": 65.26,
+    "confirmation_close_lte": 65.78,
+    "close_gt_open_required": false,
+    "special_volume_filter_required": false,
+    "support_zone_visit_required": false,
+    "anchor": "Oct29 earnings-session high65.26, already recovered on daily close; persistence test, not new breakout",
+    "last_daily_close_gt_ema50_required": true,
+    "long_trend_supportive_required": true,
+    "fundamental_cap": 66.5,
+    "technical_cap": 65.78,
+    "authorized_cap_if_all_conditions_met": 65.78,
+    "M": 61.55,
+    "manual_S": 61.2,
+    "M_regular_trade_breach_lt": 61.55,
+    "M_equality_is_break": false,
+    "send_regular_price_gt": 65.26,
+    "send_regular_price_lte": 65.78,
+    "cancel_regular_price_lte": 65.26,
+    "block_new_CTSH_order_if_prior_CTSH_order_active_or_outcome_uncertain": true,
+    "regular_price_gt_fundamental_cap_requires_new_review_before_reactivation": 66.5,
+    "first_order_earliest": "2026-11-05T09:45:00-05:00",
+    "order_time_in_force": "DAY regular session; cancel any unfilled remainder at next regular15-minute boundary following signal",
+    "last_signal": "2026-11-05T15:45:00-05:00",
+    "expiry": "2026-11-05T16:00:00-05:00",
+    "partial_fill_handling": "Count actual filled shares, cancel unfilled remainder if invalidated or expired; no presumed fills and no duplicate initial order",
+    "automatic_rearming": false,
+    "rearming_requires": "New documented review and reconciliation of prior order/fill status, never change timeframe to fit outcome",
+    "post_fill_stop_trigger_lte": 61.2,
+    "earnings_crossing_approved": false,
+    "signal_exists": false,
+    "order_sent": false,
+    "fill_confirmed": false,
+    "current_approved_quantity": 0,
+    "prospective_only": true,
+    "B_route_active_as_proposal_only": true,
+    "A_route_active": false,
+    "C_route_active": false,
+    "alternative_daily_B": "Permitted, but inactive in this version; would require separate ex-ante selection, daily close over65.26 and<=65.78, execution next session after review"
+  },
+  "risk": {
+    "E_worst": 65.78,
+    "S": 61.2,
+    "R_provisional": 4.579999999999998,
+    "stop_distance_pct": 6.962602614776525,
+    "stop_distance_atr": 1.6186007753250107,
+    "M_buffer": 0.3499999999999943,
+    "M_buffer_atr": 0.12369219898771719,
+    "one_R": 70.36,
+    "two_R": 74.94,
+    "three_R": 79.52,
+    "base_margin_of_safety_pct": 17.091251969894127,
+    "rr_cases": [
+      {
+        "label": "first resistance high Nov4",
+        "level": 66.77,
+        "return_pct": 1.5050167224080147,
+        "reward_per_share": 0.9899999999999949,
+        "reward_to_risk": 0.21615720524017362
+      },
+      {
+        "label": "recent supply Oct27-28",
+        "level": 67.5,
+        "return_pct": 2.6147765278200064,
+        "reward_per_share": 1.7199999999999989,
+        "reward_to_risk": 0.37554585152838416
+      },
+      {
+        "label": "recent supply Oct27-28 upper",
+        "level": 68.56,
+        "return_pct": 4.226208574034662,
+        "reward_per_share": 2.780000000000001,
+        "reward_to_risk": 0.6069868995633193
+      },
+      {
+        "label": "October22-23 upper supply lower",
+        "level": 72.84,
+        "return_pct": 10.732745515354214,
+        "reward_per_share": 7.060000000000002,
+        "reward_to_risk": 1.5414847161572063
+      },
+      {
+        "label": "October22-23 upper supply upper",
+        "level": 73.92,
+        "return_pct": 12.374581939799324,
+        "reward_per_share": 8.14,
+        "reward_to_risk": 1.7772925764192147
+      },
+      {
+        "label": "stress valuation moderate WACC9",
+        "level": 64.83,
+        "return_pct": -1.4442079659470974,
+        "reward_per_share": -0.9500000000000028,
+        "reward_to_risk": -0.2074235807860269
+      },
+      {
+        "label": "stress valuation beta1 DSO",
+        "level": 63.58,
+        "return_pct": -3.3444816053511794,
+        "reward_per_share": -2.200000000000003,
+        "reward_to_risk": -0.4803493449781667
+      },
+      {
+        "label": "central valuation",
+        "level": 79.34024040034222,
+        "return_pct": 20.614533901401977,
+        "reward_per_share": 13.560240400342224,
+        "reward_to_risk": 2.9607511791140237
+      },
+      {
+        "label": "bear valuation",
+        "level": 51.76139942051113,
+        "return_pct": -21.311341714029897,
+        "reward_per_share": -14.018600579488869,
+        "reward_to_risk": -3.060829820849099
+      }
+    ],
+    "gap_cases": [
+      {
+        "exit": 61.2,
+        "loss_per_share": 4.579999999999998,
+        "loss_pct": 6.962602614776525,
+        "loss_R": 1.0
+      },
+      {
+        "exit": 60,
+        "loss_per_share": 5.780000000000001,
+        "loss_pct": 8.78686530860444,
+        "loss_R": 1.2620087336244548
+      },
+      {
+        "exit": 55,
+        "loss_per_share": 10.780000000000001,
+        "loss_pct": 16.387959866220736,
+        "loss_R": 2.3537117903930143
+      },
+      {
+        "exit": 0,
+        "loss_per_share": 65.78,
+        "loss_pct": 100.0,
+        "loss_R": 14.362445414847167
+      }
+    ]
+  },
+  "stage4_resistance_zone_registered": [
+    72.84,
+    73.92
+  ],
+  "calendar": {
+    "bmo_conference": "2026-11-12T10:45:00-05:00",
+    "next_earnings_date_confirmed": false,
+    "ex_dividend_provider_date": "2026-11-13",
+    "new_issuer_material_update_identified": false,
+    "new_issuer_search_not_exhaustive": true
+  },
+  "prepared_before_open_UTC": "2026-11-05T11:15:00Z",
+  "market_review_asof": "2026-11-05T11:30:46Z",
+  "latest_indicative_quote": {
+    "retrieved_at_UTC": "2026-11-05T11:30:46.174739Z",
+    "source": "StockAnalysis",
+    "url": "https://stockanalysis.com/stocks/ctsh/",
+    "session_type": "premarket",
+    "currency": "USD",
+    "price": 67.44,
+    "quote_timestamp": "2026-11-05T06:22:00-05:00",
+    "snapshot_sha256": "941adf46db99a9a4a9d2f488959cd37a0ad64b4b471d38c68cbffdf0725fc89b",
+    "above_proposed_technical_cap": true,
+    "above_fundamental_cap": true,
+    "executable_quote_verified": false,
+    "independent_current_corroboration": false,
+    "corroboration_limit": "Yahoo remains at66.0103 from04:31:06EST; not contemporaneous corroboration.",
+    "action_at_this_indicative_price": "No entry under this proposal; no cap increase. Premarket cannot satisfy regular15-minute signal."
+  }
+}

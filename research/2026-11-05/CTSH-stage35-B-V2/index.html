@@ -1,0 +1,188 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CTSH · A278 · Prospective Stage 3.5</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/CTSH">CTSH</a><a href="../stocks/CTSH.html">A268 · valoración conservada / preserved valuation</a><a href="../index.html">Research</a><a href="../../../#entradas/CTSH-20261105-B-V2">Planes de entrada / Entry plans</a></nav><p><a href="CTSH_Stage35_B_20261105_PUBLIC_FINAL_V2.zip">ZIP público original sin cambios / Unchanged original public ZIP</a></p><h1 id="ctsh-a278-estudio-prospectivo-prospective-study">CTSH · A278 · Estudio prospectivo / Prospective study</h1>
+<p>Ficha B prospectiva del 5 noviembre; señal y controles pendientes. Primera vela completa de 15 minutos de sesión regular con cierre &gt;65,26 y ≤65,78; cierres elegibles 09:45–15:45 EST. Una sola oportunidad y ventana siguiente de 15 minutos, con vigilancia y cancelación manual confirmada; caduca el 5 noviembre a las 16:00 EST. Máximo técnico propuesto 65,78; S propuesto 61,20 y M 61,55, no activos. Sin señal actual, entrada, orden, límite operativo, stop ni cantidad aprobados; ejecución suspendida. Negociación regular &gt;66,50 exige nueva revisión antes de reactivar. A anterior y B diaria inactivas. A268 sigue completo y fundamentalmente condicional: 51,76 / 79,34 / 109,12; cierre 65,78 y máximo fundamental 66,50. Condiciones elegidas por el analista, no reglas universales ni superioridad demostrada. Media20 revisada 6.891.179: liquidez descriptiva, no filtro B; A268 no se reescribe. Referencia indicativa StockAnalysis 67,44 a las 06:22 EST, observada 06:30 EST: premercado no ejecutable, no es el cierre regular 65,78 ni una invalidación de sesión regular; Yahoo anterior no corrobora. Evaluador solo de investigación: rechaza segundos y microsegundos y etiqueta candidatos históricos caducados.</p>
+<p>Prospective B study for November 5; signal and checks pending. First complete 15-minute regular-session bar closing &gt;$65.26 and ≤$65.78; eligible closes 09:45–15:45 EST. One opportunity and the following 15-minute window, requiring supervision and confirmed manual cancellation; expires November 5 at 16:00 EST. Proposed technical cap $65.78; proposed S $61.20 and M $61.55, inactive. No current signal, approved entry, order, operative limit, stop or quantity; execution suspended. A regular trade &gt;$66.50 requires a new review before reactivation. Prior A and daily B are inactive. A268 remains complete and fundamentally conditional: $51.76 / $79.34 / $109.12; close $65.78 and fundamental cap $66.50. Analyst-selected conditions, not universal rules or proven superiority. Revised prior20 volume 6,891,179 describes liquidity, not a B filter; A268 is not rewritten. Indicative StockAnalysis quote $67.44 at 06:22 EST, observed 06:30 EST: non-executable premarket, not the $65.78 regular close or a regular-session invalidation; older Yahoo data is not corroboration. Research-only evaluator rejects seconds and microseconds and labels expired historical candidates.</p>
+<p><strong>No es una orden ni autorización operativa. Not an order or operative approval.</strong></p>
+<h1 id="ctsh-entrada-pequeña-b-definida-antes-de-la-apertura">CTSH · Entrada pequeña B, definida antes de la apertura</h1>
+<p><strong>5 de noviembre de 2026. Ficha prospectiva de paper trading. Señal pendiente; ninguna compra, orden o ejecución aprobada por este informe.</strong></p>
+<h2 id="actualización-de-precio-0630-et">Actualización de precio · 06:30 ET</h2>
+<p><strong>La marca premarket más reciente verificada es 67,44 USD a las 06:22 EST, según StockAnalysis, consultado a las 06:30. A ese precio no entraría con esta ficha:</strong> supera el límite técnico propuesto 65,78 y el fundamental 66,50. No se elevan para perseguir la cotización. No es bid/ask ejecutable en vivo y Yahoo conserva una marca anterior de las 04:31, por lo que no ofrece corroboración contemporánea.</p>
+<p>El cierre regular sigue siendo 65,78. El premarket no puede producir la señal de esta ficha. Solo se podría evaluar la entrada si el precio vuelve al intervalo definido y se cumplen las condiciones regulares; si llega a cotizar por encima de 66,50 durante sesión regular, será necesaria una nueva evaluación antes de reactivar. No se afirma que vaya a entrar hoy.</p>
+<h2 id="decisión-concreta">Decisión concreta</h2>
+<p>Estudiar una <strong>primera entrada pequeña por la vía B</strong>, con límite propuesto <strong>65,78 USD</strong> y una señal de <strong>15 minutos de sesión regular</strong> definida a continuación. No hace falta que vuelva a 62,50–64,00. El primer cierre regular de una vela completa que conserve 65,26 y no supere 65,78 puede abrir una ventana de evaluación y ejecución de quince minutos, siempre que los controles de cuenta, riesgo y órdenes estén cerrados.</p>
+<p>Esta versión sustituye como propuesta activa a la vía A incluida en A268 y al borrador posterior no publicado. <strong>A queda inactiva para evitar autorizaciones superpuestas. La valoración A268 permanece intacta</strong>, con aptitud fundamental condicional a precio razonable, máximo fundamental 66,50 y sensibilidad relevante a caja, crecimiento y coste de capital. No se declara una operación ni un cambio del reglamento.</p>
+<h2 id="qué-corregimos-y-qué-exige-realmente-el-plan">Qué corregimos y qué exige realmente el plan</h2>
+<p>La visita a 62,50–64,00, el volumen diario especial y el techo 65,25 fueron elecciones del analista para una entrada A. No son requisitos universales del plan ni fronteras de valor demostradas. La auditoría anterior validó que esa propuesta estuviera definida prospectivamente, no que fuera superior a B. Presentarla como la única manera de entrar era demasiado restrictivo.</p>
+<p>Stage 3.5 permite una entrada B con Stage 3 aprobado al precio vigente, estructura válida y señal definida previamente. <strong>No exige visitar la zona ideal.</strong> También permite elegir, antes del resultado, cierre diario o cierre de una vela completa de 15 minutos de sesión regular. No permite cambiar después la temporalidad para fabricar una señal.</p>
+<p>Esta revisión no persigue una subida nueva: el cierre regular de referencia sigue siendo el mismo <strong>65,78 del 4 de noviembre</strong> que ya se conocía cuando se eligió 65,25. Se corrige la elección de vía y se mide el riesgo con los mismos datos, sin inventar una mejora del negocio ni modificar el techo fundamental.</p>
+<h2 id="anclas-observables-y-decisiones-del-analista">Anclas observables y decisiones del analista</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dato verificable</th>
+<th>Uso y límite de interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>65,26: máximo de la sesión de resultados del 29 de octubre</td>
+<td>Ancla para comprobar que la recuperación se conserva. Ya fue recuperada por cierre diario; una vela futura no constituye una ruptura nueva del máximo vigente.</td>
+</tr>
+<tr class="even">
+<td>65,78: cierre regular del 4 de noviembre</td>
+<td>Techo propuesto de ejecución: no pagar más que la última referencia regular. Es una convención de disciplina, no un valor intrínseco ni un umbral estadísticamente óptimo.</td>
+</tr>
+<tr class="odd">
+<td>66,77: máximo reciente del 4 de noviembre</td>
+<td>Resistencia cercana. Una ruptura por encima no cabe bajo el techo fundamental 66,50; no se usa un máximo antiguo para llamarla ruptura actual.</td>
+</tr>
+<tr class="even">
+<td>61,55: mínimo del 29 de octubre</td>
+<td>M estructural, conservado. No se desplaza hacia abajo.</td>
+</tr>
+<tr class="odd">
+<td>61,20: S manual propuesto</td>
+<td>Protección inicial ya documentada, sin ampliarlo para admitir más acciones. Su margen de 0,35 bajo M es estrecho y no está validado estadísticamente.</td>
+</tr>
+</tbody>
+</table></div>
+<p>La condición es objetiva en el sentido de que puede comprobarse de forma reproducible con precios y horas. <strong>La elección de esas anclas y de la ventana es un juicio del analista</strong>, no una ventaja demostrada. No sustituimos la rigidez anterior por la afirmación de que estos nuevos números sean inevitables.</p>
+<h2 id="señal-b-y-ventana-exacta">Señal B y ventana exacta</h2>
+<ol type="1">
+<li><strong>Sesión:</strong> solo el 5 de noviembre de 2026, Nasdaq regular, 09:30–16:00 EST (14:30–21:00 UTC). Barras consecutivas de 15 minutos ancladas a las 09:30. No se usan premarket, overnight ni una vela en formación.</li>
+<li><strong>Selección:</strong> la primera vela completa, en orden cronológico, cuyo cierre sea <strong>&gt;65,26 y ≤65,78</strong>. Cierres elegibles: 09:45, 10:00, 10:15… hasta 15:45 EST. El cierre de las 16:00 no sirve para esta ficha porque su ventana posterior quedaría fuera de sesión regular.</li>
+<li><strong>Estructura:</strong> último cierre diario regular sobre EMA50 y tendencia larga favorable, comprobados con datos finales; M=61,55 no perdido durante el periodo regular pendiente. Una negociación regular &lt;61,55 invalida la propuesta; igualdad no es ruptura. Sin invalidación fundamental, stop alcanzado o salida pendiente.</li>
+<li><strong>Sin filtros adicionales no exigidos:</strong> no se exige otra visita a 62,50, vela verde ni volumen especial. La comprobación es conservación de una recuperación, no impulso nuevo ni garantía de que el precio vaya a subir. La liquidez normal y el spread sí deben revisarse para ejecutar.</li>
+<li><strong>Antes de enviar:</strong> solo tras el cierre de la vela válida y una comprobación actual. La cotización regular debe seguir <strong>&gt;65,26 y ≤65,78</strong>. Revalidar cuenta, riesgo, reservas, noticia material, calendario y ausencia de otra orden que duplique el tramo. Si no se han verificado, no enviar aunque la vela cumpla.</li>
+<li><strong>Orden hipotética:</strong> limitada de compra con precio máximo 65,78, solo sesión regular, dimensionada al peor precio permitido. Si el mercado está por encima de 65,78, no perseguir ni aumentar el límite. Si no hay precio ejecutable verificado, no se presupone un fill. Si durante esta sesión regular cotiza por encima de 66,50, suspender esta ficha y efectuar una nueva evaluación registrada antes de reactivarla; volver al intervalo no la reactiva automáticamente. Esto no implica que una cotización aislada haya cambiado el valor de la empresa.</li>
+<li><strong>Ventana de frescura:</strong> hasta el siguiente límite de cuarto de hora después de la señal. Ejemplo: señal a las 10:15 → ventana hasta las 10:30. Si no se ejecuta, cancelar el remanente y comprobar la cancelación. La selección de quince minutos es una convención operativa de esta ficha, no una regla universal del plan.</li>
+</ol>
+<p><strong>Importante sobre DAY:</strong> una orden DAY no caduca automáticamente a los quince minutos. Esa cancelación es manual salvo función específica del bróker comprobada. Si no se puede vigilar y cancelar, no debe enviarse bajo este esquema. Una orden CTSH cuya cancelación no está confirmada sigue pendiente y consumiendo capital/riesgo; no enviar otra CTSH que duplique el tramo. Las órdenes de otras compañías se concilian y reservan, no se cancelan por esta ficha.</p>
+<p>Cancelar también el remanente si la cotización regular es <strong>≤65,26 antes del fill</strong>, se invalida M o tesis, o surge una salida prioritaria. Una limitada a 65,78 no garantiza un suelo de ejecución de 65,26: puede llenarse por debajo antes de cancelarla. Se declara ese riesgo, no una protección automática inexistente.</p>
+<p>La ficha permite <strong>una sola oportunidad inicial</strong>: primera señal que cumple y su ventana siguiente. Si se invalida o caduca, no se elige después otra vela para perseguir el precio; cualquier nueva propuesta requiere revisión y registro. Si hay un fill parcial, se contabiliza solo lo realmente ejecutado y se cancela el remanente cuando corresponda. No se vuelve a enviar la cantidad inicial completa.</p>
+<p>Caducidad final: <strong>5 de noviembre, 16:00 EST / 21:00 UTC</strong>. La vigilancia, orden y cancelación no están instaladas ni delegadas automáticamente por publicar esta ficha.</p>
+<h2 id="por-qué-65706578-no-cambia-la-tesis-pero-sí-cambia-el-riesgo">Por qué 65,70–65,78 no cambia la tesis, pero sí cambia el riesgo</h2>
+<p>Manteniendo S=61,20:</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Precio de comparación</th>
+<th style="text-align: right;">Riesgo por acción</th>
+<th style="text-align: right;">Distancia al stop</th>
+<th style="text-align: right;">Distancia en ATR14</th>
+<th style="text-align: right;">Valor central 79,34, expresado en R</th>
+<th style="text-align: right;">Resistencia 66,77, expresada en R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>65,25, propuesta A anterior</td>
+<td style="text-align: right;">4,05</td>
+<td style="text-align: right;">6,21%</td>
+<td style="text-align: right;">1,43</td>
+<td style="text-align: right;">3,48R</td>
+<td style="text-align: right;">0,38R</td>
+</tr>
+<tr class="even">
+<td>65,70</td>
+<td style="text-align: right;">4,50</td>
+<td style="text-align: right;">6,85%</td>
+<td style="text-align: right;">1,59</td>
+<td style="text-align: right;">3,03R</td>
+<td style="text-align: right;">0,24R</td>
+</tr>
+<tr class="odd">
+<td><strong>65,78, máximo de esta B</strong></td>
+<td style="text-align: right;"><strong>4,58</strong></td>
+<td style="text-align: right;"><strong>6,96%</strong></td>
+<td style="text-align: right;"><strong>1,62</strong></td>
+<td style="text-align: right;"><strong>2,96R</strong></td>
+<td style="text-align: right;"><strong>0,22R</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Pagar 65,70 en lugar de 65,25 añade 0,69% al precio y 11,1% al riesgo por acción. En 65,78 son 0,81% y 13,1%, respectivamente. No hay un salto de valor demostrado en 65,25, pero tampoco es correcto decir que el precio no importa.</p>
+<p>A 65,78, margen sobre el valor central A268 de 79,34: 17,09%; recorrido hasta él: 20,61%. El escenario de estrés de 63,58 queda por debajo del precio y el adverso de 51,76 representa una caída aproximada del 21,31%. <strong>El FCFF es valor estimado actual, no take-profit, resistencia ni rentabilidad garantizada.</strong> Las resistencias cercanas limitan el recorrido inicial. El plan no prescribe un R/R mínimo universal; no se inventa uno para aprobar o rechazar.</p>
+<p>La distancia al stop de 1,62 ATR, la conservación de M, el descuento fundamental condicional y el tamaño inicial limitado hacen defendible <strong>estudiar B</strong>, con confianza moderada y sin afirmar superioridad estadística. No justifican una posición inicial completa ni ignorar la presión competitiva y los riesgos de conversión de caja de CTSH.</p>
+<p>A título de ejecución, una salida a 60 perdería 5,78 por acción y una a 55 perdería 10,78, antes de costes. Ni S ni B garantizan el máximo de pérdida ante gaps o demora. No se añade cobertura: se limita el tamaño, reteniendo exposición al negocio, mercado y sector tecnológico.</p>
+<h2 id="parcial-y-completa-límites-del-plan-no-órdenes">Parcial y completa: límites del plan, no órdenes</h2>
+<ul>
+<li>P = patrimonio verificado antes del primer tramo, fijado para la campaña. C habitual = 10% de P, compras acumuladas; B = 1% de P, incluyendo todos los lotes, pérdidas realizadas y reserva.</li>
+<li>Para el primer tramo <strong>B</strong>, Ctramo≤25% de C y Btramo≤25% de B. Con C habitual, el máximo de capital inicial es 2,5% de P. Elegir este máximo es una decisión de tamaño distinta de cambiar el precio: la opción previa de 2% de P era más pequeña. No atribuir el aumento de acciones solo a unos centavos de diferencia.</li>
+<li>Se propone reserva específica de 5% de B para costes/deslizamiento, a revalidar. No es regla universal ni coste certificado del bróker. Deben comprobarse las reservas antiguas y el límite agregado de cartera antes de aprobar una orden.</li>
+<li>Acciones iniciales = redondeo hacia abajo del mínimo entre Ctramo/E, capital acumulado restante/E, mínimo(Btramo, riesgo disponible)/(E−S) y efectivo disponible/E, con E=65,78. Aplicar también límite agregado, concentración y máximo de diez compañías contando órdenes pendientes.</li>
+<li>La cantidad privada se calcula con la captura de cuenta y se revalida antes de ordenar. No se incluyen saldos, posiciones privadas ni cantidades personales en esta versión pública.</li>
+</ul>
+<p><strong>Completa no significa entrar con todo de una vez.</strong> Acercarse al techo habitual de compras acumuladas del 10% exige ampliaciones posteriores mediante nuevas estabilizaciones o confirmaciones, con valoración y presupuestos vigentes. No hay escalera obligatoria de porcentajes, número fijo de sesiones ni obligación de completar. Una misma señal inicial no autoriza todos los tramos. Las ventas no restauran C; B no se eleva y S no se baja.</p>
+<p>No es obligatorio romper 66,77 para ampliar: el plan admite estabilización o recuperación bajo un máximo aceptable. Pero una ruptura real por encima de 66,77 no cabe bajo el techo fundamental 66,50 actual. Una eventual nueva valoración solo cambia con evidencia empresarial y revisión, nunca para hacer posible el tamaño deseado.</p>
+<h2 id="escalonar-tiene-una-ventaja-demostrada">¿Escalonar tiene una ventaja demostrada?</h2>
+<p><strong>No se ha demostrado que esta vía escalonada supere una entrada inicial completa.</strong> Limitar el primer tramo reduce exposición inicial y pérdida monetaria si falla, pero también reduce participación si el precio sube sin ofrecer añadidos. No mejora por sí mismo el valor de la acción ni la rentabilidad esperada por unidad. Esperar nuevas señales añade decisiones, vigilancia y posibles costes. Comprar todo antes concentra riesgo de timing y gaps; no es automáticamente mejor por ser más sencillo.</p>
+<p>La comparación justa debe usar el mismo universo, señales y presupuestos de campaña, contabilizar efectivo sin invertir, costes, todas las oportunidades y riesgo de cola, y separar rendimiento por exposición de rendimiento de la cuenta. Definir antes de la prueba las reglas completas de añadidos y salidas; incluir órdenes no ejecutadas y gaps, y comparar también con exposición o riesgo equivalentes. Un caso CTSH aislado o varias posiciones ganadoras no prueban ventaja estadística. El plan actual es un conjunto de reglas de prueba; evaluar una versión más simple no la adopta ni autoriza dinero real.</p>
+<p>En esta revisión, una compra inicial completa se presenta solo como contrafactual de investigación, <strong>fuera de los límites iniciales actuales</strong>. Una excepción o rediseño tendría que decidirse y registrarse por separado antes de operar; no se crea por llamar «entrada completa» al techo de campaña.</p>
+<h2 id="alternativa-permitida-pero-inactiva">Alternativa permitida, pero inactiva</h2>
+<p>Puede escogerse una B de <strong>cierre diario</strong> sobre 65,26 y no superior a 65,78, con estructura y riesgo vigentes, para evaluar entrada la siguiente sesión. Esperaría más confirmación y evitaría decidir sobre una vela intradía, pero no elimina huecos ni demuestra mejor rendimiento. Es más conservadora; el plan no obliga a elegirla.</p>
+<p>Esta versión elige 15 minutos <strong>antes de observar la sesión del 5 de noviembre</strong>. No se podrá cambiar al cierre diario después para rescatar una señal fallida, ni mantener A y B como autorizaciones independientes. Si se prefiere otra modalidad, registrarla expresamente antes de la observación que vaya a utilizarse.</p>
+<h2 id="después-de-un-fill-confirmado">Después de un fill confirmado</h2>
+<p>R original = precio real de la primera entrada−stop inicial. Con 65,78 como ejemplo, R=4,58, +1R=70,36 y +2R=74,94; no están activos antes del fill y no se reinician al ampliar. No hay breakeven automático en +1R.</p>
+<p>Precio≤S=61,20, incluido un gap, genera salida manual pendiente, sin esperar otro cierre. El suelo táctico 65,26 solo controla esta orden antes del fill; <strong>no se convierte automáticamente en un nuevo stop de la posición</strong>. M conserva su función separada: dos o más cierres seguidos bajo EMA50 y cierre bajo M obligan a la salida correspondiente; igualdad a M no es ruptura. El primer cierre bajo EMA50 suspende añadidos.</p>
+<p>Trailing por cierre desde el primer cierre≥entrada inicial+2R: máximo(stop inicial, trailing anterior, mayor cierre desde entrada−3×ATR14), nunca descendente, aplicable a sesiones posteriores. Antes de recalcular, cierre estrictamente inferior al trailing previo activo implica salida siguiente apertura; igualdad no rompe y un rebote no borra una señal pendiente.</p>
+<p>Resistencia prospectiva registrada: 72,84–73,92, máximos del 22–23 de octubre. La parcial única de un tercio exige además el umbral +2R real; en el ejemplo 74,94 ya estaría por encima de esa zona. También puede activarse por +2R y extensión EMA20+3×ATR14. No se vende por llegar a la zona si falta +2R. Ejecutar según Stage 4 y subordinar toda parcial a una salida total prioritaria.</p>
+<h2 id="datos-calendario-y-pendientes">Datos, calendario y pendientes</h2>
+<p>Último cierre regular comprobado: 65,78, 4 noviembre 16:00 EST. EMA20/50/200: 64,8868 / 62,1359 / 60,7607; EMA200 crece 1,742% en veinte sesiones. ATR14 Wilder 2,8296; RSI14 53,6667. La reconstrucción tiene 501 sesiones. El proveedor revisó solo volumen del 4 de noviembre a 10.845.173; media veinte sesiones 6.891.179. Esta media describe liquidez, <strong>no un filtro de señal B</strong>.</p>
+<p>Primera consulta conservada, a las 05:43 ET del 5 noviembre: StockAnalysis mostraba premarket 65,75 a las 05:01; Yahoo conservaba 66,0103 a las 04:31:06, con volumen cero en ese registro. Son marcas asincrónicas, no cotización ejecutable actual. No son señales y no se refresca el modelo para seguirlas. La actualización posterior de las 06:30 está destacada al comienzo del informe y conserva el carácter premarket; no sustituye el cierre regular.</p>
+<p>Conferencia BMO confirmada el 12 noviembre a las 10:45 ET. No se certificó la fecha exacta del siguiente resultado. Esta ficha <strong>no autoriza atravesar resultados</strong>: si aparece una publicación durante su vigencia, suspender hasta revisión y decisión expresa. Tras un fill, revisar exposición antes de BMO y de futuros resultados. No se identificó nueva información material del emisor en la revisión acotada que cambiara A268.</p>
+<p>Pendientes antes de cualquier orden: señal final con fuente y hora, patrimonio/cash/lotes vigentes, reservas de campañas, ausencia de órdenes duplicadas o salidas prioritarias, spread y posibilidad efectiva de vigilancia/cancelación. No cerrar esos puntos con el mero hecho de que el tamaño parezca pequeño.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li>Plan v2 del 30 octubre, Stage 3.5 del 15 octubre: <a href="https://fundamentalpullback.github.io/data/plan/Plan_Completo_2026-10-30.pdf" class="uri">https://fundamentalpullback.github.io/data/plan/Plan_Completo_2026-10-30.pdf</a> y <a href="https://fundamentalpullback.github.io/data/plan.js" class="uri">https://fundamentalpullback.github.io/data/plan.js</a>.</li>
+<li>Valoración A268 conservada: <a href="https://fundamentalpullback.github.io/research/2026-11-05/stocks/CTSH.html" class="uri">https://fundamentalpullback.github.io/research/2026-11-05/stocks/CTSH.html</a>.</li>
+<li>Datos históricos y marcas extendidas: <a href="https://stockanalysis.com/stocks/ctsh/history/" class="uri">https://stockanalysis.com/stocks/ctsh/history/</a> y <a href="https://stockanalysis.com/stocks/ctsh/" class="uri">https://stockanalysis.com/stocks/ctsh/</a>.</li>
+<li>Contraste: <a href="https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=2y&amp;interval=1d" class="uri">https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=2y&amp;interval=1d</a> y <a href="https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=5d&amp;interval=15m&amp;includePrePost=true" class="uri">https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=5d&amp;interval=15m&amp;includePrePost=true</a>.</li>
+<li>Conferencia primaria: <a href="https://news.cognizant.com/2026-11-04-Cognizant-to-Present-at-the-BMO-Technology-and-Innovation-Leaders-Conference" class="uri">https://news.cognizant.com/2026-11-04-Cognizant-to-Present-at-the-BMO-Technology-and-Innovation-Leaders-Conference</a>.</li>
+</ul>
+<p>Todos los parámetros específicos de la señal son decisiones prospectivas de esta ficha dentro del plan de prueba, no reglas universales ni parámetros estadísticamente validados. Se preservan versiones anteriores y se documenta la corrección sin registrar operaciones.</p>
+<h2 id="archivos-públicos-sin-cambios-unchanged-public-files">Archivos públicos sin cambios / Unchanged public files</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/README.md">README.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/boundary_delta_tests_independent.json">boundary_delta_tests_independent.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/delta_audit.json">delta_audit.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/delta_audit.md">delta_audit.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/evaluate_signal.py">evaluate_signal.py</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/independent_audit.json">independent_audit.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/independent_audit.md">independent_audit.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/manifest.sha256">manifest.sha256</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/market_data_revision_vs_A268.json">market_data_revision_vs_A268.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/ohlcv_indicators.csv">ohlcv_indicators.csv</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/public_calculations.py">public_calculations.py</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/public_release_certificate.json">public_release_certificate.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/public_replay.json">public_replay.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/publication_metadata.json">publication_metadata.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/quote_update.json">quote_update.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/report.html">report.html</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/report.md">report.md</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/results.json">results.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/signal_boundary_tests.json">signal_boundary_tests.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/signal_tests.json">signal_tests.json</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/CTSH-stage35-B-V2/source_register.json">source_register.json</a></li>
+</ul>
+</main></body></html>

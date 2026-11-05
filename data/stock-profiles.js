@@ -13,6 +13,9 @@
   function norm(v) { return String(v || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(); }
   function completed(depth) { return /^Stage 3 completo(?:\s|$)/i.test(depth || '') || /^Stage 3 revisado(?:\s|$)/i.test(depth || ''); }
   function cmp(a,b) { return String(b.date || '').localeCompare(String(a.date || '')) || String(b.id || '').localeCompare(String(a.id || ''),undefined,{numeric:true}); }
+  function isProspectiveStudy(report,meta) {
+    return !!(report&&meta&&report.schema==='fp.prospective-stage35.v1'&&report.type==='prospective-stage35-study'&&meta.kind==='prospective'&&ticker(meta.ticker)&&meta.historicalModelReference&&meta.stage3Complete===false&&meta.latestCompletedEligible===false&&meta.stage35Complete===false&&meta.entryApproved===false&&meta.approvedQuantity===0&&meta.signal===null&&meta.entryPrice===null&&meta.quantity===null&&meta.maximumConditioned===null&&meta.operativeStop===null&&!meta.valuation);
+  }
   function build(data) {
     var by = Object.create(null), reports = data.reports || [], reportBy = Object.create(null);
     function get(tk, name) {
@@ -74,7 +77,8 @@
         var p=get(meta.ticker,meta.company); if(!p)return;
         addReport(p,r.id,meta.kind==='management'?'management':'source');
         if(meta.kind==='complete'||meta.kind==='review') addComplete(p,null,r,r.id,day(meta.completedAt)||day(r.date),meta.label||'standalone',day(meta.completedAt)?'explicit':'report');
-        if(meta.kind!=='management') p.analyses.push({id:r.id,date:day(meta.completedAt)||day(r.date),row:null,report:r,kind:meta.label||'standalone',isComplete:meta.kind==='complete'||meta.kind==='review'});
+        // Prospective entry studies are separate from fundamental analysis and completion.
+        if(meta.kind!=='management'&&!isProspectiveStudy(r,meta)) p.analyses.push({id:r.id,date:day(meta.completedAt)||day(r.date),row:null,report:r,kind:meta.label||'standalone',isComplete:meta.kind==='complete'||meta.kind==='review'});
       });
       // A ticker explicitly written in a title is a subject link, never proof of completion.
       var titleTokens=String(r.title||'').match(/\b[A-Z][A-Z0-9.-]{0,10}\b/g)||[];
@@ -173,6 +177,6 @@
     return migrated||{status:old?'stale':'pending',sourceId:a.id,date:a.date,pros:[],cons:[],report:report};
   }
 
-  root.FP_PROFILE_ENGINE={build:build,search:search,day:day,completed:completed,researchBalance:researchBalance,balanceFingerprint:balanceFingerprint,balanceStructured:balanceStructured,balanceExplicit:balanceExplicit};
+  root.FP_PROFILE_ENGINE={isProspectiveStudy:isProspectiveStudy,build:build,search:search,day:day,completed:completed,researchBalance:researchBalance,balanceFingerprint:balanceFingerprint,balanceStructured:balanceStructured,balanceExplicit:balanceExplicit};
 })(typeof window==='undefined'?globalThis:window);
 

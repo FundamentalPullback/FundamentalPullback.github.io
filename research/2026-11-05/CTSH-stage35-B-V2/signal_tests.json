@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "count": 22,
+  "synthetic_data_only": true,
+  "no_market_signal_observed_or_order_generated": true,
+  "checks": {
+    "inside": true,
+    "floor_equal_rejected": true,
+    "ceiling_equal_allowed": true,
+    "above_technical_rejected": true,
+    "premarket_excluded": true,
+    "close16_excluded": true,
+    "last1545_allowed": true,
+    "incomplete_excluded": true,
+    "future_unobserved_excluded": true,
+    "M_equality_allowed": true,
+    "M_breach_suspends": true,
+    "fundamental_price_review": true,
+    "first_qualifying_selected": true,
+    "duplicates_blocked": true,
+    "ema50_required": true,
+    "candidate_never_entry_approval": true,
+    "off_grid_seconds_rejected": true,
+    "off_grid_microseconds_rejected": true,
+    "historical_candidate_labeled": true,
+    "deadline_exact_expired": true,
+    "before_deadline_current": true,
+    "end_session_expired": true
+  }
+}

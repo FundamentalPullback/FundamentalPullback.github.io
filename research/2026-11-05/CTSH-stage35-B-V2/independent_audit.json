@@ -1,0 +1,76 @@
+{
+  "audited_at_utc": "2026-11-05T11:26:11.281328+00:00",
+  "verdict": "ready_with_caveats_as_prospective_paper_B_only",
+  "entry_or_trade_approved": false,
+  "rule_and_editorial_checks": {
+    "explicit_B_before_observation": true,
+    "A_inactive": true,
+    "same_valuation_preserved": true,
+    "cap_is_labeled_convention": true,
+    "no_new_breakout_claim": true,
+    "strict_signal_lower": true,
+    "inclusive_signal_upper": true,
+    "no_recycled_floor": true,
+    "M_strict_and_separate": true,
+    "manual_stop_separate": true,
+    "new_order_block_scoped_CTSH": true,
+    "fundamental_overshoot_requires_review": true,
+    "DAY_manual_cancellation_disclosed": true,
+    "single_opportunity": true,
+    "partial_fills_not_duplicated": true,
+    "no_intrinsic_advantage_claim": true,
+    "full_entry_outside_current_first_limits": true,
+    "fair_testing_framework": true,
+    "no_earnings_authority": true,
+    "no_order_signal_fill": true,
+    "R_correct": true,
+    "twoR_correct": true
+  },
+  "independent_boundary_tests": {
+    "pass": true,
+    "count": 25,
+    "synthetic_not_market_observations": true
+  },
+  "private_sizing_audit": {
+    "pass": true,
+    "count": 14,
+    "details_kept_private": true
+  },
+  "public_arithmetic_replay": {
+    "pass": true,
+    "count": 2503,
+    "method": "Offline recalculation of technical indicators and scenario arithmetic from derived historical rows. No real-time quote, signal, execution or account approval."
+  },
+  "hard_findings_open": [],
+  "execution_conditions_remaining": [
+    "A future complete regular-session signal within the stated one-time window",
+    "Current equity, cash, campaign history, lots, manual stops, prior reserves and aggregate risk verified",
+    "No duplicate or unresolved CTSH order; other orders reconciled separately",
+    "Executable regular price/spread and actual capacity for monitoring and confirmed cancellation",
+    "No disqualifying fundamental/structural event; earnings crossing not authorized"
+  ],
+  "caveats": [
+    "No statistical evidence that this B signal or staging is superior",
+    "Historical level and execution cap are transparent analyst conventions, not economic cliffs",
+    "DAY does not create an automatic 15-minute expiry or protect a lower fill boundary",
+    "No visual screenshot QA claimed by this reviewer",
+    "This audit does not change A268 valuation or general plan rules"
+  ],
+  "hashes_sha256": {
+    "report.md": "f6e362172cd049fa52bae5e2b051010ef37eb5ffadb62759440f1afa65789a68",
+    "report.html": "58df8e1fd2a3b519a5d19fce130a6bbb0f245e1cc48b3b31fc47bf67f81447fb",
+    "results.json": "d90555cfcdf3dc74f09adead3e89d3ce537b252878815891b8ea0105f12696ae",
+    "ohlcv_indicators.csv": "ff2adfa31a648bea5e962830ead4e9e256ec3db0b448bd19429b8b6a15907cfa",
+    "public_calculations.py": "824188adc27f0ae698ffbb2ad52b5c62dc8abd7ea5a589d77b1d7ec6710957b8",
+    "public_replay.json": "cb68766bb70fa98fc9a3f3c832d7dda8343525e123eca3cb2f0d6569938c04ed",
+    "source_register.json": "ef5735eab782594e3fd43ddd6f30a84877e7fa0e843303e7bf231df38983f16c",
+    "signal_boundary_tests.json": "dfa680d054b5e7c3717dcdd77e0be805c06ed19bcf8e0c5a51375d22259c0c45"
+  },
+  "incremental_delta": {
+    "audited_at_utc": "2026-11-05T11:41:24.902274+00:00",
+    "record": "delta_audit.json",
+    "verdict": "delta_approved_for_prospective_research_publication_only",
+    "original_report_sha256": "916b3617b4d62e2e561b7f498e83279073ea2699cc68de9b807630b6186dcc5b",
+    "current_report_sha256": "f6e362172cd049fa52bae5e2b051010ef37eb5ffadb62759440f1afa65789a68"
+  }
+}
