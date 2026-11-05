@@ -141,7 +141,11 @@ h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1
 .exec { font-size: 0.85rem; padding: 8px 10px; border-radius: 6px; border-left: 3px solid var(--hold); background: var(--hold-bg); }
 .exec-neg { border-left-color: var(--neg); background: var(--out-bg); }
 .exec b { font-weight: 700; }
-.pos-card { cursor: default; }
+.pos-card { cursor: default; min-width: 0; }
+.pos-card > * { min-width: 0; }
+.pos-card .card-top { flex-wrap: wrap; }
+.pos-card .card-top > div { min-width: 0; }
+.pos-card .card-top .pill { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
 .pos-card:hover { border-color: var(--rule); }
 .pos-card .dr-list dd { font-size: 0.92rem; }
 .pos-sl { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 2px 12px; background: var(--paper); border-left: 4px solid var(--neg); border-radius: 8px; padding: 10px 12px; }
@@ -2245,9 +2249,9 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var LV = t().live;
     var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + (X.current ? " · " + LV.title : (S.snapshot ? " · " + LV.headline.replace("{d}", fmtD(S.snapshot)) : "")) + '</div>' +
       '<div class="hero-num">' + esc(fmtM(total)) + '</div>' +
-      '<div class="hero-sub"><span class="tag ' + (totPL >= 0 ? "tag-pos" : "tag-neg") + '">' + esc(sgnM(totPL) + " · " + (ret >= 0 ? "+" : "") + fmtP(ret, 2)) + '</span>' +
+      '<div class="hero-sub"><span class="tag ' + (totPL >= 0 ? "tag-pos" : "tag-neg") + '">' + esc(sgnM(totPL) + " · " + (ret !== null && ret >= 0 ? "+" : "") + fmtP(ret, 2)) + '</span>' +
       '<span class="muted">' + esc(K.capital + " " + fmtM(cap) + " · " + K.since + " " + fmtD(A.start)) + "</span></div></div>" +
-      '<div class="hero-side"><div><span class="eyebrow">' + esc(K.vsSpy) + '</span><b class="' + signCls(excess) + '">' + esc((excess >= 0 ? "+" : "") + fmtP(excess, 2)) + '</b><small>' + esc(K.spyLbl + " " + fmtP(spyRet, 2)) + '</small></div>' +
+      '<div class="hero-side"><div><span class="eyebrow">' + esc(K.vsSpy) + '</span><b class="' + signCls(excess) + '">' + esc((excess !== null && excess >= 0 ? "+" : "") + fmtP(excess, 2)) + '</b><small>' + esc(K.spyLbl + " " + fmtP(spyRet, 2)) + '</small></div>' +
       '<div><span class="eyebrow">' + esc(X.current ? (lang === "en" ? "Versus previous close" : "Frente al cierre anterior") : LV.lastSession) + '</span><b class="' + signCls(day) + '">' + esc(sgnM(day)) + '</b><small class="' + signCls(dayPct) + '">' + esc(fmtP(dayPct, 2)) + "</small></div></div></div>";
     if (eq && eq.length > 1) {
       h += '<p class="muted">' + esc((lang === "en" ? "Historical closes through " : "Cierres históricos hasta ") + fmtD((X.eq && X.eq.length ? X.eq[X.eq.length - 1].d : S.snapshot))) + "</p>";
