@@ -1,6 +1,9 @@
 const assert=require('assert/strict'),path=require('path');
 const {t,profiles}=require('./load-stock-profiles.cjs')(path.resolve(__dirname,'..'));
-const hrb=profiles.find(p=>p.ticker==='HRB'),aso=profiles.find(p=>p.ticker==='ASO');
+const currentHrb=profiles.find(p=>p.ticker==='HRB'),aso=profiles.find(p=>p.ticker==='ASO');
+// Calendar supersession at the November 4 review remains a historical fixture.
+const datedHrb=t.S.ges.filter(r=>r.ticker==='HRB'&&r.date==='2026-11-04'&&r.rep==='A247');assert.equal(datedHrb.length,1);
+const hrb={...currentHrb,latestManagement:datedHrb[0]};
 const before=JSON.stringify({dec:t.S.dec,ges:t.S.ges,ops:t.S.ops,acct:t.S.acct,hist:t.S.hist});
 for(const lang of ['es','en']){
  t.setLang(lang);const h=t.renderProfile(hrb),a=t.renderProfile(aso);

@@ -48,8 +48,26 @@ for(const file of [e.sourceLibrary,e.sourcePackage,e.source,e.reader,e.archive])
 const libraryContext={window:{}};vm.createContext(libraryContext);vm.runInContext(fs.readFileSync(path.join(root,e.sourceLibrary.path),'utf8'),libraryContext);assert.deepEqual(clone(libraryContext.window.FP_LIB.reports.find(r=>r.id===e.reportId)),clone(source),'Source-library digest refers to the actual bound report');
 const record=JSON.parse(fs.readFileSync(path.join(root,e.source.path),'utf8'));assert.equal(e.id,record.id);assert.equal(e.planId,record.relatedProposalId);assert.equal(e.reportId,record.relatedReportId);assert.equal(e.state,record.status);assert.equal(e.at,record.followUpPreparedAt);assert.equal(e.observedReviewAt,record.observedReviewRecordedAt);assert.equal(e.requestsStartedAt,record.sourceRequestsStartedAt);assert.equal(e.barOpenedAt,record.observationWindow.start);assert.equal(e.barClosedAt,record.observationWindow.end);assert.equal(e.evidenceEs,record.note);assert.equal(e.evidenceEn,record.noteEn);assert.equal(e.sourcePackage.sha256,record.originalPublicPackageSha256);assert.equal(record.statusLabel,'Suspendida: requiere nueva evaluación documentada');for(const k of ['terminalCancellation','entryApproved','executionVerified','orderSubmittedByReview','automaticReactivation','originalProposalModified','valuationChanged'])assert.equal(record[k],false);
 const dir=path.dirname(path.join(root,e.source.path)),observed=JSON.parse(fs.readFileSync(path.join(dir,record.evidenceRecord),'utf8'));assert.equal(observed.minute_bar_count,15);assert.equal(observed.minute_reaggregation_matches_15m,true);assert.equal(observed.independent_provider_matches_exact_ohlc,false);assert.equal(observed.signal_close_gt_65_26_lte_65_78,false);assert.equal(observed.regular_high_gt_fundamental_cap_66_50,true);assert.equal(observed.actions.automatic_rearm_permitted,false);assert.equal(observed.actions.entry_approved,false);
+// Dated economic ledgers from verified suspension commit 848a63e249badf779b4c8343239a5809d1c4bd41.
+// Preserve their exact bytes as a prefix while allowing only the minimized public HRB
+// execution append independently covered by test-hrb-partial-sale.cjs.
+const ledgerSnapshots={
+ 'ops.js':{key:'ops',rows:25,bytes:3509,sha256:'314025aa2d64b9d0516e95748b15c2b2f764b923ffb77b08c78825b36ff74d5a',appendSha256:'25ab3417b569f7fa31926099c929e686079d5170a27841fa95c948b4abe579af'},
+ 'ges.js':{key:'ges',rows:66,bytes:53969,sha256:'d6641842ebf1b9d7198d127c665b1517e8de8ae10e11c61dea6355021945c426',appendSha256:'f7f81b667cc99ec241fa09d07ed6308a6822b2290acd629099476eb403f3ea47'}
+};
+const ledgerAppendCounts=[];
+for(const [file,snapshot] of Object.entries(ledgerSnapshots)){
+ const bytes=fs.readFileSync(path.join(root,'data',file)),text=bytes.toString('utf8'),prefix='window.FP=window.FP||{};FP.'+snapshot.key+'=';
+ assert(text.startsWith(prefix)&&text.endsWith(';\n'),'Expected ledger wrapper '+file);
+ const rows=JSON.parse(text.slice(prefix.length,-2));assert(rows.length===snapshot.rows||rows.length===snapshot.rows+1,'Only the sole authorized HRB append may follow the suspension snapshot: '+file);
+ const historical=Buffer.concat([bytes.subarray(0,snapshot.bytes-3),Buffer.from('];\n')]);
+ assert.equal(crypto.createHash('sha256').update(historical).digest('hex'),snapshot.sha256,'Exact prior suspension ledger byte prefix '+file);
+ const appended=rows.length-snapshot.rows;ledgerAppendCounts.push(appended);
+ if(appended)assert.equal(crypto.createHash('sha256').update(JSON.stringify(rows[snapshot.rows])).digest('hex'),snapshot.appendSha256,'Exact minimized public HRB append '+file);
+}
+assert.equal(ledgerAppendCounts[0],ledgerAppendCounts[1],'HRB operation and management append must be reconciled together');
 const prior=path.resolve(process.env.CTSH_SUSPENSION_BASELINE||path.join(root,'../../entry_plans_visual_release/verified_site'));if(fs.existsSync(prior)){
- for(const f of fs.readdirSync(path.join(root,'data'))){if(f==='manifest.js'||f==='entry-plan-followups.js'||fs.statSync(path.join(root,'data',f)).isDirectory())continue;assert.equal(sha(path.join(root,'data',f)),sha(path.join(prior,'data',f)),'Unchanged published data '+f);}
+ for(const f of fs.readdirSync(path.join(root,'data'))){if(f==='manifest.js'||f==='entry-plan-followups.js'||ledgerSnapshots[f]||fs.statSync(path.join(root,'data',f)).isDirectory())continue;assert.equal(sha(path.join(root,'data',f)),sha(path.join(prior,'data',f)),'Unchanged published data '+f);}
  const originalDir='research/2026-11-05/CTSH-stage35-B-V2';for(const f of fs.readdirSync(path.join(root,originalDir)))assert.equal(sha(path.join(root,originalDir,f)),sha(path.join(prior,originalDir,f)),'Unchanged original source '+f);
 }
 console.log('PASS source-bound append-only suspension, separate timestamps, original pending event, exact documented state, ES/EN list/detail/panel, filters, no automatic expiry/rearm, immutable source and economic records.');

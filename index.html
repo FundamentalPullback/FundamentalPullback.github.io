@@ -1817,13 +1817,13 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   function vOperaciones() {
     var g = guard(["ops"]);
     if (g) return head(t().opsTitle, t().opsLede) + g;
-    var h = head(t().opsTitle, t().opsLede);
+    var h = head(t().opsTitle, t().opsLede) + incompleteAccountingNotice();
     var rows = S.ops.filter(function (r) { return r.ticker; });
     if (!rows.length) return h + notice(t().opsTitle, t().noOps);
     var W = positions().warn; if (W.length) h += notice(t().wTitle, W.join(" · "));
     var C = t().col;
     var prow = positions().list;
-    var totR = prow.reduce(function (a, p) { return a + p.realized; }, 0);
+    var totR = prow.some(function (p) { return p.realized === null; }) ? null : prow.reduce(function (a, p) { return a + p.realized; }, 0);
     var totC = prow.reduce(function (a, p) { return a + p.cost; }, 0);
     var nOpen = prow.filter(function (p) { return p.shares > 0; }).length;
     h += '<div class="figures"><div class="fig"><b>' + nOpen + '</b><span>' + esc(t().fOpen) + '</span></div><div class="fig"><b>' + esc(fmtM(totC, 0)) + '</b><span>' + esc(t().fCost) + '</span></div><div class="fig"><b class="' + signCls(totR) + '">' + esc(fmtM(totR, 0)) + '</b><span>' + esc(t().fReal) + '</span></div><div class="fig"><b>' + rows.length + '</b><span>' + esc(t().fTrades) + '</span></div></div>';
@@ -1851,9 +1851,21 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     Object.keys(m).forEach(function (d) { if (d < cd && (!best || d > best)) best = d; });
     return best ? m[best] : null;
   }
+  // An explicitly unpublished fee is unknown, never a confirmed zero fee.
+  function feeUnpublished(r) { return r.fee === null && /comisión no publicada|fee not published/i.test(String(r.notes || "")); }
+  function unpublishedFeeDate() {
+    var rows = (S.ops || []).filter(feeUnpublished);
+    if (!rows.length) return null;
+    return rows.map(function (r) { return isoDay(r.date) || "0000-00-00"; }).sort()[0];
+  }
+  function incompleteAccountingNotice() {
+    var date = unpublishedFeeDate();
+    if (!date) return "";
+    return notice(lang === "en" ? "Incomplete public accounting" : "Contabilidad pública incompleta", lang === "en" ? "Fee not published. Affected net results, cash and account totals are unavailable; no broker balance is inferred. Historical calculations cover only dates before " + fmtD(date) + "." : "Comisión no publicada. Los resultados netos, el efectivo y los totales afectados no están disponibles; no se infiere el saldo del bróker. Los cálculos históricos cubren solo fechas anteriores al " + fmtD(date) + ".");
+  }
   /* positions at average cost, shared by Operaciones and Cartera */
   function positions() {
-    var pos = {}, order = [], sales = [], fees = 0, warn = [];
+    var pos = {}, order = [], sales = [], fees = 0, warn = [], incompleteFees = false;
     var rows = (S.ops || []).filter(function (r) { return r.ticker; });
     rows.slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); }).forEach(function (r) {
       if (r.shares === null || r.exec === null) return;
@@ -1861,17 +1873,17 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       if (r.stop !== null) p.stop = r.stop;
       var ty = String(r.type || "").trim(), sell = /^(venta|sell)/i.test(ty);
       if (!sell && !/^(compra|buy)/i.test(ty)) { warn.push(r.ticker + " " + isoDay(r.date) + ": " + t().wUnknown + " «" + ty + "»"); return; }
-      var fee = r.fee || 0; fees += fee;
+      var fee = feeUnpublished(r) ? null : (r.fee || 0); if (fee === null) { incompleteFees = true; fees = null; } else if (fees !== null) fees += fee;
       if (sell && r.shares > p.shares + 1e-6) { warn.push(r.ticker + " " + isoDay(r.date) + ": " + t().wOversell); if (p.shares <= 0) return; r = Object.assign({}, r, { shares: p.shares }); }
-      if (!sell) { p.shares += r.shares; p.cost += r.shares * r.exec + fee; }
+      if (!sell) { p.shares += r.shares; p.cost = p.cost !== null && fee !== null ? p.cost + r.shares * r.exec + fee : null; }
       else if (p.shares > 0) {
-        var avg = p.cost / p.shares, pnl = r.shares * (r.exec - avg) - fee;
-        sales.push({ ticker: r.ticker, date: r.date, pnl: pnl, ret: r.exec / avg - 1 });
-        p.realized += pnl; p.cost -= r.shares * avg; p.shares -= r.shares;
+        var avg = p.cost !== null ? p.cost / p.shares : null, pnl = avg !== null && fee !== null ? r.shares * (r.exec - avg) - fee : null;
+        sales.push({ ticker: r.ticker, date: r.date, pnl: pnl, ret: pnl !== null && avg ? r.exec / avg - 1 : null });
+        p.realized = p.realized !== null && pnl !== null ? p.realized + pnl : null; p.cost = p.cost !== null && avg !== null ? p.cost - r.shares * avg : null; p.shares -= r.shares;
       }
     });
-    var list = order.map(function (k) { var p = pos[k]; if (Math.abs(p.shares) < 1e-6) { p.shares = 0; p.cost = 0; } p.avg = p.shares > 0 ? p.cost / p.shares : null; p.state = p.shares > 0 ? t().open : t().closed; return p; });
-    return { list: list, sales: sales, n: rows.length, fees: fees, warn: warn };
+    var list = order.map(function (k) { var p = pos[k]; if (Math.abs(p.shares) < 1e-6) { p.shares = 0; p.cost = 0; } p.avg = p.shares > 0 && p.cost !== null ? p.cost / p.shares : null; p.state = p.shares > 0 ? t().open : t().closed; return p; });
+    return { list: list, sales: sales, n: rows.length, fees: fees, warn: warn, incompleteFees: incompleteFees };
   }
 
 
@@ -1882,10 +1894,15 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var g = guard(["ops", "acct"]);
     if (g) return head(K.title, K.lede) + g;
     function sub(str, o) { return str.replace(/\{(\w+)\}/g, function (m, k) { return o[k] !== undefined ? o[k] : m; }); }
-    var open = positions().list.filter(function (p) { return p.shares > 0; });
+    var positionState = positions();
+    var open = positionState.list.filter(function (p) { return p.shares > 0; });
+    var hrbPartials = (S.ops || []).filter(function (r) { return r.ticker === "HRB" && /^(venta|sell)/i.test(String(r.type || "")) && /\bA247\b/.test(String(r.signal || "")) && r.shares > 0; });
+    var hrbPosition = positionState.list.filter(function (p) { return p.ticker === "HRB"; })[0];
+    var hrbSold = hrbPartials.reduce(function (n, r) { return n + r.shares; }, 0);
+    var hrbStatus = hrbPartials.length && hrbPosition ? (lang === "en" ? "HRB: recorded PAPER partial sale of " + fmtSh(hrbSold) + " shares; " + fmtSh(hrbPosition.shares) + " shares remain. Do not repeat the campaign partial. " : "HRB: venta parcial PAPER registrada de " + fmtSh(hrbSold) + " acciones; quedan " + fmtSh(hrbPosition.shares) + " acciones. No repetir la parcial de campaña. ") : (lang === "en" ? "HRB: pending 18-share partial signal, not an order or fill; 54 shares remain. " : "HRB: señal pendiente de parcial de 18, no orden ni ejecución; siguen 54 acciones. ");
     var h = head(K.title, K.lede) + priceStatus();
     var hasStage4Nov4 = (S.ges || []).some(function(r) { return r.rep === "A247"; });
-    if (hasStage4Nov4) h += '<section class="panel"><div><h3>' + (lang === "en" ? "4 November close · Stage 4 informational review" : "Cierre 4 noviembre · revisión informativa Stage 4") + '</h3><p class="lede">' + (lang === "en" ? "HRB: pending 18-share partial signal, not an order or fill; 54 shares remain. Trailing activation confirmed, exact level pending. ASO next-session candidate $60.53 is separate from prior $56.02, not an adopted order. Other candidates and provider discrepancies remain explicit. No add-ons or quantity/cash changes; historical values are not current approvals." : "HRB: señal pendiente de parcial de 18, no orden ni ejecución; siguen 54 acciones. Activación del trailing confirmada, nivel exacto pendiente. Candidato ASO 60,53 USD para sesión posterior separado del previo 56,02, no orden adoptada. Los demás candidatos y discrepancias siguen explícitos. Sin ampliaciones ni cambios de cantidad/efectivo; valores históricos no aprobados actualmente.") + '</p></div><div class="controls"><a class="btn" href="research/2026-11-04/stage4-review.html">' + (lang === "en" ? "Read full Stage 4 review" : "Leer revisión Stage 4 completa") + '</a><button class="btn" type="button" data-libopen="A247">A247 →</button></div></section>';
+    if (hasStage4Nov4) h += '<section class="panel"><div><h3>' + (lang === "en" ? "4 November close · Stage 4 informational review" : "Cierre 4 noviembre · revisión informativa Stage 4") + '</h3><p class="lede">' + hrbStatus + (lang === "en" ? "Trailing activation confirmed, exact level pending. ASO next-session candidate $60.53 is separate from prior $56.02, not an adopted order. Other candidates and provider discrepancies remain explicit. A247 is the historical November 4 review, not a new valuation or order. No add-ons; historical values are not current approvals." : "Activación del trailing confirmada, nivel exacto pendiente. Candidato ASO 60,53 USD para sesión posterior separado del previo 56,02, no orden adoptada. Los demás candidatos y discrepancias siguen explícitos. A247 es la revisión histórica del 4 noviembre, no nueva valoración ni orden. Sin ampliaciones; valores históricos no aprobados actualmente.") + '</p></div><div class="controls"><a class="btn" href="research/2026-11-04/stage4-review.html">' + (lang === "en" ? "Read full Stage 4 review" : "Leer revisión Stage 4 completa") + '</a><button class="btn" type="button" data-libopen="A247">A247 →</button></div></section>';
     else h += '<section class="panel"><div><h3>' + (lang === "en" ? "3 November close · Stage 4 review" : "Cierre 3 noviembre · revisión Stage 4") + '</h3><p class="lede">' + (lang === "en" ? "All six paper positions reviewed. No technical exit triggered. ANF’s calculated close-based level for November 4 is $148.56, not a broker order; other protection is unchanged. HRB remains below its +2R closing threshold. Fundamental diagnostics are unapproved: DOCU, ULTA and ANF need priority formal hold/exit review. No add-ons or new partial sales." : "Revisadas las seis posiciones paper. Sin nueva salida técnica. Nivel por cierre calculado para ANF el 4 noviembre: 148,56 USD, no una orden del bróker; las demás protecciones no cambian. HRB sigue bajo +2R al cierre. Diagnósticos fundamentales no aprobados: revisión formal prioritaria de mantener/salir en DOCU, ULTA y ANF. Sin ampliaciones ni nuevas parciales.") + '</p></div><div class="controls"><a class="btn" href="research/2026-11-03/stage4-review.html">' + (lang === "en" ? "Read full Stage 4 review" : "Leer revisión Stage 4 completa") + '</a><button class="btn" type="button" data-libopen="A148">A148 →</button></div></section>';
     if (!open.length) return h + notice(K.title, K.none);
     var ges = {}; (S.ges || []).forEach(function (r) { if (!ges[r.ticker] || String(r.date) >= String(ges[r.ticker].date)) ges[r.ticker] = r; });
@@ -2079,6 +2096,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var tpl = X.ret >= 0 ? (X.excess !== null && X.excess < 0 ? H.hlUpBehind : H.hlUp) : H.hlDown;
     var hl = esc(tpl).replace("{r}", '<span class="' + signCls(X.ret) + '">' + esc(rTxt) + "</span>").replace("{n}", esc(String(nDays || "—"))).replace("{x}", '<span class="' + signCls(X.excess) + '">' + esc(pts) + "</span>");
     if (X.current) hl = esc(K.total + ": " + fmtP(X.ret, 2) + " · " + K.vsSpy + ": " + fmtP(X.excess, 2));
+    if (X.P.incompleteFees) hl = esc(lang === "en" ? "Current net totals unavailable: fee not published." : "Totales netos actuales no disponibles: comisión no publicada.");
     function more(view, label) { return '<button type="button" class="more-link" data-goview="' + view + '">' + esc(label) + "</button>"; }
     function secHead(title, sub, link) { return "<header><div><h3>" + esc(title) + "</h3>" + (sub ? "<small>" + esc(sub) + "</small>" : "") + "</div>" + (link || "") + "</header>"; }
 
@@ -2088,6 +2106,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       '<p class="home-sub">' + esc(H.sub.replace("{s}", fmtD(isoDay(A.start) || A.start))) + "</p></div>" +
       '<img class="home-emblem" src="img/emblem-320.png" width="220" height="220" alt="Fundamental Pullback"></div>';
 
+    h += incompleteAccountingNotice();
     h += '<section class="panel profile-home"><div><h3>' + esc(pt('Encuentra la ficha de cualquier acción', 'Find any stock profile')) + '</h3><p>' + esc(pt('Busca por ticker o empresa y recupera su análisis e historial.', 'Search by ticker or company to retrieve its research and history.')) + '</p></div><a class="btn" href="#fichas">' + esc(pt('Buscar acciones →', 'Find a stock →')) + '</a></section>';
     h += latestScannerNotice();
     h += priceStatus();
@@ -2196,10 +2215,11 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     });
     function sum(list, k) { return list.reduce(function (a, x) { return a + (x[k] || 0); }, 0); }
     var openCost = sum(open, "cost"), invested = sum(open, "value"), unreal = sum(open, "upl"), realized = sum(P.list, "realized"), day = sum(open, "dayAmt");
-    var cash = cap !== null ? cap - openCost + realized : null;
+    if (P.incompleteFees) realized = null;
+    var cash = cap !== null && realized !== null ? cap - openCost + realized : null;
     var total = cash !== null ? cash + invested : null;
-    var totPL = realized + unreal;
-    var ret = cap ? totPL / cap : null;
+    var totPL = realized !== null ? realized + unreal : null;
+    var ret = cap && totPL !== null ? totPL / cap : null;
     var spyRet = A.spy0 && quotes.spy ? quotes.spy / A.spy0 - 1 : null;
     var excess = ret !== null && spyRet !== null ? ret - spyRet : null;
     open.forEach(function (p) { p.weight = total ? p.value / total : null; });
@@ -2209,6 +2229,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if (!quotes.current && eq && eq.length > 1 && total !== null) day = total - eq[eq.length - 2].v;
     var dayBase = !quotes.current && eq && eq.length > 1 ? eq[eq.length - 2].v : (total !== null ? total - day : null);
     var dayPct = dayBase ? day / dayBase : null;
+    if (P.incompleteFees) { day = null; dayBase = null; dayPct = null; }
     return { current: quotes.current, A: A, P: P, cap: cap, open: open, missing: missing, openCost: openCost, invested: invested, unreal: unreal, realized: realized, day: day, cash: cash, total: total, totPL: totPL, ret: ret, spyRet: spyRet, excess: excess, eq: eq, dayBase: dayBase, dayPct: dayPct };
   }
   function vCartera() {
@@ -2234,7 +2255,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
     } else h += '<p class="muted">' + esc(K.noHist) + "</p>";
     h += "</div>";
-    h += priceStatus() + livePanel(open, cash);
+    h += incompleteAccountingNotice() + priceStatus() + livePanel(open, cash);
     var acctNote = lang === "en" && A.noteEn ? A.noteEn : A.note;
     if (acctNote) { var nm = /^([^:]{6,60}):\s*([\s\S]+)$/.exec(acctNote); h += nm ? '<details class="why-fold acct-note"><summary>' + esc(nm[1]) + "</summary><p>" + esc(nm[2]) + "</p></details>" : '<p class="acct-note">' + esc(acctNote) + "</p>"; }
     if (missing.length) h += notice(K.title, K.noPrice + " " + missing.join(", ") + ".");
@@ -2273,7 +2294,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         var w = Math.abs(p.uplPct) / mx * 50, pos = p.uplPct >= 0;
         return '<div class="plrow" title="' + esc(p.ticker + " · " + fmtP(p.uplPct) + " · " + fmtM(p.upl, 0)) + '"><span class="t">' + esc(p.ticker) + '</span><span class="pltrack"><i class="plbar" style="' + (pos ? "left:50%" : "right:50%") + ";width:" + w.toFixed(2) + "%;background:var(" + (pos ? "--ok" : "--neg") + ')"></i></span><span class="v ' + signCls(p.uplPct) + '">' + esc(fmtP(p.uplPct)) + "</span></div>";
       }).join("") + "</div>";
-    h += '<div class="duo"><div class="panel"><div><h3>' + esc(K.allocTitle) + '</h3><p class="lede">' + esc(K.allocLede) + "</p></div>" + donut + '</div><div class="panel"><div><h3>' + esc(K.barsTitle) + '</h3><p class="lede">' + esc(K.barsLede) + "</p></div>" + bars + "</div></div>";
+    h += '<div class="duo">' + (P.incompleteFees ? '' : '<div class="panel"><div><h3>' + esc(K.allocTitle) + '</h3><p class="lede">' + esc(K.allocLede) + "</p></div>" + donut + '</div>') + '<div class="panel"><div><h3>' + esc(K.barsTitle) + '</h3><p class="lede">' + esc(K.barsLede) + "</p></div>" + bars + "</div></div>";
 
     /* statistics */
     var wins = P.sales.filter(function (s) { return s.pnl > 0; }), losses = P.sales.filter(function (s) { return s.pnl < 0; });
@@ -2293,14 +2314,14 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       fmtM(risk, 0) + " · " + fmtP(total ? risk / total : null, 2) + " " + K.riskOf + (noStop.length ? " (" + K.riskMissing + " " + noStop.map(function (p) { return p.ticker; }).join(", ") + ")" : "") + (srcTxt ? " · " + K.riskSrc.replace("{s}", srcTxt) : "");
     h += '<div class="panel"><h3>' + esc(K.statsTitle) + '</h3><dl class="kv stats">' +
       kv(K.openWin, frac(openUp, priced.length)) +
-      kv(K.sellWin, frac(wins.length, P.sales.length)) +
-      kv(K.pf, gl ? fmtN(gw / gl) : (gw ? K.pfNote : "—")) +
-      kv(K.avgWin, wins.length ? fmtP(wins.reduce(function (a, s) { return a + s.ret; }, 0) / wins.length) : "—", "pos") +
-      kv(K.avgLoss, losses.length ? fmtP(losses.reduce(function (a, s) { return a + s.ret; }, 0) / losses.length) : "—", "neg") +
+      kv(K.sellWin, P.incompleteFees ? "—" : frac(wins.length, P.sales.length)) +
+      kv(K.pf, P.incompleteFees ? "—" : (gl ? fmtN(gw / gl) : (gw ? K.pfNote : "—"))) +
+      kv(K.avgWin, !P.incompleteFees && wins.length ? fmtP(wins.reduce(function (a, s) { return a + s.ret; }, 0) / wins.length) : "—", "pos") +
+      kv(K.avgLoss, !P.incompleteFees && losses.length ? fmtP(losses.reduce(function (a, s) { return a + s.ret; }, 0) / losses.length) : "—", "neg") +
       kv(K.top, heavy ? heavy.ticker + " · " + fmtP(heavy.weight) : "—") +
-      kv(K.bigWin, wins.length ? fmtM(Math.max.apply(null, wins.map(function (s) { return s.pnl; })), 0) : "—", "pos") +
-      kv(K.bigLoss, losses.length ? fmtM(Math.min.apply(null, losses.map(function (s) { return s.pnl; })), 0) : "—", "neg") +
-      kv(t().fTrades, String(P.n) + (P.fees ? " · " + K.feesLbl + " " + fmtM(P.fees) : "")) +
+      kv(K.bigWin, !P.incompleteFees && wins.length ? fmtM(Math.max.apply(null, wins.map(function (s) { return s.pnl; })), 0) : "—", "pos") +
+      kv(K.bigLoss, !P.incompleteFees && losses.length ? fmtM(Math.min.apply(null, losses.map(function (s) { return s.pnl; })), 0) : "—", "neg") +
+      kv(t().fTrades, String(P.n) + (P.incompleteFees ? " · " + K.feesLbl + " —" : (P.fees ? " · " + K.feesLbl + " " + fmtM(P.fees) : ""))) +
       kv(K.bestDay, eq && eq.best ? fmtD(eq.best.d) + " · " + fmtP(eq.best.r, 2) : "—", "pos") +
       kv(K.worstDay, eq && eq.worst ? fmtD(eq.worst.d) + " · " + fmtP(eq.worst.r, 2) : "—", "neg") +
       kv(K.risk, riskTxt, "txt") +
@@ -2327,7 +2348,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var days = Object.keys(H.SPY).sort();
     var prior = days.filter(function (d) { return d < first; });
     var start = prior.length ? prior[prior.length - 1] : days[0];
-    days = days.filter(function (d) { return d >= start; });
+    var incompleteFrom = unpublishedFeeDate();
+    days = days.filter(function (d) { return d >= start && (!incompleteFrom || d < incompleteFrom); });
     var ops = S.ops.filter(function (r) { return r.ticker && r.shares !== null && r.exec !== null && isoDay(r.date); })
       .slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
     var sh = {}, cash = A.capital, k = 0, last = {}, lastExec = {}, out = [];
@@ -2348,7 +2370,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var today = new Date(), wd = today.getDay();
     var tIso = today.getFullYear() + "-" + String(today.getMonth() + 1).padStart(2, "0") + "-" + String(today.getDate()).padStart(2, "0");
     if (S.snapshot) { tIso = S.snapshot; wd = 1; }
-    if (liveTotal !== null && wd > 0 && wd < 6 && tIso > out[out.length - 1].d && A.spy) out.push({ d: tIso, v: liveTotal, spy: A.spy, live: true });
+    if (!incompleteFrom && liveTotal !== null && wd > 0 && wd < 6 && tIso > out[out.length - 1].d && A.spy) out.push({ d: tIso, v: liveTotal, spy: A.spy, live: true });
     var s0 = out[0].spy, base = A.capital;
     var peak = -Infinity, maxDD = 0, best = null, worst = null;
     out.forEach(function (p, i) {
@@ -2417,7 +2439,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       .slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
     if (!ops.length) return null;
     var first = isoDay(ops[0].date);
-    var days = Object.keys(H.SPY).sort().filter(function (d) { return d >= first; });
+    var incompleteFrom = unpublishedFeeDate();
+    var days = Object.keys(H.SPY).sort().filter(function (d) { return d >= first && (!incompleteFrom || d < incompleteFrom); });
     var sh = {}, last = {}, lastExec = {}, prevVal = {}, k = 0, out = [];
     days.forEach(function (d) {
       var flow = {}, fees = 0;
@@ -2463,6 +2486,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var C = t().cal;
     var ser = calSeries();
     var h = '<div class="panel"><div><h3>' + esc(C.title) + '</h3><p class="lede">' + esc(C.lede) + "</p></div>";
+    h += incompleteAccountingNotice();
     if (!ser || !ser.length) return h + '<p class="muted" style="margin:0">' + esc(C.none) + "</p></div>";
     var byDay = {}; ser.forEach(function (p) { byDay[p.d] = p; });
     var months = []; ser.forEach(function (p) { var ym = p.d.slice(0, 7); if (months.indexOf(ym) < 0) months.push(ym); });
