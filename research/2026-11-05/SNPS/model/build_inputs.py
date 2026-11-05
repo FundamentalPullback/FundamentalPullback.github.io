@@ -1,0 +1,8 @@
+from pathlib import Path
+import json
+P=Path(__file__).resolve().parent.parent
+A={'ticker':'SNPS','valuation_date':'2026-11-05','price':462.95,'price_date':'2026-11-04 regular close 16:00 EST, StockAnalysis web evidence; pending independent reconciliation','units':'USD millions, shares millions','start_revenue':9715,'segments':{'EDA_other':4935,'Simulation':2980,'IP':1800},'market':{'rf':.049,'erp':.0441,'beta':1.18,'cost_debt':.056,'debt_weight':.10,'tax':.20},'capital':{'cash_july':3607.669,'q4_fcf_rollforward':2600-(2298.603-156.089),'asr_cash_paid':1000,'operating_cash_reserve':500,'debt_principal_and_lock':10110.449,'fully_diluted_pre_asr':193,'initial_asr_shares':1.735,'pending_delivery':0,'leases':0,'nonoperating_assets':0},'cases':{
+'bear':{'growth':{'EDA_other':[.11,.10,.09,.08,.07],'Simulation':[.07,.07,.065,.06,.055],'IP':[.10,.10,.09,.08,.07]},'margin':[.32,.33,.34,.35,.35],'tax':.22,'wacc_delta':.01,'g':.025,'roic':.20,'capex':[.045,.04,.035,.035,.035],'da':.02,'wc_increment':.20,'strategic':.01},
+'base':{'growth':{'EDA_other':[.16,.14,.13,.12,.11],'Simulation':[.11,.11,.105,.10,.09],'IP':[.18,.18,.17,.16,.14]},'margin':[.353,.375,.395,.415,.42],'tax':.20,'wacc_delta':0,'g':.03,'roic':.25,'capex':[.045,.04,.035,.035,.035],'da':.02,'wc_increment':.15,'strategic':.01},
+'bull':{'growth':{'EDA_other':[.18,.18,.17,.16,.14],'Simulation':[.14,.14,.13,.12,.11],'IP':[.23,.23,.22,.20,.18]},'margin':[.365,.40,.425,.44,.45],'tax':.18,'wacc_delta':-.0075,'g':.035,'roic':.30,'capex':[.045,.04,.035,.035,.035],'da':.02,'wc_increment':.12,'strategic':.0075}}}
+(P/'model/assumptions.json').write_text(json.dumps(A,indent=2))

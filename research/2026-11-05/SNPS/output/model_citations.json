@@ -1,0 +1,4916 @@
+[
+  {
+    "sheet": "Bear",
+    "cell": "C5",
+    "formula": "=(Inputs!$C$6+Inputs!$C$8*Inputs!$C$7)*(1-Inputs!$C$10)+Inputs!$C$9*(1-Inputs!$C$11)*Inputs!$C$10+C6",
+    "value": 0.1054142,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C19",
+    "formula": "=Inputs!$C$22*(1+C16)",
+    "value": 5477.85,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C20",
+    "formula": "=Inputs!$C$23*(1+C17)",
+    "value": 3188.6000000000004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C21",
+    "formula": "=Inputs!$C$24*(1+C18)",
+    "value": 1980.0000000000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C22",
+    "formula": "=SUM(C19:C21)",
+    "value": 10646.45,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C23",
+    "formula": "=C22/SUM(Inputs!$C$22,Inputs!$C$23,Inputs!$C$24)-1",
+    "value": 0.09587750900669079,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C25",
+    "formula": "=C22*C24",
+    "value": 3406.8640000000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C26",
+    "formula": "=C25*$C$7",
+    "value": 749.51008,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C27",
+    "formula": "=C25-C26",
+    "value": 2657.3539200000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C28",
+    "formula": "=C22*$C$10",
+    "value": 212.92900000000003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C30",
+    "formula": "=C22*C29",
+    "value": 479.09025,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C31",
+    "formula": "=(C22-SUM(Inputs!$C$22,Inputs!$C$23,Inputs!$C$24))*$C$11",
+    "value": 186.29000000000016,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C32",
+    "formula": "=C22*$C$12",
+    "value": 106.46450000000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C33",
+    "formula": "=C30+C31+C32-C28",
+    "value": 558.9157500000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C34",
+    "formula": "=MAX(0,(1-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C35",
+    "formula": "=C27*$C$8/$C$9",
+    "value": 332.16924000000006,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C36",
+    "formula": "=(C35-C33)*C34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C37",
+    "formula": "=C33+C36",
+    "value": 558.9157500000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C38",
+    "formula": "=C27-C37",
+    "value": 2098.4381700000004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C39",
+    "formula": "=1/(1+$C$5)^1",
+    "value": 0.9046382794793119,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C40",
+    "formula": "=C38*C39",
+    "value": 1898.3274957025162,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D19",
+    "formula": "=C19*(1+D16)",
+    "value": 6025.635000000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D20",
+    "formula": "=C20*(1+D17)",
+    "value": 3411.8020000000006,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D21",
+    "formula": "=C21*(1+D18)",
+    "value": 2178.0000000000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D22",
+    "formula": "=SUM(D19:D21)",
+    "value": 11615.437000000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D23",
+    "formula": "=D22/C22-1",
+    "value": 0.09101503318007409,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D25",
+    "formula": "=D22*D24",
+    "value": 3833.0942100000007,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D26",
+    "formula": "=D25*$C$7",
+    "value": 843.2807262000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D27",
+    "formula": "=D25-D26",
+    "value": 2989.8134838000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D28",
+    "formula": "=D22*$C$10",
+    "value": 232.30874000000003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D30",
+    "formula": "=D22*D29",
+    "value": 464.61748000000006,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D31",
+    "formula": "=(D22-C22)*$C$11",
+    "value": 193.7974000000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D32",
+    "formula": "=D22*$C$12",
+    "value": 116.15437000000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D33",
+    "formula": "=D30+D31+D32-D28",
+    "value": 542.2605100000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D34",
+    "formula": "=MAX(0,(2-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D35",
+    "formula": "=D27*$C$8/$C$9",
+    "value": 373.726685475,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D36",
+    "formula": "=(D35-D33)*D34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D37",
+    "formula": "=D33+D36",
+    "value": 542.2605100000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D38",
+    "formula": "=D27-D37",
+    "value": 2447.5529738000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D39",
+    "formula": "=1/(1+$C$5)^2",
+    "value": 0.8183704166992896,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "D40",
+    "formula": "=D38*D39",
+    "value": 2003.0049470622919,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E19",
+    "formula": "=D19*(1+E16)",
+    "value": 6567.942150000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E20",
+    "formula": "=D20*(1+E17)",
+    "value": 3633.5691300000003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E21",
+    "formula": "=D21*(1+E18)",
+    "value": 2374.020000000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E22",
+    "formula": "=SUM(E19:E21)",
+    "value": 12575.531280000003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E23",
+    "formula": "=E22/D22-1",
+    "value": 0.0826567506672371,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E25",
+    "formula": "=E22*E24",
+    "value": 4275.680635200001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E26",
+    "formula": "=E25*$C$7",
+    "value": 940.6497397440003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E27",
+    "formula": "=E25-E26",
+    "value": 3335.030895456001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E28",
+    "formula": "=E22*$C$10",
+    "value": 251.51062560000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E30",
+    "formula": "=E22*E29",
+    "value": 440.14359480000013,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E31",
+    "formula": "=(E22-D22)*$C$11",
+    "value": 192.01885600000026,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E32",
+    "formula": "=E22*$C$12",
+    "value": 125.75531280000003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E33",
+    "formula": "=E30+E31+E32-E28",
+    "value": 506.4071380000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E34",
+    "formula": "=MAX(0,(3-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E35",
+    "formula": "=E27*$C$8/$C$9",
+    "value": 416.8788619320001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E36",
+    "formula": "=(E35-E33)*E34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E37",
+    "formula": "=E33+E36",
+    "value": 506.4071380000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E38",
+    "formula": "=E27-E37",
+    "value": 2828.6237574560005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E39",
+    "formula": "=1/(1+$C$5)^3",
+    "value": 0.7403292057396129,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "E40",
+    "formula": "=E38*E39",
+    "value": 2094.1127796936003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F19",
+    "formula": "=E19*(1+F16)",
+    "value": 7093.3775220000025,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F20",
+    "formula": "=E20*(1+F17)",
+    "value": 3851.5832778000004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F21",
+    "formula": "=E21*(1+F18)",
+    "value": 2563.941600000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F22",
+    "formula": "=SUM(F19:F21)",
+    "value": 13508.902399800005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F23",
+    "formula": "=F22/E22-1",
+    "value": 0.07422120775799157,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F25",
+    "formula": "=F22*F24",
+    "value": 4728.115839930001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F26",
+    "formula": "=F25*$C$7",
+    "value": 1040.1854847846002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F27",
+    "formula": "=F25-F26",
+    "value": 3687.930355145401,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F28",
+    "formula": "=F22*$C$10",
+    "value": 270.1780479960001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F30",
+    "formula": "=F22*F29",
+    "value": 472.8115839930002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F31",
+    "formula": "=(F22-E22)*$C$11",
+    "value": 186.6742239600004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F32",
+    "formula": "=F22*$C$12",
+    "value": 135.08902399800004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F33",
+    "formula": "=F30+F31+F32-F28",
+    "value": 524.3967839550005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F34",
+    "formula": "=MAX(0,(4-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F35",
+    "formula": "=F27*$C$8/$C$9",
+    "value": 460.9912943931751,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F36",
+    "formula": "=(F35-F33)*F34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F37",
+    "formula": "=F33+F36",
+    "value": 524.3967839550005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F38",
+    "formula": "=F27-F37",
+    "value": 3163.5335711904004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F39",
+    "formula": "=1/(1+$C$5)^4",
+    "value": 0.6697301389285689,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "F40",
+    "formula": "=F38*F39",
+    "value": 2118.7137781385386,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G19",
+    "formula": "=F19*(1+G16)",
+    "value": 7589.913948540003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G20",
+    "formula": "=F20*(1+G17)",
+    "value": 4063.420358079,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G21",
+    "formula": "=F21*(1+G18)",
+    "value": 2743.4175120000014,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G22",
+    "formula": "=SUM(G19:G21)",
+    "value": 14396.751818619005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G23",
+    "formula": "=G22/F22-1",
+    "value": 0.06572328325002519,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G25",
+    "formula": "=G22*G24",
+    "value": 5038.863136516651,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G26",
+    "formula": "=G25*$C$7",
+    "value": 1108.549890033663,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G27",
+    "formula": "=G25-G26",
+    "value": 3930.3132464829882,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G28",
+    "formula": "=G22*$C$10",
+    "value": 287.9350363723801,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G30",
+    "formula": "=G22*G29",
+    "value": 503.8863136516652,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G31",
+    "formula": "=(G22-F22)*$C$11",
+    "value": 177.56988376379996,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G32",
+    "formula": "=G22*$C$12",
+    "value": 143.96751818619006,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G33",
+    "formula": "=G30+G31+G32-G28",
+    "value": 537.488679229275,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G34",
+    "formula": "=MAX(0,(5-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G35",
+    "formula": "=G27*$C$8/$C$9",
+    "value": 491.28915581037353,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G36",
+    "formula": "=(G35-G33)*G34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G37",
+    "formula": "=G33+G36",
+    "value": 537.488679229275,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G38",
+    "formula": "=G27-G37",
+    "value": 3392.824567253713,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G39",
+    "formula": "=1/(1+$C$5)^5",
+    "value": 0.6058635205957812,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "G40",
+    "formula": "=G38*G39",
+    "value": 2055.5886370801923,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H16",
+    "formula": "=$G$16+($C$8-$G$16)*(6-5)/5",
+    "value": 0.061000000000000006,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H19",
+    "formula": "=G19*(1+H16)",
+    "value": 8052.898699400943,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H17",
+    "formula": "=$G$17+($C$8-$G$17)*(6-5)/5",
+    "value": 0.049,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H20",
+    "formula": "=G20*(1+H17)",
+    "value": 4262.527955624871,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H18",
+    "formula": "=$G$18+($C$8-$G$18)*(6-5)/5",
+    "value": 0.061000000000000006,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H21",
+    "formula": "=G21*(1+H18)",
+    "value": 2910.7659802320013,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H22",
+    "formula": "=SUM(H19:H21)",
+    "value": 15226.192635257816,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H23",
+    "formula": "=H22/G22-1",
+    "value": 0.05761305238075387,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H25",
+    "formula": "=H22*H24",
+    "value": 5329.167422340235,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H26",
+    "formula": "=H25*$C$7",
+    "value": 1172.4168329148515,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H27",
+    "formula": "=H25-H26",
+    "value": 4156.750589425384,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H28",
+    "formula": "=H22*$C$10",
+    "value": 304.52385270515634,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H30",
+    "formula": "=H22*H29",
+    "value": 532.9167422340236,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H31",
+    "formula": "=(H22-G22)*$C$11",
+    "value": 165.88816332776224,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H32",
+    "formula": "=H22*$C$12",
+    "value": 152.26192635257817,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H33",
+    "formula": "=H30+H31+H32-H28",
+    "value": 546.5429792092075,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H34",
+    "formula": "=MAX(0,(6-5)/5)",
+    "value": 0.2,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H35",
+    "formula": "=H27*$C$8/$C$9",
+    "value": 519.593823678173,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H36",
+    "formula": "=(H35-H33)*H34",
+    "value": -5.389831106206884,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H37",
+    "formula": "=H33+H36",
+    "value": 541.1531481030006,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H38",
+    "formula": "=H27-H37",
+    "value": 3615.597441322383,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H39",
+    "formula": "=1/(1+$C$5)^6",
+    "value": 0.5480873328710462,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "H40",
+    "formula": "=H38*H39",
+    "value": 1981.6631583497638,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I16",
+    "formula": "=$G$16+($C$8-$G$16)*(7-5)/5",
+    "value": 0.052000000000000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I19",
+    "formula": "=H19*(1+I16)",
+    "value": 8471.649431769792,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I17",
+    "formula": "=$G$17+($C$8-$G$17)*(7-5)/5",
+    "value": 0.043,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I20",
+    "formula": "=H20*(1+I17)",
+    "value": 4445.816657716739,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I18",
+    "formula": "=$G$18+($C$8-$G$18)*(7-5)/5",
+    "value": 0.052000000000000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I21",
+    "formula": "=H21*(1+I18)",
+    "value": 3062.1258112040655,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I22",
+    "formula": "=SUM(I19:I21)",
+    "value": 15979.591900690597,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I23",
+    "formula": "=I22/H22-1",
+    "value": 0.049480476405388885,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I25",
+    "formula": "=I22*I24",
+    "value": 5592.857165241709,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I26",
+    "formula": "=I25*$C$7",
+    "value": 1230.4285763531761,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I27",
+    "formula": "=I25-I26",
+    "value": 4362.428588888532,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I28",
+    "formula": "=I22*$C$10",
+    "value": 319.5918380138119,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I30",
+    "formula": "=I22*I29",
+    "value": 559.285716524171,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I31",
+    "formula": "=(I22-H22)*$C$11",
+    "value": 150.67985308655625,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I32",
+    "formula": "=I22*$C$12",
+    "value": 159.79591900690596,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I33",
+    "formula": "=I30+I31+I32-I28",
+    "value": 550.1696506038213,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I34",
+    "formula": "=MAX(0,(7-5)/5)",
+    "value": 0.4,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I35",
+    "formula": "=I27*$C$8/$C$9",
+    "value": 545.3035736110666,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I36",
+    "formula": "=(I35-I33)*I34",
+    "value": -1.9464307971019252,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I37",
+    "formula": "=I33+I36",
+    "value": 548.2232198067194,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I38",
+    "formula": "=I27-I37",
+    "value": 3814.205369081813,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I39",
+    "formula": "=1/(1+$C$5)^7",
+    "value": 0.4958207818128681,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "I40",
+    "formula": "=I38*I39",
+    "value": 1891.1622880929835,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J16",
+    "formula": "=$G$16+($C$8-$G$16)*(8-5)/5",
+    "value": 0.043000000000000003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J19",
+    "formula": "=I19*(1+J16)",
+    "value": 8835.930357335894,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J17",
+    "formula": "=$G$17+($C$8-$G$17)*(8-5)/5",
+    "value": 0.037000000000000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J20",
+    "formula": "=I20*(1+J17)",
+    "value": 4610.311874052259,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J18",
+    "formula": "=$G$18+($C$8-$G$18)*(8-5)/5",
+    "value": 0.043000000000000003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J21",
+    "formula": "=I21*(1+J18)",
+    "value": 3193.79722108584,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J22",
+    "formula": "=SUM(J19:J21)",
+    "value": 16640.039452473993,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J23",
+    "formula": "=J22/I22-1",
+    "value": 0.0413306895375003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J25",
+    "formula": "=J22*J24",
+    "value": 5824.013808365898,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J26",
+    "formula": "=J25*$C$7",
+    "value": 1281.283037840497,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J27",
+    "formula": "=J25-J26",
+    "value": 4542.730770525401,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J28",
+    "formula": "=J22*$C$10",
+    "value": 332.8007890494799,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J30",
+    "formula": "=J22*J29",
+    "value": 582.4013808365899,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J31",
+    "formula": "=(J22-I22)*$C$11",
+    "value": 132.08951035667926,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J32",
+    "formula": "=J22*$C$12",
+    "value": 166.40039452473994,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J33",
+    "formula": "=J30+J31+J32-J28",
+    "value": 548.0904966685291,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J34",
+    "formula": "=MAX(0,(8-5)/5)",
+    "value": 0.6,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J35",
+    "formula": "=J27*$C$8/$C$9",
+    "value": 567.8413463156751,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J36",
+    "formula": "=(J35-J33)*J34",
+    "value": 11.850509788287582,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J37",
+    "formula": "=J33+J36",
+    "value": 559.9410064568167,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J38",
+    "formula": "=J27-J37",
+    "value": 3982.789764068584,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J39",
+    "formula": "=1/(1+$C$5)^8",
+    "value": 0.4485384589892803,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "J40",
+    "formula": "=J38*J39",
+    "value": 1786.4343832536022,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K16",
+    "formula": "=$G$16+($C$8-$G$16)*(9-5)/5",
+    "value": 0.034,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K19",
+    "formula": "=J19*(1+K16)",
+    "value": 9136.351989485314,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K17",
+    "formula": "=$G$17+($C$8-$G$17)*(9-5)/5",
+    "value": 0.031,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K20",
+    "formula": "=J20*(1+K17)",
+    "value": 4753.231542147878,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K18",
+    "formula": "=$G$18+($C$8-$G$18)*(9-5)/5",
+    "value": 0.034,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K21",
+    "formula": "=J21*(1+K18)",
+    "value": 3302.386326602759,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K22",
+    "formula": "=SUM(K19:K21)",
+    "value": 17191.969858235952,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K23",
+    "formula": "=K22/J22-1",
+    "value": 0.033168815935703755,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K25",
+    "formula": "=K22*K24",
+    "value": 6017.189450382583,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K26",
+    "formula": "=K25*$C$7",
+    "value": 1323.781679084168,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K27",
+    "formula": "=K25-K26",
+    "value": 4693.407771298415,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K28",
+    "formula": "=K22*$C$10",
+    "value": 343.83939716471906,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K30",
+    "formula": "=K22*K29",
+    "value": 601.7189450382584,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K31",
+    "formula": "=(K22-J22)*$C$11",
+    "value": 110.38608115239185,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K32",
+    "formula": "=K22*$C$12",
+    "value": 171.91969858235953,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K33",
+    "formula": "=K30+K31+K32-K28",
+    "value": 540.1853276082907,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K34",
+    "formula": "=MAX(0,(9-5)/5)",
+    "value": 0.8,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K35",
+    "formula": "=K27*$C$8/$C$9",
+    "value": 586.6759714123019,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K36",
+    "formula": "=(K35-K33)*K34",
+    "value": 37.19251504320903,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K37",
+    "formula": "=K33+K36",
+    "value": 577.3778426514997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K38",
+    "formula": "=K27-K37",
+    "value": 4116.029928646915,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K39",
+    "formula": "=1/(1+$C$5)^9",
+    "value": 0.4057650598203644,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "K40",
+    "formula": "=K38*K39",
+    "value": 1670.1411302198258,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L16",
+    "formula": "=$G$16+($C$8-$G$16)*(10-5)/5",
+    "value": 0.025,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L19",
+    "formula": "=K19*(1+L16)",
+    "value": 9364.760789222446,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L17",
+    "formula": "=$G$17+($C$8-$G$17)*(10-5)/5",
+    "value": 0.025,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L20",
+    "formula": "=K20*(1+L17)",
+    "value": 4872.062330701575,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L18",
+    "formula": "=$G$18+($C$8-$G$18)*(10-5)/5",
+    "value": 0.025,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L21",
+    "formula": "=K21*(1+L18)",
+    "value": 3384.9459847678277,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L22",
+    "formula": "=SUM(L19:L21)",
+    "value": 17621.769104691848,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L23",
+    "formula": "=L22/K22-1",
+    "value": 0.02499999999999991,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L25",
+    "formula": "=L22*L24",
+    "value": 6167.619186642147,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L26",
+    "formula": "=L25*$C$7",
+    "value": 1356.8762210612722,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L27",
+    "formula": "=L25-L26",
+    "value": 4810.742965580875,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L28",
+    "formula": "=L22*$C$10",
+    "value": 352.43538209383695,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L30",
+    "formula": "=L22*L29",
+    "value": 616.7619186642147,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L31",
+    "formula": "=(L22-K22)*$C$11",
+    "value": 85.95984929117913,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L32",
+    "formula": "=L22*$C$12",
+    "value": 176.21769104691847,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L33",
+    "formula": "=L30+L31+L32-L28",
+    "value": 526.5040769084753,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L34",
+    "formula": "=MAX(0,(10-5)/5)",
+    "value": 1.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L35",
+    "formula": "=L27*$C$8/$C$9",
+    "value": 601.3428706976093,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L36",
+    "formula": "=(L35-L33)*L34",
+    "value": 74.838793789134,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L37",
+    "formula": "=L33+L36",
+    "value": 601.3428706976093,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L38",
+    "formula": "=L27-L37",
+    "value": 4209.400094883265,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L39",
+    "formula": "=1/(1+$C$5)^10",
+    "value": 0.36707060558871457,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "L40",
+    "formula": "=L38*L39",
+    "value": 1545.1470419939926,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C43",
+    "formula": "=L27*(1+C8)",
+    "value": 4931.011539720396,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C44",
+    "formula": "=C43*C8/C9",
+    "value": 616.3764424650495,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C45",
+    "formula": "=C43-C44",
+    "value": 4314.635097255346,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C46",
+    "formula": "=C45/(C5-C8)",
+    "value": 53655.13923231652,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C47",
+    "formula": "=C46/(1+C5)^10",
+    "value": 19695.22445095322,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C48",
+    "formula": "=SUM(C40:L40)+C47",
+    "value": 38739.52009054053,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C49",
+    "formula": "=Inputs!$C$12+Inputs!$C$13-Inputs!$C$14-Inputs!$C$15",
+    "value": 2565.1549999999997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C50",
+    "formula": "=Inputs!$C$16",
+    "value": 10110.449,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C51",
+    "formula": "=C48+C49-C50",
+    "value": 31194.226090540527,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C52",
+    "formula": "=Inputs!$C$17-Inputs!$C$18",
+    "value": 191.265,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C53",
+    "formula": "=C51/C52",
+    "value": 163.0942728180301,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C54",
+    "formula": "=C53/Cover!C7-1",
+    "value": -0.6477065064952368,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bear",
+    "cell": "C55",
+    "formula": "=C47/C48",
+    "value": 0.508401353576975,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C5",
+    "formula": "=(Inputs!$C$6+Inputs!$C$8*Inputs!$C$7)*(1-Inputs!$C$10)+Inputs!$C$9*(1-Inputs!$C$11)*Inputs!$C$10+C6",
+    "value": 0.0954142,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C19",
+    "formula": "=Inputs!$C$22*(1+C16)",
+    "value": 5724.599999999999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C20",
+    "formula": "=Inputs!$C$23*(1+C17)",
+    "value": 3307.8,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C21",
+    "formula": "=Inputs!$C$24*(1+C18)",
+    "value": 2124.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C22",
+    "formula": "=SUM(C19:C21)",
+    "value": 11156.4,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C23",
+    "formula": "=C22/SUM(Inputs!$C$22,Inputs!$C$23,Inputs!$C$24)-1",
+    "value": 0.14836850231600618,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C25",
+    "formula": "=C22*C24",
+    "value": 3938.2092,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C26",
+    "formula": "=C25*$C$7",
+    "value": 787.6418399999998,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C27",
+    "formula": "=C25-C26",
+    "value": 3150.56736,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C28",
+    "formula": "=C22*$C$10",
+    "value": 223.128,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C30",
+    "formula": "=C22*C29",
+    "value": 502.03799999999995,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C31",
+    "formula": "=(C22-SUM(Inputs!$C$22,Inputs!$C$23,Inputs!$C$24))*$C$11",
+    "value": 216.20999999999995,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C32",
+    "formula": "=C22*$C$12",
+    "value": 111.564,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C33",
+    "formula": "=C30+C31+C32-C28",
+    "value": 606.684,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C34",
+    "formula": "=MAX(0,(1-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C35",
+    "formula": "=C27*$C$8/$C$9",
+    "value": 378.0680832,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C36",
+    "formula": "=(C35-C33)*C34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C37",
+    "formula": "=C33+C36",
+    "value": 606.684,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C38",
+    "formula": "=C27-C37",
+    "value": 2543.88336,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C39",
+    "formula": "=1/(1+$C$5)^1",
+    "value": 0.9128966924109619,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C40",
+    "formula": "=C38*C39",
+    "value": 2322.302705223284,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D19",
+    "formula": "=C19*(1+D16)",
+    "value": 6526.044,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D20",
+    "formula": "=C20*(1+D17)",
+    "value": 3671.6580000000004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D21",
+    "formula": "=C21*(1+D18)",
+    "value": 2506.3199999999997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D22",
+    "formula": "=SUM(D19:D21)",
+    "value": 12704.022,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D23",
+    "formula": "=D22/C22-1",
+    "value": 0.13872055501774772,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D25",
+    "formula": "=D22*D24",
+    "value": 4764.008250000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D26",
+    "formula": "=D25*$C$7",
+    "value": 952.8016499999999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D27",
+    "formula": "=D25-D26",
+    "value": 3811.206600000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D28",
+    "formula": "=D22*$C$10",
+    "value": 254.08044,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D30",
+    "formula": "=D22*D29",
+    "value": 508.16088,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D31",
+    "formula": "=(D22-C22)*$C$11",
+    "value": 232.14330000000018,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D32",
+    "formula": "=D22*$C$12",
+    "value": 127.04022,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D33",
+    "formula": "=D30+D31+D32-D28",
+    "value": 613.2639600000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D34",
+    "formula": "=MAX(0,(2-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D35",
+    "formula": "=D27*$C$8/$C$9",
+    "value": 457.3447920000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D36",
+    "formula": "=(D35-D33)*D34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D37",
+    "formula": "=D33+D36",
+    "value": 613.2639600000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D38",
+    "formula": "=D27-D37",
+    "value": 3197.9426400000007,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D39",
+    "formula": "=1/(1+$C$5)^2",
+    "value": 0.8333803710148745,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "D40",
+    "formula": "=D38*D39",
+    "value": 2665.102623807488,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E19",
+    "formula": "=D19*(1+E16)",
+    "value": 7374.429719999999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E20",
+    "formula": "=D20*(1+E17)",
+    "value": 4057.1820900000002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E21",
+    "formula": "=D21*(1+E18)",
+    "value": 2932.3943999999997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E22",
+    "formula": "=SUM(E19:E21)",
+    "value": 14364.00621,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E23",
+    "formula": "=E22/D22-1",
+    "value": 0.13066603710226565,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E25",
+    "formula": "=E22*E24",
+    "value": 5673.78245295,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E26",
+    "formula": "=E25*$C$7",
+    "value": 1134.7564905899999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E27",
+    "formula": "=E25-E26",
+    "value": 4539.02596236,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E28",
+    "formula": "=E22*$C$10",
+    "value": 287.2801242,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E30",
+    "formula": "=E22*E29",
+    "value": 502.74021735,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E31",
+    "formula": "=(E22-D22)*$C$11",
+    "value": 248.99763149999978,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E32",
+    "formula": "=E22*$C$12",
+    "value": 143.6400621,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E33",
+    "formula": "=E30+E31+E32-E28",
+    "value": 608.0977867499998,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E34",
+    "formula": "=MAX(0,(3-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E35",
+    "formula": "=E27*$C$8/$C$9",
+    "value": 544.6831154832,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E36",
+    "formula": "=(E35-E33)*E34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E37",
+    "formula": "=E33+E36",
+    "value": 608.0977867499998,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E38",
+    "formula": "=E27-E37",
+    "value": 3930.928175610001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E39",
+    "formula": "=1/(1+$C$5)^3",
+    "value": 0.7607901842196994,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "E40",
+    "formula": "=E38*E39",
+    "value": 2990.6115708767393,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F19",
+    "formula": "=E19*(1+F16)",
+    "value": 8259.3612864,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F20",
+    "formula": "=E20*(1+F17)",
+    "value": 4462.900299000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F21",
+    "formula": "=E21*(1+F18)",
+    "value": 3401.5775039999994,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F22",
+    "formula": "=SUM(F19:F21)",
+    "value": 16123.8390894,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F23",
+    "formula": "=F22/E22-1",
+    "value": 0.12251685592942962,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F25",
+    "formula": "=F22*F24",
+    "value": 6691.393222101,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F26",
+    "formula": "=F25*$C$7",
+    "value": 1338.2786444201993,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F27",
+    "formula": "=F25-F26",
+    "value": 5353.114577680801,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F28",
+    "formula": "=F22*$C$10",
+    "value": 322.47678178800004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F30",
+    "formula": "=F22*F29",
+    "value": 564.334368129,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F31",
+    "formula": "=(F22-E22)*$C$11",
+    "value": 263.9749319100001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F32",
+    "formula": "=F22*$C$12",
+    "value": 161.23839089400002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F33",
+    "formula": "=F30+F31+F32-F28",
+    "value": 667.0709091450002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F34",
+    "formula": "=MAX(0,(4-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F35",
+    "formula": "=F27*$C$8/$C$9",
+    "value": 642.3737493216961,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F36",
+    "formula": "=(F35-F33)*F34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F37",
+    "formula": "=F33+F36",
+    "value": 667.0709091450002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F38",
+    "formula": "=F27-F37",
+    "value": 4686.043668535801,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F39",
+    "formula": "=1/(1+$C$5)^4",
+    "value": 0.69452284279289,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "F40",
+    "formula": "=F38*F39",
+    "value": 3254.5643701231074,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G19",
+    "formula": "=F19*(1+G16)",
+    "value": 9167.891027904001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G20",
+    "formula": "=F20*(1+G17)",
+    "value": 4864.561325910001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G21",
+    "formula": "=F21*(1+G18)",
+    "value": 3877.7983545599996,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G22",
+    "formula": "=SUM(G19:G21)",
+    "value": 17910.250708374002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G23",
+    "formula": "=G22/F22-1",
+    "value": 0.11079319317620895,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G25",
+    "formula": "=G22*G24",
+    "value": 7522.30529751708,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G26",
+    "formula": "=G25*$C$7",
+    "value": 1504.4610595034155,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G27",
+    "formula": "=G25-G26",
+    "value": 6017.844238013665,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G28",
+    "formula": "=G22*$C$10",
+    "value": 358.20501416748004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G30",
+    "formula": "=G22*G29",
+    "value": 626.8587747930901,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G31",
+    "formula": "=(G22-F22)*$C$11",
+    "value": 267.9617428461002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G32",
+    "formula": "=G22*$C$12",
+    "value": 179.10250708374002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G33",
+    "formula": "=G30+G31+G32-G28",
+    "value": 715.7180105554502,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G34",
+    "formula": "=MAX(0,(5-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G35",
+    "formula": "=G27*$C$8/$C$9",
+    "value": 722.1413085616398,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G36",
+    "formula": "=(G35-G33)*G34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G37",
+    "formula": "=G33+G36",
+    "value": 715.7180105554502,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G38",
+    "formula": "=G27-G37",
+    "value": 5302.126227458215,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G39",
+    "formula": "=1/(1+$C$5)^5",
+    "value": 0.6340276059894878,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "G40",
+    "formula": "=G38*G39",
+    "value": 3361.6943986494066,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H16",
+    "formula": "=$G$16+($C$8-$G$16)*(6-5)/5",
+    "value": 0.094,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H19",
+    "formula": "=G19*(1+H16)",
+    "value": 10029.672784526978,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H17",
+    "formula": "=$G$17+($C$8-$G$17)*(6-5)/5",
+    "value": 0.078,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H20",
+    "formula": "=G20*(1+H17)",
+    "value": 5243.997109330981,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H18",
+    "formula": "=$G$18+($C$8-$G$18)*(6-5)/5",
+    "value": 0.11800000000000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H21",
+    "formula": "=G21*(1+H18)",
+    "value": 4335.37856039808,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H22",
+    "formula": "=SUM(H19:H21)",
+    "value": 19609.048454256037,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H23",
+    "formula": "=H22/G22-1",
+    "value": 0.09485058436885851,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H25",
+    "formula": "=H22*H24",
+    "value": 8235.800350787535,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H26",
+    "formula": "=H25*$C$7",
+    "value": 1647.1600701575062,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H27",
+    "formula": "=H25-H26",
+    "value": 6588.640280630028,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H28",
+    "formula": "=H22*$C$10",
+    "value": 392.18096908512075,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H30",
+    "formula": "=H22*H29",
+    "value": 686.3166958989614,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H31",
+    "formula": "=(H22-G22)*$C$11",
+    "value": 254.81966188230524,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H32",
+    "formula": "=H22*$C$12",
+    "value": 196.09048454256038,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H33",
+    "formula": "=H30+H31+H32-H28",
+    "value": 745.0458732387062,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H34",
+    "formula": "=MAX(0,(6-5)/5)",
+    "value": 0.2,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H35",
+    "formula": "=H27*$C$8/$C$9",
+    "value": 790.6368336756034,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H36",
+    "formula": "=(H35-H33)*H34",
+    "value": 9.118192087379384,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H37",
+    "formula": "=H33+H36",
+    "value": 754.1640653260856,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H38",
+    "formula": "=H27-H37",
+    "value": 5834.476215303943,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H39",
+    "formula": "=1/(1+$C$5)^6",
+    "value": 0.578801704405044,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "H40",
+    "formula": "=H38*H39",
+    "value": 3377.004777728612,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I16",
+    "formula": "=$G$16+($C$8-$G$16)*(7-5)/5",
+    "value": 0.078,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I19",
+    "formula": "=H19*(1+I16)",
+    "value": 10811.987261720084,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I17",
+    "formula": "=$G$17+($C$8-$G$17)*(7-5)/5",
+    "value": 0.066,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I20",
+    "formula": "=H20*(1+I17)",
+    "value": 5590.1009185468265,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I18",
+    "formula": "=$G$18+($C$8-$G$18)*(7-5)/5",
+    "value": 0.096,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I21",
+    "formula": "=H21*(1+I18)",
+    "value": 4751.574902196296,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I22",
+    "formula": "=SUM(I19:I21)",
+    "value": 21153.663082463205,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I23",
+    "formula": "=I22/H22-1",
+    "value": 0.07877050392375962,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I25",
+    "formula": "=I22*I24",
+    "value": 8884.538494634546,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I26",
+    "formula": "=I25*$C$7",
+    "value": 1776.9076989269088,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I27",
+    "formula": "=I25-I26",
+    "value": 7107.630795707637,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I28",
+    "formula": "=I22*$C$10",
+    "value": 423.0732616492641,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I30",
+    "formula": "=I22*I29",
+    "value": 740.3782078862122,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I31",
+    "formula": "=(I22-H22)*$C$11",
+    "value": 231.69219423107515,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I32",
+    "formula": "=I22*$C$12",
+    "value": 211.53663082463206,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I33",
+    "formula": "=I30+I31+I32-I28",
+    "value": 760.5337712926553,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I34",
+    "formula": "=MAX(0,(7-5)/5)",
+    "value": 0.4,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I35",
+    "formula": "=I27*$C$8/$C$9",
+    "value": 852.9156954849165,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I36",
+    "formula": "=(I35-I33)*I34",
+    "value": 36.952769676904495,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I37",
+    "formula": "=I33+I36",
+    "value": 797.4865409695598,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I38",
+    "formula": "=I27-I37",
+    "value": 6310.1442547380775,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I39",
+    "formula": "=1/(1+$C$5)^7",
+    "value": 0.5283861615131921,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "I40",
+    "formula": "=I38*I39",
+    "value": 3334.1929013555746,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J16",
+    "formula": "=$G$16+($C$8-$G$16)*(8-5)/5",
+    "value": 0.062,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J19",
+    "formula": "=I19*(1+J16)",
+    "value": 11482.330471946729,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J17",
+    "formula": "=$G$17+($C$8-$G$17)*(8-5)/5",
+    "value": 0.054,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J20",
+    "formula": "=I20*(1+J17)",
+    "value": 5891.966368148355,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J18",
+    "formula": "=$G$18+($C$8-$G$18)*(8-5)/5",
+    "value": 0.074,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J21",
+    "formula": "=I21*(1+J18)",
+    "value": 5103.191444958822,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J22",
+    "formula": "=SUM(J19:J21)",
+    "value": 22477.488285053907,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J23",
+    "formula": "=J22/I22-1",
+    "value": 0.0625813693557491,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J25",
+    "formula": "=J22*J24",
+    "value": 9440.54507972264,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J26",
+    "formula": "=J25*$C$7",
+    "value": 1888.1090159445275,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J27",
+    "formula": "=J25-J26",
+    "value": 7552.436063778113,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J28",
+    "formula": "=J22*$C$10",
+    "value": 449.5497657010782,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J30",
+    "formula": "=J22*J29",
+    "value": 786.7120899768868,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J31",
+    "formula": "=(J22-I22)*$C$11",
+    "value": 198.57378038860534,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J32",
+    "formula": "=J22*$C$12",
+    "value": 224.7748828505391,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J33",
+    "formula": "=J30+J31+J32-J28",
+    "value": 760.510987514953,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J34",
+    "formula": "=MAX(0,(8-5)/5)",
+    "value": 0.6,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J35",
+    "formula": "=J27*$C$8/$C$9",
+    "value": 906.2923276533735,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J36",
+    "formula": "=(J35-J33)*J34",
+    "value": 87.4688040830523,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J37",
+    "formula": "=J33+J36",
+    "value": 847.9797915980052,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J38",
+    "formula": "=J27-J37",
+    "value": 6704.456272180108,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J39",
+    "formula": "=1/(1+$C$5)^8",
+    "value": 0.48236197916111734,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "J40",
+    "formula": "=J38*J39",
+    "value": 3233.9747966479636,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K16",
+    "formula": "=$G$16+($C$8-$G$16)*(9-5)/5",
+    "value": 0.046,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K19",
+    "formula": "=J19*(1+K16)",
+    "value": 12010.517673656279,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K17",
+    "formula": "=$G$17+($C$8-$G$17)*(9-5)/5",
+    "value": 0.041999999999999996,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K20",
+    "formula": "=J20*(1+K17)",
+    "value": 6139.428955610587,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K18",
+    "formula": "=$G$18+($C$8-$G$18)*(9-5)/5",
+    "value": 0.052000000000000005,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K21",
+    "formula": "=J21*(1+K18)",
+    "value": 5368.557400096681,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K22",
+    "formula": "=SUM(K19:K21)",
+    "value": 23518.504029363547,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K23",
+    "formula": "=K22/J22-1",
+    "value": 0.046313704231884634,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K25",
+    "formula": "=K22*K24",
+    "value": 9877.77169233269,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K26",
+    "formula": "=K25*$C$7",
+    "value": 1975.554338466538,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K27",
+    "formula": "=K25-K26",
+    "value": 7902.217353866152,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K28",
+    "formula": "=K22*$C$10",
+    "value": 470.37008058727093,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K30",
+    "formula": "=K22*K29",
+    "value": 823.1476410277243,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K31",
+    "formula": "=(K22-J22)*$C$11",
+    "value": 156.15236164644594,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K32",
+    "formula": "=K22*$C$12",
+    "value": 235.18504029363547,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K33",
+    "formula": "=K30+K31+K32-K28",
+    "value": 744.1149623805347,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K34",
+    "formula": "=MAX(0,(9-5)/5)",
+    "value": 0.8,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K35",
+    "formula": "=K27*$C$8/$C$9",
+    "value": 948.2660824639382,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K36",
+    "formula": "=(K35-K33)*K34",
+    "value": 163.32089606672287,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K37",
+    "formula": "=K33+K36",
+    "value": 907.4358584472576,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K38",
+    "formula": "=K27-K37",
+    "value": 6994.781495418894,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K39",
+    "formula": "=1/(1+$C$5)^9",
+    "value": 0.4403466553209893,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "K40",
+    "formula": "=K38*K39",
+    "value": 3080.128636208858,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L16",
+    "formula": "=$G$16+($C$8-$G$16)*(10-5)/5",
+    "value": 0.03,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L19",
+    "formula": "=K19*(1+L16)",
+    "value": 12370.833203865968,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L17",
+    "formula": "=$G$17+($C$8-$G$17)*(10-5)/5",
+    "value": 0.03,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L20",
+    "formula": "=K20*(1+L17)",
+    "value": 6323.611824278904,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L18",
+    "formula": "=$G$18+($C$8-$G$18)*(10-5)/5",
+    "value": 0.03,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L21",
+    "formula": "=K21*(1+L18)",
+    "value": 5529.614122099581,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L22",
+    "formula": "=SUM(L19:L21)",
+    "value": 24224.059150244455,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L23",
+    "formula": "=L22/K22-1",
+    "value": 0.030000000000000027,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L25",
+    "formula": "=L22*L24",
+    "value": 10174.10484310267,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L26",
+    "formula": "=L25*$C$7",
+    "value": 2034.8209686205337,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L27",
+    "formula": "=L25-L26",
+    "value": 8139.2838744821365,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L28",
+    "formula": "=L22*$C$10",
+    "value": 484.4811830048891,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L30",
+    "formula": "=L22*L29",
+    "value": 847.842070258556,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L31",
+    "formula": "=(L22-K22)*$C$11",
+    "value": 105.83326813213625,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L32",
+    "formula": "=L22*$C$12",
+    "value": 242.24059150244454,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L33",
+    "formula": "=L30+L31+L32-L28",
+    "value": 711.4347468882477,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L34",
+    "formula": "=MAX(0,(10-5)/5)",
+    "value": 1.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L35",
+    "formula": "=L27*$C$8/$C$9",
+    "value": 976.7140649378564,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L36",
+    "formula": "=(L35-L33)*L34",
+    "value": 265.2793180496087,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L37",
+    "formula": "=L33+L36",
+    "value": 976.7140649378564,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L38",
+    "formula": "=L27-L37",
+    "value": 7162.56980954428,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L39",
+    "formula": "=1/(1+$C$5)^10",
+    "value": 0.4019910051567611,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "L40",
+    "formula": "=L38*L39",
+    "value": 2879.2886372441762,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C43",
+    "formula": "=L27*(1+C8)",
+    "value": 8383.4623907166,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C44",
+    "formula": "=C43*C8/C9",
+    "value": 1006.015486885992,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C45",
+    "formula": "=C43-C44",
+    "value": 7377.446903830609,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C46",
+    "formula": "=C45/(C5-C8)",
+    "value": 112780.51101795341,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C47",
+    "formula": "=C46/(1+C5)^10",
+    "value": 45336.75098620026,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C48",
+    "formula": "=SUM(C40:L40)+C47",
+    "value": 75835.61640406547,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C49",
+    "formula": "=Inputs!$C$12+Inputs!$C$13-Inputs!$C$14-Inputs!$C$15",
+    "value": 2565.1549999999997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C50",
+    "formula": "=Inputs!$C$16",
+    "value": 10110.449,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C51",
+    "formula": "=C48+C49-C50",
+    "value": 68290.32240406547,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C52",
+    "formula": "=Inputs!$C$17-Inputs!$C$18",
+    "value": 191.265,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C53",
+    "formula": "=C51/C52",
+    "value": 357.0455776230125,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C54",
+    "formula": "=C53/Cover!C7-1",
+    "value": -0.2287599576131062,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Base",
+    "cell": "C55",
+    "formula": "=C47/C48",
+    "value": 0.5978292672487568,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C5",
+    "formula": "=(Inputs!$C$6+Inputs!$C$8*Inputs!$C$7)*(1-Inputs!$C$10)+Inputs!$C$9*(1-Inputs!$C$11)*Inputs!$C$10+C6",
+    "value": 0.0879142,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C19",
+    "formula": "=Inputs!$C$22*(1+C16)",
+    "value": 5823.299999999999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C20",
+    "formula": "=Inputs!$C$23*(1+C17)",
+    "value": 3397.2000000000003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C21",
+    "formula": "=Inputs!$C$24*(1+C18)",
+    "value": 2214.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C22",
+    "formula": "=SUM(C19:C21)",
+    "value": 11434.5,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C23",
+    "formula": "=C22/SUM(Inputs!$C$22,Inputs!$C$23,Inputs!$C$24)-1",
+    "value": 0.17699433865156977,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C25",
+    "formula": "=C22*C24",
+    "value": 4173.5925,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C26",
+    "formula": "=C25*$C$7",
+    "value": 751.2466499999996,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C27",
+    "formula": "=C25-C26",
+    "value": 3422.34585,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C28",
+    "formula": "=C22*$C$10",
+    "value": 228.69,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C30",
+    "formula": "=C22*C29",
+    "value": 514.5525,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C31",
+    "formula": "=(C22-SUM(Inputs!$C$22,Inputs!$C$23,Inputs!$C$24))*$C$11",
+    "value": 206.34,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C32",
+    "formula": "=C22*$C$12",
+    "value": 85.75874999999999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C33",
+    "formula": "=C30+C31+C32-C28",
+    "value": 577.9612500000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C34",
+    "formula": "=MAX(0,(1-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C35",
+    "formula": "=C27*$C$8/$C$9",
+    "value": 399.27368250000006,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C36",
+    "formula": "=(C35-C33)*C34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C37",
+    "formula": "=C33+C36",
+    "value": 577.9612500000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C38",
+    "formula": "=C27-C37",
+    "value": 2844.3846000000003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C39",
+    "formula": "=1/(1+$C$5)^1",
+    "value": 0.9191901346631931,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C40",
+    "formula": "=C38*C39",
+    "value": 2614.530263507913,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D19",
+    "formula": "=C19*(1+D16)",
+    "value": 6871.493999999999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D20",
+    "formula": "=C20*(1+D17)",
+    "value": 3872.808000000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D21",
+    "formula": "=C21*(1+D18)",
+    "value": 2723.22,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D22",
+    "formula": "=SUM(D19:D21)",
+    "value": 13467.521999999999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D23",
+    "formula": "=D22/C22-1",
+    "value": 0.17779719270628358,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D25",
+    "formula": "=D22*D24",
+    "value": 5387.0088,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D26",
+    "formula": "=D25*$C$7",
+    "value": 969.6615839999995,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D27",
+    "formula": "=D25-D26",
+    "value": 4417.347216,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D28",
+    "formula": "=D22*$C$10",
+    "value": 269.35044,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D30",
+    "formula": "=D22*D29",
+    "value": 538.70088,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D31",
+    "formula": "=(D22-C22)*$C$11",
+    "value": 243.96263999999988,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D32",
+    "formula": "=D22*$C$12",
+    "value": 101.00641499999999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D33",
+    "formula": "=D30+D31+D32-D28",
+    "value": 614.3194949999997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D34",
+    "formula": "=MAX(0,(2-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D35",
+    "formula": "=D27*$C$8/$C$9",
+    "value": 515.3571752000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D36",
+    "formula": "=(D35-D33)*D34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D37",
+    "formula": "=D33+D36",
+    "value": 614.3194949999997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D38",
+    "formula": "=D27-D37",
+    "value": 3803.0277210000004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D39",
+    "formula": "=1/(1+$C$5)^2",
+    "value": 0.8449105036621392,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "D40",
+    "formula": "=D38*D39",
+    "value": 3213.218067191188,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E19",
+    "formula": "=D19*(1+E16)",
+    "value": 8039.647979999998,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E20",
+    "formula": "=D20*(1+E17)",
+    "value": 4376.273040000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E21",
+    "formula": "=D21*(1+E18)",
+    "value": 3322.3284,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E22",
+    "formula": "=SUM(E19:E21)",
+    "value": 15738.249419999998,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E23",
+    "formula": "=E22/D22-1",
+    "value": 0.16860766368155922,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E25",
+    "formula": "=E22*E24",
+    "value": 6688.756003499999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E26",
+    "formula": "=E25*$C$7",
+    "value": 1203.9760806299992,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E27",
+    "formula": "=E25-E26",
+    "value": 5484.77992287,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E28",
+    "formula": "=E22*$C$10",
+    "value": 314.7649884,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E30",
+    "formula": "=E22*E29",
+    "value": 550.8387297,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E31",
+    "formula": "=(E22-D22)*$C$11",
+    "value": 272.4872903999999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E32",
+    "formula": "=E22*$C$12",
+    "value": 118.03687064999998,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E33",
+    "formula": "=E30+E31+E32-E28",
+    "value": 626.5979023499999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E34",
+    "formula": "=MAX(0,(3-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E35",
+    "formula": "=E27*$C$8/$C$9",
+    "value": 639.8909910015001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E36",
+    "formula": "=(E35-E33)*E34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E37",
+    "formula": "=E33+E36",
+    "value": 626.5979023499999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E38",
+    "formula": "=E27-E37",
+    "value": 4858.18202052,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E39",
+    "formula": "=1/(1+$C$5)^3",
+    "value": 0.7766333996395481,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "E40",
+    "formula": "=E38*E39",
+    "value": 3773.0264186641766,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F19",
+    "formula": "=E19*(1+F16)",
+    "value": 9325.991656799997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F20",
+    "formula": "=E20*(1+F17)",
+    "value": 4901.425804800002,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F21",
+    "formula": "=E21*(1+F18)",
+    "value": 3986.7940799999997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F22",
+    "formula": "=SUM(F19:F21)",
+    "value": 18214.211541599998,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F23",
+    "formula": "=F22/E22-1",
+    "value": 0.15732131671859095,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F25",
+    "formula": "=F22*F24",
+    "value": 8014.253078303999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F26",
+    "formula": "=F25*$C$7",
+    "value": 1442.5655540947191,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F27",
+    "formula": "=F25-F26",
+    "value": 6571.68752420928,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F28",
+    "formula": "=F22*$C$10",
+    "value": 364.284230832,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F30",
+    "formula": "=F22*F29",
+    "value": 637.497403956,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F31",
+    "formula": "=(F22-E22)*$C$11",
+    "value": 297.11545459199994,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F32",
+    "formula": "=F22*$C$12",
+    "value": 136.606586562,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F33",
+    "formula": "=F30+F31+F32-F28",
+    "value": 706.9352142779999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F34",
+    "formula": "=MAX(0,(4-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F35",
+    "formula": "=F27*$C$8/$C$9",
+    "value": 766.6968778244161,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F36",
+    "formula": "=(F35-F33)*F34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F37",
+    "formula": "=F33+F36",
+    "value": 706.9352142779999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F38",
+    "formula": "=F27-F37",
+    "value": 5864.75230993128,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F39",
+    "formula": "=1/(1+$C$5)^4",
+    "value": 0.7138737591986096,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "F40",
+    "formula": "=F38*F39",
+    "value": 4186.692778259372,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G19",
+    "formula": "=F19*(1+G16)",
+    "value": 10631.630488751998,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G20",
+    "formula": "=F20*(1+G17)",
+    "value": 5440.582643328003,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G21",
+    "formula": "=F21*(1+G18)",
+    "value": 4704.417014399999,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G22",
+    "formula": "=SUM(G19:G21)",
+    "value": 20776.630146479998,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G23",
+    "formula": "=G22/F22-1",
+    "value": 0.14068237864854116,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G25",
+    "formula": "=G22*G24",
+    "value": 9349.483565916,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G26",
+    "formula": "=G25*$C$7",
+    "value": 1682.9070418648798,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G27",
+    "formula": "=G25-G26",
+    "value": 7666.57652405112,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G28",
+    "formula": "=G22*$C$10",
+    "value": 415.5326029296,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G30",
+    "formula": "=G22*G29",
+    "value": 727.1820551268,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G31",
+    "formula": "=(G22-F22)*$C$11",
+    "value": 307.49023258560004,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G32",
+    "formula": "=G22*$C$12",
+    "value": 155.82472609859997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G33",
+    "formula": "=G30+G31+G32-G28",
+    "value": 774.9644108814,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G34",
+    "formula": "=MAX(0,(5-5)/5)",
+    "value": 0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G35",
+    "formula": "=G27*$C$8/$C$9",
+    "value": 894.4339278059641,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G36",
+    "formula": "=(G35-G33)*G34",
+    "value": 0.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G37",
+    "formula": "=G33+G36",
+    "value": 774.9644108814,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G38",
+    "formula": "=G27-G37",
+    "value": 6891.61211316972,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G39",
+    "formula": "=1/(1+$C$5)^5",
+    "value": 0.6561857168502899,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "G40",
+    "formula": "=G38*G39",
+    "value": 4522.177434734414,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H16",
+    "formula": "=$G$16+($C$8-$G$16)*(6-5)/5",
+    "value": 0.11900000000000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H19",
+    "formula": "=G19*(1+H16)",
+    "value": 11896.794516913485,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H17",
+    "formula": "=$G$17+($C$8-$G$17)*(6-5)/5",
+    "value": 0.095,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H20",
+    "formula": "=G20*(1+H17)",
+    "value": 5957.4379944441625,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H18",
+    "formula": "=$G$18+($C$8-$G$18)*(6-5)/5",
+    "value": 0.151,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H21",
+    "formula": "=G21*(1+H18)",
+    "value": 5414.783983574399,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H22",
+    "formula": "=SUM(H19:H21)",
+    "value": 23269.016494932046,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H23",
+    "formula": "=H22/G22-1",
+    "value": 0.11996104906715632,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H25",
+    "formula": "=H22*H24",
+    "value": 10471.057422719421,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H26",
+    "formula": "=H25*$C$7",
+    "value": 1884.7903360894943,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H27",
+    "formula": "=H25-H26",
+    "value": 8586.267086629927,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H28",
+    "formula": "=H22*$C$10",
+    "value": 465.3803298986409,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H30",
+    "formula": "=H22*H29",
+    "value": 814.4155773226217,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H31",
+    "formula": "=(H22-G22)*$C$11",
+    "value": 299.0863618142457,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H32",
+    "formula": "=H22*$C$12",
+    "value": 174.51762371199032,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H33",
+    "formula": "=H30+H31+H32-H28",
+    "value": 822.6392329502169,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H34",
+    "formula": "=MAX(0,(6-5)/5)",
+    "value": 0.2,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H35",
+    "formula": "=H27*$C$8/$C$9",
+    "value": 1001.7311601068249,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H36",
+    "formula": "=(H35-H33)*H34",
+    "value": 35.81838543132176,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H37",
+    "formula": "=H33+H36",
+    "value": 858.4576183815386,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H38",
+    "formula": "=H27-H37",
+    "value": 7727.809468248388,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H39",
+    "formula": "=1/(1+$C$5)^6",
+    "value": 0.603159437435682,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "H40",
+    "formula": "=H38*H39",
+    "value": 4661.101211478835,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I16",
+    "formula": "=$G$16+($C$8-$G$16)*(7-5)/5",
+    "value": 0.098,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I19",
+    "formula": "=H19*(1+I16)",
+    "value": 13062.680379571008,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I17",
+    "formula": "=$G$17+($C$8-$G$17)*(7-5)/5",
+    "value": 0.08,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I20",
+    "formula": "=H20*(1+I17)",
+    "value": 6434.033033999696,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I18",
+    "formula": "=$G$18+($C$8-$G$18)*(7-5)/5",
+    "value": 0.122,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I21",
+    "formula": "=H21*(1+I18)",
+    "value": 6075.387629570475,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I22",
+    "formula": "=SUM(I19:I21)",
+    "value": 25572.101043141178,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I23",
+    "formula": "=I22/H22-1",
+    "value": 0.09897644572604691,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I25",
+    "formula": "=I22*I24",
+    "value": 11507.445469413531,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I26",
+    "formula": "=I25*$C$7",
+    "value": 2071.3401844944347,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I27",
+    "formula": "=I25-I26",
+    "value": 9436.105284919096,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I28",
+    "formula": "=I22*$C$10",
+    "value": 511.44202086282354,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I30",
+    "formula": "=I22*I29",
+    "value": 895.0235365099413,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I31",
+    "formula": "=(I22-H22)*$C$11",
+    "value": 276.3701457850958,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I32",
+    "formula": "=I22*$C$12",
+    "value": 191.79075782355883,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I33",
+    "formula": "=I30+I31+I32-I28",
+    "value": 851.7424192557726,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I34",
+    "formula": "=MAX(0,(7-5)/5)",
+    "value": 0.4,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I35",
+    "formula": "=I27*$C$8/$C$9",
+    "value": 1100.878949907228,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I36",
+    "formula": "=(I35-I33)*I34",
+    "value": 99.6546122605821,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I37",
+    "formula": "=I33+I36",
+    "value": 951.3970315163547,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I38",
+    "formula": "=I27-I37",
+    "value": 8484.708253402741,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I39",
+    "formula": "=1/(1+$C$5)^7",
+    "value": 0.5544182045198803,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "I40",
+    "formula": "=I38*I39",
+    "value": 4704.076715726557,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J16",
+    "formula": "=$G$16+($C$8-$G$16)*(8-5)/5",
+    "value": 0.077,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J19",
+    "formula": "=I19*(1+J16)",
+    "value": 14068.506768797975,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J17",
+    "formula": "=$G$17+($C$8-$G$17)*(8-5)/5",
+    "value": 0.065,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J20",
+    "formula": "=I20*(1+J17)",
+    "value": 6852.245181209676,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J18",
+    "formula": "=$G$18+($C$8-$G$18)*(8-5)/5",
+    "value": 0.093,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J21",
+    "formula": "=I21*(1+J18)",
+    "value": 6640.398679120529,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J22",
+    "formula": "=SUM(J19:J21)",
+    "value": 27561.15062912818,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J23",
+    "formula": "=J22/I22-1",
+    "value": 0.07778201652775407,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J25",
+    "formula": "=J22*J24",
+    "value": 12402.517783107682,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J26",
+    "formula": "=J25*$C$7",
+    "value": 2232.4532009593822,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J27",
+    "formula": "=J25-J26",
+    "value": 10170.0645821483,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J28",
+    "formula": "=J22*$C$10",
+    "value": 551.2230125825636,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J30",
+    "formula": "=J22*J29",
+    "value": 964.6402720194864,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J31",
+    "formula": "=(J22-I22)*$C$11",
+    "value": 238.6859503184403,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J32",
+    "formula": "=J22*$C$12",
+    "value": 206.70862971846134,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J33",
+    "formula": "=J30+J31+J32-J28",
+    "value": 858.8118394738244,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J34",
+    "formula": "=MAX(0,(8-5)/5)",
+    "value": 0.6,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J35",
+    "formula": "=J27*$C$8/$C$9",
+    "value": 1186.5075345839684,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J36",
+    "formula": "=(J35-J33)*J34",
+    "value": 196.61741706608655,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J37",
+    "formula": "=J33+J36",
+    "value": 1055.429256539911,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J38",
+    "formula": "=J27-J37",
+    "value": 9114.63532560839,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J39",
+    "formula": "=1/(1+$C$5)^8",
+    "value": 0.5096157440723545,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "J40",
+    "formula": "=J38*J39",
+    "value": 4644.961663408087,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K16",
+    "formula": "=$G$16+($C$8-$G$16)*(9-5)/5",
+    "value": 0.05600000000000001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K19",
+    "formula": "=J19*(1+K16)",
+    "value": 14856.343147850663,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K17",
+    "formula": "=$G$17+($C$8-$G$17)*(9-5)/5",
+    "value": 0.05,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K20",
+    "formula": "=J20*(1+K17)",
+    "value": 7194.85744027016,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K18",
+    "formula": "=$G$18+($C$8-$G$18)*(9-5)/5",
+    "value": 0.064,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K21",
+    "formula": "=J21*(1+K18)",
+    "value": 7065.384194584243,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K22",
+    "formula": "=SUM(K19:K21)",
+    "value": 29116.584782705067,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K23",
+    "formula": "=K22/J22-1",
+    "value": 0.05643574807551821,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K25",
+    "formula": "=K22*K24",
+    "value": 13102.46315221728,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K26",
+    "formula": "=K25*$C$7",
+    "value": 2358.44336739911,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K27",
+    "formula": "=K25-K26",
+    "value": 10744.01978481817,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K28",
+    "formula": "=K22*$C$10",
+    "value": 582.3316956541014,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K30",
+    "formula": "=K22*K29",
+    "value": 1019.0804673946775,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K31",
+    "formula": "=(K22-J22)*$C$11",
+    "value": 186.65209842922644,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K32",
+    "formula": "=K22*$C$12",
+    "value": 218.374385870288,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K33",
+    "formula": "=K30+K31+K32-K28",
+    "value": 841.7752560400907,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K34",
+    "formula": "=MAX(0,(9-5)/5)",
+    "value": 0.8,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K35",
+    "formula": "=K27*$C$8/$C$9",
+    "value": 1253.4689748954534,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K36",
+    "formula": "=(K35-K33)*K34",
+    "value": 329.3549750842901,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K37",
+    "formula": "=K33+K36",
+    "value": 1171.1302311243808,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K38",
+    "formula": "=K27-K37",
+    "value": 9572.889553693789,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K39",
+    "formula": "=1/(1+$C$5)^9",
+    "value": 0.46843376442035095,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "K40",
+    "formula": "=K38*K39",
+    "value": 4484.264690017035,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L16",
+    "formula": "=$G$16+($C$8-$G$16)*(10-5)/5",
+    "value": 0.035,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L19",
+    "formula": "=K19*(1+L16)",
+    "value": 15376.315158025434,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L17",
+    "formula": "=$G$17+($C$8-$G$17)*(10-5)/5",
+    "value": 0.035,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L20",
+    "formula": "=K20*(1+L17)",
+    "value": 7446.677450679615,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L18",
+    "formula": "=$G$18+($C$8-$G$18)*(10-5)/5",
+    "value": 0.035,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L21",
+    "formula": "=K21*(1+L18)",
+    "value": 7312.672641394691,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L22",
+    "formula": "=SUM(L19:L21)",
+    "value": 30135.66525009974,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L23",
+    "formula": "=L22/K22-1",
+    "value": 0.03499999999999992,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L25",
+    "formula": "=L22*L24",
+    "value": 13561.049362544883,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L26",
+    "formula": "=L25*$C$7",
+    "value": 2440.988885258079,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L27",
+    "formula": "=L25-L26",
+    "value": 11120.060477286805,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L28",
+    "formula": "=L22*$C$10",
+    "value": 602.7133050019949,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L30",
+    "formula": "=L22*L29",
+    "value": 1054.748283753491,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L31",
+    "formula": "=(L22-K22)*$C$11",
+    "value": 122.28965608736078,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L32",
+    "formula": "=L22*$C$12",
+    "value": 226.01748937574806,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L33",
+    "formula": "=L30+L31+L32-L28",
+    "value": 800.342124214605,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L34",
+    "formula": "=MAX(0,(10-5)/5)",
+    "value": 1.0,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L35",
+    "formula": "=L27*$C$8/$C$9",
+    "value": 1297.340389016794,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L36",
+    "formula": "=(L35-L33)*L34",
+    "value": 496.99826480218906,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L37",
+    "formula": "=L33+L36",
+    "value": 1297.340389016794,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L38",
+    "formula": "=L27-L37",
+    "value": 9822.72008827001,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L39",
+    "formula": "=1/(1+$C$5)^10",
+    "value": 0.43057969499832893,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "L40",
+    "formula": "=L38*L39",
+    "value": 4229.46381966126,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C43",
+    "formula": "=L27*(1+C8)",
+    "value": 11509.262593991842,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C44",
+    "formula": "=C43*C8/C9",
+    "value": 1342.747302632382,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C45",
+    "formula": "=C43-C44",
+    "value": 10166.51529135946,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C46",
+    "formula": "=C45/(C5-C8)",
+    "value": 192132.07969428736,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C47",
+    "formula": "=C46/(1+C5)^10",
+    "value": 82728.17227416088,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C48",
+    "formula": "=SUM(C40:L40)+C47",
+    "value": 123761.68533680972,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C49",
+    "formula": "=Inputs!$C$12+Inputs!$C$13-Inputs!$C$14-Inputs!$C$15",
+    "value": 2565.1549999999997,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C50",
+    "formula": "=Inputs!$C$16",
+    "value": 10110.449,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C51",
+    "formula": "=C48+C49-C50",
+    "value": 116216.39133680973,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C52",
+    "formula": "=Inputs!$C$17-Inputs!$C$18",
+    "value": 191.265,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C53",
+    "formula": "=C51/C52",
+    "value": 607.6197492317451,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C54",
+    "formula": "=C53/Cover!C7-1",
+    "value": 0.3124954082119995,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Bull",
+    "cell": "C55",
+    "formula": "=C47/C48",
+    "value": 0.6684473635683073,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Cover",
+    "cell": "C10",
+    "formula": "=Bear!C53",
+    "value": 163.0942728180301,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Cover",
+    "cell": "D10",
+    "formula": "=Bear!C54",
+    "value": -0.6477065064952368,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Cover",
+    "cell": "C11",
+    "formula": "=Base!C53",
+    "value": 357.0455776230125,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Cover",
+    "cell": "D11",
+    "formula": "=Base!C54",
+    "value": -0.2287599576131062,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Cover",
+    "cell": "C12",
+    "formula": "=Bull!C53",
+    "value": 607.6197492317451,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Cover",
+    "cell": "D12",
+    "formula": "=Bull!C54",
+    "value": 0.3124954082119995,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Checks",
+    "cell": "C5",
+    "formula": "=Bear!C5>Bear!C8",
+    "value": true,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Checks",
+    "cell": "C6",
+    "formula": "=ABS(Bear!L37-Bear!L35)<0.000001",
+    "value": true,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Checks",
+    "cell": "C7",
+    "formula": "=ABS(Bear!C38-(Bear!C27-Bear!C37))<0.000001",
+    "value": true,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Checks",
+    "cell": "C8",
+    "formula": "=Base!C5>Base!C8",
+    "value": true,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Checks",
+    "cell": "C9",
+    "formula": "=ABS(Base!L37-Base!L35)<0.000001",
+    "value": true,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Checks",
+    "cell": "C10",
+    "formula": "=ABS(Base!C38-(Base!C27-Base!C37))<0.000001",
+    "value": true,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Checks",
+    "cell": "C11",
+    "formula": "=Bull!C5>Bull!C8",
+    "value": true,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Checks",
+    "cell": "C12",
+    "formula": "=ABS(Bull!L37-Bull!L35)<0.000001",
+    "value": true,
+    "source": "assumptions.json / results.json; sources ledger"
+  },
+  {
+    "sheet": "Checks",
+    "cell": "C13",
+    "formula": "=ABS(Bull!C38-(Bull!C27-Bull!C37))<0.000001",
+    "value": true,
+    "source": "assumptions.json / results.json; sources ledger"
+  }
+]

@@ -1,0 +1,173 @@
+{
+  "ticker": "SNPS",
+  "valuation_date": "2026-11-05",
+  "price": 462.95,
+  "price_date": "2026-11-04 regular close 16:00 EST, StockAnalysis web evidence; pending independent reconciliation",
+  "units": "USD millions, shares millions",
+  "start_revenue": 9715,
+  "segments": {
+    "EDA_other": 4935,
+    "Simulation": 2980,
+    "IP": 1800
+  },
+  "market": {
+    "rf": 0.049,
+    "erp": 0.0441,
+    "beta": 1.18,
+    "cost_debt": 0.056,
+    "debt_weight": 0.1,
+    "tax": 0.2
+  },
+  "capital": {
+    "cash_july": 3607.669,
+    "q4_fcf_rollforward": 457.4859999999999,
+    "asr_cash_paid": 1000,
+    "operating_cash_reserve": 500,
+    "debt_principal_and_lock": 10110.449,
+    "fully_diluted_pre_asr": 193,
+    "initial_asr_shares": 1.735,
+    "pending_delivery": 0,
+    "leases": 0,
+    "nonoperating_assets": 0
+  },
+  "cases": {
+    "bear": {
+      "growth": {
+        "EDA_other": [
+          0.11,
+          0.1,
+          0.09,
+          0.08,
+          0.07
+        ],
+        "Simulation": [
+          0.07,
+          0.07,
+          0.065,
+          0.06,
+          0.055
+        ],
+        "IP": [
+          0.1,
+          0.1,
+          0.09,
+          0.08,
+          0.07
+        ]
+      },
+      "margin": [
+        0.32,
+        0.33,
+        0.34,
+        0.35,
+        0.35
+      ],
+      "tax": 0.22,
+      "wacc_delta": 0.01,
+      "g": 0.025,
+      "roic": 0.2,
+      "capex": [
+        0.045,
+        0.04,
+        0.035,
+        0.035,
+        0.035
+      ],
+      "da": 0.02,
+      "wc_increment": 0.2,
+      "strategic": 0.01
+    },
+    "base": {
+      "growth": {
+        "EDA_other": [
+          0.16,
+          0.14,
+          0.13,
+          0.12,
+          0.11
+        ],
+        "Simulation": [
+          0.11,
+          0.11,
+          0.105,
+          0.1,
+          0.09
+        ],
+        "IP": [
+          0.18,
+          0.18,
+          0.17,
+          0.16,
+          0.14
+        ]
+      },
+      "margin": [
+        0.353,
+        0.375,
+        0.395,
+        0.415,
+        0.42
+      ],
+      "tax": 0.2,
+      "wacc_delta": 0,
+      "g": 0.03,
+      "roic": 0.25,
+      "capex": [
+        0.045,
+        0.04,
+        0.035,
+        0.035,
+        0.035
+      ],
+      "da": 0.02,
+      "wc_increment": 0.15,
+      "strategic": 0.01
+    },
+    "bull": {
+      "growth": {
+        "EDA_other": [
+          0.18,
+          0.18,
+          0.17,
+          0.16,
+          0.14
+        ],
+        "Simulation": [
+          0.14,
+          0.14,
+          0.13,
+          0.12,
+          0.11
+        ],
+        "IP": [
+          0.23,
+          0.23,
+          0.22,
+          0.2,
+          0.18
+        ]
+      },
+      "margin": [
+        0.365,
+        0.4,
+        0.425,
+        0.44,
+        0.45
+      ],
+      "tax": 0.18,
+      "wacc_delta": -0.0075,
+      "g": 0.035,
+      "roic": 0.3,
+      "capex": [
+        0.045,
+        0.04,
+        0.035,
+        0.035,
+        0.035
+      ],
+      "da": 0.02,
+      "wc_increment": 0.12,
+      "strategic": 0.0075
+    }
+  }
+}

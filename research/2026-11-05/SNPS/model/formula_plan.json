@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "company": "Synopsys, Inc.",
+    "ticker": "SNPS",
+    "industry": "EDA and engineering simulation",
+    "currency": "USD",
+    "units": "$mm except per-share data",
+    "valuation_date": "2026-11-05",
+    "as_of_date": "2026-07-31",
+    "accounting_basis": "US GAAP",
+    "valuation_purpose": "public_equity_screen",
+    "model_type": "fcff"
+  },
+  "source_basis": [
+    {
+      "id": "src_hist_001",
+      "topic": "historicals",
+      "label": "analyst_estimate",
+      "source_name": "FY26 guidance, Q3 release and September investor day",
+      "source_type": "company_filing",
+      "as_of_date": "2026-11-05",
+      "confidence": "high",
+      "notes": "See source_ledger.json and report limitations. No illustrative source data."
+    },
+    {
+      "id": "src_forecast_001",
+      "topic": "forecast",
+      "label": "analyst_estimate",
+      "source_name": "Analyst 5+5 model grounded in FY27 guidance",
+      "source_type": "analyst_model",
+      "as_of_date": "2026-11-05",
+      "confidence": "medium",
+      "notes": "See source_ledger.json and report limitations. No illustrative source data."
+    },
+    {
+      "id": "src_wacc_001",
+      "topic": "wacc",
+      "label": "analyst_estimate",
+      "source_name": "Treasury Nov4, Damodaran Nov1, beta StockAnalysis Nov5",
+      "source_type": "analyst_model",
+      "as_of_date": "2026-11-05",
+      "confidence": "medium",
+      "notes": "See source_ledger.json and report limitations. No illustrative source data."
+    },
+    {
+      "id": "src_terminal_001",
+      "topic": "terminal_value",
+      "label": "analyst_estimate",
+      "source_name": "Analyst g/ROIC paid terminal",
+      "source_type": "analyst_model",
+      "as_of_date": "2026-11-05",
+      "confidence": "medium",
+      "notes": "See source_ledger.json and report limitations. No illustrative source data."
+    },
+    {
+      "id": "src_bridge_001",
+      "topic": "net_debt",
+      "label": "analyst_estimate",
+      "source_name": "July31 10Q plus paid ASR and Q4 guidance rollforward",
+      "source_type": "company_filing",
+      "as_of_date": "2026-11-05",
+      "confidence": "high",
+      "notes": "See source_ledger.json and report limitations. No illustrative source data."
+    },
+    {
+      "id": "src_shares_001",
+      "topic": "share_count",
+      "label": "analyst_estimate",
+      "source_name": "FY26 diluted guidance less ASR initial delivery",
+      "source_type": "company_filing",
+      "as_of_date": "2026-11-05",
+      "confidence": "high",
+      "notes": "See source_ledger.json and report limitations. No illustrative source data."
+    }
+  ],
+  "timeline": {
+    "start_year": 2026,
+    "horizon_years": 10,
+    "periodicity": "annual"
+  },
+  "historicals": {
+    "latest_year": 2026,
+    "revenue": 9715,
+    "ebitda": 3280,
+    "ebit": 3080,
+    "cash_taxes": 616,
+    "da": 200,
+    "capex": 225,
+    "change_nwc": 0,
+    "net_working_capital": 0,
+    "unlevered_fcf": 2439,
+    "source_id": "src_hist_001"
+  },
+  "forecast": {
+    "cash_flow_basis": "fcff",
+    "mid_year_convention": false,
+    "source_id": "src_forecast_001",
+    "notes": "FY26 is guidance anchor, not reported actual. Custom reviewed model controls 5+5 paid growth; template compatibility export only."
+  },
+  "wacc": {
+    "risk_free_rate": 0.049,
+    "beta": 1.18,
+    "equity_risk_premium": 0.0441,
+    "size_premium": 0,
+    "company_specific_premium": 0,
+    "country_risk_premium": 0,
+    "pre_tax_cost_of_debt": 0.056,
+    "marginal_tax_rate": 0.2,
+    "target_debt_pct": 0.1,
+    "target_equity_pct": 0.9,
+    "source_id": "src_wacc_001",
+    "preferred_pct": 0.0,
+    "pre_tax_cost_of_preferred": 0.0
+  },
+  "terminal_value": {
+    "method": "perpetual_growth",
+    "perpetual_growth_rate": 0.03,
+    "exit_ebitda_multiple": 13.0,
+    "source_id": "src_terminal_001"
+  },
+  "ev_to_equity_bridge": {
+    "cash": 2565.1549999999997,
+    "debt": 10110.449,
+    "leases": 0,
+    "minorities": 0.0,
+    "associates": 0.0,
+    "pensions": 0,
+    "preferred_stock": 0.0,
+    "non_operating_assets": 0,
+    "options": 0.0,
+    "other_debt_like_items": 0.0,
+    "diluted_shares": 191.265,
+    "net_debt_source_id": "src_bridge_001",
+    "share_count_source_id": "src_shares_001"
+  },
+  "scenarios": {
+    "base": {
+      "description": "Analyst scenario; retained SBC, explicit paid reinvestment.",
+      "revenue_growth": [
+        0.14836850231600618,
+        0.13872055501774772,
+        0.13066603710226565,
+        0.12251685592942962,
+        0.11079319317620895,
+        0.09485058436885851,
+        0.07877050392375962,
+        0.0625813693557491,
+        0.046313704231884634,
+        0.030000000000000027
+      ],
+      "ebit_margin": [
+        0.353,
+        0.375,
+        0.395,
+        0.415,
+        0.42,
+        0.42,
+        0.42,
+        0.42,
+        0.42,
+        0.42
+      ],
+      "tax_rate": 0.2,
+      "da_percent_revenue": 0.02,
+      "capex_percent_revenue": 0.04,
+      "nwc_percent_revenue": [
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "terminal_growth_rate": 0.03,
+      "wacc_adjustment": 0
+    },
+    "downside": {
+      "description": "Analyst scenario; retained SBC, explicit paid reinvestment.",
+      "revenue_growth": [
+        0.09587750900669079,
+        0.09101503318007409,
+        0.0826567506672371,
+        0.07422120775799157,
+        0.06572328325002519,
+        0.05761305238075387,
+        0.049480476405388885,
+        0.0413306895375003,
+        0.033168815935703755,
+        0.02499999999999991
+      ],
+      "ebit_margin": [
+        0.32,
+        0.33,
+        0.34,
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35,
+        0.35
+      ],
+      "tax_rate": 0.22,
+      "da_percent_revenue": 0.02,
+      "capex_percent_revenue": 0.04,
+      "nwc_percent_revenue": [
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "terminal_growth_rate": 0.025,
+      "wacc_adjustment": 0.01
+    },
+    "upside": {
+      "description": "Analyst scenario; retained SBC, explicit paid reinvestment.",
+      "revenue_growth": [
+        0.17699433865156977,
+        0.17779719270628358,
+        0.16860766368155922,
+        0.15732131671859095,
+        0.14068237864854116,
+        0.11996104906715632,
+        0.09897644572604691,
+        0.07778201652775407,
+        0.05643574807551821,
+        0.03499999999999992
+      ],
+      "ebit_margin": [
+        0.365,
+        0.4,
+        0.425,
+        0.44,
+        0.45,
+        0.45,
+        0.45,
+        0.45,
+        0.45,
+        0.45
+      ],
+      "tax_rate": 0.18,
+      "da_percent_revenue": 0.02,
+      "capex_percent_revenue": 0.04,
+      "nwc_percent_revenue": [
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "terminal_growth_rate": 0.035,
+      "wacc_adjustment": -0.0075
+    }
+  },
+  "sensitivities": {
+    "wacc_delta": [
+      -0.01,
+      -0.005,
+      0.0,
+      0.005,
+      0.01
+    ],
+    "terminal_growth_delta": [
+      -0.01,
+      -0.005,
+      0.0,
+      0.005,
+      0.01
+    ],
+    "exit_multiple_delta": [
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0
+    ],
+    "revenue_growth_delta": [
+      -0.02,
+      -0.01,
+      0.0,
+      0.01,
+      0.02
+    ],
+    "ebit_margin_delta": [
+      -0.03,
+      -0.015,
+      0.0,
+      0.015,
+      0.03
+    ]
+  }
+}

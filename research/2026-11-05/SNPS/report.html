@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SNPS | Fundamental Pullback</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="report.css" />
+</head>
+<body>
+<h1 id="snps-mejora-real-precio-todavía-exigente">SNPS: mejora real,
+precio todavía exigente</h1>
+<p><strong>5 noviembre 2026 | Fundamental Pullback | S3-SNPS-20261105-v2
+| Investigación auditada con salvedades</strong></p>
+<p><strong>Decisión: EN OBSERVACIÓN. No pasar a Stage 3.5 ni
+ejecutar.</strong> El Investor Day de septiembre cambia materialmente
+las expectativas frente a A104, pero no demuestra una compensación
+suficiente por el riesgo a $462,95. No se rechaza por superar un único
+valor central: el caso de cumplir el plan de dirección llega a unos $423
+y, con un WACC 50 puntos básicos menor, a $466. Ese último caso explica
+el precio, pero apenas ofrece holgura de valoración frente a un estrés
+moderado que reduce su valor a $312. La brecha de valor de ese caso
+(~0,7%) no es una estimación de rentabilidad anual: a precio justo,
+podría ofrecer aproximadamente su rentabilidad exigida. La observación
+responde a la combinación necesaria de ejecución y menor descuento, y a
+su fragilidad bajo estrés. El escenario favorable no constituye una
+aprobación.</p>
+<p>Abrir primero <a href="output/SNPS_DCF.xlsx">el modelo editable</a>.
+Estado <strong>screen-grade</strong> para aprobación: las cuentas,
+fórmulas y fuentes están trazadas; persiste el límite de comparabilidad
+económica proforma. La auditoría independiente concluye que es apto con
+salvedades para investigación condicional y observación. La decisión de
+no comprar hoy no necesita inventar una certeza de valor intrínseco.
+Este informe no modifica posiciones ni registra órdenes.
+Opportunity100≥85 permanece sin cambios; la verificación técnica se hace
+por separado.</p>
+<h2 id="corte-y-novedad-decisiva">1. Corte y novedad decisiva</h2>
+<p>Precio de referencia, confirmado por dos proveedores:
+<strong>$462,95</strong>, cierre regular del 4 noviembre, 16:00 EST,
+observado en la página histórica y estadística de StockAnalysis. No se
+usa el $465 del scanner ni el $460 fuera de horario. Se conserva
+evidencia fechada; cierre confirmado también por la serie Yahoo y
+reconstrucción independiente de la revisión técnica. Las cuentas
+publicadas más recientes son Q3 FY26, 31 julio. FY26 terminó el 31
+octubre, pero sus resultados todavía no se habían publicado al
+corte.</p>
+<p>La guía del 30 septiembre para FY27 es ingresos $11.100–11.200
+millones, margen operativo no-GAAP ~44%, EPS ajustado $19,04–19,12, FCF
+~$3.100 millones y capex ~$500 millones. SBC esperada $960–980 millones.
+Los objetivos FY26–30 son crecimiento agregado ~15%, margen no-GAAP ~50%
+al final y crecimiento de FCF en la veintena media. Son objetivos de
+dirección, no resultados asegurados. El modelo incorpora esta
+información, ausente del cálculo condicional A104. <a
+href="https://news.synopsys.com/2026-09-30-Synopsys-Details-Growth-Strategy-and-Long-term-Financial-Model-at-2026-Investor-Day">Investor
+Day</a>.</p>
+<h2 id="historia-no-confundir-adquisición-y-crecimiento-orgánico">2.
+Historia: no confundir adquisición y crecimiento orgánico</h2>
+<p>USD millones; ingresos y beneficio de operaciones continuadas.
+CFO/FCF FY23–24 son del grupo y aún incluyen Software Integrity. No se
+usan como serie homogénea de crecimiento de caja.</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">BN continuado</th>
+<th style="text-align: right;">CFO grupo</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">FCF grupo</th>
+<th style="text-align: right;">SBC continuada</th>
+<th style="text-align: right;">EPS económico proxy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td style="text-align: right;">5,318.01</td>
+<td style="text-align: right;">1,273.24</td>
+<td style="text-align: right;">1,227.05</td>
+<td style="text-align: right;">1,703.27</td>
+<td style="text-align: right;">191.82</td>
+<td style="text-align: right;">1,511.45</td>
+<td style="text-align: right;">513.09</td>
+<td style="text-align: right;">6.90</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td style="text-align: right;">6,127.44</td>
+<td style="text-align: right;">1,355.71</td>
+<td style="text-align: right;">1,441.71</td>
+<td style="text-align: right;">1,407.03</td>
+<td style="text-align: right;">139.50</td>
+<td style="text-align: right;">1,267.53</td>
+<td style="text-align: right;">657.93</td>
+<td style="text-align: right;">7.80</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td style="text-align: right;">7,054.18</td>
+<td style="text-align: right;">914.93</td>
+<td style="text-align: right;">1,336.12</td>
+<td style="text-align: right;">1,518.61</td>
+<td style="text-align: right;">169.45</td>
+<td style="text-align: right;">1,349.15</td>
+<td style="text-align: right;">893.29</td>
+<td style="text-align: right;">5.59</td>
+</tr>
+<tr class="even">
+<td>TTM2025</td>
+<td style="text-align: right;">6,435.30</td>
+<td style="text-align: right;">1,104.34</td>
+<td style="text-align: right;">1,166.70</td>
+<td style="text-align: right;">1,441.69</td>
+<td style="text-align: right;">155.64</td>
+<td style="text-align: right;">1,286.05</td>
+<td style="text-align: right;">821.29</td>
+<td style="text-align: right;">6.13</td>
+</tr>
+<tr class="odd">
+<td>TTM2026</td>
+<td style="text-align: right;">9,416.47</td>
+<td style="text-align: right;">802.36</td>
+<td style="text-align: right;">1,076.56</td>
+<td style="text-align: right;">2,938.34</td>
+<td style="text-align: right;">190.64</td>
+<td style="text-align: right;">2,747.71</td>
+<td style="text-align: right;">950.02</td>
+<td style="text-align: right;">8.52</td>
+</tr>
+</tbody>
+</table>
+<p>TTM26=FY25+9M26−9M25; TTM25=FY24+9M25−9M24. FY24 tuvo 53 semanas. La
+inversión FY23 de 191,822 suma compras de PPE netas 189,618 y software
+capitalizado 2,204; no es una diferencia entre capex bruto y neto. Las
+ventas de edificios FY24/25 de 16,339/74,279 son líneas de caja
+separadas y no se descuentan nuevamente de las compras de PPE. Software
+Integrity se vendió en septiembre 2024 y está excluida de ingresos/EPS
+comparativos. Ansys se incorporó el 17 julio 2025; usar el salto de
+ingresos reportados como orgánico sería incorrecto.</p>
+<p><strong>Corrección de calidad:</strong> los filings dan EBIT TTM26 de
+802,356, no los ~$1.040 millones de la página secundaria. A104 usaba SBC
+total FY23/24 (563,292/692,316); la continuada es 513,094/657,935. Las
+cifras primarias controlan. <a
+href="https://www.sec.gov/Archives/edgar/data/883241/000088324125000028/snps-20251031.htm">10-K</a>,
+<a
+href="https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/snps-20260731.htm">10-Q
+actual</a>.</p>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Trimestre</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT GAAP</th>
+<th style="text-align: right;">BN continuado</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">FCF</th>
+<th style="text-align: right;">EPS económico proxy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q4 FY2025</td>
+<td style="text-align: right;">2,254.86</td>
+<td style="text-align: right;">121.39</td>
+<td style="text-align: right;">448.70</td>
+<td style="text-align: right;">639.74</td>
+<td style="text-align: right;">34.55</td>
+<td style="text-align: right;">605.19</td>
+<td style="text-align: right;">1.47</td>
+</tr>
+<tr class="even">
+<td>Q1 FY2026</td>
+<td style="text-align: right;">2,408.80</td>
+<td style="text-align: right;">203.05</td>
+<td style="text-align: right;">64.96</td>
+<td style="text-align: right;">856.83</td>
+<td style="text-align: right;">35.32</td>
+<td style="text-align: right;">821.51</td>
+<td style="text-align: right;">2.32</td>
+</tr>
+<tr class="odd">
+<td>Q2 FY2026</td>
+<td style="text-align: right;">2,275.99</td>
+<td style="text-align: right;">120.43</td>
+<td style="text-align: right;">17.11</td>
+<td style="text-align: right;">628.93</td>
+<td style="text-align: right;">54.20</td>
+<td style="text-align: right;">574.74</td>
+<td style="text-align: right;">2.11</td>
+</tr>
+<tr class="even">
+<td>Q3 FY2026</td>
+<td style="text-align: right;">2,476.82</td>
+<td style="text-align: right;">357.49</td>
+<td style="text-align: right;">545.80</td>
+<td style="text-align: right;">812.84</td>
+<td style="text-align: right;">66.57</td>
+<td style="text-align: right;">746.27</td>
+<td style="text-align: right;">2.61</td>
+</tr>
+</tbody>
+</table>
+<p>El archivo History incluye también cada trimestre comparable del año
+anterior. Los flujos trimestrales se obtienen por diferencias de
+acumulados, no anualizando Q3. Fuentes: S1–S5.</p>
+<h3
+id="comparación-de-perímetro-y-límite-del-crecimiento-de-beneficio">Comparación
+de perímetro y límite del crecimiento de beneficio</h3>
+<p>Las notas de adquisición ofrecen ingresos combinados proforma: FY24
+$8.450,296; FY25 $8.920,890; 9M24 $6.385,630; 9M25 $6.666,029. Así, el
+TTM comparable anterior asciende a $8.730,695 frente a $9.416,465
+actuales: <strong>+7,86%</strong>, mucho menos que el salto reportado.
+Q1/Q2/Q3 FY26 frente al proforma previo crecen aproximadamente
+8,6%/5,5%/8,1%. Este cálculo aún no ajusta totalmente desinversiones ni
+los $60 millones del cambio de reconocimiento del canal Ansys comunicado
+en Q2. Restar esos 60 del TTM actual reduce el crecimiento a 7,17%;
+retirar negocios vendidos del denominador aumentaría el porcentaje. Es
+una banda de contexto, no una medida oficial orgánica.</p>
+<p>El EPS económico proxy se calcula de forma uniforme: EBIT +
+amortización adquirida + reestructuración + costes operativos de
+adquisición/desinversión −1% de ventas como coste económico de
+renovación; menos intereses publicados y tasa normalizada 20%. Conserva
+SBC y compensación diferida. Excluye ganancias de desinversión y otros
+ingresos no operativos. El 1% es una estimación explícita, no una medida
+publicada de amortización económica. La I+D permanece como gasto. El
+aumento TTM del proxy refleja Ansys, financiación y dilución; <strong>no
+certifica crecimiento homogéneo de EPS proforma</strong>. No se usa el
+aumento como pase automático de la regla≥5%, ni se declara crecimiento
+negativo a partir de GAAP distorsionado.</p>
+<p>La historia sí muestra recuperación operativa: IP Q3 vuelve a crecer,
+pero 9 M ventas IP aún retroceden ligeramente y su margen ajustado cae
+frente al año anterior. La prueba prospectiva es que esa recuperación
+sostenga caja después de SBC y la inversión. Para aprobar deberá
+cerrarse la comparación económica combinada o una evidencia posterior
+suficientemente comparable; no se exige para concluir que hoy no hay
+compensación robusta por precio.</p>
+<h2 id="caja-amortización-y-reinversión">3. Caja, amortización y
+reinversión</h2>
+<p>FCF TTM publicado 2.747,706 menos SBC 950,016 deja 1.797,690 antes de
+desapalancar el flujo. No es FCFF. La conversión debe añadir intereses
+después de impuestos y normalizar circulante, impuestos e inversión. La
+aportación NVIDIA de 2.000 millones es financiación, no caja operativa;
+ya está en el balance julio y no se añade otra vez.</p>
+<p><strong>Puente FY27:</strong> guíaFCF 3.100 −SBC 970 +interés bruto
+supuesto 500×(1−20%) ≈2.530 de FCFF económico. El interés bruto es una
+estimación coherente con el principal y los cupones, no confundirlo con
+la guía de interés y otros netos−460. El modelo por EBIT produce
+2.543,883: NOPAT 3.150,567 +DA 223,128 −capex 502,038 −circulante
+216,210 −reinversión intangible 111,564. La diferencia de 14 es pequeña,
+no se introduce un ajuste de caja para forzar igualdad. La guíaFY 26
+tiene redondeos: CFO~2.800 menos capex~225 no suma exactamente
+FCF~2.600.</p>
+<p>No se añade automáticamente una deducción fiscal del 20% de toda la
+amortización PPA. El precio pagado asignó 12.990 millones a intangibles
+y reconoció pasivos fiscales diferidos materiales; amortización contable
+no equivale a deducibilidad fiscal. El modelo usa impuestos 20%, con 18%
+en favorable, y ningún activo fiscal PPA adicional. La guía de
+amortización FY27~1.545 millones se separa del desgaste ordinario. El
+margen económico excluye la amortización adquirida, pero
+<strong>mantiene I+D, SBC, compensación y costes operativos de sostener
+productos</strong>. Capex 3,5–4,5% de ventas, DA 2%, circulante
+incremental y 1% de inversión estratégica pagan renovación y
+crecimiento. Eliminar ese 1% eleva la valoración solo~$4: no explica la
+conclusión.</p>
+<h2 id="balance-y-acciones-recompra-pagada">4. Balance y acciones:
+recompra pagada</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Puente de capital</th>
+<th style="text-align: right;">USD millones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caja e inversiones líquidas julio</td>
+<td style="text-align: right;">3.607,669</td>
+</tr>
+<tr class="even">
+<td>FCF Q4 implícito en guíaFY 26</td>
+<td style="text-align: right;">457,486</td>
+</tr>
+<tr class="odd">
+<td>ASR octubre, desembolso contado una vez</td>
+<td style="text-align: right;">−1.000,000</td>
+</tr>
+<tr class="even">
+<td>Reserva de caja operativa estimada</td>
+<td style="text-align: right;">−500,000</td>
+</tr>
+<tr class="odd">
+<td>Caja excedentaria proyectada al cierreFY 26</td>
+<td style="text-align: right;">2.565,155</td>
+</tr>
+<tr class="even">
+<td>Principal y compromiso treasury-lock</td>
+<td style="text-align: right;">−10.110,449</td>
+</tr>
+<tr class="odd">
+<td>Ajuste EV→equity</td>
+<td style="text-align: right;">−7.545,294</td>
+</tr>
+</tbody>
+</table>
+<p>No se presenta este rollforward como balance publicado de noviembre.
+No se añade también FCFF Q4 al DCF: sus flujos empiezan enFY 27. Variar
+la caja proyectada±500 millones cambia el valor±$2,61. La caja
+extranjera~1.700 millones no está toda certificada como inmediatamente
+repatriable; la reserva/sensibilidad acota el riesgo, sin inventar un
+impuesto concreto.</p>
+<p>Acciones julio 191,605 millones; guía plenamente diluida FY26
+midpoint 193. Denominador:193−1,735 de entrega inicial ASR
+=<strong>191,265</strong>. Es estimación diluida, no conteo actual
+certificado, coherente con guíaFY 27 190–192. Esa guía se publicó junto
+con la intención de recomprar 1.000 millones; no se presume que
+excluyera esa recompra y no se le resta el ASR de nuevo. No se descuenta
+entrega adicional pendiente ni se incorporan recompras futuras
+gratuitas. La liquidación ASR está prevista como máximo 5 enero 2027. Un
+millón de acciones extra reduce base~$1,86. <a
+href="https://news.synopsys.com/2026-10-05-Synopsys-Initiates-1-Billion-Accelerated-Share-Repurchase-Agreement">ASR
+oficial</a>.</p>
+<p>Se usa principal 10.110,449 en vez de valor contable 10.037,360;
+incluye compromiso treasury-lock 99,526 sin duplicarlo. Arrendamientos
+operativos~804,429 siguen en gasto, no se deducen nuevamente como deuda.
+Compensación diferida tiene activos y pasivos emparejados; no se añade
+su activo bruto. No se concede valor a participaciones estratégicas no
+líquidas. Vencen~1.025 millones en 2027 y otro tanto 2028, cubiertos en
+principio por caja y generación proyectada. Riesgo de integración real,
+no financiación actualmente demostrada como frágil.</p>
+<h2 id="wacc-coherente-sin-prima-arbitraria">5. WACC coherente, sin
+prima arbitraria</h2>
+<p>CAPM: Rf 4,90% +beta 1,18×ERP 4,41% =Ke 10,10%. Peso deuda 10%, coste
+marginal supuesto 5,60%, impuesto 20%: <strong>WACC 9,54142%</strong>.
+Rf es Treasury 4 nov; ERP Damodaran 1 nov usa una referenciaRf 5,29%
+distinta: mezclar fechas introduce incertidumbre, expresamente sometida
+a sensibilidad. No se llama a ese dato una cotización simultánea
+perfecta. Beta publicada 5 años de SNPS 1,18; pares CDNS 1,10/ADSK 1,25
+contextualizan el riesgo. La beta retrospectiva tampoco mide
+perfectamente el nuevo perímetro Ansys.</p>
+<p>La deuda equivale aproximadamente 10% del capital de mercado. Cupones
+4,55–5,70% y rendimientos efectivos de emisión 4,84–5,80% respaldan el
+orden de magnitud del 5,60%, que <strong>no</strong> se presenta como
+yield observado hoy. No hay prima por tamaño ni empresa. Bear
+10,54%/bull 8,79% son riesgos alternativos; no se cambia la tasa para
+aprobar. El 9,5% de A104 era una rentabilidad exigida, no una estimación
+WACC.</p>
+<h2 id="pronóstico-55-y-terminal-pagado">6. Pronóstico 5+5 y terminal
+pagado</h2>
+<p>FY26 ingresos 9715: simulación 2980 según guía; IP 1800 y EDA/otros
+4935 son reparto propio anclado en mezcla 9 M/Q3. No son tres segmentos
+contables publicados: EDA+simulación pertenecen a Design Automation. La
+desagregación permite probar motores distintos sin inventar previsiones
+oficiales de cada unidad.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Motor</th>
+<th style="text-align: right;">Año 1</th>
+<th style="text-align: right;">Año 2</th>
+<th style="text-align: right;">Año 3</th>
+<th style="text-align: right;">Año 4</th>
+<th style="text-align: right;">Año 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EDA/otros, crecimiento base</td>
+<td style="text-align: right;">16%</td>
+<td style="text-align: right;">14%</td>
+<td style="text-align: right;">13%</td>
+<td style="text-align: right;">12%</td>
+<td style="text-align: right;">11%</td>
+</tr>
+<tr class="even">
+<td>Simulación, crecimiento base</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">10,5%</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">9%</td>
+</tr>
+<tr class="odd">
+<td>IP, crecimiento base</td>
+<td style="text-align: right;">18%</td>
+<td style="text-align: right;">18%</td>
+<td style="text-align: right;">17%</td>
+<td style="text-align: right;">16%</td>
+<td style="text-align: right;">14%</td>
+</tr>
+<tr class="even">
+<td>Margen EBIT económico base</td>
+<td style="text-align: right;">35,3%</td>
+<td style="text-align: right;">37,5%</td>
+<td style="text-align: right;">39,5%</td>
+<td style="text-align: right;">41,5%</td>
+<td style="text-align: right;">42%</td>
+</tr>
+</tbody>
+</table>
+<p>Año 1 total 11.156,4 coincide aproximadamente con guía 11.150. La
+ruta base no perpetúa un salto adquirido: ya parte del perímetro
+combinado, y no añade compras futuras sin coste. IngresosFY 31~17.910
+yFY 36~24.224. Margen 41,5%FY30 supone una cargaSBC y otros costes que
+separa la guía no-GAAP 50% del beneficio económico. La mejora exige
+eficiencia real y éxito de productos, no solo eliminación de SBC.</p>
+<p>Años 6–10: cada motor desacelera linealmente a 3%; margen 42%;
+inversión neta converge a NOPAT×g/ROIC. Terminal g 3%, ROICincremental
+25%: reinvertir 12% del NOPAT, no crecimiento gratis. ROICincremental no
+es ROIC histórico sobre los 35.000 millones pagados por Ansys. El
+soporte es la economía de software y los gastos de I+D ya incorporados;
+el 25% sigue siendo hipótesis, probada entre 20–30%. Valor
+terminal~59,8% delEV exige prudencia. Descuento fin de año con FY27 como
+primer flujo; no convención de mitad de año oculta.</p>
+<h2 id="escenarios-precio-razonable-y-estrés">7. Escenarios, precio
+razonable y estrés</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th style="text-align: right;">Valor/acción</th>
+<th style="text-align: right;">Cambio vs 462,95</th>
+<th style="text-align: right;">WACC</th>
+<th style="text-align: right;">g / ROIC</th>
+<th style="text-align: right;">Peso terminal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td style="text-align: right;">163.09</td>
+<td style="text-align: right;">-64.8%</td>
+<td style="text-align: right;">10.54%</td>
+<td style="text-align: right;">2.5% / 20%</td>
+<td style="text-align: right;">50.8%</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td style="text-align: right;">357.05</td>
+<td style="text-align: right;">-22.9%</td>
+<td style="text-align: right;">9.54%</td>
+<td style="text-align: right;">3.0% / 25%</td>
+<td style="text-align: right;">59.8%</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td style="text-align: right;">607.62</td>
+<td style="text-align: right;">31.2%</td>
+<td style="text-align: right;">8.79%</td>
+<td style="text-align: right;">3.5% / 30%</td>
+<td style="text-align: right;">66.8%</td>
+</tr>
+</tbody>
+</table>
+<p>Bear: crecimiento por motor~7–11% inicial, margen 32→35%, impuesto
+22%, ejecución lenta y mayor descuento. Bull: crecimientoEDA 18%,
+simulación 14%, IP 23% iniciales; margen 36,5→45%, impuesto 18%, ROIC
+30% y menorWACC. No son probabilidades ni precios garantizados.</p>
+<p><strong>Prueba más justa que precio&gt;base:</strong> la guía de
+dirección cubre el CAGR FY26–FY30, cuatro años. Este contraste prolonga
+por hipótesis propia el 15% también hastaFY 31, un año adicional, antes
+de desacelerar: no es una réplica pura de la guía. Mantener 15% de
+crecimiento agregado durante cinco años y margen 35,3→43%
+produce$423,23. RebajarWACC 50 pb produce$465,99: sí existe una
+combinación defendible que explica el precio. Sin embargo, ~0,7% de
+ventaja frente al precio no compensa que crecimiento 13%, margen 2
+puntos menor, WACC+50 pb y g 2,5% reduzcan ese caso a$311,52. No se
+exige un descuento fijo; se rechaza la escasa compensación frente a
+desviaciones moderadas. El estrés equivalente sobre el modelo segmentado
+base arroja$261,79. La asimetría favorable+31% frente a adverso−65%
+tampoco justifica forzar una compra con el bull.</p>
+<p>Otros límites: tasa fiscal 18% base da$367,38; ROIC 20/30%
+da$347,32/$363,53; eliminar reserva de caja da$359,66. Ninguna de esas
+pequeñas incertidumbres basta para explicar el precio. La sensibilidad
+WACC/g completa está en el workbook y JSON. La principal incertidumbre
+es duración del crecimiento/margen, no unos millones en el puente de
+caja.</p>
+<h2 id="valoración-inversa-y-múltiplos">8. Valoración inversa y
+múltiplos</h2>
+<p>Con márgenes/reinversión/WACC base, el precio exige crecimiento
+agregado constante <strong>16,97% durante cinco años</strong>, seguido
+de desaceleración a 3%: ingresosFY 31~21.268 millones frente a 17.910 en
+base. Manteniendo la ruta de ventas, exige añadir <strong>10,60
+puntos</strong> a todos los márgenes económicos, llevando el maduro
+a~52,6%, después de SBC. Son alternativas del mismo modelo, no dos
+pruebas independientes. El caso dirección+menorWACC muestra otra
+combinación posible; no existe una expectativa única.</p>
+<p>Al precio observado, PERFY 27 sobre guía ajustada 19,08≈24,3; no
+confundirlo con beneficio económico. El PER sobre EPSGAAPTTM publicado
+aproximado 5,64 ronda 82. El EPS proxy económicoTTM 8,52 implica~54,3,
+pero su perímetro cambia. Para comparables homogéneos se presentan
+métricasGAAPTTM secundarias al mismo corte, sin convertirlas en
+valoración principal: CDNS PER 65,52/EVventas 14,95/EVEBIT 49,94; ADSK
+35,00/7,16/25,50. CDNS es el par más cercano; ADSK difiere en mercados y
+mix. Los múltiplos actuales de SNPS se recalculan con filings, porque el
+EBIT de agregador es inconsistente. Con EVeconómico~96.090 millones y
+ventasTTM 9.416,465, EVventas~10,2; EV/EBITGAAP~119,8;
+EV/EBITnormalizado~36,1. Las definiciones no se mezclan ni se
+promedian.</p>
+<p>No se ha reconstruido una serie histórica de múltiplos de mercado con
+precios y contabilidad homogéneos. El salto de perímetro y márgenes
+impide afirmar «barata frente a su media». Esta limitación reduce la
+confianza para aprobar, pero no se convierte en una barrera artificial a
+terminar el análisis económico.</p>
+<h2 id="riesgos-catalizadores-y-siguiente-prueba">9. Riesgos,
+catalizadores y siguiente prueba</h2>
+<p>Ansys amplía simulación y venta cruzada; acuerdosAI/IP de septiembre
+respaldan oportunidades, no ingresos ya ganados. Backlog julio~10.900
+millones incluye 1.900 de compromisosFSA no asignados; de lo restante se
+espera reconocer 49% en doce meses. No equivale a ventas libres de
+riesgo ni cubre toda la previsión.</p>
+<p>Causas verificadas de presión histórica: restricciones de exportación
+y debilidadIP documentadas en filings, problemas de demanda de un
+cliente de fundición y ejecución de roadmap. No se asigna una causa
+única al retroceso diario de octubre sin evidencia. La subida de octubre
+tras Investor Day muestra que la expectativa nueva ya es conocida.
+Riesgos principales: monetización deAI, ritmo deIP, integraciónAnsys,
+restriccionesChina, presión competitiva y conversión de margen a caja.
+Lo primero que rompe el caso es crecimientoIP o márgenes que no se
+conviertan enFCF después deSBC y capex.</p>
+<p>La páginaIR no muestra una fecha oficial futura confirmada al corte.
+<strong>9 diciembre 2026 es estimación externa</strong>, no fecha
+oficial; 10 diciembre 2025 pertenece al ejercicio anterior. Revalidar
+anuncio oficial antes de cualquier ficha operativa. ASR: liquidación
+esperada no después 5 enero 2027.</p>
+<p>Reabrir cuando el precio deje margen frente a un caso razonable
+resistente, o la evidencia eleve de forma sustentable
+ventas/margen/caja. No hay techo de compra ni señal técnica activada.
+Próximas pruebas: FY26 y nueva guíaFY 27, conversiónFCF frente a
+2.600/3.100, SBC, inversión~500, recuperaciónIP y acciones/deuda
+despuésASR. No se aprueba una posición pequeña para sortear
+incertidumbre fundamental.</p>
+<h2 id="b.-comprobación-técnica-separada">9 b. Comprobación técnica
+separada</h2>
+<p>La revisión independiente conserva Yahoo histórico y barra final
+StockAnalysis, y su EMA fue reconstruida en este paquete: cierre 462,95;
+EMA 20 462,5895; EMA 50 448,9774; EMA 200 447,4292; EMA 200 sube 1,038%
+en 20 sesiones; ATR 14 18,8451; RSI 14 51,4755; volumen medio 20~2,227
+millones; retroceso desde máximo 252~14,186%. Los filtros técnicos
+básicos pasan. El máximo 29 oct 491,39 sigue por debajo del 9 oct 512,49
+y el mínimo 3 nov 445,56 aún no tiene dos sesiones posteriores para
+confirmarse como pivote. No hay señal, stop ni tamaño aprobados. Una
+estructura favorable no invalida la valoración. Los volúmenes finales
+difieren ligeramente por proveedor y no se usa una señal de volumen.</p>
+<h2 id="migración-desde-a104-y-reproducibilidad">10. Migración desde
+A104 y reproducibilidad</h2>
+<p>A104 base 227,25/bull 378,34 eran condicionales, no valoraciones
+actuales vinculantes. La reproducción de inputs publicados arroja
+227,34, diferencia 0,09 atribuible a detalle no preservado/redondeo, no
+se afirma réplica exacta. Puente secuencial con el mismo marco:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Paso</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A104 replay (may differ timing)</td>
+<td style="text-align: right;">227.34</td>
+</tr>
+<tr class="even">
+<td>WACC only</td>
+<td style="text-align: right;">225.63</td>
+</tr>
+<tr class="odd">
+<td>Current bridge/shares</td>
+<td style="text-align: right;">221.84</td>
+</tr>
+<tr class="even">
+<td>New segment growth, old margins/reinvestment</td>
+<td style="text-align: right;">267.16</td>
+</tr>
+<tr class="odd">
+<td>New economic margin path, old reinvestment</td>
+<td style="text-align: right;">362.39</td>
+</tr>
+<tr class="even">
+<td>Current full economic model</td>
+<td style="text-align: right;">357.05</td>
+</tr>
+</tbody>
+</table>
+<p>El aumento viene de nueva guía/mezcla/márgenes, no de rebajar la tasa
+para alcanzar el precio. Los cambios de reinversión, capital y
+denominador están separados. Las dos versiones se conservan; esta
+revisión auditada sustituye la valoración económica condicional, sin
+convertirla en aprobación.</p>
+<p>Paquete: assumptions/history/results/analysis JSON, CSV por
+escenario, fuentes primarias descargadas, evidencia web fechada, ledger
+y modelo editable. Ejecutar <code>python reproduce.py</code> desde esta
+carpeta regenera cálculo, workbook, informe y controles sin red. Las
+fuentes históricas permanecen congeladas. El modelo editable de 10 años
+contiene 702 fórmulas con resultados comprobados; se recalculó con un
+segundo motor de hojas de cálculo y se inspeccionó visualmente como QA
+propia, no como auditoría independiente. Las sensibilidades estáticas
+deben regenerarse con el script después de cambios; los tres casos
+principales son fórmulas editables.</p>
+<p><strong>Auditoría independiente completada:</strong> <a
+href="audit/report.md">acta y salvedades</a>. Reconstrucción separada
+con 992 controles DCF,134 de fuentes primarias,10 sensibilidades
+adicionales y 453 celdas del libro verificadas tanto en caché como tras
+recálculo nativo. Las pruebas activas de tasa y crecimiento también
+coinciden. No quedan errores materiales identificados; esto no convierte
+supuestos en hechos ni concede aprobación de compra.</p>
+<p><strong>Pendientes expresos:</strong> comparación homogénea de
+beneficio/FCF combinado y calendario oficial. No están ocultos ni
+transformados en datos inventados. No hay publicación externa ni
+operación realizada.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li>S1: <a
+href="https://www.sec.gov/Archives/edgar/data/883241/000088324125000028/snps-20251031.htm">FY25
+10-K; FY23–25 history</a> · 2025-12-22. Reported history; continuing
+operations; acquisitions, proforma, capital and SBC.</li>
+<li>S2: <a
+href="https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/snps-20260731.htm">Q3
+FY26 10-Q</a> · 2026-08-26. July balance, 9 m/Q3 results, proforma
+comparator, cash and debt/lease schedules.</li>
+<li>S3: <a
+href="https://www.sec.gov/Archives/edgar/data/883241/000088324126000018/snps-20260430.htm">Q2
+FY26 10-Q</a> · 2026-05-27. Q2/H 1 results, channel accounting impact
+and proforma comparison.</li>
+<li>S4: <a
+href="https://www.sec.gov/Archives/edgar/data/883241/000088324126000014/snps-20260131.htm">Q1
+FY26 10-Q</a> · 2026-02-25. Q1 results and prior proforma.</li>
+<li>S5: <a
+href="https://www.sec.gov/Archives/edgar/data/883241/000088324125000024/snps-20250731.htm">Q3
+FY25 10-Q</a> · 2025-09-09. Prior TTM, FY24 comparators and combined
+proforma FY24/25.</li>
+<li>S6: <a
+href="https://news.synopsys.com/2026-08-26-Synopsys-Posts-Financial-Results-for-Third-Quarter-Fiscal-Year-2026">Q3
+FY26 earnings release</a> · 2026-08-26. FY26 revenue 9715 midpoint; FCF
+2600 approximate, capex 225; SBC 950 and PPA 1612.5; no fabricated exact
+reconciliation of rounded CFO 2800 minus capex 225 versus FCF 2600.</li>
+<li>S7: <a
+href="https://news.synopsys.com/2026-09-30-Synopsys-Details-Growth-Strategy-and-Long-term-Financial-Model-at-2026-Investor-Day">Investor
+Day FY27 and FY30 guidance</a> · 2026-09-30. FY27 revenue 11100–11200,
+NG margin 44%, FCF 3100, capex 500, SBC 960–980, diluted 190–192. FY 30
+NGmargin 50%, growth~15% company; EDA 13%+, simulation 10%+, IP
+17%+.</li>
+<li>S8: <a
+href="https://news.synopsys.com/2026-10-05-Synopsys-Initiates-1-Billion-Accelerated-Share-Repurchase-Agreement">October
+accelerated share repurchase</a> · 2026-10-05. Paid 1 bn once; initial
+1.735 m shares; pending settlement no later than Jan 5 2027, exact
+delivery unknown.</li>
+<li>S9: <a href="https://stockanalysis.com/stocks/snps/statistics/">SNPS
+historical close and beta</a> · 2026-11-05. Web close 462.95 Nov 4
+regular session; beta 5 Y 1.18. Historical price page same close.
+Secondary EBIT/EV data disagree with primary and are not
+controlling.</li>
+<li>S10: <a
+href="https://stockanalysis.com/stocks/cdns/statistics/">CDNS same-date
+comparison</a> · 2026-11-05. Beta 1.10; TTMGAAPPE 65.52, EVsales 14.95,
+EVEBIT 49.94; indicative secondary peer only.</li>
+<li>S11: <a
+href="https://stockanalysis.com/stocks/adsk/statistics/">ADSK same-date
+comparison</a> · 2026-11-05. Beta 1.25; TTMGAAPPE 35, EVsales 7.16,
+EVEBIT 25.50; less-direct peer, no averaging.</li>
+<li>S12: <a
+href="https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value=2026">US
+Treasury daily par yields</a> · 2026-11-04. 10 Y 4.90%; retained
+downloaded evidence from parallel primary-source research.</li>
+<li>S13: <a href="https://pages.stern.nyu.edu/~adamodar/">Damodaran
+implied ERP</a> · 2026-11-01. Implied ERP 4.41%; source model uses 5.29%
+Rf at different date. Pairing with Nov 4 treasury is a disclosed
+mixed-date analyst estimate; stress +/-50–100 bp.</li>
+<li>S14: <a
+href="https://investor.synopsys.com/events-and-presentations/">Company
+events calendar</a> · 2026-11-05. No current future event found in read.
+Dec 9 2026 third-party estimate only; Dec 10 2025 is old results.</li>
+<li>S15: <a href="model/assumptions.json">Analyst model</a> ·
+2026-11-05. Forecast decomposition, beta CAPM financing, cash reserve,
+capital bridge, scenarios and economic normalization are estimates, not
+company guidance.</li>
+</ul>
+</body>
+</html>
