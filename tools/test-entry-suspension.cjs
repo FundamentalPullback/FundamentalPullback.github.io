@@ -67,7 +67,20 @@ for(const [file,snapshot] of Object.entries(ledgerSnapshots)){
 }
 assert.equal(ledgerAppendCounts[0],ledgerAppendCounts[1],'HRB operation and management append must be reconciled together');
 const prior=path.resolve(process.env.CTSH_SUSPENSION_BASELINE||path.join(root,'../../entry_plans_visual_release/verified_site'));if(fs.existsSync(prior)){
- for(const f of fs.readdirSync(path.join(root,'data'))){if(f==='manifest.js'||f==='entry-plan-followups.js'||ledgerSnapshots[f]||fs.statSync(path.join(root,'data',f)).isDirectory())continue;assert.equal(sha(path.join(root,'data',f)),sha(path.join(prior,'data',f)),'Unchanged published data '+f);}
+ // Morning earnings append: exact dated prefix and exact three new rows, independently
+ // covered by test-morning-earnings.cjs; no other data changes are permitted.
+ const earnings={"rows":769,"bytes":1267420,"sha256":"f72f9d0726c75c28a41df117efed1c2cdb5cadcb27e4e83d0d7190b5d8777385","appendRows":3,"appendSha256":"faa2e47ef8e9107ca5f29ec78a3ed76689b244d86e810f5dd9af134685ec8bae","librarySha256":"efd9b1f065c3a2a6efb4ce1f29c7a72dd7aae89a80d54bb7335914433a46a199"};
+ for(const f of fs.readdirSync(path.join(root,'data'))){
+  if(f==='manifest.js'||f==='entry-plan-followups.js'||ledgerSnapshots[f]||fs.statSync(path.join(root,'data',f)).isDirectory())continue;
+  if(f==='dec.js'){
+   const b=fs.readFileSync(path.join(root,'data',f)),prefix='window.FP=window.FP||{};FP.dec=';
+   const rows=JSON.parse(b.toString('utf8').slice(prefix.length,-2));
+   assert.equal(rows.length,earnings.rows+earnings.appendRows,'Only exact three earnings decision rows appended');
+   assert.equal(crypto.createHash('sha256').update(Buffer.concat([b.subarray(0,earnings.bytes-3),Buffer.from('];\n')])).digest('hex'),earnings.sha256,'Exact prior decision byte prefix');
+   assert.equal(crypto.createHash('sha256').update(JSON.stringify(rows.slice(earnings.rows))).digest('hex'),earnings.appendSha256,'Exact earnings append');
+  }else if(f==='lib-morning-earnings.js')assert.equal(sha(path.join(root,'data',f)),earnings.librarySha256,'Exact dedicated earnings library');
+  else assert.equal(sha(path.join(root,'data',f)),sha(path.join(prior,'data',f)),'Unchanged published data '+f);
+ }
  const originalDir='research/2026-11-05/CTSH-stage35-B-V2';for(const f of fs.readdirSync(path.join(root,originalDir)))assert.equal(sha(path.join(root,originalDir,f)),sha(path.join(prior,originalDir,f)),'Unchanged original source '+f);
 }
 console.log('PASS source-bound append-only suspension, separate timestamps, original pending event, exact documented state, ES/EN list/detail/panel, filters, no automatic expiry/rearm, immutable source and economic records.');

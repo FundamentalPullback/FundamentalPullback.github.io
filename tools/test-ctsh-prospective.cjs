@@ -21,8 +21,25 @@ for(const lang of ['es','en']){
  assert.equal(out.replace(/<aside class="stock-note prospective-study">[\s\S]*?<\/aside>/,''),prior,'Only the separate study panel changes the CTSH summary');
  for(const tk of ['BZ','LNG','TRMD','GAP'])assert.equal(now.t.profileSummaryCard(find(now,tk)),before.t.profileSummaryCard(find(before,tk)),tk+' card preserved');
 }
-assert.equal(now.reports.length,before.reports.length+1);
-for(const original of before.reports)assert.deepEqual(clone(now.reports.find(r=>r.id===original.id)),clone(original),original.id);
+// Exact append-only publication history: the prospective study plus the three
+// independently audited earnings supplements. No arbitrary future ID is allowed.
+function assertPublishedReportHistory(reports){
+ assert.equal(reports.length,before.reports.length+4,'Exact report count preserves duplicate protection');
+ assert.equal(new Set(reports.map(r=>r.id)).size,reports.length,'Report IDs must be unique');
+ const priorIds=new Set(before.reports.map(r=>r.id));
+ assert.deepEqual(clone(reports.filter(r=>!priorIds.has(r.id)).map(r=>r.id).sort()),['A278','A280','A281','A282']);
+ for(const original of before.reports)assert.deepEqual(clone(reports.find(r=>r.id===original.id)),clone(original),original.id);
+ assert.equal(require('crypto').createHash('sha256').update(JSON.stringify(reports.find(r=>r.id==='A278'))).digest('hex'),'1650049107734958ddd28c717c2bfdef454479d13393e568ed442ccf7a65ec3f','Exact preserved original A278');
+}
+assertPublishedReportHistory(now.reports);
+for(const change of [
+ reports=>reports.push({id:'A279',title:'Unexpected paused candidate'}),
+ reports=>reports.push({id:'A283',title:'Unexpected new report'}),
+ reports=>reports.push(clone(reports.find(r=>r.id==='A268'))),
+ reports=>{reports.find(r=>r.id==='A268').title+=' MUTATION';},
+ reports=>{reports.find(r=>r.id==='A278').text+=' MUTATION';}
+]){const bad=clone(now.reports);change(bad);assert.throws(()=>assertPublishedReportHistory(bad),'Unexpected additions and changes to A268/A278 must fail');}
+
 const publicDir=root+'/research/2026-11-05/CTSH-stage35-B-V2';for(const filename of ['report.md','report.html','results.json','publication_metadata.json','independent_audit.json','independent_audit.md','manifest.sha256','market_data_revision_vs_A268.json','ohlcv_indicators.csv','public_calculations.py','public_release_certificate.json','public_replay.json','source_register.json','README.md'])assert(fs.existsSync(publicDir+'/'+filename));
 assert(fs.readFileSync(publicDir+'/index.html','utf8').includes('6.891.179'));
 console.log('PASS A278 schema-gated study; malformed/unknown/future-ticker cases; ES/EN panel rendering; A268 completion, conditional status, valuation, close, balance, decisions and all old reports unchanged; no operational approval.');
