@@ -1,0 +1,21 @@
+{
+  "Inputs!B2": "S6/S13 Nov4 regular close48.29; conflict preserved",
+  "Inputs!B5": "S5 Oct21 recorddate60.053154m basic",
+  "Inputs!B6": "S1 FY26 treasury dilution proxy2.1m; not exact current count",
+  "Inputs!B8:B11": "S1 notes9/11 and balance sheet; principal1583,finance13,pension13,minority1",
+  "Inputs!B12": "Analyst all37cash retained operationally",
+  "Inputs!B21": "95days Aug1 toNov4 /365.25",
+  "WACC!B2": "S8 TreasuryNov4 10Y4.90%",
+  "WACC!B3": "S9 beta1.08 vendor5Y",
+  "WACC!B4": "S11 ERP4.41% Nov1",
+  "WACC!B7:B9": "Analyst debtcost7%,targetdebt35%,tax26%; actual rates S1note9",
+  "Historical Financials!A2:R11": "S1/S2/S3/S4/S7 current/comparative; quarterCFO/capex differences; annual EPS not summed",
+  "Normalization!B2:B14": "S1 cashflow, notes1/6/7/14; all50insurance removed vsadjusted45 unresolved",
+  "Normalization!B15": "S7 FY27guidance EBITDA730-780 midpoint755",
+  "Normalization!B16:B24": "Analyst economic forecast, S1 FY26 baseline and S7 totalcapexcloud300",
+  "Base!B11:D15": "S7 FY27sales midpoint31500; subsequent growth/margins analyst; no extraFY27growth",
+  "Base!J11:M20": "Analyst explicit investment transition to paid incrementalROIC12%",
+  "Normalization!B28:B33": "model.py exact guidance_cash_paths; conditional not company FCFF guidance",
+  "Reverse DCF": "Python bisection model.py, one variable each, static refresh output",
+  "Sensitivities": "Python model.py static recalculated output"
+}

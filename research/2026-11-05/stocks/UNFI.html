@@ -1,0 +1,297 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>UNFI · Investigación condicional completada · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/UNFI">← UNFI profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación completada / Research completed</span><span class="tag deferred">En observación / Observation</span><span class="tag">No investment or entry approval</span></div><h1 id="unfi-a276-investigación-condicional-completada">UNFI · A276 · Investigación condicional completada</h1>
+<p><strong>Investigación A104 completada de forma condicional; observación, sin aprobación. Base 43,71 USD frente a 48,29, escenarios 9,53/66,92. Caja alternativa 46,80/47,42; persistencia de margen 69,03 es sensibilidad, no guía perpetua.</strong></p>
+<p>A104 research completed conditionally; observation, no approval. Base $43.71 versus $48.29, scenarios $9.53/$66.92. Alternative cash $46.80/$47.42; persistent-margin $69.03 is a sensitivity, not perpetual guidance.</p>
+<p>Investigación Stage 3 completada de forma condicional. En observación, sin aprobación de inversión ni Stage 3.5. Señal, máximo operativo y stop nulos; cantidad nueva 0. / Conditional Stage 3 research completed. Observation, no investment or Stage 3.5 approval. Signal, operative maximum and stop are null; new quantity 0.</p>
+<p>Escáner original / Original scanner: <strong>2026-11-04, 48.29 USD</strong>. Cierre regular documentado / Documented regular close: <strong>2026-11-04, 48.29 USD</strong>. Referencias históricas separadas, no cotización actual. Separate dated observations, not a current quote.</p>
+<p>Publicación web; conciliación con el diario pendiente. Website publication; journal reconciliation pending. Todos los documentos y decisiones anteriores se conservan. All earlier documents and decisions are preserved.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-05/stocks/UNFI.html">Perfil / Profile</a></p>
+<h1 id="unfi-fundamental-pullback-expediente-a104-actualizado">UNFI | Fundamental Pullback: expediente A104 actualizado</h1>
+<p><strong>Corte: 5 noviembre 2026. Precio: $48,29, cierre regular del 4 noviembre a las 16:00 EST.</strong> Una primera respuesta web mostró $48,32 tanto en encabezado regular como en la barra. La descarga fresca del histórico y Yahoo coinciden en $48,29; prevalecen esas dos lecturas. No se atribuye la discrepancia a fuera de horario sin más. USD millones salvo acción. Se conserva Opportunity≥85; no se cambia el umbral ni se aprueba una entrada por el score. <a href="https://stockanalysis.com/stocks/unfi/history/">Precio e histórico</a>.</p>
+<h2 id="conclusión-de-inversión">Conclusión de inversión</h2>
+<p><strong>ESPERAR PRUEBA / SIN ENTRADA APROBADA.</strong> La recuperación es real. El valor central operativo de <strong>$43.71</strong> queda por debajo de $48,29, lo que por sí solo NO obliga a rechazar: el plan admite precio razonable cuando retorno, caja y riesgos compensan. La razón para no aprobar todavía es que no podemos elegir con suficiente confianza entre las dos bases de caja, y el escenario adverso produce pérdida muy sustancial. Escenarios adverso <strong>$9.53</strong>, central <strong>$43.71</strong>, favorable <strong>$66.92</strong>. Son resultados condicionales, no probabilidades ni límites de órdenes. El precio sí cabe dentro de un caso favorable económicamente posible. Se retira la antigua descripción «por encima incluso del favorable»; no se sostiene el rechazo únicamente con el viejo $27,76.</p>
+<p>La calibración de caja importa: un puente preliminar desde FCF guiado implica $320.1 de FCFF económico frente a $214.32 del caso central. <strong>No está demostrado que toda esa diferencia sea recurrente, pero tampoco que deba descartarse.</strong> El expediente permite valorar la incertidumbre; no certifica una oportunidad aprobada. Calidad del modelo: <strong>screen-grade</strong>, investigación completa en arquitectura, con incertidumbres económicas explícitas y auditoría independiente superada con salvedades. No está listo para decidir una compra por sí solo.</p>
+<h2 id="qué-vende-y-por-qué-podría-mejorar">1. Qué vende y por qué podría mejorar</h2>
+<p>UNFI distribuye alimentación natural, convencional y especialidades a más de 30.000 establecimientos, con retail propio y servicios a proveedores. FY26 ventas natural 17.132 (+7%), convencional 12.974 (−11,5%), retail 2.157 (−7,9%) y eliminaciones−1.111. El crecimiento de natural y el abandono deliberado de contratos/centros de menor retorno mejoran mezcla; no equivalen a crecimiento del conjunto. La ejecución Lean, compras y productividad explican parte del avance. Los márgenes estrechos amplifican pequeños errores de costes, salarios, surtido, precios y clientes. <a href="https://www.sec.gov/Archives/edgar/data/1020859/000102085926000022/f26q4earningsrelease.htm">FY26 y guía</a>.</p>
+<p>La ventaja es escala y especialización de surtido, no poder ilimitado de precios. Dependencia de clientes grandes, concentración logística, reputación de servicio y ciberseguridad son riesgos centrales. Whole Foods/Amazon y otros grandes clientes disponen de poder negociador; el contrato no se valora como perpetuidad garantizada. No se atribuye múltiplo premium por «alimentación defensiva» sin considerar apalancamiento y bajo margen.</p>
+<h2 id="últimos-cuatro-trimestres-y-ttm-anterior">2. Últimos cuatro trimestres y TTM anterior</h2>
+<p>Todos los trimestres son 13 semanas; FY25 y FY26,52 semanas. FY24 tuvo 53 y sólo sirve como contexto. CFO/capex trimestrales se comprueban por diferencias entre acumulados; no se anualiza Q2. EPS anuales usan denominador anual y cifras no redondeadas de compañía: no deben sumarse EPS trimestrales redondeados.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th style="text-align: right;">Ventas</th>
+<th style="text-align: right;">EBIT</th>
+<th style="text-align: right;">Neto atrib.</th>
+<th style="text-align: right;">EPS GAAP</th>
+<th style="text-align: right;">EPS ajustado emisor</th>
+<th style="text-align: right;">CFO</th>
+<th style="text-align: right;">Capex</th>
+<th style="text-align: right;">FCF</th>
+<th style="text-align: right;">SBC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q1 FY25</td>
+<td style="text-align: right;">7.871</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">−21</td>
+<td style="text-align: right;">−0,35</td>
+<td style="text-align: right;">0,16</td>
+<td style="text-align: right;">−110</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">−159</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td>Q2 FY25</td>
+<td style="text-align: right;">8.158</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">−3</td>
+<td style="text-align: right;">−0,05</td>
+<td style="text-align: right;">0,22</td>
+<td style="text-align: right;">247</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">193</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td>Q3 FY25</td>
+<td style="text-align: right;">8.059</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">−7</td>
+<td style="text-align: right;">−0,12</td>
+<td style="text-align: right;">0,44</td>
+<td style="text-align: right;">173</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td>Q4 FY25</td>
+<td style="text-align: right;">7.696</td>
+<td style="text-align: right;">−78</td>
+<td style="text-align: right;">−87</td>
+<td style="text-align: right;">−1,43</td>
+<td style="text-align: right;">−0,11</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="odd">
+<td>TTM previo FY25</td>
+<td style="text-align: right;">31.784</td>
+<td style="text-align: right;">−31</td>
+<td style="text-align: right;">−118</td>
+<td style="text-align: right;">−1,95</td>
+<td style="text-align: right;">0,71</td>
+<td style="text-align: right;">470</td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">239</td>
+<td style="text-align: right;">43</td>
+</tr>
+<tr class="even">
+<td>Q1 FY26</td>
+<td style="text-align: right;">7.840</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">−4</td>
+<td style="text-align: right;">−0,06</td>
+<td style="text-align: right;">0,56</td>
+<td style="text-align: right;">−38</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">−54</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td>Q2 FY26</td>
+<td style="text-align: right;">7.947</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">0,31</td>
+<td style="text-align: right;">0,62</td>
+<td style="text-align: right;">283</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">243</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td>Q3 FY26</td>
+<td style="text-align: right;">7.723</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">0,52</td>
+<td style="text-align: right;">0,77</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="odd">
+<td>Q4 FY26</td>
+<td style="text-align: right;">7.642</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">0,57</td>
+<td style="text-align: right;">0,69</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: right;">117</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td>TTM FY26</td>
+<td style="text-align: right;">31.152</td>
+<td style="text-align: right;">211</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">1,34</td>
+<td style="text-align: right;">2,65</td>
+<td style="text-align: right;">540</td>
+<td style="text-align: right;">217</td>
+<td style="text-align: right;">323</td>
+<td style="text-align: right;">61</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fuentes primarias: <a href="https://www.sec.gov/Archives/edgar/data/1020859/000102085925000063/q1fy26-earningsrelease.htm">Q1 y comparativo</a>, <a href="https://www.sec.gov/Archives/edgar/data/1020859/000102085926000004/q2fy26-earningsrelease.htm">Q2</a>, <a href="https://www.sec.gov/Archives/edgar/data/1020859/000102085926000013/q3fy26-earningsrelease.htm">Q3</a>, <a href="https://www.sec.gov/Archives/edgar/data/1020859/000102085926000022/f26q4earningsrelease.htm">Q4/FY</a>.</p>
+<p>Ventas TTM−1,99%; CFO+14,89%; FCF+35,15%; EPS ajustado+273%, desde una base deprimida. EBIT pasa de−31 a 211, margen 0,677%. Q3 FCF cae 54,6% y Q4 cae 7,0%, pese al mejor EBIT. La mejora anual de FCF no es uniforme. FY24 (53 semanas, no comparable exacto con los ejercicios de 52 semanas): ventas 30.980, EBIT 8, neto atribuible −112, EPS GAAP −1,89, SBC 39, CFO 253, capex 345, FCF −92. El salto reciente no prueba crecimiento de caja sostenible a diez años.</p>
+<p><strong>EPS comparable propio:</strong> el workbook calcula (EBIT−seguros+costes directos ciber+ajustes de activos excluyendo factoring−interés neto)×74% / acciones diluidas ajustadas. Conserva SBC, reestructuración, transformación y LIFO; excluye ingreso de pensiones. Es una medida analítica prudente, distinta del EPS ajustado emisor. FY26≈0,81 frente FY25≈−1,53. Q1–Q4 FY26≈−0,01/0,32/0,35/0,25. No son previsión ni reemplazo del dato GAAP. El residual 5 de seguros se asigna Q4 por diferencia FY50−9 m 40; no se infiere que su tratamiento contable haya sido explicado.</p>
+<h2 id="conciliación-de-calidad-de-caja-y-beneficio">3. Conciliación de calidad de caja y beneficio</h2>
+<p><strong>Seguros 45/50:</strong> la nota 1 yMD&amp;A del 10-K dicen 50 cobrados y reconocidos en gasto operativo; el ajuste EBITDA/EPS excluye 45 y compensa 24 de costes directos. La diferencia 5 no tiene reconciliación explícita localizada. No la llamamos desfase temporal sin evidencia. Normalización prudente: retirar 50; sensibilidad 45–50 supone 3,70 después de impuesto o~$0,059 por acción anual, no una razón para detener toda investigación. No perpetuar cobros futuros. <a href="https://www.sec.gov/Archives/edgar/data/1020859/000102085926000025/unfi-20260801.htm">10-K, nota 1 y reconciliación</a>.</p>
+<p><strong>CFO y FCF:</strong> 540−217=323. Restar 61 SBC y 50 seguro deja 212 antes de impuestos/circulante normalizados. Contribución neta de cambios operativos:131+130+115−119−247=10, no una liberación de cientos de millones netos. Q1 acumula inventario, Q2 libera; el total agregado es más informativo. Excluir ese 10 deja 202, sin afirmar que sea FCFE perpetuo. Los 24 de costes ciber pueden justificar un ajuste favorable, pero no equivalen necesariamente a 24 pagados este año. Factoring tiene costes 17 y debe mantenerse como coste recurrente si se mantiene el programa; sus ventas no son crecimiento económico gratuito.</p>
+<p><strong>Cloud:</strong> inversión 35 ya incluida en CFO. No restarla otra vez de 323. Desde EBIT sí se modela inversión total 217+35=252, con amortización económica pertinente. Saldo cloud 76 frente 52, amortización 10 frente 8; 52+35−10=77, residual 1 por redondeos/otros movimientos no asignado. La D&amp;A 303 comprende 237 de PP&amp;E y 66 de intangibles adquiridos; la amortización cloud 10 está en gastos operativos y se considera separadamente. Si se añade 66 de amortización adquirida al EBIT económico, no se vuelve a sumar 66 como D&amp;A económica. No atribuimos valor de escudo fiscal intangible adicional sin conciliar base fiscal y calendario.</p>
+<p><strong>Mantenimiento:</strong> no se publica división exacta mantenimiento/crecimiento. FY26 capex 217:179 de logística/tecnología/otras mejoras,20 retail,18 nuevos centros; cloud 35 aparte. No podemos afirmar que sólo 18 sea crecimiento ni que todo 217 sea mantenimiento. El caso central invierte 300 en FY27 (guía total) y mantiene intensidad 0,9524% cinco años; D&amp;A económica 0,8% implica reinversión neta positiva. En 6–10 converge a reinversión pagada según crecimiento/ROIC. No se cuentan adquisiciones futuras ni sinergias sin coste.</p>
+<p><strong>EBIT económico FY26 diagnóstico:</strong>211−50 seguros+24 costes directos+10 ajuste de activos sin factoring+26 de 52 reestructuración+11 legal+66 intangibles=298. Mantener la mitad de reestructuración es hipótesis, no dato auditado. D&amp;A económica 247 y capex/cloud 252 llevan a~215,5 de FCFF antes de circulante a impuesto 26%. Transformación 34, SBC 61, factoring 17 y LIFO 19 permanecen como costes. Beneficio no operativo de pensiones 23 no infla FCFF. Autoaseguro 106 con gasto 58/pago 58 se trata como obligación operativa; no se vuelve a restar como deuda.</p>
+<h2 id="guía-fy27-y-diferencia-entre-caja-guiada-y-modelo">4. Guía FY27 y diferencia entre caja guiada y modelo</h2>
+<p>Ventas 31,2–31,8 bn; neto 105–145; EPS GAAP 1,70–2,30; EPS ajustado 3–3,50; EBITDA ajustado 730–780; capex+cloud~300; FCF 275–325. La empresa usa 27% para EPS ajustado; modelo 26% es supuesto de largo plazo, con sensibilidad. Esta información ya formaba parte deA104: no es nuevo catalizador que justifique elevar por sí sola el valor.</p>
+<p>Puente central desde EBITDA 755: menos SBC 65, depreciación física/software 240, transformación recurrente 35, factoring 17 y provisión de reestructuración 20 = EBIT económico 378 (1,2% de 31.500). Cloud amortizado sigue incluido en EBITDA como gasto: no se deduce otra vez; D&amp;A económica 252 incluye 12 de cloud. FCFF:378×74%+252−300−17,4=<strong>214,32</strong>. Son supuestos explícitos ligados a FY26, no reconciliación oficial del guidance.</p>
+<p>Puente alternativo de caja: FCF 300−SBC 65+interés neto 115×74%=<strong>320,10</strong>. Los 115 de interés y 65 SBC son hipótesis; la empresa no guía FCFF. El exceso de 105,78 frente al caso operativo no está reconciliado por la guía disponible: faltan cash taxes esperados, cambios de circulante, composición cloud/capex y pagos/ajustes recurrentes. El FCF guiado ya incluye esos desembolsos: no restamos otra vez transformación o reestructuración de la guía para forzar un empate. FY26 impuestos pagados 7, gasto fiscal 18 y tasa efectiva 17,65% muestran por qué gasto normalizado 26% no equivale a impuesto pagado; sin desglose FY27 no asignamos arbitrariamente todo el gap a impuestos.</p>
+<p><strong>Alternativa de valoración, no caso aprobado:</strong> para generar 320,10 con los demás inputs de FY27, margen económico~1.654%; mantener la diferencia de margen en toda la curva daría~$69.03. Esa extrapolación necesita evidencia y no se suma al DCF. Es el principal motivo para no concluir «precio imposible» ni utilizar el modelo central prudente como veto absoluto. Una revisión tras el próximo trimestre debe resolver este puente antes de afirmar caja sostenible.</p>
+<p>No se ha certificado si la guía FY27 de FCF incluye cobros adicionales de seguros ciber. Ni el desglose primario disponible ni la transcripción consultada permiten separarlos. Una búsqueda explícita de «insurance» en esa transcripción no encontró coincidencias; esto no prueba su exclusión. No se considera automáticamente recurrente toda la guía ni se resta un cobro futuro inventado.</p>
+<p>La presentación primaria Q4, diapositiva 15, sitúa FCF 300 como objetivo de largo plazo 2025–2028 y atribuye el cambio frente FY26 al aumento de inversiones. La conferencia reitera esa intención, con EBITDAFY 28 aproximadamente 10% superior al punto medio FY27. Es evidencia favorable de intención de recurrencia, no una garantía ni conciliación contable. Se conserva la alternativa de caja como posible valoración superior y no se descarta por conveniencia. <a href="https://s205.q4cdn.com/522321978/files/doc_earnings/2026/q4/presentation/Q4-2026-UNFI-Presentation.pdf">Presentación primaria</a>. La transcripción de tercero consultada no aporta detalle de impuestos/cobros de seguros y contiene errores de nombres; no controla cifras sobre el 10-K.</p>
+<p>La valoración se lleva al 4 de noviembre mediante un desplazamiento de 95/365,25 años desde el cierre fiscal del 1 de agosto: los descuentos son t−0,2601, sin añadir otro stub de caja. El puente de balance de agosto se mantiene sin cambios posteriores como supuesto, no como balance de noviembre certificado. El central a fecha fiscal era $42.32; un cambio de deuda neta de ±100 modifica el valor por acción en ∓$1,61.</p>
+<p>La exclusión de amortización adquirida del EBIT puede perder un escudo fiscal si sigue siendo deducible. Una sensibilidad deliberadamente alta conserva 66×26% de ahorro anual durante sólo cinco años, sin perpetuidad: valor $44.83. No es un activo adicional confirmado: no está certificado que los 66 sean deducibles y constantes durante ese plazo. DTA neto 158, activos por I+D 47, NOL 18 y otros carryforwards 123 no se suman al equity si sus beneficios ya se cuentan en flujos. Las donaciones tienen horizonte limitado y reservas de valoración. Estas partidas justifican una sensibilidad fiscal finita, no declarar recurrente todo el diferencial de caja de 105,78.</p>
+<p>El factoring pendiente era 385 frente a 380: sólo aumenta 5, no explica 385 de nueva caja. El programa tiene límite 500, sin interés retenido, salvo servicing. Se conserva su coste 17 como recurrente con circulante neto de ventas de créditos; no se suma 385 como deuda base. Una reducción del programa es riesgo de financiación y podría absorber caja adicional, que se analiza separadamente.</p>
+<p>Entre los extremos, incorporar sólo el diferencial indicativo de 105,78 en FY27 y FY28, sin mejora terminal, produce <strong>$46.80</strong>. Si además se admite el escudo fiscal máximo de 66×26% sólo en FY29–FY31, el resultado es <strong>$47.42</strong>. Se excluye ese escudo de FY27–FY28 porque podría estar ya dentro de la diferencia guiada. Ambos casos exigen que no haya posteriores reversiones compensatorias de circulante o impuestos. No se aprueban como caja certificada: son puntos intermedios útiles. La alternativa $69.03 exige un margen superior durante los diez años <strong>y el terminal</strong>, mucho más que cumplir el objetivo de FCF 300 hasta 2028.</p>
+<h2 id="capital-deuda-arrendamientos-caja-y-dilución">5. Capital: deuda, arrendamientos, caja y dilución</h2>
+<p>Nominal deuda 370 termloan+863 ABL+350 notes=1.583. Menos 15 costes emisión y 5 descuento=1.563 valor contable. Más 13 finance leases menos 37 cash=1.539 neto emisor (redondeado 1,54 bn). A1041.526 omitía leases. Valoración usa principal 1.583+finance 13+pensión 13+minoría 1=<strong>1.610</strong> de deducciones; no se presupone caja excedente:37 se retienen para operación. Añadir toda la caja elevaría valor central sólo$0,60/acción. Operating leases 1.459 no se restan de nuevo porque alquiler permanece en márgenes y FCFF; no se usa el EV del agregador con leases junto a un flujo después de rentas.</p>
+<p>La <a href="https://www.sec.gov/Archives/edgar/data/1020859/000102085926000030/unfi-20261103.htm">proxy definitiva del 4 nov</a> aporta 60.053.154 acciones básicas al 21 oct; supera en actualidad al 60,317 m del 8 sep y al 60,32 m agregador. Hay 3.393.369 RSU y 2.421.259 PSU a objetivo, cero opciones;1.323.006 PSU adicionales a máximo. Se usa 60,053154+2,1 equivalente dilutivo FY26=<strong>62,153154 m</strong> como proxy, no como medición exacta al 21 oct. Sensibilidad con todos los premios a objetivo 65,867782 m reduce base a$41.25; máximo 67,190788 m a$40.43. La tabla de premios no permite calcular exactamente la dilución treasury-stock actual ni valor reconocido frente a servicios futuros. El escenario de todas las acciones es techo de dilución, no un coste adicional que se sume automáticamente al SBC.</p>
+<p>SBC sigue como coste económico del margen; no se resta otra vez en FCFF ni se proyecta otra tasa de dilución anual automática. Las recompras futuras no son gratuitas. Autorización 200 no prueba compras; no se inventa nueva deuda posterior a agosto para explicar reducción de acciones. Hay desfase entre balance de agosto y acciones de octubre; cada 100 de cambio de deuda/caja movería~$1,61/acción. Vencimientos relevantes: notes en año fiscal 2029 (fin calendario 2028),termloan/ABL 2031; calendario de financiación no elimina riesgo de refinanciación.</p>
+<h2 id="coste-de-capital-revisión-material-de-a104">6. Coste de capital: revisión material de A104</h2>
+<p>Rf 4,90% Treasury 10 Y 4 nov; beta 5 Y 1,08 de proveedor, contrastada en Yahoo; ERP implícita Damodaran 4,41% al 1 nov; deuda marginal 7% (supuesto frente tasas contables 4,98%ABL/7,73%termloan/6,75%notes); deuda objetivo 35%,capital 65%; tax 26%. Coste equity 9,6628%; <strong>WACC 8,09382%</strong>. Sin prima pequeña-cap arbitraria en central. ERP implícita 4,41% no es un precio contemporáneo: se calcula con otros inputs de mercado yRf propio de 5,29%; combinarla con Treasury 4 nov es aproximación de componentes y exige sensibilidad, no una estimación exacta.</p>
+<p>Fuentes: <a href="https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value=2026">Treasury</a>, <a href="https://pages.stern.nyu.edu/~adamodar/">ERP Damodaran</a>, <a href="https://stockanalysis.com/stocks/unfi/statistics/">beta y datos de mercado</a>, <a href="https://www.sec.gov/Archives/edgar/data/1020859/000102085926000025/unfi-20260801.htm">coste deuda 10-K</a>. Copias de las páginas conservadas en soporte.</p>
+<p>Usar ERP 5% sin prima lleva base$39.16; añadir 75 pb al coste equity a la base observada,$38.41. Con 10,5% deA104,$23.49. Esa tasa antigua era rentabilidad exigida analítica, no WACC observado. Ni el viejo$27,76 ni una tasa baja se conservan para forzar una conclusión.</p>
+<h2 id="dcf-canónico-10-años55">7. DCF canónico 10 años,5+5</h2>
+<p>FY27 empieza en 31.500, no 31.500 más otro crecimiento 1,5%: evita doble contar año inicial. Después 2% anual en central; margen 1,2/1,25/1,3/1,35/1,4%; tax 26%; D&amp;A 0,8%; inversión total 300/31.500; NWC incremental 5% de cambio ventas. Años 6–10 transitan a crecimiento 2%, margen 1,4%, reinversiónNOPAT×g/ROIC 12%. Terminal mantiene esa relación; WACC&gt;g. Método de fin de año ajustado por el offset explícito a 4 de noviembre. El balance de agosto se mantiene como supuesto sin añadir un segundo stub de caja; no se certifica el balance actual.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th style="text-align: right;">FY27 ventas</th>
+<th>Margen FY27→Y 5/terminal</th>
+<th>Crec.Y 2–5</th>
+<th style="text-align: right;">WACC</th>
+<th>g/ROIC</th>
+<th style="text-align: right;">Valor</th>
+<th style="text-align: right;">vs 48,29</th>
+<th style="text-align: right;">Peso terminal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverso</td>
+<td style="text-align: right;">30.900</td>
+<td>1,00→1,15%</td>
+<td>0/0,5/1/1%</td>
+<td style="text-align: right;">10,5%</td>
+<td>1,5/9%</td>
+<td style="text-align: right;">9.53</td>
+<td style="text-align: right;">-80.3%</td>
+<td style="text-align: right;">46.4%</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td style="text-align: right;">31.500</td>
+<td>1,20→1,40%</td>
+<td>2%</td>
+<td style="text-align: right;">8,094%</td>
+<td>2/12%</td>
+<td style="text-align: right;">43.71</td>
+<td style="text-align: right;">-9.5%</td>
+<td style="text-align: right;">58.9%</td>
+</tr>
+<tr class="odd">
+<td>Favorable</td>
+<td style="text-align: right;">31.800</td>
+<td>1,35→1,65%</td>
+<td>3,5/3/2,5/2,5%</td>
+<td style="text-align: right;">8,0%</td>
+<td>2,5/14%</td>
+<td style="text-align: right;">66.92</td>
+<td style="text-align: right;">38.6%</td>
+<td style="text-align: right;">61.7%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Adverso: pérdida de volumen, menos absorción fija, costes de servicio y reinversión 1%ventas; no deterioro permanente total. Favorable: natural/alta de clientes, eficiencias sostenidas y mejor capital incremental; requiere prueba. No implica todas las mejoras simultáneas por defecto. ROIC 12% central es incremental futuro, no ratio reportado; supone mejor utilización que el retorno histórico débil. Con crecimiento cero y los demás márgenes base, valor$33.93, demostrando dependencia de la mejora.</p>
+<p>Central EV 4326.72=PV explícito 1777.63+PV terminal 2549.08; menos 1.610=equity 2716.72; /62,153154=$43.71. TerminalNOPAT 397.81, reinversión 66.30, FCFF 331.51. El rango no es distribución estadística.</p>
+<h2 id="qué-exige-el-precio-y-contrastes">8. Qué exige el precio y contrastes</h2>
+<p>Inversas independientes manteniendo lo demás central: crecimiento ventasY 1–5 <strong>3.50%</strong> (incluye FY27, por encima de guía); o aumentar curva margen<strong>0.082 puntos</strong>, FY271.282% y terminal 1.482%; o WACC<strong>7.73%</strong>. Ninguna es imposible, pero requieren convicción adicional. No se presentan como tres condiciones simultáneas.</p>
+<p>A 48,29: PERFY 26 GAAP 36,04 x; ajustado 18,22 x; FY27 guía ajustada 13,80–16,10 x, medio 14,86 x; guía GAAP 21,00–28,41 x, medio 24,15 x. Capitalización con acciones básicas actuales~2.902. EV sin operating leases~4.461 usando deuda nominal+finance−cash, distinto del puente DCF que añade pensiones/minorías y retiene caja. EV/EBITDA ajustado FY26~6,36 x no significa caja barata: EBITDA añade SBC y excluye varios costes recurrentes.</p>
+<p>Contraste del 4 nov, misma fuente y sólo métricas identificadas: SYYPERGAAP 20,46 x/forward 14,94 x; USFD 33,84 x/21,28 x; PFGC 43,64 x/18,60 x. <a href="https://stockanalysis.com/stocks/syy/statistics/">SYY</a>, <a href="https://stockanalysis.com/stocks/usfd/statistics/">USFD</a>, <a href="https://stockanalysis.com/stocks/pfgc/statistics/">PFGC</a>. Foodservice es adyacente, no idéntico a grocery; márgenes/cliente/perímetro difieren. Forward vendor no comparte necesariamente la base de ajustes de UNFI; sólo control direccional, no mediana para fijar valor. USFD tiene resultados 5 nov, aún futuros al corte. El proveedor muestra UNFIEBIT 328/leases enEV y cash 38, discrepantes con 10-K 211/cash 37: no mezclamos su EV/EBITDA con cifras GAAP ni llamamos el comp auditado. Falta comparación histórica homogénea de múltiplos; series de PER sobre pérdidas no ofrecen ancla defendible. Esta limitación reduce la fuerza del contraste de múltiplos, pero no constituye por sí sola un veto al DCF.</p>
+<h2 id="caída-noticias-calendario-y-entrada">9. Caída, noticias, calendario y entrada</h2>
+<p>El retroceso no tiene causa única verificada. La interrupción ciberjunio 2025 es riesgo documentado, pero no se usa automáticamente para explicar movimientos de octubre/noviembre 2026. Reestructuración/abandono deventas, costes de red y dudas sobre cash flow son hipótesis de mercado, no causalidad probada. El 4 nov subió 7,07%; los filtros básicos de pullback pasan, pero no hay señal prospectiva registrada lista para entrar. No se aprovecha ese rebote para elevar forecast. Se ha revisado FY26,guía,proxy 4 nov y anuncios de IR; no es una garantía de ausencia de noticias.</p>
+<p>Últimos resultados 8 sep 2026. Próxima publicación: tercero estima 1 dic antes de apertura, <strong>no confirmada por IR</strong> en esta revisión. La página de eventos oficial consultada muestra que no hay próximos eventos publicados. No confundir UNFI con textil UFI; no usar su calendario. Tampoco afirmar que estamos dentro de la semana excluida: fecha exacta desconocida. La investigación puede continuar; cualquier ejecución debe revalidar evento. Reunión accionistas 15 dic es evento separado de resultados. <a href="https://ir.unfi.com/events/default.aspx">Calendario IR</a>.</p>
+<p>Stage 1/2: conservar score de exportación yOpportunity≥85; se verificaron independientemente desde la serie Yahoo: EMA 20 46,5883, EMA 50 46,4470, EMA 200 44,5748, pendiente EMA 200 +1,04% en 20 sesiones, ATR 14 1,7124, RSI 57,19, volumen 20 ~562.140 y retroceso 15,31%. Los filtros básicos pasan; no hay veto técnico automático ni señal de ejecución por este dato. Tendencia larga, EMA 20/50/200 y estructura deben evaluarse con serie y corte comunes; SMA de proveedor no es EMA. Stage 3.5: no ficha nueva, señal,stopM/S,tamaño,caducidad ni límites decompra autorizados. No se operó, no se publicó y no se creó posición.</p>
+<h2 id="qué-cambiaría-la-decisión">10. Qué cambiaría la decisión</h2>
+<ul>
+<li>Puente publicado entre caja guiada y FCFF recurrente que demuestre impuestos/circulante normalizados, mantenimiento completo, SBC y cloud pagados. Éste es el dato de mayor valor, no encontrar una tasa que ajuste al precio.</li>
+<li>Margen económico sostenido alrededor 1,28%→1,48% justificaría 48,29 con el resto central; verificar fill rates, retención y natural sin perpetuar seguros.</li>
+<li>Precio bajo valor central no aprueba automáticamente: aún faltan margen de seguridad apropiado, calidad de supuestos y toda Stage 3.5. No fijamos porcentaje universal nuevo.</li>
+<li>Reabrir adverso si ventas FY27 caen bajo 31,2 bn con menor caja, productividad falla, surge nuevo ciberincidente, o crece deuda sin retorno. Los puntos son disparadores de revisión, no órdenes.</li>
+</ul>
+<h2 id="integridad-del-paquete">11. Integridad del paquete</h2>
+<p>Auditoría independiente superada: 431 controles del motor, 70 cotejos de cifras financieras y 341 controles del libro. Prueba viva independiente: Treasury 4,90%→5,00% lleva el central a $42,9544; el libro entregado conserva 4,90% y $43,7101. El dictamen permite investigación y observación condicional, <strong>no inversión Stage 3 ni ejecución Stage 3.5</strong>. La calidad económica sigue siendo screen-grade. El libro auditado se conserva sin modificación; sus textos anteriores de «auditoría pendiente» quedan actualizados por el addendum de auditoría adjunto. No se certifica publicación ni operación.</p>
+<p>Workbook editable con fórmulas editables, tres casos 10 años, controles, fuente a entrada, matriz trimestral y puente contable. CSV y Python permiten reproducción independiente. Sensibilidades e inversas son resultados Python etiquetados, no fórmulas Excel ocultas. El constructor estándar probado trunca 10 años a 6; su archivo se conserva sólo como evidencia técnica y <strong>no</strong> se entrega como modelo controlador. El archivo principal es un modelo de fórmulas canónico personalizado, no se anuncia como banker_formula_workbook. Recálculo, cachés y valores se comprueban contra Python en QA.</p>
+<p><strong>Pendientes no ocultos:</strong> residual seguro 5; mantenimiento no desglosado; guía FCF no conciliada a nuestro FCFF; dilución corriente exacta; variación de balance desde agosto; comparables/historia homogéneos y calendario exacto. La auditoría independiente de cálculo y fuentes está superada, sin resolver por ello las incertidumbres económicas. Ninguno se disfraza de dato reportado ni se resuelve con posición pequeña. La conclusión es investigar la calidad de caja antes de aprobar, no declarar que la empresa jamás pueda ser una opción.</p>
+<h2 id="soporte-y-alcance-support-and-scope">Soporte y alcance / Support and scope</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/UNFI/UNFI_website_support_20261105.zip">Paquete derivado para la web / Website-support derivative</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/UNFI/WEBSITE_SUPPORT_README.md">Alcance de reproducción / Reproduction scope</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/UNFI/model.py">Modelo / Model</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/UNFI/model_results.json">Resultados / Results</a></li>
+</ul>
+<p>El paquete web excluye copias completas de documentos de terceros y materiales privados de auditoría. No es el ZIP original inmutable. / The website package excludes complete third-party documents and private source-audit materials. It is not the immutable original ZIP.</p>
+</main></body></html>

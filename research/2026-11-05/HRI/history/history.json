@@ -1,0 +1,1576 @@
+{
+  "company": "Herc Holdings Inc.",
+  "ticker": "HRI",
+  "as_of": "2026-11-04",
+  "units": "USD millions except EPS in USD/share",
+  "periods": {
+    "FY2023": {
+      "sales": {
+        "value": 3282.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:sales:2023-01-01:2023-12-31"
+        ]
+      },
+      "net_income": {
+        "value": 347.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:net_income:2023-01-01:2023-12-31"
+        ]
+      },
+      "eps_diluted": {
+        "value": 12.09,
+        "status": "direct",
+        "observation_ids": [
+          "annual:eps_diluted:2023-01-01:2023-12-31"
+        ]
+      },
+      "cfo": {
+        "value": 1086.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:cfo:2023-01-01:2023-12-31"
+        ]
+      },
+      "rental_gross_capex": {
+        "value": 1320.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:rental_gross_capex:2023-01-01:2023-12-31"
+        ]
+      },
+      "rental_disposal_proceeds": {
+        "value": 325.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:rental_disposal_proceeds:2023-01-01:2023-12-31"
+        ]
+      },
+      "nonrental_capex": {
+        "value": 156.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:nonrental_capex:2023-01-01:2023-12-31"
+        ]
+      },
+      "nonrental_disposal_proceeds": {
+        "value": 15.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:nonrental_disposal_proceeds:2023-01-01:2023-12-31"
+        ]
+      },
+      "rental_da": {
+        "value": 643.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:rental_da:2023-01-01:2023-12-31"
+        ]
+      },
+      "other_da": {
+        "value": 112.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:other_da:2023-01-01:2023-12-31"
+        ]
+      },
+      "sbc": {
+        "value": 18.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:sbc:2023-01-01:2023-12-31"
+        ]
+      },
+      "transaction_expenses": {
+        "value": 8.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:transaction_expenses:2023-01-01:2023-12-31"
+        ]
+      },
+      "pretax_income": {
+        "value": 447.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:pretax_income:2023-01-01:2023-12-31"
+        ]
+      },
+      "interest_nonoperating_signed": {
+        "value": -224.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:interest_nonoperating_signed:2023-01-01:2023-12-31"
+        ]
+      },
+      "other_nonoperating_signed": {
+        "value": 8.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:other_nonoperating_signed:2023-01-01:2023-12-31"
+        ]
+      },
+      "operating_ebit": {
+        "value": 663.0,
+        "status": "derived",
+        "formula": "Pretax - signed nonoperating interest - signed other nonoperating",
+        "observation_ids": [
+          "annual:pretax_income:2023-01-01:2023-12-31",
+          "annual:interest_nonoperating_signed:2023-01-01:2023-12-31",
+          "annual:other_nonoperating_signed:2023-01-01:2023-12-31"
+        ]
+      },
+      "net_rental_capex": {
+        "value": 995.0,
+        "status": "derived",
+        "formula": "Rental gross capex - rental disposal proceeds",
+        "observation_ids": [
+          "annual:rental_gross_capex:2023-01-01:2023-12-31",
+          "annual:rental_disposal_proceeds:2023-01-01:2023-12-31"
+        ]
+      },
+      "fcf_after_gross_capex": {
+        "value": -390.0,
+        "status": "derived",
+        "formula": "CFO - gross rental capex - nonrental capex",
+        "observation_ids": [
+          "annual:cfo:2023-01-01:2023-12-31",
+          "annual:rental_gross_capex:2023-01-01:2023-12-31",
+          "annual:nonrental_capex:2023-01-01:2023-12-31"
+        ]
+      },
+      "fcf_after_net_capex": {
+        "value": -50.0,
+        "status": "derived",
+        "formula": "CFO - rental and nonrental capex + rental and nonrental disposal proceeds",
+        "observation_ids": [
+          "annual:cfo:2023-01-01:2023-12-31",
+          "annual:rental_gross_capex:2023-01-01:2023-12-31",
+          "annual:nonrental_capex:2023-01-01:2023-12-31",
+          "annual:rental_disposal_proceeds:2023-01-01:2023-12-31",
+          "annual:nonrental_disposal_proceeds:2023-01-01:2023-12-31"
+        ]
+      }
+    },
+    "FY2024": {
+      "sales": {
+        "value": 3568.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:sales:2024-01-01:2024-12-31"
+        ]
+      },
+      "net_income": {
+        "value": 211.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:net_income:2024-01-01:2024-12-31"
+        ]
+      },
+      "eps_diluted": {
+        "value": 7.4,
+        "status": "direct",
+        "observation_ids": [
+          "annual:eps_diluted:2024-01-01:2024-12-31"
+        ]
+      },
+      "cfo": {
+        "value": 1225.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:cfo:2024-01-01:2024-12-31"
+        ]
+      },
+      "rental_gross_capex": {
+        "value": 1048.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:rental_gross_capex:2024-01-01:2024-12-31"
+        ]
+      },
+      "rental_disposal_proceeds": {
+        "value": 288.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:rental_disposal_proceeds:2024-01-01:2024-12-31"
+        ]
+      },
+      "nonrental_capex": {
+        "value": 161.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:nonrental_capex:2024-01-01:2024-12-31"
+        ]
+      },
+      "nonrental_disposal_proceeds": {
+        "value": 10.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:nonrental_disposal_proceeds:2024-01-01:2024-12-31"
+        ]
+      },
+      "rental_da": {
+        "value": 679.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:rental_da:2024-01-01:2024-12-31"
+        ]
+      },
+      "other_da": {
+        "value": 127.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:other_da:2024-01-01:2024-12-31"
+        ]
+      },
+      "sbc": {
+        "value": 17.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:sbc:2024-01-01:2024-12-31"
+        ]
+      },
+      "transaction_expenses": {
+        "value": 11.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:transaction_expenses:2024-01-01:2024-12-31"
+        ]
+      },
+      "pretax_income": {
+        "value": 291.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:pretax_income:2024-01-01:2024-12-31"
+        ]
+      },
+      "interest_nonoperating_signed": {
+        "value": -260.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:interest_nonoperating_signed:2024-01-01:2024-12-31"
+        ]
+      },
+      "other_nonoperating_signed": {
+        "value": 2.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:other_nonoperating_signed:2024-01-01:2024-12-31"
+        ]
+      },
+      "operating_ebit": {
+        "value": 549.0,
+        "status": "derived",
+        "formula": "Pretax - signed nonoperating interest - signed other nonoperating",
+        "observation_ids": [
+          "annual:pretax_income:2024-01-01:2024-12-31",
+          "annual:interest_nonoperating_signed:2024-01-01:2024-12-31",
+          "annual:other_nonoperating_signed:2024-01-01:2024-12-31"
+        ]
+      },
+      "net_rental_capex": {
+        "value": 760.0,
+        "status": "derived",
+        "formula": "Rental gross capex - rental disposal proceeds",
+        "observation_ids": [
+          "annual:rental_gross_capex:2024-01-01:2024-12-31",
+          "annual:rental_disposal_proceeds:2024-01-01:2024-12-31"
+        ]
+      },
+      "fcf_after_gross_capex": {
+        "value": 16.0,
+        "status": "derived",
+        "formula": "CFO - gross rental capex - nonrental capex",
+        "observation_ids": [
+          "annual:cfo:2024-01-01:2024-12-31",
+          "annual:rental_gross_capex:2024-01-01:2024-12-31",
+          "annual:nonrental_capex:2024-01-01:2024-12-31"
+        ]
+      },
+      "fcf_after_net_capex": {
+        "value": 314.0,
+        "status": "derived",
+        "formula": "CFO - rental and nonrental capex + rental and nonrental disposal proceeds",
+        "observation_ids": [
+          "annual:cfo:2024-01-01:2024-12-31",
+          "annual:rental_gross_capex:2024-01-01:2024-12-31",
+          "annual:nonrental_capex:2024-01-01:2024-12-31",
+          "annual:rental_disposal_proceeds:2024-01-01:2024-12-31",
+          "annual:nonrental_disposal_proceeds:2024-01-01:2024-12-31"
+        ]
+      }
+    },
+    "FY2025": {
+      "sales": {
+        "value": 4376.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:sales:2025-01-01:2025-12-31"
+        ]
+      },
+      "net_income": {
+        "value": 1.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:net_income:2025-01-01:2025-12-31"
+        ]
+      },
+      "eps_diluted": {
+        "value": 0.03,
+        "status": "direct",
+        "observation_ids": [
+          "annual:eps_diluted:2025-01-01:2025-12-31"
+        ]
+      },
+      "cfo": {
+        "value": 1085.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:cfo:2025-01-01:2025-12-31"
+        ]
+      },
+      "rental_gross_capex": {
+        "value": 1097.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:rental_gross_capex:2025-01-01:2025-12-31"
+        ]
+      },
+      "rental_disposal_proceeds": {
+        "value": 448.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:rental_disposal_proceeds:2025-01-01:2025-12-31"
+        ]
+      },
+      "nonrental_capex": {
+        "value": 157.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:nonrental_capex:2025-01-01:2025-12-31"
+        ]
+      },
+      "nonrental_disposal_proceeds": {
+        "value": 20.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:nonrental_disposal_proceeds:2025-01-01:2025-12-31"
+        ]
+      },
+      "rental_da": {
+        "value": 856.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:rental_da:2025-01-01:2025-12-31"
+        ]
+      },
+      "other_da": {
+        "value": 224.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:other_da:2025-01-01:2025-12-31"
+        ]
+      },
+      "sbc": {
+        "value": 34.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:sbc:2025-01-01:2025-12-31"
+        ]
+      },
+      "transaction_expenses": {
+        "value": 199.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:transaction_expenses:2025-01-01:2025-12-31"
+        ]
+      },
+      "pretax_income": {
+        "value": 1.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:pretax_income:2025-01-01:2025-12-31"
+        ]
+      },
+      "interest_nonoperating_signed": {
+        "value": -416.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:interest_nonoperating_signed:2025-01-01:2025-12-31"
+        ]
+      },
+      "other_nonoperating_signed": {
+        "value": -6.0,
+        "status": "direct",
+        "observation_ids": [
+          "annual:other_nonoperating_signed:2025-01-01:2025-12-31"
+        ]
+      },
+      "operating_ebit": {
+        "value": 423.0,
+        "status": "derived",
+        "formula": "Pretax - signed nonoperating interest - signed other nonoperating",
+        "observation_ids": [
+          "annual:pretax_income:2025-01-01:2025-12-31",
+          "annual:interest_nonoperating_signed:2025-01-01:2025-12-31",
+          "annual:other_nonoperating_signed:2025-01-01:2025-12-31"
+        ]
+      },
+      "net_rental_capex": {
+        "value": 649.0,
+        "status": "derived",
+        "formula": "Rental gross capex - rental disposal proceeds",
+        "observation_ids": [
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "annual:rental_disposal_proceeds:2025-01-01:2025-12-31"
+        ]
+      },
+      "fcf_after_gross_capex": {
+        "value": -169.0,
+        "status": "derived",
+        "formula": "CFO - gross rental capex - nonrental capex",
+        "observation_ids": [
+          "annual:cfo:2025-01-01:2025-12-31",
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "annual:nonrental_capex:2025-01-01:2025-12-31"
+        ]
+      },
+      "fcf_after_net_capex": {
+        "value": 299.0,
+        "status": "derived",
+        "formula": "CFO - rental and nonrental capex + rental and nonrental disposal proceeds",
+        "observation_ids": [
+          "annual:cfo:2025-01-01:2025-12-31",
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "annual:nonrental_capex:2025-01-01:2025-12-31",
+          "annual:rental_disposal_proceeds:2025-01-01:2025-12-31",
+          "annual:nonrental_disposal_proceeds:2025-01-01:2025-12-31"
+        ]
+      }
+    },
+    "TTM2025Q3": {
+      "sales": {
+        "value": 4118.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:sales:2024-01-01:2024-12-31",
+          "q3_prior:sales:2024-01-01:2024-09-30",
+          "q3:sales:2025-01-01:2025-09-30"
+        ]
+      },
+      "net_income": {
+        "value": -69.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:net_income:2024-01-01:2024-12-31",
+          "q3_prior:net_income:2024-01-01:2024-09-30",
+          "q3:net_income:2025-01-01:2025-09-30"
+        ]
+      },
+      "cfo": {
+        "value": 1101.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:cfo:2024-01-01:2024-12-31",
+          "q3_prior:cfo:2024-01-01:2024-09-30",
+          "q3:cfo:2025-01-01:2025-09-30"
+        ]
+      },
+      "rental_gross_capex": {
+        "value": 1130.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:rental_gross_capex:2024-01-01:2024-12-31",
+          "q3_prior:rental_gross_capex:2024-01-01:2024-09-30",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30"
+        ]
+      },
+      "rental_disposal_proceeds": {
+        "value": 396.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:rental_disposal_proceeds:2024-01-01:2024-12-31",
+          "q3_prior:rental_disposal_proceeds:2024-01-01:2024-09-30",
+          "q3:rental_disposal_proceeds:2025-01-01:2025-09-30"
+        ]
+      },
+      "nonrental_capex": {
+        "value": 157.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:nonrental_capex:2024-01-01:2024-12-31",
+          "q3_prior:nonrental_capex:2024-01-01:2024-09-30",
+          "q3:nonrental_capex:2025-01-01:2025-09-30"
+        ]
+      },
+      "nonrental_disposal_proceeds": {
+        "value": 19.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:nonrental_disposal_proceeds:2024-01-01:2024-12-31",
+          "q3_prior:nonrental_disposal_proceeds:2024-01-01:2024-09-30",
+          "q3:nonrental_disposal_proceeds:2025-01-01:2025-09-30"
+        ]
+      },
+      "rental_da": {
+        "value": 793.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:rental_da:2024-01-01:2024-12-31",
+          "q3_prior:rental_da:2024-01-01:2024-09-30",
+          "q3:rental_da:2025-01-01:2025-09-30"
+        ]
+      },
+      "other_da": {
+        "value": 183.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:other_da:2024-01-01:2024-12-31",
+          "q3_prior:other_da:2024-01-01:2024-09-30",
+          "q3:other_da:2025-01-01:2025-09-30"
+        ]
+      },
+      "sbc": {
+        "value": 29.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:sbc:2024-01-01:2024-12-31",
+          "q3_prior:sbc:2024-01-01:2024-09-30",
+          "q3:sbc:2025-01-01:2025-09-30"
+        ]
+      },
+      "transaction_expenses": {
+        "value": 187.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:transaction_expenses:2024-01-01:2024-12-31",
+          "q3_prior:transaction_expenses:2024-01-01:2024-09-30",
+          "q3:transaction_expenses:2025-01-01:2025-09-30"
+        ]
+      },
+      "pretax_income": {
+        "value": -59.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:pretax_income:2024-01-01:2024-12-31",
+          "q3_prior:pretax_income:2024-01-01:2024-09-30",
+          "q3:pretax_income:2025-01-01:2025-09-30"
+        ]
+      },
+      "interest_nonoperating_signed": {
+        "value": -349.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:interest_nonoperating_signed:2024-01-01:2024-12-31",
+          "q3_prior:interest_nonoperating_signed:2024-01-01:2024-09-30",
+          "q3:interest_nonoperating_signed:2025-01-01:2025-09-30"
+        ]
+      },
+      "other_nonoperating_signed": {
+        "value": 4.0,
+        "status": "derived",
+        "formula": "FY2024 - 9M2024 + 9M2025",
+        "observation_ids": [
+          "annual:other_nonoperating_signed:2024-01-01:2024-12-31",
+          "q3_prior:other_nonoperating_signed:2024-01-01:2024-09-30",
+          "q3:other_nonoperating_signed:2025-01-01:2025-09-30"
+        ]
+      },
+      "eps_diluted": {
+        "value": null,
+        "status": "not_reported",
+        "reason": "No valid directly reported TTM diluted EPS; annual and YTD EPS are not additive."
+      },
+      "operating_ebit": {
+        "value": 286.0,
+        "status": "derived",
+        "formula": "Pretax - signed nonoperating interest - signed other nonoperating",
+        "observation_ids": [
+          "annual:pretax_income:2024-01-01:2024-12-31",
+          "q3_prior:pretax_income:2024-01-01:2024-09-30",
+          "q3:pretax_income:2025-01-01:2025-09-30",
+          "annual:interest_nonoperating_signed:2024-01-01:2024-12-31",
+          "q3_prior:interest_nonoperating_signed:2024-01-01:2024-09-30",
+          "q3:interest_nonoperating_signed:2025-01-01:2025-09-30",
+          "annual:other_nonoperating_signed:2024-01-01:2024-12-31",
+          "q3_prior:other_nonoperating_signed:2024-01-01:2024-09-30",
+          "q3:other_nonoperating_signed:2025-01-01:2025-09-30"
+        ]
+      },
+      "net_rental_capex": {
+        "value": 734.0,
+        "status": "derived",
+        "formula": "Rental gross capex - rental disposal proceeds",
+        "observation_ids": [
+          "annual:rental_gross_capex:2024-01-01:2024-12-31",
+          "q3_prior:rental_gross_capex:2024-01-01:2024-09-30",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "annual:rental_disposal_proceeds:2024-01-01:2024-12-31",
+          "q3_prior:rental_disposal_proceeds:2024-01-01:2024-09-30",
+          "q3:rental_disposal_proceeds:2025-01-01:2025-09-30"
+        ]
+      },
+      "fcf_after_gross_capex": {
+        "value": -186.0,
+        "status": "derived",
+        "formula": "CFO - gross rental capex - nonrental capex",
+        "observation_ids": [
+          "annual:cfo:2024-01-01:2024-12-31",
+          "q3_prior:cfo:2024-01-01:2024-09-30",
+          "q3:cfo:2025-01-01:2025-09-30",
+          "annual:rental_gross_capex:2024-01-01:2024-12-31",
+          "q3_prior:rental_gross_capex:2024-01-01:2024-09-30",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "annual:nonrental_capex:2024-01-01:2024-12-31",
+          "q3_prior:nonrental_capex:2024-01-01:2024-09-30",
+          "q3:nonrental_capex:2025-01-01:2025-09-30"
+        ]
+      },
+      "fcf_after_net_capex": {
+        "value": 229.0,
+        "status": "derived",
+        "formula": "CFO - rental and nonrental capex + rental and nonrental disposal proceeds",
+        "observation_ids": [
+          "annual:cfo:2024-01-01:2024-12-31",
+          "q3_prior:cfo:2024-01-01:2024-09-30",
+          "q3:cfo:2025-01-01:2025-09-30",
+          "annual:rental_gross_capex:2024-01-01:2024-12-31",
+          "q3_prior:rental_gross_capex:2024-01-01:2024-09-30",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "annual:nonrental_capex:2024-01-01:2024-12-31",
+          "q3_prior:nonrental_capex:2024-01-01:2024-09-30",
+          "q3:nonrental_capex:2025-01-01:2025-09-30",
+          "annual:rental_disposal_proceeds:2024-01-01:2024-12-31",
+          "q3_prior:rental_disposal_proceeds:2024-01-01:2024-09-30",
+          "q3:rental_disposal_proceeds:2025-01-01:2025-09-30",
+          "annual:nonrental_disposal_proceeds:2024-01-01:2024-12-31",
+          "q3_prior:nonrental_disposal_proceeds:2024-01-01:2024-09-30",
+          "q3:nonrental_disposal_proceeds:2025-01-01:2025-09-30"
+        ]
+      }
+    },
+    "2025Q4": {
+      "sales": {
+        "value": 1209.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:sales:2025-01-01:2025-12-31",
+          "q3:sales:2025-01-01:2025-09-30"
+        ]
+      },
+      "net_income": {
+        "value": 24.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:net_income:2025-01-01:2025-12-31",
+          "q3:net_income:2025-01-01:2025-09-30"
+        ]
+      },
+      "cfo": {
+        "value": 315.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:cfo:2025-01-01:2025-12-31",
+          "q3:cfo:2025-01-01:2025-09-30"
+        ]
+      },
+      "rental_gross_capex": {
+        "value": 262.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30"
+        ]
+      },
+      "rental_disposal_proceeds": {
+        "value": 142.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:rental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:rental_disposal_proceeds:2025-01-01:2025-09-30"
+        ]
+      },
+      "nonrental_capex": {
+        "value": 34.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:nonrental_capex:2025-01-01:2025-12-31",
+          "q3:nonrental_capex:2025-01-01:2025-09-30"
+        ]
+      },
+      "nonrental_disposal_proceeds": {
+        "value": 5.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:nonrental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:nonrental_disposal_proceeds:2025-01-01:2025-09-30"
+        ]
+      },
+      "rental_da": {
+        "value": 243.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:rental_da:2025-01-01:2025-12-31",
+          "q3:rental_da:2025-01-01:2025-09-30"
+        ]
+      },
+      "other_da": {
+        "value": 76.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:other_da:2025-01-01:2025-12-31",
+          "q3:other_da:2025-01-01:2025-09-30"
+        ]
+      },
+      "sbc": {
+        "value": 6.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:sbc:2025-01-01:2025-12-31",
+          "q3:sbc:2025-01-01:2025-09-30"
+        ]
+      },
+      "transaction_expenses": {
+        "value": 14.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:transaction_expenses:2025-01-01:2025-12-31",
+          "q3:transaction_expenses:2025-01-01:2025-09-30"
+        ]
+      },
+      "pretax_income": {
+        "value": 17.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:pretax_income:2025-01-01:2025-12-31",
+          "q3:pretax_income:2025-01-01:2025-09-30"
+        ]
+      },
+      "interest_nonoperating_signed": {
+        "value": -134.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:interest_nonoperating_signed:2025-01-01:2025-12-31",
+          "q3:interest_nonoperating_signed:2025-01-01:2025-09-30"
+        ]
+      },
+      "other_nonoperating_signed": {
+        "value": -9.0,
+        "status": "derived",
+        "formula": "FY2025 - 9M2025",
+        "observation_ids": [
+          "annual:other_nonoperating_signed:2025-01-01:2025-12-31",
+          "q3:other_nonoperating_signed:2025-01-01:2025-09-30"
+        ]
+      },
+      "eps_diluted": {
+        "value": 0.72,
+        "status": "direct",
+        "observation_ids": [
+          "q4_release:eps_diluted:2025-10-01:2025-12-31"
+        ]
+      },
+      "operating_ebit": {
+        "value": 160.0,
+        "status": "derived",
+        "formula": "Pretax - signed nonoperating interest - signed other nonoperating",
+        "observation_ids": [
+          "annual:pretax_income:2025-01-01:2025-12-31",
+          "q3:pretax_income:2025-01-01:2025-09-30",
+          "annual:interest_nonoperating_signed:2025-01-01:2025-12-31",
+          "q3:interest_nonoperating_signed:2025-01-01:2025-09-30",
+          "annual:other_nonoperating_signed:2025-01-01:2025-12-31",
+          "q3:other_nonoperating_signed:2025-01-01:2025-09-30"
+        ]
+      },
+      "net_rental_capex": {
+        "value": 120.0,
+        "status": "derived",
+        "formula": "Rental gross capex - rental disposal proceeds",
+        "observation_ids": [
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "annual:rental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:rental_disposal_proceeds:2025-01-01:2025-09-30"
+        ]
+      },
+      "fcf_after_gross_capex": {
+        "value": 19.0,
+        "status": "derived",
+        "formula": "CFO - gross rental capex - nonrental capex",
+        "observation_ids": [
+          "annual:cfo:2025-01-01:2025-12-31",
+          "q3:cfo:2025-01-01:2025-09-30",
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "annual:nonrental_capex:2025-01-01:2025-12-31",
+          "q3:nonrental_capex:2025-01-01:2025-09-30"
+        ]
+      },
+      "fcf_after_net_capex": {
+        "value": 166.0,
+        "status": "derived",
+        "formula": "CFO - rental and nonrental capex + rental and nonrental disposal proceeds",
+        "observation_ids": [
+          "annual:cfo:2025-01-01:2025-12-31",
+          "q3:cfo:2025-01-01:2025-09-30",
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "annual:nonrental_capex:2025-01-01:2025-12-31",
+          "q3:nonrental_capex:2025-01-01:2025-09-30",
+          "annual:rental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:rental_disposal_proceeds:2025-01-01:2025-09-30",
+          "annual:nonrental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:nonrental_disposal_proceeds:2025-01-01:2025-09-30"
+        ]
+      }
+    },
+    "2026Q1": {
+      "sales": {
+        "value": 1139.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:sales:2026-01-01:2026-03-31"
+        ]
+      },
+      "net_income": {
+        "value": -24.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:net_income:2026-01-01:2026-03-31"
+        ]
+      },
+      "eps_diluted": {
+        "value": -0.72,
+        "status": "direct",
+        "observation_ids": [
+          "q1:eps_diluted:2026-01-01:2026-03-31"
+        ]
+      },
+      "cfo": {
+        "value": 277.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:cfo:2026-01-01:2026-03-31"
+        ]
+      },
+      "rental_gross_capex": {
+        "value": 272.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:rental_gross_capex:2026-01-01:2026-03-31"
+        ]
+      },
+      "rental_disposal_proceeds": {
+        "value": 117.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:rental_disposal_proceeds:2026-01-01:2026-03-31"
+        ]
+      },
+      "nonrental_capex": {
+        "value": 41.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:nonrental_capex:2026-01-01:2026-03-31"
+        ]
+      },
+      "nonrental_disposal_proceeds": {
+        "value": 13.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:nonrental_disposal_proceeds:2026-01-01:2026-03-31"
+        ]
+      },
+      "rental_da": {
+        "value": 242.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:rental_da:2026-01-01:2026-03-31"
+        ]
+      },
+      "other_da": {
+        "value": 73.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:other_da:2026-01-01:2026-03-31"
+        ]
+      },
+      "sbc": {
+        "value": 6.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:sbc:2026-01-01:2026-03-31"
+        ]
+      },
+      "transaction_expenses": {
+        "value": 5.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:transaction_expenses:2026-01-01:2026-03-31"
+        ]
+      },
+      "pretax_income": {
+        "value": -23.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:pretax_income:2026-01-01:2026-03-31"
+        ]
+      },
+      "interest_nonoperating_signed": {
+        "value": -128.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:interest_nonoperating_signed:2026-01-01:2026-03-31"
+        ]
+      },
+      "other_nonoperating_signed": {
+        "value": 3.0,
+        "status": "direct",
+        "observation_ids": [
+          "q1:other_nonoperating_signed:2026-01-01:2026-03-31"
+        ]
+      },
+      "operating_ebit": {
+        "value": 102.0,
+        "status": "derived",
+        "formula": "Pretax - signed nonoperating interest - signed other nonoperating",
+        "observation_ids": [
+          "q1:pretax_income:2026-01-01:2026-03-31",
+          "q1:interest_nonoperating_signed:2026-01-01:2026-03-31",
+          "q1:other_nonoperating_signed:2026-01-01:2026-03-31"
+        ]
+      },
+      "net_rental_capex": {
+        "value": 155.0,
+        "status": "derived",
+        "formula": "Rental gross capex - rental disposal proceeds",
+        "observation_ids": [
+          "q1:rental_gross_capex:2026-01-01:2026-03-31",
+          "q1:rental_disposal_proceeds:2026-01-01:2026-03-31"
+        ]
+      },
+      "fcf_after_gross_capex": {
+        "value": -36.0,
+        "status": "derived",
+        "formula": "CFO - gross rental capex - nonrental capex",
+        "observation_ids": [
+          "q1:cfo:2026-01-01:2026-03-31",
+          "q1:rental_gross_capex:2026-01-01:2026-03-31",
+          "q1:nonrental_capex:2026-01-01:2026-03-31"
+        ]
+      },
+      "fcf_after_net_capex": {
+        "value": 94.0,
+        "status": "derived",
+        "formula": "CFO - rental and nonrental capex + rental and nonrental disposal proceeds",
+        "observation_ids": [
+          "q1:cfo:2026-01-01:2026-03-31",
+          "q1:rental_gross_capex:2026-01-01:2026-03-31",
+          "q1:nonrental_capex:2026-01-01:2026-03-31",
+          "q1:rental_disposal_proceeds:2026-01-01:2026-03-31",
+          "q1:nonrental_disposal_proceeds:2026-01-01:2026-03-31"
+        ]
+      }
+    },
+    "2026Q2": {
+      "sales": {
+        "value": 1204.0,
+        "status": "direct",
+        "observation_ids": [
+          "q2:sales:2026-04-01:2026-06-30"
+        ]
+      },
+      "net_income": {
+        "value": 19.0,
+        "status": "direct",
+        "observation_ids": [
+          "q2:net_income:2026-04-01:2026-06-30"
+        ]
+      },
+      "eps_diluted": {
+        "value": 0.57,
+        "status": "direct",
+        "observation_ids": [
+          "q2:eps_diluted:2026-04-01:2026-06-30"
+        ]
+      },
+      "cfo": {
+        "value": 314.0,
+        "status": "derived",
+        "formula": "6M2026 - Q1 2026",
+        "observation_ids": [
+          "q2:cfo:2026-01-01:2026-06-30",
+          "q1:cfo:2026-01-01:2026-03-31"
+        ]
+      },
+      "rental_gross_capex": {
+        "value": 285.0,
+        "status": "derived",
+        "formula": "6M2026 - Q1 2026",
+        "observation_ids": [
+          "q2:rental_gross_capex:2026-01-01:2026-06-30",
+          "q1:rental_gross_capex:2026-01-01:2026-03-31"
+        ]
+      },
+      "rental_disposal_proceeds": {
+        "value": 113.0,
+        "status": "derived",
+        "formula": "6M2026 - Q1 2026",
+        "observation_ids": [
+          "q2:rental_disposal_proceeds:2026-01-01:2026-06-30",
+          "q1:rental_disposal_proceeds:2026-01-01:2026-03-31"
+        ]
+      },
+      "nonrental_capex": {
+        "value": 41.0,
+        "status": "derived",
+        "formula": "6M2026 - Q1 2026",
+        "observation_ids": [
+          "q2:nonrental_capex:2026-01-01:2026-06-30",
+          "q1:nonrental_capex:2026-01-01:2026-03-31"
+        ]
+      },
+      "nonrental_disposal_proceeds": {
+        "value": 7.0,
+        "status": "derived",
+        "formula": "6M2026 - Q1 2026",
+        "observation_ids": [
+          "q2:nonrental_disposal_proceeds:2026-01-01:2026-06-30",
+          "q1:nonrental_disposal_proceeds:2026-01-01:2026-03-31"
+        ]
+      },
+      "rental_da": {
+        "value": 242.0,
+        "status": "direct",
+        "observation_ids": [
+          "q2:rental_da:2026-04-01:2026-06-30"
+        ]
+      },
+      "other_da": {
+        "value": 75.0,
+        "status": "direct",
+        "observation_ids": [
+          "q2:other_da:2026-04-01:2026-06-30"
+        ]
+      },
+      "sbc": {
+        "value": 2.0,
+        "status": "derived",
+        "formula": "6M2026 - Q1 2026",
+        "observation_ids": [
+          "q2:sbc:2026-01-01:2026-06-30",
+          "q1:sbc:2026-01-01:2026-03-31"
+        ]
+      },
+      "transaction_expenses": {
+        "value": 3.0,
+        "status": "direct",
+        "observation_ids": [
+          "q2:transaction_expenses:2026-04-01:2026-06-30"
+        ]
+      },
+      "pretax_income": {
+        "value": 24.0,
+        "status": "direct",
+        "observation_ids": [
+          "q2:pretax_income:2026-04-01:2026-06-30"
+        ]
+      },
+      "interest_nonoperating_signed": {
+        "value": -126.0,
+        "status": "direct",
+        "observation_ids": [
+          "q2:interest_nonoperating_signed:2026-04-01:2026-06-30"
+        ]
+      },
+      "other_nonoperating_signed": {
+        "value": 6.0,
+        "status": "direct",
+        "observation_ids": [
+          "q2:other_nonoperating_signed:2026-04-01:2026-06-30"
+        ]
+      },
+      "operating_ebit": {
+        "value": 144.0,
+        "status": "derived",
+        "formula": "Pretax - signed nonoperating interest - signed other nonoperating",
+        "observation_ids": [
+          "q2:pretax_income:2026-04-01:2026-06-30",
+          "q2:interest_nonoperating_signed:2026-04-01:2026-06-30",
+          "q2:other_nonoperating_signed:2026-04-01:2026-06-30"
+        ]
+      },
+      "net_rental_capex": {
+        "value": 172.0,
+        "status": "derived",
+        "formula": "Rental gross capex - rental disposal proceeds",
+        "observation_ids": [
+          "q2:rental_gross_capex:2026-01-01:2026-06-30",
+          "q1:rental_gross_capex:2026-01-01:2026-03-31",
+          "q2:rental_disposal_proceeds:2026-01-01:2026-06-30",
+          "q1:rental_disposal_proceeds:2026-01-01:2026-03-31"
+        ]
+      },
+      "fcf_after_gross_capex": {
+        "value": -12.0,
+        "status": "derived",
+        "formula": "CFO - gross rental capex - nonrental capex",
+        "observation_ids": [
+          "q2:cfo:2026-01-01:2026-06-30",
+          "q1:cfo:2026-01-01:2026-03-31",
+          "q2:rental_gross_capex:2026-01-01:2026-06-30",
+          "q1:rental_gross_capex:2026-01-01:2026-03-31",
+          "q2:nonrental_capex:2026-01-01:2026-06-30",
+          "q1:nonrental_capex:2026-01-01:2026-03-31"
+        ]
+      },
+      "fcf_after_net_capex": {
+        "value": 108.0,
+        "status": "derived",
+        "formula": "CFO - rental and nonrental capex + rental and nonrental disposal proceeds",
+        "observation_ids": [
+          "q2:cfo:2026-01-01:2026-06-30",
+          "q1:cfo:2026-01-01:2026-03-31",
+          "q2:rental_gross_capex:2026-01-01:2026-06-30",
+          "q1:rental_gross_capex:2026-01-01:2026-03-31",
+          "q2:nonrental_capex:2026-01-01:2026-06-30",
+          "q1:nonrental_capex:2026-01-01:2026-03-31",
+          "q2:rental_disposal_proceeds:2026-01-01:2026-06-30",
+          "q1:rental_disposal_proceeds:2026-01-01:2026-03-31",
+          "q2:nonrental_disposal_proceeds:2026-01-01:2026-06-30",
+          "q1:nonrental_disposal_proceeds:2026-01-01:2026-03-31"
+        ]
+      }
+    },
+    "2026Q3": {
+      "sales": {
+        "value": 1364.0,
+        "status": "direct",
+        "observation_ids": [
+          "q3:sales:2026-07-01:2026-09-30"
+        ]
+      },
+      "net_income": {
+        "value": 104.0,
+        "status": "direct",
+        "observation_ids": [
+          "q3:net_income:2026-07-01:2026-09-30"
+        ]
+      },
+      "eps_diluted": {
+        "value": 3.1,
+        "status": "direct",
+        "observation_ids": [
+          "q3:eps_diluted:2026-07-01:2026-09-30"
+        ]
+      },
+      "cfo": {
+        "value": 360.0,
+        "status": "derived",
+        "formula": "9M2026 - 6M2026",
+        "observation_ids": [
+          "q3:cfo:2026-01-01:2026-09-30",
+          "q2:cfo:2026-01-01:2026-06-30"
+        ]
+      },
+      "rental_gross_capex": {
+        "value": 499.0,
+        "status": "derived",
+        "formula": "9M2026 - 6M2026",
+        "observation_ids": [
+          "q3:rental_gross_capex:2026-01-01:2026-09-30",
+          "q2:rental_gross_capex:2026-01-01:2026-06-30"
+        ]
+      },
+      "rental_disposal_proceeds": {
+        "value": 89.0,
+        "status": "derived",
+        "formula": "9M2026 - 6M2026",
+        "observation_ids": [
+          "q3:rental_disposal_proceeds:2026-01-01:2026-09-30",
+          "q2:rental_disposal_proceeds:2026-01-01:2026-06-30"
+        ]
+      },
+      "nonrental_capex": {
+        "value": 25.0,
+        "status": "derived",
+        "formula": "9M2026 - 6M2026",
+        "observation_ids": [
+          "q3:nonrental_capex:2026-01-01:2026-09-30",
+          "q2:nonrental_capex:2026-01-01:2026-06-30"
+        ]
+      },
+      "nonrental_disposal_proceeds": {
+        "value": 6.0,
+        "status": "derived",
+        "formula": "9M2026 - 6M2026",
+        "observation_ids": [
+          "q3:nonrental_disposal_proceeds:2026-01-01:2026-09-30",
+          "q2:nonrental_disposal_proceeds:2026-01-01:2026-06-30"
+        ]
+      },
+      "rental_da": {
+        "value": 255.0,
+        "status": "direct",
+        "observation_ids": [
+          "q3:rental_da:2026-07-01:2026-09-30"
+        ]
+      },
+      "other_da": {
+        "value": 74.0,
+        "status": "direct",
+        "observation_ids": [
+          "q3:other_da:2026-07-01:2026-09-30"
+        ]
+      },
+      "sbc": {
+        "value": 14.0,
+        "status": "derived",
+        "formula": "9M2026 - 6M2026",
+        "observation_ids": [
+          "q3:sbc:2026-01-01:2026-09-30",
+          "q2:sbc:2026-01-01:2026-06-30"
+        ]
+      },
+      "transaction_expenses": {
+        "value": 1.0,
+        "status": "direct",
+        "observation_ids": [
+          "q3:transaction_expenses:2026-07-01:2026-09-30"
+        ]
+      },
+      "pretax_income": {
+        "value": 120.0,
+        "status": "direct",
+        "observation_ids": [
+          "q3:pretax_income:2026-07-01:2026-09-30"
+        ]
+      },
+      "interest_nonoperating_signed": {
+        "value": -126.0,
+        "status": "direct",
+        "observation_ids": [
+          "q3:interest_nonoperating_signed:2026-07-01:2026-09-30"
+        ]
+      },
+      "other_nonoperating_signed": {
+        "value": -1.0,
+        "status": "direct",
+        "observation_ids": [
+          "q3:other_nonoperating_signed:2026-07-01:2026-09-30"
+        ]
+      },
+      "operating_ebit": {
+        "value": 247.0,
+        "status": "derived",
+        "formula": "Pretax - signed nonoperating interest - signed other nonoperating",
+        "observation_ids": [
+          "q3:pretax_income:2026-07-01:2026-09-30",
+          "q3:interest_nonoperating_signed:2026-07-01:2026-09-30",
+          "q3:other_nonoperating_signed:2026-07-01:2026-09-30"
+        ]
+      },
+      "net_rental_capex": {
+        "value": 410.0,
+        "status": "derived",
+        "formula": "Rental gross capex - rental disposal proceeds",
+        "observation_ids": [
+          "q3:rental_gross_capex:2026-01-01:2026-09-30",
+          "q2:rental_gross_capex:2026-01-01:2026-06-30",
+          "q3:rental_disposal_proceeds:2026-01-01:2026-09-30",
+          "q2:rental_disposal_proceeds:2026-01-01:2026-06-30"
+        ]
+      },
+      "fcf_after_gross_capex": {
+        "value": -164.0,
+        "status": "derived",
+        "formula": "CFO - gross rental capex - nonrental capex",
+        "observation_ids": [
+          "q3:cfo:2026-01-01:2026-09-30",
+          "q2:cfo:2026-01-01:2026-06-30",
+          "q3:rental_gross_capex:2026-01-01:2026-09-30",
+          "q2:rental_gross_capex:2026-01-01:2026-06-30",
+          "q3:nonrental_capex:2026-01-01:2026-09-30",
+          "q2:nonrental_capex:2026-01-01:2026-06-30"
+        ]
+      },
+      "fcf_after_net_capex": {
+        "value": -69.0,
+        "status": "derived",
+        "formula": "CFO - rental and nonrental capex + rental and nonrental disposal proceeds",
+        "observation_ids": [
+          "q3:cfo:2026-01-01:2026-09-30",
+          "q2:cfo:2026-01-01:2026-06-30",
+          "q3:rental_gross_capex:2026-01-01:2026-09-30",
+          "q2:rental_gross_capex:2026-01-01:2026-06-30",
+          "q3:nonrental_capex:2026-01-01:2026-09-30",
+          "q2:nonrental_capex:2026-01-01:2026-06-30",
+          "q3:rental_disposal_proceeds:2026-01-01:2026-09-30",
+          "q2:rental_disposal_proceeds:2026-01-01:2026-06-30",
+          "q3:nonrental_disposal_proceeds:2026-01-01:2026-09-30",
+          "q2:nonrental_disposal_proceeds:2026-01-01:2026-06-30"
+        ]
+      }
+    },
+    "TTM2026Q3": {
+      "sales": {
+        "value": 4916.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:sales:2025-01-01:2025-12-31",
+          "q3:sales:2025-01-01:2025-09-30",
+          "q3:sales:2026-01-01:2026-09-30"
+        ]
+      },
+      "net_income": {
+        "value": 123.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:net_income:2025-01-01:2025-12-31",
+          "q3:net_income:2025-01-01:2025-09-30",
+          "q3:net_income:2026-01-01:2026-09-30"
+        ]
+      },
+      "cfo": {
+        "value": 1266.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:cfo:2025-01-01:2025-12-31",
+          "q3:cfo:2025-01-01:2025-09-30",
+          "q3:cfo:2026-01-01:2026-09-30"
+        ]
+      },
+      "rental_gross_capex": {
+        "value": 1318.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "q3:rental_gross_capex:2026-01-01:2026-09-30"
+        ]
+      },
+      "rental_disposal_proceeds": {
+        "value": 461.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:rental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:rental_disposal_proceeds:2025-01-01:2025-09-30",
+          "q3:rental_disposal_proceeds:2026-01-01:2026-09-30"
+        ]
+      },
+      "nonrental_capex": {
+        "value": 141.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:nonrental_capex:2025-01-01:2025-12-31",
+          "q3:nonrental_capex:2025-01-01:2025-09-30",
+          "q3:nonrental_capex:2026-01-01:2026-09-30"
+        ]
+      },
+      "nonrental_disposal_proceeds": {
+        "value": 31.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:nonrental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:nonrental_disposal_proceeds:2025-01-01:2025-09-30",
+          "q3:nonrental_disposal_proceeds:2026-01-01:2026-09-30"
+        ]
+      },
+      "rental_da": {
+        "value": 982.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:rental_da:2025-01-01:2025-12-31",
+          "q3:rental_da:2025-01-01:2025-09-30",
+          "q3:rental_da:2026-01-01:2026-09-30"
+        ]
+      },
+      "other_da": {
+        "value": 298.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:other_da:2025-01-01:2025-12-31",
+          "q3:other_da:2025-01-01:2025-09-30",
+          "q3:other_da:2026-01-01:2026-09-30"
+        ]
+      },
+      "sbc": {
+        "value": 28.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:sbc:2025-01-01:2025-12-31",
+          "q3:sbc:2025-01-01:2025-09-30",
+          "q3:sbc:2026-01-01:2026-09-30"
+        ]
+      },
+      "transaction_expenses": {
+        "value": 23.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:transaction_expenses:2025-01-01:2025-12-31",
+          "q3:transaction_expenses:2025-01-01:2025-09-30",
+          "q3:transaction_expenses:2026-01-01:2026-09-30"
+        ]
+      },
+      "pretax_income": {
+        "value": 138.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:pretax_income:2025-01-01:2025-12-31",
+          "q3:pretax_income:2025-01-01:2025-09-30",
+          "q3:pretax_income:2026-01-01:2026-09-30"
+        ]
+      },
+      "interest_nonoperating_signed": {
+        "value": -514.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:interest_nonoperating_signed:2025-01-01:2025-12-31",
+          "q3:interest_nonoperating_signed:2025-01-01:2025-09-30",
+          "q3:interest_nonoperating_signed:2026-01-01:2026-09-30"
+        ]
+      },
+      "other_nonoperating_signed": {
+        "value": -1.0,
+        "status": "derived",
+        "formula": "Q4 2025 + 9M2026",
+        "observation_ids": [
+          "annual:other_nonoperating_signed:2025-01-01:2025-12-31",
+          "q3:other_nonoperating_signed:2025-01-01:2025-09-30",
+          "q3:other_nonoperating_signed:2026-01-01:2026-09-30"
+        ]
+      },
+      "eps_diluted": {
+        "value": null,
+        "status": "not_reported",
+        "reason": "A trailing-twelve-month GAAP diluted EPS is not directly reported; do not subtract FY and 9M EPS."
+      },
+      "eps_diluted_sum_of_quarters": {
+        "value": 3.67,
+        "status": "derived",
+        "formula": "Sum of four reported quarterly diluted EPS; not a recalculated GAAP TTM diluted EPS",
+        "observation_ids": [
+          "q4_release:eps_diluted:2025-10-01:2025-12-31",
+          "q1:eps_diluted:2026-01-01:2026-03-31",
+          "q2:eps_diluted:2026-04-01:2026-06-30",
+          "q3:eps_diluted:2026-07-01:2026-09-30"
+        ]
+      },
+      "operating_ebit": {
+        "value": 653.0,
+        "status": "derived",
+        "formula": "Pretax - signed nonoperating interest - signed other nonoperating",
+        "observation_ids": [
+          "annual:pretax_income:2025-01-01:2025-12-31",
+          "q3:pretax_income:2025-01-01:2025-09-30",
+          "q3:pretax_income:2026-01-01:2026-09-30",
+          "annual:interest_nonoperating_signed:2025-01-01:2025-12-31",
+          "q3:interest_nonoperating_signed:2025-01-01:2025-09-30",
+          "q3:interest_nonoperating_signed:2026-01-01:2026-09-30",
+          "annual:other_nonoperating_signed:2025-01-01:2025-12-31",
+          "q3:other_nonoperating_signed:2025-01-01:2025-09-30",
+          "q3:other_nonoperating_signed:2026-01-01:2026-09-30"
+        ]
+      },
+      "net_rental_capex": {
+        "value": 857.0,
+        "status": "derived",
+        "formula": "Rental gross capex - rental disposal proceeds",
+        "observation_ids": [
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "q3:rental_gross_capex:2026-01-01:2026-09-30",
+          "annual:rental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:rental_disposal_proceeds:2025-01-01:2025-09-30",
+          "q3:rental_disposal_proceeds:2026-01-01:2026-09-30"
+        ]
+      },
+      "fcf_after_gross_capex": {
+        "value": -193.0,
+        "status": "derived",
+        "formula": "CFO - gross rental capex - nonrental capex",
+        "observation_ids": [
+          "annual:cfo:2025-01-01:2025-12-31",
+          "q3:cfo:2025-01-01:2025-09-30",
+          "q3:cfo:2026-01-01:2026-09-30",
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "q3:rental_gross_capex:2026-01-01:2026-09-30",
+          "annual:nonrental_capex:2025-01-01:2025-12-31",
+          "q3:nonrental_capex:2025-01-01:2025-09-30",
+          "q3:nonrental_capex:2026-01-01:2026-09-30"
+        ]
+      },
+      "fcf_after_net_capex": {
+        "value": 299.0,
+        "status": "derived",
+        "formula": "CFO - rental and nonrental capex + rental and nonrental disposal proceeds",
+        "observation_ids": [
+          "annual:cfo:2025-01-01:2025-12-31",
+          "q3:cfo:2025-01-01:2025-09-30",
+          "q3:cfo:2026-01-01:2026-09-30",
+          "annual:rental_gross_capex:2025-01-01:2025-12-31",
+          "q3:rental_gross_capex:2025-01-01:2025-09-30",
+          "q3:rental_gross_capex:2026-01-01:2026-09-30",
+          "annual:nonrental_capex:2025-01-01:2025-12-31",
+          "q3:nonrental_capex:2025-01-01:2025-09-30",
+          "q3:nonrental_capex:2026-01-01:2026-09-30",
+          "annual:rental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:rental_disposal_proceeds:2025-01-01:2025-09-30",
+          "q3:rental_disposal_proceeds:2026-01-01:2026-09-30",
+          "annual:nonrental_disposal_proceeds:2025-01-01:2025-12-31",
+          "q3:nonrental_disposal_proceeds:2025-01-01:2025-09-30",
+          "q3:nonrental_disposal_proceeds:2026-01-01:2026-09-30"
+        ]
+      }
+    }
+  },
+  "notes": [
+    "Operating EBIT is analytically derived, not a reported operating-income subtotal. Transaction costs and loss on assets held for sale remain in EBIT. Interest and Other nonoperating income/expense are excluded.",
+    "Cash capex and proceeds follow the cash-flow statement, not accrual-basis equipment sales revenue. Capex is expressed as a positive outflow.",
+    "H&E results consolidated from June 2, 2025. FY2025 contains a partial period; current TTM Oct 1 2025-Sep 30 2026 contains 12 months of acquired operations. Growth across FY2024/FY2025 is acquisition-distorted.",
+    "Comparable TTM2025Q3 spans October 1 2024-September 30 2025 and includes only about four months of H&E from June 2, 2025. Current TTM includes twelve months, so TTM growth and cash conversion are not like-for-like.",
+    "FY2024 includes $194m assets-held-for-sale loss; FY2025 includes $48m. No normalization applied.",
+    "Quarter cash flow observations derive from cumulative YTD differences; Q4 uses full year less nine months. Rounded reported amounts create rounding limits."
+  ]
+}

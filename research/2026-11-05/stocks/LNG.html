@@ -1,0 +1,569 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LNG · Investigación condicional completada · En observación</title><style>
+:root{color-scheme:light;--ink:#172638;--muted:#526579;--line:#d5dfe7;--paper:#fff;--wash:#f2f5f7;--accent:#12596c;--warn:#7d480a;--bad:#8e2f36}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:0 auto;padding:44px 52px 80px;background:var(--paper)}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}h1,h2,h3,h4{line-height:1.2;letter-spacing:-.025em;color:#102236;scroll-margin-top:20px}h1{font-size:clamp(2.1rem,5vw,3.5rem);max-width:960px;margin:.3em 0 .55em}h2{font-size:1.9rem;margin:2.2em 0 .65em}h3{font-size:1.35rem;margin:1.65em 0 .55em}h4{font-size:1.05rem}p{margin:.7em 0 1em}small,.small,.eyebrow{font-size:.82rem;color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:700}.lead{font-size:1.18rem;max-width:900px}.muted{color:var(--muted)}.status-line{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:3px 10px;font-size:.78rem;font-weight:650;letter-spacing:.025em;background:#f5f8fa;overflow-wrap:anywhere}.blocked{color:var(--bad);background:#fbf2f2;border-color:#efd5d7}.deferred{color:var(--warn);background:#fff8ed;border-color:#ecd9ba}.complete{color:#1b614b;background:#edf7f1;border-color:#c7dfd2}.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:28px 0 38px}.metric{padding:16px 0;border-top:3px solid #b5cbd4}.metric b{font-size:2rem;display:block;line-height:1.1;margin-bottom:7px}.metric span{font-size:.87rem;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:10px 24px;margin:20px 0 35px}nav a{font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;margin:20px 0 28px;table-layout:auto}th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;min-width:0}th{background:#17384a;color:#fff;font-weight:650}tr:nth-child(even) td{background:#f7fafb}.table-wrap{width:100%;max-width:100%;overflow-x:auto;margin:18px 0 28px}.table-wrap table{margin:0}.overview td:first-child{font-weight:750;min-width:74px}.overview td:nth-child(2){min-width:100px}code{font-size:.83em;white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f3f5;border-radius:3px;padding:.08em .25em}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:18px;border:1px solid var(--line);font-size:.8rem}pre code{padding:0;background:none}blockquote{margin:20px 0;padding:0 0 0 18px;border-left:3px solid #c6d6de;color:#41576b}ul,ol{padding-left:1.3em}li{margin:.3em 0}.dossier{padding-top:30px;margin-top:65px;border-top:1px solid var(--line)}.dossier>h2{font-size:2.3rem;margin:.2em 0}.dossier-content{margin-top:32px}.dossier-content h1{font-size:1.8rem}.dossier-content h2{font-size:1.45rem}.dossier-content h3{font-size:1.15rem}.dossier-content p,.dossier-content li{max-width:100%}.scope-note{font-weight:600;color:var(--warn);margin:16px 0}.metadata{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}.metadata div{border-top:1px solid var(--line);padding-top:10px;min-width:0}.metadata dt{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.metadata dd{margin:4px 0;font-weight:650;overflow-wrap:anywhere}.source-list{font-size:.88rem}.source-list li{margin:12px 0}details{margin:16px 0}summary{cursor:pointer;font-weight:650}.footer{font-size:.8rem;color:var(--muted);margin-top:60px;padding-top:25px;border-top:1px solid var(--line)}.breakdown{columns:2;column-gap:30px}.file-links{font-size:.85rem}.approval{font-size:.94rem;color:#42566a}.content-table-note{font-size:.79rem;color:var(--muted)}
+@media(max-width:700px){body{font-size:16px}main{padding:25px 20px 55px}h1{font-size:2.1rem}h2{font-size:1.55rem}.lead{font-size:1.05rem}.funnel{grid-template-columns:repeat(2,1fr);gap:12px}.metric b{font-size:1.65rem}.metadata{grid-template-columns:1fr 1fr}.dossier{margin-top:44px}.dossier>h2{font-size:1.9rem}.dossier-content h1{font-size:1.5rem}th,td{padding:9px;font-size:.82rem}table{table-layout:fixed}.overview{min-width:700px;table-layout:auto}.dossier-content table{min-width:600px;table-layout:auto}.breakdown{columns:1}nav{gap:8px 16px}pre{font-size:.75rem;padding:12px}}
+@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}.dossier{break-before:page;border-top:none}.table-wrap{overflow:visible}table{font-size:9pt}tr{break-inside:avoid}h1,h2,h3{break-after:avoid}nav,.file-links{display:none}a{color:inherit;text-decoration:none}.funnel{grid-template-columns:repeat(4,1fr)}}
+
+.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{overflow-x:auto;max-width:100%}.math.inline{overflow-wrap:anywhere;white-space:normal}
+
+.notice{padding:18px 20px;border:1px solid #ecd9ba;background:#fff8ed;border-radius:6px}.report-card{padding:24px;border:1px solid var(--line);border-radius:6px;margin:22px 0}.report-card h2{margin:0 0 12px}.report-card p:last-child{margin-bottom:0}.nowrap{white-space:nowrap}.metadata dd{line-height:1.4}.dossier-content{min-width:0;overflow-wrap:anywhere}.dossier-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+nav{display:flex;gap:1rem;flex-wrap:wrap}pre{white-space:pre-wrap}a{overflow-wrap:anywhere}</style></head><body><main><nav><a href="../../../#ficha/LNG">← LNG profile</a><a href="../index.html">Research index</a><a href="../../../#biblioteca">Library</a></nav><div class="status-line"><span class="tag">Investigación completada / Research completed</span><span class="tag deferred">En observación / Observation</span><span class="tag">No investment or entry approval</span></div><h1 id="lng-a274-investigación-condicional-completada">LNG · A274 · Investigación condicional completada</h1>
+<p><strong>Investigación condicional completada; observación, sin aprobación. Base 250,08 USD frente a 292,02; comprobación NCI por caja 253,32. El caso operativo alto al mismo WACC alcanza 296,80: no hay rechazo categórico, ni ventaja robusta. Referencia corregida del informe: 292,02 USD; 291,99 se conserva como captura histórica.</strong></p>
+<p>Conditional research completed; observation, no approval. Base $250.08 versus $292.02; cash-based NCI crosscheck $253.32. The high operating case at the same WACC reaches $296.80: neither categorical rejection nor a robust edge. Corrected dated report reference: $292.02; $291.99 is retained as a historical capture.</p>
+<p>Investigación Stage 3 completada de forma condicional. En observación, sin aprobación de inversión ni Stage 3.5. Señal, máximo operativo y stop nulos; cantidad nueva 0. / Conditional Stage 3 research completed. Observation, no investment or Stage 3.5 approval. Signal, operative maximum and stop are null; new quantity 0.</p>
+<p>Escáner original / Original scanner: <strong>2026-11-04, 289.62 USD</strong>. Cierre regular documentado / Documented regular close: <strong>2026-11-04, 292.02 USD</strong>. Referencias históricas separadas, no cotización actual. Separate dated observations, not a current quote.</p>
+<p>Publicación web; conciliación con el diario pendiente. Website publication; journal reconciliation pending. Todos los documentos y decisiones anteriores se conservan. All earlier documents and decisions are preserved.</p>
+<p><a href="https://fundamentalpullback.github.io/research/2026-11-05/stocks/LNG.html">Perfil / Profile</a></p>
+<h1 id="cheniere-más-caja-contratada-pero-no-una-infravaloración-robusta-a-292-dólares">Cheniere: más caja contratada, pero no una infravaloración robusta a 292 dólares</h1>
+<p><strong>LNG · Valoración condicional al cierre del 4 de noviembre de 2026 · Preparado el 5 de noviembre.</strong></p>
+<p><strong>Decisión propuesta: investigación Stage 3 terminada de forma condicional; mantener en observación. No se aprueba inversión ni entrada Stage 3.5.</strong> Confianza media-baja en el valor, mayor en los hechos contables. Revisión independiente superada con salvedades para investigación condicional en observación. No certifica una compra ni entrada; el dictamen y sus límites acompañan el soporte.</p>
+<h2 id="qué-cambia-respecto-al-expediente-anterior">1. Qué cambia respecto al expediente anterior</h2>
+<p>Ya hay una valoración FCFF de diez años, con cinco ejercicios explícitos y cinco de transición, tres escenarios, puente a las acciones de LNG y contraste independiente del derecho económico de los minoritarios de CQP. Las estimaciones ordinarias de inversión, impuestos o dilución se presentan como rangos; dejan de ser una razón para mantener toda la valoración vacía. No se reescribe el informe previo como si hubiera contenido estos cálculos.</p>
+<p>La base da aproximadamente <strong>250 dólares por acción</strong> frente a <strong>292,02</strong>. Valorar los comunes externos de CQP mediante su propia caja y cascada, en vez de su cotización, lleva esa base a unos <strong>253</strong>. El caso favorable amplio sí supera el precio; por tanto, no queda demostrada una sobrevaloración inevitable. El resultado es más preciso: <strong>a este precio no aparece una infravaloración resistente a hipótesis operativas razonables</strong>.</p>
+<p>Se utiliza un WACC calculado de <strong>6,12%</strong>, no una tasa de 8–10% impuesta para descartar. Manteniendo esa misma tasa, EBITDA normalizado de 8.000 millones y ninguna reducción por renovación de contratos arrojan cerca de <strong>297 dólares</strong>, apenas por encima del cierre. El precio no exige un resultado imposible, pero consume la mayor parte de la holgura de esa combinación favorable. Una regla universal de descuento del 15% o 20% no decide el caso.</p>
+<p>La caja próxima tampoco se ignora. El CFO describió, en la transcripción de la llamada, unos <strong>4 millones de toneladas de 2027 vendidos con margen cercano a 10 dólares/MMBtu</strong>. Frente a 2,75 del funcionamiento normal utilizado aquí, eso permite estimar una prima temporal de <strong>1.508 millones de EBITDA</strong>. Se incluye en 2027 y no en la perpetuidad. La transcripción es una fuente secundaria de declaraciones de gestión, no guía financiera auditada ni un audio cotejado. [5]</p>
+<h2 id="negocio-ventaja-y-riesgo-real">2. Negocio, ventaja y riesgo real</h2>
+<p>Sabine Pass opera dentro de CQP; Corpus Christi y la comercialización tienen participaciones y financiación diferentes. Cheniere aporta sitios, muelles, tanques, gasoductos, experiencia de ejecución y acceso comercial difíciles de replicar. Ampliar una instalación existente puede ofrecer mejor economía que construir un complejo nuevo. Esa ventaja no vuelve gratuita la inversión.</p>
+<p>Buena parte de las ventas combina una tarifa fija, generalmente pagadera incluso si se cancela un cargamento, y un componente variable vinculado al 115% de Henry Hub. Esto reduce exposición directa al precio del gas, pero deja riesgo de contraparte, base regional, suministro, combustible, disponibilidad, entrega y fuerza mayor. El negocio de comercialización incorpora además diferenciales internacionales y oportunidades temporales.</p>
+<p>El 10-Q describe alrededor del 95% de producción prevista de SPL/CCL contratada hasta mediados de los años 2030, con vida restante cercana a 15 años. La referencia de más de 16 años de las slides no tiene exactamente la misma fecha/perímetro. CCH por separado informa más del 80% con terceros: no se traslada el 95% consolidado a cada filial. Las ventas internas a comercialización y los contratos externos no son la misma protección económica. [1,4,16]</p>
+<p>La causa concreta de toda la caída del 4 de noviembre no se ha demostrado. Se observa una sesión de −6,15% en LNG y de −10,07% en CQP, pero no se atribuye causalidad a un titular no verificado. Normalización de márgenes, tipos, riesgo sectorial y toma de beneficios son explicaciones posibles, no hechos establecidos.</p>
+<h2 id="historia-y-normalización-del-beneficio">3. Historia y normalización del beneficio</h2>
+<p>Millones de dólares salvo EPS. EBIT y beneficio neto son GAAP. Capex es efectivo de PPE neto de cobros de puesta en marcha. FCF mecánico significa CFO menos ese capex, antes de distribuciones a minoritarios; no es caja libre normalizada del accionista de LNG.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Periodo</th>
+<th>Ventas</th>
+<th>EBIT</th>
+<th>Beneficio LNG</th>
+<th>EPS</th>
+<th>CFO</th>
+<th>PPE neto</th>
+<th>FCF mecánico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY2023</td>
+<td>20.394</td>
+<td>15.489</td>
+<td>9.881</td>
+<td>40,72</td>
+<td>8.418</td>
+<td>2.121</td>
+<td>6.297</td>
+</tr>
+<tr class="even">
+<td>FY2024</td>
+<td>15.703</td>
+<td>6.128</td>
+<td>3.252</td>
+<td>14,20</td>
+<td>5.394</td>
+<td>2.238</td>
+<td>3.156</td>
+</tr>
+<tr class="odd">
+<td>FY2025</td>
+<td>19.976</td>
+<td>9.112</td>
+<td>5.330</td>
+<td>24,13</td>
+<td>5.539</td>
+<td>3.078</td>
+<td>2.461</td>
+</tr>
+<tr class="even">
+<td>Q42025</td>
+<td>5.450</td>
+<td>3.804</td>
+<td>2.302</td>
+<td>10,68</td>
+<td>2.055</td>
+<td>744</td>
+<td>1.311</td>
+</tr>
+<tr class="odd">
+<td>Q12026</td>
+<td>5.868</td>
+<td>-3.488</td>
+<td>-3.502</td>
+<td>-16,65</td>
+<td>1.080</td>
+<td>736</td>
+<td>344</td>
+</tr>
+<tr class="even">
+<td>Q22026</td>
+<td>5.732</td>
+<td>4.290</td>
+<td>3.068</td>
+<td>14,65</td>
+<td>1.578</td>
+<td>1.180</td>
+<td>398</td>
+</tr>
+<tr class="odd">
+<td>Q32026</td>
+<td>6.173</td>
+<td>1.915</td>
+<td>1.170</td>
+<td>5,65</td>
+<td>2.466</td>
+<td>732</td>
+<td>1.734</td>
+</tr>
+<tr class="even">
+<td>TTM2025Q3</td>
+<td>18.962</td>
+<td>7.047</td>
+<td>4.005</td>
+<td>17,95</td>
+<td>5.125</td>
+<td>2.903</td>
+<td>2.222</td>
+</tr>
+<tr class="odd">
+<td>TTM2026Q3</td>
+<td>23.223</td>
+<td>6.521</td>
+<td>3.038</td>
+<td>14,33</td>
+<td>7.179</td>
+<td>3.392</td>
+<td>3.787</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los EPS anuales y de Q1–Q3 proceden de las observaciones iXBRL. Q4 2025, 10,68, y el comparable Q4 2024, 4,33, se contrastan en Reuters. Los EPS TTM de 14,33 y 17,95 son sumas de cuatro EPS trimestrales publicados, no EPS anuales GAAP con un único denominador. No se restan EPS anuales y acumulados. Las recompras y premios explican parte de la diferencia con beneficio dividido por acciones actuales. [1,2,9–11,18]</p>
+<p>Los movimientos de EBIT de −3.488 en Q1 a +4.290 en Q2 no describen una planta que deja de producir y luego recupera de golpe. Hay marcas de derivados muy grandes. En Q3, 1.915 de EBIT menos 432 de ganancias de valoración y 26 de amortización NPNS dejan <strong>1.457</strong>, frente a 1.243 comparable. Añadir D&amp;A de 393 y el ajuste de compensación de 50 reproduce 1.900 de EBITDA ajustado.</p>
+<p>Nueve meses: 2.717 + 2.077 de pérdidas de valoración − 31 de amortización NPNS = 4.763. Se elimina además el <strong>crédito histórico de combustible de 370</strong>, reconocido en Q1 2026 por periodos 2018–24. Quedan <strong>4.393 de EBIT parcialmente normalizado</strong>, +15,1% frente a 3.817. No se descuenta ese crédito del beneficio neto sin considerar fiscalidad y atribución. [1–3]</p>
+<p>La nueva conciliación con el comunicado anual permite mejorar el TTM: Q4 2025 registra 3.804 de EBIT y 2.124 de ganancias por derivados, dejando 1.680. Con los 4.393 de nueve meses, el TTM queda en <strong>6.073</strong>, frente a <strong>5.069</strong>, +19,8%. El EBITDA ajustado TTM sin el crédito es <strong>7.714</strong>, frente a <strong>6.473</strong>, +19,2%. Son ajustes delimitados, no certificación de que todo el margen sea repetible. En particular, retienen beneficios reales de comercialización extraordinariamente buenos. [17]</p>
+<p>El beneficio ajustado de nueve meses del comunicado es 2.388. La slide 11 imprime 1.833 para 9M2025, mientras el comunicado y su suma dan 1.883. Se mantiene la cifra reconciliada y se conserva la discrepancia. No se afirma que el emisor haya corregido la slide.</p>
+<p>SBC tiene coste. El añadido del EBITDA es 128 en nueve meses, distinto de los 190 del estado de caja. Los premios en efectivo y en acciones no permiten restar indistintamente ambas cifras. El modelo parte de EBITDA de gestión, resta <strong>185 millones de compensación económica en 2027</strong>, con crecimiento del 3% en la fase explícita, y nunca la vuelve a añadir a FCFF. Es una estimación algo superior a anualizar 128; los pagos operativos ya incluidos no se descuentan por segunda vez.</p>
+<h2 id="de-caja-publicada-a-caja-económica">4. De caja publicada a caja económica</h2>
+<p>El “DCF” de Cheniere significa flujo distribuible de gestión; no FCFF ni valoración por descuento. En nueve meses, su puente aproximado es 6,04 de EBITDA menos 0,72 de intereses, 0,09 de mantenimiento, 0,20 de impuestos y 0,10 de otros, igual a 4,93; menos 0,86 atribuido económicamente a minoritarios da 4,07. Son miles de millones. [3,4]</p>
+<p>La caja efectiva cuenta otra historia compatible: CFO 5.124 menos PPE neto 2.648 = 2.476; menos NCI efectivamente distribuido 594 = 1.882. Los 860 de distribución económica no son los 594 pagados. El capex neto incluye 115 de cobros de puesta en marcha; el desembolso bruto es 2.763. Los 136 por adquirir el resto de Gregory son una compra de propiedad, no distribución recurrente.</p>
+<p>El TTM de CFO 7.179 menos capex 3.392 da 3.787. Excluir devolución CAMT de 380 y crédito histórico de 370 deja 3.037; restar NCI efectivo de 797 da 2.240. No se llama a este residuo owner FCF. El impuesto sobre renta TTM neto es una devolución de 347, no una tasa permanente negativa. Los saldos netos de derivados de 141 y NPNS de 313 tampoco se suman a caja libre.</p>
+<p>La tasa operativa estimada aumenta del 12% al 18% durante 2027–31 y termina en 18%. Reconoce depreciación fiscal, NOL, FDDEI y que parte de CQP no tributa a nivel corporativo de LNG. No extrapola automáticamente el 10,1% GAAP de nueve meses. Un 21% desde el primer año reduce el valor base a unos 232 dólares. La fiscalidad exacta futura es una incertidumbre económica acotada, no un permiso para valorar con cero impuestos.</p>
+<h2 id="capacidad-inversión-y-renovación">5. Capacidad, inversión y renovación</h2>
+<p>La fase 3 industrial de Corpus Christi ya tiene sus siete trenes operativos; el último terminó sustancialmente en agosto de 2026. “Fase 3” del proyecto no es Stage 3 del proceso de inversión. Trenes 8 y 9 más debottlenecking añaden aproximadamente 5 mtpa y apuntan a la segunda mitad de 2028. El avance global del 58,6% no equivale al 14,5% de construcción ni al porcentaje de caja gastada.</p>
+<p>La producción 2027 de gestión es 56–58 mtpa, con unos 52 de contratos largos, 4 spot vendidos a plazo y 1 abierto. No incluye 8 y 9. La base utiliza 57/59/61,5/61,5/61,5 mtpa en 2027–31. El ancla operativa de 2029 es el punto medio de <strong>7.300–8.000 millones de EBITDA</strong> sobre <strong>60–63 mtpa</strong> de la presentación. No se infla esa referencia antes del primer año completo. Desde 2030 se aplica 1% de mejora nominal por tonelada, sin capacidad opcional gratuita.</p>
+<p>La prima 2027 de 1.508 se calcula como 4 mt × 52 MMBtu/t estimados × (10 − 2,75). La base añade 250 en 2028 como estimación de efectos temporales y cero después. El favorable añade prima por el millón de toneladas abierto y una desaparición más lenta; no repricia a favor los cuatro millones ya vendidos. Sin ninguna prima temporal la base cae unos 7 dólares, a 243. El ingreso estimado parte de volumen, Henry Hub de 3, factor de gas de 1,15 y costes/tarifa por tonelada; la caja la determina el margen, no una extrapolación mecánica de ventas infladas por gas.</p>
+<p>La dirección mostró aproximadamente <strong>3.000 millones de coste total</strong> para 8 y 9/debottlenecking, frente a EPC de 2.900, y unos 7.000 para fase 3. Esto permite estimar remanentes, aunque no publican un calendario exacto de caja futuro. La investigación separada propone proyectos comprometidos de <strong>950/575/100/0/0 millones</strong>, incluyendo cierre de fase 3 y Gregory; el rango acumulado es aproximadamente 975–2.500. No se resta todo el gasto de 2026 de un saldo EPC con perímetro distinto. [15,16]</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Estimación, MUSD</th>
+<th>2027</th>
+<th>2028</th>
+<th>2029</th>
+<th>2030</th>
+<th>2031</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Capex proyectos comprometidos</td>
+<td>950</td>
+<td>575</td>
+<td>100</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Sostenimiento capitalizado</td>
+<td>200</td>
+<td>225</td>
+<td>250</td>
+<td>275</td>
+<td>300</td>
+</tr>
+<tr class="odd">
+<td>Nuevos activos de leasing financiero</td>
+<td>300</td>
+<td>300</td>
+<td>250</td>
+<td>200</td>
+<td>200</td>
+</tr>
+<tr class="even">
+<td>Total, antes de circulante</td>
+<td>1.450</td>
+<td>1.100</td>
+<td>600</td>
+<td>475</td>
+<td>500</td>
+</tr>
+<tr class="odd">
+<td>D&amp;A, incluido activo financiero</td>
+<td>1.650</td>
+<td>1.720</td>
+<td>1.800</td>
+<td>1.820</td>
+<td>1.840</td>
+</tr>
+</tbody>
+</table></div>
+<p>El mantenimiento mayor y reparaciones ya se cargan parcialmente en O&amp;M. Por ello, capitalizar de nuevo todo ese gasto duplicaría costes. Pero mantener sólo 120–200 de capex para siempre frente a D&amp;A superior a 1.500 crearía un activo que nunca se repone. En los cinco años de transición se desvanece el beneficio de activos jóvenes y la reinversión neta converge a <strong>NOPAT × g / ROIC</strong>. El capex terminal incluye reposición coherente con D&amp;A y crecimiento. Se desvanece conjuntamente el mantenimiento de activos propios y la adquisición de activos de leasing financiero, sin añadir una segunda reposición de barcos encima.</p>
+<p>La nota de leasing separa alquiler operativo, que permanece en EBITDA, de amortización financiera en D&amp;A e interés financiero. Las nuevas altas financieras fueron 545 en nueve meses de 2026; la base reserva 300/300/250/200/200 de inversión económica equivalente. La deuda financiera existente de 1.385 se resta una sola vez en el puente: sus pagos de principal no vuelven a reducir FCFF. Los aproximadamente 6.000 de arrendamientos aún no iniciados no se convierten todos en deuda actual, porque no se conoce su reparto financiero/operativo y sus rentas pueden estar ya en el margen supuesto.</p>
+<p>SPL fase 1 y CCL fase 1 no están incluidos en la base. El primero tiene EPC de unos 4.700 y financiación condicional de 3.250 que sugiere coste total cercano a 6.500, sin ser presupuesto exacto. Su valor sólo se añadirá con todo el coste, participación económica y calendario. Un anuncio de FID no equivale por sí mismo a creación de valor.</p>
+<h2 id="contratos-y-terminal">6. Contratos y terminal</h2>
+<p>La primera SPA histórica de veinte años de Train 1 comenzó en noviembre de 2016, apuntando originalmente a finales de 2036, con posibles modificaciones posteriores. No hay un precipicio general de contratos en 2027. En 2032–36 la base reduce gradualmente un 5% el EBITDA normalizado respecto a continuidad completa. Es una sensibilidad de recontractación: por ejemplo, repriciar un 35% del beneficio a tarifas un 15% inferiores produce un recorte cercano al 5%. No es una curva de vencimientos publicada. Favorable 0%; adverso 15%.</p>
+<p>La terminación de un acuerdo de regasificación en 2029 tampoco elimina automáticamente 136 millones de EBITDA: a sus aproximadamente 136 de ingresos en 2025 se oponían 134 de O&amp;M por la cesión asociada. No se resta el ingreso bruto como beneficio perdido. [2,15]</p>
+<p>La base termina con g del 1,5% y ROIC incremental del 12%; adverso 1%/10%, favorable 2%/15%. El crecimiento nominal no exige otra ampliación opcional. WACC supera g en todos. El terminal representa aproximadamente el 56% del EV base.</p>
+<p>Las principales autorizaciones de exportación citadas llegan hasta diciembre de 2050. La perpetuidad supone renovación y capacidad económica de operar después, no una autorización perpetua concedida. Como prueba extrema, cortar toda operación en 2050 y asignar residuo cero reduce la base a unos 120 dólares. No es una previsión ni el escenario adverso central: también ignora posibles renovaciones, reutilización y valor residual. Hace visible la dependencia de duración, en lugar de ocultarla en una tasa arbitraria.</p>
+<h2 id="coste-de-capital-puente-y-minoritarios">7. Coste de capital, puente y minoritarios</h2>
+<p>Se calcula beta con 58 retornos mensuales ajustados de enero de 2022 a octubre de 2026 frente a SPY. LNG da 0,023 y CQP 0,303. Ambos estimadores son imprecisos: el intervalo del 95% de LNG va aproximadamente de −0,45 a +0,49, con escasa capacidad explicativa. Aplicar un tercio de peso a beta 1 lleva a 0,349 y 0,535. Es normalización analítica explícita, no dato observado.</p>
+<p>La beta del conjunto pondera las acciones de LNG y los comunes CQP externos por su valor de mercado; resulta 0,384. Treasury a diez años de 4 de noviembre: 4,90%; ERP implícita de Damodaran de 1 de noviembre: 4,41%. Son fechas distintas identificadas. Coste de equity 6,59%; coste marginal de deuda estimado 5,8%, apoyado en el bono anunciado el 2 de noviembre; escudo efectivo consolidado estimado 18%, por la parte no gravada de CQP. Deuda financiera de 25.523 y equity total de mercado de 73.647 producen un peso de deuda del 25,74% y <strong>WACC 6,1197%</strong>. Es una calibración favorable e imprecisa del coste de capital, no una tasa exacta de riesgo. Las sensibilidades elevan o reducen esa tasa sin alterar el método. No se usa beta cero como sinónimo de ausencia de riesgo. [19,20]</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Puente base</th>
+<th>MUSD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EV operativo consolidado</td>
+<td>89.718</td>
+</tr>
+<tr class="even">
+<td>Menos deuda nominal</td>
+<td>-24.138</td>
+</tr>
+<tr class="odd">
+<td>Menos leasing financiero</td>
+<td>-1.385</td>
+</tr>
+<tr class="even">
+<td>Más caja tras reserva operativa estimada</td>
+<td>863</td>
+</tr>
+<tr class="odd">
+<td>Ajuste posterior al trimestre supuesto</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Menos comunes CQP externos a mercado</td>
+<td>-13.840</td>
+</tr>
+<tr class="odd">
+<td>Equity de LNG condicional</td>
+<td>51.218</td>
+</tr>
+<tr class="even">
+<td>Acciones diluidas aproximadas, millones</td>
+<td>204,803914</td>
+</tr>
+<tr class="odd">
+<td>Valor base por acción</td>
+<td>250,08</td>
+</tr>
+</tbody>
+</table></div>
+<p>La deuda es nominal, 24.138, más leasing financiero de 1.385; no los 23.931 contables ni la suma duplicada SPL más CQP incluyendo SPL. Las rentas operativas permanecen como gasto y no se capitalizan otra vez. La caja de 1.663 se reduce en 800 de reserva operativa estimada; los 393 restringidos no se añaden. Los bonos de 1.200 cuyo cierre se espera el 17 de noviembre aún no son caja ni deuda cerradas.</p>
+<p>Se utilizan <strong>204,803914 millones de acciones</strong>: 204,203914 actuales al 23 de octubre más 0,6 como aproximación de premios dilutivos observados. No son las 206,9 medias trimestrales; no se incluye capacidad de premios no concedidos. No hay recompra futura que reduzca gratis el denominador.</p>
+<p>El balance es de septiembre y no se conoce una caja diaria certificada. La base deja en cero el ajuste posterior y no incorpora un trimestre adicional de caja libre entre ese balance y 2027. Esta omisión puede ser conservadora, pero nuevas recompras o pagos pueden consumirla. Añadir 1.500 de caja neta elevaría el valor unos 7,32 dólares, sin resolver la diferencia con el cierre. Cada 1.000 cambia 4,88 dólares. No se afirma que todo ese efectivo exista hoy.</p>
+<p>El exterior tiene <strong>244,185202 millones de comunes CQP</strong>, valorados a <strong>56,68</strong>, dando <strong>13.840,42 millones</strong>. Se usan para LNG 239,872502 millones de comunes publicados con exactitud en febrero y corroborados redondeados a 239,9 millones en septiembre; no es una nueva medición exacta diaria. LNG conserva todo GP/IDR. La cifra divulgada 48,6% usa valores totales, mientras su fracción de comunes es 49,55%. No se multiplica todo FCFF por 48,6% y después se descuenta nuevamente el minoritario.</p>
+<p>El modelo principal valora 100% del FCFF consolidado y resta el equity externo cotizado. Es una valoración con el minoritario marcado a mercado, no prueba de que esa cotización sea su valor intrínseco. La capitalización total CQP tampoco representa el valor de GP/IDR, que no se cotiza por separado. [12,21]</p>
+<p>El contraste estima caja de CQP después de intereses, reinversión y 500 de amortización de deuda. Usa la cascada marginal GP de 2%/15%/25%/50%; por encima del tramo superior, el exterior recibe aproximadamente 25,22% del dólar incremental, no 49,4% de toda la caja. El ancla de gestión de 4,00–4,25 de DCF común por unidad permite una base de 4,125. Se considera la reposición futura y la prima temporal de comercialización, sin descontar de nuevo deuda al equity ya calculado. El resultado externo base es <strong>13.177 millones</strong>, cercano al mercado; no sostiene una gran corrección oculta a favor de LNG.</p>
+<h2 id="escenarios-precio-implícito-y-contraste">8. Escenarios, precio implícito y contraste</h2>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escenario</th>
+<th>WACC</th>
+<th>g / ROIC terminal</th>
+<th>EV consolidado</th>
+<th>LNG con NCI cotizado</th>
+<th>LNG con contraste NCI de caja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adverso</td>
+<td>7,50%</td>
+<td>1,0% / 10%</td>
+<td>46.770</td>
+<td>38,91 $</td>
+<td>67,29 $</td>
+</tr>
+<tr class="even">
+<td>Base</td>
+<td>6,12%</td>
+<td>1,5% / 12%</td>
+<td>89.718</td>
+<td>250,08 $</td>
+<td>253,32 $</td>
+</tr>
+<tr class="odd">
+<td>Favorable</td>
+<td>5,80%</td>
+<td>2,0% / 15%</td>
+<td>122.676</td>
+<td>411,98 $</td>
+<td>401,97 $</td>
+</tr>
+</tbody>
+</table></div>
+<p>La columna con NCI cotizado mantiene ese derecho a su valor observable en todos los casos. Esto exagera la dureza del caso adverso si también cae el valor económico de CQP; por eso se muestra al lado la valoración de sus comunes externos bajo cada escenario. La conclusión no usa 39 dólares como pérdida esperada ni stop: con el contraste económico, el adverso queda cerca de 67. Los escenarios son combinaciones analíticas, sin probabilidades ni mínimos garantizados.</p>
+<div class="table-wrap"><table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Base, MUSD salvo volumen</th>
+<th>2027</th>
+<th>2028</th>
+<th>2029</th>
+<th>2030</th>
+<th>2031</th>
+<th>2036</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Volumen, mtpa</td>
+<td>57,0</td>
+<td>59,0</td>
+<td>61,5</td>
+<td>61,5</td>
+<td>61,5</td>
+<td>61,5</td>
+</tr>
+<tr class="even">
+<td>Ventas aproximadas</td>
+<td>21.104</td>
+<td>20.534</td>
+<td>21.143</td>
+<td>21.244</td>
+<td>21.346</td>
+<td>22.576</td>
+</tr>
+<tr class="odd">
+<td>EBITDA gestión, estimado</td>
+<td>8.598</td>
+<td>7.589</td>
+<td>7.650</td>
+<td>7.726</td>
+<td>7.804</td>
+<td>7.987</td>
+</tr>
+<tr class="even">
+<td>SBC retenida como coste</td>
+<td>185</td>
+<td>191</td>
+<td>196</td>
+<td>202</td>
+<td>208</td>
+<td>224</td>
+</tr>
+<tr class="odd">
+<td>EBIT después de SBC y D&amp;A</td>
+<td>6.763</td>
+<td>5.678</td>
+<td>5.654</td>
+<td>5.704</td>
+<td>5.756</td>
+<td>5.780</td>
+</tr>
+<tr class="even">
+<td>NOPAT</td>
+<td>5.952</td>
+<td>4.883</td>
+<td>4.749</td>
+<td>4.735</td>
+<td>4.720</td>
+<td>4.740</td>
+</tr>
+<tr class="odd">
+<td>Capex económico total</td>
+<td>1.450</td>
+<td>1.100</td>
+<td>600</td>
+<td>475</td>
+<td>500</td>
+<td>2.562</td>
+</tr>
+<tr class="even">
+<td>Incremento circulante</td>
+<td>200</td>
+<td>0</td>
+<td>30</td>
+<td>5</td>
+<td>5</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>FCFF consolidado</td>
+<td>5.952</td>
+<td>5.503</td>
+<td>5.919</td>
+<td>6.075</td>
+<td>6.054</td>
+<td>4.147</td>
+</tr>
+</tbody>
+</table></div>
+<p>El precio implica EV operativo de aproximadamente <strong>98.307 millones</strong>, frente a 89.718 de la base. Conservando todos los demás supuestos, lo reproduce un WACC de <strong>5,67%</strong>, o elevar el EBITDA recurrente por tonelada un <strong>7,54%</strong>, equivalente a unos <strong>8.227 millones</strong> sobre la capacidad de referencia de 61,5 mtpa. La prima temporal de 2027 ya está incluida antes de ese aumento. Son soluciones separadas del mismo FCFF, no ajustes para fabricar un precio objetivo.</p>
+<p>Ese EBITDA supera moderadamente la parte alta de la referencia de gestión, pero no es inconcebible. Por eso el juicio no es “imposible pagar 292”, sino que la evidencia actual no justifica dar por segura esa permanencia. Eliminar sólo la reducción del 5% por recontractación da unos 270,43, todavía por debajo del cierre. La prima temporal importa; la duración y renovación del flujo importan más.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>WACC, mismo caso operativo</th>
+<th>Valor LNG, g 1,5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5,00%</td>
+<td>375,00 $</td>
+</tr>
+<tr class="even">
+<td>5,50%</td>
+<td>310,74 $</td>
+</tr>
+<tr class="odd">
+<td>6,00%</td>
+<td>260,52 $</td>
+</tr>
+<tr class="even">
+<td>6,50%</td>
+<td>220,16 $</td>
+</tr>
+<tr class="odd">
+<td>7,00%</td>
+<td>186,97 $</td>
+</tr>
+<tr class="even">
+<td>7,50%</td>
+<td>159,17 $</td>
+</tr>
+<tr class="odd">
+<td>8,00%</td>
+<td>135,51 $</td>
+</tr>
+<tr class="even">
+<td>9,00%</td>
+<td>97,34 $</td>
+</tr>
+</tbody>
+</table></div>
+<p>Con NCI cotizado un 25% más bajo o alto, la base cambia a 266,98 / 233,19 dólares. No son cambios en el negocio operativo de LNG.</p>
+<p>El EV implícito equivale a 12,85 veces EBITDA normalizado de 7.650, o a 10,92 veces la guía excepcional de 9.000 de 2026. Usar sólo la segunda cifra hace que parezca más barata sin demostrar mayor caja sostenible. El PER por beneficio TTM atribuible ronda 19,69; precio dividido por suma de EPS trimestrales da 20,38 por diferencias de denominador. Las marcas contables y la mezcla de periodos impiden tratar cualquiera como PER económico estable.</p>
+<p>Williams sirve de contraste, no de múltiplo transferible. Su guía de EBITDA ajustado 2026 es 8.300–8.500 y su EV sencillo de proveedor unos 115.180: la razón indicativa sería 13,55–13,88 veces. Pero ese EV omite una conciliación económica de los 5.761 de NCI contable y del preferred, mientras EBITDA incorpora negocios consolidados y participaciones por equivalencia. No se utiliza ese cociente como ancla homogénea ni se promedia con LNG. El dato útil es que el supuesto descuento por comparar 2026 pico de LNG con EBITDA de infraestructura distinta no es fiable. WMB también invierte intensamente: 9M CFO 4.484 frente a capex efectivo 5.682 no se parece a su AFFO de 4.809. [7,22]</p>
+<p>CQP es una parte del negocio, no un par independiente; su distribución y su cash-flow equity sí son un contraste directo del puente. Venture Global tiene el resultado Q3 anunciado para el 10 de noviembre y un perímetro más expuesto a ramp-up y controversias contractuales. No se mezcla un resultado todavía no publicado ni se fuerza un grupo artificial de comparables para obtener un múltiplo favorable. [13]</p>
+<h2 id="técnica-calendario-y-condiciones-de-revisión">9. Técnica, calendario y condiciones de revisión</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Indicador, sesión 4 noviembre</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cierre</td>
+<td>292,02 $</td>
+</tr>
+<tr class="even">
+<td>EMA20 / EMA50 / EMA200</td>
+<td>296,28 / 284,91 / 260,56</td>
+</tr>
+<tr class="odd">
+<td>Pendiente EMA200, veinte sesiones</td>
+<td>2,97%</td>
+</tr>
+<tr class="even">
+<td>Retroceso desde máximo de 252 sesiones</td>
+<td>-11,70%</td>
+</tr>
+<tr class="odd">
+<td>Volumen medio veinte sesiones</td>
+<td>2.176.683</td>
+</tr>
+<tr class="even">
+<td>ATR14 Wilder</td>
+<td>10,93 $</td>
+</tr>
+<tr class="odd">
+<td>RSI14 Wilder</td>
+<td>49,61</td>
+</tr>
+</tbody>
+</table></div>
+<p>Se utilizan 501 sesiones sin ajuste por dividendos para las señales. Los cincuenta datos recientes se contrastan con la historia larga: 48 solapamientos coinciden a un centavo; el 16 de octubre difiere dos centavos y se toma la captura más reciente. La antigua captura de cierre 291,99 se conserva como versión previa, no se presenta como cierre vigente.</p>
+<p>Se cumplen los filtros intermedios: cierre superior a EMA50 y EMA20 superior a EMA50, retroceso dentro de 8–50%, volumen suficiente, precio y tamaño superiores a mínimos. La lectura larga es favorable: cierre y EMA50 sobre EMA200, cuya pendiente en veinte sesiones es positiva. RSI es contexto, no un veto. El beneficio TTM y el FCF mecánico son positivos. Opportunity 85 del scanner permitió investigar; no es aprobación fundamental.</p>
+<p>La sesión del 4 de noviembre cae con 1,75 veces el volumen medio y termina por debajo de EMA20. No se describe una estabilización que aún no se ha producido. <strong>No hay precio de entrada, stop ni orden aprobados.</strong> Una señal técnica posterior no resuelve por sí sola la valoración. Stage 3.5 tendría que partir de una señal prospectiva verificable y del presupuesto de riesgo del conjunto, sin inventar retrospectivamente un trigger.</p>
+<p>El calendario oficial consultado no anuncia otra presentación de resultados. El último resultado fue el 29 de octubre; no se fabrica una fecha futura ni se convierte una fecha desconocida en un veto fundamental automático. Dividendo de 0,625: registro 9 de noviembre, pago 17; son fechas distintas de resultados. Los bonos también apuntan a cierre el 17. Se revisarán al confirmarse, sin considerar ya recibidos sus fondos. [6,14]</p>
+<p>Qué cambiaría el juicio: guía financiera 2027 que confirme la prima contratada y su conversión en caja; mayor certeza de rentabilidad después de reposición; ejecución y coste de 8 y 9; contratos largos adicionales con tarifa y capital coherentes; precio más favorable sin deterioro económico. Una guía fuerte sólo para un año aumenta ese año, no automáticamente la perpetuidad.</p>
+<p>Qué invalidaría el caso: incumplimientos relevantes de clientes, pérdida de disponibilidad o base de gas que erosione las tarifas, inversión o financiación superior a la capacidad de caja, contratos de expansión sin retorno sobre el coste de capital, o cambio regulatorio que reduzca de forma material la vida económica. Las recompras no compensan estos fallos.</p>
+<p><strong>Conclusión:</strong> la investigación puede cerrarse en observación y la búsqueda puede seguir. LNG tiene activos valiosos, crecimiento operativo y un 2027 comercialmente bien cubierto. El precio actual se puede defender con hipótesis favorables, pero no deja una holgura robusta después de impuestos, inversión, renovación y minoritarios. No se fuerza una compra ni se conserva una valoración vacía por información que normalmente debe estimarse.</p>
+<h2 id="fuentes-y-reproducción">Fuentes y reproducción</h2>
+<p>[1] <a href="https://www.sec.gov/Archives/edgar/data/3570/000000357026000038/lng-20260930.htm">10-Q Q3 2026</a></p>
+<p>[2] <a href="https://www.sec.gov/Archives/edgar/data/3570/000000357026000005/lng-20251231.htm">10-K 2025</a></p>
+<p>[3] <a href="https://lngir.cheniere.com/news-events/press-releases/detail/349/cheniere-reports-third-quarter-2026-results-raises-full">Resultados Q3 2026</a></p>
+<p>[4] <a href="https://lngir.cheniere.com/_assets/_c825fb77538e72bc5ef0338780618c98/cheniere/db/778/7578/pdf/10_29_2026_3Q_2026_Earnings_Presentation_vF.pdf">Presentación Q3, pp12 y19</a></p>
+<p>[5] <a href="https://stockanalysis.com/stocks/lng/transcripts/726509-q3-2026/">StockAnalysis/Quartr, llamada y Q&amp;A Q3; fuente secundaria</a></p>
+<p>[6] <a href="https://www.sec.gov/Archives/edgar/data/3570/000119312526444411/d119932dex992.htm">Pricing de bonos del2de noviembre</a></p>
+<p>[7] <a href="https://investor.williams.com/news-releases/news-release-details/williams-delivers-strong-third-quarter-2026-results">Williams Q3 2026</a></p>
+<p>[8] <a href="https://stockanalysis.com/stocks/lng/history/">Historia bursátil LNG</a></p>
+<p>[9] <a href="https://www.sec.gov/Archives/edgar/data/3570/000000357026000014/lng-20260331.htm">10-Q Q1 2026</a></p>
+<p>[10] <a href="https://www.sec.gov/Archives/edgar/data/3570/000000357026000028/lng-20260630.htm">10-Q Q2 2026</a></p>
+<p>[11] <a href="https://www.sec.gov/Archives/edgar/data/3570/000000357025000107/lng-20250930.htm">10-Q Q3 2025</a></p>
+<p>[12] <a href="https://www.sec.gov/Archives/edgar/data/1383650/000138365026000038/cqp-20260930.htm">CQP 10-Q Q3 2026</a></p>
+<p>[13] <a href="https://investors.ventureglobal.com/news/news-details/2026/Venture-Global-Inc--Announces-Timing-of-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx">Convocatoria Venture Global</a></p>
+<p>[14] <a href="https://lngir.cheniere.com/news-events/ir-calendar">Calendario oficial</a></p>
+<p>[15] <a href="https://www.sec.gov/Archives/edgar/data/3570/000000357025000088/a20250624chenierecapital.htm">Revisión de inversión: capital day24junio2025</a></p>
+<p>[16] <a href="https://www.sec.gov/Archives/edgar/data/1693317/000169331726000011/cch-20260930.htm">CCH 10-Q Q3 2026</a></p>
+<p>[17] <a href="https://lngir.cheniere.com/sec-filings/all-sec-filings/content/0000003570-26-000006/cei20254thqtrerex991.htm">Comunicado anual2025, conciliaciónEBITDA</a></p>
+<p>[18] <a href="https://www.reuters.com/business/energy/cheniere-reports-rise-2025-profit-lng-demand-2026-02-26/">Reuters26feb2026: EPS trimestral</a></p>
+<p>[19] <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value=2026">US Treasury, curva diaria2026</a></p>
+<p>[20] <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm">Damodaran: ERP actualizada1nov2026</a></p>
+<p>[21] <a href="https://stockanalysis.com/stocks/cqp/history/">Historia bursátil CQP</a></p>
+<p>[22] <a href="https://stockanalysis.com/stocks/wmb/statistics/">Williams, métricas secundarias</a></p>
+<p>Fuentes adicionales: <a href="https://www.sec.gov/Archives/edgar/data/1383650/000138365026000005/cqp-20251231.htm">CQP 10-K 2025, cascada y propiedad</a>, <a href="https://lngir.cheniere.com/sec-filings/all-sec-filings/content/0000003570-17-000052/cei2016form10-k.htm">Cheniere 10-K 2016, comienzo de SPA</a>, series mensuales ajustadas Yahoo de LNG, CQP y SPY guardadas con fecha de corte.</p>
+<p>Los importes futuros que no son guía se identifican como estimaciones analíticas. El soporte contiene datos seleccionados, fuentes, fórmulas ejecutables, series de mercado, escenarios y pruebas. No redistribuye publicaciones completas de terceros. El valor por acción es condicional, no una promesa de cotización ni una rentabilidad anual.</p>
+<h2 id="soporte-y-alcance-support-and-scope">Soporte y alcance / Support and scope</h2>
+<ul>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/LNG/LNG_website_support_20261105.zip">Paquete derivado para la web / Website-support derivative</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/LNG/WEBSITE_SUPPORT_README.md">Alcance de reproducción / Reproduction scope</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/LNG/model.py">Modelo / Model</a></li>
+<li><a href="https://fundamentalpullback.github.io/research/2026-11-05/LNG/results.json">Resultados / Results</a></li>
+</ul>
+<p>El paquete web excluye copias completas de documentos de terceros y materiales privados de auditoría. No es el ZIP original inmutable. / The website package excludes complete third-party documents and private source-audit materials. It is not the immutable original ZIP.</p>
+</main></body></html>

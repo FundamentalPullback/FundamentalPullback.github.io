@@ -1,0 +1,102 @@
+{
+  "price": 173.02,
+  "reverse_wacc_fixed_base_cashflows": 0.08224658659371137,
+  "uniform_ebit_margin_shift": 0.00517703474852009,
+  "growth_shift_firstfive": 0.007500386166701395,
+  "wacc_sensitivity": {
+    "0.075": 208.07201108098323,
+    "0.08": 182.79836172583126,
+    "0.085079018": 161.83058243337135,
+    "0.09": 144.9073856829258,
+    "0.095": 130.3425787515811,
+    "0.1": 117.86360170363851,
+    "0.105": 107.05314921578513
+  },
+  "strategic_capital_sensitivity": {
+    "0": 171.74425994951866,
+    "0.005": 167.9758285484148,
+    "0.01": 164.20739714731093,
+    "0.015": 160.43896574620703,
+    "0.02": 156.6705343451032
+  },
+  "terminal_ROIC_sensitivity": {
+    "0.12": 149.32862058341965,
+    "0.15": 158.2558865217544,
+    "0.18": 164.20739714731093,
+    "0.22": 169.61786135236227,
+    "0.25": 172.53951202309005,
+    "0.3": 176.11041839842392
+  },
+  "shares_sensitivity": {
+    "15.78075": 167.5293692677285,
+    "16.1": 164.20739714731093,
+    "16.4": 161.20360329705528,
+    "16.7": 158.30773018393452
+  },
+  "wc_no_collection_recovery": 158.58405161932868,
+  "client_receivable_50pct_loss": 162.63198526191167,
+  "shorelight_zero": 163.3074903150128,
+  "shorelight_book": 164.69196236470225,
+  "other_claim_per_10m": 0.6211180124223602,
+  "current_EV_reconciled_assumed_capital": 3622.9045,
+  "EV_normalized_EBIT_TTM": 17.065425469276242,
+  "EV_RBR_TTM": 1.986082528481821,
+  "earnings_growth_normalized_limited": 0.17927908410685411,
+  "capital_buffer_all_upper_release_not_valuation": 167.41481950755937,
+  "joint_scenarios": {
+    "wc_4_5pct_no_strategic": 174.2579071612806,
+    "wacc8_no_strategic": 190.44898963206694,
+    "wc4_5_no_strategic_wacc8": 192.9624854510038,
+    "moderate_stress_wacc9_wc10_margin_minus_50bps": 131.57809092131333
+  },
+  "guide_anchor_timing_sensitivity": {
+    "110": 164.05437332932001,
+    "150": 164.17679238371275,
+    "160": 164.20739714731093,
+    "170": 164.2380019109091
+  },
+  "q4_bridge": {
+    "base": {
+      "reported_fcf": 173.59,
+      "implied_nwc_ratio_ex_cash": 0.05339038766131245,
+      "rbr": 478.134,
+      "ebit": 62.15742,
+      "da": 11,
+      "capex": 16.081,
+      "end_nwc": 126.10199079999995,
+      "dnwc": -127.24300919999999,
+      "fcff": 168.1585,
+      "pv": 167.69690633838852
+    },
+    "bear": {
+      "reported_fcf": 163.59,
+      "implied_nwc_ratio_ex_cash": 0.05279476598755889,
+      "rbr": 463.134,
+      "ebit": 53.26041000000001,
+      "da": 11,
+      "capex": 21.081,
+      "end_nwc": 123.98559929999993,
+      "dnwc": -129.3594007,
+      "fcff": 158.1585,
+      "pv": 157.67527919669953
+    },
+    "bull": {
+      "reported_fcf": 183.59,
+      "implied_nwc_ratio_ex_cash": 0.05424997302195585,
+      "rbr": 493.134,
+      "ebit": 71.50443,
+      "da": 11,
+      "capex": 11.081,
+      "end_nwc": 128.73382249999992,
+      "dnwc": -124.61117750000003,
+      "fcff": 178.1585,
+      "pv": 177.6972959565943
+    }
+  },
+  "valuation_date_convention": "Nov4 after market close; Q4 stub at Nov15 and annual midyear; Q4 cash guide spans Oct-Dec while balance Sep30. No material October capital change claimed known; timing/claim sensitivities explicit.",
+  "capital_classification_bounds": {
+    "possible_deduction_if_8728_not_current": 0.542111801242236,
+    "possible_release_if_8728_already_net_other_bucket": 0.542111801242236,
+    "not_certified_balance": true
+  }
+}

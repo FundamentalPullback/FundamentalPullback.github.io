@@ -1,0 +1,87 @@
+{
+  "reported": {
+    "fleet_oec": {
+      "value": 10000,
+      "source": "S1/S2",
+      "note": "Approximate company OEC; not gross accounting cost"
+    },
+    "gross_debt": {
+      "value": 8080,
+      "source": "S1 Note8",
+      "formula": "4750 notes+1950ABL+744term+550AR+86finance leases"
+    },
+    "financing_obligations": {
+      "value": 99,
+      "source": "S1 Note9"
+    },
+    "fleet_purchase_payables": {
+      "value": 252,
+      "source": "S1 cash-flow supplement"
+    },
+    "cash": {
+      "value": 66,
+      "source": "S1 balance sheet"
+    },
+    "actual_common_shares_oct23": {
+      "value": 33.463396,
+      "source": "S1 cover"
+    }
+  },
+  "company_guidance": {
+    "rental_revenue_2026": {
+      "value": 4512.5,
+      "source": "S2",
+      "formula": "(4475+4550)/2"
+    },
+    "adjusted_ebitda_midpoint": {
+      "value": 2125,
+      "source": "S2"
+    },
+    "net_rental_capex_midpoint": {
+      "value": 1050,
+      "source": "S2"
+    }
+  },
+  "web_research": {
+    "risk_free": {
+      "value": 0.0495,
+      "source": "S5",
+      "date": "2026-11-03"
+    },
+    "uri_beta": {
+      "value": 1.81,
+      "source": "S6",
+      "note": "Vendor beta5Y; capital/debt lease conventions imperfect"
+    },
+    "price": {
+      "value": 158.1,
+      "source": "S7",
+      "date": "2026-11-04"
+    },
+    "latest_risk_free_refresh": {
+      "value": 0.049,
+      "source": "S8",
+      "date": "2026-11-04",
+      "note": "Freshness observation only. Original scenario WACCs/results retained; full5bp lower-WACC diagnostic in independent audit."
+    }
+  },
+  "analyst_estimate": {
+    "scope": "All scenario values in inputs.json, including life, residual, premium, margins, growth, WACC, tax, terminal ROIC/g, working capital, bridge reserves and dilution. They are not company guidance.",
+    "other_net_maintenance_2026": {
+      "value": 130,
+      "anchor": "9M nonrental D&A97 and nonrental capex107; FY estimate includes software/vehicles. Net disposals not assumed to recur at FY25 levels."
+    }
+  },
+  "derived": {
+    "core_ebitda_2026": {
+      "value": 1940,
+      "formula": "2125 -30 SBC -142 fleet gain/PPA -13 recurring transformation/other; approximate"
+    },
+    "core_q3": {
+      "value": 559,
+      "formula": "603 -14SBC -10PPA -17fleet sale gain -2transformation -1other",
+      "note": "Retains the $1m Q3 transaction-cost addback. Fully expensed equivalent is558. No numerical model change."
+    },
+    "physical_cashflow": "See model.py and *_forecast.csv; all reported inputs held separate from assumptions."
+  }
+}

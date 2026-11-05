@@ -1,0 +1,1280 @@
+{
+  "base": {
+    "case": "base",
+    "assumptions": {
+      "fy26_rbr": 1870,
+      "q4_ebit_margin": 0.13,
+      "q4_da": 11,
+      "fy26_capex": 45,
+      "fy26_nwc_ratio": 0.1,
+      "growth_detailed": {
+        "Healthcare": [
+          0.08,
+          0.07,
+          0.06,
+          0.05,
+          0.05
+        ],
+        "Education": [
+          0.05,
+          0.05,
+          0.04,
+          0.04,
+          0.04
+        ],
+        "Commercial": [
+          0.08,
+          0.07,
+          0.06,
+          0.05,
+          0.05
+        ]
+      },
+      "ebit_margin": [
+        0.123,
+        0.126,
+        0.128,
+        0.13,
+        0.13,
+        0.13,
+        0.13,
+        0.13,
+        0.13,
+        0.13
+      ],
+      "nwc_ratio": [
+        0.07,
+        0.07,
+        0.068,
+        0.065,
+        0.06,
+        0.06,
+        0.06,
+        0.06,
+        0.06,
+        0.06
+      ],
+      "da_ratio": 0.02,
+      "capex_ratio": [
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024
+      ],
+      "tax": 0.26,
+      "terminal_growth": 0.03,
+      "terminal_roic": 0.18,
+      "wacc_adjustment": 0,
+      "shares": 16.1,
+      "shorelight_recovery_fraction": 0.65,
+      "oneoff_unbilled_loss": 0,
+      "description": "Organic growth moderates; annual NWC 7% fading to 6%, above December 2025 comparable 4.67%, to reflect performance-fee mix; SBC retained; strategic capital allowance 1% is analyst estimate, not mandatory cash.",
+      "fy26_reported_fcf_guidance_case": 160,
+      "q4_fcf_anchor_enabled": true,
+      "q4_cash_interest": 11.20625,
+      "q4_sbc": 13.5,
+      "q4_interest_tax_shield": 0.28,
+      "fy26_nwc_ratio_note": "Not used when Q4 guide anchor is enabled; resulting closing working capital is implied by estimated conversion and carried unchanged into 2027."
+    },
+    "wacc": 0.08445191600000002,
+    "beta": 1.03095,
+    "ke": 0.09446489500000001,
+    "opening_nwc": 253.34499999999994,
+    "stub": {
+      "reported_fcf": 173.59,
+      "implied_nwc_ratio_ex_cash": 0.05339038766131245,
+      "rbr": 478.134,
+      "ebit": 62.15742,
+      "da": 11,
+      "capex": 16.081,
+      "end_nwc": 126.10199079999995,
+      "dnwc": -127.24300919999999,
+      "fcff": 168.1585,
+      "pv": 167.69690633838852
+    },
+    "rows": [
+      {
+        "year": 2027,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1044.0384187605853,
+          "Education": 568.6372793112381,
+          "Commercial": 390.6775225192843
+        },
+        "segment_growth": {
+          "Healthcare": 0.08,
+          "Education": 0.05,
+          "Commercial": 0.08
+        },
+        "rbr": 2003.3532205911076,
+        "rbr_growth": 0.07131188266904154,
+        "ebit_margin": 0.123,
+        "ebit": 246.41244613270624,
+        "tax": 64.06723599450362,
+        "nopat": 182.34521013820262,
+        "da": 40.06706441182215,
+        "ordinary_ppe_software": 48.080477294186586,
+        "strategic_reinvestment": 20.033532205911076,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 68.11400950009767,
+        "nwc": 168.3694815437416,
+        "dnwc": 42.26749074374166,
+        "unbilled_impairment_cash": 0,
+        "fcff": 112.03077430618544,
+        "pv": 106.20308344232822
+      },
+      {
+        "year": 2028,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1117.1211080738262,
+          "Education": 597.0691432768,
+          "Commercial": 418.0249490956342
+        },
+        "segment_growth": {
+          "Healthcare": 0.07,
+          "Education": 0.05,
+          "Commercial": 0.07
+        },
+        "rbr": 2132.2152004462605,
+        "rbr_growth": 0.06432314508029235,
+        "ebit_margin": 0.126,
+        "ebit": 268.6591152562288,
+        "tax": 69.8513699666195,
+        "nopat": 198.8077452896093,
+        "da": 42.64430400892521,
+        "ordinary_ppe_software": 51.173164810710254,
+        "strategic_reinvestment": 21.322152004462605,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 72.49531681517286,
+        "nwc": 179.19953613217334,
+        "dnwc": 10.830054588431722,
+        "unbilled_impairment_cash": 0,
+        "fcff": 158.12667789492994,
+        "pv": 138.22755775500084
+      },
+      {
+        "year": 2029,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1184.148374558256,
+          "Education": 620.951909007872,
+          "Commercial": 443.1064460413723
+        },
+        "segment_growth": {
+          "Healthcare": 0.06,
+          "Education": 0.04,
+          "Commercial": 0.06
+        },
+        "rbr": 2248.2067296075,
+        "rbr_growth": 0.054399541442610166,
+        "ebit_margin": 0.128,
+        "ebit": 287.77046138976004,
+        "tax": 74.82031996133762,
+        "nopat": 212.95014142842243,
+        "da": 44.96413459215,
+        "ordinary_ppe_software": 53.95696151058001,
+        "strategic_reinvestment": 22.482067296075,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 76.43902880665502,
+        "nwc": 184.451495265277,
+        "dnwc": 5.251959133103668,
+        "unbilled_impairment_cash": 0,
+        "fcff": 176.22328808081372,
+        "pv": 142.0504087948332
+      },
+      {
+        "year": 2030,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1243.3557932861688,
+          "Education": 645.7899853681869,
+          "Commercial": 465.2617683434409
+        },
+        "segment_growth": {
+          "Healthcare": 0.05,
+          "Education": 0.04,
+          "Commercial": 0.05
+        },
+        "rbr": 2354.4075469977965,
+        "rbr_growth": 0.047238012408599594,
+        "ebit_margin": 0.13,
+        "ebit": 306.07298110971357,
+        "tax": 79.57897508852554,
+        "nopat": 226.49400602118803,
+        "da": 47.08815093995593,
+        "ordinary_ppe_software": 56.50578112794712,
+        "strategic_reinvestment": 23.544075469977965,
+        "transition_reinvestment_adjustment": 0.0,
+        "total_capex": 80.04985659792509,
+        "nwc": 186.10139464640952,
+        "dnwc": 1.6498993811325136,
+        "unbilled_impairment_cash": 0,
+        "fcff": 191.88240098208632,
+        "pv": 142.62775003493695
+      },
+      {
+        "year": 2031,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1305.5235829504772,
+          "Education": 671.6215847829144,
+          "Commercial": 488.524856760613
+        },
+        "segment_growth": {
+          "Healthcare": 0.05,
+          "Education": 0.04,
+          "Commercial": 0.05
+        },
+        "rbr": 2465.670024494005,
+        "rbr_growth": 0.04725710195674648,
+        "ebit_margin": 0.13,
+        "ebit": 320.53710318422065,
+        "tax": 83.33964682789738,
+        "nopat": 237.19745635632327,
+        "da": 49.313400489880095,
+        "ordinary_ppe_software": 59.17608058785611,
+        "strategic_reinvestment": 24.656700244940048,
+        "transition_reinvestment_adjustment": 0.0,
+        "total_capex": 83.83278083279616,
+        "nwc": 182.56765710503757,
+        "dnwc": -3.5337375413719485,
+        "unbilled_impairment_cash": 0,
+        "fcff": 206.21181355477913,
+        "pv": 141.3422916590399
+      },
+      {
+        "year": 2032,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1365.5776677661993,
+          "Education": 697.1432050046652,
+          "Commercial": 510.9970001716012
+        },
+        "segment_growth": {
+          "Healthcare": 0.046,
+          "Education": 0.038,
+          "Commercial": 0.046
+        },
+        "rbr": 2573.717872942466,
+        "rbr_growth": 0.04382088737548506,
+        "ebit_margin": 0.13,
+        "ebit": 334.5833234825206,
+        "tax": 86.99166410545536,
+        "nopat": 247.59165937706524,
+        "da": 51.47435745884932,
+        "ordinary_ppe_software": 61.76922895061918,
+        "strategic_reinvestment": 25.73717872942466,
+        "transition_reinvestment_adjustment": -0.5534100797512637,
+        "total_capex": 86.95299760029258,
+        "nwc": 190.56793384544358,
+        "dnwc": 8.000276740406008,
+        "unbilled_impairment_cash": 0,
+        "fcff": 204.112742495216,
+        "pv": 129.0085233834099
+      },
+      {
+        "year": 2033,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1422.9319298123796,
+          "Education": 722.2403603848331,
+          "Commercial": 532.4588741788085
+        },
+        "segment_growth": {
+          "Healthcare": 0.042,
+          "Education": 0.036,
+          "Commercial": 0.042
+        },
+        "rbr": 2677.6311643760214,
+        "rbr_growth": 0.0403747794293996,
+        "ebit_margin": 0.13,
+        "ebit": 348.0920513688828,
+        "tax": 90.50393335590951,
+        "nopat": 257.58811801297327,
+        "da": 53.552623287520426,
+        "ordinary_ppe_software": 64.26314794502451,
+        "strategic_reinvestment": 26.776311643760213,
+        "transition_reinvestment_adjustment": -0.8998486377713193,
+        "total_capex": 90.13961095101341,
+        "nwc": 198.2620721407698,
+        "dnwc": 7.694138295326212,
+        "unbilled_impairment_cash": 0,
+        "fcff": 213.30699205415405,
+        "pv": 124.32059429096766
+      },
+      {
+        "year": 2034,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1477.00334314525,
+          "Education": 746.7965326379175,
+          "Commercial": 552.6923113976032
+        },
+        "segment_growth": {
+          "Healthcare": 0.038,
+          "Education": 0.034,
+          "Commercial": 0.038
+        },
+        "rbr": 2776.492187180771,
+        "rbr_growth": 0.036921075658225444,
+        "ebit_margin": 0.13,
+        "ebit": 360.9439843335002,
+        "tax": 93.84543592671008,
+        "nopat": 267.09854840679014,
+        "da": 55.52984374361542,
+        "ordinary_ppe_software": 66.6358124923385,
+        "strategic_reinvestment": 27.76492187180771,
+        "transition_reinvestment_adjustment": -1.0047089110390204,
+        "total_capex": 93.3960254531072,
+        "nwc": 205.58212110643572,
+        "dnwc": 7.320048965665933,
+        "unbilled_impairment_cash": 0,
+        "fcff": 221.9123177316324,
+        "pv": 119.26392417066256
+      },
+      {
+        "year": 2035,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1527.2214568121885,
+          "Education": 770.6940216823309,
+          "Commercial": 571.4838499851218
+        },
+        "segment_growth": {
+          "Healthcare": 0.034,
+          "Education": 0.032,
+          "Commercial": 0.034
+        },
+        "rbr": 2869.399328479641,
+        "rbr_growth": 0.03346205752993936,
+        "ebit_margin": 0.13,
+        "ebit": 373.02191270235335,
+        "tax": 96.98569730261187,
+        "nopat": 276.0362153997415,
+        "da": 57.387986569592826,
+        "ordinary_ppe_software": 68.86558388351139,
+        "strategic_reinvestment": 28.693993284796413,
+        "transition_reinvestment_adjustment": -0.8358043698788493,
+        "total_capex": 96.72377279842897,
+        "nwc": 212.4613218700262,
+        "dnwc": 6.8792007635904895,
+        "unbilled_impairment_cash": 0,
+        "fcff": 229.82122840731486,
+        "pv": 113.8957521141437
+      },
+      {
+        "year": 2036,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1573.0381005165543,
+          "Education": 793.8148423328008,
+          "Commercial": 588.6283654846754
+        },
+        "segment_growth": {
+          "Healthcare": 0.03,
+          "Education": 0.03,
+          "Commercial": 0.03
+        },
+        "rbr": 2955.4813083340305,
+        "rbr_growth": 0.030000000000000027,
+        "ebit_margin": 0.13,
+        "ebit": 384.212570083424,
+        "tax": 99.89526822169023,
+        "nopat": 284.31730186173377,
+        "da": 59.10962616668061,
+        "ordinary_ppe_software": 70.93155140001673,
+        "strategic_reinvestment": 29.554813083340306,
+        "transition_reinvestment_adjustment": -0.3643609958216061,
+        "total_capex": 100.12200348753544,
+        "nwc": 218.83516152612702,
+        "dnwc": 6.373839656100813,
+        "unbilled_impairment_cash": 0,
+        "fcff": 236.93108488477816,
+        "pv": 108.27523320727124
+      }
+    ],
+    "terminal": {
+      "nopat": 292.8468209175858,
+      "roic": 0.18,
+      "growth": 0.03,
+      "reinvestment": 48.8078034862643,
+      "fcff": 244.03901743132147,
+      "unlevered_value": 4481.734259476221,
+      "pv": 2048.109568880723,
+      "implied_invested_capital": 1626.9267828754766
+    },
+    "operating_ev": 3481.021594071706,
+    "bridge": {
+      "cash_excess": 0,
+      "shorelight": 14.4885,
+      "debt": 815,
+      "current_earnout": 18.551,
+      "net_noncurrent_comp_and_other": 9.492000000000004,
+      "additional_deferred_acquisition_reserve": 8.728,
+      "total": -837.2824999999999
+    },
+    "equity": 2643.7390940717064,
+    "per_share": 164.20739714731093,
+    "upside": -0.050934012557444674,
+    "terminal_weight": 0.5883645112597753
+  },
+  "bear": {
+    "case": "bear",
+    "assumptions": {
+      "fy26_rbr": 1855,
+      "q4_ebit_margin": 0.115,
+      "q4_da": 11,
+      "fy26_capex": 50,
+      "fy26_nwc_ratio": 0.12,
+      "growth_detailed": {
+        "Healthcare": [
+          0,
+          0.02,
+          0.03,
+          0.03,
+          0.03
+        ],
+        "Education": [
+          -0.02,
+          0,
+          0.02,
+          0.03,
+          0.03
+        ],
+        "Commercial": [
+          -0.05,
+          0,
+          0.02,
+          0.03,
+          0.03
+        ]
+      },
+      "ebit_margin": [
+        0.095,
+        0.1,
+        0.105,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11
+      ],
+      "nwc_ratio": [
+        0.12,
+        0.12,
+        0.115,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11
+      ],
+      "da_ratio": 0.02,
+      "capex_ratio": [
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028
+      ],
+      "tax": 0.27,
+      "terminal_growth": 0.02,
+      "terminal_roic": 0.12,
+      "wacc_adjustment": 0.01,
+      "shares": 16.4,
+      "shorelight_recovery_fraction": 0,
+      "oneoff_unbilled_loss": 26.75594,
+      "description": "Orders and margin weaken; persistent high WC and half concentrated client receivable impairment; Q4 assumes lower end of management cash guide, not a cash floor. Strategic allowance fades to sustainable terminal investment.",
+      "fy26_reported_fcf_guidance_case": 150,
+      "q4_fcf_anchor_enabled": true,
+      "q4_cash_interest": 11.20625,
+      "q4_sbc": 13.5,
+      "q4_interest_tax_shield": 0.28,
+      "fy26_nwc_ratio_note": "Not used when Q4 guide anchor is enabled; resulting closing working capital is implied by estimated conversion and carried unchanged into 2027."
+    },
+    "wacc": 0.09445191600000001,
+    "beta": 1.03095,
+    "ke": 0.09446489500000001,
+    "opening_nwc": 253.34499999999994,
+    "stub": {
+      "reported_fcf": 163.59,
+      "implied_nwc_ratio_ex_cash": 0.05279476598755889,
+      "rbr": 463.134,
+      "ebit": 53.26041000000001,
+      "da": 11,
+      "capex": 21.081,
+      "end_nwc": 123.98559929999993,
+      "dnwc": -129.3594007,
+      "fcff": 158.1585,
+      "pv": 157.67527919669953
+    },
+    "rows": [
+      {
+        "year": 2027,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 958.7514170331469,
+          "Education": 526.5243888437736,
+          "Commercial": 341.0298585107706
+        },
+        "segment_growth": {
+          "Healthcare": 0,
+          "Education": -0.02,
+          "Commercial": -0.05
+        },
+        "rbr": 1826.3056643876912,
+        "rbr_growth": -0.015468644534937348,
+        "ebit_margin": 0.095,
+        "ebit": 173.49903811683066,
+        "tax": 46.844740291544284,
+        "nopat": 126.65429782528638,
+        "da": 36.52611328775382,
+        "ordinary_ppe_software": 51.13655860285535,
+        "strategic_reinvestment": 21.915667972652294,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 73.05222657550765,
+        "nwc": 244.80500969039858,
+        "dnwc": 120.81941039039864,
+        "unbilled_impairment_cash": 26.75594,
+        "fcff": -57.44716585286608,
+        "pv": -54.13046405695459
+      },
+      {
+        "year": 2028,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 977.9264453738099,
+          "Education": 526.5243888437736,
+          "Commercial": 341.0298585107706
+        },
+        "segment_growth": {
+          "Healthcare": 0.02,
+          "Education": 0,
+          "Commercial": 0
+        },
+        "rbr": 1845.4806927283541,
+        "rbr_growth": 0.010499353265211342,
+        "ebit_margin": 0.1,
+        "ebit": 184.54806927283542,
+        "tax": 49.827978703665565,
+        "nopat": 134.72009056916986,
+        "da": 36.909613854567084,
+        "ordinary_ppe_software": 51.673459396393916,
+        "strategic_reinvestment": 22.145768312740252,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 73.81922770913417,
+        "nwc": 247.37530396823155,
+        "dnwc": 2.5702942778329714,
+        "unbilled_impairment_cash": 0,
+        "fcff": 95.2401824367698,
+        "pv": 81.99675683210056
+      },
+      {
+        "year": 2029,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1007.2642387350242,
+          "Education": 537.0548766206491,
+          "Commercial": 347.85045568098604
+        },
+        "segment_growth": {
+          "Healthcare": 0.03,
+          "Education": 0.02,
+          "Commercial": 0.02
+        },
+        "rbr": 1892.1695710366594,
+        "rbr_growth": 0.025299033738077403,
+        "ebit_margin": 0.105,
+        "ebit": 198.67780495884924,
+        "tax": 53.643007338889305,
+        "nopat": 145.03479761995993,
+        "da": 37.84339142073319,
+        "ordinary_ppe_software": 52.98074798902646,
+        "strategic_reinvestment": 22.706034852439913,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 75.68678284146637,
+        "nwc": 244.1728122741077,
+        "dnwc": -3.202491694123836,
+        "unbilled_impairment_cash": 0,
+        "fcff": 110.39389789335058,
+        "pv": 86.84100461114693
+      },
+      {
+        "year": 2030,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1037.482165897075,
+          "Education": 553.1665229192686,
+          "Commercial": 358.28596935141564
+        },
+        "segment_growth": {
+          "Healthcare": 0.03,
+          "Education": 0.03,
+          "Commercial": 0.03
+        },
+        "rbr": 1948.9346581677592,
+        "rbr_growth": 0.030000000000000027,
+        "ebit_margin": 0.11,
+        "ebit": 214.3828123984535,
+        "tax": 57.883359347582456,
+        "nopat": 156.49945305087104,
+        "da": 38.97869316335518,
+        "ordinary_ppe_software": 54.57017042869726,
+        "strategic_reinvestment": 23.38721589801311,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 77.95738632671038,
+        "nwc": 241.75332335149216,
+        "dnwc": -2.4194889226155567,
+        "unbilled_impairment_cash": 0,
+        "fcff": 119.94024881013141,
+        "pv": 86.20809143585228
+      },
+      {
+        "year": 2031,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1068.6066308739873,
+          "Education": 569.7615186068466,
+          "Commercial": 369.0345484319581
+        },
+        "segment_growth": {
+          "Healthcare": 0.03,
+          "Education": 0.03,
+          "Commercial": 0.03
+        },
+        "rbr": 2007.402697912792,
+        "rbr_growth": 0.030000000000000027,
+        "ebit_margin": 0.11,
+        "ebit": 220.81429677040714,
+        "tax": 59.61986012800992,
+        "nopat": 161.19443664239722,
+        "da": 40.148053958255844,
+        "ordinary_ppe_software": 56.20727554155818,
+        "strategic_reinvestment": 24.088832374953505,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 80.29610791651169,
+        "nwc": 249.00592305203696,
+        "dnwc": 7.252599700544806,
+        "unbilled_impairment_cash": 0,
+        "fcff": 113.79378298359657,
+        "pv": 74.73171251676078
+      },
+      {
+        "year": 2032,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1098.527616538459,
+          "Education": 585.7148411278383,
+          "Commercial": 379.36751578805297
+        },
+        "segment_growth": {
+          "Healthcare": 0.028,
+          "Education": 0.028,
+          "Commercial": 0.028
+        },
+        "rbr": 2063.6099734543504,
+        "rbr_growth": 0.028000000000000025,
+        "ebit_margin": 0.11,
+        "ebit": 226.99709707997854,
+        "tax": 61.28921621159421,
+        "nopat": 165.70788086838434,
+        "da": 41.272199469087006,
+        "ordinary_ppe_software": 57.78107925672181,
+        "strategic_reinvestment": 24.763319681452206,
+        "transition_reinvestment_adjustment": -4.125277033962667,
+        "total_capex": 78.41912190421135,
+        "nwc": 255.97808889749402,
+        "dnwc": 6.972165845457056,
+        "unbilled_impairment_cash": 0,
+        "fcff": 121.58879258780294,
+        "pv": 72.9597368544118
+      },
+      {
+        "year": 2033,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1127.089334568459,
+          "Education": 600.9434269971622,
+          "Commercial": 389.23107119854234
+        },
+        "segment_growth": {
+          "Healthcare": 0.026,
+          "Education": 0.026,
+          "Commercial": 0.026
+        },
+        "rbr": 2117.2638327641635,
+        "rbr_growth": 0.026000000000000023,
+        "ebit_margin": 0.11,
+        "ebit": 232.899021604058,
+        "tax": 62.882735833095666,
+        "nopat": 170.01628577096233,
+        "da": 42.34527665528327,
+        "ordinary_ppe_software": 59.28338731739658,
+        "strategic_reinvestment": 25.40716599316996,
+        "transition_reinvestment_adjustment": -8.265863735249743,
+        "total_capex": 76.4246895753168,
+        "nwc": 262.63351920882883,
+        "dnwc": 6.655430311334811,
+        "unbilled_impairment_cash": 0,
+        "fcff": 129.281442539594,
+        "pv": 70.88089890788943
+      },
+      {
+        "year": 2034,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1154.139478598102,
+          "Education": 615.3660692450941,
+          "Commercial": 398.57261690730735
+        },
+        "segment_growth": {
+          "Healthcare": 0.024,
+          "Education": 0.024,
+          "Commercial": 0.024
+        },
+        "rbr": 2168.078164750503,
+        "rbr_growth": 0.02400000000000002,
+        "ebit_margin": 0.11,
+        "ebit": 238.48859812255535,
+        "tax": 64.39192149308994,
+        "nopat": 174.0966766294654,
+        "da": 43.361563295010065,
+        "ordinary_ppe_software": 60.70618861301409,
+        "strategic_reinvestment": 26.01693797700604,
+        "transition_reinvestment_adjustment": -12.389192990666627,
+        "total_capex": 74.3339335993535,
+        "nwc": 268.9367236698407,
+        "dnwc": 6.303204461011887,
+        "unbilled_impairment_cash": 0,
+        "fcff": 136.82110186411006,
+        "pv": 68.54084037198048
+      },
+      {
+        "year": 2035,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1179.5305471272602,
+          "Education": 628.9041227684862,
+          "Commercial": 407.3412144792681
+        },
+        "segment_growth": {
+          "Healthcare": 0.022,
+          "Education": 0.022,
+          "Commercial": 0.022
+        },
+        "rbr": 2215.7758843750144,
+        "rbr_growth": 0.02200000000000002,
+        "ebit_margin": 0.11,
+        "ebit": 243.7353472812516,
+        "tax": 65.80854376593794,
+        "nopat": 177.92680351531365,
+        "da": 44.31551768750029,
+        "ordinary_ppe_software": 62.0417247625004,
+        "strategic_reinvestment": 26.589310612500174,
+        "transition_reinvestment_adjustment": -16.46212668454762,
+        "total_capex": 72.16890869045295,
+        "nwc": 274.8533315905772,
+        "dnwc": 5.91660792073651,
+        "unbilled_impairment_cash": 0,
+        "fcff": 144.15680459162448,
+        "pv": 65.98341707460796
+      },
+      {
+        "year": 2036,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1203.1211580698055,
+          "Education": 641.482205223856,
+          "Commercial": 415.48803876885347
+        },
+        "segment_growth": {
+          "Healthcare": 0.02,
+          "Education": 0.02,
+          "Commercial": 0.02
+        },
+        "rbr": 2260.091402062515,
+        "rbr_growth": 0.02000000000000024,
+        "ebit_margin": 0.11,
+        "ebit": 248.61005422687666,
+        "tax": 67.1247146412567,
+        "nopat": 181.48533958561995,
+        "da": 45.2018280412503,
+        "ordinary_ppe_software": 63.28255925775042,
+        "strategic_reinvestment": 27.121096824750182,
+        "transition_reinvestment_adjustment": -20.45133807545858,
+        "total_capex": 69.95231800704202,
+        "nwc": 280.35039822238883,
+        "dnwc": 5.497066631811606,
+        "unbilled_impairment_cash": 0,
+        "fcff": 151.23778298801665,
+        "pv": 63.25039935451337
+      }
+    ],
+    "terminal": {
+      "nopat": 185.11504637733236,
+      "roic": 0.12,
+      "growth": 0.02,
+      "reinvestment": 30.852507729555395,
+      "fcff": 154.26253864777698,
+      "unlevered_value": 2071.975402859706,
+      "pv": 866.5379053724237,
+      "implied_invested_capital": 1542.6253864777698
+    },
+    "operating_ev": 1641.475578471432,
+    "bridge": {
+      "cash_excess": 0,
+      "shorelight": 0.0,
+      "debt": 815,
+      "current_earnout": 18.551,
+      "net_noncurrent_comp_and_other": 9.492000000000004,
+      "additional_deferred_acquisition_reserve": 8.728,
+      "total": -851.771
+    },
+    "equity": 789.7045784714321,
+    "per_share": 48.15271819947757,
+    "upside": -0.7216927626894141,
+    "terminal_weight": 0.5279017956388711
+  },
+  "bull": {
+    "case": "bull",
+    "assumptions": {
+      "fy26_rbr": 1885,
+      "q4_ebit_margin": 0.145,
+      "q4_da": 11,
+      "fy26_capex": 40,
+      "fy26_nwc_ratio": 0.08,
+      "growth_detailed": {
+        "Healthcare": [
+          0.12,
+          0.11,
+          0.1,
+          0.09,
+          0.08
+        ],
+        "Education": [
+          0.08,
+          0.07,
+          0.06,
+          0.06,
+          0.05
+        ],
+        "Commercial": [
+          0.12,
+          0.11,
+          0.1,
+          0.09,
+          0.08
+        ]
+      },
+      "ebit_margin": [
+        0.135,
+        0.14,
+        0.145,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "nwc_ratio": [
+        0.05,
+        0.05,
+        0.047,
+        0.047,
+        0.045,
+        0.045,
+        0.045,
+        0.045,
+        0.045,
+        0.045
+      ],
+      "da_ratio": 0.02,
+      "capex_ratio": [
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024
+      ],
+      "tax": 0.25,
+      "terminal_growth": 0.03,
+      "terminal_roic": 0.22,
+      "wacc_adjustment": -0.005,
+      "shares": 16.1,
+      "shorelight_recovery_fraction": 1,
+      "oneoff_unbilled_loss": 0,
+      "description": "Growth, delivery productivity and collections improve; margin 15% retains SBC, annual NWC normalizes toward 4.5%; high end of FY2026 cash guide; no guaranteed outcome.",
+      "fy26_reported_fcf_guidance_case": 170,
+      "q4_fcf_anchor_enabled": true,
+      "q4_cash_interest": 11.20625,
+      "q4_sbc": 13.5,
+      "q4_interest_tax_shield": 0.28,
+      "fy26_nwc_ratio_note": "Not used when Q4 guide anchor is enabled; resulting closing working capital is implied by estimated conversion and carried unchanged into 2027."
+    },
+    "wacc": 0.07945191600000001,
+    "beta": 1.03095,
+    "ke": 0.09446489500000001,
+    "opening_nwc": 253.34499999999994,
+    "stub": {
+      "reported_fcf": 183.59,
+      "implied_nwc_ratio_ex_cash": 0.05424997302195585,
+      "rbr": 493.134,
+      "ebit": 71.50443,
+      "da": 11,
+      "capex": 11.081,
+      "end_nwc": 128.73382249999992,
+      "dnwc": -124.61117750000003,
+      "fcff": 178.1585,
+      "pv": 177.6972959565943
+    },
+    "rows": [
+      {
+        "year": 2027,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1091.6114296114963,
+          "Education": 589.5167501430413,
+          "Commercial": 408.2378665364609
+        },
+        "segment_growth": {
+          "Healthcare": 0.12,
+          "Education": 0.08,
+          "Commercial": 0.12
+        },
+        "rbr": 2089.3660462909984,
+        "rbr_growth": 0.1084170006848797,
+        "ebit_margin": 0.135,
+        "ebit": 282.0644162492848,
+        "tax": 70.5161040623212,
+        "nopat": 211.5483121869636,
+        "da": 41.78732092581997,
+        "ordinary_ppe_software": 50.14478511098396,
+        "strategic_reinvestment": 16.71492837032799,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 66.85971348131196,
+        "nwc": 133.81100809242233,
+        "dnwc": 5.07718559242241,
+        "unbilled_impairment_cash": 0,
+        "fcff": 181.3987340390492,
+        "pv": 172.48703625243635
+      },
+      {
+        "year": 2028,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1211.688686868761,
+          "Education": 630.7829226530542,
+          "Commercial": 453.1440318554716
+        },
+        "segment_growth": {
+          "Healthcare": 0.11,
+          "Education": 0.07,
+          "Commercial": 0.11
+        },
+        "rbr": 2295.615641377287,
+        "rbr_growth": 0.09871395941004146,
+        "ebit_margin": 0.14,
+        "ebit": 321.3861897928202,
+        "tax": 80.34654744820506,
+        "nopat": 241.03964234461512,
+        "da": 45.91231282754574,
+        "ordinary_ppe_software": 55.09477539305489,
+        "strategic_reinvestment": 18.364925131018296,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 73.45970052407318,
+        "nwc": 147.02002251387444,
+        "dnwc": 13.20901442145211,
+        "unbilled_impairment_cash": 0,
+        "fcff": 200.28324022663557,
+        "pv": 176.426376906868
+      },
+      {
+        "year": 2029,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1332.8575555556372,
+          "Education": 668.6298980122375,
+          "Commercial": 498.4584350410188
+        },
+        "segment_growth": {
+          "Healthcare": 0.1,
+          "Education": 0.06,
+          "Commercial": 0.1
+        },
+        "rbr": 2499.9458886088933,
+        "rbr_growth": 0.08900891052868753,
+        "ebit_margin": 0.145,
+        "ebit": 362.4921538482895,
+        "tax": 90.62303846207237,
+        "nopat": 271.8691153862171,
+        "da": 49.99891777217787,
+        "ordinary_ppe_software": 59.99870132661344,
+        "strategic_reinvestment": 19.999567108871148,
+        "transition_reinvestment_adjustment": 0.0,
+        "total_capex": 79.99826843548459,
+        "nwc": 152.6062768779108,
+        "dnwc": 5.586254364036364,
+        "unbilled_impairment_cash": 0,
+        "fcff": 236.28351035887405,
+        "pv": 192.81864183116184
+      },
+      {
+        "year": 2030,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1452.8147355556446,
+          "Education": 708.7476918929718,
+          "Commercial": 543.3196941947106
+        },
+        "segment_growth": {
+          "Healthcare": 0.09,
+          "Education": 0.06,
+          "Commercial": 0.09
+        },
+        "rbr": 2704.882121643327,
+        "rbr_growth": 0.08197626755372367,
+        "ebit_margin": 0.15,
+        "ebit": 405.73231824649906,
+        "tax": 101.43307956162477,
+        "nopat": 304.2992386848743,
+        "da": 54.09764243286654,
+        "ordinary_ppe_software": 64.91717091943985,
+        "strategic_reinvestment": 21.639056973146616,
+        "transition_reinvestment_adjustment": -0.0,
+        "total_capex": 86.55622789258646,
+        "nwc": 165.11636986163202,
+        "dnwc": 12.510092983721222,
+        "unbilled_impairment_cash": 0,
+        "fcff": 259.33056024143315,
+        "pv": 196.04961864695156
+      },
+      {
+        "year": 2031,
+        "phase": "detailed",
+        "segments": {
+          "Healthcare": 1569.0399144000962,
+          "Education": 744.1850764876204,
+          "Commercial": 586.7852697302875
+        },
+        "segment_growth": {
+          "Healthcare": 0.08,
+          "Education": 0.05,
+          "Commercial": 0.08
+        },
+        "rbr": 2900.0102606180044,
+        "rbr_growth": 0.07213923941947198,
+        "ebit_margin": 0.15,
+        "ebit": 435.0015390927006,
+        "tax": 108.75038477317514,
+        "nopat": 326.2511543195255,
+        "da": 58.000205212360086,
+        "ordinary_ppe_software": 69.6002462548321,
+        "strategic_reinvestment": 23.200082084944036,
+        "transition_reinvestment_adjustment": 0.0,
+        "total_capex": 92.80032833977614,
+        "nwc": 171.22771867791838,
+        "dnwc": 6.111348816286352,
+        "unbilled_impairment_cash": 0,
+        "fcff": 285.3396823758231,
+        "pv": 199.8348254672602
+      },
+      {
+        "year": 2032,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1678.872708408103,
+          "Education": 778.417590006051,
+          "Commercial": 627.8602386114077
+        },
+        "segment_growth": {
+          "Healthcare": 0.07,
+          "Education": 0.046,
+          "Commercial": 0.07
+        },
+        "rbr": 3085.150537025562,
+        "rbr_growth": 0.06384124874375563,
+        "ebit_margin": 0.15,
+        "ebit": 462.77258055383425,
+        "tax": 115.69314513845859,
+        "nopat": 347.07943541537566,
+        "da": 61.70301074051124,
+        "ordinary_ppe_software": 74.04361288861348,
+        "strategic_reinvestment": 24.681204296204495,
+        "transition_reinvestment_adjustment": -0.12483678079420742,
+        "total_capex": 98.59998040402377,
+        "nwc": 182.15911005786117,
+        "dnwc": 10.931391379942795,
+        "unbilled_impairment_cash": 0,
+        "fcff": 299.2510743719203,
+        "pv": 194.1517988960132
+      },
+      {
+        "year": 2033,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1779.6050709125893,
+          "Education": 811.1111287863051,
+          "Commercial": 665.5318529280921
+        },
+        "segment_growth": {
+          "Healthcare": 0.06,
+          "Education": 0.042,
+          "Commercial": 0.06
+        },
+        "rbr": 3256.2480526269865,
+        "rbr_growth": 0.05545840099147381,
+        "ebit_margin": 0.15,
+        "ebit": 488.43720789404796,
+        "tax": 122.109301973512,
+        "nopat": 366.32790592053595,
+        "da": 65.12496105253973,
+        "ordinary_ppe_software": 78.14995326304768,
+        "strategic_reinvestment": 26.049984421015893,
+        "transition_reinvestment_adjustment": 0.3106303005750448,
+        "total_capex": 104.51056798463861,
+        "nwc": 192.26136302770007,
+        "dnwc": 10.1022529698389,
+        "unbilled_impairment_cash": 0,
+        "fcff": 316.8400460185982,
+        "pv": 190.4331129303114
+      },
+      {
+        "year": 2034,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1868.5853244582188,
+          "Education": 841.9333516801847,
+          "Commercial": 698.8084455744968
+        },
+        "segment_growth": {
+          "Healthcare": 0.049999999999999996,
+          "Education": 0.038,
+          "Commercial": 0.049999999999999996
+        },
+        "rbr": 3409.3271217129004,
+        "rbr_growth": 0.047010874666755464,
+        "ebit_margin": 0.15,
+        "ebit": 511.39906825693504,
+        "tax": 127.84976706423379,
+        "nopat": 383.54930119270125,
+        "da": 68.18654243425802,
+        "ordinary_ppe_software": 81.82385092110961,
+        "strategic_reinvestment": 27.274616973703203,
+        "transition_reinvestment_adjustment": 1.4111262805552627,
+        "total_capex": 110.50959417536808,
+        "nwc": 201.29973786825485,
+        "dnwc": 9.03837484055478,
+        "unbilled_impairment_cash": 0,
+        "fcff": 332.18787461103636,
+        "pv": 184.96215358900443
+      },
+      {
+        "year": 2035,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 1943.3287374365475,
+          "Education": 870.559085637311,
+          "Commercial": 726.7607833974766
+        },
+        "segment_growth": {
+          "Healthcare": 0.04,
+          "Education": 0.034,
+          "Commercial": 0.04
+        },
+        "rbr": 3540.6486064713354,
+        "rbr_growth": 0.038518299966609604,
+        "ebit_margin": 0.15,
+        "ebit": 531.0972909707003,
+        "tax": 132.77432274267505,
+        "nopat": 398.3229682280253,
+        "da": 70.81297212942671,
+        "ordinary_ppe_software": 84.97556655531206,
+        "strategic_reinvestment": 28.325188851770683,
+        "transition_reinvestment_adjustment": 3.2602091445323143,
+        "total_capex": 116.56096455161504,
+        "nwc": 209.05346155466415,
+        "dnwc": 7.753723686409302,
+        "unbilled_impairment_cash": 0,
+        "fcff": 344.82125211942764,
+        "pv": 177.86472305839487
+      },
+      {
+        "year": 2036,
+        "phase": "transition",
+        "segments": {
+          "Healthcare": 2001.628599559644,
+          "Education": 896.6758582064303,
+          "Commercial": 748.563606899401
+        },
+        "segment_growth": {
+          "Healthcare": 0.03,
+          "Education": 0.03,
+          "Commercial": 0.03
+        },
+        "rbr": 3646.8680646654752,
+        "rbr_growth": 0.030000000000000027,
+        "ebit_margin": 0.15,
+        "ebit": 547.0302096998213,
+        "tax": 136.7575524249553,
+        "nopat": 410.272657274866,
+        "da": 72.93736129330951,
+        "ordinary_ppe_software": 87.52483355197141,
+        "strategic_reinvestment": 29.1749445173238,
+        "transition_reinvestment_adjustment": 5.912250823947012,
+        "total_capex": 122.61202889324221,
+        "nwc": 215.32506540130407,
+        "dnwc": 6.27160384663992,
+        "unbilled_impairment_cash": 0,
+        "fcff": 354.3263858282934,
+        "pv": 169.31521593228447
+      }
+    ],
+    "terminal": {
+      "nopat": 422.580836993112,
+      "roic": 0.22,
+      "growth": 0.03,
+      "reinvestment": 57.62465958996981,
+      "fcff": 364.9561774031422,
+      "unlevered_value": 7380.02097639942,
+      "pv": 3526.550364807967,
+      "implied_invested_capital": 1920.8219863323272
+    },
+    "operating_ev": 5558.591164275247,
+    "bridge": {
+      "cash_excess": 0,
+      "shorelight": 22.29,
+      "debt": 815,
+      "current_earnout": 18.551,
+      "net_noncurrent_comp_and_other": 9.492000000000004,
+      "additional_deferred_acquisition_reserve": 8.728,
+      "total": -829.481
+    },
+    "equity": 4729.110164275247,
+    "per_share": 293.7335505761023,
+    "upside": 0.6976855310143468,
+    "terminal_weight": 0.6344324057277153
+  }
+}

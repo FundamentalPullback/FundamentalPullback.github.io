@@ -1,0 +1,122 @@
+{
+  "source_ledger": "sources/source_ledger.json",
+  "citations": [
+    {
+      "sheet": "Cover",
+      "range": "A5",
+      "source_ids": [
+        "S03"
+      ],
+      "label": "reported",
+      "note": "Nov 4 regular close, not scanner or after-hours snapshot."
+    },
+    {
+      "sheet": "Cover",
+      "range": "B5:E5",
+      "source_ids": [
+        "S15",
+        "S16"
+      ],
+      "label": "derived",
+      "note": "Audited case results. Bear forced renewal is not a rational-management forecast or floor."
+    },
+    {
+      "sheet": "Bridge",
+      "range": "B6:D6, B17:D17",
+      "source_ids": [
+        "S01"
+      ],
+      "label": "reported",
+      "note": "Sep 30 cash and Oct 26 issued shares; October Volare purchase separately deducted."
+    },
+    {
+      "sheet": "Bridge",
+      "range": "B7:D15",
+      "source_ids": [
+        "S01",
+        "S07",
+        "S10",
+        "S11",
+        "S15"
+      ],
+      "label": "mixed_reported_and_estimated",
+      "note": "Operating cash, pending sales, investments and dated claims proxy. See report treatment and source ledger."
+    },
+    {
+      "sheet": "Bridge",
+      "range": "B19:D21",
+      "source_ids": [
+        "S01",
+        "S07"
+      ],
+      "label": "derived",
+      "note": "Current conversion rate from Q3; initial indenture rate differs. Bank retained, principal/option removed on full conversion."
+    },
+    {
+      "sheet": "Base FCFF; Bear FCFF; Bull FCFF",
+      "range": "C5:O175, U5:V175",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S15",
+        "S16"
+      ],
+      "label": "derived",
+      "note": "Fleet-cohort engine outputs. Inputs in assumptions.json; Q4 guidance explicit; later drydock dates inferred; all disclosed commitments counted once."
+    },
+    {
+      "sheet": "Base FCFF; Bear FCFF; Bull FCFF",
+      "range": "H5:J175, P5:T175",
+      "source_ids": [
+        "S16"
+      ],
+      "label": "derived_live_formulas",
+      "note": "EBIT, NOPAT, FCFF, PV and reconciliation formulas; tax amount is an engine input."
+    },
+    {
+      "sheet": "Terminal",
+      "range": "B5:D27",
+      "source_ids": [
+        "S15",
+        "S16"
+      ],
+      "label": "derived",
+      "note": "Opening hull and NWC capital by vintage; ordinary scrap, ROIC, net reinvestment and actual cohort tail. Not statutory invested capital or marginal project IRR."
+    },
+    {
+      "sheet": "Sensitivity; Assumptions",
+      "range": "all",
+      "source_ids": [
+        "S04",
+        "S05",
+        "S06",
+        "S15",
+        "S16"
+      ],
+      "label": "analyst_estimate_and_derived",
+      "note": "Judgment-led USD WACC and sustainable TCE. High-value raw claims-proxy sensitivities require conversion reassessment."
+    },
+    {
+      "sheet": "Fleet",
+      "range": "A5:H95",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S15"
+      ],
+      "label": "mixed_reported_and_estimated",
+      "note": "Names, classes and build years reported; exact within-period delivery/sale timing and historical replacement proxies estimated."
+    },
+    {
+      "sheet": "Historical",
+      "range": "A5:D9",
+      "source_ids": [
+        "S02",
+        "S12",
+        "S13"
+      ],
+      "label": "reported",
+      "note": "Annual nominal spot/pool TCE, not a composition-adjusted sustainable-rate forecast."
+    }
+  ]
+}

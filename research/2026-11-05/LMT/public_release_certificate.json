@@ -1,0 +1,32 @@
+{
+  "scope": "Editorial privacy and portable audit path only; original archive retained",
+  "original_archive": "LMT_valuation_20261105_FINAL.zip",
+  "original_sha256": "f6129b8dcd290a27918c1f7d4ca54bb45d04d86fa8d7b554943b17e30141fc3a",
+  "changed_original_members_before_manifest": [
+    "independent_audit/independent_tests.py",
+    "independent_audit/offline_replay.json",
+    "render_report.py",
+    "report.html",
+    "report.md"
+  ],
+  "changes": [
+    "Audit root resolved relative to its package, replacing machine-specific absolute path.",
+    "Historic replay metadata masks private temporary extraction directory.",
+    "Two verified source URLs repaired; renderer preserves URL bytes."
+  ],
+  "replay_calculation_steps": 7,
+  "independent_checks": 1040,
+  "independent_all_passed": true,
+  "all_other_original_members_byte_identical": true,
+  "economic_files_byte_identical": {
+    "results.json": true,
+    "beta_estimate.json": true,
+    "technical.json": true,
+    "comparables.json": true,
+    "QA.json": true,
+    "model.py": true,
+    "model/inputs.json": true
+  },
+  "report_changes": "Exactly two URL repairs: /f 35/ to /f35/ and /713938-q 3-2026/ to /713938-q3-2026/. No visible economic wording/numbers changed.",
+  "renderer_change": "Preserve URLs before applying the existing prose spacing rule."
+}

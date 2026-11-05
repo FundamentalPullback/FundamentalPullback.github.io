@@ -1,0 +1,286 @@
+{
+  "cutoff": "2026-11-05T02:00:00Z",
+  "inputs": [
+    {
+      "fields": "reported guidance, CAS/FAS, FCF",
+      "label": "company_guidance",
+      "source": "https://lockheedmartin.gcs-web.com/news-releases/news-release-details/lockheed-martin-reports-third-quarter-2026-financial-results",
+      "locator": "2026 outlook; GAAP reconciliation; selected pension data"
+    },
+    {
+      "fields": "cash/debt/pension/program reserves/contract balances/shares",
+      "label": "reported",
+      "source": "https://www.sec.gov/Archives/edgar/data/936468/000162828026066928/lmt-20260927.htm",
+      "locator": "cover, balance sheet, notes3,5,8,9,11,13"
+    },
+    {
+      "fields": "nonqualified pension PBO/trust; historical CAS",
+      "label": "reported",
+      "source": "https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm",
+      "locator": "Note11 retirement plans"
+    },
+    {
+      "fields": "Ultra closing and consideration",
+      "label": "reported",
+      "source": "https://news.lockheedmartin.com/2026-10-26-Lockheed-Martin-Closes-Ultra-Maritime-Acquisition",
+      "locator": "closing release; price from July6 announcement"
+    },
+    {
+      "fields": "Ultra revenue784",
+      "label": "web_research",
+      "source": "https://www.ft.com/content/7f74fbea-89fa-4444-b092-fccfae4c0cea",
+      "locator": "search-accessible excerpt; full direct HTTP returned403; not company-confirmed"
+    },
+    {
+      "fields": "Ultra EBITDA150-160",
+      "label": "web_research",
+      "source": "https://ionanalytics.com/insights/mergermarket/advent-targets-strategics-in-ultra-maritime-sale/",
+      "locator": "March20 report, anonymous sources, prospective2026"
+    },
+    {
+      "fields": "revenue outlook high-single-digit2027; pension contribution>1000; fiscal benefit multiyear",
+      "label": "management_case",
+      "source": "https://stockanalysis.com/stocks/lmt/transcripts/713938-q3-2026/",
+      "locator": "Oct22 CFO Q&A; secondary transcript; not formal2027 guidance"
+    },
+    {
+      "fields": "risk_free4.90",
+      "label": "reported",
+      "source": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "locator": "row11/04/2026 column10Yr"
+    },
+    {
+      "fields": "ERP4.41",
+      "label": "web_research",
+      "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "locator": "November1 update; own Treasury5.29 basis disclosed"
+    },
+    {
+      "fields": "price595.04 and OHLC",
+      "label": "web_research",
+      "source": "https://stockanalysis.com/stocks/lmt/history/",
+      "locator": "Nov4 regular close, refreshedNov5; prior snapshot594.71 retained"
+    },
+    {
+      "fields": "beta0.0586",
+      "label": "derived",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/LMT?range=5y&interval=1mo",
+      "locator": "beta.py, monthly adjusted close versus SPY, incompleteNov excluded"
+    },
+    {
+      "fields": "all forecasts, normalized beta, debt spread, cash reserve, pension recovery term, support reserves, terminal economics",
+      "label": "analyst_estimate",
+      "source": "assumptions.md",
+      "locator": "model/inputs.json and model.py; no consensus values used"
+    },
+    {
+      "fields": "GD FY2025 sales52550/EBIT5356;9M26 sales42141/EBIT4407;9M25sales38171/EBIT3904;debt7016/cash4388",
+      "label": "reported",
+      "source": [
+        "https://www.sec.gov/Archives/edgar/data/40533/000004053326000036/gd-20261004exhibit991.htm",
+        "https://www.sec.gov/Archives/edgar/data/40533/000004053326000003/gd-20251231exhibit991.htm"
+      ],
+      "locator": "Consolidated Statements of Earnings; Balance Sheet; ExhibitG debt reconciliation"
+    },
+    {
+      "fields": "NOC FY2025 sales41954/EBIT4511;9M26sales31879/EBIT3354;9M25sales30242/EBIT3240;debt14433+764;cash3744",
+      "label": "reported",
+      "source": [
+        "https://www.sec.gov/Archives/edgar/data/1133421/000113342126000037/noc-09302026xearningsrelea.htm",
+        "https://northropgrumman.gcs-web.com/node/43526/html"
+      ],
+      "locator": "Consolidated Statements of Operations and Financial Position"
+    },
+    {
+      "fields": "NOC/GD market cap74630/98450 for comparable context",
+      "label": "web_research",
+      "source": [
+        "https://stockanalysis.com/stocks/noc/statistics/",
+        "https://stockanalysis.com/stocks/gd/statistics/"
+      ],
+      "locator": "Nov4 statistics snapshot; primary financial statements supersede incompatible aggregator EBIT/debt"
+    }
+  ],
+  "snapshots": [
+    {
+      "path": "sources/GD_monthly.json",
+      "bytes": 7683,
+      "sha256": "18ce2be11cf0428cf426ce24f9ddda7157986618aed4062e4fb9d5ed4e26cedf"
+    },
+    {
+      "path": "sources/LMT_daily.json",
+      "bytes": 51684,
+      "sha256": "904b7b9b29df6a85e33a1b8f15f5ab6a6ca569523d487fa8b4659281e1842659"
+    },
+    {
+      "path": "sources/LMT_monthly.json",
+      "bytes": 7483,
+      "sha256": "82a72a4d385c9c3245f28360bb926a85d5216e3bce9fb9c7ab1846a7a1bbe23e"
+    },
+    {
+      "path": "sources/LMT_ohlcv_selected.json",
+      "bytes": 86529,
+      "sha256": "040f534d7150fc0096960397da43889bd52ea45e55963088d742d6c7ca4b5e87"
+    },
+    {
+      "path": "sources/NOC_monthly.json",
+      "bytes": 7622,
+      "sha256": "4e6446a8e3d88b946023ef1c29b74f766475c8d209b4a300aca523b3c1d14567"
+    },
+    {
+      "path": "sources/SPY_monthly.json",
+      "bytes": 7952,
+      "sha256": "7d691ca798c9a5ceab7eeb5edc2ec83ab18a35a3f6720af7b7fd2d11a5235a0c"
+    },
+    {
+      "path": "sources/acquisition.html",
+      "bytes": 91771,
+      "sha256": "2095e7cf4de94b175ef67b7ab027a4e5bc37b8468fc7ee355560d4920d5a6dde"
+    },
+    {
+      "path": "sources/acquisition.txt",
+      "bytes": 8529,
+      "sha256": "394f6cbf169a2202e9fee6da428749682bad610982409193e8d96502d2d03c51"
+    },
+    {
+      "path": "sources/annual.html",
+      "bytes": 2909294,
+      "sha256": "c357cc0fa992e62df3dfe3539e452c9157fbce4c5d0c8cb05b88cb0ce3f63a20"
+    },
+    {
+      "path": "sources/annual.txt",
+      "bytes": 502184,
+      "sha256": "845d7900902e3cea08207c79d83c6c3e926ee210df8f451636afb79f944fed38"
+    },
+    {
+      "path": "sources/calendar.html",
+      "bytes": 101141,
+      "sha256": "4ce5378bba7d318dcae480b9bafcada04dc847f9d922bc8a368fc007012ad4a0"
+    },
+    {
+      "path": "sources/closing.html",
+      "bytes": 113695,
+      "sha256": "b8046bcab08afa72d0aa0e0933d12ab7d9162f64030c7e5eb9add9d8d49882e4"
+    },
+    {
+      "path": "sources/closing.txt",
+      "bytes": 7031,
+      "sha256": "b4f5b9cd5de72251ee84856c3a017e78f113f1880cf1bc97448260b9b1a84579"
+    },
+    {
+      "path": "sources/erp.html",
+      "bytes": 17007,
+      "sha256": "9e39dfdebe1d02540b6fa7f6c5733c57b533eb4bf58ab3ffed9d014c6772a972"
+    },
+    {
+      "path": "sources/gd_fy25.html",
+      "bytes": 376816,
+      "sha256": "16cb6866a0722da620da4f4041f44b71bc203cf332a34306607b597a75ff4242"
+    },
+    {
+      "path": "sources/gd_release.html",
+      "bytes": 335538,
+      "sha256": "1230dcc0bd932ff1dd33d626d9acbba90df6e72b313700253ba1d9994f4f8b04"
+    },
+    {
+      "path": "sources/gdstatistics.html",
+      "bytes": 126379,
+      "sha256": "52181f7d6d671bed25fa53d196fc30c5f4e47453710caa796b73c15d24faf0b8"
+    },
+    {
+      "path": "sources/gdstatistics.txt",
+      "bytes": 6511,
+      "sha256": "c0bc2ff2a13e0c689d78691c97d7fbcbede42a39c0f6a5e3d7d63e197ce2d72d"
+    },
+    {
+      "path": "sources/midterms.html",
+      "bytes": 929804,
+      "sha256": "e8a7bc3a5bf0976f066ad4a1932d486e8d257d5e7166f48fa615c9fed3a71719"
+    },
+    {
+      "path": "sources/noc_fy25.html",
+      "bytes": 3144372,
+      "sha256": "3b5c61724758ad55c815316c3fa3fec95d0c8538f0a32dfcc3561a2b4a6a232e"
+    },
+    {
+      "path": "sources/noc_release.html",
+      "bytes": 521517,
+      "sha256": "53c93909986261c2fe0e8b861e2f5c20dc4712f01e38863b2267a0ce6042e2f8"
+    },
+    {
+      "path": "sources/nocstatistics.html",
+      "bytes": 126463,
+      "sha256": "813504a7bd743d34c2e310f85ce62c55b9106e1e88f218542eb47094a6f5e42b"
+    },
+    {
+      "path": "sources/nocstatistics.txt",
+      "bytes": 6529,
+      "sha256": "009ad11e7f2afd7ee6655769e4616e2b34115bbd7efd1405fedd3f8c47345507"
+    },
+    {
+      "path": "sources/price.html",
+      "bytes": 115732,
+      "sha256": "f7573d3b66448c0102c33285f56f889417e1661f71fc2382d6c8115b30721785"
+    },
+    {
+      "path": "sources/q3.html",
+      "bytes": 1703058,
+      "sha256": "c9dc6e03ba0e8369542610f95685006df8baf743dc572fb6465764f20e70c9c3"
+    },
+    {
+      "path": "sources/q3.txt",
+      "bytes": 184615,
+      "sha256": "3a0f4129e7b70a421c05a3b0d6bfea6a9a3a519f64176885a353883e3b955bfb"
+    },
+    {
+      "path": "sources/release.html",
+      "bytes": 993108,
+      "sha256": "d01d9b8775fea3d7302db22868ea195c570d4c160809eca5ffb55333ae514264"
+    },
+    {
+      "path": "sources/release.txt",
+      "bytes": 43264,
+      "sha256": "d7c5b5ec1fbc8d6d538382501fd7f3d2e7f6a41ec36b0e72ae9ccd58946f6391"
+    },
+    {
+      "path": "sources/statistics.html",
+      "bytes": 126657,
+      "sha256": "e1cd6f490dfdf8a665467a15aabf5d53eeafbe6b8b8539a63b4605fb9973e902"
+    },
+    {
+      "path": "sources/statistics.txt",
+      "bytes": 6624,
+      "sha256": "e4cc31d2a251df05333baa5ac205d3a35c7dca006fb3ec01909a0cbac47d2e2e"
+    },
+    {
+      "path": "sources/transcript.html",
+      "bytes": 305054,
+      "sha256": "b8e7940ba0d2e0b9fd537d4c668ff36a886f0712c04b7b8ebcc5c57818f1bceb"
+    },
+    {
+      "path": "sources/transcript.txt",
+      "bytes": 57434,
+      "sha256": "928da086a155059743effd0fa40b376688c7b400e26ed38f266f053cb1143318"
+    },
+    {
+      "path": "sources/treasury.html",
+      "bytes": 1357820,
+      "sha256": "15838554c8b0476a7d02e72a1caeeec5809cee4e59a2be9c663c01ebe6abd07e"
+    },
+    {
+      "path": "sources/treasury_rows.json",
+      "bytes": 1421,
+      "sha256": "597a2ac8c0ddcb1134a779e41e1ed20743a59768dc0bd13f1692f6371d2bb4cc"
+    },
+    {
+      "path": "sources/ultra_estimates.html",
+      "bytes": 163829,
+      "sha256": "09a3d4693cbcb569ed5f67770a7fe4122e63c6fbda1f6dcc574aba9b6c89f0a4"
+    },
+    {
+      "path": "sources/urls.json",
+      "bytes": 2520,
+      "sha256": "5742361cf6e4c754cff4fd08c5e6f327bcde084892427e12989f2b59c60113c0"
+    }
+  ]
+}

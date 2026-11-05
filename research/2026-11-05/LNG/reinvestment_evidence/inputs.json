@@ -1,0 +1,459 @@
+{
+  "as_of": "2026-11-05",
+  "purpose": "Source-reviewed reinvestment inputs for a consolidated FCFF valuation, not a completed valuation",
+  "units": "USD millions unless specified",
+  "years": [
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "sources": {
+    "annual2025": {
+      "url": "https://www.sec.gov/Archives/edgar/data/3570/000000357026000005/lng-20251231.htm",
+      "sections": [
+        "Accounting policy p66",
+        "PP&E note 5 p71\u201372",
+        "Leases note 11 p84\u201385",
+        "Commitments note 19 p95\u201396",
+        "Regasification revenues note 12 p86",
+        "Business pp8\u20139"
+      ]
+    },
+    "q3_2026": {
+      "url": "https://www.sec.gov/Archives/edgar/data/3570/000000357026000038/lng-20260930.htm",
+      "sections": [
+        "PP&E note 4 p12",
+        "Leases note 9 pp20\u201321",
+        "Business and MD&A",
+        "Investing cash flows"
+      ]
+    },
+    "cch_q3_2026": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1693317/000169331726000011/cch-20260930.htm",
+      "sections": [
+        "Note 1",
+        "PP&E note 4 p9",
+        "Business p21",
+        "Construction and investing cash flow p28"
+      ]
+    },
+    "cqp_q3_2026": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1383650/000138365026000038/cqp-20260930.htm",
+      "sections": [
+        "Business p22"
+      ]
+    },
+    "cqp_annual2025": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1383650/000138365026000005/cqp-20251231.htm",
+      "sections": [
+        "Regasification revenues pp75\u201376"
+      ]
+    },
+    "fid_june2025": {
+      "url": "https://www.sec.gov/Archives/edgar/data/3570/000000357025000088/a20250624chenierecapital.htm",
+      "sections": [
+        "Slides 7\u20138",
+        "Slide 13"
+      ]
+    },
+    "q3_slides": {
+      "url": "https://lngir.cheniere.com/_assets/_c825fb77538e72bc5ef0338780618c98/cheniere/db/778/7578/pdf/10_29_2026_3Q_2026_Earnings_Presentation_vF.pdf",
+      "sections": [
+        "Slides 5\u20136",
+        "Slide 12",
+        "Slide 19",
+        "Slide 21"
+      ]
+    },
+    "annual2016": {
+      "url": "https://lngir.cheniere.com/sec-filings/all-sec-filings/content/0000003570-17-000052/cei2016form10-k.htm",
+      "sections": [
+        "Significant events p41 (web lines1420\u20131426)"
+      ],
+      "note": "Historical commencement anchor, not proof no amendments since 2016."
+    }
+  },
+  "reported_facts": {
+    "epc_at_dec2025": {
+      "stage3_contract_price_approx": 6000,
+      "stage3_remaining_obligations_approx": 700,
+      "trains8_9_contract_price_approx": 2900,
+      "trains8_9_remaining_obligations_approx": 1600,
+      "source": "annual2025",
+      "classification": "reported approximate amounts; not current cash remaining"
+    },
+    "cash_project_spend_ex_interest_9m2026": {
+      "stage3_approx": 1100,
+      "trains8_9": 709,
+      "gregory": 245,
+      "spl_development": 203,
+      "source": "q3_2026"
+    },
+    "cash_project_spend_ex_interest_fy2025": {
+      "stage3_approx": 1300,
+      "trains8_9_approx": 1000,
+      "source": "annual2025"
+    },
+    "cch_prior_transfer": {
+      "date": "June 2025",
+      "construction_in_process": 373,
+      "other_noncurrent_assets": 124,
+      "source": "cch_q3_2026",
+      "warning": "Internal contribution is not incremental consolidated capex; not sufficient to derive exact pre-2025 paid cash."
+    },
+    "depreciation": {
+      "2025_expense": 1320,
+      "q3_2026_expense": 391,
+      "q3_2026_da": 393,
+      "9m2026_expense": 1140,
+      "9m2026_da": 1146,
+      "source": [
+        "annual2025",
+        "q3_2026"
+      ]
+    },
+    "ppe_sept2026": {
+      "terminal_pipeline_gross": 41313,
+      "construction_in_process": 3243,
+      "marine_finance_lease_gross": 1605,
+      "source": "q3_2026"
+    },
+    "asset_lives_years": {
+      "terminal_pipeline": [
+        6,
+        50
+      ],
+      "marine_finance_leases": [
+        5,
+        20
+      ],
+      "other_fixed_assets": [
+        3,
+        10
+      ],
+      "source": "annual2025"
+    },
+    "finance_leases": {
+      "liability_pv_sept2026": 1385,
+      "payments_2027_2030": [
+        205,
+        207,
+        208,
+        208
+      ],
+      "9m2026_new_rou": 545,
+      "fy2025_new_rou": 472,
+      "fy2025_amortization": 90,
+      "fy2025_interest": 52,
+      "weighted_remaining_years": 9.4,
+      "weighted_discount_rate": 0.062,
+      "source": [
+        "annual2025",
+        "q3_2026"
+      ]
+    },
+    "operating_leases": {
+      "liability_pv_sept2026": 2370,
+      "fy2025_lease_cost": 796,
+      "9m2026_new_rou": 95,
+      "payments_2027_2030": [
+        626,
+        425,
+        315,
+        300
+      ],
+      "source": [
+        "annual2025",
+        "q3_2026"
+      ]
+    },
+    "future_not_commenced_leases": {
+      "undiscounted_minimum_approx": 6000,
+      "maximum_term_years": 15,
+      "split_and_timing_disclosed": false,
+      "source": "q3_2026"
+    },
+    "contracts": {
+      "consolidated_production_coverage_pct_approx": 95,
+      "consolidated_weighted_remaining_years_approx": 15,
+      "cqp_third_party_coverage_pct_approx": 90,
+      "cqp_weighted_remaining_years_approx": 13,
+      "cch_third_party_coverage_pct_greater_than": 80,
+      "cch_weighted_remaining_years_approx": 15,
+      "coverage_horizon": "mid-2030s",
+      "source": [
+        "q3_2026",
+        "cqp_q3_2026",
+        "cch_q3_2026"
+      ]
+    }
+  },
+  "management_indications": {
+    "june2025_project_cost_envelopes_rounded": {
+      "stage3": 7000,
+      "trains8_9_and_debottlenecking": 3000,
+      "source": "fid_june2025",
+      "classification": "Management rounded planning estimate, not exact current cash-to-complete; financing-cost scope not separately reconciled"
+    },
+    "8_9": {
+      "overall_completion_pct": 58.6,
+      "construction_completion_pct": 14.5,
+      "substantial_completion": "2H 2028",
+      "no_2027_production": true,
+      "source": [
+        "q3_2026",
+        "q3_slides"
+      ]
+    },
+    "post_8_9_normal_runrate": {
+      "capacity_mtpa": [
+        60,
+        63
+      ],
+      "ebitda": [
+        7300,
+        8000
+      ],
+      "parent_distributable_cash_flow": [
+        4100,
+        4700
+      ],
+      "source": "q3_slides",
+      "classification": "Management run-rate scenario, not dated annual guidance or FCFF"
+    }
+  },
+  "analyst_estimates": {
+    "classification": "ALL future annual capex, D&A and terminal haircut figures here are analyst estimates, NOT management guidance or contractual payment schedule.",
+    "committed_project_cash_capex_ex_capitalized_interest": {
+      "midscale_8_9_and_debottlenecking": {
+        "low": [
+          500,
+          250,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          650,
+          400,
+          50,
+          0,
+          0
+        ],
+        "high": [
+          900,
+          600,
+          100,
+          0,
+          0
+        ]
+      },
+      "stage3_closeout": {
+        "low": [
+          25,
+          0,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          50,
+          25,
+          0,
+          0,
+          0
+        ],
+        "high": [
+          100,
+          50,
+          0,
+          0,
+          0
+        ]
+      },
+      "gregory_power_upgrades": {
+        "low": [
+          150,
+          50,
+          0,
+          0,
+          0
+        ],
+        "base": [
+          250,
+          150,
+          50,
+          0,
+          0
+        ],
+        "high": [
+          400,
+          250,
+          100,
+          0,
+          0
+        ]
+      }
+    },
+    "committed_project_totals": {
+      "low": [
+        675,
+        300,
+        0,
+        0,
+        0
+      ],
+      "base": [
+        950,
+        575,
+        100,
+        0,
+        0
+      ],
+      "high": [
+        1400,
+        900,
+        200,
+        0,
+        0
+      ]
+    },
+    "committed_project_total_five_years": {
+      "low": 975,
+      "base": 1625,
+      "high": 2500
+    },
+    "capitalized_owned_asset_sustaining": {
+      "low": [
+        150,
+        175,
+        200,
+        225,
+        250
+      ],
+      "base": [
+        200,
+        225,
+        250,
+        275,
+        300
+      ],
+      "high": [
+        300,
+        350,
+        400,
+        425,
+        450
+      ]
+    },
+    "future_finance_lease_rou_cash_equivalent_capex": {
+      "low": [
+        150,
+        150,
+        100,
+        100,
+        100
+      ],
+      "base": [
+        300,
+        300,
+        250,
+        200,
+        200
+      ],
+      "high": [
+        600,
+        600,
+        500,
+        400,
+        400
+      ]
+    },
+    "total_reinvestment_before_working_capital": {
+      "low": [
+        975,
+        625,
+        300,
+        325,
+        350
+      ],
+      "base": [
+        1450,
+        1100,
+        600,
+        475,
+        500
+      ],
+      "high": [
+        2300,
+        1850,
+        1100,
+        825,
+        850
+      ]
+    },
+    "da_accepted_working_base": [
+      1650,
+      1720,
+      1800,
+      1820,
+      1840
+    ],
+    "da_reasonable_range": {
+      "2027": [
+        1550,
+        1800
+      ],
+      "2029": [
+        1650,
+        1950
+      ],
+      "2031": [
+        1750,
+        2050
+      ],
+      "2036": [
+        1900,
+        2200
+      ]
+    },
+    "terminal_reinvestment": {
+      "formula": "Gross capex + delta working capital = D&A + NOPAT * g / ROIC",
+      "terminal_incremental_roic_range": [
+        0.08,
+        0.12
+      ],
+      "classification": "Valuation convention, not issuer forecast; combined owned sustaining and finance-lease replacement must be faded toward D&A, with no extra full lease replacement added again."
+    },
+    "terminal_recontracting_aggregate_normalized_ebitda_haircut": {
+      "favorable": 0,
+      "base": 0.05,
+      "adverse_range": [
+        0.12,
+        0.15
+      ],
+      "base_decomposition_example": {
+        "profit_share_repriced": 0.35,
+        "lower_margin_on_repriced_slice": 0.15,
+        "aggregate_reduction": 0.0525
+      },
+      "timing": "No blanket expiry haircut in 2027\u20132031. Introduce rollover pressure around 2036 and a sustainable terminal case, not an asserted exact cliff."
+    }
+  },
+  "exclusions": [
+    "No optional SPL Phase 1 or CCL Phase 1 capex, EBITDA or tax shields in funded base.",
+    "No subtraction of all $6bn future undiscounted lease commitments from current equity bridge.",
+    "No deduction of current finance principal repayments in FCFF if $1.385bn existing liability is deducted in bridge.",
+    "No operating-lease ROU capex if corresponding rents remain operating costs.",
+    "No use of 2026 peak distributable cash flow as perpetual free cash flow.",
+    "No $136m EBITDA loss assumed from 2029 TUA expiry: FY2025 corresponding O&M was $134m."
+  ],
+  "limitations": [
+    "No detailed current project cash-to-complete or annual Gregory budget disclosed in reviewed sources.",
+    "No future lease operating/finance split or vessel-delivery schedule disclosed in reviewed sources.",
+    "No complete amended contract-by-contract expiry ladder reconstructed.",
+    "Numerical ranges are intended to permit scenario valuation, not certify a single exact forecast."
+  ]
+}

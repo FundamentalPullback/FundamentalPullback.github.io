@@ -1,0 +1,338 @@
+{
+  "as_of": "2026-11-05T02:56:00Z",
+  "price": 173.02,
+  "price_date": "2026-11-04",
+  "cash_balance_date": "2026-09-30",
+  "units": "USD millions, shares millions, pricesUSD",
+  "history": {
+    "ttm_rbr": 1824.146,
+    "ttm_gaap_revenue": 1860.223,
+    "ttm_ebit": 195.845,
+    "ttm_earnout_remeasurement": 15.613,
+    "ttm_deferred_comp_market_cost": 4.9,
+    "deferred_comp_cost_rounding_note": "5.7FY2025+4.2YTD2026-5.0YTD2025; rounded narrative",
+    "lease_gain_removed": 4.063,
+    "prior_ttm_ebit": 175.436,
+    "prior_earnout_remeasurement": -0.015,
+    "ttm_da": 39.56,
+    "ttm_acquired_amortization": 15.272,
+    "ttm_capex": 36.738,
+    "ttm_sbc": 50.22,
+    "ttm_fcfe_cash_diagnostic": 104.998,
+    "prior_ttm_deferred_comp_market_cost": 4.6
+  },
+  "current": {
+    "rbr_9m": 1391.866,
+    "rbr_9m_segments": {
+      "Healthcare": 713.265,
+      "Education": 404.828,
+      "Commercial": 273.773
+    },
+    "q3_mix": {
+      "Healthcare": 0.5300548373324934,
+      "Education": 0.28596860635250915,
+      "Commercial": 0.1839765563149976
+    },
+    "cash": 25.618,
+    "debt": 815,
+    "earnout": 27.947,
+    "current_earnout": 18.551,
+    "noncurrent_other_comp_bucket": 62.676,
+    "restricted_comp_assets": 53.184,
+    "deferred_acquisition_max_reserve": 8.728,
+    "shorelight_book": 22.29,
+    "other_investments": 0.115,
+    "shares_actual_oct27": 15.78075,
+    "leases": 32.651,
+    "receivables": 218.893,
+    "unbilled": 263.196,
+    "prepaid_operating": 49.010999999999996,
+    "ap": 13.464,
+    "accrued_other": 28.998999999999995,
+    "payroll": 222.596,
+    "deferred_revenue": 38.314,
+    "classification_note": "Operating WC removes derivative asset 1.801 and liability 0.231. Convention: all 8.728 deferred purchase accrual is removed from current accrued liabilities and separately reserved once. Exact location and remaining balance unverified, bounded in sensitivity. This is a classification assumption, not a certified balance."
+  },
+  "market": {
+    "risk_free": 0.049,
+    "erp": 0.0441,
+    "sector_beta_business_unlevered_cash_corrected": 0.81,
+    "sector_beta_computer_unlevered_cash_corrected": 0.96,
+    "selected_beta_unlevered": 0.87,
+    "target_debt": 0.2,
+    "tax": 0.26,
+    "cost_debt": 0.06,
+    "country_premium": 0,
+    "company_premium": 0,
+    "comments": "60% consulting / 40% digital approximately reflects 9M business mix; sector beta proxy, not company regression. Rf 4.90% November 4 and ERP 4.41% November 1 mix dates/reference Treasury; 20% debt target and 6% debt cost are analyst estimates."
+  },
+  "cases": {
+    "base": {
+      "fy26_rbr": 1870,
+      "q4_ebit_margin": 0.13,
+      "q4_da": 11,
+      "fy26_capex": 45,
+      "fy26_nwc_ratio": 0.1,
+      "growth_detailed": {
+        "Healthcare": [
+          0.08,
+          0.07,
+          0.06,
+          0.05,
+          0.05
+        ],
+        "Education": [
+          0.05,
+          0.05,
+          0.04,
+          0.04,
+          0.04
+        ],
+        "Commercial": [
+          0.08,
+          0.07,
+          0.06,
+          0.05,
+          0.05
+        ]
+      },
+      "ebit_margin": [
+        0.123,
+        0.126,
+        0.128,
+        0.13,
+        0.13,
+        0.13,
+        0.13,
+        0.13,
+        0.13,
+        0.13
+      ],
+      "nwc_ratio": [
+        0.07,
+        0.07,
+        0.068,
+        0.065,
+        0.06,
+        0.06,
+        0.06,
+        0.06,
+        0.06,
+        0.06
+      ],
+      "da_ratio": 0.02,
+      "capex_ratio": [
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024
+      ],
+      "tax": 0.26,
+      "terminal_growth": 0.03,
+      "terminal_roic": 0.18,
+      "wacc_adjustment": 0,
+      "shares": 16.1,
+      "shorelight_recovery_fraction": 0.65,
+      "oneoff_unbilled_loss": 0,
+      "description": "Organic growth moderates; annual NWC 7% fading to 6%, above December 2025 comparable 4.67%, to reflect performance-fee mix; SBC retained; strategic capital allowance 1% is analyst estimate, not mandatory cash.",
+      "fy26_reported_fcf_guidance_case": 160,
+      "q4_fcf_anchor_enabled": true,
+      "q4_cash_interest": 11.20625,
+      "q4_sbc": 13.5,
+      "q4_interest_tax_shield": 0.28,
+      "fy26_nwc_ratio_note": "Not used when Q4 guide anchor is enabled; resulting closing working capital is implied by estimated conversion and carried unchanged into 2027."
+    },
+    "bear": {
+      "fy26_rbr": 1855,
+      "q4_ebit_margin": 0.115,
+      "q4_da": 11,
+      "fy26_capex": 50,
+      "fy26_nwc_ratio": 0.12,
+      "growth_detailed": {
+        "Healthcare": [
+          0,
+          0.02,
+          0.03,
+          0.03,
+          0.03
+        ],
+        "Education": [
+          -0.02,
+          0,
+          0.02,
+          0.03,
+          0.03
+        ],
+        "Commercial": [
+          -0.05,
+          0,
+          0.02,
+          0.03,
+          0.03
+        ]
+      },
+      "ebit_margin": [
+        0.095,
+        0.1,
+        0.105,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11
+      ],
+      "nwc_ratio": [
+        0.12,
+        0.12,
+        0.115,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11,
+        0.11
+      ],
+      "da_ratio": 0.02,
+      "capex_ratio": [
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028,
+        0.028
+      ],
+      "tax": 0.27,
+      "terminal_growth": 0.02,
+      "terminal_roic": 0.12,
+      "wacc_adjustment": 0.01,
+      "shares": 16.4,
+      "shorelight_recovery_fraction": 0,
+      "oneoff_unbilled_loss": 26.75594,
+      "description": "Orders and margin weaken; persistent high WC and half concentrated client receivable impairment; Q4 assumes lower end of management cash guide, not a cash floor. Strategic allowance fades to sustainable terminal investment.",
+      "fy26_reported_fcf_guidance_case": 150,
+      "q4_fcf_anchor_enabled": true,
+      "q4_cash_interest": 11.20625,
+      "q4_sbc": 13.5,
+      "q4_interest_tax_shield": 0.28,
+      "fy26_nwc_ratio_note": "Not used when Q4 guide anchor is enabled; resulting closing working capital is implied by estimated conversion and carried unchanged into 2027."
+    },
+    "bull": {
+      "fy26_rbr": 1885,
+      "q4_ebit_margin": 0.145,
+      "q4_da": 11,
+      "fy26_capex": 40,
+      "fy26_nwc_ratio": 0.08,
+      "growth_detailed": {
+        "Healthcare": [
+          0.12,
+          0.11,
+          0.1,
+          0.09,
+          0.08
+        ],
+        "Education": [
+          0.08,
+          0.07,
+          0.06,
+          0.06,
+          0.05
+        ],
+        "Commercial": [
+          0.12,
+          0.11,
+          0.1,
+          0.09,
+          0.08
+        ]
+      },
+      "ebit_margin": [
+        0.135,
+        0.14,
+        0.145,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "nwc_ratio": [
+        0.05,
+        0.05,
+        0.047,
+        0.047,
+        0.045,
+        0.045,
+        0.045,
+        0.045,
+        0.045,
+        0.045
+      ],
+      "da_ratio": 0.02,
+      "capex_ratio": [
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024,
+        0.024
+      ],
+      "tax": 0.25,
+      "terminal_growth": 0.03,
+      "terminal_roic": 0.22,
+      "wacc_adjustment": -0.005,
+      "shares": 16.1,
+      "shorelight_recovery_fraction": 1,
+      "oneoff_unbilled_loss": 0,
+      "description": "Growth, delivery productivity and collections improve; margin 15% retains SBC, annual NWC normalizes toward 4.5%; high end of FY2026 cash guide; no guaranteed outcome.",
+      "fy26_reported_fcf_guidance_case": 170,
+      "q4_fcf_anchor_enabled": true,
+      "q4_cash_interest": 11.20625,
+      "q4_sbc": 13.5,
+      "q4_interest_tax_shield": 0.28,
+      "fy26_nwc_ratio_note": "Not used when Q4 guide anchor is enabled; resulting closing working capital is implied by estimated conversion and carried unchanged into 2027."
+    }
+  },
+  "capital_treatment": {
+    "cash_reserve": 25.618,
+    "noncurrent_bucket_net_reserve": 9.492000000000004,
+    "additional_deferred_acquisition_reserve": 8.728,
+    "leases_in_opex_not_debt_again": true,
+    "derivatives_added": 0,
+    "tax_receivable_added": 0,
+    "tax_rate_cash_statuory_ignores_uncertified_acquisition_tax_benefits": true,
+    "future_sbc_retained_as_cost": true,
+    "prior_awards_denominator_is_estimate_not_certified": true
+  },
+  "economic_posture": "Conditional valuation under independent review. No Stage 3 approval or entry; share count, capital classification, Q4 cash conversion and organic reinvestment are estimates.",
+  "guidance_bridge": {
+    "fy26_reported_fcf_range": [
+      150,
+      170
+    ],
+    "nine_months_reported_fcf": -13.59,
+    "estimated_q4_cash_interest": 11.20625,
+    "estimated_q4_sbc": 13.5,
+    "q4_cash_tax_rate_for_interest_shield": 0.28,
+    "source": "Secondary transcript of CFO statements, cross-checked across three publishers, no primary audio certified",
+    "fcff_conversion_note": "Reported CFO-PPE-software plus cash interest after tax minus noncash SBC to preserve an economic compensation cost. Exact cash tax, transaction, working capital and interest adjustments remain estimates."
+  }
+}

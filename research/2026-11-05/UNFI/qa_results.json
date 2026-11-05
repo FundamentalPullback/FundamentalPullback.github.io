@@ -1,0 +1,50 @@
+{
+  "ten_year_all_cases": true,
+  "wacc_above_growth": true,
+  "terminal_paid_growth": true,
+  "positive_capex_all_cases": true,
+  "bridge_correct": true,
+  "no_free_buybacks": true,
+  "cloud_in_capex_from_EBIT": true,
+  "no_SBC_addback": true,
+  "no_operating_lease_double_deduction": true,
+  "formula_count": 477,
+  "cached_formula_errors": [],
+  "uncached_formulas": [],
+  "excel_python_price_matches": {
+    "base": true,
+    "bear": true,
+    "bull": true
+  },
+  "external_links": 0,
+  "recalculation": "LibreOffice headless completed; formulas retained",
+  "visual_QA": "Prior visual checks valid; final edit changes formula links and snapshot labels, not initial economics.",
+  "browser_render": "Chromium failed due sandbox socket/read-only crashpad restrictions; used LibreOffice PDF rendering instead",
+  "decision_posture": "screen-grade economic uncertainty; independent audit passed with qualifications",
+  "live_input_test": {
+    "test": "Rf4.9% to5.0% in separate copy; deliverable retains4.9%",
+    "base_before": 43.7100555847806,
+    "base_after": 42.9544284813327,
+    "expected_after_python": 42.95442848133272,
+    "WACC_after": 0.0815882,
+    "rf_delivered": 0.049,
+    "links": {
+      "Inputs!B14": "=WACC!B10",
+      "WACC!B9": "=Inputs!B4",
+      "Base!B2": "=Inputs!B14",
+      "Base!B3": "=Inputs!B15",
+      "Base!B4": "=Inputs!B16"
+    },
+    "pass": true
+  },
+  "independent_audit": {
+    "status": "passed_with_qualifications",
+    "engine_controls": 431,
+    "financial_source_checks": 70,
+    "workbook_controls": 341,
+    "workbook_sha256": "4fd4752746dc7a56c1f2b119faa461dad643e6a343936fa3e626f341ff49d2e3",
+    "scope": "conditional research and observation; no Stage3 investment or Stage3.5 approval",
+    "economic_quality": "screen-grade",
+    "report": "independent_audit/report.md"
+  }
+}

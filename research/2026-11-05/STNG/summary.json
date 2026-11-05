@@ -1,0 +1,95 @@
+{
+  "ticker": "STNG",
+  "as_of_market": "2026-11-04",
+  "prepared": "2026-11-05",
+  "currency": "USD",
+  "method": "Bottom-up fleet FCFF: full Q4 2026, five detailed years, five transition years, vintage-aware replacement tail and terminal reinvestment",
+  "model_status": "Independent arithmetic/economic review complete; research release-ready",
+  "decision": {
+    "stage3_price_reasonable_approved": false,
+    "stage35_approved": false,
+    "entryApproved": false,
+    "approved_quantity": 0,
+    "reason": "At 85.05, ordinary sustainable-rate and renewal uncertainty absorb the modest base-case discount. Price-versus-risk judgment under plan section 12; no universal fixed discount imposed.",
+    "review_price_center": 75,
+    "indicative_review_zone": [
+      72,
+      76
+    ],
+    "review_zone_is_fair_value_band": false,
+    "review_zone_is_order_or_trigger": false,
+    "review_rationale": "Anchored to 74.99 at 10% lower normalized rates. Rebuild the fundamental and technical thesis at that time.",
+    "certified_fair_value": null
+  },
+  "market_anchor": {
+    "regular_close": 85.05,
+    "time": "2026-11-04 16:00 America/New_York",
+    "url": "https://stockanalysis.com/stocks/stng/history/",
+    "latest_bar_volume": 894556,
+    "earlier_capture_volume": 894555,
+    "volume_discrepancy_note": "One share between captures; no decision impact. Latest technical packet retained.",
+    "after_hours_observation": 83.43,
+    "after_hours_time": "2026-11-04 19:38 America/New_York",
+    "after_hours_is_regular_close": false
+  },
+  "analytical_values": {
+    "bear_forced_continuity": 17.877507597649995,
+    "base_continuity": 95.4435700563133,
+    "bull_coherent_conversion": 176.85042919818434,
+    "bull_raw_claims_proxy_not_headline": 184.8730717271541,
+    "bear_runoff_sensitivity_not_floor": 49.402575404270166,
+    "central_working_sensitivity_range": [
+      81,
+      95
+    ],
+    "base_upside_pct": 12.220540924530642,
+    "base_discount_pct": 10.889754071626756
+  },
+  "decision_sensitivities": {
+    "five_pct_lower_normal_rates": 85.2152962616,
+    "ten_pct_lower_normal_rates": 74.9870224668,
+    "twenty_year_life": 81.573093451,
+    "future_replacement_one_year_earlier": 92.11591969648208,
+    "future_replacement_one_point_five_year_earlier": 90.3293131035422
+  },
+  "capital_treatment": {
+    "reported_future_commitments_usdm": 1295.9,
+    "all_commitments_deducted_once": true,
+    "sbc_cost_retained": true,
+    "issued_restricted_shares_not_added_again": true,
+    "new_vlcc_jv_future_positive_value": 0,
+    "cash_and_nwc_baseline": "2026-09-30",
+    "october_volare_purchase_deducted_separately": true,
+    "convertible_claim_proxy_usdm": 718.621,
+    "claims_proxy_not_live_market_value": true
+  },
+  "remaining_uncertainty": {
+    "decision_critical": [
+      "Sustainable TCE and future industry supply/demand",
+      "Economic vessel renewal cost, life and management capital discipline",
+      "Avoidable overhead and winding-down costs in a finite-runoff strategy"
+    ],
+    "bounded": [
+      "Future replacement payment lead time",
+      "Convertible option value and settlement method",
+      "Post-2027 survey dates and precise delivery timing",
+      "Taxes, working cash and residual share reconciliation"
+    ],
+    "asset_not_certified": [
+      "New VLCC JV percentage, waterfall, final financing and any additional guarantees. All disclosed funding is charged and no positive future value assumed."
+    ]
+  },
+  "artifacts": {
+    "investment_report": "report/STNG_valoracion_flotas.md",
+    "workbook": "outputs/stng_fleet/STNG_fleet_FCFF.xlsx",
+    "workbook_qa": "outputs/stng_fleet/workbook_qa.json",
+    "source_cell_ledger": "outputs/stng_fleet/model_citations.json",
+    "source_ledger": "sources/source_ledger.json",
+    "independent_audit": "independent_audit.md",
+    "independent_tests": "audit_checks.json",
+    "technical_packet": "technical/review_draft.md",
+    "portable_reproduction": "reproduce.py",
+    "manifest": "manifest.json"
+  },
+  "scope": "Research and review only. No trade, external communication or publication."
+}

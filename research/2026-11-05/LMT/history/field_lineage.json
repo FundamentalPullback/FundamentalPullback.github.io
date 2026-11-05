@@ -1,0 +1,2378 @@
+{
+  "FY2025": {
+    "revenue": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Total sales",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Diluted",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 0,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "reach_forward_loss_addback": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Reach-forward losses on select programs",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Pension settlement charge",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Total business segment operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Other, net",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "FY2024": {
+    "revenue": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Total sales",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Diluted",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 1,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "reach_forward_loss_addback": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Reach-forward losses on select programs",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Pension settlement charge",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Total business segment operating profit",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Other, net",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "FY2023": {
+    "revenue": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Total sales",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Diluted",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 26,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 2,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "reach_forward_loss_addback": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Reach-forward losses on select programs",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "source_id": "fy25",
+      "table_index_zero_based": 29,
+      "row": "Pension settlement charge",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Total business segment operating profit",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "fy25",
+      "table_index_zero_based": 15,
+      "row": "Other, net",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "Q32026": {
+    "revenue": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Total sales",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Diluted",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Total business segment operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Other, net",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "formula": "1 * 9M2026.capex_including_software + -1 * H12026.capex_including_software",
+      "status": "derived"
+    },
+    "cfo": {
+      "formula": "1 * 9M2026.cfo + -1 * H12026.cfo",
+      "status": "derived"
+    },
+    "da": {
+      "formula": "1 * 9M2026.da + -1 * H12026.da",
+      "status": "derived"
+    },
+    "reach_forward_loss_addback": {
+      "formula": "1 * 9M2026.reach_forward_loss_addback + -1 * H12026.reach_forward_loss_addback",
+      "status": "derived"
+    },
+    "sbc": {
+      "formula": "1 * 9M2026.sbc + -1 * H12026.sbc",
+      "status": "derived"
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "Q32025": {
+    "revenue": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Total sales",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Diluted",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Total business segment operating profit",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Other, net",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "r325",
+      "table_index_zero_based": 0,
+      "row": "Cash from operations",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "r325",
+      "table_index_zero_based": 0,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 0,
+      "sign_transform": -1
+    },
+    "da": {
+      "formula": "1 * 9M2025.da + -1 * H12025.da",
+      "status": "derived"
+    },
+    "reach_forward_loss_addback": {
+      "formula": "1 * 9M2025.reach_forward_loss_addback + -1 * H12025.reach_forward_loss_addback",
+      "status": "derived"
+    },
+    "sbc": {
+      "formula": "1 * 9M2025.sbc + -1 * H12025.sbc",
+      "status": "derived"
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "9M2026": {
+    "revenue": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Total sales",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Diluted",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 0,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "reach_forward_loss_addback": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Reach-forward losses on select programs",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Total business segment operating profit",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Other, net",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "9M2025": {
+    "revenue": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Total sales",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Diluted",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 11,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 1,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "reach_forward_loss_addback": {
+      "source_id": "q326",
+      "table_index_zero_based": 14,
+      "row": "Reach-forward losses on select programs",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Total business segment operating profit",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "q326",
+      "table_index_zero_based": 19,
+      "row": "Other, net",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "Q12026": {
+    "revenue": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Sales",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Diluted",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "r126",
+      "table_index_zero_based": 11,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "r126",
+      "table_index_zero_based": 11,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 0,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "r126",
+      "table_index_zero_based": 11,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "r126",
+      "table_index_zero_based": 11,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "row": "Business segment operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "note": "No impairment item in complete bridge; zero reconciling value."
+    },
+    "other_unallocated_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "row": "Other, net",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "reach_forward_loss_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "Q12025": {
+    "revenue": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Sales",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Diluted",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 8,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "r126",
+      "table_index_zero_based": 11,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "r126",
+      "table_index_zero_based": 11,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 1,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "r126",
+      "table_index_zero_based": 11,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "r126",
+      "table_index_zero_based": 11,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "row": "Business segment operating profit",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "note": "No impairment item in complete bridge; zero reconciling value."
+    },
+    "other_unallocated_signed": {
+      "source_id": "r126",
+      "table_index_zero_based": 0,
+      "row": "Other, net",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "reach_forward_loss_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "Q22026": {
+    "revenue": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Sales",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Diluted",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Business segment operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Other, net",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "formula": "1 * H12026.capex_including_software + -1 * Q12026.capex_including_software",
+      "status": "derived"
+    },
+    "cfo": {
+      "formula": "1 * H12026.cfo + -1 * Q12026.cfo",
+      "status": "derived"
+    },
+    "da": {
+      "formula": "1 * H12026.da + -1 * Q12026.da",
+      "status": "derived"
+    },
+    "reach_forward_loss_addback": {
+      "formula": "1 * H12026.reach_forward_loss_addback + -1 * Q12026.reach_forward_loss_addback",
+      "status": "unavailable input"
+    },
+    "sbc": {
+      "formula": "1 * H12026.sbc + -1 * Q12026.sbc",
+      "status": "derived"
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "Q22025": {
+    "revenue": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Sales",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Diluted",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Business segment operating profit",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Other, net",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "formula": "1 * H12025.capex_including_software + -1 * Q12025.capex_including_software",
+      "status": "derived"
+    },
+    "cfo": {
+      "formula": "1 * H12025.cfo + -1 * Q12025.cfo",
+      "status": "derived"
+    },
+    "da": {
+      "formula": "1 * H12025.da + -1 * Q12025.da",
+      "status": "derived"
+    },
+    "reach_forward_loss_addback": {
+      "formula": "1 * H12025.reach_forward_loss_addback + -1 * Q12025.reach_forward_loss_addback",
+      "status": "unavailable input"
+    },
+    "sbc": {
+      "formula": "1 * H12025.sbc + -1 * Q12025.sbc",
+      "status": "derived"
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "H12026": {
+    "revenue": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Sales",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Diluted",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 0,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "reach_forward_loss_addback": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Reach-forward losses on select programs",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Business segment operating profit",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Other, net",
+      "numeric_column_zero_based": 2,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "H12025": {
+    "revenue": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Sales",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Diluted",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 8,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 1,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "reach_forward_loss_addback": {
+      "source_id": "r226",
+      "table_index_zero_based": 13,
+      "row": "Reach-forward losses on select programs",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Business segment operating profit",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "r226",
+      "table_index_zero_based": 0,
+      "row": "Other, net",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "Q42025": {
+    "revenue": {
+      "source_id": "r425",
+      "table_index_zero_based": 9,
+      "row": "Sales",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "r425",
+      "table_index_zero_based": 9,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "r425",
+      "table_index_zero_based": 9,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "r425",
+      "table_index_zero_based": 9,
+      "row": "Diluted",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "r425",
+      "table_index_zero_based": 9,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "r425",
+      "table_index_zero_based": 9,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "r425",
+      "table_index_zero_based": 9,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "r425",
+      "table_index_zero_based": 9,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "r425",
+      "table_index_zero_based": 0,
+      "row": "Business segment operating profit",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "r425",
+      "table_index_zero_based": 0,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "r425",
+      "table_index_zero_based": 0,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "r425",
+      "table_index_zero_based": 0,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "r425",
+      "table_index_zero_based": 0,
+      "row": "Other, net",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "r425",
+      "table_index_zero_based": 0,
+      "row": "Cash from operations",
+      "numeric_column_zero_based": 0,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "r425",
+      "table_index_zero_based": 0,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 0,
+      "sign_transform": -1
+    },
+    "da": {
+      "formula": "1 * FY2025.da + -1 * 9M2025.da",
+      "status": "derived"
+    },
+    "pension_settlement_addback": {
+      "formula": "1 * FY2025.pension_settlement_addback + -1 * 9M2025.pension_settlement_addback",
+      "status": "unavailable input"
+    },
+    "reach_forward_loss_addback": {
+      "formula": "1 * FY2025.reach_forward_loss_addback + -1 * 9M2025.reach_forward_loss_addback",
+      "status": "derived"
+    },
+    "sbc": {
+      "formula": "1 * FY2025.sbc + -1 * 9M2025.sbc",
+      "status": "derived"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "9M2024": {
+    "revenue": {
+      "source_id": "r325",
+      "table_index_zero_based": 8,
+      "row": "Sales",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "ebit_gaap": {
+      "source_id": "r325",
+      "table_index_zero_based": 8,
+      "row": "Operating profit",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "net_income": {
+      "source_id": "r325",
+      "table_index_zero_based": 8,
+      "row": "Net earnings",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "eps_diluted": {
+      "source_id": "r325",
+      "table_index_zero_based": 8,
+      "row": "Diluted",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "nonservice_pension_income_signed": {
+      "source_id": "r325",
+      "table_index_zero_based": 8,
+      "row": "Non-service FAS pension",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "interest_expense_signed": {
+      "source_id": "r325",
+      "table_index_zero_based": 8,
+      "row": "Interest expense",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "pretax_income": {
+      "source_id": "r325",
+      "table_index_zero_based": 8,
+      "row": "Earnings before income taxes",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "income_tax_signed": {
+      "source_id": "r325",
+      "table_index_zero_based": 8,
+      "row": "Income tax expense",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "cfo": {
+      "source_id": "r325",
+      "table_index_zero_based": 12,
+      "row": "Net cash provided by operating activities",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "capex_including_software": {
+      "source_id": "r325",
+      "table_index_zero_based": 12,
+      "row": "Capital expenditures",
+      "numeric_column_zero_based": 1,
+      "sign_transform": -1
+    },
+    "da": {
+      "source_id": "r325",
+      "table_index_zero_based": 12,
+      "row": "Depreciation and amortization",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "sbc": {
+      "source_id": "r325",
+      "table_index_zero_based": 12,
+      "row": "Stock-based compensation",
+      "numeric_column_zero_based": 1,
+      "sign_transform": 1
+    },
+    "segment_profit_nongaap": {
+      "source_id": "r325",
+      "table_index_zero_based": 0,
+      "row": "Business segment operating profit",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "fas_cas_operating_adjustment": {
+      "source_id": "r325",
+      "table_index_zero_based": 0,
+      "row": "FAS/CAS pension operating adjustment",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "intangible_amort_signed": {
+      "source_id": "r325",
+      "table_index_zero_based": 0,
+      "row": "Intangible asset amortization expense",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "impairment_signed": {
+      "source_id": "r325",
+      "table_index_zero_based": 0,
+      "row": "Impairment and other charges",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "other_unallocated_signed": {
+      "source_id": "r325",
+      "table_index_zero_based": 0,
+      "row": "Other, net",
+      "numeric_column_zero_based": 3,
+      "sign_transform": 1
+    },
+    "pension_settlement_addback": {
+      "status": "not established"
+    },
+    "reach_forward_loss_addback": {
+      "status": "not established"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "TTM2026Q3": {
+    "capex_including_software": {
+      "formula": "1 * FY2025.capex_including_software + 1 * 9M2026.capex_including_software + -1 * 9M2025.capex_including_software",
+      "status": "derived"
+    },
+    "cfo": {
+      "formula": "1 * FY2025.cfo + 1 * 9M2026.cfo + -1 * 9M2025.cfo",
+      "status": "derived"
+    },
+    "da": {
+      "formula": "1 * FY2025.da + 1 * 9M2026.da + -1 * 9M2025.da",
+      "status": "derived"
+    },
+    "ebit_gaap": {
+      "formula": "1 * FY2025.ebit_gaap + 1 * 9M2026.ebit_gaap + -1 * 9M2025.ebit_gaap",
+      "status": "derived"
+    },
+    "fas_cas_operating_adjustment": {
+      "formula": "1 * FY2025.fas_cas_operating_adjustment + 1 * 9M2026.fas_cas_operating_adjustment + -1 * 9M2025.fas_cas_operating_adjustment",
+      "status": "derived"
+    },
+    "impairment_signed": {
+      "formula": "1 * FY2025.impairment_signed + 1 * 9M2026.impairment_signed + -1 * 9M2025.impairment_signed",
+      "status": "derived"
+    },
+    "income_tax_signed": {
+      "formula": "1 * FY2025.income_tax_signed + 1 * 9M2026.income_tax_signed + -1 * 9M2025.income_tax_signed",
+      "status": "derived"
+    },
+    "intangible_amort_signed": {
+      "formula": "1 * FY2025.intangible_amort_signed + 1 * 9M2026.intangible_amort_signed + -1 * 9M2025.intangible_amort_signed",
+      "status": "derived"
+    },
+    "interest_expense_signed": {
+      "formula": "1 * FY2025.interest_expense_signed + 1 * 9M2026.interest_expense_signed + -1 * 9M2025.interest_expense_signed",
+      "status": "derived"
+    },
+    "net_income": {
+      "formula": "1 * FY2025.net_income + 1 * 9M2026.net_income + -1 * 9M2025.net_income",
+      "status": "derived"
+    },
+    "nonservice_pension_income_signed": {
+      "formula": "1 * FY2025.nonservice_pension_income_signed + 1 * 9M2026.nonservice_pension_income_signed + -1 * 9M2025.nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "other_unallocated_signed": {
+      "formula": "1 * FY2025.other_unallocated_signed + 1 * 9M2026.other_unallocated_signed + -1 * 9M2025.other_unallocated_signed",
+      "status": "derived"
+    },
+    "pension_settlement_addback": {
+      "formula": "1 * FY2025.pension_settlement_addback + 1 * 9M2026.pension_settlement_addback + -1 * 9M2025.pension_settlement_addback",
+      "status": "unavailable input"
+    },
+    "pretax_income": {
+      "formula": "1 * FY2025.pretax_income + 1 * 9M2026.pretax_income + -1 * 9M2025.pretax_income",
+      "status": "derived"
+    },
+    "reach_forward_loss_addback": {
+      "formula": "1 * FY2025.reach_forward_loss_addback + 1 * 9M2026.reach_forward_loss_addback + -1 * 9M2025.reach_forward_loss_addback",
+      "status": "derived"
+    },
+    "revenue": {
+      "formula": "1 * FY2025.revenue + 1 * 9M2026.revenue + -1 * 9M2025.revenue",
+      "status": "derived"
+    },
+    "sbc": {
+      "formula": "1 * FY2025.sbc + 1 * 9M2026.sbc + -1 * 9M2025.sbc",
+      "status": "derived"
+    },
+    "segment_profit_nongaap": {
+      "formula": "1 * FY2025.segment_profit_nongaap + 1 * 9M2026.segment_profit_nongaap + -1 * 9M2025.segment_profit_nongaap",
+      "status": "derived"
+    },
+    "eps_diluted": {
+      "status": "not established; EPS not summed across changing denominators"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  },
+  "TTM2025Q3": {
+    "capex_including_software": {
+      "formula": "1 * FY2024.capex_including_software + 1 * 9M2025.capex_including_software + -1 * 9M2024.capex_including_software",
+      "status": "derived"
+    },
+    "cfo": {
+      "formula": "1 * FY2024.cfo + 1 * 9M2025.cfo + -1 * 9M2024.cfo",
+      "status": "derived"
+    },
+    "da": {
+      "formula": "1 * FY2024.da + 1 * 9M2025.da + -1 * 9M2024.da",
+      "status": "derived"
+    },
+    "ebit_gaap": {
+      "formula": "1 * FY2024.ebit_gaap + 1 * 9M2025.ebit_gaap + -1 * 9M2024.ebit_gaap",
+      "status": "derived"
+    },
+    "fas_cas_operating_adjustment": {
+      "formula": "1 * FY2024.fas_cas_operating_adjustment + 1 * 9M2025.fas_cas_operating_adjustment + -1 * 9M2024.fas_cas_operating_adjustment",
+      "status": "derived"
+    },
+    "impairment_signed": {
+      "formula": "1 * FY2024.impairment_signed + 1 * 9M2025.impairment_signed + -1 * 9M2024.impairment_signed",
+      "status": "derived"
+    },
+    "income_tax_signed": {
+      "formula": "1 * FY2024.income_tax_signed + 1 * 9M2025.income_tax_signed + -1 * 9M2024.income_tax_signed",
+      "status": "derived"
+    },
+    "intangible_amort_signed": {
+      "formula": "1 * FY2024.intangible_amort_signed + 1 * 9M2025.intangible_amort_signed + -1 * 9M2024.intangible_amort_signed",
+      "status": "derived"
+    },
+    "interest_expense_signed": {
+      "formula": "1 * FY2024.interest_expense_signed + 1 * 9M2025.interest_expense_signed + -1 * 9M2024.interest_expense_signed",
+      "status": "derived"
+    },
+    "net_income": {
+      "formula": "1 * FY2024.net_income + 1 * 9M2025.net_income + -1 * 9M2024.net_income",
+      "status": "derived"
+    },
+    "nonservice_pension_income_signed": {
+      "formula": "1 * FY2024.nonservice_pension_income_signed + 1 * 9M2025.nonservice_pension_income_signed + -1 * 9M2024.nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "other_unallocated_signed": {
+      "formula": "1 * FY2024.other_unallocated_signed + 1 * 9M2025.other_unallocated_signed + -1 * 9M2024.other_unallocated_signed",
+      "status": "derived"
+    },
+    "pension_settlement_addback": {
+      "formula": "1 * FY2024.pension_settlement_addback + 1 * 9M2025.pension_settlement_addback + -1 * 9M2024.pension_settlement_addback",
+      "status": "unavailable input"
+    },
+    "pretax_income": {
+      "formula": "1 * FY2024.pretax_income + 1 * 9M2025.pretax_income + -1 * 9M2024.pretax_income",
+      "status": "derived"
+    },
+    "reach_forward_loss_addback": {
+      "formula": "1 * FY2024.reach_forward_loss_addback + 1 * 9M2025.reach_forward_loss_addback + -1 * 9M2024.reach_forward_loss_addback",
+      "status": "unavailable input"
+    },
+    "revenue": {
+      "formula": "1 * FY2024.revenue + 1 * 9M2025.revenue + -1 * 9M2024.revenue",
+      "status": "derived"
+    },
+    "sbc": {
+      "formula": "1 * FY2024.sbc + 1 * 9M2025.sbc + -1 * 9M2024.sbc",
+      "status": "derived"
+    },
+    "segment_profit_nongaap": {
+      "formula": "1 * FY2024.segment_profit_nongaap + 1 * 9M2025.segment_profit_nongaap + -1 * 9M2024.segment_profit_nongaap",
+      "status": "derived"
+    },
+    "eps_diluted": {
+      "status": "not established; EPS not summed across changing denominators"
+    },
+    "fcf_cfo_less_capex": {
+      "formula": "cfo - capex_including_software",
+      "status": "derived"
+    },
+    "ebit_margin": {
+      "formula": "ebit_gaap / revenue",
+      "status": "derived"
+    },
+    "ebitda_mechanical": {
+      "formula": "ebit_gaap + da",
+      "status": "derived"
+    },
+    "fas_cas_total_adjustment": {
+      "formula": "fas_cas_operating_adjustment + nonservice_pension_income_signed",
+      "status": "derived"
+    },
+    "owner_fcf": {
+      "status": "not established: no sustainable working-capital, maintenance capex or program cash-loss normalization"
+    }
+  }
+}
