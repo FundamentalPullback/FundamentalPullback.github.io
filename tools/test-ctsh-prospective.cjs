@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const root=path.resolve(__dirname,'..'),baseline=process.env.CTSH_BASELINE||path.resolve(root,'../../close_correction_release/verified_site');
-const load=require('./load-stock-profiles.cjs'),now=load(root),before=load(baseline),clone=x=>JSON.parse(JSON.stringify(x));
+const load=require('./load-stock-profiles.cjs'),now=require("./current-price-contract.cjs").legacy(root,load(root)),before=load(baseline),clone=x=>JSON.parse(JSON.stringify(x));
 const find=(a,t)=>a.profiles.find(p=>p.ticker===t),p=find(now,'CTSH'),old=find(before,'CTSH'),r=now.reports.find(r=>r.id==='A278'),m=r.profiles[0];
 assert.equal(p.latestCompleted.id,'A268');assert.equal(p.latestAnalysis.id,'A268');
 for(const key of ['latestCompleted','latestAnalysis','latestReview','latestManagement','completed','analyses','decisions','management','scans'])assert.deepEqual(clone(p[key]),clone(old[key]),key);

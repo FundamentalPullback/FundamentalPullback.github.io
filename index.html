@@ -774,6 +774,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 #v-entradas .entry-detail { padding:0; gap:0; overflow:hidden; overflow-wrap:anywhere; border-radius:14px; }
 #v-entradas .entry-detail-head { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:16px; padding:24px 26px; border-top:3px solid var(--accent); border-bottom:1px solid var(--rule); background:linear-gradient(105deg,var(--accent-soft),var(--sheet) 70%); }
 #v-entradas .entry-detail-head h2 { margin-top:4px; font-size:2.25rem; line-height:1.2; }
+#v-entradas .entry-state--inactive { background:var(--accent-soft); color:var(--ink); }
 #v-entradas .entry-plan-id { display:block; margin:3px 0 10px; color:var(--ink-2); font-size:.77rem; }
 #v-entradas .entry-detail-section { padding:24px 26px; border-bottom:1px solid var(--rule); }
 #v-entradas .entry-detail-section:last-child { border-bottom:0; }
@@ -3000,8 +3001,14 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if(!studies.length)return '';
     var x=studies[0],m=x.report.profiles.find(function(m){return m.ticker===p.ticker&&m.kind==='prospective';});
     var registry=entryPlanFollowups(),plan=isEntryPlan(x.report)&&registry.ok?entryPlanCompose(x.report,registry).entryPlan:null;
-    var current=registry.ok?(plan?entryPlanFollowupNotice(plan):''):'<p><strong>'+esc(pt('Estado no verificable: requiere revisión de las fuentes. Sin autorización de entrada.','State cannot be verified: source review required. No entry authorization.'))+'</strong></p>';
+    var current=registry.ok?(plan?(entryPlanFollowupNotice(plan)||(plan.events[0].state==='inactive'?'<p><strong>'+esc(entryPlanLabel(entryPlanStatus(plan).state))+'</strong></p>':'')):''):'<p><strong>'+esc(pt('Estado no verificable: requiere revisión de las fuentes. Sin autorización de entrada.','State cannot be verified: source review required. No entry authorization.'))+'</strong></p>';
     return '<aside class="stock-note prospective-study"><h3>'+esc(pt('Estudio prospectivo separado','Separate prospective study'))+'</h3>'+current+'<h4>'+esc(pt('Propuesta original · resumen histórico','Original proposal · historical summary'))+'</h4><p>'+esc(pt('El texto conservado describe la propuesta antes del seguimiento; no sustituye el estado actual.','This preserved text describes the proposal before the follow-up; it does not replace the current state.'))+'</p><p>'+esc(pt(m.summary,m.summaryEn))+'</p>'+reportLink(x.id,pt('Estudio ','Study ')+x.id)+' <a class="btn" href="'+esc(m.studyUrl)+'">'+esc(pt('Informe y auditoría','Report and audit'))+'</a> <a class="btn" href="'+esc(isEntryPlan(x.report)?entryPlanHash(x.report.entryPlan.id):'#entradas')+'">'+esc(pt('Plan · versión e historial','Plan · version and history'))+'</a></aside>';
+  }
+  function profileCurrentPriceReview(p) {
+    var x=p.reports.find(function(x){return (x.report.profiles||[]).some(function(m){return m.ticker===p.ticker&&window.FP_PROFILE_ENGINE.isCurrentPriceReview(x.report,m);});});
+    if(!x)return '';
+    var m=x.report.profiles.find(function(m){return m.ticker===p.ticker&&window.FP_PROFILE_ENGINE.isCurrentPriceReview(x.report,m);});
+    return '<aside class="stock-note current-price-review"><h3>'+esc(pt('Revisión de precio separada · sin entrada','Separate price review · no entry'))+'</h3><p>'+esc(pt(m.summary,m.summaryEn))+'</p><p>'+esc(pt('Los valores y cierres siguientes pertenecen al modelo histórico conservado; esta observación intradía no los sustituye ni autoriza operar.','The values and closes below belong to the preserved historical model; this intraday observation does not replace them or authorize trading.'))+'</p>'+reportLink(x.id,pt('Revisión ','Review ')+x.id)+' '+reportLink(m.historicalModelReference,pt('Modelo conservado ','Preserved model ')+m.historicalModelReference)+'</aside>';
   }
   function profileSummaryCard(p,inline) {
     var d=profileCardData(p),r=d.row,v=d.model,c=d.close,s=d.scan,none=pt('No disponible','Unavailable');
@@ -3015,6 +3022,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if(profileStatus(p).value)h+='<p class="muted profile-status-date">'+esc(pt('Fecha de la decisión registrada: ','Recorded decision date: ')+profileDate(window.FP_PROFILE_ENGINE.day(r.adate)))+'</p>';
     h+='<p class="stock-brief">'+esc(short)+'</p>';
     h+=profileProspectiveStudy(p);
+    h+=profileCurrentPriceReview(p);
     if(r&&note.length>short.length)h+='<details class="stock-note"><summary>'+esc(pt('Leer comentario completo','Read full comment'))+'</summary><p>'+esc(note)+'</p></details>';
     h+='<p class="stock-caution">'+esc(profileStatusCaution()+' '+pt('Los valores son modelos fechados, no precios objetivo garantizados.','Values are dated models, not guaranteed price targets.'))+'</p>';
     function tile(label,value,sub,cls){return '<div><dt>'+esc(label)+'</dt><dd class="'+(cls||'')+'">'+esc(value)+'</dd><small>'+esc(sub)+'</small></div>';}
@@ -3087,7 +3095,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 
   /* Entry-plan archive: immutable evidence, URL preferences, no operational writes. */
   function isEntryPlan(r,asOf) {
-    var p=r&&r.entryPlan,states=['pending','activated','expired','cancelled'],now=typeof asOf==='string'?Date.parse(asOf):Date.now();
+    var p=r&&r.entryPlan,states=['pending','inactive','activated','expired','cancelled'],now=typeof asOf==='string'?Date.parse(asOf):Date.now();
     function keys(o,allowed){return o&&typeof o==='object'&&!Array.isArray(o)&&Object.keys(o).every(function(k){return allowed.indexOf(k)>=0;});}
     function stamp(s){
       if(typeof s!=='string'||!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?(?:Z|[+-]\d\d:\d\d)$/.test(s)||!isFinite(Date.parse(s)))return false;
@@ -3102,8 +3110,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var time=Date.parse(p.proposedAt),previous=null;
     return p.events.every(function(e,i){
       if(!e||!keys(e,['state','at','source','evidenceEs','evidenceEn','verifiedSignal'])||states.indexOf(e.state)<0||!stamp(e.at)||Date.parse(e.at)<time||Date.parse(e.at)>now||!source(e.source)||typeof e.evidenceEs!=='string'||!e.evidenceEs.trim()||typeof e.evidenceEn!=='string'||!e.evidenceEn.trim())return false;
-      if(i===0&&e.state!=='pending')return false;
-      if(i>0&&(previous!=='pending'||e.state==='pending'))return false;
+      if(i===0&&e.state!=='pending'&&e.state!=='inactive')return false;
+      if(i>0&&!(previous==='pending'&&['activated','expired','cancelled'].indexOf(e.state)>=0||previous==='inactive'&&e.state==='inactive'))return false;
       if(e.state!=='activated'&&e.verifiedSignal)return false;
       if(e.state==='activated'){
         var v=e.verifiedSignal;
@@ -3160,17 +3168,17 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   function entryPlanStatus(plan,now) {
     var events=plan.events||[],last=events[events.length-1];
     if(!last)return {state:'pending',basis:'missing'};
-    if(last.state==='pending'&&Date.parse(now||new Date().toISOString())>=Date.parse(plan.expiresAt))return {state:'expired',basis:'deadline'};
+    if((last.state==='pending'||last.state==='inactive')&&Date.parse(now||new Date().toISOString())>=Date.parse(plan.expiresAt))return {state:'expired',basis:'deadline'};
     return {state:last.state,basis:'recorded'};
   }
   function entryPlanHash(id,q,state) {
     var p=new URLSearchParams();if(q)p.set('q',q);if(state&&state!=='all')p.set('state',state);
     return '#entradas'+(id?'/'+encodeURIComponent(id):'')+(p.toString()?'?'+p.toString():'');
   }
-  function entryPlanLabel(state) { return ({pending:pt('Pendiente','Pending'),activated:pt('Activada · señal verificada','Activated · verified signal'),expired:pt('Caducada','Expired'),cancelled:pt('Cancelada','Cancelled'),suspended:pt('Suspendida: requiere nueva evaluación documentada','Suspended: requires a new documented evaluation')})[state]||state; }
+  function entryPlanLabel(state) { return ({pending:pt('Pendiente','Pending'),inactive:pt('No activa · sin señal aprobada','Inactive · no approved signal'),activated:pt('Activada · señal verificada','Activated · verified signal'),expired:pt('Caducada','Expired'),cancelled:pt('Cancelada','Cancelled'),suspended:pt('Suspendida: requiere nueva evaluación documentada','Suspended: requires a new documented evaluation')})[state]||state; }
   function entryPlanRoute(hash) {
     var parts=hash.split('?'),route=parts[0],params=new URLSearchParams(parts[1]||'');
-    S.entryQ=(params.get('q')||'').slice(0,80);S.entryState=['pending','activated','expired','cancelled','suspended'].indexOf(params.get('state'))>=0?params.get('state'):'all';
+    S.entryQ=(params.get('q')||'').slice(0,80);S.entryState=['pending','inactive','activated','expired','cancelled','suspended'].indexOf(params.get('state'))>=0?params.get('state'):'all';
     try{S.entrySel=route.indexOf('/')>=0?decodeURIComponent(route.slice(route.indexOf('/')+1)):null;}catch(e){S.entrySel=null;}
     return 'entradas';
   }
@@ -3196,7 +3204,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var candidates=S.lib.filter(function(r){return isEntryPlan(r);}),counts=Object.create(null);candidates.forEach(function(r){counts[r.entryPlan.id]=(counts[r.entryPlan.id]||0)+1;});
     var records=candidates.filter(function(r){return counts[r.entryPlan.id]===1;}).map(function(r){return entryPlanCompose(r,registry);});
     var list=records.filter(function(r){var p=r.entryPlan;return (!S.entryQ||(p.ticker+' '+p.id+' '+r.title).toLowerCase().indexOf(S.entryQ.toLowerCase())>=0)&&(S.entryState==='all'||entryPlanStatus(p).state===S.entryState);});
-    h+='<form class="controls entry-filters" id="entry-filters"><label for="entry-q">'+esc(pt('Buscar ticker o plan','Search ticker or plan'))+'<input type="search" id="entry-q" name="q" value="'+esc(S.entryQ||'')+'" placeholder="CTSH"></label><label for="entry-state">'+esc(pt('Estado','State'))+'<select id="entry-state" name="state">'+['all','pending','activated','expired','cancelled','suspended'].map(function(s){return '<option value="'+s+'"'+(S.entryState===s?' selected':'')+'>'+esc(s==='all'?t().all:entryPlanLabel(s))+'</option>';}).join('')+'</select></label><button class="btn entry-primary" type="submit">'+esc(pt('Filtrar','Filter'))+'</button><a class="btn" href="#entradas">'+esc(pt('Limpiar filtros','Clear filters'))+'</a></form>';
+    h+='<form class="controls entry-filters" id="entry-filters"><label for="entry-q">'+esc(pt('Buscar ticker o plan','Search ticker or plan'))+'<input type="search" id="entry-q" name="q" value="'+esc(S.entryQ||'')+'" placeholder="CTSH"></label><label for="entry-state">'+esc(pt('Estado','State'))+'<select id="entry-state" name="state">'+['all','pending','inactive','activated','expired','cancelled','suspended'].map(function(s){return '<option value="'+s+'"'+(S.entryState===s?' selected':'')+'>'+esc(s==='all'?t().all:entryPlanLabel(s))+'</option>';}).join('')+'</select></label><button class="btn entry-primary" type="submit">'+esc(pt('Filtrar','Filter'))+'</button><a class="btn" href="#entradas">'+esc(pt('Limpiar filtros','Clear filters'))+'</a></form>';
     h+='<div class="entry-results"><p role="status"><strong>'+list.length+'</strong> '+esc(pt('planes encontrados','plans found'))+'</p>'+(S.entrySel?'<a class="entry-back" href="'+esc(entryPlanHash(null,S.entryQ,S.entryState))+'">'+entryPlanIcon('back')+esc(pt('Volver al archivo filtrado','Back to filtered archive'))+'</a>':'')+'</div>';
     if(S.entrySel) {
       var r=records.find(function(r){return r.entryPlan.id===S.entrySel;});

@@ -1,0 +1,43 @@
+{
+  "version": "IT-B-20261105-v2",
+  "registered_at_utc": "2026-11-05T16:09:39.570670+00:00",
+  "status": "audited_prospective_proposal_pending_communication_activation_record_and_account",
+  "mode": "B, small initial reasonable-price entry",
+  "fundamental_maximum": 208.0,
+  "technical_maximum": 206.5,
+  "authorized_maximum": 206.5,
+  "lower_price_validity_strict": 203.5,
+  "preferred_zone": [
+    202.45,
+    206.5
+  ],
+  "preferred_zone_is_mandatory": false,
+  "M": 184.45,
+  "S": 183.0,
+  "support_type": "Broad observed Oct5 low184.45 and Nov3 event low185; not a new intraday confirmed pivot",
+  "first_eligible_bar_start_utc": null,
+  "first_eligible_bar_end_utc": null,
+  "last_eligible_bar_end_utc": "2026-11-05T20:45:00Z",
+  "expires_utc": "2026-11-05T21:00:00Z",
+  "signal": "First future eligible completed15m regular-session candle close strictly above203.50 and at or below206.50, with valid thesis, structure and account checks. No candle-color or special-volume condition.",
+  "execution_window": "After confirmed eligible close until next15m boundary, or first loss of valid current-price/structure/account/event conditions; never use an expired bar. One first-tranche opportunity, no automatic rearming after window loss.",
+  "pre_signal_cancellations": "After registration, regular trade strictly belowM184.45 cancels; at or belowS183 cancels. Above authorized maximum206.50 suspends new buying pending a separately documented review, not automatic reactivation on return. Before a signal, price<=203.50 alone is not cancellation.",
+  "post_signal_cancellations": "Price outside(203.50,206.50], structure breach, event change, account conflict or window expiry cancels an unfilled remainder if any; no broker order exists.",
+  "stage3Eligibility": "conditional reasonable-price eligibility independently reviewed; model unchanged",
+  "stage35Approved": false,
+  "entryApproved": false,
+  "approvedQuantity": 0,
+  "old_daily_framework": "Prior daily-only/3R diagnostic is historical and inactive; this is a separately registered future15m framework, not a retrospective change of signal.",
+  "revision_registered_at_utc": "2026-11-05T16:21:44.710040+00:00",
+  "earliest_permitted_bar_start_utc": null,
+  "activation_rule": "Register a specific future full regular15-minute interval only after audit and communication of the final sheet. Every interval already begun is excluded. No activation has been recorded.",
+  "excluded_earlier_bar": "16:15–16:30 UTC cannot activate; audit and communication were not completed before its start.",
+  "fundamental_limit_reason": "Bounded analyst judgment: 208 is below midpoint208.60 of alternative203.44 and base213.76 calibrations. Model unchanged; thin cushion and downside explicitly accepted for evaluation, not guaranteed expected return.",
+  "technical_floor_reason": "203.50 is a predeclared rounded B entry level above203.34 low of10:45–11:00EST, known before11:09 registration. It is not proven support or a C breakout.",
+  "excluded_earlier_bars": [
+    "2026-11-05T16:15:00Z/16:30:00Z",
+    "2026-11-05T16:30:00Z/16:45:00Z"
+  ],
+  "M_scope": "M cancels an unfilled proposal/remainder only. After fill, S manual and Stage4 structural daily rules apply; M is not an additional intraday stop.",
+  "excluded_started_through_utc": "2026-11-05T16:45:00Z"
+}

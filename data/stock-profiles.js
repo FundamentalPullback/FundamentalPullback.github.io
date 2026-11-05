@@ -16,6 +16,11 @@
   function isProspectiveStudy(report,meta) {
     return !!(report&&meta&&report.schema==='fp.prospective-stage35.v1'&&report.type==='prospective-stage35-study'&&meta.kind==='prospective'&&ticker(meta.ticker)&&meta.historicalModelReference&&meta.stage3Complete===false&&meta.latestCompletedEligible===false&&meta.stage35Complete===false&&meta.entryApproved===false&&meta.approvedQuantity===0&&meta.signal===null&&meta.entryPrice===null&&meta.quantity===null&&meta.maximumConditioned===null&&meta.operativeStop===null&&!meta.valuation);
   }
+  // Dated price reviews do not recertify or supersede their preserved valuation.
+  function isCurrentPriceReview(report,meta) {
+    var q=meta&&meta.contextQuote;
+    return !!(report&&meta&&report.schema==='fp.current-price-review.v1'&&report.type==='current-price-review'&&meta.kind==='current-price-review'&&ticker(meta.ticker)&&meta.historicalModelReference&&meta.valuationChanged===false&&meta.stage3Complete===false&&meta.latestCompletedEligible===false&&meta.stage35Complete===false&&meta.entryApproved===false&&meta.approvedQuantity===0&&meta.signal===null&&meta.entryPrice===null&&meta.quantity===null&&meta.maximumConditioned===null&&meta.operativeStop===null&&!meta.valuation&&q&&q.type==='dated-intraday-not-executable'&&typeof q.price==='number'&&isFinite(q.price)&&q.price>0&&typeof q.at==='string'&&isFinite(Date.parse(q.at))&&day(q.at)===day(report.date)&&typeof meta.summary==='string'&&meta.summary.trim()&&typeof meta.summaryEn==='string'&&meta.summaryEn.trim());
+  }
   function build(data) {
     var by = Object.create(null), reports = data.reports || [], reportBy = Object.create(null);
     function get(tk, name) {
@@ -78,7 +83,7 @@
         addReport(p,r.id,meta.kind==='management'?'management':'source');
         if(meta.kind==='complete'||meta.kind==='review') addComplete(p,null,r,r.id,day(meta.completedAt)||day(r.date),meta.label||'standalone',day(meta.completedAt)?'explicit':'report');
         // Prospective entry studies are separate from fundamental analysis and completion.
-        if(meta.kind!=='management'&&!isProspectiveStudy(r,meta)) p.analyses.push({id:r.id,date:day(meta.completedAt)||day(r.date),row:null,report:r,kind:meta.label||'standalone',isComplete:meta.kind==='complete'||meta.kind==='review'});
+        if(meta.kind!=='management'&&!isProspectiveStudy(r,meta)&&!isCurrentPriceReview(r,meta)) p.analyses.push({id:r.id,date:day(meta.completedAt)||day(r.date),row:null,report:r,kind:meta.label||'standalone',isComplete:meta.kind==='complete'||meta.kind==='review'});
       });
       // A ticker explicitly written in a title is a subject link, never proof of completion.
       var titleTokens=String(r.title||'').match(/\b[A-Z][A-Z0-9.-]{0,10}\b/g)||[];
@@ -177,6 +182,6 @@
     return migrated||{status:old?'stale':'pending',sourceId:a.id,date:a.date,pros:[],cons:[],report:report};
   }
 
-  root.FP_PROFILE_ENGINE={isProspectiveStudy:isProspectiveStudy,build:build,search:search,day:day,completed:completed,researchBalance:researchBalance,balanceFingerprint:balanceFingerprint,balanceStructured:balanceStructured,balanceExplicit:balanceExplicit};
+  root.FP_PROFILE_ENGINE={isProspectiveStudy:isProspectiveStudy,isCurrentPriceReview:isCurrentPriceReview,build:build,search:search,day:day,completed:completed,researchBalance:researchBalance,balanceFingerprint:balanceFingerprint,balanceStructured:balanceStructured,balanceExplicit:balanceExplicit};
 })(typeof window==='undefined'?globalThis:window);
 

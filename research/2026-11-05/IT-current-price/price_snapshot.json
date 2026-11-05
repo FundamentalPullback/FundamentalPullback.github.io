@@ -1,0 +1,29 @@
+{
+  "price": 200.79,
+  "timestamp_utc": "2026-11-05T16:36:38+00:00",
+  "request_started_at_utc": "2026-11-05T16:37:50.646741+00:00",
+  "currency": "USD",
+  "session": "regular",
+  "executable_quote": false,
+  "fetch_timestamp_note": "Capture timestamp is request start, not completion.",
+  "sources": [
+    {
+      "key": "yahoo15",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/IT?range=1d&interval=15m&includePrePost=false",
+      "retrievedAt": "2026-11-05T16:37:50.646741+00:00",
+      "sha256": "e5494b84217e2339dc062b07c0b042c4c7df39d1b883cec65ad4c76de6bb69b4"
+    },
+    {
+      "key": "yahoo1",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/IT?range=1d&interval=1m&includePrePost=false",
+      "retrievedAt": "2026-11-05T16:37:50.647561+00:00",
+      "sha256": "c258ac7636887c494ce14198f7dfcdd44e362b057bd4e52b8bc581fc493a8f98"
+    },
+    {
+      "key": "sa",
+      "url": "https://stockanalysis.com/stocks/it/",
+      "retrievedAt": "2026-11-05T16:37:50.648189+00:00",
+      "sha256": "2d7b8d243015ea880bece9ad359b63d7b25595190e7eea594c30d4fa16702693"
+    }
+  ]
+}

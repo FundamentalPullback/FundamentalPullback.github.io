@@ -5,9 +5,10 @@ const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),clone=x=>JSON.p
 const filename=path.join(__dirname,'load-stock-profiles.cjs'),m=new Module(filename,module);m.filename=filename;m.paths=module.paths;
 m._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,profileCardData,'),filename);
 const a=m.exports(root),ids=['A280','A281','A282'],tickers=['FA','ROK','IMAX'];
-assert.equal(sha(fs.readFileSync(root+'/index.html')),contract.indexSha256,'No application or layout changes');
-for(const [f,h] of Object.entries(contract.dataHashes))assert.equal(sha(fs.readFileSync(root+'/data/'+f)),h,'All pre-existing source data unchanged: '+f);
-const actualManifest=clone(a.c.window.FP_MANIFEST),expectedManifest=clone(contract.priorManifest);expectedManifest.libraryFiles.push('data/lib-morning-earnings.js');expectedManifest.generated=actualManifest.generated;
+const successor=require('./current-price-contract.cjs').validate(root,a);
+assert.equal(sha(fs.readFileSync(root+'/index.html')),successor.indexSha256,'Exact audited current-price UI successor');
+for(const [f,h] of Object.entries(contract.dataHashes))assert.equal(sha(fs.readFileSync(root+'/data/'+f)),f==='stock-profiles.js'?successor.engineSha256:h,'All prior data preserved, exact separately tested engine successor: '+f);
+const actualManifest=clone(a.c.window.FP_MANIFEST),expectedManifest=clone(contract.priorManifest);expectedManifest.libraryFiles.push('data/lib-morning-earnings.js','data/lib-current-price-reviews.js');expectedManifest.generated=actualManifest.generated;
 assert.deepEqual(actualManifest,expectedManifest,'Only version and dedicated library addition in manifest');assert(Date.parse(actualManifest.generated)>Date.parse(contract.priorManifest.generated));
 assert.equal(sha(fs.readFileSync(root+'/data/lib-morning-earnings.js')),contract.librarySha256);
 const originalDec=fs.readFileSync(root+'/data/dec.js'),prefix='window.FP=window.FP||{};FP.dec=';
@@ -15,7 +16,7 @@ assert(originalDec.toString().startsWith(prefix)&&originalDec.toString().endsWit
 const rows=JSON.parse(originalDec.toString().slice(prefix.length,-2));assert.equal(rows.length,contract.rows+3);
 assert.equal(sha(Buffer.concat([originalDec.subarray(0,contract.bytes-3),Buffer.from('];\n')])),contract.sha256,'Exact old decision byte prefix');assert.equal(sha(JSON.stringify(rows.slice(contract.rows))),contract.appendSha256,'Only exact new append');
 const pending=JSON.parse(fs.readFileSync(root+'/tools/pending-web-commentary.json','utf8'));
-assert.deepEqual(pending.pending.slice(0,-3),contract.priorPending.pending,'All previous pending reconciliation records preserved');assert.deepEqual(pending.pending.slice(-3).map(x=>x.reportId),ids);
+assert.equal(pending.pending.length,contract.priorPending.pending.length+6,'Only exact six research markers after this old baseline');assert.deepEqual(pending.pending.slice(-3).map(x=>x.reportId),successor.ids);assert.deepEqual(pending.pending.slice(0,contract.priorPending.pending.length),contract.priorPending.pending,'All previous pending reconciliation records preserved');assert.deepEqual(pending.pending.slice(contract.priorPending.pending.length,contract.priorPending.pending.length+3).map(x=>x.reportId),ids);
 for(const [id,h] of Object.entries(contract.historicalReportHashes))assert.equal(sha(JSON.stringify(a.reports.find(r=>r.id===id))),h,'Original report preserved '+id);
 assert(!a.reports.some(r=>r.id==='A279'),'Paused candidate remains absent');
 const before=JSON.stringify({lib:a.reports,dec:a.t.S.dec,ops:a.t.S.ops,ges:a.t.S.ges,acct:a.t.S.acct,hist:a.t.S.hist});

@@ -1,0 +1,134 @@
+{
+  "quote": {
+    "price": 66.85,
+    "comparison_price_rounded_up_to_cent": 66.85,
+    "comparison_price_is_authorized_limit": false,
+    "timestamp_epoch": 1793896567,
+    "request_started_at": "2026-11-05T16:36:05.129195+00:00",
+    "response_received_at": null,
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=15m&includePrePost=false",
+    "source_sha256": "aefd406ab42e4fb0ea9f33b7f3a4a91a7e0bcff1793ca7d9a7c23aa230b9d36a",
+    "currency": "USD",
+    "session": "regular",
+    "executable_quote_verified": false
+  },
+  "frozen_valuation": {
+    "base": 79.34024040034222,
+    "bear": 51.76139942051113,
+    "bull": 109.1152593638308,
+    "moderate_stress": 63.57531607369725,
+    "central_plausible_range": [
+      64,
+      80
+    ],
+    "WACC": 0.08517569896180917,
+    "new_operating_evidence_applied": false
+  },
+  "current_metrics": {
+    "MOS_pct": 15.742629890353033,
+    "base_upside_pct": 18.683979656458092,
+    "EPS_TTM_multiple": 12.198905109489049,
+    "strict_TTM_FCF_yield_pct": 7.875534188148866,
+    "FCF_after_SBC_before_MA_yield_pct": 7.232293350945003,
+    "FCF_after_SBC_after_MA_yield_pct": 2.85625594551146,
+    "enterprise_value_implied": 30859.313911249996,
+    "R_provisional": 5.6499999999999915,
+    "manual_stop": 61.2,
+    "M": 61.55,
+    "stop_pct": 8.451757666417341,
+    "R_in_last_final_daily_ATR": 1.9967454979446069,
+    "one_R": 72.49999999999999,
+    "two_R": 78.14999999999998,
+    "three_R": 83.79999999999997
+  },
+  "scenario_returns": {
+    "base": {
+      "value": 79.34024040034222,
+      "return_pct": 18.683979656458092,
+      "change_per_share": 12.49024040034223,
+      "R_multiple": 2.2106620177596903
+    },
+    "bear": {
+      "value": 51.76139942051113,
+      "return_pct": -22.570831083752974,
+      "change_per_share": -15.088600579488862,
+      "R_multiple": -2.670548775130776
+    },
+    "bull": {
+      "value": 109.1152593638308,
+      "return_pct": 63.22402298254421,
+      "change_per_share": 42.26525936383081,
+      "R_multiple": 7.480576878554136
+    },
+    "combined_moderate_stress": {
+      "value": 63.57531607369725,
+      "return_pct": -4.898554863579275,
+      "change_per_share": -3.2746839263027425,
+      "R_multiple": -0.5795900754518137
+    },
+    "moderate_same_wacc": {
+      "value": 70.02113628404652,
+      "return_pct": 4.743659362822039,
+      "change_per_share": 3.1711362840465256,
+      "R_multiple": 0.5612630591232797
+    },
+    "cash_drag_300m": {
+      "value": 75.99367851502134,
+      "return_pct": 13.677903537803072,
+      "change_per_share": 9.14367851502135,
+      "R_multiple": 1.6183501796497988
+    },
+    "near_resistance_68_56": {
+      "value": 68.56,
+      "return_pct": 2.5579655946148305,
+      "change_per_share": 1.710000000000008,
+      "R_multiple": 0.30265486725663904
+    },
+    "upper_zone_72_84": {
+      "value": 72.84,
+      "return_pct": 8.960359012715058,
+      "change_per_share": 5.990000000000009,
+      "R_multiple": 1.0601769911504457
+    },
+    "upper_zone_73_92": {
+      "value": 73.92,
+      "return_pct": 10.575916230366511,
+      "change_per_share": 7.070000000000007,
+      "R_multiple": 1.2513274336283218
+    },
+    "manual_stop": {
+      "value": 61.2,
+      "return_pct": -8.451757666417336,
+      "change_per_share": -5.6499999999999915,
+      "R_multiple": -1.0
+    }
+  },
+  "reverse_dcf": {
+    "discount_rate_that_equates_model_EV_to_price": 0.09549266647372712,
+    "organic_growth_at_price": -0.007066603582500507,
+    "parallel_margin_change_at_price": -0.021850116488784002
+  },
+  "mechanical_market_cap_weight_only": {
+    "WACC": 0.08520979994269721,
+    "base_value": 79.29182433888495,
+    "adopted": false,
+    "note": "Pure market-weight sensitivity. Frozen research WACC retained; no intraday model inflation."
+  },
+  "ceiling_review": {
+    "existing_fundamental": 66.5,
+    "existing_technical": 65.78,
+    "discount_at_existing_fundamental_pct": 16.183767953754323,
+    "15pct_reference_price": 67.43920434029089,
+    "round_down_15pct_reference": 67.4,
+    "20pct_reference_price": 63.472192320273784,
+    "2R_to_base_price_if_chosen": 67.24674680011408,
+    "1R_to_lower_resistance_price_if_chosen": 67.02000000000001,
+    "ratio_conditions_are_not_existing_universal_rules": true
+  },
+  "fundamental_inputs_unchanged_sha256": {
+    "model/inputs.json": "70d098d3d4722f34fe2627432c00faf90da988f7da5fa38838bd4bbcaa8ba553",
+    "results.json": "4920d7ae468fbb86f370b442637f96fb1fd459794d8484252fc847007bc0d7b7",
+    "sensitivity.json": "19a4736885eb7194e34ff3441d7a92234daef004745666c6ad751f72b7b446cd",
+    "value.py": "5b298e8ca4c91229ca661ae62b6f9382f401a75c332904018f06a593c1a91536"
+  }
+}
