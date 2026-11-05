@@ -1,0 +1,116 @@
+{
+  "id": "CTSH-20261105-B-V3-FOLLOWUP-1200",
+  "proposal_id": "CTSH-20261105-B-V3",
+  "as_of_UTC": "2026-11-05T17:22:37.006630+00:00",
+  "sessionDate": "2026-11-05",
+  "session": "regular",
+  "currency": "USD",
+  "registration_at_UTC": "2026-11-05T16:55:55.484451+00:00",
+  "window_start_UTC": "2026-11-05T17:00:00Z",
+  "window_end_UTC": "2026-11-05T17:15:00Z",
+  "proposal_sha256": "cd1a69207959c49872ef58d6b213169a27555b2137fd680197c159f55f62451d",
+  "status": "unfilled_opportunity_ended_after_technical_signal",
+  "status_es": "Señal técnica observada; oportunidad no ejecutada terminada por pérdida posterior de banda",
+  "status_en": "Technical signal observed; unfilled opportunity ended after subsequent range loss",
+  "events": [
+    {
+      "type": "technical_close_condition_met",
+      "effective_at_UTC": "2026-11-05T17:15:00Z",
+      "observed_at_UTC": "2026-11-05T17:15:19.625654+00:00",
+      "open": 66.44,
+      "high": 66.6,
+      "low": 66.26,
+      "close": 66.58,
+      "volume": 134338,
+      "one_minute_count": 15,
+      "OHLCV_same_provider_reconciled": true,
+      "independent_analytical_review": true,
+      "independent_market_feed_corroboration": false,
+      "pre_signal_high_above_cap": false,
+      "pre_signal_low_below_lower_level": true,
+      "lower_level_intrabar_dip_does_not_invalidate_pre_signal": true
+    },
+    {
+      "type": "post_signal_range_loss",
+      "observed_at_UTC": "2026-11-05T17:17:17.346206+00:00",
+      "breach_bar_start_UTC": "2026-11-05T17:16:00Z",
+      "breach_bar_end_UTC": "2026-11-05T17:17:00Z",
+      "exact_first_trade_timestamp_available": false,
+      "bar_open": 66.48,
+      "bar_high": 66.48,
+      "bar_low": 66.345,
+      "bar_close": 66.345,
+      "quote_price": 66.345,
+      "quote_time_UTC": "2026-11-05T17:17:09+00:00",
+      "independent_subsequent_quote": {
+        "price": 66.36,
+        "at_utc": "2026-11-05T17:18:04+00:00",
+        "regular": true
+      },
+      "applies_to": "unfilled opportunity and unfilled remainder only",
+      "does_not_imply_position_exit": true
+    }
+  ],
+  "nominal_window_end_UTC": "2026-11-05T17:30:00Z",
+  "ended_before_nominal_expiry": true,
+  "automatic_rearm": false,
+  "entryApproved": false,
+  "order_sent_by_research_workflow": false,
+  "actual_order_or_fill_inferred": false,
+  "broker_order_status_verified": false,
+  "account_reverified": false,
+  "manual_position_stop": 61.2,
+  "M": 61.55,
+  "lower_range_level_is_position_stop": false,
+  "source_snapshots": [
+    {
+      "key": "yahoo15",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=15m&includePrePost=false",
+      "request_started_at": "2026-11-05T17:15:08.049908+00:00",
+      "response_received_at": "2026-11-05T17:15:17.972234+00:00",
+      "sha256": "a691cc2102fc9da0530cae522abef90633a9a78c110025d39981d942c23d5da3"
+    },
+    {
+      "key": "yahoo1",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=1m&includePrePost=false",
+      "request_started_at": "2026-11-05T17:15:08.050873+00:00",
+      "response_received_at": "2026-11-05T17:15:17.975080+00:00",
+      "sha256": "7db81c90161b247b5fafec746320c66cc1d1838c52793a2f715abcbad0f2c0e5"
+    },
+    {
+      "key": "sa",
+      "url": "https://stockanalysis.com/stocks/ctsh/",
+      "request_started_at": "2026-11-05T17:15:08.051845+00:00",
+      "response_received_at": "2026-11-05T17:15:19.603526+00:00",
+      "sha256": "d0c4de096068f90832d995153f648ea7719c03a03d3e6f4a3e6f60c6e77e1e01"
+    },
+    {
+      "key": "yahoo15",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=15m&includePrePost=false",
+      "request_started_at": "2026-11-05T17:17:10.056461+00:00",
+      "response_received_at": "2026-11-05T17:17:17.303771+00:00",
+      "sha256": "f33e39920e998e97d555f4eb745c312853be50238e2cf71d53ff5be5d19575bf"
+    },
+    {
+      "key": "yahoo1",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=1m&includePrePost=false",
+      "request_started_at": "2026-11-05T17:17:10.057173+00:00",
+      "response_received_at": "2026-11-05T17:17:17.331300+00:00",
+      "sha256": "187217b72367ae38df1ab774618c1b6d6be08f3e7cb6789afea971358003031c"
+    },
+    {
+      "key": "sa",
+      "url": "https://stockanalysis.com/stocks/ctsh/",
+      "request_started_at": "2026-11-05T17:17:10.057740+00:00",
+      "response_received_at": "2026-11-05T17:17:17.071609+00:00",
+      "sha256": "5b8a9df553c7904f015ed491cc0a8cb0369b96b42a42a71c86ef66d78ec5c108"
+    }
+  ],
+  "limitations": [
+    "Completed bars are provider data, not proof of executable bid/ask or any fill.",
+    "Separate reviewer fetched another snapshot from the same market provider, not an independent market feed.",
+    "Minute OHLC establishes that the breach occurred within the12:16 minute; it does not establish the exact first tick.",
+    "If any shares were filled, lower-band loss is not an additional stop: manual S61.20 and the canonical Stage4 rules govern.",
+    "No historical proposal, valuation or parameter is overwritten."
+  ]
+}

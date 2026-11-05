@@ -81,6 +81,7 @@ const prior=path.resolve(process.env.CTSH_SUSPENSION_BASELINE||path.join(root,'.
    assert.equal(crypto.createHash('sha256').update(Buffer.concat([b.subarray(0,earnings.bytes-3),Buffer.from('];\n')])).digest('hex'),earnings.sha256,'Exact prior decision byte prefix');
    assert.equal(crypto.createHash('sha256').update(JSON.stringify(rows.slice(earnings.rows))).digest('hex'),earnings.appendSha256,'Exact earnings append');
   }else if(f==='lib-morning-earnings.js')assert.equal(sha(path.join(root,'data',f)),earnings.librarySha256,'Exact dedicated earnings library');
+  else if(f==='entry-observation-followups.js')assert.equal(sha(path.join(root,'data',f)),JSON.parse(fs.readFileSync(root+'/tools/current-price-contract.json')).observationFollowupSha256,'Exact audited chronological observation successor');
   else assert.equal(sha(path.join(root,'data',f)),sha(path.join(prior,'data',f)),'Unchanged published data '+f);
  }
  const originalDir='research/2026-11-05/CTSH-stage35-B-V2';for(const f of fs.readdirSync(path.join(root,originalDir)))assert.equal(sha(path.join(root,originalDir,f)),sha(path.join(prior,originalDir,f)),'Unchanged original source '+f);

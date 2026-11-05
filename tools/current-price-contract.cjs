@@ -4,6 +4,8 @@ const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 function validate(root,loaded){
  const c=JSON.parse(fs.readFileSync(path.join(root,'tools/current-price-contract.json')));
  assert.deepEqual(c.ids,['A283','A284','A285']);
+ assert.equal(sha(fs.readFileSync(root+'/data/entry-observation-followups.js')),c.observationFollowupSha256,'Exact audited observation registry');
+ for(const [file,h] of Object.entries(c.observationSourceHashes))assert.equal(sha(fs.readFileSync(root+'/'+file)),h,'Exact observation source '+file);
  assert.equal(sha(fs.readFileSync(root+'/index.html')),c.indexSha256,'Exact reviewed application successor');
  assert.equal(sha(fs.readFileSync(root+'/data/stock-profiles.js')),c.engineSha256,'Exact separate-review engine');
  assert.equal(sha(fs.readFileSync(root+'/data/lib-current-price-reviews.js')),c.librarySha256,'Exact new source chunk');
@@ -13,6 +15,6 @@ function validate(root,loaded){
  return c;
 }
 function legacy(root,loaded){
- const c=validate(root,loaded);loaded.reports=loaded.reports.filter(r=>!c.ids.includes(r.id));loaded.t.S.lib=loaded.reports;loaded.profiles=loaded.t.profiles();return loaded;
+ const c=validate(root,loaded);delete loaded.c.window.FP_ENTRY_OBSERVATION_FOLLOWUPS;delete loaded.c.window.FP_MANIFEST.entryObservationFollowupFile;loaded.c.window.FP_MANIFEST.libraryFiles=loaded.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!=='data/entry-observation-followups.js');loaded.reports=loaded.reports.filter(r=>!c.ids.includes(r.id));loaded.t.S.lib=loaded.reports;loaded.profiles=loaded.t.profiles();return loaded;
 }
 module.exports={validate,legacy};

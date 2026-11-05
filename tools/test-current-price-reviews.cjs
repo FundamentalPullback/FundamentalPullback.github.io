@@ -17,7 +17,7 @@ for(const tk of ['IT','HURN','CTSH']){
  assert.equal(m.approvedQuantity,0);assert(!m.valuation);assert(!m.close);assert.equal(m.contextQuote.type,'dated-intraday-not-executable');
  for(const lang of ['es','en']){a.t.setLang(lang);const card=a.t.profileSummaryCard(p);assert(card.includes(r.id));assert(card.includes(lang==='es'?m.summary:m.summaryEn));assert(!/undefined|NaN|Infinity/.test(card));
   if(tk==='HURN'){assert(card.includes('current-price-review'));assert(!card.includes('#entradas/HURN'));assert(card.includes(lang==='es'?'sin entrada':'no entry'));}
-  else {assert(card.includes('prospective-study'));assert(card.includes('#entradas/'+r.entryPlan.id));assert(card.includes(lang==='es'?'No activa · sin señal aprobada':'Inactive · no approved signal'));}
+  else {assert(card.includes('prospective-study'));assert(card.includes('#entradas/'+r.entryPlan.id));assert(card.includes(tk==='CTSH'?(lang==='es'?'Oportunidad no ejecutada terminada':'Unfilled opportunity ended'):(lang==='es'?'No activa · sin señal aprobada':'Inactive · no approved signal')));}
  }
  const name=tk==='CTSH'?'CTSH-current-price-B-V3':tk+'-current-price',dir=root+'/research/2026-11-05/'+name+'/',source=c.sourceVerification[tk];
  for(const [file,h] of Object.entries(source.hashes))assert.equal(sha(fs.readFileSync(dir+file)),h,'Audited original '+tk+'/'+file);
@@ -37,9 +37,9 @@ const regdir=root+'/research/2026-11-05/CTSH-current-price-B-V3/',reg=JSON.parse
 assert.equal(sha(fs.readFileSync(regdir+'observation_registration_public.json')),'3ed6ea63a03c0da727f8a70d5e5a2ef6ba43046499e6e23485dc162092f07ade');assert(Date.parse(reg.registered_at_UTC)<Date.parse(reg.bar_start_UTC));assert.equal(reg.bar_start_UTC,'2026-11-05T17:00:00Z');assert.equal(reg.bar_end_UTC,'2026-11-05T17:15:00Z');assert.equal(reg.entryApproved,false);assert.equal(reg.order_sent,false);assert.equal(reg.account_reverified,false);assert.equal(records.A285.entryPlan.events[1].at,reg.registered_at_UTC);assert.equal(records.A285.entryPlan.events[1].state,'inactive');
 const v2=a.reports.find(r=>r.id==='A278');assert(a.t.entryPlanFollowups().ok);assert.equal(a.t.entryPlanStatus(a.t.entryPlanCompose(v2,a.t.entryPlanFollowups()).entryPlan).state,'suspended');
 for(const lang of ['es','en']){
- a.t.setLang(lang);a.t.entryPlanRoute('entradas?state=inactive');let out=a.t.vEntradas();assert.equal((out.match(/<article class="entry-card">/g)||[]).length,2);assert(!out.includes('entry-state--activated'));assert(!out.includes('TRMD'));
+ a.t.setLang(lang);a.t.entryPlanRoute('entradas?state=inactive');let out=a.t.vEntradas();assert.equal((out.match(/<article class="entry-card">/g)||[]).length,1);assert(!out.includes('entry-state--activated'));assert(!out.includes('TRMD'));
  a.t.entryPlanRoute('entradas?state=activated');out=a.t.vEntradas();assert(!out.includes('<article class="entry-card">'));
- a.t.entryPlanRoute('entradas/CTSH-20261105-B-V3');out=a.t.vEntradas();assert(out.includes('12:00'));assert(out.includes('observation_registration_public.json'));assert(!out.includes('entry-state--activated'));assert(out.includes(lang==='es'?'sin señal aprobada':'no approved signal'));
+ a.t.entryPlanRoute('entradas/CTSH-20261105-B-V3');out=a.t.vEntradas();assert(out.includes('12:00'));assert(out.includes('observation_registration_public.json'));assert(!out.includes('entry-state--activated'));assert(out.includes(lang==='es'?'Oportunidad no ejecutada terminada':'Unfilled opportunity ended'));
  a.t.entryPlanRoute('entradas/CTSH-20261105-B-V2');assert(a.t.vEntradas().includes('entry-state--suspended'));
 }
 const pending=JSON.parse(fs.readFileSync(root+'/tools/pending-web-commentary.json'));assert.deepEqual(pending.pending.slice(0,-3),c.priorPending.pending);assert.deepEqual(pending.pending.slice(-3).map(r=>r.reportId),c.ids);

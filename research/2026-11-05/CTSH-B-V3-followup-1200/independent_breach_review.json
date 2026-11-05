@@ -1,0 +1,100 @@
+{
+  "checked_at_utc": "2026-11-05T17:18:07.722795+00:00",
+  "window_start_utc": "2026-11-05T17:00:00+00:00",
+  "window_end_utc": "2026-11-05T17:15:00+00:00",
+  "request_started_after_end": true,
+  "quote": {
+    "price": 66.36,
+    "at_utc": "2026-11-05T17:18:04+00:00",
+    "regular": true
+  },
+  "bar15": {
+    "t": "2026-11-05T17:00:00+00:00",
+    "open": 66.44000244140625,
+    "high": 66.5999984741211,
+    "low": 66.26000213623047,
+    "close": 66.58000183105469,
+    "volume": 134338
+  },
+  "complete_1minute_count": 15,
+  "entryApproved": false,
+  "order_sent": false,
+  "account_reverified": false,
+  "sources": [
+    {
+      "key": "yahoo15",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=15m&includePrePost=false",
+      "retrievedAt": "2026-11-05T17:18:01.222631+00:00",
+      "sha256": "ee780f32b795d14d496116f4bbf25245ed077ac08c64cb46fabfc846db302441"
+    },
+    {
+      "key": "yahoo1",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=1d&interval=1m&includePrePost=false",
+      "retrievedAt": "2026-11-05T17:18:01.223430+00:00",
+      "sha256": "69f7c259699b2137692776eecb8922d2a06684a8f666f3cdbf64a09ffd82b03e"
+    },
+    {
+      "key": "sa",
+      "url": "https://stockanalysis.com/stocks/ctsh/",
+      "retrievedAt": "2026-11-05T17:18:01.224507+00:00",
+      "sha256": "46b2ca2c1abe764eef7510949cdb1965d7306863efa1753cbac2c8bd4d135279"
+    }
+  ],
+  "aggregate_1m": {
+    "open": 66.44000244140625,
+    "high": 66.5999984741211,
+    "low": 66.26000213623047,
+    "close": 66.58000183105469,
+    "volume": 134338
+  },
+  "absolute_price_diffs": {
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "close": 0.0
+  },
+  "volume_diff": 0,
+  "close_condition_15m": true,
+  "close_condition_1m": true,
+  "M_breach_in_window": false,
+  "S_reached_in_window": false,
+  "pre_signal_high_above_ceiling": false,
+  "current_price_valid": false,
+  "observed_post_signal_bars": [
+    {
+      "t": "2026-11-05T17:15:00+00:00",
+      "low": 66.52400207519531,
+      "volume": 7278,
+      "open": 66.58000183105469,
+      "close": 66.52400207519531,
+      "high": 66.61000061035156
+    },
+    {
+      "t": "2026-11-05T17:16:00+00:00",
+      "low": 66.34500122070312,
+      "volume": 4362,
+      "open": 66.4800033569336,
+      "close": 66.34500122070312,
+      "high": 66.4800033569336
+    },
+    {
+      "t": "2026-11-05T17:17:00+00:00",
+      "low": 66.34500122070312,
+      "volume": 3295,
+      "open": 66.37000274658203,
+      "close": 66.38999938964844,
+      "high": 66.38999938964844
+    },
+    {
+      "t": "2026-11-05T17:18:04+00:00",
+      "low": 66.36000061035156,
+      "volume": 0,
+      "open": 66.36000061035156,
+      "close": 66.36000061035156,
+      "high": 66.36000061035156
+    }
+  ],
+  "observed_after_end_band_breach": true,
+  "state": "technical observation reconstructed; account/entry not approved",
+  "timestamp_note": "Any retrievedAt field denotes request-start time in the capture helper, not response-completion time. Price timestamps are separate exchange/provider market times."
+}
