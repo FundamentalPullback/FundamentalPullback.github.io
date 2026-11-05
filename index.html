@@ -692,7 +692,144 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 .decision-archive details .cards { margin-top:12px; }
 @media(max-width:600px) { .nav-sub[data-group="invest"] { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); } .saved-views { gap:6px; } .saved-views .chip { font-size:.76rem; } .daily-workspace .controls { align-items:flex-start; gap:12px; } .decision-archive .sec-head { align-items:flex-start; } }
 
-.entry-filters{align-items:end;flex-wrap:wrap}.entry-filters label{display:grid;gap:6px;min-width:0}.entry-filters input,.entry-filters select{max-width:100%;min-height:44px}.entry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}.entry-detail{overflow-wrap:anywhere}.entry-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}.entry-facts dt{font-weight:700}.entry-facts dd{margin:6px 0}.entry-events{padding-left:24px}.entry-detail .controls{flex-wrap:wrap}.entry-detail a{overflow-wrap:anywhere}
+/* Entry-plan presentation only. All selectors stay inside this archive. */
+#v-entradas:not([hidden]) { display:grid; gap:16px; }
+#v-entradas { --entry-navy:#13232F; --entry-gold:#F0B266; --entry-copper:#B5600B; --entry-link:#9A4F09; min-width:0; }
+#v-entradas p { margin:0; }
+#v-entradas a { color:var(--entry-link); text-underline-offset:3px; }
+#v-entradas a:visited { color:var(--entry-link); }
+#v-entradas :is(a,button,input,select,summary):focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+#v-entradas .entry-icon { width:20px; height:20px; flex:none; vertical-align:middle; }
+#v-entradas .entry-hero { position:relative; isolation:isolate; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:22px 28px; overflow:hidden; border:1px solid #354552; border-radius:16px; background:radial-gradient(ellipse at 90% 15%,#3C392A 0,transparent 50%),linear-gradient(115deg,#13232F,#0E191F); color:#F5F6F4; }
+#v-entradas .entry-hero::after { content:""; position:absolute; z-index:-1; inset:0 auto 0 0; width:4px; background:linear-gradient(#F0B266,#B5600B); }
+#v-entradas .entry-hero-copy { min-width:0; }
+#v-entradas .entry-eyebrow { display:flex; align-items:center; gap:8px; color:var(--entry-link); font-size:.7rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+#v-entradas .entry-hero .entry-eyebrow { color:#F0B266; margin-bottom:5px; }
+#v-entradas .entry-hero h2 { font-size:clamp(2rem,4.4vw,2.8rem); line-height:1.06; letter-spacing:-.025em; }
+#v-entradas .entry-hero p:last-child { max-width:70ch; margin-top:9px; color:#C5D0D6; font-size:.88rem; line-height:1.55; }
+#v-entradas .entry-hero-mark { width:112px; height:112px; flex:none; filter:drop-shadow(0 6px 18px #0005); }
+#v-entradas .entry-hero--detail { padding-block:18px; }
+#v-entradas .entry-hero--detail h2 { font-size:2rem; }
+#v-entradas .entry-hero--detail .entry-hero-mark { width:92px; height:92px; }
+#v-entradas .entry-safety { display:flex; align-items:flex-start; gap:10px; padding:11px 14px; border-left:3px solid var(--accent); border-radius:0 8px 8px 0; background:var(--accent-soft); color:var(--ink); font-size:.8rem; line-height:1.5; }
+#v-entradas .entry-safety .entry-icon { color:var(--accent); margin-top:1px; }
+#v-entradas .entry-filters{align-items:end;flex-wrap:wrap}
+#v-entradas .entry-filters { display:flex; gap:10px; padding:14px 16px; margin:0; border:1px solid var(--rule); border-radius:12px; background:var(--sheet); }
+#v-entradas .entry-filters label { display:grid; gap:5px; min-width:0; font-size:.73rem; font-weight:700; color:var(--ink-2); }
+#v-entradas .entry-filters label:first-child { flex:1 1 220px; }
+#v-entradas .entry-filters label:nth-child(2) { flex:0 1 255px; }
+#v-entradas .entry-filters input,#v-entradas .entry-filters select { width:100%; max-width:100%; min-width:0; min-height:44px; padding:9px 12px; border:1px solid var(--ink-2); border-radius:7px; background:var(--paper); color:var(--ink); font:inherit; font-size:.88rem; font-weight:400; }
+#v-entradas .entry-filters input::placeholder { color:var(--ink-2); opacity:1; }
+#v-entradas .btn { display:inline-flex; justify-content:center; align-items:center; gap:7px; min-height:44px; padding:10px 14px; border-radius:7px; font-size:.8rem; line-height:1.35; color:var(--ink); text-align:center; }
+#v-entradas .btn:hover { border-color:var(--accent); color:var(--entry-link); }
+#v-entradas .entry-primary,#v-entradas .entry-primary:visited { background:var(--entry-gold); color:#192630; border-color:var(--entry-gold); font-weight:800; }
+#v-entradas .entry-primary:hover { background:#F7C68B; color:#13232F; border-color:#F7C68B; }
+#v-entradas .entry-results { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; font-size:.8rem; color:var(--ink-2); }
+#v-entradas .entry-results strong { color:var(--ink); }
+#v-entradas .entry-back { display:inline-flex; align-items:center; gap:6px; min-height:32px; font-weight:700; text-decoration:none; }
+#v-entradas .entry-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr)); gap:18px; }
+#v-entradas .entry-card { position:relative; display:grid; gap:18px; padding:24px; border:1px solid var(--rule); border-top:3px solid var(--accent); border-radius:12px; background:var(--sheet); box-shadow:0 5px 18px #0E151B06; }
+#v-entradas .entry-card-top { display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+#v-entradas .entry-card-id { display:flex; align-items:center; gap:12px; min-width:0; }
+#v-entradas .entry-monogram { display:grid; place-items:center; flex:none; width:48px; height:48px; border:1px solid #495244; border-radius:10px; background:var(--entry-navy); color:var(--entry-gold); }
+#v-entradas .entry-monogram .entry-icon { width:25px; height:25px; }
+#v-entradas .entry-card-title { font-size:1.9rem; line-height:1.15; }
+#v-entradas .entry-card-title a,#v-entradas .entry-card-title a:visited { color:var(--ink); text-decoration:none; }
+#v-entradas .entry-card-title a:hover { color:var(--entry-link); }
+#v-entradas .entry-card-title small { display:block; margin-top:4px; color:var(--ink-2); font-family:var(--font-body); font-size:.81rem; font-weight:500; font-variation-settings:"wdth" 100; letter-spacing:0; }
+#v-entradas .entry-state { display:inline-flex; align-items:center; gap:7px; max-width:100%; padding:6px 11px; border:1px solid currentColor; border-radius:999px; color:var(--ink); background:var(--hold-bg); border-color:var(--accent); font-size:.74rem; font-weight:800; line-height:1.35; }
+#v-entradas .entry-state::before { content:""; flex:none; width:6px; height:6px; border-radius:50%; background:currentColor; }
+#v-entradas .entry-state--activated { color:var(--wait); background:var(--wait-bg); }
+#v-entradas .entry-state--expired,#v-entradas .entry-state--cancelled { color:var(--out); background:var(--out-bg); }
+#v-entradas .entry-state-note { display:block; margin-top:5px; color:var(--ink-2); font-size:.72rem; }
+#v-entradas .entry-meta { display:flex; flex-wrap:wrap; align-items:center; gap:7px 12px; color:var(--ink-2); font-size:.75rem; }
+#v-entradas .entry-version { display:inline-block; padding:3px 7px; border:1px solid var(--rule); border-radius:4px; background:var(--paper); font-size:.71rem; letter-spacing:.015em; overflow-wrap:anywhere; }
+#v-entradas .entry-section-label { display:flex; align-items:center; gap:8px; margin:0 0 10px; font-size:.75rem; font-weight:700; color:var(--ink-2); }
+#v-entradas .entry-section-label .entry-icon { width:17px; height:17px; color:var(--accent); }
+#v-entradas .entry-levels { display:grid; grid-template-columns:1.25fr 1fr 1fr; gap:1px; padding:1px; margin:0; overflow:hidden; border:1px solid var(--rule); border-radius:10px; background:var(--rule); }
+#v-entradas .entry-levels>div { min-width:0; padding:14px 16px; background:var(--paper); }
+#v-entradas .entry-levels>div:first-child { background:var(--accent-soft); }
+#v-entradas .entry-levels dt { color:var(--ink-2); font-size:.71rem; font-weight:600; }
+#v-entradas .entry-levels dd { margin:5px 0 0; font-size:1.25rem; font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:-.02em; line-height:1.3; overflow-wrap:anywhere; }
+#v-entradas .entry-levels dd small { font-size:.7rem; font-weight:500; letter-spacing:0; color:var(--ink-2); }
+#v-entradas .entry-card-bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:2px; }
+#v-entradas .entry-expiry { display:flex; align-items:flex-start; gap:8px; font-size:.74rem; color:var(--ink-2); }
+#v-entradas .entry-expiry .entry-icon { width:17px; height:17px; margin-top:2px; }
+#v-entradas .entry-expiry time { display:block; margin-top:2px; font-size:.79rem; font-weight:600; color:var(--ink); overflow-wrap:anywhere; }
+#v-entradas .entry-detail { padding:0; gap:0; overflow:hidden; overflow-wrap:anywhere; border-radius:14px; }
+#v-entradas .entry-detail-head { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:16px; padding:24px 26px; border-top:3px solid var(--accent); border-bottom:1px solid var(--rule); background:linear-gradient(105deg,var(--accent-soft),var(--sheet) 70%); }
+#v-entradas .entry-detail-head h2 { margin-top:4px; font-size:2.25rem; line-height:1.2; }
+#v-entradas .entry-plan-id { display:block; margin:3px 0 10px; color:var(--ink-2); font-size:.77rem; }
+#v-entradas .entry-detail-section { padding:24px 26px; border-bottom:1px solid var(--rule); }
+#v-entradas .entry-detail-section:last-child { border-bottom:0; }
+#v-entradas .entry-section-head { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+#v-entradas .entry-section-number { display:grid; place-items:center; width:29px; height:29px; flex:none; border:1px solid var(--rule); border-radius:7px; color:var(--entry-link); background:var(--accent-soft); font-size:.72rem; font-weight:800; }
+#v-entradas .entry-detail-section>p { margin:12px 0 0; color:var(--ink-2); font-size:.84rem; line-height:1.65; }
+#v-entradas .entry-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+#v-entradas .entry-facts { margin:16px 0 0; }
+#v-entradas .entry-facts>div { padding-left:12px; border-left:2px solid var(--rule); min-width:0; }
+#v-entradas .entry-facts dt { color:var(--ink-2); font-weight:600; font-size:.74rem; }
+#v-entradas .entry-facts dd { margin:5px 0 0; font-size:.87rem; line-height:1.5; }
+#v-entradas .entry-prose { max-width:90ch; font-size:.9rem; line-height:1.8; }
+#v-entradas .entry-prose p+p { margin-top:14px; }
+#v-entradas .entry-events { padding:0; margin:0; list-style:none; }
+#v-entradas .entry-events li { position:relative; margin-left:9px; padding:0 0 24px 26px; border-left:2px solid var(--rule); }
+#v-entradas .entry-events li:last-child { padding-bottom:0; border-left-color:transparent; }
+#v-entradas .entry-events li::before { content:""; position:absolute; top:5px; left:-6px; width:10px; height:10px; border:2px solid var(--sheet); border-radius:50%; background:var(--accent); box-shadow:0 0 0 2px var(--accent); }
+#v-entradas .entry-event-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:5px 12px; }
+#v-entradas .entry-event-head strong { font-size:.87rem; }
+#v-entradas .entry-event-head time { color:var(--ink-2); font-size:.75rem; }
+#v-entradas .entry-events p { max-width:85ch; margin-top:8px; font-size:.86rem; line-height:1.7; }
+#v-entradas .entry-event-source { display:inline-flex; align-items:center; gap:5px; margin-top:8px; min-height:32px; font-size:.8rem; font-weight:700; }
+#v-entradas .entry-source-links { display:flex; flex-wrap:wrap; gap:8px; }
+#v-entradas .entry-source-links a { overflow-wrap:anywhere; }
+#v-entradas .entry-source-note { padding-top:14px; border-top:1px solid var(--rule); }
+@media(min-width:900px) {
+  #v-entradas .entry-grid:has(>.entry-card:only-child) .entry-card { grid-template-columns:minmax(220px,.9fr) minmax(0,1.5fr); align-items:start; gap:16px 26px; }
+  #v-entradas .entry-grid:has(>.entry-card:only-child) .entry-card-intro { grid-row:1 / 3; align-self:start; }
+  #v-entradas .entry-card-intro .entry-meta { margin-top:16px; }
+  #v-entradas .entry-grid:has(>.entry-card:only-child) .entry-card-bottom { grid-column:2; }
+}
+@media(max-width:899px) {
+  #v-entradas .entry-card-intro .entry-meta { margin-top:12px; }
+}
+@media(max-width:640px) {
+  #v-entradas:not([hidden]) { gap:12px; }
+  #v-entradas .entry-hero { padding:20px; border-radius:12px; }
+  #v-entradas .entry-hero-mark { display:none; }
+  #v-entradas .entry-hero h2 { font-size:2rem; }
+  #v-entradas .entry-hero p:last-child { font-size:.83rem; }
+  #v-entradas .entry-filters { padding:12px; gap:10px 8px; }
+  #v-entradas .entry-filters label:first-child,#v-entradas .entry-filters label:nth-child(2) { flex:1 1 100%; }
+  #v-entradas .entry-filters .btn { flex:1 1 110px; }
+  #v-entradas .entry-card { padding:18px; gap:16px; }
+  #v-entradas .entry-card-top { gap:12px; }
+  #v-entradas .entry-card-title { font-size:1.7rem; }
+  #v-entradas .entry-levels { grid-template-columns:1fr 1fr; }
+  #v-entradas .entry-levels>div:first-child { grid-column:1 / -1; }
+  #v-entradas .entry-levels>div { padding:12px; }
+  #v-entradas .entry-levels dd { font-size:1.16rem; }
+  #v-entradas .entry-card-bottom { align-items:stretch; flex-direction:column; }
+  #v-entradas .entry-detail-head,#v-entradas .entry-detail-section { padding:20px 18px; }
+  #v-entradas .entry-detail-head h2 { font-size:1.9rem; }
+  #v-entradas .entry-events li { padding-left:20px; }
+  #v-entradas .entry-source-links { display:grid; grid-template-columns:minmax(0,1fr); }
+  #v-entradas .entry-source-links .btn { width:100%; justify-content:flex-start; text-align:left; }
+}
+@media(prefers-reduced-motion:no-preference) {
+  #v-entradas .btn,#v-entradas .entry-card-title a { transition:background-color .16s ease,color .16s ease,border-color .16s ease; }
+}
+@media(forced-colors:active) {
+  #v-entradas .entry-hero { background:Canvas; color:CanvasText; border-color:CanvasText; }
+  #v-entradas .entry-hero p:last-child,#v-entradas .entry-hero .entry-eyebrow { color:CanvasText; }
+  #v-entradas .entry-events li::before { background:CanvasText; }
+}
+
+@media(prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) #v-entradas { --entry-link:#E39A4C; }
+}
+:root[data-theme="dark"] #v-entradas { --entry-link:#E39A4C; }
+
 </style>
 </head>
 <body>
@@ -2954,32 +3091,44 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     try{S.entrySel=route.indexOf('/')>=0?decodeURIComponent(route.slice(route.indexOf('/')+1)):null;}catch(e){S.entrySel=null;}
     return 'entradas';
   }
+  /* Presentation helpers: no record, status, signal or route changes. */
+  function entryPlanIcon(name) {
+    var paths={shield:'<path d="M12 3 4 6v5c0 5 8 10 8 10s8-5 8-10V6Z"/><path d="M12 8v5m0 3h.01"/>',plan:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>',back:'<path d="M20 12H4m6-6-6 6 6 6"/>',lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/>',source:'<path d="M14 4h6v6m0-6-9 9"/><path d="M10 5H5a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-5"/>'};
+    return '<svg class="entry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'+(paths[name]||paths.plan)+'</svg>';
+  }
+  function entryPlanBadge(st) { return '<span class="entry-state entry-state--'+esc(st.state)+'">'+esc(entryPlanLabel(st.state))+'</span>'+(st.basis==='deadline'?'<span class="entry-state-note">'+esc(pt('según plazo declarado','from declared deadline'))+'</span>':''); }
+  function entryPlanLevels(p) {
+    return '<div><p class="entry-section-label">'+entryPlanIcon('lock')+esc(pt('Niveles propuestos e inactivos','Proposed inactive levels'))+'</p><dl class="entry-levels"><div><dt>'+esc(pt('Cierre de señal propuesto','Proposed signal close'))+'</dt><dd>'+esc('> '+p.signal.closeGt+' / ≤ '+p.signal.closeLte)+' <small>'+esc(p.currency)+'</small></dd></div><div><dt>'+esc(pt('Máximo técnico propuesto','Proposed technical cap'))+'</dt><dd>'+esc(p.levels.cap)+' <small>'+esc(p.currency)+'</small></dd></div><div><dt>'+esc(pt('M y S propuestos','Proposed M and S'))+'</dt><dd>'+esc('M '+p.levels.M)+'<br>'+esc('S '+p.levels.S)+' <small>'+esc(p.currency)+'</small></dd></div></dl></div>';
+  }
+  function entryPlanProse(summary) {
+    var parts=summary.split('. '),h='';for(var i=0;i<parts.length;i+=3)h+='<p>'+esc(parts.slice(i,i+3).join('. ')+(i+3<parts.length?'.':''))+'</p>';return h;
+  }
   function vEntradas() {
     ensureLib();var title=pt('Planes de entrada','Entry plans');
-    var h=head(title,pt('Propuestas de entrada, no operaciones ejecutadas. Versiones conservadas y estados respaldados por evidencia.','Proposed entry plans, not executed operations. Preserved versions and evidence-backed states.'));
-    h+='<p class="notice">'+esc(pt('Activada significa únicamente una señal verificada registrada, nunca una compra ni una orden. No hay ejecución ni orden registrada para este plan.','Activated means only a recorded verified signal, never a purchase or an order. No execution or order is recorded for this plan.'))+'</p>';
+    var h='<div class="entry-hero'+(S.entrySel?' entry-hero--detail':'')+'"><div class="entry-hero-copy"><p class="entry-eyebrow">Fundamental Pullback · '+esc(pt('Archivo de investigación','Research archive'))+'</p><h2>'+esc(title)+'</h2><p>'+esc(pt('Propuestas de entrada, no operaciones ejecutadas. Versiones conservadas y estados respaldados por evidencia.','Proposed entry plans, not executed operations. Preserved versions and evidence-backed states.'))+'</p></div><img class="entry-hero-mark" src="img/emblem-320.png" width="112" height="112" alt="" aria-hidden="true"></div>';
+    h+='<p class="entry-safety">'+entryPlanIcon('shield')+'<span>'+esc(pt('Activada significa únicamente una señal verificada registrada, nunca una compra ni una orden. No hay ejecución ni orden registrada para este plan.','Activated means only a recorded verified signal, never a purchase or an order. No execution or order is recorded for this plan.'))+'</span></p>';
     if(S.libState==='loading'||S.libState==='idle')return h+loadingBlock();
     if(S.libState==='fail')return h+notice(title,pt('No se pudo cargar el archivo.','Could not load the archive.'),'<button class="btn" data-libretry="1">'+esc(t().retry)+'</button>');
     var candidates=S.lib.filter(function(r){return isEntryPlan(r);}),counts=Object.create(null);candidates.forEach(function(r){counts[r.entryPlan.id]=(counts[r.entryPlan.id]||0)+1;});
     var records=candidates.filter(function(r){return counts[r.entryPlan.id]===1;});
     var list=records.filter(function(r){var p=r.entryPlan;return (!S.entryQ||(p.ticker+' '+p.id+' '+r.title).toLowerCase().indexOf(S.entryQ.toLowerCase())>=0)&&(S.entryState==='all'||entryPlanStatus(p).state===S.entryState);});
-    h+='<form class="controls entry-filters" id="entry-filters"><label for="entry-q">'+esc(pt('Buscar ticker o plan','Search ticker or plan'))+'<input type="search" id="entry-q" name="q" value="'+esc(S.entryQ||'')+'" placeholder="CTSH"></label><label for="entry-state">'+esc(pt('Estado','State'))+'<select id="entry-state" name="state">'+['all','pending','activated','expired','cancelled'].map(function(s){return '<option value="'+s+'"'+(S.entryState===s?' selected':'')+'>'+esc(s==='all'?t().all:entryPlanLabel(s))+'</option>';}).join('')+'</select></label><button class="btn" type="submit">'+esc(pt('Filtrar','Filter'))+'</button><a class="btn" href="#entradas">'+esc(pt('Limpiar filtros','Clear filters'))+'</a></form>';
-    h+='<p role="status">'+list.length+' '+esc(pt('planes encontrados','plans found'))+'</p>';
+    h+='<form class="controls entry-filters" id="entry-filters"><label for="entry-q">'+esc(pt('Buscar ticker o plan','Search ticker or plan'))+'<input type="search" id="entry-q" name="q" value="'+esc(S.entryQ||'')+'" placeholder="CTSH"></label><label for="entry-state">'+esc(pt('Estado','State'))+'<select id="entry-state" name="state">'+['all','pending','activated','expired','cancelled'].map(function(s){return '<option value="'+s+'"'+(S.entryState===s?' selected':'')+'>'+esc(s==='all'?t().all:entryPlanLabel(s))+'</option>';}).join('')+'</select></label><button class="btn entry-primary" type="submit">'+esc(pt('Filtrar','Filter'))+'</button><a class="btn" href="#entradas">'+esc(pt('Limpiar filtros','Clear filters'))+'</a></form>';
+    h+='<div class="entry-results"><p role="status"><strong>'+list.length+'</strong> '+esc(pt('planes encontrados','plans found'))+'</p>'+(S.entrySel?'<a class="entry-back" href="'+esc(entryPlanHash(null,S.entryQ,S.entryState))+'">'+entryPlanIcon('back')+esc(pt('Volver al archivo filtrado','Back to filtered archive'))+'</a>':'')+'</div>';
     if(S.entrySel) {
       var r=records.find(function(r){return r.entryPlan.id===S.entrySel;});
-      h+='<p><a class="btn" href="'+esc(entryPlanHash(null,S.entryQ,S.entryState))+'">'+esc(pt('Volver al archivo filtrado','Back to filtered archive'))+'</a></p>';
       if(!r)return h+notice(title,pt('No existe esta versión del plan. Usa el archivo para elegir una versión publicada.','This plan version does not exist. Choose a published version from the archive.'));
       var p=r.entryPlan,st=entryPlanStatus(p),m=r.profiles.find(function(m){return m&&m.ticker===p.ticker&&window.FP_PROFILE_ENGINE.isProspectiveStudy(r,m);});
-      h+='<article class="panel entry-detail" aria-labelledby="entry-title"><h2 id="entry-title">'+esc(p.ticker+' · '+p.id)+'</h2><p><strong>'+esc(entryPlanLabel(st.state))+'</strong> · '+esc(p.strategy+' · '+p.version+' · '+p.date)+'</p>';
-      h+='<p>'+esc(st.basis==='deadline'?pt('Caducidad calculada a partir del plazo declarado. El registro original sigue pendiente; no se añade un evento de mercado ni una operación.','Expiry calculated from the declared deadline. The original record remains pending; no market event or trade is added.'):pt('Estado respaldado por el último evento registrado; no constituye una compra ni una orden.','State supported by the latest recorded event; it does not constitute a purchase or an order.'))+'</p>';
-      h+='<dl class="entry-facts"><div><dt>'+esc(pt('Estrategia','Strategy'))+'</dt><dd>'+esc(p.strategy)+'</dd></div><div><dt>'+esc(pt('Señal propuesta','Proposed signal'))+'</dt><dd>'+esc('> '+p.signal.closeGt+' / ≤ '+p.signal.closeLte+' '+p.currency+' · '+p.signal.eligibleCloses)+'</dd></div><div><dt>'+esc(pt('Niveles propuestos e inactivos','Proposed inactive levels'))+'</dt><dd>'+esc(pt('Máximo técnico ','Technical cap ')+p.levels.cap+' · M '+p.levels.M+' · S '+p.levels.S+' '+p.currency)+'</dd></div><div><dt>'+esc(pt('Caducidad declarada (con zona horaria)','Declared expiry (with timezone)'))+'</dt><dd>'+esc(p.expiresAt)+'</dd></div></dl>';
-      h+='<p>'+esc(pt(m.summary,m.summaryEn))+'</p>';
-      h+='<h3>'+esc(pt('Evidencia e historial inmutable','Evidence and immutable history'))+'</h3><ol class="entry-events">'+p.events.map(function(e){return '<li><strong>'+esc(entryPlanLabel(e.state))+'</strong> · '+esc(e.at)+'<p>'+esc(pt(e.evidenceEs,e.evidenceEn))+' <a href="'+esc(e.source)+'">'+esc(pt('Fuente del evento','Event source'))+'</a></p></li>';}).join('')+'</ol>';
-      h+='<div class="controls"><a class="btn" href="#ficha/'+encodeURIComponent(p.ticker)+'">'+esc(pt('Ficha ','Profile ')+p.ticker)+'</a>'+reportLink(p.predecessorReportId,pt('Predecesor ','Predecessor ')+p.predecessorReportId)+reportLink(r.id,pt('Estudio ','Study ')+r.id)+'<a class="btn" href="'+esc(m.studyUrl)+'">'+esc(pt('Versión publicada y fuentes','Published version and sources'))+'</a><a class="btn" href="'+esc(m.publicSupportUrl)+'">'+esc(pt('ZIP original sin cambios','Unchanged original ZIP'))+'</a></div><p class="muted">'+esc(pt('Los borradores no publicados no son versiones oficiales. El evaluador es de investigación: sus candidatos históricos no acreditan una señal actual. Los eventos de estado requieren evidencia; las preferencias de pantalla nunca cambian el registro.','Unpublished drafts are not official versions. The evaluator is for research: historical candidates do not establish a current signal. Status events require evidence; display preferences never change the record.'))+'</p></article>';
+      h+='<article class="panel entry-detail" aria-labelledby="entry-title"><div class="entry-detail-head"><div><p class="entry-eyebrow">'+esc(pt('Versión publicada · Propuesta ','Published version · Proposal ')+p.route)+'</p><h2 id="entry-title">'+esc(p.ticker)+'</h2><span class="entry-plan-id">'+esc(p.id)+'</span><div class="entry-meta"><span>'+esc(p.strategy)+'</span><span class="entry-version">'+esc(p.version)+'</span><time datetime="'+esc(p.date)+'">'+esc(p.date)+'</time></div></div><div>'+entryPlanBadge(st)+'</div></div>';
+      h+='<section class="entry-detail-section" aria-labelledby="entry-levels-title"><div class="entry-section-head"><span class="entry-section-number" aria-hidden="true">01</span><h3 id="entry-levels-title">'+esc(pt('El plan, de un vistazo','The plan at a glance'))+'</h3></div>'+entryPlanLevels(p);
+      h+='<dl class="entry-facts"><div><dt>'+esc(pt('Estrategia','Strategy'))+'</dt><dd>'+esc(p.strategy)+'</dd></div><div><dt>'+esc(pt('Cierres elegibles de la señal propuesta','Eligible proposed signal closes'))+'</dt><dd>'+esc(p.signal.eligibleCloses)+'</dd></div><div><dt>'+esc(pt('Caducidad declarada (con zona horaria)','Declared expiry (with timezone)'))+'</dt><dd><time datetime="'+esc(p.expiresAt)+'">'+esc(p.expiresAt)+'</time></dd></div></dl>';
+      h+='<p>'+esc(st.basis==='deadline'?pt('Caducidad calculada a partir del plazo declarado. El registro original sigue pendiente; no se añade un evento de mercado ni una operación.','Expiry calculated from the declared deadline. The original record remains pending; no market event or trade is added.'):pt('Estado respaldado por el último evento registrado; no constituye una compra ni una orden.','State supported by the latest recorded event; it does not constitute a purchase or an order.'))+'</p></section>';
+      h+='<section class="entry-detail-section" aria-labelledby="entry-context-title"><div class="entry-section-head"><span class="entry-section-number" aria-hidden="true">02</span><h3 id="entry-context-title">'+esc(pt('Contexto y condiciones','Context and conditions'))+'</h3></div><div class="entry-prose">'+entryPlanProse(pt(m.summary,m.summaryEn))+'</div></section>';
+      h+='<section class="entry-detail-section" aria-labelledby="entry-evidence-title"><div class="entry-section-head"><span class="entry-section-number" aria-hidden="true">03</span><h3 id="entry-evidence-title">'+esc(pt('Evidencia e historial inmutable','Evidence and immutable history'))+'</h3></div><ol class="entry-events">'+p.events.map(function(e){return '<li><div class="entry-event-head"><strong>'+esc(entryPlanLabel(e.state))+'</strong><time datetime="'+esc(e.at)+'">'+esc(e.at)+'</time></div><p>'+esc(pt(e.evidenceEs,e.evidenceEn))+'</p><a class="entry-event-source" href="'+esc(e.source)+'">'+esc(pt('Fuente del evento','Event source'))+entryPlanIcon('source')+'</a></li>';}).join('')+'</ol></section>';
+      h+='<section class="entry-detail-section" aria-labelledby="entry-sources-title"><div class="entry-section-head"><span class="entry-section-number" aria-hidden="true">04</span><h3 id="entry-sources-title">'+esc(pt('Fuentes y versiones','Sources and versions'))+'</h3></div><div class="controls entry-source-links"><a class="btn" href="#ficha/'+encodeURIComponent(p.ticker)+'">'+esc(pt('Ficha ','Profile ')+p.ticker)+'</a>'+reportLink(p.predecessorReportId,pt('Predecesor ','Predecessor ')+p.predecessorReportId)+reportLink(r.id,pt('Estudio ','Study ')+r.id)+'<a class="btn" href="'+esc(m.studyUrl)+'">'+esc(pt('Versión publicada y fuentes','Published version and sources'))+'</a><a class="btn" href="'+esc(m.publicSupportUrl)+'">'+esc(pt('ZIP original sin cambios','Unchanged original ZIP'))+'</a></div><p class="entry-source-note">'+esc(pt('Los borradores no publicados no son versiones oficiales. El evaluador es de investigación: sus candidatos históricos no acreditan una señal actual. Los eventos de estado requieren evidencia; las preferencias de pantalla nunca cambian el registro.','Unpublished drafts are not official versions. The evaluator is for research: historical candidates do not establish a current signal. Status events require evidence; display preferences never change the record.'))+'</p></section></article>';
       return h;
     }
     if(!list.length)return h+notice(title,pt('No hay planes con estos filtros. Prueba otro ticker o estado.','No plans match these filters. Try another ticker or state.'));
-    h+='<div class="entry-grid">'+list.map(function(r){var p=r.entryPlan,st=entryPlanStatus(p);return '<article class="panel"><p class="muted">'+esc(p.date+' · '+p.version)+'</p><h2><a href="'+esc(entryPlanHash(p.id,S.entryQ,S.entryState))+'">'+esc(p.ticker+' · '+pt('Propuesta ','Proposal ')+p.route)+'</a></h2><p><strong>'+esc(entryPlanLabel(st.state))+'</strong>'+(st.basis==='deadline'?' · '+esc(pt('según plazo declarado','from declared deadline')):'')+'</p><p>'+esc(pt('Cierre de señal ','Signal close ')+'>'+p.signal.closeGt+' / ≤'+p.signal.closeLte+' · M '+p.levels.M+' / S '+p.levels.S+' '+p.currency+' · '+pt('inactivos','inactive'))+'</p><p>'+esc(pt('Caduca: ','Expires: ')+p.expiresAt)+'</p><a class="btn" href="'+esc(entryPlanHash(p.id,S.entryQ,S.entryState))+'">'+esc(pt('Ver plan, evidencia e historial','View plan, evidence and history'))+'</a></article>';}).join('')+'</div>';return h;
+    h+='<div class="entry-grid">'+list.map(function(r){var p=r.entryPlan,st=entryPlanStatus(p);return '<article class="entry-card"><div class="entry-card-intro"><div class="entry-card-top"><div class="entry-card-id"><span class="entry-monogram">'+entryPlanIcon('plan')+'</span><h2 class="entry-card-title"><a href="'+esc(entryPlanHash(p.id,S.entryQ,S.entryState))+'">'+esc(p.ticker)+' <small>'+esc(pt('Propuesta ','Proposal ')+p.route)+'</small></a></h2></div><div>'+entryPlanBadge(st)+'</div></div><div class="entry-meta"><time datetime="'+esc(p.date)+'">'+esc(p.date)+'</time><span class="entry-version">'+esc(p.version)+'</span></div></div>'+entryPlanLevels(p)+'<div class="entry-card-bottom"><p class="entry-expiry">'+entryPlanIcon('clock')+'<span>'+esc(pt('Caducidad declarada','Declared expiry'))+'<time datetime="'+esc(p.expiresAt)+'">'+esc(p.expiresAt)+'</time></span></p><a class="btn entry-primary" href="'+esc(entryPlanHash(p.id,S.entryQ,S.entryState))+'">'+esc(pt('Ver plan, evidencia e historial','View plan, evidence and history'))+entryPlanIcon('arrow')+'</a></div></article>';}).join('')+'</div>';return h;
   }
   document.addEventListener('submit',function(e){if(e.target.id!=='entry-filters')return;e.preventDefault();location.hash=entryPlanHash(null,document.getElementById('entry-q').value,document.getElementById('entry-state').value);});
 
