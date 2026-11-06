@@ -1,0 +1,131 @@
+{
+  "compiled_at_utc": "2026-11-06T00:04:39Z",
+  "calculation_status": "Completed using one identified full-history provider; not certified exchange-official OHLC",
+  "market_session": "2026-11-05",
+  "next_session": "2026-11-06",
+  "selected_provider": "ChartExchange",
+  "selection_reason": "One complete homogeneous 323-session OHLC series available for all six symbols; no averaging or cross-provider price substitutions. The plan prescribes method but not a mandatory market-data vendor.",
+  "canonical_rule": "Activate first regular close >= initial entry +2R; highest daily close since entry minus 3*Wilder ATR14; max(initial stop, previous effective trailing, candidate); never lower; apply prospectively next session.",
+  "rounding": "Full precision carried; two decimals displayed.",
+  "levels": {
+    "HRB": {
+      "close": 55.0,
+      "atr14_wilder": 1.6909515542991822,
+      "highest_close_since_entry": 55.47,
+      "prior_reconstructed": 50.30692574764879,
+      "candidate": 50.39714533710245,
+      "next_session_raw": 50.39714533710245,
+      "next_session_display": 50.4,
+      "activation_date": "2026-11-04",
+      "prior_published_numeric": null,
+      "source_url": "https://chartexchange.com/symbol/nyse-hrb/historical/",
+      "source_rows": 323,
+      "source_period": [
+        "2025-07-28",
+        "2026-11-05"
+      ],
+      "nov5_close_below_prior_reconstructed": false
+    },
+    "ASO": {
+      "close": 67.81,
+      "atr14_wilder": 2.4143429365471287,
+      "highest_close_since_entry": 67.81,
+      "prior_reconstructed": 60.5221228203862,
+      "candidate": 60.566971190358615,
+      "next_session_raw": 60.566971190358615,
+      "next_session_display": 60.57,
+      "activation_date": "2026-10-22",
+      "prior_published_numeric": 56.02,
+      "source_url": "https://chartexchange.com/symbol/nasdaq-aso/historical/",
+      "source_rows": 323,
+      "source_period": [
+        "2025-07-28",
+        "2026-11-05"
+      ],
+      "nov5_close_below_prior_reconstructed": false
+    },
+    "EXLS": {
+      "close": 43.61,
+      "atr14_wilder": 1.2087522811154368,
+      "highest_close_since_entry": 43.61,
+      "prior_reconstructed": 39.6,
+      "candidate": 39.98374315665369,
+      "next_session_raw": 39.98374315665369,
+      "next_session_display": 39.98,
+      "activation_date": "2026-10-08",
+      "prior_published_numeric": 39.6,
+      "source_url": "https://chartexchange.com/symbol/nasdaq-exls/historical/",
+      "source_rows": 323,
+      "source_period": [
+        "2025-07-28",
+        "2026-11-05"
+      ],
+      "nov5_close_below_prior_reconstructed": false
+    },
+    "ANF": {
+      "close": 157.59,
+      "atr14_wilder": 7.056000526125092,
+      "highest_close_since_entry": 171.09,
+      "prior_reconstructed": 151.69292137713433,
+      "candidate": 149.92199842162472,
+      "next_session_raw": 151.69292137713433,
+      "next_session_display": 151.69,
+      "activation_date": "2026-10-16",
+      "prior_published_numeric": 148.56,
+      "source_url": "https://chartexchange.com/symbol/nyse-anf/historical/",
+      "source_rows": 323,
+      "source_period": [
+        "2025-07-28",
+        "2026-11-05"
+      ],
+      "nov5_close_below_prior_reconstructed": false
+    },
+    "ULTA": {
+      "close": 649.68,
+      "atr14_wilder": 18.956173818597183,
+      "highest_close_since_entry": 660.7,
+      "prior_reconstructed": 606.3085153553014,
+      "candidate": 603.8314785442085,
+      "next_session_raw": 606.3085153553014,
+      "next_session_display": 606.31,
+      "activation_date": "2026-10-15",
+      "prior_published_numeric": 597.42,
+      "source_url": "https://chartexchange.com/symbol/nasdaq-ulta/historical/",
+      "source_rows": 323,
+      "source_period": [
+        "2025-07-28",
+        "2026-11-05"
+      ],
+      "nov5_close_below_prior_reconstructed": false
+    },
+    "DOCU": {
+      "close": 78.88,
+      "atr14_wilder": 2.9598260807755588,
+      "highest_close_since_entry": 85.27,
+      "prior_reconstructed": 76.97,
+      "candidate": 76.39052175767333,
+      "next_session_raw": 76.97,
+      "next_session_display": 76.97,
+      "activation_date": "2026-10-14",
+      "prior_published_numeric": 76.97,
+      "source_url": "https://chartexchange.com/symbol/nasdaq-docu/historical/",
+      "source_rows": 323,
+      "source_period": [
+        "2025-07-28",
+        "2026-11-05"
+      ],
+      "nov5_close_below_prior_reconstructed": false
+    }
+  },
+  "comparison_only": {
+    "HRB": "50.38–50.39 using SA recent-row overlay / A148-seed continuation",
+    "ASO": "60.53 using SA recent-row overlay / A148-seed continuation",
+    "EXLS": "40.01 using SA recent-row overlay / A148-seed continuation",
+    "ANF": "151.69 in checked continuity path",
+    "ULTA": "606.31 in checked continuity paths",
+    "DOCU": "76.97 prior floor retained in all checked paths"
+  },
+  "primary_checks": "ASO official issuer/LSEG confirms Nov5 C67.81 but provides O68.42/H69.62/L66.84; thus not a full confirmation of either provider bar. HRB issuer history only throughNov4, EXLS only throughOct30; Nasdaq historical/official-close data unavailable and NYSE HRB no accessible price rows.",
+  "authority_limit": "Disagreement is retained. These are calculated provider-specific reference levels, not universal official cents.",
+  "record_scope": "Public reference calculation. No orders, fills, holdings, cash or account identifiers changed."
+}

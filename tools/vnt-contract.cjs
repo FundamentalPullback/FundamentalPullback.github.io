@@ -3,7 +3,7 @@ const fs=require('fs'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),clone=x=>JSON.parse(JSON.stringify(x));
 function contract(root){return JSON.parse(fs.readFileSync(root+'/tools/vnt-contract.json'));}
 function priorDecisionBytes(root){
- const c=contract(root),b=fs.readFileSync(root+'/data/dec.js'),prefix='window.FP=window.FP||{};FP.dec=';
+ const c=contract(root),b=require('./scanner-nov5-contract.cjs').priorBytes(root,'data/dec.js'),prefix='window.FP=window.FP||{};FP.dec=';
  assert(b.toString().startsWith(prefix)&&b.toString().endsWith('];\n'));
  const rows=JSON.parse(b.toString().slice(prefix.length,-2));assert.equal(rows.length,c.priorDecision.rows+1,'Only one exact decision additions');
  assert.equal(sha(JSON.stringify(rows.slice(c.priorDecision.rows))),c.appendRowsSha256,'Exact one decision rows');

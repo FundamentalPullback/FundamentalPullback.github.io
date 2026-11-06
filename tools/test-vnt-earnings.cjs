@@ -3,7 +3,7 @@ const fs=require('fs'),path=require('path'),assert=require('assert/strict'),cryp
 const root=path.resolve(__dirname,'..'),sha=b=>crypto.createHash('sha256').update(b).digest('hex'),clone=x=>JSON.parse(JSON.stringify(x));
 const filename=path.join(__dirname,'load-stock-profiles.cjs'),m=new Module(filename,module);m.filename=filename;m.paths=module.paths;m._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,profileCardData,'),filename);
 const a=m.exports(root),contract=require('./vnt-contract.cjs'),c=contract.validate(root,a);
-for(const [f,h] of Object.entries(c.priorDataHashes))assert.equal(sha(fs.readFileSync(root+'/data/'+f)),h,'Prior data unchanged '+f);
+for(const [f,h] of Object.entries(c.priorDataHashes))assert.equal(sha(require('./trailing-contract.cjs').priorBytes(root,'data/'+f)),h,'Prior data unchanged '+f);
 for(const [f,h] of Object.entries(c.priorResearchHashes))assert.equal(sha(fs.readFileSync(root+'/'+f)),h,'Prior research unchanged '+f);
 const r=a.reports.find(r=>r.id==='A288'),p=a.profiles.find(p=>p.ticker==='VNT'),meta=r.profiles[0],d=a.t.profileCardData(p),folder=root+'/research/2026-11-05/VNT-post-earnings/',v=c.sourceVerification.VNT,full=fs.readFileSync(folder+'website_report.md','utf8'),body=fs.readFileSync(folder+'report/VNT_Q3_2026_revision_limitada.html','utf8'),ed=JSON.parse(fs.readFileSync(folder+'editorial_metadata.json'));
 assert.equal(r.schema,'fp.post-earnings-supplement.v1');assert.equal(meta.kind,'partial');assert.equal(meta.earningsUpdateComplete,true);

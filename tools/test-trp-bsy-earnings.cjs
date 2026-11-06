@@ -3,7 +3,7 @@ const fs=require('fs'),path=require('path'),assert=require('assert/strict'),cryp
 const root=path.resolve(__dirname,'..'),clone=x=>JSON.parse(JSON.stringify(x)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const filename=path.join(__dirname,'load-stock-profiles.cjs'),m=new Module(filename,module);m.filename=filename;m.paths=module.paths;m._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,profileCardData,'),filename);
 const a=m.exports(root),contract=require('./trp-bsy-contract.cjs'),c=contract.validate(root,a);
-for(const [f,h] of Object.entries(c.priorDataHashes))assert.equal(sha(fs.readFileSync(root+'/data/'+f)),h,'Every prior data file unchanged '+f);
+for(const [f,h] of Object.entries(c.priorDataHashes))assert.equal(sha(require('./trailing-contract.cjs').priorBytes(root,'data/'+f)),h,'Every prior data file unchanged '+f);
 for(const [f,h] of Object.entries(c.priorResearchHashes))assert.equal(sha(fs.readFileSync(root+'/'+f)),h,'Every prior research file unchanged '+f);
 const rows=JSON.parse(fs.readFileSync(root+'/data/dec.js','utf8').slice('window.FP=window.FP||{};FP.dec='.length,-2)),pending=JSON.parse(fs.readFileSync(root+'/tools/pending-web-commentary.json'));
 const before=JSON.stringify({reports:a.reports,dec:a.t.S.dec,ops:a.t.S.ops,ges:a.t.S.ges,acct:a.t.S.acct,hist:a.t.S.hist});

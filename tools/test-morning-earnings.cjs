@@ -7,7 +7,7 @@ m._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,
 const a=m.exports(root),ids=['A280','A281','A282'],tickers=['FA','ROK','IMAX'];
 const successor=require('./current-price-contract.cjs').validate(root,a);
 assert.equal(sha(fs.readFileSync(root+'/index.html')),successor.indexSha256,'Exact audited current-price UI successor');
-for(const [f,h] of Object.entries(contract.dataHashes))assert.equal(sha(fs.readFileSync(root+'/data/'+f)),f==='stock-profiles.js'?successor.engineSha256:h,'All prior data preserved, exact separately tested engine successor: '+f);
+for(const [f,h] of Object.entries(contract.dataHashes))assert.equal(sha(require('./trailing-contract.cjs').priorBytes(root,'data/'+f)),f==='stock-profiles.js'?successor.engineSha256:h,'All prior data preserved, exact separately tested engine successor: '+f);
 const actualManifest=clone(a.c.window.FP_MANIFEST),expectedManifest=clone(contract.priorManifest);expectedManifest.libraryFiles.push('data/lib-morning-earnings.js','data/lib-current-price-reviews.js');expectedManifest.generated=actualManifest.generated;expectedManifest.libraryFiles.push('data/entry-observation-followups.js','data/lib-trp-bsy-earnings.js','data/lib-vnt-earnings.js','data/lib-cross-candidate-review.js');expectedManifest.entryObservationFollowupFile='data/entry-observation-followups.js';
 assert.deepEqual(actualManifest,expectedManifest,'Only version and dedicated library addition in manifest');assert(Date.parse(actualManifest.generated)>Date.parse(contract.priorManifest.generated));
 assert.equal(sha(fs.readFileSync(root+'/data/lib-morning-earnings.js')),contract.librarySha256);

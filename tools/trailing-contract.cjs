@@ -1,0 +1,9 @@
+// Exact A290 successor: validate current bytes before projecting historical tests.
+const fs=require('fs'),crypto=require('crypto'),assert=require('assert/strict');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),clone=x=>JSON.parse(JSON.stringify(x));
+function contract(root){return JSON.parse(fs.readFileSync(root+'/tools/trailing-contract.json'));}
+function validateFiles(root){const c=contract(root);for(const [f,h]of Object.entries(c.currentHashes))assert.equal(sha(require('./scanner-nov5-contract.cjs').priorBytes(root,f)),h,'Exact A290 successor '+f);return c;}
+function priorBytes(root,f){const c=validateFiles(root);return c.priorContents[f]!==undefined?Buffer.from(c.priorContents[f]):require('./scanner-nov5-contract.cjs').priorBytes(root,f);}
+function legacy(root,a){a=require('./scanner-nov5-contract.cjs').legacy(root,a);if(!a.reports.some(r=>r.id==='A290'))return a;const c=validateFiles(root);assert.equal(a.reports.filter(r=>r.id==='A290').length,1);assert.equal(sha(JSON.stringify(a.reports.find(r=>r.id==='A290'))),c.reportHash);assert.equal(a.reports.length,c.priorReportCount+1);const mf=clone(a.c.window.FP_MANIFEST);mf.libraryFiles=mf.libraryFiles.filter(f=>f!==c.library);mf.generated=c.priorManifest.generated;assert.deepEqual(mf,c.priorManifest);const rows=clone(a.c.FP.ges);assert.equal(rows.length,c.priorGesRows+6);assert.equal(sha(JSON.stringify(rows.slice(0,c.priorGesRows))),c.priorGesHash);assert.equal(sha(JSON.stringify(rows.slice(c.priorGesRows))),c.newGesHash);
+a.reports=a.reports.filter(r=>r.id!=='A290');a.t.S.lib=a.reports;a.t.S.ges=a.t.PARTS.ges(rows.slice(0,c.priorGesRows));a.c.FP.ges=rows.slice(0,c.priorGesRows);a.c.window.FP_LIB.reports=a.reports;a.c.window.FP_MANIFEST=mf;a.profiles=a.t.profiles();return a;}
+module.exports={validateFiles,priorBytes,legacy};

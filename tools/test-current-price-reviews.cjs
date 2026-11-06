@@ -1,10 +1,11 @@
+const ActualDate=Date;global.Date=class extends ActualDate{constructor(...args){super(...(args.length?args:['2026-11-05T19:49:59Z']));}static now(){return ActualDate.parse('2026-11-05T19:49:59Z');}};
 // Dated source-bound reviews. No network, trading or account writes.
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto'),vm=require('vm'),Module=require('module');
 const root=path.resolve(__dirname,'..'),base=path.resolve(root,'../../morning_earnings_release/verified_site'),clone=x=>JSON.parse(JSON.stringify(x)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const filename=path.join(__dirname,'load-stock-profiles.cjs'),mod=new Module(filename,module);mod.filename=filename;mod.paths=module.paths;
 mod._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,isEntryPlan,entryPlanStatus,entryPlanCompose,entryPlanFollowups,vEntradas,entryPlanRoute,'),filename);
 const a=mod.exports(root),before=require('./load-stock-profiles.cjs')(base),c=require('./current-price-contract.cjs').validate(root,a),get=(x,t)=>x.profiles.find(p=>p.ticker===t),records=Object.fromEntries(c.ids.map(id=>[id,a.reports.find(r=>r.id===id)]));
-for(const [f,h] of Object.entries(c.priorDataHashes))assert.equal(sha(f==='dec.js'?require('./trp-bsy-contract.cjs').priorDecisionBytes(root):fs.readFileSync(root+'/data/'+f)),h,'All historical data exact: '+f);
+for(const [f,h] of Object.entries(c.priorDataHashes))assert.equal(sha(f==='dec.js'?require('./trp-bsy-contract.cjs').priorDecisionBytes(root):require('./trailing-contract.cjs').priorBytes(root,'data/'+f)),h,'All historical data exact: '+f);
 assert(!a.reports.some(r=>r.id==='A279'),'Paused TRMD remains unpublished');
 const originalReports=JSON.stringify(a.reports),originalState=JSON.stringify({dec:a.t.S.dec,ges:a.t.S.ges,ops:a.t.S.ops,acct:a.t.S.acct,hist:a.t.S.hist});
 for(const tk of ['IT','HURN','CTSH']){
