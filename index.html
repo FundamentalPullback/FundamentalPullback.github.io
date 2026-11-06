@@ -1863,6 +1863,24 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if (!rows.length) return null;
     return rows.map(function (r) { return isoDay(r.date) || "0000-00-00"; }).sort()[0];
   }
+  // Gross figures exclude ALL fees, never assuming unpublished fees are zero.
+  function grossRecordedRealized(rows) {
+    var holdings = {}, result = 0, valid = true;
+    (rows || []).slice().sort(function(a,b){return String(a.date).localeCompare(String(b.date));}).forEach(function(r){
+      if (!r.ticker) return;
+      var n=r.shares, price=r.exec, buy=/^(compra|buy)$/i.test(String(r.type||'').trim()), sell=/^(venta|sell)$/i.test(String(r.type||'').trim());
+      if (!Number.isFinite(n)||n<=0||!Number.isFinite(price)||price<=0||(!buy&&!sell)){valid=false;return;}
+      var p=holdings[r.ticker]||(holdings[r.ticker]={n:0,cost:0});
+      if(buy){p.n+=n;p.cost+=n*price;}
+      else {if(n>p.n+1e-6||!p.n){valid=false;return;}var avg=p.cost/p.n;result+=n*(price-avg);p.cost-=n*avg;p.n-=n;}
+    });
+    return valid?result:null;
+  }
+  function grossAccountingPanel() {
+    if(!unpublishedFeeDate()) return '';
+    var gross=grossRecordedRealized(S.ops); if(gross===null) return '';
+    return '<section class="panel" data-gross-accounting="true"><h3>'+esc(pt('Resultado realizado bruto del registro publicado','Gross realized result of published trades'))+'</h3><b>'+esc(fmtM(gross))+'</b><p>'+esc(pt('Antes de todas las comisiones. Solo operaciones y precios publicados; no es el saldo del bróker ni el resultado neto. Los totales netos siguen pendientes de las comisiones no publicadas.','Before all fees. Published trades and prices only; this is not the broker balance or net result. Net totals remain pending unpublished fees.'))+'</p></section>';
+  }
   function incompleteAccountingNotice() {
     var date = unpublishedFeeDate();
     if (!date) return "";
@@ -2260,6 +2278,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
     } else h += '<p class="muted">' + esc(K.noHist) + "</p>";
     h += "</div>";
+    h = grossAccountingPanel() + h;
     h += incompleteAccountingNotice() + priceStatus() + livePanel(open, cash);
     var acctNote = lang === "en" && A.noteEn ? A.noteEn : A.note;
     if (acctNote) { var nm = /^([^:]{6,60}):\s*([\s\S]+)$/.exec(acctNote); h += nm ? '<details class="why-fold acct-note"><summary>' + esc(nm[1]) + "</summary><p>" + esc(nm[2]) + "</p></details>" : '<p class="acct-note">' + esc(acctNote) + "</p>"; }
