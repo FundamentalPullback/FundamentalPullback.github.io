@@ -1,0 +1,34 @@
+{
+  "self_check": true,
+  "independent_audit": true,
+  "checks": {
+    "prior_reports_empty": true,
+    "library_search_attempted": true,
+    "primary_q3_calendar": true,
+    "four_quarters_sum_to_ttm": true,
+    "three_years": true,
+    "ten_year_fcff": true,
+    "terminal_reinvestment_linked_to_roic": true,
+    "sbc_retained": true,
+    "software_capex_included": true,
+    "leases_not_double_counted": true,
+    "regular_close_distinct_from_last": true,
+    "scenarios_monotonic": true,
+    "inverse": true,
+    "historical_homogeneous_ratios": true,
+    "reported_vs_analyst_identified": true,
+    "raw_beta_sensitivity_disclosed": true,
+    "all_additive_quarter_metrics_reconcile": true,
+    "inverse_repricing": true,
+    "beta_sensitivity_direction_reversal_explicit": true
+  },
+  "caveats": [
+    "No exact Q4 date found.",
+    "Historical ratios retrospective, not point-in-time backtest.",
+    "FCF cash-interest proxy not used to drive DCF.",
+    "No source artifact exposed private paths.",
+    "TTM P/E17.78 uses approximate published trailing EPS7.95, not certified TTM weighted-share EPS."
+  ],
+  "artifact_mode": "deterministic_support_model_not_banker_formula_workbook",
+  "audit_verdict": "Ready with caveats for conditional screen; not ready for portfolio action"
+}

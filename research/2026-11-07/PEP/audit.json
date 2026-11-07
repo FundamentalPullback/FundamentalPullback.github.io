@@ -1,0 +1,110 @@
+{
+  "ticker": "PEP",
+  "asof": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "permitted_use": "Completed conditional exploratory fundamental review only",
+  "portfolio_action_readiness": "Not ready",
+  "entryApproved": false,
+  "published": false,
+  "scope": "Independent source tie-out and executable model audit; archived issuer filings and live price/beta corroboration",
+  "mechanics_pass": true,
+  "scenario_values": {
+    "bear": 64.75776931753106,
+    "base": 119.85439850539117,
+    "bull": 204.05030113726406
+  },
+  "corrections": [
+    {
+      "type": "Not comparable without bridge",
+      "location": "model.py comparisons / report historical ratios",
+      "finding": "TTM P/E used net income divided by Q3 shares while annual ratios used reported EPS",
+      "fix": "Use published FY+YTD-current\u2212YTD-prior approximate diluted EPS7.95; P/E17.78; explicitly disclose rounding/weighting limits"
+    },
+    {
+      "type": "Unsupported assumption",
+      "location": "report WACC headline and sensitivity",
+      "finding": "Beta0.85 is not source-calibrated; operational risks alone do not prove market covariance",
+      "fix": "Do not treat119.85 as uniquely validated central value. Promote212.28 observed-beta value and126.69 at exact normalized-beta WACC; show price/value and break-even beta0.722"
+    },
+    {
+      "type": "Formula/control defect",
+      "location": "model.py assertions",
+      "finding": "Prior quarterly control checked only revenue",
+      "fix": "Check every additive statement metric except EPS and independently reprice all three inverse solutions"
+    }
+  ],
+  "open_issues": [
+    {
+      "severity": "High for investment use; caveat for exploratory review",
+      "type": "Unsupported assumption",
+      "finding": "Empirical normalized-beta/peer capital-structure calibration and contemporaneous debt spread missing",
+      "impact": "Direction of valuation reverses; illustrative fair value112.33\u2013212.28 across beta1.00\u20130.32",
+      "owner": "Research underwriting"
+    },
+    {
+      "severity": "Medium",
+      "type": "Unsupported assumption",
+      "finding": "18% terminal incremental ROIC versus14.3% reported return; growth/reinvestment path and recurring cost reserves require underwriting",
+      "impact": "Terminal58.6% of base EV; no validated organic plan or funded future acquisition strategy",
+      "owner": "Research underwriting"
+    },
+    {
+      "severity": "Low to Medium",
+      "type": "Unsupported assumption",
+      "finding": "Pension annual liability proxy, minority15x, excluded investment values and inaccessible cash haircut are conservative estimates",
+      "impact": "Bridge bounded in report; no claim to asset-by-asset market values",
+      "owner": "Research underwriting"
+    }
+  ],
+  "source_tieouts": [
+    "S1 annual2023\u20132025 statements pp57\u201363; Note7 pension recognized liabilities61+585+14+244+55+413=1372; Note12 operating leases3846; software260 amortization/1800 net",
+    "S2 Q3 income p2, cash flow pp4\u20135 and balance sheet; Note9 poppi266 gain,12 liability,300 contingent maximum; Russia20% cash",
+    "S3 Q3 core operating growth3% including4pp tariff refund tailwind; core YTD11394/10837",
+    "S4/S5 cumulative2026 Q2/Q1 source cash-flow and earnings tieouts",
+    "StockAnalysis historical page independently corroborates Nov6 close141.34; Yahoo stats search corroborates five-year monthly beta0.32"
+  ],
+  "remaining_limits": [
+    "Audit does not independently reconstruct beta regression, cost of debt or monthly ERP calibration",
+    "Historical year-end prices retain original source evidence rather than new independent price-by-price fetch",
+    "No date-certain Q4 event or technical/portfolio entry review"
+  ],
+  "audit_sensitivity": [
+    {
+      "beta": 0.32,
+      "wacc": 0.059228097261671456,
+      "value": 212.27859197280378,
+      "upside": 0.5019003252639294,
+      "price_premium_to_value": -0.33417685369748507
+    },
+    {
+      "beta": 0.5,
+      "wacc": 0.06548165214430929,
+      "value": 174.4975342352592,
+      "upside": 0.23459412929998003,
+      "price_premium_to_value": -0.19001720786814036
+    },
+    {
+      "beta": 0.65,
+      "wacc": 0.07069294787984083,
+      "value": 150.89907560471926,
+      "upside": 0.0676317787230738,
+      "price_premium_to_value": -0.06334747622814663
+    },
+    {
+      "beta": 0.85,
+      "wacc": 0.07764134219388287,
+      "value": 126.68644041273132,
+      "upside": -0.10367595576106325,
+      "price_premium_to_value": 0.11566793999049074
+    },
+    {
+      "beta": 1.0,
+      "wacc": 0.08285263792941441,
+      "value": 112.33347244062462,
+      "upside": -0.2052251843736761,
+      "price_premium_to_value": 0.25821802646319125
+    }
+  ],
+  "breakeven_wacc": 0.07320559276684258,
+  "breakeven_beta": 0.722323036760419
+}
