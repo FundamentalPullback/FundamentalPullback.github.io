@@ -1,0 +1,131 @@
+{
+  "ticker": "LEVI",
+  "asOf": "2026-11-07",
+  "verdict": "Ready with caveats for explicitly partial research; Not ready for completed research or portfolio action",
+  "publishReadiness": "Partial conditional research only. No publishing performed or authorized by this audit.",
+  "researchComplete": false,
+  "entryApproved": false,
+  "mechanics": "pass",
+  "pricesVerified": {
+    "adverso": {
+      "price": 8.446735590251787,
+      "independent_pv_recalculation": true,
+      "minimum_capex_to_sales": 0.0375,
+      "terminal_reinvestment_exceeds_floor": true
+    },
+    "central": {
+      "price": 14.937328962104147,
+      "independent_pv_recalculation": true,
+      "minimum_capex_to_sales": 0.04386585365853662,
+      "terminal_reinvestment_exceeds_floor": true
+    },
+    "favorable": {
+      "price": 26.266530007552397,
+      "independent_pv_recalculation": true,
+      "minimum_capex_to_sales": 0.039689320388349526,
+      "terminal_reinvestment_exceeds_floor": true
+    }
+  },
+  "checks": {
+    "quarterly_ttm": true,
+    "capm_arithmetic": true,
+    "terminal_g_over_roic": true,
+    "fcff_identity": true,
+    "all_economic_share_classes": true,
+    "sbc_not_double_subtracted": true,
+    "dockers_income_excluded_cash_consolidated_disclosed": true,
+    "tariff_refunds_removed_from_sustainable_anchor": true,
+    "current_close_verified": {
+      "date": "2026-11-06",
+      "price": 22.87
+    }
+  },
+  "issues": [
+    {
+      "severity": "high",
+      "type": "Not comparable without bridge",
+      "location": "report cash bridge; model historical cash",
+      "finding": "Investing FX settlements and retained ex-Dockers cash are not economically reconciled. Q3 note 5 reports 13.6 realized FX gains in the CFO reconciliation while investing reports -179.7 settlements. The -192.5 TTM inclusion is a consolidated cash diagnostic, not a perpetual operating expense.",
+      "fix": "Reconcile derivative principal/settlements, hedged exposures, operating cash offsets and discontinued working capital before treating any cash measure as sustainable FCFF."
+    },
+    {
+      "severity": "medium",
+      "type": "Not comparable without bridge",
+      "location": "report historical/peer contrasts",
+      "finding": "No homogeneous historical valuation series or KTB/VFC peer bridge.",
+      "fix": "Complete matched-date, matched-perimeter financial and valuation cross-checks."
+    },
+    {
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "CAPM sources",
+      "finding": "ERP 4.41% is verified as November 1 but underlying source assumes Treasury 5.29%, while model uses November 6 10Y 4.86%. Beta 1.30 is secondary 5Y beta, not independently regressed; debt cost 6% is an estimate. No arithmetic defect.",
+      "fix": "Keep mixed-date basis explicit; refresh synchronized ERP/risk-free inputs if full research is completed.",
+      "illustrativeAuditSensitivity": {
+        "description": "Use ERP source Treasury 5.29% with all other central inputs unchanged; diagnostic only, not revised base case",
+        "wacc": 0.10293659330722357,
+        "centralValue": 13.996231212742654
+      }
+    },
+    {
+      "severity": "low",
+      "type": "Missing forecast refresh",
+      "location": "equity bridge",
+      "finding": "FY25 finance leases 73.5, gross pension/postretirement 151.2 and deferred compensation 120.8 less August Rabbi 113.6 are dated/mixed-date proxies. Pension total deliberately excludes 109.1 surplus assets.",
+      "fix": "Update balances when available; do not turn bounded proxies into a false full-readiness claim.",
+      "claim100EffectPerShare": 0.25772205705488527,
+      "claim200EffectPerShare": 0.5154441141097705
+    },
+    {
+      "severity": "low",
+      "type": "Unsupported assumption",
+      "location": "FCFF underwriting",
+      "finding": "Incremental ROIC 10/15/20%, marginal NWC 15%, capex floor and margin expansion are explicit estimates, not historical invested-capital returns. The inverse 23.5% margin is conditional on financing margin-generated NOPAT growth at 15% incremental ROIC.",
+      "fix": "Retain conditional labels; calibrate with store/capital productivity and historical invested-capital evidence."
+    }
+  ],
+  "sourceTieout": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/94845/000009484526000047/lvis-20260830.htm",
+      "locations": "Statements; notes 2 and 5; liquidity section",
+      "verified": "Q3/9M revenue, EBIT, cash, capex, SBC, tariff benefit 80.7, proceeds and Dockers perimeter, FX settlement -179.7, shares, cash/securities and November dividend."
+    },
+    {
+      "url": "https://investors.levistrauss.com/news/financial-news/news-details/2026/Levi-Strauss--Co--Reports-Third-Quarter-Results/default.aspx",
+      "locations": "Adjusted EBIT reconciliation and tariff footnotes",
+      "verified": "Adjusted EBIT 248.7 still includes tariffs; promotional reinvestment 25."
+    },
+    {
+      "url": "https://s23.q4cdn.com/172692177/files/doc_financials/2025/ar/449421_LEVI-STRAUSS_AR_PROOF_RC.pdf",
+      "locations": "PDF pages 88,91,116-118,128",
+      "verified": "Annual income and cash inputs spot checks, 73.5 finance lease PV, pension 11.2+109.2 and postretirement 4.3+26.5, 109.1 surplus asset, deferred comp 11.1+109.7.",
+      "limitation": "Original SEC PDF exceeded web size limit; company-linked annual report successfully read instead."
+    },
+    {
+      "url": "https://stockanalysis.com/stocks/levi/history/",
+      "verified": "November 6 regular close 22.87, distinct from 22.80 after-hours."
+    },
+    {
+      "url": "https://stockanalysis.com/stocks/levi/statistics/",
+      "verified": "Published 5Y beta 1.30."
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve",
+      "verified": "November 6 10Y Treasury 4.86."
+    },
+    {
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm?lfrom=202213444",
+      "verified": "November 1 ERP 4.41; source Treasury basis 5.29."
+    }
+  ],
+  "scopeLimits": [
+    "Source checks are risk-based spot checks, not certification of every historical input or source claim.",
+    "No independent regression, actuarial valuation, full peer history, or complete derivative economic bridge.",
+    "No trading, portfolio sizing, entry approval, or publication."
+  ],
+  "changes": [
+    "No forecast assumptions or scenario values changed.",
+    "Added explicit ERP source risk-free basis and separate FX gain/settlement reconciliation evidence to report.",
+    "Added company-hosted annual report source and audit metadata."
+  ]
+}
