@@ -1,0 +1,95 @@
+{
+  "ticker": "OTIS",
+  "audit_date": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "research_status": "completed_conditional_review",
+  "permitted_use": "Completed Stage 3 analytical review supporting wait-for-price/evidence. Not entry approval, Stage 3.5 clearance, trading authorization, or exact appraisal.",
+  "publication_safe": true,
+  "publication_performed": false,
+  "material_unresolved_model_defects": 0,
+  "headline": "Model and source tie-outs support a completed conditional review; disclosed proxies and missing future earnings date do not alone require partial status.",
+  "values": {
+    "adverso": 31.00189307726352,
+    "central": 70.31761817963157,
+    "favorable": 134.51738366959995
+  },
+  "checks": [
+    {
+      "check": "Reported EBIT vs provider",
+      "result": "2025 2,133 - 9M2025 1,544 + 9M2026 1,734 = TTM 2,323. Provider standardized operating income 2,342 is not used. Difference 19 does not imply erroneous primary EBIT; detailed provider taxonomy not reconstructed.",
+      "source": "k.txt lines 4275–4400; q.txt lines 1630–1730; https://stockanalysis.com/stocks/otis/financials/ operating-income row"
+    },
+    {
+      "check": "TTM cash and sales",
+      "result": "Sales 14,431−10,635+11,339=15,135; CFO 1,596−779+1,017=1,834; capex 152−107+116=161; FCF 1,673. Service 9,442−6,939+7,613=10,116 and equipment 5,019.",
+      "source": "k.txt annual statements; q.txt operations and cash-flow statements"
+    },
+    {
+      "check": "Financial debt / lease convention",
+      "result": "1,224+7,051=8,275; separate noncurrent operating lease liability 419 explains 8,694 standardized debt. Leases retained in operating costs and not also deducted in EV bridge. Current leases are not assumed absent.",
+      "source": "q.txt lines 1940–2005 and 6435–6442"
+    },
+    {
+      "check": "Equity bridge",
+      "result": "EV−8,275+866−200−320−900 = EV−8,829. Minority includes redeemable portion; no separate 106 subtraction. Pension contributions not also fully deducted from projected FCFF.",
+      "source": "model.py BRIDGE; q.txt statements; k.txt pension footnote lines 7080–7130"
+    },
+    {
+      "check": "Pension measurement",
+      "result": "2025 pension plan assets 713 less obligation 997 = deficit284; recognized asset130/current liability30/noncurrent liability384 reconcile. 2026 noncurrent pension plus postretirement421 combined with stale annual130 and30 gives proxy321≈320. Do not subtract gross assets713 from already-net liability421.",
+      "source": "k.txt lines 7080–7130; q.txt balance sheet"
+    },
+    {
+      "check": "Segment / guidance",
+      "result": "Service sales mix 2616/3914=66.84%; organic growth7%, modernization20%, margin24.2% vs25.5%; equipment margin3.2%, China decline>20%. FY sales15.1–15.3bn, adjusted EBIT~2.4bn, EPS4.01–4.05, adjusted FCF~1.5bn verified live.",
+      "source": "q.txt segment discussion; https://www.sec.gov/Archives/edgar/data/1781335/000178133526000124/a2026-09x308xkerexhibit99.htm"
+    },
+    {
+      "check": "Normalization",
+      "result": "Reported GAAP versus adjusted distinction preserved. 2,323*.74+169−227−121−36=1,504.02 illustrative FCFF, not exact FCF reconciliation. SBC retained as cost, software included once, acquisitions charged recurrently.",
+      "source": "report.md normalized bridge; model.py"
+    },
+    {
+      "check": "DCF mechanics",
+      "result": "Ten forecast years, years6–10 blend detailed reinvestment into NOPAT*growth/ROIC, year11 NOPAT*g/ROIC deducted once; all scenario values reproduced, discount WACC>g, no free terminal growth.",
+      "source": "model.py and regenerated results.json"
+    },
+    {
+      "check": "Price / cost of capital",
+      "result": "Independently verified Nov6 regular close78.96 vs after-hours78.50, provider beta0.87. Treasury Nov6 ten-year4.86%; CAPM assumptions yield7.7594%–8.2181%. Book financial debt as weight proxy and 380.710513 basic market shares distinct from DCF381.9 diluted shares.",
+      "source": "https://stockanalysis.com/stocks/otis/history/ ; https://stockanalysis.com/stocks/otis/statistics/ ; https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    },
+    {
+      "check": "Sensitivity / inverse",
+      "result": "Base 7.5–8.5% WACC and2–3% g gives58.9273–86.4975. Extra initial segment growth1.59179pp or parallel margin1.57446pp separately solves78.96. Joint minority/pension sensitivity +0.969/−1.126 per share verified.",
+      "source": "model.py; results.json"
+    },
+    {
+      "check": "Historical comparison",
+      "result": "Live secondary P/FCF current17.97, FY2025 23.58, FY2024 25.74, FY2023 24.59 verifies quoted range. Same provider definition, not cash-flow normalization or matched foreign peers.",
+      "source": "https://stockanalysis.com/stocks/otis/financials/ valuation rows"
+    }
+  ],
+  "corrections": [
+    "Clarified that 130 is recognized net pension asset, not gross pension plan assets (713). No numerical change.",
+    "Replaced ambiguous commercial-debt wording with current borrowings/current debt plus long-term debt.",
+    "Added 12 restricted cash and 86% foreign cash disclosure; no restricted-cash double count or assumption of immediate domestic availability."
+  ],
+  "remaining_limits": [
+    "900 minority economic-value proxy capitalizes trailing noncontrolling earnings of 56 at approximately 16x, not a subsidiary-by-subsidiary valuation. TTM ownership changes and redeemable rights require refresh before entry.",
+    "320 pension/postretirement proxy combines current noncurrent liability with annual recognized asset/current liability data. Approximate gross subtraction without tax refinement; range 250–450 disclosed.",
+    "Operating cash reserve 200 is an assumption. Foreign subsidiary cash access and distributability require entry-stage diligence.",
+    "Growth, margin recovery, tax, acquisition reinvestment, ERP, marginal borrowing rate and terminal ROIC are underwriting assumptions, not sourced forecasts or consensus.",
+    "End-year discounting and prospective TTM anchor omit a precise valuation-date stub; no future buyback benefit included.",
+    "Terminal value contributes 61.4% of base EV and 71.3% of favorable EV; favorable combines multiple successes.",
+    "No matched KONE/Schindler peer table; transparent historical P/FCF and earnings-yield checks substitute only for conditional review, not proof of relative cheapness.",
+    "Next primary earnings date remains unverified; technical entry checks, post-September balance changes and any portfolio approval remain outstanding.",
+    "Audited archived filings and selected live sources, not every historical claim or each provider-methodology definition."
+  ],
+  "artifact_sha256": {
+    "model.py": "3a180a7623d392739e0734082e41709786fee874ef8d780aeb27f0e6a818c740",
+    "results.json": "1b566d6dc67984ad32cea2bf3e080067b4b29ee9a877d5e55a12530dc885bb27",
+    "report.md": "9dbce6127796d9f2730635025aac598dd354f62da9eda29bd42c88a24638c226",
+    "source_ledger.json": "c918caacff65cb3b78424e7fb139d829cc58161cb15cfe071fcc93a8dc5bf095"
+  }
+}

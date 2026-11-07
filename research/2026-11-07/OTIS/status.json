@@ -1,0 +1,33 @@
+{
+  "ticker": "OTIS",
+  "as_of": "2026-11-07",
+  "status": "completed_conditional_review",
+  "decision": "Esperar precio y recuperación de margen",
+  "approval": false,
+  "stage35": false,
+  "source_posture": "primary_filings_plus_verified_market_close",
+  "model_posture": "independently_audited_ready_with_caveats",
+  "price": 78.96,
+  "price_timestamp": "2026-11-06T16:00:00-05:00",
+  "fair_value": {
+    "adverse": 31.0018930773,
+    "central": 70.3176181796,
+    "favorable": 134.5173836696
+  },
+  "limitations": [
+    "Minority economic value proxy 900, tested 600–1200",
+    "Net pension proxy 320, tested 250–450",
+    "Future earnings date not announced/verified",
+    "No matched foreign peer multiple used; historical crosscheck instead",
+    "No technical entry assessment or approval"
+  ],
+  "artifacts": [
+    "report.md",
+    "model.py",
+    "results.json",
+    "source_ledger.json",
+    "audit.json"
+  ],
+  "audit_verdict": "Ready with caveats",
+  "audit_artifact": "audit.json"
+}
