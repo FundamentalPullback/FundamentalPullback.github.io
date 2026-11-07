@@ -1,0 +1,14 @@
+item,source_id,finding,result
+FY2023–25 statements,S1,"Revenue, EBIT, net income, CFO, capex, SBC and D&A tie to model.py; D&A is depreciation plus amortization.",pass
+9M2026/2025 and current bridge,S2,"All model input fields tie; 193.617m Q3 diluted shares, not current basic shares. Bridge $3267.44835m.",pass
+9M2024 comparatives,S4,"Prior TTM correctly FY2024+9M2025−9M2024, not annualized Q3.",pass
+Tariff refunds,S2,9M $54m including marine $34m; Q3 $33m including marine $20m. Report correctly removes $54m from TTM.,pass
+Noncontrolling interests,S2,Wholly owned subsidiaries and no NCI equity line.,pass
+Pensions,S1,Defined contribution expense included; non-US defined benefit obligations/contributions/expense reported immaterial.,pass
+Lease treatment,S1/S2,Operating expense retained; no separate lease deduction avoids double counting. Noncurrent liability $173.491m is not total lease debt.,pass_with_caveat
+Current market price,S8,"Independently retrieved NYSE GRMN $285.57 regular close November 6, 2026 16:00 EST.",pass
+CAPM inputs,S9/S10/S11,Treasury 10Y 4.86%; November 1 ERP4.41%; observed monthly beta0.90. Selected1.05 is explicitly judgment. CAPM9.4905% rounds9.5%.,pass_with_caveat
+Historical comparison,S12,Provider fiscal P/E2025/24/23 23.76/28.48/19.07 verified. Dates/definitions and tax distortion disclosed; not peer valuation.,pass_with_caveat
+Quarter sequence,S5/S6,Q1 revenue1753.489 EBIT431.665; Q2 revenue2022.092 EBIT615.508 verified. $0.001m aggregation difference disclosed.,pass
+Reinvestment/SBC,model.py/report.md,"SBC remains expense, no FCFF addback; R&D remains expense. Organic growth on existing perimeter assumed; no free future acquisitions.",pass_with_caveat
+Inverse and sensitivity,calculations.json,"20.107%,18.111%,16.452% first-five-year growth; direct/inverse same model, not independent valuation evidence.",pass

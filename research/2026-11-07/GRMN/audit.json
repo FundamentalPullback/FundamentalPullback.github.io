@@ -1,0 +1,78 @@
+{
+  "ticker": "GRMN",
+  "asof": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "status": "completed_conditional_review",
+  "publish_verdict": "Eligible for research-only circulation with stated caveats; no publication performed and no entry/Stage3.5 approval.",
+  "scope": "Independent source tie-out and deterministic model audit; no formal assurance or empirical beta regression.",
+  "entryApproved": false,
+  "stage35Approved": false,
+  "published": false,
+  "traded": false,
+  "material_blockers": [],
+  "mechanical_checks": {
+    "bear": {
+      "independent_recalculation": true,
+      "value": 104.23107895873602,
+      "terminal_reinvestment_ratio": 0.14285714285714285,
+      "positive_reinvestment": true
+    },
+    "base": {
+      "independent_recalculation": true,
+      "value": 165.7587985713292,
+      "terminal_reinvestment_ratio": 0.1388888888888889,
+      "positive_reinvestment": true
+    },
+    "bull": {
+      "independent_recalculation": true,
+      "value": 262.9129234535851,
+      "terminal_reinvestment_ratio": 0.13636363636363635,
+      "positive_reinvestment": true
+    }
+  },
+  "price_anchor": {
+    "price": 285.57,
+    "at": "2026-11-06T16:00:00-05:00",
+    "source": "S8",
+    "independently_verified": true
+  },
+  "source_tieout_file": "audit_source_tieouts.csv",
+  "issues": [
+    {
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "model.py CASES",
+      "finding": "Growth, normalized margins, working capital and terminal incremental ROIC are analyst underwriting, not verified future outcomes. Base margin28.5% is slightly above TTM ex-refund28.14%; it is not obtained by mechanically subtracting tariffs from guidance.",
+      "disposition": "Retain conditional valuation; clarified report. No material formula correction."
+    },
+    {
+      "severity": "low",
+      "type": "Not comparable without bridge",
+      "location": "CAPM",
+      "finding": "November1 ERP was estimated using5.29% Treasury, versus November6 4.86% Rf used here. Same currency but different vintage. Normalized beta1.05 is judgment, not observed beta.",
+      "disposition": "Existing8.5\u201310.5% sensitivity covers43bp vintage difference; disclose; no forced parameter substitution."
+    },
+    {
+      "severity": "low",
+      "type": "Unsupported assumption",
+      "location": "balance bridge",
+      "finding": "5% cash reserve and full dividend-payable deduction conservative; pension not separately quantified but primary annual report says immaterial.",
+      "disposition": "Bounded sensitivities already disclosed; not completion blockers."
+    },
+    {
+      "severity": "medium",
+      "type": "Not comparable without bridge",
+      "location": "crosschecks",
+      "finding": "No homogeneous peer target and no consensus forecast bridge; historical fiscal P/E is contextual only.",
+      "disposition": "Historical crosscheck plus guidance/direct/inverse DCF suffice for conditional research, not entry approval."
+    },
+    {
+      "severity": "low",
+      "type": "Missing forecast refresh",
+      "location": "event calendar",
+      "finding": "Next earnings official date unconfirmed.",
+      "disposition": "Not a valuation-completion blocker; confirm before any event-driven execution."
+    }
+  ],
+  "conclusion": "Reported range and rejection of entry at evaluated price survive audit. Completion is justified as conditional research, not fully validated future estimates or trading permission."
+}
