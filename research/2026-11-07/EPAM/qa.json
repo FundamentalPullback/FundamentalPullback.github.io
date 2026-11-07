@@ -1,0 +1,43 @@
+{
+  "status": "screen-grade",
+  "checks": {
+    "three_fiscal_years": true,
+    "four_quarters_sum_revenue": true,
+    "four_quarters_sum_cfo": true,
+    "all_years_and_terminal_funded": true,
+    "all_wacc_gt_g": true,
+    "ordered_cases": true,
+    "no_asr_execution_assumed": true,
+    "no_lease_double_deduction": true,
+    "no_sbc_addback_in_fcff": true,
+    "quarter_sum_ebit": true,
+    "quarter_sum_net_income": true,
+    "quarter_sum_da": true,
+    "quarter_sum_sbc": true,
+    "quarter_sum_capex": true,
+    "quarter_sum_fcf": true,
+    "ledger_public_fields_only": true,
+    "report_no_private_paths": true,
+    "sensitivity_wacc_monotonic": true,
+    "terminal_fcf_nonnegative": true,
+    "report_main_values": true,
+    "inverse_brackets_target": true,
+    "inverse_grid_monotonic": true,
+    "inverse_residual": true,
+    "no_stage3_or_entry_approval": true,
+    "approved_values_unset": true,
+    "eps_proxy_not_quarter_sum": true,
+    "literal_primary_excerpts_in_report": true,
+    "historical_multiple_gap_disclosed": true,
+    "no_stub_convention_disclosed": true,
+    "no_library_workflow_narration": true
+  },
+  "hard_failures": [],
+  "limitations": [
+    "No current independent utilization/rate decomposition, customer-level AI profitability or consensus dataset.",
+    "Growth, margin, ROIC, ERP and beta are analyst assumptions, not reported forecasts.",
+    "Post-September cash bridge is not a November 6 balance sheet.",
+    "Same-date peer trading multiples and homogeneous historical EPAM/peer multiple ranges were not verified; operating comparison only."
+  ],
+  "review": "Numeric tie-outs, source-field privacy, terminal funding, scenario ordering and disclosure QA completed. No remote publication performed."
+}
