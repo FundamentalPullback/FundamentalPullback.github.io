@@ -1,0 +1,77 @@
+{
+  "as_of": "2026-11-07",
+  "ticker": "AEO",
+  "predecessor": "A258",
+  "verdict": "Not ready",
+  "permitted_use": "Partial factual successor update and exploratory sensitivity research only. Not approved valuation or portfolio action. No publication performed.",
+  "mechanical_verdict": "Pass with disclosed economic calibration gaps",
+  "stage3_complete": false,
+  "entry_authorized": false,
+  "public_value_fields": null,
+  "scope": "Financial report, reproducible model and cited SEC filings. Inherited history was not fully re-audited; market observations were not independently refetched in this audit.",
+  "checks": [
+    {
+      "case": "adverso",
+      "value": 8.819801773004638,
+      "formula_checks": "pass",
+      "terminal_weight": 0.3948363518514003
+    },
+    {
+      "case": "central",
+      "value": 18.085144135976414,
+      "formula_checks": "pass",
+      "terminal_weight": 0.46076670470894193
+    },
+    {
+      "case": "favorable",
+      "value": 28.737027629595783,
+      "formula_checks": "pass",
+      "terminal_weight": 0.5352014959039386
+    }
+  ],
+  "source_tieouts": [
+    "SEC-Q2 operating discussion: EBIT211.405 minus net tariff benefit161 =50.405; no double subtraction of incentive35 or below-EBIT participation interest45. Gross benefit192-13=179.",
+    "SEC-Q2 segments:805.883 AE revenue,535.822 Aerie; EBIT188.478+170.160-2.407-144.826=211.405. Aerie comp19%, AE-1%.",
+    "SEC-Q2 balance/EPS/cover:cash147.954, debt55, leases1865.747; diluted Q2170.180/H1171.277; outstanding167.573333 at Sep10. Model172 is assumption.",
+    "SEC-K retirement/tax notes:401(k)/profit-sharing expense16.8; unrecognized tax benefits7.9 plus interest/penalties1.5; rounded10 reserve assumption, not additional confirmed debt.",
+    "SEC-Q2 note2:ACON cost35 for20%, H1 unrealized17.4, distribution0.6, carrying53.8. No asset credit or income in FCFF."
+  ],
+  "fixed_findings": [
+    {
+      "severity": "medium",
+      "type": "Formula/control defect",
+      "location": "model.py/report.md/results.json",
+      "finding": "Transition displayed component diagnostics did not directly sum to blended FCFF. Added structural total, transition weight/adjustment and explicit diagnostic-only labeling. Scenario values unchanged; physical reinvestment calibration not claimed."
+    },
+    {
+      "severity": "low",
+      "type": "Not comparable without bridge",
+      "location": "report.md",
+      "finding": "Clarified modeled EV/normalized EBIT is not price/EBIT or conventional EV; model adds debt plus discretionary claim reserves and no cash credit."
+    }
+  ],
+  "blocking_gaps": [
+    {
+      "severity": "high",
+      "type": "Unsupported assumption",
+      "finding": "Segment sustainable margins/growth, explicit NWC12%, capex/D&A and terminal ROIC10-15% are not sufficiently calibrated. Transition has no reconciled physical investment path."
+    },
+    {
+      "severity": "high",
+      "type": "Not comparable without bridge",
+      "finding": "Owner cash refund/incentive/participation financing reconciliation remains incomplete. Historical CFO-capex is not normalized owner FCF."
+    },
+    {
+      "severity": "high",
+      "type": "Unsupported assumption",
+      "finding": "Dated risk-free/beta/ERP/cost of debt are inconsistent or provisional; WACC values are analytical assumptions, not fully verified capital costs."
+    },
+    {
+      "severity": "medium",
+      "type": "Not comparable without bridge",
+      "finding": "Historical multiples and normalized public peers incomplete; capital bridge cash reserve/minority/tax/investments and172 diluted shares remain assumptions with sensitivity only."
+    }
+  ],
+  "publish_safe_status": "Partial update to A258; valuation fields null; no entry approval. Scenarios are exploratory dossier calculations only.",
+  "next_required": "Calibrate operating and reinvestment paths, reconcile cash, align dated capital-cost evidence, complete comparable/historical checks and re-audit before any valuation upgrade."
+}
