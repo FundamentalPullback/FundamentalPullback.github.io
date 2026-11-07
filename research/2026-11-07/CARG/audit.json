@@ -1,0 +1,90 @@
+{
+  "ticker": "CARG",
+  "as_of": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "permitted_use": "Conditional watchlist research only; no entry approval, publication execution or trading.",
+  "material_blockers": [],
+  "scope": "Independent model rerun, annual/quarterly/TTM filing tie-outs, source review and online market/legal corroboration.",
+  "findings": [
+    {
+      "id": "A01",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "report.md timing paragraph",
+      "finding": "t=1 was incorrectly called conservative versus December year-end; cash flows were earlier.",
+      "remediation": "Corrected direction; added diagnostic 0.15-year delay sensitivity, leaving disclosed base convention unchanged.",
+      "status": "fixed"
+    },
+    {
+      "id": "A02",
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "model.py WACC/report.md",
+      "finding": "ERP dated November 1 uses its own 5.29% Treasury versus November 6 10Y 4.86%; beta is secondary-market estimate.",
+      "remediation": "Explicit mixed-date CAPM caveat and existing 9%-12% sensitivity; not a blocker for conditional research.",
+      "status": "disclosed"
+    },
+    {
+      "id": "A03",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "model.py cash reconciliation and terminal",
+      "finding": "Cash residual was not broken into source-line inputs and existing checks were mostly declarations.",
+      "remediation": "Added 13 signed FY25/9M25/9M26 line inputs and assertions for cash residual, consolidated income, deferred tax, terminal growth/reinvestment/FCFF and inverse prices.",
+      "status": "fixed"
+    },
+    {
+      "id": "A04",
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "report.md valuation assumptions",
+      "finding": "No consensus comparison or reliable peer set; historical check is one post-recast observation. Forecast dealer/QARSD and ROIC are analyst assumptions, not demonstrated consensus variants.",
+      "status": "disclosed",
+      "remediation": "Restrict to conditional observation; no entry approval."
+    }
+  ],
+  "verified": {
+    "caroffer": "Closed/abandoned 2025-12-31, not a sale; annual earnings recast but cash flow consolidated.",
+    "fcf_reported": 301.141,
+    "normalized_fcff": 191.43675000000002,
+    "wacc": 0.103284,
+    "fair": {
+      "adverso": 19.183454915732117,
+      "central": 32.41163402989162,
+      "favorable": 47.448252940826265
+    },
+    "price": 33.74,
+    "historical_price_2026_02_20": 30.17,
+    "share_divisor": 90.412328,
+    "cash_bridge": 129.81,
+    "terminal_controls": "Year 10 component growth g, reinvestment/NOPAT g/ROIC and year 11 FCFF grows at g; all pass.",
+    "nyc": "October 15 public action verified, allegations distinguished from adjudicated facts; direct claims are sensitivities, not estimated liabilities."
+  },
+  "sources_reviewed": [
+    "S01 annual statements/CarOffer/leases",
+    "S02 quarterly income/cash flow/EPS/KPIs/contingencies",
+    "S05 and S06 releases",
+    "S03 and S04 IR releases",
+    "S09 historical table",
+    "S10 closing-price table",
+    "S11 beta table",
+    "S12 Treasury table dated November 6",
+    "S13 ERP November 1",
+    "S14 NYC announcement"
+  ],
+  "limitations": [
+    "No full three-statement workbook; deterministic support model",
+    "Unquantified litigation and AI/traffic risk remains scenario judgment",
+    "Terminal ROIC, operating cash reserve, capitalized SBC and share dilution are explicit analyst proxies",
+    "No consensus-derived variant claim; only one comparable historical multiple"
+  ],
+  "illustrative_audit_sensitivity": {
+    "year_end_delay_years": 0.15,
+    "year_end_delayed_no_stub_fair": {
+      "adverso": 18.896020649931305,
+      "central": 31.95828587308948,
+      "favorable": 46.82612189576097
+    },
+    "note": "Diagnostic only: delays all annual cash flows and terminal value 0.15 years; no Q4 2026 stub added; not a revised base case."
+  }
+}

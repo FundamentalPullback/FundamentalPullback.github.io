@@ -1,0 +1,19 @@
+{
+  "model_type": "deterministic_support",
+  "run": "python model.py",
+  "status": "audited-ready-with-caveats",
+  "independent_audit": "completed",
+  "formula_workbook": false,
+  "checks": {
+    "horizon": 10,
+    "explicit": 5,
+    "transition": 5,
+    "all_wacc_gt_g": true,
+    "no_future_buybacks": true,
+    "leases_operating_expense": true,
+    "sbc_retained_in_ebit": true,
+    "other_cfo_lines_tie": true,
+    "terminal_components_tie": true,
+    "inverse_prices_tie": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "decision_flags": {
+    "stage3Complete": false,
+    "entryApproved": false,
+    "approvedValuation": null,
+    "marginOfSafety": null
+  },
+  "inverse_qa": {
+    "endpoint_low": -14.263679798454069,
+    "endpoint_high": 53.17199883971121,
+    "grid_strictly_monotonic": true,
+    "brackets_price": true,
+    "residual": 1.4210854715202004e-14
+  },
+  "presentation": "Visual review not performed.",
+  "passed": [
+    "bear: all 11 years including terminal fund margin-driven NOPAT and physical+NWC floor; FCFF arithmetic passes",
+    "base: all 11 years including terminal fund margin-driven NOPAT and physical+NWC floor; FCFF arithmetic passes",
+    "bull: all 11 years including terminal fund margin-driven NOPAT and physical+NWC floor; FCFF arithmetic passes",
+    "Quarterly revenue, EBIT and CFO reconcile to TTM within $0.2m release rounding",
+    "TTM = FY2025 + 9M2026 - 9M2025; prior TTM = FY2024 + 9M2025 - 9M2024",
+    "One-sided Q3 removal of disclosed 2026 LIFO benefit: 234.998 - 26.8 = 208.198 versus reported adjusted 221.408 prior; prior comparable benefit not separately quantified, so not fully normalized YoY",
+    "Company FCF reconciliation: 729.841 - 307.092 + 10.040 + 12.398 = 445.187",
+    "No current fair value, margin of safety or entry approval: seasonal and transaction bridges unresolved"
+  ],
+  "blocking_gaps": [
+    "Deal-inclusive carve-out FCFF, integration costs and minority bridge are not completed",
+    "Seasonal NWC/cash-to-valuation-date bridge not verified",
+    "Technical trend and entry levels unavailable; regular close independently verified at $41.09 on November 6, 16:00 EST"
+  ],
+  "ordinary_assumptions": [
+    "Growth, EBITA margin, ROIC, maintenance capex, tax, WACC, sales/capital, normal NWC ratio and operating cash requirement are analyst assumptions, not missing reported figures"
+  ]
+}
