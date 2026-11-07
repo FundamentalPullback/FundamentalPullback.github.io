@@ -2101,7 +2101,17 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   function latestScannerNotice() {
     var dates=scanDates().filter(function(d){return window.FP_PROFILE_ENGINE.day(d);}),date=dates[0];if(!date)return '';
     var rows=(S.scan||[]).filter(function(r){return r.date===date;}),qual=rows.filter(function(r){return r.opp!==null&&r.opp>=85;}).length;
-    var reviews=(S.dec||[]).filter(function(r){return r.date===date;}),count=Array.from(new Set(reviews.map(function(r){return r.ticker;}))).length,audit=scannerAudit(date);
+    // Research can be published after its scanner date. Count only explicit links,
+    // never infer research or approval from a report's publication date or text.
+    var linked=new Set();
+    (S.dec||[]).forEach(function(r){if(r.date===date&&r.ticker)linked.add(r.ticker);});
+    (S.lib||[]).forEach(function(report){
+      (report.profiles||[]).forEach(function(profile){
+        var linkedDate=profile.scanner&&profile.scanner.date||report.scannerDate;
+        if(linkedDate===date&&profile.ticker&&rows.some(function(r){return r.ticker===profile.ticker;}))linked.add(profile.ticker);
+      });
+    });
+    var count=linked.size,audit=scannerAudit(date);
     var h='<section class="panel latest-scanner-notice" data-scan-date="'+esc(date)+'"><h3>'+esc(pt('Último escáner · ','Latest scanner · ')+fmtD(date))+'</h3><p>'+esc(rows.length+' '+pt('símbolos publicados; ','published symbols; ')+qual+' '+pt('con Opportunity ≥85. ','with Opportunity ≥85. ')+(count?count+' '+pt('empresas con registros de investigación o revisión asociados a este escáner.','companies with research or review records linked to this scan.'):pt('Todavía no hay registros de investigación asociados a este escáner.','No research records are linked to this scan yet.')) )+'</p><p class="muted">'+esc(pt('Opportunity ≥85 es solo un filtro de puntuación: no certifica Stage 1, Stage 2, un análisis completo ni autoriza una compra. Los escáneres e informes anteriores se conservan en el archivo.','Opportunity ≥85 is only a score filter: it does not certify Stage 1, Stage 2, completed research or authorize a purchase. Earlier scans and reports remain in the archive.'))+'</p><div class="controls"><a class="btn" href="#escaner" data-latest-scan="'+esc(date)+'">'+esc(pt('Ver último escáner','View latest scanner'))+'</a><a class="btn" href="#resumen" data-latest-overview="'+esc(date)+'">'+esc(pt('Resumen diario y archivo','Daily overview and archive'))+'</a><a class="btn" href="#fichas">'+esc(pt('Buscar investigación','Find research'))+'</a>';
     if(audit&&audit.reportId)h+='<a class="btn" href="#biblioteca/'+encodeURIComponent(audit.reportId)+'">'+esc(pt('Control de calidad y fuentes','Data quality and sources'))+'</a>';
     if(audit&&/^A[0-9]+$/.test(audit.reconciliationReportId||''))h+='<a class="btn" href="#biblioteca/'+encodeURIComponent(audit.reconciliationReportId)+'">'+esc(pt('Estado de la investigación y próximos eventos','Research status and upcoming events'))+'</a>';
