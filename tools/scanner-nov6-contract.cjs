@@ -1,4 +1,4 @@
 const fs=require('fs'),assert=require('assert/strict');
-function priorBytes(root,f){let p=JSON.parse(fs.readFileSync(root+'/tools/scanner-nov6-prior.json'));return p[f]===undefined?fs.readFileSync(root+'/'+f):Buffer.from(p[f]);}
+function priorBytes(root,f){let p=Object.assign({},JSON.parse(fs.readFileSync(root+'/tools/accounting-prior.json')),JSON.parse(fs.readFileSync(root+'/tools/scanner-nov6-prior.json')));return p[f]===undefined?fs.readFileSync(root+'/'+f):Buffer.from(p[f]);}
 function legacy(root,a){if(!a.reports.some(r=>r.id==='A295'))return a;assert.equal(a.c.FP.scan.length,4752);assert.equal(a.c.FP.scan.filter(r=>r[0]==='2026-11-06').length,200);assert.equal(a.reports.length,298);a.reports=a.reports.filter(r=>!['A295','A296','A297','A298','A299'].includes(r.id));a.t.S.lib=a.reports;a.c.window.FP_LIB.reports=a.reports;a.c.FP.scan=a.c.FP.scan.slice(0,4552);a.t.S.scan=a.t.PARTS.scan([a.c.FP.scanHead].concat(a.c.FP.scan));a.c.window.FP_MANIFEST=JSON.parse(priorBytes(root,'data/manifest.js').toString().split('=')[1].trim().replace(/;$/,''));a.profiles=a.t.profiles();return a;}
 module.exports={priorBytes,legacy};
