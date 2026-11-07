@@ -1,0 +1,93 @@
+{
+  "ticker": "MNST",
+  "as_of": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "permitted_use": "Completed conditional fundamental research; publication-ready as research only. No Stage 3 or Stage 3.5 approval, order or trade.",
+  "material_blockers": [],
+  "checks": {
+    "independent_dcf_recalculation": {
+      "adverso": true,
+      "central": true,
+      "favorable": true
+    },
+    "four_quarters_tie_to_ttm": true,
+    "three_year_history_source_tied": true,
+    "split_adjusted_quote_and_diluted_shares": true,
+    "bang_gain_below_ebit_not_subtracted_again": true,
+    "sbc_retained_in_forecast_ebit": true,
+    "leases_cash_and_debt_bridge": true,
+    "analyst_beta_not_observed_beta": true,
+    "funded_terminal_growth": true,
+    "historical_multiple_crosscheck": true,
+    "prior_ttm_comparison_added": true
+  },
+  "scenarios": {
+    "adverso": 13.188444269159582,
+    "central": 22.089929614853876,
+    "favorable": 34.137750746563896
+  },
+  "reverse_growth": 0.23707312205335895,
+  "source_tieout": [
+    {
+      "file": "annual_clean.txt",
+      "locations": "income lines 3948\u20134045; cash flow 4400\u20134600",
+      "checked": "2023\u20132025 income/cash/D&A/SBC/impairments, pre-split shares"
+    },
+    {
+      "file": "q3_clean.txt",
+      "locations": "balance 1960\u20132115; income 2120\u20132225; cash 2930\u20133130; debt note 9; commitments 6190\u20136205",
+      "checked": "Sep2026 financials, investments, dilution, split, leases and no drawn debt"
+    },
+    {
+      "source": "S4/S5",
+      "checked": "Nov6 daily close 45.72; historical P/Es 36.75/33.87/39.31 verified from S4"
+    },
+    {
+      "source": "S7/S8",
+      "checked": "Treasury Nov6 10-year 4.86%; November ERP4.41%; WACC assumption 9.5% not empirically estimated beta"
+    },
+    {
+      "source": "S10",
+      "checked": "Bang gain45.4m in interest and other income, not EBIT"
+    },
+    {
+      "source": "S11/S12/S13",
+      "checked": "Additional quarterly and prior-TTM evidence checked against cited filings"
+    }
+  ],
+  "issues_fixed": [
+    {
+      "severity": "medium",
+      "type": "Missing forecast refresh",
+      "finding": "Four discrete quarters and prior-TTM comparison absent from report",
+      "fix": "Archived Q1/Q2 2026 and Q3 2025 SEC sources; added reproducible supplemental_history and report bridge; no valuation assumptions changed."
+    },
+    {
+      "severity": "low",
+      "type": "Not comparable without bridge",
+      "finding": "Historical CFO-based FCF includes SBC addback unlike projected FCFF",
+      "fix": "Explicit distinction and FCF less SBC 1773.212 added."
+    },
+    {
+      "severity": "low",
+      "type": "Source contradiction",
+      "finding": "Quote discussion overstates sources independently revalidated",
+      "fix": "Use StockAnalysis close and ChartExchange daily row; identify 45.71 timestamped header and unavailable YCharts."
+    },
+    {
+      "severity": "low",
+      "type": "Missing decision output",
+      "finding": "Reasonable central range and signed margin of safety not explicit",
+      "fix": "Central sensitivity range19\u201327 and central MOS about minus107% stated."
+    }
+  ],
+  "limitations": [
+    "Aggregate forecasts, no audited country volume/price build or independent sell-through",
+    "No full earnings-call review or verified next-event date",
+    "Analyst beta1 plus prudence; no empirical beta measurement",
+    "Finance lease claim conservatively proxied at5m; operating leases retained as operating expense",
+    "FCFF mechanics validated, not a full three-statement forecast or an investment return guarantee"
+  ],
+  "publication_performed": false,
+  "trade_performed": false
+}
