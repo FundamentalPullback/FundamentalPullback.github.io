@@ -13,6 +13,7 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 
 def main():
+    subprocess.run([sys.executable, str(ROOT / 'tools/test-close-batch.py')], check=True)
     # Fail before quote refresh/tests if canonical Sheet reconciliation is absent.
     subprocess.run([sys.executable, str(ROOT / "tools/stage35-publication.py"),
                     "validate", "--site-root", str(ROOT)], check=True)

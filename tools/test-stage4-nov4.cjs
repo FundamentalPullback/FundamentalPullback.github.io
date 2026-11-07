@@ -15,7 +15,7 @@ a.t.S.ops=a.t.PARTS.ops(historicalOps);a.t.S.ges=a.t.PARTS.ges(now);
 for(const lang of ['es','en']){a.t.setLang(lang);const html=a.t.vPosiciones();assert(html.includes('A247'));assert(html.includes(lang==='es'?'siguen 54 acciones':'54 shares remain'));assert(html.includes(lang==='es'?'Referencia histórica de valoración':'Historical valuation reference'));assert(html.includes(lang==='es'?'Discrepancia histórica':'Historical data discrepancy'));assert(html.includes(lang==='es'?'Trailing registrado previo':'Last recorded pre-session trailing'));assert(html.includes(lang==='es'?'Activación confirmada; nivel pendiente':'Activation confirmed; level pending'));assert(!html.includes('HRB remains below its +2R'));}
 const qty=Object.fromEntries(a.t.positions().list.map(p=>[p.ticker,p.shares]));for(const [t,n] of Object.entries({HRB:54,ASO:155,ANF:30.8615,EXLS:160.699,ULTA:16,DOCU:134}))assert(Math.abs(qty[t]-n)<1e-8,t+' shares');
 // Existing November3 presentation remains available when no newer review is loaded.
-a.t.S.ges=a.t.S.ges.filter(r=>r.rep!=='A247');a.t.setLang('en');assert(a.t.vPosiciones().includes('3 November close'));
+a.t.S.ges=a.t.S.ges.filter(r=>r.rep!=='A247');a.t.setLang('en');assert(a.t.vPosiciones().includes('Historical Stage 4 · 3 November 2026'));
 console.log('PASS Stage4 append-only rows, protected ledgers, prior levels, pending HRB signal, bilingual valuation caveats, ASO discrepancy, six unchanged holdings and historical fallback.');
 
 const stageRecord=JSON.parse(fs.readFileSync(path.resolve(root,"research/2026-11-04/stage4_record.json"),"utf8"));for(const p of stageRecord.profiles){assert(p.summary.includes("Revisión informativa"));assert(p.summaryEn.includes("Informational review"));assert.equal(p.kind,"management");}
