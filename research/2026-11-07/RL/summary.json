@@ -1,0 +1,157 @@
+{
+  "ticker": "RL",
+  "company": "Ralph Lauren Corporation",
+  "asOf": "2026-11-07",
+  "scanDate": "2026-11-06",
+  "scanPrice": 376.56,
+  "opportunity": 85,
+  "qp": 90,
+  "rsi": 47.6,
+  "regularClose": {
+    "price": 376.56,
+    "date": "2026-11-06",
+    "time": "16:00 EST",
+    "sources": [
+      "https://stockanalysis.com/stocks/rl/history/",
+      "https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=RL%3ANYQ"
+    ]
+  },
+  "status": "audited_provisional_partial",
+  "publicationReady": true,
+  "publicationScope": "provisional_research_only",
+  "approvedValuation": null,
+  "entryApproved": false,
+  "stage3Complete": false,
+  "marginOfSafety": {
+    "definition": "(central_value-price)/central_value",
+    "value": -0.5897140816086037,
+    "referencePrice": 376.56,
+    "referenceDate": "2026-11-06"
+  },
+  "conditionalReview": {
+    "price": 189.49822706179495,
+    "discountToCentral": 0.2,
+    "notEntryApproval": true
+  },
+  "cases": {
+    "adverse": {
+      "value": 145.79120010594784,
+      "assumptions": {
+        "growth": [
+          0.02,
+          0.02,
+          0.03,
+          0.03,
+          0.03,
+          0.028,
+          0.026,
+          0.024,
+          0.022,
+          0.02
+        ],
+        "margin_end": 0.145,
+        "wacc": 0.113,
+        "g": 0.02,
+        "roic": 0.12,
+        "capex": 0.046
+      },
+      "terminalWeight": 0.42418000921952853
+    },
+    "central": {
+      "value": 236.87278382724367,
+      "assumptions": {
+        "growth": [
+          0.07,
+          0.06,
+          0.05,
+          0.05,
+          0.04,
+          0.037,
+          0.034,
+          0.031,
+          0.028,
+          0.025
+        ],
+        "margin_end": 0.175,
+        "wacc": 0.103,
+        "g": 0.025,
+        "roic": 0.15,
+        "capex": 0.041
+      },
+      "terminalWeight": 0.4942309134230973
+    },
+    "favorable": {
+      "value": 380.6163733809786,
+      "assumptions": {
+        "growth": [
+          0.1,
+          0.09,
+          0.08,
+          0.07,
+          0.06,
+          0.054,
+          0.048,
+          0.042,
+          0.036,
+          0.03
+        ],
+        "margin_end": 0.2,
+        "wacc": 0.093,
+        "g": 0.03,
+        "roic": 0.2,
+        "capex": 0.041
+      },
+      "terminalWeight": 0.5856055626162532
+    }
+  },
+  "conclusionES": "Negocio sólido, precio exigente: 376,56 requiere resultados cercanos al caso favorable. Observar; no aprobar entrada.",
+  "conclusionEN": "Strong business, demanding price: $376.56 requires results near the favorable case. Watch; no entry approval.",
+  "confidence": "Moderada; estados primarios sólidos, valoración dependiente de supuestos explícitos.",
+  "limitations": [
+    "ERP/beta calibration caveats and unverified current marginal debt yield",
+    "Cash reserve and terminal ROIC are analyst assumptions",
+    "No fully homogeneous forward peer consensus or normalized multiple history",
+    "Homogeneous historical multiple comparison remains an open Stage 3 requirement",
+    "Independent numerical audit passed; technical entry checks pending"
+  ],
+  "pros": [
+    {
+      "es": "Asia y precio sostienen el crecimiento; comparables DTC +10%, AUR +9% y Asia +28%.",
+      "en": "Asia and pricing support growth: DTC comps +10%, AUR +9%, Asia +28%.",
+      "evidence": "RL registró comparables globales DTC de +10%, AUR de +9% y ventas de Asia de +28% en Q2 FY27. El crecimiento incluye mezcla, precio y expansión; AUR no equivale a precio puro ni demuestra volumen positivo. [S2]",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070619/rl-20260926ex991xpressrele.htm"
+    },
+    {
+      "es": "Liquidez sin vencimientos inmediatos: caja e inversiones 1.821,8m frente a deuda nominal 1.250m.",
+      "en": "Liquidity exceeds senior debt: cash and short-term investments $1,821.8m versus $1,250m face debt.",
+      "evidence": "A septiembre de 2026 había $1.821,8m de caja e inversiones de corto plazo frente a $1.250m de deuda senior nominal, con vencimientos en 2030 y 2032. Existen además $222,6m de deuda por arrendamientos financieros y necesidades operativas que impiden tratar toda la caja como excedentaria. [S1]",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm"
+    }
+  ],
+  "cons": [
+    {
+      "es": "El margen GAAP incluye 82,3m de devolución arancelaria; el FCF TTM se beneficia del menor capex y circulante.",
+      "en": "GAAP margin includes an $82.3m tariff refund; trailing cash flow benefits from capex and working-capital timing.",
+      "evidence": "El margen bruto GAAP Q2 de 74,2% incluye $82,3m de devoluciones arancelarias; sin ellas es 70,5%. El FCF TTM CFO menos capex de $1.301,9m no es una base perpetua: el capex TTM bajó a $241,2m, frente a una guía anual de 4–5% de ventas, y el CFO mejora por inventarios e impuestos. [S1] [S2]",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070619/rl-20260926ex991xpressrele.htm"
+    },
+    {
+      "es": "Europa y la guía Q3 muestran desaceleración; adelantos de envíos favorecieron el crecimiento mayorista Q2.",
+      "en": "Europe and Q3 guidance indicate slowing growth; earlier shipments supported Q2 wholesale growth.",
+      "evidence": "Europa tuvo comparables DTC de -1% y la guía Q3 de crecimiento constante de 3–4% incluye un punto de impacto por calendario mayorista y reducción de off-price. Las ventas mayoristas norteamericanas Q2 incorporaron cuatro puntos de beneficio por adelanto de envíos. [S2]",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070619/rl-20260926ex991xpressrele.htm"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-11-05",
+      "event": "Q2 FY27 results and raised FY27 guidance",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070619/rl-20260926ex991xpressrele.htm"
+    },
+    {
+      "date": "2026-11-06",
+      "event": "Verified regular close $376.56",
+      "sourceUrl": "https://stockanalysis.com/stocks/rl/history/"
+    }
+  ]
+}

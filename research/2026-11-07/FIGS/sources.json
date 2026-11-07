@@ -1,0 +1,67 @@
+{
+  "asof": "2026-11-07",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1846576/000162828026071035/figs-q32026xearningsreleas.htm",
+      "type": "primary"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1846576/000162828026071055/figs-20260930.htm",
+      "type": "primary"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1846576/000162828026012333/figs-20251231.htm",
+      "type": "primary"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1846576/000162828026054342/figs-20260630.htm",
+      "type": "primary"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001846576.json",
+      "type": "primary"
+    },
+    {
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "type": "primary"
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "type": "primary"
+    },
+    {
+      "url": "https://stockanalysis.com/stocks/figs/statistics/",
+      "type": "secondary"
+    },
+    {
+      "url": "https://stockanalysis.com/stocks/figs/history/",
+      "type": "secondary"
+    },
+    {
+      "url": "https://finance.yahoo.com/quote/FIGS/",
+      "type": "secondary"
+    }
+  ],
+  "local_archives": {
+    "q3.html": "2026 Q3 10-Q",
+    "fy2025.html": "2025 10-K",
+    "companyfacts.json": "SEC XBRL facts; extraction script retained"
+  },
+  "Treasury_URL_check": "Opened successfully 2026-11-07 after correcting resource-center/data-chart-center path; browser ref turn1345view0",
+  "publication_required": [
+    "report.md",
+    "model.py",
+    "calculations.json",
+    "history.csv",
+    "sources.json",
+    "QA.json"
+  ],
+  "optional_audit_files": [
+    "extract_history.py",
+    "companyfacts.json",
+    "q3.html",
+    "q3.txt",
+    "fy2025.html"
+  ],
+  "model_runtime_dependencies": "Python standard library only; standalone model.py uses frozen historical values, no network or archived companyfacts dependency."
+}

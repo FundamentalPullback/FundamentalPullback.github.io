@@ -1,0 +1,124 @@
+{
+  "ticker": "LIND",
+  "company": "Lindblad Expeditions Holdings, Inc.",
+  "asOf": "2026-11-07",
+  "reportType": "factual_partial_research",
+  "publicationReady": true,
+  "publicationScope": "Factual research only; not Stage 3 valuation or entry approval",
+  "independentFactualReview": "completed",
+  "remotePublicationPerformed": false,
+  "eligibility": "pending_source_denominator_reconciliation_and_EPS_definition",
+  "stage3": false,
+  "entry": false,
+  "valuation": {
+    "method": null,
+    "fairValue": null,
+    "bearValue": null,
+    "baseValue": null,
+    "bullValue": null,
+    "targetPrice": null,
+    "marginOfSafety": null,
+    "upside": null,
+    "WACC": null,
+    "terminalGrowth": null,
+    "enterpriseValue": null,
+    "equityValue": null
+  },
+  "scanner": {
+    "date": "2026-11-06",
+    "price": 33.98,
+    "currency": "USD",
+    "PE": -3398,
+    "FCFPerShare": 1.55,
+    "QP": 80,
+    "Opportunity": 95,
+    "source": "https://fundamentalpullback.github.io/data/scan-4552.js",
+    "priceStatus": "scanner value only; not independently verified close"
+  },
+  "verifiedClose": {
+    "price": null,
+    "date": null,
+    "source": null,
+    "status": "not independently verified"
+  },
+  "conclusion": {
+    "es": "Investigación factual parcial completada. EBIT, FCF y beneficio común TTM son positivos, pero cuatro discrepancias entre fuentes de EPS y acciones impiden validar el denominador y la elegibilidad por acción. Sin rechazo automático, valoración ni aprobación de entrada.",
+    "en": "Partial factual research completed. TTM EBIT, FCF and common income are positive, but four source EPS/share discrepancies prevent validation of the denominator and per-share eligibility. No automatic rejection, valuation or entry approval."
+  },
+  "pros": [
+    {
+      "es": "EBIT TTM $64,814m frente a $43,422m; ventas $859,592m frente a $736,447m.",
+      "en": "TTM EBIT $64.814m versus $43.422m; revenue $859.592m versus $736.447m.",
+      "evidence": "FY2025 + 9M2026 - 9M2025; prior TTM FY2024 + 9M2025 - 9M2024. USD millions.",
+      "sourceIds": [
+        "FY2025_10K",
+        "Q3_2026_10Q",
+        "Q3_2025_release"
+      ]
+    },
+    {
+      "es": "FCF TTM $95,985m frente a $52,170m; beneficio común $4,021m frente a pérdida $36,068m.",
+      "en": "TTM FCF $95.985m versus $52.170m; common income $4.021m versus a $36.068m loss.",
+      "evidence": "FCF = CFO minus capex: 125.781 - 29.796 = 95.985; common income = -34.647 + 28.835 - (-9.833) = 4.021. USD millions.",
+      "sourceIds": [
+        "FY2025_10K",
+        "Q3_2026_10Q",
+        "Q3_2025_release"
+      ]
+    }
+  ],
+  "cons": [
+    {
+      "es": "EPS Q1: $6,003m / 61.113.044 acciones = $0,09823, frente a $0,09 publicado.",
+      "en": "Q1 EPS: $6.003m / 61,113,044 shares = $0.09823, versus $0.09 reported.",
+      "evidence": "Unexplained quotient mismatch also present in Q1 10-Q EPS note.",
+      "sourceIds": [
+        "Q1_2026_EPS_NOTE"
+      ]
+    },
+    {
+      "es": "Tres brechas de acciones ponderadas sin explicar: semestre 654.979,67; Q4 3.614,77; 9M 7.434,82 acciones.",
+      "en": "Three unexplained weighted-share gaps: six months 654,979.67; Q4 3,614.77; nine months 7,434.82 shares.",
+      "evidence": "See exact operands, day counts and directions in inputs_calculations.json checks.source_denominator_audit. Not assumed to be rounding.",
+      "sourceIds": [
+        "Q1_2026_release",
+        "Q2_2026_release",
+        "FY2025_release",
+        "FY2025_10K",
+        "Q3_2026_10Q"
+      ]
+    },
+    {
+      "es": "CFO 9M incluye $40,483m de anticipos; deuda $675m, efectivo restringido $33,223m y NCI rescatable $77,609m.",
+      "en": "Nine-month CFO includes $40.483m of passenger advances; debt $675m, restricted cash $33.223m and redeemable NCI $77.609m.",
+      "evidence": "9M capex $18.829m versus D&A $53.109m; FCF is not normalized FCFF or distributable cash.",
+      "sourceIds": [
+        "Q3_2026_10Q"
+      ]
+    }
+  ],
+  "proxyLimitations": {
+    "selectedInputShareProxy": 61962559.775342464,
+    "basicEPSProxy": 0.06489402656344302,
+    "FCFPerShareProxy": 1.549080611711534,
+    "validated": false,
+    "es": "No son EPS GAAP emitido ni reconstrucción validada. Revisar asignación del numerador a preferentes participantes por método de dos clases y antidilución. Sumar EPS trimestrales (-0,02) o FY+YTD-YTD (-0,01) tampoco certifica EPS TTM.",
+    "en": "Not issued GAAP EPS or a validated reconstruction. Review two-class participating-preferred numerator allocation and antidilution. Quarterly EPS summation (-0.02) or FY+YTD-YTD (-0.01) also does not certify TTM EPS."
+  },
+  "calendar": {
+    "latestResultsDate": "2026-11-03",
+    "latestPeriodEnd": "2026-09-30",
+    "nextResultsDate": null,
+    "nextResultsStatus": "No official next date verified"
+  },
+  "sourceURLs": {
+    "FY2025_10K": "https://www.sec.gov/Archives/edgar/data/1512499/000143774926005873/lindb20251231c_10k.htm",
+    "Q3_2026_10Q": "https://www.sec.gov/Archives/edgar/data/1512499/000143774926034680/lindb20260930c_10q.htm",
+    "FY2025_release": "https://www.sec.gov/Archives/edgar/data/1512499/000143774926005736/ex_914868.htm",
+    "Q1_2026_release": "https://www.sec.gov/Archives/edgar/data/1512499/000143774926014742/ex_943646.htm",
+    "Q2_2026_release": "https://investors.expeditions.com/press-releases/news-details/2026/Lindblad-Expeditions-Holdings-Inc--Reports-2026-Second-Quarter-Financial-Results/default.aspx",
+    "Q3_2026_release": "https://www.sec.gov/Archives/edgar/data/1512499/000143774926034519/ex_1021914.htm",
+    "Q3_2025_release": "https://investors.expeditions.com/press-releases/news-details/2025/Lindblad-Expeditions-Holdings-Inc--Reports-2025-Third-Quarter-Financial-Results/default.aspx",
+    "Q1_2026_EPS_NOTE": "https://www.sec.gov/Archives/edgar/data/1512499/000143774926014912/R9.htm"
+  }
+}

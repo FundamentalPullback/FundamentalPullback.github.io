@@ -1,0 +1,31 @@
+{
+  "status": "released_as_research_conditional_valuation_not_Stage3_approved",
+  "checks": {
+    "ten_years": true,
+    "positive_terminal_funding": true,
+    "scenario_order": true,
+    "wacc_above_g": true
+  },
+  "standalone_model_reproduces_calculations": true,
+  "sha256": {
+    "report.md": "6430fb775754f49c92eda86b8d2787fca70e33fb4a240b432dc892c64208a6ad",
+    "model.py": "9d33ef9d5fdf6a7b00fa7c7dadb755c8ca7106e878db526d9127421591722f7c",
+    "calculations.json": "17920865927c1c0ab26e775006c5969b0c1e3f49c71b61e48603206bcd604400",
+    "history.csv": "1e922e96c27ceef10e2eb7574b407f046b85512ee08bafcbd1022c88d4b008ad",
+    "sources.json": "f86dfc68fbc5c7e35dd8c2722d4d0c2418dbb74c9614f320d6db363b411e78f0"
+  },
+  "open_items": [
+    "Exact options valuation versus incremental diluted-share proxy",
+    "Quarterly cashflow SBC versus EBITDA expense presentation reconciliation",
+    "Historical multiple comparison",
+    "No certified technical EMA/ATR or entry plan"
+  ],
+  "publication_required": [
+    "report.md",
+    "model.py",
+    "calculations.json",
+    "history.csv",
+    "sources.json",
+    "QA.json"
+  ]
+}
