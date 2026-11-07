@@ -1,0 +1,51 @@
+{
+  "ticker": "FFBC",
+  "as_of": "2026-11-07",
+  "public_sources": [
+    "https://www.sec.gov/Archives/edgar/data/708955/000070895526000212/ffbc-20260930.htm",
+    "https://www.sec.gov/Archives/edgar/data/708955/000070895526000195/a8k3q26earningsreleaseex991.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0000708955.json",
+    "https://www.sec.gov/Archives/edgar/data/708955/000110465926085424/tm2620858d1_ex99-2.htm",
+    "https://www.sec.gov/Archives/edgar/data/708955/000110465926111382/tm2624150-5_424b3.htm",
+    "https://stockanalysis.com/stocks/ffbc/history/",
+    "https://vva.marketminute.com/quote/NQ%3AFFBC/historical",
+    "https://stockanalysis.com/stocks/ffbc/statistics/"
+  ],
+  "price": {
+    "date": "2026-11-06",
+    "time": "16:00 EST",
+    "close": 32.57,
+    "sources": [
+      "https://stockanalysis.com/stocks/ffbc/history/",
+      "https://vva.marketminute.com/quote/NQ%3AFFBC/historical"
+    ]
+  },
+  "status": "partial_research_no_approval",
+  "model_status": "illustrative bank residual income sensitivity; not a finalized regulatory capital forecast",
+  "calibration": {
+    "rf": {
+      "value": 0.0486,
+      "date": "2026-11-06",
+      "source": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve"
+    },
+    "erp": {
+      "value": 0.0441,
+      "date": "2026-11-01",
+      "method": "Trailing twelve months with adjusted payout",
+      "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm"
+    },
+    "beta": {
+      "value": 0.96,
+      "source": "https://stockanalysis.com/stocks/ffbc/statistics/"
+    },
+    "ke": 0.090936
+  },
+  "rotce_bridge": {
+    "net_income_m": 81.182,
+    "avg_tangible_equity_m": 1725.026,
+    "annualizer": 3.967391304347826,
+    "amortization_added_back": false,
+    "q3_amortization_m": 6.23,
+    "source_section": "10-Q pages 57\u201358"
+  }
+}
