@@ -1,0 +1,37 @@
+{
+  "reason": "Terminal reinvestment now funds the greater of economic ROIC requirements and continued physical expansion plus working capital. Direct, inverse and sensitivity calculations use one function.",
+  "cases": [
+    {
+      "case": "bear",
+      "old_value": 7.552938740076628,
+      "repaired_value": 5.6207397677078275,
+      "change": -1.9321989723688002,
+      "economic_reinvestment": 76.5376879339864,
+      "physical_floor": 112.30019571479932,
+      "selected_reinvestment": 112.30019571479932,
+      "physical_floor_binding": true
+    },
+    {
+      "case": "base",
+      "old_value": 39.26138237438571,
+      "repaired_value": 37.25420309269934,
+      "change": -2.007179281686369,
+      "economic_reinvestment": 114.7019469633273,
+      "physical_floor": 140.3159891128067,
+      "selected_reinvestment": 140.3159891128067,
+      "physical_floor_binding": true
+    },
+    {
+      "case": "bull",
+      "old_value": 80.51660926141668,
+      "repaired_value": 78.81360354187024,
+      "change": -1.7030057195464394,
+      "economic_reinvestment": 145.93558535325474,
+      "physical_floor": 161.80409629736542,
+      "selected_reinvestment": 161.80409629736542,
+      "physical_floor_binding": true
+    }
+  ],
+  "inverse_change": "No numerical change: economic reinvestment already exceeds physical floor at inverse solution margins.",
+  "verdict": "Observed-price nonapproval unchanged; not permanent business rejection."
+}
