@@ -1,0 +1,883 @@
+{
+  "unit": "USD millions except per share",
+  "history": {
+    "FY2023": {
+      "sales": 1658.713,
+      "ebit": 225.458,
+      "net_income": 169.885,
+      "cfo": 285.942,
+      "capex": 50.672,
+      "sbc": 29.8,
+      "da": 46.434,
+      "fcf": 235.27,
+      "fcf_less_sbc": 205.47
+    },
+    "FY2024": {
+      "sales": 1829.873,
+      "ebit": 245.376,
+      "net_income": 175.689,
+      "cfo": 261.386,
+      "capex": 41.832,
+      "sbc": 40.719,
+      "da": 48.132,
+      "fcf": 219.55400000000003,
+      "fcf_less_sbc": 178.83500000000004
+    },
+    "FY2025": {
+      "sales": 1868.494,
+      "ebit": 213.557,
+      "net_income": 165.387,
+      "cfo": 254.737,
+      "capex": 42.667,
+      "sbc": 47.688,
+      "da": 54.232,
+      "fcf": 212.07,
+      "fcf_less_sbc": 164.382
+    },
+    "H12025": {
+      "sales": 797.02,
+      "ebit": 83.695,
+      "net_income": 67.76,
+      "cfo": -19.101,
+      "capex": 19.943,
+      "sbc": 21.317,
+      "da": 26.297,
+      "fcf": -39.044,
+      "fcf_less_sbc": -60.361
+    },
+    "H12026": {
+      "sales": 864.282,
+      "ebit": 105.956,
+      "net_income": 81.168,
+      "cfo": 29.801,
+      "capex": 25.479,
+      "sbc": 18.308,
+      "da": 28.343,
+      "fcf": 4.321999999999999,
+      "fcf_less_sbc": -13.986
+    },
+    "Q32025": {
+      "sales": 487.766,
+      "ebit": 54.353,
+      "net_income": 39.4,
+      "cfo": 100.94,
+      "capex": 11.828999999999997,
+      "sbc": 11.092999999999996,
+      "da": 13.793000000000003,
+      "fcf": 89.111,
+      "fcf_less_sbc": 78.018
+    },
+    "Q12026": {
+      "sales": 380.414,
+      "ebit": 12.438,
+      "net_income": 9.851,
+      "cfo": -32.649,
+      "capex": 11.119,
+      "sbc": 9.401,
+      "da": 13.972,
+      "fcf": -43.768,
+      "fcf_less_sbc": -53.169
+    },
+    "Q22026": {
+      "sales": 483.868,
+      "ebit": 93.518,
+      "net_income": 71.317,
+      "cfo": 62.45,
+      "capex": 14.36,
+      "sbc": 8.907,
+      "da": 14.371,
+      "fcf": 48.09,
+      "fcf_less_sbc": 39.18300000000001
+    },
+    "Q42025": {
+      "sales": 583.7079999999999,
+      "ebit": 75.50899999999999,
+      "net_income": 58.227000000000004,
+      "cfo": 172.898,
+      "capex": 10.895000000000003,
+      "sbc": 15.278000000000006,
+      "da": 14.141999999999996,
+      "fcf": 162.003,
+      "fcf_less_sbc": 146.72499999999997
+    },
+    "TTM": {
+      "sales": 1935.7559999999999,
+      "ebit": 235.81799999999998,
+      "net_income": 178.79500000000002,
+      "cfo": 303.63899999999995,
+      "capex": 48.203,
+      "sbc": 44.679,
+      "da": 56.278,
+      "fcf": 255.43599999999995,
+      "fcf_less_sbc": 210.75699999999995
+    }
+  },
+  "assumptions": {
+    "FY26_sales_reference": 2008.6310499999997,
+    "cash_reserve": 40,
+    "diluted_shares_reference": 74.085796,
+    "tax": 0.24,
+    "terminal_growth": 0.025,
+    "lease_treatment": "operating rent retained in operating margin; do not also subtract operating lease liabilities",
+    "shares_bridge": "Aug6 outstanding72.988796m plus Q2 weighted dilutiveincrement1.097m; proxy, not spot fullydiluted."
+  },
+  "sourced_calibration": {
+    "rf": 0.0486,
+    "rf_date": "2026-11-06 secondary corroboration; H15 indexed prior day4.84",
+    "erp": 0.0441,
+    "erp_date": "2026-11-01 Damodaran indexed snapshot",
+    "kd": 0.0553,
+    "kd_period": "Q2FY2026 term loan weighted rate; proxy not fresh marginal quote",
+    "debt_weight": 0.029602153863193727,
+    "cases": {
+      "raw_5y_monthly": {
+        "beta": 1.63,
+        "ke": 0.120483,
+        "wacc": 0.11816056301866315,
+        "value": 34.85055669349632,
+        "reverse_growth_at_45": 0.12465511293908663,
+        "terminal_weight": 0.461306991222374
+      },
+      "two_thirds_shrinkage": {
+        "beta": 1.4199999999999997,
+        "ke": 0.11122199999999999,
+        "wacc": 0.10917370856559017,
+        "value": 38.98069778122662,
+        "reverse_growth_at_45": 0.09979964906060457,
+        "terminal_weight": 0.4964419752691905
+      }
+    },
+    "refund_asset_not_added": "68.749 receivable not added separately; sensitivity upper bound net tax approx52.249 or0.705pershare, less costs/timing and no duplicate cash projection"
+  },
+  "audit_initial_sensitivity": {
+    "scenarios": {
+      "bear": {
+        "value_per_share": 34.05144540001365,
+        "pv_terminal_share": 0.5112741877241966,
+        "rows": [
+          {
+            "year": 1,
+            "sales": 2068.8899815,
+            "growth": 0.03,
+            "margin": 0.11850000000000001,
+            "nopat": 186.32423173389003,
+            "reinvestment": 17.314399651000038,
+            "fcff": 169.00983208289
+          },
+          {
+            "year": 2,
+            "sales": 2130.9566809450002,
+            "growth": 0.03,
+            "margin": 0.122,
+            "nopat": 197.58230345722043,
+            "reinvestment": 17.833831640530043,
+            "fcff": 179.7484718166904
+          },
+          {
+            "year": 3,
+            "sales": 2194.8853813733504,
+            "growth": 0.03,
+            "margin": 0.1255,
+            "nopat": 209.34816767539013,
+            "reinvestment": 18.368846589745917,
+            "fcff": 190.97932108564422
+          },
+          {
+            "year": 4,
+            "sales": 2260.731942814551,
+            "growth": 0.03,
+            "margin": 0.129,
+            "nopat": 221.6421596735386,
+            "reinvestment": 18.91991198743831,
+            "fcff": 202.72224768610027
+          },
+          {
+            "year": 5,
+            "sales": 2328.553901098988,
+            "growth": 0.03,
+            "margin": 0.1325,
+            "nopat": 234.4853778406681,
+            "reinvestment": 19.48750934706146,
+            "fcff": 214.99786849360663
+          },
+          {
+            "year": 6,
+            "sales": 2396.0819642308584,
+            "growth": 0.028999999999999998,
+            "margin": 0.136,
+            "nopat": 247.65903182290154,
+            "reinvestment": 25.346979091848745,
+            "fcff": 222.3120527310528
+          },
+          {
+            "year": 7,
+            "sales": 2463.1722592293227,
+            "growth": 0.028,
+            "margin": 0.1395,
+            "nopat": 261.1455229234928,
+            "reinvestment": 31.448605683632955,
+            "fcff": 229.69691723985986
+          },
+          {
+            "year": 8,
+            "sales": 2529.677910228514,
+            "growth": 0.027,
+            "margin": 0.143,
+            "nopat": 274.9253952836349,
+            "reinvestment": 37.72976640694967,
+            "fcff": 237.19562887668522
+          },
+          {
+            "year": 9,
+            "sales": 2595.4495358944555,
+            "growth": 0.026000000000000002,
+            "margin": 0.1465,
+            "nopat": 288.97735132648864,
+            "reinvestment": 44.12103444930024,
+            "fcff": 244.85631687718842
+          },
+          {
+            "year": 10,
+            "sales": 2660.3357742918165,
+            "growth": 0.025,
+            "margin": 0.15,
+            "nopat": 303.2782782692671,
+            "reinvestment": 50.54637971154452,
+            "fcff": 252.7318985577226
+          }
+        ]
+      },
+      "central_illustrative": {
+        "value_per_share": 51.683574972552265,
+        "pv_terminal_share": 0.5811820951481507,
+        "rows": [
+          {
+            "year": 1,
+            "sales": 2149.2352235,
+            "growth": 0.07,
+            "margin": 0.1365,
+            "nopat": 222.96166208589,
+            "reinvestment": 29.687566919000016,
+            "fcff": 193.27409516689
+          },
+          {
+            "year": 2,
+            "sales": 2299.681689145,
+            "growth": 0.07,
+            "margin": 0.138,
+            "nopat": 241.1906155575276,
+            "reinvestment": 31.76569660333,
+            "fcff": 209.4249189541976
+          },
+          {
+            "year": 3,
+            "sales": 2460.65940738515,
+            "growth": 0.07,
+            "margin": 0.1395,
+            "nopat": 260.87911037097365,
+            "reinvestment": 33.98929536556315,
+            "fcff": 226.8898150054105
+          },
+          {
+            "year": 4,
+            "sales": 2632.905565902111,
+            "growth": 0.07,
+            "margin": 0.14100000000000001,
+            "nopat": 282.14216044207024,
+            "reinvestment": 36.36854604115256,
+            "fcff": 245.77361440091767
+          },
+          {
+            "year": 5,
+            "sales": 2817.208955515259,
+            "growth": 0.07,
+            "margin": 0.14250000000000002,
+            "nopat": 305.10372988230256,
+            "reinvestment": 38.914344264033204,
+            "fcff": 266.18938561826934
+          },
+          {
+            "year": 6,
+            "sales": 2989.0587018016895,
+            "growth": 0.061000000000000006,
+            "margin": 0.144,
+            "nopat": 327.1225843251769,
+            "reinvestment": 52.35859922662131,
+            "fcff": 274.76398509855557
+          },
+          {
+            "year": 7,
+            "sales": 3144.4897542953777,
+            "growth": 0.052000000000000005,
+            "margin": 0.1455,
+            "nopat": 347.71767702998284,
+            "reinvestment": 61.71627948042776,
+            "fcff": 286.00139754955507
+          },
+          {
+            "year": 8,
+            "sales": 3279.7028137300786,
+            "growth": 0.043000000000000003,
+            "margin": 0.147,
+            "nopat": 366.40839834992437,
+            "reinvestment": 65.87884516487267,
+            "fcff": 300.52955318505167
+          },
+          {
+            "year": 9,
+            "sales": 3391.212709396901,
+            "growth": 0.034,
+            "margin": 0.1485,
+            "nopat": 382.73226638253425,
+            "reinvestment": 63.893365068660714,
+            "fcff": 318.8389013138735
+          },
+          {
+            "year": 10,
+            "sales": 3475.9930271318235,
+            "growth": 0.025,
+            "margin": 0.15,
+            "nopat": 396.26320509302786,
+            "reinvestment": 55.03655626292054,
+            "fcff": 341.2266488301073
+          }
+        ]
+      },
+      "bull": {
+        "value_per_share": 71.94164865549355,
+        "pv_terminal_share": 0.638290094901759,
+        "rows": [
+          {
+            "year": 1,
+            "sales": 2189.4078445,
+            "growth": 0.09,
+            "margin": 0.15,
+            "nopat": 249.592494273,
+            "reinvestment": 35.87415055300004,
+            "fcff": 213.71834371999995
+          },
+          {
+            "year": 2,
+            "sales": 2386.454550505,
+            "growth": 0.09,
+            "margin": 0.15,
+            "nopat": 272.05581875757,
+            "reinvestment": 39.10282410277,
+            "fcff": 232.95299465480002
+          },
+          {
+            "year": 3,
+            "sales": 2601.2354600504505,
+            "growth": 0.09,
+            "margin": 0.15,
+            "nopat": 296.54084244575137,
+            "reinvestment": 42.62207827201936,
+            "fcff": 253.918764173732
+          },
+          {
+            "year": 4,
+            "sales": 2835.3466514549914,
+            "growth": 0.09,
+            "margin": 0.15,
+            "nopat": 323.229518265869,
+            "reinvestment": 46.458065316501106,
+            "fcff": 276.77145294936787
+          },
+          {
+            "year": 5,
+            "sales": 3090.527850085941,
+            "growth": 0.09,
+            "margin": 0.15,
+            "nopat": 352.32017490979723,
+            "reinvestment": 50.63929119498618,
+            "fcff": 301.68088371481105
+          },
+          {
+            "year": 6,
+            "sales": 3328.498494542558,
+            "growth": 0.077,
+            "margin": 0.15,
+            "nopat": 379.4488283778516,
+            "reinvestment": 65.76909050377986,
+            "fcff": 313.67973787407175
+          },
+          {
+            "year": 7,
+            "sales": 3541.522398193282,
+            "growth": 0.064,
+            "margin": 0.15,
+            "nopat": 403.7335533940341,
+            "reinvestment": 74.65170947917116,
+            "fcff": 329.08184391486293
+          },
+          {
+            "year": 8,
+            "sales": 3722.140040501139,
+            "growth": 0.051,
+            "margin": 0.15,
+            "nopat": 424.3239646171299,
+            "reinvestment": 75.8120885909286,
+            "fcff": 348.5118760262013
+          },
+          {
+            "year": 9,
+            "sales": 3863.5813620401823,
+            "growth": 0.03799999999999999,
+            "margin": 0.15,
+            "nopat": 440.44827527258076,
+            "reinvestment": 68.19604822801458,
+            "fcff": 372.2522270445662
+          },
+          {
+            "year": 10,
+            "sales": 3960.1708960911865,
+            "growth": 0.024999999999999994,
+            "margin": 0.15,
+            "nopat": 451.45948215439523,
+            "reinvestment": 51.30221388118126,
+            "fcff": 400.15726827321396
+          }
+        ]
+      }
+    },
+    "wacc_sensitivity": {
+      "0.07": 76.64427755770765,
+      "0.08": 61.8749331595742,
+      "0.09": 51.683574972552265,
+      "0.1": 44.23670409853836,
+      "0.11": 38.563831501906385
+    },
+    "reverse_growth_at_9pct": 0.04316548550129924
+  },
+  "readiness": {
+    "status": "valuation_watch_provisional",
+    "stage3_complete": false,
+    "entry_approved": false,
+    "primary_values": "selected_outputs only; initial grid is audit, not adopted valuation"
+  },
+  "selected_outputs": {
+    "central_operations_raw_beta": {
+      "value_per_share": 34.85055669349632,
+      "pv_terminal_share": 0.461306991222374,
+      "rows": [
+        {
+          "year": 1,
+          "sales": 2149.2352235,
+          "growth": 0.07,
+          "margin": 0.1365,
+          "nopat": 222.96166208589,
+          "reinvestment": 29.687566919000016,
+          "fcff": 193.27409516689
+        },
+        {
+          "year": 2,
+          "sales": 2299.681689145,
+          "growth": 0.07,
+          "margin": 0.138,
+          "nopat": 241.1906155575276,
+          "reinvestment": 31.76569660333,
+          "fcff": 209.4249189541976
+        },
+        {
+          "year": 3,
+          "sales": 2460.65940738515,
+          "growth": 0.07,
+          "margin": 0.1395,
+          "nopat": 260.87911037097365,
+          "reinvestment": 33.98929536556315,
+          "fcff": 226.8898150054105
+        },
+        {
+          "year": 4,
+          "sales": 2632.905565902111,
+          "growth": 0.07,
+          "margin": 0.14100000000000001,
+          "nopat": 282.14216044207024,
+          "reinvestment": 36.36854604115256,
+          "fcff": 245.77361440091767
+        },
+        {
+          "year": 5,
+          "sales": 2817.208955515259,
+          "growth": 0.07,
+          "margin": 0.14250000000000002,
+          "nopat": 305.10372988230256,
+          "reinvestment": 38.914344264033204,
+          "fcff": 266.18938561826934
+        },
+        {
+          "year": 6,
+          "sales": 2989.0587018016895,
+          "growth": 0.061000000000000006,
+          "margin": 0.144,
+          "nopat": 327.1225843251769,
+          "reinvestment": 52.35859922662131,
+          "fcff": 274.76398509855557
+        },
+        {
+          "year": 7,
+          "sales": 3144.4897542953777,
+          "growth": 0.052000000000000005,
+          "margin": 0.1455,
+          "nopat": 347.71767702998284,
+          "reinvestment": 61.71627948042776,
+          "fcff": 286.00139754955507
+        },
+        {
+          "year": 8,
+          "sales": 3279.7028137300786,
+          "growth": 0.043000000000000003,
+          "margin": 0.147,
+          "nopat": 366.40839834992437,
+          "reinvestment": 65.87884516487267,
+          "fcff": 300.52955318505167
+        },
+        {
+          "year": 9,
+          "sales": 3391.212709396901,
+          "growth": 0.034,
+          "margin": 0.1485,
+          "nopat": 382.73226638253425,
+          "reinvestment": 63.893365068660714,
+          "fcff": 318.8389013138735
+        },
+        {
+          "year": 10,
+          "sales": 3475.9930271318235,
+          "growth": 0.025,
+          "margin": 0.15,
+          "nopat": 396.26320509302786,
+          "reinvestment": 55.03655626292054,
+          "fcff": 341.2266488301073
+        }
+      ]
+    },
+    "central_operations_shrunk_beta": {
+      "value_per_share": 38.98069778122662,
+      "pv_terminal_share": 0.4964419752691905,
+      "rows": [
+        {
+          "year": 1,
+          "sales": 2149.2352235,
+          "growth": 0.07,
+          "margin": 0.1365,
+          "nopat": 222.96166208589,
+          "reinvestment": 29.687566919000016,
+          "fcff": 193.27409516689
+        },
+        {
+          "year": 2,
+          "sales": 2299.681689145,
+          "growth": 0.07,
+          "margin": 0.138,
+          "nopat": 241.1906155575276,
+          "reinvestment": 31.76569660333,
+          "fcff": 209.4249189541976
+        },
+        {
+          "year": 3,
+          "sales": 2460.65940738515,
+          "growth": 0.07,
+          "margin": 0.1395,
+          "nopat": 260.87911037097365,
+          "reinvestment": 33.98929536556315,
+          "fcff": 226.8898150054105
+        },
+        {
+          "year": 4,
+          "sales": 2632.905565902111,
+          "growth": 0.07,
+          "margin": 0.14100000000000001,
+          "nopat": 282.14216044207024,
+          "reinvestment": 36.36854604115256,
+          "fcff": 245.77361440091767
+        },
+        {
+          "year": 5,
+          "sales": 2817.208955515259,
+          "growth": 0.07,
+          "margin": 0.14250000000000002,
+          "nopat": 305.10372988230256,
+          "reinvestment": 38.914344264033204,
+          "fcff": 266.18938561826934
+        },
+        {
+          "year": 6,
+          "sales": 2989.0587018016895,
+          "growth": 0.061000000000000006,
+          "margin": 0.144,
+          "nopat": 327.1225843251769,
+          "reinvestment": 52.35859922662131,
+          "fcff": 274.76398509855557
+        },
+        {
+          "year": 7,
+          "sales": 3144.4897542953777,
+          "growth": 0.052000000000000005,
+          "margin": 0.1455,
+          "nopat": 347.71767702998284,
+          "reinvestment": 61.71627948042776,
+          "fcff": 286.00139754955507
+        },
+        {
+          "year": 8,
+          "sales": 3279.7028137300786,
+          "growth": 0.043000000000000003,
+          "margin": 0.147,
+          "nopat": 366.40839834992437,
+          "reinvestment": 65.87884516487267,
+          "fcff": 300.52955318505167
+        },
+        {
+          "year": 9,
+          "sales": 3391.212709396901,
+          "growth": 0.034,
+          "margin": 0.1485,
+          "nopat": 382.73226638253425,
+          "reinvestment": 63.893365068660714,
+          "fcff": 318.8389013138735
+        },
+        {
+          "year": 10,
+          "sales": 3475.9930271318235,
+          "growth": 0.025,
+          "margin": 0.15,
+          "nopat": 396.26320509302786,
+          "reinvestment": 55.03655626292054,
+          "fcff": 341.2266488301073
+        }
+      ]
+    },
+    "persistent_downside": {
+      "value_per_share": 21.317068839151176,
+      "pv_terminal_share": 0.4017886987706043,
+      "rows": [
+        {
+          "year": 1,
+          "sales": 2068.8899815,
+          "growth": 0.03,
+          "margin": 0.1145,
+          "nopat": 180.03480619012998,
+          "reinvestment": 17.314399651000038,
+          "fcff": 162.72040653912995
+        },
+        {
+          "year": 2,
+          "sales": 2130.9566809450002,
+          "growth": 0.03,
+          "margin": 0.114,
+          "nopat": 184.62608683707484,
+          "reinvestment": 17.833831640530043,
+          "fcff": 166.7922551965448
+        },
+        {
+          "year": 3,
+          "sales": 2194.8853813733504,
+          "growth": 0.03,
+          "margin": 0.1135,
+          "nopat": 189.3308129972652,
+          "reinvestment": 18.368846589745917,
+          "fcff": 170.9619664075193
+        },
+        {
+          "year": 4,
+          "sales": 2260.731942814551,
+          "growth": 0.03,
+          "margin": 0.113,
+          "nopat": 194.15165924891363,
+          "reinvestment": 18.91991198743831,
+          "fcff": 175.23174726147533
+        },
+        {
+          "year": 5,
+          "sales": 2328.553901098988,
+          "growth": 0.03,
+          "margin": 0.1125,
+          "nopat": 199.09135854396348,
+          "reinvestment": 19.48750934706146,
+          "fcff": 179.60384919690202
+        },
+        {
+          "year": 6,
+          "sales": 2396.0819642308584,
+          "growth": 0.028999999999999998,
+          "margin": 0.112,
+          "nopat": 203.95449679533067,
+          "reinvestment": 23.657070404116006,
+          "fcff": 180.29742639121466
+        },
+        {
+          "year": 7,
+          "sales": 2463.1722592293227,
+          "growth": 0.028,
+          "margin": 0.1115,
+          "nopat": 208.7292172470928,
+          "reinvestment": 27.53485485979509,
+          "fcff": 181.1943623872977
+        },
+        {
+          "year": 8,
+          "sales": 2529.677910228514,
+          "growth": 0.027,
+          "margin": 0.111,
+          "nopat": 213.40362850687745,
+          "reinvestment": 31.085415595059875,
+          "fcff": 182.31821291181757
+        },
+        {
+          "year": 9,
+          "sales": 2595.4495358944555,
+          "growth": 0.026000000000000002,
+          "margin": 0.1105,
+          "nopat": 217.9658520244164,
+          "reinvestment": 34.27410654607955,
+          "fcff": 183.69174547833683
+        },
+        {
+          "year": 10,
+          "sales": 2660.3357742918165,
+          "growth": 0.025,
+          "margin": 0.11,
+          "nopat": 222.40407073079587,
+          "reinvestment": 37.06734512179931,
+          "fcff": 185.33672560899655
+        }
+      ]
+    },
+    "favorable_execution": {
+      "value_per_share": 50.00690407316507,
+      "pv_terminal_share": 0.5174658553874947,
+      "rows": [
+        {
+          "year": 1,
+          "sales": 2189.4078445,
+          "growth": 0.09,
+          "margin": 0.152,
+          "nopat": 252.92039419664,
+          "reinvestment": 35.87415055300004,
+          "fcff": 217.04624364363994
+        },
+        {
+          "year": 2,
+          "sales": 2386.454550505,
+          "growth": 0.09,
+          "margin": 0.154,
+          "nopat": 279.3106405911052,
+          "reinvestment": 39.10282410277,
+          "fcff": 240.2078164883352
+        },
+        {
+          "year": 3,
+          "sales": 2601.2354600504505,
+          "growth": 0.09,
+          "margin": 0.156,
+          "nopat": 308.40247614358145,
+          "reinvestment": 42.62207827201936,
+          "fcff": 265.7803978715621
+        },
+        {
+          "year": 4,
+          "sales": 2835.3466514549914,
+          "growth": 0.09,
+          "margin": 0.158,
+          "nopat": 340.46842590671537,
+          "reinvestment": 46.458065316501106,
+          "fcff": 294.01036059021425
+        },
+        {
+          "year": 5,
+          "sales": 3090.527850085941,
+          "growth": 0.09,
+          "margin": 0.16,
+          "nopat": 375.8081865704504,
+          "reinvestment": 50.63929119498618,
+          "fcff": 325.1688953754642
+        },
+        {
+          "year": 6,
+          "sales": 3328.498494542558,
+          "growth": 0.077,
+          "margin": 0.162,
+          "nopat": 409.8047346480798,
+          "reinvestment": 67.89400394269585,
+          "fcff": 341.9107307053839
+        },
+        {
+          "year": 7,
+          "sales": 3541.522398193282,
+          "growth": 0.064,
+          "margin": 0.164,
+          "nopat": 441.4153517108106,
+          "reinvestment": 79.03650055603242,
+          "fcff": 362.3788511547782
+        },
+        {
+          "year": 8,
+          "sales": 3722.140040501139,
+          "growth": 0.051,
+          "margin": 0.166,
+          "nopat": 469.5851875096237,
+          "reinvestment": 82.10751322961183,
+          "fcff": 387.4776742800119
+        },
+        {
+          "year": 9,
+          "sales": 3863.5813620401823,
+          "growth": 0.03799999999999999,
+          "margin": 0.168,
+          "nopat": 493.3020683052905,
+          "reinvestment": 75.49948144707993,
+          "fcff": 417.8025868582106
+        },
+        {
+          "year": 10,
+          "sales": 3960.1708960911865,
+          "growth": 0.024999999999999994,
+          "margin": 0.17,
+          "nopat": 511.6540797749813,
+          "reinvestment": 58.14250906533877,
+          "fcff": 453.51157070964257
+        }
+      ]
+    }
+  },
+  "selected_scenario_assumptions": {
+    "persistent_downside": {
+      "initial_growth": 0.03,
+      "initial_margin": 0.115,
+      "terminal_margin": 0.11,
+      "terminal_roic": 0.15,
+      "wacc": 0.11816056301866315
+    },
+    "favorable_execution": {
+      "initial_growth": 0.09,
+      "initial_margin": 0.15,
+      "terminal_margin": 0.17,
+      "terminal_roic": 0.22,
+      "wacc": 0.10917370856559017
+    }
+  },
+  "cash_bridge": {
+    "H1FCF": 4.322,
+    "FY26FCFguidance": [
+      200,
+      225
+    ],
+    "implied_H2FCF": [
+      195.678,
+      220.678
+    ],
+    "July4cash": 59.823,
+    "yearend_cash_before_financing_buybacks_FX": [
+      255.501,
+      280.501
+    ],
+    "note": "Not currentcash; includes H2 flows partly already earned by Nov7. Cannot add to DCF and refund receivable independently. Unknown subsequentbuybacks/debt/tax cash. Main uses disclosedJuly4cash only."
+  },
+  "financial_lease_check": {
+    "FY25ending": 1.19,
+    "H1cashpayments": 1.268,
+    "spot_balance": "not separately disclosed in reviewedQ2; payments cannot provezero",
+    "sensitivity_1_190m_extra_debt_per_share": 0.01606245818024281
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "ticker": "BMI",
+  "company": "Badger Meter",
+  "as_of": "2026-11-07",
+  "status": "partial_conditioned_audited",
+  "publicationReady": true,
+  "ready": false,
+  "publication_status": "partial_audited",
+  "stage3_approved": false,
+  "total_valuation": null,
+  "fair_value": null,
+  "fair_value_low": null,
+  "fair_value_base": null,
+  "fair_value_high": null,
+  "bear_value": null,
+  "base_value": null,
+  "bull_value": null,
+  "entry_price": null,
+  "margin_of_safety": null,
+  "price": 158.18,
+  "price_date": "2026-11-06",
+  "price_session": "regular close",
+  "opportunity": 90,
+  "opportunity_minimum": 65,
+  "pros": {
+    "es": [
+      "Q3 recupera crecimiento: ventas 235,938M y EBIT 47,742M, ambos superiores al año anterior. Es evidencia para observación, no aprobación de compra."
+    ],
+    "en": [
+      "Q3 returned to growth: revenue 235.938M and EBIT 47.742M both exceeded the prior year. This supports observation, not purchase approval."
+    ]
+  },
+  "cons": {
+    "es": [
+      "El EBIT y EPS TTM siguen cayendo. 37South, anunciada como adquirida el 3 de noviembre, queda fuera del modelo por términos financieros no divulgados. La valoración combinada permanece pendiente."
+    ],
+    "en": [
+      "Trailing EBIT and EPS are still declining. 37South, announced as acquired on November 3, is outside the model because financial terms were not disclosed. Combined valuation remains pending."
+    ]
+  },
+  "evidence": {
+    "report": "report.md",
+    "section": "Publication scope and evidence / Evidence paragraphs",
+    "es": {
+      "pros_exact_paragraph": "Q3 recupera crecimiento: ventas 235,938M y EBIT 47,742M, ambos superiores al año anterior. Es evidencia para observación, no aprobación de compra.",
+      "cons_exact_paragraph": "El EBIT y EPS TTM siguen cayendo. 37South, anunciada como adquirida el 3 de noviembre, queda fuera del modelo por términos financieros no divulgados. La valoración combinada permanece pendiente."
+    },
+    "en": {
+      "pros_exact_paragraph": "Q3 returned to growth: revenue 235.938M and EBIT 47.742M both exceeded the prior year. This supports observation, not purchase approval.",
+      "cons_exact_paragraph": "Trailing EBIT and EPS are still declining. 37South, announced as acquired on November 3, is outside the model because financial terms were not disclosed. Combined valuation remains pending."
+    }
+  },
+  "model_diagnostics": "model_outputs.json; provisional aggregate FCFF, not comprehensive approved value",
+  "subsequent_acquisition": {
+    "target": "37South",
+    "announcement_date": "2026-11-03",
+    "status": "announced as completed",
+    "precise_legal_close_date": null,
+    "consideration": null,
+    "revenue": null,
+    "ebitda": null,
+    "source": "https://www.badgermeter.com/en-gb/newsroom/37south/"
+  },
+  "model_perimeter": "September 2026 before 37South; not current combined BMI",
+  "unresolved": [
+    "37South purchase consideration, funding, acquired cash/debt, liabilities, earnings and dilution; rebuild combined perimeter",
+    "capitalized software cash additions",
+    "employee and lease classification/current portions",
+    "valuation-date diluted shares",
+    "business-level capital and software maintenance build",
+    "fully normalized peer comparisons",
+    "37-day fiscal/run-rate stub reconciliation",
+    "technical gates"
+  ],
+  "model_version": "BMI-FCFF-20261107-v1.1-QA-provisional"
+}

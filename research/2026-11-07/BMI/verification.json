@@ -1,0 +1,83 @@
+{
+  "checks": {
+    "TTM_sales_FY25_plus9M26_less9M25": true,
+    "TTM_ebit_FY25_plus9M26_less9M25": true,
+    "TTM_netincome_rollforward": true,
+    "TTM_CFO_rollforward": true,
+    "TTM_DA_rollforward": true,
+    "TTM_SBC_rollforward": true,
+    "TTM_PPE_rollforward": true,
+    "YTD_cash_bridge": true
+  },
+  "incremental_return_sensitivity": [
+    {
+      "growth_roic": 0.15,
+      "terminal_roic": 0.15,
+      "price": 72.84126384779337
+    },
+    {
+      "growth_roic": 0.15,
+      "terminal_roic": 0.18,
+      "price": 74.94112971735183
+    },
+    {
+      "growth_roic": 0.15,
+      "terminal_roic": 0.25,
+      "price": 78.00491459355186
+    },
+    {
+      "growth_roic": 0.2,
+      "terminal_roic": 0.15,
+      "price": 77.349367471466
+    },
+    {
+      "growth_roic": 0.2,
+      "terminal_roic": 0.18,
+      "price": 79.36295930578997
+    },
+    {
+      "growth_roic": 0.2,
+      "terminal_roic": 0.25,
+      "price": 82.28616734739983
+    },
+    {
+      "growth_roic": 0.25,
+      "terminal_roic": 0.15,
+      "price": 80.13292840978934
+    },
+    {
+      "growth_roic": 0.25,
+      "terminal_roic": 0.18,
+      "price": 82.09019873739281
+    },
+    {
+      "growth_roic": 0.25,
+      "terminal_roic": 0.25,
+      "price": 84.92006782546933
+    },
+    {
+      "growth_roic": 0.3,
+      "terminal_roic": 0.15,
+      "price": 82.03287535845173
+    },
+    {
+      "growth_roic": 0.3,
+      "terminal_roic": 0.18,
+      "price": 83.9504859734883
+    },
+    {
+      "growth_roic": 0.3,
+      "terminal_roic": 0.25,
+      "price": 86.71376079721358
+    }
+  ],
+  "capital_and_share_sensitivity": {
+    "baseline": 79.36295930578997,
+    "no_employee_claim_reserve": 79.68867313869923,
+    "no_excess_cash_credit": 78.0407208112398,
+    "full_50m_earnout": 78.03821076136614,
+    "all_cash_excess": 80.40881341980878,
+    "q3_weighted_diluted_denominator": 78.85030171451702
+  },
+  "status": "research-ready for independent review; NOT a completed Stage3 approval"
+}
