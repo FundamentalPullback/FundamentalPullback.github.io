@@ -1,0 +1,158 @@
+{
+  "ticker": "NYT",
+  "asof": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "status": "completed_conditional_review",
+  "permitted_use": "Publish-safe fundamental conditional review with the stated caveats; no Stage3.5 entry, sizing, technical approval or trade. Nothing published.",
+  "material_blockers": [],
+  "scope": [
+    "Primary FY2023-25 statements and latest nine-month comparative",
+    "Four-quarter income and TTM cash flow",
+    "Subscription/ARPU definitions; historic Athletic only",
+    "Tax/SBC/FCFF normalization",
+    "Cash, pension, October distributions and share bridge",
+    "5+5 FCFF, sustainable terminal reinvestment, capital cost",
+    "Scenarios, central sensitivity, reverse valuation and historical P/E"
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "type": "Formula/control defect",
+      "location": "model.py BRIDGE; report Balance",
+      "finding": "September cash was reduced by October buybacks but not the October dividend expressly confirmed in Q3 10-Q liquidity discussion.",
+      "fix": "Added conservative $37.247m declared-dividend proxy; payout sensitivity $36.8-37.247m is below $0.003/share. All three values decrease $0.231583/share; report inverse and sensitivity values refreshed.",
+      "resolved": true
+    },
+    {
+      "severity": "low",
+      "type": "Missing decision output",
+      "location": "report historical schedule; model QUARTERS",
+      "finding": "Original package had three years plus TTM but omitted discrete four-quarter income evidence.",
+      "fix": "Added S15 Q2/6M primary filing; derive Q1 by subtraction, Q4 by annual minus9M; revenue/EBIT/net sum exactly to TTM.",
+      "resolved": true
+    },
+    {
+      "severity": "low",
+      "type": "Not comparable without bridge",
+      "location": "TTM EPS and historical P/E",
+      "finding": "Rounded period EPS addition is approximate, not exact weighted-share TTM EPS.",
+      "fix": "Explicit approximation label; no DCF dependence.",
+      "resolved": true
+    },
+    {
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "model.py checks",
+      "finding": "Some initial controls were hardcoded true.",
+      "fix": "Added computed WACC>g, quarter tie and terminal continuity checks. Full three-statement model not claimed.",
+      "resolved": true
+    },
+    {
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "Forecast margins/terminal ROIC",
+      "finding": "Terminal margin20.5%, incremental ROIC15%, cash reserve5%, forward subscriber/ARPU and capex path are analyst assumptions, not observed guidance.",
+      "fix": "Retained explicit labels, downside/upside cases and sensitivity; suitable for conditional valuation not certainty.",
+      "resolved": false,
+      "blocking": false
+    }
+  ],
+  "tieouts": {
+    "annual": "S1 annual filing: revenue, EBIT, attributable net, EPS, CFO, capex, DA, SBC FY2023-25 checked against primary tables.",
+    "ttm": "FY2025+9M2026-9M2025 yields revenue3045.543, EBIT492.157, net408.534, CFO626.400, capex32.975, FCF593.425, DA83.723, SBC78.914. CFO/FCF also disclosed TTM in Q3 filing.",
+    "quarters": {
+      "2025Q4": {
+        "revenue": 802.3140000000001,
+        "ebit": 161.584,
+        "net": 129.838,
+        "eps": 0.7899999999999998
+      },
+      "2026Q1": {
+        "revenue": 712.236,
+        "ebit": 90.61699999999999,
+        "net": 87.922,
+        "eps": 0.5400000000000001
+      },
+      "2026Q2": {
+        "revenue": 762.455,
+        "ebit": 118.018,
+        "net": 93.418,
+        "eps": 0.57
+      },
+      "2026Q3": {
+        "revenue": 768.538,
+        "ebit": 121.938,
+        "net": 97.356,
+        "eps": 0.6
+      }
+    },
+    "kpi": "Q3 digital13.22m, total13.76m, ARPU9.93 per28 days, quarterly sequence confirmed in Q3 table. Family/corporate definitions limit per-payer interpretations.",
+    "athletic": "S8 primary2024 10-K corroborates revenues131.271/172.085 and adjusted operating losses31.430/4.983 for2023/24. Single segment sinceQ3 2025. No current standalone profit/churn invented.",
+    "normalization": "502.748 normalized EBIT*.75+83.723-40-2=418.784. FCF593.425 minus SBC78.914 minus CFO residual55.229 minus net/NOPAT difference31.473 minus capex difference7.025 minus WC2 gives418.784. Residual not mislabelled as all WC/tax. Land sale cancelled in TTM; fiscal benefits not perpetuated.",
+    "capital_bridge": {
+      "components": {
+        "cash_and_securities": 1264.7089999999998,
+        "october_buybacks": -33.4,
+        "october_dividend_proxy": -37.247,
+        "operating_cash": -152.27714999999998,
+        "debt": 0,
+        "pension_and_retiree_gross": -235.834,
+        "minority": 0
+      },
+      "net": 805.9508499999998,
+      "shares": 160.836346
+    },
+    "discount": "Primary Treasury Nov6 10y4.86%; November1 Damodaran adjusted-payout ERP4.41%; Yahoo5y monthly beta0.86 independently search-corroborated (direct Yahoo fetch429). CAPM8.6526%, discretionary8.8% base. Date mismatch explicit.",
+    "price": "Live S4 Nov6 2026 16:00 EST close68.36 verified; after-hours68.50 excluded.",
+    "historical": "2023/24/25 unadjusted48.99/52.05/69.42 corroborated external price series. Reconstructed P/E34.99/29.41/33.22 uses GAAP diluted FY EPS, explicitly hindsight rather than investable forward multiple."
+  },
+  "results": {
+    "adverso": {
+      "value": 31.76929935073446,
+      "terminal_weight": 0.44668754606486444
+    },
+    "base": {
+      "value": 53.377527466576915,
+      "terminal_weight": 0.5387215173309372
+    },
+    "favorable": {
+      "value": 89.58985821453025,
+      "terminal_weight": 0.6388293056709178
+    }
+  },
+  "central_range_approx": [
+    49,
+    60
+  ],
+  "review_threshold": 45.4,
+  "normalized_fcff": 418.784,
+  "reverse": {
+    "margin_shift": 0.06239207955231124,
+    "subscriber_growth_shift": 0.07663120651121658
+  },
+  "checks": {
+    "seed_tie": true,
+    "positive_fcff": true,
+    "horizon": 10,
+    "wacc_gt_g": true,
+    "four_quarter_tie": true,
+    "terminal_reinvestment_tie": true
+  },
+  "bounded_proxies": {
+    "pension_current_plus_minus_10m_per_share": 0.0621750011654704,
+    "cash_reserve_3_to_7pct_vs5_per_share": 0.37871327914898045,
+    "restricted_pension_surplus_not_added_per_share": 0.4721320888501161,
+    "october_dividend_proxy_max_range_per_share": 0.002779222552096527
+  },
+  "remaining_caveats": [
+    "Churn/cohort and current Athletic P&L are not disclosed; consolidated scenario approach appropriate.",
+    "Quarterly cash-flow schedule not separately reconstructed; published TTM CFO/FCF tie checked.",
+    "Cash generation since September unreported and excluded; current pension and dilution approximations bounded.",
+    "Full forward consensus and precise next earnings date not verified; no assertion of consensus beat or confirmed future day.",
+    "Technical entry review and long price-series analysis outside mandate."
+  ],
+  "model_sha256": "b33a43d7bf816e33ceaa8af0ef0c7674b39f157578852a896c8b753b753dc371",
+  "published": false,
+  "trades": false,
+  "stage35_approved": false
+}

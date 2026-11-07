@@ -1,0 +1,46 @@
+{
+  "ticker": "NYT",
+  "asof": "2026-11-07",
+  "status": "completed_conditional_review",
+  "source_posture": "primary_financials_secondary_prices",
+  "decision": "Buena empresa; esperar precio",
+  "confidence": "media",
+  "scanner_opportunity": 70,
+  "scanner_quality": 60,
+  "price": 68.36,
+  "price_timestamp": "2026-11-06T16:00:00-05:00",
+  "base_value": 53.377527466576915,
+  "central_range": [
+    49,
+    60
+  ],
+  "review_threshold": 45.4,
+  "stage35_approved": false,
+  "trades": false,
+  "material_blockers": [],
+  "limitations": [
+    "Churn and current standalone Athletic economics not disclosed; consolidated modeled scenarios instead.",
+    "Current pension obligation30m proxy bounded +/-10m;0.06/share.",
+    "Future earnings date not confirmed;Feb2027 window only.",
+    "No complete forward consensus or technical entry review.",
+    "TTM EPS is a rounded-period bridge, not exact reweighted diluted EPS.",
+    "Quarterly cash flow detail not separately reconstructed; TTM cash flow ties to published Q3 TTM.",
+    "October dividend cash uses $37.247m declared amount as conservative proxy; $36.8m-$37.247m range < $0.003/share."
+  ],
+  "artifacts": [
+    "report.md",
+    "model.py",
+    "results.json",
+    "sources.json",
+    "audit.json"
+  ],
+  "checks": {
+    "seed_tie": true,
+    "positive_fcff": true,
+    "horizon": 10,
+    "wacc_gt_g": true,
+    "four_quarter_tie": true,
+    "terminal_reinvestment_tie": true
+  },
+  "audit_verdict": "Ready with caveats"
+}

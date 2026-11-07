@@ -1,0 +1,15 @@
+{
+  "artifact_type": "deterministic_support_model",
+  "run": "python model.py",
+  "status": "completed_conditional_review",
+  "checks": {
+    "seed_tie": true,
+    "positive_fcff": true,
+    "horizon": 10,
+    "wacc_gt_g": true,
+    "four_quarter_tie": true,
+    "terminal_reinvestment_tie": true
+  },
+  "model_sha256": "b33a43d7bf816e33ceaa8af0ef0c7674b39f157578852a896c8b753b753dc371",
+  "audit": "audit.json"
+}
