@@ -1,0 +1,13 @@
+# Mapa fuente–modelo
+- Historia: companyfacts SEC; cada observación en selected public facts embedded in model.py conserva tag, accession, periodo y fecha. Amortización/deterioro proviene de etiqueta propia itw:AmortizationandImpairmentofIntangibleAssets en HTML primario con contexto; D&A=depreciación+esa etiqueta.
+- TTM y Q4: diferencias de acumulados; checks exactos al redondeo publicado.
+- Base16.846,2: ingresos2025×1,05, guía anual2026. No es NTM preciso.
+- Demanda, precio/coste, seguro, adquisiciones, balance, shares:10-Q2026-10-28 y releaseq32026. No sumar seguro y beneficios de ventas perdidas.
+- Pensiones, leasing, fiscalidad, tooling, seguros, bonosEUR/USD e I+D:10-K2026-02-13; fechas anuales explícitas, no roll-forward inventado. Actualización debt/IRS/shares:10-Q.
+- Principal deuda9.435,667: USD4.250 + CP369 + EURloan850 + EURbonds3.500×(850/750). Cambio inferido de un saldo redondeado, no cotizaciónFX exacta. Diferencia frente book9.372 son aproximación nominal/fees/discounts, no dato absoluto certificado.
+- Dividendos pendientes490 del balance se deducen por exfecha30sept/pago9oct; no se deduce otro dividendo todavía cum-derecho de diciembre.
+- Precio y beta: StockAnalysis6nov; Treasury6nov4,86%; Damodaran1novERP4,41%, propia tasa5,29%, desajuste declarado. Kd5,56% hipótesis Rf+70pb, no yield actual.
+- Márgenes, crecimientos, impuestos24,5%, ROIC marginal y terminal, reserva500, capex/reposición y NWC son hipótesis analíticas. El ROIC agregado no demuestra marginal; se incluye alternativa sin restricciónROIC pero manteniendo todos los presupuestos explícitos.
+- Precio por acción=(PVFCFF+PVterminal+bridge)/285,1. El denominador es proxy284,2+0,7+0,2; SBC queda en EBIT. No hay recompras futuras gratuitas.
+- Equidad: no duplicar leases con rentas, déficit pensión con pasivos brutos, impuestosIRS con reservas sin conciliación, gananciasWilsonart con operación, cashseguro con claims desconocidos.
+- Aprobación: null; archivos son diagnóstico reproducible, no workbook bancario ni recomendación operativa aprobada.
