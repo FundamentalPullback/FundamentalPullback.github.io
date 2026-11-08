@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-06 closes",
+  "rows": [
+    {
+      "ticker": "CAKE",
+      "price": 106.76,
+      "shares_m": 49.855413,
+      "shares_date": "2026-10-26",
+      "period": "TTM September29,2026",
+      "revenue": 4003.4639999999995,
+      "ebit": 239.06100000000004,
+      "normalization": "Remove net TTM FRC remeasurement gain2.7; retain normal amortization, SBC, preopening and rent.",
+      "cfo": 388.645,
+      "capex": 170.333,
+      "sbc": 29.601999999999997,
+      "cash": 249.269,
+      "debt_claim": 923.4,
+      "debt_date": "2026-09-29 market fair value of convertible, not fresh quote",
+      "finance_lease_principal": 0,
+      "market_cap": 5322.5638918800005,
+      "ev_proxy": 5996.69489188,
+      "ev_ebit": 25.084371318952062,
+      "ebit_margin": 0.059713538076026175,
+      "cash_after_capex_sbc_finance_lease": 188.70999999999998
+    },
+    {
+      "ticker": "DRI",
+      "price": 226.35,
+      "shares_m": 113.143224,
+      "shares_date": "2026-09-21",
+      "period": "TTM August30,2026",
+      "revenue": 13366.5,
+      "ebit": 1562.8999999999999,
+      "normalization": "Reported EBIT, no blanket acquisition/impairment addback.",
+      "cfo": 1789.6,
+      "capex": 735.1999999999999,
+      "sbc": 80.69999999999999,
+      "cash": 220.5,
+      "debt_claim": 4376.1,
+      "debt_date": "August30 carrying debt plus finance leases",
+      "finance_lease_principal": 18.200000000000003,
+      "market_cap": 25609.9687524,
+      "ev_proxy": 29765.568752400002,
+      "ev_ebit": 19.045088458890525,
+      "ebit_margin": 0.11692664497063554,
+      "cash_after_capex_sbc_finance_lease": 955.5
+    }
+  ],
+  "limitations": [
+    "Operating rent stays in EBIT and operating leases excluded from EV; DRI finance leases included in debt and principal deducted only from equity-cash diagnostic.",
+    "CAKE fair-value convertible versus DRI carrying debt is not apples-to-apples; CAKE intrinsic-only current claim is lower, not ignored.",
+    "Period mismatch September29 vs August30; stale share/debt dates identified.",
+    "Darden larger multi-brand scale, franchise/Chuy acquisition perimeter and real-estate financing differ; not a pure company-owned unit benchmark.",
+    "No deductions for necessary cash, legal claims or post-period distributions; not fair-value bridges or normalized FCFE."
+  ],
+  "approved_peer_target": null
+}
