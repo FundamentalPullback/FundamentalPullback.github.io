@@ -1,0 +1,10 @@
+import pathlib,json
+P=pathlib.Path(__file__).resolve().parent
+# Primary audited FY26 + Q127 - Q126. Adjusted-to-recurring retains all reported restructuring.
+r=18424.6+4389.5-4517.5;raw=885.8+633.6-1725.8;norm=(2811.5-155.5)+(634-.2)-(711.2-18.3)
+cfo=2166.2+297.8-397;capex=539.9+90.5-109.5;sbc=79.4+21.8-15.1
+price=35.51;shares=534.687144;ev=price*shares+1046.8+201.6+12367.2+13.4-433.1
+h=json.loads((P/'history.json').read_text())['annual']['2026'];m=json.loads((P/'market.json').read_text());inputs=json.loads((P/'model_inputs.json').read_text())
+cpbev=m['market_cap']+7519+304+140+20+94+115+87+12-394-296+118+.25*m['shares_m']
+a={'date':'2026-11-06 regular close','GIS':dict(price=price,shares_m=shares,shares_date='2026-09-16',ttm_date='2026-08-30',revenue=r,ebit_raw=raw,ebit_normalized=norm,cfo=cfo,capex=capex,sbc=sbc,owner_cash_before_finance_principal=cfo-capex-sbc,ev_carrying_claim_proxy=ev,ev_sales=ev/r,ev_normalized_ebit=ev/norm,margin=norm/r),'CPB':dict(price=m['price'],revenue=h['revenue'],ebit_normalized=985,ev_proxy=cpbev,ev_sales=cpbev/h['revenue'],ev_normalized_ebit=cpbev/985,margin=985/h['revenue']),'limitations':['GIS multinational staples/cereal/pet-food versus CPB soups/snacks/sauces; no exact product pureplay.','GIS normalized EBIT uses issuer reconciliation but RETAINS all restructuring; removes impairments/divestiture gains/held-sale valuation and specified transaction/MTM items. CPB separately defined normalization retains181restructuring.','GIS yogurt disposals, Whitebridge acquisition, petfood impairments and pending ChinaHäagenDazs disposal make perimeter nonconstant.','EV is carrying-claim proxy, not certified market debt/NCI or sum-of-parts. CPB includes acquisition minority/contingent and benefit claims; GIS debt/NCI carrying only, no implied CPBtarget.','Rent retained and operating leases not added. GIS financeleaseprincipal not separately disclosed in extracted currentcashflow; cash comparison before that adjustment, not zero assumed.'], 'approved_peer_target':None}
+(P/'comparables.json').write_text(json.dumps(a,indent=2)+'\n');print(a)
