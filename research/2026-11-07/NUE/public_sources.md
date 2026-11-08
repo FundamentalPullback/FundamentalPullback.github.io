@@ -1,0 +1,25 @@
+# Fuentes públicas NUE
+
+- submissions: https://data.sec.gov/submissions/CIK0000073309.json
+- release: https://www.sec.gov/Archives/edgar/data/73309/000119312526432117/d129328dex991.htm
+- calendar: https://investors.nucor.com/events-and-presentations/default.aspx
+- statistics: https://stockanalysis.com/stocks/nue/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/NUE?range=1y&interval=1d
+- peer_stld: https://stockanalysis.com/stocks/stld/statistics/
+- peer_cmc: https://stockanalysis.com/stocks/cmc/statistics/
+- 2026-10-26_8-K: https://www.sec.gov/Archives/edgar/data/73309/000119312526432117/d129328d8k.htm
+- 2026-08-12_10-Q: https://www.sec.gov/Archives/edgar/data/73309/000119312526345891/nue-20260704.htm
+- 2026-05-13_10-Q: https://www.sec.gov/Archives/edgar/data/73309/000119312526220778/nue-20260404.htm
+- 2026-02-25_10-K: https://www.sec.gov/Archives/edgar/data/73309/000119312526071575/nue-20251231.htm
+- 2025-11-12_10-Q: https://www.sec.gov/Archives/edgar/data/73309/000119312525276207/nue-20251004.htm
+- 2025-08-13_10-Q: https://www.sec.gov/Archives/edgar/data/73309/000095017025107646/nue-20250705.htm
+- 2025-05-14_10-Q: https://www.sec.gov/Archives/edgar/data/73309/000095017025071567/nue-20250405.htm
+- 2025-02-27_10-K: https://www.sec.gov/Archives/edgar/data/73309/000095017025028427/nue-20241231.htm
+- 2024-11-06_10-Q: https://www.sec.gov/Archives/edgar/data/73309/000095017024121863/nue-20240928.htm
+- 2024-08-07_10-Q: https://www.sec.gov/Archives/edgar/data/73309/000095017024092479/nue-20240629.htm
+- 2024-05-08_10-Q: https://www.sec.gov/Archives/edgar/data/73309/000095017024055144/nue-20240330.htm
+- 2024-02-27_10-K: https://www.sec.gov/Archives/edgar/data/73309/000095017024021195/nue-20231231.htm
+- presentation: https://www.sec.gov/Archives/edgar/data/73309/000119312526432117/d129328dex992.htm
+- annual_presentation: https://s202.q4cdn.com/531038915/files/doc_financials/2025/q4/Q4-2025-Earnings-Call-Presentation-vF.pdf
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm

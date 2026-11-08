@@ -1,0 +1,80 @@
+# NUE · Nucor · 8 noviembre 2026
+
+## Conclusión
+
+**No cumple entrada actual:** cierre regular del 6 de noviembre $244,97, inferior a EMA50 $256,41. EMA20 $260,50 supera EMA50; caída del 14,85% desde máximo $287,70, volumen medio de 1,542m y capitalización aproximada $55.578m sí cumplen los filtros respectivos. EMA200 $229,07 aporta contexto. Es un fallo técnico fechado, no exclusión permanente.
+
+Modelo condicional con capital financiado: **$35,01 / $88,65 / $149,89** por acción. Valor aprobado nulo. Estos escenarios screen-grade no son una tasación aprobada ni una recomendación de venta: la diferencia con cotización depende de márgenes cíclicos, retorno del nuevo capital, minoritarios y coste de capital. No son suficientes los beneficios récord ni la capacidad anunciada para justificar el precio sin reinversión.
+
+## Actualidad, calendario y perímetro
+Resultados Q3, periodo terminado el 3 de octubre, publicados el 26 de octubre; conferencia el 27. Son datos posteriores al evento, no estimaciones. El 10-Q detallado de Q3 no figura aún en las submissions consultadas al corte. La nota de resultados y presentación sí contienen balance, cuenta de resultados, cash flow y KPIs actualizados. Para contratos, claims y opciones se utiliza el último 10-Q disponible, de julio, más el 10-K anual. No se inventa una próxima fecha de resultados. Las referencias genéricas de noticias a un Investor Day de noviembre no prueban que sea un evento de 2026.
+
+Nucor opera Steel Mills, Steel Products y Raw Materials. No es sólo acero laminado: incluye estructuras, tubos, puertas, torres, reciclaje y DRI. El perímetro incorpora adquisiciones anteriores, entre ellas Rytec por 565 en 2024. Cash de adquisiciones fue 71/758/2 en FY2023/24/25; el crecimiento histórico no se etiqueta enteramente orgánico. No se presupone una nueva compra con coste positivo y valor objetivo cero ni se incorpora una adquisición futura sin financiación.
+
+West Virginia: capacidad de 3m toneladas anuales, primera colada en septiembre, producción comercial prevista desde 2027. La presentación indica 50% de utilización al cierre de 2027 y aumento de capacidad/productos durante 2028. No se convierte la primera colada en plena utilización. Segundo galvanizado de Berkeley arrancó recientemente. Towers & Structures inició plena producción en Indiana durante Q3; Utah prevista para mediados de 2027. La expansión anunciada en octubre de Indiana y Alabama requiere 165 adicionales. Backlog de torres hasta Q1 2028 y otros productos hasta mediados de 2027 no es cash cobrado ni garantía perpetua.
+
+## Tres ejercicios, cuatro trimestres y TTM
+USD millones, redondeados como el último 10-K. FY2023 / 2024 / 2025: ventas 34.714 / 30.734 / 32.494; EBIT derivado de pretax más interés neto 6.243 / 2.872 / 2.627; beneficio atribuible 4.525 / 2.027 / 1.744. Depreciación física 931 / 1.094 / 1.226 y amortización intangible 238 / 262 / 254. CFO 7.112 / 3.979 / 3.234; capex 2.214 / 3.173 / 3.422. SBC 130 / 132 / 133. La caída del beneficio desde 2023 demuestra la importancia del ciclo, aun con inversión creciente.
+
+Q4 FY2025 / Q1 / Q2 / Q3 FY2026: ventas 7.687 / 9.496 / 10.397 / 11.249; EBIT 512 / 1.115 / 1.637 / 1.874; neto atribuible 378 / 743 / 1.156 / 1.319. CFO 799 / 886 / 1.400 / 2.236; capex 802 / 661 / 571 / 629. Los flujos trimestrales se derivan de acumulados y no se confunden con EBITDA.
+
+TTM actual / anterior: ventas 38.829 / 31.883; EBIT 5.138 / 2.508; beneficio atribuible 3.596 / 1.653; depreciación 1.283 / 1.195; amortización 251 / 264; CFO 5.321 / 3.168; capex 2.663 / 3.499. FCF simple 2.658 frente a −331. SBC actual TTM 160 sigue dentro de costes económicos, sin addback gratuito. FCF consolidado tampoco pertenece íntegramente a accionistas de NUE: existen minoritarios significativos.
+
+Q3: precio externo medio consolidado $1.493/t, +19% interanual; toneladas externas 7,533m, +11%. En mills: precio externo $1.233/t, scrap/sustituto $421 por gross ton, utilización 89% frente a 85% un año antes. No se restan mecánicamente precios por net ton y gross ton como margen exacto. Mayor precio, mix, volumen, costes y eliminaciones explican conjuntamente el beneficio.
+
+## Normalización y calidad de caja
+El TTM incluye 130 de reembolso cash de compras de materias primas de periodos anteriores, recibido en Q2, y 61 de incremento no monetario de valoración de Helion. Se retiran ambos. Se separan además 35 de equity earnings de participadas; las inversiones reciben un valor separado. EBIT operativo inicial normalizado: 4.912. No se añaden otra vez esos beneficios en cash o terminal.
+
+Costes de puesta en marcha 352 en nueve meses, incluido Q3 de 124, permanecen dentro de margen: algunos bajarán al madurar plantas, pero la renovación del sistema industrial sigue consumiendo recursos. No se eliminan todas las futuras aperturas y rampas. Participación de empleados en beneficios también es recurrente y variable con resultados: gasto anual 256/298/611 en FY25/24/23. Corporate/eliminations incorpora esa compensación, SBC y beneficios intragrupo; no se suman sólo beneficios de segmentos y se ignora corporate.
+
+Nueve meses: AR consume 1.203 e inventario 560; AP aporta 485, impuestos 167 y salarios/accruals 458. El crecimiento de CFO contiene financiación transitoria por obligaciones acumuladas. El modelo exige circulante proporcional a actividad; no repite liberaciones como rentabilidad perpetua ni usa sólo CFO menos capex actual como flujo normalizado.
+
+Política comercial y aranceles favorecen precios y sustitución de importaciones, pero pueden revertirse o ser neutralizados por oferta local, demanda y scrap/energía. Gran parte del acero se vende a precios spot; contratos en sheet no convierten todos los ingresos en take-or-pay. La compañía orienta Q4 en línea o modestamente mejor que Q3, con precio compensando menor volumen estacional; eso no es una guía de margen a diez años.
+
+## Balance, claims y accionistas
+Caja e inversiones cortas de octubre: 3.640. Revolver 2.250 no dispuesto hasta marzo 2030: no se suma como cash. Reserva operativa supuesta de 1.000 deja 2.640 como caja excedente del modelo. No es una certificación de libre distribución geográfica.
+
+Deuda y finance leases contables 7.093, incluidos 130 a corto y 579 de vencimientos corrientes. La anual mostraba diferencia de 191 entre principal/leases y importe contable por descuento de intercambio y costes de emisión; se aplica proxy de 190 adicional, pendiente de reconciliación Q3. No se usa el interés neto publicado como coste marginal: el ingreso de inversiones y capitalización de intereses reducen ese gasto. Notas recientes al 4,65% en 2030 y 5,10% en 2035 son referencias de financiación, no promesa de refinanciación futura a ese coste.
+
+Operating leases anuales: pasivo 128, ROU 118, gasto 33. El modelo conserva alquileres en margen, sin addback ni segunda deducción del pasivo. Finance leases 258 anuales están dentro de deuda; reposición física se financia en capex. Intereses capitalizados forman parte de la intensidad de proyectos; el presupuesto cash usado es conservador y no produce un segundo beneficio por descapitalizarlos.
+
+Overdrafts incluidos en AP: último dato detallado 52 en julio, frente a 145 anual. Se retiran del AP operativo y se deducen como claim de 52; no se asume saldo octubre conocido. Obligación médica de jubilados 41 se deduce. No se inventa un plan DB deficitario cuando el plan principal es profit sharing/retirement savings. Claims fiscales anuales 173 más intereses/penalidades 49 = 222. Otros compromisos a largo de 707 incluyen compensación, salud y garantías; no se resta íntegramente ese agregado además de gastos recurrentes. Se mantiene proxy adicional de 250, separado del médico y fiscal, con riesgo de clasificación expresamente pendiente.
+
+Compromisos anuales de materias primas 2.521 y energía 934 son inputs de operación, no deuda extra si ya se pagan en margen. Compras incondicionales de equipos 1.241, de ellas 1.153 previstas en 2026, deben estar cubiertas por capex, no ignoradas ni deducidas dos veces. Louisiana DRI mantiene negociación de alegaciones ambientales; la empresa no espera efecto material, pero no se deduce que todas las contingencias valgan cero. Buffers adicionales 200/100/50 son escenarios, no máximo jurídico de pérdida.
+
+Nucor posee 51% de Nucor-Yamato, CSI y NJSM. NCI contable de octubre 1.280, beneficio de nueve meses 405 y distribución cash 314. El modelo calcula FCFF consolidado y después deduce valor de equity minoritario de 2.500/4.000/5.500. Es una sensibilidad de valoración, no sustitución automática de fair value por libro ni estimación exacta por subsidiaria. Las asignaciones futuras de deuda/capex y retorno NCI siguen siendo una incertidumbre material para aprobación.
+
+Participadas: cartera anual 473, de la que NuMit 427; Helion y otros activos de nivel 3 se revalorizaron después. Se asignan 150/300/500 al conjunto como escenarios conservadores, no NAV verificado. Equity earnings 35 se retira del EBIT operativo para no duplicar esa cartera; no se añade el uplift de Helion como flujo recurrente.
+
+Últimas acciones legales publicadas en 10-Q: 226,875676m, cifra también usada por el proveedor actual, no prueba de registro actualizado tras todas las recompras Q3. Se añaden 0,3m de dilución observada para 227,175676m de modelo. Media diluida Q3 226,7m. Recompras Q3 de 2,03m acciones/$501m ya afectaron cash y medias; no se restan de nuevo de un denominador no conciliado. La opción conservadora requiere bridge definitivo con el próximo filing.
+
+Dividendo $0,56 pagadero el 10 de noviembre, derecho de septiembre 30: se reserva 127,05 usando acciones legales como proxy. Un comprador del 6 de noviembre no adquiere ese derecho. No se resta arbitrariamente una serie futura de dividendos además del valor equity.
+
+## Modelo financiado y transición
+Modelo industrial de once filas: diez años explícitos más flujo terminal. Año inicial equivale a próximos doce meses, no a guía FY2027. Para mills existentes se separan utilización y precio; para West Virginia se añade capacidad 3m multiplicada por utilización media y precio. La utilización media base de 25% en año 1 es consistente con objetivo de 50% al cierre, no equivalente a 50% todo el año. Escenarios de utilización WV por años 1–5: 15/35/55/65/70%, 25/55/75/82/85% y 30/65/85/90/90%. La fracción mills de ingresos de 64% es aproximación de mix; raw materials y products se agrupan en la actividad restante. No se afirma que ventas internas sean ingresos externos adicionales.
+
+Utilización existente converge a 75/84/90%; precio inicial relativo 0,88/0,96/1,04 y año 5 a 0,90/1,00/1,10. Otras ventas crecen 0/3/5%. EBIT converge a 8,5/12,5/16% en año 5 y 8/11/14% en año 10. Años 6–10 convergen explícitamente a g de 2/2,5/3%; la cotización no justifica mantener el pico de Q3 para siempre.
+
+PPE inicial 16.103; depreciación física TTM 1.283. Se conserva amortización intangible 251 como coste económico: no se añade y después se omite renovación. Capex mínimo 2.500/2.300/2.000 los tres primeros años, calibración de analista sobre guía 2026 de 2.500 y proyectos/expansión, no guía de la compañía para 2027–29. Nueve meses ya distinguen 1.215 de capex de crecimiento y 646 de mantenimiento/otros; esta última cifra no se interpreta como reposición perpetua suficiente.
+
+Reposición mínima del 110% de depreciación física, más capacidad necesaria. La revisión incorpora además inflación de reposición del2% anual como hipótesis, exigiendo capex al menos igual a depreciación más inflación por PPE inicial. El objetivo de capacidad real se convierte a coste nominal de reposición; desde año6 se deflacta una vez el crecimiento nominal de actividad para no contar dos veces inflación. Se conserva sensibilidad con inflación cero; ninguna tasa es presupuesto publicado por planta. El stock ya construido contiene capacidad en commissioning: se concede headroom equivalente al nuevo volumen WV para no cobrar dos veces todo el activo financiado anteriormente. Es proxy industrial explícito, no desglose técnico de CIP por proyecto. El floor físico depende de actividad a precio constante, evitando que un aumento de precio implique automáticamente más hornos. Circulante inicial 7.988 incorpora la reclasificación del overdraft y escala con ventas. Crecimiento de NOPAT exige capital incremental máximo a ROIC de 10/13/16%; se descuenta inversión adicional sólo después de contar capex neto y circulante. No hay crecimiento gratuito por margen.
+
+En año 11 capex cubre depreciación más g por stock físico previo; circulante y capital residual también se financian. No se baja el capex terminal arbitrariamente para fabricar valor. Mantenimiento, tecnología, seguridad, comercialización y compensación permanecen en margen o inversión, sin addbacks duplicados. El uso de proxies para headroom, mix y reemplazo limita el modelo a screen-grade.
+
+## Descuento, inversa y comparables
+Treasury 10 años 4,86% al 6 de noviembre; ERP 4,41% al 1 de noviembre y beta observada 1,82: Ke de referencia 12,8862%. Con leverage de mercado próximo al 11–12% y financiación después de impuestos cercana al 3,9%, WACC base de 12% es coherente con ese orden de magnitud. Escenarios 13%/12%/10,5%; el alcista incorpora menor riesgo/ciclicidad, no se presenta como coste observado. Impuesto operativo normalizado 24% frente al efectivo cercano al 21% reciente.
+
+La inversa mantiene financiación y eleva conjuntamente márgenes del año 5 y terminal. No encuentra cruce con $244,97 al probar hasta +30 puntos porcentuales. Se publica la malla completa, no un supuesto target resuelto en el límite. La respuesta indica que el precio exige cambios adicionales en retornos del capital, descuentos, intensidad de inversión, mix o crecimiento; no que sean creíbles márgenes superiores al 40% para este negocio.
+
+Contraste secundario: P/E NUE 15,62x, STLD 16,49x, CMC 10,63x; EV/EBIT 11,44x/13,77x/11,13x. No se aplica mediana ciega: exposiciones a flat steel, rebar, proyectos y fases del ciclo son distintas; TTM y forward incorporan normalizaciones diferentes. Múltiplos no corrigen automáticamente minoritarios ni convierten EBITDA de expansión en cash atribuible.
+
+## Evidencia que cambia la decisión
+Mejora: rampa WV dentro de coste, toneladas y mix rentables verificables, retornos de torres después del capex, mantenimiento sostenible, menor consumo de circulante y participación minoritaria conciliar. Deterioro: reversión de spread metal, importaciones, retrasos de commissioning, pérdidas de arranque persistentes, costes de electricidad/scrap y proyectos con retorno inferior al descuento.
+
+Antes de aprobar: Q3 10-Q para principal/overdraft/acciones/claims; curvas de sustitución y asignación por planta; contribución incremental de proyectos separada del ciclo; estados de las subsidiarias con NCI y valor distribuible de participadas. Se han recogido los primarios obtenibles y cerrado los importes disponibles, sin convertir incertidumbres económicas en ceros. Aun resolviendo las pequeñas diferencias de balance, el principal debate sigue siendo el flujo normalizado después de financiar capital.
+
+Fuentes y trazabilidad en public_sources.md y claim_lineage.json; históricos, inputs, script reproducible, proyecciones y QA adjuntos al paquete. Sin operaciones ni escritura remota.
+
+
+## Revisión independiente
+Originales y fuentes preservados; reconstrucción aislada verificada. Se hizo explícita la financiación de inflación de reposición y se introdujo gradualmente la financiación de crecimiento del capital residual en años6–10. Los márgenes después de D&A y el techo de retorno incremental constante de cada escenario siguen siendo supuestos, no evidencia de productividad madura. No se certifican suelos de valor. Aprobaciones null; lista pública report.md y public_sources.md solamente.
