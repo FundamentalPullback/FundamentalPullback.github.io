@@ -1,0 +1,87 @@
+# MACOM Technology Solutions (MTSI) | Fundamental Pullback
+**8 de noviembre de 2026. Investigación condicional posterior a resultados; sin valor ni techo de entrada aprobados.**
+
+La aceleración operativa es real: ventas Q4 +62,7%, EBIT 134,2 millones y margen 31,6%. No obstante, el precio de 210,98 USD exige expansión prolongada con financiación suficiente de fábricas, inventario, tecnología y proveedores. Los escenarios condicionales arrojan **32,04 / 86,00 / 203,82 USD**. El caso favorable se aproxima al precio y requiere mantener una trayectoria muy fuerte; no constituye margen de seguridad probado. Las dos condiciones EMA fallan actualmente.
+
+## Identidad, antecedentes y actualidad
+MACOM Technology Solutions Holdings, Inc., Delaware, Nasdaq MTSI, es una compañía de semiconductores RF, microondas, ópticos y fotónicos para industrial/defensa, centros de datos y telecomunicaciones. No es un ADS. Último scanner: 14 de octubre, Opportunity 85 y QP 90. El umbral autorizado para investigar es 65, separado de la elegibilidad técnica actual.
+
+[Resultados FY2026 publicados el 5 de noviembre](https://www.sec.gov/Archives/edgar/data/1493594/000149359426000041/ex99_1earningsreleaseq4fy26.htm), año terminado el 2 de octubre. El 10-K FY2026 no está presentado en el listado SEC consultado al corte. Se distingue el balance anual no auditado actualizado de las notas detalladas al 3 de julio del [10-Q](https://www.sec.gov/Archives/edgar/data/1493594/000149359426000038/mtsi-20260703.htm). No se presenta la conferencia como un evento futuro ni se adjudica al balance de octubre información de notas todavía no disponible.
+
+## Perímetro y motores de crecimiento
+La adquisición RF de Wolfspeed cerró en diciembre de 2023, pero el control de la fábrica RTP se asumió el 25 de julio de 2025. ENGIN-IC cerró en noviembre de 2024; MESC/OMMIC precede ese periodo. Por tanto, el historial no es un perímetro orgánico constante. La transferencia de RTP y su financiación forman parte de la capacidad actual, no son inversiones futuras gratuitas. [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1493594/000149359425000054/mtsi-20251003.htm).
+
+En mayo de 2026 se completó una inversión en IQE plc: £30 millones de acciones, aproximadamente 12% al emitirlas, y £15 millones de préstamo convertible, más acuerdos de suministro. Desembolso total 60,588 millones USD. El préstamo es cupón cero, vencimiento cinco años y amortización prevista a partir del tercer aniversario; tiene derechos de conversión/warrants bajo condiciones. Es inversión estratégica no consolidada, no una adquisición íntegra de la producción de IQE.
+
+El desglose primario Q3 es industrial/defensa 133,390 millones, centros de datos 137,584 y telecom 71,263. China por dirección de facturación aportó 133,791 de 342,237 millones; no equivale necesariamente a consumo final chino, pero sí exige revisar restricciones de exportación y concentración. El 10-K FY2025 señala que los diez principales clientes directos/distribuidores sumaron 56,7% de ventas. Las órdenes suelen ser cancelables o aplazables sin penalización y no garantizan compras mínimas: backlog récord no es caja contratada irrevocable.
+
+La transcripción pública secundaria de la conferencia del 5 de noviembre recoge Q4 centros de datos 188,1 millones, industrial/defensa 164,6 y telecom 72,1. La dirección comenta base de crecimiento FY2027 de alrededor de 80% en centros de datos, más de 30% en industrial/defensa y bajo doble dígito en telecom, aspirando a aproximarse a 2.000 millones de ventas, sin dar guía anual formal. Son expectativas y datos de una transcripción secundaria, no sustituyen tablas auditadas. El [comunicado primario](https://ir.macom.com/news-releases/news-release-details/macom-reports-fiscal-fourth-quarter-and-fiscal-year-2026) sí guía Q1 a 450–460 millones, margen bruto ajustado 62–63%, tasa no GAAP 6% y 79 millones de acciones diluidas previstas.
+
+## Histórico y calidad de beneficios
+Millones de USD; se incluyen cuatro ejercicios para preservar contexto. FY2025 tuvo 53 semanas, incluida una semana extra en Q1; FY2026 52. No se inventa una serie comparable semanal ajustada.
+
+- FY2023: ventas 648,407; EBIT 107,400; neto 91,577; CFO 166,917; capex físico 24,699.
+- FY2024: ventas 729,578; EBIT 73,666; neto 76,859; CFO 162,640; capex físico/software 25,628.
+- FY2025: ventas 967,258; EBIT 129,652; neto −54,210; CFO 235,368; capex físico/software 53,417.
+- FY2026/TTM actual: ventas 1.327,623; EBIT 305,467; neto 335,251; CFO 357,086; capex físico 64,420 y licencias/tecnología 10,695.
+- Q1 FY2026: ventas 271,612; EBIT 43,297; neto 48,767; CFO 42,925.
+- Q2: ventas 288,955; EBIT 50,831; neto 46,331; CFO 78,664.
+- Q3: ventas 342,237; EBIT 77,115; neto 100,708; CFO 79,961.
+- Q4: ventas 424,819; EBIT 134,224; neto 139,445; CFO 155,536.
+
+Las columnas trimestrales de caja se derivan de acumulados consistentes. TTM anterior coincide con FY2025. El FCF monetario simple FY2026, CFO menos físico y licencias, es 281,971 millones, frente a 181,951; restar SBC deja aproximaciones de propietario 194,174 y 102,589. No equivalen al FCFF normalizado del modelo.
+
+Dos efectos no operativos cambian radicalmente la lectura del EPS:
+1. FY2025 registró pérdida por extinción de deuda de 193,098 millones. No representa margen operativo recurrente, pero sus pagos y emisión de acciones no se deshacen al normalizar resultados.
+2. FY2026 incluye ganancia de valor razonable IQE por 60,989 millones, de los cuales 19,446 en Q4. Se elimina de resultados operativos y no se capitaliza como beneficio anual; IQE se valora una sola vez en el puente patrimonial.
+
+R&D FY2026 es 285,830 millones y SBC 87,797. Ambos permanecen como costes económicos. La diferencia entre EBIT GAAP 305,467 y ajustado 424,4 no es caja libre. No se capitaliza el desarrollo para elevar artificialmente márgenes ni se añade SBC de nuevo. La evolución de amortización adquirida exige reposición tecnológica, aunque el activo contable se agote.
+
+El impuesto FY2026 fue 54,635 millones, incluyendo gasto diferido 27,871. La tasa no GAAP guiada de 6% no es una promesa de impuesto efectivo perpetuo. Se incorpora un beneficio fiscal temporal mediante tasas iniciales de 15/10/6%, que convergen a 27/25/23% en año 6. No se suma el DTA de 182,342 millones al valor ni se contabiliza aparte el mismo ahorro fiscal. Falta el calendario completo actualizado de uso de NOL/créditos en el próximo 10-K.
+
+## Capital físico, proveedores y financiación
+Octubre: cuentas a cobrar 209,523 millones, inventario 284,311 y proveedores 70,548. Durante FY2026 los incrementos de cuentas a cobrar e inventario absorbieron 60,878 y 46,617 millones de caja. No se permite que el crecimiento de óptica/defensa se financie con circulante cero. El contrato pasivo de julio era sólo 3,941 millones frente a 7,676 al inicio: no hay una gran fuente demostrada de anticipos permanentes.
+
+Propiedad/equipo neto 251,959 millones y fábricas propias/arrendadas exigen mantenimiento. La transcripción pública recoge capex físico FY2027 de 100–110 millones, frente a 64,4 en FY2026, destinado a capacidad existente y R&D. El escenario central exige al menos 105 millones de capex físico en el primer año, más licencias y circulante. La capacidad RTP, mejoras de procesos y lanzamiento CW previsto para 2028 no se incorporan como activos sin coste.
+
+La dirección indica que el acuerdo definitivo de financiación CHIPS sigue en negociación. No se presupuestan cobros futuros de subvenciones ni se restan de capex. Los créditos fiscales ya reflejados históricamente no autorizan contar una futura subvención dos veces. Los compromisos de compra de servicios/inventario del último 10-K eran 157,1 millones, 145,1 a corto plazo; no se etiquetan como saldo vigente de octubre. Compras normales están dentro de costes/circulante y los compromisos nuevos de suministro IQE necesitan comprobación documental adicional, no un valor cero por defecto.
+
+## Caja, convertibles, leases y acciones
+Caja y equivalentes de octubre 112,011 millones, inversiones a corto 680,396; total 792,407. La inversión IQE de largo plazo 121,577 está separada: no es caja líquida. Se aplican haircuts de 5/2/0% a inversiones cortas, reserva operativa 180/140/100 y valores IQE de 30/60,588/100 millones. Son sensibilidades, no cotizaciones exactas de salida; el escenario central se ancla al coste y no al beneficio no realizado. El préstamo, acciones y acuerdos estratégicos requieren análisis conjunto de liquidez y contraparte.
+
+Los convertibles de marzo de 2026 se cancelaron pagando 161,151 millones de principal y emitiendo aproximadamente 1,262 millones de acciones por el exceso de conversión. No quedan como deuda viva. Las notas 2029 permanecen: principal **344,316 millones**, no valor contable 340,743. Cupón cero y coste efectivo contable aproximado 0,33% no representan coste marginal de financiación.
+
+Conversión inicial: 5,7463 acciones por cada 1.000 USD, equivalente a 174,03 USD por acción. El principal se paga obligatoriamente en efectivo; el exceso puede pagarse con efectivo, acciones o ambos. La condición de cotización había hecho convertibles las notas y su clasificación corriente no implica que el vencimiento contractual haya pasado a 2026. A 210,98 USD el exceso equivaldría a aproximadamente 0,347 millones de acciones. No se suman las 1,979 millones de acciones brutas y se resta a la vez el principal como si fuera doble deuda. No se ha identificado un capped call que neutralice el exceso; no se inventa cobertura.
+
+Se deducen además lease financiero no corriente 29,796 millones, componente corriente de julio 0,687 como proxy, obligación de financiación no corriente 36,397 y reserva corriente 1. La financiación incluye el acuerdo de energía de Lowell y el sale-leaseback fallido de RTP. El inmueble permanece en PP&E: no es un activo sin obligación. Alquileres operativos siguen dentro de márgenes y no se deducen otra vez como deuda. Las licencias adquiridas pendientes de pago de julio, 9,096 millones, se tratan como reclamación adicional; su actualización de octubre está pendiente. Reserva de contingencias 20/10/5 explícita, no basada en litigios ciertos; julio no reportaba procedimientos materiales. No se identifica NCI ni preferentes emitidas; el plan estadounidense es de contribución definida.
+
+Último recuento básico fechado verificado en notas: 76,370931 millones al 3 de agosto. Más proxy de premios Q3 1,127 y exceso convertible actual 0,347 dan aproximadamente 77,844 millones. El modelo usa **79 millones**, la guía diluida primaria Q1FY27, como proxy conservador, no como recuento básico certificado de noviembre. El 10-K deberá reconciliar nuevas concesiones, vesting y conversiones. Las retenciones fiscales de premios de 56,937 millones no se interpretan como una recompra discrecional que reduce gratuitamente la dilución.
+
+## Valoración financiada a diez años
+Se parte de ventas FY2026 1.327,623 millones. Año 1 crece 25/45/60%, coherente con escenarios de ejecución por debajo, alrededor o por encima de la aspiración de 2.000 millones. Años 2–5 crecen 10/18/25%. Años 6–10 convergen expresamente a 2/2,5/3%; no se extiende 80% de crecimiento óptico a perpetuidad. Margen EBIT económico converge desde 25% a 23/30/35%, manteniendo R&D y SBC.
+
+Presupuestos: depreciación física 2,6% de ventas y amortización de licencias 0,9%; reposición física 110% del DA, licencias 100%; capacidad adicional 0,15/0,09/0,07 por dólar incremental de ventas, circulante 32/27/23% del incremento y nuevas licencias 0,2% de ventas. Capex físico año 1 no puede bajar de 105 millones. ROIC incremental se informa como resultado; no se fuerza otra inversión sobre cada ganancia de productividad ya costeada. El presupuesto pretende representar capital de capacidad/utilización, no es una ingeniería de producción verificada.
+
+En perpetuidad siguen todos los suelos de mantenimiento y licencias. Capital de crecimiento es el mayor entre presupuesto físico/circulante y NOPAT×g/ROIC de 14/20/28%. No se recorta mantenimiento al pasar al año 11. Subsidios futuros son cero porque no hay acuerdo definitivo asumido; los compromisos económicos no documentados no se declaran inexistentes.
+
+Descuento: RF 4,86% al 6 de noviembre, ERP 4,41% al 1 de noviembre y beta secundaria observada 1,83; Ke aproximadamente 12,93%. Con ponderación de mercado y coste marginal de deuda **supuesto** de 6,5%, WACC central 12,76%; casos 15% y 11%. El 6,5% no se presenta como yield de mercado obtenido. Usar cupón cero habría infravalorado el coste económico de las notas y su opción.
+
+Valores condicionales: **32,04 / 86,00 / 203,82 USD**; peso terminal en EV 36,3/50,5/61,6%. La inversa central necesita aproximadamente +66,4% el primer año y +39,4% anual en años 2–5 antes de converger, manteniendo los presupuestos de capital. No es una recomendación ni una previsión. El favorable prácticamente exige realizar y prolongar gran parte del crecimiento extraordinario manteniendo margen económico de 35% y financiación eficiente.
+
+Persisten incertidumbres materiales en capacidad incremental, transición de margen, contratos de suministro, tributación, valor realizable IQE y denominador/claims actualizado. Por ello valor aprobado y techo de entrada permanecen nulos. Los estados públicos disponibles sí se recopilaron: falta el detalle anual que todavía no ha publicado el emisor y la calibración económica, no una sustitución deliberada por ratios superficiales.
+
+## Precio y filtros actuales
+[Cierre regular del 6 de noviembre](https://stockanalysis.com/stocks/mtsi/history/): 210,98 USD, no 299,79 del scanner. Capitalización con el último básico verificado aproximadamente 16.113 millones. EMA20 247,158, EMA50 267,212 y SMA200 283,440; máximo 418,90; caída 49,635%; volumen medio 20 sesiones 2,044 millones. La caída todavía está dentro del límite 50%, sin redondear, pero precio bajo EMA50 y EMA20 bajo EMA50 bloquean entrada. El fuerte rebote del 6 de noviembre no restablece por sí solo la tendencia.
+
+Comparables secundarios al mismo corte: ADI EV/EBITDA 26,44 y EV/EBIT 36,96; QRVO 11,67 y 16,14. Sus mezclas analógica/RF y ciclos no son iguales a MACOM. No se promedia un target ni se usa el beneficio GAAP contaminado por IQE como múltiplo de operación.
+
+## Próximas comprobaciones
+Leer el 10-K FY2026 cuando exista: shares, contratos de suministro/compra, compromisos de fábricas, calendario fiscal, IQE y obligaciones corrientes. Confirmar las rampas de óptica frente a pedidos cancelables, concentración China/cliente, inventario y utilización de RTP. Contrastar capex de 100–110 millones con rendimiento de nueva capacidad y gasto R&D; cualquier acuerdo CHIPS requiere términos y financiación neta verificables. La investigación queda abierta; no se realizaron operaciones ni publicaciones remotas.
+
+## Reparaciones y límites de la auditoría
+
+El requisito de reinversión ligado al ROIC terminal se introduce gradualmente entre los años 6 y 10, usando 20/40/60/80/100% de NOPAT×crecimiento/ROIC terminal como suelo frente al capital físico, licencias y circulante ya financiado. Sólo se añade la diferencia positiva: no se suman dos presupuestos del mismo capital ni se fuerza inversión por cada mejora de margen. Es una transición prudencial de escenario, no una productividad demostrada.
+
+Se explicitan stocks de PP&E desde 251,959 millones en octubre y licencias desde 13,881 millones de julio. La renovación física y licencias financia el roll-forward; el terminal cubre también el crecimiento de esos stocks. La fecha antigua de licencias y las tasas de depreciación porcentuales no sustituyen vidas útiles por activo ni una ingeniería de capacidad. Las adquisiciones tecnológicas y relaciones comerciales requieren que R&D y márgenes cubran renovación; no se añade toda la amortización adquirida como caja gratuita.
+
+La sensibilidad alternativa con básico de agosto y premios Q3, calculando el exceso convertible al valor de cada escenario, produce 32,6602 / 87,6698 / 206,9336 USD. No se añade una cobertura inexistente ni se duplica el principal ya deducido. Es otra aproximación fechada: la guía de 79 millones permanece como denominador principal y ninguna certifica acciones actuales. Los valores son diagnósticos condicionados, no límites de valor probados.
