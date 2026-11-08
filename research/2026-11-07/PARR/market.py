@@ -1,0 +1,10 @@
+import pathlib,json,csv
+P=pathlib.Path(__file__).parent;a=[x for x in csv.DictReader((P/'daily_closes.csv').open()) if x['date']<='2026-11-06'];e={}
+for n in [20,50,200]:
+ v=float(a[0]['close'])
+ for x in a[1:]:v=float(x['close'])*2/(n+1)+v*(1-2/(n+1))
+ e[str(n)]=v
+price=float(a[-1]['close']);high=max(float(x['high']) for x in a[-252:]);vol=list(csv.DictReader((P/'volume_screen_input.csv').open()));m=dict(session='2026-11-06 regular close',price=price,cross_price=68.06,ema=e,volume20=sum(float(x['volume']) for x in vol)/20,high252=high,pullback=1-price/high,shares_m=50.076962,shares_date='2026-10-30',cap=price*50.076962,ema_pass=price>e['50'] and e['20']>e['50'],pullback_pass=.08<=1-price/high<=.5)
+(P/'market.json').write_text(json.dumps(m,indent=2));print(m)
+c={'date':'2026-11-06','PARR':{'price':price,'shares':50.076962,'cap':price*50.076962,'q3_revenue':3052.435,'q3_ebit':472.140,'q3_ebit_ex_SRE142_4_only':329.740,'nine_month_cfo':1080.731,'capex':120.180,'turnaround_already_in_cfo':87.440,'sbc':12.354,'cash_after_capex_sbc':948.197,'cash':731.060,'gross_term_debt':505.4,'inventory_financing':259.245,'term_debt_EV_proxy':price*50.076962+505.4-731.06,'current_whole_ev':None},'DINO':{'price':97.18,'shares':171.371164,'shares_date':'2026-10-22','cap':97.18*171.371164,'q3_revenue':10857,'q3_ebit':2672,'nine_month_cfo':3751,'capex':357,'turnaround_already_in_cfo':289,'sbc':26,'cash_after_capex_sbc':3368,'cash':3333,'debt_carrying':2774,'term_debt_EV_proxy':97.18*171.371164+2774-3333,'current_whole_ev':None},'limitations':['Period-matched 9m CFO-capex-SBC, turnaround already CFO. Not normalized yield.','DINO lubes/specialties pending separation, bigger midcontinent footprint; not Hawaii pricing lag. DINO9m inventory valuation adjustment minus672, PARR SRE and FIFO: cannot give cyclical peak earnings a normalized multiple.','Raw term-debt EV proxies do not settle financing obligations, pensions, NCI, environmental/other claims. No target multiple inferred.']}
+(P/'comparables.json').write_text(json.dumps(c,indent=2))
