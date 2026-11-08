@@ -1,0 +1,72 @@
+{
+  "as_of": "2026-11-08",
+  "nav_anchor": "2026-09-30",
+  "quote_date": "2026-11-06",
+  "price": 16.16,
+  "nav": 12.26,
+  "assets_nav": 2.0845166693695094,
+  "cases": {
+    "adverso": {
+      "conditional_value": 8.875269714925274,
+      "ri_crosscheck": 8.875269714925272,
+      "ke": 0.13798000000000002,
+      "terminal_g_funded": -0.013014200032434114,
+      "terminal_net_roe": 0.09498579996756588,
+      "initial_stress_loss_per_share": 0.49040000000000106,
+      "terminal_value_fraction": 0.22985036067778788,
+      "assumptions": {
+        "nii_start": 0.135,
+        "nii5": 0.125,
+        "nii_terminal": 0.12,
+        "loss": 0.012,
+        "beta": 1.8,
+        "stress": 0.04
+      }
+    },
+    "central": {
+      "conditional_value": 12.930152494610212,
+      "ri_crosscheck": 12.930152494610208,
+      "ke": 0.12474999999999999,
+      "terminal_g_funded": 0.0014928999837829447,
+      "terminal_net_roe": 0.12749289998378296,
+      "initial_stress_loss_per_share": 0.0,
+      "terminal_value_fraction": 0.30508669508386405,
+      "assumptions": {
+        "nii_start": 0.15,
+        "nii5": 0.145,
+        "nii_terminal": 0.14,
+        "loss": 0.006,
+        "beta": 1.5,
+        "stress": 0
+      }
+    },
+    "favorable": {
+      "conditional_value": 17.02506511121847,
+      "ri_crosscheck": 17.025065111218474,
+      "ke": 0.11152,
+      "terminal_g_funded": 0.009246449991891472,
+      "terminal_net_roe": 0.14874644999189146,
+      "initial_stress_loss_per_share": 0.0,
+      "terminal_value_fraction": 0.37542036607486196,
+      "assumptions": {
+        "nii_start": 0.16,
+        "nii5": 0.16,
+        "nii_terminal": 0.155,
+        "loss": 0.003,
+        "beta": 1.2,
+        "stress": 0
+      }
+    }
+  },
+  "inverse_flat_nii_roe_central_loss_ke": 0.17534187638435306,
+  "unvalued_convertible_option_adjustment": null,
+  "regulatory_funding_validated": false,
+  "approved_value": null,
+  "approved_entry": null,
+  "caveats": [
+    "Beta and additional 1% risk premium are explicit underwriting assumptions, not estimated market betas.",
+    "90% NII distribution is a financing proxy, not exact taxable-income forecast.",
+    "No continuing ATM premium assumed; SBC remains in NII.",
+    "All claims already reflected in NAV are not deducted twice. No unquantified claim set to zero."
+  ]
+}
