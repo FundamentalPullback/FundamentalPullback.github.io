@@ -1,0 +1,94 @@
+{
+  "ticker": "FBIN",
+  "as_of": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "permitted_use": "Completed conditional fundamental review / observation only; not entry approval",
+  "independent_audit": true,
+  "scope": "Primary archived filings/releases, annual/quarter/TTM tie-outs, economic normalization, perimeter and debt bridge, DCF mechanics, CAPM source recheck, sensitivities/inverses and report consistency.",
+  "valuation": {
+    "adverse": 15.520149816163029,
+    "base": 32.91224321016692,
+    "favorable": 48.627572055620234,
+    "verified_close": 48.08,
+    "close_date": "2026-11-06",
+    "wacc": 0.09375316655297722,
+    "cost_debt": 0.06087882890628582
+  },
+  "issues": [
+    {
+      "id": "FBIN-A1",
+      "severity": "medium",
+      "type": "Missing forecast refresh",
+      "location": "report.md perimeter; Q3 2026 Form 10-Q Note18 p25/MD&A p28",
+      "finding": "Expected Q4 Fiberon disposal loss175–205m was omitted.",
+      "resolution": "Added explicit disclosure and distinguished accounting loss from cash exit/closing adjustments. Do not deduct entire loss again in FCFF or equity bridge.",
+      "status": "corrected_disclosure_remaining_cash_terms_caveat"
+    },
+    {
+      "id": "FBIN-A2",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "model.py terminal_capex software stress",
+      "finding": "Stress FCFF deducted incremental software10 but terminal capex output omitted it, breaking reported physical identity only in stress.",
+      "resolution": "Added software_extra to terminal_capex; all scenario values and stress valuation unchanged; executable identity passes.",
+      "status": "corrected"
+    },
+    {
+      "id": "FBIN-A3",
+      "severity": "medium",
+      "type": "Not comparable without bridge",
+      "location": "report.md perimeter and Year1",
+      "finding": "Year1 revenues3950 and margins are estimates, not a quarterly disposal bridge. China closure Q3 2027 and EMEA Q4 2027 mean loss removal is gradual.",
+      "resolution": "Added remaining-perimeter revenue3910–3920 versus model3950 bridge, timing qualifier and one-year delayed loss-removal illustrative sensitivity0.32/share.",
+      "status": "bounded_caveat"
+    },
+    {
+      "id": "FBIN-A4",
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "model.py proceeds/exit_costs/software/pension/cost capital",
+      "finding": "Net proceeds145, exit costs65, software budget, pension proxy and dated aggregate debt yield are assumptions/proxies, not closing statements or fresh executable rates.",
+      "resolution": "Clearly labeled; no proceeds1.22/share, additional exit cash100=0.84/share, software10/year=1.03/share, pension10=0.08/share; WACC +/-100bp. No assumption establishes entry readiness.",
+      "status": "bounded_caveat"
+    },
+    {
+      "id": "FBIN-A5",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "TTM EBIT source bridge and self-check claim",
+      "finding": "Quarter sum233.3 differs0.1 from annual+9m26-9m25=233.4; previous self-check called exact tie-out.",
+      "resolution": "Preserved published quarters, disclosed0.1 rounding residual, executable check tests the residual explicitly. No forward DCF effect.",
+      "status": "corrected_disclosure"
+    }
+  ],
+  "source_tieouts": [
+    "2025 10K consolidated statements: three-year revenue, EBIT, net income, CFO, capex, D&A and SBC; prior balance q4_2024 release.",
+    "Q3 2026 10Q pp2–4 and releases: four quarters and annual+9m26-9m25 reconcile; Q2 EBIT0.1 residual disclosed.",
+    "Q3 release opening and guidance: adjusted EPS1.14 includes tax0.28/tariff0.14; normalized0.72. Businesses to exit sales320–330 and losses50–55; savings70 annualized Q1 2027 not independently added to margins.",
+    "Q3 10Q tariff note: COGS145.5 less11.5, inventory1.1, cash121.5, interest4.3, remaining receivable13.6. No recurring tariff refund in forecast.",
+    "Q3 10Q debt fair-value note and debt schedule: principal2200 plus CP118.7; senior market2004.2 and total2122.9. Pension33.4 from FY2025 Note funded status.",
+    "Q3 10Q EPS note: diluted119.3m; excluded antidilutive1.8m. SBC retained in modeled margin; no free share-count shrinkage.",
+    "Q3 10Q Note18: Fiberon cash160 subject to regulatory closing; not received as of reporting; disposal loss175–205 separate from cash.",
+    "Market sources independently rechecked in dated market source verification; date mismatch deliberately disclosed, not blended silently."
+  ],
+  "material_data_blockers_for_conditional_review": [],
+  "entry_conditions_unresolved": [
+    "Verify disposal closing, net proceeds and retained/exit cash obligations",
+    "Demonstrate recurring operating stabilization without tax/tariff benefits",
+    "Refresh perimeter forecast and cost-of-capital inputs before action",
+    "Complete Stage3.5 technical review"
+  ],
+  "readiness_reason": "Mechanics and material reported financials tie out; cash/perimeter uncertainties are explicit and bounded for a conditional negative observation. They do not justify calling a turnaround forecast certain, or approving entry. Market price already approximates favorable case.",
+  "controls": {
+    "trading": "none",
+    "stage3": "observation_not_approved"
+  },
+  "supporting_artifacts": [
+    "audit_checks.py",
+    "audit_checks.json",
+    "report.md",
+    "model.py",
+    "model_results.json"
+  ],
+  "public_package_scope": "Completed conditional research only. Prior source-audit evidence retained; numerical checks do not revalidate market data or source documents. No entry or trading approval."
+}

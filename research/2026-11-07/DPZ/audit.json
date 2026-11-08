@@ -1,0 +1,81 @@
+{
+  "ticker": "DPZ",
+  "as_of": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "permitted_use": "conditional research only",
+  "complete_conditional_research_justified": true,
+  "entry_approved": false,
+  "material_research_gaps": [],
+  "entry_diligence_gaps": [
+    "franchisee profitability and traffic",
+    "recurring financed investment versus normalized 25m",
+    "July 2027 refinancing terms",
+    "fresh price/calendar and technical qualification"
+  ],
+  "corrected_findings": [
+    {
+      "severity": "medium",
+      "type": "Not comparable without bridge",
+      "finding": "Vendor historical P/E market-cap/net-income mislabeled same definition as price/diluted-EPS",
+      "resolution": "Matched ratios recomputed; vendor ratios retained separately"
+    },
+    {
+      "severity": "low",
+      "type": "Formula/control defect",
+      "finding": "Q4 EPS obtained by cumulative ratio subtraction",
+      "resolution": "Explicit primary-release Q4 EPS; TTM sum of quarterly EPS"
+    },
+    {
+      "severity": "low",
+      "type": "Source contradiction",
+      "finding": "TTM working capital release wording assigned to FY2025",
+      "resolution": "Wording corrected"
+    },
+    {
+      "severity": "low",
+      "type": "Formula/control defect",
+      "finding": "Thin automatic assertions",
+      "resolution": "Added computed bridge, terminal and historical controls"
+    }
+  ],
+  "checks": {
+    "four_quarters_tie": true,
+    "terminal_consistency": true,
+    "reverse_tie": true,
+    "ten_years": true,
+    "sbc_not_added_back": true,
+    "finance_capex_included": true,
+    "restricted_cash_not_added": true,
+    "operating_leases_not_double_counted": true,
+    "revenue_components_exclude_adfund": true,
+    "normalized_ebit_calibration": true,
+    "ev_equity_bridge": true,
+    "fcff_identity": true,
+    "terminal_fcff_continuity": true,
+    "implied_wacc_tie": true,
+    "positive_reinvestment": true,
+    "restricted_cash_bridge": true,
+    "scenario_ordering": true,
+    "historical_pe_definitions": true
+  },
+  "values": {
+    "adverso": 126.76758868956426,
+    "central": 316.76843983064765,
+    "favorable": 502.41484194250717
+  },
+  "independently_reopened_market_sources": [
+    "S7",
+    "S10",
+    "S11",
+    "S12",
+    "S15"
+  ],
+  "source_limitations": [
+    "S9 beta 0.92 not independently revalidated: Finviz audit reopen inaccessible; vendor window unspecified",
+    "Primary financial audit based on stored primary filing PDF/text copies; no complete fresh filing download",
+    "Research source S13/S14 call transcript not independently re-opened in audit"
+  ],
+  "audit_report": "audit_report.md",
+  "model_rerun_success": true,
+  "public_package_scope": "Completed conditional research only. Prior source-audit evidence retained; numerical checks do not revalidate market data or source documents. No entry or trading approval."
+}

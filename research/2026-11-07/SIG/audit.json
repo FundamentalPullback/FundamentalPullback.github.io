@@ -1,0 +1,110 @@
+{
+  "ticker": "SIG",
+  "date": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "permitted_use": "Completed conditional research for observation and senior review only. No entry approval or trading.",
+  "recalculated": true,
+  "material_open_blockers_for_observation": [],
+  "decision_blockers": [
+    "Insufficient margin of safety at verified 117.26 regular close",
+    "Stage 3.5 not assessed",
+    "Refresh cash, ASR and normalized operating trend before any entry"
+  ],
+  "corrected_findings": [
+    {
+      "id": "SIG-A01",
+      "severity": "medium",
+      "type": "Formula/control defect",
+      "location": "model.py equity bridge",
+      "finding": "Missing declared dividend liability for price already ex-dividend October 23. Payable November 20.",
+      "remediation": "Deduct estimated 0.35 times 37.294243m basic shares =13.05298505m, separate from August dividend cash payment. Exact record-date count unknown; estimate explicit.",
+      "value_effect_per_share": -0.34720701917047
+    },
+    {
+      "id": "SIG-A02",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "model.py terminal and FCF bridge",
+      "finding": "Terminal physical components and full FCF bridge not machine-checked.",
+      "remediation": "Exported explicit terminal revenue/NOPAT/PPE D&A/cloud amortization and investment/PPE capex/NWC; asserted identity. Added checked 536.5 to 350.5976 bridge."
+    },
+    {
+      "id": "SIG-A03",
+      "severity": "low",
+      "type": "Source contradiction",
+      "location": "report normalization",
+      "finding": "Primary tariff reduction to cost of sales is14.9 versus rounded15.0.",
+      "remediation": "Retained conservative rounded model assumption and explicitly disclosed exact primary amount."
+    },
+    {
+      "id": "SIG-A04",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "model.py cloud stress transition",
+      "finding": "Extra cloud stress assigned in years6-10 but offset by PPE capex plug, despite label first5years.",
+      "remediation": "Apply extra cloud explicitly only years1-5; total cash flows unchanged."
+    }
+  ],
+  "open_caveats": [
+    {
+      "id": "SIG-C01",
+      "type": "Unsupported assumption",
+      "finding": "UK FY26 14.9 catch-up timing within semesters not isolated. Report presents conservative removal and no-removal range, not a precise recurring growth estimate."
+    },
+    {
+      "id": "SIG-C02",
+      "type": "Missing forecast refresh",
+      "finding": "August cash and September share count do not establish November balances; reserve and share sensitivities bound modest errors, not severe seasonal cash burn."
+    },
+    {
+      "id": "SIG-C03",
+      "type": "Unsupported assumption",
+      "finding": "Cloud additions equal67.2 scaled amortization is replacement proxy, not published additions; extra20 first5years stress retained."
+    },
+    {
+      "id": "SIG-C04",
+      "type": "Not comparable without bridge",
+      "finding": "ERP4.41 is Nov1 monthly implied premium published with Treasury5.29; model uses Nov6 10Y4.86. Dates and basis now disclosed; not contemporaneously recalibrated ERP."
+    },
+    {
+      "id": "SIG-C05",
+      "type": "Not comparable without bridge",
+      "finding": "Peer/M&A context not independently fully reverified; excluded from value and decision. Historical EPS/multiple contrasts are supporting context, not valuation anchors."
+    }
+  ],
+  "checks_passed": [
+    "Three annual cashflow/earnings series to archived annual report",
+    "Four-quarter TTM sums; Q4 FY minus9m, Q2 H1 minusQ1",
+    "Prior TTM impairment normalization to K25",
+    "Tariff/catch-up/discontinued inventory identified separately",
+    "Units and AUR distinct from traffic; comp scope excludes digital brands",
+    "FCF536.5 to normalized FCFF350.5976 numerical bridge",
+    "Cloud additions and amortization neutral, SBC retained",
+    "Financial debt zero, operating leases not double counted, settled UK pension and net deferred compensation",
+    "ASR signedSept10, paid and initial shares deliveredSept11; both cash and shares removed",
+    "10 forecast years and5+5 transition; positive PPE/cloud investment",
+    "Terminal physical identity and g/ROIC reinvestment",
+    "Inverse solves current117.26; scenario and sensitivity recalculation",
+    "Verified priceNov6 close117.26, beta1.07, RF4.86, ERP4.41",
+    "Q3Dec2 future, not reported"
+  ],
+  "updated_values": {
+    "adverso": 84.9252065253617,
+    "central": 120.61303213613601,
+    "favorable": 150.71193837526596
+  },
+  "fcff_year1": 350.5976,
+  "review_price_20pct": 96.49042570890882,
+  "source_scope": {
+    "web_verified": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "PX",
+      "BETA",
+      "CAL"
+    ],
+    "limitations": "Some IR/market HTTP downloads returned403; readable web source views used for relevant facts. "
+  },
+  "public_package_scope": "Completed conditional research only. Prior source-audit evidence retained; numerical checks do not revalidate market data or source documents. No entry or trading approval."
+}
