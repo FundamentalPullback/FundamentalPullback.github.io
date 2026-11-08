@@ -1,0 +1,29 @@
+# Fuentes públicas WOR
+
+- dividend_history: https://ir.worthingtonenterprises.com/stock-information/dividend-history/default.aspx
+- submissions: https://data.sec.gov/submissions/CIK0000108516.json
+- release: https://ir.worthingtonenterprises.com/news/news-details/2026/Worthington-Enterprises-Reports-First-Quarter-Fiscal-2027-Results/default.aspx
+- calendar: https://ir.worthingtonenterprises.com/overview/
+- statistics: https://stockanalysis.com/stocks/wor/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/WOR?range=1y&interval=1d
+- peer_aw_i: https://stockanalysis.com/stocks/awi/statistics/
+- peer_csl: https://stockanalysis.com/stocks/csl/statistics/
+- 2026-10-23_8-K: https://www.sec.gov/Archives/edgar/data/108516/000119312526429531/wor-20261022.htm
+- 2026-10-09_10-Q: https://www.sec.gov/Archives/edgar/data/108516/000119312526418645/wor-20260831.htm
+- 2026-09-25_8-K: https://www.sec.gov/Archives/edgar/data/108516/000119312526402803/wor-20260921.htm
+- 2026-09-22_8-K: https://www.sec.gov/Archives/edgar/data/108516/000119312526397953/wor-20260922.htm
+- 2026-09-15_8-K: https://www.sec.gov/Archives/edgar/data/108516/000119312526391980/wor-20260915.htm
+- 2026-07-30_10-K: https://www.sec.gov/Archives/edgar/data/108516/000119312526325872/wor-20260531.htm
+- 2026-04-09_10-Q: https://www.sec.gov/Archives/edgar/data/108516/000119312526149137/wor-20260228.htm
+- 2026-01-09_10-Q: https://www.sec.gov/Archives/edgar/data/108516/000119312526008430/wor-20251130.htm
+- 2025-10-08_10-Q: https://www.sec.gov/Archives/edgar/data/108516/000119312525234399/wor-20250831.htm
+- 2025-07-30_10-K: https://www.sec.gov/Archives/edgar/data/108516/000095017025100137/wor-20250531.htm
+- 2025-04-09_10-Q: https://www.sec.gov/Archives/edgar/data/108516/000095017025052413/wor-20250228.htm
+- 2025-01-10_10-Q: https://www.sec.gov/Archives/edgar/data/108516/000095017025004028/wor-20241130.htm
+- 2024-10-07_10-Q: https://www.sec.gov/Archives/edgar/data/108516/000095017024113225/wor-20240831.htm
+- 2024-07-30_10-K: https://www.sec.gov/Archives/edgar/data/108516/000095017024087983/wor-20240531.htm
+- transcript: https://www.sec.gov/Archives/edgar/data/108516/000119312526402803/wor-ex99_1.htm
+- event_notice: https://www.sec.gov/Archives/edgar/data/108516/000119312526391980/wor-ex99_1.htm
+- dividend: https://www.sec.gov/Archives/edgar/data/108516/000119312526397953/wor-ex99_2.htm
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
