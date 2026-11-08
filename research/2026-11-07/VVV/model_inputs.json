@@ -1,0 +1,174 @@
+{
+  "parameters": {
+    "base_revenue": 1964.0,
+    "base_normalized_ebit": 361.8,
+    "starting_company_stores": 1232,
+    "tax": 0.25,
+    "da_sales": 0.072,
+    "cloud_net_growth_sales": 0.0025,
+    "nwc_incremental_sales": 0.04,
+    "gross_closure_replacement_rate": 0.005,
+    "all_in_opening_cost": 2.5,
+    "opening_cost_inflation": 0.02,
+    "bridge": {
+      "face_debt": 1621.0,
+      "finance_lease_proxy": 305.4,
+      "pension_net_FY25": 151.7,
+      "legacy_tax_proxy": 64.5,
+      "cash_reported": 84.2,
+      "operating_cash_reserve": 40.0,
+      "diluted_shares": 128.4
+    },
+    "claims": 2098.4,
+    "scanner_price": 34.81,
+    "scanner_date": "2026-11-06",
+    "risk_free": 0.0484,
+    "risk_free_date": "2026-11-05",
+    "observed_beta": 1.02,
+    "erp_assumption": 0.055,
+    "debt_rate_proxy": 0.06125,
+    "capm_wacc_before_judgment": 0.08686167457055999
+  },
+  "cases": {
+    "bear": {
+      "growth": [
+        0.04,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.025,
+        0.025,
+        0.025,
+        0.02,
+        0.02
+      ],
+      "margins": [
+        0.175,
+        0.175,
+        0.175,
+        0.175,
+        0.18,
+        0.18,
+        0.18,
+        0.18,
+        0.18,
+        0.18
+      ],
+      "units": [
+        0.02,
+        0.02,
+        0.02,
+        0.015,
+        0.015,
+        0.01,
+        0.01,
+        0.01,
+        0.005,
+        0.005
+      ],
+      "roic": 0.12,
+      "terminal_roic": 0.1,
+      "terminal_units": 0.005,
+      "wacc": 0.11,
+      "g": 0.02
+    },
+    "base": {
+      "growth": [
+        0.08,
+        0.08,
+        0.07,
+        0.07,
+        0.06,
+        0.05,
+        0.05,
+        0.04,
+        0.04,
+        0.03
+      ],
+      "margins": [
+        0.19,
+        0.195,
+        0.2,
+        0.205,
+        0.21,
+        0.21,
+        0.21,
+        0.21,
+        0.21,
+        0.21
+      ],
+      "units": [
+        0.04,
+        0.04,
+        0.04,
+        0.035,
+        0.03,
+        0.025,
+        0.025,
+        0.02,
+        0.02,
+        0.01
+      ],
+      "roic": 0.16,
+      "terminal_roic": 0.14,
+      "terminal_units": 0.005,
+      "wacc": 0.0975,
+      "g": 0.025
+    },
+    "bull": {
+      "growth": [
+        0.11,
+        0.1,
+        0.09,
+        0.08,
+        0.07,
+        0.06,
+        0.06,
+        0.05,
+        0.04,
+        0.035
+      ],
+      "margins": [
+        0.2,
+        0.21,
+        0.215,
+        0.22,
+        0.225,
+        0.23,
+        0.23,
+        0.23,
+        0.23,
+        0.23
+      ],
+      "units": [
+        0.05,
+        0.05,
+        0.045,
+        0.04,
+        0.035,
+        0.03,
+        0.03,
+        0.025,
+        0.02,
+        0.015
+      ],
+      "roic": 0.2,
+      "terminal_roic": 0.17,
+      "terminal_units": 0.01,
+      "wacc": 0.0875,
+      "g": 0.03
+    }
+  },
+  "sources": {
+    "FY25": "https://www.sec.gov/Archives/edgar/data/1674910/000167491025000135/vvv-20250930.htm",
+    "Q326": "https://www.sec.gov/Archives/edgar/data/1674910/000167491026000066/vvv-20260630.htm",
+    "Q226": "https://www.sec.gov/Archives/edgar/data/1674910/000167491026000045/vvv-20260331.htm",
+    "Q126": "https://investors.valvoline.com/news/news-details/2026/Valvoline-Inc--Reports-First-Quarter-Results/default.aspx",
+    "Q325": "https://www.sec.gov/Archives/edgar/data/1674910/000167491025000119/vvv-20250630.htm",
+    "REFI": "https://www.sec.gov/Archives/edgar/data/1674910/000162828026058633/vvv-20260824.htm",
+    "H15": "https://www.federalreserve.gov/releases/H15/Current/",
+    "BETA": "https://stockanalysis.com/stocks/vvv/statistics/"
+  },
+  "basis": "conditional controlled support model; assumptions explicit, no automatic entry"
+}
