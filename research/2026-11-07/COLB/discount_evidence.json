@@ -1,0 +1,28 @@
+{
+  "price_independent": true,
+  "observed_beta_5y": 0.68,
+  "beta_source": "S8, retrieved 2026-11-08; window end not independently verified",
+  "paired_monthly": {
+    "date": "2026-11-01",
+    "risk_free": 0.0529,
+    "erp": 0.0441,
+    "formula": "0.0529 + 0.68*0.0441",
+    "capm": 0.082888,
+    "source": "S12; beta observed separately; RF/ERP are paired monthly"
+  },
+  "mixed_daily_sensitivity": {
+    "date": "2026-11-06",
+    "risk_free": 0.0486,
+    "erp": 0.0441,
+    "formula": "0.0486 + 0.68*0.0441",
+    "capm": 0.07858799999999999,
+    "source": "S13 Treasury daily plus Nov1 ERP, not a same-date estimate"
+  },
+  "approved_ke": null,
+  "diagnostic_ke_grid": [
+    0.09,
+    0.105,
+    0.12
+  ],
+  "reason": "Sources available; unresolved choice of risk under integration/CRE/funding stress, not a missing ERP. Grid is analyst sensitivity not price-calibrated."
+}

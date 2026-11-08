@@ -1,0 +1,74 @@
+{
+  "audit_version": "EMBJ-independent-v1",
+  "as_of": "2026-11-08",
+  "auditor": "independent reviewer of frozen package",
+  "verdict": "PASS_WITH_LIMITATIONS_FOR_PARTIAL_RESEARCH_ONLY",
+  "stage3Complete": false,
+  "fairValueApproved": false,
+  "entryApproved": false,
+  "original_freeze_verified": true,
+  "rerun": {
+    "model": "model.py",
+    "results_json_byte_identical": true,
+    "actuals_csv_byte_identical": true,
+    "self_checks_pass": true
+  },
+  "source_tieouts": {
+    "S1": "Annual revenue, EBIT, attributable profit, CFO, gross PP&E, intangibles, depreciation, leases, advances and inventory checked against archived audited statements; audited annuals retain priority over release rounding. Tax benefit 91.4 vs expense 202.4 verified.",
+    "S2": "Q1/Q2/H1 2026 and H1 2025 statements checked. 68 tax credit and 401 headline FCF vs 334.7 gross cash residual distinguished. Consolidated cash includes Eve; parent debt/cash, leases, supplier finance and NCI not conflated.",
+    "S3_S4": "Quarterly FY2025/Q3/Q4 and H1 2024 comparative source checked; 17.4 CFO and 17.3 PP&E discrepancy reproduced. This is unresolved cross-presentation inconsistency, not a proven classification explanation.",
+    "S5": "Ratio changes from 1 ADS:4 common to 1:1; record Nov 9, distribution after Nov 13 close, adjusted trading expected Nov 16. 74.08/4=18.52 mechanical only.",
+    "S6": "Official calendar states Q3 results Nov 10; blank explicit start-time field means timestamp is not verified earnings hour.",
+    "S8": "Eve Q3 cash/investments 356.0, debt 322.1, liquidity 470.4 including undrawn facilities/grant and 9M cash use 173.1 verified. 2028 runway is management expectation. No combination with June parent balances on a single date.",
+    "S9": "Independent web check corroborates Nov 6 regular close 74.08 via Stock Analysis history, FT historical and Yahoo.",
+    "S11": "ERP 4.41% supported only by secondary attribution in archive; primary confirmation absent, disclosure repaired."
+  },
+  "verified_calculations": {
+    "ttm_revenue": 8337.3,
+    "ttm_cfo": 1188.9,
+    "ttm_gross_cash_fcf": 687.4,
+    "prior_ttm_gross_cash_fcf": 473.7,
+    "quarter_sum_cfo": 1206.3,
+    "cfo_difference": 17.4,
+    "ppe_difference": 17.3,
+    "cash_fcf_difference": 0.1,
+    "cash_balance_flow_difference": 5.1,
+    "q2_adjusted_ebit_ex_credit": 228.9,
+    "q2_reported_ebit_ex_credit": 217.8
+  },
+  "repairs": [
+    "Removed unverified primary-source presentation of 4.41% ERP; no WACC inferred.",
+    "Clarified consolidated cash versus parent-income ratio is not parent cash conversion.",
+    "Made finalize.py narrative idempotent and prevented audited package overwrite."
+  ],
+  "unresolved": [
+    "Cash presentation discrepancies remain unexplained.",
+    "Eve ownership 72/73 percent and fully diluted rights/current economic shares not reconciled.",
+    "FY/quarter EPS and per-share cash series, full-cycle history, guarantees and customer-financing bridge incomplete.",
+    "No funded three-scenario FCFF, calibrated WACC/terminal reinvestment or validated comparables.",
+    "Price/EMA/ATR long-trend and Stage 3.5 not independently reconstructed; scanner scores are supplied screening context, not entry validation.",
+    "Browser visual QA not completed; static HTML audited only."
+  ],
+  "privacy": {
+    "public_report_scan": "No personal holdings, portfolio balances, user names, credentials or private URLs found in report.md/fuente pública citada/public_sources.json.",
+    "publication_allowlist": [
+      "report.md",
+      "fuente pública citada",
+      "public_sources.json",
+      "status.json"
+    ],
+    "do_not_publish": "Internal audit, profile duplicate check, source caches, scripts and local paths are not user-facing website content."
+  },
+  "sources": [
+    {
+      "url": "https://stockanalysis.com/stocks/embj/history/",
+      "checked_asof": "2026-11-08",
+      "finding": "November 6 regular close 74.08, open 74.47, high 75.26, low 73.58, volume 1467629"
+    },
+    {
+      "url": "https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=EMBJ%3ANYQ",
+      "checked_asof": "2026-11-08",
+      "finding": "Same November 6 OHLC and volume"
+    }
+  ]
+}

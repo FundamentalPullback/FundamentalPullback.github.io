@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-08",
+  "verdict": "PASS_AS_MATERIAL_PARTIAL_ONLY",
+  "checks": {
+    "input_hash_verified": true,
+    "all_original_freeze_hashes_verified": true,
+    "primary_filings_tieout": true,
+    "model_repeatability_exact": true,
+    "independent_ytm_recalculation": true,
+    "rate_date_and_perimeter_caveats_explicit": true,
+    "land_residual_not_falsely_allocated": true,
+    "jv_no_debt_not_claimed_no_guarantees": true,
+    "public_report_privacy_review": true,
+    "approved_values_null": true,
+    "entry_and_publication_not_authorized": true
+  },
+  "limitations": [
+    "Not an approved valuation, Stage 3 completion or Stage 3.5 approval",
+    "Beta remains documented vendor observation without independent raw quote/regression; denied raw fetch not retried",
+    "No current long-debt market yield, guaranteed JV perimeter, normalized land replacement capital or excess cash certified",
+    "No remote publication or transactions performed"
+  ],
+  "primary_anchors": {
+    "bridges": "Q3 2026 balance sheet, cash-flow statement, note 10",
+    "financed_land": "Q3 2026 notes 1/3 and supplemental cash flows",
+    "jv": "Q3 2026 note 4",
+    "debt_and_dilution": "Q3 2026 notes 5-7",
+    "bond_day_count": "2025-02-27 SEC prospectus Description of Notes, General",
+    "rates": "Archived Damodaran and NY Fed; independent Treasury November 6 read"
+  },
+  "reproducible_outputs_sha256": {
+    "results.json": "784cfb748d361ad99d70fdffb98ea32ff7b33d3522fb043debd46c1240f21db7",
+    "historical.csv": "94c4e07d3b84c3cbe0f9b1b3d40b7b28c92907c548b44b7bc27ef8efbf0c3cea",
+    "quarters.csv": "b293212cd88b5999240ba22a9d34bd259e9a474d6ffec40b0bd0f75359403cf5",
+    "self_check.json": "fa693c725cd14431175380bae53520106cb9af3d049a308a1c1e23aaf2476974",
+    "extended_results.json": "2d79c4f304429d4762e9bfaad40d75145b272e6f2538b282e0d60ec89c9b8da2"
+  }
+}

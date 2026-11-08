@@ -1,0 +1,42 @@
+{
+  "method": "Bank common-equity residual income, no FCFF or industrial net-debt bridge",
+  "starting_common_book_m": 7079,
+  "starting_shares_m": 276.33,
+  "book_per_share_reported": 25.62,
+  "tangible_common_equity_m": 5002,
+  "goodwill_m": 1482,
+  "other_intangibles_m": 595,
+  "aoci_m": -708,
+  "cet1_m": 5904,
+  "cet1_ratio": 0.1157,
+  "rwa_derived_approx_m": 51028.522039758,
+  "bank_cet1_m": 6150,
+  "bank_cet1_ratio": 0.1206,
+  "deposit_m": 52740,
+  "uninsured_m": 21559,
+  "loans_m": 46915,
+  "cre_m": 26497,
+  "cre_office_m": 3461,
+  "cre_multifamily_m": 11000,
+  "preferred_common_bridge": "No preferred equity line in consolidated balance sheet; junior subordinated trust securities are liabilities and already affect interest expense. Do not subtract funding deposits from equity value.",
+  "approved_values": null,
+  "fcfe_formula": "Normalized common earnings - increase in required regulatory equity - stress retention + separately authorized distributable excess; reconcile cash available at holding.",
+  "fcfe_numeric_approved": null,
+  "g_assumption_grid": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "roe_assumption_grid": [
+    0.1,
+    0.12,
+    0.14
+  ],
+  "ke_assumption_grid": [
+    0.09,
+    0.105,
+    0.12
+  ],
+  "diagnostic_formula": "BPS*(ROE-g)/(Ke-g), perpetual steady-state common-book RI; not approved forecast",
+  "restrictions": "Common book pairs with ROE, never tangible book with total-equity ROE. No buyback value added independently of capital decrease/share change. SBC retained as expense."
+}

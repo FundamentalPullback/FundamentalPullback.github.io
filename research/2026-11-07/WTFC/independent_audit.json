@@ -1,0 +1,55 @@
+{
+  "input_freeze_sha256": "283e47b0049a0471c07ba950a28ea4a4808a922c874dd9b4ddfdc65be0e2c4b1",
+  "verdict": "Ready with caveats for partial research only; not ready for portfolio action",
+  "original_reproduction_checks": {
+    "financials.json": true,
+    "historical_annual.csv": true,
+    "historical_quarters.csv": true,
+    "historical_ttm.csv": true,
+    "discount_evidence.json": true,
+    "model.json": true,
+    "diagnostic_sensitivity.csv": true,
+    "results.json": true
+  },
+  "source_tieouts": {
+    "annual_2023_2025": "S2 consolidated statements",
+    "quarterly_2025Q4_2026Q3": "S1 financial highlights",
+    "prior_ttm": "S2 FY2024 + S3 9M2025 minus 9M2024",
+    "capital_and_aoci": "S1; S4 balance sheet, changes in equity and tangible book reconciliation",
+    "remittances": "S2 bank dividend restrictions: 929.8 capacity at 2025-12-31; 600 paid in 2025, not annual FCFE",
+    "preferred_shares_sbc": "S1, S2 and S4 equity/cashflow statements",
+    "fdic_and_acquisition": "S1 Q2 reversal 5.2; S4 provisional guardianship intangibles and net cash 34.097",
+    "price": "S5 regular close 151.27 on 2026-11-06 16:00 EST; adjacent price-series discrepancy retained",
+    "discount": "S6 beta 0.86 with regional 0.89 caveat; S7 paired CAPM 9.0826%; S8 mixed-date 8.6526%",
+    "calendar": "S9 Q3 dates; S4 dividend dates; next Q4 date remains unconfirmed",
+    "acquisition_seller_and_secondary_calendar": "S11 archived search excerpts, distinctly marked primary issuer acquisition announcement versus unconfirmed third-party Q4 estimates"
+  },
+  "fixed_issues": [
+    {
+      "severity": "medium",
+      "finding": "Backsolve described as terminal-only with all other assumptions fixed, but model interpolates years 2-5 ROE.",
+      "fix": "Clarified report and results metadata; diagnostic outputs unchanged."
+    },
+    {
+      "severity": "medium",
+      "finding": "Score threshold statement did not distinguish authorized expanded exploration from normal research threshold.",
+      "fix": "Clarified 65 exploratory cutoff versus plan 85 research threshold, neither approving purchases."
+    },
+    {
+      "severity": "low",
+      "finding": "Numerous missing spaces in public prose.",
+      "fix": "Repaired report and regenerated equivalent HTML."
+    }
+  ],
+  "remaining_blockers": [
+    "Recurring earnings/accretion normalization not complete",
+    "Entity-level RWA, capital, AOCI, retention and remittance stress bridge not underwritten",
+    "Next Q4 date not issuer-confirmed; coherent long-term price/ATR series not validated",
+    "Visual QA blocked by prior Chromium socket Operation not permitted; not retried or bypassed"
+  ],
+  "privacy_check": "Public report contains public issuer data and analytic assumptions; no private file paths, account identifiers, trades, balances or private source links. Internal manifests not intended for publication.",
+  "no_remote_write": true,
+  "no_trade": true,
+  "annual_quarter_numeric_string_checks": "All modeled annual/quarter figures other than EPS, NIM and rounded SBC found directly in corresponding archived primary source; aggregate calculations independently reproduced.",
+  "score_policy_evidence": "Supplied plan Stage 2 calls 85 a research threshold, explicitly says lower exploration does not authorize purchase, and requires Stage 3/3.5. Current assignment includes exploratory scores >=65."
+}

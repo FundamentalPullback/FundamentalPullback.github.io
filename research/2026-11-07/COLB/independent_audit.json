@@ -1,0 +1,50 @@
+{
+  "ticker": "COLB",
+  "as_of": "2026-11-08",
+  "audited_version": 2,
+  "freeze_sha256": "8c11956eeb2c3b3042b7ee7f5905aae670794aedf712f6c107d4f32e502ee27c",
+  "original_v1_sha256": "8bdf803347893a8d8bf73a50f3c6433098a88c6f134f90f2cffdc42e89ffba16",
+  "verdict": "passed_partial_only",
+  "status": "partial",
+  "approved_values": null,
+  "trades": false,
+  "checks": {
+    "original_freeze_manifest_matches": true,
+    "diagnostics_27_reproduced": true,
+    "paired_capm": true,
+    "mixed_capm": true,
+    "q3_combined_nii": true,
+    "q3_reported_nii": true,
+    "nine_month_combined_nii": true,
+    "purchase_bridge": true,
+    "pcd_bridge": true,
+    "source_hashes": true,
+    "paired_ttm_reconstructed": true,
+    "quarter_sum_ni_835": true,
+    "quarter_sum_nii_2425": true,
+    "tangible_bridge": true,
+    "balance_sheet": true,
+    "final_capital_used": true,
+    "approved_values_null": true,
+    "not_complete": true,
+    "source_files_exist": true
+  },
+  "repairs": [
+    "S5–S10 provenance links and hashes populated from actual snapshots.",
+    "Empty S11 marked unverified and excluded.",
+    "TTM EPS 2.93 distinguished from quarterly sum 2.89."
+  ],
+  "source_conflict": {
+    "topic": "Q2 2026 fair value adjustments",
+    "S2": "net fair value loss of $3 million",
+    "S3": "net fair value gain of $3 million",
+    "resolution": "Unresolved primary-source narrative conflict; no selective normalization."
+  },
+  "blockers": [
+    "Reconciliar accretion por compra, amortización de depósitos, ajustes de valor, coste de crédito y beneficio recurrente sobre perímetro homogéneo; el pro forma excluye costes de forma asimétrica.",
+    "Validar previsión de RWA y retención CET1/AOCI bajo estrés, restricciones y capacidad futura de remesas banco-holding; las recompras intercompañía no son beneficio recurrente.",
+    "Justificar el Ke económico y prima de riesgo bajo estrés; fuentes disponibles: ERP/RF mensual noviembre y Treasury diario, que deben distinguirse.",
+    "No hay fecha primaria verificable de próximos resultados ni técnicos diarios recalculados; Opportunity 75 no satisface el umbral vigente 85."
+  ],
+  "scope": "Annual 2023–2025, four quarters, paired TTM, PPBI purchase/perimeter, capital and remittance, discount evidence, price snapshots, 27 diagnostic cases and source integrity."
+}
