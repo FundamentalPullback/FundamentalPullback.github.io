@@ -1,0 +1,27 @@
+# Fuentes públicas USFD
+
+- submissions: https://data.sec.gov/submissions/CIK0001665918.json
+- release: https://ir.usfoods.com/newsroom/news/news-details/2026/US-Foods-Reports-Third-Quarter-Fiscal-Year-2026-Earnings/default.aspx
+- calendar: https://ir.usfoods.com/newsroom/news/news-details/2026/US-Foods-to-Host-Third-Quarter-2026-Financial-Results-Conference-Call-and-Webcast/default.aspx
+- statistics: https://stockanalysis.com/stocks/usfd/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/USFD?range=1y&interval=1d
+- pfg_termination: https://ir.usfoods.com/newsroom/news/news-details/2025/US-Foods-and-Performance-Food-Group-Terminate-Information-Sharing-Process/default.aspx
+- 2026-11-05_10-Q: https://www.sec.gov/Archives/edgar/data/1665918/000166591826000056/usfd-20260926.htm
+- 2026-08-06_10-Q: https://www.sec.gov/Archives/edgar/data/1665918/000166591826000045/usfd-20260627.htm
+- 2026-05-07_10-Q: https://www.sec.gov/Archives/edgar/data/1665918/000166591826000032/usfd-20260328.htm
+- 2026-02-12_10-K: https://www.sec.gov/Archives/edgar/data/1665918/000166591826000008/usfd-20251227.htm
+- 2025-11-06_10-Q: https://www.sec.gov/Archives/edgar/data/1665918/000166591825000146/usfd-20250927.htm
+- 2025-08-07_10-Q: https://www.sec.gov/Archives/edgar/data/1665918/000166591825000127/usfd-20250628.htm
+- 2025-05-08_10-Q: https://www.sec.gov/Archives/edgar/data/1665918/000166591825000085/usfd-20250329.htm
+- 2025-02-13_10-K: https://www.sec.gov/Archives/edgar/data/1665918/000166591825000017/usfd-20241228.htm
+- 2024-11-07_10-Q: https://www.sec.gov/Archives/edgar/data/1665918/000166591824000149/usfd-20240928.htm
+- 2024-08-08_10-Q: https://www.sec.gov/Archives/edgar/data/1665918/000166591824000135/usfd-20240629.htm
+- 2024-05-09_10-Q: https://www.sec.gov/Archives/edgar/data/1665918/000166591824000101/usfd-20240330.htm
+- 2024-02-15_10-K: https://www.sec.gov/Archives/edgar/data/1665918/000166591824000014/usfd-20231230.htm
+- peer_syy: https://stockanalysis.com/stocks/syy/statistics/
+- peer_pfgc: https://stockanalysis.com/stocks/pfgc/statistics/
+- quarterly_page: https://ir.usfoods.com/financials/quarterly-results/default.aspx
+- call_secondary: https://www.fool.com/earnings/call-transcripts/2026/11/05/us-foods-usfd-q3-2026-earnings-call-transcript/
+- refinancing_8k: https://www.sec.gov/Archives/edgar/data/1665918/000166591826000048/usfd-20261002.htm
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
