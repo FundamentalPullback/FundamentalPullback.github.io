@@ -1,0 +1,115 @@
+# Agnico Eagle: caja sólida, ingeniería y perímetro que aún deben reconciliarse
+
+**8 noviembre 2026. Investigación documentada; valoración total materialmente incompleta.** Valor intrínseco y entrada aprobados: **nulos**. El modelo de Hope Bay es sólo una sensibilidad de ese proyecto; no es NAV de Agnico, ni un objetivo por acción. Importes en millones USD salvo indicación contraria.
+
+## Conclusión
+
+El oro elevado sostiene márgenes y liquidez, pero no elimina la necesidad de financiar desarrollos, mantener las minas y reponer reservas. En Q3 la producción pagable fue 814.012 oz, el precio realizado 4.264 USD/oz, los costes de caja 1.133 USD/oz y AISC 1.648 USD/oz. El beneficio fue 1.352,9; CFO 1.755,0 y caja residual tras inversión minera 852,2. La guía anual apunta al extremo inferior de 3,3–3,5 Moz y al superior de los rangos de costes. No debe extrapolarse el margen del oro actual indefinidamente.
+
+Dos cambios hacen insuficiente una extrapolación del balance FY2025: la interrupción de Barnat altera el perfil de Canadian Malartic hasta 2028, y las adquisiciones de Central Lapland añaden nuevas acciones, compromisos contingentes y proyectos todavía no productores. La nueva evaluación de Hope Bay sí permite una sensibilidad finita con construcción y cierre explícitos. No se ha convertido ese resultado parcial en valoración del patrimonio completo.
+
+## Identidad, historial y filtro vigente
+
+Agnico Eagle Mines Limited es una minera canadiense con acciones ordinarias negociadas en NYSE y TSX como AEM. La cotización NYSE está en USD; no se aplica un multiplicador ADS. Último scanner: 21 octubre, Opportunity80, QP50, precio187,23. Supera el umbral autorizado de investigación65.
+
+Resultados Q3 publicados el 28 octubre; llamada del 29 octubre. Es análisis posterior al evento. El último cierre regular verificado es **191,57 el 6 noviembre**, no la referencia antigua del scanner ni el after-hours. El timestamp Yahoo de apertura identifica la barra diaria, no la hora del cierre; el cierre regular ocurrió a las 21:00 UTC.
+
+Capitalización con acciones económicas de septiembre:96.847,5. Emitidas505,999563m, menos0,453082m en fideicomisos:505,546481m; proxy diluido506,673481m al añadir1,127m de dilución media Q3. No es un recuento plenamente diluido certificado al 6 noviembre. No se anticipan recompras futuras. Volumen20 sesiones2,009m; retroceso24,95% desde255,24; EMA20 181,5458 y EMA50 183,7561. Cumple precio, capitalización, volumen, retroceso, beneficios y FCF; precio>EMA50 pasa, pero **EMA20>EMA50 falla**. Bloqueo técnico actual, no exclusión permanente.
+
+## Tres ejercicios, cuatro trimestres y TTM comparados
+
+Series IFRS de estados primarios. CFO menos adiciones monetarias a propiedad, planta y desarrollo minero incluye exploración capitalizada y circulante de inversión; excluye compras de empresas y valores. No es una medida de beneficio económico después de toda reposición futura.
+
+- FY2023: ingresos6.626,9; beneficio1.941,3; CFO2.601,6; inversión1.654,1; residual947,4.
+- FY2024: ingresos8.285,8; beneficio1.895,6; CFO3.960,9; inversión1.817,9; residual2.142,9.
+- FY2025: ingresos11.907,9; beneficio4.461,5; CFO6.817,1; inversión2.418,2; residual4.398,9.
+- Q4FY25, derivado FY menos9M: ingresos3.564,0; beneficio1.523,1; CFO2.111,5; inversión801,3; residual1.310,2.
+- Q1FY26: ingresos4.099,6; beneficio1.695,5; CFO1.345,9; inversión613,7; residual732,1.
+- Q2FY26: ingresos3.802,8; beneficio1.600,5; CFO2.144,1; inversión809,3; residual1.334,9.
+- Q3FY26: ingresos3.583,6; beneficio1.352,9; CFO1.755,0; inversión902,8; residual852,2.
+- TTM anterior: ingresos10.567,6; beneficio3.447,7; CFO5.837,5; inversión2.179,1; residual3.658,4.
+- TTM actual: ingresos15.050,0; beneficio6.171,8; CFO7.356,5; inversión3.127,1; residual4.229,4.
+
+El proveedor secundario muestra FCF4.165,2 e inversión3.191,3, una clasificación distinta; aquí se conserva la línea de caja del emisor. EBIT aritmético TTM9.235,8 incluye ganancias no operativas, por lo que no se usa como EBIT normalizado. FY2023 contiene ganancia de revaloración1.543,4 por la operación Yamana y deterioro787,0. FY2025 incluye reversión de deterioro229,0 y ganancia de derivados224,0; nueve meses2026 incluyen ganancia por venta de inversiones155,3 y pérdidas de derivados89,2. No se tratan como producción recurrente.
+
+En9M2026 los impuestos pagados fueron2.925,2 frente877,7: parte importante del contraste CFO/beneficio es pago de impuestos acumulados, no deterioro equivalente de margen. Circulante de impuestos consumió991,4, inventario241,5 y otros activos202,9; acreedores aportaron377,4. SBC78,1 sigue siendo coste económico: su adición contable a CFO no lo convierte en caja gratuita. La exploración expensada191,2 tampoco desaparece al valorar renovación de reservas.
+
+## Producción, reservas y capital físico
+
+Reservas probadas/probables FY2025:55,442 Moz, frente54,284;1.330 Mt a1,30 g/t. Medidos/indicados47,076 Moz e inferidos41,815 se presentan aparte, sin sumarlos como reservas vendibles. Las reservas incluyen propiedades no productoras y San Nicolás al50%; dividir todo por producción actual no produce una vida económica uniforme.
+
+Principales reservas, Moz: Detour18,575; Canadian Malartic9,052, de las que Marban1,577 y Odyssey/East Gouldie6,026; Meliadine3,622; Kittila3,319; LaRonde2,848; Macassa2,200; Fosterville1,670; Meadowbank1,454; Goldex/Akasaba0,898; Pinos Altos0,269. Proyectos adicionales incluyen Upper Beaver2,768, Hammond Reef3,323, Hope Bay3,396, Wasamac1,377 y San Nicolás0,672 al50%. Ikkari, adquirido después del cierre anual, exige reconciliación propia, no una adición ciega al total FY2025.
+
+La producción pagable no es igual a las ventas: Q3 vendió825.084 oz mientras produjo814.012. En Barnat el movimiento de roca del1 julio redujo ley y disponibilidad; la extracción se reanudó el27 septiembre. Impacto previsto:60–80koz menos enH2 y hasta150koz menos en cada2027/28. Un modelo que conserva el plan2021 de Malartic sin ajuste omite información material. Meadowbank también sufrió reconciliación negativa de toneladas y menor disponibilidad mecánica; el mejor grado de Detour/Fosterville compensó sólo parte.
+
+9M2026: sostenimiento720,775 más exploración de sostenimiento23,170; desarrollo1.315,386 más exploración de desarrollo236,365. Total devengado2.295,696; ajuste de circulante30,109 da caja2.325,805. Para2026, capex excluyendo exploración2.600–2.800 y exploración capitalizada290–330. AISC incluye sostenimiento, pero no todo el capital de crecimiento; no puede sustituir al FCFF.
+
+Se archivaron y revisaron los informes técnicos Detour2024, LaRonde2023 y Malartic2021, además de la evaluación Hope Bay2026 y las actualizaciones del emisor. Detour contiene tablas anuales explícitas hasta fin de vida, con costes, royalties, inventarios, arrendamientos, impuestos y cierre; no se afirma que no exista ingeniería pública. Su PEA utiliza inferidos, precios/costes2024 y escenarios integrados frente a diferenciales. La tabla anticipa menor caja2027–28 por leyes, depósitos de relaves y construcción. No se puede sumar el NPV integrado y el incremental de la misma ampliación. El estudio operativo de LaRonde aplica la exención de publicación del análisis económico del productor; no es prueba de ausencia de costes.
+
+También se archivaron Meadowbank2018 y Meliadine2015, los informes aún citados por el emisor. El ejemplo Meadowbank evidencia el problema: la tabla2018 terminaba ingresos en2025 y sólo mostraba cierre2026–45, mientras la actualización oficial2026 extendió Amaruq a2030, desde2028. Copiar aquella tabla produciría cero ingresos para una mina hoy operativa; prolongarla sin coste de los nuevos tajos sería igualmente incorrecto. El informeMeliadine2015 no contiene las ampliaciones y costes de la década posterior.
+
+La dificultad pendiente es **actualizar y conciliar** esos perfiles, no obtener los archivos: Malartic evalúa una estrategia nueva paraQ1 2027; Detour/Upper Beaver prevén actualizaciones a mediados2027; Ikkari estudia diseño optimizado hasta finales2027. Modelar con hipótesis es posible, pero no se presenta aquí un conjunto completo de esas hipótesis como valor total ya calibrado.
+
+## Perímetro, financiación y reclamaciones
+
+Al30 septiembre: caja3.613,125; inversiones cortas15,738. Deuda principal200, frente197,102 contable tras costes; notas al2,78–2,88%, valor razonable agregado175,745 sin confundir cupón con rendimiento actual. Arrendamientos130,976. Revolver ampliado a3.000 en octubre, vencimiento28 octubre2031: capacidad no utilizada, no activo de caja.
+
+Valores de renta variable1.303,035 y warrants78,066 no son efectivo. Asociadas189,763 incluyen Goldsky183,8: tras vender su55% de Gunnarn, AEM conserva31,4% de Goldsky y royalty NSR2% de Barsele. No se incorpora100% de sus activos o producción. Inventario no corriente912,374 no es caja realizable inmediata. Los activos fiscales no se añaden sin calendario; la provisión diferida5.608,895 tampoco se deduce íntegra si se modelan impuestos futuros.
+
+Reclamación/cierre:232,758 corriente +1.169,682 no corriente =1.402,440. FY2025 se descontaba al2,38–4,39% y contemplaba pagos hasta2142. Meadowbank aumentó185,1 por revisión de estimación, alcanzando414,5; el riesgo de cierre es real, no una constante trivial por onza. Garantías/cartas de crédito1.149 no se suman automáticamente al mismo cierre ya provisionado. Compromisos de capex345,5 deben integrarse en inversión, no duplicarse como deuda.
+
+Obligaciones de pensiones FY2025:65,485; no se encontró desglose actualizado independiente enQ3 y se conserva como proxy señalado. Pasivos de remuneración en acciones con liquidación potencial monetaria56,699; derivados netos pasivos94,152. Los derivados cubren moneda de gastos por10.019m en2026–28; no equivalen a venta anticipada de todo el oro. No había cobertura de diésel abierta al30 septiembre. Dividendos declarados227,5, pagaderos15 diciembre, registro1 diciembre. Recompras9M817,8 ya afectan caja/acciones; no se restan otra vez.
+
+**Central Lapland cerrado:** compra de FinGold70% a B2Gold por325; Aurion adquirida15 junio por308,543 de caja más participación previa30,720; Rupert16 junio con8,224116m acciones emitidas, valor1.434,367, participación previa235,399 y caja17,670. La salida neta agregada de caja fue578,408. FinGold pasó a100% al sumar la participación de Aurion. No se deduce el precio de compra de nuevo ni se valora el proyecto adquirido en cero.
+
+El contrato CVR autoriza hasta207,654166m derechos, cada uno hastaC$3, durante diez años desde16 junio2026: máximo contractualC$622,962m, no una deuda presente de ese importe. Tres hitos deC$1: reservas5Moz; producción comercial más reservas y producción acumulada7,5Moz; y el mismo criterio a10Moz. La contabilidad registra el pago en el activo cuando nace la obligación. Una sensibilidad conjunta de financiación de proyectos muestra461,454 USDm al FX supuesto1,35, **no FX actual verificado ni valor razonable del CVR**. En una valoración de Ikkari los hitos y su coste deben vincularse al beneficio del proyecto.
+
+**Ikkari, evidencia disponible:** la PFS del14 febrero2025 del propietario anterior sí ofrece ingeniería y economía:52Mt a2,1g/t, reservas3,492Moz, recuperación95,8%, ventas3,340Moz durante20años,227koz/año los primeros diez y167koz/año en promedio total. Capital inicial575 y sostenimiento571, incluido cierre151 y gestión de agua118; AISC918USD/oz y NPV publicado1.700 al5% con oro2.150. El informe técnico completo precisa NPV1.680, payabilidad99,92%, circulante5% de ingresos netos, impuesto corporativo20%, pérdidas fiscales supuestas150 y depreciación lineal a diez años. Esos parámetros pertenecen a la PFS2025, no una confirmación fiscal del grupo2026. Ese NPV no se suma al balance ni a un NAV actual. El propietario actual confirma que reevalúa el diseño sin las antiguas restricciones de linderos; el estudio optimizado previsto para finales2027 puede cambiar producción, capital y CVR. La insuficiencia es la conciliación del plan nuevo, no que falte un estudio público.
+
+**San Nicolás50/50:** AEM debe financiar los primeros580m de costes, después cada socio proporcionalmente. Quedan290m de suscripciones comprometidas segúnQ3; no se suman al pasivo contable de la misma obligación. El proyecto se mantiene sin NAV aprobado, no a valor cero. La inversión y producción de cobre futuras no son gratuitas.
+
+## Hope Bay: sensibilidad finita y reproducible, no valoración de AEM
+
+Evaluación aprobada mayo2026,100% de propiedad. Producción modelada:319koz en2030,380 en2031,435/año2032–38,382 en2039 y357 en2040:4,483Moz por redondeos, frente4,5Moz de estudio. Ley media6,50g/t, recuperación94%, pagabilidad100%, coste de refino1,96USD/oz. Aproximadamente1,6Moz del material de estudio procede de recursos inferidos; el caso no equivale a reserva demostrada íntegra.
+
+Financiación remanente al30 septiembre: H2presupuesto428 menos189,675 desembolsado Q3 =238,325 enQ4;797 en2027,591 en2028 y520 en2029. Es proxy presupuestario de caja, no certificado de contratos pendientes. Sostenimiento152/año2030–34 y73/año2035–39; se retiene73 en2040 como supuesto explícito porque la tabla no especifica ese último año. Cierre196 en2041, sin venta residual ni Gordon. Capital y costes de construcción se pagan antes de producir.
+
+Costes por tonelada en CAD según cada fase, convertidos al1,35 del estudio; royalty NSR2,4% y pagosNTI2% hasta2034/7% después. Toneladas se derivan de producción, ley media y recuperación, una simplificación que no sustituye el plan anual de leyes. Impuesto proxy33% sobre margen menos depreciación por agotamiento de un pool supuesto3.461; no reproduce exactamente el calendario fiscal del emisor. Circulante8% de ingresos, liberado al cesar producción. No se añade AISC encima de costes y sostenimiento, evitando duplicación.
+
+Resultados al30 septiembre, USD2026 constantes:
+- Estrés: oro3.200, descuento real8%, capex+20%, opex+10%, un año de retraso:PV382,4.
+- Referencia: oro3.600, descuento real6%, presupuesto base:PV2.381,3.
+- Oro fuerte: oro4.300, descuento real5%, presupuesto base:PV3.982,0.
+
+Son sensibilidades del proyecto, no probabilidades ni estimaciones aprobadas. El retraso conserva los pagos de construcción en sus años y posterga ingresos; no contempla gastos adicionales de espera fuera del incremento de capex. La empresa comunicó NPV2.700 al5% bajo su propio calendario fiscal y fecha de estudio; nuestro valor no pretende coincidir. El futuro cercano de oro diciembre cerró4.074,9 el6 noviembre, una referencia de mercado, no curva de largo plazo ni justificación de4.300 perpetuo. No se suman estos valores a activos contables de Hope Bay ni a un valor empresarial no calculado.
+
+## Coste de capital, pares e inverso
+
+Treasury10años4,86% al6 noviembre y ERP implícita4,41% al1 noviembre. Beta secundaria AEM0,67 produce Ke mecánico7,8147%. Se mantiene como referencia, no como prueba de bajo riesgo geológico. Los escenarios reales del proyecto no se confunden con tasas nominales de la compañía. No se verificó rendimiento actual de sus notas; el bajo peso de deuda reduce su efecto, pero no justifica inventarlo.
+
+Pares secundarios al corte: NEM P/E14,07 y EV/EBITDA6,91; B P/E10,39 y EV/EBITDA5,82. No sustentan un target sin normalizar jurisdicción, activos vendidos, precios del oro, vidas de reserva y proyectos. No se traslada una media de múltiplos a AEM como alternativa automática al NAV.
+
+El inverso total usa la capitalización diluida proxy y un puente explícito: reserva operativa de caja1.000, haircut20% de valores/warrants, deuda, leases, cierre contable, pensión proxy, derivados y reserva adicional100. Estos ajustes son hipótesis de exigencia, no cotas económicas certificadas; las asociadas no reciben valor en el puente ni se declaran sin valor. Activos financieros netos del puente básico resultantes1.684,0.
+
+Con veinte años de FCFF constante después de toda reposición, sin terminal y tasa nominal9%, el precio requiere **10.448,5 anuales**, frente residual TTM4.229,4 antes de ajustes financieros/económicos. El modelo incluye también10/30años y7,5%/10,5%. Esto no prueba sobrevaloración: el horizonte no es una vida minera certificada, faltan el reparto temporal de capex y la valoración de propiedades nuevas. Es una exigencia de mercado, no una recomendación.
+
+## Qué falta para cerrar valor total
+
+1. Reconciliar todos los perfiles de mina actuales: agotamiento, leyes, recuperaciones, capital de desarrollo/sostenimiento y cambios Barnat, sin sustituir reservas por recursos.
+2. Integrar nuevos diseños Detour/Malartic/Upper Beaver y las alternativas que estudia el propietario en Ikkari, con sus hitos CVR y costes, en vez de sumar NPVs de fechas y perímetros distintos.
+3. Completar impuestos por jurisdicción, pools fiscales, cierres y entregas contractuales; no deducir dos veces provisiones incluidas en flujos.
+4. Calibrar precios/metales/FX y pares a un mismo corte. Un futuro cercano o un precio de estudio no define la curva completa.
+
+No se bloqueó el acceso a fuentes. La valoración permanece materialmente incompleta por esa conciliación económica pendiente, no por un veto de score, un rechazo sectorial ni pérdidas verificadas. La tesis mejoraría con los estudios actualizados y conversión de recursos en reservas financiables; se debilitaría con nuevas revisiones de tonelaje/ley, inflación de inversión o retrasos sin compensación de producción.
+
+Fuentes principales: [Q3 resultados](https://www.sec.gov/Archives/edgar/data/2809/000110465926121185/tm2628539d1_ex99-1.htm), [Q3 estados y notas](https://www.sec.gov/Archives/edgar/data/2809/000110465926119671/tm2628160d2_ex99-1.htm), [FY2025 estados](https://www.sec.gov/Archives/edgar/data/2809/000110465926032153/aem-20251231xex99d2.htm), [CVR](https://www.sec.gov/Archives/edgar/data/2809/000110465926094882/tm2622985d1_ex99-1.htm), [Hope Bay](https://agnicoeagle.com/English/news-and-media/news-releases/news-details/2026/AGNICO-EAGLE-APPROVES-HOPE-BAY-INVESTMENT-DECISION-STRONG-ECONOMIC-RETURNS-WITH-EXPECTED-ANNUAL-GOLD-PRODUCTION-OF-OVER-400000-OUNCES/default.aspx). Registro completo en las fuentes públicas. Sin operaciones ni escrituras remotas.
+
+## Correcciones de perímetro de la auditoría
+
+El dividendo declarado de227,5 millones no se resta como deuda frente a la cotización del6noviembre, anterior al registro1diciembre: forma parte del valor del accionista ordinario. Tampoco se añade por separado sobre el patrimonio calculado.
+
+El CVR máximo y los290 millones de futuras aportaciones a San Nicolás se separan del puente básico. Una sensibilidad conjunta eleva la exigencia de valor operativo en esos costes sólo si el valor operativo incluye también los beneficios correspondientes de Ikkari/San Nicolás. No se descuenta un máximo contractual como deuda contable contra un proyecto omitido o supuesto sin valor. Los desembolsos y beneficios deben actualizarse juntos antes de construir un NAV de grupo.
+
+En el estrés de retraso de Hope Bay, los costes por fase y las tasas NTI se desplazan con la producción, mientras la construcción conserva sus fechas. Es una hipótesis de fases, no un calendario fiscal contractual validado: los tipos efectivos NTI publicados reflejan costes y capital, por lo que el cambio real de calendario exigiría recalcular la base. La renovación final2040 de73 millones y el pool fiscal3461 permanecen supuestos explícitos.
+
+La sensibilidad conjunta que exige financiar CVR máximo y San Nicolás, incluyendo sus beneficios dentro del valor operativo por explicar, requiere 10530,8 millones anuales en20años al9%. No es un NAV de esos proyectos.
