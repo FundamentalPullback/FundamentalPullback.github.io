@@ -1,0 +1,31 @@
+# Fuentes públicas SAIC
+
+- submissions: https://data.sec.gov/submissions/CIK0001571123.json
+- release: https://investors.saic.com/news-releases/news-release-details/saic-announces-second-quarter-fiscal-year-2027-results
+- calendar: https://investors.saic.com/news-events/events
+- news: https://investors.saic.com/news-events/news-releases
+- quarterly: https://investors.saic.com/financial-information/quarterly-results
+- statistics: https://stockanalysis.com/stocks/saic/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/SAIC?range=1y&interval=1d
+- peer_ldos: https://stockanalysis.com/stocks/ldos/statistics/
+- peer_bah: https://stockanalysis.com/stocks/bah/statistics/
+- 2026-11-02_8-K: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000148/saic-20261102.htm
+- 2026-10-13_8-K: https://www.sec.gov/Archives/edgar/data/1571123/000119312526420441/d156029d8k.htm
+- 2026-08-31_10-Q: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000133/saic-20260731.htm
+- 2026-08-31_8-K: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000131/saic-20260831.htm
+- 2026-08-28_8-K: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000129/saic-20260827.htm
+- 2026-08-19_8-K: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000123/saic-20260814.htm
+- 2026-08-10_8-K: https://www.sec.gov/Archives/edgar/data/1571123/000119312526341188/d104119d8k.htm
+- 2026-06-01_10-Q: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000079/saic-20260501.htm
+- 2026-03-16_10-K: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000029/saic-20260130.htm
+- 2025-12-04_10-Q: https://www.sec.gov/Archives/edgar/data/1571123/000157112325000189/saic-20251031.htm
+- 2025-09-04_10-Q: https://www.sec.gov/Archives/edgar/data/1571123/000157112325000166/saic-20250801.htm
+- 2025-06-02_10-Q: https://www.sec.gov/Archives/edgar/data/1571123/000157112325000107/saic-20250502.htm
+- 2025-03-17_10-K: https://www.sec.gov/Archives/edgar/data/1571123/000157112325000022/saic-20250131.htm
+- 2024-12-05_10-Q: https://www.sec.gov/Archives/edgar/data/1571123/000157112324000153/saic-20241101.htm
+- 2024-09-05_10-Q: https://www.sec.gov/Archives/edgar/data/1571123/000157112324000129/saic-20240802.htm
+- 2024-06-03_10-Q: https://www.sec.gov/Archives/edgar/data/1571123/000157112324000086/saic-20240503.htm
+- 2024-03-20_10-K: https://www.sec.gov/Archives/edgar/data/1571123/000157112324000045/saic-20240202.htm
+- bond_pricing: https://www.sec.gov/Archives/edgar/data/1571123/000157112326000148/saic8-k11022026xexhibit992.htm
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
