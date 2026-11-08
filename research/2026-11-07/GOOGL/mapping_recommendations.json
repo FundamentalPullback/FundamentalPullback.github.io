@@ -1,0 +1,74 @@
+{
+  "issuer_key": "CIK0001652044",
+  "issuer": "Alphabet Inc.",
+  "scope": "local recommendation only; not applied",
+  "preserve_original_reports": true,
+  "historical_content_deletion": false,
+  "security_profiles": [
+    {
+      "ticker": "GOOGL",
+      "share_class": "A",
+      "votes_per_share": 1,
+      "issuer_key": "CIK0001652044",
+      "research_linked_report_ids": [
+        "A036",
+        "A037",
+        "A057"
+      ],
+      "share_specific_quote_and_technicals_required": true
+    },
+    {
+      "ticker": "GOOG",
+      "share_class": "C",
+      "votes_per_share": 0,
+      "issuer_key": "CIK0001652044",
+      "research_linked_report_ids": [
+        "A036",
+        "A037",
+        "A057"
+      ],
+      "share_specific_quote_and_technicals_required": true
+    }
+  ],
+  "issuer_research": {
+    "has_historical_research": true,
+    "latest_fundamental_review": "A037",
+    "latest_entry_review": "A057",
+    "current_status": "partial_historical_research_needs_post_Q3_refresh",
+    "post_Q3_2026_refresh_complete": false,
+    "approved_value": null,
+    "approved_entry": null
+  },
+  "report_status_recommendations": [
+    {
+      "id": "A036",
+      "historical_work_delivered": true,
+      "current_stage3_certified": false,
+      "prior_price_ceilings_status": "withdrawn_by_A037",
+      "preserve_original_content": true
+    },
+    {
+      "id": "A037",
+      "observed_label": "Stage 3 completo",
+      "recommended_label": "Revisi\u00f3n parcial de valoraci\u00f3n; sin certificaci\u00f3n Stage 3",
+      "historical_work_delivered": true,
+      "current_stage3_certified": false,
+      "approved_value": null,
+      "approved_entry": null,
+      "preserve_original_content": true
+    },
+    {
+      "id": "A057",
+      "historical_work_delivered": true,
+      "classification": "dated entry review, not post-Q3 fundamental refresh",
+      "current_stage3_certified": false,
+      "preserve_original_content": true
+    }
+  ],
+  "constraints": [
+    "Do not copy GOOG quote/EMA or security-level entry status into GOOGL.",
+    "Do not sum capitalization of both classes as duplicate issuers.",
+    "Do not restore withdrawn DCF price ceilings or propagate completed labels as investment approval.",
+    "Keep publication/delivery completion separate from financial diligence certification."
+  ]
+}

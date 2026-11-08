@@ -89,6 +89,25 @@
       var titleTokens=String(r.title||'').match(/\b[A-Z][A-Z0-9.-]{0,10}\b/g)||[];
       titleTokens.forEach(function(tk) { if(by[tk] && (tk.length>1 || new RegExp('(?:^|\\()'+tk+'(?:\\)|\\s*[—·:])').test(r.title))) addReport(by[tk],r.id,'subject'); });
     });
+    // Audited issuer-only provenance correction. Original library and decision records
+    // remain untouched. A037 withdraws A036 price ceilings, not historical delivery.
+    var withdrawal=reportBy.A037;
+    if(withdrawal && String(withdrawal.text||'').indexOf('Quedan retiradas.')>=0 && String(withdrawal.text||'').indexOf('no constituye aprobación de compra ni certificación retrospectiva de Stage 3 completo')>=0) {
+      ['GOOG','GOOGL'].forEach(function(tk) {
+        var p=get(tk); if(!p)return;
+        p.issuerResearch={schema:'fp.issuer-research-provenance.v1',appliedOn:'2026-11-08',issuerKey:'CIK0001652044',issuer:'Alphabet Inc.',shareClass:tk==='GOOG'?'C':'A',scope:'historical-issuer-research-only',statusAsOf:'2026-11-08',appliesToReportIds:['A036','A037','A057'],historicalWorkDelivered:true,currentStage3Certified:false,latestCompletedEligible:false,approvedValue:null,approvedEntry:null,entryApproved:false,priceCeilingsWithdrawnBy:'A037',reports:[]};
+        ['A036','A037','A057'].forEach(function(id) {
+          var report=reportBy[id];if(!report)return;
+          addReport(p,id,'issuer-reference');
+          p.issuerResearch.reports.push({id:id,historicalWorkDelivered:true,currentStage3Certified:false,referenceOnly:id==='A057'});
+          // Override only the audited historical sources, never later research.
+          p.completed=p.completed.filter(function(x){return x.id!==id;});
+          var prior=p.analyses.find(function(x){return x.id===id;});
+          p.analyses=p.analyses.filter(function(x){return x.id!==id;});
+          if(id!=='A057')p.analyses.push({id:id,date:day(report.date),row:prior&&prior.row||null,report:report,kind:id==='A037'?'Revisión parcial de valoración; sin certificación Stage 3':'Investigación histórica parcial; límites retirados por A037',isComplete:false,scope:'issuer-research-only',historicalWorkDelivered:true,currentStage3Certified:false});
+        });
+      });
+    }
     // Mentions are searchable source material, explicitly separate from subject analysis.
     reports.forEach(function(r) {
       var seen=Object.create(null), tokens=String(r.text||'').match(/\b[A-Z][A-Z0-9.-]{0,10}\b/g)||[];
@@ -105,7 +124,7 @@
       p.latestReview=p.decisions[0]||null;
       p.management.sort(function(a,b){return String(day(b.date)||'').localeCompare(String(day(a.date)||''));});
       p.latestManagement=p.management[0]||null;
-      p.hasResearch=!!p.decisions.length || p.reports.some(function(x){return x.relation==='source' && x.report.cat==='Selección y valoración';});
+      p.hasResearch=!!p.decisions.length || p.reports.some(function(x){return (x.relation==='source'||x.relation==='issuer-reference') && x.report.cat==='Selección y valoración';});
       p.search=norm(tk+' '+p.company);
       return p;
     }).sort(function(a,b){return a.ticker.localeCompare(b.ticker);});
