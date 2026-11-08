@@ -1,0 +1,23 @@
+# Public sources
+
+- submissions: https://data.sec.gov/submissions/CIK0001604028.json
+- companyfacts: https://data.sec.gov/api/xbrl/companyfacts/CIK0001604028.json
+- releaseq32026: https://www.sec.gov/Archives/edgar/data/1604028/000160402826000043/wms-11052026x8kex991.htm
+- events: https://investors.ads-pipe.com/events-and-presentations/
+- price: https://stockanalysis.com/stocks/wms/history/
+- statistics: https://stockanalysis.com/stocks/wms/statistics/
+- 10Q_2026-11-05: https://www.sec.gov/Archives/edgar/data/1604028/000160402826000046/wms-20260930.htm
+- 10Q_2026-08-06: https://www.sec.gov/Archives/edgar/data/1604028/000160402826000037/wms-20260630.htm
+- 10K_2026-05-21: https://www.sec.gov/Archives/edgar/data/1604028/000160402826000019/wms-20260331.htm
+- 10Q_2026-02-05: https://www.sec.gov/Archives/edgar/data/1604028/000160402826000007/wms-20251231.htm
+- 10Q_2025-11-06: https://www.sec.gov/Archives/edgar/data/1604028/000160402825000043/wms-20250930.htm
+- 10Q_2025-08-07: https://www.sec.gov/Archives/edgar/data/1604028/000160402825000030/wms-20250630.htm
+- 10K_2025-05-15: https://www.sec.gov/Archives/edgar/data/1604028/000160402825000012/wms-20250331.htm
+- 10Q_2025-02-06: https://www.sec.gov/Archives/edgar/data/1604028/000160402825000005/wms-20241231.htm
+- stormtrap: https://www.sec.gov/Archives/edgar/data/1604028/000119312526413092/d119803dex991.htm
+- investorday: https://www.sec.gov/Archives/edgar/data/1604028/000160402826000028/ads_investordayx2026xvfi.htm
+- peer_mwa: https://stockanalysis.com/stocks/mwa/statistics/
+- peer_wts: https://stockanalysis.com/stocks/wts/statistics/
+- release_q1fy2027: https://www.sec.gov/Archives/edgar/data/1604028/000160402826000034/wms-08062026x8kex991.htm
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm

@@ -1,0 +1,137 @@
+# WMS · Advanced Drainage Systems · Fundamental Pullback
+Fecha de corte: 8 de noviembre de 2026. Millones USD salvo precio, acciones y porcentajes. Año fiscal termina el 31 de marzo.
+
+## Conclusión
+**En observación; valoración materialmente parcial, sin entrada aprobada.** Opportunity 80 permite investigación bajo el umbral vigente ≥65. No se aplica el anterior 85 como veto. Stage 3 y 3.5 no completados; valores aprobados adverso/central/favorable **null/null/null**. Los escenarios son herramientas de contraste, no precios de compra aprobados.
+
+La caída de la cotización tiene fundamento operativo: el crecimiento adquirido de NDS oculta una contracción orgánica trimestral, la demanda es más débil y la guía de ventas ha bajado. Eso no prueba un deterioro irreversible: precio/coste, mix e innovación sostienen márgenes y el semestre continúa creciendo orgánicamente. El precio ya recoge parte de las malas noticias. Falta calibrar cuánto beneficio y reinversión son sostenibles en el ciclo y cerrar el efecto de StormTrap.
+
+Cierre regular **124,31 USD el 6 nov 2026,16:00 EST**, frente a 144,07 del escáner 4 nov: descenso 13,7%. Apertura 120,22, máximo 124,60, mínimo 119,53, volumen 1.152.284. Fuente [histórico de mercado](https://stockanalysis.com/stocks/wms/history/). No se usa la cotización antigua ni una operación fuera de horario.
+
+## Acontecimientos
+[Resultados primarios del 5 nov](https://www.sec.gov/Archives/edgar/data/1604028/000160402826000043/wms-11052026x8kex991.htm) y [10-Q](https://www.sec.gov/Archives/edgar/data/1604028/000160402826000046/wms-20260930.htm) corresponden a **Q2 FY 2027**, trimestre terminado 30 sept 2026; llegaron después del escáner. La [página oficial de eventos](https://investors.ads-pipe.com/events-and-presentations/) no permite verificar la próxima publicación en su contenido disponible: fecha futura=null, sin inventarla. StormTrap se espera cerrar en Q3 fiscal 2027/Q4 calendario 2026, sujeto a condiciones y aprobaciones. Es una adquisición empresarial pendiente, no arbitraje de una venta de WMS ni una prohibición automática por cualquier M&A.
+
+## Qué cambió en los resultados
+Q2: ventas 889,406 frente a 850,381 (+4,6%). NDS aportó 77,267; orgánicas 812,139, **−4,5%**. Stormwater 712,063 frente a 670,665: +6,2% declarado pero **−5,3% orgánico**. Wastewater 177,343 frente a 179,716 (−1,3%). Los volúmenes de Pipe/Allied y Wastewater cayeron, parcialmente compensados por precio/mix. Parte de la venta se adelantó a Q1 más de lo estimado.
+
+Semestre: ventas 1.890,518 (+12,5%); NDS 171,954; orgánicas 1.718,564 (+2,3%). Stormwater orgánico+2,1%, apoyado por no residencial; Wastewater+3,1%. Por tanto, no se anualiza el Q1 de 1.001,112 ni su crecimiento orgánico 9,2%, ni se convierte el −4,5% Q2 en pronóstico perpetuo.
+
+Q2 beneficio bruto 345,855 (+1,7%), EBIT 194,875 frente a 223,295 (−12,7%); EBITDA ajustado 286,8 frente a 287,5, margen 32,2% frente a 33,8%. Continuadas 133,623 frente a 156,500 (−14,6%). Beneficio atribuible 110,439 incluye pérdidas discontinuadas 23,522: no representa por sí solo la economía del negocio que se retiene.
+
+[Guía anterior agosto](https://www.sec.gov/Archives/edgar/data/1604028/000160402826000034/wms-08062026x8kex991.htm): ingresos 3.350–3.550 y EBITDA ajustado 1.000–1.050. Nueva guía: **3.300–3.400 y 1.000–1.030**, capex≈200. El menor ingreso esperado combina demanda más débil y la menor necesidad de aumentos de precio porque los materiales cuestan menos de lo anticipado. No toda reducción nominal de ventas implica caída idéntica de margen o volumen. El punto medio EBITDA cae sólo 10; el de ventas 100.
+
+## Negocio, ciclo y materias primas
+ADS fabrica soluciones de drenaje pluvial y aguas residuales, con exposición a construcción no residencial, residencial, infraestructuras y agricultura. La regulación del agua, sustitución de materiales y productos asociados amplían el mercado, pero no eliminan estacionalidad, tipos de interés ni aplazamientos de obra. No es una compañía inmobiliaria excluida: su actividad principal es manufactura y soluciones hidráulicas.
+
+[10-K FY 2026](https://www.sec.gov/Archives/edgar/data/1604028/000160402826000019/wms-20260331.htm) describe compras superiores a 1.000 millones de libras anuales de resina virgen y reciclada, de aproximadamente 450 proveedores. El poder de compra y mezcla de reciclados amortigua costes, no impide desfases entre precio y resina. El 10-Q confirma que al 30 sept no hay compromisos de resina con precio y cantidad fijados pendientes; esto **no** significa ausencia de compras futuras o de riesgo de oferta.
+
+Inventario 563,775 frente a 543,381 en marzo: materias primas 124,072 frente a 108,856; producto terminado 439,703 frente a 434,525. El circulante de inventarios consumió 35,761 de caja en el semestre, frente a liberación 69,516 anterior: diferencia 105,277. No se extrapola aquella liberación como generación recurrente. Menor demanda puede dejar capacidad ociosa/inventarios; los datos disponibles no cuantifican utilización por planta o capacidad incremental vendible.
+
+La flotilla propia tiene≈600 tractores y 1.100 remolques. La presentación [Investor Day 18 jun 2026](https://www.sec.gov/Archives/edgar/data/1604028/000160402826000028/ads_investordayx2026xvfi.htm) describe≈170 invertidos desde FY 2020, **incluyendo capex y leasing financiero**. Su servicio/logística es ventaja comercial, pero necesita reposición. Objetivos de dirección de crecimiento orgánico>8%, margen EBITDA>30% y CFO>70% EBITDA son aspiraciones, no hechos de cada año. ROIC FY 2026 publicado 18,6% es ajustado y corporativo, no retorno marginal universal de cada nueva inversión.
+
+## Tres ejercicios y cuatro trimestres
+Historia reconciliada con 10-K/10-Q y companyfacts, con las etiquetas, períodos, accession y fechas de presentación archivados. D&A total ya contiene amortización intangible, que no se suma otra vez.
+
+- FY 2024: ventas 2.874,473; EBIT 732,131; beneficio atribuible 509,915; CFO 717,928; capex 183,812; D&A total 154,903; SBC 31,986.
+- FY 2025: ventas 2.904,245; EBIT 657,436; beneficio atribuible 450,172; CFO 581,491; capex 212,944; D&A total 183,281; SBC 26,581.
+- FY 2026: ventas 3.050,376; EBIT 619,202; beneficio atribuible 426,465; CFO 819,054; capex 249,766; D&A total 216,261; SBC 32,354.
+
+- Q3 FY 2026: ventas 693,354; EBIT 136,823; beneficio atribuible 93,626; CFO 269,290; capex 85,719; D&A total 51,522; SBC 8,835.
+- Q4 FY 2026: ventas 676,761; EBIT 53,338; beneficio atribuible 32,900; CFO 39,921; capex 53,029; D&A total 59,818; SBC 6,538.
+- Q1 FY 2027: ventas 1.001,112; EBIT 254,548; beneficio atribuible 168,521; CFO 260,395; capex 57,151; D&A total 62,157; SBC 13,274.
+- Q2 FY 2027: ventas 889,406; EBIT 194,875; beneficio atribuible 110,439; CFO 197,852; capex 41,607; D&A total 63,685; SBC 11,257.
+
+Q3 FY 2026=octubre–diciembre 2025; Q4 FY 2026=enero–marzo 2026; Q1/Q2 FY 2027=abril–junio/julio–septiembre 2026. No se mezclan calendarios.
+
+- TTM septiembre 2025: ventas 2.986,560; EBIT 672,886; beneficio atribuible 458,327; CFO 741,008; capex 211,780; D&A total 202,297; SBC 29,602.
+- TTM septiembre 2026: ventas 3.260,633; EBIT 639,584; beneficio atribuible 405,486; CFO 767,458; capex 237,506; D&A total 237,182; SBC 39,904.
+
+TTM=último FY terminado en marzo + abril–septiembre actual − abril–septiembre anterior. La suma de los cuatro trimestres coincide. TTM 2026 ventas+9,2%, EBIT−4,9%, beneficio atribuible−11,5%. El crecimiento de ventas no es puramente orgánico; NDS sólo aporta ocho meses al TTM. El modelo usa la guía FY 2027 de 3.350 como base completa estimada del perímetro con NDS, en vez de hacer crecer gratis el TTM hacia un año completo comprado.
+
+## Calidad de caja y normalización
+Semestre CFO 458,247 frente a 509,843; capex 98,758 frente a 111,018; CFO−capex 359,489 frente a 398,825. D&A 125,842, SBC 24,531, inventario adquirido ajustado 14,197 y diferidos 9,376 ayudan a conciliar beneficio y caja. SBC se conserva como coste económico, no se suma al FCFF proyectado.
+
+La etiqueta XBRL 2026 de CFO se llama NetCashProvidedByUsedInOperatingActivitiesContinuingOperations, pero el estado publicado totaliza 458,247 **incluyendo −5,486 de caja de discontinuadas**. Se guarda el total presentado, se revela la diferencia de etiqueta y no se llama a esa cifra CFO puro de continuadas. No se reconstruye flujo libre desde la etiqueta sin leer el estado.
+
+TTM CFO−capex 529,952; descontar SBC 39,904 da 490,048, todavía flujo apalancado, no FCFF. Incluye intereses, impuestos efectivos, circulante y discontinuadas. No se suman al FCFF las ganancias de venta de inmuebles del año anterior; Q2 FY 2026 incluyó 17,6 de ganancias de disposición, por lo que el deterioro de EBIT también tiene comparación favorable previa.
+
+Se separan costes de integración NDS 8,8 y reestructuración 9,213 del semestre, pero no se eliminan automáticamente: la reestructuración no tiene todavía estimación del coste final/fecha de finalización. Inventario step-up no repetible 14,197 se identifica, sin asumir que toda diferencia entre EBITDA ajustado y GAAP es dinero para accionistas. La normalización de márgenes del DCF es un supuesto explícito y no una suma opaca de todos los ajustes favorables.
+
+## Perímetro adquirido y desinvertido
+NDS cerró 2 feb 2026. Precio bruto 984,881; neto de caja adquirida y mantenida para venta≈972,5. Se financió principalmente con caja. PPA provisional: goodwill 316,299; intangibles 456,920; PP&E 67,699, inventario 92,598. Goodwill 271,7 deducible fiscalmente. La ventaja fiscal no se añade como activo separado si ya mejora los impuestos de los flujos. El coste pagado ya se refleja en balance/caja: no se resta de nuevo del EV actual ni se añade goodwill como valor extra.
+
+Proforma primaria del semestre anterior con NDS: ventas 1.839,467 frente a ventas reportadas actuales 1.890,518, crecimiento≈2,8%, distinto del 12,5% headline. Es proforma contable sin sinergias, no crecimiento orgánico perfectamente comparable. River Valley Pipe costó≈18,8 en mayo 2025; Orenco también altera la comparación histórica.
+
+NDS International fue clasificado para venta desde su compra. Se vendieron Teco Italia y Teco USA en julio; pérdida 3,0. Las pérdidas discontinuadas del semestre 29,175 incluyen revaloración de activos. Activos mantenidos para venta 11,415, pasivos 7,277, entre ellos caja 8,660. No se suman 8,660 aparte del valor neto de disposición. Se concede sólo 3,104 en el puente tras descuento 25% del neto 4,138, supuesto sujeto a realización. No se reincorpora el negocio vendido al margen recurrente.
+
+### StormTrap
+[Comunicado primario 5 oct](https://www.sec.gov/Archives/edgar/data/1604028/000119312526413092/d119803dex991.htm): precio en efectivo≈530; ≈450 **después del valor presente estimado de 80 de ventajas fiscales**. No se confunde 450 con desembolso. LTM julio 2026 ventas≈165, EBITDA ajustado≈40. El múltiplo 10 x divulgado usa precio neto de fiscalidad y sinergias; no es 530/40. No se reconoce acreción de EPS como prueba de rentabilidad sobre capital.
+
+Financiación prevista: caja y líneas existentes. Caja 153,245 + disponibilidad 738,6 − reserva operativa supuesta 100 − precio 530 = **261,845 de cobertura remanente antes de gastos/ajustes**. No hay déficit aritmético como en una operación cuyo precio excede liquidez; el uso de crédito incrementa deuda e intereses. No se confirma todavía cierre, ajustes de precio, recursos consumidos ni covenant final.
+
+El DCF principal conserva el perímetro actual sin StormTrap. Una sensibilidad separada supone adquirir el objetivo pagando530; no afirma que ya se haya pagado. Calcula el incremento de valor común como EV adquirido menos530 más una sola ventaja fiscal40/80/80. Supuestos target de crecimiento 2/5/8%, margen FCFF **después de reinversión** 8/12/16%, WACC 11/10/9%, g 2/2,5/3% dan EV 149,6/310,7/602,3; variación por acción −4,57/−1,87/+2,04. No se presume valor cero ni probabilidad de cierre. **No se verificaron capex, capital de trabajo y reclamaciones detalladas del objetivo**; por eso es sensibilidad de conversión, no DCF completo aprobado del objetivo. Se necesitan sus estados y condiciones finales para aprobar valor combinado. La sustracción de530 ya representa el coste financiado y no se resta además una deuda nueva por ese mismo principal. El WACC postcompra, comisiones y gastos de integración no están verificados; la ventaja fiscal40/80 es valor presente hipotético y no debe duplicarse en el margen FCFF.
+
+## Deuda, leasing y reclamaciones
+La deuda contractual al 30 de septiembre es 1.628,148: préstamo a plazo 598,5; bonos 2030 y 2034 de 500 cada uno; otra deuda 29,648. Con leasing financiero de 161,909, suma **1.790,057**. La deuda contable de 1.611,197, antes del leasing, descuenta 16,951 de comisiones. El modelo resta principal, no sólo valor contable.
+
+El préstamo vence el 28 de febrero de 2033. El revolver de 750 vence el 27 de febrero de 2031; cartas de crédito de 11,4 dejan 738,6 disponibles. El margen contractual es de 125–225 puntos básicos sobre la referencia, según los ratios aplicables. Bonos 2030: cupón 6,375%; bonos 2034: 5,375%. Otra deuda incluye equipo por 2,448 con coste medio de 1,8% y préstamo de sede de aproximadamente 27,2 a SOFR+285 puntos básicos, con vencimiento en diciembre de 2028 y amortización desde enero de 2027. El 1,8% no es el coste de financiación de toda la empresa.
+
+El valor razonable de los bonos al 30 de septiembre era 495,395 y 462,150, frente a principal de 500 cada uno. Apoya una tasa aproximada de 6–7%, pero no sustituye una cotización de noviembre. Leasing financiero: 40,517 corriente y 121,392 no corriente; principal pagado en el semestre 19,052. Hubo 21,4 de altas de activos mediante leasing, además del capex de caja. La proyección debe renovar esos activos. El principal existente se resta una sola vez en el puente, sin volver a deducir sus cuotas de principal del FCFF.
+
+Los alquileres operativos permanecen como gasto en EBIT. La última obligación completa verificada, de marzo, era 74,199 y el coste operativo anual 22,818. No se suma amortización ROU al FCFF ni se resta otra vez toda esa obligación. No se afirma que el saldo de marzo sea el de septiembre.
+
+ADS México está consolidado al 51%, con un socio del 49%. El valor contable de minoritarios es 24,957; el modelo deduce 37,436, equivalente a 1,5 veces libros, como hipótesis con sensibilidad. El JV sudamericano, participado al 50% y no consolidado, aporta beneficio TTM de 5,642 fuera del EBIT. Se acredita 56,420, diez veces ese beneficio, como proxy pendiente de valoración individual de sus distribuciones y capital. Ese beneficio no se añade también al FCFF operativo.
+
+La garantía sudamericana tiene máximo de 5,5 y la línea de crédito de 11 no estaba dispuesta, incluidas cartas de crédito. México tiene una indemnidad del 49% sobre la línea intercompañía de 9,5, también sin disposición. No hay deuda exigible actual por esas líneas, pero existe exposición contingente. Una utilización plena conjunta supondría aproximadamente 0,136 USD por acción. El préstamo intercompañía vence en junio de 2027; el 10-K señala diciembre de 2026 para la garantía sudamericana, sujeto a posibles renovaciones.
+
+Se deducen 14,991 de beneficios fiscales no reconocidos al cierre de marzo, que incluyen 0,7 de potenciales intereses y penalidades. No se añade nuevamente ese 0,7. Los diferidos de 230,852 no se tratan como deuda íntegra pagadera inmediatamente. La dirección no considera materiales los litigios ordinarios y no se identificó una provisión adicional cuantificable, sin afirmar por ello que cualquier reclamación desconocida valga cero. La reestructuración pendiente de 0,646 se trata como obligación operativa dentro de la reserva y los márgenes, no como caja excedente.
+
+## Acciones y recompras
+Hay **73.829.604 acciones al 29 de octubre**, excluyendo 210.746 restringidas no consolidadas. El balance de septiembre separa 70,456 millones de comunes y 4,249 millones de acciones rescatables del KSOP. Son clasificaciones contables de acciones comunes, no una deuda de 69,045 adicional a todas las acciones. El derecho de venta del KSOP se activa bajo condiciones de falta de cotización o negociación restringida, no como rescate fijo programado independiente. No se resta esa mezzanine de nuevo.
+
+Proxy diluido: 73,829604 básicas + 0,210746 restringidas + 0,370 de incremento de opciones en Q2 + 0,009 de PSU + 0,061 excluidas = **74,480350 millones**. No se usa el promedio trimestral de 75,787 como denominador actual. Los incrementos promedio no sustituyen el cálculo actual por tramos tras la caída del precio. SBC del semestre: 24,531 frente a 16,981.
+
+Recompras semestrales de 2,7 millones de acciones, coste 375,1 y caja 372,916; dividendos 30,512; principal de leasing 19,052. En conjunto superan el FCF reportado de 359,489. Los 677,3 restantes de autorización no son caja gastada ni creación gratuita de valor. El balance de septiembre y las acciones de octubre tienen un desfase conocido; no se inventa el balance contemporáneo.
+
+## Inversión física y coste de capital
+Capex FY2024/2025/2026: 183,812 / 212,944 / 249,766. La guía FY2027 de aproximadamente 200 incluye unos 80 de órdenes abiertas a septiembre. Esa guía no demuestra un mantenimiento mínimo perpetuo de 200: mezcla expansiones, reposiciones y tecnología, mientras el leasing se financia aparte. No se obtuvo el desglose completo de mantenimiento por planta, capacidad nueva y vida útil residual.
+
+El modelo conserva un suelo físico nominal de mantenimiento del 5–6% de ventas, nunca inferior al presupuesto inicial escalado un 2% anual. Añade reposición intangible económica del 1,2% de ventas. El crecimiento exige 0,45–0,60 por dólar incremental de ventas y circulante del 16% del incremento. D&A total de 7,6% incluye 5,2% físico y 2,4% adquirido. La auditoría amplía el crecimiento financiado al mayor entre cero, crecimiento de ventas y crecimiento de NOPAT por volumen y margen desde el margen TTM observado. Se contrasta la reinversión explícita con NOPAT×crecimiento financiado/ROIC marginal, sin sumar ambas exigencias y sin tratar goodwill como efectivo.
+
+Estas intensidades son hipótesis, no un presupuesto confirmado. Financiar toda mejora del margen es una convención prudente: parte puede proceder de desaparición de cargos y no exigir capital nuevo. No se certifica ese gasto; debe calibrarse antes de aprobar valoración. La reposición intangible explícita1,2% es inferior a amortización2,4%: la inversión suplementaria cubre la diferencia en estos escenarios, pero no identifica el presupuesto real de renovación. Se muestran sensibilidades de mantenimiento y ROIC. El forecast financia activos propios y arrendados aunque el capex de caja actual sea menor. No se rebaja artificialmente el suelo en el terminal para elevar el resultado.
+
+Treasury a diez años del 6 de noviembre: 4,86%. ERP implícita del 1 de noviembre: 4,41%. Beta observada a cinco años: 1,32. Resulta Ke de 10,6812%. Con deuda de prueba al 6,7%, impuesto del 25% y peso de deuda del 16,32%, el WACC mecánico es 9,7581%. Se aplican 11% / 10% / 9%. El 6,7% tiene apoyo limitado en los valores razonables de bonos de septiembre, no es un yield exacto de noviembre. La ERP fuente usa Treasury5,29%, distinto del4,86% aplicado; las fechas/base no están emparejadas. Falta confirmar financiación y apalancamiento tras StormTrap. Las fuentes fechadas y originales están en public_sources.md y market_observations.json.
+
+## DCF financiado, inversa y contraste
+Diez años, USD nominal, partiendo de la guía media FY2027 de 3.350 sin StormTrap. SBC permanece en EBIT; intereses quedan fuera del FCFF. Puente a acciones: **−1.729,715**, con reserva operativa de 100 y caja restringida de 0,132 excluida. No se añade crecimiento adquirido sin pagarlo.
+
+- Adverso: ingresos −3%, +1%, +2,5%, +3%, +3% los primeros cinco años; margen EBIT de 19–20%, terminal 19,5%; crecimiento terminal 2%, ROIC 13%, WACC 11%.
+- Central: ingresos +3,5%, +4,5%, +5%, +5%, +4,5%; EBIT de 22,5% a 23,5%, terminal 23%; crecimiento terminal 2,5%, ROIC 18%, WACC 10%.
+- Favorable: ingresos +6%, +7,5%, +8%, +7,5%, +6,5%; EBIT de 24,5% a 26%, terminal 25%; crecimiento terminal 3%, ROIC 22%, WACC 9%.
+
+Los años 6–10 convergen gradualmente al terminal. Los años del modelo son períodos anuales normalizados desde la fecha de valoración, no presupuestos trimestrales ni un calendario fiscal exacto. La guía FY2027 es un ancla de escala; falta una interpolación detallada del período inicial hasta marzo. El EBIT TTM actual, de 19,6%, está afectado por integración y reestructuración; el 23% central exige una normalización real. El favorable no queda demostrado por un margen EBITDA ajustado superior al 30%.
+
+Resultados **condicionales, no aprobados**:
+- Adverso: 36,07 USD. Terminal 44,9% del EV; reinversión terminal 92,2.
+- Central: 66,34 USD. Terminal 57,6%; reinversión terminal 120,6.
+- Favorable: 112,37 USD. Terminal 68,1%; reinversión terminal 154,1.
+- Añadiendo la sensibilidad correspondiente de StormTrap: 31,50 / 64,47 / 114,41 USD. No es una valoración combinada verificada.
+
+A124,31, incluso el favorable queda por debajo del precio bajo esta convención de financiación; la comparación no es prueba suficiente de valor razonable. No se declara sobrevaloración definitiva sobre una calibración incompleta; se mantiene la observación, sin aprobación de compra.
+
+La inversa, manteniendo los demás supuestos centrales, exige aproximadamente 19,55% de crecimiento anual de ventas durante cinco años. No es una estimación literal de la expectativa del mercado: éste puede descontar menor reinversión, más margen o menor coste de capital. Con crecimiento terminal del 2,5%, WACC del 9% / 10% / 11% da 82,10 / 66,34 / 54,35 USD. Se conservan sensibilidades de mantenimiento, ROIC, minoritarios, JV y reserva de caja.
+
+Comparables secundarios al cierre del 6 de noviembre: EV/EBIT de WMS 14,77; Mueller Water 11,26; Watts 20,21. EV/EBITDA: 11,38 / 9,75 / 18,18. La mezcla de exposición municipal, metales, válvulas y productos limita su equivalencia. Sirven como contraste, no como una mediana automática de valor razonable. Son datos del proveedor sin homogeneización completa de PPA, leasing y SBC.
+
+## Condiciones para cerrar la investigación
+1. Confirmar recuperación de volumen y órdenes, sin extrapolar la venta adelantada de Q1 ni todo el precio/coste favorable.
+2. Reconciliar capacidad utilizada, mantenimiento físico y de flota, expansión y reposición intangible. No asignar retrospectivamente todo el capex a crecimiento.
+3. Concluir integración y PPA de NDS, caja de discontinuadas y costes finales de reestructuración.
+4. Verificar cierre, financiación, ajustes, beneficios fiscales y estados de flujos de StormTrap.
+5. Ajustar valor de JV y NCI, impuestos, opciones por tramo y balance a fecha común. Actualizar el spread y la financiación combinada.
+6. Obtener auditoría independiente y evidencia de Stage 1 y Stage 3.5 antes de cualquier entrada.
+
+La contracción orgánica y la reducción de guía son hechos. La rentabilidad normalizada, el valor combinado y el precio de entrada son cuestiones abiertas. No se confunde investigación pendiente con deterioro probado ni con rechazo formal del negocio.
+
+## Fuentes, controles y límites
+Sólo fuentes públicas. Originales SEC, presentación, fuentes de mercado y procedencia XBRL archivados. Tres anuales, cuatro trimestres y TTM cuadran. El 10-K FY 2025 devolvió un error 503 transitorio y se obtuvo en un segundo intento; no hubo denegaciones ni bypass. El calendario dinámico se describe según el contenido verificado. No hubo escritura remota, publicación, transacciones ni divulgación privada. El modelo y las fuentes se conservan para auditoría, con todas las aprobaciones nulas.
