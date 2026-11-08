@@ -1,0 +1,31 @@
+# Fuentes públicas APH
+
+- transcript_secondary: https://stockanalysis.com/stocks/aph/transcripts/659916-q3-2026/
+- peer_tel: https://stockanalysis.com/stocks/tel/statistics/
+- peer_glw: https://stockanalysis.com/stocks/glw/statistics/
+- news: https://investors.amphenol.com/news-and-events/financial-news/default.aspx
+- submissions: https://data.sec.gov/submissions/CIK0000820313.json
+- companyfacts: https://data.sec.gov/api/xbrl/companyfacts/CIK0000820313.json
+- release: https://investors.amphenol.com/news-and-events/news-details/2026/Amphenol-Reports-Record-Third-Quarter-2026-Results-and-Announces-Dividend-Increase-and-New-Stock-Repurchase-Program/default.aspx
+- calendar: https://investors.amphenol.com/news-and-events/events/default.aspx
+- statistics: https://stockanalysis.com/stocks/aph/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/APH?range=1y&interval=1d
+- 2026-10-30_10-Q: https://www.sec.gov/Archives/edgar/data/820313/000110465926120646/aph-20260930x10q.htm
+- 2026-10-28_8-K: https://www.sec.gov/Archives/edgar/data/820313/000110465926119421/aph-20261028x8k.htm
+- 2026-10-06_8-K: https://www.sec.gov/Archives/edgar/data/820313/000110465926114035/tm2627036d1_8k.htm
+- 2026-09-04_8-K: https://www.sec.gov/Archives/edgar/data/820313/000110465926105485/tm2624775d1_8k.htm
+- 2026-08-06_8-K: https://www.sec.gov/Archives/edgar/data/820313/000110465926091969/tm2622441d1_8k.htm
+- 2026-07-31_10-Q: https://www.sec.gov/Archives/edgar/data/820313/000110465926089194/aph-20260630x10q.htm
+- 2026-05-01_10-Q: https://www.sec.gov/Archives/edgar/data/820313/000110465926054128/aph-20260331x10q.htm
+- 2026-02-11_10-K: https://www.sec.gov/Archives/edgar/data/820313/000110465926013549/aph-20251231x10k.htm
+- 2025-10-24_10-Q: https://www.sec.gov/Archives/edgar/data/820313/000110465925102142/aph-20250930x10q.htm
+- 2025-07-25_10-Q: https://www.sec.gov/Archives/edgar/data/820313/000155837025009610/aph-20250630x10q.htm
+- 2025-04-25_10-Q: https://www.sec.gov/Archives/edgar/data/820313/000155837025005558/aph-20250331x10q.htm
+- 2025-02-07_10-K: https://www.sec.gov/Archives/edgar/data/820313/000155837025000714/aph-20241231x10k.htm
+- 2024-10-25_10-Q: https://www.sec.gov/Archives/edgar/data/820313/000155837024013696/aph-20240930x10q.htm
+- 2024-07-26_10-Q: https://www.sec.gov/Archives/edgar/data/820313/000155837024010246/aph-20240630x10q.htm
+- 2024-04-26_10-Q: https://www.sec.gov/Archives/edgar/data/820313/000155837024005928/aph-20240331x10q.htm
+- 2024-02-07_10-K: https://www.sec.gov/Archives/edgar/data/820313/000155837024000866/aph-20231231x10k.htm
+- dividend_split: https://www.sec.gov/Archives/edgar/data/820313/000110465926091969/tm2622441d1_ex99-1.htm
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
