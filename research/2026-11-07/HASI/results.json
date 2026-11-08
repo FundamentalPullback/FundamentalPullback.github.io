@@ -1,0 +1,328 @@
+{
+  "ticker": "HASI",
+  "as_of": "2026-11-08",
+  "close": {
+    "price": 38.9,
+    "date": "2026-11-06",
+    "type": "regular-close"
+  },
+  "method": "Conditional common-equity residual income; equivalent clean-surplus FCFE",
+  "valuation_status": "not_certified",
+  "decision": "wait_for_proof",
+  "entry_approved": false,
+  "current_fair_value": null,
+  "capital": {
+    "date": "2026-09-30",
+    "assets": 9631.123,
+    "liabilities": 6895.176,
+    "total_equity": 2735.947,
+    "reported_NCI_excluded": 113.173,
+    "common_book": 2622.7740000000003,
+    "cash": 102.287,
+    "debt_carrying": 6455.826,
+    "nonrecourse_carrying": 112.433,
+    "junior_subordinated_principal": 1100,
+    "junior_subordinated_carrying": 1114.644,
+    "convertible_principal": 403,
+    "convertible_carrying": 401.01,
+    "common_shares_2026_11_03": 128.485212,
+    "Q3_GAAP_diluted_shares": 143.57656,
+    "Q3_adjusted_shares": 132.058694,
+    "convertible_shares": 14.9,
+    "capped_call_shares": 14.8,
+    "capped_call_initial_strike": 27.14,
+    "capped_call_initial_cap": 43.42,
+    "loan_funding_commitments": 242,
+    "jupiter_guarantee_max": 53,
+    "jupiter_guarantee_annual_cap": 20,
+    "JV_guarantee_max": 104,
+    "JV_partner_reimbursement_fraction": 0.15,
+    "liquidity": 1981,
+    "unfunded_co_invest_closed_transactions": 300,
+    "common_market_cap": 4998.074746799999,
+    "common_book_per_share": 20.413041774799737,
+    "price_to_book": 1.9056444614747587,
+    "debt_to_common_book": 2.4614495949708206
+  },
+  "risk_free": {
+    "rate": 0.0486,
+    "date": "2026-11-06",
+    "source": "US Treasury 10Y nominal par"
+  },
+  "ke_basis": {
+    "base": 0.12,
+    "base_type": "analyst judgment sensitivity; not empirically calibrated project premium",
+    "observed_beta": 1.38,
+    "beta_method": "Yahoo Finance 5-year monthly; corroborated StockAnalysis 5Y; retrieved 2026-11-08; underlying regression not independently reproduced",
+    "beta_sources": [
+      "https://finance.yahoo.com/quote/HASI/",
+      "https://stockanalysis.com/stocks/hasi/statistics/"
+    ],
+    "ERP": 0.0441,
+    "ERP_date": "2026-11-01",
+    "ERP_method": "Damodaran implied ERP, trailing 12-month adjusted payout",
+    "ERP_underlying_RF": 0.0529,
+    "ERP_source": "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "november_1_matched_market_inputs_Ke": 0.113758,
+    "november_6_RF_with_monthly_ERP_Ke": 0.109458,
+    "time_alignment_note": "Monthly ERP was solved using 5.29% RF, not November 6 4.86%. Matched RF/ERP snapshot and mixed-date latest-RF sensitivity are separate. No fresh November 6 implied ERP calculation is claimed. Beta is a retrieved historical estimator, not an exact November 1 frozen observation.",
+    "judgment_wedge_vs_matched_snapshot": 0.0062419999999999976,
+    "judgment_wedge_vs_latest_RF_sensitivity": 0.010541999999999996,
+    "risk_note": "12% is a hurdle sensitivity above public CAPM references, not a measured separate project/country premium. Project losses and ROE stresses must not be interpreted as statistically independent of this hurdle.",
+    "country_premium": 0,
+    "country_note": "USD/US baseline without separate country add-on. Not evidence that every asset has zero foreign-country exposure; asset geography schedule remains open."
+  },
+  "scenarios_conditional_not_fair_value_range": {
+    "stress": {
+      "conditional_value_per_share": 11.10144633679266,
+      "common_equity_value": 1483.4265535330055,
+      "terminal_value_fraction_fcfe": 0.5474761229457026,
+      "forecast": [
+        {
+          "year": 1,
+          "opening_book": 2360.4966000000004,
+          "earnings": 236.04966000000005,
+          "required_equity_retention": 47.20993200000001,
+          "potential_distribution": 188.83972800000004,
+          "residual_income": -94.41986400000005
+        },
+        {
+          "year": 2,
+          "opening_book": 2407.7065320000006,
+          "earnings": 240.77065320000008,
+          "required_equity_retention": 48.15413064000001,
+          "potential_distribution": 192.61652256000008,
+          "residual_income": -96.30826128000001
+        },
+        {
+          "year": 3,
+          "opening_book": 2455.8606626400006,
+          "earnings": 245.58606626400007,
+          "required_equity_retention": 49.11721325280001,
+          "potential_distribution": 196.46885301120005,
+          "residual_income": -98.23442650560003
+        },
+        {
+          "year": 4,
+          "opening_book": 2504.9778758928005,
+          "earnings": 250.49778758928005,
+          "required_equity_retention": 50.09955751785601,
+          "potential_distribution": 200.39823007142405,
+          "residual_income": -100.19911503571205
+        },
+        {
+          "year": 5,
+          "opening_book": 2555.0774334106563,
+          "earnings": 255.50774334106563,
+          "required_equity_retention": 51.10154866821313,
+          "potential_distribution": 204.4061946728525,
+          "residual_income": -102.20309733642631
+        }
+      ],
+      "assumptions": {
+        "roe": 0.1,
+        "ke": 0.14,
+        "book_growth": 0.02,
+        "terminal_roe": 0.09,
+        "terminal_growth": 0.015,
+        "initial_book_haircut": 0.1,
+        "share_dilution": 0.04
+      },
+      "RI_FCFE_tieout": 9.094947017729282e-13
+    },
+    "central_conditional": {
+      "conditional_value_per_share": 20.84141277045591,
+      "common_equity_value": 2677.813338191535,
+      "terminal_value_fraction_fcfe": 0.6719792388096595,
+      "forecast": [
+        {
+          "year": 1,
+          "opening_book": 2622.7740000000003,
+          "earnings": 354.0744900000001,
+          "required_equity_retention": 131.13870000000003,
+          "potential_distribution": 222.93579000000005,
+          "residual_income": 39.34161000000006
+        },
+        {
+          "year": 2,
+          "opening_book": 2753.9127000000003,
+          "earnings": 371.77821450000005,
+          "required_equity_retention": 137.695635,
+          "potential_distribution": 234.08257950000004,
+          "residual_income": 41.30869050000001
+        },
+        {
+          "year": 3,
+          "opening_book": 2891.6083350000004,
+          "earnings": 390.36712522500005,
+          "required_equity_retention": 144.58041675,
+          "potential_distribution": 245.78670847500004,
+          "residual_income": 43.37412502500001
+        },
+        {
+          "year": 4,
+          "opening_book": 3036.1887517500004,
+          "earnings": 409.88548148625006,
+          "required_equity_retention": 151.8094375875,
+          "potential_distribution": 258.0760438987501,
+          "residual_income": 45.54283127625001
+        },
+        {
+          "year": 5,
+          "opening_book": 3187.9981893375,
+          "earnings": 430.37975556056256,
+          "required_equity_retention": 159.39990946687502,
+          "potential_distribution": 270.97984609368757,
+          "residual_income": 47.81997284006252
+        }
+      ],
+      "assumptions": {
+        "roe": 0.135,
+        "ke": 0.12,
+        "book_growth": 0.05,
+        "terminal_roe": 0.115,
+        "terminal_growth": 0.025,
+        "initial_book_haircut": 0,
+        "share_dilution": 0
+      },
+      "RI_FCFE_tieout": 1.3642420526593924e-12
+    },
+    "favorable_conditional": {
+      "conditional_value_per_share": 34.64743245376449,
+      "common_equity_value": 4451.68270407761,
+      "terminal_value_fraction_fcfe": 0.770682463016536,
+      "forecast": [
+        {
+          "year": 1,
+          "opening_book": 2622.7740000000003,
+          "earnings": 445.8715800000001,
+          "required_equity_retention": 209.82192000000003,
+          "potential_distribution": 236.04966000000007,
+          "residual_income": 170.4803100000001
+        },
+        {
+          "year": 2,
+          "opening_book": 2832.59592,
+          "earnings": 481.54130640000005,
+          "required_equity_retention": 226.60767360000003,
+          "potential_distribution": 254.93363280000003,
+          "residual_income": 184.11873480000003
+        },
+        {
+          "year": 3,
+          "opening_book": 3059.2035936,
+          "earnings": 520.064610912,
+          "required_equity_retention": 244.73628748800002,
+          "potential_distribution": 275.328323424,
+          "residual_income": 198.848233584
+        },
+        {
+          "year": 4,
+          "opening_book": 3303.939881088,
+          "earnings": 561.66977978496,
+          "required_equity_retention": 264.31519048704,
+          "potential_distribution": 297.35458929792003,
+          "residual_income": 214.75609227072005
+        },
+        {
+          "year": 5,
+          "opening_book": 3568.2550715750403,
+          "earnings": 606.6033621677569,
+          "required_equity_retention": 285.4604057260032,
+          "potential_distribution": 321.1429564417537,
+          "residual_income": 231.9365796523777
+        }
+      ],
+      "assumptions": {
+        "roe": 0.17,
+        "ke": 0.105,
+        "book_growth": 0.08,
+        "terminal_roe": 0.14,
+        "terminal_growth": 0.03,
+        "initial_book_haircut": 0,
+        "share_dilution": 0
+      },
+      "RI_FCFE_tieout": 0.0
+    }
+  },
+  "sensitivity": [
+    {
+      "ke": 0.105,
+      "terminal_roe": 0.1,
+      "value": 21.933210772233295
+    },
+    {
+      "ke": 0.105,
+      "terminal_roe": 0.115,
+      "value": 24.89834324915935
+    },
+    {
+      "ke": 0.105,
+      "terminal_roe": 0.14,
+      "value": 29.84023071070278
+    },
+    {
+      "ke": 0.12,
+      "terminal_roe": 0.1,
+      "value": 18.507246655587767
+    },
+    {
+      "ke": 0.12,
+      "terminal_roe": 0.115,
+      "value": 20.84141277045591
+    },
+    {
+      "ke": 0.12,
+      "terminal_roe": 0.14,
+      "value": 24.73168962856949
+    },
+    {
+      "ke": 0.14,
+      "terminal_roe": 0.1,
+      "value": 15.324270710014614
+    },
+    {
+      "ke": 0.14,
+      "terminal_roe": 0.115,
+      "value": 17.08918403376666
+    },
+    {
+      "ke": 0.14,
+      "terminal_roe": 0.14,
+      "value": 20.03070624002007
+    }
+  ],
+  "market_input_crosschecks": [
+    {
+      "label": "Monthly matched RF and ERP, retrieved beta",
+      "ke": 0.113758,
+      "conditional_value": 22.361914798763117
+    },
+    {
+      "label": "November 6 RF with unchanged November 1 ERP, mixed-date sensitivity",
+      "ke": 0.109458,
+      "conditional_value": 23.54108752693831
+    }
+  ],
+  "reverse_single_stage_implied_sustainable_ROE": 0.2060362238401021,
+  "normalization": {
+    "q3_adjusted_earnings": 108.134,
+    "less_unrealized_platform_gain": 35,
+    "after_mark_removal": 73.134,
+    "less_equity_expenses": 3.541,
+    "after_mark_and_SBC": 69.593,
+    "economic_project_loss_already_included": 21.425,
+    "9M_adjusted_earnings": 308.597,
+    "9M_after_mark_and_SBC": 246.32,
+    "note": "Not FCFE; does not certify recurring gain-on-sale, cash taxes, project capital replacement or convertible economics."
+  },
+  "gaps": [
+    "Project-by-project cash waterfalls, amortization, tax-equity flips and replacement capital not independently reconciled",
+    "Clean-surplus economic common book and noncontrolling claim mapping remain incomplete",
+    "Fully diluted settlement and capped-call adjustment mechanics unresolved for valuation",
+    "Country-by-country invested capital not fully mapped; no blanket zero-risk assertion",
+    "2028 guidance is adjusted earnings, not after-tax cash distributable to common stock",
+    "Stage 1 and long-trend technical checks not independently recalculated"
+  ],
+  "no_remote_writes": true
+}

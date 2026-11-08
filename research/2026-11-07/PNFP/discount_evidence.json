@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "riskfree": {
+    "value": 0.0486,
+    "date": "2026-11-06",
+    "source": "RF_PRIMARY",
+    "quality": "Primary Treasury daily table row Nov6;10Yr4.86. Not5.29 on ERP page."
+  },
+  "erp": {
+    "value": 0.0441,
+    "date": "2026-11-01",
+    "source": "ERP_NOV",
+    "definition": "Trailing12month adjusted payout",
+    "alternative_cash_yield": 0.0379,
+    "default_spread": 0.0022,
+    "note": "Homepage labels Treasury input5.29; monthly calibration does not equal Nov6 spot. Pair spot Treasury with monthly ERP as a hybrid dated proxy, not exact same-day implied return."
+  },
+  "beta": {
+    "value": 1.03,
+    "window": "5Y",
+    "date": "2026-11-07",
+    "source": "BETA",
+    "reason": "Observed vendor beta, spans old and new PNFP; not recalculated regression of combined entity"
+  },
+  "CAPM_observed_proxy": 0.094023,
+  "cash_yield_ERP_alternative_Ke": 0.08763699999999999,
+  "default_adjusted_consistency": 0.094089,
+  "ke11_status": "Stress assumption1.5977percentage points over9.4023 CAPM proxy; no independently proven premium",
+  "sector_beta_crosscheck": {
+    "US_regional": 0.4,
+    "global_regional": 0.51,
+    "date": "2026-01",
+    "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+    "note": "Broad stale cross-section including smaller banks; not selected. Total beta1.60 is not market beta and must not be substituted."
+  }
+}

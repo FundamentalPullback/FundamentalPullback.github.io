@@ -1,0 +1,325 @@
+{
+  "ticker": "JBTM",
+  "as_of": "2026-11-08",
+  "currency": "USD",
+  "units": "millions_except_price_eps",
+  "status": "partial",
+  "annual": [
+    {
+      "period": "2023",
+      "perimeter": "legacy_JBT_continuing",
+      "sales": 1664.4,
+      "ebit": 164.7,
+      "net_continuing": 129.3,
+      "cfo": 74.2,
+      "capex": 55.1,
+      "sbc": 11.4,
+      "strict_fcf": 19.1
+    },
+    {
+      "period": "2024",
+      "perimeter": "legacy_JBT_continuing",
+      "sales": 1716,
+      "ebit": 118.4,
+      "net_continuing": 84.6,
+      "cfo": 232.6,
+      "capex": 37.9,
+      "sbc": 14.7,
+      "strict_fcf": 194.7
+    },
+    {
+      "period": "2025",
+      "perimeter": "JBT_plus_Marel_from_Jan2",
+      "sales": 3798.2,
+      "ebit": 189.4,
+      "net_continuing": -49.7,
+      "cfo": 341.7,
+      "capex": 103.6,
+      "sbc": 23.2,
+      "strict_fcf": 238.1
+    }
+  ],
+  "last_four_quarters": [
+    {
+      "period": "2025Q4",
+      "sales": 1008,
+      "ebit": 72.3,
+      "net_income": 53.1,
+      "eps": 1.01,
+      "cfo": 117.39999999999998,
+      "capex": 33.89999999999999,
+      "strict_fcf": 83.5
+    },
+    {
+      "period": "2026Q1",
+      "sales": 936,
+      "ebit": 68,
+      "net_income": 45,
+      "eps": 0.86,
+      "cfo": 119,
+      "capex": 26,
+      "strict_fcf": 93
+    },
+    {
+      "period": "2026Q2",
+      "sales": 981,
+      "ebit": 46,
+      "net_income": 28,
+      "eps": 0.54,
+      "cfo": 102,
+      "capex": 25,
+      "strict_fcf": 77
+    },
+    {
+      "period": "2026Q3",
+      "sales": 994,
+      "ebit": 100,
+      "net_income": 70,
+      "eps": 1.34,
+      "cfo": 99,
+      "capex": 26,
+      "strict_fcf": 73
+    }
+  ],
+  "ttm_current_rounded_quarter_sum": {
+    "sales": 3919,
+    "ebit": 286.3,
+    "net_income": 196.1,
+    "eps": 3.75,
+    "cfo": 437.4,
+    "capex": 110.9,
+    "strict_fcf": 326.5
+  },
+  "prior_ttm_reported_mixed_perimeter": {
+    "sales": 3257.7999999999997,
+    "ebit": 132.8,
+    "cfo": 353.0,
+    "capex": 79.69999999999999,
+    "comparable": false
+  },
+  "prior_ttm_proforma_revenue_only": {
+    "sales": 3629.1999999999994,
+    "current_growth_pct": 7.985230904882634,
+    "cfo": null,
+    "fcff": null,
+    "note": "Unaudited proforma revenue bridge, not organic growth or full comparable statements"
+  },
+  "claim_bridge": {
+    "regular_close": 128.35,
+    "regular_close_date": "2026-11-06",
+    "scanner_after_hours": 127.36,
+    "shares_as_of": "2026-10-27",
+    "shares_outstanding": 51.07788,
+    "equity_market_value": 6555.845898,
+    "cash_unrestricted": 98,
+    "cash_restricted_excluded": 19,
+    "debt_carrying": 1694,
+    "debt_principal_sum": 1720,
+    "issuer_gross_debt": 1719,
+    "rounding_residual": 1,
+    "net_debt_principal": 1621,
+    "partial_enterprise_value": 8176.845898,
+    "lease_operating_2025": 78.2,
+    "lease_finance_2025": 10.2,
+    "lease_current": null,
+    "derivative_liabilities_2026": 120,
+    "current_claim_valuation_complete": false,
+    "derivative_assets_2026": 6,
+    "derivative_net_liability": 114,
+    "derivative_breakdown": {
+      "termloan_crosscurrency": 90,
+      "netinvestment_crosscurrency": 22,
+      "operating_fx_liabilities": 8,
+      "operating_fx_assets": 6
+    },
+    "convertible_principal": 575,
+    "convertible_fair_value_sept30": 501,
+    "finance_lease_current_status": "not separately disclosed in Q3 note12 or tagged statement; latest detail FY2025 10.2",
+    "operating_lease_current_status": "not separately disclosed in Q3 note12; latest detail FY2025 78.2",
+    "warranty_operating_liability": 19,
+    "performance_guarantees_not_automatic_debt": 117,
+    "bank_guarantees_security_existing_obligations": 10,
+    "restricted_investments": 37,
+    "minority_marel_remaining": 0,
+    "diagnostic_nonoperating_net_claims_excluding_unverified_leases": 1733,
+    "claim_policy": "Principal debt convention. Financing derivatives112 separated from operating FX net2; do not include FX net2 both here and normalized WC. Financing swaps must be reconciled to hedged debt fair-value basis before final approval. Restricted trust investments37 unavailable as excess cash; includes restricted19, never add both. Finance leases latest10.2 sensitivity only; operating rent retained in operating FCFF.",
+    "price_independent_verification": "StockAnalysis read 2026-11-08; Nov6 close16:00EST128.35; afterhours19:59EST127.36; dated extract price_verification.txt"
+  },
+  "cash_bridge_9m26": {
+    "cfo": 320,
+    "capex": 77,
+    "strict_fcf": 243,
+    "asset_sale_proceeds": 9,
+    "company_fcf": 252,
+    "sbc": 26,
+    "strict_fcf_less_sbc_diagnostic": 217,
+    "working_capital_cash_effect": -90,
+    "fcff": null
+  },
+  "fcff_model": {
+    "formula": "EBIT_normalized*(1-tax)+economic_DA-capex_physical_and_software-delta_operating_WC",
+    "wacc": null,
+    "terminal_g": null,
+    "normalized_ebit": null,
+    "sustainable_reinvestment": null,
+    "bear": null,
+    "base": null,
+    "bull": null,
+    "fair_value": null,
+    "reason": "Material operating normalization, current claims and discount-rate calibration incomplete; no unsupported value or entry threshold."
+  },
+  "checks": {
+    "quarter_sales_tie_9m": true,
+    "quarter_ebit_tie_9m": true,
+    "quarter_cfo_tie_9m": true,
+    "strict_vs_company_fcf": true,
+    "carrying_net_debt": true
+  },
+  "rounding_caveat": "2026 statements USD whole millions; 2025 original decimals and recast values differ. Quarter-sum TTM net income 196.1 versus annual plus rounded nine-month formula 196.5; no false exact tie.",
+  "discount_rate_diagnostic": {
+    "rf": 0.0486,
+    "rf_date": "2026-11-06",
+    "erp": 0.0441,
+    "erp_date": "2026-11-01",
+    "erp_source_rf": 0.0529,
+    "erp_date_mismatch_explicit": true,
+    "beta_sector_source": "Damodaran Machinery Jan 2026 cash-corrected unlevered .89; 105 firms",
+    "cases": {
+      "observed_sector": {
+        "beta_unlevered": 0.89,
+        "beta_relevered": 1.0696916398476333,
+        "cost_equity": 0.09577340131728063,
+        "pretax_cost_debt": 0.0544,
+        "tax": 0.23,
+        "weights": {
+          "debt": 0.20773800759425334,
+          "equity": 0.7922619924057467
+        },
+        "wacc": 0.08457935540921199,
+        "approved": false
+      },
+      "higher_operating_risk": {
+        "beta_unlevered": 1.05,
+        "beta_relevered": 1.2619957548764213,
+        "cost_equity": 0.10425401279005017,
+        "pretax_cost_debt": 0.065,
+        "tax": 0.23,
+        "weights": {
+          "debt": 0.20773800759425334,
+          "equity": 0.7922619924057467
+        },
+        "wacc": 0.09299377916943173,
+        "approved": false
+      },
+      "stress": {
+        "beta_unlevered": 1.2,
+        "beta_relevered": 1.44228086271591,
+        "cost_equity": 0.11220458604577163,
+        "pretax_cost_debt": 0.075,
+        "tax": 0.23,
+        "weights": {
+          "debt": 0.20773800759425334,
+          "equity": 0.7922619924057467
+        },
+        "wacc": 0.10089229883625321,
+        "approved": false
+      }
+    },
+    "limits": "Sector not pure-play peer regression; current debt weights not target; ERP Nov1 vs RF Nov6 and source treasury5.29%; no country-risk calibration. Diagnostic only, not approved WACC.",
+    "debt_cost_basis": {
+      "proxy_used": 0.0544,
+      "proxy_type": "Q3 2026 effective accounting rate, not verified marginal refinancing cost",
+      "term_loan_contract": "max(SOFR,0)+1.75%",
+      "term_loan_maturity": "2032-01-02",
+      "revolver_contract": "SOFR/EURIBOR or alternate base plus leverage-linked margin",
+      "convertible_coupon": 0.00375,
+      "convertible_effective_rate": 0.0093,
+      "current_marginal_cost_verified": false
+    }
+  },
+  "legacy_marel_ifrs_eur": {
+    "annual2024": {
+      "cfo": 95.1,
+      "ppe_cash_capex": 20.4,
+      "intangible_cash_capex": 27.5,
+      "lease_principal_cash": 16.6,
+      "cash_after_gross_capex_and_lease": 30.599999999999987
+    },
+    "nine_month2024": {
+      "cfo": 17.4,
+      "ppe_cash_capex": 11.5,
+      "intangible_cash_capex": 20.8,
+      "lease_principal_cash": 11.9
+    },
+    "q42024_difference": {
+      "cfo": 77.69999999999999,
+      "ppe_cash_capex": 8.899999999999999,
+      "intangible_cash_capex": 6.699999999999999,
+      "lease_principal_cash": 4.700000000000001
+    },
+    "prior_ttm_bridge": "Prior TTM must add Q4 Marel EUR flows converted at appropriate period FX to legacy JBT Q4 USD + combined9M2025, then IFRS lease/R&D, financing/tax and purchase accounting reconciliation. Not unavailable raw history: identified source data; comparable FCFF conversion remains incomplete.",
+    "nine_month_source_audit_status": "Author reports web PDF table read; local download403; no retained PDF independently audited. Q4 differences conditional on stated nine-month inputs."
+  },
+  "operating_diagnostic_2027": [
+    {
+      "name": "cautious",
+      "sales_growth": 0.02,
+      "sales": 4054.5,
+      "post_sbc_cash_ebitda_margin": 0.16,
+      "ebitda": 648.72,
+      "economic_da_proxy": 94.86,
+      "ebit": 553.86,
+      "tax": 0.23,
+      "nopat": 426.47220000000004,
+      "gross_physical_capex": 120,
+      "software_cloud_cash_reserve": 40,
+      "delta_operating_wc": 11.924999999999999,
+      "transition_cash_cost_after_tax": 30,
+      "fcff": 319.40720000000005,
+      "valuation_approved": false
+    },
+    {
+      "name": "central_diagnostic",
+      "sales_growth": 0.04,
+      "sales": 4134.0,
+      "post_sbc_cash_ebitda_margin": 0.17,
+      "ebitda": 702.7800000000001,
+      "economic_da_proxy": 96.72,
+      "ebit": 606.0600000000001,
+      "tax": 0.23,
+      "nopat": 466.66620000000006,
+      "gross_physical_capex": 125,
+      "software_cloud_cash_reserve": 35,
+      "delta_operating_wc": 23.849999999999998,
+      "transition_cash_cost_after_tax": 20,
+      "fcff": 359.5362,
+      "valuation_approved": false
+    },
+    {
+      "name": "favorable",
+      "sales_growth": 0.06,
+      "sales": 4213.5,
+      "post_sbc_cash_ebitda_margin": 0.18,
+      "ebitda": 758.43,
+      "economic_da_proxy": 98.58,
+      "ebit": 659.8499999999999,
+      "tax": 0.23,
+      "nopat": 508.08449999999993,
+      "gross_physical_capex": 135,
+      "software_cloud_cash_reserve": 35,
+      "delta_operating_wc": 35.775,
+      "transition_cash_cost_after_tax": 10,
+      "fcff": 390.8895,
+      "valuation_approved": false
+    }
+  ],
+  "operating_diagnostic_limits": "Not guidance or approved forecasts. Sales baseline2026 guide midpoint3975. Margin16/17/18 analyst sensitivities anchored latest guide17.25-17.5 adjusted and Q318; SBC retained. D&A93=guide261-168 acquisition component proxy, not maintenance estimate. Physical capex120-135 above current100-110 guide; software/cloud35-40 reserve conservative may overlap already-expensed R&D, not additive actual estimate. WC15% incremental sales and transition aftertax10-30 assumptions. No terminal value or fair price: unresolved classification and long-run reinvestment.",
+  "source_reconciliation_open_intervals": [
+    "Q4 2024 EUR/USD period translation and IFRS lease/R&D to USGAAP normalization for paired TTM",
+    "September30 2026 lessee lease liabilities not separately quantified in current filing; use dated FY25 only",
+    "Sustainable physical versus software/cloud investment and economic depreciation",
+    "Current post-Oct27 share movements unknown; no inference from authorization",
+    "Operating FX net2 vs financing derivative112 and debt carrying/fair-value convention",
+    "Sector-beta/ERP-date and country-risk calibration before approved discount rate"
+  ]
+}

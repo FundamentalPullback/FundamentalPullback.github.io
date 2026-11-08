@@ -1,0 +1,96 @@
+{
+  "version": 3,
+  "units": "USD million exceptEPS",
+  "Q3_GAAP_to_adjusted": {
+    "net_income": 379,
+    "preferred_dividends": 15,
+    "common_income": 364,
+    "remove_investment_disposal_gain": -4,
+    "add_Visa_derivative_valuation": 3,
+    "add_security_loss": 1,
+    "add_merger_cost": 56,
+    "tax_effect": -11,
+    "adjusted_common": 409,
+    "check": 409
+  },
+  "nine_months": {
+    "common": 812,
+    "remove_disposal": -4,
+    "Visa": 5,
+    "security_losses": 27,
+    "merger": 382,
+    "tax": -72,
+    "sum_rounded": 1150
+  },
+  "after_nonrecurring_lease": {
+    "gain_pretax": 23,
+    "tax_assumption": 0.24,
+    "adjusted_common_less_lease": 391.52,
+    "eps": 2.5805771233472625
+  },
+  "PAA": {
+    "remaining_loan_mark_q2": 666,
+    "remaining_loan_mark_q3": 640,
+    "q3_loan_mark_change": 26,
+    "unearned_fee_balance_change": -7,
+    "warning": "Balance marks and fee changes are not full net P&L purchase-accounting bridge. Do not equate26 or19 to certified net NII PAA.",
+    "gross26_haircut_sensitivity_only": {
+      "common_income": 371.76,
+      "eps": 2.450335490844857
+    },
+    "intangibles_amortization_q3": 46,
+    "intangibles_amortization_9m": 140,
+    "treatment": "Kept as expense in full-book ROE framework; do not add back then also use unchanged full book.",
+    "measurement_period": "Purchase accounting still provisional;9m goodwill refinement+11 primarily deferred taxes, borrowings and ORE",
+    "historical_Q1_estimate": "Year1 interest accretion~120 less eliminated deferred loan fees~30; estimate, not actual3Q/9m. Cannot allocate quarterly mechanically.",
+    "remaining_loan_mark_q2_basis": "Derived as Q3remaining640 + quarterly mark change26; not a directly observed value in the Q3slide."
+  },
+  "SBC": {
+    "cashflow_9m": 130,
+    "restricted_RSU_PSU_equity_9m": 126,
+    "single_trigger_Q1_historical_disclosed": 69.5,
+    "mechanical_130_less_69_5": 60.5,
+    "warning": "60.5 is not certified recurrent SBC: recognition scope/classification differ. Do not double-add equity acceleration already in merger adjustments."
+  },
+  "preferred": {
+    "carrying_value": 781,
+    "quarterly_dividends": 15,
+    "nine_months_dividends": 45,
+    "legacy_SNV_D_maps_to_new_A": "1:1",
+    "legacy_SNV_E_maps_to_new_B": "1:1",
+    "common_bridge": "Deduct preferred carrying781 once from equity14610; common earnings already net dividends. No redemption model assumed.",
+    "legacy_PNFP_mapping_source_conflict": {
+      "K25": "Legacy Pinnacle Series B6.75% converts1:1 to NewPinnacle Series C6.75%.",
+      "Q26_note2": "Calls predecessor LegacyPinnacle Series C6.75%, converts1:1 to Newco Series C6.75%.",
+      "resolution": "Primary predecessor-series naming conflict unresolved. No claim that legacySeriesA maps toC. CurrentSeriesC6.75% is confirmed; historical legal label must be reconciled against merger/certificate documents before reliance on security-specific claims."
+    }
+  },
+  "funding_and_capital": {
+    "management_CET1_objective": 0.1025,
+    "repurchases2026_expected": 0,
+    "core_deposits_ex_brokered": 93634,
+    "brokered_derived": 9402,
+    "insured_share": 0.49,
+    "uninsured_uncollateralized_share": 0.41,
+    "collateralized_share": 0.1,
+    "liquidity_sources_total": 41600,
+    "note": "Not all borrowing lines or unencumbered securities are immediately cash; avoid double counting pledged assets or assuming unrestricted distribution."
+  },
+  "credit": {
+    "criticized_classified_pct": 0.021,
+    "CRE_NPL_ratio": 0.0052,
+    "CRE_NCO": 0.0012,
+    "CRE_NPL_top3_concentration": 0.76,
+    "top3_types": [
+      "SeniorHousing",
+      "Office",
+      "Multifamily"
+    ]
+  },
+  "remaining_gap": [
+    "Net actual purchase-accounting P&L bridge including eliminated fees and securities/borrowings marks not separately reconciled",
+    "Forward RWA/OCI/regulatory deductions and authorized bank-to-holding remittances under stress",
+    "BHG sustainable cash distribution versus earnings and recurrentSBC/merger costs through conversion",
+    "Same-perimeter actual pairedTTM unavailable; proforma excludes integration costs and future synergies"
+  ]
+}
