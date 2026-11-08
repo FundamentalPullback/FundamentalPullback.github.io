@@ -1,0 +1,151 @@
+{
+  "ticker": "BTI",
+  "as_of": "2026-11-07",
+  "verdict": "Not ready",
+  "permitted_use": "Explanatory diagnostic only; no portfolio action, Stage 3.5 approval, trading",
+  "canonical_value": null,
+  "completion": false,
+  "scope": "Independent local archive, Python formula and report reconciliation. No repeat live-market verification. Archived facts are not assurance of source authenticity beyond the supplied package.",
+  "issues": [
+    {
+      "id": "BTI-1",
+      "severity": "high",
+      "finding_type": "Unsupported assumption",
+      "location": "cost_of_capital",
+      "finding": "Beta 0.09 provider regression/benchmark, geographic exposure, hybrid weighting/tax and contemporaneous marginal GBP debt cost unresolved. 6.007% is a November 2 model mark, not a trade.",
+      "recommended_fix": "Replicate relevant regression and exposure calibration; source contemporary funding cost.",
+      "owner": "BTI research",
+      "status": "open"
+    },
+    {
+      "id": "BTI-2",
+      "severity": "high",
+      "finding_type": "Not comparable without bridge",
+      "location": "operating forecast",
+      "finding": "Proxy margins/D&A/capex/WC are not a historical normalized cash bridge; lease additions/renewals not tied.",
+      "recommended_fix": "Reconcile recurring EBIT, cash tax, reinvestment and lease convention.",
+      "owner": "BTI research",
+      "status": "open"
+    },
+    {
+      "id": "BTI-3",
+      "severity": "high",
+      "finding_type": "Missing forecast refresh",
+      "location": "equity bridge",
+      "finding": "ITC value is December 2025; claims and diluted weighted-average shares are June 2026 proxies, not November spot claims/shares.",
+      "recommended_fix": "Roll forward assets, claims and diluted shares to valuation date.",
+      "owner": "BTI research",
+      "status": "open"
+    },
+    {
+      "id": "BTI-4",
+      "severity": "medium",
+      "finding_type": "Not comparable without bridge",
+      "location": "Canada bridge",
+      "finding": "Restricted Canada cash excluded while full future liability deducted; same-obligation funding offset not established.",
+      "recommended_fix": "Map restricted cash to settlement liability before deciding offset; do not presume it is distributable.",
+      "owner": "BTI research",
+      "status": "open"
+    },
+    {
+      "id": "BTI-5",
+      "severity": "medium",
+      "finding_type": "Missing decision output",
+      "location": "other associates",
+      "finding": "263 fair-value investments does not include other equity-accounted associates. Other associates omitted.",
+      "recommended_fix": "Value other associates separately with current evidence and avoid adding their dividends to operating FCFF.",
+      "owner": "BTI research",
+      "status": "open"
+    },
+    {
+      "id": "BTI-6",
+      "severity": "high",
+      "finding_type": "Unsupported assumption",
+      "location": "claims",
+      "finding": "Pension, minority and hybrid book claims not reconciled to economic value and pension operating cash treatment.",
+      "recommended_fix": "Tie economic claims and operating cash costs to prevent duplication.",
+      "owner": "BTI research",
+      "status": "open"
+    },
+    {
+      "id": "BTI-7",
+      "severity": "medium",
+      "finding_type": "Missing decision output",
+      "location": "historical valuation",
+      "finding": "Matched historical multiple evidence absent.",
+      "recommended_fix": "Use prices and financial information available at each historical date.",
+      "owner": "BTI research",
+      "status": "open"
+    },
+    {
+      "id": "BTI-8",
+      "severity": "medium",
+      "finding_type": "Formula/control defect",
+      "location": "output controls",
+      "finding": "Canonical-null and completion-false flags were not explicit in model outputs.",
+      "recommended_fix": "Remediated in model.py and status.json; economic outputs unchanged.",
+      "owner": "BTI research",
+      "status": "remediated"
+    }
+  ],
+  "source_tieout": [
+    {
+      "source": "H12026",
+      "location": "Group Balance Sheet and net-debt reconciliation; Canada provision note; cash restrictions page 12",
+      "items": {
+        "borrowings_including_leases": 35063,
+        "debt_derivatives": 25,
+        "cash": 2518,
+        "canada_restricted_cash": 386,
+        "other_restricted_cash": 73,
+        "hybrids": 1893,
+        "pension_liability": 787,
+        "minority": 216,
+        "canada_noncurrent": 2752,
+        "canada_current_payable": 83,
+        "diluted_weighted_average_shares": 2176
+      },
+      "tie_status": "ties; stale for November equity bridge"
+    },
+    {
+      "source": "AR2025",
+      "location": "Investments in associates and joint ventures",
+      "items": {
+        "itc_market_value": 9558,
+        "itc_ownership_pct": 22.91,
+        "other_listed_associates_market_value": 184,
+        "unlisted_associates_book": 46
+      },
+      "tie_status": "ties; stale"
+    },
+    {
+      "source": "H12026/H12025/AR2025",
+      "location": "cash flow statements, revenue statements and report TTM tables",
+      "tie_status": "TTM arithmetic and H1 cash-flow classification checked; no quarterly extrapolation"
+    },
+    {
+      "source": "market sources in sources.json",
+      "tie_status": "not independently re-fetched; dates/type/limitations preserved"
+    }
+  ],
+  "mechanical_checks": {
+    "canonical_value_null": true,
+    "completion_false": true,
+    "one_wacc_all_operating_cases": true,
+    "positive_capex": true,
+    "all_ten_years": true,
+    "fcff_identity": true,
+    "g_below_wacc": true,
+    "terminal_reinvestment": true
+  },
+  "diagnostic_values_usd": {
+    "adverso": 66.73359341809262,
+    "central": 120.92819562891661,
+    "favorable": 174.87979047460786
+  },
+  "terminal_ev_shares": {
+    "adverso": 0.599934122718121,
+    "central": 0.6901184778837779,
+    "favorable": 0.735872969877431
+  }
+}

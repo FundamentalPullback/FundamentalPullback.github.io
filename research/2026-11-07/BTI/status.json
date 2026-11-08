@@ -1,0 +1,40 @@
+{
+  "ticker": "BTI",
+  "asOf": "2026-11-07",
+  "opportunity": 75,
+  "scannerDate": "2026-11-06",
+  "researchStatus": "partial",
+  "valuationStatus": "screen-grade",
+  "decisionStatus": "not-decision-ready",
+  "fundamentalApproval": false,
+  "stage35Approved": false,
+  "trades": false,
+  "completionMeaning": "Three-year and semiannual/TTM evidence, market price/ADR/FX and diagnostic 10-year FCFF complete; material valuation bridge/normalization and matched-history remain unresolved",
+  "blockers": [
+    "ITC current value and post-June balance/share roll-forward",
+    "economic claims valuations and additional contingencies",
+    "operating FCFF normalization including leases and reinvestment",
+    "exact contemporary marginal debt yield, beta regression benchmark and geographic exposure",
+    "matched historical valuation multiples",
+    "Canada restricted-cash funding offset against full settlement obligation",
+    "other equity-accounted associates omitted; fair-value investments are a separate line"
+  ],
+  "artifacts": [
+    "report.md",
+    "model.py",
+    "results.json",
+    "sources.json",
+    "run_log.json",
+    "audit.json"
+  ],
+  "calibration": "Observed published beta 0.09; no arbitrary geographic overlay; dated indicative GBP debt yield6.007%; WACC5.2715%. Low beta causes material valuation sensitivity. Partial retained.",
+  "canonical_value": null,
+  "completion": false,
+  "auditStatus": "not-ready",
+  "auditPermittedUse": "Explanatory diagnostics only; not portfolio action",
+  "profile_kind": "partial",
+  "stage3Complete": false,
+  "canonicalValuationApproved": false,
+  "entryApproved": false,
+  "researchCompleted": false
+}

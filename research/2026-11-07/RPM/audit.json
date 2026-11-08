@@ -1,0 +1,82 @@
+{
+  "ticker": "RPM",
+  "audit_date": "2026-11-07",
+  "verdict": "Ready with caveats for conditional research only",
+  "portfolio_action_verdict": "Not ready",
+  "independent_audit_complete": true,
+  "stage3Complete": false,
+  "stage35Complete": false,
+  "entryApproved": false,
+  "approvedQuantity": 0,
+  "checks": {
+    "ten_years": true,
+    "fcff_identity": true,
+    "terminal_funding": true,
+    "quarter_tie": true,
+    "terminal_fcff_identity": true,
+    "capex_floor": true,
+    "terminal_capex_floor": true,
+    "scenario_order": true,
+    "inverse_tie": true
+  },
+  "wacc": 0.09009101430683893,
+  "values": {
+    "adverso": 48.042982729550786,
+    "central": 62.38920706354805,
+    "favorable": 80.12023717591009
+  },
+  "issues": [
+    {
+      "id": "RPM-A1",
+      "severity": "medium",
+      "type": "Source contradiction",
+      "location": "report.md captive assets",
+      "finding": "210.549m includes deferred-compensation assets and captive investments.",
+      "resolution": "Corrected label; unchanged conservative exclusion from equity bridge.",
+      "status": "fixed"
+    },
+    {
+      "id": "RPM-A2",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "model.py terminal",
+      "finding": "Terminal reinvestment was calculated but D&A/capex/dNWC components and identity checks were not explicit.",
+      "resolution": "Added coherent year-11 allocation and assertions; valuation unchanged.",
+      "status": "fixed"
+    },
+    {
+      "id": "RPM-A3",
+      "severity": "high",
+      "type": "Not comparable without bridge",
+      "location": "normalization and capital bridge",
+      "finding": "Nominal debt, full dilution, software allocation, investment availability and comparable peers remain incomplete; disposal cash-flow net gain lacks complete operating/nonoperating item mapping.",
+      "resolution": "Retain partial research and no portfolio action; close detailed bridges before upgrade.",
+      "status": "open"
+    },
+    {
+      "id": "RPM-A4",
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "model.py forecast",
+      "finding": "Margins, growth, incremental ROIC, tax, operating cash floor and investment ratios are analyst judgments. BBB yield is a proxy; capital weights mix dates.",
+      "resolution": "Explicitly disclosed, retain sensitivity and future Investor Day review.",
+      "status": "disclosed"
+    }
+  ],
+  "source_tieout": [
+    "FY24-26 annual income/cash flow primary rows",
+    "Four-quarter and prior/current TTM arithmetic",
+    "FY24 balance FY2025 annual statements; FY25/26 FY2026 annual statements; latest Q1 statements",
+    "Pension deficits 0.453+24.717=25.170 and postretirement .944+25.125=26.069",
+    "Debt carrying 407.497+1999.028=2406.525, market 2279.883",
+    "Gains 14.418+4.945 earnout and 6.093+10.505 disposal; SBC retained in operating forecast",
+    "Live independent price/beta/ERP/BBB/history check saved in dated market verification",
+    "Investor Day Nov 9 in official earnings release remains future"
+  ],
+  "limitations": [
+    "Audit is research QA, not financial-statement audit or investment approval.",
+    "Full item-by-item disposal mapping, nominal debt and dilution not closed.",
+    "No homogeneous normalized peers; no portfolio/technical entry analysis."
+  ],
+  "changes_to_valuation": false
+}

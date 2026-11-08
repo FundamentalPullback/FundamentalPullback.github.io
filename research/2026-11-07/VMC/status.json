@@ -1,0 +1,103 @@
+{
+  "ticker": "VMC",
+  "as_of": "2026-11-07",
+  "opportunity": 80,
+  "scanner_date": "2026-11-06",
+  "status": "partial_perimeter_and_reinvestment_validation_pending",
+  "valuation_status": "screen-grade",
+  "conclusion": "No demuestra margen de seguridad al cierre 282.72; no entrada propuesta",
+  "price": 282.72,
+  "price_session": "2026-11-06 regular session close 16:00 EST",
+  "material_gaps": [],
+  "bounded_proxies": [
+    "provider beta",
+    "curve-mark issuer debt cost",
+    "residual concrete perimeter",
+    "year-end pension measure",
+    "book-value NCI",
+    "reserve replacement economics"
+  ],
+  "audit_pending": false,
+  "trade_allowed": false,
+  "files": [
+    "report.md",
+    "model.py",
+    "results.json",
+    "forecast_adverso.csv",
+    "forecast_central.csv",
+    "forecast_favorable.csv",
+    "audit.json"
+  ],
+  "sources": [
+    {
+      "title": "Vulcan 2025 Form10-K",
+      "date": "2026-02-19",
+      "url": "https://www.sec.gov/Archives/edgar/data/1396009/000162828026009546/vmc-20251231.htm"
+    },
+    {
+      "title": "Vulcan Q1 Form10-Q",
+      "date": "2026-04-29",
+      "url": "https://www.sec.gov/Archives/edgar/data/1396009/000162828026028318/vmc-20260331.htm"
+    },
+    {
+      "title": "Vulcan Q2 Form10-Q",
+      "date": "2026-07-29",
+      "url": "https://www.sec.gov/Archives/edgar/data/1396009/000162828026050486/vmc-20260630.htm"
+    },
+    {
+      "title": "Vulcan Q3 Form10-Q",
+      "date": "2026-10-29",
+      "url": "https://www.sec.gov/Archives/edgar/data/1396009/000162828026068102/vmc-20260930.htm"
+    },
+    {
+      "title": "Vulcan Q3 results",
+      "date": "2026-10-29",
+      "url": "https://www.sec.gov/Archives/edgar/data/1396009/000114036126041095/ef20084525_ex99-1.htm"
+    },
+    {
+      "title": "Treasury daily curve",
+      "date": "2026-11-06",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=202611"
+    },
+    {
+      "title": "Damodaran ERP",
+      "date": "2026-11-01",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm"
+    },
+    {
+      "title": "VMC Yahoo beta/quote",
+      "date": "2026-11-07 retrieval",
+      "url": "https://finance.yahoo.com/quote/VMC/"
+    },
+    {
+      "title": "Aephel VMC2034 curve mark",
+      "date": "2026-11-02",
+      "url": "https://www.aephel.com/research/bonds/US929160BC27"
+    },
+    {
+      "title": "VMC StockAnalysis history",
+      "date": "2026-11-06",
+      "url": "https://stockanalysis.com/stocks/vmc/history/"
+    },
+    {
+      "title": "VMC StockAnalysis annual ratios",
+      "date": "2026-11-07 retrieval",
+      "url": "https://stockanalysis.com/stocks/vmc/financials/ratios/"
+    }
+  ],
+  "audit_verdict": "Ready with caveats",
+  "audit_file": "audit.json",
+  "decision_grade_limitations": [
+    "Economic reserve replacement and acquisition-equivalent growth reinvestment use aggregate turnover, not quarry-level spending schedules.",
+    "Concrete residual uses seasonal Q3 times four. USVI aggregates disposal and 2026 acquisitions are not separately pro forma annualized; current aggregate TTM is not a clean continuing-organic perimeter.",
+    "Beta is vendor-provided; debt yield is a dated curve estimate, not executable marginal funding.",
+    "Year-end pension and book minority interests are proxies."
+  ],
+  "researchCompleted": false,
+  "editorial_review": "Material current disposal/acquisition perimeter is not fully pro forma bridged and immateriality is unquantified. Preserve exploratory research, not completed Stage 3 valuation.",
+  "canonicalValuationApproved": false,
+  "profile_kind": "partial",
+  "stage3Complete": false,
+  "canonical_value": null,
+  "entryApproved": false
+}

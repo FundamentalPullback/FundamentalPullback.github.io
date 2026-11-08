@@ -1,0 +1,62 @@
+{
+  "ticker": "OLLI",
+  "asof": "2026-11-07",
+  "research_status": "partial_valuation_calibration_pending",
+  "stage3Complete": false,
+  "auditPassed": false,
+  "entryApproved": false,
+  "stage35Complete": false,
+  "decision": "Pendiente de calibrar valoración; escenarios exploratorios, sin entrada",
+  "regularClose": 90.4,
+  "regularCloseDate": "2026-11-06",
+  "regularSessionEnd": "2026-11-06T16:00:00-05:00",
+  "priceType": "regular-session daily close, not timestamped trade",
+  "priceConflict": {
+    "alternate": 90.42,
+    "source": "https://stockanalysis.com/stocks/olli/history/",
+    "effect": "0.022%, immaterial to conclusion",
+    "currentRecheck": 90.4,
+    "currentRecheckDate": "2026-11-07",
+    "status": "Earlier90.42 capture retained; current source corroborates90.40"
+  },
+  "scannerLast": 90.4,
+  "opportunity": 65,
+  "qp": 90,
+  "lastPublishedResults": "2026-09-02 Q2 FY2026 ended 2026-08-01",
+  "nextEarningsConfirmed": false,
+  "nextEarningsEstimate": "2026-12-08",
+  "sourceCalendar": "https://investors.ollies.com/events-presentations",
+  "materialResearchBlockers": [
+    "Beta 1.10 and 0.489 percentage-point premium lack empirical or bottom-up calibration; source beta0.35 can reverse the valuation conclusion. Validate a consistent beta/hurdle methodology before Stage3 completion."
+  ],
+  "requiredBeforeEntry": [
+    "Resolve valuation calibration and repeat decision audit",
+    "Latest balance/share buybacks update",
+    "Official earnings date and refreshed price",
+    "Stage3.5 technical/risk validation"
+  ],
+  "boundedProxies": [
+    "Maintenance versus growth capex",
+    "Post-August cash and share changes",
+    "Cash reserve",
+    "Incremental ROIC and beta"
+  ],
+  "artifacts": [
+    "report.md",
+    "model.py",
+    "results.json",
+    "sources.json",
+    "forecast_adverso.csv",
+    "forecast_central.csv",
+    "forecast_favorable.csv",
+    "audit.json",
+    "audit_checks.py",
+    "audit_checks.json"
+  ],
+  "noTrades": true,
+  "auditMechanicalPassed": true,
+  "auditDecisionReadiness": "Not ready for portfolio action",
+  "canonicalValuationApproved": false,
+  "profile_kind": "partial",
+  "distribution_scope": "Partial research only; exploratory scenarios, no canonical valuation or entry approval."
+}

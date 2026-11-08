@@ -1,0 +1,97 @@
+{
+  "asOf": "2026-11-07",
+  "verdict": "Not ready for portfolio action",
+  "permitted_use": "Partial research simulation only",
+  "valuation_approved": false,
+  "stage3_certified": false,
+  "entry_authorized": false,
+  "mechanical_checks": {
+    "bear": {
+      "price": 132.59508779918636,
+      "wacc": 0.0748,
+      "terminal_weight": 0.5729415163974988,
+      "identity_pass": true
+    },
+    "base": {
+      "price": 199.19978632851218,
+      "wacc": 0.0748,
+      "terminal_weight": 0.6054706098071297,
+      "identity_pass": true
+    },
+    "bull": {
+      "price": 271.7529835574692,
+      "wacc": 0.0748,
+      "terminal_weight": 0.6420680778911017,
+      "identity_pass": true
+    }
+  },
+  "calculated_wacc": 0.07476567307183803,
+  "primary_tieout": {
+    "annual": "annual report printed pp38-41: 2023-2025 income and cash flows checked",
+    "q1": "Official May20 release: sales23078 EBIT2554 NI1628 CFO3350 DA644 capex521 SBC65. Local Q1 source download is HTML, not valid PDF; independent online verification used.",
+    "q3": "Official Nov19 release: YTD CFO8297 DA1557 capex1610 SBC177 verified; quarter by subtraction",
+    "q2_ttm": "Q2 filing H1 CFO7009 vs7610, DA1292 vs1022, capex1063 vs1013, SBC132 vs117; FY-H1prior+H1current produces TTM9263/2464/2263/262",
+    "acquisitions": "annual report note2 pp48-49: ADG June2 1300, FBM Oct9 8778; no proforma earnings/revenue provided. Q2note1 one-month consolidation lag. Other H1 sales3695 EBIT-28",
+    "tariff": "Q2 filing note1: 80 recognized in earnings; timing/amount future collections uncertain",
+    "bond": "TradingView FINRA LOW6184394 CUSIP548661EX1 ISINUS548661EX13 coupon4.85 maturity2035-10-15; yield5.65; no trade timestamp",
+    "price_beta": "StockAnalysis statistics: Nov6 regular close224.55, 5Ybeta0.81",
+    "erp": "Damodaran Nov1 adjusted-payout ERP4.41%, source riskfree5.29%",
+    "rf": "Treasury Nov6 10Y4.86% checked"
+  },
+  "remediated": [
+    {
+      "severity": "medium",
+      "finding": "Cash control assumed tariff income was collected, risking duplicate subtraction via working capital",
+      "fix": "Control now7892 before unknown tariff cash adjustment; 7832 conditional sensitivity only. EBIT80 removal retained."
+    },
+    {
+      "severity": "low",
+      "finding": "TTM interest1528 vs annual/H1 calculation1529",
+      "fix": "Corrected report; forecast unaffected."
+    },
+    {
+      "severity": "low",
+      "finding": "Share sensitivity understated",
+      "fix": "560-564 sensitivity corrected to approximately +/-0.71."
+    }
+  ],
+  "open": [
+    {
+      "severity": "high",
+      "type": "Unsupported assumption",
+      "finding": "FBM/ADG standalone cash conversion and future Other margin recovery remain unvalidated; no full proforma cash statements.",
+      "fix": "Obtain acquired cash/margin evidence and reconcile reinvestment before valuation approval."
+    },
+    {
+      "severity": "medium",
+      "type": "Not comparable without bridge",
+      "finding": "Mixed ERP/RF dates, timestamp-free bond proxy and book debt weights; July bond FV differs materially from carrying value.",
+      "fix": "Refresh comparable dated inputs; reconcile debt FV bridge and WACC together."
+    },
+    {
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "finding": "Terminal ROIC, long-run margins, reserve cash1000, 562 shares and total reinvestment remain analyst assumptions.",
+      "fix": "Retain sensitivities and validate economic support."
+    },
+    {
+      "severity": "medium",
+      "type": "Missing forecast refresh",
+      "finding": "Balance July only; homogeneous historical/peer crosschecks incomplete.",
+      "fix": "Refresh after Q3 and complete comparable valuation checks."
+    }
+  ],
+  "double_counting_review": {
+    "operating_leases": "Rent in EBIT, liabilities not deducted: consistent",
+    "finance_leases": "Included debt once; new asset allowance30 explicit",
+    "SBC": "Retained expense, not added to FCFF; share cushion current claims not annual dilution",
+    "acquisition_amortization": "GAAP margin plus DA once; no adjusted EBIT duplicate",
+    "terminal": "g/ROIC reinvestment applied, year10 fully converges",
+    "acquisition_price": "Past consideration not deducted again from forecast; included balance debt/cash perimeter"
+  },
+  "scope_limits": [
+    "Lightweight model audit, not financial-statement assurance.",
+    "No trading approval.",
+    "Old uncalibrated model is excluded from verdict."
+  ]
+}

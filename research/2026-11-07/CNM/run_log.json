@@ -1,0 +1,20 @@
+{
+  "artifact": "deterministic_support_calculation",
+  "status": "partial_pending_material_valuation_bridge",
+  "checks": {
+    "ten_years": true,
+    "fcff_identity": true,
+    "terminal_reinvestment": true,
+    "ordered": true,
+    "positive_capex": true
+  },
+  "hard_failures": [
+    "TRA future-benefit amount versus already-realized benefits is unresolved; original paired-TRA values are not audited fair values."
+  ],
+  "warnings": [
+    "Analyst scenarios, not forecasts guaranteed by management.",
+    "Debt cost uses July issuance rather than live bond yield.",
+    "TRA timing and software bounds disclosed.",
+    "Independent audit completed with material TRA blocker; no completed valuation or publication approval."
+  ]
+}

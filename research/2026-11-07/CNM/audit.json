@@ -1,0 +1,80 @@
+{
+  "ticker": "CNM",
+  "asof": "2026-11-07",
+  "verdict": "Not ready for completed valuation or portfolio action",
+  "research_status": "partial_pending_material_valuation_bridge",
+  "permitted_use": "Historical/operating research and explicitly provisional diagnostics only. No completed Stage3, entry approval, trading.",
+  "checks": {
+    "three_fiscal_years_primary_statements": true,
+    "four_quarters_and_ttm_arithmetic": true,
+    "ebit_growth_1_5_vs_eps_growth_8_5": true,
+    "fcf_628_to_fcff_650_242": true,
+    "operating_da_184_not_cfs_193": true,
+    "sbc_14_remains_expense": true,
+    "deferred_tax_34_and_nwc_36_bridge": true,
+    "class_b_included_and_nci_not_double_subtracted": true,
+    "gross_debt_2478_and_cash_adjustments": true,
+    "leases_not_double_subtracted": true,
+    "ten_year_fcff_and_terminal_components": true,
+    "wacc_inputs_independently_rechecked": true,
+    "scenario_outputs_reproduced": true,
+    "inverse_reproduced_but_conditional_on_tra": true,
+    "historical_pe_periods_comparable_with_lookahead_caveat": true,
+    "tra_future_benefits_vs_past_realization_reconciled": false
+  },
+  "issues": [
+    {
+      "id": "CNM-TRA-01",
+      "severity": "material",
+      "finding_type": "Unsupported assumption",
+      "location": "model.py tra_net; report TRA; results equity bridge",
+      "finding": "685/85% was treated as future tax savings despite the disclosed two-fiscal-year lag between deductions and TRA payments. Some benefits are already realized. Their amount and future incremental deductions have not been reconciled.",
+      "source": "10-Q Note 7 and MD&A Liquidity",
+      "impact": "Original central42.71 remains provisional. No-future-benefit schedule illustration40.35; full nominal obligation illustration38.77. These are diagnostics, not replacement fair values.",
+      "remediation": "Obtain realization-versus-payment roll-forward, tax-basis deduction schedule and incremental tax cash benefits; credit only unrecognized future benefits; rerun and re-audit.",
+      "status": "open"
+    },
+    {
+      "id": "CNM-CTRL-02",
+      "severity": "material",
+      "finding_type": "Formula/control defect",
+      "location": "status.json and run_log.json",
+      "finding": "Mechanically passing formulas had incorrectly supported research-complete readiness despite an unresolved equity-bridge assumption.",
+      "remediation": "Status and reproducible run log now mark partial; audited_fair_value is null and portfolio_action_ready false.",
+      "status": "corrected"
+    },
+    {
+      "id": "CNM-PROXY-03",
+      "severity": "minor",
+      "finding_type": "Unsupported assumption",
+      "location": "dilution, software, Kd and tax partnership bridge",
+      "finding": "Current option dilution is weighted-average residual proxy; software cash classification not separately proven; debt coupon is not live yield; tax partnership asset43/liability55 are carrying-value proxies.",
+      "impact": "Explicit assumptions, not independently priced assets. Extra software16/year for10years reduces value0.56/share.",
+      "status": "disclosed_caveat"
+    },
+    {
+      "id": "CNM-CTRL-04",
+      "severity": "minor",
+      "finding_type": "Formula/control defect",
+      "location": "extract.py",
+      "finding": "Dormant extractor wrote empty strings to three release archive filenames before parsing.",
+      "remediation": "Removed empty-file writes; extractor now only parses existing archives. Existing annual/current-quarter archives were intact.",
+      "status": "corrected"
+    }
+  ],
+  "formula_recalculation": "python model.py; all mechanical assertions pass; material readiness control remains failed",
+  "corrected_artifacts": [
+    "model.py",
+    "results.json",
+    "run_log.json",
+    "report.md",
+    "status.json",
+    "sources.json",
+    "manifest.json",
+    "extract.py"
+  ],
+  "source_posture": "Archived primary 10-K, current 10-Q, presentation reviewed; previous Q2/Q3 releases, close, beta, ERP/Rf and historical prices independently read through web tools on 2026-11-07.",
+  "next_step": "Resolve CNM-TRA-01, then rerun and independently re-audit.",
+  "trades": false,
+  "stage35_approved": false
+}

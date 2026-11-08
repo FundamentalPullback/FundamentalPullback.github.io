@@ -1,0 +1,65 @@
+{
+  "ticker": "VMC",
+  "audit_date": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "permitted_use": "Partial exploratory research only; latest editorial status requires perimeter and reinvestment validation. No canonical valuation or entry approval.",
+  "independent_audit": "completed",
+  "method": "Independent source tie-out of archived SEC documents, archived market-tool evidence, formula inspection and deterministic recalculation. Not a new live source pull.",
+  "checks": {
+    "ten_years": true,
+    "five_explicit_five_transition": true,
+    "fcff_identity": true,
+    "terminal_g_less_wacc": true,
+    "terminal_reinvestment_not_free": true,
+    "wacc_recalculated": true,
+    "scenario_values_reproduced": true,
+    "csv_ties": true
+  },
+  "material_gaps_for_conditional_screen": [],
+  "decision_grade_limitations": [
+    "Economic reserve replacement and acquisition-equivalent growth reinvestment use aggregate turnover, not quarry-level spending schedules.",
+    "Concrete residual uses seasonal Q3 times four. USVI aggregates disposal and 2026 acquisitions are not separately pro forma annualized; current aggregate TTM is not a clean continuing-organic perimeter.",
+    "Beta is vendor-provided; debt yield is a dated curve estimate, not executable marginal funding.",
+    "Year-end pension and book minority interests are proxies."
+  ],
+  "findings": [
+    {
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "model.py checks",
+      "finding": "Previously hardcoded true flags replaced by live identity and stage tests. Terminal capex, DDA and working-capital components now explicitly reconciled.",
+      "status": "fixed"
+    },
+    {
+      "severity": "low",
+      "type": "Source contradiction",
+      "location": "report historical TTM income and cash bridge",
+      "finding": "Derived rounded statements produce TTM net income1103.2 and net interest212.1; official TTM disclosure is1103.1 and212.2. Rounding only; no DCF impact.",
+      "status": "disclosed"
+    },
+    {
+      "severity": "medium",
+      "type": "Not comparable without bridge",
+      "location": "BASE aggregate TTM and concrete residual",
+      "finding": "USVI aggregate removal and acquired-operation full-year effects are not quantified separately. This limits clean organic forecast interpretation; not claimed immaterial numerically.",
+      "status": "conditional-screen caveat; decision-grade upgrade requires perimeter schedule"
+    },
+    {
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "turnover and terminal ROIC",
+      "finding": "Reinvestment is an explicitly stressed economic assumption, not management guidance; nominal pricing also triggers capital. Terminal components are accounting decomposition of ROIC assumption, not independently sourced physical estimates.",
+      "status": "retained and prominently caveated"
+    }
+  ],
+  "downstream_dda": "Verified fixed: only aggregate DDA is deducted from aggregate cash gross profit. Asphalt/concrete margins are after DDA, corporate DDA remains in SAG.",
+  "aro": "496.1 deducted once;18.7 accretion excluded; new restoration allowance is incremental, not settlement of existing liability.",
+  "bridge": "Debt4763.7 incl finance leases; operating leases not deducted because rents retained; restricted cash excluded; no excess cash; discounted receivable only; pension71.8 and NCI24.6 once.",
+  "scenario_prices": {
+    "adverso": 69.95854873918766,
+    "central": 122.0408315495573,
+    "favorable": 196.7460782548888
+  },
+  "trade_allowed": false,
+  "original_audit_scope": "Conditional screen-grade numerical and source review; completion of this review is not completion of Stage 3."
+}

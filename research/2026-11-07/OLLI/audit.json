@@ -1,0 +1,117 @@
+{
+  "ticker": "OLLI",
+  "asof": "2026-11-07",
+  "audit_scope": "Independent source and Python FCFF review, with authorized local remediation; no trading.",
+  "verdict": "Not ready for portfolio action; partial research, valuation calibration pending",
+  "mechanicalPassed": true,
+  "auditPassed": false,
+  "stage3Complete": false,
+  "entryApproved": false,
+  "issues": [
+    {
+      "id": "OLLI-A1",
+      "severity": "high",
+      "type": "Unsupported assumption",
+      "location": "model.py CASES / capital_cost; report cost of capital",
+      "finding": "Beta1.10 and execution premium lack empirical or bottom-up calibration. Source S19 beta5Y0.35 disagrees materially but itself has unverified benchmark/frequency.",
+      "impact": "Illustrative beta0.35 WACC6.8925% yields108.31; beta0.75 yields77.54. The central62.30 is not approved and no under/overvaluation conclusion is certified.",
+      "state": "open",
+      "fix": "Justify beta using documented regression or operating peer/unlever-relever approach; reconcile lease convention and distinguish risk premium from conservative operating scenarios; rerun and re-audit."
+    },
+    {
+      "id": "OLLI-A2",
+      "severity": "medium",
+      "type": "Formula/control defect",
+      "location": "model.py bounded_proxies.cash_buffer_5pct",
+      "finding": "5% cash policy formerly changed opening bridge only.",
+      "impact": "Correct full policy sensitivity60.94 versus opening-only61.32; main scenarios unchanged.",
+      "state": "fixed"
+    },
+    {
+      "id": "OLLI-A3",
+      "severity": "low",
+      "type": "Source contradiction",
+      "location": "S12 / report price",
+      "finding": "Fresh StockAnalysis price is90.40, not previously captured90.42.",
+      "impact": "Same valuation anchor; historical discrepancy explicitly retained, not presented as current verified quote.",
+      "state": "fixed"
+    },
+    {
+      "id": "OLLI-A4",
+      "severity": "low",
+      "type": "Not comparable without bridge",
+      "location": "CAPM source dates",
+      "finding": "Monthly ERP4.41% source uses5.29% Treasury, unlike current daily4.86%; beta is judgment.",
+      "impact": "Paired-source discount10.63% gives59.10; not a replacement forecast.",
+      "state": "disclosed"
+    },
+    {
+      "id": "OLLI-A5",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "historical EPS metadata",
+      "finding": "TTM EPS computed FY+H1-H1, originally described simply as quarterly sum.",
+      "impact": "Metadata/report corrected; FY/H1 bridge4.47 versus rounded quarter sum4.48; difference0.01 explicitly disclosed.",
+      "state": "fixed"
+    }
+  ],
+  "verified": [
+    "FY2023/24/25 income and cash flow source tie-out S1",
+    "Prior/current H1 and TTM bridges S1-S3; Q3 and Q4 cash by subtraction S4; Q1 cash/capex independently reopened S5",
+    "Q2 refund allocation28.3 operating/1.1 interest; underlyingEBIT80.175 +4.2% versus dilutedEPS +43.4%",
+    "Inventory704.433, supplier cash H121.679 versus36.511, software capitalization, SBC and total D&A",
+    "Cash/investments507.094; finance leases2.229; operating leases retained in rent and not subtracted twice; shares59.688 consistent snapshot",
+    "Ten-year5+5 FCFF, terminal reinvestment/physical tie, bridge and inverse roots",
+    "Scenarios41.62777/62.30197/90.05361 independently regenerated, exploratory only",
+    "Treasury10year4.86 Nov6; ERP4.41 expressly datedNov1; sourcebeta0.35 retrievedNov7",
+    "Nov6 dailyclose90.40 and matched-history prices104.87/79.74/73.87",
+    "Official calendar no future date; Dec8 external estimate only",
+    "Oct13 authorization500m and aggregate561m, no assumption it was executed"
+  ],
+  "limitations": [
+    "No independent audit opinion on issuer statements",
+    "No certified statistical beta or bottom-up risk calibration; decision blocker",
+    "Maintenance/growth split and terminal incremental ROIC remain analyst proxies",
+    "Post-August cash/share changes unknown; price-to-August balance mismatch bounded but must refresh before entry",
+    "Quarterly dilution increment is a proxy for end-period dilution",
+    "No consensus underwriting or technical entry approval"
+  ],
+  "source_rechecks": [
+    {
+      "id": "S5",
+      "url": "https://www.sec.gov/Archives/edgar/data/1639300/000114036126023882/olli-20260502.htm"
+    },
+    {
+      "id": "S6",
+      "url": "https://investors.ollies.com/news-releases/news-release-details/ollies-bargain-outlet-holdings-inc-announces-second-quarter-8"
+    },
+    {
+      "id": "S9",
+      "url": "https://investors.ollies.com/events-presentations"
+    },
+    {
+      "id": "S11",
+      "url": "https://chartexchange.com/symbol/nasdaq-olli/historical/"
+    },
+    {
+      "id": "S12",
+      "url": "https://stockanalysis.com/stocks/olli/history/"
+    },
+    {
+      "id": "S13",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve"
+    },
+    {
+      "id": "S14",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm?lfrom=202213444"
+    },
+    {
+      "id": "S15",
+      "url": "https://investors.ollies.com/news-releases/news-release-details/ollies-bargain-outlet-holdings-inc-announces-500-million-share"
+    },
+    {
+      "id": "S19",
+      "url": "https://stockanalysis.com/stocks/olli/statistics/"
+    }
+  ]
+}
