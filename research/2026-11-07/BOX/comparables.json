@@ -1,0 +1,59 @@
+{
+  "as_of": "2026-11-06 regular close",
+  "rows": [
+    {
+      "ticker": "BOX",
+      "price": 41.95,
+      "shares_m": 137.200773,
+      "share_date": "2026-07-31",
+      "period": "TTM July31,2026",
+      "revenue": 1234.07,
+      "ebit": 116.35,
+      "cfo": 394.46299999999997,
+      "capital_cash": 44.8,
+      "sbc": 235.74,
+      "finance_lease_principal": 0,
+      "cash_securities": 444.136,
+      "borrowed_debt": 460,
+      "preferred_claim_market_proxy": 778.7598,
+      "market_cap": 5755.57242735,
+      "ev_proxy": 6550.196227349999,
+      "ev_revenue": 5.307799579724002,
+      "ev_ebit": 56.29734617404383,
+      "ebit_margin": 0.09428152373852375,
+      "cash_after_capital_sbc_finance_lease": 113.92299999999994
+    },
+    {
+      "ticker": "DBX",
+      "price": 34.66,
+      "shares_m": 223.556983,
+      "share_date": "2026-11-02",
+      "period": "TTM September30,2026",
+      "revenue": 2534.5,
+      "ebit": 675.0000000000001,
+      "cfo": 937.6,
+      "capital_cash": 25.7,
+      "sbc": 302.80000000000007,
+      "finance_lease_principal": 140.9,
+      "cash_securities": 1142.2,
+      "borrowed_debt": 3641.8999999999996,
+      "preferred_claim_market_proxy": 0,
+      "market_cap": 7748.48503078,
+      "ev_proxy": 10248.185030779998,
+      "ev_revenue": 4.043474070144012,
+      "ev_ebit": 15.182496341896291,
+      "ebit_margin": 0.26632471887946346,
+      "cash_after_capital_sbc_finance_lease": 468.19999999999993
+    }
+  ],
+  "definitions": "Operating rent retained in EBIT and not added to EV. Finance leases in debt; principal repayment additionally deducted only in the equity-cash diagnostic, not in a valuation FCFF. BOX preferred valued at max500/as-converted market proxy. DBX includes all ClassA+ClassB outstanding, including8.266666m conditional founder awards, conservative share convention.",
+  "limitations": [
+    "BOX July vs DBX September TTM, not identical reporting cutoffs",
+    "DBX substantial financed infrastructure and finance-lease repayments versus BOX completed migration to public cloud",
+    "DBX founder conditional shares, convertible option values and capped calls not fully fair-valued in headline EV",
+    "No bridge for necessary cash, legal claims, post-period capital changes or tax windfalls; no peer-derived target",
+    "BOX capitalized equity compensation not included in cash diagnostic; additional economic cost required in model",
+    "Consumer/self-service vs enterprise mix and differing revenue/retention trajectories prevent equal multiples"
+  ],
+  "approved_peer_target": null
+}
