@@ -1,0 +1,369 @@
+{
+  "ticker": "COST",
+  "as_of": "2026-11-08",
+  "status": "material_partial",
+  "model_grade": "screen-grade",
+  "stage3_complete": false,
+  "stage35_complete": false,
+  "entry_approved": false,
+  "approved_values": {
+    "adverso": null,
+    "central": null,
+    "favorable": null
+  },
+  "price": 1053.56,
+  "session": "2026-11-06T16:00:00-05:00",
+  "history": {
+    "FY2024": {
+      "revenue": 254453.0,
+      "ebit": 9285.0,
+      "net_income": 7367.0,
+      "cfo": 11339.0,
+      "capex": 4710.0,
+      "da_total": 2237.0,
+      "sbc": 818.0
+    },
+    "FY2025": {
+      "revenue": 275235.0,
+      "ebit": 10383.0,
+      "net_income": 8099.0,
+      "cfo": 13335.0,
+      "capex": 5498.0,
+      "da_total": 2426.0,
+      "sbc": 860.0
+    },
+    "FY2026": {
+      "revenue": 303154.0,
+      "ebit": 11685.0,
+      "net_income": 9226.0,
+      "cfo": 15817.0,
+      "capex": 6435.0,
+      "da_total": 2674.0,
+      "sbc": 924.0
+    },
+    "TTM_Aug2025": {
+      "revenue": 275235.0,
+      "ebit": 10383.0,
+      "net_income": 8099.0,
+      "cfo": 13335.0,
+      "capex": 5498.0,
+      "da_total": 2426.0,
+      "sbc": 860.0
+    },
+    "TTM_Aug2026": {
+      "revenue": 303154.0,
+      "ebit": 11685.0,
+      "net_income": 9226.0,
+      "cfo": 15817.0,
+      "capex": 6435.0,
+      "da_total": 2674.0,
+      "sbc": 924.0
+    }
+  },
+  "quarters": {
+    "Q1_FY2026_12weeks": {
+      "revenue": 67307.0,
+      "ebit": 2463.0,
+      "net_income": 2001.0,
+      "cfo": 4688.0,
+      "capex": 1526.0,
+      "da_total": 597.0,
+      "sbc": 486.0
+    },
+    "Q2_FY2026_12weeks": {
+      "revenue": 69597.0,
+      "ebit": 2606.0,
+      "net_income": 2035.0,
+      "cfo": 2996.0,
+      "capex": 1289.0,
+      "da_total": 597.0,
+      "sbc": 166.0
+    },
+    "Q3_FY2026_12weeks": {
+      "revenue": 70527.0,
+      "ebit": 2815.0,
+      "net_income": 2192.0,
+      "cfo": 3449.0,
+      "capex": 1413.0,
+      "da_total": 597.0,
+      "sbc": 119.0
+    },
+    "Q4_FY2026_16weeks": {
+      "revenue": 95723.0,
+      "ebit": 3801.0,
+      "net_income": 2998.0,
+      "cfo": 4684.0,
+      "capex": 2207.0,
+      "da_total": 883.0,
+      "sbc": 153.0
+    }
+  },
+  "conditional_cases": {
+    "adverso": {
+      "inputs": {
+        "sales_growth": [
+          0.04,
+          0.04,
+          0.045,
+          0.045,
+          0.04
+        ],
+        "fee_growth": [
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04
+        ],
+        "merch_margin": [
+          0.0175,
+          0.0175,
+          0.018,
+          0.018,
+          0.018
+        ],
+        "terminal_merch_margin": 0.018,
+        "wacc": 0.095,
+        "g": 0.025,
+        "roic": 0.22,
+        "terminal_roic": 0.18,
+        "maint": 0.011,
+        "growth_capital": 0.18,
+        "float_ratio": 0
+      },
+      "conditional_value_per_share": 211.45559144720355,
+      "approved_value": null,
+      "ev": 89118.73990633368,
+      "equity": 94125.08976330368,
+      "pv_explicit": 39652.57417567507,
+      "pv_terminal": 49466.165730658606,
+      "terminal_weight": 0.5550590794107833,
+      "terminal_nopat": 12239.018854740958,
+      "terminal_reinvestment": 3657.8296055461633,
+      "terminal_physical_floor_net": 3657.8296055461633,
+      "terminal_gross_maintenance": 5667.509243477049,
+      "terminal_total_investment": 7581.489851030274,
+      "terminal_fcff": 8581.189249194795
+    },
+    "central": {
+      "inputs": {
+        "sales_growth": [
+          0.08,
+          0.075,
+          0.07,
+          0.065,
+          0.06
+        ],
+        "fee_growth": [
+          0.075,
+          0.07,
+          0.065,
+          0.06,
+          0.06
+        ],
+        "merch_margin": [
+          0.0195,
+          0.02,
+          0.0205,
+          0.021,
+          0.0215
+        ],
+        "terminal_merch_margin": 0.0215,
+        "wacc": 0.085,
+        "g": 0.03,
+        "roic": 0.28,
+        "terminal_roic": 0.22,
+        "maint": 0.01,
+        "growth_capital": 0.16,
+        "float_ratio": -0.02
+      },
+      "conditional_value_per_share": 353.14581771666406,
+      "approved_value": null,
+      "ev": 152189.21808532134,
+      "equity": 157195.56794229132,
+      "pv_explicit": 52658.66378617483,
+      "pv_terminal": 99530.5542991465,
+      "terminal_weight": 0.6539921523438476,
+      "terminal_nopat": 16109.387528633564,
+      "terminal_reinvestment": 3732.35609069568,
+      "terminal_physical_floor_net": 3732.35609069568,
+      "terminal_gross_maintenance": 6328.10991508897,
+      "terminal_total_investment": 8785.628328715755,
+      "terminal_fcff": 12377.031437937883
+    },
+    "favorable": {
+      "inputs": {
+        "sales_growth": [
+          0.1,
+          0.1,
+          0.09,
+          0.085,
+          0.08
+        ],
+        "fee_growth": [
+          0.09,
+          0.09,
+          0.085,
+          0.08,
+          0.075
+        ],
+        "merch_margin": [
+          0.021,
+          0.022,
+          0.023,
+          0.024,
+          0.025
+        ],
+        "terminal_merch_margin": 0.025,
+        "wacc": 0.0775,
+        "g": 0.035,
+        "roic": 0.32,
+        "terminal_roic": 0.25,
+        "maint": 0.0095,
+        "growth_capital": 0.15,
+        "float_ratio": -0.025
+      },
+      "conditional_value_per_share": 560.331329117545,
+      "approved_value": null,
+      "ev": 244413.56989742757,
+      "equity": 249419.91975439756,
+      "pv_explicit": 65274.64667739549,
+      "pv_terminal": 179138.9232200321,
+      "terminal_weight": 0.7329336226921069,
+      "terminal_nopat": 20199.568437399554,
+      "terminal_reinvestment": 4139.341498570234,
+      "terminal_physical_floor_net": 4139.341498570234,
+      "terminal_gross_maintenance": 7076.267459494749,
+      "terminal_total_investment": 10197.494442258661,
+      "terminal_fcff": 16060.22693882932
+    }
+  },
+  "method": "10-year explicit warehouse/maintenance/software capex and operating float FCFF; memberships not independently capitalized; no extra capital charge for expensed margin productivity",
+  "cost_capital": {
+    "rf": 0.0486,
+    "rf_date": "2026-11-06",
+    "erp": 0.0441,
+    "erp_date": "2026-11-01",
+    "erp_source_rf": 0.0529,
+    "observed_beta_5y": 0.85,
+    "ke": 0.086085,
+    "debt_cost_proxy": 0.0536,
+    "debt_cost_method": "USD riskfree plus assumed50bp; not a current bond yield. Japan2026 issuance2.62-3.68% is currency-specific.",
+    "debt_weight": 0.015993209607535176,
+    "mechanical_wacc": 0.08534686539698343,
+    "applied": [
+      0.095,
+      0.085,
+      0.0775
+    ]
+  },
+  "equity_bridge": {
+    "cash": 20207,
+    "short_term_investments": 1094,
+    "operating_and_claims_liquidity_reserve": 8000,
+    "debt_principal": 6175,
+    "finance_leases": 1413,
+    "tax_claim": 94,
+    "oct30_ex_dividend": 651.40014303,
+    "subsequent_refund155_retained_fraction": 0.25,
+    "subsequent_refund_credit": 38.75,
+    "net_bridge": 5006.3498569700005,
+    "basic_sept29": 443.129349,
+    "aug30_outstanding_rsu_proxy": 2.0,
+    "diluted_proxy": 445.129349
+  },
+  "inverse_first5_sales_and_fee_growth": 0.30644098406618203,
+  "sensitivity": [
+    {
+      "wacc": 0.0775,
+      "g": 0.025,
+      "value": 388.1668956701529
+    },
+    {
+      "wacc": 0.0775,
+      "g": 0.03,
+      "value": 411.76318661196814
+    },
+    {
+      "wacc": 0.0775,
+      "g": 0.035,
+      "value": 440.90442733734244
+    },
+    {
+      "wacc": 0.085,
+      "g": 0.025,
+      "value": 336.91194334804226
+    },
+    {
+      "wacc": 0.085,
+      "g": 0.03,
+      "value": 353.14581771666406
+    },
+    {
+      "wacc": 0.085,
+      "g": 0.035,
+      "value": 372.6210058661908
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.025,
+      "value": 285.90610741766085
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.03,
+      "value": 296.2661200015882
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.035,
+      "value": 308.34884319445325
+    }
+  ],
+  "calibration_sensitivity": {
+    "float_ratio": {
+      "-0.04": 365.20851763956273,
+      "-0.02": 353.14581771666406,
+      "0": 341.0831177937653,
+      "0.02": 329.02041787086665
+    },
+    "maintenance_ratio": {
+      "0.008": 384.25589191455236,
+      "0.01": 353.14581771666406,
+      "0.012": 322.0357435187758,
+      "0.014": 290.92566932088755
+    },
+    "growth_capital": {
+      "0.1": 389.3339174853602,
+      "0.16": 353.14581771666406,
+      "0.22": 316.95771794796786
+    },
+    "reserve6000_to10000_delta": [
+      4.493076011485372,
+      -4.493076011485372
+    ],
+    "self_insurance_adverse_development10pct_per_share": 0.4845782478386973,
+    "uncommenced_lease_gross1667_per_share": 3.7449788555730574,
+    "refund_credit0_to155_delta": [
+      -0.08705334772252908,
+      0.26116004316758723
+    ]
+  },
+  "cash_diagnostic": {
+    "filed_cfo": 15817,
+    "preliminary_cfo": 15825,
+    "filed_investing": -6378,
+    "preliminary_investing": -6386,
+    "fcf": 9382,
+    "fcf_less_sbc": 8458,
+    "fcf_less_sbc_and_wc_release": 6138,
+    "warning": "Levered CF, not FCFF. 8m classification difference between preliminary and final disclosed; no causal explanation invented."
+  },
+  "remaining_gaps": [
+    "Warehouse cohort unit economics, land/building logistics and maintenance/growth software budgets; conditional assumptions rather than verified marginal returns",
+    "Incremental supplier/fee float sustainability and liquidity reserve, not all cash freely excess",
+    "Sustainable fee mix/renewals and net margin after tariff refunds and member reinvestment",
+    "Current cash/debt/share/RSU roll-forward after Aug30 and Sept29, operating vs finance uncommenced lease split",
+    "Current borrowing yield, foreign-cash withholding and exact Nov fiscal stub; independent audit"
+  ]
+}

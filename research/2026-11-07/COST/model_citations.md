@@ -1,0 +1,14 @@
+# Fuentes y trazabilidad
+- selected public facts embedded in model.py conserva tags, accession, fechas y periodos exactos. Tres anuales52semanas; cuatro periodos12/12/12/16semanas. TTM actual=FY2026, comparativo=FY2025. No sumar meses de ventas a beneficio/caja.
+- CFO final15.817 y investing−6.378 son10-K; preliminar15.825/−6.386 se reconcilia por8 con caja final idéntica. Causa específica no inferida. Q4 residual usa10-K.
+- Membresías, renovación, deferred fees, premios, activos, capex y guidance:10-K2026-10-07 yreleasefy2026. Tabla anual de socios incluye algunas cuentas expiradas; renovación es retrospectiva.
+- Caja/inversiones21.301 incluye cobros de tarjetas2.842, no se suman otra vez. Reserva8.000 es hipótesis. Claimfiscal94; deuda nominal6.175 frentebook6.162; financelease1.413 adicional. Operating leases en EBIT sin doble deducción.
+- Subsequent refund155:10-K. Crédito38,75 presupone retener25% tras devolver mayoría al cliente. Tariffrefund174 no se extrapola; net margin gain3pb según10-K, no subtract174 más precios reinvertidos otra vez.
+- Ex dividend30oct/payment13nov:8-K14oct. Pasivo estimado443,129349×1,47, no otra deducción del antiguo especial enero2024.
+- Shares básicas29sept443,129349 +2mRSU30ago es proxy conservador, posibles vesting duplicados declarados. No suma capacidad no otorgada5,28m. SBC retenido en EBIT, no addback.
+- Precio1053,56/beta0,85:market6nov. RF4,86%6nov; ERP4,41%1nov conRf propia5,29%; Kd5,36%=Rf+50pb supuesto, no rendimiento negociado.
+- Modelo: ventas y cuotas separadas, todos los costes consolidados permanecen en margen residual. No EV de membresía adicional. Margen/growth/tax25,5/maint/expansionfloat son supuestos.
+- Capex incluye mantenimiento, digital/logística y expansión física. Piso absoluto crece2% y persiste año11. Año1central 7.657 es presupuesto bruto incluyendo activos financiables, comparable a guía efectivo7.500 más altas finance históricas122; no desglose primario de cohortes.
+- Reinversión=max(presupuesto explícito−DA+NWC, NOPAT×crecimiento ventas/ROIC). No se recarga inversión por márgenes debidos a productividad ya expensada. Retornos son controles analíticos no hechos verificados.
+- Inverso30,64% primeros5años es solución matemática no previsión plausible ni inferencia única de expectativas.
+- Sin aprobación; modelo reproducible de diagnóstico, no workbook bancario.
