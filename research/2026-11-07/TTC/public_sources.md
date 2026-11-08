@@ -1,0 +1,30 @@
+# Fuentes públicas TTC
+
+- submissions: https://data.sec.gov/submissions/CIK0000737758.json
+- news: https://www.thetorocompany.com/news-releases
+- calendar: https://www.thetorocompany.com/events-and-presentations
+- statistics: https://stockanalysis.com/stocks/ttc/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/TTC?range=1y&interval=1d
+- peer_de: https://stockanalysis.com/stocks/de/statistics/
+- peer_alamo: https://stockanalysis.com/stocks/alg/statistics/
+- 2026-09-21_8-K: https://www.sec.gov/Archives/edgar/data/737758/000162828026062886/ttc-20260921.htm
+- 2026-09-03_10-Q: https://www.sec.gov/Archives/edgar/data/737758/000073775826000043/ttc-20260731.htm
+- 2026-09-03_8-K: https://www.sec.gov/Archives/edgar/data/737758/000073775826000041/ttc-20260903.htm
+- 2026-06-04_10-Q: https://www.sec.gov/Archives/edgar/data/737758/000073775826000018/ttc-20260501.htm
+- 2026-03-05_10-Q: https://www.sec.gov/Archives/edgar/data/737758/000073775826000009/ttc-20260130.htm
+- 2025-12-17_10-K: https://www.sec.gov/Archives/edgar/data/737758/000073775825000115/ttc-20251031.htm
+- 2025-09-04_10-Q: https://www.sec.gov/Archives/edgar/data/737758/000073775825000093/ttc-20250801.htm
+- 2025-06-05_10-Q: https://www.sec.gov/Archives/edgar/data/737758/000073775825000056/ttc-20250502.htm
+- 2025-03-06_10-Q: https://www.sec.gov/Archives/edgar/data/737758/000073775825000032/ttc-20250131.htm
+- 2024-12-18_10-K: https://www.sec.gov/Archives/edgar/data/737758/000073775824000087/ttc-20241031.htm
+- 2024-09-05_10-Q: https://www.sec.gov/Archives/edgar/data/737758/000073775824000046/ttc-20240802.htm
+- 2024-06-06_10-Q: https://www.sec.gov/Archives/edgar/data/737758/000073775824000036/ttc-20240503.htm
+- 2024-03-07_10-Q: https://www.sec.gov/Archives/edgar/data/737758/000073775824000022/ttc-20240202.htm
+- 2023-12-20_10-K: https://www.sec.gov/Archives/edgar/data/737758/000073775823000034/ttc-20231031.htm
+- release: https://www.thetorocompany.com/news-releases/news-release-details/toro-company-reports-record-third-quarter-results-2
+- news_current: https://www.thetorocompany.com/news-events/news-releases
+- calendar_current: https://www.thetorocompany.com/news-events/events-and-presentations
+- dividend: https://www.thetorocompany.com/news-releases/news-release-details/toro-company-declares-regular-quarterly-cash-dividend-41
+- events_verified: https://www.thetorocompany.com/news-events/events
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
