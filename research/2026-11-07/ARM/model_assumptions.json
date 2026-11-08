@@ -1,0 +1,23 @@
+{
+  "label": "conditional analyst assumptions, not approved valuation",
+  "source_types": {
+    "history": "reported SEC plus arithmetic",
+    "price": "public market regular close",
+    "capital_cost": "reported RF/ERP/beta; scenario normalization unvalidated",
+    "forecast": "analyst_estimate",
+    "claims_reserves": "analyst_estimate, not bounded liabilities"
+  },
+  "scope": "IP royalties/licensing, own silicon, agency net treatment. Constant-mature-policy dynamic capital tail. Expensed R&D and SBC retained.",
+  "incomplete": [
+    "Silicon versus IP standalone costs, margin and capital conversion not yet reported; scenarios are hypotheses, not management guidance.",
+    "Supplier minimum-volume and quarterly price economics, recovery of advances, agency timing/counterparty exposure and liability overlap are not bounded.",
+    "Replacement compute/IP mix, incremental ROIC and margin improvement require calibration; expensed R&D is retained, no artificial capitalization.",
+    "Normalized beta is not validated against a sufficiently long listing or peer regression; observed beta implies Ke22.2354%.",
+    "September share/claim bridge to November, existing award dilution versus future SBC overlap, finance lease rollforward and tax contingency netting are incomplete.",
+    "Investment realization and unresolved Qualcomm bench rulings have no reliable bounded current valuation; explicit reserves are assumptions not claims estimates."
+  ],
+  "depreciation_history_note": "companyfacts Depreciation excludes finance-lease ROU amortization; cashflow total DA is complete. Do not sum narrow historical depreciation with total amortization and expect full DA tie.",
+  "historical_payment_source": "EDA payments FY24/25/26=40/59/67; H12431,H12537,9M2549,Q12629,H12649 from cashflow rows. TTM79/65 independently ties shareholder letter.",
+  "noncurrent_claim_overlap": "finance lease proxy36 includes current20 and estimated noncurrent16; subtract16 from other noncurrent51 before residual35 claim. Tax grossUTB not separately stacked with current tax and scenario reserves.",
+  "incremental_depreciation_bridge": "Scenario margins apply to physical/IP-budget baseline. Additional ROIC capital receives matched 12% physical and25%IP depreciation/amortization expense beforeNOPAT and cashaddback; no freeincrementalamortization. Baseline physicalstock evolves with growthcapacity; baselineIP385. Allocation/retirements remain unvalidated."
+}
