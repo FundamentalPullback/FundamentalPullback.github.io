@@ -1,0 +1,14 @@
+# Source-to-model map
+All financial quantities USD millions. Model uses reported, derived and explicitly analyst-estimated inputs; no private inherited values.
+- Equipment base sales 41,358: FY25 38,917 minus 9M25 28,338 plus 9M26 30,779. Annual and quarterly supplemental consolidating statements; historical_source_facts.json preserves full series.
+- Segment equipment profit 5,021, corporate expense 281, tariff recovery 382: annual segment note and Q3 segment/tariff notes. Normalized starting EBIT diagnostic 4,358. Scenario margins are analyst estimates after corporate expense, R&D and SBC.
+- Finance book 6,953 and equipment debt/cash/intercompany asset: Q3 supplemental balance sheet. FS equity already deducts external and internal debt. FS recurring forward ROE and capital growth are analyst assumptions; no unverified capital surplus released.
+- Historical finance dividends are removed from equipment cash proxy. Industrial FCFF contains no FS dividend, pension nonservice income or interest on excess cash. Financial lease residual risks remain in FS equity economics.
+- Share denominator actual 269.625412 on Aug2 + diluted increment .9 from EPS note + .000092m RSU granted to new director per Nov2 8-K; proxy, not November actual. SBC retained in operating margins; no free buybacks.
+- Bridge pension 1,385 is a conservative proxy based on annual gross deficits 1,452 less current FS retirement/other67; exact current actuarial allocation unresolved. Tax322 annual ETR-affecting uncertain tax amount is proxy, not asserted wholly industrial. Fees100 proxy versus consolidated140. NCI book values44+7 proxies.
+- Two distinct dividends: balance payable443 paidAug10, new Aug26 dividend1.62 payableNov9 recordSep30. Both pre-Nov6 rights. November amount based on dated basic shares, not exact record-date count.
+- Cash reserve3000, guarantee reserve25, risk haircut10%, future margin/growth/capex/ROIC/financeROE/Ke are analyst assumptions. Noncash guaranteed contingent maximums are not blindly treated as certain debt.
+- Treasury Nov6 4.86%; Damodaran Nov1 ERP4.41 uses ownRF5.29. Observed beta .90 from StockAnalysis Nov6. Industrial kd5.61 is assumed spread75bp; mechanical WACC8.60 vs chosen9.0. Captive debt excluded from industrial debt weight.
+- Ten-year FCFF annual schedules include physical replacement, growth capex, acquisitions and working capital. Additional ROIC funding on sales growth only, not mechanical capitalization of already-expensed margin productivity. Terminal identical funding discipline, no arbitrary floor cut.
+- Finance FCFE and RI equality assertion is mandatory; negative FCFE requires funding, never silently clipped. Loan growth capital proxy maintains current capital intensity; regulatory/economic target not certified.
+- Controlled deterministic export. Not a banker formula workbook. All approved valuation fields null; quality screen-grade.
