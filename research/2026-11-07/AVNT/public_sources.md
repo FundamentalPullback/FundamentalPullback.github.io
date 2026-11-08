@@ -1,0 +1,30 @@
+# Fuentes públicas
+
+- submissions: https://data.sec.gov/submissions/CIK0001122976.json (primary; consulta 2026-11-08).
+- companyfacts: https://data.sec.gov/api/xbrl/companyfacts/CIK0001122976.json (primary; consulta 2026-11-08).
+- releaseq32026: https://www.sec.gov/Archives/edgar/data/1122976/000112297626000145/avnt-20260930xnewsrelease.htm (primary; consulta 2026-11-08).
+- events: https://www.avient.com/investors/events-presentations (primary; consulta 2026-11-08).
+- price: https://stockanalysis.com/stocks/avnt/history/ (secondary_market; consulta 2026-11-08).
+- statistics: https://stockanalysis.com/stocks/avnt/statistics/ (secondary_market; consulta 2026-11-08).
+- 10Q_2026-11-04: https://www.sec.gov/Archives/edgar/data/1122976/000112297626000148/avnt-20260930.htm (primary; consulta 2026-11-08).
+- 8K_2026-11-04: https://www.sec.gov/Archives/edgar/data/1122976/000112297626000145/avnt-20260930x8k.htm (primary; consulta 2026-11-08).
+- 8K_2026-10-09: https://www.sec.gov/Archives/edgar/data/1122976/000119312526418501/d158162d8k.htm (primary; consulta 2026-11-08).
+- 10Q_2026-08-06: https://www.sec.gov/Archives/edgar/data/1122976/000112297626000126/avnt-20260630.htm (primary; consulta 2026-11-08).
+- 10Q_2026-05-07: https://www.sec.gov/Archives/edgar/data/1122976/000112297626000094/avnt-20260331.htm (primary; consulta 2026-11-08).
+- 10K_2026-02-17: https://www.sec.gov/Archives/edgar/data/1122976/000112297626000039/avnt-20251231.htm (primary; consulta 2026-11-08).
+- 10Q_2025-11-05: https://www.sec.gov/Archives/edgar/data/1122976/000112297625000088/avnt-20250930.htm (primary; consulta 2026-11-08).
+- 10Q_2025-08-01: https://www.sec.gov/Archives/edgar/data/1122976/000112297625000053/avnt-20250630.htm (primary; consulta 2026-11-08).
+- 10Q_2025-05-06: https://www.sec.gov/Archives/edgar/data/1122976/000112297625000030/avnt-20250331.htm (primary; consulta 2026-11-08).
+- 10K_2025-02-18: https://www.sec.gov/Archives/edgar/data/1122976/000112297625000008/avnt-20241231.htm (primary; consulta 2026-11-08).
+- 10Q_2024-11-05: https://www.sec.gov/Archives/edgar/data/1122976/000112297624000066/avnt-20240930.htm (primary; consulta 2026-11-08).
+- 10Q_2024-08-06: https://www.sec.gov/Archives/edgar/data/1122976/000112297624000057/avnt-20240630.htm (primary; consulta 2026-11-08).
+- 10Q_2024-05-07: https://www.sec.gov/Archives/edgar/data/1122976/000112297624000033/avnt-20240331.htm (primary; consulta 2026-11-08).
+- 10K_2024-02-20: https://www.sec.gov/Archives/edgar/data/1122976/000112297624000019/avnt-20231231.htm (primary; consulta 2026-11-08).
+- q3_slides: https://www.avient.com/sites/default/files/2026-11/AVNT%20Q3%202026%20Webcast%20Slides_Upload.pdf (primary; consulta 2026-11-08).
+- ceo_grant: https://www.sec.gov/Archives/edgar/data/1122976/000122520826008407/xslF345X06/doc4.xml (primary; consulta 2026-11-08).
+- dividend_oct: https://www.avient.com/investor-center/news/avient-announces-sixteenth-consecutive-annual-dividend-increase (primary; consulta 2026-11-08).
+- ash_statistics: https://stockanalysis.com/stocks/ash/statistics/ (secondary_market; consulta 2026-11-08).
+- emn_statistics: https://stockanalysis.com/stocks/emn/statistics/ (secondary_market; consulta 2026-11-08).
+- dividend_july: https://www.avient.com/investor-center/news/avient-announces-quarterly-dividend-16 (primary; consulta 2026-11-08).
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve (primary; consulta 2026-11-08).
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm (primary; consulta 2026-11-08).
