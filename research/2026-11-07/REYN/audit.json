@@ -1,0 +1,122 @@
+{
+  "ticker": "REYN",
+  "as_of": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "research_status": "complete_conditional_audited",
+  "permitted_use": "Conditional fundamental review only; not portfolio action, Stage3.5 approval, publication or trading",
+  "scope": [
+    "report.md",
+    "model.py",
+    "results.json",
+    "status.json",
+    "three forecast CSVs",
+    "Q3 2026 10-Q independently retrieved",
+    "Q1/Q2/Q3 primary statement extracts",
+    "market history opened and dated"
+  ],
+  "mechanical_checks": {
+    "adverso_rows_fcff_growth": true,
+    "adverso_ev_equity": true,
+    "adverso_terminal_components": true,
+    "adverso_csv": true,
+    "central_rows_fcff_growth": true,
+    "central_ev_equity": true,
+    "central_terminal_components": true,
+    "central_csv": true,
+    "favorable_rows_fcff_growth": true,
+    "favorable_ev_equity": true,
+    "favorable_terminal_components": true,
+    "favorable_csv": true,
+    "ttm_2026_primary_bridge": true,
+    "ttm_2025_primary_bridge": true,
+    "four_quarter_ttm_bridge": true,
+    "capm": true,
+    "scenario_targets": true,
+    "normalized_cash_bridge": true
+  },
+  "independent_recalculated_values": {
+    "adverse": 9.752932651046358,
+    "base": 21.616294489966823,
+    "favorable": 31.948441002065668,
+    "reverse_volume": 0.016790386468410134,
+    "reverse_margin": 0.16060080201529442
+  },
+  "price": {
+    "value": 24.11,
+    "security": "NASDAQ:REYN",
+    "as_of": "2026-11-06T16:00:00-05:00",
+    "verified": "Opened header and dated OHLC history row",
+    "url": "https://stockanalysis.com/stocks/reyn/history/",
+    "not_live": true
+  },
+  "source_tieouts": {
+    "annual_2023_2025": "FY25 10-K income and cash-flow statements verified",
+    "quarters_and_ttm": "4 quarters and 2 TTM bridges pass; cumulative rounding note retained",
+    "retail_volume": "Q3 release -7%; 9M -3%",
+    "inventory_factoring": "Q3 10-Q cash inventory use191; factoring receivables37 limit95; not a debt deduction",
+    "debt_and_OHA": "Principal1536 vs carrying1531; post-quarter acquisition110 funded revolver; matched asset/debt proxy",
+    "leases": "Operating109 retained as operating costs; finance47 upper-bound using14+33, not exact balance",
+    "postretirement_environment": "13 long-term+1 latest annual; reserve25 separately after-tax18.75, unestimated additional exposure retained",
+    "CAPM": "RF4.86 supported dated secondary indexed sources; beta0.56 secondary not independently regressed; beta0.8 ERP5 debt25% are assumptions; calculated WACC7.71375 rounded8",
+    "historical_ratios": "Opened StockAnalysis FY23/24/25 PE18.92/16.11/16.02 and PFCF10.44/15.37/15.26; secondary crosscheck only"
+  },
+  "issues": [
+    {
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "Projected capex and normalized FCFF",
+      "finding": "Year1 economic capex181 vs cash180 plus 9M finance-lease additions33; no guidance separately proves normalization",
+      "resolution": "Explicit economic-capex caveat and illustrative additional33 each year1-10 stress20.57, normalized cash bridge311.353; base retained as analyst assumption",
+      "status": "bounded_caveat"
+    },
+    {
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "Terminal/operating forecast",
+      "finding": "Volume recovery,15% margin,12% incremental ROIC and15% incremental NWC are underwriting choices, not demonstrated forward facts",
+      "resolution": "Scenario/sensitivity/reverse evidence and NWC balance comparison make uncertainty explicit",
+      "status": "open_underwriting_caveat"
+    },
+    {
+      "severity": "low",
+      "type": "Source contradiction",
+      "location": "Summary and price sources",
+      "finding": "Original wording overstated need for favorable case and relied on indexed price evidence",
+      "resolution": "Summary corrected; current-dated StockAnalysis open independently verifies close",
+      "status": "fixed"
+    },
+    {
+      "severity": "low",
+      "type": "Formula/control defect",
+      "location": "model.py terminal components",
+      "finding": "Terminal FCFF net reinvestment existed but component display and WACC>g guard absent",
+      "resolution": "Added year11 revenue/EBIT/NOPAT/DA/capex/NWC, identities and domain guard; all scenario values unchanged",
+      "status": "fixed"
+    },
+    {
+      "severity": "low",
+      "type": "Unsupported assumption",
+      "location": "Software capitalization",
+      "finding": "No separate material software spending quantified in examined filings; zero cannot be inferred",
+      "resolution": "No-addback/no-zero assertion recorded, aggregate costs retained",
+      "status": "disclosed"
+    }
+  ],
+  "remaining_limits": [
+    "Not an integrated three-statement model or formula workbook",
+    "No external consensus or homogeneous peer comp set verified",
+    "No independent beta regression; discount assumptions remain analyst judgment",
+    "Environmental losses above reserve unestimable, not bounded by illustrative stress",
+    "OHA standalone financials unavailable; acquisition value0/110/165 proxy",
+    "No technical filter or portfolio risk approval"
+  ],
+  "material_hard_failures": [],
+  "changes": [
+    "report.md pricing, CAPM labeling, summary, capex, software and audit verdict",
+    "model.py terminal components, guard, CAPM provenance and diagnostic stress",
+    "status.json audit completed conditional",
+    "audit_checks.py and audit_checks.json 18 independent checks"
+  ],
+  "publication_status": "not_published",
+  "trading_actions": false
+}

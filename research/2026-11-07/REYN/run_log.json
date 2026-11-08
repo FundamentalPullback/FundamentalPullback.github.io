@@ -1,0 +1,17 @@
+{
+  "status": "senior-review-ready",
+  "model_type": "deterministic Python support, not banker formula workbook",
+  "checks": {
+    "ten_years": true,
+    "fcff_identity": true,
+    "terminal_reinvestment_identity": true,
+    "no_future_share_buybacks": true
+  },
+  "bounded_proxies": [
+    "finance leases 47 upper bound",
+    "OHA value 0/110/165",
+    "cash excess zero",
+    "postretirement current component 1 carried from FY25"
+  ],
+  "hard_failures": []
+}
