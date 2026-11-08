@@ -1,0 +1,26 @@
+# Marriott: fuentes públicas
+
+Corte: 8 de noviembre de 2026.
+
+- [submissions](https://data.sec.gov/submissions/CIK0001048286.json)
+- [release](https://www.sec.gov/Archives/edgar/data/1048286/000104828626000040/mar-2026q3xex99earningsrel.htm)
+- [calendar](https://marriott.gcs-web.com/events/event-details/marriott-international-3rd-quarter-2026-earnings-conference-call)
+- [statistics](https://stockanalysis.com/stocks/mar/statistics/)
+- [daily_history](https://query1.finance.yahoo.com/v8/finance/chart/MAR?range=2y&interval=1d)
+- [2026-11-02_10-Q](https://www.sec.gov/Archives/edgar/data/1048286/000104828626000043/mar-20260930.htm)
+- [2026-08-03_10-Q](https://www.sec.gov/Archives/edgar/data/1048286/000104828626000035/mar-20260630.htm)
+- [2026-05-06_10-Q](https://www.sec.gov/Archives/edgar/data/1048286/000104828626000014/mar-20260331.htm)
+- [2026-02-10_10-K](https://www.sec.gov/Archives/edgar/data/1048286/000104828626000007/mar-20251231.htm)
+- [2025-11-04_10-Q](https://www.sec.gov/Archives/edgar/data/1048286/000104828625000013/mar-20250930.htm)
+- [2025-08-05_10-Q](https://www.sec.gov/Archives/edgar/data/1048286/000104828625000006/mar-20250630.htm)
+- [2025-05-06_10-Q](https://www.sec.gov/Archives/edgar/data/1048286/000162828025022485/mar-20250331.htm)
+- [2025-02-11_10-K](https://www.sec.gov/Archives/edgar/data/1048286/000162828025004818/mar-20241231.htm)
+- [2024-02-13_10-K](https://www.sec.gov/Archives/edgar/data/1048286/000162828024004372/mar-20231231.htm)
+- [lefay_closed](https://marriott.gcs-web.com/node/37396)
+- [lefay_announced](https://marriott.gcs-web.com/node/37161)
+- [h_statistics](https://stockanalysis.com/stocks/h/statistics/)
+- [hlt_statistics](https://stockanalysis.com/stocks/hlt/statistics/)
+- [dividend_nov5](https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-declares-quarterly-cash-dividend-17)
+- [release_Q2_pdf](https://marriott.gcs-web.com/static-files/fa82e409-2afb-48ce-be7a-bd2903479ceb)
+- [treasury](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve)
+- [erp](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm)
