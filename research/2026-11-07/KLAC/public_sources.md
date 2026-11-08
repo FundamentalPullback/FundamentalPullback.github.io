@@ -1,0 +1,37 @@
+# Public source ledger
+
+- submissions: https://data.sec.gov/submissions/CIK0000319201.json
+- companyfacts: https://data.sec.gov/api/xbrl/companyfacts/CIK0000319201.json
+- releaseq127: https://www.sec.gov/Archives/edgar/data/319201/000031920126000032/exhibit991earningsrelease0.htm
+- investor_home: https://ir.kla.com/
+- financial_results: https://ir.kla.com/financial-information/financial-results
+- events: https://ir.kla.com/news-events/ir-calendar
+- price: https://stockanalysis.com/stocks/klac/history/
+- statistics: https://stockanalysis.com/stocks/klac/statistics/
+- 10-Q_2026-10-29: https://www.sec.gov/Archives/edgar/data/319201/000031920126000034/klac-20260930.htm
+- 10-K_2026-08-06: https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm
+- 10-Q_2026-04-30: https://www.sec.gov/Archives/edgar/data/319201/000031920126000016/klac-20260331.htm
+- 10-Q_2026-01-30: https://www.sec.gov/Archives/edgar/data/319201/000031920126000008/klac-20251231.htm
+- 10-Q_2025-10-31: https://www.sec.gov/Archives/edgar/data/319201/000031920125000034/klac-20250930.htm
+- 10-K_2025-08-08: https://www.sec.gov/Archives/edgar/data/319201/000031920125000024/klac-20250630.htm
+- 10-Q_2025-05-01: https://www.sec.gov/Archives/edgar/data/319201/000031920125000012/klac-20250331.htm
+- 10-Q_2025-01-31: https://www.sec.gov/Archives/edgar/data/319201/000031920125000006/klac-20241231.htm
+- 10-Q_2024-10-31: https://www.sec.gov/Archives/edgar/data/319201/000031920124000027/klac-20240930.htm
+- 10-K_2024-08-05: https://www.sec.gov/Archives/edgar/data/319201/000031920124000021/klac-20240630.htm
+- 10-Q_2024-04-26: https://www.sec.gov/Archives/edgar/data/319201/000031920124000012/klac-20240331.htm
+- 10-Q_2024-01-26: https://www.sec.gov/Archives/edgar/data/319201/000031920124000006/klac-20231231.htm
+- 10-Q_2023-10-27: https://www.sec.gov/Archives/edgar/data/319201/000031920123000039/klac-20230930.htm
+- 10-K_2023-08-04: https://www.sec.gov/Archives/edgar/data/319201/000031920123000031/klac-20230630.htm
+- split_faq: https://d1io3yog0oux5.cloudfront.net/_0ebdd7ea4324b85d41343cefc23f5eca/klatencor/db/1126/10661/description/05.07.26-KLAC-Stock-Split-FAQs.pdf
+- q127_letter: https://d1io3yog0oux5.cloudfront.net/_50d63f16d5350a23b8ec3131256a9548/klatencor/db/1117/10679/letter_to_shareholders/KLA_Earnings_Shareholder_Letter_-_Q1_FY27.pdf
+- q127_slides: https://d1io3yog0oux5.cloudfront.net/_50d63f16d5350a23b8ec3131256a9548/klatencor/db/1117/10679/earnings_slide_presentation/KLA_Earnings_Slides_-_Q1_FY27.pdf
+- dividend_november: https://www.prnewswire.com/news-releases/kla-declares-regular-cash-dividend-302931350.html
+- credit_a_yield: https://fred.stlouisfed.org/series/BAMLC0A3CAEY
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
+- bis_extension: https://public-inspection.federalregister.gov/2026-22793.pdf
+- lam_facts: https://data.sec.gov/api/xbrl/companyfacts/CIK0000707549.json
+- lam_submissions: https://data.sec.gov/submissions/CIK0000707549.json
+- lam_price: https://stockanalysis.com/stocks/lrcx/history/
+- lam_10-K: https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm
+- lam_10-Q: https://www.sec.gov/Archives/edgar/data/707549/000070754926000054/lrcx-20260927.htm
