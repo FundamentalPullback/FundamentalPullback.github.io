@@ -1,0 +1,77 @@
+# Magnolia Oil & Gas (MGY): perímetro combinado verificado, valoración parcial
+
+Corte: 8 de noviembre de 2026. Importes en millones de USD salvo indicación. Fuentes públicas.
+
+## Conclusión
+
+El cierre ordinario del 6 de noviembre es 23,67 USD, corroborado con dos proveedores secundarios archivados; no se presenta como cotización primaria certificada. Las 266.311.001 acciones efectivas al 2 de noviembre implican capitalización indicativa 6.303,58.
+
+Precio, tamaño, volumen y rentabilidad TTM superan mínimos. La caída frente al máximo intradía de 252 sesiones es 27,75%; volumen20 2,72 millones. Precio inferior a EMA20 24,97 y EMA50 25,32, con EMA20 inferior a EMA50: no hay entrada técnica actual. Se siguió investigando fundamentales, sin interpretar ese fallo como rechazo permanente.
+
+Q3 se publicó el 4 de noviembre, la conferencia fue el 5 y el 10-Q se presentó el 5. El análisis ya incorpora esos resultados. La transformación por WildFire impide valorar la compañía actual extrapolando el TTM principalmente antiguo. Se entrega una ventana finita financiada y el mapa de obligaciones, no un NAV completo ni objetivo por acción. Valor y entrada aprobados: null.
+
+## Perímetro, acciones y adquisición
+
+WildFire cerró el 10 de septiembre. La asignación provisional refleja activos por 4.583,4, incluidos propiedades probadas 3.060,5 y no probadas 1.274,1; deuda asumida 618,8 contable, derivados corrientes 160,0 y ARO no corriente 104,1. El valor neto de activos adquiridos 3.462,2 no es enterprise value ni NAV de mercado. Se pagaron aproximadamente 2.600 de efectivo y se emitieron 32,2 millones de acciones al vendedor. La emisión al mercado de 53,3 millones de acciones recaudó 1.225,6 netos en nueve meses; deuda nueva y revolver también financiaron la operación. No sumar de nuevo efectivo recaudado que ya se gastó.
+
+El vendedor posee aproximadamente 12% a septiembre. El denominador actual 266,311 millones es muy distinto de las 230,6 millones de acciones medias diluidas del trimestre. No usar EPS ajustado multiplicado por ese promedio como beneficio atribuible al capital actual.
+
+El antiguo Up-C dejó de generar minoritarios: en febrero se intercambiaron 4,8 millones de unidades/acciones B por A, y las 0,7 millones restantes se recompraron/cancelaron por 19,8. El 10-Q confirma explícitamente NCI y acciones B cero a septiembre. Aquí cero tiene evidencia primaria, no es un supuesto. No se añade una obligación TRA imaginada ni se afirma que existiera una sin fuente.
+
+La venta de activos no esenciales en Q3 afecta la base combinada: la guía 2027 parte de Q2 pro forma ajustado de aproximadamente 158 mil boe/d y 78 mil barriles de crudo/d, no de 117,3 mil boe/d reportados en Q3. Los estados de WildFire auditados, su información intermedia, pro forma original y reporte independiente de reservas fueron obtenidos, no se dejó esa búsqueda pendiente.
+
+## Historia reconciliada y calidad de caja
+
+FY2023 / FY2024 / FY2025: ingresos 1.226,98 / 1.315,89 / 1.311,85; EBIT 534,49 / 511,99 / 439,18; beneficio atribuible 388,30 / 366,03 / 325,25; CFO 855,79 / 920,85 / 878,64. El capex efectivo, conciliando variación de proveedores de inversión, es 458,68 / 489,11 / 479,85.
+
+Q4 2025, Q1/Q2/Q3 2026: ingresos 317,63 / 358,51 / 478,81 / 513,89; EBIT 94,08 / 127,76 / 239,50 / 154,60; beneficio atribuible 68,75 / 99,83 / 181,78 / 80,48; CFO 208,40 / 197,62 / 384,03 / 368,98; capex efectivo 137,78 / 100,98 / 127,37 / 162,31. Q4 y Q2 son diferencias de acumulados auditables.
+
+TTM septiembre 2026 frente a anterior: ingresos 1.668,84 frente a 1.320,83; EBIT 615,95 frente a 469,17; beneficio atribuible 430,83 frente a 342,10; CFO 1.159,02 frente a 892,87; capex efectivo 528,44 frente a 479,70. CFO menos capex 630,58 frente a 413,17; después de SBC y distribuciones minoritarias efectivas, proxy 591,06 frente a 383,89. No es FCFE normalizado del conjunto adquirido: casi todo el año precede al cierre.
+
+Q3 incluye costes de transacción/integración de 68,74 y pérdida de derivados de 41,29, principalmente no realizada. Nueve meses SBC 31,69 y pérdida no realizada de derivados 39,87. Las sinergias previstas superiores a 100 anuales requieren integración; no se añade 100 a los márgenes de guía que pueden incorporarlas. La compra de licencias sísmicas explica gasto de exploración reciente: el desarrollo no es gratuito por clasificar inversión en resultados.
+
+La presentación muestra D&C Q3 147,4 y FCF ajustado 223,7; el efectivo total de inversión en propiedades, con capital circulante de inversión, es 162,31. CFO menos ese importe es 206,67. No confundir D&C selectivo con todos los pagos de inversión. Los impuestos pagados netos de nueve meses fueron un reembolso de 19,07, frente a gasto fiscal 95,30; las deducciones de adquisición y bonus depreciation no justifican impuesto cero perpetuo.
+
+El 10-Q presenta ingresos combinados pro forma de 760,99 Q3 y 2.234,48 nueve meses; beneficio atribuible 162,10 y 514,21. Son no auditados y sujetos a ajustes de compra. No se mezclan mecánicamente con el pro forma de julio para producir un TTM preciso bajo una asignación de compra distinta.
+
+## Obligaciones actuales
+
+Septiembre: efectivo 17,493; deuda nominal 1.935 y contable neta 1.937,799. Componentes nominales: revolver 435, notas 2029 600 al 7,5%, notas 2032 400 al 6,875% y notas 2034 500 al 6,625%. El perfil adquirido importa mucho más que la antigua etiqueta de caja neta. Interés anual contractual de notas aproximadamente 105,6 más revolver variable; guía Q4 interés 35–40.
+
+Derivados: pasivo neto 178,144, de los que 170,810 corriente. La compañía prevé pagos compensados parcialmente por mayor precio físico. Si se modelan liquidaciones explícitas no se deduce además el mismo mark-to-market del puente. El riesgo de base MEH/WTI, contrapartes y precios permanece.
+
+ARO 294,905 total, no corriente 291,922; integra 106,567 adquirido. Es una estimación descontada, no un calendario final de abandono. Proveedores de capex 96,809: no restarlos de nuevo si ya se convierten inversiones devengadas a pagadas. Arrendamientos operativos FY2025 26,309; los nuevos ROU por 35,947 en nueve meses indican movimiento, pero no permiten afirmar un saldo actual sumando entradas sin vencimientos. Se conserva la actualización completa de leases como brecha del puente.
+
+Las contraprestaciones contingentes de la adquisición de 2023 quedaron liquidadas antes de finalizar 2025 y la última no exigió pago. No mantener un máximo de 40 como deuda vigente. El emisor informa no tener procedimientos materiales pendientes al 30 de septiembre; no equivale a conocer pérdida ambiental futura cero. Se conserva incertidumbre sin fabricar una deducción numérica.
+
+Dividendo 0,18, registro 10 de noviembre, pago 1 de diciembre. No se trata como efectivo ya pagado el 6 de noviembre. La autorización ampliada de recompras no es ejecución ni reducción futura de acciones garantizada.
+
+## Reservas, guía y coberturas
+
+FY2025 Magnolia: 210,2 millones boe probados, 166,6 desarrollados y 43,6 PUD. WildFire: 271,225 millones boe, 139,804 desarrollados y 131,422 PUD. La suma histórica de 481,425 no es una certificación de reservas actuales tras producción, venta, compras y revisiones de 2026. Los barriles, pies cúbicos y boe se mantienen separados; 6:1 es conversión energética, no económica.
+
+Medida estandarizada FY2025: Magnolia 2.518,53 y WildFire 4.068,37. WildFire tenía estructura fiscal diferente: no sumar y restar deuda para llamar al resultado NAV común actual. Su reporte independiente calcula PV10 probado de 4.107,56 antes de la diferencia fiscal; no es idéntico a la medida estandarizada. Costes futuros de desarrollo históricos 372,76 y 2.040,81, respectivamente. Probables y extensas acres no se suman como valor cierto, ni se declaran sin valor por quedar fuera del modelo.
+
+La guía primaria 2027: crecimiento orgánico 4–5% de crudo y total sobre base combinada ajustada, D&C 900–950, cuatro rigs y dos equipos de completación, concentración 88–90% del capital en Giddings. Es una base financiada de un año, no promesa de crecimiento ilimitado.
+
+La tabla trimestral publicada detalla collars MEH 2027: 2,700 / 2,275 / 0,920 / 0 millones de barriles, pisos 70,83 / 70 / 70 y techos 88,68 / 82,31 / 80,08. Swaps WTI heredados: 2,066605 / 1,982790 / 0,893666 / 0,866955 millones, precios 63,46 / 65,02 / 67,37 / 66,34. El modelo utiliza cada tramo, no el promedio anual para una curva no lineal. Después de 2027 no presume renovaciones gratuitas de coberturas.
+
+## Modelo finito y límites
+
+La ventana 2027–2036 usa tres escenarios de WTI 55/70/85, gas realizado 2/3/4 y NGL 15/20/25. MEH se supone igual a WTI y el físico de crudo recibe descuento de 2; son hipótesis de base explícitas, no cotizaciones forward certificadas. Mezcla de gas/NGL aproximada por Q3, porque la guía combinada solo precisa crudo y boe. Se exige posterior ingeniería por producto.
+
+Año 1: crecimiento 4,5% y D&C 925, más provisión de inversión adicional 25. Años 2–5 reducen crecimiento a cero; años 6–10 convergen a caídas del 10%/7%/4%. D&C escala con volumen y precios de coste +2% anual, sin eliminar la inversión de reposición. Costes: LOE 6, transporte 1,95 y SBC económica 0,60 por boe, más G&A fijo 45 anual con inflación; no se suman sinergias separadas. Impuesto producción 6%; fiscalidad normalizada 21% sobre margen después de agotamiento fiscal supuesto de 14,5 por boe, sin prolongar 0–2% de caja de Q4.
+
+Cada producto tiene techo físico: su reserva probada histórica conjunta menos una provisión ilustrativa de producción combinada 2026. Se agota ese inventario durante la ventana; no se proyecta extracción más allá del límite ni se añade Gordon. El resto del recurso queda **sin valorar**, no vale cero. El límite por producto puede modificar abruptamente la mezcla y reducir capex en los últimos años. Mantener un coste de perforación proporcional a boe no demuestra que petróleo, gas y NGL tengan igual productividad de capital; la inversión de 25 anual y G&A fijo permanecen incluso al agotarse el presupuesto. No se considera que esos últimos flujos incluyan cierre o desmantelamiento. La asignación temporal y conversión de PUD no están certificadas por ingeniero; el modelo es una sensibilidad del inventario, no un plan de desarrollo comprobado.
+
+Anclas públicas de descuento: Treasury diez años del 6 de noviembre 4,86% y ERP del 1 de noviembre 4,41%, con fechas/base distintas. Betas supuestas 1,50/1,25/1,00; deuda objetivo 23%, coste 6,625% de notas recientes y escudo 21% producen WACC aproximado 10,040% / 9,191% / 8,342%. No son una calibración empírica de beta ni coste marginal asegurado.
+
+PV de esa caja parcial: 1.524 / 3.884 / 6.446, respectivamente. No se divide por acciones ni se resta deuda para presentar valor común: faltan cierre calendarizado, leases, circulante, impuestos por base real y recursos no modelados. Los pagos de hedge sí están incorporados al primer año y no se duplican como pasivo separado.
+
+Se resuelve una inversa de financiación del primer año con y sin contratos existentes, antes de interés, abandono y dividendos. La protección temporal de collars hace bajar mucho el umbral con cobertura; no demuestra viabilidad a ese precio después de 2027. Los resultados exactos figuran en model_results.json. No hay inversa válida del precio de la acción sin NAV completo.
+
+## Próximo trabajo que cambia la conclusión
+
+Actualizar reservas al perímetro actual y reconciliar producción/desinversiones por producto; obtener cronograma de PUD, declive y costes de abandono; calibrar gas/NGL, basis y fiscalidad; cerrar leases/circulante y presupuesto de inversión fuera de D&C. Esas son brechas económicas reales después de obtener las fuentes disponibles, no tablas primarias dejadas sin buscar. La mejora operativa y el nuevo inventario deben generar caja por acción después de financiación y reposición. No se aprueba compra solo por producción mayor, EPS ajustado o PV10 reglamentario.
+
+Fuentes exactas en public_sources.json. Archivos de estados, presentaciones y reporte independiente preservados; history.csv y scripts permiten repetir cálculos.
