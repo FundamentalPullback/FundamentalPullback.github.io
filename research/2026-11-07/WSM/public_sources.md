@@ -1,0 +1,26 @@
+# Fuentes públicas WSM
+
+- submissions: https://data.sec.gov/submissions/CIK0000719955.json
+- release: https://ir.williams-sonomainc.com/investor-information/news-releases/news-release-details/2026/Williams-Sonoma-Inc--announces-strong-second-quarter-2026-results/default.aspx
+- IR_home: https://ir.williams-sonomainc.com/investor-information/default.aspx
+- statistics: https://stockanalysis.com/stocks/wsm/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/WSM?range=2y&interval=1d
+- 2026-08-28_10-Q: https://www.sec.gov/Archives/edgar/data/719955/000071995526000208/wsm-20260802.htm
+- 2026-05-22_10-Q: https://www.sec.gov/Archives/edgar/data/719955/000071995526000131/wsm-20260503.htm
+- 2026-03-26_10-K: https://www.sec.gov/Archives/edgar/data/719955/000071995526000059/wsm-20260201.htm
+- 2025-11-25_10-Q: https://www.sec.gov/Archives/edgar/data/719955/000071995525000049/wsm-20251102.htm
+- 2025-08-29_10-Q: https://www.sec.gov/Archives/edgar/data/719955/000071995525000010/wsm-20250803.htm
+- 2025-05-28_10-Q: https://www.sec.gov/Archives/edgar/data/719955/000162828025028196/wsm-20250504.htm
+- 2025-03-27_10-K: https://www.sec.gov/Archives/edgar/data/719955/000162828025015037/wsm-20250202.htm
+- 2024-11-22_10-Q: https://www.sec.gov/Archives/edgar/data/719955/000162828024048978/wsm-20241027.htm
+- 2024-08-23_10-Q: https://www.sec.gov/Archives/edgar/data/719955/000162828024038362/wsm-20240728.htm
+- 2024-05-24_10-Q: https://www.sec.gov/Archives/edgar/data/719955/000162828024025227/wsm-20240428.htm
+- 2024-03-20_10-K: https://www.sec.gov/Archives/edgar/data/719955/000162828024012221/wsm-20240128.htm
+- calendar: https://ir.williams-sonomainc.com/investor-information/events-and-presentations/default.aspx
+- news: https://ir.williams-sonomainc.com/investor-information/news-releases/default.aspx
+- rh_statistics: https://stockanalysis.com/stocks/rh/statistics/
+- arhs_statistics: https://stockanalysis.com/stocks/arhs/statistics/
+- dividend: https://ir.williams-sonomainc.com/investor-information/news-releases/news-release-details/2026/Williams-Sonoma-Inc--declares-quarterly-cash-dividend-0ca7623b0/default.aspx
+- dividend_august: https://ir.williams-sonomainc.com/investor-information/news-releases/news-release-details/2026/Williams-Sonoma-Inc--declares-quarterly-cash-dividend/default.aspx
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
