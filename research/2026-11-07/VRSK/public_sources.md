@@ -1,0 +1,23 @@
+# Public sources
+
+- submissions: https://data.sec.gov/submissions/CIK0001442145.json
+- companyfacts: https://data.sec.gov/api/xbrl/companyfacts/CIK0001442145.json
+- releaseq32026: https://www.sec.gov/Archives/edgar/data/1442145/000143774926035082/ex_1007822.htm
+- events: https://investor.verisk.com/News--Events-/Events--Presentations/default.aspx
+- price: https://stockanalysis.com/stocks/vrsk/history/
+- statistics: https://stockanalysis.com/stocks/vrsk/statistics/
+- 10Q_2026-11-05: https://www.sec.gov/Archives/edgar/data/1442145/000143774926035083/vrsk20260820_10q.htm
+- 10Q_2026-07-29: https://www.sec.gov/Archives/edgar/data/1442145/000143774926024749/vrsk20260630_10q.htm
+- 10Q_2026-04-29: https://www.sec.gov/Archives/edgar/data/1442145/000143774926013729/vrsk20260331_10q.htm
+- 10K_2026-02-18: https://www.sec.gov/Archives/edgar/data/1442145/000143774926004452/vrsk20251231_10k.htm
+- 10Q_2025-10-29: https://www.sec.gov/Archives/edgar/data/1442145/000143774925032073/vrsk20250930_10q.htm
+- 10Q_2025-07-30: https://www.sec.gov/Archives/edgar/data/1442145/000143774925023862/vrsk20250630_10q.htm
+- 10Q_2025-05-07: https://www.sec.gov/Archives/edgar/data/1442145/000143774925014907/vrsk20250331_10q.htm
+- 10K_2025-02-26: https://www.sec.gov/Archives/edgar/data/1442145/000143774925005160/vrsk20241231_10k.htm
+- accu_oct23: https://www.sec.gov/Archives/edgar/data/1442145/000095010326016441/dp255815_ex9901.htm
+- accu_original: https://www.sec.gov/Archives/edgar/data/1442145/000095010325009565/dp232275_ex9901.htm
+- peer_mco: https://stockanalysis.com/stocks/mco/statistics/
+- peer_spgi: https://stockanalysis.com/stocks/spgi/statistics/
+- investorday2026: https://s29.q4cdn.com/767340216/files/doc_events/2026/Mar/05/VRSK-Investor-Day-Final.pdf
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve

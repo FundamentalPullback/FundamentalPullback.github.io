@@ -1,0 +1,79 @@
+# FITB · Fifth Third Bancorp
+
+**Corte: 8 de noviembre de 2026. Investigación parcial; valoración y entrada no aprobadas.** Opportunity 90 del scanner del 5 de noviembre permite investigar, no comprar. Cierre regular del 6 de noviembre: **$53,04**, corroborado por proveedores secundarios; el scanner conserva $53,45. La interfaz de cotización del emisor no proporcionó un cierre verificable. La acción ordinaria actual cotiza en NYSE; no confundirla con las series preferentes ni con referencias históricas a Nasdaq.
+
+## Conclusión
+
+Comerica ya forma parte de Fifth Third: el cierre ocurrió el 1 de febrero de 2026, no es un catalizador de aprobación pendiente. El crecimiento publicado mezcla adquisición y mejora orgánica. El banco tiene una franquicia de depósitos, pagos y distribución valiosa, pero el precio exige rentabilidad persistente después de pagar el crédito, la integración y el capital retenido. No se aplica FCFF industrial: depósitos, préstamos y deuda bancaria forman parte de la operación, no un puente mecánico de valor de empresa.
+
+El modelo de diez años de beneficio residual y FCFE bancario ofrece **sensibilidades condicionadas de $23,32 / $38,26 / $53,65**, no precios objetivo. La inversa central requiere **ROE común aproximadamente 14,94% sostenido**, superior al puente normalizado ilustrativo del trimestre (11,40%). No equivale al ROTCE ajustado anunciado de 20,6%, cuyo denominador excluye intangibles. Los valores aprobados permanecen nulos.
+
+## Perímetro y contabilidad de adquisición
+
+La contraprestación preliminar asciende a $12.676m: acciones comunes $12.056m, preferentes $412m y premios sustituidos $208m. Aproximadamente 240m acciones comunes nuevas y ratio de canje 1,8663. Se reconocieron activos identificables netos $7.660m y goodwill $5.016m, no deducible fiscalmente. Las estimaciones siguen abiertas durante el período de medición. No se resta otra vez el precio de compra del patrimonio ya consolidado. [S1, nota 4]
+
+Los préstamos adquiridos tenían principal $50.710m, valor razonable $49.878m, ACL inicial $661m y descuento no crediticio $171m. La adopción anticipada de ASU 2025-08 lleva gran parte de la reserva de préstamos adquiridos a un gross-up del activo, no a provisión del día uno. La disminución de provisiones no demuestra por sí sola menor riesgo. La acreción/amortización neta de compra elevó NII en $57m en Q3 y $160m en nueve meses; no se perpetúa gratuitamente en el modelo.
+
+El 10-Q aporta pro forma sin sinergias: beneficio común Q3 2026/2025 de $991m/$769m; nueve meses $2.656m/$1.275m. Imputa los costes directos de fusión al inicio de 2025, de modo que tampoco representa una comparación limpia de crecimiento recurrente. No se mezcla este pro forma con el TTM publicado. Q1 2026 incluye sólo dos meses de Comerica; Q2 y Q3 incluyen tres.
+
+## Historia reconciliada
+
+Importes USD millones; ingresos = NII GAAP + comisiones/otros ingresos no financieros. El archivo CSV contiene detalle y fórmulas reproducibles en model.py.
+
+- FY2023: ingresos 8.708; provisión 515; gastos 5.205; beneficio común 2.212; CFO 4.509; SBC 169.
+- FY2024: ingresos 8.479; provisión 530; gastos 5.033; beneficio común 2.155; CFO 2.824; SBC 164.
+- FY2025: ingresos 9.017; provisión 662; gastos 5.144; beneficio común 2.376; CFO 4.514; SBC 163.
+- Q4 2025 residual anual menos nueve meses: NII 1.529; otros ingresos 811; provisión 118; beneficio común 699; CFO 929.
+- Q1 2026: NII 1.934; otros ingresos 895; provisión 227; beneficio común 128; CFO −1.106.
+- Q2 2026: NII 2.215; otros ingresos 1.059; provisión 129; beneficio común 763; CFO 2.796, obtenido de seis meses menos Q1.
+- Q3 2026: NII 2.271; otros ingresos 1.008; provisión 122; beneficio común 828; CFO 835, obtenido de nueve meses menos seis.
+- TTM septiembre 2025: ingresos 8.847; PPNR 3.786; beneficio común 2.259; CFO 3.484.
+- TTM septiembre 2026: ingresos 11.722; PPNR 3.860; beneficio común 2.418; CFO 3.454.
+
+El TTM es aritméticamente verdadero, pero incluye sólo ocho meses de Comerica y no mide crecimiento orgánico ni rentabilidad de doce meses del combinado. La suma de provisiones trimestrales 2026 es 478 frente a 479 de nueve meses: se conserva la diferencia publicada de redondeo. No se suman EPS de bases accionariales distintas para obtener un EPS normalizado. CFO no es FCFE distribuible del banco. [S1–S5]
+
+## Calidad del beneficio y crédito
+
+Q3 tiene NIM FTE 3,34%, inferior a 3,36% de Q2. El crecimiento de depósitos incluye la entrada de antiguos saldos sweep de Comerica, con coste financiero: no todo es crecimiento gratuito de financiación. La expansión hacia Texas, California y el Southeast aumenta oportunidades y también complejidad de integración.
+
+Los gastos directos de fusión suman $1.075m en nueve meses, incluidos $32m de menores ingresos. En Q3 son $225m antes de impuestos/$171m después; además hay $26m después de impuestos por litigios de interchange y $14m de deterioro tecnológico. Se mantiene el coste de interchange en el puente normalizado, dada su recurrencia e incertidumbre; SBC tampoco se añade de vuelta.
+
+Puente ilustrativo, no previsión: anualizar beneficio común Q3 de 828, eliminar la integración y deterioro tecnológico del trimestre, quitar acreción de compra, subir coste de crédito desde 31 a 50 pb y retirar el beneficio pensional de $20m trimestrales da aproximadamente $3.546m, o 11,40% del patrimonio común. No se agregan sinergias a ese resultado. La selección de 50 pb es hipótesis, no guía del banco ni media calibrada de ciclo completo.
+
+Préstamos al cierre $180.272m; ALLL $2.906m (1,61%) y ACL 1,74%. Morosidad de activos 0,64%; NCO 31 pb, frente a 109 pb del Q3 anterior, que incluyó $178m de fraude en financiación respaldada por activos. No se extrapola la mejora como estructural. Préstamos solares $4.193m con reserva 8,44%; hay litigios e investigaciones estatales relacionados. La cartera de hipotecas comerciales y construcción suma $36.443m, sin afirmar que toda sea oficina. [S1]
+
+## Capital, duración y liquidez
+
+Se utilizan cifras **finales del 10-Q**, no las preliminares del comunicado: CET1 10,03%/$25.001m sobre RWA $249.257m; AOCI −$4.938m; patrimonio común $31.114m; TCE $19.940m. El comunicado indicaba 10,02%, −$4.919m y libro por acción $34,31; el 10-Q informa $34,29. Goodwill $9.984m e intangibles $1.190m explican por qué ROTCE y ROE no son intercambiables.
+
+La Fed confirma SCB 3,2% y mínimo CET1 con buffer 7,7%, no 4,5% aislado. El resultado de búsqueda inicialmente mezclaba columnas; la lectura directa de la tabla lo resolvió. El grupo pasó a categoría III en Q3: mayores exigencias de liquidez y stress anual. La estimación del emisor bajo la propuesta de reglas de capital es CET1 9,2%; es una propuesta, no el ratio vigente ni una pérdida inmediata. La regla de septiembre modifica el calendario futuro de SCB, por lo que la carta de febrero no se usa como calendario definitivo. [S1, S6]
+
+AOCI ya reduce el patrimonio inicial del modelo: no se devuelve automáticamente. Las pérdidas netas AFS $4.734m ya están reflejadas según su tratamiento fiscal. HTM contiene pérdida adicional no reconocida de $1.039m; el caso prudente aplica un descuento después de impuestos de $810m, sin volver a restar la pérdida transferida que ya está en AOCI. La sensibilidad del emisor a una bajada gradual de 200 pb reduce NII 2,26% el primer año y 8,30% el segundo; no se interpreta como previsión.
+
+Depósitos $239.486m, de los que aproximadamente $101.500m domésticos no están asegurados. La cobertura FDIC generalmente es $250.000 por depositante, banco y categoría de titularidad; no asegura al accionista. Liquidez disponible declarada $142.000m y horizonte de la matriz 24 meses sin nuevas remesas ni mercados: capacidad de resistencia, no caja libre para repartir. El monto actualizado de remesas legalmente distribuibles por la filial no quedó cuantificado; se mantienen las restricciones de beneficios, solvencia y supervisión descritas en el 10-K.
+
+Las obligaciones de pensiones y leases ya están incorporadas en patrimonio/gastos. El plan adquirido cualificado presenta superávit $1.459m y el no cualificado déficit $141m: no se considera el superávit dinero libre ni se vuelve a deducir el pasivo registrado. [S1, S2]
+
+## Reclamaciones y capital por acción
+
+El 10-Q estima pérdidas legales/regulatorias razonablemente posibles de hasta $76m por encima de reservas para asuntos cuantificables; no es tope de todos los litigios. Existen asuntos sin rango estimable. La reclamación Early Access supera $440m según los demandantes, pero no equivale a una obligación reconocida: el procedimiento sigue con cuestión certificada al Supremo de Ohio. Interchange, sobregiros y solar requieren seguimiento. Se descuenta $76m adicional en el caso prudente sin presentarlo como pérdida esperada.
+
+Acciones comunes: 907,367m a septiembre; 903,646m al 31 de octubre; media diluida Q3 917,103m, utilizada como proxy prudente explícita, no como número exacto futuro. No se reconoce acreción por recompras hipotéticas. Dividendo trimestral declarado $0,42, pagado el 15 de octubre a titulares registrados el 30 de septiembre; no pertenece al comprador actual. La tasa anualizada $1,68 equivale a 3,17% del cierre, pero futuros dividendos no están garantizados. [S1, S8]
+
+## Modelo de diez años y exigencia del precio
+
+El modelo parte de patrimonio común consolidado, después de preferentes, incluyendo goodwill y AOCI. Beneficio = ROE × patrimonio inicial; capital retenido es el mayor entre crecimiento del libro y necesidad de CET1 sobre RWA proyectados. FCFE potencial = beneficio menos retención, nunca negativo; no es autorización de dividendo ni remesa disponible. Si los beneficios no cubren el capital necesario, el déficit queda visible y no se inventa una emisión de capital; no se asume liberación inmediata del capital existente. El capital común y CET1 aumentan por beneficios retenidos. Es una aproximación, no una proyección regulatoria completa: futuros OCI, deducciones, impuestos diferidos y remesas pueden diferir.
+
+- Prudente: ROE 9,5%, Ke 11,75%, crecimiento 2%, objetivo CET1 11%; pérdida HTM y reclamación inicial, más shock crediticio incremental de 1% de préstamos después de impuestos en año uno. Cero distribución cuando el capital la impide; el objetivo de gestión puede tardar en reconstruirse. $23,32.
+- Intermedio: ROE 12% durante cinco años, converge a 11,5%; Ke 10,75%; crecimiento 4% que baja a 2,5%; objetivo CET1 10,5%. $38,26.
+- Expansivo: ROE 14% converge a 13%; Ke 9,75%; crecimiento 5% converge a 2,5%; objetivo CET1 10,5%. $53,65.
+
+Los diez años registran libro, beneficio, retención, distribución, CET1, RWA y déficit frente al objetivo. El valor terminal retiene g/ROE del beneficio. RI y FCFE potencial se concilian numéricamente. La revisión independiente confirma continuidad de distribución terminal y capital suficiente al final de estos escenarios, pero la identidad presupone que las remesas potenciales pueden pagarse: no valida restricciones de filiales ni plazos de autorización. Los casos son del combinado actual, no de Fifth Third standalone. La inversa sostiene ROE constante, no la senda descendente central: con Ke 10,75%, crecimiento 4%→2,5% y mismo capital exige 14,94% para justificar $53,04.
+
+Ke se ancla a Treasury diez años 4,86% del 6 de noviembre y ERP implícita 4,41% del 1 de noviembre. Beta 1,2 es hipótesis explícita, no regresión observada: CAPM 10,152%; la banda 9,75–11,75% prueba sensibilidad de ejecución y crédito. La ERP publicada utilizó un Treasury5,29%, distinto del4,86% aplicado aquí; esta mezcla de fechas/base no es una calibración contemporánea. No se usa WACC de un industrial. Un comparativo útil posterior sería USB/PNC/MTB por ROE, capital y P/TBV homogéneos; no se produce mediana con cifras mezcladas ni se usa como validación automática.
+
+## Calendario y cierre pendiente
+
+La conferencia BancAnalysts se celebró el 6 de noviembre, antes del cierre utilizado. El anuncio primario la confirma, pero no se recuperó contenido primario de diapositivas/transcripción; no se afirma que no hubiera cambios. Próximo Q4 2026 previsto por el emisor: 19 de enero de 2027; calendario posterior actualizado en agosto: Q1 16 de abril y Q2 16 de julio. [S7]
+
+Para completar Stage 3: revisar el contenido de la conferencia; fijar ROE sostenible con desaparición verificable de costes y acreción, normalizar crédito de ciclo, y reconciliar el capital distribuible/remesas bajo categoría III y la trayectoria regulatoria. Un cierre primario de mercado sigue sin certificarse. Los precios aprobados, tamaño y entrada permanecen nulos. No se ejecutó operación ni se modificó una publicación remota.
