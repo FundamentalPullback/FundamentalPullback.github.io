@@ -1,0 +1,69 @@
+# Vistra (VST): investigación fundamental parcial, sin entrada aprobada
+
+Fecha de corte: 8 de noviembre de 2026. Importes en millones de USD salvo acción, porcentaje o MW. Investigación pública parcial.
+
+## Conclusión
+
+El cierre ordinario del 6 de noviembre es 124,80 USD, corroborado por dos proveedores de mercado archivados; no es una cotización certificada por el emisor. Los 124,65 posteriores al cierre no se utilizan. Con aproximadamente 339 millones de acciones comunicadas al 2 de noviembre, la capitalización indicativa es 42.307 millones, no una cifra exacta de acciones diluidas.
+
+Precio, tamaño, volumen y rentabilidad contable superan sus mínimos. El precio está por debajo de EMA20 138,13 y EMA50 143,16, y EMA20 es inferior a EMA50. La caída frente al máximo intradía de 252 sesiones es 36,59%; volumen medio de veinte sesiones 7,32 millones. No existe configuración técnica de entrada. Eso no impide esta investigación fundamental. La serie de dos años y su inicialización están archivadas.
+
+La publicación del 6 de noviembre ya contiene el tercer trimestre. No es un informe previo a resultados. Sin embargo, el inventario SEC consultado aún no contiene el 10-Q de septiembre: el último balance detallado disponible es junio. La compra de Cogentrix posterior al trimestre y los movimientos de financiación impiden convertir ese balance antiguo en un puente de valor actual sin datos adicionales. Valor intrínseco aprobado y entrada aprobada: **no determinados**.
+
+## Historia reproducible y perímetro
+
+FY2023 / FY2024 / FY2025: ingresos 14.779 / 17.224 / 17.738; resultado operativo 2.661 / 4.081 / 1.906; beneficio ordinario 1.343 / 2.467 / 752; CFO 5.453 / 4.563 / 4.070; capex, combustible nuclear y prepagos LTSA 1.676 / 2.078 / 2.752. Son cifras consolidadas reportadas, no crecimiento orgánico.
+
+Últimos cuatro trimestres, Q4 2025, Q1, Q2 y Q3 2026: ingresos 4.584 / 5.640 / 4.017 / 6.347; EBIT 474 / 1.499 / 553 / 1.706; beneficio común 185 / 980 / 258 / 1.092; CFO 1.432 / 1.199 / 1.023 / 2.108; inversión 836 / 883 / 689 / 747. Q4 y Q2 se obtienen por diferencias de periodos acumulados, no por extrapolación.
+
+TTM septiembre 2026 frente a septiembre 2025: ingresos 20.588 frente a 17.191; EBIT 4.232 frente a 2.031; beneficio común 2.515 frente a 960; CFO 5.762 frente a 3.991; inversión 3.155 frente a 2.346. CFO menos inversión: 2.607 frente a 1.645. Tras retirar los movimientos de depósitos de margen: 3.199 frente a 2.019; tras cargar SBC económicamente: 3.072 frente a 1.913. Estos últimos son puentes diagnósticos, **no FCFE ni FCFF normalizados**: aún incluyen efectos de seguros, fiscalidad, permisos ambientales y perímetro.
+
+Energy Harbor se incorporó en marzo de 2024. Lotus, siete plantas y más de 2.300 MW, cerró en octubre de 2025; precio final 1.231 tras devolución de 6 en marzo de 2026. Cogentrix, diez plantas de gas y aproximadamente 5.500 MW, cerró el 30 de octubre de 2026: efectivo aproximado 2.200, cinco millones de acciones nuevas y deuda asumida aproximada 1.700, posteriormente amortizada. Cogentrix no está en el TTM de septiembre, pero sí en la guía 2027. No se divide el flujo del perímetro antiguo por la deuda y acciones nuevas para declarar valor del conjunto.
+
+## Qué genera realmente la caja
+
+La integración de generación y comercialización minorista amortigua exposición, pero no elimina precio mayorista, combustible, base regional, climatología, indisponibilidad ni garantías de derivados. Los ingresos no equivalen al valor bruto de toda la energía negociada: las operaciones y derivados tienen tratamientos de presentación distintos. No se interpreta crecimiento reportado como expansión uniforme de volumen o margen.
+
+Q3 se benefició de calor récord y disponibilidad comercial del 95%. El beneficio atribuible de 1.140 incluye 559 de ganancia no realizada de coberturas; después de preferentes quedan 1.092 comunes. Ni esa ganancia ni el trimestre de calor se anualizan. El ajuste de derivados en CFO TTM es −369 frente a +937 un año antes. A mediados de año el emisor indicó que prácticamente toda la generación prevista de 2026 estaba cubierta al inicio del ejercicio; eso no prueba igual cobertura para 2028–2036.
+
+La depreciación de resultados y la amortización del combustible nuclear no coinciden: FY2025 el ajuste total de depreciación/amortización en caja es 2.950. Sumar ese importe y volver a omitir las compras de combustible/LTSA inflaría la caja. El modelo conserva explícitamente esas compras en inversión.
+
+Los 246 de seguros por daños a activos y la ganancia por conversión involuntaria de 102 en nueve meses no constituyen rentabilidad recurrente. Compras/ventas de permisos ambientales de 251/153 consumen 98 de inversión neta. Los movimientos de los fondos de desmantelamiento no son reservas de efectivo disponibles al accionista.
+
+## Activos, compromisos y financiación
+
+A junio: efectivo 435, efectivo restringido 46, deuda financiera a largo/corto plazo contable 19.595 y financiación de cuentas a cobrar 300 adicional. Depósitos de margen de mercancías 1.436; depósitos de financiación afiliada 438 con obligación correspondiente: no añadir como caja libre. ARO 4.269, incluida parte corriente 197. Preferentes 2.476. Compromiso de recompra del antiguo minoritario de Vistra Vision: valor presente 613 y pago final de principal/intereses 631 el 31 de diciembre de 2026. El minoritario fue adquirido: no restar además una participación inexistente y simultáneamente omitir su pago aplazado.
+
+El 24 de septiembre se emitieron 1.500 de notas subordinadas: 850 al 7,000% y 650 al 7,250%, vencimiento 2057. Son derechos superiores al común aunque su tratamiento crediticio pueda parecer híbrido. En octubre/noviembre se amortizó la Serie A preferente por 1.000, se pagó Cogentrix, se dispuso de 1.375 de financiación de cuentas a cobrar y se amortizaron aproximadamente 1.700 de deuda adquirida. La liquidez disponible comunicada pasa de 8.923 al 30 de septiembre a aproximadamente 5.400 pro forma; **liquidez disponible no es efectivo**. No se reconstruye un saldo exacto contemporáneo con esos movimientos parciales.
+
+Los arrendamientos FY2025 suman 327: operativos 105 y financieros 222; los déficits netos de pensiones/OPEB son 101/88. Son referencias fechadas, no saldos actuales certificados. Se requiere actualización posterior a Cogentrix antes del puente completo.
+
+Moss Landing: junio recogía costes totales de retirada/remediación estimados en 175, con 90 incurridos y 85 pendientes provisionados; litigios y otras consecuencias no tienen aquí una pérdida final cuantificable. Q3 registra deterioro de 269 ligado al activo de 350 MW. No se usa el deterioro como sustituto del efectivo de restauración, ni se fija reclamación desconocida en cero. Cambios en reglas de emisiones, cenizas y agua pueden alterar costes/fechas de cierre.
+
+El fideicomiso de desmantelamiento de Comanche Peak de junio, 2.737, frente a ARO de 1.869 no crea 868 de efectivo distribuible. Hay restricciones y otros fondos/obligaciones nucleares; tampoco se compensa todo el ARO corporativo con un único fideicomiso.
+
+## Vida útil y crecimiento comprometido
+
+Licencias comunicadas en el anual: Comanche Peak 1/2 hasta 2050/2053; Beaver Valley 1/2 hasta 2036/2047; Perry hasta 2046; Davis-Besse hasta 2037. Solicitar extensión no equivale a obtenerla. Las inversiones de mantenimiento, recarga y seguridad continúan incluso con PPA. Baldwin, Kincaid, Newton y Coleto Creek tenían cierres anunciados para 2027, sujetos a ejecución y posible reconversión; no se capitalizan como plantas perpetuas.
+
+Meta: PPA de veinte años que cubre capacidad existente de Perry/Davis-Besse y 433 MW de aumentos previstos, inversión 2026–2034, menos del 20% prevista antes de finalizar 2028. AWS: contrato Comanche Peak de 1.200 MW, veinte años con opción adicional, incorporación progresiva hasta 2032. Precios confidenciales: no asignar ingresos por MW sin precio, disponibilidad y perfil. La financiación DOE de hasta 4.200 es condicional, no subvención ni caja ya recibida. Pulaski y Deer Creek entraron en operación; el PPA de Odessa de 207 MW tampoco demuestra por sí solo retorno sobre capital.
+
+## Presupuesto 2027 y sensibilidad útil
+
+Guía consolidada de EBITDA ajustado 7.625–8.425, no confundir con 7.700–8.500 de operaciones continuadas que excluye cierre de activos. Puente publicado: menos intereses pagados 1.353, impuestos 117, más liberación de circulante/márgenes/permisos 704, menos reclamación/remediación 217 y otros usos operativos 190: CFO 6.452–7.252.
+
+El modelo retira los 704 temporales, paga mantenimiento/combustible/LTSA 1.750, inversión neta adicional 10 y SBC económica 155, sin devolver costes de transición ni otros ajustes discrecionales. Antes de normalizar seguros quedan 3.833–4.633, centro 4.233. La nota (a) del puente primario indica que los 1.750 de inversión incluyen 74 de cobros esperados por daños de Martin Lake de 2024. Al retirar ese beneficio no recurrente quedan **3.759–4.559**, centro **4.159**, antes de crecimiento, impuestos adicionales, preferentes, principal financiero y distribuciones comunes. Esto reconcilia por qué el AFCFbG ajustado publicado de 4.075–4.875 no es dinero íntegramente distribuible.
+
+Se cruzan presupuestos hipotéticos de crecimiento de 500/1.000/1.500/2.000 con impuestos adicionales de 0/400/800. No son guía del emisor. En el caso central, crecimiento 1.500 e impuesto adicional 400 dejan 2.259 antes de preferentes y financiación. El máximo de crecimiento más impuesto adicional más preferentes y principal sin financiación externa ni dividendo común es 4.159 bajo la guía central, después de retirar el seguro no recurrente. Esa es una inversa de financiación, **no inversa del precio de la acción**. Los 117 de impuestos de caja son bajos frente al gasto fiscal previsto de 890–1.060 y no se perpetúan automáticamente.
+
+Para valoración futura, referencias archivadas: Treasury diez años del 6 de noviembre 4,86% y ERP público del 1 de noviembre 4,41%; el ERP utiliza otra fecha/tasa subyacente, por tanto no son una calibración simultánea. Betas hipotéticas 1,00/1,25/1,50 producen Ke 9,27%/10,3725%/11,475%. No se presentan como beta medida ni WACC validado. El rendimiento de las notas híbridas no sustituye al coste marginal senior de toda la compañía.
+
+## Qué impide aprobar valor
+
+Faltan distribución anual de caja por flota/vida útil, curva de coberturas después de 2026, inversión completa de crecimiento y extensiones, impuestos normalizados, balance detallado y obligaciones posteriores a Cogentrix, y rango completo de reclamaciones. Las PPAs públicas no revelan sus precios. Por ello no se fabrican años 6–10, convergencia terminal ni una perpetuidad de plantas con licencia finita. Tampoco se asigna cero al negocio posterior a 2036: está **sin valorar**. Un múltiplo de CEG/NRG sin normalizar combustible, contratos, deuda y capex no cerraría estas carencias.
+
+Próxima actualización: 10-Q de septiembre y documentación financiera posterior al cierre, presupuestos de inversión por programa, exposición contractual y perfil de impuestos. La tesis favorable exige convertir capacidad contratada y nuevas plantas en caja después de reinversión, no únicamente mayores EBITDA y MW. La invalidan sobrecostes, garantías exigidas, deterioro de disponibilidad o contratos cuyo retorno no cubra capital y cierre. Este paquete completa la investigación disponible y una herramienta de financiación; no certifica una valoración integral.
+
+## Fuentes
+
+Anuales y trimestrales SEC archivados, comunicado SEC/IR del 6 de noviembre, 8-K de cierre Cogentrix y de notas subordinadas, anuncios de Meta y DOE, inventario SEC y dos historiales de mercado. Las URL exactas figuran en public_sources.json. history.csv preserva cada periodo; model.py genera sensibilidad y filtros.
