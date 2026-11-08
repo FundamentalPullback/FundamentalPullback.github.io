@@ -1,0 +1,26 @@
+# Fuentes públicas de LIN
+
+- submissions: https://data.sec.gov/submissions/CIK0001707925.json
+- release: https://www.sec.gov/Archives/edgar/data/1707925/000165495426009199/lin_ex991.htm
+- calendar: https://www.linde.com/news-and-media/2026/linde-announces-third-quarter-2026-earnings-and-conference-call-schedule
+- statistics: https://stockanalysis.com/stocks/lin/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/LIN?range=2y&interval=1d
+- 2026-10-29_10-Q: https://www.sec.gov/Archives/edgar/data/1707925/000162828026068079/lin-20260930.htm
+- 2026-07-31_10-Q: https://www.sec.gov/Archives/edgar/data/1707925/000162828026051289/lin-20260630.htm
+- 2026-05-01_10-Q: https://www.sec.gov/Archives/edgar/data/1707925/000162828026029165/lin-20260331.htm
+- 2026-02-25_10-K: https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm
+- 2025-10-31_10-Q: https://www.sec.gov/Archives/edgar/data/1707925/000162828025047710/lin-20250930.htm
+- 2025-08-01_10-Q: https://www.sec.gov/Archives/edgar/data/1707925/000162828025037164/lin-20250630.htm
+- 2025-05-01_10-Q: https://www.sec.gov/Archives/edgar/data/1707925/000162828025021379/lin-20250331.htm
+- 2025-02-26_10-K: https://www.sec.gov/Archives/edgar/data/1707925/000162828025007990/lin-20241231.htm
+- 2024-10-31_10-Q: https://www.sec.gov/Archives/edgar/data/1707925/000162828024044457/lin-20240930.htm
+- 2024-08-02_10-Q: https://www.sec.gov/Archives/edgar/data/1707925/000162828024034299/lin-20240630.htm
+- 2024-05-02_10-Q: https://www.sec.gov/Archives/edgar/data/1707925/000170792524000090/lin-20240331.htm
+- 2024-02-28_10-K: https://www.sec.gov/Archives/edgar/data/1707925/000162828024007424/lin-20231231.htm
+- financial_reports: https://www.linde.com/investors/financial-reports
+- dividend: https://www.linde.com/news-and-media/2026/linde-declares-dividend-in-fourth-quarter-2026
+- apd_statistics: https://stockanalysis.com/stocks/apd/statistics/
+- slides: https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/linde3q26teleconferenceslides.pdf
+- transcript: https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- erp: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
