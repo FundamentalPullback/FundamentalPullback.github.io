@@ -1,0 +1,85 @@
+# Enerpac Tool Group (EPAC) — perímetro adquirido pendiente de conciliación
+
+**Corte: 8 de noviembre de 2026. Investigación parcial, sin valor aprobado ni entrada.** EPAC es elegible para investigación con Opportunity 80 bajo el umbral vigente de 65. La elegibilidad no acredita valor ni permite omitir Stage 3/3.5. Cierre regular: **38,83 USD, 6 de noviembre, 16:00 Nueva York**, corroborado en dos historiales; Last 39,54 y puntuaciones Opportunity 80/QP80 son del scanner del 5 de noviembre [S8]. No se recalculan scores con la cotización nueva.
+
+## Lo que cambia la lectura
+
+Enerpac cerró SFE el **28 de octubre**, después del balance anual del 31 de agosto. Por tanto, la deuda neta anual 7,6 millones y el apalancamiento 0,1x ya no describen el perímetro que compra hoy el accionista. La adquisición costó aproximadamente 472 millones:452 en efectivo más 20 en premios de acciones vinculados a bonos de transacción. La nota 18 del 10-K confirma financiación con préstamo 300 y revolver 312. El emisor estima deuda neta/EBITDA ajustado de **2,3x** tras el cierre [S1,S5,S6].
+
+La lectura operativa tampoco es crecimiento sin fricción: FY2026 ventas+5,7%, pero EBIT−3,2% y beneficio−3,2%; EPS+1,2% ayudado por menos acciones. EBITDA ajustado 154,3 frente 153,6 apenas aumenta, mientras el margen cae de 24,9% a 23,7%. El cuarto trimestre mejora ventas, pero empeora beneficio y margen. La caída desde máximos no prueba infravaloración.
+
+**Bloqueo concreto:** el 8-K de cierre difiere los estados de SFE y la información proforma a una enmienda. No se encontró dicha enmienda en las presentaciones disponibles al corte. Se revisaron 10-K, comunicado de cierre e Investor Day del 4 de noviembre; aportan financiación y guía, pero no sustituyen balance adquirido, flujo de caja ni asignación del precio de compra. No se inventan esos estados. Se entrega historia conciliada y una prueba inversa financiada, no tres precios objetivo aparentando precisión.
+
+## Historia y cuatro trimestres
+
+USD millones. CFO y beneficio de operaciones continuadas; FY2024 beneficio total 85,7 incluye 3,5 de discontinuadas y CFO total 81,3 difiere del continuo 84,0. FCF reportado=CFO continuo−capex; no es FCFF económico normalizado [S1–S4].
+
+| Periodo | Ventas | EBIT | Beneficio continuo | CFO continuo | Capex | FCF reportado |
+|---|---:|---:|---:|---:|---:|---:|
+| FY2024 | 589,5 | 121,6 | 82,2 | 84,0 | 11,4 | 72,6 |
+| FY2025 | 616,9 | 133,5 | 92,7 | 111,3 | 19,3 | 92,0 |
+| FY2026 | 652,3 | 129,2 | 89,7 | 130,2 | 10,6 | 119,6 |
+| Q1 FY2026 | 144,208 | 28,490 | 19,131 | 15,976 | 2,677 | 13,299 |
+| Q2 FY2026 | 154,807 | 25,020 | 16,308 | 13,051 | 3,057 | 9,994 |
+| Q3 FY2026 | 167,553 | 41,368 | 29,798 | 40,236 | 3,507 | 36,729 |
+| Q4 FY2026 derivado | 185,732 | 34,323 | 24,462 | 60,937 | 1,359 | 59,578 |
+
+El último TTM coincide con FY2026; su comparación homogénea inmediata es FY2025, no un TTM desfasado a mayo. El archivo incluye adicionalmente TTM de mayo como conciliación, sin mezclarlo con la valoración actual. Q4 se calcula anual redondeado menos nueve meses con mayor precisión: **sus tres decimales son aritméticos, no precisión declarada por el emisor**. El comunicado Q4 informa ventas 185,7, EBIT34,4 y beneficio 24,4; la pequeña diferencia con el residual evidencia redondeo/presentación y no se oculta. CFO trimestral por diferencias de acumulados. El modelo tolera diferencias de 0,001 millones entre sumas de beneficio trimestral y acumulado.
+
+Margen EBIT anual 20,63%/21,64%/19,81%; D&A13,3/15,7/17,5; SBC10,9/13,0/12,1. FY2026 producto 546,1 frente 500,1 y servicios 106,2 frente 116,8. IT&S EBIT163,5 frente 163,9 y margen 26,1% frente 27,5%; costes corporativos 41,6 frente 36,4. Cortland Biomedical aporta 25,8 de ventas y 7,3 EBIT, una fracción pequeña; el grupo sigue siendo industrial, no una compañía sanitaria nueva [S1].
+
+## Márgenes y costes: no sumar todo lo ajustado
+
+ASCEND finalizó en agosto 2024, con coste total 74,7 incluyendo 18,6 de reestructuración. Esa terminación no significa ausencia de gastos de adaptación: plan 2025 de 5,9 millones, seguido por plan 2026 de 3,3 para Hydratight y ajustes de plantilla en EMEA. Al cierre quedan reservas de 0,5 y 1,2 respectivamente. Son programas identificables, pero la repetición aconseja mantener un coste normal de productividad/reorganización en márgenes, no devolver todos los cargos al accionista [S1].
+
+SFE añade costes de transacción estimados 8 y de integración 10–14. Las sinergias 4–6 se esperan al tercer año, no de inmediato. Los ajustes de adquisición no eliminan el coste económico de comprar capacidad y mantener talento. Premios totales de incentivo 21,2 incluyen los 20 sustituyendo bonos del vendedor, con distintas condiciones de permanencia y desempeño. No se restan 20 de efectivo y además se cargan como dilución, ni se supone que toda la capacidad del plan se emitió [S6].
+
+La guíaFY2027 incluye aproximadamente diez meses de SFE: ventas 825–845, crecimiento orgánico 4–6%, EBITDA ajustado 195–205 y EPS ajustado 2,00–2,15. Investor Day aporta D&A26–30 **excluyendo PPA**, intereses 30–34, capex 2–3%, tasa ajustada 22–26% y acciones 51–52 millones. El objetivoFY2030 es crecimiento orgánico 4–6%, margen EBITDA ajustado 25,5–26% y conversión FCF/beneficio GAAP>100%. Son objetivos, no una proyección garantizada ni un EBIT GAAP listo para descontar [S7].
+
+## Caja e inversión
+
+La mejora CFO de 111,3 a 130,2 convive con caída de beneficio. Inventarios liberan 8,5, compensación acumula 5,7, otros pasivos 8,7 y cuentas fiscales 4,7; clientes consumen 7,8 y prepagos/otros activos 14,2. No se extrapolan esas liberaciones como crecimiento perpetuo.
+
+Capex baja de 19,3 a 10,6: en 2025 inversión corporativa 10,0 frente 2,1 en 2026. Depreciación física aproximada=D&A−amortización intangible:11,2 en 2026. El capex físico reportado está cerca o ligeramente por debajo de ese consumo, y hubo otros 2,0 de compras de activos de negocio. FCF tras ambos usos sería 117,6, no 119,6. DTA consumió 26,7 de adquisición en 2025; el coste de SFE no aparece en cajaFY2026 porque cerró después. Ni capex bajo ni addbacks de amortización justifican crecimiento adquirido gratuito.
+
+Circulante seleccionado clientes+inventario−proveedores:140,9 al cierre,21,6% de ventas, frente 142,0/23,0% en 2025. No equivale al circulante operativo completo. Falta el circulante de SFE, sus activos de reposición, software capitalizado y flujos fiscales. No se ha aislado una cifra completa de inversión en software del nuevo perímetro; el porcentaje de capex es proxy pendiente, no demostración de gasto cero. La afirmación de capacidad instalada en Investor Day es una tesis de dirección que debe contrastarse con esas cifras.
+
+## Deuda, arrendamientos, pensiones y acciones
+
+Nueva facilidad 850 millones del 16 de octubre:300 préstamo y 550 revolver, vencimiento octubre 2031 y opción de 425 adicionales sujeta a condiciones. El margen contractual sobre SOFR ajustado es 1,125–1,875%, inicialmente 1,125%; límites de apalancamiento 3,75x o temporalmente 4,25x en adquisiciones elegibles y cobertura de intereses mínima 3x [S1]. No se confunde capacidad no dispuesta con caja.
+
+2,3×(154,3+44)=**456,09** de deuda neta aproximada usando la estimación del emisor;612 menos esa cifra implicaría 155,91 de caja. **No es un balance de cierre verificado**: el ratio está redondeado, definido por covenant y sujeto a ajustes. No se resta además el precio 452, ya financiado dentro de la deuda neta proforma. El precio/EBITDA de compra tampoco sustituye flujo distribuible.
+
+Arrendamientos operativos heredados 38,7, coste 12,6 y pagos 13,0; no hay financiación por arrendamientos significativa. Manteniendo rentas dentro del margen, no se descuenta de nuevo todo ese pasivo. Déficits de planes significativos: EE.UU.0,4, extranjero 1,1, OPEB1,4 y SERP0,6; compensación diferida sin financiación 4,5. No se equipara el renglón agregado de pensiones 5,8 al déficit de todos los planes ni se presume completa la lista adquirida de SFE. Contingencias ordinarias y expediente neerlandés de sanciones tienen provisiones; el emisor no espera efecto material, pero no se declara riesgo cero [S1].
+
+Acciones ordinarias 51,305685 millones al 26 de octubre. Promedio diluidoFY2026 52,2; las recompras 81,1 ya afectaron acciones/caja y no se añaden como valor. La prueba de sensibilidad usa 51,305685+0,4 de dilución histórica aproximada+0,621622 de capacidad del plan de incentivos=52,327307; **no afirma que esa sea la dilución real actual**. La guía 51–52 es otro periodo/medida. Sin acciones B ni preferentes en circulación al cierre anual.
+
+## Prueba inversa condicional de diez años
+
+No se publican valores por escenario. Se pregunta qué **margen EBITA constante** haría compatibles 38,83 USD con hipótesis explícitas. EBITA incluye depreciación física y retiene costes de personal/SBC; no se añade amortización PPA no conocida ni su escudo fiscal. Base de ventas año 1=863,333: media de guía FY2027 de 835 más dos meses de SFE (170/6), para aproximar un run-rate de doce meses desde el corte de noviembre. Es una aproximación analítica, no guía NTM ni reconciliación exacta del tramo fiscal transcurrido; mantiene el run-rate legado de la guía y el dato histórico SFE, sin proyección estacional comprobada. No se añaden otra vez meses SFE en año 2. Años 6–10 convergen al crecimiento terminal.
+
+Supuestos comunes: impuesto 25%; depreciación física 2% de ventas, pendiente de verificar; integración 12 antes de impuestos en año 1; circulante inicial legado 140,9 más 22% de ventas SFE170, ambos con fechas distintas y el segundo supuesto. Obligaciones netas condicionales 481,357 incluyen deuda neta estimada 456,09, reserva de caja operativa 17,267, déficits identificados 3,5 y compensación diferida 4,5. Otros derechos adquiridos desconocidos quedan sin valorar, no certificados como cero.
+
+| Prueba | Prudente | Intermedia | Expansiva |
+|---|---:|---:|---:|
+| Crecimiento orgánico inicial | 3% | 5% | 7% |
+| WACC | 10% | 9% | 8% |
+| Capex / ventas | 3% | 2,5% | 2,5% |
+| Circulante / ventas | 26% | 24% | 22% |
+| Crecimiento terminal | 2% | 2,5% | 3% |
+| ROIC terminal supuesto | 12% | 15% | 18% |
+| **Margen EBITA exigido** | **34,60%** | **26,33%** | **19,03%** |
+| Peso terminal | 46,3% | 54,3% | 64,0% |
+
+Todos los años financian como mínimo capex menos depreciación más aumento de circulante. En años 6–10 se incorpora reinversión suplementaria para converger al requisito terminal g/ROIC, sin caer bajo ese piso físico. El terminal mantiene la cota física y resta reinversión=Nopat×g/ROIC cuando esta es mayor. La caja del año 11 crece de forma continua desde el año 10; no aparece un salto de inversión únicamente después del horizonte explícito. El margen constante exigido es una pregunta inversa, no una recuperación de margen validada sin costes. El intermedio equivale a aproximadamente 28,33% de EBITDA antes de diferencias de ajustes, por encima del objetivo de EBITDA ajustado 25,5–26%; las definiciones no son idénticas y **no se interpreta la resta como déficit de beneficio exacto**. La dispersión demuestra sensibilidad y la necesidad de conciliar SFE, no un rango de precios aprobado. ROIC legado aproximado 20,8% con NOPAT25% y capital medio contable neto no demuestra el retorno de los 472 pagados.
+
+Coste de capital fechado: Treasury 4,86% del 6 de noviembre, verificado en tabla primaria; ERP Damodaran 4,41% del 1 de noviembre, cuyo cálculo usa Treasury 5,29%; las fechas/bases se mezclan expresamente y no equivalen a una calibración simultánea. Beta histórica 0,81 del proveedor produce Ke 8,43%, pero no incorpora suficientemente el cambio de apalancamiento/perímetro. Hipótesis de beta 1,2 implica Ke 10,15%; deuda 612 y capitalización básica aproximan peso deuda 23,5%. Coste de deuda 6% es supuesto, no SOFR vivo; con impuesto 25%, WACC8,82%, redondeado a 9% en prueba intermedia. No se certifica una prima exacta por integración [S8,S9].
+
+## Comparables y cierre del trabajo pendiente
+
+ITT e ITW muestran EV/EBIT26,03 y 19,77, EV/EBITDA19,45 y 18,15 al 6 de noviembre, respectivamente [S10]. ITW es mucho mayor y diversificado; ITT tiene distinta mezcla y adquisiciones. Los datos agregados de EPAC aún usan caja 174,7 y deuda 221 incluyendo arrendamientos precompra; además su EBIT132 difiere del 129,2 primario. No se usan para una supuesta ventaja relativa. Una comparación válida exige deuda y ganancias del mismo perímetro.
+
+Para cerrar Stage 3: obtener estados SFE y proformaSEC, conciliar efectivo/ajustes y otras obligaciones al cierre, PPA/impuestos, inversión de reposición, capital circulante adquirido y unidades efectivas de incentivos; después construir tres escenarios de FCFF y comprobar retornos incrementales. Releer el próximo 10-Q combinado y la enmienda prometida. ResultadosFY2026 ya publicados 28 oct; InvestorDay 4 nov; próxima fecha de resultados **no confirmada** en las fuentes primarias recuperadas. Se evita convertir una fecha estimada de diciembre en anuncio. Estado final: parcial por perímetro material, no exclusión por puntuación ni aprobación de entrada.
+
+
+Auditoría independiente completada con alcance parcial: historia, deuda/claims conocidos, instrumentos de incentivo y aritmética inversa reproducidos; transición de reinversión y fecha inicial corregidas. No completa la información SFE/PPA faltante ni convierte márgenes inversos en valores aprobados.
