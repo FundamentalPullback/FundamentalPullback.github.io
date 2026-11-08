@@ -1,0 +1,216 @@
+{
+  "normalization_9m": {
+    "GGG": {
+      "reported_ebit": 460.986,
+      "acquisition_cost_addback": 8.9,
+      "tariff_refund_removed": 9,
+      "comparable_ebit": 460.88599999999997,
+      "sales": 1717.081,
+      "margin": 0.2684124977214237
+    },
+    "NDSN": {
+      "reported_ebit": 586.7,
+      "acquisition_cost_addback": 1.11,
+      "inventory_stepup_addback": 3.404,
+      "comparable_ebit": 591.214,
+      "sales": 2227.975,
+      "margin": 0.2653593509801502
+    },
+    "IEX": {
+      "reported_ebit": 580.3,
+      "legal_gain_removed": 3.0,
+      "comparable_ebit": 577.3,
+      "sales": 2759.2,
+      "margin": 0.20922731226442448
+    }
+  },
+  "asof": "2026-11-08",
+  "inputs": {
+    "GGG": {
+      "price": 67.86,
+      "shares": 160.375132,
+      "share_date": "2026-10-07",
+      "balance_date": "2026-09-25",
+      "ttm_date": "2026-09-25",
+      "debt": 104.479,
+      "cash": 139.818,
+      "annual": [
+        2236.604,
+        624.797,
+        683.591,
+        45.669,
+        107.433,
+        34.333
+      ],
+      "nine_current": [
+        1717.081,
+        460.986,
+        463.439,
+        47.649,
+        77.629,
+        23.553
+      ],
+      "nine_prior": [
+        1643.448,
+        466.218,
+        487.262,
+        33.646,
+        75.744,
+        24.495
+      ]
+    },
+    "NDSN": {
+      "price": 309.86,
+      "shares": 55.699366,
+      "share_date": "2026-08-18",
+      "balance_date": "2026-07-31",
+      "ttm_date": "2026-07-31",
+      "debt": 1731.005,
+      "cash": 113.431,
+      "annual": [
+        2791.687,
+        711.725,
+        719.175,
+        58.06,
+        150.523,
+        18.944
+      ],
+      "nine_current": [
+        2227.975,
+        586.7,
+        570.473,
+        40.313,
+        109.446,
+        17.512
+      ],
+      "nine_prior": [
+        2039.867,
+        497.464,
+        516.264,
+        49.002,
+        112.454,
+        13.255
+      ]
+    },
+    "IEX": {
+      "price": 226.99,
+      "shares": 73.452801,
+      "share_date": "2026-10-23",
+      "balance_date": "2026-09-30",
+      "ttm_date": "2026-09-30",
+      "debt": 1751.5,
+      "cash": 602.1,
+      "annual": [
+        3457.5,
+        699.3,
+        680.4,
+        63.6,
+        206.5,
+        27.3
+      ],
+      "nine_current": [
+        2759.2,
+        580.3,
+        543.2,
+        65.9,
+        160.5,
+        27.6
+      ],
+      "nine_prior": [
+        2558.4,
+        515.7,
+        470.9,
+        43.9,
+        153.0,
+        23.7
+      ]
+    }
+  },
+  "definition": "EV simple=precio Nov6 × acciones básicas del último cover + deuda contable − caja; excluye leases/pensiones/reserva operativa consistentemente. No es puenteDCF. EBITDA GAAP=EBIT+DA; SBC permanece gasto. CFO−capex es flujo tras intereses/impuestos, no FCFF. Sin normalización proforma adquisiciones.",
+  "rows": [
+    {
+      "ticker": "GGG",
+      "price_date": "2026-11-06",
+      "price": 67.86,
+      "shares": 160.375132,
+      "share_date": "2026-10-07",
+      "balance_date": "2026-09-25",
+      "ttm_date": "2026-09-25",
+      "debt": 104.479,
+      "cash": 139.818,
+      "sales": 2310.237,
+      "ebit": 619.565,
+      "cfo": 659.768,
+      "capex": 59.672,
+      "da": 109.318,
+      "cashflow_sbc_addback": 33.391,
+      "market_cap": 10883.05645752,
+      "simple_ev": 10847.71745752,
+      "ebit_margin": 0.2681824418879968,
+      "gaap_ebitda": 728.883,
+      "ev_sales": 4.6954998372547925,
+      "ev_ebit": 17.50860274147184,
+      "ev_gaap_ebitda": 14.882659435766783,
+      "cfo_less_capex": 600.096,
+      "cfo_less_capex_less_sbc": 566.705,
+      "equity_cash_yield": 0.055140392071139556,
+      "equity_cash_yield_after_sbc": 0.05207222825793731
+    },
+    {
+      "ticker": "NDSN",
+      "price_date": "2026-11-06",
+      "price": 309.86,
+      "shares": 55.699366,
+      "share_date": "2026-08-18",
+      "balance_date": "2026-07-31",
+      "ttm_date": "2026-07-31",
+      "debt": 1731.005,
+      "cash": 113.431,
+      "sales": 2979.795,
+      "ebit": 800.961,
+      "cfo": 773.384,
+      "capex": 49.371,
+      "da": 147.515,
+      "cashflow_sbc_addback": 23.201,
+      "market_cap": 17259.00554876,
+      "simple_ev": 18876.57954876,
+      "ebit_margin": 0.2687973501532824,
+      "gaap_ebitda": 948.476,
+      "ev_sales": 6.334858454611811,
+      "ev_ebit": 23.56741407978666,
+      "ev_gaap_ebitda": 19.90201075067793,
+      "cfo_less_capex": 724.013,
+      "cfo_less_capex_less_sbc": 700.812,
+      "equity_cash_yield": 0.041949867734529925,
+      "equity_cash_yield_after_sbc": 0.04060558402510919
+    },
+    {
+      "ticker": "IEX",
+      "price_date": "2026-11-06",
+      "price": 226.99,
+      "shares": 73.452801,
+      "share_date": "2026-10-23",
+      "balance_date": "2026-09-30",
+      "ttm_date": "2026-09-30",
+      "debt": 1751.5,
+      "cash": 602.1,
+      "sales": 3658.3,
+      "ebit": 763.9,
+      "cfo": 752.7,
+      "capex": 85.6,
+      "da": 214.0,
+      "cashflow_sbc_addback": 31.2,
+      "market_cap": 16673.051298989998,
+      "simple_ev": 17822.45129899,
+      "ebit_margin": 0.20881283656343108,
+      "gaap_ebitda": 977.9,
+      "ev_sales": 4.871785063824727,
+      "ev_ebit": 23.33086961511978,
+      "ev_gaap_ebitda": 18.225228856723593,
+      "cfo_less_capex": 667.1,
+      "cfo_less_capex_less_sbc": 635.9,
+      "equity_cash_yield": 0.04001067279391211,
+      "equity_cash_yield_after_sbc": 0.03813938964120628
+    }
+  ]
+}
