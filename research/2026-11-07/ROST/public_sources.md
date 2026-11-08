@@ -1,0 +1,24 @@
+# Fuentes públicas de ROST
+
+- submissions: https://data.sec.gov/submissions/CIK0000745732.json
+- calendar: https://investors.rossstores.com/news-releases/news-release-details/ross-stores-inc-announces-third-quarter-2026-earnings-release
+- release_pdf: https://investors.rossstores.com/node/23266/pdf
+- statistics: https://stockanalysis.com/stocks/rost/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/ROST?range=2y&interval=1d
+- 2026-09-01_10-Q: https://www.sec.gov/Archives/edgar/data/745732/000074573226000041/rost-20260801.htm
+- 2026-06-02_10-Q: https://www.sec.gov/Archives/edgar/data/745732/000074573226000032/rost-20260502.htm
+- 2026-03-31_10-K: https://www.sec.gov/Archives/edgar/data/745732/000074573226000006/rost-20260131.htm
+- 2025-12-10_10-Q: https://www.sec.gov/Archives/edgar/data/745732/000074573225000061/rost-20251101.htm
+- 2025-09-10_10-Q: https://www.sec.gov/Archives/edgar/data/745732/000074573225000052/rost-20250802.htm
+- 2025-06-11_10-Q: https://www.sec.gov/Archives/edgar/data/745732/000074573225000031/rost-20250503.htm
+- 2025-04-01_10-K: https://www.sec.gov/Archives/edgar/data/745732/000074573225000010/rost-20250201.htm
+- 2024-12-11_10-Q: https://www.sec.gov/Archives/edgar/data/745732/000074573224000062/rost-20241102.htm
+- 2024-09-11_10-Q: https://www.sec.gov/Archives/edgar/data/745732/000074573224000050/rost-20240803.htm
+- 2024-06-12_10-Q: https://www.sec.gov/Archives/edgar/data/745732/000074573224000035/rost-20240504.htm
+- 2024-04-02_10-K: https://www.sec.gov/Archives/edgar/data/745732/000074573224000009/rost-20240203.htm
+- october_stores: https://rossstoresinc.gcs-web.com/news-releases/news-release-details/ross-stores-opens-51-new-locations-0
+- dividend: https://rossstoresinc.gcs-web.com/news-releases/news-release-details/ross-stores-announces-quarterly-dividend-75
+- tjx_statistics: https://stockanalysis.com/stocks/tjx/statistics/
+- burl_statistics: https://stockanalysis.com/stocks/burl/statistics/
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- erp: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
