@@ -1,0 +1,52 @@
+{
+  "ticker": "CVLT",
+  "as_of": "2026-11-08",
+  "status": "partial",
+  "valuation_status": "unavailable",
+  "regular_close": {
+    "price": 158.36,
+    "date": "2026-11-06",
+    "type": "regular-close",
+    "source": "https://stockanalysis.com/stocks/cvlt/history/"
+  },
+  "scanner_last": 158.36,
+  "opportunity": 70,
+  "qp": 90,
+  "ttm": {
+    "revenue": 1252.044,
+    "ebit": 92.504,
+    "net_income": 82.681,
+    "cfo": 262.698,
+    "capex": 6.964,
+    "sbc_total": 132.091,
+    "da": 10.274,
+    "commission_amort": 55.948,
+    "commission_cash": 85.093,
+    "deferred_revenue_cash": 96.318,
+    "sales_marketing": 550.293,
+    "period": "TTM_2026-09-30_derived",
+    "fcf_reported": 255.734,
+    "fcf_less_sbc_diagnostic": 123.643,
+    "ebit_margin": 0.07388238751992741
+  },
+  "scenarios": null,
+  "inverse": null,
+  "sensitivity": null,
+  "why_withheld": [
+    "Diagnóstico FCFF ejecutado, aún sin calibración suficiente para valor canónico: cohortes de comisiones/marketplace y crecimiento orgánico.",
+    "Awards/dilución, coste marginal de deuda y normalización de capital operativo usan proxies explícitos.",
+    "Múltiplos históricos emparejados pendientes. Auditoría independiente terminada con salvedades; D&A de Q3/Q4 pendiente de clasificación homogénea."
+  ],
+  "checks": {
+    "four_quarters_equal_ttm": true,
+    "no_sbc_addback_fcff": true,
+    "no_generated_fair_value": true,
+    "no_trades": true,
+    "no_publication": true,
+    "four_quarters_tie_scope": "All reported comparable metrics; quarterly D&A excluded and blank pending homogeneous source."
+  },
+  "diagnostics_available": "diagnostics/results.json",
+  "forecast_uncertainty_not_accounting_impossibility": true,
+  "independent_audit": "independent_audit.json",
+  "independent_audit_status": "completed_with_qualifications_not_decision_ready"
+}

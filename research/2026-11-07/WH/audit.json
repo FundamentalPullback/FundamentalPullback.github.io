@@ -1,0 +1,70 @@
+{
+  "ticker": "WH",
+  "audit_date": "2026-11-08",
+  "verdict": "Not ready for portfolio action; ready with caveats for research screening",
+  "stage3_status": "partial_valuation_calibration_pending",
+  "mechanics": "PASS",
+  "source_scope": "Independent mechanical recalculation and preserved primary-document tie-out; external quote/beta/Treasury/ERP pages not independently re-fetched in this audit",
+  "research_status": "Fundamental history and mechanical review complete; material valuation calibration unresolved",
+  "canonical_valuation_approved": false,
+  "diagnostic_values": {
+    "adverse": 54.6571211729,
+    "central": 104.6729994072,
+    "favorable": 151.7008113416
+  },
+  "findings": [
+    {
+      "id": "WH-A1",
+      "severity": "high",
+      "type": "Unsupported assumption",
+      "location": "model.py target_capex; report Caja normalizada",
+      "finding": "Terminal capex is a residual solved from assumed g/ROIC. Positive capex and algebraic reinvestment identity do not validate physical software replacement, contract acquisition or franchise development spending.",
+      "impact": "Terminal is 69.5% of central EV; valuation is diagnostic rather than a calibrated canonical value.",
+      "remediation": "Build independently anchored software/capex, contract-cost and franchise-development cash schedules before deriving terminal incremental ROIC."
+    },
+    {
+      "id": "WH-A2",
+      "severity": "high",
+      "type": "Not comparable without bridge",
+      "location": "documento fuente citado Note 3 and cash flows; documento fuente citado capitalized contract costs; model.py delta_wc",
+      "finding": "Capitalized contract assets rise 68 to 76 to 84 to 87 across FY23/FY24/FY25/Sep26. Model aggregates all working capital and contract acquisition in 10% of revenue growth, with no gross additions/amortization/FX/write-off roll-forward or allocation to D&A and capex. Contract additions cannot be inferred as only the net asset increase.",
+      "impact": "Cannot establish completeness or absence of double counting for contract reinvestment; $10m flat annual stress is illustrative, not an evidence-based upper bound.",
+      "remediation": "Reconcile additions, amortization classification and working-capital inclusion, identifying overlap with existing D&A, software capex and development notes."
+    },
+    {
+      "id": "WH-A3",
+      "severity": "high",
+      "type": "Not comparable without bridge",
+      "location": "report CFO normalization; documento fuente citado marketing disclosure and Note 9; model.py total-sales ratios",
+      "finding": "Marketing profit timing is neutralized and restricted cash is excluded correctly, but marketing cash working capital and allocation of development-note amortization/payments are not separately reconciled. Q3 9M cash-flow amortization26 versus segment adjustment25 flags an allocation difference. All-company D&A/notes ratios are applied after removal of marketing profit.",
+      "impact": "The 360.56 cash-flow proxy and 344.46 normalized reference differ by16.10 without a sourced itemized bridge; cash calibration is unresolved, not proven wrong by16.10.",
+      "remediation": "Reconcile marketing restricted obligations and collection/spend timing, allocate note amortization and cash payments, then tie normalized FCFF to GAAP cash flow."
+    },
+    {
+      "id": "WH-A4",
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "report retention and WACC; sources S6-S11",
+      "finding": "Global Q3 retention remains unverified. Observed beta0.64, close77.35, Treasury4.86 and ERP4.41 have existing dated source citations but no preserved external-market snapshots independently verified in this audit; coupon5.625 is primary-supported but not a current marginal yield.",
+      "impact": "+100bp WACC produces75.85, removing apparent margin. Retention uncertainty cannot be declared solved solely by conservative net-room growth.",
+      "remediation": "Preserve dated market evidence and reconcile gross openings, deletions, Revo and retention. Reassess marginal financing cost before action."
+    }
+  ],
+  "verified_primary_tieouts": [
+    "FY23-25 cash-flow history including gross development-note payments112/114/73 less collections7/5/1; net105/109/72",
+    "FY25 loans58 less1 collections=57; FY24 17 less1=16; FY23 29 less0=29",
+    "9M26 CFO226 capex32 notes75 loans14; 9M25 CFO215 capex30 notes73 loans56; TTM CFO378 capex48 notes107 loans15",
+    "Q3 company FCF93-11+18=100; cash after development notes82 and investing loans69, with no second subtraction of notes from CFO",
+    "TTM EBIT402+460-438=424; normalization424+160-5=579",
+    "TTM royalties541+409-420=530; revenue1429+1112-1095=1446; net income193+262-253=202",
+    "Debt2727+17 issuance costs+4 discount=2748; October15 shares72.900802 plus0.2 dilution proxy; cash excess0 excludes restricted19",
+    "Q3 release rooms877400 reported and864400 excluding Revo; RevPAR51.13; pipeline264000; 30% FeePAR premium is prospective"
+  ],
+  "illustrative_audit_sensitivities": {
+    "fixed_45_over_1446_capex_ratio_price": 102.98879929585412,
+    "additional_annual_flat_10m_reinvestment_price": 102.57780015497724,
+    "base_plus_100bp_wacc_price": 75.85041005739625,
+    "additional_annual_flat_reinvestment_that_erases_20pct_MOS": 38.1133173791203
+  },
+  "trading": "not_authorized_or_executed"
+}

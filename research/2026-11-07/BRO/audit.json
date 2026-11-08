@@ -1,0 +1,138 @@
+{
+  "ticker": "BRO",
+  "as_of": "2026-11-07",
+  "verdict": "Not ready",
+  "permitted_use": "Partial research only; do not use for portfolio action until remediated and re-audited",
+  "independent_audit_complete": true,
+  "mechanics": "pass",
+  "valuation_validated": false,
+  "source_posture": "Primary filing excerpts independently checked for capital, EPS and normalization; Nov 6 regular close and 5Y beta re-opened; bond data secondary delayed curve estimate only. No trade or publication.",
+  "case_prices": {
+    "adverso": 54.63150571659258,
+    "central": 88.0636003636222,
+    "favorable": 134.60932483942148
+  },
+  "wacc": 0.06401184581651172,
+  "illustrative_audit_sensitivity": {
+    "label": "Illustrative audit sensitivity; not revised base case",
+    "issuer_curve_yield": {
+      "kd": 0.06183,
+      "date": "2026-11-02",
+      "source": "https://www.aephel.com/research/bonds/US115236AM30",
+      "basis": "Delayed secondary curve-implied mark, not executable trade or current issuance quote",
+      "wacc": 0.06518168565177312,
+      "case_prices": {
+        "adverso": 52.604640570244705,
+        "central": 84.69463518211434,
+        "favorable": 129.061094089073
+      }
+    },
+    "producer_costs_9m2026": {
+      "capitalized": 30,
+      "amortized": 11,
+      "net_capitalized": 19,
+      "basis": "Q3 10-Q Note 3; 15-year amortization. Not independently bridged to forecast working capital; no unsupported annualization."
+    },
+    "earnout_tail": {
+      "fair_value": 326,
+      "uncapped_fair_value": 214,
+      "capped_max_excluding_uncapped": 369,
+      "hypothetical_capped_max_increment": 257,
+      "central_price_if_capped_max_and_uncapped_fv": 87.29111370300151,
+      "basis": "369 minus (326 minus 214); diagnostic ignores timing and correlation, not expected liability."
+    }
+  },
+  "issues": [
+    {
+      "severity": "high",
+      "type": "Not comparable without bridge",
+      "finding": "Corporate free cash, captive/VIE capital and future reinvestment remain unreconciled. Reserving all cash is an explicit diagnostic assumption, not proof of unavailability.",
+      "location": "model.py bridge and value; S2 notes 10 and 13",
+      "status": "open",
+      "fix": "Bridge corporate usable cash and ongoing required captive capital before canonical valuation."
+    },
+    {
+      "severity": "high",
+      "type": "Not comparable without bridge",
+      "finding": "Current cover-share count escrow inclusion remains inference. Primary EPS explicitly includes escrow shares conditionally, but this does not prove cover share treatment.",
+      "location": "S2 cover, balance sheet, notes 4–5; model.py bridge",
+      "status": "open",
+      "fix": "Obtain complete legal issued/outstanding/escrow/participating awards reconciliation. Do not deduct stock escrow liability and dilute twice."
+    },
+    {
+      "severity": "high",
+      "type": "Missing forecast refresh",
+      "finding": "Post-Accession recurring cash conversion lacks equivalent perimeter cash-flow bridge; tax timing is material.",
+      "location": "S1 acquisition pro formas; S2 note 10; report cash section",
+      "status": "open",
+      "fix": "Bridge equivalent-perimeter normalized NOPAT to CFO after producer costs, taxes, working capital and captive investment."
+    },
+    {
+      "severity": "high",
+      "type": "Unsupported assumption",
+      "finding": "Producer acquisition costs are partly capitalized: 30m additions versus 11m amortization, 9M2026. Original statement all ordinary acquisition costs in margin corrected. Model aggregate reinvestment coverage remains unproved.",
+      "location": "S2 note 3; value() delta_wc; report audit section",
+      "status": "disclosure corrected; cash calibration open",
+      "fix": "Trace deferred contract costs to forecast component without double counting amortization."
+    },
+    {
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "finding": "5.55% cost of debt is coupon. New 6.183% Nov 2 issuer curve-implied yield is better diagnostic but delayed/non-executable; 6.05% Bondfish lacks quote timestamp.",
+      "location": "model.py capital_cost; S17–S18",
+      "status": "diagnostic added; marginal cost open",
+      "fix": "Validate dated marginal cost and market debt weights at valuation cutoff."
+    },
+    {
+      "severity": "medium",
+      "type": "Source contradiction",
+      "finding": "Reported diluted EPS already excludes 83m escrow gain; the report now states ASC260 numerator/denominator treatment. No numerical valuation change required.",
+      "location": "S2 note 4; report audit section",
+      "status": "corrected"
+    },
+    {
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "finding": "Earn-out fair value is not maximum exposure: 214m uncapped and 369m capped maximum excluding uncapped. Added no-double-count tail diagnostic.",
+      "location": "S2 note 5; model audit_diagnostics; report audit section",
+      "status": "disclosure corrected; tail remains uncertain"
+    },
+    {
+      "severity": "low",
+      "type": "Formula/control defect",
+      "finding": "FCFF identity check was hardcoded True; replaced with recomputed all-row component check and independent PV/bridge/terminal assertions.",
+      "location": "model.py checks; audit_checks.py",
+      "status": "corrected"
+    }
+  ],
+  "source_tieouts": {
+    "annual_revenue": [
+      4257,
+      4805,
+      5902
+    ],
+    "ttm_revenue": 6909,
+    "ttm_cfo": 1584,
+    "ttm_reported_fcf": 1487,
+    "ttm_economic_ebita": 2169,
+    "9m_escrow_gain_removed": 83,
+    "9m_earnout_credit_removed": 7,
+    "debt_face": 7822,
+    "cash_total_ex_fiduciary": 1099,
+    "fiduciary": 2442,
+    "restricted_escrow_cash": 271,
+    "VIE_assets_and_liabilities_each": 908,
+    "leases": 336,
+    "nci": 18,
+    "earnout_fv": 326,
+    "cover_shares_m": 331.691829,
+    "quarterly_sum_rounding_note": "Pretax and amortization sum may differ by 1m from reported nine months; revenue and CFO tie exactly."
+  },
+  "canonical_fields": {
+    "maximumFundamentalPrice": null,
+    "signal": null,
+    "stop": null,
+    "approvedQuantity": 0
+  },
+  "reproduction": "python model.py; python audit_checks.py (public numerical checks only)"
+}

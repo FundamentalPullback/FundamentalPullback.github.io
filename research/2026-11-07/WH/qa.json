@@ -1,0 +1,19 @@
+{
+  "scope": "Independent mechanical recalculation and preserved primary-document tie-out; external quote/beta/Treasury/ERP pages not independently re-fetched in this audit",
+  "checks": [
+    "adverso: recalculation, FCFF, terminal and equity bridge PASS",
+    "central: recalculation, FCFF, terminal and equity bridge PASS",
+    "favorable: recalculation, FCFF, terminal and equity bridge PASS",
+    "Inverse solutions reproduce observed price input PASS"
+  ],
+  "illustrative_audit_sensitivities": {
+    "fixed_45_over_1446_capex_ratio_price": 102.98879929585412,
+    "additional_annual_flat_10m_reinvestment_price": 102.57780015497724,
+    "base_plus_100bp_wacc_price": 75.85041005739625,
+    "additional_annual_flat_reinvestment_that_erases_20pct_MOS": 38.1133173791203
+  },
+  "source_hashes": {
+    "model.py": "8e8a3a87f7492c7b56a7ccc648c829a82e02a18db765e51cc84018012d9faf90",
+    "results.json": "f4404f2d8718e9d3b9f996e8ac4b0b699112e3439b34f62fec81f51d5ad02e88"
+  }
+}

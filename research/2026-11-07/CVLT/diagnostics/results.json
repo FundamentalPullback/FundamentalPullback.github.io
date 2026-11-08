@@ -1,0 +1,232 @@
+{
+  "status": "diagnostic_only_partial_not_decision_ready",
+  "canonical_valuation": null,
+  "rf": 0.0486,
+  "rf_date": "2026-11-06",
+  "erp": 0.0441,
+  "erp_date": "2026-11-01",
+  "beta": 0.9,
+  "beta_observation_date": "2026-11-08",
+  "assumptions": {
+    "adverso": {
+      "growth": [
+        0.1,
+        0.08,
+        0.06,
+        0.05,
+        0.04
+      ],
+      "margin": [
+        0.09,
+        0.095,
+        0.1,
+        0.105,
+        0.11
+      ],
+      "terminal_margin": 0.12,
+      "sbc": [
+        0.12,
+        0.115,
+        0.11,
+        0.105,
+        0.1
+      ],
+      "terminal_sbc": 0.09,
+      "g": 0.02,
+      "roic": 0.12,
+      "spread": 0.04,
+      "cash_reserve": 180.0,
+      "contingency": 75.0
+    },
+    "central": {
+      "growth": [
+        0.14,
+        0.13,
+        0.11,
+        0.09,
+        0.07
+      ],
+      "margin": [
+        0.105,
+        0.12,
+        0.135,
+        0.15,
+        0.16
+      ],
+      "terminal_margin": 0.18,
+      "sbc": [
+        0.11,
+        0.105,
+        0.1,
+        0.095,
+        0.09
+      ],
+      "terminal_sbc": 0.08,
+      "g": 0.025,
+      "roic": 0.18,
+      "spread": 0.025,
+      "cash_reserve": 125.0,
+      "contingency": 25.0
+    },
+    "favorable": {
+      "growth": [
+        0.18,
+        0.17,
+        0.15,
+        0.12,
+        0.1
+      ],
+      "margin": [
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "terminal_margin": 0.24,
+      "sbc": [
+        0.105,
+        0.1,
+        0.095,
+        0.09,
+        0.085
+      ],
+      "terminal_sbc": 0.07,
+      "g": 0.03,
+      "roic": 0.24,
+      "spread": 0.015,
+      "cash_reserve": 80.0,
+      "contingency": 0.0
+    }
+  },
+  "scenarios": {
+    "adverso": {
+      "value": 36.952117661084024,
+      "wacc": 0.08580406436153358,
+      "ke": 0.08829000000000001,
+      "kd": 0.0886,
+      "ev": 1817.9053597686284,
+      "equity": 1560.1553597686284,
+      "terminal_weight": 0.5623055592896574,
+      "terminal_fcff": 153.21842560432276,
+      "terminal_reinvestment": 30.64368512086455,
+      "below_conversion_threshold": true
+    },
+    "central": {
+      "value": 86.08315028125024,
+      "wacc": 0.08445159388914085,
+      "ke": 0.08829000000000001,
+      "kd": 0.0736,
+      "ev": 3787.266688024666,
+      "equity": 3634.516688024666,
+      "terminal_weight": 0.614149394905357,
+      "terminal_fcff": 311.07501642130177,
+      "terminal_reinvestment": 50.17338974537126,
+      "below_conversion_threshold": true
+    },
+    "favorable": {
+      "value": 156.52921298836984,
+      "wacc": 0.08354994690754569,
+      "ke": 0.08829000000000001,
+      "kd": 0.06359999999999999,
+      "ev": 6691.569901581962,
+      "equity": 6608.819901581962,
+      "terminal_weight": 0.6670182343540494,
+      "terminal_fcff": 533.2294435065164,
+      "terminal_reinvestment": 76.1756347866452,
+      "below_conversion_threshold": true
+    }
+  },
+  "sensitivity": [
+    {
+      "wacc": 0.075,
+      "g": 0.02,
+      "value": 98.60806448356888
+    },
+    {
+      "wacc": 0.075,
+      "g": 0.025,
+      "value": 104.20363023923893
+    },
+    {
+      "wacc": 0.075,
+      "g": 0.03,
+      "value": 110.98418385956957
+    },
+    {
+      "wacc": 0.085,
+      "g": 0.02,
+      "value": 81.74158177608894
+    },
+    {
+      "wacc": 0.085,
+      "g": 0.025,
+      "value": 85.20847108842275
+    },
+    {
+      "wacc": 0.085,
+      "g": 0.03,
+      "value": 89.26140595222472
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.02,
+      "value": 69.42714562911121
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.025,
+      "value": 71.68573630937746
+    },
+    {
+      "wacc": 0.095,
+      "g": 0.03,
+      "value": 74.25706794814884
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.02,
+      "value": 60.054578187932556
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.025,
+      "value": 61.5804274421084
+    },
+    {
+      "wacc": 0.105,
+      "g": 0.03,
+      "value": 63.28180603944103
+    }
+  ],
+  "inverse": [
+    {
+      "growth_shift_first_five": -0.02,
+      "margin_uplift": 0.17308456157040142,
+      "year1_margin": 0.2780845615704014,
+      "terminal_margin": 0.3530845615704014,
+      "implied_value": 158.36
+    },
+    {
+      "growth_shift_first_five": 0,
+      "margin_uplift": 0.13639388378227857,
+      "year1_margin": 0.24139388378227855,
+      "terminal_margin": 0.31639388378227856,
+      "implied_value": 158.36
+    },
+    {
+      "growth_shift_first_five": 0.02,
+      "margin_uplift": 0.10358600439520996,
+      "year1_margin": 0.20858600439520997,
+      "terminal_margin": 0.28358600439521,
+      "implied_value": 158.35999999999999
+    }
+  ],
+  "checks": {
+    "no_sbc_addback": true,
+    "fcff_identity": true,
+    "ten_years": true,
+    "terminal_reinvestment_tied_to_roic": true,
+    "no_orders": true
+  }
+}

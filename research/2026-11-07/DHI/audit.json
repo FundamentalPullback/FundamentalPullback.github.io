@@ -1,0 +1,120 @@
+{
+  "ticker": "DHI",
+  "as_of": "2026-11-07",
+  "verdict": "Not ready",
+  "permitted_use": "Partial research and conditional model diagnostics only; not approved valuation or portfolio action",
+  "independent_audit_completed": true,
+  "mechanical_checks_pass": true,
+  "economic_certification": false,
+  "canonical_approved_value": null,
+  "stage3_complete": false,
+  "stage35_complete": false,
+  "entry_approved": false,
+  "checks": {
+    "existing_source_hashes_match": true,
+    "three_fiscal_year_revenue_ebit": true,
+    "four_quarters_revenue_tie": true,
+    "cfo_derived_from_ytd": true,
+    "capex_derived_from_ytd": true,
+    "balance_sheet_tie": true,
+    "cash_including_restricted_tie": true,
+    "debt_segments_tie": true,
+    "segment_revenue_eliminations_tie": true,
+    "segment_pretax_tie": true,
+    "segment_cfo_tie": true,
+    "interest_9m_rollforward": true,
+    "capital_cost_formula": true,
+    "adverso_independent_ev": true,
+    "adverso_land_reinvestment_once": true,
+    "adverso_terminal_roic": true,
+    "adverso_equity_bridge": true,
+    "adverso_financial_residual_income_equals_ddm": true,
+    "central_independent_ev": true,
+    "central_land_reinvestment_once": true,
+    "central_terminal_roic": true,
+    "central_equity_bridge": true,
+    "central_financial_residual_income_equals_ddm": true,
+    "favorable_independent_ev": true,
+    "favorable_land_reinvestment_once": true,
+    "favorable_terminal_roic": true,
+    "favorable_equity_bridge": true,
+    "favorable_financial_residual_income_equals_ddm": true,
+    "partial_controls": true
+  },
+  "issues": [
+    {
+      "id": "DHI-01",
+      "severity": "critical",
+      "type": "Not comparable without bridge",
+      "location": "model.py nonfinancial FCFF and fin_value",
+      "finding": "All group interest is capitalized; Q3 note E identifies $16.6m nine-month mortgage-facility interest. FY26 $257.8m incurred/$182.5m released does not allocate mortgage funding and inventory releases to separate operating and financial perimeters.",
+      "fix": "Reconcile annual segment interest costs, capitalized inventory balances and eliminations before certifying either valuation component.",
+      "status": "open"
+    },
+    {
+      "id": "DHI-02",
+      "severity": "critical",
+      "type": "Not comparable without bridge",
+      "location": "FIN_EQUITY=3251.4-1913.8 and NCI=604.7",
+      "finding": "Segment assets less liabilities is not certified standalone financial equity. Consolidated eliminations and Forestar minority economic claims remain unallocated.",
+      "fix": "Reconcile intercompany receivables/payables, funding, taxes and minority claims to consolidated balance and distributable earnings.",
+      "status": "open"
+    },
+    {
+      "id": "DHI-03",
+      "severity": "high",
+      "type": "Missing forecast refresh",
+      "location": "DEBT,CASH,SHARES bridge",
+      "finding": "September cash/debt/share base is adjusted only for October $600m maturity and assumed dilution/reserve. $34.6m unsettled repurchases are not separately adjusted. Forestar excess-cash transferability is unverified.",
+      "fix": "Trace settlement and share recognition, reconcile nonoperating liability treatment and all material post-close movements; do not deduct a liability twice.",
+      "status": "open_disclosure_remediated"
+    },
+    {
+      "id": "DHI-04",
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "Total reinvestment, capex, delta operating WC",
+      "finding": "Land is counted once. Capex/D&A split is an algebraic allocation, not independently forecast assets/liabilities; changing these alone leaves FCFF unchanged.",
+      "fix": "For certification, add inventory/lot commitments/operating liability schedules and downside liquidity checks.",
+      "status": "open_disclosure_remediated"
+    },
+    {
+      "id": "DHI-05",
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "location": "WACC, other income and lease bridge",
+      "finding": "100bp spread, $500m cash reserve, ancillary-income exclusion and unrefreshed FY26 leases/software are disclosed assumptions, not observed exact drivers.",
+      "fix": "Refresh contractual debt/lease evidence and retain operating ancillary income with a nonoperating income reconciliation.",
+      "status": "open"
+    },
+    {
+      "id": "DHI-06",
+      "severity": "low",
+      "type": "Source contradiction",
+      "location": "report.md market corroboration",
+      "finding": "Archived StockAnalysis supports Nov6 16:00 EST $152.28. Fresh ChartExchange read is stale to Nov2; MarketWatch unavailable. Alternate Nov6 $152.27 tick cannot be independently confirmed from retained evidence.",
+      "fix": "Removed claim of independently reproduced corroboration and label alternate tick unverified; do not average.",
+      "status": "remediated_disclosure"
+    }
+  ],
+  "source_scope": "Reviewed archived FY25 annual, FY26 Q1/Q2 releases, Q3 10-Q, Q4/FY26 unaudited release, transcript/presentation, annual index and market evidence. Primary PDFs retained with hashes. Not a live SEC completeness search.",
+  "verified_events": {
+    "next_earnings": "2027-01-19 before open, 08:30 ET call",
+    "q1_fy27_home_sales_gross_margin": "18–18.5%",
+    "q1_fy27_consolidated_pretax_margin": "7–8%"
+  },
+  "market": {
+    "adopted_close": 152.28,
+    "timestamp": "2026-11-06T16:00:00-05:00",
+    "source": "documento fuente citado StockAnalysis",
+    "alternative_tick": 152.27,
+    "alternative_status": "prior research claim not reproduced; excluded"
+  },
+  "provisional_scenario_values": {
+    "adverso": 55.47562517584845,
+    "central": 92.82371587340276,
+    "favorable": 140.85044399130027
+  },
+  "numeric_revision": false,
+  "diagnostic_unsettled_buyback_per_share": -0.12704912148653644
+}
