@@ -1,0 +1,25 @@
+# Magnite: fuentes públicas
+
+Corte: 8 de noviembre de 2026. Últimos estados: septiembre de 2026.
+
+- [submissions](https://data.sec.gov/submissions/CIK0001595974.json)
+- [q3release](https://investor.magnite.com/node/17546)
+- [price](https://stockanalysis.com/stocks/mgni/history/)
+- [statistics](https://stockanalysis.com/stocks/mgni/statistics/)
+- [daily_history](https://query1.finance.yahoo.com/v8/finance/chart/MGNI?range=2y&interval=1d)
+- [2026-11-04_10-Q](https://www.sec.gov/Archives/edgar/data/1595974/000159597426000041/mgni-20260930.htm)
+- [2026-11-04_8-K](https://www.sec.gov/Archives/edgar/data/1595974/000159597426000039/mgni-20261104.htm)
+- [2026-10-07_8-K](https://www.sec.gov/Archives/edgar/data/1595974/000119312526417011/d149525d8k.htm)
+- [2026-09-21_8-K](https://www.sec.gov/Archives/edgar/data/1595974/000159597426000032/mgni-20260921.htm)
+- [2026-08-05_10-Q](https://www.sec.gov/Archives/edgar/data/1595974/000162828026053343/mgni-20260630.htm)
+- [2026-05-06_10-Q](https://www.sec.gov/Archives/edgar/data/1595974/000159597426000022/mgni-20260331.htm)
+- [2026-02-25_10-K](https://www.sec.gov/Archives/edgar/data/1595974/000159597426000007/mgni-20251231.htm)
+- [2025-11-05_10-Q](https://www.sec.gov/Archives/edgar/data/1595974/000159597425000043/mgni-20250930.htm)
+- [2025-08-06_10-Q](https://www.sec.gov/Archives/edgar/data/1595974/000159597425000027/mgni-20250630.htm)
+- [2025-05-07_10-Q](https://www.sec.gov/Archives/edgar/data/1595974/000159597425000017/mgni-20250331.htm)
+- [2025-02-26_10-K](https://www.sec.gov/Archives/edgar/data/1595974/000159597425000008/mgni-20241231.htm)
+- [2024-02-28_10-K](https://www.sec.gov/Archives/edgar/data/1595974/000159597424000014/mgni-20231231.htm)
+- [peer_pubm](https://stockanalysis.com/stocks/pubm/statistics/)
+- [peer_ttd](https://stockanalysis.com/stocks/ttd/statistics/)
+- [treasury](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve)
+- [damodaran_nov](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm)
