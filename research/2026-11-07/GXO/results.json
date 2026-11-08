@@ -1,0 +1,149 @@
+{
+  "ticker": "GXO",
+  "as_of": "2026-11-08",
+  "status": "partial_not_decision_ready",
+  "complete": false,
+  "price": {
+    "regular_close": 55.18,
+    "date": "2026-11-06",
+    "time": "16:00 EST / 21:00 UTC",
+    "scanner_Last": 55.18,
+    "scanner_Opportunity": 80,
+    "scanner_QP": 80,
+    "scanner_RSI": 72.7,
+    "sources": [
+      "S7",
+      "S8"
+    ]
+  },
+  "historical_calculations": {
+    "TTM_current": {
+      "revenue": 13836,
+      "ebit": 306,
+      "net_income": 140,
+      "cfo": 433,
+      "cash_capex": 259,
+      "ppe_sales": 55,
+      "sbc": 48,
+      "da": 467,
+      "fcf_company": 229,
+      "cash_after_capex_before_sales": 174
+    },
+    "TTM_previous": {
+      "revenue": 12921,
+      "ebit": 252,
+      "net_income": 93,
+      "cfo": 450,
+      "cash_capex": 373,
+      "ppe_sales": 146,
+      "sbc": null,
+      "da": 450,
+      "fcf_company": 223,
+      "cash_after_capex_before_sales": 77
+    },
+    "investment_9m2026_cash_plus_finance_lease_additions": 411,
+    "investment_9m2025_cash_plus_finance_lease_additions": 352,
+    "investment_growth": 0.16761363636363646,
+    "cash_capex_growth": -0.241635687732342,
+    "finance_lease_ttm_status": "Unresolved comparability; no negative Q4 or TTM economic additions accepted.",
+    "rejected_arithmetic_diagnostics": {
+      "FY25_minus_9M25": -9,
+      "FY25_plus_9M26_minus_9M25": 198,
+      "accepted_as_economic_additions": false
+    },
+    "accepted_q4_2025_finance_lease_additions": null,
+    "accepted_ttm_finance_lease_additions": null
+  },
+  "balance": {
+    "date": "2026-09-30",
+    "debt_book_including_finance_leases": 2818,
+    "finance_leases_already_in_debt": 487,
+    "debt_unamortized_costs": 21,
+    "debt_gross_proxy": 2839,
+    "cash": 340,
+    "restricted_cash_excluded": 3,
+    "book_net_debt_before_overdraft": 2478,
+    "bank_overdraft": 2,
+    "company_net_debt": 2480,
+    "operating_leases_current": 777,
+    "operating_leases_long": 2225,
+    "nci_book": 31,
+    "shares_period_end_millions": 113.026,
+    "shares_q3_weighted_diluted_millions": 114.636,
+    "uk_pension_surplus_FY2025": 160,
+    "pension_surplus_excess_cash_credit": 0,
+    "excess_cash_accepted": null,
+    "final_ev_equity_bridge": null
+  },
+  "capital_candidates": {
+    "rf": 0.0486,
+    "rf_date": "2026-11-06",
+    "beta": 1.54,
+    "beta_basis": "Yahoo index only,5Y monthly",
+    "erp": 0.0441,
+    "erp_date": "2026-11-01",
+    "ke_arithmetic_only": 0.116514,
+    "kd_indicative": 0.061,
+    "kd_date": "2026-11-05",
+    "tax_rate_normalized": null,
+    "wacc": null,
+    "approved": false
+  },
+  "valuation": {
+    "fcff10y": null,
+    "bear": null,
+    "base": null,
+    "bull": null,
+    "reverse_dcf": null,
+    "sensitivity": null,
+    "fair_value": null,
+    "maximum_price": null,
+    "reason": "Core normalized operating cash/reinvestment/perimeter bridge not resolved; no invented valuation"
+  },
+  "events": [
+    {
+      "date": "2026-11-03",
+      "event": "Resultados3T26 publicados"
+    },
+    {
+      "date": "2026-11-04",
+      "event": "Llamada3T26 y presentación10-Q"
+    },
+    {
+      "date": "2026-11-16T09:00:00-05:00",
+      "event": "Investor Day, futuro al corte"
+    }
+  ],
+  "blockers": [
+    "Reconciliar altas finance leases FY25=74 vs9M25=83, con modificaciones/bajas y clasificación: Q4 mecánico=-9 no es inversión negativa asumible.",
+    "Definir reinversión física y software/nuevo contrato recurrente con D&A; no extrapolar cash capex aislado.",
+    "Normalizar EBIT: beneficio inmobiliario30m, integración/transacción54m9M26, reestructuración11m, pérdida desinversión24m, pensión no operativa21m. Evitar sumar toda amortización adquirida y omitir inversión sustituta.",
+    "Cuantificar ventas/margen del perímetro Wincanton vendido septiembre y sinergias restantes sin contarlas dos veces.",
+    "Resolver impuesto sostenible, beta verificable, coste deuda callable como proxy, efectivo operativo/excedentario y derechosminoría a valor económico antes del DCF."
+  ],
+  "trade": "Sin orden ni aprobación Stage3.5",
+  "finance_lease_source_review": {
+    "FY2025": 74,
+    "9M2025_original": 83,
+    "9M2025_comparative_in_2026": 83,
+    "9M2026": 207,
+    "annual_label": "ROU assets obtained in exchange for lease liabilities",
+    "original_interim_label": "Leased assets obtained in exchange for new lease obligations",
+    "scope_review": "Annual footnote includes 83 acquisition-related finance leases in 2024; original 9M25 footnote includes 36 in 2024. These are prior-year acquisition classifications, not an explanation of the FY25 versus 9M25 difference. No quantified modification/reclassification bridge in inspected lease tables and adjacent notes. Do not infer an accounting error or assume gross physical additions.",
+    "sources": [
+      "S2 note 4 pp.11-12",
+      "S4 note 9 pp.54-55",
+      "S14 note 4 p.11"
+    ]
+  },
+  "normalization_controls": {
+    "lease_termination_net_benefit_9M26": 30,
+    "wincanton_divestiture_cash_paid_9M26": 38,
+    "wincanton_additional_impairment_9M26": 24,
+    "wincanton_additional_impairment_Q326": 1,
+    "pension_income_already_outside_ebit_9M26": 21,
+    "cash_exit_in_company_fcf": false,
+    "cash_exit_treatment": "Investing outflow excluded from company FCF; do not deduct historical cash exit again from current cash/debt equity bridge. Do not combine accounting impairment and cash exit as recurring capex."
+  },
+  "independent_audit": "pass_factual_partial_only"
+}

@@ -1,0 +1,49 @@
+{
+  "ticker": "ONON",
+  "asOf": "2026-11-08",
+  "status": "partial_pre_event",
+  "stage3Approved": false,
+  "analysisComplete": false,
+  "valuationReady": false,
+  "tradingAuthorized": false,
+  "independentAudit": "completed_with_open_valuation_gaps",
+  "event": {
+    "date": "2026-11-10",
+    "timing": "before US market open; call 08:00 ET",
+    "verifiedPrimary": true
+  },
+  "scanner": {
+    "date": "2026-11-06",
+    "opportunity": 70,
+    "qp": 80,
+    "last": 37.34
+  },
+  "regularClose": {
+    "date": "2026-11-06",
+    "price": 37.36,
+    "currency": "USD",
+    "verified": true
+  },
+  "gaps": [
+    "Reconciliar lease payments FY25 69.9 financing cash-flow statement versus 65.9 note 3.4; obtain H1 ROU depreciation/additions and choose consistent FCFF treatment.",
+    "Normalize operating tax rate; do not perpetuate FY25 0.7% ETR.",
+    "Verify November 6 cap table, incremental dilution and buyback execution; period average is not spot shares.",
+    "Determine excess unrestricted cash and reconcile other financial liabilities, pension and minority claims.",
+    "Source coherent dated CHF risk-free rate, ERP, beta methodology, debt/lease cost and CHF/USD FX.",
+    "Complete ten-year 5+5 DCF, terminal ROIC/g reinvestment, three scenarios, sensitivity, inverse valuation and normalized historical multiples.",
+    "Refresh Q3 actuals only after November 10 release; tariff refund is currently expected, not realized."
+  ],
+  "artifacts": [
+    "report.md",
+    "model.py",
+    "results.json",
+    "financials.csv",
+    "audit.json"
+  ],
+  "profile_kind": "partial",
+  "canonical_value": null,
+  "stage3Complete": false,
+  "researchCompleted": false,
+  "entryApproved": false,
+  "independent_audit_file": "audit.json"
+}

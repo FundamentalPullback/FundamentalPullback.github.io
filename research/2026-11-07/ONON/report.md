@@ -1,0 +1,48 @@
+# ONON · Diagnóstico previo a resultados
+Fecha de investigación: 8 noviembre 2026. Información financiera hasta 30 junio 2026; comunicación posterior hasta 27 octubre. Estado: **parcial; Stage 3 no aprobado**. Sin precio objetivo ni operación autorizada.
+
+## Decisión y evento
+La empresa tiene crecimiento operativo y una mezcla comercial favorable, pero no debe aprobarse por su salto de beneficio neto ni por el FCF del scanner. Resultados 3T2026 anunciados para **10 noviembre, antes de apertura estadounidense; conferencia 08:00 ET**. La valoración debe actualizarse después del evento. Este documento no contiene cifras del trimestre pendiente. [Calendario oficial](https://investors.on-running.com/news/news-details/2026/On-to-Release-Third-Quarter-2026-Results-on-Tuesday-November-10-2026/default.aspx).
+
+Opportunity 70 y QP80 en scanner 6nov permiten esta investigación ampliada, el score por sí solo no aprueba ni descarta una compra. ScannerLast **37,34 USD**, cierre regular **37,36 USD** el 6nov2026, corroborado en la auditoría por [StockAnalysis](https://stockanalysis.com/stocks/onon/history/). ScannerLast 37,34 es una referencia del export cuya sesión/hora no está verificada, no un cierre ni un after-hours confirmado. Yahoo no pudo releerse (HTTP429).
+
+## Series verificadas
+Millones de CHF. FCF simple = CFO menos compras de PP&E e intangibles, sin netear ventas de activos; **no es FCFF**. Fuentes: [20-F 2025](https://investors.on-running.com/files/doc_financials/2025/q4/Ex-99-3_Annual-Report_FY2025-1.pdf), [2T2026](https://investors.on-running.com/news/news-details/2026/On-Reports-Results-for-the-Second-Quarter-and-Six-Month-Period-Ended-June-30-2026/default.aspx).
+
+| Periodo | Ventas | EBIT IFRS | Neto | CFO | Capex incl. intangibles | FCF simple |
+|---|---:|---:|---:|---:|---:|---:|
+| 2023 | 1.792,1 | 180,2 | 79,6 | 232,1 | 47,2 | 184,9 |
+| 2024 | 2.318,3 | 211,6 | 242,3 | 510,6 | 65,0 | 445,6 |
+| 2025 | 3.014,0 | 377,0 | 203,7 | 359,5 | 78,6 | 280,9 |
+| H1 2025 | 1.475,8 | 169,8 | 15,8 | 89,1 | 29,5 | 59,6 |
+| H1 2026 | 1.682,2 | 236,9 | 208,3 | 255,0 | 47,2 | 207,8 |
+| TTM junio 2026 | 3.220,4 | 444,1 | 396,2 | 525,4 | 96,3 | 429,1 |
+
+TTM = 2025 + H1 2026 − H1 2025, no anualización del semestre. Últimos cuatro trimestres (ventas/EBIT/neto): 3T25 794,4/124,7/118,9; 4T25 743,8/82,5/69,1; 1T26 831,9/117,4/103,3; 2T26 850,3/119,4/105,0. Las sumas trimestrales difieren 0,1 del puente semestral por redondeo. [3T25](https://investors.on-running.com/news/news-details/2025/On-Reports-Results-for-the-Third-Quarter-and-Nine-Month-Period-Ended-September-30-2025/default.aspx), [FY25](https://investors.on-running.com/news/news-details/2026/On-Announces-Fourth-Quarter-and-Full-Year-Results-and-the-Filing-of-its-Annual-Report-on-Form-20-F-for-2025/default.aspx), [1T26](https://investors.on-running.com/news/news-details/2026/On-Reports-First-Quarter-2026-Results/default.aspx).
+
+## Lectura fundamental
+- H1 EBIT crece 39,5%; el crecimiento neto publicado de 1.221,5% parte de una base mínima. Con los importes redondeados 208,3/15,8−1 resulta 1.218,35%; se conserva 1.221,5% como tasa publicada, no como cociente reproducible de esos redondeos. El resultado de divisas pasa de −154,4 a +2,9, un giro de 157,3. La cifra neta no representa crecimiento recurrente equivalente. La tasa fiscal FY25, 1,5/205,2 = 0,7%, tampoco debe perpetuarse.
+- En 2T, DTC crece 26,0% reportado/34,3% constante, frente a wholesale 4,8%/12,7%. Calzado aporta 781,6; apparel54,2; accesorios14,5. Apparel crece 47,7%, pero solo aporta 6,4% de ventas; calzado todavía 91,9%. Más DTC ayuda al margen bruto de 65,4%, pero requiere tiendas, alquileres y capital.
+- La desaceleración de wholesale y la moderación de expectativas son hechos; que sea solo disciplina de marca y no debilidad de demanda continúa siendo hipótesis que comprobar. El EBIT mejora con claridad; la seguridad de su persistencia no se deduce del margen bruto.
+
+## Caja y balance: puentes que no deben omitirse
+El FCF simple TTM429,1 incluye la reversión contable de SBC y el interés cobrado, y deja principal e intereses de alquiler fuera del CFO. Restando principal de leases71,0 e interés pagado total24,1 resulta **334,0 de caja después de esas salidas**, todavía no FCFF económico. El addback SBC del estado de caja TTM es72,3, distinto del gasto SBC en resultados TTM70,6 (62,6+33,5−25,5). Mantener el gasto económico en EBIT y reconciliar las diferencias antes del FCFF; no sumar SBC de nuevo e ignorar dilución. El aumento de CFO en H1 también recoge una menor absorción de circulante:49,5 frente144,1. No prolongarlo como motor permanente.
+
+A junio: inventario472,9, clientes374,0, proveedores211,0. La diferencia de balances no es igual al cambio de circulante en caja por divisas y otros ajustes. Caja1.205,6 no es automáticamente excedentaria. Leases87,9 corrientes+474,6 largos=562,5; derechos de uso530,7. Obligaciones laborales8,1. Otros pasivos financieros46,3+5,6 deben clasificarse: el 20-F identifica gran parte del saldo FY25 como devoluciones de clientes, no deuda bancaria. No descontarlos dos veces como deuda y circulante. No hay una línea de minoritarios en el balance revisado; comprobar perímetro antes de fijar cero definitivo.
+
+Software capitalizado forma parte de los intangibles y de la inversión necesaria. En FY25, altas de derechos de uso291,2 (143,4 en almacenes y137,8 en tiendas) superan el capex monetario78,6; son altas de activos, no un desembolso de caja que deba sumarse mecánicamente al capex. La inversión de almacenes también es material. La expansión DTC no es crecimiento sin reinversión. **Discrepancia pendiente concreta:** la sección de financiación del estado de flujos FY25 muestra pagos de pasivos por leases69,9, mientras nota3.4 muestra principal65,9. La nota separa interés pagado21,3 (el estado de caja informa interés total21,5), por lo que no se resuelve llamando interés a los4,0. El roll-forward de la nota cierra con65,9; no se encontró puente explicativo. Se conserva69,9 para la métrica descriptiva de caja y queda pendiente la conciliación4,0 antes del FCFF. También falta el desglose H1 de depreciación ROU frente a otros activos. [20-F, notas3.4–3.5 y4.3](https://investors.on-running.com/files/doc_financials/2025/q4/Ex-99-3_Annual-Report_FY2025-1.pdf).
+
+## Moneda, capital y valoración
+Los estados son CHF y ONON cotiza USD como acción ordinaria clase A en NYSE, no ADR; no corresponde aplicar un ratio ADR adicional. Acciones B tienen 1/10 del derecho económico A, no deben sumarse 1:1: el denominador diluido equivalente promedio H1 es335,749 millones; el de 2T335,884. No equivalen a acciones diluidas vigentes el6nov. La recompra autorizada hasta1.000M USD no se incorpora como reducción gratuita del denominador; falta verificar ejecución posterior y concesiones de acciones. Toda valoración debe convertir equity CHF a USD con FX fechado y usar descuento CHF coherente.
+
+**No se emite DCF numérico:** faltan puente de leases/reinversión, impuesto operativo normalizado, caja excedentaria, cap table actual y paquete completo fechado de tasa libre de riesgo CHF, ERP, beta y coste de deuda/leases. Beta2,08 aparece en proveedores secundarios, pero no basta para fijar WACC sin fecha/metodología consistentes. No se sustituye por una prima arbitraria. Tampoco hay valoración inversa o múltiplos históricos normalizados defendibles todavía; PER25,56 del scanner no prueba precio atractivo.
+
+Modelo siguiente: FCFF10 años,5 detallados+5 transición, SBC retenida en EBIT, capex+software+circulante, opción de leases consistente en flujos y puente EV/equity, reinversión terminal=NOPAT×g/ROIC y WACC>g. Adverso: persistencia de desaceleración wholesale y reinversión DTC más alta; central: expansión operativa con moderación hacia madurez; favorable: objetivos2029 alcanzados sin deteriorar retornos. Son marcos pendientes de cuantificar, no tres valoraciones calculadas.
+
+## Qué debe resolver el 10nov
+El Investor Day del22sep estableció ambiciones2029: ventas al menos5.600M CHF, crecimiento constante high-teens, margen bruto65%+ y EBITDA ajustado22%+. No son EBIT/FCFF. Para3T anticipó crecimiento constante alrededor17% y posibles reintegros arancelarios de hasta53M CHF. Estos últimos son **expectativas, no ingresos realizados**; separar cualquier cobro/beneficio del margen recurrente. [Investor Day](https://investors.on-running.com/news/news-details/2026/On-Enters-Next-Chapter-Unveils-Strategy-to-Redefine-What-a-Sportswear-Brand-Can-Be-Alongside-2029-Financial-Targets/default.aspx).
+
+Prioridades: sell-through frente sell-in, inventario y descuentos, crecimiento y rentabilidad DTC, beneficio sin reembolso arancelario, nueva guía, leases/capex y retorno incremental, SBC/acciones y recompra ejecutada. El comparativo3T25 incluye un beneficio no recurrente de aproximadamente200pb de margen bruto por fletes y otros costes: normalizarlo antes de proyectar el TTM. Después completar WACC/FX, escenarios, sensibilidad, inversa y contraste histórico. Hasta entonces: observación investigada, **no análisis completo ni aprobación de compra**.
+
+## Nota de auditoría
+Verificación independiente del8nov: cifras históricas y evento corroborados; diagnóstico parcial utilizable con las reservas expresas. El [20-F SEC, estados y notas3.4–4.6](https://www.sec.gov/Archives/edgar/data/1858985/000185898526000008/onholdingag-20251231.htm) permite comprobar clasificación de leases, software y clases de acciones. No hay valoración aprobada ni autorización de publicación u operación.

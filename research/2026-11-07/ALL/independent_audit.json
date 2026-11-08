@@ -1,0 +1,132 @@
+{
+  "ticker": "ALL",
+  "as_of": "2026-11-08",
+  "audit_outcome": "ACCOUNTING_AND_ARITHMETIC_PASS_WITH_MATERIAL_VALUATION_GAPS",
+  "stage3_completed": false,
+  "valuation_approved": false,
+  "entry_approved": false,
+  "publication_performed": false,
+  "remote_writes_or_trades_performed": false,
+  "summary": "The supplied source extracts support the principal accounting facts, and an independent implementation reproduces all three illustrative values and RI/DDM equality. That is not economic validation. Retain partial status, no approved valuation, no entry approval. No material transcription or arithmetic error was found in the audited core accounting figures.",
+  "audit_scope": {
+    "read": [
+      "report.md",
+      "model.py",
+      "results.json",
+      "sources.json",
+      "financials_quarterly.csv",
+      "status.json",
+      "documento fuente citado",
+      "documento fuente citado",
+      "documento fuente citado"
+    ],
+    "pdf_check": "Re-extracted original Q3 PDF pages 70-71 with pdftotext; capital/liquidity text agrees with supplied extraction. Financial and reserve schedules checked in full source extracts.",
+    "limits": "Historical price source PDFs were not separately redownloaded; duplicate eligibility and the underlying plan's insurer-exception authorization were not independently re-audited. No claim of full primary-source Treasury verification or independent beta regression.",
+    "original_research_files_modified": [
+      "report.md: requested Spanish spacing cleanup, precise adjusted statutory capital terminology, and explicit non-approval sensitivity/audit caveats; original model and numerical assumptions unchanged"
+    ],
+    "reproduce": "python independent_audit.py",
+    "calculation_artifact": "independent_audit_calculations.json"
+  },
+  "verified": [
+    {
+      "topic": "Common equity and shares",
+      "result": "32,311 total Allstate equity minus 2,001 preferred equals 30,310 common. Nine-month bridge 28,609 + 7,719 + 99 - 2,939 + 55 - 830 - 2,403 = 30,310. Dividend declarations, not cash paid, belong in this bridge. Diluted point-in-time denominator 252.1 differs appropriately from quarter EPS weighted average 255.3 and October 19 basic shares 247.449496.",
+      "source": "Q3 10-Q pp. 3-4; supplement pp. 1,3"
+    },
+    {
+      "topic": "Quarterly and TTM actuals",
+      "result": "All CSV sums tie to results and source supplement: revenue 70,230; common income 11,522; adjusted income 11,408; premiums 59,582; underwriting 10,692; catastrophe losses 4,821. TTM CR 82.05% is premium-weighted, not a simple average. Issuer TTM EPS 44.25 need not equal quarterly EPS sum.",
+      "source": "Q3 supplement pp. 1,2,6"
+    },
+    {
+      "topic": "Reserves",
+      "result": "Q3 favorable prior non-cat development 763 less adverse cat development 10 gives 753 total favorable. Nine-month 2,471 less 73 gives 2,398. Current-year auto favorable development of 1.6 points is not removed by prior-year-only adjustments. Report correctly flags this and does not count it twice.",
+      "source": "Q3 10-Q pp. 46-52"
+    },
+    {
+      "topic": "Statutory capital",
+      "result": "AIC total ADJUSTED statutory capital and surplus estimated at 20.75bn and ACL-RBC 4.23bn imply 490.54% ACL coverage at December 2025. This is not GAAP common equity, not all-subsidiary statutory surplus, and not distributable excess capital. The official index still lists Q2 as latest AIC quarterly statement; Q3 heading contains Rule 606 only.",
+      "source": "2025 10-K pp. 157-158; official statutory index"
+    },
+    {
+      "topic": "Parent liquidity and distributions",
+      "result": "Parent 9.04bn investments, 550m December debt maturity, 750m undrawn facility and covenant 13.7% versus 37.5% are supported. Ordinary AIC dividend formula is 7.98bn less preceding rolling-12-month payments, with 4.75bn paid in 9M2026. A simple subtraction is not verified remaining capacity. There is also an unassigned-surplus restriction excluding unrealized appreciation. Parent investment liquidity does not equal excess distributable equity.",
+      "source": "Q3 10-Q pp. 67-68; 2025 10-K p.157"
+    },
+    {
+      "topic": "Post-quarter transactions",
+      "result": "October acquisition of substantially all INRIX assets and November agreement for remaining Replica ownership, expected close by year-end subject to conditions, are in 10-Q. Consideration/financing and updated capital bridge remain unresolved. Do not imply INRIX whole-company share acquisition or Replica already closed.",
+      "source": "Q3 10-Q p.44"
+    },
+    {
+      "topic": "Valuation math",
+      "result": "Independent code reproduces 149.531639/291.155283/408.439387 and verifies RI equals dividend valuation under the same clean-surplus assumptions. No portfolio cash addback, second debt deduction, or free buyback accretion found. DDM identity is a consistency test, not independent valuation evidence."
+    }
+  ],
+  "required_fixes_before_any_valuation_approval": [
+    {
+      "severity": "high",
+      "topic": "Unsupported discount overlay",
+      "finding": "Observed beta 0.12 is sourced; valuation beta 1.0 is not estimated or peer-derived. Catastrophe tail/regulatory risks alone do not establish systematic CAPM beta=1.0. The 9.27% central rate is an explicit judgment hurdle, not a validated cost of equity. No evidence of target-price calibration was found, but lack of evidence does not justify the selection.",
+      "action": "Retain observed beta and raw CAPM separately. Label 9.27% a judgment discount scenario pending multi-period return regression, peer/bottom-up beta and economic risk cross-check. Put idiosyncratic catastrophe, reserves and regulatory constraints into cash flows/capital scenarios; avoid duplicative risk penalties. Do not claim central upside or entry attractiveness from this assumption."
+    },
+    {
+      "severity": "high",
+      "topic": "Fragile apparent upside",
+      "finding": "At otherwise unchanged base assumptions, Ke 10.27% gives 251.65, below 254.81; break-even Ke is 10.1784%. At Ke9.27%, terminal ROE12% gives 233.01, versus 291.16 at16%. A 16% terminal ROE permanently exceeds Ke by6.73 points. Mechanical observed-beta CAPM yields755.72, which is a diagnostic of sensitivity and is not approved either.",
+      "action": "Surface these specific counterexamples and justify perpetual excess returns before approving any valuation. The current +14.3% is only a model output comparison, not an investment conclusion."
+    },
+    {
+      "severity": "high",
+      "topic": "Sustainable earnings and legal-entity payout",
+      "finding": "CR93%, investment income3.8bn, other pretax -300m, tax21% and perpetual ROE16% are assumptions. Other pretax combines distinct services, runoff, corporate, financing and reconciliation items without a source bridge. Model payout4,546.5m is economic common-equity distribution, not demonstrably available AIC ordinary dividends. Model growth5% assumes adequate regulatory capital rather than establishing it.",
+      "action": "Build segment-to-common normalized earnings and GAAP-to-statutory capital bridges, including holding-company interest/preferred/SBC, runoff reserve charges, cat/reinsurance stress, rating buffers and timing of upstream dividends. Source the applicable rolling dividend history. Reconcile post-quarter acquisition financing and repurchases. Do not double-count common payouts and parent expenses."
+    },
+    {
+      "severity": "medium",
+      "topic": "Clean surplus and AOCI",
+      "finding": "Mathematical equality assumes future equity changes occur only through modeled earnings and distributions. Historical OCI is material. No future OCI, changes in dilution, or capital restrictions are represented.",
+      "action": "Explicitly state expected OCI=0 and fixed diluted share-equivalent assumptions, then stress investment losses/liquidity and required capital. Any subsequent change in book basis requires a consistent ROE/earnings and share denominator bridge."
+    },
+    {
+      "severity": "low",
+      "topic": "Precise terminology and missing contextual support",
+      "finding": "Report calls20.75bn statutory capital without the source's important 'total adjusted' qualifier. The report's cat10.5-point normal assumption has relevant issuer evidence: ten-year average catastrophe impact on nine-month total CR is10.3 points, but that partial-year measure is not automatically a full-year forecast.",
+      "action": "Use 'total adjusted statutory capital and surplus (AIC, estimated December2025)'. Add the10-Q p.51 cat historical context without turning it into guidance; retain separate all-subsidiary statutory surplus22.95bn if discussed."
+    },
+    {
+      "severity": "low",
+      "topic": "Model maintainability",
+      "finding": "Central Ke9.27% and assumed beta1.0 are separately hardcoded; editing RF/ERP/BETA does not update central scenario. Current numbers reconcile but future changes could silently diverge.",
+      "action": "Either calculate central judgment hurdle explicitly from named inputs with an assertion, or label it an independent hurdle rather than a computed CAPM rate. Add input checks ke>terminal growth and nonzero ROE where payout ratio is computed."
+    }
+  ],
+  "live_source_checks": [
+    {
+      "url": "https://stockanalysis.com/stocks/all/history/",
+      "verified": "Regular close254.81 on November6,2026 16:00EST; after-hours260.00 at19:51EST is separate, not substituted. November5 intraday high281.11 is supported."
+    },
+    {
+      "url": "https://stockanalysis.com/stocks/all/statistics/",
+      "verified": "5Y beta0.12; independent regression not performed. Do not reuse inconsistent generic EV/cash/FCF ratios as insurer valuation inputs."
+    },
+    {
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "verified": "November1 ERP4.41% adjusted trailing payout; page Treasury5.29%, not daily November6 rate. Mixed input dates disclosed in research."
+    },
+    {
+      "url": "https://www.slickcharts.com/treasury/10-year",
+      "verified": "Secondary source4.86% at November6 close, attributed to Treasury. Primary source verification still open."
+    },
+    {
+      "url": "https://ycharts.com/indicators/10_year_treasury_rate",
+      "verified": "Audit read returned JavaScript verification wall, not rate confirmation. Alternative Slickcharts succeeded; no challenge bypass attempted."
+    },
+    {
+      "url": "https://www.allstatecorporation.com/statements/statutory-statements.aspx",
+      "verified": "Q3 heading Rule606 only; latest AIC quarterly linkQ2. This establishes index availability, not absence from every possible regulatory source."
+    }
+  ],
+  "recommendation": "Keep research partial; replace 'independent audit pending' with 'audit completed with material valuation conditions outstanding'. Do not set Stage3, Stage3.5, valuation approval or entry approval. No publication or trade authorized by this audit. Resolve above items or explicitly stop with unresolved valuation."
+}

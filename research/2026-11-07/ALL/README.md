@@ -1,0 +1,3 @@
+# ALL: partial research only
+
+Calculation type: illustrative insurer RI/DDM sensitivity, not approved. No canonical valuation, Stage 3 completion or entry approval. Governing independent audit: independent_audit.json. Sources: sources.json. Run `python model.py` with Python 3 standard library only. Reproduction does not resolve economic or source limitations.

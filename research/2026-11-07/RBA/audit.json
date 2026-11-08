@@ -1,0 +1,48 @@
+{
+  "ticker": "RBA",
+  "as_of": "2026-11-08",
+  "independent_review": true,
+  "verdict": "factual_partial_research_pass_with_explicit_limits",
+  "publish_safe_scope": "Factual partial research only; not a completed Stage 3 valuation or investment decision.",
+  "stage3_complete": false,
+  "entry_approved": false,
+  "fair_value": null,
+  "checks": {
+    "three_annual_periods_present_and_core_financials_primary_checked": true,
+    "four_quarter_sum_all_model_fields_to_TTM": true,
+    "TTM_prior_year_bridge": true,
+    "revenue_components_reconcile": true,
+    "provider_FCF_611_2_less_intangibles_109_6_equals_501_6": true,
+    "GAAP_EBIT_TTM_777_6_growth_5_2945_percent": true,
+    "DST_reversal_11_2_primary_verified_partial_adjusted_EBIT_766_4_not_normalized": true,
+    "nov9_premarket_0830_ET_issuer_verified": true,
+    "oct8_update_is_guidance_not_Q3_actuals": true,
+    "nov6_NYSE_regular_close_93_52_secondary_verified": true,
+    "valuation_gate_rejects_empty_false_and_truthy_nonboolean": true,
+    "fair_value_scenarios_inverse_withheld": true,
+    "no_preferred_principal_plus_conversion_double_count_in_executed_outputs": true
+  },
+  "corrections": [
+    "Disclosed preferred participating dividends, quarterly floor and issuer redemption right on coupon step-up.",
+    "Disclosed auction minimum-payout guarantees of 103.0 at June 30 as gross contingent exposure, not certain incremental debt.",
+    "Added current J.M. Wood deferred payments 25.2 and partial DST-only EBIT 766.4, without calling it normalized.",
+    "DCF now requires separate finance-lease asset additions, excludes overlap with cash PP&E/software, and transition reinvestment funds next-year incremental NOPAT including margin changes.",
+    "Strict boolean verification gate added; clarified EV-only architecture has no implemented equity bridge, inverse or scenarios."
+  ],
+  "remaining_material_gaps": [
+    "No complete normalized EBIT/FCFF, SBC economic bridge or arbitration cash/expense timing. DST adjustment alone is insufficient; prior-period DST expenses also affect comparability.",
+    "No verified sustainable operating working capital or excess cash after client/consignor settlements; book overdrafts cannot simply be extra financial debt.",
+    "Current noncurrent finance-lease/equipment financing principal not reconciled; 132.0 is December 2025 total, not June 2026 current debt.",
+    "No maintenance/growth split, acquired versus organic reinvestment returns, or financed-asset economic capex schedule.",
+    "Preferred economic claim must include participation and conversion/step-up/redemption terms; use one consistent claim/share route and update current shares.",
+    "WACC is not approved; contractual debt rates are not marginal yields. Terminal/incremental ROIC not justified.",
+    "No calibrated scenarios, sensitivity, inverse valuation, EV-to-common bridge or homogeneous cycle/comparable multiples.",
+    "Q3 financial results have not been incorporated; release expected November 9."
+  ],
+  "verification_limits": [
+    "Independent accounting/arithmetic and targeted primary-source review, not an audit opinion on issuer financial statements.",
+    "Historical core rows reconciled against issuer releases/filings and saved extracts; not every narrative absence claim certifies completeness.",
+    "Updated DCF scaffold has been syntax/gate checked but no RBA valuation case run, intentionally.",
+    "Market close is secondary-source evidence; event and guidance are issuer-primary."
+  ]
+}

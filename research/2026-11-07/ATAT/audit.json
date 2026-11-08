@@ -1,0 +1,242 @@
+{
+  "ticker": "ATAT",
+  "as_of": "2026-11-08",
+  "verdict": "Not ready",
+  "permitted_use": "Bounded partial research and diagnostic scenario exploration only; do not use for portfolio action until remediated and re-audited.",
+  "stage3_complete": false,
+  "fair_value_approved": false,
+  "entry_approved": false,
+  "audit_scope": "Independent review of local report, executable model, CSV forecasts/actuals, results, manifest, profile duplicate check, primary annual/interim source files; independent live close and event verification. Remediation authorized by parent.",
+  "checks": [
+    {
+      "check": "Primary-file hashes",
+      "result": "pass",
+      "detail": "All five stored primary/parameter evidence hashes match manifest."
+    },
+    {
+      "check": "TTM2025 revenue",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2025 ebit",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2025 net_income",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2025 cfo",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2025 capex_incl_intangibles",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2025 da",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2025 sbc",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2025 other_operating_income",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2026 revenue",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2026 ebit",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2026 net_income",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2026 cfo",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2026 capex_incl_intangibles",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2026 da",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2026 sbc",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "TTM2026 other_operating_income",
+      "result": "pass",
+      "detail": "FY prior + current H1 - prior H1; no quarter annualization."
+    },
+    {
+      "check": "adverso enterprise/equity bridge",
+      "result": "pass",
+      "detail": "Independent CSV sum of 10 discounted cash flows + terminal PV; cash adjustment once; ADS ratio three."
+    },
+    {
+      "check": "adverso terminal reinvestment",
+      "result": "pass",
+      "detail": "Terminal reinvestment = NOPAT11*g/ROIC. Year 10 growth and margin reach terminal assumptions."
+    },
+    {
+      "check": "central enterprise/equity bridge",
+      "result": "pass",
+      "detail": "Independent CSV sum of 10 discounted cash flows + terminal PV; cash adjustment once; ADS ratio three."
+    },
+    {
+      "check": "central terminal reinvestment",
+      "result": "pass",
+      "detail": "Terminal reinvestment = NOPAT11*g/ROIC. Year 10 growth and margin reach terminal assumptions."
+    },
+    {
+      "check": "favorable enterprise/equity bridge",
+      "result": "pass",
+      "detail": "Independent CSV sum of 10 discounted cash flows + terminal PV; cash adjustment once; ADS ratio three."
+    },
+    {
+      "check": "favorable terminal reinvestment",
+      "result": "pass",
+      "detail": "Terminal reinvestment = NOPAT11*g/ROIC. Year 10 growth and margin reach terminal assumptions."
+    },
+    {
+      "check": "Discount formula",
+      "result": "pass",
+      "detail": "Treasury 4.86% is not adjusted risk-free: subtract assumed US default spread 0.22%; Rf=4.64%, Ke=8.467486%. 100% equity diagnostic policy."
+    },
+    {
+      "check": "CFO residual",
+      "result": "pass",
+      "detail": "Arithmetic verified; economic reconciliation remains OPEN. Not labeled working capital."
+    },
+    {
+      "check": "No approval",
+      "result": "pass",
+      "detail": "No approved fair value or entry price; diagnostic outputs only."
+    }
+  ],
+  "issues": [
+    {
+      "severity": "high",
+      "finding_type": "Unsupported assumption",
+      "status": "OPEN",
+      "location": "model.py cash/reserve/other_claims",
+      "finding": "RMB1,500m reserve and zero incremental minority claims have no current entity-level economic bridge.",
+      "remediation": "Refresh entity cash, third-party collections, deposits, restricted assets, taxes and minority rights; prevent overlap with operating reinvestment."
+    },
+    {
+      "severity": "high",
+      "finding_type": "Not comparable without bridge",
+      "status": "OPEN",
+      "location": "report.md cash reconciliation / results.bridge_rmb_m",
+      "finding": "RMB265.586m TTM residual is arithmetically identified but not economically explained.",
+      "remediation": "Obtain interim cash-flow adjustments; reconcile leases, taxes, noncash items and working capital."
+    },
+    {
+      "severity": "high",
+      "finding_type": "Unsupported assumption",
+      "status": "OPEN",
+      "location": "model.py scenarios and value()",
+      "finding": "Sales/capital 2/3/4, 80/20 capex-WC split, terminal incremental ROIC and 0.5% D&A are uncalibrated.",
+      "remediation": "Calibrate hotel/supplies/retail economics separately, including contract costs and inventory."
+    },
+    {
+      "severity": "high",
+      "finding_type": "Missing forecast refresh",
+      "status": "OPEN",
+      "location": "model.py ads / capital",
+      "finding": "Q2 weighted diluted shares are not November economic shares.",
+      "remediation": "Reconcile both classes, treasury shares, repurchases, awards and current dilution before executable valuation."
+    },
+    {
+      "severity": "medium",
+      "finding_type": "Unsupported assumption",
+      "status": "OPEN",
+      "location": "model.py fx/rf/beta/wacc",
+      "finding": "Constant FX and short-listing published beta remain diagnostic; country premium July versus ERP November and assumed 100% equity policy are explicit.",
+      "remediation": "Validate FX path, beta/relevering, marginal cost and current refinancing. Do not use historic RMB debt coupon as USD cost."
+    },
+    {
+      "severity": "medium",
+      "finding_type": "Source contradiction",
+      "status": "FIXED",
+      "location": "report.md history / interim cash flow",
+      "finding": "US GAAP was not explicit and Spanish revisados could imply auditor-reviewed interim statements.",
+      "remediation": "Explicit US GAAP, not IFRS; interim financial release unaudited."
+    },
+    {
+      "severity": "medium",
+      "finding_type": "Missing decision output",
+      "status": "FIXED_DISCLOSURE_ONLY",
+      "location": "report.md balance/rights",
+      "finding": "Dual-class voting and available parent-only financial evidence omitted.",
+      "remediation": "Added A one/B ten votes, class conversion and count, FY2025 parent cash697.085/debt210.120, restricted subsidiary net assets1156.707 RMBm; current availability still unresolved."
+    },
+    {
+      "severity": "low",
+      "finding_type": "Formula/control defect",
+      "status": "FIXED",
+      "location": "model.py checks",
+      "finding": "Only central FCFF identity asserted and terminal components not exposed.",
+      "remediation": "Added all-scenario controls, WACC>g and positive input guards, terminal NOPAT/reinvestment and forecast net-reinvestment fields; no assumption or valuation change."
+    }
+  ],
+  "diagnostic_values_usd_ads": {
+    "adverso": 31.20269588503147,
+    "central": 53.49000290125058,
+    "favorable": 78.52819373425373
+  },
+  "market_anchor": {
+    "close": 35.91,
+    "date": "2026-11-06",
+    "time": "16:00 EST",
+    "scanner_last": 35.4,
+    "source": "https://stockanalysis.com/stocks/atat/history/",
+    "independently_reopened": true
+  },
+  "event": {
+    "date": "2026-11-10",
+    "call": "07:00 EST",
+    "results_timing": "before US market open",
+    "status_as_of_audit": "future, not reported",
+    "source": "https://ir.yaduo.com/news-events/events-presentations",
+    "independently_reopened": true
+  },
+  "source_tieout": [
+    "FY2023–2025 revenue/EBIT/NI/CFO/D&A/SBC/other income match audited US GAAP 20-F F7/F9; interim source rows and reconstructed TTM checked.",
+    "Interim cash flow only aggregate CFO; PP&E and intangibles separately disclosed.",
+    "Q2 retail 1574.522/3490.347=45.11% MIX; year-on-year GROWTH=63.19%, not 45.1%.",
+    "Same-hotel RevPAR336.8/347.2-1=-3.00%; system345.4/343.1-1=+0.67%; avoid mixing cohorts.",
+    "ADS=3 Class A ordinary shares, both A/B economic ordinary classes included in denominator. Q2 diluted410.476026m/3=136.825342m ADS proxy.",
+    "20-F Note19 F37–39: parent cash697.085m, short debt210.120m, restricted subsidiary net assets1156.707m RMB as of Dec2025; not current distributable cash."
+  ],
+  "limitations": [
+    "Audit does not resolve material economic underwriting gaps.",
+    "No new current market refresh of FX/beta/Treasury/ERP beyond existing research manifest; parameters tested as explicit sourced inputs, not endorsed.",
+    "No independently derived consensus or homogeneous historical/peer multiple set."
+  ]
+}

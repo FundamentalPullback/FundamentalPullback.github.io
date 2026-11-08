@@ -1,0 +1,126 @@
+{
+  "ticker": "ONON",
+  "audit_date": "2026-11-08",
+  "verdict": "Partial pre-event diagnostic fact-checked with corrections; not valuation-ready, not Stage3 approval, not complete analysis. Suitable only as a clearly limited factual research draft. Trading remains unauthorized.",
+  "checks": {
+    "event": {
+      "pass": true,
+      "date": "2026-11-10",
+      "release": "before US markets open",
+      "call": "08:00 US Eastern",
+      "source": "S1"
+    },
+    "price": {
+      "pass": true,
+      "regular_close_usd": 37.36,
+      "date": "2026-11-06",
+      "time": "16:00 EST",
+      "source": "StockAnalysis history",
+      "scanner_last_usd": 37.34,
+      "scanner_session": "unknown; must not label confirmed after-hours",
+      "yahoo_recheck": "HTTP429; not independently corroborated this audit"
+    },
+    "financial_history": {
+      "pass": true,
+      "currency": "CHF millions",
+      "annual": "FY2023–FY2025 source-tied to SEC20-F",
+      "interim": "H12025/H12026 tied to Q22026 release",
+      "four_quarters": "Q32025/Q42025/Q12026/Q22026 sales, EBIT and net income checked against releases",
+      "ttm": "FY2025 + H12026 - H12025",
+      "quarter_sum_vs_ttm": {
+        "sales": 0.0,
+        "ebit": -0.1,
+        "net_income": 0.1
+      }
+    },
+    "growth": {
+      "pass": true,
+      "h1_ebit_growth_pct": 39.51707891637219,
+      "h1_net_growth_reported_pct": 1221.5,
+      "h1_net_growth_rounded_arithmetic_pct": 1218.3544303797469,
+      "fx_result_swing_chf_m": 157.3,
+      "conclusion": "Operating growth is real; net growth is distorted by low base and FX reversal."
+    },
+    "cash_flow": {
+      "pass": true,
+      "ttm_cfo_less_ppe_intangibles": 429.1,
+      "is_FCFF": false,
+      "ttm_cash_after_reported_lease_principal_and_all_interest_paid": 334.0,
+      "is_economic_FCFF": false,
+      "ttm_sbc_cashflow_addback": 72.3,
+      "ttm_sbc_pnl_expense": 70.6,
+      "interest_received_in_cfo": true,
+      "lease_principal_and_interest_paid_classification": "financing cash flows"
+    },
+    "lease_discrepancy": {
+      "status": "verified_unreconciled",
+      "cashflow_fy2025": 69.9,
+      "note_3_4_principal": 65.9,
+      "difference": 4.0,
+      "note_interest_paid": 21.3,
+      "cashflow_total_interest_paid": 21.5,
+      "note_rollforward_closes": true,
+      "explanation": "Both primary statement figures verified. Note separately identifies interest; no evidence that4.0 is interest or short-term lease expense. No supported correction/bridge found. Cash metric uses statement69.9; FCFF reconciliation remains open.",
+      "source": "SEC20-F cash flow F-7 / note3.4 F-22"
+    },
+    "capital": {
+      "pass_with_limits": true,
+      "security": "NYSE Class A ordinary share, not ADR",
+      "economic_share_equivalent": "A + B/10",
+      "h1_diluted_weighted_m": 335.74891080000003,
+      "is_spot_diluted_shares": false,
+      "buyback": "USD1bn board authorization through2029; execution not verified",
+      "other_financial_liabilities": "FY25 current56.7 includes customer-return liabilities55.8; not automatically debt",
+      "excess_cash": "unresolved; FY25 restricted cash0.9 known, H12026 unrestricted/excess bridge pending"
+    },
+    "event_expectations": {
+      "pass": true,
+      "tariff_refund_chf_m_up_to": 53,
+      "tariff_refund_usd_m_up_to": 65,
+      "status": "September22 expectation for Q32026; not realized income/cash evidence",
+      "q3_cc_sales_growth_expectation_pct": 17,
+      "2029_targets": "at least CHF5.6bn sales,65%+ gross margin,22%+ adjusted EBITDA margin; not EBIT/FCFF",
+      "prior_year_normalization": "Q32025 gross margin included about200bp one-off freight/other cost benefit"
+    },
+    "duplicate_snapshot": {
+      "analyses": 0,
+      "completed": 0,
+      "mentions": 9,
+      "limit": "Saved profile snapshot only; no new external repository completeness claim."
+    },
+    "controls": {
+      "fair_value_null": true,
+      "valuation_ready_false": true,
+      "stage3_false": true,
+      "analysis_complete_false": true,
+      "publication_false": true,
+      "trading_false": true
+    }
+  },
+  "corrections_applied": [
+    "Separated company-reported1221.5% net growth from rounded arithmetic1218.35%.",
+    "Separated cash-flow SBC72.3 from P&L SBC70.6 TTM.",
+    "Removed unsupported after-hours classification of scanner37.34 and fresh Yahoo corroboration claim.",
+    "Clarified financing cash-flow lease classification and genuine unexplained4.0 discrepancy.",
+    "Added ordinary ClassA/notADR identity and no additional ADR ratio.",
+    "Clarified ROU additions include warehouses and are not extra current cash capex.",
+    "Added Q32025 one-off gross-margin normalization flag."
+  ],
+  "remaining_gaps": [
+    "Reconciliar lease payments FY25 69.9 financing cash-flow statement versus 65.9 note 3.4; obtain H1 ROU depreciation/additions and choose consistent FCFF treatment.",
+    "Normalize operating tax rate; do not perpetuate FY25 0.7% ETR.",
+    "Verify November 6 cap table, incremental dilution and buyback execution; period average is not spot shares.",
+    "Determine excess unrestricted cash and reconcile other financial liabilities, pension and minority claims.",
+    "Source coherent dated CHF risk-free rate, ERP, beta methodology, debt/lease cost and CHF/USD FX.",
+    "Complete ten-year 5+5 DCF, terminal ROIC/g reinvestment, three scenarios, sensitivity, inverse valuation and normalized historical multiples.",
+    "Refresh Q3 actuals only after November 10 release; tariff refund is currently expected, not realized.",
+    "Tie SBC P&L versus cash-flow addback, D&A operating versus cash-flow amounts, leases and tax effects into one economic cash bridge.",
+    "Normalize Q32025 approximately200bp one-off gross-margin benefit and avoid extrapolating working-capital release.",
+    "Build store/warehouse and software maintenance/growth investment, noncash lease additions and incremental capital-return forecasts, including H1 ROU D&A/additions."
+  ],
+  "source_access_limits": [
+    "IR annual PDF exceeded web size limit; SEC primary HTML was successfully inspected instead.",
+    "Yahoo history returned HTTP429; StockAnalysis verified regular close."
+  ],
+  "primary_filing": "https://www.sec.gov/Archives/edgar/data/1858985/000185898526000008/onholdingag-20251231.htm"
+}

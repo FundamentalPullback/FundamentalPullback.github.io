@@ -15,11 +15,11 @@ for(const lang of ['es','en']){
  t.setLang(lang);
  let h=t.latestScannerNotice();
  assert(h.includes('data-scan-date="2026-11-06"'));
- assert(h.includes(lang==='es'?'69 empresas con registros':'69 companies with research'));
+ assert(h.includes(lang==='es'?'75 empresas con registros':'75 companies with research'));
  // Multiple reports and a legacy decision for the same ticker do not double count.
  const report=t.S.lib.find(r=>r.id==='A296');
  t.S.lib=saved.lib.concat([report]);t.S.dec=saved.dec.concat([{ticker:'LMT',date:'2026-11-06'}]);
- h=t.latestScannerNotice();assert(h.includes(lang==='es'?'69 empresas con registros':'69 companies with research'));
+ h=t.latestScannerNotice();assert(h.includes(lang==='es'?'75 empresas con registros':'75 companies with research'));
  // Future scan must not inherit old research, even if report publication is on its date.
  t.S.scan=saved.scan.concat([{ticker:'LMT',date:'2026-11-07',opp:100}]);
  h=t.latestScannerNotice();assert(h.includes('data-scan-date="2026-11-07"'));assert(h.includes(lang==='es'?'Todavía no hay registros':'No research records'));
@@ -28,4 +28,4 @@ for(const lang of ['es','en']){
  h=t.latestScannerNotice();assert(h.includes(lang==='es'?'1 empresas con registros':'1 companies with research'));
  t.S.scan=saved.scan;t.S.lib=saved.lib;t.S.dec=saved.dec;
 }
-console.log('PASS latest scanner research: 69 linked profiles, later publication dates, deduplication, future rollover, explicit association, ES/EN.');
+console.log('PASS latest scanner research: 75 linked profiles, later publication dates, deduplication, future rollover, explicit association, ES/EN.');

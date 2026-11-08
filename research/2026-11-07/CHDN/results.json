@@ -1,0 +1,135 @@
+{
+  "ticker": "CHDN",
+  "as_of": "2026-11-08",
+  "status": "partial",
+  "approved_valuation": null,
+  "regular_close": {
+    "price": 97.94,
+    "date": "2026-11-06",
+    "time": "16:00 EST"
+  },
+  "market_inputs": {
+    "rf": 0.0486,
+    "beta": 0.77,
+    "erp": 0.0441,
+    "ke": 0.08255699999999999,
+    "kd_historical_proxy": 0.056817799320071354,
+    "wacc_unadjusted": 0.06577489727146046
+  },
+  "bridge": {
+    "debt": 4748,
+    "cash": 167,
+    "restricted_cash_excluded": 92,
+    "minority": 24,
+    "finance_lease_proxy": 27.8,
+    "shares": 68.548342,
+    "cash_treatment": "All unrestricted cash assumed excess for diagnostic only; minimum operating cash unverified"
+  },
+  "diagnostic_scenarios": {
+    "adverso": {
+      "diagnostic_only": true,
+      "operating_ev": 6145.949256871587,
+      "operating_explicit_pv": 3211.9921776038245,
+      "operating_terminal_value_year10": 6681.157707247829,
+      "operating_terminal_pv": 2933.9570792677628,
+      "jv_explicit_pv": 638.1564152308657,
+      "jv_terminal_pv": 476.03150689929123,
+      "jv_terminal_share": 0.4272452585818663,
+      "jv_equity_value": 1114.187922130157,
+      "equity_value": 2627.3371790017436,
+      "raw_per_share": 38.328238179732246,
+      "per_share": 38.328238179732246,
+      "terminal_share_of_operating_ev": 0.47738062203937015,
+      "terminal_fcff": 472.8582503848915
+    },
+    "central": {
+      "diagnostic_only": true,
+      "operating_ev": 8986.553936752898,
+      "operating_explicit_pv": 3010.7169247579154,
+      "operating_terminal_value_year10": 12405.458029518803,
+      "operating_terminal_pv": 5975.837011994983,
+      "jv_explicit_pv": 802.5109380133155,
+      "jv_terminal_pv": 747.3394945717504,
+      "jv_terminal_share": 0.48220104266785857,
+      "jv_equity_value": 1549.8504325850658,
+      "equity_value": 5903.604369337964,
+      "raw_per_share": 86.12322628223399,
+      "per_share": 86.12322628223399,
+      "terminal_share_of_operating_ev": 0.6649753680946833,
+      "terminal_fcff": 629.8858570542315
+    },
+    "favorable": {
+      "diagnostic_only": true,
+      "operating_ev": 15031.149597299403,
+      "operating_explicit_pv": 2951.957132632755,
+      "operating_terminal_value_year10": 22839.824889061198,
+      "operating_terminal_pv": 12079.192464666648,
+      "jv_explicit_pv": 953.1751880437184,
+      "jv_terminal_pv": 1001.9662199017041,
+      "jv_terminal_share": 0.5124776222476046,
+      "jv_equity_value": 1955.1414079454225,
+      "equity_value": 12353.491005244829,
+      "raw_per_share": 180.21575204904047,
+      "per_share": 180.21575204904047,
+      "terminal_share_of_operating_ev": 0.8036106876906393,
+      "terminal_fcff": 817.0923891043103
+    }
+  },
+  "sensitivity": [
+    {
+      "wacc": 0.06577489727146046,
+      "g": 0.015,
+      "diagnostic_value": 105.44753713469282
+    },
+    {
+      "wacc": 0.06577489727146046,
+      "g": 0.025,
+      "diagnostic_value": 120.45034223349894
+    },
+    {
+      "wacc": 0.06577489727146046,
+      "g": 0.03,
+      "diagnostic_value": 130.764851661272
+    },
+    {
+      "wacc": 0.07577489727146046,
+      "g": 0.015,
+      "diagnostic_value": 78.07418817399393
+    },
+    {
+      "wacc": 0.07577489727146046,
+      "g": 0.025,
+      "diagnostic_value": 86.12322628223399
+    },
+    {
+      "wacc": 0.07577489727146046,
+      "g": 0.03,
+      "diagnostic_value": 91.25584850420739
+    },
+    {
+      "wacc": 0.08577489727146047,
+      "g": 0.015,
+      "diagnostic_value": 58.5723639412791
+    },
+    {
+      "wacc": 0.08577489727146047,
+      "g": 0.025,
+      "diagnostic_value": 63.18845176321762
+    },
+    {
+      "wacc": 0.08577489727146047,
+      "g": 0.03,
+      "diagnostic_value": 65.98351463454614
+    }
+  ],
+  "inverse_diagnostic_year5_margin": 0.32193588176445864,
+  "limitations": [
+    "JV distribution sustainability and standalone reinvestment not validated",
+    "Current marginal issuer debt yield not independently verified; historical cost proxy",
+    "Finance lease roll-forward from Dec25 to Sep26 not isolated",
+    "No approved price target; scenarios diagnostic only",
+    "Unrestricted cash is not proven excess cash; minimum operating cash unresolved",
+    "Post-Oct21 shares and deferred compensation claims unreconciled",
+    "Project capex timing and normalized comparable history incomplete"
+  ]
+}

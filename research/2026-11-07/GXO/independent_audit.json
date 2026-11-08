@@ -1,0 +1,44 @@
+{
+  "ticker": "GXO",
+  "as_of": "2026-11-08",
+  "verdict": "pass_factual_partial_only",
+  "decision_ready": false,
+  "completed_stage3": false,
+  "trade_authorized": false,
+  "checks": {
+    "all_fcf_arithmetic": true,
+    "ttm_and_four_quarter_tieout": true,
+    "history_actuals_match": true,
+    "capital_bridge_no_lease_or_pension_double_count": true,
+    "unreviewed_dcf_rejected": true,
+    "no_calibrated_valuation": true
+  },
+  "primary_source_checks": [
+    "FY2023-25 statements and company FCF",
+    "Q42025, H12026/Q22026 and 9M2026; Q12026 by subtraction",
+    "Annual and original/comparative interim lease tables with adjacent footnotes",
+    "30 termination benefit; 38 cash exit versus 24 impairment; 21 nonoperating pension income",
+    "Debt, finance/operating leases, net debt and pension funded status",
+    "IR/LSEG and StockAnalysis Nov 6 close 55.18; official Nov 16 Investor Day 09:00 ET"
+  ],
+  "corrections": [
+    "Removed standalone -9/198 finance-lease additions fields; preserved rejected arithmetic diagnostics with accepted values null.",
+    "Qualified investment measure as disclosed ROU exchange amounts plus cash capex, not normalized gross physical investment.",
+    "Specified 2024 acquisition footnote scope and no quantified FY25 bridge found in reviewed notes.",
+    "Removed redundant hardcoded Q1/Q2 FCF overrides from builder.",
+    "Explicit cash-exit versus impairment and nonoperating pension treatment."
+  ],
+  "limitations": [
+    "No calibrated DCF, approved WACC, canonical fair value, entry or completion claim.",
+    "Rate/beta candidates remain unapproved; audit did not freshly validate all capital candidates.",
+    "Web extracts archived, not complete original PDF/HTML archives.",
+    "Public-facing extract must omit private scanner/profile workflow context and raw tool archives; no external publication performed."
+  ],
+  "remaining_blockers": [
+    "Reconciliar altas finance leases FY25=74 vs9M25=83, con modificaciones/bajas y clasificación: Q4 mecánico=-9 no es inversión negativa asumible.",
+    "Definir reinversión física y software/nuevo contrato recurrente con D&A; no extrapolar cash capex aislado.",
+    "Normalizar EBIT: beneficio inmobiliario30m, integración/transacción54m9M26, reestructuración11m, pérdida desinversión24m, pensión no operativa21m. Evitar sumar toda amortización adquirida y omitir inversión sustituta.",
+    "Cuantificar ventas/margen del perímetro Wincanton vendido septiembre y sinergias restantes sin contarlas dos veces.",
+    "Resolver impuesto sostenible, beta verificable, coste deuda callable como proxy, efectivo operativo/excedentario y derechosminoría a valor económico antes del DCF."
+  ]
+}

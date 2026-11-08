@@ -1,0 +1,68 @@
+{
+  "ticker": "CHDN",
+  "date": "2026-11-08",
+  "verdict": "PASS_FOR_FACTUAL_PARTIAL_RESEARCH_ONLY",
+  "stage3_complete": false,
+  "stage3_5_complete": false,
+  "approved_valuation": null,
+  "trading_permitted": false,
+  "scope": "Independent archived primary-statement tie-out and model-mechanics audit; live secondary price/beta recheck. Not an audit opinion on issuer accounts, full valuation approval or complete source re-download.",
+  "verified": [
+    "FY2023–2025 annual statements; Q4 2025 derived from FY minus nine months; Q1–Q3 2026 and cashflow cumulative differences",
+    "TTM CFO 804.4 to 756.0; capex 354.0 to 226.3; CFO-capex 450.4 to 529.7: improvement entirely explained by lower capex offset by lower CFO",
+    "Affiliate distributions TTM 130.3 versus equity earnings 149.0; nine-month Rivers distributions 68 and MVG 38",
+    "Rivers 61.3% equity method due to joint participating rights; MVG 50%; affiliates aggregate debt 760 is not parent or proportionate debt",
+    "Parent debt principal 4748; unrestricted cash 167; restricted cash 92 excluded; Oct19 600 bond repayment financed by revolver not deleveraging",
+    "ERP archive 4.41% November 1 2026 with monthly Treasury reference 5.29%, distinct from daily 4.86% input pending primary verification",
+    "Independent live StockAnalysis: November6 regular close97.94 at16:00EST; 5Ybeta0.77",
+    "Ten forecast years,5+5; FCFF reinvestment identities; terminal g/ROIC reinvestment; three diagnostic cases; inverse and9point sensitivity"
+  ],
+  "corrections": [
+    "Disclosed unrestricted versus unverified excess cash distinction and added minimum operating cash gap",
+    "Added affiliate profit/distribution TTM and per-affiliate distribution detail; explicitly distinguished aggregate affiliate debt from proportionate debt",
+    "Added explicit and terminal PV components for consolidated operations and affiliates to reproducible model output",
+    "Expanded mechanical checks; synchronized Markdown and HTML; updated partial audit status without promoting completion"
+  ],
+  "open_gaps": [
+    "Affiliate distributable cash/capex/restrictions not independently reconciled",
+    "Physical project timing and segment return bridge not completed",
+    "Marginal issuer debt cost and direct primary risk-free session verification missing",
+    "Finance lease/deferred compensation/latest share roll-forwards unresolved",
+    "Matched-normalized historical valuation pending",
+    "Unrestricted cash not reconciled to minimum operating cash requirement"
+  ],
+  "source_references": [
+    "SEC_FY25",
+    "SEC_Q325",
+    "SEC_Q126",
+    "SEC_Q226",
+    "SEC_Q326",
+    "ERP",
+    "PRICE",
+    "BETA2"
+  ],
+  "checks": {
+    "checks": {
+      "withheld_approved_valuation": true,
+      "ttm_revenue": true,
+      "ttm_cash": true,
+      "restricted_cash_excluded": true,
+      "ten_year_and_physical_consistency": true,
+      "no_prior_complete": true,
+      "ttm_affiliate_bridge": true,
+      "fcf_change_capex_driven": true,
+      "terminal_components": true,
+      "equity_bridge": true,
+      "no_stage_or_publication": true
+    },
+    "all_pass": true,
+    "scope": "Mechanical tests; independent audit findings in audit.json; no decision-readiness approval"
+  },
+  "diagnostic_caveats": [
+    "Historical net interest proxy is not marginal borrowing yield",
+    "All unrestricted cash is assumed excess only for diagnostic; not proven distributable",
+    "Affiliate payout growth is not separately supported by capex/debt/claims coverage; no terminal sustainable-payout proof",
+    "Operating terminal PV share central66.5%,favorable80.4%; affiliate terminal contributes separately",
+    "No canonical value, entry price or trade instruction may be inferred from scenario outputs"
+  ]
+}
