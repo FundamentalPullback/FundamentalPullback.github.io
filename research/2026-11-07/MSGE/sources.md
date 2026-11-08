@@ -1,0 +1,27 @@
+# Fuentes públicas
+
+- submissions.json: https://data.sec.gov/submissions/CIK0001952073.json
+- 2026-09-30.html: https://www.sec.gov/Archives/edgar/data/1952073/000162828026070156/msge-20260930.htm
+- 2026-06-30.html: https://www.sec.gov/Archives/edgar/data/1952073/000162828026056286/msge-20260630.htm
+- 2026-03-31.html: https://www.sec.gov/Archives/edgar/data/1952073/000162828026032215/msge-20260331.htm
+- 2025-12-31.html: https://www.sec.gov/Archives/edgar/data/1952073/000162828026005948/msge-20251231.htm
+- 2025-09-30.html: https://www.sec.gov/Archives/edgar/data/1952073/000162828025050248/msge-20250930.htm
+- 2025-06-30.html: https://www.sec.gov/Archives/edgar/data/1952073/000195207325000037/msge-20250630.htm
+- 2025-03-31.html: https://www.sec.gov/Archives/edgar/data/1952073/000195207325000026/msge-20250331.htm
+- 2024-12-31.html: https://www.sec.gov/Archives/edgar/data/1952073/000195207325000008/msge-20241231.htm
+- 2024-09-30.html: https://www.sec.gov/Archives/edgar/data/1952073/000195207324000035/msge-20240930.htm
+- 2024-06-30.html: https://www.sec.gov/Archives/edgar/data/1952073/000195207324000022/msge-20240630.htm
+- 2024-03-31.html: https://www.sec.gov/Archives/edgar/data/1952073/000195207324000015/msge-20240331.htm
+- 2023-12-31.html: https://www.sec.gov/Archives/edgar/data/1952073/000195207324000009/msge-20231231.htm
+- 2023-09-30.html: https://www.sec.gov/Archives/edgar/data/1952073/000195207323000018/msge-20230930.htm
+- 2023-06-30.html: https://www.sec.gov/Archives/edgar/data/1952073/000195207323000012/msge-20230630.htm
+- release.html: https://www.sec.gov/Archives/edgar/data/1952073/000162828026069803/msgeex99193026.htm
+- price.html: https://stockanalysis.com/stocks/msge/history/
+- price_cross.html: https://www.financialcontent.com/quote/NY%3AMSGE/historical
+- price_year.json: https://query1.finance.yahoo.com/v8/finance/chart/MSGE?range=2y&interval=1d
+- lyv_submissions.json: https://data.sec.gov/submissions/CIK0001335258.json
+- lyv_10-Q.html: https://www.sec.gov/Archives/edgar/data/1335258/000133525826000053/lyv-20260930.htm
+- lyv_10-K.html: https://www.sec.gov/Archives/edgar/data/1335258/000133525826000009/lyv-20251231.htm
+- lyv_price.html: https://stockanalysis.com/stocks/lyv/history/
+- treasury_public.json: https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=202611
+- erp_public.html: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
