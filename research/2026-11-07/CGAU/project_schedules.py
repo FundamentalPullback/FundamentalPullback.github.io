@@ -1,0 +1,9 @@
+import csv,json,pathlib
+P=pathlib.Path(__file__).parent
+rows=[]
+for y,koz,grade,prod,aisc in zip(range(2028,2036),[22,114,120,106,90,47,29,6],[.70,.87,.77,.76,.48,.38,.30,None],[None,1003,965,1040,1023,1169,1000,1596],[None,1419,1194,1269,1306,1325,1144,1833]):
+ rows.append(dict(year=y,gold_koz=koz,grade_gpt=grade,production_cost_per_oz=prod,aisc_per_oz=aisc,hedged_koz=57 if y==2029 else 60 if y==2030 else 0,hedge_floor=3200 if y in [2029,2030] else None,hedge_cap_current=4438 if y==2029 else 4706 if y==2030 else None))
+with (P/'goldfield_schedule.csv').open('w') as f:
+ w=csv.DictWriter(f,fieldnames=rows[0]);w.writeheader();w.writerows(rows)
+fund=dict(asof='2026-09-30',cash=397.892,corporate_facility_undrawn=600,langeloth_new_facility_Nov4=75,new_facility_draw_unknown=True,thompson_total_budget=[425,450],thompson_spent_since_decision=337.3,thompson_remaining=[87.7,112.7],goldfield_initial_budget=252,goldfield_9m2026_nonsustaining=48.6,goldfield_remaining_reference=203.4,goldfield_scope_reconciliation_pending=True,combined_remaining_reference=[291.1,316.1],ppe_contracts=131.3,contract_overlap='Included in project budgets where applicable; do not add all again',lease_liabilities=43.036,closure_current=5.144,closure_noncurrent=270.444,closure_project_overlap='MTM96 and TC200 source future cash closure already modeled; no blanket second deduction',share_repurchase_payable=13.385,current_shares_m=193.671809,listed_equity_m=193.671809*21.78,dividend_CAD_per_share=.07,dividend_record='2026-11-19',dividend_pay='2026-12-02',dividend_ex_date_not_verified=True,nov6_dividend_deduction=False,financial_asset_RoyalGold=72.8,Goldfield_collars_liability=73.767,equity_investments=176.797,Greenstone_remaining_contract_asset=42.635,Greenstone_second_receivable_transferred_RoyalGold=47.846,unknown_tax_legal_claims=None)
+(P/'capital_claims.json').write_text(json.dumps(fund,indent=2))
