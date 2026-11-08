@@ -1,0 +1,63 @@
+# Diamondback Energy (FANG): análisis finito parcial, no NAV aprobado
+
+Corte: 8 de noviembre de 2026. Millones de USD salvo indicación. Fuentes exclusivamente públicas.
+
+## Resultado y actualidad
+
+Resultados Q3 publicados el 2 de noviembre, conferencia el 3 y 10-Q presentado el 4: se utilizan datos posteriores al evento. Cierre ordinario del 6 de noviembre: 178,96 USD, corroborado con historiales secundarios archivados, no cotización primaria certificada. Las 279.167.841 acciones del 30 de octubre implican capitalización indicativa de 49.960 millones. Precio, tamaño, volumen y rentabilidad TTM superan mínimos; precio inferior a EMA20 194,91 y EMA50 195,66, y EMA20 inferior a EMA50, impiden entrada técnica. Retroceso 17,49% frente al máximo intradía de 252 sesiones; volumen20 2,17 millones. La investigación fundamental continúa pese a ese fallo temporal.
+
+## Historia reconciliada
+
+FY2023 / FY2024 / FY2025: ingresos 8.412 / 11.066 / 15.026; EBIT 4.570 / 4.396 / 1.266; beneficio atribuible 3.143 / 3.338 / 1.664; CFO 5.920 / 6.413 / 8.758; inversión en propiedades 2.701 / 2.867 / 3.523. El perímetro cambia sustancialmente, incluido Endeavor; no son tasas orgánicas comparables.
+
+Q4 2025, Q1/Q2/Q3 2026: ingresos 3.376 / 4.240 / 5.562 / 5.431; EBIT −2.782 / 116 / 2.512 / 2.500; beneficio atribuible −1.458 / 25 / 1.882 / 1.603; CFO 2.343 / 1.828 / 3.589 / 2.599; inversión 943 / 933 / 996 / 1.026. Q4 y Q2 se calculan por diferencias de acumulados. No se sustituyen pérdidas GAAP por EPS ajustado.
+
+TTM septiembre 2026 frente al anterior: ingresos 18.609 frente a 15.361; EBIT 2.346 frente a 5.460; beneficio atribuible 2.052 frente a 4.196; CFO 10.359 frente a 8.756; inversión 3.898 frente a 3.513. CFO menos inversión 6.461 frente a 5.243; después de distribuciones efectivas a minoritarios, 5.898 frente a 4.917. Este último cálculo **no equivale a FCFE**: los minoritarios conservan también beneficios no distribuidos y cambian con adquisiciones y emisiones.
+
+Deterioros de propiedades de 3.652 en FY2025 y 1.400 en nueve meses de 2026 explican parte del EBIT deprimido. No son caja del periodo, pero sí señales sobre rentabilidad del capital y precios de reservas. No se eliminan para declarar una aprobación automática. TTM ajuste de derivados en CFO −176 y liquidaciones +222: beneficio de mercado y cobro real se distinguen. Nueve meses incluyen ganancia por retirada de deuda 137, no recurrente.
+
+En Q3, CFO 2.599 menos capex 1.026 produce 1.573, no los 2.148 de FCF publicado que excluye circulante. FCF ajustado 2.150 además ajusta costes de transacción. Nueve meses: CFO 8.016 menos 2.955 = 5.061; no confundir con FCF ajustado 6.218. La SBC de nueve meses incluye 72 en G&A y 29 capitalizada: no tratar la capitalización como desaparición del coste económico.
+
+## Propiedad y transacciones
+
+Rattler está íntegramente controlada. Viper se consolida como entidad de interés variable, pero FANG posee aproximadamente **40% económico diluido** al 30 de septiembre, incluido el efecto de opciones de canje. No atribuir el 100% de las regalías, reservas o caja de Viper al accionista FANG. Las regalías consolidadas no son barriles físicos adicionales que puedan sumarse otra vez a una producción o reserva ya consolidada. Aplicar un único coste por boe y presupuesto de perforación al agregado mezcla intereses económicos distintos; la ventana es una aproximación y no un modelo operativo separado de Viper. Sitio cerró en agosto de 2025. Las transferencias internas de minerales de septiembre de 2026, a cambio de 3,82 millones de unidades y acciones B, son bajo control común: no crean ingresos externos ni valor dos veces.
+
+Viper adquirió McElroy Ranch por aproximadamente 529, con 49 diferidos hasta junio de 2029; Riverbend por 347 de efectivo y 3,69 millones de acciones A. Vendió activos no Permian por 610 netos en febrero y utilizó la mayor parte para amortizar deuda. Son cambios de reservas y de participación económica, no simplemente crecimiento por pozos. La oferta secundaria aportó 589 al grupo en nueve meses y cambió exposición a Viper; no es flujo operativo recurrente.
+
+SGF bajó del 25% de propiedad; conserva derecho a dos consejeros mientras mantenga al menos 10%. Es relevante para gobierno y partes vinculadas. No se asume que las recompras futuras ya redujeron acciones.
+
+## Balance y compromisos
+
+A septiembre: efectivo consolidado 558, del que 10 pertenece a Viper; efectivo standalone 548. Deuda nominal consolidada 13.375, frente a deuda contable 13.230. NCI contable 6.167 no es una valoración de mercado que pueda restarse mecánicamente. En Q4 se retiraron 698 nominales de notas 2026 por 706 de efectivo y 195 de notas largas por 183. Falta una actualización simultánea de caja para un puente exacto al 6 de noviembre: restar solo deuda sobrevaloraría el capital.
+
+ARO total 589, parte no corriente 543. No es gasto anual fijo ni liquidación final garantizada. Cinco litigios costeros en Louisiana y otras contingencias tienen alcance incierto; la afirmación de la dirección de ausencia de efecto material previsto no establece pérdida cero. Hay compromisos de compra de electricidad adicionales: 28 en 2028, 132 acumulados en 2029–2030 y 359 en 2031–2034. Los costes de arrendamiento operativo de yacimientos (LOE) no son un saldo de pasivo IFRS16/ASC842; no inventar deuda de leasing a partir de ese nombre. El puente completo requeriría conciliar los compromisos y pasivos no desglosados.
+
+Power JV: inversión 100 y posible financiación adicional estimada 250–700 si no obtiene financiación independiente. Solitude: 7,5%, 25 aportados y exposición máxima total aproximada 269, incluida financiación futura. No se deducen esos importes como pérdidas ciertas ni se asigna cero al valor de las inversiones. Deep Blue, participada y contraparte operativa, exige conservar costes de servicios y obligaciones de financiación sin doble cómputo.
+
+Dividendo declarado 1,18 por acción, registro 12 de noviembre y pago 19; no se descuenta como si ya hubiera salido antes del cierre del 6. Futuros dividendos y recompras no están garantizados.
+
+## Producción, precio y recursos finitos
+
+Q3 produjo 48,295 millones de barriles de crudo, 135.002 millones de pies cúbicos de gas y 24,330 millones de barriles de NGL: 95,125 millones de boe. La equivalencia energética 6:1 no representa equivalencia económica. Realizaciones no cubiertas: crudo 87,30 USD/bbl, gas 1,12 USD/Mcf y NGL 20,02 USD/bbl. En Q2 el gas realizado fue −2,15; usar Henry Hub sin base local falsearía margen. Crudo cubierto Q3 85,89. Las tablas de contratos 2026/2027 están archivadas; volumen, vencimiento y basis requieren modelización por producto, no un descuento uniforme.
+
+Ventas de petróleo comprado de 536 frente a coste 540 en Q3 generan margen −4: no capitalizar ese ingreso bruto como producción propia. La dirección considera los precios actuales superiores a mitad de ciclo. La guía 2026 es aproximadamente 524 mil barriles diarios de crudo, 1,015 millones boe/d y capex 3.950–4.000. Cinco equipos eléctricos de completación previstos para 2027 no constituyen guía numérica de producción/caja a diez años.
+
+Reservas probadas FY2025: 3.617,856 millones boe, de los que 2.521,028 desarrollados y 1.096,828 pendientes de desarrollo. Composición: 1.774,420 millones de barriles de crudo, 5.273.821 millones de pies cúbicos de gas y 964,466 millones de barriles de NGL. Desarrollo futuro estimado 9.425; medida estandarizada después de impuestos y descuento 10%: 36.910. No es NAV actual ni valor atribuible íntegramente a FANG: fecha, precios reglamentarios, NCI, financiación y activos adicionales son distintos.
+
+La presentación ofrece unos 8.900 emplazamientos económicos a 50 USD/bbl y nuevas áreas Barnett. Son estimaciones de inventario, no todas reservas probadas ni valor adquirido sin inversión. Los umbrales del emisor, incluido mantener producción y dividendo a 36 USD/bbl, dependen de supuestos propios. El gráfico de FCF 2026 a WTI 85/95/105 incluye nueve meses ya realizados; **no es una curva anual de sensibilidad perpetua**.
+
+## Modelo finito reproducible
+
+model.py produce tres ventanas 2027–2036, no un objetivo por acción. Escenarios de precios **realizados**, no WTI/Henry Hub: crudo 55/70/85, gas 0/1/2, NGL 14/18/22. Escala inicial de guía 2026 y mezcla gas/NGL de Q3. Descenso anual inicial 4%/2%/0%; años 6–10 convergen explícitamente a 10%/7%/4%. Se mantiene inversión inicial 3.975 con inflación 2%, sin liberarla porque cae producción. LOE 6,075, transporte 1,40, G&A de caja 0,60 y provisión económica SBC 0,30 por boe; inflación 2%. Impuesto a producción 6,5% de ingresos, impuesto de caja ilustrativo 20,5% sobre margen después de agotamiento fiscal supuesto de 14 por boe. No se atribuye a ese supuesto carácter de calendario fiscal real.
+
+El límite físico ilustrativo es reserva FY2025 menos un año de producción de guía 2026. No certifica reservas disponibles actuales: omite altas, bajas y revisiones 2026. Limita únicamente el volumen agregado: no valida un presupuesto por petróleo, gas y NGL, ni homogeneiza regalías con producción operada. En el escenario alto recorta la cola total, pero el petróleo acumulado puede superar el saldo histórico ilustrativo de petróleo después de una producción anual supuesta. No debe llamarse volumen certificado disponible ni utilizarse como valoración exclusivamente de reservas probadas. Las cantidades por producto quedan publicadas como diagnóstico adicional. Los contratos eléctricos adicionales se financian con reparto uniforme dentro de los intervalos acumulados publicados; es una hipótesis explícita.
+
+Descuento condicional: Treasury diez años del 6 de noviembre 4,86%; ERP del 1 de noviembre 4,41%, con fecha/base subyacente distinta. Betas asumidas 1,50/1,25/1,00, deuda objetivo supuesta 20%, coste deuda 6% y escudo 23%: WACC 10,104%/9,222%/8,340%. No son betas estimadas ni estructura aprobada. El escudo de deuda del 23% y el impuesto operativo ilustrativo del 20,5% son supuestos distintos sin conciliación fiscal por entidad; no acreditan coste de capital ni carga de caja efectiva. Resultados y cada fila anual están en model_results.json y finite_cash_scenarios.csv; no se convierten en precios de FANG.
+
+La inversa del caso central resuelve el crudo realizado necesario para financiar ese presupuesto operativo y de perforación inicial, aproximadamente 28,57 USD/bbl. **Excluye intereses, minoritarios, cierre, JV, dividendo y circulante**, por lo que no es comparable al umbral corporativo de 36 del emisor ni prueba de seguridad financiera.
+
+## Pendientes que sí cambian la decisión
+
+Distribución anual ingeniería por activo/producto, conversión y coste de PUD, separación económica Viper, cobertura/basis, fiscalidad, caja tras amortizaciones y financiación JV/cierre. Sin ello la ventana de caja no es FCFF completo ni NAV de empresa. El valor posterior a 2036 queda sin valorar, no vale cero; no hay Gordon. Se requiere ingeniería suficiente para vida finita y comparables con NCI/capex/perímetro equivalentes antes de aprobación. Valor aprobado y entrada aprobada permanecen null.
+
+Todos los periodos, contratos y cambios de perímetro tienen archivos primarios locales. public_sources.json y presentation_source.txt identifican URL; fuentes de precio son secundarias y separadas.

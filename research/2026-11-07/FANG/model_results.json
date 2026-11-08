@@ -1,0 +1,65 @@
+{
+  "scope": "finite conditional asset cash window, no current full NAV or stock target",
+  "screen": {
+    "close_date": "2026-11-06",
+    "regular_close": 178.96,
+    "shares_m_2026_10_30": 279.167841,
+    "cap_m": 49959.87682536001,
+    "ema20": 194.90872080351664,
+    "ema50": 195.66255014215034,
+    "pullback_252_high_pct": 17.49192944403274,
+    "volume20": 2167877.4,
+    "ttm_ebit_margin": 0.12606803159761407,
+    "ttm_parent_net_margin": 0.11026922456875705,
+    "ema_initialization": "first archived daily close, two-year series"
+  },
+  "scenarios": {
+    "stress": {
+      "pv_ten_year_cash_window": 9223.589249415907,
+      "cumulative_mmboe": 2872.8314559146693,
+      "cumulative_oil_mmbbl_proxy": 1483.1169289648144,
+      "cumulative_gas_bcf_proxy": 4006.254647641863,
+      "cumulative_ngl_mmbbl_proxy": 722.0054190095444,
+      "product_specific_reserve_budget_validated": false,
+      "conditional_ke": 0.11474999999999999,
+      "conditional_wacc": 0.10103999999999999,
+      "terminal_value": null,
+      "whole_equity_value": null
+    },
+    "central": {
+      "pv_ten_year_cash_window": 28870.589602157594,
+      "cumulative_mmboe": 3214.5281106108055,
+      "cumulative_oil_mmbbl_proxy": 1659.519930995135,
+      "cumulative_gas_bcf_proxy": 4482.761477912637,
+      "cumulative_ngl_mmbbl_proxy": 807.881266630231,
+      "product_specific_reserve_budget_validated": false,
+      "conditional_ke": 0.103725,
+      "conditional_wacc": 0.09222,
+      "terminal_value": null,
+      "whole_equity_value": null
+    },
+    "upside": {
+      "pv_ten_year_cash_window": 48569.701358263475,
+      "cumulative_mmboe": 3247.3810000000003,
+      "cumulative_oil_mmbbl_proxy": 1676.4804374384237,
+      "cumulative_gas_bcf_proxy": 4528.575874901695,
+      "cumulative_ngl_mmbbl_proxy": 816.1379167446277,
+      "product_specific_reserve_budget_validated": false,
+      "conditional_ke": 0.0927,
+      "conditional_wacc": 0.0834,
+      "terminal_value": null,
+      "whole_equity_value": null
+    }
+  },
+  "funding_inverse_realized_oil_not_WTI": 28.568090402961133,
+  "not_modeled": [
+    "future hedge settlements and basis",
+    "separate Viper minority economics",
+    "exact reserve depletion/development schedule",
+    "corporate/JV funding and closure timing",
+    "working capital and complete current equity bridge"
+  ],
+  "unvalued_tail": null,
+  "approved_value": null,
+  "approved_entry": null
+}
