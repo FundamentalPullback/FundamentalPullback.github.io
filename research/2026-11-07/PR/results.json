@@ -1,0 +1,78 @@
+{
+  "scope": "Undiscounted fixed-reserve sensitivity of December31 2025 engineering perimeter plus standalone future oil swap/earnout component. Not current NAV, no whole-company price inverse.",
+  "reserves": {
+    "oil_mmbbl": 479.21,
+    "ngl_mmbbl": 295.4,
+    "gas_bcf": 2050.131,
+    "developed_mmboe": 794.095,
+    "pud_mmboe": 322.203,
+    "total_mmboe": 1116.298,
+    "future_dev_usdm": 4253.827,
+    "future_production_usdm": 18026.302,
+    "future_income_tax_usdm": 1787.484,
+    "future_inflows_usdm": 38611.475,
+    "future_net_cash_usdm": 14543.862,
+    "standardized_measure_usdm": 8365.503,
+    "pretax_pv10_usdm": 9439.319
+  },
+  "cases": {
+    "adverso": {
+      "realized_oil_usd_bbl": 65,
+      "ngl_usd_bbl": 18,
+      "gas_usd_mcf": 0.5,
+      "cost_multiplier": 1.2,
+      "undiscounted_inflow_on_2025_stock": 37489.465612,
+      "undiscounted_pretax_project_surplus": 10753.310812,
+      "not_a_nav": true,
+      "current_fair_value": null
+    },
+    "central": {
+      "realized_oil_usd_bbl": 85,
+      "ngl_usd_bbl": 24,
+      "gas_usd_mcf": 1.5,
+      "cost_multiplier": 1.1,
+      "undiscounted_inflow_on_2025_stock": 50896.19661200001,
+      "undiscounted_pretax_project_surplus": 26388.054712000005,
+      "not_a_nav": true,
+      "current_fair_value": null
+    },
+    "favorable": {
+      "realized_oil_usd_bbl": 100,
+      "ngl_usd_bbl": 30,
+      "gas_usd_mcf": 3,
+      "cost_multiplier": 1.0,
+      "undiscounted_inflow_on_2025_stock": 62931.94311199999,
+      "undiscounted_pretax_project_surplus": 40651.81411199999,
+      "not_a_nav": true,
+      "current_fair_value": null
+    }
+  },
+  "contracts_totals": {
+    "adverso": {
+      "oil_swap_cash": 149.79209999999998,
+      "earnout": 0
+    },
+    "central": {
+      "oil_swap_cash": -142.4079,
+      "earnout": 125.0
+    },
+    "favorable": {
+      "oil_swap_cash": -361.5579,
+      "earnout": 125.0
+    }
+  },
+  "approved_value": null,
+  "approved_entry": null,
+  "current_corporate_nav": null,
+  "unvalued_assets": [
+    "Post2025 additions and Ridge Runner",
+    "Unproved locations/royalty acreage beyond booked reserves"
+  ],
+  "unresolved": [
+    "Production/ad valorem taxes are within aggregate costs but not repriced separately; price elasticity and economic-limit revisions unmodeled",
+    "Annual remaining reserve development/decline and price-dependent economic limits",
+    "Updated acquisition allocation and postclosing net debt",
+    "Gas/basis/roll scenario reference curves and contract valuation",
+    "Corporate taxes/NOLs/leases/environmental claims without double counting"
+  ]
+}
