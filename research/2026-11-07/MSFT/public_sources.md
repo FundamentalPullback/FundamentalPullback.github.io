@@ -1,0 +1,34 @@
+# Fuentes públicas MSFT
+
+- segment_recast: https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965dex991.htm
+- debt_prospectus: https://www.sec.gov/Archives/edgar/data/789019/000119312526442618/d150456d424b2.htm
+- underwriting: https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557dex11.htm
+- submissions: https://data.sec.gov/submissions/CIK0000789019.json
+- release: https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast
+- transcript: https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/earnings-call-transcript
+- calendar: https://www.microsoft.com/en-us/investor/events/default
+- statistics: https://stockanalysis.com/stocks/msft/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=1y&interval=1d
+- peer_googl: https://stockanalysis.com/stocks/googl/statistics/
+- peer_orcl: https://stockanalysis.com/stocks/orcl/statistics/
+- 2026-11-05_8-K: https://www.sec.gov/Archives/edgar/data/789019/000119312526448357/d177209d8k.htm
+- 2026-11-04_8-K: https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557d8k.htm
+- 2026-10-28_8-K: https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-20261028.htm
+- 2026-10-28_10-Q: https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm
+- 2026-09-02_8-K: https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm
+- 2026-07-29_10-K: https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm
+- 2026-04-29_10-Q: https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm
+- 2026-01-28_10-Q: https://www.sec.gov/Archives/edgar/data/789019/000119312526027207/msft-20251231.htm
+- 2025-10-29_10-Q: https://www.sec.gov/Archives/edgar/data/789019/000119312525256321/msft-20250930.htm
+- 2025-07-30_10-K: https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm
+- 2025-04-30_10-Q: https://www.sec.gov/Archives/edgar/data/789019/000095017025061046/msft-20250331.htm
+- 2025-01-29_10-Q: https://www.sec.gov/Archives/edgar/data/789019/000095017025010491/msft-20241231.htm
+- 2024-10-30_10-Q: https://www.sec.gov/Archives/edgar/data/789019/000095017024118967/msft-20240930.htm
+- 2024-07-30_10-K: https://www.sec.gov/Archives/edgar/data/789019/000095017024087843/msft-20240630.htm
+- current_call: https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1
+- annual_call: https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4
+- transcript_document: https://aka.ms/transcriptfy27q1
+- asset_package: https://aka.ms/assetsfy27q1
+- openai_amended: https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
