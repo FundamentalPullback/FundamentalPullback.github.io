@@ -1,0 +1,92 @@
+{
+  "ticker": "ETSY",
+  "fecha": "2026-11-08",
+  "resultado": "Diagnóstico reproducido; valoración y entrada no aprobadas",
+  "valuationReady": false,
+  "entryApproved": false,
+  "valores_reproducidos": {
+    "adverse": 22.409454060184046,
+    "central": 50.86458404294154,
+    "favorable": 93.56225804009402
+  },
+  "comprobaciones": [
+    {
+      "comprobacion": "Integridad de archivos fuente",
+      "correcto": true,
+      "detalle": "70 archivos contrastados con sus huellas"
+    },
+    {
+      "comprobacion": "CAPM y ponderación",
+      "correcto": true,
+      "detalle": 0.10966065464314512
+    },
+    {
+      "comprobacion": "Puente de caja y derechos",
+      "correcto": true,
+      "detalle": {
+        "deuda_neta_y_arrendamientos": 833.9070000000002,
+        "acciones": 95.14099999999999
+      }
+    },
+    {
+      "comprobacion": "FCFF independiente adverse",
+      "correcto": true,
+      "detalle": 22.409454060184046
+    },
+    {
+      "comprobacion": "Pisos físicos y terminal adverse",
+      "correcto": true,
+      "detalle": "Capex >= D&A; circulante no negativo; g < WACC; reinversión terminal positiva"
+    },
+    {
+      "comprobacion": "FCFF independiente central",
+      "correcto": true,
+      "detalle": 50.86458404294154
+    },
+    {
+      "comprobacion": "Pisos físicos y terminal central",
+      "correcto": true,
+      "detalle": "Capex >= D&A; circulante no negativo; g < WACC; reinversión terminal positiva"
+    },
+    {
+      "comprobacion": "FCFF independiente favorable",
+      "correcto": true,
+      "detalle": 93.56225804009402
+    },
+    {
+      "comprobacion": "Pisos físicos y terminal favorable",
+      "correcto": true,
+      "detalle": "Capex >= D&A; circulante no negativo; g < WACC; reinversión terminal positiva"
+    },
+    {
+      "comprobacion": "FCF TTM total 2026",
+      "correcto": true,
+      "detalle": "Q3 10-Q, conciliación FCF, página 41"
+    },
+    {
+      "comprobacion": "Beneficio Q3",
+      "correcto": true,
+      "detalle": "Continuadas + discontinuadas = beneficio total"
+    },
+    {
+      "comprobacion": "Sin falsa comparabilidad",
+      "correcto": true,
+      "detalle": "Los TTM de perímetro cambiante no son Etsy-only"
+    }
+  ],
+  "sensibilidad_RF_mensual_pareado": {
+    "rf": 0.0529,
+    "erp": 0.0441,
+    "kd": 0.0729,
+    "wacc": 0.11372059514088702,
+    "valor_central": 47.85417612654695
+  },
+  "limitaciones": [
+    "Faltan Q4 2025 y TTM previo Etsy-only completos.",
+    "Saldo exacto de opciones y caja/acciones de octubre pendientes.",
+    "Porción corriente de arrendamientos financieros no conciliada.",
+    "Spread de deuda estimado y beta del perímetro histórico; el convertible se aproxima por conversión intrínseca, sin valorar su opción temporal.",
+    "Cierre 89,93 respaldado por resultados de búsqueda archivados de IR/Yahoo/StockAnalysis; la descarga directa de cotización no contiene ese valor.",
+    "No hay certificación OHLC/EMA200 ni autorización de entrada."
+  ]
+}

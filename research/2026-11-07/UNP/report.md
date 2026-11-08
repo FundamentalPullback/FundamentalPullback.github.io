@@ -1,0 +1,100 @@
+# Union Pacific: operación sólida, adquisición pendiente y precio exigente
+
+Fecha de corte: 8 de noviembre de 2026. USD millones salvo precio y beneficio por acción. Investigación parcial. No constituye una valoración aprobada, señal de entrada ni recomendación personalizada.
+
+## Decisión y alcance
+
+Opportunity 70 permite investigar; no demuestra infravaloración. El escáner del 6 de noviembre muestra QP 90, Opportunity 70, RSI 47.1 y Last 290.16.
+
+El cierre regular se verificó por separado: 290.16 USD el 6 de noviembre a las 16:00 EST; Yahoo muestra 16:00:02. La sesión cayó un 2.61% y el precio está un 8.17% por debajo de 315.99, máximo del 23 de julio. No se confunde Last con prueba independiente del cierre.
+
+El contrafactual de UNP sin adquisición produce 98.06 / 187.45 / 318.63 USD por acción. El escenario central queda un 35.4% por debajo del cierre; el favorable lo supera un 9.8%. La compra pendiente de Norfolk Southern exige una segunda valoración. El modelo ahora incorpora su negocio, deuda, obligaciones, contraprestación, financiación ilustrativa, dilución y sinergias condicionadas. Bajo la base de ambas compañías, los desenlaces ilustrativos combinados dan aproximadamente 156–173 USD de valor presente condicionado por cada acción antigua. No son objetivos aprobados ni un rango probabilístico: dependen de supuestos de integración y coste de capital que aún no están verificados.
+
+Conclusión: mantener en investigación, sin entrada. No basta con señalar el riesgo de fusión, pero tampoco es defendible convertir las proyecciones del comprador en valor asegurado. El precio exige resultados mucho más favorables que nuestra base.
+
+## Negocio y evidencia reciente
+
+La red de 23 estados occidentales tiene densidad, accesos a puertos y México y activos difíciles de replicar. El valor depende de fijación de precios, calidad de servicio y reinversión suficiente. La exposición industrial, agrícola, intermodal y automotriz introduce ciclicidad; el carbón añade riesgo estructural.
+
+En Q3 2026, el volumen creció un 6% y los ingresos un 15%. Sin recargos de combustible, los ingresos de carga crecieron un 6%: no extrapolar toda la venta nominal como crecimiento real. El operating ratio publicado fue 59.1%, frente a 59.2%; el ajustado fue 58.8%, peor que 58.5%. La dirección atribuye 140 puntos básicos de presión al combustible. EPS publicado 3.49, un 16% más; ajustado 3.53, un 15% más. Un OR de 59.1% corresponde a margen operativo de 40.9%, no de 59.1%.
+
+La velocidad fue 228 millas diarias, un 1% mejor; permanencia en terminal 19.9 horas, un 2% menor; productividad laboral un 5% mayor. Los índices de servicio intermodal y manifest descendieron 6 y 7 puntos, parcialmente afectados por comparativas exigentes. Conviene seguir servicio y puntualidad, no solo reducción de costes.
+
+Últimos resultados: 22 de octubre, conferencia a las 08:45 ET. La guía contempla crecimiento de EPS de alto dígito único en 2026 y plan de capital de 3,500, frente a 3,300 anterior. No se ha verificado fecha de Q4. Próximo evento material confirmado: 18 de noviembre, plazo STB para comentarios, protestas y condiciones.
+
+## Historial financiero y calidad del efectivo
+
+Se revisan tres ejercicios y cuatro trimestres. Ingresos 2023/2024/2025: 24,119 / 24,250 / 24,510. EBIT: 9,082 / 9,713 / 9,846. Beneficio neto: 6,379 / 6,747 / 7,138. EPS diluido: 10.45 / 11.09 / 11.98. CFO: 8,379 / 9,346 / 9,290. Capex de caja: 3,606 / 3,452 / 3,791. D&A: 2,318 / 2,398 / 2,465. SBC: 107 / 118 / 142.
+
+Ingresos Q4 2025, Q1, Q2 y Q3 2026: 6,085 / 6,217 / 6,864 / 7,197. EBIT: 2,401 / 2,458 / 2,763 / 2,943. EPS: 3.11 / 2.87 / 3.36 / 3.49. Q4 se obtiene por diferencia de ejercicio y nueve meses. TTM: ventas 26,363, EBIT 10,565, beneficio 7,618, D&A 2,538, CFO 10,527 y capex 3,833. La suma de EPS trimestrales redondeados es 12.83, no un EPS anual recalculado.
+
+CFO menos capex TTM es 6,694, pero no equivale a FCFF. El arranque normalizado es EBIT × 76% + D&A − capex − 100 de circulante = 6,634.4. SBC TTM de 130 permanece como coste económico en EBIT. No se suma de nuevo y no se crean recompras gratuitas.
+
+En nueve meses, CFO aumenta de 7,065 a 8,302. La partida de impuestos pasa de 119 a 816 y explica 697 del incremento de 1,237, aproximadamente un 56%. No se capitaliza esa liberación fiscal como crecimiento permanente. Un puente diagnóstico desde CFO menos capex, añadiendo intereses después de impuestos y retirando otros ingresos y SBC, arroja 7,055.72; la diferencia de 421.32 con el arranque normalizado refleja impuestos, ajustes no monetarios y circulante. No se pretende una equivalencia automática.
+
+La definición de FCF de la empresa resta inversión total y dividendos: nueve meses 8,302 − 3,456 − 2,484 = 2,362. CFO menos capex en ese periodo es 5,468. Son métricas distintas, no cifras intercambiables.
+
+## Reinversión y balance de UNP
+
+El capex de nueve meses incluye 1,510 de reposición de vía, 354 de capacidad, 693 de locomotoras y equipos y 277 de tecnología. Equipos incluye 320 de compra de activos antes arrendados. En 2025, estas categorías sumaron 1,987 / 617 / 810 / 377; las compras de arrendamientos fueron 311. No se identifica mantenimiento con D&A ni se trata todo crecimiento de flota como opcional. Falta una conciliación exacta entre el nuevo plan de 3,500 y capex de caja comparable.
+
+Al 30 de septiembre, caja 2,211 más inversiones cortas 875; deuda 30,324. El modelo reserva 1,500 de caja operativa y resta deuda nominal completa. Los 22,800 de valor de mercado de deuda se usan solo para ponderar WACC. Arrendamientos operativos 788 no se restan otra vez, porque el alquiler sigue en EBIT. Arrendamientos financieros ya están en deuda.
+
+UNP registra obligaciones ambientales históricas de 274, de las que 65 son corrientes. El caso base asume pagos brutos de 65 en el año 1 y de 52.25 en cada año 2–5; no presume deducción fiscal. El margen conserva gastos ambientales ordinarios, pero el circulante proyectado solo recoge crecimiento de ventas y no incorpora una liquidación explícita de estas provisiones. Por ello se deduce una sola vez el valor presente de los pagos heredados: 217.06, o 0.3651 USD por acción antigua. Si los gastos proyectados incluyeran ya todos esos pagos, la deducción incremental sería cero; esa sensibilidad aumenta cada valor independiente en 0.3651. El límite bruto inmediato es 0.4609. La fecha exacta y cualquier solapamiento permanecen pendientes, pero no se usa cero por omisión. En la fusión, pagos anteriores al cierre reducen caja y solo los pendientes se deducen de la valoración al cierre.
+
+TTX se añade a valor contable de 2,000 como aproximación provisional, no como valor realizable verificado. Otros ingresos no se proyectan en FCFF. Eliminar ese ajuste reduce el valor por acción en 3.36 USD. No se añade toda la cuenta de inversiones ni excedente de pensiones como caja libre. No se esperan aportaciones mínimas al plan cualificado en 2026. La línea disponible de 2,000 y los 600 de financiación de cuentas a cobrar no dispuestos no son caja. La autorización para emitir deuda tampoco es deuda emitida.
+
+Acciones diluidas Q3: 594.5 millones; promedio nueve meses 594.0. Acciones realmente emitidas al 30 de septiembre: 594.224 millones; al 16 de octubre: 594.250 millones. La base usa 594.5 para incorporar dilución corriente, sin deducir recompras futuras hipotéticas.
+
+## Norfolk Southern: contrafactual separado y obligaciones
+
+Ventas 2023/2024/2025: 12,156 / 12,123 / 12,180; EBIT publicado: 2,851 / 4,071 / 4,356; CFO: 3,179 / 4,052 / 4,361; capex: 2,327 / 2,381 / 2,204. El EBIT de 2024 incluye 433 de ganancias por venta de líneas y 2025 se beneficia de recuperaciones del incidente. No representan márgenes recurrentes puros.
+
+TTM a septiembre de 2026: ventas 12,963, EBIT 4,088, beneficio neto 2,684, D&A 1,426, CFO 3,783, capex 2,136 e intereses 782. En nueve meses, EBIT ajustado 3,355 frente a 3,237, pero el margen ajustado baja a aproximadamente 33.6%, desde 35.2%. La mejora nominal no demuestra expansión del margen.
+
+El CFO de nueve meses cae 578. Los flujos del incidente pasan de entrada neta de 227 a salida de 345: un deterioro de 572, casi todo el cambio agregado. Esto evita atribuirlo íntegramente al negocio ferroviario, sin eliminar el coste real para los accionistas. Los 285 pagados en marzo por el acuerdo colectivo no se restan otra vez como obligación futura.
+
+Quedan 189 de provisiones legales y 184 ambientales por el incidente. La cobertura de responsabilidad se agotó en junio de 2025; no se presumen indemnizaciones futuras no reconocidas. Persisten litigios, supervisión y posibles pérdidas no cuantificables. El modelo resta los 373 registrados, sin fingir que acotan el peor caso.
+
+NSC tiene caja 1,598 y deuda 16,613, incluidos arrendamientos financieros. La garantía residual de 499 asociada al arrendamiento de oficinas no está provisionada como pérdida probable: se revela como riesgo adicional, no se ignora ni se suma automáticamente a la deuda. Usamos como aproximaciones de cierre de 2025 obligaciones de pensiones no financiadas de 277 y otros beneficios de 125, por reconciliar a septiembre. La nota 8 del 10-Q confirma anticipos de Conrail de 534 al 30 de septiembre de 2026, con vencimiento en 2050 y tipo medio del 1.31%. No se monetiza el superávit de otros planes.
+
+No se añade indiscriminadamente la cuenta de inversiones de 4,186. En 2025, Conrail 1,827 y TTX 1,056 generaban ingresos que compensaban gastos operativos; añadir su valor sin retirar esos beneficios duplicaría valor. COLI 751 tampoco es caja operativa disponible demostrada. El modelo conserva las compensaciones operativas y no agrega esos activos; es prudente, aunque requiere mejor separación económica.
+
+La valoración ilustrativa de NSC usa diez años, crecimiento inicial 4%, margen que transita desde el TTM publicado hacia 35.5%, D&A del 11% y capex del 17.5% de ventas, circulante del 5% del incremento de ventas, impuesto 24%, WACC 8.5%, crecimiento terminal 2.5% y ROIC terminal 13%. Conserva 750 de caja operativa y deduce las obligaciones descritas. Resulta equity de 31,293. No es una tasación aprobada: WACC, margen y reinversión son hipótesis explícitas, no consenso.
+
+## Transacción, financiación y desenlaces
+
+El acuerdo de julio de 2025 ofrece una acción UNP y 88.82 USD por cada acción NSC. El 10-Q estima 225 millones de acciones nuevas y unos 20,000 de efectivo. El último calendario empresarial espera cierre en la segunda mitad de 2027. La aprobación de accionistas no sustituye autorización STB. Las decisiones procedimentales del 4 de noviembre no son aprobación ni conclusión definitiva de las alegaciones examinadas.
+
+Con 225 millones de nuevas acciones, el pago calculado es 19,984.5, las acciones combinadas 819.5 millones y los antiguos titulares conservan un 72.54%. La emisión equivale al 37.85% de las acciones anteriores. Quedan pendientes ajustes por premios, conversiones y número definitivo. La contraprestación bursátil más efectivo al precio actual sería 85,270.5; no es enterprise value porque aún faltan deuda y otras reclamaciones del adquirido.
+
+Puente fechado: t = 0 es el 8 de noviembre de 2026; cierres supuestos el 8 de noviembre de 2027 o 2029. Se mantiene deuda heredada constante mediante refinanciación de vencimientos, sin recompras. Cada año se retiene FCFF menos intereses después de impuestos, dividendos y pagos ambientales históricos. Dividendos anuales supuestos: UNP 3,312, anualización de nueve meses; NSC 1,215, hipótesis de 5.40 por 225 millones de acciones. Intereses heredados: UNP 1,270 y NSC 782, con impuesto del 24%; la caja no gana intereses. En el cierre a un año, UNP aporta 4,312.51 de caja, emite 15,671.99 de deuda y queda deuda combinada de 62,608.99, con caja de 3,698.84. Con retraso a tres años, la deuda nueva baja a 9,032.22 por generación retenida. Estos importes se derivan del escenario; no son financiación comprometida. NSC no financia el pago antes del cierre.
+
+Al cierre se calcula el EV operativo restante de cada negocio, retirando del DCF los flujos anteriores al cierre y capitalizando solo su valor restante hasta esa fecha. Se añaden las sinergias valoradas en esa fecha, se resta deuda heredada más nueva financiación y se suma caja posterior al pago, menos mínimos operativos. Se deducen obligaciones pendientes y se añade el ajuste TTX una sola vez. La emisión ocurre al cierre: 819.5 millones de acciones después, no antes. El valor presente por acción antigua suma dividendos UNP anteriores al cierre divididos por 594.5 millones, más equity al cierre dividido por 819.5 millones y descontado hasta hoy. Las distribuciones previas de NSC pertenecen a sus propios accionistas y reducen su caja; nunca se atribuyen a UNP. Así no se descuenta únicamente el precio de compra ni se duplica generación de caja.
+
+La empresa anuncia 2,750 de EBITDA por sinergias al tercer año: 1,750 ligados a ingresos y 1,000 a costes. Los 1,750 no son ventas a las que volver a aplicar un margen. Modelamos impuestos y reinversión explícitos: 10% del EBITDA de sinergias para mantenimiento; 2,100 de inversión incremental repartidos en tres años; integración supuesta de 3,000 o 4,000. No añadimos los 133 de ahorro anual de capex anunciados para evitar optimismo no conciliado. La sinergia madura se mantiene sin crecimiento; no se confunde EBITDA con FCFF.
+
+Desenlaces sin probabilidades asignadas, expresados como valor presente condicionado por acción antigua:
+- Cierre en un año, 100% de sinergias y 3,000 de integración: 170.70 USD.
+- Cierre en un año con 50% de sinergias, integración de 4,000 y remedios de 200 anuales: 156.22 USD.
+- Retraso de dos años adicionales, sinergias completas e integración de 4,000: 172.72 USD. El resultado incluye distribuciones previas, generación retenida y distinta financiación; no implica que retrasar carezca de riesgos.
+- Fracaso sin comisión: contrafactual independiente de 187.45 USD.
+- Fracaso con comisión contractual de 2,500 dentro de un año: 183.57 USD. No toda ruptura genera la comisión.
+
+Los casos usan UNP central. UNP operativo conserva WACC de 8.1137%; NSC y sinergias usan 8.5%. Los derechos de equity al cierre y dividendos previos se descuentan al coste de equity UNP actual de 8.6085%, aproximación explícita pendiente de recalibrar para el nuevo apalancamiento. No se restan intereses de la nueva deuda otra vez del FCFF posterior; su riesgo y escudo fiscal requieren calibración del descuento. Los 1,309 de reclamaciones NSC se mantienen pendientes hasta el cierre por falta de calendario de pagos: si se pagan antes, deben reducir caja y eliminarse de la reclamación final por el mismo importe. No se valora una exoneración de esas obligaciones. Persisten pendientes las bases fiscales de compra, costes finales, remedios y pérdidas no provisionadas. Se ha reparado el puente temporal, pero no se convierte en valoración aprobada por ello.
+
+## Descuento, escenarios e inversa de UNP
+
+Beta observada Yahoo a cinco años mensual: 0.85. Treasury a diez años del 6 de noviembre: 4.86%, fuente secundaria. ERP implícita de Damodaran del 1 de noviembre: 4.41%. Coste de equity 8.6085%; coste de deuda supuesto 5.75%; impuesto 24%; WACC ponderado 8.1137%. La ERP mensual se calculó con otra fecha y Treasury de 5.29%; no son observaciones simultáneas. Falta verificar Treasury primario y rendimiento marginal de deuda.
+
+FCFF a diez años: cinco de crecimiento inicial y cinco de transición; terminal con reinversión g / ROIC. Base: crecimiento 4.5%, margen a cinco años 41.5% y terminal 40%, capex 14.5% de ventas, D&A 9.7%, crecimiento terminal 2.5%, ROIC terminal 15%. Adverso: crecimiento 2%, margen final 37%, capex 16%, WACC 9%, g terminal 2%, ROIC 12%. Favorable: crecimiento 6.5%, margen final 43%, capex 14%, WACC 7.25%, g terminal 3%, ROIC 18%. La reinversión terminal usa el máximo entre NOPAT × g / ROIC y capex físico mínimo menos D&A más circulante incremental. El capex mínimo conserva el porcentaje del último año explícito. Por tanto, UNP adverso no cae de 16% a 14.29%; NSC tampoco cae de 17.5% a 16.07%. Base y favorable UNP ya superaban su mínimo físico. Valor terminal corregido: 50.4% / 59.2% / 67.8% del EV. NSC equity baja a 31,293 por aplicar el suelo. Esta corrección asegura continuidad mecánica; no prueba por sí sola que el porcentaje de mantenimiento elegido sea suficiente.
+
+La inversa exige crecimiento inicial aproximado del 10.97% para justificar 290.16 manteniendo el resto de supuestos base. No es previsión, ni incluye la fusión. Se calculan doce combinaciones de WACC y crecimiento terminal.
+
+Comparación histórica orientativa: precios de cierre 245.62 al 29 de diciembre de 2023, 228.04 al 31 de diciembre de 2024 y 231.32 al 31 de diciembre de 2025. Frente al EPS de cada ejercicio, múltiplos retrospectivos 23.50 / 20.56 / 19.31, frente a aproximadamente 22.62 veces el TTM actual. La observación de 2024 tiene fuente secundaria no triangulada; no se presenta como prueba suficiente de normalidad. Esta comparación usa beneficios conocidos después del cierre y no es un backtest sin anticipación.
+
+## Qué cambia la tesis y qué falta
+
+Mejora: servicio estable, crecimiento de volumen sin sacrificar precio, recuperación del margen NSC, reinversión suficiente y financiación final que preserve la creación de valor después de dilución. Deterioro: remedios que destruyan sinergias, costes de integración superiores, apalancamiento caro, nuevas pérdidas del incidente o capex insuficiente para sostener servicio.
+
+Pendiente antes de aprobar: financiación comprometida y su coste; conversión final de premios y acciones; costes de integración verificables; remedios STB; bases fiscales y contabilidad de compra; actualización de pensiones; valoración coherente de inversiones y beneficios asociados; capex de mantenimiento comparable; Treasury primario y rendimiento de deuda. Ningún dato ausente se sustituye por cero. Las hipótesis son reproducibles, pero no sustituyen los datos pendientes ni permiten aprobar la valoración.

@@ -1,0 +1,421 @@
+{
+  "environmental_overlap_tax_sensitivities": [
+    {
+      "overlap_fraction": 0,
+      "tax_rate_if_deductible": 0,
+      "PV_deduction": 217.05508594255622,
+      "central_value": 187.4454461879624
+    },
+    {
+      "overlap_fraction": 0,
+      "tax_rate_if_deductible": 0.24,
+      "PV_deduction": 164.96186531634274,
+      "central_value": 187.53307145394427
+    },
+    {
+      "overlap_fraction": 0.5,
+      "tax_rate_if_deductible": 0,
+      "PV_deduction": 108.52754297127811,
+      "central_value": 187.6279988254246
+    },
+    {
+      "overlap_fraction": 0.5,
+      "tax_rate_if_deductible": 0.24,
+      "PV_deduction": 82.48093265817137,
+      "central_value": 187.67181145841553
+    },
+    {
+      "overlap_fraction": 1,
+      "tax_rate_if_deductible": 0,
+      "PV_deduction": 0.0,
+      "central_value": 187.8105514628868
+    },
+    {
+      "overlap_fraction": 1,
+      "tax_rate_if_deductible": 0.24,
+      "PV_deduction": 0.0,
+      "central_value": 187.8105514628868
+    }
+  ],
+  "checks": [
+    {
+      "check": "independent_UNP_adverso",
+      "actual": 98.05843623911274,
+      "expected": 98.05843623911274,
+      "passed": true
+    },
+    {
+      "check": "independent_UNP_central",
+      "actual": 187.44544618796235,
+      "expected": 187.4454461879624,
+      "passed": true
+    },
+    {
+      "check": "independent_UNP_favorable",
+      "actual": 318.62816731580585,
+      "expected": 318.6281673158058,
+      "passed": true
+    },
+    {
+      "check": "WACC",
+      "actual": 0.08113683099733886,
+      "expected": 0.08113683099733886,
+      "passed": true
+    },
+    {
+      "check": "UNP_TTM_revenue",
+      "actual": 26363,
+      "expected": 26363,
+      "passed": true
+    },
+    {
+      "check": "UNP_TTM_EBIT",
+      "actual": 10565,
+      "expected": 10565,
+      "passed": true
+    },
+    {
+      "check": "UNP_TTM_net_income",
+      "actual": 7618,
+      "expected": 7618,
+      "passed": true
+    },
+    {
+      "check": "UNP_TTM_DA",
+      "actual": 2538,
+      "expected": 2538,
+      "passed": true
+    },
+    {
+      "check": "UNP_TTM_CFO",
+      "actual": 10527,
+      "expected": 10527,
+      "passed": true
+    },
+    {
+      "check": "UNP_TTM_cash_capex",
+      "actual": 3833,
+      "expected": 3833,
+      "passed": true
+    },
+    {
+      "check": "FCFF_normalized",
+      "actual": 6634.4000000000015,
+      "expected": 6634.4000000000015,
+      "passed": true
+    },
+    {
+      "check": "NSC_equity",
+      "actual": 31293.473196284773,
+      "expected": 31293.47319628475,
+      "passed": true
+    },
+    {
+      "check": "cash_consideration",
+      "actual": 19984.5,
+      "expected": 19984.5,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_current_old_share_value",
+      "actual": 170.69602227109746,
+      "expected": 170.69602227109746,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_closing_equity",
+      "actual": 147361.93374292913,
+      "expected": 147361.93374292913,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_remaining_UNP_EV_at_close",
+      "actual": 142551.3046528752,
+      "expected": 142551.3046528752,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_remaining_NSC_EV_at_close",
+      "actual": 50068.546238768955,
+      "expected": 50068.546238768955,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_postclose_gross_cash",
+      "actual": 3698.8421792,
+      "expected": 3698.8421792,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_postclose_gross_debt",
+      "actual": 62608.9943782,
+      "expected": 62608.994378200005,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_UNP_cash_used_at_close",
+      "actual": 4312.5056218,
+      "expected": 4312.5056218,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_new_debt_at_close",
+      "actual": 15671.994378200001,
+      "expected": 15671.994378200001,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_remaining_UNP_environment_PV_at_close",
+      "actual": 170.74027301592116,
+      "expected": 170.74027301592116,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_preclose_distributions_PV",
+      "actual": 3049.485077134847,
+      "expected": 3049.485077134847,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_net_synergy_value_at_close",
+      "actual": 15381.9753233009,
+      "expected": 15381.9753233009,
+      "passed": true
+    },
+    {
+      "check": "close_full_claim_purchase_funding_identity",
+      "actual": 19984.5,
+      "expected": 19984.5,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_current_old_share_value",
+      "actual": 156.21737632774705,
+      "expected": 156.21737632774705,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_closing_equity",
+      "actual": 134475.26331592415,
+      "expected": 134475.26331592415,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_remaining_UNP_EV_at_close",
+      "actual": 142551.3046528752,
+      "expected": 142551.3046528752,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_remaining_NSC_EV_at_close",
+      "actual": 50068.546238768955,
+      "expected": 50068.546238768955,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_postclose_gross_cash",
+      "actual": 3698.8421792,
+      "expected": 3698.8421792,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_postclose_gross_debt",
+      "actual": 62608.9943782,
+      "expected": 62608.994378200005,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_UNP_cash_used_at_close",
+      "actual": 4312.5056218,
+      "expected": 4312.5056218,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_new_debt_at_close",
+      "actual": 15671.994378200001,
+      "expected": 15671.994378200001,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_remaining_UNP_environment_PV_at_close",
+      "actual": 170.74027301592116,
+      "expected": 170.74027301592116,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_preclose_distributions_PV",
+      "actual": 3049.485077134847,
+      "expected": 3049.485077134847,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_net_synergy_value_at_close",
+      "actual": 2495.3048962959288,
+      "expected": 2495.3048962959288,
+      "passed": true
+    },
+    {
+      "check": "close_half_synergies_remedies_purchase_funding_identity",
+      "actual": 19984.5,
+      "expected": 19984.5,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_current_old_share_value",
+      "actual": 172.724469923406,
+      "expected": 172.724469923406,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_closing_equity",
+      "actual": 166430.9116039554,
+      "expected": 166430.9116039554,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_remaining_UNP_EV_at_close",
+      "actual": 150718.99831053478,
+      "expected": 150718.99831053478,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_remaining_NSC_EV_at_close",
+      "actual": 53348.10340548805,
+      "expected": 53348.10340548805,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_postclose_gross_cash",
+      "actual": 5453.803893724162,
+      "expected": 5453.803893724162,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_postclose_gross_debt",
+      "actual": 55969.22456153807,
+      "expected": 55969.22456153807,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_UNP_cash_used_at_close",
+      "actual": 10952.275438461933,
+      "expected": 10952.275438461933,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_new_debt_at_close",
+      "actual": 9032.224561538067,
+      "expected": 9032.224561538067,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_remaining_UNP_environment_PV_at_close",
+      "actual": 92.40397708668803,
+      "expected": 92.40397708668803,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_preclose_distributions_PV",
+      "actual": 8442.490803331315,
+      "expected": 8442.490803331315,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_net_synergy_value_at_close",
+      "actual": 14530.634532833172,
+      "expected": 14530.634532833172,
+      "passed": true
+    },
+    {
+      "check": "delay_two_years_purchase_funding_identity",
+      "actual": 19984.5,
+      "expected": 19984.5,
+      "passed": true
+    },
+    {
+      "check": "environmental_schedule_total",
+      "actual": 274.0,
+      "expected": 274,
+      "passed": true
+    },
+    {
+      "check": "environmental_PV",
+      "actual": 217.05508594255622,
+      "expected": 217.05508594255622,
+      "passed": true
+    },
+    {
+      "check": "terminal_floor_adverso",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "check": "terminal_floor_central",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "check": "terminal_floor_favorable",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "check": "NSC_terminal_floor",
+      "actual": 0.175,
+      "expected": 0.175,
+      "passed": true
+    },
+    {
+      "check": "environment_per_share",
+      "actual": 0.3651052749244007,
+      "expected": 0.3651052749244007,
+      "passed": true
+    }
+  ],
+  "all_arithmetic_checks_pass": true,
+  "terminal_physical_capex": [
+    {
+      "case": "adverso",
+      "implied_terminal_capex": 5244.652302753317,
+      "implied_terminal_capex_ratio": 0.16,
+      "explicit_capex_ratio": 0.16,
+      "terminal_ROIC": 0.12
+    },
+    {
+      "case": "central",
+      "implied_terminal_capex": 5800.295671878001,
+      "implied_terminal_capex_ratio": 0.14644715447154472,
+      "explicit_capex_ratio": 0.145,
+      "terminal_ROIC": 0.15
+    },
+    {
+      "case": "favorable",
+      "implied_terminal_capex": 6920.0016559816295,
+      "implied_terminal_capex_ratio": 0.150010355987055,
+      "explicit_capex_ratio": 0.14,
+      "terminal_ROIC": 0.18
+    }
+  ],
+  "NSC_implied_terminal_capex_ratio": 0.175,
+  "NSC_explicit_capex_ratio": 0.175,
+  "source_TTM_NSC": {
+    "revenue": 12963,
+    "EBIT": 4088,
+    "net_income": 2684,
+    "DA": 1426,
+    "CFO": 3783,
+    "capex": 2136,
+    "interest": 782
+  },
+  "incident_CFO_swing": -572,
+  "UNP_environmental_claim_full_undiscounted_sensitivity_per_share": 0.4608915054667788,
+  "author_artifact_sha256": {
+    "model.py": "84864ac9825fcf05d133c00063c0040136806942da6da79bc1eded3ca6a94f14",
+    "results.json": "25bb2d1cbf44f1e99dfb0e13b59caf7774245274f746de00de64478c35b5b052",
+    "financials_annual.csv": "93ef45d88934cc8e2a2d5b23f0451d92f745a1cb30764a8854a12c06805027e4",
+    "financials_quarterly.csv": "35cb347a54701ca3e6d7edde5c326c9afd5ee4cf24f2b25f9cd374fa7608abcd"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ticker": "AXP",
+  "asOf": "2026-11-08",
+  "auditStatus": "completed_material_gaps",
+  "classification": "partial_conditional_research",
+  "stage3": {
+    "status": "partial",
+    "researchCompleted": false,
+    "valuationApproved": false
+  },
+  "researchCompleted": false,
+  "entryApproved": false,
+  "scope": "Auditoría independiente de fuentes, normalización, cálculo y clasificación; no aprobación de valor económico distribuible.",
+  "reason": "La retención proporcional de patrimonio y CET1 no valida los ajustes regulatorios dinámicos, necesidades de capital por escenario, restricciones de remesas de entidades legales ni capacidad de distribución bajo estrés. Son carencias materiales de la excepción financiera.",
+  "materialValuationGaps": [
+    "Proyección de RWA e intensidad de capital por escenario no completada",
+    "Ajustes CET1 y capital distribuible bajo estrés no validados",
+    "Restricciones de remesas y capital por entidad legal sin modelar"
+  ],
+  "separateEntryGaps": [
+    "Calendario próximo no confirmado por fuente primaria",
+    "Stage 3.5 técnico y riesgo no evaluado",
+    "QA visual bloqueado, no realizado"
+  ],
+  "passedChecks": {
+    "primary_source_reconciliation": true,
+    "three_annual_periods": true,
+    "four_quarters_and_paired_ttm": true,
+    "preferred_coupon_repair": true,
+    "fcfe_residual_income_identity": true,
+    "inverse_valuation": true,
+    "manifest_hashes": true
+  },
+  "scenarioValuesUSD": {
+    "bajista": 126.81107826215218,
+    "central": 226.22165630820953,
+    "favorable": 342.28836978411374
+  },
+  "inverseGrowthFirst5": 0.16070086922364835,
+  "approvedEconomics": false
+}

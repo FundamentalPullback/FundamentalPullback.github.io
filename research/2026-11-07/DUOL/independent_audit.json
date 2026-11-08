@@ -1,0 +1,144 @@
+{
+  "ticker": "DUOL",
+  "asOf": "2026-11-08",
+  "verdict": "Ready with caveats for conditional fundamental research; not approved for technical entry or trading",
+  "classificationRecommendation": "fundamental_research_complete_conditional",
+  "entryApproved": false,
+  "reproducibleCheck": "python final_independent_checks.py",
+  "mechanicalChecks": {
+    "corrected_values_reproduced": {
+      "adverse": {
+        "value": 50.940159895377995,
+        "terminal_reinvestment": 47.206420607119234,
+        "terminal_physical_requirement": 47.206420607119234,
+        "terminal_shortfall": 0,
+        "year10_shortfall": 0
+      },
+      "central": {
+        "value": 112.01198528660899,
+        "terminal_reinvestment": 75.13637158242528,
+        "terminal_physical_requirement": 54.18740041887638,
+        "terminal_shortfall": 0,
+        "year10_shortfall": 0
+      },
+      "favorable": {
+        "value": 212.77379066033072,
+        "terminal_reinvestment": 133.66014466640166,
+        "terminal_physical_requirement": 71.45800204527987,
+        "terminal_shortfall": 0,
+        "year10_shortfall": 0
+      }
+    },
+    "all_12_sensitivities_reproduced": true,
+    "all_3_reverse_cases_reproduced": true,
+    "last_four_quarters_tie": true,
+    "all_archived_fact_provenance_matches_sec_companyfacts": true,
+    "all_source_manifest_hashes_match": true,
+    "illustrative_physical_floor_sensitivity": {
+      "adverse": {
+        "value": 50.940159895377995,
+        "terminal_reinvestment": 47.206420607119234,
+        "terminal_physical_requirement": 47.206420607119234,
+        "terminal_shortfall": 0,
+        "year10_shortfall": 0
+      },
+      "central": {
+        "value": 112.01198528660899,
+        "terminal_reinvestment": 75.13637158242528,
+        "terminal_physical_requirement": 54.18740041887638,
+        "terminal_shortfall": 0,
+        "year10_shortfall": 0
+      },
+      "favorable": {
+        "value": 212.77379066033072,
+        "terminal_reinvestment": 133.66014466640166,
+        "terminal_physical_requirement": 71.45800204527987,
+        "terminal_shortfall": 0,
+        "year10_shortfall": 0
+      }
+    }
+  },
+  "scope": "Independent review of archived primary filings, source extracts, source hashes, accounting-period reconstruction, cash bridges, ten-year FCFF, equity bridge, sensitivity and inverse valuation. No new live market retrieval; archived market excerpts verified for ticker and date.",
+  "findings": [
+    {
+      "id": "DUOL-A1",
+      "severity": "medium",
+      "type": "Formula/control defect",
+      "location": "model.py calc(): years 6–10 and terminal reinvestment; adverse scenario",
+      "finding": "El escenario adverso acaba reinvirtiendo el 1,90% de ventas, por debajo del 2,50% neto requerido por sus hipótesis de PPE, software y adquisiciones. La transición sustituye progresivamente la inversión física sin justificar una reducción de intensidad de capital.",
+      "impact": "Déficit terminal de 11,330 millones USD. Aplicar un suelo de reinversión física reduce el adverso de 51,95 a 50,94 USD; central y favorable no cambian. No altera la conclusión de observar.",
+      "requiredFix": "Aplicar un suelo a la reinversión de transición y terminal, o justificar y mostrar explícitamente el menor gasto físico estable. Recalcular informe y estado.",
+      "status": "resolved_and_independently_recomputed",
+      "resolution": "Physical reinvestment floor applied to every explicit year and terminal. Corrected adverse 50.94 USD."
+    },
+    {
+      "id": "DUOL-A2",
+      "severity": "medium",
+      "type": "Publication privacy and writing control",
+      "location": "report.md, conclusion and prose throughout",
+      "finding": "Existe una referencia a la revisión del perfil privado y Space, y numerosas palabras y cifras pegadas: estados10-K, umbral65, cartaQ3, publicados3nov, etc.",
+      "requiredFix": "Eliminar el párrafo sobre el perfil privado y la búsqueda en Space. Corregir espacios en toda la prosa española. Mantener únicamente fuentes públicas en la versión publicable; no publicar archivos de herramientas o extractos brutos como contenido del informe.",
+      "status": "resolved_and_reinspected",
+      "resolution": "Private-profile paragraph removed and prose spacing repaired."
+    },
+    {
+      "id": "DUOL-A3",
+      "severity": "low",
+      "type": "Source-date caveat",
+      "location": "Capital cost / diluted shares",
+      "finding": "ERP del 1 de noviembre frente a Treasury del 6; beta de proveedor; 50,8 millones de acciones estimadas al precio 142,40 USD, no recalculadas al cierre 160,42. Todas las diferencias se revelan.",
+      "requiredFix": "Mantener las advertencias. No etiquetar estos parámetros como estimación intradía ni precisión exacta.",
+      "status": "disclosed"
+    },
+    {
+      "id": "DUOL-A4",
+      "severity": "low",
+      "type": "Data completeness enhancement",
+      "location": "Historical EPS section",
+      "finding": "EPS anual y Q1–Q3 están presentes, pero faltan EPS Q4 y un puente explícito de EPS de ambos TTM. No debe calcularse Q4 restando EPS anual menos nueve meses.",
+      "requiredFix": "Añadir EPS Q4 publicado y comparación EPS TTM, con método explícito; no afecta al FCFF ni es un bloqueo material de esta valoración.",
+      "status": "secondary_supplement_added_with_explicit_limitations",
+      "resolution": "PromtFinance financial-table Q4 EPS and rounded-quarter sums shown; internal table conflict disclosed. No primary TTM EPS certification."
+    },
+    {
+      "id": "DUOL-A5",
+      "severity": "high_for_entry_only",
+      "type": "Missing technical decision output",
+      "location": "Stage 3.5",
+      "finding": "No se ha certificado EMA200, estructura, stop ni tamaño. El intento de serie completa devolvió 429.",
+      "requiredFix": "Mantener entrada no aprobada. Este límite no invalida por sí mismo la investigación financiera condicional.",
+      "status": "disclosed_and_blocked"
+    }
+  ],
+  "sourceTieouts": {
+    "latestResults": "Carta Q3 del 3 de noviembre de 2026; 8-K 0001628280-26-069474. 10-Q presentado el 4 de noviembre, accession 0001628280-26-069692.",
+    "annualAndTtm": "Tres ejercicios, últimos cuatro trimestres y ambos TTM presentes; sumas verificadas; hechos seleccionados coinciden con el archivo SEC.",
+    "scannerMargin": "35,875% coincide por redondeo con margen neto TTM junio, no operativo; actual EBIT TTM 12,3592%. No se afirma haber inspeccionado el código del proveedor.",
+    "tax": "222,7 millones de liberación de valoración fiscal en Q3 2025 respaldados por 10-Q. El modelo normaliza EBIT a 24% y no capitaliza aquella ganancia.",
+    "software": "8,718 millones de salidas 9M 2026 verificados en cash-flow; inversión no confundida con adiciones contables.",
+    "cashAndClaims": "Caja 1.239,607, inversión corta 134,294 y larga 110,120 millones verificadas. Reserva 150 millones es hipótesis; caja restringida y DTA excluidos. Alquileres tratados operativamente sin doble deducción.",
+    "sbc": "SBC retenida en margen EBIT, sin addback ni dilución futura duplicada. Acciones fully diluted estimadas 50,8 millones verificadas en carta.",
+    "product": "Carta confirma cierre de nuevas ventas Max este noviembre y Video Call ilimitado en Super; transición de Max individual a Super familiar al mismo precio; alternativas para familias antiguas en 2027.",
+    "price": "Extractos archivados de StockAnalysis/ChartExchange/Investing confirman 160,42 USD el 6 noviembre. 160,39 del scanner se conserva separado.",
+    "capitalCost": "Treasury archivado 6 noviembre: 10 años 4,86%; Damodaran archivado 1 noviembre ERP 4,41%, convención Treasury no ajustada; beta 5Y mensual 1,02 de Yahoo. CAPM 9,3582% correcto."
+  },
+  "investmentJudgment": "El precio exige recuperación de monetización y margen más fuerte que el caso central. El favorable puede justificarlo; no se presenta ausencia de descuento central como imposibilidad absoluta de valor. Cohortes, coste IA y retención tras Max siguen siendo riesgos de tesis, no datos inventados.",
+  "completionAssessment": "Investigación fundamental condicional completa. La reinversión adversa está corregida y verificada; la incertidumbre de monetización y las limitaciones de EPS están reveladas. No se aprueba una entrada técnica ni una operación.",
+  "finalReaudit": {
+    "authorFrozenManifestVerified": true,
+    "isolatedModelRerunByteIdentical": [
+      "results.json",
+      "history.csv"
+    ],
+    "allSourceManifestHashesVerified": true,
+    "physicalFloorPassesAllForecastYearsAndTerminal": true,
+    "correctedValues": {
+      "adverse": 50.940159895377995,
+      "central": 112.01198528660899,
+      "favorable": 212.77379066033072
+    },
+    "publicationCleanup": "Private profile and Space paragraph removed; Spanish spacing repaired. Final auditor corrected EPS source attribution to conflicting tables within PromtFinance, not unsupported Finviz corroboration.",
+    "epsLimitation": "Secondary rounded-quarter EPS sums only, explicitly not primary or company-certified TTM. No effect on FCFF.",
+    "technicalEntryApproved": false
+  }
+}

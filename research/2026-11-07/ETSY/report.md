@@ -1,0 +1,105 @@
+# ETSY | Fundamental Pullback
+
+Fecha de revisión: 8 de noviembre de 2026. USD millones salvo acciones, porcentajes y precio por acción. Uso: investigación de paper trading. Estado: observar, sin aprobación de valoración ni entrada. Investigación parcial auditada; quedan bloqueos de comparabilidad y derechos sobre el capital que se detallan expresamente. Sin autorización de operaciones.
+
+## Lectura de inversión
+
+La recuperación del marketplace es real en los indicadores publicados: GMS +8,8%, ingresos +10,9% y compradores activos +1,0% en Q3. Pero el beneficio consolidado no mide esa recuperación: de $853,5 millones de beneficio trimestral, $739,9 millones proceden de operaciones discontinuadas, incluida la venta de Depop. El beneficio de operaciones continuadas es $113,6 millones y el EBIT apenas crece, de $111,0 a $111,4 millones, afectado por reestructuración. Un P/E aparente de 10,86 no demuestra que Etsy esté barata.
+
+A $89,93, la valoración diagnóstica exige una recuperación prolongada. El FCFF central condicionado resulta en $50,86; el favorable, $93,56, apenas alcanza la cotización. Estos importes NO son precios aprobados ni órdenes de entrada: dependen de supuestos de capital, reinversión y riesgo todavía sujetos a revisión. La conclusión robusta es exigir más evidencia y no convertir el scanner en señal de compra. Opportunity≥65 amplía la investigación; el score por sí solo no aprueba ni descarta una compra.
+
+## Identidad, historial y precio
+
+Etsy, Inc., ETSY, NYSE, acciones ordinarias en USD, sin ADR. Se trata de una investigación inicial, no de una actualización de tesis aprobada.
+
+Scanner 6 noviembre: precio $89,93; máximo $97,85; retroceso 8,1%; QP 100; Opportunity 75; RSI 56,1; P/E 10,86; OPM 12,64%; FCF/acción $5,87. Se preservan íntegros. Los resultados de búsqueda archivados de IR de la empresa, Yahoo y StockAnalysis corroboran el cierre regular $89,93; la descarga directa de cotización no contiene ese dato: 6 noviembre 2026, 16:00 Nueva York, 21:00 UTC. Los proveedores discrepan en OHLC intradía, por lo que no se mezclan series para producir stops o ATR. El precio verificado no valida automáticamente EMA200, su pendiente ni la estructura de largo plazo.
+
+El OPM bruto no coincide con el EBIT Q3 continuado (16,09%), ni 9M continuado (17,90%), ni el margen operativo TTM histórico reconstruido (6,35%). No se atribuye una causa o campo alternativo sin demostrarla. El P/E implica EPS cercano a $8,28, susceptible de contaminación por la desinversión; no se sustituye silenciosamente por otro múltiplo. El FCF/acción necesita reconciliar perímetro, periodo y denominador.
+
+## Perímetro y calidad del negocio
+
+Depop se vendió a eBay el 30 julio 2026 por aproximadamente $1.400 millones de contraprestación agregada, frente al precio contractual inicial anunciado de $1.200 millones sujeto a ajustes. La venta ya está dentro del balance de septiembre: añadir nuevamente los ingresos sería duplicarlos. El 10-Q reclasifica Depop como discontinuada en periodos comparativos. Reverb se vendió el 2 junio 2025; por tanto, las continuadas 9M25 todavía incluyen Reverb. Elo7 salió en agosto 2023. La historia anual publicada 2023–25 no representa el perímetro Etsy actual.
+
+Etsy tiene una red de pequeños vendedores y compradores de artículos especiales, con inventario no propio. La diferenciación depende de confianza, descubrimiento, personalización y oferta genuina; no de logística propia. Competidores generalistas y especializados, cambios en búsqueda y comercio mediante IA pueden captar la relación con el cliente. Los servicios publicitarios monetizan la demanda pero no son ingreso gratuito: necesitan demostrar retorno al vendedor y no degradar relevancia ni rentabilidad de las tiendas.
+
+Q3: GMS $2.646,9 millones, +8,8% publicado y +9,1% neutralizando divisa; crecimiento de app +10,4% y fuera de app +7,5%, app aproximadamente 47% del GMS. Take rate 26,2%, frente a 25,7%, con marketplace +9,1% y servicios +15,0%. Los ingresos avanzan más que GMS: parte es monetización, no volumen. La mayoría de ingresos de Etsy Ads procede de vendedores con menos de $100.000 de GMS anual; esto acentúa la importancia de su retorno económico.
+
+Compradores activos 87,5 millones, +1%; GMS TTM por comprador $126, +3,9%. Los compradores habituales y repetidores mejoran secuencialmente, pero la frecuencia de compra sigue modestamente por debajo del año anterior. El crecimiento por comprador procede principalmente del valor del pedido, no de una frecuencia ya recuperada. Las altas brutas +6,2% y retención mejorando son favorables; no equivalen a LTV/CAC demostrado. No hay cohortes completas, coste de adquisición incremental ni rentabilidad por canal verificables que permitan prometer crecimiento autosostenido. El modelo no inventa esos datos.
+
+## Historia financiera y conciliaciones
+
+Cifras publicadas originales del grupo; EBIT es operativo GAAP, FCF = CFO menos PP&E y software capitalizado.
+
+| Periodo | Ingresos | EBIT | Beneficio neto | CFO | FCF | SBC |
+|---|---:|---:|---:|---:|---:|---:|
+| 2023 | 2.748,377 | 279,841 | 307,568 | 705,513 | 665,605 | 284,558 |
+| 2024 | 2.808,332 | 380,208 | 303,281 | 752,469 | 708,971 | 282,847 |
+| 2025 | 2.883,501 | 266,210 | 162,982 | 693,414 | 638,750 | 244,745 |
+| Q4 2025, Etsy + Depop | 881,636 | 129,397 | 110,735 | 317,124 | 307,888 | 63,355 |
+| Q1 2026, continuadas | 631,277 | 119,846 | 104,662 | 102,536 | 92,674 | 52,963 |
+| Q2 2026, continuadas | 668,313 | 125,268 | 114,339 | 165,905 | 158,134 | 51,184 |
+| Q3 2026, continuadas | 692,469 | 111,433 | 113,637 | 242,852 | 236,369 | 45,705 |
+
+Q4 deriva de FY25 menos 9M25. CFO, amortización e inversión de Q2 y Q3 derivan de acumulados. No se suman estos cuatro trimestres como TTM Etsy-only: Q4 mantiene Depop. La ausencia de Q4 2025 recast completo y del TTM comparativo Etsy-only es un bloqueo de valoración aprobada, no un permiso para rellenarlo con estimaciones.
+
+El TTM histórico hasta septiembre 2025 fue ingresos $2.854,027, EBIT $291,945, beneficio neto $182,153, CFO $691,249 y FCF $635,357. Reconstruyendo el perímetro histórico hasta septiembre 2026, ingresos $3.012,281 y EBIT $191,267 incluyen los resultados de Depop hasta la venta; beneficio total $987,282, CFO $598,110 y FCF $557,125. El FCF cae 12,3% y CFO 13,5%, mientras el beneficio total se dispara por la venta. Estos dos TTM están calculados y conservados para explicar la distorsión, no son una comparación orgánica. D&A/SBC TTM total 2026 no quedan conciliados en este expediente y figuran nulos.
+
+La comparación válida más próxima es la presentación Etsy-only de 9M: ingresos $1.992,059 frente a $1.822,252 (+9,3%); GMS $7.689,975 frente a $7.167,704 (+7,3%); EBITDA ajustado $590,433 frente a $521,848 (+13,1%). El EBIT Etsy-only previo derivado de bruto menos gastos es $309,562; frente a $356,547 ahora, +15,2%, considerablemente menos que la mejora GAAP continuada afectada por el deterioro Reverb de $101,703 millones.
+
+## Caja, normalización y fiscalidad
+
+En 9M26, CFO continuado $511,293 menos PP&E $4,122 y software $19,994 = FCF $487,177. Restar SBC $149,852 como comprobación económica da $337,325; esto no es FCFF y no se vuelve a restar en un modelo que ya conserva SBC en EBIT. Q3 FCF $236,369 tiene fuerte estacionalidad; multiplicarlo por cuatro exageraría caja sostenible. El capital circulante 9M supone aproximadamente $12,536 millones de salida neta entre las cuatro líneas de activos/pasivos operativos, y no se perpetúa una liberación de circulante.
+
+La reestructuración Q3 cuesta $33,864 millones, de los cuales $27,349 pagados y $6,515 pendientes. EBIT antes de esa carga sería $145,297 millones, margen 20,98%. Es un punto de calibración, no una eliminación automática de futuros costes: se retiene un coste económico de reorganización en la prudencia de escenarios. EBITDA ajustado 30,4% excluye SBC, D&A y ajustes, por lo que no es margen FCFF.
+
+El impuesto continuado 9M26 $60,294 sobre beneficio antes de impuestos $392,932 implica 15,34%, inferior al 24% normalizado del modelo. No se perpetúan beneficios fiscales ni ganancias cambiarias. El beneficio fiscal 2023 también explica por qué el neto anual supera al EBIT. El impuesto concreto futuro y liquidaciones tras desinversión requieren revisión. El modelo excluye ingresos financieros del EBIT y añade solamente caja excedentaria.
+
+## Capital, deuda y derechos por acción
+
+Septiembre: efectivo $2.065,658, inversiones cortas $245,043 y largas $150,392; deuda nominal aproximadamente $2.999,887. Las cuentas de vendedores $219,559 tienen pasivo igual y no se añaden como caja propia. Caja restringida $8,054 excluida. El 1 octubre se pagaron $10,8 por conversiones y $637,8 por resto de notas 2019, con $1,3 contabilizado en capital. Se reducen caja y deuda conjuntamente; no se combina caja de septiembre con deuda posterior sin esa salida.
+
+Quedan $650 millones con vencimiento septiembre 2027, $1.000 millones junio 2028 y $700 millones junio 2030. Conversiones iniciales $199,97, $246,80 y $85,79 respectivamente. Los capped calls 2019 expiraron sin ejercicio. La valoración no capitaliza valor especulativo de los restantes. Se deduce deuda nominal, no el descuento contable por comisiones. Los cupones históricos bajos no son coste de refinanciación.
+
+Acciones emitidas septiembre 87,914 millones, frente a 97,031 en diciembre; 11,7 millones recompradas 9M por aproximadamente $789 millones. No se regalan recompras futuras. RSU no consolidadas 6,812 millones y gasto pendiente $312,9 millones durante 2,11 años. Opciones a diciembre 2025: 1,517 millones con precio medio $34,32. El estado de patrimonio 9M26 documenta 1,102 millones ejercidas, por lo que el saldo puente antes de posibles cancelaciones o nuevas concesiones es 0,415 millones. Diagnóstico: denominador 95,141 millones, incluyendo ese saldo sin crédito por ejercicio y las RSU. No se presume que todas las opciones de diciembre sigan vivas. El detalle exacto de cancelaciones, nuevas concesiones y strikes sigue pendiente. La SBC futura permanece como coste de EBIT; el ajuste por derechos ya existentes no es una proyección gratuita de nueva dilución.
+
+Las notas 2030 se tratan como deuda hasta que el valor por acción excede $85,79; entonces se elimina su principal de $700 millones y se añaden 8,160 millones de acciones. No se resta simultáneamente deuda y se cuenta su conversión. El favorable activa esta condición. Es una aproximación de conversión por valor intrínseco, no una valoración separada del componente opcional ni una afirmación de convertibilidad inmediata según contrato. Los otros strikes no se alcanzan. La portada del 10-Q verifica 86,205886 millones de acciones el 23 octubre, ya posteriores al vencimiento de las notas 2019 y nuevas recompras. Se usa esta cifra en la ponderación de mercado del WACC, pero se conserva el puente septiembre para valor por acción porque no se dispone de la salida de caja por recompras de octubre: usar el denominador menor con caja anterior sobrevaloraría el capital. Para arrendamientos, el 10-K documenta deuda financiera $93,492 millones a diciembre y el 10-Q $92,134 millones no corrientes a septiembre, pero no desglosa su porción corriente. Los pagos de principal 9M $3,192 no bastan para un roll-forward exacto por otras modificaciones. Se conserva un cargo de $96,4 millones como reserva diagnóstica, no cifra certificada; variar el cargo entre $92,134 y $100 millones mueve menos de $0,09 por acción. Reserva operativa de caja $200 millones: hipótesis explícita.
+
+## Perspectivas y FCFF condicionado
+
+Q3 publicado 28 octubre. Guidance Q4: GMS $3.460–3.520 millones, take rate aproximadamente 25,6%, EBITDA ajustado aproximadamente 30%; FY GMS +7% y take rate 25,8%. Esto produce una base estimada 2026 de ingresos $2.885,499 y GMS $11.179,975 usando Q4 medio. No es consenso ni guidance directo de ingresos. El calendario oficial consultado indica que no hay próximos eventos programados; no hay fecha futura de resultados confirmada. No se adopta el 25 febrero de proveedores como anuncio de la empresa.
+
+Modelo: diez años FY27–36, cinco detallados y cinco de transición. Ingresos = GMS × take rate. Take rate 25,8% constante evita perpetuar incrementos de extracción al vendedor. Crecimiento GMS años 1–5: 0%, 6%, 10%; converge respectivamente a 1,5%, 2,5%, 3%. Margen EBIT inicial normalizado 20%, converge a 16%, 22%, 26% en año 5. Conserva SBC y costes de operación. D&A 1,8% de ingresos; net capex y software pagan la reinversión requerida por crecimiento y ROIC, más circulante incremental explícito. Es una reserva económica agregada, no un presupuesto corporativo observado; no se oculta bajo el capex histórico muy pequeño.
+
+RF 4,86% a 6 noviembre verificado en la tabla oficial Treasury; beta mensual 5 años 1,78 en Yahoo/StockAnalysis. ERP primario de Damodaran a 1 noviembre 2026: 4,41%, método TTM con payout ajustado. Se inspeccionaron directamente las fuentes archivadas: no se heredó un número de otra valoración. La página usa Treasury 5,29% para su cálculo mensual y ofrece sumar 0,22 puntos al ERP solamente si se descuenta ese spread del tipo soberano. Aquí no se resta spread al Treasury ni se suma al ERP. Se combina ERP mensual 1 noviembre con RF diario 6 noviembre; es un CAPM actualizado parcialmente, no una reestimación diaria del ERP. Con RF mensual 5,29% y manteniendo el spread de deuda de 200 pb, el coste de deuda pasa a 7,29%, el WACC a 11,37% y el valor central a $47,85. Cambiar únicamente el RF del capital propio elevaría WACC unos 33 pb; actualizar también la deuda lo eleva 40,6 pb. No se oculta el desfase temporal.
+
+Coste de deuda estimado 6,86% = RF + 200 pb; impuesto 24%. Capitalización con 86,205886 millones de acciones verificadas el 23 octubre y precio 6 noviembre: $7.752,495 millones. Ponderada con deuda nominal $2.350, produce WACC 10,97%. Spread no observado y beta histórico del antiguo perímetro siguen siendo limitaciones, pero el ERP de enero ya no interviene. Adverso 12,47%, favorable 9,97%.
+
+Terminal financiado: reinversión = NOPAT × g/ROIC, con ROIC incremental 12%/20%/25%; no es el retorno contable sobre patrimonio negativo. Reinvierte 12,5%/12,5%/12,0% del NOPAT terminal. g inferior a WACC en todos los casos.
+
+| Escenario diagnóstico | Valor/acción | PV terminal / EV | Lectura |
+|---|---:|---:|---|
+| Adverso | $22,41 | 30,9% | Recuperación frágil, margen se erosiona |
+| Central | $50,86 | 51,5% | 6% GMS, 22% EBIT y crecimiento financiado |
+| Favorable | $93,56 | 62,4% | 10% GMS, 26% EBIT y menor descuento |
+
+El modelo no asigna probabilidades ni margen de seguridad aprobado. A la senda GMS central, un EBIT constante de aproximadamente 36,2% sería necesario para justificar $89,93, superior incluso al EBITDA ajustado actual: no es previsión, es una advertencia de expectativas. Con la senda favorable, un margen 26% y fuerte crecimiento sí aproximan el precio; el reverse DCF no es evidencia independiente del DCF directo. results.json contiene sensibilidad completa WACC 9–13,5% y g 1,5–3%.
+
+## Seguimiento y puertas pendientes
+
+La tesis se fortalece si crecen compradores y frecuencia a la vez, GMS mantiene crecimiento sin depender de take rate, Ads mejora retorno al vendedor, el margen después de SBC convierte en caja y las recompras no comprometen vencimientos. La rompe una reversión sostenida de compradores/GMS, gasto comercial creciente sin conversión, degradación de confianza y oferta, o caja insuficiente tras atender deuda. La mejora en valor medio por pedido por sí sola no resuelve retención.
+
+Para avanzar: recastear Q4 2025 y el TTM Etsy-only anterior; conciliar opciones, liquidación convertible y arrendamientos a la fecha de valoración; calibrar spread de deuda y sensibilidad del coste de capital; verificar calendario futuro; certificar EMA200 y serie OHLC consistente, soporte M, stop, patrimonio y presupuesto de riesgo. No hay tamaño, entrada, stop ni objetivo operativo autorizado. Una auditoría aritmética no elimina estos bloqueos económicos.
+
+## Fuentes
+
+S1: [2025 10-K, tres ejercicios y notas de opciones](https://www.sec.gov/Archives/edgar/data/1370637/000137063726000019/etsy-20251231.htm).
+S2: [Q3 2025 10-Q, comparativos históricos](https://www.sec.gov/Archives/edgar/data/1370637/000137063725000100/etsy-20250930.htm).
+S3: [Q1 2026 10-Q](https://www.sec.gov/Archives/edgar/data/1370637/000137063726000044/etsy-20260331.htm).
+S4: [Q2 2026 10-Q](https://www.sec.gov/Archives/edgar/data/1370637/000137063726000080/etsy-20260630.htm).
+S5: [Q3 2026 10-Q, especialmente notas 2, 11, 14 y 15](https://www.sec.gov/Archives/edgar/data/1370637/000137063726000092/etsy-20260930.htm).
+S6: [Carta Q3 2026, KPI y guidance](https://www.sec.gov/Archives/edgar/data/1370637/000137063726000090/q326shareholderletter.htm).
+S7: [Cotización IR](https://investors.etsy.com/stock-data/quote-chart), [histórico StockAnalysis](https://stockanalysis.com/stocks/etsy/history/), [beta Yahoo](https://finance.yahoo.com/quote/ETSY/).
+S8: [Calendario IR](https://investors.etsy.com/news-events/ir-events-calendar).
+S9: [Treasury reproducido por Slickcharts](https://www.slickcharts.com/treasury/10-year), [ERP noviembre 2026 primario](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm) y tabla oficial Treasury archivada.
+
+Fuentes enlazadas en sources.json y cifras reproducibles en model.py, history.csv y results.json. Evidencia primaria fuerte en resultados y desinversiones; confianza menor en puente de derechos y valoración. La auditoría independiente reproduce los tres escenarios y verifica las conciliaciones descritas, sin eliminar los bloqueos pendientes. No está listo para decisión.

@@ -1,0 +1,41 @@
+{
+  "ticker": "HON",
+  "audit_date": "2026-11-08",
+  "scope": "Versión corregida exacta; liberación solo como diagnóstico parcial",
+  "release_status": "partial_only",
+  "stage3_completed": false,
+  "valuation_approved": false,
+  "entry_approved": false,
+  "checks": {
+    "all_manifest_hashes_match": true,
+    "manifest_file_count": 54,
+    "public_report_removes_internal_history_claim": true,
+    "public_report_no_private_paths": true,
+    "approved_values_null": true,
+    "no_approval": true,
+    "unknown_R_null": true,
+    "no_arbitrary_reserve": true,
+    "operating_gap_unassigned": true,
+    "fcff_identity": true,
+    "csv_matches_results": true,
+    "terminal_transition_smooth": true,
+    "reverse_reprices_conditionally": true
+  },
+  "mismatched_files": [],
+  "verified_conditional_intercepts": {
+    "adverse": 62.3344964951287,
+    "central": 144.6394105534831,
+    "favorable": 239.39205555602018
+  },
+  "equation": "V(R) = V0 - R/319.2; R desconocido en millones de USD; no se supone cero",
+  "remaining_material_gaps": [
+    "CFO, capex y D&A anuales y TTM del perímetro continuado final",
+    "Diferencia operativa de 57 millones entre versiones trimestrales y estado de nueve meses",
+    "R residual desconocido: pensiones, prestaciones corrientes, garantías y correcciones económicas del puente",
+    "Condiciones de realización y fiscalidad de QNT; WACC postseparación no calibrado"
+  ],
+  "independent_reproduction": "../HON_audit/revised_checks.py",
+  "original_audit": "../HON_audit/auditoria_independiente.md",
+  "distribution_note": "El informe público utiliza fuentes públicas. No distribuir archivos auxiliares de historial interno como fuentes públicas.",
+  "manifest_note": "Este certificado se añade después de congelar los archivos auditados y no modifica el manifiesto."
+}

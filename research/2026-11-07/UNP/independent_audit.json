@@ -1,0 +1,98 @@
+{
+  "ticker": "UNP",
+  "as_of": "2026-11-08",
+  "verdict": "mechanical_repairs_verified_partial_research_not_approved",
+  "stage3_complete": false,
+  "stage35_approved": false,
+  "arithmetic_reproduction": "56 independent checks pass. Standalone98.058436 /187.445446 /318.628167; NSC equity31293.473196. Conditional current-old-share outcomes170.696022 /156.217376 /172.724470.",
+  "reproducibility": {
+    "script": "independent_audit_checks.py",
+    "results": "independent_audit_checks.json",
+    "command": "python independent_audit_checks.py",
+    "author_numerical_model_changed": false
+  },
+  "verified": [
+    "UNP annual statements and annual-minus-prior-nine-months-plus-current-nine-months revenue, EBIT, net income, D&A, CFO and capex reconcile; four-quarter revenue and EBIT reconcile.",
+    "Normalized FCFF6634.4 differs appropriately from levered CFO-capex6694; SBC not added back, rental expenses not double deducted.",
+    "NSC annual and TTM operating data reconcile; incident CFO swings from227 inflow to345 outflow, a572 decline versus578 aggregate CFO decline.",
+    "NSC189 legal plus184 environmental reserves total373; liability insurance exhausted June2025; March285 settlement not deducted a second time.",
+    "UNP debt30324, market-debt weight22800, cash and short investments3086, diluted shares594.5; minimum cash1500 and TTX2000 are explicit provisional assumptions.",
+    "NSC debt16613 and cash1598 reconcile; Conrail534 is confirmed at September2026, not merely FY2025 proxy. Pension277 and OPEB125 remain FY2025 approximations.",
+    "225m new shares times88.82 equals19984.5 cash, combined819.5m shares. Cash purchase deducted once and target debt deducted only in target equity; incremental financing interest diagnostic, not double-subtracted from FCFF.",
+    "UNP Q3 filing expects second-half2027 closing; STB November4 procedural actions do not constitute approval or final findings of misconduct.",
+    "Independent live Stock Analysis retrieval confirms290.16 regular close November6 at16:00EST; after-hours294.37 is distinct. Independent live STB docket verifies November4 summaries."
+  ],
+  "issues": [
+    {
+      "severity": "medium",
+      "issue": "Financing and discount calibration remain provisional",
+      "required_correction": "Verify committed funding and its cost, recalibrate operating WACC and equity discount after close; do not treat current UNP Ke as validated combined-company cost of equity. Current mixed discount conventions can affect timing comparisons.",
+      "status": "partial-research blocker"
+    },
+    {
+      "severity": "medium",
+      "issue": "Settlement timing and expense overlap remain assumptions",
+      "required_correction": "Verify UNP environmental65/52.25 schedule and embedded FCFF expense overlap; NSC1309 claims are held unpaid to close without independently verified schedule. Avoid duplicating payments against final claims; reconcile pension/OPEB update and legacy incident expenses.",
+      "status": "explicit assumptions with environmental overlap and hypothetical tax bounds"
+    },
+    {
+      "severity": "medium",
+      "issue": "Terminal continuity repaired, economic sufficiency not proved",
+      "required_correction": "Validate actual maintenance capex, asset lives, inflation and terminal returns; floors prevent a mechanical drop but do not prove chosen capital ratios are adequate.",
+      "status": "partial-research blocker"
+    },
+    {
+      "severity": "medium",
+      "issue": "Other source/calibration gaps remain",
+      "required_correction": "Verify primary Treasury and observed marginal debt yield; final share awards, taxes, integration cost, remedies, unquantified contingencies and TTX asset valuation.",
+      "status": "partial-research blocker"
+    }
+  ],
+  "report_repairs": [
+    "Corrected Conrail date and source",
+    "Added UNP environmental liability and no-double-count sensitivity",
+    "Disclosed terminal capex reconciliation gaps",
+    "Explicitly labeled merger numbers arithmetic diagnostics, not current values or comparable payoffs",
+    "Corrected mixed discount-rate description",
+    "Removed internal workflow and local artifact references from public report"
+  ],
+  "external_reverification_sources": [
+    "https://stockanalysis.com/stocks/unp/history/"
+  ],
+  "limitations": [
+    "STB full November4 decision PDFs not independently read; official docket summaries used",
+    "Private numerical archives reviewed as supplied, not every archive redownloaded",
+    "No independent Treasury/bond yield verification or final funding evidence",
+    "Detailed requested specialist skill resources were inaccessible through skills read; existing artifact evidence and independent arithmetic used"
+  ],
+  "publication": "No remote writes or trades performed by auditor. Publication permission is not established by this audit.",
+  "model_revision": "dated_close_environment_physical_floor_v2",
+  "repaired_issues": [
+    {
+      "issue": "Merger timing and current shareholder entitlement not modeled",
+      "resolution": "Rebuild each outcome at its actual closing date. Roll forward each business cash/debt using retained cash after interest, taxes and distributions; use remaining post-close business value, transaction financing, and shares actually issued. Discount old-holder pre-close distributions separately from post-close ownership. Do not discount only purchase cash while preserving full standalone present values and immediately diluting all shares."
+    },
+    {
+      "issue": "UNP environmental reserve274, current65, omitted from explicit bridge reconciliation",
+      "resolution": "Map future legacy settlements against recurring expenses and working-capital forecasts, then deduct only present value not already in FCFF, including supportable tax effects. Full gross undiscounted deduction sensitivity is0.4609 per old share or0.33435 per combined share; it is not an automatic extra deduction."
+    },
+    {
+      "issue": "Terminal physical reinvestment discontinuities",
+      "resolution": "Demonstrate physical maintenance sufficiency or apply a cash reinvestment floor. UNP adverse implied capex falls16% to14.29% of revenue; a floor produces98.4235 rather than104.1177. UNP central14.64% versus14.5% and favorable15.00% versus14% need no additional floor at these assumptions. NSC falls17.5% to16.07%; floor reduces target equity1989.835 to31293.473, or2.4281 per combined diagnostic share."
+    },
+    {
+      "issue": "Incorrect stale Conrail designation and incorrect combined-WACC wording",
+      "resolution": "Conrail534 is current at September2026;8.5% discounts NSC and synergy overlay only, while UNP uses8.1137%."
+    }
+  ],
+  "reaudit": {
+    "frozen_author_manifest_checked": true,
+    "all_four_original_hashes_match": true,
+    "checks_passed": 56,
+    "dated_bridge": "Remaining EV excludes preclose operating flows. Cash rolls after interest, dividends and environmental settlement. UNP surplus alone funds purchase, new debt funds balance. Shares issued only at close; old-holder dividends discounted separately. Debt, cash and remaining claims are counted once.",
+    "environment": "274 gross schedule;217.0550859 PV; zero tax benefit baseline; overlap0/50/100% and hypothetical24% deductible sensitivity independently calculated. Standalone central187.445446 to187.810551 across overlap endpoints.",
+    "terminal": "Physical terminal capex floor verified: UNP16%,14.6447%,15.0010%; NSC17.5%.",
+    "author_numerical_model_changed_by_auditor": false,
+    "source_repairs": "Corrected archive filename spacing and obsolete funding-range description; current Conrail evidence preserved."
+  }
+}
