@@ -1,0 +1,103 @@
+{
+  "ticker": "AAGIY",
+  "status": "material_partial",
+  "fair_value": null,
+  "canonical_approved_value": null,
+  "margin_of_safety": null,
+  "entry_approved": false,
+  "currency": "USD",
+  "units": "USD millions except per-ADR and ratios",
+  "price": 40.39,
+  "price_date": "2026-11-06",
+  "shares_ordinary_millions": 10346.64487,
+  "share_basis": "issued at2026-10-31, not fully diluted",
+  "adr_ratio": 4,
+  "market_cap_derived_usdm": 104475.246574825,
+  "bridges": {
+    "ufsg": 3935,
+    "new_business_investment": -732,
+    "group_office": -163,
+    "finance_other": -282,
+    "net_fsg": 2758,
+    "opening_free_surplus": 10972,
+    "investment_other": 389,
+    "dividend": -1906,
+    "buybacks": -1743,
+    "closing_free_surplus": 10470,
+    "required_capital": 19630,
+    "eligible_tier2": 11172,
+    "capital_resources": 41272,
+    "shareholder_capital_ratio": 2.1024961793173715,
+    "IFRS_shareholders_equity": 40679,
+    "allocated_equity": 47686,
+    "EV": 80555,
+    "EV_equity": 83402,
+    "goodwill_other_net_in_EV_equity": 2847
+  },
+  "ttm_to_june2026": {
+    "OPAT": 7690,
+    "net_profit_attributable": 7994,
+    "UFSG": 7131,
+    "net_FSG": 4779,
+    "not_projection": true
+  },
+  "context_not_fair_value": {
+    "EV_equity_per_ADR": 32.243109161627196,
+    "price_to_EV_equity": 1.2526707581931489,
+    "price_to_allocated_equity": 2.1908997729905004,
+    "average_volume_20_rounded": 568502.0,
+    "volume_window": "2026-10-12 to2026-11-06",
+    "volume_threshold": 500000,
+    "volume_pass_from_rounded_data": true,
+    "normalised_distributable_cash": null
+  },
+  "valuation_architecture": {
+    "formula": "V0 = sum(distributions_t/(1+ke)^t) + terminal_value/(1+ke)^T",
+    "distributions": "Dividend + repurchase pool, net issuance, subject to legal capital and remittances; no automatic free-surplus addback",
+    "ke": null,
+    "terminal_growth": null,
+    "terminal_value": null,
+    "cash_bridge_status": "incomplete",
+    "residual_income_crosscheck": "Allocated equity only after IFRS reserve/OCI clean-surplus reconciliation; do not add EV/VIF/CSM to residual-income value."
+  },
+  "EV_sensitivities_issuer_not_price_targets": {
+    "base_EV": 80555,
+    "risk_discount_plus200bp": 68859,
+    "risk_discount_minus200bp": 98632,
+    "equity_prices_minus10pct": 77809,
+    "mortality_morbidity_plus10pct": 73699,
+    "USD_appreciates5pct": 79789
+  },
+  "checks": {
+    "net_fsg": true,
+    "free_surplus": true,
+    "resources": true,
+    "EV_bridge": true,
+    "EV_equity_bridge": true,
+    "no_industrial_FCFF": true,
+    "no_fabricated_quarterly_earnings": true,
+    "holding_company_resources": true,
+    "LCSM_surplus": true
+  },
+  "regulatory_LCSM": {
+    "eligible_group_capital": 85423,
+    "prescribed_capital_requirement": 37228,
+    "coverage_ratio": 2.2945900934780274,
+    "surplus": 48195,
+    "not_shareholder_capital_ratio": true
+  },
+  "holding_company_resources": {
+    "opening": 10507,
+    "subsidiary_capital_flows": 1708,
+    "corporate_activity": -82,
+    "intercompany_loan_settlements": 323,
+    "borrowings_change": -316,
+    "interest_payments": -285,
+    "investment_and_other": 29,
+    "dividends": -1906,
+    "buybacks": -1743,
+    "closing": 8235,
+    "not_unrestricted_cash": true,
+    "jurisdiction_remittance_schedule_complete": false
+  }
+}
