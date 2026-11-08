@@ -1,0 +1,17 @@
+{
+  "artifact": "deterministic support calculation",
+  "checks": {
+    "incremental_investment_ties": true,
+    "terminal_investment_ties": true,
+    "ttm_revenue_matches_quarters": true,
+    "ttm_cash_matches_quarters": true,
+    "wacc_above_terminal_growth": true,
+    "ordered_scenarios": true
+  },
+  "status": "screen-grade",
+  "hard_failures": [],
+  "decision_blockers": [
+    "Economic bridge not reconciled: operating cash reserve, full acquisition liabilities and redeemable NCI valuation.",
+    "ROIC reinvestment and segment forecasts are analyst assumptions, not company guidance."
+  ]
+}

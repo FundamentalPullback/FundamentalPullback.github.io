@@ -1,0 +1,71 @@
+{
+  "policy": "Conservadora: excluir TIH discontinuado neto de NCI, goodwill, pérdida excepcional de reposicionamiento de valores, beneficio fiscal discreto 2023 y efecto RAC 2026. Mantener SBC, amortización, reestructuración, donaciones, litigio y FDIC incluidos créditos. No equivale a beneficio ex todo extraordinario.",
+  "units": "USD millones",
+  "annual": {
+    "2023": {
+      "reported_common": -1452,
+      "discontinued_net_income": 456,
+      "discontinued_NCI": 44,
+      "preferred_already_deducted": 361,
+      "continuing_common": -1864,
+      "add_goodwill": 6078,
+      "add_securities_aftertax": 0,
+      "remove_discrete_tax_benefit": -204,
+      "normalized_continuing_common": 4010
+    },
+    "2024": {
+      "reported_common": 4469,
+      "discontinued_net_income": 4885,
+      "discontinued_NCI": 22,
+      "preferred_already_deducted": 349,
+      "continuing_common": -394,
+      "add_goodwill": 0,
+      "add_securities_aftertax": 5089,
+      "remove_discrete_tax_benefit": 0,
+      "normalized_continuing_common": 4695
+    },
+    "2025": {
+      "reported_common": 4974,
+      "discontinued_net_income": 0,
+      "discontinued_NCI": 0,
+      "preferred_already_deducted": 333,
+      "continuing_common": 4974,
+      "add_goodwill": 0,
+      "add_securities_aftertax": 15,
+      "remove_discrete_tax_benefit": 0,
+      "normalized_continuing_common": 4989
+    }
+  },
+  "paired_ttm": {
+    "2025-09-30": {
+      "reported_common": 4901,
+      "remove_discontinued_loss": 13,
+      "securities_net_tax": 14,
+      "normalized_continuing_common": 4928
+    },
+    "2026-09-30": {
+      "reported_common": 4869,
+      "securities_RAC_net": 739,
+      "normalized_continuing_common": 5608,
+      "components": {
+        "securities_loss_pretax": 1447,
+        "remove_RAC_reserve_release": -581,
+        "RAC_sale_costs": 106,
+        "tax_securities": -346,
+        "tax_reserve_release": 139,
+        "tax_sale_costs": -26
+      }
+    }
+  },
+  "source": "2025 10-K estados y 2024 10-K; 4Q24 release Selected Items p12; 3Q26 release reconciliación EPS",
+  "paired_ttm_growth": 0.13798701298701288,
+  "annual_normalized_revenue": {
+    "2023": 20022,
+    "2024": 19928,
+    "2025": 20338
+  },
+  "paired_ttm_normalized_revenue": {
+    "2025-09-30": 20152,
+    "2026-09-30": 20923
+  }
+}

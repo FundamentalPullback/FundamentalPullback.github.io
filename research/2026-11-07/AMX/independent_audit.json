@@ -1,0 +1,54 @@
+{
+  "ticker": "AMX",
+  "audit_date": "2026-11-08",
+  "opinion": "PASS_AS_PARTIAL_ONLY",
+  "checks": {
+    "initial_frozen_hashes_match": true,
+    "annual_2023_2025_source_amounts_match": true,
+    "four_quarters_sum_to_latest_ttm": true,
+    "paired_ttm_formula_checked": true,
+    "ttm_ebit_margin_21_426458_pct": true,
+    "management_fcf_addback_13013_identified": true,
+    "cash_74366_719_not_liquidity_83829": true,
+    "investing_inflow_37321_877_unresolved": true,
+    "tax_and_capex_definitions_separated": true,
+    "employee_benefit_liabilities_increase": true,
+    "desktop_price_and_escrow_verified_not_enterprise_value": true,
+    "no_fair_value_or_entry": true,
+    "ads_ratio_twenty_B_shares": true,
+    "regular_close_25_72_verified": true,
+    "ads_dates_secondary_not_depositary_certified": true,
+    "public_report_no_private_paths": true
+  },
+  "corrections": [
+    {
+      "item": "source-manifest provenance",
+      "detail": "Removed five Form 3 URLs incorrectly mapped to the March 18 6-K file; actual 6-K retained.",
+      "removed_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1129137/000114036126010293/xslF345X06/form3.xml",
+        "https://www.sec.gov/Archives/edgar/data/1129137/000114036126010288/xslF345X06/form3.xml",
+        "https://www.sec.gov/Archives/edgar/data/1129137/000114036126010286/xslF345X06/form3.xml",
+        "https://www.sec.gov/Archives/edgar/data/1129137/000114036126010283/xslF345X06/form3.xml",
+        "https://www.sec.gov/Archives/edgar/data/1129137/000114036126010280/xslF345X06/form3.xml"
+      ]
+    },
+    {
+      "item": "Price evidence",
+      "detail": "Archived independent ChartExchange regular-close evidence; removed unsupported second-level timestamp."
+    },
+    {
+      "item": "ADS dividend calendar",
+      "detail": "Added secondary-source ex/record November 10 and payment November 18; retained primary ordinary payment November 11 and depositary caveat."
+    }
+  ],
+  "remaining": [
+    "Classify other investing inflow 37321.877 and investible/excess cash.",
+    "Normalize taxes, spectrum, working capital, pension and lease economics.",
+    "Post-Desktop acquired debt/cash, financing and operating perimeter remain unknown, never zero.",
+    "Current minority economic values and liabilities remain unvalued.",
+    "Depositary confirmation of ADS dividend dates and net amount unavailable in reviewed primary material.",
+    "Full FCFF valuation, sensitivities, reverse valuation and entry approval not performed."
+  ],
+  "no_remote_writes": true,
+  "read_denials": []
+}

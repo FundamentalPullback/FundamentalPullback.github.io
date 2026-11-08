@@ -1,0 +1,174 @@
+{
+  "status": "conditional_not_approved",
+  "rates": {
+    "rf": 0.0484,
+    "rf_observation_date": "2026-11-05",
+    "rf_source": "Fed H15 release 2026-11-06",
+    "erp": 0.0441,
+    "erp_date": "2026-11-01",
+    "erp_source": "Damodaran adjusted payout TTM; source itself uses Treasury 5.29%, not same date as rf",
+    "debt_cost_assumption": 0.065,
+    "debt_cost_support": "Term Loan B contractual SOFR+225bp, issue price99.75; SOFR overnight not interchangeable with Term SOFR",
+    "target_debt_weight_assumption": 0.1,
+    "cases": {
+      "sector_relevered": {
+        "beta": 0.7691666666666666,
+        "wacc": 0.078963225,
+        "base_value": 83.97562750586226
+      },
+      "analyst_normalized_unvalidated": {
+        "beta": 1.25,
+        "wacc": 0.09804750000000001,
+        "base_value": 55.74526790748274
+      },
+      "observed_5y_monthly": {
+        "beta": 3.65,
+        "wacc": 0.1933035,
+        "base_value": 15.326271974777258
+      }
+    }
+  },
+  "tax_timing_only_same_schedule": {
+    "5": {
+      "PV_DTA": 2230.870804960406,
+      "PV_TRA": 1712.5101187819985,
+      "value": 61.55369743349279
+    },
+    "10": {
+      "PV_DTA": 1823.9908289704358,
+      "PV_TRA": 1400.1719616537252,
+      "value": 61.46981244717756
+    },
+    "15": {
+      "PV_DTA": 1516.0565588417467,
+      "PV_TRA": 1163.7886837236128,
+      "value": 61.406326742399685
+    }
+  },
+  "cycle_stress": {
+    "value": 7.46962159660045,
+    "rows": [
+      {
+        "year": 1,
+        "revenue": 23333.35,
+        "margin": -0.05,
+        "nopat": -1166.6675,
+        "capex_including_financed": 420.0002999999999,
+        "da": 233.3335,
+        "acquisitions": 46.6667,
+        "delta_working_capital": -658.8240000000003,
+        "fcff": -741.1769999999997,
+        "capital_end": 7433.5095
+      },
+      {
+        "year": 2,
+        "revenue": 22166.6825,
+        "margin": -0.02,
+        "nopat": -443.33365,
+        "capex_including_financed": 399.00028499999996,
+        "da": 221.666825,
+        "acquisitions": 44.333365,
+        "delta_working_capital": -186.66679999999994,
+        "fcff": -478.333675,
+        "capital_end": 7468.509525
+      },
+      {
+        "year": 3,
+        "revenue": 23275.016625,
+        "margin": 0.02,
+        "nopat": 349.125249375,
+        "capex_including_financed": 418.95029924999994,
+        "da": 232.75016625,
+        "acquisitions": 46.55003325,
+        "delta_working_capital": 177.3334600000002,
+        "fcff": -60.95837687500017,
+        "capital_end": 7878.593151250001
+      },
+      {
+        "year": 4,
+        "revenue": 25602.518287500003,
+        "margin": 0.05,
+        "nopat": 960.0944357812502,
+        "capex_including_financed": 460.845329175,
+        "da": 256.02518287500004,
+        "acquisitions": 51.20503657500001,
+        "delta_working_capital": 372.40026600000044,
+        "fcff": 331.66898690624976,
+        "capital_end": 8507.018600125002
+      },
+      {
+        "year": 5,
+        "revenue": 28162.770116250005,
+        "margin": 0.07,
+        "nopat": 1478.5454311031253,
+        "capex_including_financed": 506.92986209250006,
+        "da": 281.62770116250005,
+        "acquisitions": 56.32554023250001,
+        "delta_working_capital": 409.6402926000004,
+        "fcff": 787.2774373406248,
+        "capital_end": 9198.286593887502
+      },
+      {
+        "year": 6,
+        "revenue": 30415.791725550007,
+        "margin": 0.08,
+        "nopat": 1824.9475035330006,
+        "capex_including_financed": 547.4842510599001,
+        "da": 304.1579172555001,
+        "acquisitions": 60.831583451100016,
+        "delta_working_capital": 360.4834574880003,
+        "fcff": 1160.3061287895002,
+        "capital_end": 9862.927968631002
+      },
+      {
+        "year": 7,
+        "revenue": 32240.73922908301,
+        "margin": 0.08,
+        "nopat": 1934.4443537449806,
+        "capex_including_financed": 580.3333061234941,
+        "da": 322.4073922908301,
+        "acquisitions": 64.48147845816602,
+        "delta_working_capital": 291.9916005652805,
+        "fcff": 1320.04536088887,
+        "capital_end": 10477.326961487113
+      },
+      {
+        "year": 8,
+        "revenue": 33530.36879824633,
+        "margin": 0.08,
+        "nopat": 2011.82212789478,
+        "capex_including_financed": 603.546638368434,
+        "da": 335.3036879824633,
+        "acquisitions": 67.06073759649266,
+        "delta_working_capital": 206.34073106613127,
+        "fcff": 1470.1777088461854,
+        "capital_end": 11018.971380535708
+      },
+      {
+        "year": 9,
+        "revenue": 34536.27986219372,
+        "margin": 0.08,
+        "nopat": 2072.1767917316233,
+        "capex_including_financed": 621.6530375194869,
+        "da": 345.3627986219372,
+        "acquisitions": 69.07255972438743,
+        "delta_working_capital": 160.945770231582,
+        "fcff": 1565.868222878104,
+        "capital_end": 11525.279949389227
+      },
+      {
+        "year": 10,
+        "revenue": 35399.68685874856,
+        "margin": 0.08,
+        "nopat": 2123.9812115249138,
+        "capex_including_financed": 637.194363457474,
+        "da": 353.9968685874856,
+        "acquisitions": 70.79937371749712,
+        "delta_working_capital": 138.1451194487745,
+        "fcff": 1631.8392234886537,
+        "capital_end": 12017.421937425486
+      }
+    ],
+    "caveat": "Not worst case. Does not model loss of loan buyers, forced recapitalization, insolvency or liquidation. Negative free cash can require financing. Historical2022 exgoodwill operating margin was worse."
+  }
+}
