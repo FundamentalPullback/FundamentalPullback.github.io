@@ -1,0 +1,57 @@
+{
+  "ticker": "MCD",
+  "as_of": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "permitted_use": "Completed conditional fundamental research / observation only",
+  "publication_readiness": "Content ready with disclosed caveats; this audit does not authorize publication",
+  "entry_approved": false,
+  "trading_authorized": false,
+  "material_blockers_for_conditional_research": [],
+  "mechanics": "Independent audit_checks.py and original validate.py both passed; valuation assumptions unchanged",
+  "values": {
+    "adverso": 129.26,
+    "base": 235.45,
+    "favorable": 368.83
+  },
+  "price_verified": {
+    "close": 276.52,
+    "date": "2026-11-06",
+    "source": "https://stockanalysis.com/stocks/mcd/history/"
+  },
+  "inverse_sss": 0.046316326168503896,
+  "source_tieout": [
+    "2025 10-K: three-year statements, gains and affiliates, software policy, supplemental plan assets and liabilities",
+    "2026 Q1/Q2/Q3 and 2025 Q3 filings: quarterly/nine-month data and TTM bridge",
+    "2026 Q3 10-Q: NEXT totals, 2028 unit target, current balance, dilution and guidance",
+    "Independent market snapshot saved to dated market source verification: close, beta, Treasury and November ERP"
+  ],
+  "resolved_findings": [
+    {
+      "type": "Source contradiction",
+      "severity": "low",
+      "finding": "Report described source differences as rounding of $1-3m; actual sum of Q1-Q3 CFO and capex each falls $4m below nine-month figures.",
+      "fix": "Preserved reported quarterly and cumulative figures, explained exact discrepancy and cumulative TTM method; FCF unchanged."
+    },
+    {
+      "type": "Unsupported assumption",
+      "severity": "medium",
+      "finding": "Software proxy stress could be read as bounding permanent investment risk although its effect fades with fixed terminal ROIC.",
+      "fix": "Clarified that total reinvestment converges to ROIC and residual physical capex offsets software by year 10; permanent incremental costs require lower ROIC or more total reinvestment."
+    },
+    {
+      "type": "Formula/control defect",
+      "severity": "low",
+      "finding": "Validation did not test terminal continuity, standalone PV/bridge, source figures or five-year transition mechanics independently.",
+      "fix": "Added audit_checks.py and persisted check results; no valuation changes."
+    }
+  ],
+  "remaining_limits": [
+    "Peer multiples are provisional and not normalized from peer filings. They cannot support relative investment approval.",
+    "NEXT annual rent/capital allocation, pre-relief margins, marginal terminal ROIC and 1% incremental NWC remain analyst assumptions, not company guidance. Support reduction contributes to 13.4% FCFF jump in 2031.",
+    "4.86% Treasury, 4.41% ERP and 0.43 beta are independently verified; +100bp debt spread and +50bp execution premium are analyst judgments, not observed funding quotes. Lower WACC can eliminate apparent downside. ERP snapshot uses its own November reference Treasury and is not a synchronized intraday ERP estimate.",
+    "Software investment, current pension exposure, affiliate value, current option value and 54-day seasonal stub remain proxies. Individual sensitivity tests are not a bound on joint risks.",
+    "No technical Stage 3.5, position sizing, stop, portfolio capital, verified next earnings date or entry authorization."
+  ],
+  "next_action": "Retain observation posture. Normalize peers and refresh operating, capital-cost and technical evidence before any entry decision.",
+  "public_package_note": "Public-safe audit excerpt. Source verification is prior audit evidence; public checks reproduce numerical mechanics only. Original private source archives and internal coverage checks are not included."
+}

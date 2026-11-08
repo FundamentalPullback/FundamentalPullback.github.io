@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "results_equal_original_audited_results": true,
+  "dependencies": "Python 3 standard library only",
+  "scope": "Numerical checks only; no live market or source-document re-verification",
+  "checks": [
+    {
+      "command": "python validate.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"checks\": {\n    \"quarter_sum_sales\": true,\n    \"quarter_sum_ebit\": true,\n    \"quarter_sum_net\": true,\n    \"quarter_sum_da\": true,\n    \"quarter_sum_cfo\": true,\n    \"quarter_sum_capex\": true,\n    \"quarter_sum_sbc\": true,\n    \"quarter_sum_interest\": true,\n    \"quarter_sum_fcf\": true,\n    \"adverso_ten_years\": true,\n    \"adverso_fcff\": true,\n    \"adverso_terminal_physical\": true,\n    \"adverso_bridge\": true,\n    \"adverso_wacc_gt_g\": true,\n    \"adverso_positive_capex\": true,\n    \"central_ten_years\": true,\n    \"central_fcff\": true,\n    \"central_terminal_physical\": true,\n    \"central_bridge\": true,\n    \"central_wacc_gt_g\": true,\n    \"central_positive_capex\": true,\n    \"favorable_ten_years\": true,\n    \"favorable_fcff\": true,\n    \"favorable_terminal_physical\": true,\n    \"favorable_bridge\": true,\n    \"favorable_wacc_gt_g\": true,\n    \"favorable_positive_capex\": true,\n    \"scenario_order\": true,\n    \"price_distinct_from_scanner\": true,\n    \"debt_includes_finance_leases_once\": true,\n    \"normalized_refund_once\": true,\n    \"prior_ttm_week_difference_disclosed\": true,\n    \"cash_refund_inventory_timing\": true,\n    \"erp_snapshot_date\": true,\n    \"adverso_terminal_reinvestment\": true,\n    \"adverso_pv_ev\": true,\n    \"central_terminal_reinvestment\": true,\n    \"central_pv_ev\": true,\n    \"favorable_terminal_reinvestment\": true,\n    \"favorable_pv_ev\": true\n  },\n  \"external_audit\": \"completed: see audit.json; mechanical checks do not certify assumptions\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

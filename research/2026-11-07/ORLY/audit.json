@@ -1,0 +1,147 @@
+{
+  "ticker": "ORLY",
+  "asof": "2026-11-07",
+  "verdict": "pass_for_conditional_standalone_research",
+  "completed_conditional_justified": true,
+  "material_gaps": [],
+  "entry_approved": false,
+  "publication_performed": false,
+  "publication_ready": true,
+  "checks": [
+    {
+      "check": "source_actuals_fy25",
+      "result": "pass",
+      "detail": "Model actuals occur in archived SEC financial tables; amounts USD thousands converted to millions."
+    },
+    {
+      "check": "source_actuals_q1",
+      "result": "pass",
+      "detail": "Model actuals occur in archived SEC financial tables; amounts USD thousands converted to millions."
+    },
+    {
+      "check": "source_actuals_q2",
+      "result": "pass",
+      "detail": "Model actuals occur in archived SEC financial tables; amounts USD thousands converted to millions."
+    },
+    {
+      "check": "source_actuals_q3",
+      "result": "pass",
+      "detail": "Model actuals occur in archived SEC financial tables; amounts USD thousands converted to millions."
+    },
+    {
+      "check": "TTM_sales",
+      "result": "pass",
+      "detail": "Quarterly sum equals FY + current YTD - prior YTD."
+    },
+    {
+      "check": "TTM_ebit",
+      "result": "pass",
+      "detail": "Quarterly sum equals FY + current YTD - prior YTD."
+    },
+    {
+      "check": "TTM_ni",
+      "result": "pass",
+      "detail": "Quarterly sum equals FY + current YTD - prior YTD."
+    },
+    {
+      "check": "TTM_cfo",
+      "result": "pass",
+      "detail": "Quarterly sum equals FY + current YTD - prior YTD."
+    },
+    {
+      "check": "TTM_da",
+      "result": "pass",
+      "detail": "Quarterly sum equals FY + current YTD - prior YTD."
+    },
+    {
+      "check": "TTM_capex",
+      "result": "pass",
+      "detail": "Quarterly sum equals FY + current YTD - prior YTD."
+    },
+    {
+      "check": "TTM_sbc",
+      "result": "pass",
+      "detail": "Quarterly sum equals FY + current YTD - prior YTD."
+    },
+    {
+      "check": "TTM_interest",
+      "result": "pass",
+      "detail": "Quarterly sum equals FY + current YTD - prior YTD."
+    },
+    {
+      "check": "price_and_split",
+      "result": "pass",
+      "detail": "SEC retrospective split; ChartExchange daily table and Finviz independently confirm 89.89 regular close, distinct from scanner 89.85."
+    },
+    {
+      "check": "historical_closes",
+      "result": "pass",
+      "detail": "All five historical closes tie to archived Yahoo OHLC. Uses next session after results, not pre-release calendar-year prices."
+    },
+    {
+      "check": "scenario_values",
+      "result": "pass",
+      "detail": "Independent rerun reproduces all values."
+    },
+    {
+      "check": "inverse",
+      "result": "pass",
+      "detail": "11.612373868% five-year revenue growth reproduces price with stated unchanged assumptions."
+    },
+    {
+      "check": "terminal_physical_components",
+      "result": "pass",
+      "detail": "Explicit year11 component reconciliation; capex above D&A in all years/scenarios. Accounting coherence does not independently prove economic maintenance needs."
+    },
+    {
+      "check": "forecast_export",
+      "result": "pass",
+      "detail": "30 exported forecast rows reconcile to model."
+    },
+    {
+      "check": "equity_bridge",
+      "result": "pass",
+      "detail": "804.607512 basic - rounded 3.0 postperiod repurchase + 3.350 option dilution; 7750 principal + conservative 262.8 debt-funded repurchase. No double-counted October refinancing."
+    },
+    {
+      "check": "tariff_normalization",
+      "result": "pass",
+      "detail": "SEC Q3 explicitly describes $39m tariff refunds; removed once from recurring EBIT."
+    },
+    {
+      "check": "supplier_finance",
+      "result": "pass",
+      "detail": "SEC reports $5.1bn within accounts payable. Operating treatment plus separately disclosed 20% unwind stress; not deducted as duplicate financial debt."
+    },
+    {
+      "check": "capm",
+      "result": "pass",
+      "detail": "RBC Nov6 report snapshot 4.86%; Damodaran Nov1 ERP4.41%; Finviz beta0.54 verified, chosen0.75 explicitly judgment; SEC issuance effective yield5.581% proxy; tax22.7% judgment near 9M22.8%."
+    },
+    {
+      "check": "full_capex_sbc_tax",
+      "result": "pass",
+      "detail": "All disclosed PPE purchases retained; recurring SBC remains in EBIT, not added back in FCFF; historical cash after SBC distinct. Cash tax timing $258.049m downside illustration is not mechanically embedded as permanent recurring cash."
+    }
+  ],
+  "fixes": [
+    "Disambiguated supplier finance accounts payable from commercial paper.",
+    "Labeled Treasury as dated report snapshot, not verified closing yield.",
+    "Labeled normalized tax22.7% as assumption near reported9M22.8%.",
+    "Added year11 physical components and assertions to model.",
+    "Added unconfirmed NAPA acquisition-interest risk, standalone boundary and official-news recheck trigger.",
+    "Updated report generator/status so regeneration preserves audit disposition."
+  ],
+  "limits": [
+    "No technical entry gate or Stage3.5 approval.",
+    "NAPA interest is press-reported, not signed deal; no invented acquisition debt/synergies. Official transaction developments require new underwriting.",
+    "Debt yield, beta, postbalance debt/cash and subsequent shares remain disclosed bounded proxies.",
+    "Terminal ROIC and maintenance intensity remain economic assumptions despite formula tie-out.",
+    "No publication/trading executed."
+  ],
+  "source_verification": {
+    "sec": "Archived FY2025/Q1/Q2/Q3 plus live Q3 re-opened",
+    "market": "Live ChartExchange, Finviz, RBC and Damodaran; archived Yahoo history"
+  },
+  "public_package_note": "Public-safe audit excerpt. Source verification is prior audit evidence; public checks reproduce numerical mechanics only. Original private source archives and internal coverage checks are not included."
+}

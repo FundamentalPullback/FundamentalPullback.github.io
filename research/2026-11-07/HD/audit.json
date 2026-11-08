@@ -1,0 +1,115 @@
+{
+  "ticker": "HD",
+  "asof": "2026-11-07",
+  "verdict": "Ready with caveats",
+  "permitted_use": "Completed conditional fundamental research review and observation only; no entry approval, publication or trading.",
+  "completed_conditional_review_justified": true,
+  "material_data_blockers": [],
+  "mechanical_checks_passed": true,
+  "independent_inverse_tests_passed": true,
+  "issues": [
+    {
+      "id": "HD-A01",
+      "severity": "medium",
+      "type": "Not comparable without bridge",
+      "finding": "Prior TTM is 53 weeks against 52 current and different acquisition perimeter; recurring EBIT -5.85% was mislabeled comparable.",
+      "fix": "Labeled reported-period comparison; added equal-26-week H1 normalized EBIT -4.73%, still not organic.",
+      "status": "remediated_disclosure",
+      "source": "Q2 FY2026 filing"
+    },
+    {
+      "id": "HD-A02",
+      "severity": "medium",
+      "type": "Source contradiction",
+      "finding": "Source ledger reported November ERP but noted canonical September snapshot; report did not disclose conflict.",
+      "fix": "Independently read November 1 4.41% at exact query-bearing NYU URL and archived; disclosed stale canonical snapshot and mixed monthly ERP/daily Treasury dates.",
+      "status": "resolved_with_date_caveat",
+      "source": "dated CAPM source verification"
+    },
+    {
+      "id": "HD-A03",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "finding": "CFO proxy subtracts EBIT refund 685 but cash received 730; 45 inventory timing not separately shown.",
+      "fix": "Retained earnings-normalized proxy 15742.63 and added inventory cash timing -45 to 15697.63; actual tax timing remains unavailable.",
+      "status": "remediated",
+      "source": "Q2 FY2026 filing"
+    },
+    {
+      "id": "HD-A04",
+      "severity": "low",
+      "type": "Formula/control defect",
+      "finding": "Report claimed sensitivity mesh in CSV, but CSVs contain only forecasts/history.",
+      "fix": "Corrected location to results.json.",
+      "status": "remediated"
+    },
+    {
+      "id": "HD-A05",
+      "severity": "medium",
+      "type": "Unsupported assumption",
+      "finding": "Forward D&A replacement, incremental ROIC, working-capital intensity and debt spread are analyst assumptions, not externally verified forecasts.",
+      "fix": "Retained transparent assumptions and sensitivities; no investment-entry readiness implied.",
+      "status": "accepted_bounded_caveat"
+    }
+  ],
+  "source_tieout": [
+    {
+      "area": "3 annual years",
+      "source": "FY2025 annual report",
+      "result": "Sales, EBIT, earnings, CFO, capex, SBC and total D&A tie; FY2024 53-week caveat retained."
+    },
+    {
+      "area": "4 quarters / TTM",
+      "source": "Q3 FY2025 results; Q4 FY2025 results; Q1 FY2026 results; Q2 FY2026 filing",
+      "result": "Quarter summation and FY2025 + H1 2026 - H1 2025 identities pass for all nine historical metrics. Current TTM sales 169176, EBIT 21022, cash FCF 15099."
+    },
+    {
+      "area": "Tariff adjustment",
+      "source": "Q2 FY2026 filing",
+      "result": "685 earnings benefit excluded once; 730 cash receipts and 45 inventory effect now distinct. No unsupported removal of actual cost pressures."
+    },
+    {
+      "area": "Acquisitions",
+      "source": "FY2025 annual report; Q2 FY2026 filing",
+      "result": "SRS 18028; GMS 5081 plus separately assumed/repaid 354; Mingledorff about 1100 closed. Existing debt reflects historical financing. TTM is not pro forma; +2% sales sensitivity bounds omitted maturity, not a factual run rate."
+    },
+    {
+      "area": "Equity bridge",
+      "source": "Q2 FY2026 filing balance sheet, lease, supplier finance and EPS notes; annual employee plans",
+      "result": "Debt 52896 includes finance leases 3094 once. Operating leases 9671 remain operating cost. Supplier finance 542 remains WC. Cash 2085 with 2000 operating reserve. No identified material minority or separately disclosed defined-benefit deficit; zero is evidence-limited, not certification of all contingent claims."
+    },
+    {
+      "area": "Reinvestment / SBC",
+      "source": "model.py dcf; FY2025 annual report",
+      "result": "Economic capex exceeds cash history; software amortization 3-7 years. SBC stays economic expense and is not added to forward FCFF. Generic total-D&A replacement is conservative proxy, not asset-by-asset engineering proof."
+    },
+    {
+      "area": "FCFF / terminal / inverse",
+      "source": "model.py; validate.py; forecasts",
+      "result": "Ten years = five explicit plus five fade. FCFF, terminal physical capex, terminal g/ROIC, PV, equity bridge and both inverse equations independently reproduce."
+    },
+    {
+      "area": "Price / event / CAPM",
+      "source": "dated market source verification; dated CAPM source verification; dated Treasury source verification",
+      "result": "343.47 regular close November 6 confirmed; Nov17 09:00 ET official event remains future. Treasury 10Y 4.86%, November ERP4.41%, beta0.95 verified with stated as-of caveats; debt spread90bp assumed."
+    }
+  ],
+  "scenario_values": {
+    "adverso": 127.8517001936581,
+    "central": 211.78193498750557,
+    "favorable": 341.5072143413338
+  },
+  "reference_price": 343.47,
+  "decision": "observacion_sin_aprobacion",
+  "event": "2026-11-17 09:00 ET; not anticipated as actual results",
+  "residual_limits": [
+    "Not acquisition-neutral or week-neutral TTM growth.",
+    "Incremental ROIC/capex adequacy, operating cash, debt spread and partial acquisition maturity are bounded assumptions.",
+    "Refund tax cash timing not separately disclosed.",
+    "Monthly ERP and daily Treasury are different as-of dates; historical beta is an estimate.",
+    "No complete peer panel or historical valuation-multiple percentile claimed."
+  ],
+  "publication_performed": false,
+  "trade_authorized": false,
+  "public_package_note": "Public-safe audit excerpt. Source verification is prior audit evidence; public checks reproduce numerical mechanics only. Original private source archives and internal coverage checks are not included."
+}

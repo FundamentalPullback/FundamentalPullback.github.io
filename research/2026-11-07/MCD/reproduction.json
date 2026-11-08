@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "results_equal_original_audited_results": true,
+  "dependencies": "Python 3 standard library only",
+  "scope": "Numerical checks only; no live market or source-document re-verification",
+  "checks": [
+    {
+      "command": "python validate.py",
+      "exit_code": 0,
+      "stdout": "PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": "python audit_checks.py",
+      "exit_code": 0,
+      "stdout": "PASS 4 independent audit check groups\n",
+      "stderr": ""
+    }
+  ]
+}
