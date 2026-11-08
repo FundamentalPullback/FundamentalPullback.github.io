@@ -1,0 +1,31 @@
+# Public source ledger
+
+- submissions: https://data.sec.gov/submissions/CIK0000936395.json
+- companyfacts: https://data.sec.gov/api/xbrl/companyfacts/CIK0000936395.json
+- releaseq326: https://www.sec.gov/Archives/edgar/data/936395/000162828026060245/ex9912026q3earningspressre.htm
+- slidesq326: https://www.sec.gov/Archives/edgar/data/936395/000162828026060245/ex9922026q3earningsprese.htm
+- investor_home: https://investor.ciena.com/overview/default.aspx
+- financial_results: https://investor.ciena.com/financials/quarterly-results/
+- price: https://stockanalysis.com/stocks/cien/history/
+- statistics: https://stockanalysis.com/stocks/cien/statistics/
+- q326_transcript: https://s25.q4cdn.com/550667411/files/doc_financials/2026/q3/Ciena-Fiscal-Q3-2026-Financial-Results-Call_Transcript.pdf
+- 10-Q_2026-09-03: https://www.sec.gov/Archives/edgar/data/936395/000162828026060361/cien-20260801.htm
+- 10-Q_2026-06-04: https://www.sec.gov/Archives/edgar/data/936395/000162828026040767/cien-20260502.htm
+- 10-Q_2026-03-05: https://www.sec.gov/Archives/edgar/data/936395/000162828026015152/cien-20260131.htm
+- 10-K_2025-12-12: https://www.sec.gov/Archives/edgar/data/936395/000162828025056698/cien-20251101.htm
+- 10-Q_2025-09-04: https://www.sec.gov/Archives/edgar/data/936395/000093639525000041/cien-20250802.htm
+- 10-Q_2025-06-05: https://www.sec.gov/Archives/edgar/data/936395/000093639525000025/cien-20250503.htm
+- 10-Q_2025-03-12: https://www.sec.gov/Archives/edgar/data/936395/000093639525000011/cien-20250201.htm
+- 10-K_2024-12-20: https://www.sec.gov/Archives/edgar/data/936395/000093639524000044/cien-20241102.htm
+- 10-Q_2024-09-04: https://www.sec.gov/Archives/edgar/data/936395/000093639524000032/cien-20240727.htm
+- 10-Q_2024-06-06: https://www.sec.gov/Archives/edgar/data/936395/000093639524000025/cien-20240427.htm
+- 10-Q_2024-03-07: https://www.sec.gov/Archives/edgar/data/936395/000093639524000008/cien-20240127.htm
+- 10-K_2023-12-15: https://www.sec.gov/Archives/edgar/data/936395/000093639523000044/cien-20231028.htm
+- events: https://investor.ciena.com/events-and-presentations/default.aspx
+- targets2029: https://investor.ciena.com/news/news-details/2026/Ciena-Announces-Fiscal-Year-2029-Financial-Targets/default.aspx
+- convert_8k: https://www.sec.gov/Archives/edgar/data/936395/000119312526267607/d118604d8k.htm
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
+- credit_bb_yield: https://fred.stlouisfed.org/series/BAMLH0A1HYBBEY
+- hedge_contract: https://www.sec.gov/Archives/edgar/data/936395/000119312526267607/d118604dex101.htm
+- warrant_contract: https://www.sec.gov/Archives/edgar/data/936395/000119312526267607/d118604dex102.htm
