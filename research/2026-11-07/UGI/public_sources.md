@@ -1,0 +1,44 @@
+# Fuentes públicas UGI
+
+- august_presentation: https://www.ugicorp.com/static-files/56d57d85-929d-4d23-b14d-1df17ad5b30c
+- utility_filings: https://ugi.gcs-web.com/investors/financial-reports/ugi-utilities/
+- amerigas_filings: https://www.ugicorp.com/investors/financial-reports/amerigas
+- rate_filing: https://www.ugi.com/rate-filing/
+- rate_approval_republication: https://www.publicnow.com/view/6314CF7C2141287C141CDFAF4F5EDC921C7B98D7
+- dividends: https://www.ugicorp.com/investors/investor-resources/dividends
+- submissions: https://data.sec.gov/submissions/CIK0000884614.json
+- release: https://www.ugicorp.com/news-releases/news-release-details/ugi-reports-third-quarter-results-3
+- calendar: https://ugi.gcs-web.com/news/corporate-news
+- statistics: https://stockanalysis.com/stocks/ugi/statistics/
+- daily_history: https://query1.finance.yahoo.com/v8/finance/chart/UGI?range=1y&interval=1d
+- peer_spire: https://stockanalysis.com/stocks/sr/statistics/
+- peer_sph: https://stockanalysis.com/stocks/sph/statistics/
+- 2026-11-02_8-K: https://www.sec.gov/Archives/edgar/data/884614/000110465926121354/ugi-20261028x8k.htm
+- 2026-10-22_8-K: https://www.sec.gov/Archives/edgar/data/884614/000110465926118169/ugi-20261016x8k.htm
+- 2026-10-02_8-K: https://www.sec.gov/Archives/edgar/data/884614/000110465926113317/ugi-20260928x8k.htm
+- 2026-08-17_8-K: https://www.sec.gov/Archives/edgar/data/884614/000110465926097884/ugi-20260811x8k.htm
+- 2026-08-10_8-K: https://www.sec.gov/Archives/edgar/data/884614/000110465926093478/ugi-20260804x8k.htm
+- 2026-08-06_10-Q: https://www.sec.gov/Archives/edgar/data/884614/000088461426000052/ugi-20260630.htm
+- 2026-08-06_8-K: https://www.sec.gov/Archives/edgar/data/884614/000088461426000048/ugi-20260805.htm
+- 2026-07-07_8-K: https://www.sec.gov/Archives/edgar/data/884614/000110465926081321/ugi-20260630x8k.htm
+- 2026-05-07_10-Q: https://www.sec.gov/Archives/edgar/data/884614/000088461426000022/ugi-20260331.htm
+- 2026-02-05_10-Q: https://www.sec.gov/Archives/edgar/data/884614/000088461426000011/ugi-20251231.htm
+- 2025-11-21_10-K: https://www.sec.gov/Archives/edgar/data/884614/000088461425000053/ugi-20250930.htm
+- 2025-08-07_10-Q: https://www.sec.gov/Archives/edgar/data/884614/000088461425000045/ugi-20250630.htm
+- 2025-05-08_10-Q: https://www.sec.gov/Archives/edgar/data/884614/000088461425000017/ugi-20250331.htm
+- 2025-02-06_10-Q: https://www.sec.gov/Archives/edgar/data/884614/000088461425000008/ugi-20241231.htm
+- 2024-11-26_10-K: https://www.sec.gov/Archives/edgar/data/884614/000088461424000086/ugi-20240930.htm
+- 2024-08-08_10-Q: https://www.sec.gov/Archives/edgar/data/884614/000088461424000072/ugi-20240630.htm
+- 2024-05-02_10-Q: https://www.sec.gov/Archives/edgar/data/884614/000088461424000055/ugi-20240331.htm
+- 2024-02-01_10-Q: https://www.sec.gov/Archives/edgar/data/884614/000088461424000038/ugi-20231231.htm
+- 2023-11-29_10-K: https://www.sec.gov/Archives/edgar/data/884614/000088461423000104/ugi-20230930.htm
+- events: https://www.ugicorp.com/investors/financial-reports/events-and-presentations
+- event_notice: https://www.ugicorp.com/news-releases/news-release-details/ugi-corporation-hold-fiscal-2026-earnings-conference-call
+- electric_sale: https://www.ugicorp.com/news-releases/news-release-details/ugi-utilities-and-argo-infrastructure-partners-reach-agreement
+- utility_q3: https://www.ugicorp.com/static-files/856328d1-1534-419b-accf-eebdc4bd1fd8
+- utility_annual: https://www.ugicorp.com/static-files/97e640c1-4d75-45f5-b1a9-65cbee300d94
+- amerigas_q3: https://www.ugicorp.com/static-files/7f8ebe90-e5c0-4da2-8ece-77811528d621
+- treasury: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve
+- damodaran_nov: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm
+
+La orden regulatoria final no fue obtenida. Los enlaces no sustituyen el texto primario ausente.
