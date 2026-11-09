@@ -976,7 +976,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         protTitle: "Protecciones", sl: "Stop loss", slSub: "{p} por debajo del precio actual", slNone: "sin stop registrado", stop: "Stop loss S (manual: si el precio lo toca, queda una venta pendiente de ejecutar a mano)", trail: "Stop por cierre (trailing: solo cuenta el cierre)", m: "Mínimo M (referencia de la regla de salida)", toStop: "{p} por debajo del precio", below: "¡el precio ya está por debajo!", next: "Próximo evento",
         valTitle: "Última valoración", valOf: "Valoración del {d}", noVal: "No hay una valoración completa (valor estimado y escenarios) registrada en el historial para esta empresa.", openRec: "Ver ficha", reports: "Informes sobre {t} →", allPos: "Ver todas las posiciones →",
         none: "No hay posiciones abiertas." },
-      live: { title: "Últimos precios disponibles", sub: "Movimiento frente al cierre anterior de la fuente. Se conservan también después del cierre; no son precios en tiempo real.", value: "Valor ahora", day: "Desde cierre anterior", spy: "SPY vs cierre anterior", vsSpy: "Cuenta vs SPY", upd: "Hoja recalculada: {t} (hora de Nueva York)", stale: "La hora de recálculo de la hoja tiene más de 30 minutos; frescura de cotización no verificada.", closed: "Mercado cerrado. Los números en vivo aparecen de 9:30 a 16:00 (Nueva York), de lunes a viernes.", pre: "Antes de la apertura: aún no hay movimiento de hoy.", tradesNote: "Usa las posiciones del último cierre: una compra o venta de hoy aparece tras la actualización diaria.", byPos: "Por posición, frente al cierre anterior", headline: "Al cierre del {d}", lastSession: "Última sesión" },
+      live: { title: "Últimos precios disponibles", sub: "Movimiento frente al cierre anterior de la fuente. Se conservan también después del cierre; no son precios en tiempo real.", value: "Valor ahora", day: "Desde cierre anterior", spy: "SPY vs cierre anterior", vsSpy: "Cuenta vs SPY", upd: "Hoja recalculada: {t} (hora de Nueva York)", stale: "La hora de recálculo de la hoja tiene más de 30 minutos; frescura de cotización no verificada.", closed: "Mercado cerrado. Los números en vivo aparecen de 9:30 a 16:00 (Nueva York), de lunes a viernes.", pre: "Antes de la apertura: aún no hay movimiento de hoy.", tradesNote: "Usa las posiciones y operaciones publicadas. La variación de la cuenta incluye las ejecuciones de la sesión y las comisiones registradas.", byPos: "Por posición, frente al cierre anterior", headline: "Al cierre del {d}", lastSession: "Última sesión" },
       cart: {
         title: "Cartera", lede: "Valor de la cuenta con precios de GOOGLEFINANCE (pueden ir con unos 20 minutos de retraso). Coste medio; incluye las comisiones registradas, sin dividendos.", feesLbl: "comisiones",
         capital: "Capital inicial", capNote: "se cambia en la pestaña Cuenta de la hoja",
@@ -1119,7 +1119,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         protTitle: "Protections", sl: "Stop loss", slSub: "{p} below the current price", slNone: "no stop recorded", stop: "Stop loss S (manual: if the price touches it, a sale is pending to execute by hand)", trail: "Closing stop (trailing: only the close counts)", m: "Low M (reference for the exit rule)", toStop: "{p} below the price", below: "price is already below it!", next: "Next event",
         valTitle: "Latest valuation", valOf: "Valuation of {d}", noVal: "No full valuation (estimated value and scenarios) is recorded in the history for this company.", openRec: "Open record", reports: "Reports on {t} →", allPos: "See all positions →",
         none: "No open positions." },
-      live: { title: "Latest available prices", sub: "Move versus the feed’s previous close. Retained after market hours; not real-time quotes.", value: "Value now", day: "Since previous close", spy: "SPY vs previous close", vsSpy: "Account vs SPY", upd: "Sheet recalculated: {t} (New York time)", stale: "Sheet recalculation is over 30 minutes old; quote freshness is unverified.", closed: "Market closed. Live numbers show from 9:30 to 16:00 (New York), Monday to Friday.", pre: "Before the open: no move for today yet.", tradesNote: "Uses the positions as of the last close: a buy or sale made today shows after the daily update.", byPos: "By position, versus previous close", headline: "As of the close on {d}", lastSession: "Last session" },
+      live: { title: "Latest available prices", sub: "Move versus the feed’s previous close. Retained after market hours; not real-time quotes.", value: "Value now", day: "Since previous close", spy: "SPY vs previous close", vsSpy: "Account vs SPY", upd: "Sheet recalculated: {t} (New York time)", stale: "Sheet recalculation is over 30 minutes old; quote freshness is unverified.", closed: "Market closed. Live numbers show from 9:30 to 16:00 (New York), Monday to Friday.", pre: "Before the open: no move for today yet.", tradesNote: "Uses published holdings and trades. Account movement includes session fills and recorded fees.", byPos: "By position, versus previous close", headline: "As of the close on {d}", lastSession: "Last session" },
       cart: {
         title: "Portfolio", lede: "Account value using GOOGLEFINANCE prices (may lag by about 20 minutes). Average-cost basis; includes recorded fees, excludes dividends.", feesLbl: "fees",
         capital: "Starting capital", capNote: "change it in the sheet's Cuenta tab",
@@ -1884,8 +1884,23 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   function estimatedAccounting() { return (S.ops || []).some(function(r) { return /estimad|estimated/i.test(String(r.notes || "")) && r.fee !== null; }); }
   function incompleteAccountingNotice() {
     var date = unpublishedFeeDate();
-    if (!date) return estimatedAccounting() ? notice(lang === "en" ? "Provisional PAPER accounting" : "Contabilidad PAPER provisional", lang === "en" ? "Account value, cash, realized results and history are reconstructed from recorded PAPER trades and estimated fees (including HRB $0.04 and CTSH $0.00). They are provisional, not a verified broker balance. Price dates and sources are shown separately; refreshing quotes does not refresh transactions or historical closes." : "El valor, efectivo, resultados realizados e histórico se reconstruyen con operaciones PAPER registradas y comisiones estimadas (incluidas HRB 0,04 USD y CTSH 0,00 USD). Son provisionales, no un saldo verificado del bróker. Fechas y fuentes de precios se indican por separado; actualizar cotizaciones no actualiza operaciones ni cierres históricos.") : "";
+    if (!date) return estimatedAccounting() ? notice(lang === "en" ? "Provisional PAPER accounting" : "Contabilidad PAPER provisional", lang === "en" ? "Account value, cash, realized results and history are reconstructed from recorded PAPER trades and estimated fees (including the November 9 ANF $0.11 and HRB $0.05 sale fees). They are provisional, not a verified broker balance. Price dates and sources are shown separately; refreshing quotes does not refresh transactions or historical closes." : "El valor, efectivo, resultados realizados e histórico se reconstruyen con operaciones PAPER registradas y comisiones estimadas (incluidas las comisiones de las ventas del 9 noviembre: ANF 0,11 USD y HRB 0,05 USD). Son provisionales, no un saldo verificado del bróker. Fechas y fuentes de precios se indican por separado; actualizar cotizaciones no actualiza operaciones ni cierres históricos.") : "";
     return notice(lang === "en" ? "Incomplete public accounting" : "Contabilidad pública incompleta", lang === "en" ? "Fee not published. Affected net results, cash and account totals are unavailable; no broker balance is inferred. Historical calculations cover only dates before " + fmtD(date) + "." : "Comisión no publicada. Los resultados netos, el efectivo y los totales afectados no están disponibles; no se infiere el saldo del bróker. Los cálculos históricos cubren solo fechas anteriores al " + fmtD(date) + ".");
+  }
+  function ledgerDay() { return (S.ops || []).map(function (r) { return isoDay(r.date); }).filter(Boolean).sort().pop() || S.snapshot; }
+  function ledgerAfterSnapshot() { return !!(S.snapshot && ledgerDay() > S.snapshot); }
+  function nyDay(at) { var p = {}; new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date(at)).forEach(function (v) { p[v.type] = v.value; }); return p.year + "-" + p.month + "-" + p.day; }
+  /* End holdings plus execution adjustments reconstruct prior-close exposure, including full exits. */
+  function currentDayPL(open) {
+    var L = S.live, d = L && L.at ? nyDay(L.at) : null, day = 0, complete = !!d;
+    if (!d || ledgerDay() > d) return null;
+    open.forEach(function (p) { var q = L.prices[p.ticker]; if (!q || !(q.p > 0) || !(q.prev > 0)) complete = false; else day += p.shares * (q.p - q.prev); });
+    (S.ops || []).filter(function (r) { return isoDay(r.date) === d && r.ticker; }).forEach(function (r) {
+      var q = L.prices[r.ticker], sell = /^(venta|sell)/i.test(String(r.type || "").trim()), buy = /^(compra|buy)/i.test(String(r.type || "").trim());
+      if ((!sell && !buy) || r.shares === null || r.exec === null || feeUnpublished(r) || !q || !(q.prev > 0)) { complete = false; return; }
+      day += r.shares * (sell ? r.exec - q.prev : q.prev - r.exec) - (r.fee || 0);
+    });
+    return complete ? day : null;
   }
   /* positions at average cost, shared by Operaciones and Cartera */
   function positions() {
@@ -1924,9 +1939,10 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var hrbPosition = positionState.list.filter(function (p) { return p.ticker === "HRB"; })[0];
     var hrbSold = hrbPartials.reduce(function (n, r) { return n + r.shares; }, 0);
     var hrbStatus = hrbPartials.length && hrbPosition ? (lang === "en" ? "HRB: recorded PAPER partial sale of " + fmtSh(hrbSold) + " shares; " + fmtSh(hrbPosition.shares) + " shares remain. Do not repeat the campaign partial. " : "HRB: venta parcial PAPER registrada de " + fmtSh(hrbSold) + " acciones; quedan " + fmtSh(hrbPosition.shares) + " acciones. No repetir la parcial de campaña. ") : (lang === "en" ? "HRB: pending 18-share partial signal, not an order or fill; 54 shares remain. " : "HRB: señal pendiente de parcial de 18, no orden ni ejecución; siguen 54 acciones. ");
+    if (hrbPosition && hrbPosition.shares === 0) hrbStatus = lang === "en" ? "HRB is closed: the recorded November 9 PAPER sale of the final 36 shares follows the November 5 partial of 18. No shares remain. " : "HRB está cerrada: la venta PAPER registrada del 9 noviembre de las 36 acciones finales sigue a la parcial de 18 del 5 noviembre. No quedan acciones. ";
     var h = head(K.title, K.lede) + priceStatus();
     var hasStage4Nov4 = (S.ges || []).some(function(r) { return r.rep === "A247"; });
-    if (hasStage4Nov4) h += '<section class="panel"><div><h3>' + (lang === "en" ? "4 November close · Stage 4 informational review" : "Cierre 4 noviembre · revisión informativa Stage 4") + '</h3><p class="lede">' + hrbStatus + (lang === "en" ? "Trailing activation confirmed, exact level pending. ASO next-session candidate $60.53 is separate from prior $56.02, not an adopted order. Other candidates and provider discrepancies remain explicit. A247 is the historical November 4 review, not a new valuation or order. No add-ons; historical values are not current approvals." : "Activación del trailing confirmada, nivel exacto pendiente. Candidato ASO 60,53 USD para sesión posterior separado del previo 56,02, no orden adoptada. Los demás candidatos y discrepancias siguen explícitos. A247 es la revisión histórica del 4 noviembre, no nueva valoración ni orden. Sin ampliaciones; valores históricos no aprobados actualmente.") + '</p></div><div class="controls"><a class="btn" href="research/2026-11-04/stage4-review.html">' + (lang === "en" ? "Read full Stage 4 review" : "Leer revisión Stage 4 completa") + '</a><button class="btn" type="button" data-libopen="A247">A247 →</button></div></section>';
+    if (hasStage4Nov4) h += '<section class="panel"><div><h3>' + (lang === "en" ? "4 November close · Stage 4 informational review" : "Cierre 4 noviembre · revisión informativa Stage 4") + '</h3><p class="lede">' + hrbStatus + (lang === "en" ? "Historical review at that time: trailing activation confirmed, exact level pending. ASO next-session candidate $60.53 is separate from prior $56.02, not an adopted order. Other candidates and provider discrepancies remain explicit. A247 is the historical November 4 review, not a new valuation or order. No add-ons; historical values are not current approvals." : "Revisión histórica de aquel momento: activación del trailing confirmada, nivel exacto pendiente. Candidato ASO 60,53 USD para sesión posterior separado del previo 56,02, no orden adoptada. Los demás candidatos y discrepancias siguen explícitos. A247 es la revisión histórica del 4 noviembre, no nueva valoración ni orden. Sin ampliaciones; valores históricos no aprobados actualmente.") + '</p></div><div class="controls"><a class="btn" href="research/2026-11-04/stage4-review.html">' + (lang === "en" ? "Read full Stage 4 review" : "Leer revisión Stage 4 completa") + '</a><button class="btn" type="button" data-libopen="A247">A247 →</button></div></section>';
     else h += '<section class="panel"><div><h3>' + (lang === "en" ? "Historical Stage 4 · 3 November 2026" : "Stage 4 histórico · 3 noviembre 2026") + '</h3><p class="lede">' + (lang === "en" ? "Historical review, retained for the audit trail. These are not current management instructions. Consult the latest dated position review before acting." : "Revisión histórica conservada para seguimiento. No son instrucciones de gestión vigentes. Consulta la revisión fechada más reciente de cada posición antes de actuar.") + '</p></div><div class="controls"><a class="btn" href="research/2026-11-03/stage4-review.html">' + (lang === "en" ? "Read full Stage 4 review" : "Leer revisión Stage 4 completa") + '</a><button class="btn" type="button" data-libopen="A148">A148 →</button></div></section>';
     if (!open.length) return h + notice(K.title, K.none);
     var ges = {}; (S.ges || []).forEach(function (r) { if (!ges[r.ticker] || String(r.date) >= String(ges[r.ticker].date)) ges[r.ticker] = r; });
@@ -2030,6 +2046,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var en = lang === "en", L = S.live, current = accountQuotes().current;
     var text = current ? (en ? "Latest available Google prices (not real-time). Refresh checked every 2 minutes; quotes may be delayed up to 20 minutes. " : "Últimos precios disponibles de Google (no en tiempo real). Consulta cada 2 minutos; cotizaciones con hasta 20 minutos de retraso. ") :
       (en ? "Using the saved price snapshot of " : "Usando los precios guardados del ") + fmtD(S.snapshot) + ". ";
+    if (ledgerAfterSnapshot()) text += (en ? "Recorded trades through " : "Operaciones registradas hasta ") + fmtD(ledgerDay()) + (en ? "; historical closes remain through " : "; cierres históricos hasta ") + fmtD(S.snapshot) + (en ? ". Without a current feed, account value combines the updated ledger with these older prices; session P&L is unavailable. " : ". Sin una fuente actual, el valor combina las operaciones actualizadas con estos precios anteriores; el resultado de la sesión no está disponible. ");
+    if (current) text += en ? "Session P&L includes recorded fills and fees; it is unavailable if a required prior close is missing. " : "El resultado de la sesión incluye ejecuciones y comisiones registradas; no está disponible si falta un cierre anterior necesario. ";
     if (L && L.at) text += (en ? "Sheet recalculated: " : "Hoja recalculada: ") + new Intl.DateTimeFormat(loc(), { timeZone: "America/New_York", dateStyle: "medium", timeStyle: "short" }).format(new Date(L.at)) + " (New York). ";
     if (L && L.readAt) text += (en ? "Last successful check: " : "Última consulta correcta: ") + new Intl.DateTimeFormat(loc(), {timeZone: "America/New_York", hour: "2-digit", minute: "2-digit"}).format(new Date(L.readAt)) + " (New York). ";
     text += en ? "The feed does not provide an exchange quote timestamp. Positions and historical chart remain the published record." : "La fuente no proporciona la hora de cotización de la bolsa. Las posiciones y la curva histórica siguen siendo el registro publicado.";
@@ -2075,6 +2093,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       rows.push({ t: p.ticker, r: q.p / q.prev - 1, a: p.shares * (q.p - q.prev) });
     });
     if (!ok || cash === null) return "";
+    day = currentDayPL(open); prevVal = day !== null ? val - day : null;
     var dayPct = prevVal ? day / prevVal : null, sq = L.prices.SPY, spyDay = sq && sq.p !== null && sq.prev ? sq.p / sq.prev - 1 : null;
     var diff = dayPct !== null && spyDay !== null ? dayPct - spyDay : null;
     function fig(label, v, cls, sb, sbc) { return '<div class="fig"><b class="' + (cls || "") + '">' + esc(v) + "</b>" + (sb ? '<small class="' + (sbc || "") + '">' + esc(sb) + "</small>" : "") + "<span>" + esc(label) + "</span></div>"; }
@@ -2123,7 +2142,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var g = guard(["ops", "acct"]);
     if (g) return head(t().tabs.inicio, "") + g;
     var X = acctCalc(), A = X.A;
-    var asOf = S.snapshot || isoDay(new Date().toISOString());
+    var asOf = ledgerAfterSnapshot() ? ledgerDay() : (S.snapshot || isoDay(new Date().toISOString()));
     var nDays = A.start && asOf ? Math.max(1, Math.round((Date.parse(asOf) - Date.parse(isoDay(A.start) || A.start)) / 864e5)) : null;
     var pts = X.excess !== null ? H.pts.replace("{p}", fmtN(Math.abs(X.excess) * 100, 1)) : "—";
     var rTxt = fmtP(Math.abs(X.ret), 2);
@@ -2134,7 +2153,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     function more(view, label) { return '<button type="button" class="more-link" data-goview="' + view + '">' + esc(label) + "</button>"; }
     function secHead(title, sub, link) { return "<header><div><h3>" + esc(title) + "</h3>" + (sub ? "<small>" + esc(sub) + "</small>" : "") + "</div>" + (link || "") + "</header>"; }
 
-    var h = '<div class="home"><div class="home-top"><div class="home-lead"><div class="eyebrow">' + esc(X.current ? t().live.title : H.eyebrow.replace("{d}", fmtD(asOf))) + "</div>" +
+    var h = '<div class="home"><div class="home-top"><div class="home-lead"><div class="eyebrow">' + esc(X.current ? t().live.title : (ledgerAfterSnapshot() ? pt("Operaciones al ", "Trades through ") + fmtD(ledgerDay()) : H.eyebrow.replace("{d}", fmtD(asOf)))) + "</div>" +
       '<h2 class="home-hl">' + esc(H.tagline) + "</h2>" +
       '<p class="home-live">' + hl + "</p>" +
       '<p class="home-sub">' + esc(H.sub.replace("{s}", fmtD(isoDay(A.start) || A.start))) + "</p></div>" +
@@ -2258,11 +2277,13 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var spyRet = A.spy0 && quotes.spy ? quotes.spy / A.spy0 - 1 : null;
     var excess = ret !== null && spyRet !== null ? ret - spyRet : null;
     open.forEach(function (p) { p.weight = total ? p.value / total : null; });
-    var eq = equitySeries(quotes.current ? null : total);
+    var eq = equitySeries(null);
     S.eq = eq;
     /* day change from the account-value series: includes shares sold during the day and recorded fees */
-    if (!quotes.current && eq && eq.length > 1 && total !== null) day = total - eq[eq.length - 2].v;
-    var dayBase = !quotes.current && eq && eq.length > 1 ? eq[eq.length - 2].v : (total !== null ? total - day : null);
+    if (quotes.current) day = currentDayPL(open);
+    else if (ledgerAfterSnapshot()) day = null;
+    else if (eq && eq.length > 1 && total !== null) day = total - eq[eq.length - 2].v;
+    var dayBase = day === null ? null : (!quotes.current && eq && eq.length > 1 ? eq[eq.length - 2].v : (total !== null ? total - day : null));
     var dayPct = dayBase ? day / dayBase : null;
     if (P.incompleteFees) { day = null; dayBase = null; dayPct = null; }
     return { current: quotes.current, A: A, P: P, cap: cap, open: open, missing: missing, openCost: openCost, invested: invested, unreal: unreal, realized: realized, day: day, cash: cash, total: total, totPL: totPL, ret: ret, spyRet: spyRet, excess: excess, eq: eq, dayBase: dayBase, dayPct: dayPct };
@@ -2278,7 +2299,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 
     /* hero */
     var LV = t().live;
-    var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + (X.current ? " · " + LV.title : (S.snapshot ? " · " + LV.headline.replace("{d}", fmtD(S.snapshot)) : "")) + '</div>' +
+    var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + (X.current ? " · " + LV.title : (S.snapshot ? " · " + (ledgerAfterSnapshot() ? pt("precios guardados del ", "saved prices from ") + fmtD(S.snapshot) : LV.headline.replace("{d}", fmtD(S.snapshot))) : "")) + '</div>' +
       '<div class="hero-num">' + esc(fmtM(total)) + '</div>' +
       '<div class="hero-sub"><span class="tag ' + (totPL >= 0 ? "tag-pos" : "tag-neg") + '">' + esc(sgnM(totPL) + " · " + (ret !== null && ret >= 0 ? "+" : "") + fmtP(ret, 2)) + '</span>' +
       '<span class="muted">' + esc(K.capital + " " + fmtM(cap) + " · " + K.since + " " + fmtD(A.start)) + "</span></div></div>" +
