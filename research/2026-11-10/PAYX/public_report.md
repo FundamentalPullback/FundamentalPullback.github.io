@@ -1,0 +1,70 @@
+# PAYX · investigación fundamental condicional
+
+10 de noviembre de 2026. Plan del 9 de noviembre, versión 2.1. Investigación revisada de forma independiente para este alcance condicional. No constituye aprobación fundamental, entrada, precio máximo de compra ni orden.
+
+## Conclusión
+
+Paychex combina márgenes elevados con necesidades de financiación que no deben confundirse con caja libre para el accionista. Los escenarios del modelo son 52,83 / 72,47 / 95,36 USD por acción, frente a Last 114,25 del escáner del 9 de noviembre a las 21:43:18. Esa referencia no se presenta como cotización actual ni cierre regular certificado. QP 100 y Opportunity 90 permiten investigar, no comprar.
+
+La mejora publicada necesita separar adquisición, amortización y financiación operativa. Los escenarios son estimaciones condicionadas, no probabilidades ni valores garantizados. El caso central sólo iguala 114,25 reduciendo el WACC a aproximadamente 7,23%, manteniendo todas las demás hipótesis. Es una solución matemática, no un coste de capital validado.
+
+## Historia y discrepancia del escáner
+
+USD millones; orden: ingresos / EBIT GAAP / beneficio neto / flujo operativo / capex.
+
+- FY2024: 5.278,3 / 2.174,1 / 1.690,4 / 1.897,7 / 161,4.
+- FY2025: 5.571,7 / 2.207,7 / 1.657,3 / 1.900,9 / 191,8.
+- FY2026: 6.512,0 / 2.510,5 / 1.760,1 / 2.556,7 / 234,9.
+- Q2 FY2026: 1.557,6 / 571,9 / 395,4 / 444,9 / 62,1.
+- Q3 FY2026: 1.808,9 / 792,0 / 560,3 / 812,5 / 51,0.
+- Q4 FY2026: 1.605,5 / 604,7 / 420,6 / 580,9 / 65,9.
+- Q1 FY2027: 1.630,5 / 619,2 / 429,7 / 413,5 / 56,1.
+- TTM hasta agosto de 2026: 6.602,5 / 2.587,8 / 1.806,0 / 2.251,8 / 235,1.
+
+El año fiscal termina el 31 de mayo. Q4 se obtiene como año menos nueve meses; los flujos Q2 y Q3 se derivan de acumulados. TTM = FY2026 + Q1 FY2027 − Q1 FY2026. No se anualiza un trimestre estacional.
+
+El campo de margen operativo del escáner, 27,353%, coincide con margen neto TTM de 27,3533%, no con margen operativo GAAP de 39,1942%. Se conserva el dato original y se señala el error de correspondencia, sin recalcular unilateralmente los scores.
+
+## Paycor y beneficio económico
+
+Paycor cerró el 11 de abril de 2025. La contraprestación total fue 4.085,7 millones, incluidos 4.060,6 en efectivo y 25,1 de componente de capital por servicios previos. FY2025 sólo incluyó 92,5 millones de ingresos de Paycor. Aproximadamente doce puntos del crecimiento de ingresos del 17% en FY2026 procedieron de la adquisición: no es crecimiento orgánico del 17%.
+
+La amortización de intangibles adquiridos TTM es 237,8 millones. El modelo conserva SBC y los restantes costes GAAP, incluidos costes de servicio, retención e integración. Sustituye esa amortización por una reserva económica de reposición del 50%, 118,9 millones. El EBIT económico inicial resulta 2.706,7 millones. La reserva es una hipótesis del analista, no una vida útil demostrada; puede solaparse parcialmente con marketing, tecnología y costes contractuales ya reconocidos.
+
+Sensibilidad obligatoria del caso central, manteniendo el resto de hipótesis:
+
+- Reposición económica del 0% de la amortización adquirida: 76,86 USD por acción.
+- Reposición del 50%: 72,47 USD.
+- Reposición del 100%: 68,09 USD.
+
+Esta amplitud no convierte el extremo de 0% en beneficio gratuito certificado. La adquisición histórica no se resta nuevamente: su financiación ya está reflejada en la deuda actual.
+
+## Reinversión y fondos de clientes
+
+D&A TTM de 443,1 menos amortización adquirida de 237,8 deja 205,3. Capex de 235,1 implica inversión física neta de 29,8. Costes contractuales capitalizados menos amortización suman 105,3; compras netas de cuentas a cobrar, clasificadas como inversión pero necesarias para la operación, añaden 182,3. La suma observada es 317,4 millones, aproximadamente el 4,81% de ingresos.
+
+El modelo proyecta ese porcentaje como piso de reinversión recurrente, una extrapolación explícita de la intensidad observada. **El piso del 4,81% domina en todos los escenarios y también en el terminal. Los parámetros alternativos de ventas/capital y retorno sobre capital terminal no son vinculantes y no explican las diferencias de valoración.** No se suman dos proxies que representarían los mismos activos.
+
+Los fondos de clientes no son efectivo libre de Paychex. Al 31 de agosto: activos de clientes 4.348,4 frente a obligaciones de 4.440,7, una brecha contable de 92,3. El interés generado por esos fondos permanece como ingreso operativo; el principal no se añade al valor. Tras agosto hubo trece préstamos overnight, con saldo medio ponderado de 523,8 millones, para atender liquidaciones. Un saldo cero de deuda de corto plazo en una fecha no elimina el riesgo de liquidez.
+
+Caja corporativa de 600,9 más inversiones corporativas de 333,3 suma 934,2; efectivo restringido de 55 queda excluido. Una reserva analítica de 600 protege necesidades operativas y de liquidación, sin afirmar que sea un mínimo legal. La brecha de clientes y los préstamos overnight pueden solaparse: no se suman mecánicamente como obligaciones independientes. Excedente modelado: 334,2. Deuda nominal de 4.600 menos excedente deja 4.265,8 de deuda neta, descontada una sola vez. Las rentas siguen en gastos operativos y los pasivos por arrendamiento no se descuentan de nuevo.
+
+## Acciones y coste de capital
+
+Se usa una aproximación de 356,8 millones de acciones: 356,0 emitidas al cierre de agosto más 0,8 de incremento trimestral por método de tesorería. **No es un denominador económico exacto a noviembre.** Las 2,1 millones de equivalentes antidilutivos excluidos del cálculo contable pueden convertirse en dilutivos; no se afirma que estén plenamente recogidos en la aproximación. SBC se conserva como coste y no se presume reducción gratuita de acciones por recompras.
+
+WACC común del 9,5%. Referencias fechadas: Treasury a diez años del 4,86% al 6 de noviembre, publicado por Fed H.15 el 9; ERP de Damodaran del 4,41% al 1 de noviembre. Son referencias con fechas y metodología distintas. Beta 1,0–1,3 es un supuesto, no una regresión verificada. Coste de deuda aproximado de 5,79% deriva de interés histórico sobre deuda nominal, no de una oferta marginal actual. El rango ilustrativo resultante de WACC es aproximadamente 8,78–9,96%; se prueban tasas de 7,5–11,5%.
+
+## Escenarios y límites
+
+FCFF a diez años: cinco explícitos y cinco de transición. Impuesto normalizado del 24%, coherente con guía. Crecimientos iniciales del 3% / 5,5% / 7,5%, convergiendo al 2% / 2,5% / 3%. Márgenes finales del 38% / aproximadamente 41% / 44%, después del tratamiento económico descrito. El favorable exige ejecución exigente: no equipara su definición económica al margen ajustado comunicado por la compañía.
+
+Los valores 52,83 / 72,47 / 95,36 tienen pesos del terminal del 49,2% / 53,5% / 57,3% sobre valor de empresa. Los flujos proyectados son positivos, sin financiación externa implícita. La estabilidad de esas cifras depende del piso de reinversión, las relaciones adquiridas, retención de clientes, empleo y tipos de interés.
+
+La guía FY2027 contempla ingresos +5–6%, ingresos PEO +7–8%, margen operativo ajustado cercano al 44% y EPS ajustado +7–9%. No se confunden estas magnitudes ajustadas con GAAP. Riesgos adicionales: reservas de compensación laboral PEO, ciberseguridad, crédito en cuentas a cobrar y ejecución de Paycor. No se certifica aquí una composición accionarial actual completa.
+
+## Calendario y seguimiento
+
+La página oficial anuncia conferencia JPMorgan Ultimate Services el 17 de noviembre a las 11:40 EST, 16:40 UTC. La siguiente fecha de resultados no quedó confirmada en la página revisada. Revisar retención, venta cruzada, liquidez de fondos de clientes y conversión del beneficio a caja. Este informe actualiza investigación previa; no declara que Paychex nunca hubiera sido analizada.
+
+Fuentes primarias y referencias de calibración: archivo adjunto de fuentes. No hay aprobación de entrada ni operación asociada.
