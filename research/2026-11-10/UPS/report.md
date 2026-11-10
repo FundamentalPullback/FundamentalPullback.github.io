@@ -1,0 +1,82 @@
+# UPS — recuperación de caja con financiación de pensiones y menor inversión
+
+**Investigación factual parcial; corte 10 de noviembre de 2026. Sin valoración canónica ni entrada aprobada.** United Parcel Service, Inc., NYSE UPS (clase B), CIK 1090727. Scanner del 9 de noviembre: Opportunity **65**, precio **$110,96**. Cumple exactamente el umbral de investigación ≥65, no certifica los demás filtros. La revisión de la biblioteca completa encontró referencias de escáner, no un informe individual previo de UPS. Es logística integrada; la actividad de logística sanitaria no convierte al grupo en un proveedor médico.
+
+## Conclusión
+
+La recuperación comercial del trimestre y la mejora de caja son reales como cifras publicadas, pero no equivalen a recuperación completa del beneficio económico. Q3 aumenta ingresos 6,71%, mientras EBIT baja 3,33%; el volumen diario de paquetes cae 4,2% y la facturación por pieza sube 7,7%, con un día operativo adicional. El acumulado está afectado por costes de transformación, combustible, sustitución de aeronaves y cambios de perímetro. [S1, MD&A]
+
+El punto principal para valorar es la calidad de la mejora de caja: menos capex pagado, menores aportaciones monetarias a pensiones, impuestos y fondos de clientes. En agosto se aportaron **$450m de pagarés propios** a planes de pensiones, no efectivo; al cierre había **unos $270m de reembolsos arancelarios pendientes de devolver a clientes**. Ni el ahorro de caja por financiar pensiones con deuda ni esos fondos ajenos son crecimiento recurrente de FCFF. [S1, notas 1, 6, 9 y 10]
+
+## Reconstrucción financiera
+
+USD millones. EBIT significa Operating Profit publicado. FCF simple = CFO menos capex pagado, no FCFF normalizado ni la definición ajustada de la empresa. Los periodos anuales cierran en diciembre. Trimestres de caja derivados por resta de acumulados; Q4 = FY menos 9M. TTM septiembre 2026 = FY2025 − 9M2025 + 9M2026, con comparativo equivalente. No se anualiza Q3 ni se suman EPS de denominadores distintos. [S1, S3–S6]
+
+| Periodo | Ingresos | EBIT | Neto | D&A | CFO | Capex caja | FCF simple |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| FY2023 | 90.958 | 9.141 | 6.708 | 3.366 | 10.238 | 5.158 | 5.080 |
+| FY2024 | 91.070 | 8.468 | 5.782 | 3.609 | 10.122 | 3.909 | 6.213 |
+| FY2025 | 88.661 | 7.867 | 5.572 | 3.746 | 8.450 | 3.685 | 4.765 |
+| Q4 2025, derivado | 24.479 | 2.575 | 1.791 | 972 | 3.302 | 716 | 2.586 |
+| Q1 2026 | 21.202 | 1.267 | 864 | 985 | 2.224 | 1.031 | 1.193 |
+| Q2 2026, caja derivada | 22.834 | 930 | 604 | 980 | 859 | 693 | 166 |
+| Q3 2026, caja derivada | 22.853 | 1.744 | 1.163 | 965 | 2.903 | 497 | 2.406 |
+| 9M2025 | 64.182 | 5.292 | 3.781 | 2.774 | 5.148 | 2.969 | 2.179 |
+| 9M2026 | 66.889 | 3.941 | 2.631 | 2.930 | 5.986 | 2.221 | 3.765 |
+| TTM septiembre 2025 | 89.483 | 8.218 | 5.502 | 3.693 | 8.463 | 4.067 | 4.396 |
+| TTM septiembre 2026 | 91.368 | 6.516 | 4.422 | 3.902 | 9.288 | 2.937 | 6.351 |
+
+TTM: ingresos +2,11%, EBIT −20,71%, CFO +9,75% y FCF simple +44,47%. La divergencia impide extrapolar el último crecimiento de caja. AHG se adquirió en Q4 2025 y Coyote se desinvirtió en 2024: los comparativos no son una serie orgánica homogénea. Las cifras publicadas conservan esos perímetros; no se inventa un proforma. [S1, S3]
+
+## Del EBIT publicado al beneficio sostenible
+
+Q3 2026: EBIT 1.744 + transformación 171 + deterioro de goodwill 182 − ganancia por activos MD-11 43 = **2.054 ajustado por la empresa**. Q3 2025 ajustado era 2.132, pero conservaba $330m de ganancias de venta con arrendamiento posterior: al excluir solo esa ganancia queda 1.802. Es una comparación diagnóstica limitada, no prueba de un margen normalizado, pues no elimina todos los posibles factores asimétricos ni costes futuros de arrendamiento. En 9M, EBIT ajustado 5.478 frente a 5.771; el comparativo incluye $362m de ganancias de esas ventas, no solo los $330m de Q3. [S1 nota 5 y reconciliaciones; S2]
+
+Transformación 9M: $1.398m de cargos. Los costes de separación reconocidos fueron aproximadamente $1.200m y los pagos aproximadamente $1.100m; provisión restante $158m frente a $117m inicial. Cargos y pagos no son intercambiables. Se cerraron 47 instalaciones, 46 permanentemente. Se puede estudiar un escenario posterior a la reestructuración, pero no añadir todos los costes de vuelta mientras se mantienen ahorros perpetuos sin modelar inversión y ejecución. [S1 nota 16 y MD&A]
+
+El deterioro de $182m afecta goodwill de Healthcare Logistics and Distribution. Es no monetario en el periodo, pero señala riesgo económico sobre capital adquirido; no se usa para concluir que esa inversión dejó de importar. La flota MD-11 fue retirada permanentemente en Q4 2025. El uso de aeronaves de terceros y nuevas entregas financiadas por leasing cambia coste e inversión, no desaparece por excluir el deterioro previo. [S1 notas 5 y 7]
+
+## Caja: cuatro puentes que faltan antes de valorar
+
+**1. Definiciones.** La empresa presenta FCF 9M de **4.220** = CFO 5.986 − capex 2.221 + ventas de PP&E 473 − otras inversiones 18. La resta estricta CFO−capex es **3.765**. El comparativo empresarial 2.744 utiliza otras inversiones −20 frente a −10 de la línea total del estado de caja: seguir la reconciliación específica, no equiparar líneas de perímetro distinto. Los cobros por vender activos no se perpetúan como caja operativa. [S2 reconciliación de FCF; S1]
+
+**2. Pensiones y clientes.** CFO aumenta 838; capex pagado baja 748 y explica parte importante del aumento de FCF simple de 1.586. Las aportaciones monetarias a pensiones/postretiro bajan 1.338→897, pero se aportan además 450 mediante deuda emitida. Sustraer ilustrativamente 450 y los aproximadamente 270 de fondos pendientes de transferir a clientes del FCF simple deja **unos 3.045**, todavía sin normalizar impuestos, circulante, separación ni inversión. No es FCFF ni un valor justo. El importe 270 es el saldo pendiente, no el total cobrado: UPS había recibido aproximadamente 500 de reembolsos bajo esa fase. [S1 notas 1, 6, 9 y 10; MD&A liquidez]
+
+**3. Impuestos y factoring.** El emisor explica menores pagos fiscales porque un pago de 2024 se difirió a 2025 por alivio asociado al huracán Helene y no se repitió. No se atribuye toda la mejora a operaciones. El factoring vende receivables y registra cobros en CFO; el saldo vendido pendiente era 450 frente a 491 al cierre anterior. Los 2.700 de actividad de factoring mencionados por dirección son flujo bruto, no incremento neto que deba restarse íntegramente al CFO. Los 121 cobrados y aún no remitidos a compradores (59 al inicio) generan un cambio de 62 en financiación, separado de CFO. [S1 nota 3 y liquidez]
+
+**4. Inversión económica.** Los menores desembolsos no capturan todo el capital: nuevos derechos de uso por obligaciones de leasing financiero 1.086; las operaciones de aeronaves incluyen 643 de inversión/financiación no monetaria. Son métricas relacionadas, no sumables automáticamente. Principal de leasing financiero pagado 128 está en financiación; intereses 36 en operaciones. Una valoración debe escoger tratamiento coherente de arrendamientos: no deducir simultáneamente todo el principal, la inversión equivalente y la deuda sin ajustar flujos. Capex devengado 276 tampoco se suma directamente como nuevo gasto al capex caja. [S1 nota 1]
+
+SBC en CFO 9M 95 y TTM 127 es remuneración económica. No confundir un addback contable con caja libre sin coste de dilución. En un modelo basado en EBIT que ya conserva SBC como gasto, no descontarla dos veces. [S1 nota 4 y estados]
+
+## Negocio, balance y dividendo
+
+Q3 U.S. Domestic: ingresos 14.865, EBIT 906; International: 5.007 y 746; SCS: 2.981 y 92. El crecimiento en facturación por pieza puede reflejar mix, recargos y menor volumen de clientes de baja rentabilidad, no solo poder de fijación de precios. Hay un día operativo más en Q3 (65 frente a 64) y en 9M (191 frente a 190). El negocio afronta estacionalidad navideña, costes laborales, combustible, comercio internacional y ejecución de automatización. No se convierte una mejora doméstica en recuperación uniforme de todos los segmentos. [S1]
+
+Septiembre: deuda más leasing financiero **26.078**, caja **6.837**, deuda neta simple **19.241**. Leasing operativo **4.212** se presenta aparte. Los pagarés de pensiones de 450 y leasing financiero ya están en las obligaciones correspondientes: no añadirlos una segunda vez. Hay **5.751** de obligaciones de pensión/postretiro en balance; su tratamiento económico exige conciliar activos, financiación, impuestos y flujos futuros, no deducir el pasivo bruto y cobrar las aportaciones de nuevo sin coherencia. La retirada del plan New England tiene 798 de pasivo contable separado (10 corriente, 788 no corriente), con valor razonable divulgado 589; no se confunde valor contable con descuento definitivo de equity. [S1 notas 6, 8 y 9]
+
+Unos 2.300 de la caja están en filiales extranjeras, generalmente distribuibles sin impuesto federal estadounidense, pero pueden existir retenciones y tributos estatales. No se considera toda caja excedentaria. La línea de crédito de 1.000 vence el 23 de noviembre de 2026 según el 10-Q; comprobar renovación antes de una decisión futura. La lectura acotada del índice SEC hasta el 10 de noviembre no establece que ya se haya renovado. [S1]
+
+A 15 de octubre había 99,812037m acciones clase A y 751,657335m clase B: **851,469372m** entre ambas. Usar solo las B infravaloraría el equity. A la referencia de escáner $110,96, capitalización ilustrativa 94.479m; fechas diferentes, no plenamente diluida ni precio ejecutable actual. No se construye un EV o precio objetivo con un puente incompleto. [S1 portada]
+
+Pagos de dividendos 9M 4.064 superan FCF simple 3.765 en 299; no demuestra por sí solo insolvencia, pero exige normalizar cobertura y estacionalidad. El 4 de noviembre se anunció dividendo de $1,64 para ambas clases, pagadero el 3 de diciembre a titulares registrados el 16 de noviembre. Anuncio no garantiza futuros dividendos. [S1; S8]
+
+## Qué probar a continuación
+
+La guía del 27 de octubre eleva ventas FY2026 a unos 92.600, beneficio operativo ajustado a 8.750 y EPS ajustado a 7,28; FCF ajustado objetivo 6.100. Capex previsto 3.000, dividendos unos 5.400 y aportaciones a pensiones 1.300. Son previsiones con definiciones diferentes de FCFF, y las contribuciones incluyen la cuestión monetaria/no monetaria descrita. No se usa EPS ajustado como sustituto de valoración. [S2]
+
+Antes de un rango de valoración: reconstruir beneficio/caja después de transformación con inversiones y leasing consistentes; separar fondos de clientes y factoring, calendario fiscal y pensiones; modelar volúmenes, mix, salarios, combustible y temporada navideña; reconciliar deuda, obligaciones, dilución y caja realmente disponible. Contrastar WACC y escenarios contra supuestos verificables, sin múltiplo arbitrario. Consenso homogéneo, propiedad institucional, float y posiciones cortas no verificados en este expediente. Filtros técnicos/estructura/tamaño son pasos distintos: no hay stop, M, K ni aprobación Stage 3.5.
+
+**Confianza:** alta en estados primarios y aritmética; limitada en normalización, previsiones y exceso de caja. **Estado:** investigación factual parcial, no compra ni valoración final.
+
+## Fuentes
+
+- S1: [10-Q septiembre 2026](https://www.sec.gov/Archives/edgar/data/1090727/000162828026070246/ups-20260930.htm), estados y notas indicadas.
+- S2: [Resultados Q3, anexo SEC](https://www.sec.gov/Archives/edgar/data/1090727/000162828026067381/exhibit991-earningspressre.htm), guía y reconciliaciones.
+- S3: [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1090727/000162828026008432/ups-20251231.htm), estados comparativos 2023–25.
+- S4: [10-Q junio 2026](https://www.sec.gov/Archives/edgar/data/1090727/000162828026053249/ups-20260630.htm).
+- S5: [10-Q marzo 2026](https://www.sec.gov/Archives/edgar/data/1090727/000162828026031154/ups-20260331.htm).
+- S6: [10-Q septiembre 2025](https://www.sec.gov/Archives/edgar/data/1090727/000162828025049661/ups-20250930.htm), comparativo TTM.
+- S7: [8-K noviembre 2026](https://www.sec.gov/Archives/edgar/data/1090727/000162828026070386/ups-20261104.htm), actualización de consejo, no nueva capitalización.
+- S8: [Dividendo anunciado el 4 de noviembre](https://investors.ups.com/news-events/press-releases/detail/2173/ups-announces-quarterly-dividend).
+
+Cálculos reproducibles: analysis.py, financials.csv y calculations.json. No depende de memoria para reconstruir las cifras.
