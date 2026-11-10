@@ -10,6 +10,8 @@ Object.assign(c,{document:{getElementById:()=>el,addEventListener:(name,fn)=>(ev
 const t=c.window.TEST,F=c.FP;t.S.scan=t.PARTS.scan([F.scanHead].concat(F.scan));for(const k of ['dec','ges','ops','acct','hist'])t.S[k]=t.PARTS[k](F[k]);t.S.lib=c.window.FP_LIB.reports;t.S.libState='ok';t.S.snapshot=c.window.FP_MANIFEST.asOf;
 
 
+// This historical fixture tests November 6 links; newer scans have their own regression.
+t.S.scan=t.S.scan.filter(r=>r.date<='2026-11-06');
 const saved={scan:t.S.scan,dec:t.S.dec,lib:t.S.lib};
 for(const lang of ['es','en']){
  t.setLang(lang);
