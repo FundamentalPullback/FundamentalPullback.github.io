@@ -1,0 +1,67 @@
+# EFX — Equifax: crecimiento, software y caja antes de valorar
+
+**Investigación factual parcial al 10 de noviembre de 2026. Sin valoración canónica ni entrada aprobada.** EFX es Equifax Inc., NYSE, CIK 33185; no Enerflex, cuyo símbolo estadounidense es EFXT. Scanner del 9 de noviembre: Opportunity 80 y precio $188,33. Es elegible para investigar bajo el umbral ≥65 solicitado, no una certificación de Stage 1/2 ni una compra. Las menciones anteriores eran aplazamientos bajo el antiguo umbral y una comparación limitada de caja, no un rechazo fundamental ni una valoración individual completa.
+
+## Lectura principal
+
+Equifax presenta crecimiento de ventas y EBIT, pero la mejora de beneficios no se traslada íntegramente a la caja reciente. En nueve meses de 2026, ventas $5.041,5m y EBIT $957,2m aumentan 11,4% y 18,0%, mientras CFO se mantiene en $1.142,1m frente a $1.144,9m y la inversión pagada sube de $351,4m a $378,9m. El TTM conserva crecimiento de caja gracias a su composición temporal: no confundirlo con aceleración de los últimos nueve meses.
+
+Dos asuntos cambian la interpretación: la inversión en software es económica, aunque el activo no sea una fábrica; y la adquisición pendiente de Círculo de Crédito debe pagarse antes de atribuir a EFX beneficios futuros del negocio. Los acuerdos judiciales, seguros y efectivo extranjero también requieren puentes explícitos. Esta revisión establece esos puentes, pero no sustituye un modelo completo de FCFF.
+
+## Estados y reconstrucción
+
+USD millones. D&A de esta tabla es la partida del estado de resultados, no el addback de caja. FCF simple = CFO menos capex pagado, con software incluido en la definición de inversión de la compañía; no es FCFF normalizado.
+
+| Periodo | Ventas | EBIT | Neto atribuible EFX | D&A resultados | CFO | Capex pagado | FCF simple |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| FY2023 | 5.265,2 | 933,6 | 545,3 | 610,8 | 1.116,8 | 601,3 | 515,5 |
+| FY2024 | 5.681,1 | 1.042,1 | 604,1 | 669,8 | 1.324,5 | 511,5 | 813,0 |
+| FY2025 | 6.074,5 | 1.095,2 | 660,3 | 719,5 | 1.615,7 | 481,4 | 1.134,3 |
+| Q4 2025 derivado | 1.550,6 | 284,2 | 175,8 | 184,2 | 470,8 | 130,0 | 340,8 |
+| Q1 2026 | 1.648,9 | 287,7 | 171,5 | 183,1 | 241,9 | 120,4 | 121,5 |
+| Q2 2026 | 1.700,1 | 314,2 | 183,9 | 189,7 | 339,8 | 135,0 | 204,8 |
+| Q3 2026 | 1.692,5 | 355,3 | 211,7 | 194,4 | 560,4 | 123,5 | 436,9 |
+| TTM septiembre 2026 | 6.592,1 | 1.241,4 | 742,9 | 751,4 | 1.612,9 | 508,9 | 1.104,0 |
+| TTM septiembre 2025 | 5.943,3 | 1.099,1 | 658,5 | 706,8 | 1.469,7 | 470,3 | 999,4 |
+
+Q4 = anual menos nueve meses; caja Q2/Q3 = diferencia de acumulados. TTM = FY2025 − 9M2025 + 9M2026 y concilia con cuatro trimestres; comparativo = FY2024 − 9M2024 + 9M2025. Ventas TTM +10,92%, EBIT +12,95%, neto atribuible +12,82%, CFO +9,74% y FCF simple +10,47%. La tabla no anualiza un trimestre ni confunde promedio de acciones con acciones a fecha de valoración. Fuentes: [10-K FY2025](https://www.sec.gov/Archives/edgar/data/33185/000003318526000010/efx-20251231.htm), [Q1 2026](https://www.sec.gov/Archives/edgar/data/33185/000003318526000018/efx-20260331.htm), [Q2 2026](https://www.sec.gov/Archives/edgar/data/33185/000003318526000028/efx-20260630.htm), [Q3 2026](https://www.sec.gov/Archives/edgar/data/33185/000003318526000044/efx-20260930.htm) y [Q3 2025/comparativo 2024](https://www.sec.gov/Archives/edgar/data/33185/000003318525000064/efx-20250930.htm).
+
+## Software, SBC y capital económico
+
+El balance de septiembre contiene $3.002,3m de coste bruto de software y sistemas de uso interno. No es el capex del periodo ni efectivo recuperable. La política del 10-K capitaliza desarrollo elegible y amortiza normalmente en tres a siete años; mantenimiento de los archivos de crédito se lleva a gasto. Por ello, no puede retirarse toda amortización de software como si no necesitara reposición, ni añadirse otra vez a capex una inversión ya incluida. La amortización creciente refleja en parte inversión tecnológica anterior.
+
+Hay dos precisiones relevantes. Primero, capex FY2025 de la tabla de indicadores es $480,2m **incluyendo devengos**, frente a $481,4m pagados en el estado de caja. En 9M2026 la comparación es $373,7m frente a $378,9m. No son cifras alternativas intercambiables: nuestra caja usa pagos. Segundo, D&A TTM del estado de caja es $758,7m frente a $751,4m del estado de resultados. Se conservan por separado; no se usa automáticamente el addback total como depreciación operativa de un futuro FCFF sin reconciliar sus componentes.
+
+SBC TTM del estado de caja es $89,0m, frente a $73,6m en el TTM previo. FCF simple menos ese addback da $1.015,0m frente a $925,8m, un diagnóstico de coste económico, no FCFF. En un DCF se mantiene SBC dentro del EBIT y no se descuenta por segunda vez. Tampoco se promete recompra futura gratuita para neutralizarla. Los $652,0m recomprados en 9M2026 más $199,4m de dividendos exceden el FCF simple de $763,2m en $88,2m, antes de otros flujos de financiación. No es por sí solo prueba de fragilidad, pero impide describir todas las distribuciones como financiadas únicamente por esa caja del periodo. [10-K, políticas contables y caja](https://www.sec.gov/Archives/edgar/data/33185/000003318526000010/efx-20251231.htm); [Q3, estados y liquidez](https://www.sec.gov/Archives/edgar/data/33185/000003318526000044/efx-20260930.htm).
+
+## Beneficio normalizado y caja judicial
+
+El litigio FCRA por el problema de cálculo de puntuaciones de 2022 originó una provisión de $100m en Q2 2026 y un derecho de cobro a aseguradoras de $60m, con cargo neto de $40m. A septiembre, los $60m permanecen como cuenta a cobrar. No equivalen a seguro ya cobrado. Sumar $100m al EBIT ignoraría la compensación ya reconocida; añadir solo $40m llevaría el EBIT TTM a $1.281,4m, pero este es **un puente de una partida, no una normalización completa**. No se añade ese importe a CFO como si fuese un pago realizado, ni se duplica como deuda el mismo desembolso ya incluido en una proyección.
+
+La audiencia de aprobación final del acuerdo FCRA está prevista para enero de 2027; otros litigios por consultas al historial de crédito tienen audiencia prevista en diciembre de 2026 y una provisión de $30m registrada en Q4 2025. Además permanece litigio antimonopolio relacionado con verificaciones de empleo/ingresos, con daños no cuantificados. Son alegaciones y procedimientos, no una conclusión de responsabilidad adicional. El gasto jurídico ordinario no se elimina automáticamente porque existan ajustes no GAAP.
+
+En 2025 se registraron $49,9m de reestructuración; a septiembre de 2026 se habían pagado $38,8m de esos cargos. Esto ilustra que gasto y pago no coinciden. El futuro flujo debe recoger los desembolsos remanentes y evaluar la recurrencia de reorganizaciones. En 9M2026 las cuentas a cobrar consumen $91,7m, otros activos $95,7m y otras obligaciones aportan $37,1m; no perpetuar liberaciones de circulante o tratar el seguro por cobrar como efectivo operativo disponible. [Q3, notas 6 y 9 y estado de caja](https://www.sec.gov/Archives/edgar/data/33185/000003318526000044/efx-20260930.htm).
+
+## Deuda, liquidez, minoritarios y adquisición pendiente
+
+A septiembre: deuda nominal $5.232,7m; menos $26,0m de descuentos/costes no amortizados resulta deuda contable $5.206,7m. Esta última **no** significa deuda después de restar efectivo. Caja $192,9m da deuda nominal menos toda la caja de $5.039,8m, solo un puente aritmético, no el ajuste final de valor patrimonial. $179,4m de caja se encuentra en subsidiarias extranjeras. No se presume que toda sea excedentaria, transferible sin coste o innecesaria para operaciones.
+
+Los $27,5m en cuentas designadas para clientes están registrados en otros activos corrientes con obligación compensatoria; no se añaden como caja propia ni se restan nuevamente de los $192,9m sin comprobar clasificación. Los minoritarios son $20,5m y los minoritarios rescatables $120,8m de valor contable: ninguno es automáticamente una estimación de valor de mercado. Arrendamientos, pensiones y otros derechos deben conservar coherencia con los flujos que se valoren.
+
+La emisión de julio de dos bonos de $500m, al 5,00% y 5,65%, se destinó finalmente a amortizar papel comercial. No supone $1.000m de nueva caja aún disponible para adquirir Círculo. El acuerdo anunciado en julio contempla $825m de precio de compra menos $75m de caja estimada adquirida, equivalente a $750m de valor empresarial. En el último 10-Q y resultados de octubre seguía sujeto a condiciones/regulación, con cierre esperado Q4. La revisión del índice IR hasta el 10 de noviembre no localizó una confirmación de cierre; se mantiene pendiente, no se supone consumado. No se incorpora crecimiento adquirido sin financiar el precio ni se añade de antemano la caja del objetivo. [Q3, nota 5, liquidez y compromisos](https://www.sec.gov/Archives/edgar/data/33185/000003318526000044/efx-20260930.htm); [noticias oficiales](https://investor.equifax.com/news-events/press-releases).
+
+Acciones al 9 de octubre: 117.017.174. Media diluida Q3: 118,1m frente a 124,1m, caída de 4,83%. El EPS Q3 crece más que el beneficio neto, ayudado por recompras. No se usa la media ni el conteo de portada como denominador diluido actual definitivo sin revisar premios pendientes y movimientos posteriores. La valoración exigirá esa reconciliación.
+
+## Negocio, perspectivas y riesgos
+
+Workforce Solutions aporta verificaciones de empleo/ingreso y servicios a empleadores; USIS ofrece datos crediticios y soluciones de información; International diversifica mercados. En Q3, ingresos respectivos $693,9m, $599,1m y $399,5m. Crecieron 7%, 13% y 9% reportados, con International +7% en moneda local. Los márgenes operativos segmentarios no incluyen todo el gasto corporativo y no deben agregarse como si fueran el margen consolidado.
+
+La compañía describe Q3 hipotecario +15%, pero redujo la previsión anual por debilidad del mercado hipotecario: ventas FY2026 $6.646–6.676m y EPS ajustado $8,45–8,55. Ese EPS excluye partidas y no es beneficio GAAP ni caja. Nuevos productos, datos propios, verificación y eficiencia tecnológica pueden apoyar crecimiento; las metas de ahorro por IA y ventas son objetivos de gestión, no hipótesis ya demostradas. Las perspectivas deben soportar ciclos hipotecarios/laborales, inversión continua, cambios de precios/modelos crediticios, regulación, privacidad, ciberseguridad y competencia. No se atribuye la caída bursátil a una única causa no comprobada. [Resultados Q3 y guía](https://investor.equifax.com/news-events/press-releases/detail/1427/equifax-delivers-strong-10-revenue-growth-in-third-quarter).
+
+Calendario oficial revisado: conferencias de inversores el 17 y 18 de noviembre. No se encontró una próxima fecha exacta de resultados en el calendario y no se inventa. [Calendario IR](https://investor.equifax.com/news-events/ir-calendar).
+
+## Qué falta para una decisión
+
+No se publica precio objetivo ni rango de valor. Faltan una normalización operativa completa, economía de reposición del software/datos, circulante e impuestos sostenibles, alcance y financiación final de Círculo, exceso de caja defendible y puente diluido/minoritarios. Después debe construirse y auditarse FCFF a diez años 5+5 con escenarios adverso/central/favorable, WACC USD justificado, reinversión terminal ligada a ROIC, sensibilidad, valoración inversa y pares homogéneos. No se ha sustituido ese trabajo con CFO menos capex ni un múltiplo de EPS ajustado.
+
+La tesis mejoraría si las verificaciones y productos nuevos sostienen crecimiento y convierten beneficios en caja después de inversión y costes legales. Se debilitaría si la caja queda persistentemente rezagada, el mercado hipotecario decepciona, las exigencias regulatorias erosionan rentabilidad o la adquisición aumenta capital/deuda sin retornos adecuados. **Stage 3 incompleto; Stage 1/2 y Stage 3.5 no certificados; sin señal, tamaño ni entrada aprobada.**
