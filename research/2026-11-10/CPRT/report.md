@@ -1,0 +1,80 @@
+# CPRT — caja fuerte, crecimiento estancado y nuevo perímetro ACV
+
+**Investigación factual parcial. Corte: 10 de noviembre de 2026. Sin valoración canónica ni entrada aprobada.** Copart, Inc., Nasdaq CPRT, CIK 900075. Scanner del 9 de noviembre: Opportunity 70 y precio $32,41. Supera el umbral de investigación ≥65, no los filtros de entrada por sí solo. El precio es la referencia del scanner, no cotización ejecutable. La búsqueda de todos los informes registrados en la biblioteca no encontró un análisis previo de Copart; no se sustituye un modelo anterior.
+
+## Conclusión
+
+Copart conserva elevada rentabilidad operativa y una plataforma con efectos de red, terrenos y conocimiento de títulos de vehículos difíciles de replicar. Pero FY2026 no fue un año de expansión del beneficio: ventas +0,41%, EBIT −2,60% y neto atribuible −4,39%. El CFO cayó 10,85%; el pequeño aumento de caja después de capex procede de invertir menos efectivo, no de una aceleración operativa. Q4 muestra ventas +2,43% y EBIT −10,59%. [S1, S2]
+
+Además, **ACV ya fue adquirida el 16 de octubre**, aunque el 10-K, anterior al cierre, aún la describe como pendiente. La compra cambia el uso de la liquidez y el perímetro económico. No se puede sumar la caja de julio como excedente intacto y, simultáneamente, atribuir a Copart los beneficios futuros de ACV sin pagar por ellos. [S4, S5]
+
+## Tres años y cuatro trimestres
+
+USD millones. Neto es atribuible a Copart, no el neto consolidado usado al inicio del estado de caja. D&A incluye amortización de costes de deuda según la rúbrica publicada. Capex es compra pagada de propiedad y equipo, sin adquisiciones. CFO−capex es una resta contable, **no FCFF normalizado**. FY2026 es exactamente el TTM terminado el 31 de julio de 2026, no un TTM a noviembre. [S1 estados]
+
+| Periodo | Ingresos | EBIT | Neto atribuible | D&A | CFO | Capex caja | CFO−capex |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| FY2024 | 4.236,823 | 1.572,023 | 1.363,020 | 190,256 | 1.472,564 | 510,990 | 961,574 |
+| FY2025 | 4.646,958 | 1.696,714 | 1.552,449 | 217,784 | 1.799,750 | 568,990 | 1.230,760 |
+| FY2026 | 4.666,209 | 1.652,590 | 1.484,270 | 238,466 | 1.604,492 | 337,363 | 1.267,129 |
+
+Q1 corresponde a octubre de 2025; Q2 a enero de 2026; Q3 a abril y Q4 a julio. Q2 = H1−Q1, Q3 = 9M−H1 y Q4 = FY−9M; los resultados directos de Q2/Q3 concilian. Los cuatro trimestres suman el ejercicio. No se suman EPS trimestrales para fabricar EPS TTM porque cambian las acciones medias. [S1, S2, S3, S7]
+
+| Periodo | Ingresos | EBIT | Neto atribuible | D&A | CFO | Capex caja | CFO−capex |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Q1FY2026 | 1.155,030 | 430,694 | 403,714 | 54,199 | 535,253 | 108,042 | 427,211 |
+| Q2FY2026 | 1.121,674 | 388,710 | 350,732 | 55,514 | 127,500 | 69,618 | 57,882 |
+| Q3FY2026 | 1.237,066 | 464,282 | 402,401 | 59,086 | 584,198 | 80,893 | 503,305 |
+| Q4FY2026 | 1.152,439 | 368,904 | 327,423 | 69,667 | 357,541 | 78,810 | 278,731 |
+
+## Calidad de la caja, reinversión e intereses
+
+El CFO pasó de $1.799,750m a $1.604,492m, caída de $195,258m. Capex en efectivo bajó de $568,990m a $337,363m, $231,627m menos. Por eso CFO−capex subió solo $36,369m, hasta $1.267,129m (+2,96%). No extrapolar la menor inversión como ahorro permanente: la expansión de terrenos e instalaciones y su calendario son parte del negocio. Se registraron además compras de PP&E por liquidación de depósitos de $6,222m frente a $64,050m; son reclasificaciones de depósitos previamente pagados, no necesariamente nuevo efectivo del periodo. No se vuelven a restar automáticamente. [S1 caja y liquidez]
+
+La caja incluye $38,818m de SBC añadida en la conciliación. Restarla de CFO−capex deja $1.228,311m como diagnóstico, todavía sin normalizar impuestos, circulante, intereses o necesidades de expansión. No es FCFF. En un futuro DCF basado en EBIT, la SBC ya es gasto: mantener su coste económico sin descontarla dos veces. [S1 nota 12 y caja]
+
+Cuentas a cobrar consumieron $80,629m, impuestos a cobrar $49,277m e impuestos a pagar $47,388m; proveedores y otros pasivos aportaron $32,507m. Las cuentas a cobrar incluyen anticipos realizados por cuenta de aseguradoras y cobros brutos de subastas, por lo que un aumento no significa necesariamente ingresos impagados del mismo importe. El coste de vehículos en depósito se reconoce al vender y crea necesidades de circulante antes del ingreso. [S1 nota 3 y políticas]
+
+El interés neto aporta $181,923m antes de impuestos, fuera de EBIT. No debe capitalizarse como beneficio operativo perpetuo y además sumarse la misma liquidez íntegra al valor de empresa. La adquisición y las recompras reducen fondos potencialmente invertibles. En FY2026 las recompras consumieron $1.632,538m de efectivo; no son capex ni un ajuste que mejore el flujo disponible. La cifra patrimonial de recompra ($1.648,856m) no es idéntica al pago del estado de caja y no se usa para reemplazarlo. [S1 estados y nota 12]
+
+## Modelo de negocio y señales de demanda
+
+El 79% de vehículos procesados provino de aseguradoras, frente al 81% en los dos ejercicios previos. La decisión de reparar o declarar pérdida total, precios de vehículos usados, demanda de piezas, tipos de cambio y exportaciones influyen en unidades y precio de adjudicación. Inviernos y eventos meteorológicos alteran volumen, costes de transporte y anticipos; no anualizar un trimestre o un año de catástrofes. [S1 negocio y estacionalidad]
+
+Ingresos por servicios FY2026 fueron $3.969,520m, prácticamente planos; Estados Unidos cayó 1,8% e internacional creció 12,4%. Ventas de vehículos propios fueron $696,689m, +2,7%. Los servicios se reconocen por comisiones netas, mientras los vehículos propios se registran por precio bruto: no comparar ambos como si cada dólar tuviese igual margen o riesgo. La red de compradores y los terrenos aportan ventajas, pero requieren reinversión y no garantizan crecimiento de unidades. [S1 negocio y MD&A]
+
+En Q4, EBIT fue $368,904m frente a $412,591m derivado para el año previo. La mejor cifra de ventas no eliminó la presión de costes. Antes de elevar la tesis, verificar volumen sin eventos extraordinarios, rendimiento por unidad, costes de instalaciones y contribución internacional. El expediente no atribuye toda la caída a un único factor no cuantificado por fuentes primarias. [S1, S2]
+
+## Balance: julio no es noviembre
+
+A 31 de julio, efectivo/equivalentes/restringido $1.907,901m más letras del Tesoro a coste amortizado $2.581,901m suman **$4.489,802m**. Es liquidez contable agregada, no caja excedente utilizable. La línea de efectivo agrupa caja restringida; $598,3m estaba en filiales extranjeras con intención de reinversión fuera de EE.UU. y posibles retenciones al repatriar. También se necesitan fondos para anticipos, expansión e integración. [S1 balance, políticas y liquidez]
+
+El balance muestra pasivos por arrendamientos corrientes $15,163m y no corrientes $73,204m, conjuntamente $88,367m. El proxy describe ausencia de deuda financiera al cierre y capacidad revolvente no dispuesta; esa capacidad no es caja propia. La participación minoritaria rescatable $16,585m tampoco desaparece de un puente a accionistas. No se presenta un EV actual sin conciliar obligaciones, efectivo disponible y ACV a la misma fecha. [S1 balance; S5 carta inicial]
+
+La portada del 10-K registra 926.330.452 acciones a 25 de septiembre; al multiplicarlas por el precio del scanner resulta capitalización ilustrativa $30.022,4m. Son fechas distintas y acciones básicas, no capital plenamente diluido actual. El EPS diluido FY2026 de $1,55 produce un cociente mecánico de 20,91 veces; no es valoración ni margen de seguridad. La media diluida anual de 956,860m no sustituye acciones de cierre. [S1 portada y estado de resultados]
+
+## ACV: cierre confirmado, integración pendiente de modelar
+
+El 8-K del 16 de octubre confirma consumación y $10,50 en efectivo por acción. El precio anunciado de aproximadamente $1.900m es valor de capital, no una cifra verificada de enterprise value o coste final neto de caja adquirida. El proxy posterior confirma financiación con efectivo disponible. El antiguo comentario de cierre previsto para fin de año queda superado por estos documentos. [S1 nota 19; S4; S5]
+
+ACV amplía la presencia en vehículos comercializables y la distribución digital a concesionarios, pero sus márgenes, circulante, crédito/financiación, remuneración en acciones y costes de integración deben modelarse por separado. Las cuentas de Copart hasta julio no incorporan ACV. No se ha completado aquí una reconstrucción financiera de ACV ni la asignación del precio de compra. Restar mecánicamente $1.900m a la liquidez de julio ignoraría caja generada desde entonces, costes, efectivo adquirido y otros movimientos. Por eso se retienen valor canónico y caja excedente actual. [S4, S5]
+
+## Riesgos y siguiente decisión
+
+El 10-K mantiene una investigación del Departamento de Justicia sobre posibles incumplimientos de normas contra blanqueo por procedimientos de la plataforma. La empresa coopera y no puede estimar rango de pérdida. Es una investigación, no una conclusión de responsabilidad; tampoco se supone coste cero al no existir estimación. Se añaden riesgo de exportación, concentración sectorial en aseguradoras, uso del capital, capacidad física y ejecución de ACV. [S1 nota 15 y factores de riesgo]
+
+La siguiente evidencia necesaria es el primer periodo que incorpora el cierre de ACV (trimestre terminado en octubre), balance posterior a la operación y detalle de caja, financiación, integración y dilución. En esta consulta acotada no se localizó un comunicado oficial confirmando la fecha exacta de esos resultados; no se convierte una estimación de calendario de terceros en fecha confirmada.
+
+Antes de valorar: reconstruir ACV y su balance adquirido, normalizar capex y circulante a través del ciclo, separar interés financiero del resultado operativo, conciliar caja/arrendamientos/minoritarios/dilución y calibrar descuento y escenarios. Consenso, short interest, float, propiedad institucional y señales técnicas no se verificaron: quedan sin rellenar. No hay señal, stop, M, K, tamaño ni aprobación Stage 3.5. **Estado: parcial factual; confianza alta en cifras históricas, limitada en economía combinada futura.**
+
+## Fuentes primarias
+
+- S1: [10-K FY2026, estados y notas](https://www.sec.gov/Archives/edgar/data/900075/000119312526405731/cprt-20260731.htm).
+- S2: [10-Q abril2026, trimestre y nueve meses](https://www.sec.gov/Archives/edgar/data/900075/000119312526245578/cprt-20260430.htm).
+- S3: [10-Q enero2026, trimestre y semestre](https://www.sec.gov/Archives/edgar/data/900075/000119312526088593/cprt-20260131.htm).
+- S4: [8-K16oct2026, cierre de ACV](https://www.sec.gov/Archives/edgar/data/900075/000119312526423478/d129535d8k.htm).
+- S5: [Proxy22oct2026, carta y adquisición](https://www.sec.gov/Archives/edgar/data/900075/000119312526428904/d144331ddef14a.htm).
+- S6: [Resultados Q4 FY2026](https://www.sec.gov/Archives/edgar/data/900075/000119312526387902/cprt-ex99_1.htm).
+- S7: [10-Q octubre2025, primer trimestre](https://www.sec.gov/Archives/edgar/data/900075/000119312525291660/cprt-20251031.htm).
+
+Cálculos reproducibles en analysis.py y calculations.json; originales y extractos conservados en el expediente individual.
