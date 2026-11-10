@@ -3,10 +3,12 @@ const {t,profiles}=require('./load-stock-profiles.cjs')(path.resolve(__dirname,'
 const currentHrb=profiles.find(p=>p.ticker==='HRB'),aso=profiles.find(p=>p.ticker==='ASO');
 // Calendar supersession at the November 4 review remains a historical fixture.
 const datedHrb=t.S.ges.filter(r=>r.ticker==='HRB'&&r.date==='2026-11-04'&&r.rep==='A247');assert.equal(datedHrb.length,1);
-const hrb={...currentHrb,latestManagement:datedHrb[0]};
+const historicalAnalysis=currentHrb.analyses.find(a=>a.id==='A082');assert(historicalAnalysis);
+const hrb={...currentHrb,latestAnalysis:historicalAnalysis,latestManagement:datedHrb[0]};
 const before=JSON.stringify({dec:t.S.dec,ges:t.S.ges,ops:t.S.ops,acct:t.S.acct,hist:t.S.hist});
 for(const lang of ['es','en']){
  t.setLang(lang);const h=t.renderProfile(hrb),a=t.renderProfile(aso);
+ if(currentHrb.latestAnalysis.date>'2026-11-04'){const current=t.renderProfile({...currentHrb,latestManagement:datedHrb[0]});assert(!current.includes(lang==='es'?'Próximo paso del informe histórico':'Historical report next step'));}
  assert(h.includes(lang==='es'?'Próximo paso del informe histórico (puede estar superado): ':'Historical report next step (may be superseded): '));
  assert(h.includes(lang==='es'?'Resultados ~5 nov':'Results ~Nov 5'));
  assert(h.includes(lang==='es'?'Próximo paso de la revisión histórica':'Historical review next step'));
