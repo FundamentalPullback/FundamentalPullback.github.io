@@ -1,0 +1,123 @@
+{
+  "as_of": "2026-11-09 close",
+  "original_calculation_time_utc": "2026-11-10T02:56:40.268Z",
+  "recovery": "Recomputed from the originally reviewed ChartExchange Nov6/Nov9 OHLC and the unchanged public A290 exact seed; not a new market-data snapshot.",
+  "method": "Wilder14 continuity, highest close since entry minus 3 ATR; compare close to prior trailing first; never lower; prospective next session; do not mix StockAnalysis OHLC.",
+  "source_seed": "https://fundamentalpullback.github.io/research/2026-11-05/trailing-reconciliation/calculations.json",
+  "source_seed_blob_sha": "c319e422e210973c14695cecb4cae09eab991d28",
+  "calculations": {
+    "ASO": [
+      {
+        "date": "2026-11-06",
+        "h": 69.12,
+        "l": 65.83,
+        "c": 67.27,
+        "prevTrail": 60.566971190358615,
+        "exit": false,
+        "tr": 3.2900000000000063,
+        "atr": 2.4768898696509054,
+        "hc": 67.81,
+        "candidate": 60.37933039104729,
+        "nextTrail": 60.566971190358615
+      },
+      {
+        "date": "2026-11-09",
+        "h": 71.29,
+        "l": 69.05,
+        "c": 71.21,
+        "prevTrail": 60.566971190358615,
+        "exit": false,
+        "tr": 4.02000000000001,
+        "atr": 2.5871120218186983,
+        "hc": 71.21,
+        "candidate": 63.4486639345439,
+        "nextTrail": 63.4486639345439
+      }
+    ],
+    "EXLS": [
+      {
+        "date": "2026-11-06",
+        "h": 43.6,
+        "l": 41.88,
+        "c": 43.15,
+        "prevTrail": 39.98374315665369,
+        "exit": false,
+        "tr": 1.7299999999999969,
+        "atr": 1.2459842610357623,
+        "hc": 43.61,
+        "candidate": 39.87204721689271,
+        "nextTrail": 39.98374315665369
+      },
+      {
+        "date": "2026-11-09",
+        "h": 43.7,
+        "l": 42.81,
+        "c": 43.34,
+        "prevTrail": 39.98374315665369,
+        "exit": false,
+        "tr": 0.8900000000000006,
+        "atr": 1.2205568138189222,
+        "hc": 43.61,
+        "candidate": 39.948329558543236,
+        "nextTrail": 39.98374315665369
+      }
+    ],
+    "ULTA": [
+      {
+        "date": "2026-11-06",
+        "h": 649.7,
+        "l": 637.64,
+        "c": 644.76,
+        "prevTrail": 606.3085153553014,
+        "exit": false,
+        "tr": 12.06000000000006,
+        "atr": 18.463589974411672,
+        "hc": 660.7,
+        "candidate": 605.3092300767651,
+        "nextTrail": 606.3085153553014
+      },
+      {
+        "date": "2026-11-09",
+        "h": 672.67,
+        "l": 650.02,
+        "c": 665.03,
+        "prevTrail": 606.3085153553014,
+        "exit": false,
+        "tr": 27.909999999999968,
+        "atr": 19.138333547667976,
+        "hc": 665.03,
+        "candidate": 607.614999356996,
+        "nextTrail": 607.614999356996
+      }
+    ],
+    "DOCU": [
+      {
+        "date": "2026-11-06",
+        "h": 78.5,
+        "l": 75.93,
+        "c": 77.61,
+        "prevTrail": 76.97,
+        "exit": false,
+        "tr": 2.9499999999999886,
+        "atr": 2.959124217863018,
+        "hc": 85.27,
+        "candidate": 76.39262734641095,
+        "nextTrail": 76.97
+      },
+      {
+        "date": "2026-11-09",
+        "h": 78.36,
+        "l": 76.7,
+        "c": 77.73,
+        "prevTrail": 76.97,
+        "exit": false,
+        "tr": 1.6599999999999966,
+        "atr": 2.866329630872802,
+        "hc": 85.27,
+        "candidate": 76.67101110738159,
+        "nextTrail": 76.97
+      }
+    ]
+  },
+  "market_caveat": "Original Nov9 ChartExchange closing fields were pre-auction last trades. Provider-specific prospective estimates, not broker orders or exchange-certified official closes. Keep any higher confirmed trailing reference."
+}

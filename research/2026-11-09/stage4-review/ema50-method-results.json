@@ -1,0 +1,60 @@
+{
+  "as_of": "2026-11-09",
+  "status": "reviewed_original_method_and_results_only",
+  "full_original_series_included": false,
+  "method": {
+    "source": "ChartExchange historical Close column, original pre-auction Nov9 fields; no StockAnalysis values substituted",
+    "start": "2025-11-10",
+    "end": "2026-11-09",
+    "observations": 251,
+    "seed": "SMA of first 50 closes on 2026-01-22",
+    "alpha": 0.0392156862745098,
+    "recurrence": "EMA_t = (2/51)*Close_t + (49/51)*EMA_(t-1)",
+    "consecutiveBelow": "Reset to zero whenever Close >= same-day EMA50"
+  },
+  "limitation": "Reviewed original results. This artifact does not reproduce the 251 original source bars. Later provider revisions are not silently substituted.",
+  "results": {
+    "ASO": {
+      "ema50_display": 56.2083,
+      "original_close_field": 71.21,
+      "consecutiveBelow": 0,
+      "source": "https://chartexchange.com/symbol/nasdaq-aso/historical/"
+    },
+    "ULTA": {
+      "ema50_display": 588.293,
+      "original_close_field": 665.03,
+      "consecutiveBelow": 0,
+      "source": "https://chartexchange.com/symbol/nasdaq-ulta/historical/"
+    },
+    "DOCU": {
+      "ema50_display": 73.204,
+      "original_close_field": 77.73,
+      "consecutiveBelow": 0,
+      "source": "https://chartexchange.com/symbol/nasdaq-docu/historical/"
+    },
+    "EXLS": {
+      "ema50_display": 38.561,
+      "original_close_field": 43.34,
+      "consecutiveBelow": 0,
+      "source": "https://chartexchange.com/symbol/nasdaq-exls/historical/"
+    },
+    "CTSH": {
+      "ema50_display": 62.4508,
+      "original_close_field": 63.62,
+      "consecutiveBelow": 0,
+      "source": "https://chartexchange.com/symbol/nasdaq-ctsh/historical/"
+    },
+    "JXN": {
+      "ema50_display": 132.1529,
+      "original_close_field": 135.41,
+      "consecutiveBelow": 0,
+      "source": "https://chartexchange.com/symbol/nyse-jxn/historical/",
+      "prior": {
+        "date": "2026-11-06",
+        "close": 131.69,
+        "ema50_display": 132.0199,
+        "consecutiveBelow": 1
+      }
+    }
+  }
+}
