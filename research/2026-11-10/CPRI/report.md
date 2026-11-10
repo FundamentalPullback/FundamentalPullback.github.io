@@ -1,0 +1,21 @@
+# Capri: hedge claims and continuing operating cash
+
+November 10, 2026. This continues A356. November 9 scanner: $21.38, Opportunity 80, QP 80. Research eligibility does not approve entry.
+
+Latest results remain October 30, Q2 FY2027 ended September 26. November 6 was the telephone replay expiry, not another earnings date. No next exact earnings date is verified. The continuing business is Michael Kors and Jimmy Choo; Versace sale proceeds are already reflected in the balance sheet and must not be added again.
+
+The main additional finding is contractual. Capri's $763m net-investment hedge liability remains an economic claim even though the credit agreement excludes swap obligations from covenant indebtedness. Borrowing cash to settle that claim can turn an excluded swap obligation into included bank debt. Up to $150m supplier financing is also excluded from that covenant definition, but this does not remove existing supplier financing from economic debt.
+
+The net-investment hedges have USD-equivalent notionals of $3.5bn for CHF subsidiaries and $2.364bn for EUR subsidiaries. Those notionals are not another debt amount. Current fair value is a $763m liability, split $61m current and $702m long-term. Master netting leaves it unchanged; the separate $3m inventory-forward asset does not offset it. The $77m decline in the hedge liability matches the disclosed six-month hedge OCI gain, but does not establish principal cash settlement.
+
+Modified CHF contracts no longer require future collateral and have shorter maturities. The issuer says they contain a financing element and classifies subsequent coupon receipts as financing cash flow, despite recognizing interest income in earnings. Reported six-month hedge interest income of $66m is not a separately verified cash receipt. The financing statement provides no distinct coupon line, so it would be wrong to mechanically remove the accrued amount from operating cash flow or invent an offset in debt borrowings.
+
+A consistent operating valuation must exclude hedge interest from handbag and shoe FCFF, include continuing foreign operations once, and address the separate derivative claim. Foreign subsidiary book net investments are not an extra asset to add after those operations have already been valued. Future coupons must not be added again on top of a fair-value contract bridge. Exact currency-specific exposure and cash settlement timing remain important limitations.
+
+Current TTM revenue is $3.399bn, EBIT $46m, continuing CFO $334m and cash capex $77m. Michael Kors TTM segment EBIT is $299m, Jimmy Choo negative $2m; corporate expense, impairments and restructuring materially reduce the consolidated result. The tariff refund receivable fell from $65m to $7m. Its collection is not a second profit, and the earlier $40m cost-of-sales benefit is not recurring margin improvement. The portion of the additional $25m inventory credit sold through earnings is not separately quantified.
+
+The current share register and award rollforward improve the denominator evidence: October 27 legal shares were 103.349705m, with September service RSUs of 2.957367m and performance RSUs of 0.235043m. Performance payout can reach 200%. These dated figures still require care: weighted-average diluted shares, anti-dilutive equivalents and the award register cannot simply be added together. SBC remains an economic expense and future buybacks are not free.
+
+The revolver has $559m unused committed capacity, net of letters of credit, and matures in June 2031. Its covenant uses lease-adjusted leverage and limits cash netting to $200m; ordinary debt/EBITDA is not the contractual test. The company reports current compliance. Operating cash reserves, seasonal needs, derivative settlements and refinancing must be considered together.
+
+Conditional recovery and funding tests remain sensitive to margin improvement, the capital needed to achieve it and hedge settlement timing. There is no cleared valuation range or entry approval. The most useful next disclosures are actual net hedge cash schedules, matching currency exposure, sustainable brand profit after investment, tariff inventory realization and contract-defined borrowing capacity.

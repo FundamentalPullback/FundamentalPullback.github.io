@@ -1,0 +1,97 @@
+{
+  "asof": "2026-11-10",
+  "scope": "Factual continuation and conditional diagnostics; no approved valuation or entry",
+  "sources": [
+    {
+      "id": "q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299126000171/szl-20260930.htm",
+      "use": "3 FY/TTM bridge with annuals; current balances, provision rollforward, 24.4 trust exposure, facility eligible collateral 297.2 and reported capacity 169.3, cash/SPE and covenants compliance. Tax and SBC retained."
+    },
+    {
+      "id": "annual",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299126000016/szl-20251231.htm",
+      "use": "Historical statements, reconciliation and reported guidance; see dated report."
+    },
+    {
+      "id": "annual2024",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299125000041/szl-20241231.htm",
+      "use": "Historical statements, reconciliation and reported guidance; see dated report."
+    },
+    {
+      "id": "q3_2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299125000257/szl-20250930.htm",
+      "use": "Comparative nine-month 2024 SBC 3.823; September 2025 net loans 184.131. Original CFO replaced by restated annual 2025 tables."
+    },
+    {
+      "id": "q1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299126000065/szl-20260331.htm",
+      "use": "Historical statements, reconciliation and reported guidance; see dated report."
+    },
+    {
+      "id": "q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299126000126/szl-20260630.htm",
+      "use": "Historical statements, reconciliation and reported guidance; see dated report."
+    },
+    {
+      "id": "release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299126000169/sezl-20261104ex9901.htm",
+      "use": "Historical statements, reconciliation and reported guidance; see dated report."
+    },
+    {
+      "id": "retention",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299126000171/sezl-20260930ex1005.htm",
+      "use": "Sections 2(c), 2(g), 2(j), 26 and Schedule 1: mandatory purchases, termination, 30 initial / 150 discretionary retention threshold, redacted collateral formula and two-business-day top-up."
+    },
+    {
+      "id": "program",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299126000171/sezl-20260930ex1004.htm",
+      "use": "Section 42 and definitions: minimum tangible net worth at least 100 but higher limb, leverage and liquidity terms redacted; WebBank owns deposits, not Sezzle."
+    },
+    {
+      "id": "facility",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299126000071/sezl-20260507ex1001.htm",
+      "use": "Exhibit F:100 tangible net worth, cash greater than max 20 or 10% advances, debt/EBITDA 6 x, collection and second-payment triggers. Section 2 permits conditional prepayments; no extra borrowing assumed."
+    },
+    {
+      "id": "guaranty",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662991/000166299126000071/sezl-20260507ex1002.htm",
+      "use": "Section 2 amendment of restricted-payment clause: no default, positiveLTM netincome and 75+50% subsequent profits with 100% losses. No starting basket credited."
+    },
+    {
+      "id": "treasury",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "use": "November 9,2026 ten-year nominal yield 4.88%, actual table row."
+    },
+    {
+      "id": "erp",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "use": "November 1,2026 implied ERP 4.41%."
+    },
+    {
+      "id": "statistics",
+      "url": "https://stockanalysis.com/stocks/sezl/statistics/",
+      "use": "Observed beta 6.60, not guaranteed stable or appropriate forward beta."
+    },
+    {
+      "id": "prices",
+      "url": "https://stockanalysis.com/stocks/sezl/history/",
+      "use": "Historical statements, reconciliation and reported guidance; see dated report."
+    },
+    {
+      "id": "chart",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SEZL?range=5y&interval=1d",
+      "use": "Split-adjusted historical closes 2023-12-29,2024-12-31,2025-12-31; retrospective multiples, no point-in-time backtest."
+    }
+  ],
+  "assumptions": [
+    "25% normalized tax; no SBC or provision addback in NI; maintenance approximates depreciation; capital growth includes loans, collateral and operations.",
+    "No bank license, deposits, new debt, acquisitions or buybacks assumed. Existing debt repaid with 52 in year 1 and 52 in year 3, with year 2 cash prefunding checked; no claim of actual maturity-date liquidity.",
+    "All initial cash 70.142 remains operating buffer; separate restricted 37.722 not available. Parent test subtracts SPE 19.610. Redacted WebBank tests are not certified.",
+    "Growth, margins, capital ratios 65–85% and incremental returns 25–45% are scenario estimates, not promises. Terminal retains funded growth.",
+    "Raw beta 6.60 CAPM 33.986% is a mechanical high-risk diagnostic. Rates 14–26% are explicit sensitivities, not measured replacement betas or validated hurdles.",
+    "Distributions after debt repayment assume contractual release and continuing WebBank compliance; no legal approval to distribute is implied.",
+    "Stress 54.4 loss and 30 extra collateral are hypothetical, not recorded balances or maximum simultaneous loss. Stress and inverse fail funding and cannot be read as financed values.",
+    "Quarterly diluted shares 34.753 are a proxy, not a spot award register; historical prices/shares are split-consistent and retrospective.",
+    "Year 1 interest uses full opening principal 104 and unused commitment 196 because repayment occurs at year-end. Tax sensitivity retains opening normalized NI 170.2995 at 25% and changes prospective taxes only."
+  ]
+}
