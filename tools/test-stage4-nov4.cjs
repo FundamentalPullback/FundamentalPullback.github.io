@@ -1,6 +1,8 @@
 const fs=require('fs'),path=require('path'),assert=require('assert'),vm=require('vm'),Module=require('module');
 const root=path.resolve(__dirname,'..'),crypto=require('crypto'); const sha=s=>crypto.createHash('sha256').update(s).digest('hex');
-const hashes={"acct.js": "bdb2b3f0ce46d6337196ec900df8bd81a92cf29b471ee875b2945f9ca7a7e956", "hist.js": "7528b78eafd866b00476728a060836c409b1fa3cf6694c2f6b613c91751d7832", "plan.js": "57c62e6f641709e25a3e3387db5a34a39b25b0bd707e3f114a6f64946d8e33a5"}; for(const [f,h] of Object.entries(hashes))assert.equal(sha((JSON.parse(fs.readFileSync(root+'/tools/accounting-prior.json'))['data/'+f]) || fs.readFileSync(root+'/data/'+f)),h,f+' preserved');
+const hashes={"acct.js": "bdb2b3f0ce46d6337196ec900df8bd81a92cf29b471ee875b2945f9ca7a7e956", "hist.js": "7528b78eafd866b00476728a060836c409b1fa3cf6694c2f6b613c91751d7832", "plan.js": "57c62e6f641709e25a3e3387db5a34a39b25b0bd707e3f114a6f64946d8e33a5"}; for(const [f,h] of Object.entries(hashes))assert.equal(sha((JSON.parse(fs.readFileSync(root+'/tools/accounting-prior.json'))['data/'+f]) || require('./load-accounting-nov6-fixture.cjs')().sourceFiles['data/'+f]),h,f+' preserved');
+// Current plan update is separately reviewed and must not drift during a close import.
+assert.equal(sha(fs.readFileSync(root+'/data/plan.js')),'829d79f433f3616a01ce7f55b635bb56d2c20c89a5dc389aa6cdeb746cf63f70','Reviewed November 9 plan unchanged');
 function ges(p){const c={window:{FP:{}}};c.FP=c.window.FP;vm.createContext(c);vm.runInContext(fs.readFileSync(p+'/data/ges.js','utf8'),c);return JSON.parse(JSON.stringify(c.FP.ges));}
 // The November 4 review is a dated snapshot, not a ban on later executed trades.
 const opsContext={window:{FP:{}}};opsContext.FP=opsContext.window.FP;vm.createContext(opsContext);vm.runInContext(fs.readFileSync(root+'/data/ops.js','utf8'),opsContext);

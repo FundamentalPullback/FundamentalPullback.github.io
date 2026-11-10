@@ -1,0 +1,111 @@
+{
+  "asOf": "2026-11-09",
+  "source": "Reviewed dated daily vendor histories; source differences documented in research/accounting-update.html. Not exchange auction certification.",
+  "retrievedAt": "2026-11-10T02:45:05.438146+00:00",
+  "sessions": {
+    "2026-11-09": {
+      "SPY": 752.69,
+      "ASO": 71.18,
+      "DOCU": 77.75,
+      "EXLS": 43.33,
+      "ULTA": 665.13,
+      "CTSH": 63.6,
+      "JXN": 135.51
+    }
+  },
+  "evidence": {
+    "2026-11-09": {
+      "SPY": {
+        "sessionDate": "2026-11-09",
+        "priceType": "regular-close",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?range=5d&interval=1d",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-10T02:44:45.277745+00:00",
+        "rawSha256": "03d0e998d8626bb176f0837332f72e6b533531a506d61545e04d4db93d77bacc"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-09",
+        "priceType": "regular-close",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/ASO?range=5d&interval=1d",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-10T02:44:47.466584+00:00",
+        "rawSha256": "36e48b0cefea75c6ddc5ec919fdf0fd813defd267242139faed256ba9d487ac5"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-09",
+        "priceType": "regular-close",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/DOCU?range=5d&interval=1d",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-10T02:44:49.461353+00:00",
+        "rawSha256": "7ba729b72d6bccd958249daef440a4584f9a4d7be4d7fdabc283e5b494985c8c"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-09",
+        "priceType": "regular-close",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXLS?range=5d&interval=1d",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-10T02:44:51.725602+00:00",
+        "rawSha256": "cadad163ef428f2e0d9c24594dcd34e6f52236dacbee1f4e7e2e425b46bf8daf"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-09",
+        "priceType": "regular-close",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/ULTA?range=5d&interval=1d",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-10T02:44:54.230458+00:00",
+        "rawSha256": "c12811d8fdd38998acfe52a3e4173d4934df6254839573682a08c8d4c01f09cc"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-09",
+        "priceType": "regular-close",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/CTSH?range=5d&interval=1d",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-10T02:44:56.731292+00:00",
+        "rawSha256": "62377c268c7e7c102f802e4fdcfde0d444d3922f60a62f84194e0b98af1c2ca1"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-09",
+        "priceType": "regular-close",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/JXN?range=5d&interval=1d",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-10T02:44:58.962121+00:00",
+        "rawSha256": "a1d6ef100eaf5dbf42c061fb10f817c3057375a9d2ecedc476628949bbc96d04"
+      }
+    }
+  },
+  "review": {
+    "calendar": "https://www.nyse.com/trade/hours-calendars",
+    "sessionCloseAt": "2026-11-09T21:00:00Z",
+    "calendarReview": "Normal scheduled session; no extraordinary closure identified in current notice searches. No claim of complete notice-archive certification.",
+    "priceBasis": "Dated daily unadjusted Close fields, not Last or extended-hours quotes. Vendor-reviewed, not a certified official auction price.",
+    "differences": [
+      {
+        "ticker": "ASO",
+        "sheet": 71.21,
+        "accepted": 71.18,
+        "corroboration": "https://stockanalysis.com/stocks/aso/history/",
+        "note": "The later dated daily row converged with Yahoo and FinancialContent at 71.18; earlier StockAnalysis view was 71.24. Cause and exact vendor revision time not established. Sheet not edited."
+      },
+      {
+        "ticker": "EXLS",
+        "sheet": 43.34,
+        "accepted": 43.33,
+        "corroboration": "https://stockanalysis.com/stocks/exls/history/",
+        "note": "Dated daily Close agrees with Yahoo. Sheet not edited."
+      },
+      {
+        "ticker": "CTSH",
+        "accepted": 63.6,
+        "corroboration": "https://www.financialcontent.com/quote/NQ:CTSH/historical",
+        "note": "Dated daily series corroborate 63.60. Earlier alternative vendor views differed; no exchange correction notice established."
+      },
+      {
+        "ticker": "SPY",
+        "accepted": 752.69,
+        "corroboration": "https://finance.yahoo.com/quote/SPY/history/",
+        "note": "Dated daily Close agrees with the historical sheet and the dated closing-cross record reviewed. Other earlier vendor values differed."
+      }
+    ],
+    "scope": "Only new November 9 historical session. All earlier historical prices, public executions, fees, research, approvals and stops remain unchanged."
+  }
+}

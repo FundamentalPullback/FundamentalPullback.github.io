@@ -3,7 +3,15 @@ const fs=require('fs'),path=require('path'),assert=require('assert/strict'),Modu
 const root=path.resolve(__dirname,'..'),clone=x=>JSON.parse(JSON.stringify(x));
 const filename=path.join(__dirname,'load-stock-profiles.cjs'),m=new Module(filename,module);m.filename=filename;m.paths=module.paths;
 m._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,vPosiciones,vOperaciones,vInicio,vCartera,calPanel,positions,acctCalc,equitySeries,calSeries,livePanel,'),filename);
-const a=m.exports(root),t=a.t,ops=clone(a.c.FP.ops),sha=s=>crypto.createHash('sha256').update(s).digest('hex');
+const a=m.exports(root),t=a.t,sha=s=>crypto.createHash('sha256').update(s).digest('hex');
+// Keep the November 6 reconciliation as a dated scenario, not a prohibition on
+// subsequent reviewed executions. The current ledger remains independently frozen.
+assert.equal(a.c.FP.ops.length,31,'Review any additional executions before publication');
+assert.equal(sha(JSON.stringify(a.c.FP.ops)),require('./reviewed-ledger-contract.json').opsSha256,'Reviewed current ledger unchanged');
+const ops=clone(a.c.FP.ops.slice(0,27));t.S.ops=t.PARTS.ops(ops);
+const fixture=require('./load-accounting-nov6-fixture.cjs')();
+for(const k of ['acct','hist'])t.S[k]=t.PARTS[k](fixture[k]);
+t.S.snapshot='2026-11-06';
 assert.equal(ops.length,27);assert.equal(sha(JSON.stringify(ops.slice(0,25))),'20729a2578b1495b1c864ffee7f181abc240f2062a9af8980636cf06f4ae6785','all previous operations preserved');
 assert.equal(t.S.ops.filter(x=>x.ticker==='CTSH').length,1);const c=t.S.ops.find(x=>x.ticker==='CTSH');assert.equal(c.shares,41);assert.equal(c.exec,66.69);assert.equal(c.fee,0);assert.match(c.notes,/estimated/i);
 const hrb=t.S.ops.filter(x=>x.ticker==='HRB'&&x.type==='Venta');assert.equal(hrb.length,1);assert.equal(hrb[0].shares,18);assert.equal(hrb[0].fee,.04);assert.match(hrb[0].notes,/estimada/);

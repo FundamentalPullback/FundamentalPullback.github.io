@@ -7,6 +7,12 @@ const noop=()=>{},el={addEventListener:noop,setAttribute:noop,querySelectorAll:(
 Object.assign(c,{document:{getElementById:()=>el,addEventListener:noop,querySelectorAll:()=>[],querySelector:()=>el,hidden:false},localStorage:{getItem:()=>null},console,Date,Intl,setTimeout,clearTimeout,AbortController,location:{hash:'#cartera'},URL,URLSearchParams});c.window.addEventListener=noop;vm.runInContext(app,c);
 const t=c.window.TEST,F=c.FP;for(const k of ['ops','acct','hist','ges'])t.S[k]=t.PARTS[k](F[k]);t.S.scan=[];t.S.dec=[];t.S.lib=[];t.S.libState='ok';t.S.snapshot=c.window.FP_MANIFEST.asOf;
 const near=(a,b)=>assert(Math.abs(a-b)<1e-7,`${a} !== ${b}`);
+// Preserve the actual pre-close-history/missing-JXN input scenario after later
+// daily imports. Only the historical prices are substituted; the current ledger
+// and application implementation are still under test.
+assert.equal(require('crypto').createHash('sha256').update(JSON.stringify(F.ops)).digest('hex'),require('./reviewed-ledger-contract.json').opsSha256,'Reviewed current ledger unchanged');
+const fixture=require('./load-accounting-nov6-fixture.cjs')();
+for(const k of ['acct','hist'])t.S[k]=t.PARTS[k](fixture[k]);t.S.snapshot='2026-11-06';
 assert.equal(require('crypto').createHash('sha256').update(JSON.stringify(F.ops.slice(0,27))).digest('hex'),'cc6dc5fc6ab15f0d5e26cb71e2c414f96746aa550deef256a11df732502e0c05','All 26 prior operations preserved');
 assert.equal(require('crypto').createHash('sha256').update(JSON.stringify(F.ops.slice(0,29))).digest('hex'),'7f000a0861bbc23f17943b014d2a483dbc998133e524109d35f81030d35f9e8d','All prior operations including both sales preserved');
 assert.equal(F.ops.length,31);assert.equal(t.S.ops.filter(x=>x.date.startsWith('2026-11-09')).length,4);assert.equal(t.S.ops.filter(x=>x.ticker==='HRB'&&x.type==='Venta').length,2);
