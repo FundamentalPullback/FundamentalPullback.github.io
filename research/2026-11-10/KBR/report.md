@@ -1,0 +1,69 @@
+# KBR — caja, joint ventures y separación de Trinzic
+
+**Investigación factual parcial al 10 de noviembre de 2026. Sin valoración canónica ni entrada aprobada.** KBR, Inc., NYSE KBR, CIK 1357615. Scanner del 9 de noviembre: Opportunity 90 y precio $38,65. El umbral de investigación ≥65 no certifica los filtros técnicos ni una compra. La revisión de registros anteriores encontró referencias de scanner y aplazamientos por el antiguo umbral, no una valoración individual que deba sustituirse.
+
+## Conclusión
+
+La cotización actual representa todavía el grupo combinado. No debe compararse con un beneficio de la futura KBR excluyendo Trinzic sin asignar correctamente la distribución, deuda, caja, costes independientes y participaciones retenidas. La separación se propone para el **4 de enero de 2027**, pero no está completada ni garantizada. Los Investor Days de KBR y Trinzic están anunciados para el **11 y 12 de noviembre**, respectivamente; sus nuevas proyecciones aún no se incorporan aquí.
+
+El EBIT TTM apenas cambia, mientras el flujo operativo de operaciones continuadas cae. Además, una parte relevante de EBIT proviene de afiliadas no consolidadas y exige distinguir beneficio contable, dividendos recibidos y capital aportado. Estas diferencias impiden tratar CFO menos PPE como FCFF sostenible.
+
+## Tres ejercicios y cuatro trimestres
+
+USD millones. Beneficio neto es el atribuible a KBR e incluye operaciones discontinuadas. CFO, capex y FCF simple se refieren a operaciones continuadas. FCF simple = CFO − compras de PPE; no es FCFF. EBIT incluye participación en beneficios de afiliadas. El año fiscal FY2025 terminó el 2 de enero de 2026, FY2024 el 3 de enero de 2025 y FY2023 el 29 de diciembre de 2023.
+
+| Periodo | Ventas | EBIT | Neto atribuible | D&A | CFO continuadas | PPE caja | FCF simple |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| FY2023 | 6.956 | 449 | −265 | 141 | 301 | 62 | 239 |
+| FY2024 | 7.710 | 659 | 375 | 156 | 450 | 52 | 398 |
+| FY2025 | 7.786 | 778 | 415 | 169 | 557 | 42 | 515 |
+| Q4 FY2025 derivado | 1.885 | 191 | 111 | 40 | 51 | 18 | 33 |
+| Q1 FY2026 | 1.923 | 180 | 102 | 41 | 110 | 12 | 98 |
+| Q2 FY2026 | 1.984 | 172 | 96 | 42 | 50 | 16 | 34 |
+| Q3 FY2026 | 2.028 | 186 | 133 | 43 | 171 | 8 | 163 |
+| TTM octubre 2026 | 7.820 | 729 | 442 | 166 | 382 | 54 | 328 |
+| TTM octubre 2025 | 8.009 | 727 | 380 | 173 | 547 | 40 | 507 |
+
+Q4 = FY2025 − 9M FY2025; caja de Q2/Q3 se deriva de acumulados. TTM = último ejercicio − nueve meses comparativos + nueve meses actuales, contrastado con los cuatro trimestres. Para el TTM anterior se utiliza el comparativo 2024 **reexpresado en el 10-Q de 2025**, no el antiguo 2024 sin reexpresar discontinuadas. FY2024 tuvo 53 semanas por las fechas fiscales, frente a 52 en FY2025; el TTM comparativo conserva esa semana adicional. Las tasas siguientes son publicadas/derivadas, no crecimiento orgánico homogéneo: ventas −2,36%, EBIT +0,28%, CFO −30,16% y FCF simple −35,31%. La adquisición de LinQuest en 2024 y cambios de perímetro también requieren control de comparabilidad.
+
+Fuentes: [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1357615/000135761526000051/kbr-20260102.htm), [Q1 FY2026](https://www.sec.gov/Archives/edgar/data/1357615/000135761526000141/kbr-20260403.htm), [Q2 FY2026](https://www.sec.gov/Archives/edgar/data/1357615/000135761526000172/kbr-20260703.htm), [Q3 FY2026](https://www.sec.gov/Archives/edgar/data/1357615/000135761526000196/kbr-20261002.htm), [Q3 FY2025 con comparativo reexpresado](https://www.sec.gov/Archives/edgar/data/1357615/000135761525000066/kbr-20251003.htm).
+
+## Beneficio sostenible: no basta con el EPS
+
+En 9M2026 las ventas son $5.935m frente a $5.901m; EBIT $538m frente a $587m. La línea de costes de separación y otros cargos asciende a $70m frente a $4m. Un puente mecánico excluyendo únicamente esa línea da EBIT $608m frente a $591m, pero **no es beneficio normalizado completo**: existen partidas de mix, cierre favorable de contratos, afiliadas y costes independientes futuros. $19m de deterioro de derechos de uso figuran como ajuste no monetario en el estado de caja; no se debe convertir todo el cargo de separación en un pago de efectivo ni excluir dos veces el deterioro.
+
+El beneficio neto atribuible 9M sube de $304m a $331m aunque el beneficio de operaciones continuadas antes de minoritarios baja de $345m a $332m. Contribuye el cambio de pérdidas discontinuadas a beneficio y un beneficio fiscal discreto de $15m vinculado al examen del IRS. No es apropiado presentar el crecimiento del EPS publicado como mejora equivalente del negocio recurrente. FY2023 contiene además $144m de acuerdo legal en EBIT y $494m de cargos relacionados con convertibles fuera de EBIT: no se mezclan los dos ajustes.
+
+La compensación en acciones registrada en patrimonio 9M2026 es $18m frente a $15m. Sigue siendo coste económico; no se elimina por ser no monetaria ni se resta dos veces si ya permanece en el margen de un DCF. Las recompras pagadas bajan de $304m a $29m, y no se proyectan recompras gratuitas para sostener EPS. [10-Q, estados, notas 8, 13 y 18](https://www.sec.gov/Archives/edgar/data/1357615/000135761526000196/kbr-20261002.htm).
+
+## Caja, capital de afiliadas y contratos
+
+CFO continuadas 9M2026 $331m frente a $506m. Cobros pendientes consumen $218m y activos de contratos $38m, parcialmente compensados por cuentas a pagar +$134m y pasivos de contratos +$99m. No se perpetúan estos movimientos como margen. Otros activos/pasivos consumen $107m frente a aportar $59m el año anterior. La evaluación de caja debe cubrir el ciclo de cobros y pagos, no solo Q3.
+
+La participación en resultados de afiliadas es $167m en 9M y $214m TTM, incluida en EBIT. En CFO se elimina ese beneficio contable y se registran distribuciones de beneficios de $145m en 9M. Por separado, inversiones netas en participadas consumen **$127m**, incluyendo $115m aportados a BRIS para una adquisición. En 9M2025 la línea aportó $82m por devoluciones de inversión. CFO−PPE es $295m en 9M2026; después de la inversión neta en participadas queda un diagnóstico de caja de $168m. No es FCFF: conserva intereses, impuestos, circulante y flujos de distinta naturaleza. Los $49m en títulos de deuda disponibles para la venta y $13m en otras inversiones también se muestran por separado, no se esconden como capex cero.
+
+Un DCF debe modelar afiliadas mediante distribuciones y aportaciones futuras o valorarlas separadamente, evitando tanto descontar sus beneficios como EBIT consolidado y añadir de nuevo su valor, como ignorar el capital requerido. Tampoco se utiliza D&A $166m frente a PPE $54m TTM como prueba de reinversión estructuralmente mínima.
+
+La cartera contratada es $17.718m; cartera más opciones $23.122m, no el mismo concepto. Las obligaciones de desempeño remanentes son $13.600m; diferencias de definición, afiliadas y opciones impiden equipararlas automáticamente. Muchos contratos permiten terminación por el cliente. Se reconocieron $27m de ingresos 9M por obligaciones satisfechas en periodos anteriores; las estimaciones de cierre requieren seguimiento. La exposición a presupuestos públicos, pagos, auditorías, contratos a precio fijo y reclamaciones, incluida Ichthys, no desaparece con una cartera elevada. [10-Q, notas 3, 5, 6, 10–11 y MD&A](https://www.sec.gov/Archives/edgar/data/1357615/000135761526000196/kbr-20261002.htm).
+
+## Balance y acciones antes de separar
+
+Deuda nominal: $957m Term Loan A + $975m Term Loan B + $250m bonos + $375m revolver = $2.557m. Menos costes/descuentos $16m da deuda contable $2.541m, de la cual $554m corriente. Caja continuadas $439m, frente a $442m incluyendo discontinuadas. Deuda nominal menos caja es $2.118m, no el puente contable de $2.102m. Ninguno equivale a una deducción final de valoración sin revisar vencimientos, caja necesaria y obligaciones adicionales.
+
+No toda la caja es excedentaria: incluye $10m en una aseguradora cautiva generalmente no disponibles para otras operaciones y caja de entidades de proyectos. El balance muestra arrendamientos, pensiones y minoritarios que requieren una valoración coherente; no se añaden rentas al margen y se excluye simultáneamente la deuda de arrendamiento. Las 126.108.987 acciones en circulación al 21 de octubre y las medias diluidas trimestral/9M de 126m/127m no son un denominador económico actualizado automáticamente a noviembre. Deben reconciliarse premios, dilución y términos de distribución.
+
+## Trinzic: información nueva, términos aún provisionales
+
+Se examinó la **enmienda 10-12B/A del 9 de noviembre**, posterior al registro original de septiembre. La operación propone distribuir al menos el 80,1% de Trinzic, pero la portada mantiene en blanco el ratio definitivo y la fecha de registro. No se convierten en derechos definitivos los supuestos usados para ilustrar estados pro forma.
+
+La nota pro forma prevé $1.725m de nueva deuda bruta, $20m de costes y $1.705m de fondos netos; cancelar $115m de deuda existente y transferir **$1.682m de caja a KBR**. Con caja histórica de $292m, el puente 292+1.705−115−1.682 deja $200m. Son planes sujetos a modificación, no una transacción ejecutada ni distribución adicional gratuita para el accionista. La estimación de interés sobre la financiación anticipada usa aproximadamente 7,1% para 9M2026 y 7,0% para FY2025; las cifras no son un WACC.
+
+Los estados independientes de Trinzic muestran EBIT histórico 9M2026 $299m, frente a $342m del segmento MTS en KBR. La diferencia demuestra por qué no se asigna sin ajustes el resultado segmentario al nuevo accionista. Deben reconciliarse costes corporativos, perímetro, contratos de transición, incentivos, impuestos, deuda y caja de ambas sociedades, además de los intereses retenidos. MTS continúa clasificado como operaciones continuadas de KBR mientras la separación está pendiente; las operaciones discontinuadas históricas son otra cuestión.
+
+Fuentes: [Trinzic, enmienda y estados pro forma, 9 noviembre](https://www.sec.gov/Archives/edgar/data/2101664/000114036126042809/ny20061458x9_ex99-1.htm), [KBR 8-K presentado 9 noviembre](https://www.sec.gov/Archives/edgar/data/1357615/000135761526000201/kbr-20261105.htm), [resultados Q3 y anuncio de Investor Days](https://www.sec.gov/Archives/edgar/data/1357615/000135761526000194/q326kbr-exhibit991x10022026.htm).
+
+## Tesis y siguiente decisión
+
+A favor: tecnología e ingeniería diferenciadas, contratos de misión crítica, crecimiento STS, afiliadas rentables y posibilidad de mayor foco tras separar. En contra: MTS 9M cae en ventas, STS aumenta ventas pero reduce EBIT, deterioro de conversión de caja, capital aportado a afiliadas, presupuestos públicos y costes/deuda de separación. El escenario mejora si se normalizan cobros y la suma de flujos independientes compensa costes y financiación; se debilita con nuevas salidas de caja, concentración presupuestaria o rentabilidad postseparación inferior a la segmentaria.
+
+**Pendiente:** incorporar los Investor Days del 11/12, reconciliar íntegramente el perímetro independiente y términos finales, normalizar impuestos/capital de trabajo/afiliadas, construir FCFF financiado a diez años 5+5 con tres escenarios para los negocios pertinentes, justificar WACC y ROIC terminal, sensibilidad, valoración inversa y pares homogéneos. No hay valoración canónica, precio objetivo, techo de compra, tamaño ni señal. Stage 3 incompleto y Stage 1/2/3.5 no certificados. El PER del scanner no resuelve estas cuestiones.
