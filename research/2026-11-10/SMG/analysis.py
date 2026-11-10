@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,csv
+p=Path(__file__).parent
+# USD millions. Explicit source observations preserve original vs recast scope.
+cols=['revenue','ebit','net_income','da','cfo','capex','sbc']
+def row(name,vals,scope,source):return dict(period=name,scope=scope,source=source,**dict(zip(cols,vals)))
+r=[row('FY2023_reported',[3551.3,-174.4,-380.1,92.5,531,92.8,68.9],'historical incl Hawthorne','S2 tables36/38'),row('FY2024_reported',[3552.7,208.8,-34.9,80.6,667.5,84,80.4],'historical incl Hawthorne','S2 tables36/38'),row('FY2025_reported',[3413.1,358.6,145.2,75,371.3,97.4,69],'historical incl Hawthorne','S2 tables36/38'),row('FY2025_recast',[3255.8,402,145.2,75,371.3,97.4,69],'recast continuing revenue/EBIT; consolidated cash/net','S1 tables1/4'),row('FY2026_TTM',[3288.9,406.7,103.9,67.9,373,94.6,48.3],'continuing revenue/EBIT; consolidated cash/net; unaudited','S1 tables1/4'),row('Q1_FY2026', [354.4,-21.8,-125,18.4,-370.4,20,7.4],'continuing revenue/EBIT; consolidated cash/net','S5 tables7/9'),row('H1_FY2026',[1814,380,113.6,34.5,-150.4,38.6,26.3],'continuing revenue/EBIT; consolidated cash/net','S4 tables7/9'),row('9M_FY2026',[2986.1,549.7,225.8,51.2,195.2,63.1,38.3],'continuing revenue/EBIT; consolidated cash/net','S3 tables7/9')]
+d={x['period']:x for x in r}
+for n,a,b in [('Q2_FY2026_derived','H1_FY2026','Q1_FY2026'),('Q3_FY2026_derived','9M_FY2026','H1_FY2026'),('Q4_FY2026_derived','FY2026_TTM','9M_FY2026')]:r.append(row(n,[round(d[a][c]-d[b][c],3) for c in cols],'derived differences; consolidated cash/net',a+' minus '+b))
+for x in r:x['simple_fcf']=round(x['cfo']-x['capex'],3)
+metrics={'FY2026_revenue_growth_recast_pct':(3288.9/3255.8-1)*100,'FY2026_ebit_growth_recast_pct':(406.7/402-1)*100,'FY2026_continuing_income_growth_pct':(194.9/182.1-1)*100,'FY2026_CFO_growth_pct':(373/371.3-1)*100,'FY2026_FCF_growth_pct':(278.4/273.9-1)*100,'FY2026_FCF_less_SBC_diagnostic':278.4-48.3,'FY2025_FCF_less_SBC_diagnostic':273.9-69,'FY2026_cash_after_dividends_and_repurchases':278.4-154.8-37.7,'FY2026_cash_after_dividends_repurchases_disposed_cash':278.4-154.8-37.7-35,'debt_carrying_September2026':35.5+1992,'net_debt_simple_September2026':35.5+1992-7.4,'interest_reduction':129-112.6,'tax_rate2026_pct':83.1/278*100,'tax_rate2025_pct':82.8/264.9*100,'illustrative_price_to_continuing_EPS':66.34/3.3,'illustrative_price_to_adjusted_EPS':66.34/4.48,'illustrative_price_to_FY2027_adjusted_EPS_low':66.34/4.9,'illustrative_price_to_FY2027_adjusted_EPS_high':66.34/4.7}
+rounding={'Q2_revenue_direct':1459.5,'Q2_revenue_derived':1459.6,'Q3_ebit_direct':169.6,'Q3_ebit_derived':169.7,'Q3_net_income_direct':112.2,'Q3_net_income_derived':112.2,'Q4_revenue_direct':302.9,'Q4_revenue_derived':302.8,'direct_quarter_revenue_sum':354.4+1459.5+1172.1+302.9,'direct_quarter_EBIT_sum':-21.8+401.8+169.6-143,'annual_EBIT':406.7,'quarter_EBIT_residual':406.7-(-21.8+401.8+169.6-143)}
+(p/'calculations.json').write_text(json.dumps(dict(units='USD millions except ratios',rows=r,metrics=metrics,rounding=rounding,valuationAvailable=False,entryApproved=False),indent=2)+'\n')
+with (p/'financials.csv').open('w') as f:
+ w=csv.DictWriter(f,fieldnames=r[0].keys());w.writeheader();w.writerows(r)
+print(json.dumps(metrics,indent=2))
