@@ -1,0 +1,75 @@
+# CWST — crecimiento adquirido, caja ajustada y pérdida de capacidad en New Hampshire
+
+**Investigación factual parcial. Corte: 10 de noviembre de 2026. Valoración canónica no disponible; ninguna entrada aprobada.** Casella Waste Systems, Inc., Nasdaq CWST, CIK 911177, servicios de residuos, reciclaje y gestión de recursos. No confundir con el productor de vinos Casella. Scanner del 9 de noviembre: Opportunity 65 y precio $92,70. Cumple exactamente el umbral mínimo de investigación ≥65, no una aprobación fundamental o técnica. La revisión completa de la biblioteca encontró referencias de escáner, sin informe propio previo.
+
+## Conclusión
+
+La subida de ingresos no se traduce todavía en mejora equivalente de caja o rentabilidad. Q3 crece 15,2% en ventas y 11,4% en EBITDA ajustado, pero el margen ajustado baja de 24,7% a 23,9%; el beneficio neto ajustado cae 18,7%. El crecimiento de residuos sólidos incluye adquisiciones, precios y recargos de combustible, no solo mayor demanda orgánica. El puente de residuos sólidos muestra +5,5% en precio, −1,0% en volumen, +2,4% en recargos y +9,6% en adquisiciones, con otros efectos e intercompañía. Estos porcentajes tienen como base ese negocio, no las ventas consolidadas. [S1 MD&A; S2]
+
+La caja requiere más prudencia que el titular: **CFO menos capex de Q3 es $2,618m, frente a FCF ajustado empresarial de $32,963m**. En nueve meses son $41,356m frente a $111,081m. El segundo excluye inversión y desembolsos realmente pagados. Ninguno equivale automáticamente a FCFF normalizado. Además, la terminación del proyecto Granite State y el cierre adelantado de NCES eliminan la capacidad operativa de vertedero propia en New Hampshire tras diciembre de 2026. El problema no se resuelve añadiendo de nuevo una depreciación o un deterioro contable. [S1; S2; S7]
+
+## Historia financiera y reconstrucción
+
+USD millones. FCF simple = CFO menos adiciones pagadas a propiedad y equipo; no descuenta compras de empresas, altas no monetarias de arrendamientos ni adiciones separadas a intangibles. Las cifras consolidadas incorporan negocios adquiridos desde sus fechas de compra; no son series orgánicas de perímetro constante. [S1, S3–S6]
+
+| Periodo | Ingresos | EBIT | Neto | D&A | CFO | Capex caja | FCF simple |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| FY2023 | 1.264,542 | 80,427 | 25,399 | 170,705 | 233,092 | 154,907 | 78,185 |
+| FY2024 | 1.557,283 | 72,761 | 13,536 | 234,907 | 281,355 | 203,227 | 78,128 |
+| FY2025 | 1.836,841 | 63,669 | 7,871 | 306,835 | 329,776 | 245,071 | 84,705 |
+| 9M2025 | 1.367,786 | 51,785 | 10,382 | 227,326 | 233,213 | 187,803 | 45,410 |
+| 9M2026 | 1.560,307 | 40,468 | -8,790 | 254,546 | 241,831 | 200,475 | 41,356 |
+| Q42025 | 469,055 | 11,884 | -2,511 | 79,509 | 96,563 | 57,268 | 39,295 |
+| Q12026 | 457,328 | 4,855 | -5,539 | 77,982 | 62,253 | 49,979 | 12,274 |
+| Q22026 | 543,748 | 19,964 | 3,770 | 88,499 | 98,773 | 72,309 | 26,464 |
+| Q32026 | 559,231 | 15,649 | -7,021 | 88,065 | 80,805 | 78,187 | 2,618 |
+| TTMSep2025 | 1.795,272 | 70,314 | 15,258 | 293,684 | 342,974 | 264,669 | 78,305 |
+| TTMSep2026 | 2.029,362 | 52,352 | -11,301 | 334,055 | 338,394 | 257,743 | 80,651 |
+
+TTM = año anterior − nueve meses anteriores + nueve meses actuales. Q4 2025 se obtiene por diferencia anual; Q2 y Q3 2026 por diferencias acumuladas. TTM septiembre 2026: ventas +13,04%, EBIT −25,55%, CFO −1,34% y FCF simple +3,00%. Las pérdidas no se convierten en una tasa ordinaria de crecimiento del beneficio. D&A Q3 directa es $88,066m frente a $88,065m derivada; Q2 directa $88,498m frente a $88,499m derivada. Se conservan diferencias de $0,001m por precisión publicada, sin forzar falsa exactitud. La suma de los cuatro trimestres derivados concilia con TTM.
+
+## De EBITDA y beneficio a caja económica
+
+El deterioro de Granite State es $13,593m: elimina costes de desarrollo diferidos y no representa por sí mismo una nueva salida de caja en Q3. Sumarlo al EBIT deja $29,242m, todavía ligeramente por debajo de los $29,369m del trimestre anterior comparable. Es solo un diagnóstico parcial, no EBIT normalizado: permanecen gastos de adquisición, cierre, transformación y variación de amortización. Tampoco cabe excluir el gasto y mantener en el modelo una capacidad de vertedero que ya no se considera viable. [S1 notas 8 y 11]
+
+Los $3,586m de monetización de créditos fiscales de inversión se incluyen en otros ingresos, fuera de EBIT, por un acuerdo ligado a una instalación de gas renovable propiedad de un tercero. No deben restarse otra vez de EBIT. El neto Q3 es pérdida de $7,021m pese a beneficio antes de impuestos de $1,486m, por provisión fiscal de $8,507m. Los reembolsos de impuestos en efectivo de 9M ($1,761m netos) tampoco son un tipo fiscal recurrente. [S1 estados y MD&A; S2 reconciliación]
+
+La D&A TTM de $334,055m mezcla depreciación/amortización de vertederos e intangibles adquiridos. No es toda capacidad de reinversión libre. En 9M, la amortización de intangibles es $61,644m; el gasto económico de captar y retener clientes necesita estudio antes de eliminarlo. La SBC TTM es $12,073m; restar su addback del FCF simple da $68,578m, solo un diagnóstico del coste de dilución, no FCFF. En un modelo que conserve SBC como gasto de EBIT no debe deducirse dos veces. [S1 nota 5 y estado de caja; S3]
+
+### Puente de FCF ajustado, nueve meses
+
+USD millones: 241,831 CFO − 200,475 capex = **41,356**. La empresa añade 0,971 por ventas de activos, 38,281 de capex de adquisiciones, 19,111 de desembolsos por gastos de adquisición, 5,731 por ferrocarril de McKean, 4,606 por construcción del MRF de Lehigh Valley y 1,025 por cierre orgánico, llegando a **111,081**. La diferencia de 69,725 no es caja adicional generada. No es correcto excluir indefinidamente el coste de integrar adquisiciones manteniendo todo el crecimiento que aportan. [S2 conciliación de liquidez]
+
+Las compras de empresas son otra salida: $440,060m en el estado de caja de 9M, además del capex. La asignación preliminar de precio de las adquisiciones de 2026 muestra $434,824m de efectivo neto, ajustes y contraprestaciones que llevan a $436,747m; no sustituye al total desembolsado del estado de caja, que tiene alcance distinto. No se fuerza la diferencia ni se suma el precio asignado de nuevo a la inversión ya pagada. Goodwill agregado $1.389,497m y las asignaciones preliminares requieren seguimiento de retornos, no solo de crecimiento de ventas. [S1 nota 4 y estado de caja]
+
+## Capacidad, obligaciones y financiación
+
+**New Hampshire.** NCES dejará de aceptar residuos el 31 de diciembre de 2026, un año antes de la expectativa previa de fin de 2027. El 8-K anticipa más amortización en Q4 pero no un impacto material de ese gasto en los resultados previstos; esto no demuestra que el traslado futuro de residuos carezca de coste. El 10-Q advierte de redirigir residuos a otras instalaciones, incluidas de terceros, con posible mayor coste de transporte/eliminación y menor ingreso de disposición en Eastern. Granite State ya no se considera viable y los costes diferidos se han dado de baja. Ontario County está previsto cerrar al vencimiento contractual a fin de 2028. Las autorizaciones, vida útil y sustitución de capacidad deben entrar en el modelo. [S7; S1 factores de riesgo y notas 8, 11]
+
+**Cierre y postcierre.** Obligación registrada de $211,110m: 192,722 inicial + 10,890 incurrida + 2,726 de revisión + 11,919 de acreción − 7,147 liquidada. Parte corriente $34,493m frente a $7,562m al cierre de 2025. Acreción no es pago actual, pero tampoco es coste económico inexistente. Si los flujos futuros incorporan pagos de cierre, no volver a restar sin conciliación toda la provisión como deuda; si no los incorporan, no omitir la obligación. [S1 nota 6]
+
+**Balance de septiembre.** Principal de deuda $1.393,985m, incluido $104,354m de arrendamientos financieros. Valor contable después de costes de emisión $1.381,784m. Caja $11,741m: deuda principal neta simple $1.382,244m, sin afirmar que toda la caja sea excedentaria. Arrendamientos operativos $89,414m separados. La partida de $2,990m «restricted cash and assets» no es automáticamente efectivo: la conciliación específica muestra cero efectivo restringido al cierre. El efectivo total incluido restringido bajó de $216,859m a $11,741m. [S1 balance, notas 7–8]
+
+El revolver tiene $215,400m dispuesto y $450,718m disponible neto de cartas de crédito, según la fecha del balance. La compañía declara cumplimiento de covenants. Disponibilidad crediticia no es caja propia ni prueba de capacidad ilimitada de comprar empresas. Las altas no monetarias de leasing financiero de 9M son $32,319m; el capex de caja no captura toda la inversión económica. No se añaden de nuevo los $104,354m de leasing financiero ya incluidos en deuda. [S1]
+
+## Expectativas y valoración retenida
+
+La guía de noviembre para 2026 es ventas $2.100–2.110m, EBITDA ajustado $475–481m y pérdida neta $4–10m. CFO $370–380m y FCF ajustado $200–210m se mantienen. Con capex previsto de $265m, la resta simple CFO−capex sería $105–115m, antes de $1m de ventas de activos y $94m de otras exclusiones de inversión/gastos. No confundir esos dos conceptos ni sumar el objetivo de expansión de margen futuro como hecho conseguido. La guía no incluye compras no completadas. [S2]
+
+El precio $92,70 pertenece al scanner del 9 de noviembre, no es cotización actual verificada tras los resultados y la conferencia del día 10. A 15 de octubre, la portada informa 62.655.943 acciones A y 988.200 B: 63.644.143 en total. Valorarlas ilustrativamente al precio del scanner da $5.899,8m de capitalización, con fechas distintas y sin dilución completa. Las B tienen derechos de voto reforzados; las medias diluidas de un periodo de pérdidas excluyen instrumentos antidilutivos. No equivalen a un recuento plenamente diluido actual. [S1 portada, balance y nota 10]
+
+Antes de valorar faltan: caja sostenible tras inversión de mantenimiento y crecimiento, obligaciones de vertedero/arrendamientos, coste y rendimiento de adquisiciones, impacto del cierre de NCES y sustitución de capacidad, coste de capital y sensibilidad con escenarios verificables. La conferencia ocurrió el 10 de noviembre; este expediente se apoya en documentos primarios escritos y no afirma incorporar una transcripción oficial completa. Consenso homogéneo, propiedad institucional, float y cortos no se verificaron. No hay rango razonable, descuento canónico, señal, stop, M/K o tamaño aprobado.
+
+**Confianza:** alta en estados primarios y puentes aritméticos; limitada en normalización y previsiones. **Estado:** investigación parcial. Próxima prueba útil: cobertura de inversión/obligaciones con caja operativa y coste de redirigir residuos en 2027, antes de construir un DCF.
+
+## Fuentes
+
+- S1: [Q3 2026 10-Q](https://www.sec.gov/Archives/edgar/data/911177/000091117726000059/cwst-20260930.htm).
+- S2: [Q3 2026 release](https://www.sec.gov/Archives/edgar/data/911177/000091117726000057/cwst-ex991093026.htm).
+- S3: [FY2025 10-K](https://www.sec.gov/Archives/edgar/data/911177/000091117726000008/cwst-20251231.htm).
+- S4: [H1 2026 10-Q](https://www.sec.gov/Archives/edgar/data/911177/000091117726000049/cwst-20260630.htm).
+- S5: [Q1 2026 10-Q](https://www.sec.gov/Archives/edgar/data/911177/000091117726000021/cwst-20260331.htm).
+- S6: [Q3 2025 10-Q](https://www.sec.gov/Archives/edgar/data/911177/000091117725000125/cwst-20250930.htm).
+- S7: [Oct1 2026 8-K](https://www.sec.gov/Archives/edgar/data/911177/000091117726000052/cwst-20261001.htm).
+
+Cálculos reproducibles en analysis.py y calculations.json. Las fuentes originales están preservadas en el expediente de trabajo.
