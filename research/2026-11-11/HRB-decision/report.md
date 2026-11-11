@@ -1,0 +1,82 @@
+# HRB — precio razonable después de resultados, no una recompra automática
+
+**Actualización11 de noviembre de2026; cierre regular10nov: $50,99 a16:00EST. Opportunity≥90, horizonte6–12meses.** Continúa A082 y la revisión de resultados del10nov; conserva íntegros sus informes. No modifica operaciones personales ni reactiva una ficha antigua.
+
+## Conclusión
+
+**HRB merece una revisión prioritaria para posible entrada a precio razonable, con confianza media; no es una entrada habilitada.** A diferencia de candidatas cuyo precio exige casi todo el escenario favorable, aquí la capacidad de caja normalizada puede sostener la cotización bajo hipótesis moderadas. Pero el margen de seguridad depende de rentabilidad exigida y durabilidad del negocio.
+
+El nuevo modelo de diez años da **$55,62 exigiendo10% de rentabilidad al negocio**, frente a50,99: aproximadamente9% de potencial, no un colchón enorme. La tasa calibrada con beta normalizada1,00 es8,53% y da70,94. La beta histórica0,41 produciría110,50; **no la uso como objetivo de inversión**. Un estrés combinado de crecimiento/margen y10% de tasa da43,42; un caso adverso más severo26,57. No son límites de pérdida ni probabilidades.
+
+Mi juicio: razonable para estudiar, no «muy barata» de forma incuestionable. La mejora de un año fiscal completo importa más que el ruido de una vela intradía. Tampoco se compra automáticamente porque cayó o porque tuvo una aprobación histórica. La ficha de octubre estaba fechada y caducada.
+
+**Precio bien identificado:**50,99 es cierre regular;51,02 es el dato posterior al cierre de19:30EST. La lista del10nov contiene50,99 y coincide con el cierre contrastado; el51,02 de otros contextos no se reutiliza como cierre vigente. Se conserva cada scanner original con su fecha. [Histórico diario](https://stockanalysis.com/stocks/hrb/history/).
+
+## Qué dicen los nuevos resultados
+
+Q1FY27 vende224,336m frente a203,551m, pero EBIT pasa de−207,031m a−231,893m. Los8m de transición de liderazgo de oficinas explican solo parte del empeoramiento; quitarlos no transforma el trimestre en mejora de margen. La pérdida ajustada también crece. **No anualizo esa pérdida:** septiembre es temporada baja; la campaña estadounidense concentra ingresos y caja en el trimestre de marzo. La guía anual se reafirma, no se eleva: ventas4.110–4.160m, EBITDA ajustado1.110–1.140m y tasa fiscal cercana23%. [Comunicado Q1](https://investors.hrblock.com/news-releases/news-release-details/hr-block-reports-fiscal-2027-first-quarter-results-and-reaffirms).
+
+FY26 EBIT907,686m sobre ventas3.945,392m es23,01%; TTM septiembre EBIT882,824m sobre3.966,177m es22,26%. El caso central supone22,5% inicial y recuperación a23%, no un salto a márgenes inéditos. Aun así requiere controlar costes tras el arranque flojo, no dar por asegurada la guía. El beneficio netoFY26 contenía84,1m de beneficio fiscal extraordinario: no se repite en el modelo. [10-K FY26](https://www.sec.gov/Archives/edgar/data/12659/000001265926000026/hrb-20260630.htm), [10-Q septiembre](https://www.sec.gov/Archives/edgar/data/12659/000001265926000036/hrb-20260930.htm).
+
+El anterior informe conserva los ejercicios, cuatro trimestres y TTM con sus conciliaciones. CFO TTM837,077 menos capex90,203=746,874m; menos SBC29,183 deja717,691m como prueba de caja económica, **no FCFF**. Menores pagos fiscales de Q1 no mejoraron el CFO total. No extrapolo ese flujo publicado como renta perpetua. [Investigación factual y serie histórica](https://fundamentalpullback.github.io/research/2026-11-10/HRB/report.md).
+
+## Normalización que evita inflar el valor
+
+- **SBC sigue dentro de EBIT.** El EBITDA ajustado de HRB no la excluye como FA; restarla otra vez sería duplicar el coste.
+- EBITFY26 más D&A122,440m da1.030,126m. El EBITDA publicado1.056,939m incluye26,813m de otros ingresos no operativos. No es idéntico a EBITDA puramente operativo, ni se atribuye todo ese diferencial a intereses de préstamos sin desglose verificado. El modelo parte de EBIT, no de la guía EBITDA como si toda fuera renta operativa.
+- CapexFY26 82,614m y compras de franquicias57,639m son usos reales. Se financia2,5% de ventas en inversión física/software y1,4% en adquisiciones recurrentes; D&A3,1%. La combinación evita crecimiento adquirido gratuito y reinversión cero.
+- Los préstamos a franquicias son capital de apoyo a la red. Sus cobros netosFY26 no se repiten como caja libre, ni se suma el préstamo como activo excedente manteniendo gratuitamente sus servicios. La financiación incremental se incluye en circulante; no se descuentan simultáneamente todas las entregas brutas y el aumento de saldos.
+- La tasa fiscal central25% es prudente frente a guía23%; no usa la tasaTTM deprimida por el acuerdo fiscal. Se muestra23% como sensibilidad.
+
+## Caja estacional y puente de valor
+
+Al30septiembre: principal de bonos1.500m, caja no restringida390,498m y caja restringida21,248m. De los390,5m,250,6m estaban en filiales extranjeras; la empresa indica que no pretende repatriar imponiendo impuestos. Esa descripción no equivale a caja legalmente restringida, pero tampoco justifica repartirla toda.
+
+El CFO del siguiente trimestre estacional comparable consumió613,950m, más que la caja de septiembre. **Central: cero crédito por caja excedente.** Se conserva toda para operación/financiación estacional. La línea revolving comprometida1.500m estaba sin disposición, con vencimiento2030. No se añade como activo ni se trata una disposición estacional futura como deuda permanente ya existente. Una hipótesis de200m excedentes solo añade1,61 por acción; no cambia la tesis.
+
+Los bonos vencen2028/2030/2032. La tasa marginal supuesta6,5% no es su cupón medio histórico. Arrendamientos operativos602,280m permanecen en costes operativos: no se suman a deuda sin retirar alquileres del flujo. Se deducen29,8m de obligaciones contingentes de adquisición/compensación como prueba conservadora; excluir esa deducción solo añade0,24 y no resuelve por sí sola el problema de valorar su composición. No se suman otra vez cuentas por pagar y reservas ya dentro de operación/circulante.
+
+Se usan **124,5m de acciones**, buffer sobre121,553m de portada al30oct y2,1m de premios excluidos del Q1 por pérdidas. No es un recuento exacto diluido a fecha de hoy. Se mantiene el denominador, sin recompra futura gratuita. La autorización restante de500m es discrecional, no efectivo ya gastado ni crecimiento garantizado por acción.
+
+La estacionalidad se representa mediante un año completo y caja operativa reservada, no un modelo mensual de disponibilidad ni un calendario de refinanciación certificado. Las necesidades extraordinarias de financiación y adquisición siguen siendo riesgos; el descuento de flujos de negocio no resta además todos los intereses financieros como si fuese flujo al accionista.
+
+## Diez años de FCFF reproducible
+
+USDmillones excepto valor por acción. MárgenesEBIT tras SBC. Año1 representa doce meses prospectivos normalizados usando la guíaFY27 como escala, no los meses restantes de ese ejercicio ni una previsión trimestral exacta. No se suman separadamente resultados ya realizados. Un modelo mensual podría diferir por el calendario de campaña y pagos. Balance de septiembre, sin inventar movimiento posterior. Impuestos25%, D&A3,1%, capex2,5%, adquisiciones1,4%, circulante10% del aumento de ingresos.
+
+|Caso|Ventas año1|Crecimiento años2–5|Margen inicial→final|Tasa|g terminal|ROIC terminal|Valor|
+|---|---:|---:|---:|---:|---:|---:|---:|
+|Central con beta normalizada|4.135|3,5%|22,5→23%|8,53%|2%|15%|70,94|
+|Mismas operaciones, exigencia10%|4.135|3,5%|22,5→23%|10%|2%|15%|55,62|
+|Estrés moderado|4.050|2%|21,5→21%|10%|1,5%|12%|43,42|
+|Adverso|3.966,177|0%|20→19%|11,5%|1%|10%|26,57|
+|Recuperación|4.160|4,5%|23,5→24%|8,53%|2,5%|17%|83,40|
+
+Años6–10: crecimiento converge al terminal; reinversión transita desde capex+adquisiciones+Δcirculante−D&A haciaNOPAT×g/ROIC. El año10 y perpetuidad usan íntegramente la segunda fórmula. Por eso la sensibilidad de capex afecta plenamente años1–5 y se diluye después; el ROIC terminal gobierna la necesidad final. No se sostiene el crecimiento terminal con inversión cero.
+
+### Tasas transparentes, no precio elegido primero
+
+ReferenciaUSD4,98%, ERP4,41%, deuda marginal6,5%, impuesto25% y pesos de capital al cierre. **Beta1 es una normalización analítica, no la beta observada**, que es0,41. La normalización generaWACC8,527%; se contrasta con9–11%. La beta baja no garantiza protección ante presión competitiva o pérdida de clientes. Esos riesgos también están en crecimiento y márgenes; el caso10% es una exigencia de retorno, no una tasa observada con precisión. [Beta y datos de mercado](https://stockanalysis.com/stocks/hrb/statistics/), [ERP de noviembre](https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPNov26.xlsx).
+
+La antigua valoraciónA082 era a cinco años y con balance de junio, mayor caja y otra fecha. No se presenta70,94 como mejora causada únicamente por Q1: cambian duración, tasa, puente de caja y supuestos; de hecho Q1 debilitó el margen. La cifra comparable al10% es55,62, no una revisión mecánica del antiguo58,05.
+
+## Sensibilidades y qué exige50,99
+
+Sobre central8,53%: impuesto23%→73,21; capex3,5%→69,08; adquisiciones2%→69,83; ROICterminal10%→66,63; margen21% constante→63,77. No se mezclan esas cifras con el caso10% como si fueran la misma tasa.
+
+La inversa mantiene crecimiento y reinversión centrales: para justificar50,99 bastaría margenEBIT constante17,57% a8,53%;18,80% a9%;21,39% a10%;23,97% a11%. **La oportunidad depende de que el negocio conserve márgenes cercanos a22–23% y no se le exija una tasa extraordinariamente alta.** Una presión moderada de margen combinada con menor crecimiento ya puede eliminar el colchón.
+
+No se usa el PERGAAPTTM bajo como prueba de barato, porque contiene el beneficio fiscal. Tampoco se aplica aHRB el múltiplo de Intuit, cuya mezcla de software y crecimiento es distinta. Este informe no certifica un comparable contemporáneo completo; el contraste es capacidad de caja y valoración inversa del propio negocio.
+
+## Qué haría ahora
+
+**Priorizar su evaluación, no descartarla por el trimestre estacional ni habilitarla por el dividendo.** Antes de cualquier entrada: comprobar precio disponible, si la estructura diaria sigue defendible, y riesgo/encaje de cartera. No exige una vela15min. La recuperación intradía del10nov por sí sola no es una señal completa ni una garantía.
+
+Reabrir con confianza mayor si la campaña fiscal demuestra crecimiento real de clientes/precio y costes controlados, y caja anual después de impuestos e inversión. Reducir convicción si hay recorte de guía, erosión persistente de margen, presión de financiación estacional o recompras que absorban liquidez necesaria. La competencia digital/IA y soluciones de menor precio son riesgos de negocio, no una noticia verificada como causa de cada caída.
+
+**Estado: nueva decisión fundamental condicional terminada; candidata razonable para revisión de entrada, no operación autorizada ni nueva fichaStage3.5.** No hay stop, M, cantidad ni precio máximo ejecutable nuevos. Los dividendos y recompras son distribuciones del valor calculado, no se añaden de nuevo encima del DCF.
+
+
+## Modelo y comprobación
+
+[Modelo reproducible](https://fundamentalpullback.github.io/research/2026-11-11/HRB-decision/decision/model.py), [resultados completos](https://fundamentalpullback.github.io/research/2026-11-11/HRB-decision/decision/results.json), [auditor independiente](https://fundamentalpullback.github.io/research/2026-11-11/HRB-decision/decision/audit/independent_check.py), [resultado de auditoría](https://fundamentalpullback.github.io/research/2026-11-11/HRB-decision/decision/audit/independent_output.json), [fuentes](https://fundamentalpullback.github.io/research/2026-11-11/HRB-decision/source_refresh/source_ledger.json). Seis escenarios y cuatro inversas comprobados sin importar el modelo. El terminal pesa aproximadamente54% del EV central y47% del caso10%; las cifras no predicen rentabilidad bursátil a12meses. Los informes y operaciones anteriores permanecen intactos.
