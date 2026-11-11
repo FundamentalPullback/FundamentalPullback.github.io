@@ -699,6 +699,22 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 .prospective-study .entry-followup { margin:12px 0; padding:14px 16px; border-left:3px solid var(--accent); background:var(--accent-soft); overflow-wrap:anywhere; }
 .prospective-study .entry-followup p { margin:8px 0; }
 .prospective-study h4 { margin-top:16px; }
+/* Dedicated Stage 4 view: mobile-first, no nested full-page overflow. */
+#v-stage4 { min-width:0; }
+.s4-hero { padding:26px; border-radius:14px; background:linear-gradient(120deg,#13232f,#25483d); color:#f5f7f5; }
+.s4-hero h2 { font-size:clamp(2rem,5vw,3rem); margin:8px 0; }
+.s4-hero p { max-width:75ch; margin:8px 0; }
+.s4-eyebrow { font-size:.72rem; font-weight:750; letter-spacing:.1em; margin:0 0 8px; }
+.s4-latest { border-left:4px solid var(--ok); }
+.s4-selector { padding:20px; border:1px solid var(--rule); border-radius:12px; background:var(--sheet); }
+.s4-selector label { display:block; font-weight:700; margin-bottom:10px; }
+.s4-selector select { width:100%; max-width:100%; min-width:0; min-height:44px; text-overflow:ellipsis; }
+.s4-selector p,.s4-caution p { margin:10px 0 0; font-size:.85rem; color:var(--ink-2); }
+.s4-summary,.s4-report { display:block; min-width:0; }
+.s4-report header { padding-bottom:18px; border-bottom:1px solid var(--rule); margin-bottom:22px; }
+.s4-report p,.s4-report li,.s4-summary p { line-height:1.7; overflow-wrap:anywhere; }
+.s4-report .tbl-wrap { max-width:100%; overflow-x:auto; }
+@media(max-width:600px){.s4-hero,.s4-selector { padding:18px; }.s4-latest{display:block}.s4-latest .btn{margin-top:12px}.s4-report{padding:16px}.s4-selector select{font-size:16px}}
 /* Entry-plan presentation only. All selectors stay inside this archive. */
 #v-entradas:not([hidden]) { display:grid; gap:16px; }
 #v-entradas { --entry-navy:#13232F; --entry-gold:#F0B266; --entry-copper:#B5600B; --entry-link:#9A4F09; min-width:0; }
@@ -888,6 +904,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   <section id="v-operaciones" hidden></section>
   <section id="v-rendimiento" hidden></section>
   <section id="v-retro" hidden></section>
+  <section id="v-stage4" hidden></section>
   <section id="v-entradas" hidden></section>
   <section id="v-biblioteca" hidden></section>
   <section id="v-plan" hidden></section>
@@ -928,7 +945,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     es: {
       sub: "Diario de investigación · paper trading",
       refresh: "Actualizar",
-      navGroups: { entradas: "Planes de entrada", inicio: "Hoy", cartera: "Cartera", invest: "Investigación", plan: "Plan y biblioteca" },
+      navGroups: { entradas: "Planes de entrada", stage4: "Stage 4", inicio: "Hoy", cartera: "Cartera", invest: "Investigación", plan: "Plan y biblioteca" },
       readMore: "Cómo leer esto",
       home: { tagline: "Cada compra, cada descarte y cada error, con su informe.", eyebrow: "Al cierre del {d}", hlUp: "La cuenta gana un {r} en {n} días, {x} por delante del SPY.", hlUpBehind: "La cuenta gana un {r} en {n} días, {x} por detrás del SPY.", hlDown: "La cuenta pierde un {r} en {n} días, {x} frente al SPY.",
         sub: "Paper trading con 100.000 $ simulados desde el {s}: no hay dinero real en juego, y cada informe está en la biblioteca.",
@@ -939,7 +956,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         kDot: "precio", kVal: "valor estimado", ofVal: "del valor", below: "por debajo", above: "por encima", noClose: "No hay valoraciones en el último análisis.",
         posTitle: "Posiciones abiertas", seePos: "Ver posiciones", repTitle: "Últimos informes", seeLib: "Abrir la biblioteca", libLoading: "Cargando la biblioteca…", weight: "del total" },
       disclaimer: "Diario personal de paper trading con fines de estudio. No es asesoramiento de inversión ni una recomendación de compra o venta.",
-      tabs: { entradas: "Planes de entrada", fichas: "Buscar acciones", inicio: "Hoy", posiciones: "Posiciones", revision: "Revisión diaria", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca", plan: "Plan" },
+      tabs: { stage4: "Stage 4", entradas: "Planes de entrada", fichas: "Buscar acciones", inicio: "Hoy", posiciones: "Posiciones", revision: "Revisión diaria", resumen: "Resumen diario", escaner: "Escáner", analisis: "Análisis", aprobadas: "Aprobadas", descartadas: "Descartadas", operaciones: "Operaciones", cartera: "Cartera", rendimiento: "Rendimiento", retro: "Retrospectiva", biblioteca: "Biblioteca", plan: "Plan" },
       plan: { title: "Plan de trading", lede: "Las reglas con las que se toman las decisiones de esta web, en su edición vigente. Cada sección indica desde cuándo rige.", edition: "Edición vigente: {v}, {d}", sumTitle: "Resumen", sumLede: "Las cinco etapas en una pantalla. Toca una para ir a su detalle.", fullTitle: "Plan completo", intro: "Introducción y orden de aplicación", since: "Vigente desde", isNew: "Nuevo", open: "Abrir todo", close: "Cerrar todo", logTitle: "Historial de versiones", pdf: "Descargar el PDF de esta edición", none: "El plan no se ha podido cargar." },
       valHelp: "Valor estimado: lo que el informe calcula que vale la acción en el escenario central. Techo del informe: el precio máximo de compra que fijó el informe de cada empresa (puede venir de la valoración, de la técnica o de un evento); no es un descuento fijo del plan, no autoriza una orden por sí solo, y si el informe no fija techo no se muestra. Descuento sobre el valor: cuánto más barata (positivo, verde) o más cara (negativo, rojo) cotiza frente al valor estimado. Los escenarios «si va mal» y «si va bien» no son límites garantizados.",
       whatMeans: "¿Qué significa cada número?", trRet: "Rentabilidad", trEx: "Frente al SPY",
@@ -1071,7 +1088,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     en: {
       sub: "Research journal · paper trading",
       refresh: "Refresh",
-      navGroups: { entradas: "Entry plans", inicio: "Today", cartera: "Portfolio", invest: "Research", plan: "Plan & library" },
+      navGroups: { entradas: "Entry plans", stage4: "Stage 4", inicio: "Today", cartera: "Portfolio", invest: "Research", plan: "Plan & library" },
       readMore: "How to read this",
       home: { tagline: "Every buy, every rejection and every mistake, with its report.", eyebrow: "As of the close on {d}", hlUp: "The account is up {r} in {n} days, {x} ahead of the SPY.", hlUpBehind: "The account is up {r} in {n} days, {x} behind the SPY.", hlDown: "The account is down {r} in {n} days, {x} versus the SPY.",
         sub: "Paper trading with a simulated $100,000 since {s}: no real money is at stake, and every report is in the library.",
@@ -1082,7 +1099,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         kDot: "price", kVal: "estimated value", ofVal: "of value", below: "below", above: "above", noClose: "No valuations in the latest analysis.",
         posTitle: "Open positions", seePos: "See positions", repTitle: "Latest reports", seeLib: "Open the library", libLoading: "Loading the library…", weight: "of total" },
       disclaimer: "Personal paper-trading journal kept for study. Not investment advice or a recommendation to buy or sell.",
-      tabs: { entradas: "Entry plans", fichas: "Find a stock", inicio: "Today", posiciones: "Positions", revision: "Daily review", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library", plan: "Plan" },
+      tabs: { stage4: "Stage 4", entradas: "Entry plans", fichas: "Find a stock", inicio: "Today", posiciones: "Positions", revision: "Daily review", resumen: "Daily overview", escaner: "Scanner", analisis: "Analysis", aprobadas: "Approved", descartadas: "Rejected", operaciones: "Trades", cartera: "Portfolio", rendimiento: "Performance", retro: "Hindsight", biblioteca: "Library", plan: "Plan" },
       plan: { title: "Trading plan", lede: "The rules behind the decisions on this site, in their current edition. Each section shows when it took effect.", edition: "Current edition: {v}, {d}", sumTitle: "Summary", sumLede: "The five stages on one screen. Tap one to go to its detail.", fullTitle: "Full plan", intro: "Introduction and order of application", since: "In force since", isNew: "New", open: "Open all", close: "Close all", logTitle: "Version history", pdf: "Download this edition's PDF (Spanish)", none: "The plan couldn't be loaded." },
       valHelp: "Estimated value: what the report calculates the share is worth in the central case. Report ceiling: the max. buy price set by each company's report (it can come from the valuation, the technicals or an event); it isn't a fixed plan discount, it doesn't authorize an order on its own, and if the report sets no ceiling none is shown. Discount to value: how much cheaper (positive, green) or more expensive (negative, red) the stock trades than its estimated value. The badly/well scenarios are not guaranteed limits.",
       whatMeans: "What does each number mean?", trRet: "Return", trEx: "Vs SPY",
@@ -1249,18 +1266,20 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     anaFilter: "all", rejFilter: "all", rejQ: "", anaQ: "", resDate: null, anaDate: null, latestOnly: true,
     retroHz: "corte", retroGrp: "A", calMode: "m", calMonth: null, calYear: null, calSel: null,
     entryQ: "", entryState: "current", entrySel: null,
+    stage4Sel: null,
     lib: null, libState: "idle", libQ: "", libCat: "all", libSel: null,
     sort: {}, lastIn: {}
   };
   var GROUPS = [
     { id: "entradas", views: ["entradas"] },
     { id: "inicio", views: ["inicio"] },
+    { id: "stage4", views: ["stage4"] },
     { id: "cartera", views: ["cartera", "posiciones", "operaciones", "rendimiento"] },
     { id: "invest", views: ["fichas", "revision", "analisis", "retro"] },
     { id: "plan", views: ["plan", "biblioteca"] }
   ];
   function navGroupOf(v) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i].views.indexOf(v) >= 0) return GROUPS[i].id; return "inicio"; }
-  var VIEWS = ["entradas", "revision", "fichas", "inicio", "resumen", "cartera", "posiciones", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca", "plan"];
+  var VIEWS = ["stage4", "entradas", "revision", "fichas", "inicio", "resumen", "cartera", "posiciones", "escaner", "analisis", "aprobadas", "descartadas", "operaciones", "rendimiento", "retro", "biblioteca", "plan"];
 
   /* ---------- parsing ---------- */
   function num(v) {
@@ -3151,6 +3170,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   }
   function profileReports(rows) { return rows.length?'<div class="profile-report-list">'+rows.map(function(x){var r=x.report;return '<a href="#biblioteca/'+encodeURIComponent(r.id)+'"><span>'+esc(profileDate(x.date)+' · '+r.id)+'</span><b>'+esc(r.title)+'</b><small>'+esc(t().lib.cat[r.cat]||r.cat)+'</small></a>';}).join('')+'</div>':'<p class="muted">'+esc(pt('No hay informes vinculados.','No linked reports.'))+'</p>'; }
   function profileRoute(hash) {
+    if (/^stage4(?:\/|$)/.test(hash)) { S.stage4Sel = hash.slice(7) || null; return "stage4"; }
     if(/^entradas(?:[/?]|$)/.test(hash))return entryPlanRoute(hash);
     var research=researchRoute(hash);if(research)return research;
     if(/^ficha\//.test(hash)||/^fichas(?:\?|$)/.test(hash)) {
@@ -3322,13 +3342,47 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   }
   document.addEventListener('submit',function(e){if(e.target.id!=='entry-filters')return;e.preventDefault();location.hash=entryPlanHash(null,document.getElementById('entry-q').value,document.getElementById('entry-state').value);});
 
+  /* ---------- Stage 4: published reviews, never inferred live signals ---------- */
+  function stage4Reports() {
+    var combined = ['A015','A102','A103','A104','A105','A106','A112'];
+    var sessionOverrides = {A290:'2026-11-05',A494:'2026-11-09'};
+    return (S.lib || []).filter(function(r) {
+      return (r.cat === 'Gestión de posiciones' && /stage\s*4/i.test(r.title || '')) || combined.indexOf(r.id)>=0;
+    }).map(function(r) { return { report:r, date:r.marketSession || sessionOverrides[r.id] || r.date }; })
+      .sort(function(a,b) { return String(b.date).localeCompare(String(a.date)) || Number(/intrad[ií]a|intraday/i.test(a.report.title))-Number(/intrad[ií]a|intraday/i.test(b.report.title)) || Number(b.report.id.slice(1))-Number(a.report.id.slice(1)); });
+  }
+  function stage4Excerpt(r) {
+    var text = String(r.text || ''), match = /## Decisión de gestión\s*\n([\s\S]*?)(?=\n## |$)/.exec(text);
+    // Exact published excerpts, not a new assessment. No fabricated summary for older formats.
+    return match ? match[1].trim() : '';
+  }
+  function vStage4() {
+    ensureLib();
+    var h='<header class="s4-hero"><p class="s4-eyebrow">'+esc(pt('GESTIÓN DE POSICIONES','POSITION MANAGEMENT'))+'</p><h2>Stage 4</h2><p>'+esc(pt('La revisión diaria del riesgo, los stops y los trailing. Último informe publicado y archivo de revisiones publicadas, sin confundir referencias con órdenes.','Daily risk, stop and trailing review. Latest published report and the published review archive, without confusing reference levels with orders.'))+'</p></header>';
+    if(S.libState==='fail')return h+notice(pt('Informe no disponible','Report unavailable'),pt('No se pudo cargar la biblioteca. Recarga la página para intentarlo de nuevo.','The library could not load. Reload the page to try again.'));
+    if(S.libState!=='ok')return h+'<p role="status">'+esc(t().lib.loading)+'</p>';
+    var rows=stage4Reports();
+    if(!rows.length)return h+notice(pt('Sin revisiones publicadas','No published reviews'),pt('Todavía no hay informes Stage 4 disponibles.','No Stage 4 reports are available yet.'));
+    var latest=rows[0], chosen=S.stage4Sel ? rows.find(function(x){return x.report.id===S.stage4Sel;}) : latest;
+    if(!chosen)return h+notice(pt('Informe no encontrado','Report not found'),pt('Ese identificador no corresponde a una revisión Stage 4 publicada.','That identifier is not a published Stage 4 review.'))+'<p><a class="btn" href="#stage4">'+esc(pt('Ver el último informe','View latest report'))+'</a></p>';
+    var r=chosen.report, historic=r.id!==latest.report.id;
+    h+='<section class="panel s4-latest"><div><p class="s4-eyebrow">'+esc(pt('ÚLTIMO INFORME PUBLICADO','LATEST PUBLISHED REPORT'))+'</p><h3><time datetime="'+esc(latest.date)+'">'+esc(fmtD(latest.date))+'</time> · '+esc(latest.report.id)+'</h3><p>'+esc(latest.report.title)+'</p></div><a class="btn" href="#stage4/'+esc(latest.report.id)+'">'+esc(pt('Abrir último','Open latest'))+'</a></section>';
+    h+='<section class="s4-selector"><label for="stage4-date">'+esc(pt('Consultar otro día o revisión','Choose another day or review'))+'</label><select id="stage4-date">'+rows.map(function(x){return '<option value="'+esc(x.report.id)+'"'+(x.report.id===r.id?' selected':'')+'>'+esc(fmtD(x.date)+' · '+x.report.id+' · '+x.report.title)+'</option>';}).join('')+'</select><p>'+esc(pt('Solo se muestran informes publicados. Las fechas ausentes no tienen revisión disponible aquí; las revisiones parciales o intradía mantienen su título original.','Only published reports are shown. Missing dates have no review available here; partial and intraday reviews retain their original titles.'))+'</p></section>';
+    h+='<aside class="stock-note s4-caution"><strong>'+esc(historic?pt('Consulta histórica: no son niveles vigentes.','Historical review: these are not current levels.'):pt('Revisión fechada, no monitorización en directo.','Dated review, not live monitoring.'))+'</strong><p>'+esc(pt('Stops manuales y trailing calculados son referencias de gestión. Este informe no acredita órdenes colocadas, ejecuciones ni precios garantizados del bróker. Cada regla conserva su condición de cierre o intradía.','Manual stops and calculated trailing levels are management references. This report does not establish broker orders, fills or guaranteed execution prices. Each rule retains its closing-price or intraday condition.'))+'</p></aside>';
+    var excerpt=stage4Excerpt(r);
+    if(excerpt)h+='<section class="panel s4-summary"><h3>'+esc(pt('Decisiones y alertas del informe seleccionado','Decisions and alerts from the selected report'))+'</h3><div>'+md(excerpt)+'</div></section>';
+    h+='<article class="panel s4-report"><header><p class="s4-eyebrow">'+esc(historic?pt('ARCHIVO HISTÓRICO','HISTORICAL ARCHIVE'):pt('INFORME COMPLETO','FULL REPORT'))+'</p><h3>'+esc(r.title)+'</h3><p>'+esc(pt('Sesión / fecha de referencia: ','Session / reference date: ')+fmtD(chosen.date)+' · '+r.id)+'</p><a href="#biblioteca/'+esc(r.id)+'">'+esc(pt('Ver original en Biblioteca','View original in Library'))+'</a></header><div class="lib-text">'+md(r.text)+'</div></article>';
+    return h;
+  }
+  document.addEventListener('change',function(e){if(e.target.id==='stage4-date')location.hash='stage4/'+encodeURIComponent(e.target.value);});
+
   /* ---------- library ---------- */
   // Wait for the fresh manifest (or explicit offline fallback) before loading chunks.
   var libraryManifestReady = !window.FP_MANIFEST;
   function ensureLib() {
     if (!libraryManifestReady || S.libState !== "idle") return;
     S.libState = "loading";
-    function done() { if (S.view === "entradas" || S.view === "biblioteca" || S.view === "inicio" || S.view === "fichas") render(); }
+    function done() { if (S.view === "stage4" || S.view === "entradas" || S.view === "biblioteca" || S.view === "inicio" || S.view === "fichas") render(); }
     var files = (window.FP_MANIFEST || {}).libraryFiles || ["data/lib.js", "data/lib-nov2.js", "data/lib-followup.js", "data/lib-watchlist.js", "data/lib-hood.js", "data/lib-ntnx.js", "data/lib-ntnx-sale.js", "data/lib-stage4-nov3.js"];
     var version = (window.FP_MANIFEST || {}).generated || Date.now();
     files.reduce(function (promise, file) { return promise.then(function () { return loadScript(file + "?v=" + encodeURIComponent(version)); }); }, Promise.resolve()).then(function () { S.lib = (window.FP_LIB || {}).reports || []; S.libState = "ok"; done(); }, function () { S.libState = "fail"; done(); });
@@ -3531,7 +3585,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     else if (S.loadedAt) st.textContent = t().updated + " · " + new Intl.DateTimeFormat(loc(), { hour: "2-digit", minute: "2-digit" }).format(new Date(S.loadedAt));
     else st.textContent = S.err.dec || S.err.scan ? "" : t().loading;
   }
-  var RENDER = { entradas: vEntradas, revision: vRevision, fichas: vFichas, inicio: vInicio, posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca, plan: vPlan };
+  var RENDER = { stage4: vStage4, entradas: vEntradas, revision: vRevision, fichas: vFichas, inicio: vInicio, posiciones: vPosiciones, resumen: vResumen, escaner: vEscaner, analisis: vAnalisis, aprobadas: vAprobadas, descartadas: vDescartadas, operaciones: vOperaciones, cartera: vCartera, rendimiento: vRendimiento, retro: vRetro, biblioteca: vBiblioteca, plan: vPlan };
   /* fade on the right edge of a table while there are more columns to scroll to */
   function markScroll(root) {
     [].forEach.call(root.querySelectorAll(".tbl-outer"), function (o) {
@@ -3562,7 +3616,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
           if(!navFocus || navFocus.disabled)navFocus=document.getElementById("profile-title");
           if(navFocus)navFocus.focus({preventScroll:true});
         }
-        if (focusId === "profile-scans" || focusId === "profile-scan-count" || focusId === "profile-filter" || focusId === "profile-status" || focusId === "profile-history" || focusId === "review-date") { var filterFocus=document.getElementById(focusId); if(filterFocus)filterFocus.focus({preventScroll:true}); }
+        if (focusId === "stage4-date" || focusId === "profile-scans" || focusId === "profile-scan-count" || focusId === "profile-filter" || focusId === "profile-status" || focusId === "profile-history" || focusId === "review-date") { var filterFocus=document.getElementById(focusId); if(filterFocus)filterFocus.focus({preventScroll:true}); }
         if (focusId === "profile-q" || focusId === "scan-q" || focusId === "lib-q" || focusId === "rej-q" || focusId === "ana-q") { var q = document.getElementById(focusId); if (q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); } }
       }
     });
