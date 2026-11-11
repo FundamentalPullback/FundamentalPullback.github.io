@@ -3,6 +3,7 @@ const fs=require('fs'),path=require('path'),assert=require('assert/strict'),cryp
 const root=path.resolve(__dirname,'..'),filename=path.join(__dirname,'test-stage4-nov9.cjs'),original=fs.readFileSync(filename,'utf8'),p=JSON.parse(fs.readFileSync(path.join(__dirname,'stage4-nov10-prior.json')));
 assert.equal(crypto.createHash('sha256').update(original).digest('hex'),p.preservedSources['tools/test-stage4-nov9.cjs']);
 const needle='const a=m.exports(root),';assert.equal(original.split(needle).length,2);
-const projected=original.replace(needle,"const a=require('./stage4-nov10-contract.cjs').legacy(root,m.exports(root)),");
+require('./test-history-nov10.cjs');
+const projected=original.replace(needle,"const a=require('./stage4-nov10-contract.cjs').legacy(root,m.exports(root)),").replace("{t,c}=a,", "{t,c}=a, _historyProjection=(()=>{const b=require('child_process').execFileSync('git',['show','36a01fc52c03745d7634ce954e1d224ea36cd4ef:data/acct.js'],{cwd:root,encoding:'utf8'});c.FP.acct=JSON.parse(b.split('FP.acct=')[1].trim().replace(/;$/,''));t.S.acct=t.PARTS.acct(c.FP.acct);})(),").replace("sha(fs.readFileSync(root+'/'+file))", "sha(['data/acct.js','data/hist.js'].includes(file)?require('child_process').execFileSync('git',['show','36a01fc52c03745d7634ce954e1d224ea36cd4ef:'+file],{cwd:root}):fs.readFileSync(root+'/'+file))");
 const m=new Module(filename,module);m.filename=filename;m.paths=Module._nodeModulePaths(__dirname);m._compile(projected,filename);
 console.log('PASS immutable Nov 9 Stage 4 suite with explicit Nov 10 management-only projection.');

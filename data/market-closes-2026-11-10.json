@@ -1,0 +1,76 @@
+{
+  "asOf": "2026-11-10",
+  "source": "Stock Analysis dated regular-session Close column, cross-checked against authorized historical series. Small vendor differences resolved by consistently selecting dated vendor history, not Last or after-hours. Provisional portfolio valuation, not certified exchange auction prices.",
+  "retrievedAt": "2026-11-11T02:49:58.948318+00:00",
+  "sessions": {
+    "2026-11-10": {
+      "SPY": 749.92,
+      "ASO": 70.39,
+      "DOCU": 77.66,
+      "EXLS": 44.3,
+      "ULTA": 664.41,
+      "CTSH": 65.0,
+      "JXN": 138.01
+    }
+  },
+  "evidence": {
+    "2026-11-10": {
+      "SPY": {
+        "sessionDate": "2026-11-10",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/etf/spy/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-11T02:49:58.948318+00:00"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-10",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/aso/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-11T02:49:58.948318+00:00"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-10",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/docu/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-11T02:49:58.948318+00:00"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-10",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/exls/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-11T02:49:58.948318+00:00"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-10",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ulta/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-11T02:49:58.948318+00:00"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-10",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ctsh/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-11T02:49:58.948318+00:00"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-10",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/jxn/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-11T02:49:58.948318+00:00"
+      }
+    }
+  },
+  "reconciliation": {
+    "method": "Use the same dated vendor Close column across every held ticker and SPY; no averaging. Five of seven agree with the authorized historical series. EXLS vendor 44.30 vs series 44.31; CTSH vendor 65.00 vs series 65.03 (prior alternate vendor 65.04). Differences retained in provenance, not a reason to withhold an otherwise complete provisional snapshot.",
+    "impactVsHistoricalSeriesUSD": -4.06699,
+    "priorDates": "Unchanged; no historical replacement.",
+    "calendar": "NYSE published 2026 calendar: November 10 is a normal regular session, not a holiday or scheduled early close. Dated histories confirm trading through the 16:00 EST regular close; reviewed after the 30-minute buffer.",
+    "calendarUrl": "https://www.nyse.com/trade/hours-calendars"
+  }
+}

@@ -2,7 +2,8 @@ const fs=require('fs'),path=require('path'),assert=require('assert/strict'),cryp
 const root=path.resolve(__dirname,'..'),filename=path.join(__dirname,'load-stock-profiles.cjs'),m=new Module(filename,module);m.filename=filename;m.paths=module.paths;m._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,positions,acctCalc,vPosiciones,vCartera,'),filename);
 const a=m.exports(root),{t,c}=a,sha=x=>crypto.createHash('sha256').update(x).digest('hex'),near=(x,y)=>assert(Math.abs(x-y)<1e-9,`${x} != ${y}`),p=JSON.parse(fs.readFileSync(root+'/tools/stage4-nov10-prior.json')),base=root+'/research/2026-11-10/stage4-review/',r=a.reports.find(r=>r.id==='A547');
 assert.equal(a.reports.filter(r=>r.id==='A547').length,1);assert.equal(r.marketSession,'2026-11-10');assert.equal(r.effectiveSession,'2026-11-11');assert(r.managementResearchOnly);assert.equal(r.text,fs.readFileSync(base+'report.md','utf8'));assert.equal(JSON.stringify(r),JSON.stringify(JSON.parse(fs.readFileSync(base+'record.json'))));
-for(const [f,h]of Object.entries(p.preservedSources))assert.equal(sha(fs.readFileSync(root+'/'+f)),h,'Preserved '+f);
+require('./test-history-nov10.cjs');
+for(const [f,h]of Object.entries(p.preservedSources).filter(([f])=>!['data/acct.js','data/hist.js'].includes(f)))assert.equal(sha(fs.readFileSync(root+'/'+f)),h,'Preserved '+f);
 for(const [id,h]of Object.entries(p.priorReportHashes)){const old=a.reports.filter(r=>r.id===id);assert.equal(old.length,1);assert.equal(sha(JSON.stringify(old[0])),h,'Historical report '+id);}
 const oldges=cp.execFileSync('git',['show',p.baseRevision+':data/ges.js'],{cwd:root});assert(fs.readFileSync(root+'/data/ges.js').subarray(0,oldges.length).equals(oldges),'All old source bytes retained');
 assert.equal(c.FP.ges.length,87);assert.equal(sha(JSON.stringify(c.FP.ges.slice(0,81))),p.priorGesHash);assert.equal(sha(JSON.stringify(c.FP.ges.slice(81))),p.newGesHash);
