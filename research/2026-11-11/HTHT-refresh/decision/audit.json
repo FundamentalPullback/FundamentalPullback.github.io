@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "scenario": "bear",
+      "test": "equity bridge",
+      "difference": 0.0
+    },
+    {
+      "scenario": "bear",
+      "test": "USD ADS conversion",
+      "difference": 1.7763568394002505e-15
+    },
+    {
+      "scenario": "base",
+      "test": "equity bridge",
+      "difference": -4.440892098500626e-15
+    },
+    {
+      "scenario": "base",
+      "test": "USD ADS conversion",
+      "difference": -7.105427357601002e-15
+    },
+    {
+      "scenario": "bull",
+      "test": "equity bridge",
+      "difference": 9.769962616701378e-15
+    },
+    {
+      "scenario": "bull",
+      "test": "USD ADS conversion",
+      "difference": -1.4210854715202004e-14
+    },
+    {
+      "scenario": "moderate_soft",
+      "test": "equity bridge",
+      "difference": -4.440892098500626e-15
+    },
+    {
+      "scenario": "moderate_soft",
+      "test": "USD ADS conversion",
+      "difference": -7.105427357601002e-15
+    },
+    {
+      "scenario": "moderate_firm",
+      "test": "equity bridge",
+      "difference": -4.440892098500626e-15
+    },
+    {
+      "scenario": "moderate_firm",
+      "test": "USD ADS conversion",
+      "difference": 0.0
+    }
+  ],
+  "extracted_fields_match_original": true,
+  "additional_comparison_checks": 6,
+  "legacy_model_sha256": "5e0c07f70037d4bcacc55c94ab60dde285c973b84273ad460ec15b98fb79db68",
+  "source_date_review": "Nov4 issuer release confirms Nov16 Q3, 06EST call; Nov10 close50.65 verified regular16EST; Q3 not published in checked issuer sources.",
+  "issues": [
+    {
+      "severity": "minor",
+      "issue": "Replace draft quarterly-results URL with verified /financials/quarterly-reports.",
+      "resolved": true
+    }
+  ],
+  "scope": "Bounded dated-model comparison, not new DCF."
+}
