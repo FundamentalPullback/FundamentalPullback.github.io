@@ -1,0 +1,85 @@
+# YOU / Clear Secure: revisión del 11 de noviembre de 2026
+
+**Conclusión: esperar pruebas. No elevar a candidata de compra por la puntuación 100.** El negocio crece con fuerza, pero el precio ya exige mucha ejecución. Valor total certificado: no disponible. **El favorable depende de bajar la tasa: con el mismo 10% del central da54,57USD, no65,65.** Esta revisión de los cálculos previos no es un precio objetivo.
+
+## Lo nuevo que cambia la lectura
+
+- Precio regular del 10nov: **55,74 USD**, no 56,50. Este último aparece como after-hours de las19:30 EST y también fue cierre del5nov. Fuente [histórico](https://stockanalysis.com/stocks/you/history/), consultado11nov. El proveedor ahora muestra59,08 el4nov frente59,06 del archivo anterior; no reescribimos silenciosamente el archivo original.
+- El modelo anterior restaba todo el TRA sin crédito por el ahorro fiscal asociado en sus casos principales. Eso era un estrés, no una estimación neutral. Aquí se emparejan ahorro y pago: el15% retenido sobre el bloque histórico se reconoce una sola vez, con un calendario supuesto explícito; nunca se suma DTA además de incorporar el mismo ahorro en flujos.
+- Se separan83,639M de obligaciones comerciales existentes de la reserva operativa200M. Las previsiones basadas en EBIT futuro no pagan automáticamente obligaciones devengadas antes de su fecha inicial.
+- La inversa anterior saltaba de inmediato a márgenes altos y requería financiación superior a la liquidez supuesta. Ahora la mejora se escalona durante diez años y se mide el déficit acumulado. La solvencia por entidad sigue sin demostrarse.
+
+## Negocio y calidad de crecimiento
+
+CLEAR+ vende acceso de identidad aeroportuaria con suscripción anticipada. CLEAR1 y nuevos usos aportan opcionalidad, no una tasación separada demostrada. Las tarifas de socios/aeropuertos, financiación de beneficios de tarjetas, salarios comerciales y SBC tienen coste económico aunque su calendario de caja difiera del reconocimiento contable.
+
+Q3 ingresos292,850M (+27,8%), bookings323,5M (+24,4%) y margen operativo28,3%. El conjunto de usuarios46,741M incluye usos gratuitos. Incluso los8,474M de Active CLEAR+ incluyen pruebas, grace period y familiares: **no equivalen a pagadores únicos**. La compañía no publica en los documentos revisados la combinación necesaria de retención pagadora actual, altas brutas y CAC de cohorte para construir LTV/CAC fiable. No dividir marketing por altas netas ni llamar ARPU a ingresos divididos por miembros de cierre. [Q3 release](https://ir.clearme.com/sec-filings/all-sec-filings/content/0001856314-26-000053/clearq32026pressreleaseear.htm).
+
+La guía Q4 de ingresos299–302M implica+24,8% y bookings335–340M +17,6%, ambos calculados en el punto medio. La desaceleración de pedidos merece más atención que el crecimiento acumulado de usuarios. Precios y renovaciones impulsan pedidos; no se conoce su contribución separada. Bookings = ingresos + cambio de diferidos, también con facturación devengada a socios. Ingresos diferidos603,646M no son caja libre adicional. El aporte TTM de diferidos al CFO133,853M no es una renta perpetua. [10-Q, KPI y balance](https://ir.clearme.com/sec-filings/all-sec-filings/content/0001856314-26-000055/you-20260930.htm).
+
+## Historia recuperada y comprobable
+
+El [dossier original del 4 de noviembre](https://fundamentalpullback.github.io/research/2026-11-04/YOU/YOU_research_20261104_FINAL.zip) conserva sin modificar: tres ejercicios2023–25, últimos cuatro trimestres, TTM comparativo,749 hechos y fórmulas de derivación. Se debe abrir primero research_notes.md para las diferencias de1.000USD y la incompatibilidad comparativa de software que no se ha ocultado.
+
+| USD millones | FY23 | FY24 | FY25 | Q4'25 | Q1'26 | Q2'26 | Q3'26 | TTM Sep26 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Ingresos |613,579|770,488|900,779|240,751|253,003|277,757|292,850|1064,361|
+| EBIT |20,138|123,191|186,478|53,906|62,001|82,952|82,926|281,785|
+| FCF compañía |199,478|283,668|343,112|187,398|185,483|188,982|-103,825|458,037|
+| SBC P&L |37,293|35,339|38,932|11,258|11,311|11,088|13,676|47,333|
+
+TTM ingresos+22,86% y EBIT+69,09%; margen26,47%. FCF compañía=CFO−PPE, no FCFF. Incluye ya el pago aproximado315M de partnership: **no añadirlo al TTM**. SBC no se suma al EBIT modelado; software capitalizado se trata aparte para evitar doble capex. Fuentes anuales y trimestrales con trazabilidad en original/inputs/source_index.json; fuente central [FY25 10-K](https://ir.clearme.com/sec-filings/all-sec-filings/content/0001856314-26-000006/you-20251231.htm).
+
+## Derechos y liquidez
+
+Al30oct:99,618115M A +31,679772M unidades Alclear,131,297887M económicas básicas; C no es otro derecho adicional a la misma unidad. B y D ya convertidas. Se usa proxy bruto4,213967M RSU no vestidas para estrés de denominador, no dilución neta certificada. Los fundadores no tienen ya los antiguos PSUs pendientes como bloque adicional. El EPS diluido ponderado102,719M no sirve para repartir100% del FCFF.
+
+Consolidado sep30: caja/valores632,969M, deuda financiera dispuesta0. Reserva operativa supuesta200M; pasivo partnership83,639M; dividendo declarado0,15 por unidad básica como proxy19,695M. Quedan329,635M bajo el supuesto de caja en Alclear. La reserva200M no es un hecho revelado. Arrendamientos108,661M se mantienen en costes operativos; no descontarlos otra vez como deuda en este enfoque. Sin cash split matriz/Alclear no se certifica caja económica A ni liquidez de cada entidad.
+
+La matriz debe TRA267,786M asociado al bloque DTA315,042M; neto contable47,256M. Aquí se supone realización uniforme15años y pago emparejado85%, no se afirma que sea su calendario real. Base PV neto23,962M. Cambios futuros, terminación anticipada, realizabilidad, bases nuevas y distribuciones fiscales pueden alterar esa relación. Nunca tratarlo como efectivo disponible para financiar el negocio. Fuente [10-Q notas12–15](https://ir.clearme.com/sec-filings/all-sec-filings/content/0001856314-26-000055/you-20260930.htm).
+
+## Diez años: cálculos de apoyo ex-distribución, no valor completo
+
+Se mantiene el modelo económico heredado para no cambiar supuestos hasta fabricar una compra. EBIT después de SBC, impuesto corporativo proxy25%, capex≥1,25xD&A; reinversión=max(suelo físico, incremento NOPAT/ROIC,0). ROIC15/20/25% es supuesto de underwriting, no ROIC incremental demostrado. El modelo no capitaliza por separado CAC ya expensado ni presta valor adicional a una aplicación emergente.
+
+| Caso | Crecimiento años1–5 | Margen final | Tasa descuento | g terminal | ROIC terminal | EV M | Residuo A condicionado |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Adverso |10/8/6/5/4%|24%|12%|2,5%|15%|1955,3|17,07|
+| Central |20/18/15/12/10%|30%|10%|3%|20%|4424,5|35,31|
+| Favorable |26/24/20/18/15%|35%|9,0372%|3%|25%|8534,0|65,65|
+
+Años6–10 crecimiento converge linealmente a terminal. Reinversión terminal incluye g/ROIC, no se convierte todo NOPAT en caja. El central tiene69,35% del EV en terminal: la persistencia del negocio pesa mucho. Los flujos negativos iniciales16,2M central y59,9M favorable caben en329,6M agregados supuestos, pero no son prueba de financiación por entidad. FCFF negativo ya reduce EV; no restar otra vez ese déficit del equity bridge.
+
+Tesoro10años4,98% al10nov, ERP4,41% al1nov y beta5años0,92 generan CAPM9,0372%; 10%central y12%adverso añaden prima analítica por concentración/complejidad. No son WACC publicados por emisor. Sin deuda dispuesta no se inventa escudo de intereses. ERP mensual y beta históricos no son observables prospectivos exactos. [Tesoro](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve), [ERP](https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm), [beta](https://stockanalysis.com/stocks/you/statistics/).
+
+Manteniendo operación central, mover toda la caja excedente entre entidades y crédito fiscal neto entre0 y47,256M sin descuento produce35,08–36,28. **No son límites universales de valor**, sólo sensibilidad a dos inputs dentro de los demás supuestos. La incertidumbre de esa caja/TRA por sí sola no explica la distancia a55,74; se necesita una tesis operativa mucho más favorable.
+
+## Qué exige el precio bajo esta convención de reinversión
+
+A55,74, con crecimiento central, descuento10%, ROIC20% y margen que mejora gradualmente, la inversa de esta convención requiere margen EBIT final59,86% y inicial30,99%. Déficit acumulado máximo276,79M frente329,64M supuestos disponibles; queda52,84M sobre la reserva después del máximo déficit. El valor terminal de esta inversa supone85,12% del EV. Esto sólo demuestra financiación agregada anual condicional, no liquidez intraanual ni solvencia: si el efectivo está retenido en matriz o los pagos fiscales ocurren antes, puede fallar. No se asume revolver para tapar déficit ni aumento de capital gratuito.
+
+Comparando residuos ex-distribución con precio cum-dividendo, las diferencias mecánicas son aproximadamente+17,8% favorable, -36,6% central y -69,4% adverso. No son retornos totales. **Con la misma tasa10% del central, la operación favorable produce54,57USD: desaparece aquel upside.** No asignamos probabilidades inventadas. Una expansión de margen más modesta podría justificar precio con crecimiento más alto, mejor eficiencia de reinversión u otra tasa, pero necesita evidencia; no es conclusión probada por esta inversa.
+
+## Calificaciones económicas materiales tras la auditoría independiente
+
+**SBC y awards:** mantener SBC en márgenes y añadir todas las4,213967M RSU no vestidas puede cobrar dos veces el servicio futuro de esos premios, una vez vía gasto y otra vía dilución. Hay111,273M de gasto pendiente de reconocimiento en2,19años. Hay que separar servicio ya devengado, servicio futuro y futuros grants; no basta con no sumar SBC al EBIT. Sin el estrés bruto de awards, y sin cambiar nada más, salen17,62 /36,45 /67,76. Son sensibilidades, no denominadores corregidos certificados.
+
+**Reinversión y eficiencia:** ΔNOPAT/ROIC supone que también la mejora de margen por eficiencia exige capital incremental. Parte del coste de captar/servir clientes ya puede estar expensado: sin puente operativo no queda demostrado ese requisito económico. Sustituirlo por NOPAT previo×crecimiento de ventas/ROIC, manteniendo los demás supuestos centrales, da una inversa de margen final48,71% y ningún déficit acumulado anual. No se recomienda esta alternativa: demuestra que59,86% y276,79M dependen de la convención, no son expectativas inevitables del mercado.
+
+**Tasa y escenarios:** el favorable combina mejores operaciones y menor descuento. A10% produce54,57USD, frente65,65 a9,0372%. RF actual y ERP mensual congelado no son calibración sincronizada; el ERP fuente estaba expresado con Treasury5,29%. Beta de la acción incorpora caja y derechos Up-C y no se ha convertido en beta de activos operativos.9,0372% es cálculo CAPM orientativo;10/12% son hurdles elegidos, no WACC calibrados.
+
+**Dividendo:**19,695M se reserva correctamente para liquidez, pero restarlo del puente sin acreditar al accionista el dividendo crea un **residuo ex-distribución** comparado con cotización cum-dividendo. Todos los valores condicionados anteriores tienen esa base, incluido el objetivo de igualación de la inversa. La diferencia orientativa es0,1453USD por unidad económica bruta diluida; no se presenta como derecho exacto de cada A/RSU. No sumar distribuciones fiscales históricas a impuestos futuros ya cargados al25% sin conciliación por entidad.
+
+**Fuentes archivadas:** La revisión independiente contrastó nueve documentos primarios descargados de nuevo, identificados en sources.json: los nueve coinciden byte a byte con el índice original. Esa verificación y la reconstrucción independiente cierran procedencia y aritmética del soporte, no certifican cada uno de749 hechos individualmente ni la valoración total. El alcance se resume en independent_review.json. La coincidencia del56,50 del scanner con una cotización after-hours no demuestra el timestamp o proveedor original del scanner.
+
+## Pruebas pendientes y decisión
+
+1. Retención pagadora, conversiones de trial, renovaciones y rentabilidad por canal después de beneficios financiados y coste de captación.
+2. Roll-forward y calendario de pasivos de partnership; división caja/valores matriz-Alclear; distribuciones fiscales, pagos TRA y tax basis por vintages.
+3. Dilución neta futura y solapamiento de awards de performance; efecto económico de SBC sin doble conteo del servicio ya proyectado.
+4. Rentabilidad incremental demostrable de CLEAR1/eGates, no sólo despliegues; mantener tasas de renovación cuando precio sube.
+5. Próximo Q4: contrastar bookings335–340M y mejora operativa. Fecha de resultados futura no verificada. Dividendo24dic no es catalizador suficiente.
+
+Si fallan renovaciones/bookings, caen primero ingresos futuros y margen por coste fijo aeroportuario. Si mejorar margen exige mucho más capital que el supuesto, falla FCFF. Si se demuestra retención pagadora sólida, unit economics netos y caja atribuible, se reevalúa; no se asciende por múltiplos de FCF publicados que mezclan perímetros.
+
+**Estado:** cálculos de apoyo reproducibles; no decisión-ready por datos estructurales/operativos ausentes. Sin recomendación de entrada ni negociación. Publicación de investigación parcial de apoyo; no valoración aprobada.
