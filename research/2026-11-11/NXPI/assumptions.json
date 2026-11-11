@@ -1,0 +1,104 @@
+{
+  "common": {
+    "valuation_date": "2026-11-10",
+    "stub_years": 0.13972602739726028,
+    "stub_fcff_assumed": 0,
+    "reference_price": 261.56,
+    "reference_price_status": "Nov10 scanner matched Stock Analysis regular close 16:00 EST; cross-provider discrepancies retained",
+    "shares_proxy": 253.831,
+    "cash": 3943,
+    "operating_cash_reserve": 1000,
+    "debt_principal": 11039,
+    "nci_economic_claim": 1000,
+    "earnout_credit": 0,
+    "base_revenue": 14313,
+    "base_revenue_status": "9M actual plus Q4 guidance midpoint, not reported FY2026",
+    "risk_free": 0.0498,
+    "erp_assumed": 0.05,
+    "beta_assumed": 1.25,
+    "debt_cost_assumed": 0.06,
+    "tax": 0.2,
+    "jv_funding": [
+      682,
+      117,
+      117,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "jv_timing_status": "Conservative modeled 2027 VSMC565 plus ESMC351 evenly 2027-29; actual schedule only deadlines disclosed",
+    "calibrated_wacc": 0.10313303371144496
+  },
+  "scenarios": {
+    "bear": {
+      "growth": [
+        -0.05,
+        0.02,
+        0.03,
+        0.03,
+        0.03
+      ],
+      "margin": [
+        0.26,
+        0.27,
+        0.275,
+        0.28,
+        0.28
+      ],
+      "tax": 0.23,
+      "sc": 0.9,
+      "terminal_margin": 0.27,
+      "terminal_roic": 0.12,
+      "g": 0.02,
+      "wacc": 0.115
+    },
+    "base": {
+      "growth": [
+        0.08,
+        0.07,
+        0.06,
+        0.05,
+        0.05
+      ],
+      "margin": [
+        0.31,
+        0.315,
+        0.32,
+        0.32,
+        0.32
+      ],
+      "tax": 0.2,
+      "sc": 1.2,
+      "terminal_margin": 0.3,
+      "terminal_roic": 0.15,
+      "g": 0.025,
+      "wacc": 0.10313303371144496
+    },
+    "bull": {
+      "growth": [
+        0.12,
+        0.1,
+        0.09,
+        0.08,
+        0.07
+      ],
+      "margin": [
+        0.33,
+        0.34,
+        0.35,
+        0.35,
+        0.35
+      ],
+      "tax": 0.19,
+      "sc": 1.5,
+      "terminal_margin": 0.33,
+      "terminal_roic": 0.18,
+      "g": 0.03,
+      "wacc": 0.09
+    }
+  }
+}
