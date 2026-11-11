@@ -1,0 +1,94 @@
+{
+  "method": "Preserved A186 FCFF repriced, plus separately reconstructed reverse cash flows. No model import.",
+  "rates": {
+    "0.9": 0.08379991430904372,
+    "1.0": 0.0876210775638339
+  },
+  "base_recovery_checks": [
+    {
+      "label": "observed_beta",
+      "case": "base",
+      "wacc": 0.08379991430904372,
+      "pv_explicit": 9636.797067548243,
+      "pv_terminal": 12726.292567566648,
+      "value": 163.60533364055024,
+      "expected": 163.60533364055013,
+      "error": 1.1368683772161603e-13
+    },
+    {
+      "label": "observed_beta",
+      "case": "recovery",
+      "wacc": 0.08379991430904372,
+      "pv_explicit": 10830.352597760322,
+      "pv_terminal": 15337.915111266913,
+      "value": 196.89648039393904,
+      "expected": 196.89648039393896,
+      "error": 8.526512829121202e-14
+    },
+    {
+      "label": "normalized_beta",
+      "case": "base",
+      "wacc": 0.0876210775638339,
+      "pv_explicit": 9466.55349656421,
+      "pv_terminal": 11536.472336194136,
+      "value": 151.7062627537913,
+      "expected": 151.7062627537912,
+      "error": 8.526512829121202e-14
+    },
+    {
+      "label": "normalized_beta",
+      "case": "recovery",
+      "wacc": 0.0876210775638339,
+      "pv_explicit": 10633.310402579324,
+      "pv_terminal": 13903.926256337663,
+      "value": 182.6267424227208,
+      "expected": 182.6267424227207,
+      "error": 1.1368683772161603e-13
+    }
+  ],
+  "reverse_checks": [
+    {
+      "beta": 0.9,
+      "margin": 0.22,
+      "growth": 0.07637396570840049,
+      "independent_value": 192.9600000000002,
+      "error_from_price": 1.9895196601282805e-13
+    },
+    {
+      "beta": 0.9,
+      "margin": 0.23,
+      "growth": 0.06888540442523688,
+      "independent_value": 192.96000000000004,
+      "error_from_price": 2.842170943040401e-14
+    },
+    {
+      "beta": 0.9,
+      "margin": 0.24,
+      "growth": 0.06175719429433657,
+      "independent_value": 192.96000000000012,
+      "error_from_price": 1.1368683772161603e-13
+    },
+    {
+      "beta": 1,
+      "margin": 0.22,
+      "growth": 0.08876150091570778,
+      "independent_value": 192.9600000000001,
+      "error_from_price": 8.526512829121202e-14
+    },
+    {
+      "beta": 1,
+      "margin": 0.23,
+      "growth": 0.08115398639480997,
+      "independent_value": 192.95999999999995,
+      "error_from_price": -5.684341886080802e-14
+    },
+    {
+      "beta": 1,
+      "margin": 0.24,
+      "growth": 0.07391313360416432,
+      "independent_value": 192.96000000000004,
+      "error_from_price": 2.842170943040401e-14
+    }
+  ],
+  "passed": true
+}
