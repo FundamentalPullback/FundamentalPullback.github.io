@@ -1,0 +1,130 @@
+{
+  "inputs": {
+    "published_year1_fcff_deficit": 199.39,
+    "dated_cash_all_reserved": 147.954,
+    "facility_nominal": 700,
+    "dated_drawn": 55,
+    "dated_letters_of_credit": 10
+  },
+  "nominal_unutilized_before_scenario": 635,
+  "scenarios": [
+    {
+      "reserve_release_fraction": 0,
+      "cash_released": 0.0,
+      "cash_reserve_remaining": 147.954,
+      "hypothetical_rate": 0.06,
+      "initial_incremental_draw": 199.39,
+      "one_year_gross_interest": 11.963399999999998,
+      "year_end_incremental_claim": 211.3534,
+      "total_facility_draw_if_only_this_change": 266.35339999999997,
+      "nominal_headroom_after_initial_draw": 435.61,
+      "nominal_headroom_after_year_end_claim": 423.64660000000003
+    },
+    {
+      "reserve_release_fraction": 0,
+      "cash_released": 0.0,
+      "cash_reserve_remaining": 147.954,
+      "hypothetical_rate": 0.08,
+      "initial_incremental_draw": 199.39,
+      "one_year_gross_interest": 15.9512,
+      "year_end_incremental_claim": 215.3412,
+      "total_facility_draw_if_only_this_change": 270.34119999999996,
+      "nominal_headroom_after_initial_draw": 435.61,
+      "nominal_headroom_after_year_end_claim": 419.65880000000004
+    },
+    {
+      "reserve_release_fraction": 0,
+      "cash_released": 0.0,
+      "cash_reserve_remaining": 147.954,
+      "hypothetical_rate": 0.1,
+      "initial_incremental_draw": 199.39,
+      "one_year_gross_interest": 19.939,
+      "year_end_incremental_claim": 219.32899999999998,
+      "total_facility_draw_if_only_this_change": 274.32899999999995,
+      "nominal_headroom_after_initial_draw": 435.61,
+      "nominal_headroom_after_year_end_claim": 415.67100000000005
+    },
+    {
+      "reserve_release_fraction": 0.5,
+      "cash_released": 73.977,
+      "cash_reserve_remaining": 73.977,
+      "hypothetical_rate": 0.06,
+      "initial_incremental_draw": 125.41299999999998,
+      "one_year_gross_interest": 7.524779999999999,
+      "year_end_incremental_claim": 132.93777999999998,
+      "total_facility_draw_if_only_this_change": 187.93777999999998,
+      "nominal_headroom_after_initial_draw": 509.587,
+      "nominal_headroom_after_year_end_claim": 502.06222
+    },
+    {
+      "reserve_release_fraction": 0.5,
+      "cash_released": 73.977,
+      "cash_reserve_remaining": 73.977,
+      "hypothetical_rate": 0.08,
+      "initial_incremental_draw": 125.41299999999998,
+      "one_year_gross_interest": 10.033039999999998,
+      "year_end_incremental_claim": 135.44603999999998,
+      "total_facility_draw_if_only_this_change": 190.44603999999998,
+      "nominal_headroom_after_initial_draw": 509.587,
+      "nominal_headroom_after_year_end_claim": 499.55396
+    },
+    {
+      "reserve_release_fraction": 0.5,
+      "cash_released": 73.977,
+      "cash_reserve_remaining": 73.977,
+      "hypothetical_rate": 0.1,
+      "initial_incremental_draw": 125.41299999999998,
+      "one_year_gross_interest": 12.5413,
+      "year_end_incremental_claim": 137.9543,
+      "total_facility_draw_if_only_this_change": 192.9543,
+      "nominal_headroom_after_initial_draw": 509.587,
+      "nominal_headroom_after_year_end_claim": 497.0457
+    },
+    {
+      "reserve_release_fraction": 1,
+      "cash_released": 147.954,
+      "cash_reserve_remaining": 0.0,
+      "hypothetical_rate": 0.06,
+      "initial_incremental_draw": 51.43599999999998,
+      "one_year_gross_interest": 3.0861599999999987,
+      "year_end_incremental_claim": 54.52215999999998,
+      "total_facility_draw_if_only_this_change": 109.52215999999999,
+      "nominal_headroom_after_initial_draw": 583.5640000000001,
+      "nominal_headroom_after_year_end_claim": 580.47784
+    },
+    {
+      "reserve_release_fraction": 1,
+      "cash_released": 147.954,
+      "cash_reserve_remaining": 0.0,
+      "hypothetical_rate": 0.08,
+      "initial_incremental_draw": 51.43599999999998,
+      "one_year_gross_interest": 4.1148799999999985,
+      "year_end_incremental_claim": 55.55087999999998,
+      "total_facility_draw_if_only_this_change": 110.55087999999998,
+      "nominal_headroom_after_initial_draw": 583.5640000000001,
+      "nominal_headroom_after_year_end_claim": 579.44912
+    },
+    {
+      "reserve_release_fraction": 1,
+      "cash_released": 147.954,
+      "cash_reserve_remaining": 0.0,
+      "hypothetical_rate": 0.1,
+      "initial_incremental_draw": 51.43599999999998,
+      "one_year_gross_interest": 5.143599999999998,
+      "year_end_incremental_claim": 56.57959999999998,
+      "total_facility_draw_if_only_this_change": 111.57959999999997,
+      "nominal_headroom_after_initial_draw": 583.5640000000001,
+      "nominal_headroom_after_year_end_claim": 578.4204
+    }
+  ],
+  "not_actual_availability": true,
+  "not_funded_dcf": true,
+  "limitations": [
+    "Borrowing base and covenant availability not certified",
+    "Debt rate hypothetical, not primary SOFR quote",
+    "Annual upfront draw and annual capitalized gross interest only",
+    "No financing fees, further seasonality, existing debt interest, dividends or repayments modeled",
+    "Cash release sacrifices reserved operating liquidity",
+    "New debt finances already modeled negativeFCFF; not a secondEVloss"
+  ]
+}
