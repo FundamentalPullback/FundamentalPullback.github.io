@@ -3309,8 +3309,10 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   document.addEventListener('submit',function(e){if(e.target.id!=='entry-filters')return;e.preventDefault();location.hash=entryPlanHash(null,document.getElementById('entry-q').value,document.getElementById('entry-state').value);});
 
   /* ---------- library ---------- */
+  // Wait for the fresh manifest (or explicit offline fallback) before loading chunks.
+  var libraryManifestReady = !window.FP_MANIFEST;
   function ensureLib() {
-    if (S.libState !== "idle") return;
+    if (!libraryManifestReady || S.libState !== "idle") return;
     S.libState = "loading";
     function done() { if (S.view === "entradas" || S.view === "biblioteca" || S.view === "inicio" || S.view === "fichas") render(); }
     var files = (window.FP_MANIFEST || {}).libraryFiles || ["data/lib.js", "data/lib-nov2.js", "data/lib-followup.js", "data/lib-watchlist.js", "data/lib-hood.js", "data/lib-ntnx.js", "data/lib-ntnx-sale.js", "data/lib-stage4-nov3.js"];
@@ -3813,6 +3815,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   if (window.FP_MANIFEST) {
     function bootSnapshot(MF) {
     window.FP_MANIFEST = MF;
+    libraryManifestReady = true;
     document.getElementById("refresh").hidden = false;
     var foot = document.querySelector("footer .wrap"); if (foot) { var sn = document.createElement("div"); sn.setAttribute("data-i18n", "snapNote"); sn.style.marginTop = "6px"; foot.parentNode.appendChild(sn); sn.className = "wrap"; }
     var failed = [];
