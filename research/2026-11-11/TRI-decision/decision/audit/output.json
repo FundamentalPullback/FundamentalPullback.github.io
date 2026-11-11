@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "count": 10,
+  "checks": [
+    {
+      "name": "terminal legacy full FCFF",
+      "computed": 3230.866083704466,
+      "reference": 3230.866083704466,
+      "pass": true
+    },
+    {
+      "name": "year10royalty",
+      "computed": 49.69516595678542,
+      "reference": 49.69516595678543,
+      "pass": true
+    },
+    {
+      "name": "terminalFCFF royalty",
+      "computed": 10.666719506462293,
+      "reference": 10.666719506462295,
+      "pass": true
+    },
+    {
+      "name": "PVloss",
+      "computed": 85.77699025450586,
+      "reference": 85.77699025450588,
+      "pass": true
+    },
+    {
+      "name": "per share loss",
+      "computed": 0.19718848334369163,
+      "reference": 0.19718848334369166,
+      "pass": true
+    },
+    {
+      "name": "central sensitivity",
+      "computed": 92.0646700217877,
+      "reference": 92.0646700217877,
+      "pass": true
+    },
+    {
+      "name": "IRR current independentNewton",
+      "computed": 0.06552137948359175,
+      "reference": 0.06552137948359171,
+      "pass": true
+    },
+    {
+      "name": "IRR prior tieout",
+      "computed": 0.0639099668140997,
+      "reference": 0.06390996681409977,
+      "pass": true
+    },
+    {
+      "name": "SBC growth",
+      "computed": 0.2619047619047619,
+      "reference": 0.26190476190476186,
+      "pass": true
+    },
+    {
+      "name": "cross perimeter arithmetic not certified",
+      "computed": 133,
+      "reference": 133,
+      "pass": true
+    }
+  ],
+  "model_sha256": "2885e83d7f9fa190c92626207b64991f52346f00809991dd5c6addb7cd904a53",
+  "review": [
+    "No production calculator imported. Independent iterative royalty and Newton IRR calculations.",
+    "Terminal deletion is the component embedded in old blended aggregate Gordon terminal. It is NOT full contractual runoff valuation; renewal and retained costs remain uncertain.",
+    "Ten-year initial term from Oct1 2026 not exact model fiscalyear clock; terminal-only stress deliberately does not adjust earlier rows.",
+    "SBC133 is mixed-perimeter arithmetic, not actual continuing/combined TTM. No extra SBC deduction in forecast EBIT.",
+    "IRR freezes historical terminal equity and dated claims; not expected realized investment return."
+  ]
+}
