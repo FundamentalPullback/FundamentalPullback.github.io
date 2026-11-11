@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-11",
+  "status": "pass_with_minor_edits",
+  "material_numeric_errors": [],
+  "checks": [
+    "All nine rounded scenario values match independently audited outputs",
+    "First FCFF256m, peak floor deficit527m, terminal fractions54.9/66.9% correct",
+    "Inverse shifts8.31pp/1.55pp and terminal20.81/14.05% correct",
+    "HFI70 explicitly book-value recoverability assumption, no certified liquidation value claimed",
+    "Capital/rates dated and conditional; future owned lending zero NPV with dependency caveat",
+    "Credit expenses not mechanically counted again as84 debt claim"
+  ],
+  "minor_edits": [
+    {
+      "text": "Se mantienen en gastos los costes del programa con bancos y sus ingresos ordinarios",
+      "replace": "Se mantienen en el EBIT los costes del programa con bancos y sus ingresos ordinarios",
+      "reason": "Revenue is not an expense; intended net operating treatment is correct."
+    },
+    {
+      "text": "https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "replace": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "reason": "Fix malformed Treasury path"
+    }
+  ],
+  "concept_note": "Bottom-up investment is an analytical choice permitting high incremental returns, not proof that old economic floor was erroneous. Current prose describes both, preserves downside/upside, and does not certify HFI fair value.",
+  "minor_edits_resolved": true,
+  "final_report_sha256": "cafc52ba09522f144c13ff445551afe3f8913f9e8f317cdfa35cc6331ea7f7f6"
+}
