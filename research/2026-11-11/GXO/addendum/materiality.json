@@ -1,0 +1,69 @@
+{
+  "claim_tests": {
+    "bear": {
+      "unfloored_original": -7.400195575825098,
+      "all_favorable_claims_diagnostic": -3.216946655270013,
+      "extra_claim_20_incremental_sensitivity": -0.1744652639659444,
+      "extra_claim_415_deliberate_overcount_sensitivity": -11.020349803118444,
+      "ev": 2102.3911799697144
+    },
+    "base": {
+      "unfloored_original": 19.12695671461442,
+      "all_favorable_claims_diagnostic": 22.98678952500642,
+      "extra_claim_20_incremental_sensitivity": -0.1744652639659444,
+      "extra_claim_415_deliberate_overcount_sensitivity": 15.506802487321073,
+      "ev": 5064.177809936538,
+      "annual_investment_saving_years1_5_to_reference": 1080.5573913948167
+    },
+    "bull": {
+      "unfloored_original": 51.629865398225455,
+      "all_favorable_claims_diagnostic": 55.25123367744161,
+      "extra_claim_20_incremental_sensitivity": -0.1744652639659444,
+      "extra_claim_415_deliberate_overcount_sensitivity": 48.009711170932114,
+      "ev": 8711.001249790974,
+      "annual_investment_saving_years1_5_to_reference": 108.7558347954588
+    }
+  },
+  "operating_sensitivity_not_evidence_verified": [
+    {
+      "test": "bull_wacc8_5",
+      "assumption_changes": {
+        "wacc": 0.085
+      },
+      "unfloored_residual_per_share": 59.33726669175819
+    },
+    {
+      "test": "bull_wacc9_5",
+      "assumption_changes": {
+        "wacc": 0.095
+      },
+      "unfloored_residual_per_share": 45.127559347272566
+    },
+    {
+      "test": "bull_capex_minus25bp",
+      "assumption_changes": {
+        "capex": 0.0355
+      },
+      "unfloored_residual_per_share": 53.539554176437974
+    },
+    {
+      "test": "bull_margin_plus25bp",
+      "assumption_changes": {
+        "m5": 0.0525,
+        "m10": 0.0575
+      },
+      "unfloored_residual_per_share": 55.136005536150016
+    },
+    {
+      "test": "base_capex_minus50bp",
+      "assumption_changes": {
+        "capex": 0.034
+      },
+      "unfloored_residual_per_share": 22.615259345990424
+    }
+  ],
+  "reference": 55.32,
+  "factoring_20_is_flow_not_ending_balance": true,
+  "canonical_fair_value": null,
+  "canonical_entry": null
+}
