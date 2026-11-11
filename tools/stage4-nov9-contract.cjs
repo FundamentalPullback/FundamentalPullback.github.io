@@ -5,7 +5,7 @@ function contract(root){return JSON.parse(fs.readFileSync(root+'/tools/stage4-no
 function priorBytes(root,f){
  const c=contract(root),ref=c.historicalSources[f];
  if(!ref)return fs.readFileSync(root+'/'+f);
- if(f==='index.html')assert.equal(sha(fs.readFileSync(root+'/'+f)),c.currentIndexHash,'Reviewed current UI');
+ if(f==='index.html')assert.equal(sha(require('./entry-validity-contract.cjs').priorHtml(root,fs.readFileSync(root+'/'+f,'utf8'))),c.currentIndexHash,'Reviewed current UI');
  // Resolve immutable, already public source bytes without embedding portfolio history.
  const b=cp.execFileSync('git',['show',ref.revision+':'+f],{cwd:root,maxBuffer:10e6});
  assert.equal(sha(b),ref.sha256,'Exact historical public source '+f);return b;
