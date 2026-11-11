@@ -1,0 +1,66 @@
+# RYAN — TRA emparejado con su beneficio fiscal; valoración muy dependiente de la tasa
+
+**11 de noviembre de 2026. Opportunity ≥90. Últimas cuentas verificadas: Q3 terminado el 30 de septiembre, publicadas el 29/30 de octubre. Cierre regular NYSE del 10 de noviembre: $47,20 a las 16:00 EST, no precio en vivo.**
+
+## Conclusión
+
+**No la elijo como entrada prioritaria a $47,20**, pero tampoco sostengo que el residuo de aproximadamente $15 del informe anterior sea su valor intrínseco actual. Esa cifra combinaba una tasa discrecional del 9,5% con una deducción fiscal deliberadamente asimétrica. Al emparejar beneficios y pagos del TRA y mostrar una tasa mecánica basada en beta observada, el caso ordinario sube a aproximadamente **$44,26**, o **$45,18** permitiendo que las mejoras de margen requieran menos inversión incremental. No aparece un descuento claro, aunque tampoco un rechazo robusto bajo todos los supuestos razonables.
+
+Con beta normalizada a uno, la misma operación arroja **$27,36–28,24**. Un caso de recuperación operativa más fuerte puede justificar **$73,70** con la beta observada, pero sólo **$45,27** con la normalizada. La decisión depende de cuánto crecimiento, margen y riesgo sistemático se esté dispuesto a suscribir. No convierto la beta normalizada en una verdad, ni la baja beta histórica en garantía de riesgo bajo.
+
+Esta investigación resuelve una limitación económica importante y permite una decisión de prioridad sin esperar una precisión imposible en cada premio o impuesto futuro. Sigue siendo **valoración condicional**, no rango aprobado de compra, no señal, no stop, no cantidad ni operación. Conserva íntegramente A259 y su modelo, cuyas limitaciones ya advertían que los residuos no eran objetivos de precio.
+
+## La corrección económica importante: impuestos y TRA juntos
+
+La nota 16 estima unos **$570,7 millones de ahorro fiscal futuro calificable** y **$485,088 millones de pagos TRA no descontados**, incluidos intereses devengados. El caso ordinario debe valorar ambos lados conjuntamente: beneficio fiscal menos pago asociado, atribuido sólo a la matriz pública. El DTA contable neto de la matriz de $251,2 millones no se suma además. El modelo mantiene impuesto operativo normalizado del 26%, sin este escudo especial, y añade por separado su efecto neto. [10-Q, notas 12 y 16](https://ir.ryanspecialty.com/financial-reports/sec-filings/content/0001849253-26-000047/ryan-20260930.htm).
+
+La diferencia nominal aproximada es **$85,6 millones**, no $570,7 millones de caja gratuita. La distribución uniforme en diez años es una hipótesis de calendario, no el cronograma contractual publicado; se prueban cinco y quince años. Descontar ese flujo neto al coste del equity es una simplificación de realización ordinaria emparejada. Los dos flujos pueden tener riesgos y momentos distintos: rechazo de beneficios, aceleración, incumplimiento o futuros canjes pueden cambiar el resultado. El estrés separado conserva pagos sin beneficio fiscal. Ninguno de estos límites es un techo universal de responsabilidad.
+
+## Negocio y beneficios: hay mejora, no aceleración uniforme
+
+El negocio de corretaje especializado y suscripción delegada permite crecer sin financiar el principal asegurado del cliente. Su distribución y conocimiento sectorial son ventajas; competencia, remuneración de equipos, ciclo de primas y adquisiciones pueden absorberlas. El crecimiento orgánico trimestral se ha desacelerado hasta el 4% en Q3. El TTM del expediente previo reconstruye ventas de $3.253 millones, EBIT GAAP de $507 millones y un puente antes de amortización intangible y sin revaloración contingente de $821 millones. No son medidas equivalentes. Retenemos SBC; no capitalizamos EBITDA ajustado como si fuera caja libre.
+
+El presupuesto de software, instalaciones, adquisiciones y circulante importa. Amortización incluye software interno y activos adquiridos; no se añade toda como beneficio gratuito. Los márgenes del modelo son antes de esa amortización, con sustitución económica financiada. La normalización de $9,221 millones por reversión de premios es una selección conservadora del expediente, no una nueva cifra de reversión TTM. Empower no produce ahorros sin costes ni duplicación de mejoras ya incorporadas al margen. [Dossier y reconstrucción anteriores](https://fundamentalpullback.github.io/research/2026-11-04/RYAN/report.md).
+
+## Capital: conocido, estimado y separado
+
+Se mantienen los saldos y recuentos fechados del expediente: 119,694 millones de acciones A y 131,887 millones de unidades económicas externas aproximadas mediante B, al 26 de octubre. **No sumamos B y sus unidades como dos derechos económicos.** La reserva adicional de 12 millones de premios es un proxy, probado entre 8 y 16 millones, no un censo actual certificado. Las ventas propuestas de insiders en formularios 144 no son nuevas emisiones.
+
+La caja corporativa ya contiene los $57,8 millones de ingresos ganados aún ubicados en cuentas fiduciarias; no se añaden otra vez. El principal de clientes no es caja del accionista. Las recompras posteriores por $50 millones se pagan una vez, sin restar de nuevo todas sus acciones al recuento que ya recoge parte del período. Matriz y LLC no son intercambiables al asignar obligaciones; se conserva el puente de ambos niveles y sus límites. [10-Q, notas de capital y hechos posteriores](https://ir.ryanspecialty.com/financial-reports/sec-filings/content/0001849253-26-000047/ryan-20260930.htm).
+
+El dividendo declarado de **$0,13 por acción A**, pagadero el 24 de noviembre a titulares registrados el 10, se deduce una vez del puente de septiembre. El precio de referencia es ya exdividendo según el proveedor: una compra el 11 no adquiere ese pago. No añadimos el dividendo otra vez a la rentabilidad. La distribución LLC de $0,06 sigue siendo hipótesis, no una nueva declaración comprobada. [Comunicados del emisor](https://ir.ryanspecialty.com/ir-news-events/press-releases), [fecha exdividendo](https://stockanalysis.com/stocks/ryan/dividend/).
+
+## Modelo y tasas: no ocultar el verdadero factor decisivo
+
+Diez períodos anuales prospectivos, sin anualizar Q3. Central: crecimiento 7/7/6/5/4%, convergiendo a 2,5%; margen 25% que alcanza 27%; impuesto 26%; ROIC incremental 20%. Inversión es el mayor entre suelo físico (capex/software, menos depreciación, más circulante) y aumento positivo de NOPAT/ROIC. El suelo de capex parte de $100 millones y aumenta con ventas. No se regala crecimiento adquirido. La variante de eficiencia financia crecimiento de ventas sin exigir la misma inversión por cada mejora de margen, manteniendo el suelo físico. Es una alternativa razonable, no un hecho probado.
+
+Tasa libre de riesgo 4,98% del Treasury a diez años del 10 de noviembre; ERP seleccionado 4,41%; coste de deuda supuesto 6%; impuesto 26%. Beta observada del proveedor 0,54 frente a normalizada 1. Costes de equity: 7,3614% y 9,39%. El peso de deuda usa principal y una aproximación de capital económico a precio equivalente por unidad: **no afirma que cada unidad LLC tenga el mismo valor neto que una acción A después del TRA**. Resultan WACC de **6,667% y 8,214%**. Se publica además sensibilidad 6,5–9,5%; no se usa una prima escondida para forzar el rechazo. [Treasury](https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026), [ERP de referencia](https://pages.stern.nyu.edu/~adamodar/), [beta del proveedor](https://stockanalysis.com/stocks/ryan/statistics/).
+
+El valor terminal representa aproximadamente el 63,3% del EV central con beta normalizada y el 71,6% con beta observada. La tasa baja aumenta mucho la dependencia de resultados lejanos: estos valores no son objetivos a seis meses. La sensibilidad de impuesto operativo mantiene por separado el escudo de deuda del WACC en 26%; es una variación aislada, no una nueva estructura fiscal integral.
+
+| Caso analítico | USD por acción A |
+|---|---:|
+| Operación central, beta normalizada |27,36|
+| Central con eficiencia de inversión, beta normalizada |28,24|
+| Operación central, beta observada |44,26|
+| Central con eficiencia, beta observada |45,18|
+| Recuperación, beta normalizada |45,27|
+| Recuperación, beta observada |73,70|
+| Supuestos favorables de derechos/caja y beta observada |48,91|
+| Adverso con pagos TRA sin ahorro, tasa10% |2,43|
+
+No son probabilidades ni un intervalo de confianza. El último es un estrés altamente apalancado, no predicción de quiebra ni precio objetivo. El caso favorable de derechos libera toda la reserva operativa y compensación diferida, acredita inversiones a valor contable, supone cero premios adicionales y beneficio fiscal sin descuento. **No puede usarse como central**: deliberadamente mide cuánto aportan esas incertidumbres bajo tratamiento generoso. Tampoco es cota máxima de todo el negocio.
+
+La recuperación usa crecimiento 12/12/10/8/6%, margen 27% a30%, ROIC25% y terminal3%; son supuestos más exigentes que el 4% orgánico observado, no guía del emisor. Por eso no presento $73,70 como una ganga demostrada.
+
+## Qué está descontando $47,20
+
+Con beta observada y las demás hipótesis centrales, el inverso requiere elevar la trayectoria de margen unos **1,42 puntos** (terminal28,42%) o **0,80 puntos** si se acepta la variante eficiente (terminal27,80%). No es una exigencia absurda: ésta es la razón para no rechazar RYAN de forma categórica.
+
+Con beta normalizada exige aproximadamente **16,11 puntos** o **11,17 puntos** respectivamente (terminal43,11%/38,17%). El primer caso produce déficit inicial acumulado de unos $1.231 millones, mayor que la disponibilidad de revolver de $977 millones citada en las cuentas, y no incluye su financiación: no es una trayectoria ejecutable sin revisar deuda o dilución. El inverso eficiente no presenta ese déficit, pero sigue requiriendo margen muy superior. La tasa y el retorno requerido son tan importantes como la mejora de beneficios.
+
+**Qué reabriría la prioridad:** evidencia de crecimiento orgánico y márgenes sostenibles, caja después de software/captación y M&A, capital/tax schedule más claro o precio que mejore el retorno bajo hipótesis ordinarias. No hace falta una vela de 15 minutos para resolver esto. No he identificado resultados operativos nuevos después de octubre en las fuentes primarias comprobadas; no invento fecha del siguiente trimestre. [Filings recientes](https://ir.ryanspecialty.com/financial-reports/sec-filings), [cierre regular](https://stockanalysis.com/stocks/ryan/history/).
+
+
+## Reproducción y auditoría
+[Modelo](https://fundamentalpullback.github.io/research/2026-11-11/RYAN-decision/decision/model.py), [datos de partida](https://fundamentalpullback.github.io/research/2026-11-11/RYAN-decision/decision/legacy_inputs.json), [resultados](https://fundamentalpullback.github.io/research/2026-11-11/RYAN-decision/decision/results.json), [auditor independiente](https://fundamentalpullback.github.io/research/2026-11-11/RYAN-decision/decision/audit/independent.py), [comprobación](https://fundamentalpullback.github.io/research/2026-11-11/RYAN-decision/decision/audit/output.json), [fuentes](https://fundamentalpullback.github.io/research/2026-11-11/RYAN-decision/source_refresh/source_ledger.json). Ocho casos y cuatro inversos comprobados independientemente; 4.000 intervalos de monotonía. No operaciones ni cambios de cartera.
