@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "check_count": 22,
+  "checks": [
+    {
+      "name": "original claim identity",
+      "expected": "5417",
+      "pass": true
+    },
+    {
+      "name": "maturity sum",
+      "expected": "5696",
+      "pass": true
+    },
+    {
+      "name": "pension net",
+      "expected": "414",
+      "pass": true
+    },
+    {
+      "name": "old_book_bridge claims",
+      "expected": "5417",
+      "pass": true
+    },
+    {
+      "name": "old_book_bridge delta",
+      "expected": "0",
+      "pass": true
+    },
+    {
+      "name": "old_book_bridge illustration",
+      "expected": "156.87",
+      "pass": true
+    },
+    {
+      "name": "principal_only claims",
+      "expected": "5474",
+      "pass": true
+    },
+    {
+      "name": "principal_only delta",
+      "expected": "-0.1958762886597938144329896907",
+      "pass": true
+    },
+    {
+      "name": "principal_only illustration",
+      "expected": "156.6741237113402061855670103",
+      "pass": true
+    },
+    {
+      "name": "principal_and_gross_current_pension claims",
+      "expected": "5516",
+      "pass": true
+    },
+    {
+      "name": "principal_and_gross_current_pension delta",
+      "expected": "-0.3402061855670103092783505155",
+      "pass": true
+    },
+    {
+      "name": "principal_and_gross_current_pension illustration",
+      "expected": "156.5297938144329896907216495",
+      "pass": true
+    },
+    {
+      "name": "principal_current_pension_plus_earnout_proxy claims",
+      "expected": "5666",
+      "pass": true
+    },
+    {
+      "name": "principal_current_pension_plus_earnout_proxy delta",
+      "expected": "-0.8556701030927835051546391753",
+      "pass": true
+    },
+    {
+      "name": "principal_current_pension_plus_earnout_proxy illustration",
+      "expected": "156.0143298969072164948453608",
+      "pass": true
+    },
+    {
+      "name": "principal_net_pension_plus_earnout_proxy claims",
+      "expected": "5413",
+      "pass": true
+    },
+    {
+      "name": "principal_net_pension_plus_earnout_proxy delta",
+      "expected": "0.01374570446735395189003436426",
+      "pass": true
+    },
+    {
+      "name": "principal_net_pension_plus_earnout_proxy illustration",
+      "expected": "156.8837457044673539518900344",
+      "pass": true
+    },
+    {
+      "name": "incremental year1 capex",
+      "expected": "112.2935",
+      "pass": true
+    },
+    {
+      "name": "single-year discounted capex per share",
+      "expected": "-0.3516066661969956711989917729",
+      "pass": true
+    },
+    {
+      "name": "limited-scope flags",
+      "pass": true
+    },
+    {
+      "name": "no known private account quantities/identifier",
+      "pass": true
+    }
+  ],
+  "scope": "Independent arithmetic and source/prose QA of bounded bridge and one-year capital sensitivity. Not full DCF audit.",
+  "source_review": [
+    "Nov9 SEC10K debt note principal5696 less57 issuance adjustments =5639; maturities and400 August2027 note verified.",
+    "Pension current42, noncurrent625, assets253 gives414 net including8 postretirement. Gross/net access assumptions disclosed.",
+    "Earn-out150 is acquisition-date estimated fair value, not fixed maximum or certified current liability; separate fromRNCI150.",
+    "SEC10K liquidity paragraph1084 explicitly guides fiscal2027 capital spending approximately6% of net sales.",
+    "Astrodyne remains pending; no duplicate1400 subtraction. Baird08:55EST confirmed; content not claimed verified."
+  ],
+  "prose_review": "PASS. Public report contains no private account quantities or identifiers, distinguishes frozen scenarios and illustrative claims from new valuation. No unsupported sale/entry instruction.",
+  "hashes": {
+    "check.py": "8f95355bd9c8df61b653a2a608478670861d3e85b142102682dff2f8857e335e",
+    "results.json": "b968b07b5156fae3e8e22ea2e1a4305a251dbfa24020425e5c6c6fde0504837d",
+    "report.md": "c3bfae61c08085ada47a24d76a2904708891b95acb1177b9c28dad548e6f6259",
+    "audit.py": "aa72907d657bba8aadd809332caf2ef55fb5ad104021aafdbfa59a3557c280d3"
+  }
+}

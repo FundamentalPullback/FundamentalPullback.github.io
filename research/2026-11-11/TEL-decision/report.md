@@ -1,0 +1,55 @@
+# TEL — nueva 10-K: obligaciones, pensiones y reinversión
+
+**11 de noviembre de 2026. Suplemento verificado al análisis del 29 de octubre, no nueva valoración integral ni entrada aprobada.** Último cierre regular contrastado: **217,76 USD, 10 de noviembre a las 16:00 EST**. El informe anual FY2026 se presentó el 9 de noviembre y cubre el ejercicio terminado el 25 de septiembre. No son resultados de un trimestre adicional. [1,2]
+
+## Conclusión
+La 10-K permite cerrar parte de la información pendiente sobre deuda y pensiones y abre una comprobación específica de contraprestación contingente. No muestra un hundimiento operativo. Los ajustes acotados del puente patrimonial son inferiores a un dólar por acción en los casos ilustrados y **no convierten la acción en una candidata de entrada a este precio**. La guía de inversión exige más capital físico que el supuesto inicial del modelo anterior.
+
+Se preservan como antecedentes fechados el central FCFF **156,87**, adverso **92,27** y favorable **253,80 USD**. No se publican valores nuevos aprobados ni se mezclan con el antiguo método de múltiplos. La diferencia entre aquella valoración por múltiplos y el FCFF no equivale a pérdida económica observada. Este suplemento no determina una venta de posiciones existentes ni modifica stops.
+
+## 1. Deuda: valor contable no equivale a principal
+La deuda registrada era **5.639 millones**, mientras el calendario de principal suma **5.696 millones**. La diferencia es de 57 millones; la nota de deuda distingue costes/descuentos del importe a pagar. Vencimientos nominales: FY2027 **502**, FY2028 **571**, FY2029 **627**, FY2030 **350**, FY2031 **650**, después **2.996** millones. Dentro del primer año están 400 millones de notas al 3,125% que vencen en agosto de 2027. [1, nota 10]
+
+El modelo anterior restaba el valor contable. Sustituir solo esa cifra por principal, manteniendo todos los demás supuestos y 291 millones de acciones, reduce valor aproximadamente **0,196 USD por acción**. Es una convención conservadora, no la afirmación de que todos los bonos valgan hoy su nominal: la empresa informa valor razonable indicativo de deuda de 5.402 millones. No se cambian a la vez deuda, caja y coste financiero sin conciliar flujos.
+
+## 2. Pensiones: 625 millones no eran el déficit neto total
+Los **625 millones no corrientes** incorporan 617 millones de pensiones y 8 de otros beneficios postretiro. La nota también muestra **42 millones corrientes** y **253 millones de activos de pensiones**. La combinación contable neta es **414 millones**, pero los activos de un plan no son necesariamente transferibles a otro o distribuibles a accionistas. [1, nota 14]
+
+Por eso se ilustran dos tratamientos, no una corrección automática: conservar la deducción bruta y añadir 42 millones corrientes; o reconocer el neto de 414 millones sujeto a restricciones y recuperabilidad. El modelo previo descontaba 625, no una medición certificada de déficit neto. Las aportaciones FY2027 previstas de **67 millones** son flujo de financiación de obligaciones: no se resta indiscriminadamente su serie futura además del mismo déficit ya descontado. Gastos de servicio y reposición de prestaciones continúan siendo costes operativos.
+
+## 3. Dos importes de 150 millones que no son lo mismo
+La compañía adquirió dos negocios FY2026 por **212 millones de caja, neta de caja adquirida**. Una adquisición incluye earn-out por desempeño cuyo **valor razonable estimado en la fecha de adquisición era aproximadamente 150 millones**. No se certifica aquí que ese sea su pago pendiente actual, importe máximo ni fecha de vencimiento. Hay que conciliar revaloraciones, pagos y clasificación antes de incorporarlo como obligación exacta. [1, nota 4]
+
+Es distinto del **interés minoritario rescatable de First Sensor, también 150 millones**, ya deducido en el modelo anterior. No se identificó una deducción específica del earn-out en su puente publicado. El presupuesto recurrente de adquisiciones futuras no demuestra que esta contraprestación histórica esté cubierta. Para medir magnitud se prueba 150 millones como proxy adicional, sin deducir de nuevo los 212 ya pagados ni cargar dos veces la misma adquisición.
+
+| Sensibilidad aislada sobre el central anterior | Cambio por acción | Resultado ilustrativo |
+|---|---:|---:|
+| Solo principal frente a deuda contable | −0,20 | 156,67 |
+| Principal y pensión corriente, manteniendo deducción bruta | −0,34 | 156,53 |
+| Lo anterior más proxy de earn-out de 150 millones | −0,86 | 156,01 |
+| Principal, pensiones netas de 414 y proxy de earn-out | +0,01 | 156,88 |
+
+Estos resultados usan el central **redondeado** antiguo y no recalculan operaciones, tasas o calendario. No son cinco valoraciones nuevas ni probabilidades. En particular, el caso neto presupone recuperabilidad que no se ha certificado. Sirven para demostrar magnitud y evitar falsas explicaciones del salto histórico entre métodos.
+
+## 4. Inversión FY2027 y Astrodyne
+La 10-K espera **capex FY2027 cercano al 6% de ventas**, frente al **5,5%** de capex físico del escenario central anterior. El 0,5% adicional de adquisiciones de mantenimiento de ese modelo es otra partida: no sustituye una fábrica o equipo que la compañía espera comprar. [1, liquidez e inversión]
+
+A modo de diagnóstico, sobre las ventas del primer año antiguo de 22.458,7 millones, medio punto exige **112,29 millones** adicionales. Si afectase solo a ese año, con descuento anual del 9,75% y 291 millones de acciones, su efecto sería aproximadamente **−0,35 USD por acción**. El año móvil antiguo y FY2027 no son idénticos; no se presenta esto como guía de importe exacto ni DCF recalibrado. Si el mayor capex fuese persistente, habría que rehacer capital y depreciación de toda la proyección, no extrapolar esa cifra ni ignorarla.
+
+Astrodyne sigue descrita como adquisición pendiente por **1.400 millones en efectivo**, prevista para final de 2026 y sujeta a condiciones. La guía Q1 excluye Astrodyne; la expectativa anual de crecimiento de dos dígitos sí incluye su contribución anticipada. El modelo anterior ya incorporaba precio y negocio, por lo que no se suma de nuevo. La intención de financiar con caja y, en su caso, papel comercial no es deuda emitida ya ni licencia para añadir caja gratuita. [1]
+
+## Próximos puntos de control
+Conciliar saldo y pago del earn-out; confirmar cierre y financiación de Astrodyne; comprobar el capex real y retorno del crecimiento industrial, manteniendo SBC y reinversión como costes. La conferencia Baird del 11 de noviembre a **08:55 EST** está anunciada; no se ha verificado su contenido ni se anticipa guidance nuevo. [3]
+
+**Estado: observación; sin nueva compra o ampliación aprobada.** Hay nueva información documental útil, pero no evidencia suficiente para sustituir íntegramente el DCF anterior. No hay operaciones, cantidades ni datos privados de cuentas en este suplemento.
+
+## Fuentes y alcance
+[1] [10-K FY2026, presentada el 9 de noviembre](https://www.sec.gov/Archives/edgar/data/1385157/000110465926124497/tel-20260925x10k.htm), especialmente liquidez y notas 4, 10, 14 y 17.
+
+[2] [Histórico diario TEL, Stock Analysis/S&P Global](https://stockanalysis.com/stocks/tel/history/), cierre regular del 10 de noviembre.
+
+[3] Convocatoria Baird en el registro de fuentes adjunto. La comprobación es dirigida, no una certificación exhaustiva de ausencia de toda noticia posterior. Las cifras del modelo anterior siguen siendo hipótesis fechadas. Los controles reproducen únicamente las identidades y sensibilidades expuestas.
+
+
+## Reproducción
+[Fuentes](https://fundamentalpullback.github.io/research/2026-11-11/TEL-decision/source_refresh/source_ledger.json), [sensibilidad reproducible](https://fundamentalpullback.github.io/research/2026-11-11/TEL-decision/decision/check.py), [resultados](https://fundamentalpullback.github.io/research/2026-11-11/TEL-decision/decision/results.json), [auditor independiente](https://fundamentalpullback.github.io/research/2026-11-11/TEL-decision/decision/audit.py), [controles](https://fundamentalpullback.github.io/research/2026-11-11/TEL-decision/decision/audit.json). Se conserva el modelo de origen.
