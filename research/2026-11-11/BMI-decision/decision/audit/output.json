@@ -1,0 +1,3863 @@
+{
+  "status": "PASS",
+  "comparisons": 635,
+  "cases": 10,
+  "deal_scenarios": 16,
+  "inverses": 4,
+  "legacy_paths": 3,
+  "monotonic_intervals": 4000,
+  "values": {
+    "oldcentral": 79.36295930578999,
+    "oldfavorable": 119.9622040750589,
+    "oldadverse": 45.36916585898835,
+    "efficientcentral": 99.49028902108373,
+    "efficientfavorable": 151.01767649709313,
+    "fundedcentral_obs": 101.77731660337409,
+    "efficientcentral_obs": 125.31326363612966,
+    "efficientfavorable_obs": 177.9526334690228,
+    "efficientcentral_939": 93.57664712597835,
+    "efficientfavorable_939": 128.57870533828327
+  },
+  "inverse_scans": [
+    {
+      "mode": "funded",
+      "rate": 0.09,
+      "intervals": 1000,
+      "strictly_increasing": true,
+      "root": 0.22647725637338045
+    },
+    {
+      "mode": "efficient",
+      "rate": 0.09,
+      "intervals": 1000,
+      "strictly_increasing": true,
+      "root": 0.15700068788877442
+    },
+    {
+      "mode": "efficient",
+      "rate": 0.0939,
+      "intervals": 1000,
+      "strictly_increasing": true,
+      "root": 0.16965271646133184
+    },
+    {
+      "mode": "efficient",
+      "rate": 0.077142,
+      "intervals": 1000,
+      "strictly_increasing": true,
+      "root": 0.11190688634230594
+    }
+  ],
+  "checks": [
+    {
+      "label": "shares",
+      "actual": 28.684689000000002,
+      "expected": 28.684689000000002,
+      "pass": true
+    },
+    {
+      "label": "bridge",
+      "actual": 16.584999999999997,
+      "expected": 16.584999999999994,
+      "pass": true
+    },
+    {
+      "label": "observed KE",
+      "actual": 0.077142,
+      "expected": 0.077142,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.value",
+      "actual": 79.36295930578999,
+      "expected": 79.36295930578999,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.ev",
+      "actual": 2259.916805806242,
+      "expected": 2259.916805806242,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.terminal_fcff",
+      "actual": 221.9740804167776,
+      "expected": 221.9740804167776,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.terminal_pv",
+      "actual": 1442.5269295196854,
+      "expected": 1442.5269295196854,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.terminal_fraction",
+      "actual": 0.6383097491967423,
+      "expected": 0.6383097491967423,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.required_net_deal_value",
+      "actual": 2243.6314868137592,
+      "expected": 2243.631486813759,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.1.sales",
+      "actual": 951.74136,
+      "expected": 951.74136,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.1.nopat",
+      "actual": 142.76120400000002,
+      "expected": 142.76120400000002,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.1.net_investment",
+      "actual": 93.78477000000011,
+      "expected": 93.78477000000011,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.1.fcff",
+      "actual": 48.97643399999991,
+      "expected": 48.97643399999991,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.1.pv",
+      "actual": 44.93250825688065,
+      "expected": 44.93250825688065,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.2.sales",
+      "actual": 1027.8806688,
+      "expected": 1027.8806688,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.2.nopat",
+      "actual": 158.036652828,
+      "expected": 158.036652828,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.2.net_investment",
+      "actual": 76.3772441399999,
+      "expected": 76.3772441399999,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.2.fcff",
+      "actual": 81.6594086880001,
+      "expected": 81.6594086880001,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.2.pv",
+      "actual": 68.73109055466719,
+      "expected": 68.73109055466719,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.3.sales",
+      "actual": 1110.111122304,
+      "expected": 1110.111122304,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.3.nopat",
+      "actual": 174.84250176288,
+      "expected": 174.84250176288,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.3.net_investment",
+      "actual": 84.02924467440002,
+      "expected": 84.02924467440002,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.3.fcff",
+      "actual": 90.81325708847999,
+      "expected": 90.81325708847999,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.3.pv",
+      "actual": 70.12449689426258,
+      "expected": 70.12449689426258,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.4.sales",
+      "actual": 1187.81890086528,
+      "expected": 1187.81890086528,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.4.nopat",
+      "actual": 191.53579776452642,
+      "expected": 191.53579776452642,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.4.net_investment",
+      "actual": 83.46648000823208,
+      "expected": 83.46648000823208,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.4.fcff",
+      "actual": 108.06931775629434,
+      "expected": 108.06931775629434,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.4.pv",
+      "actual": 76.5590292411746,
+      "expected": 76.55902924117458,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.5.sales",
+      "actual": 1259.0880349171969,
+      "expected": 1259.0880349171969,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.5.nopat",
+      "actual": 207.74952576133748,
+      "expected": 207.7495257613375,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.5.net_investment",
+      "actual": 81.0686399840553,
+      "expected": 81.06863998405544,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.5.fcff",
+      "actual": 126.68088577728219,
+      "expected": 126.68088577728207,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.5.pv",
+      "actual": 82.33388371073134,
+      "expected": 82.33388371073127,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.6.sales",
+      "actual": 1325.8197007678082,
+      "expected": 1325.8197007678082,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.6.nopat",
+      "actual": 218.76025062668836,
+      "expected": 218.76025062668833,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.6.net_investment",
+      "actual": 56.177167680361634,
+      "expected": 56.17716768036134,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.6.fcff",
+      "actual": 162.58308294632673,
+      "expected": 162.58308294632698,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.6.pv",
+      "actual": 96.94298026418805,
+      "expected": 96.94298026418821,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.7.sales",
+      "actual": 1386.8074070031273,
+      "expected": 1386.8074070031273,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.7.nopat",
+      "actual": 228.82322215551602,
+      "expected": 228.823222155516,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.7.net_investment",
+      "actual": 52.411310045977395,
+      "expected": 52.411310045977395,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.7.fcff",
+      "actual": 176.41191210953863,
+      "expected": 176.4119121095386,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.7.pv",
+      "actual": 96.5033571222071,
+      "expected": 96.50335712220709,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.8.sales",
+      "actual": 1440.8928958762492,
+      "expected": 1440.8928958762492,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.8.nopat",
+      "actual": 237.74732781958113,
+      "expected": 237.74732781958113,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.8.net_investment",
+      "actual": 47.468647149282496,
+      "expected": 47.468647149282646,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.8.fcff",
+      "actual": 190.27868067029863,
+      "expected": 190.27868067029848,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.8.pv",
+      "actual": 95.4944535690454,
+      "expected": 95.49445356904533,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.9.sales",
+      "actual": 1487.0014685442893,
+      "expected": 1487.0014685442893,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.9.nopat",
+      "actual": 245.35524230980775,
+      "expected": 245.35524230980775,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.9.net_investment",
+      "actual": 41.34736135992728,
+      "expected": 41.34736135992728,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.9.fcff",
+      "actual": 204.00788094988047,
+      "expected": 204.00788094988047,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.9.pv",
+      "actual": 93.93089562957934,
+      "expected": 93.93089562957933,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.10.sales",
+      "actual": 1524.1765052578965,
+      "expected": 1524.1765052578965,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.10.nopat",
+      "actual": 251.48912336755293,
+      "expected": 251.48912336755293,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.10.net_investment",
+      "actual": 34.077116987473254,
+      "expected": 34.077116987473254,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.10.fcff",
+      "actual": 217.41200638007967,
+      "expected": 217.41200638007967,
+      "pass": true
+    },
+    {
+      "label": "oldcentral.10.pv",
+      "actual": 91.83718104382011,
+      "expected": 91.83718104382011,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.value",
+      "actual": 119.9622040750589,
+      "expected": 119.96220407505892,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.ev",
+      "actual": 3424.4935156475976,
+      "expected": 3424.493515647598,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.terminal_fcff",
+      "actual": 301.3863440069405,
+      "expected": 301.3863440069405,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.terminal_pv",
+      "actual": 2423.6142590102213,
+      "expected": 2423.6142590102218,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.terminal_fraction",
+      "actual": 0.7077292592133577,
+      "expected": 0.7077292592133577,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.required_net_deal_value",
+      "actual": 1079.0547769724035,
+      "expected": 1079.0547769724026,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.1.sales",
+      "actual": 986.99104,
+      "expected": 986.99104,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.1.nopat",
+      "actual": 155.4510888,
+      "expected": 155.45108879999998,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.1.net_investment",
+      "actual": 125.78735520000004,
+      "expected": 125.78735519999992,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.1.fcff",
+      "actual": 29.663733599999972,
+      "expected": 29.663733600000057,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.1.pv",
+      "actual": 27.339846635944674,
+      "expected": 27.339846635944753,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.2.sales",
+      "actual": 1105.4299648,
+      "expected": 1105.4299648,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.2.nopat",
+      "actual": 182.39594419200003,
+      "expected": 182.395944192,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.2.net_investment",
+      "actual": 107.77942156800009,
+      "expected": 107.77942156800009,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.2.fcff",
+      "actual": 74.61652262399994,
+      "expected": 74.61652262399991,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.2.pv",
+      "actual": 63.383399625390176,
+      "expected": 63.38339962539015,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.3.sales",
+      "actual": 1227.0272609280003,
+      "expected": 1227.0272609280003,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.3.nopat",
+      "actual": 211.66220251008005,
+      "expected": 211.66220251008005,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.3.net_investment",
+      "actual": 117.06503327232008,
+      "expected": 117.06503327232019,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.3.fcff",
+      "actual": 94.59716923775997,
+      "expected": 94.59716923775986,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.3.pv",
+      "actual": 74.06088988486454,
+      "expected": 74.06088988486445,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.4.sales",
+      "actual": 1349.7299870208003,
+      "expected": 1349.7299870208003,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.4.nopat",
+      "actual": 237.88991021241605,
+      "expected": 237.88991021241605,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.4.net_investment",
+      "actual": 104.91083080934402,
+      "expected": 104.91083080934402,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.4.fcff",
+      "actual": 132.97907940307203,
+      "expected": 132.97907940307203,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.4.pv",
+      "actual": 95.95428404288305,
+      "expected": 95.95428404288303,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.5.sales",
+      "actual": 1471.2056858526723,
+      "expected": 1471.2056858526723,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.5.nopat",
+      "actual": 264.817023453481,
+      "expected": 264.817023453481,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.5.net_investment",
+      "actual": 107.70845296425978,
+      "expected": 107.70845296425978,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.5.fcff",
+      "actual": 157.10857048922122,
+      "expected": 157.10857048922122,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.5.pv",
+      "actual": 104.48433576324524,
+      "expected": 104.48433576324526,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.6.sales",
+      "actual": 1585.9597293491809,
+      "expected": 1585.9597293491809,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.6.nopat",
+      "actual": 285.4727512828525,
+      "expected": 285.4727512828525,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.6.net_investment",
+      "actual": 86.06553262238137,
+      "expected": 86.06553262238137,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.6.fcff",
+      "actual": 199.40721866047116,
+      "expected": 199.40721866047116,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.6.pv",
+      "actual": 122.22567570582747,
+      "expected": 122.22567570582747,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.7.sales",
+      "actual": 1690.633071486227,
+      "expected": 1690.633071486227,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.7.nopat",
+      "actual": 304.31395286752087,
+      "expected": 304.3139528675208,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.7.net_investment",
+      "actual": 81.91826775942758,
+      "expected": 81.91826775942731,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.7.fcff",
+      "actual": 222.3956851080933,
+      "expected": 222.39568510809352,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.7.pv",
+      "actual": 125.63718281571805,
+      "expected": 125.63718281571818,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.8.sales",
+      "actual": 1781.9272573464834,
+      "expected": 1781.9272573464834,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.8.nopat",
+      "actual": 320.746906322367,
+      "expected": 320.746906322367,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.8.net_investment",
+      "actual": 74.69524297657337,
+      "expected": 74.69524297657364,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.8.fcff",
+      "actual": 246.05166334579366,
+      "expected": 246.05166334579337,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.8.pv",
+      "actual": 128.11158366405664,
+      "expected": 128.11158366405647,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.9.sales",
+      "actual": 1856.7682021550359,
+      "expected": 1856.7682021550359,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.9.nopat",
+      "actual": 334.2182763879064,
+      "expected": 334.2182763879065,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.9.net_investment",
+      "actual": 64.1493812644734,
+      "expected": 64.14938126447369,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.9.fcff",
+      "actual": 270.06889512343304,
+      "expected": 270.0688951234328,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.9.pv",
+      "actual": 129.6005737045223,
+      "expected": 129.60057370452222,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.10.sales",
+      "actual": 1912.471248219687,
+      "expected": 1912.471248219687,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.10.nopat",
+      "actual": 344.2448246795436,
+      "expected": 344.2448246795436,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.10.net_investment",
+      "actual": 50.13274145818599,
+      "expected": 50.132741458185706,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.10.fcff",
+      "actual": 294.11208322135764,
+      "expected": 294.1120832213579,
+      "pass": true
+    },
+    {
+      "label": "oldfavorable.10.pv",
+      "actual": 130.08148479492405,
+      "expected": 130.0814847949242,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.value",
+      "actual": 45.36916585898835,
+      "expected": 45.36916585898836,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.ev",
+      "actual": 1284.8154128544988,
+      "expected": 1284.815412854499,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.terminal_fcff",
+      "actual": 143.76407772975674,
+      "expected": 143.76407772975676,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.terminal_pv",
+      "actual": 623.1730690896618,
+      "expected": 623.173069089662,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.terminal_fraction",
+      "actual": 0.48502926012161257,
+      "expected": 0.4850292601216127,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.required_net_deal_value",
+      "actual": 3218.7328797655023,
+      "expected": 3218.7328797655014,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.1.sales",
+      "actual": 881.242,
+      "expected": 881.242,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.1.nopat",
+      "actual": 118.96767,
+      "expected": 118.96767,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.1.net_investment",
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.1.fcff",
+      "actual": 118.96767,
+      "expected": 118.96767,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.1.pv",
+      "actual": 107.66304977375566,
+      "expected": 107.66304977375566,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.2.sales",
+      "actual": 907.67926,
+      "expected": 907.67926,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.2.nopat",
+      "actual": 122.5367001,
+      "expected": 122.53670009999999,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.2.net_investment",
+      "actual": 23.793534000000044,
+      "expected": 23.793533999999948,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.2.fcff",
+      "actual": 98.74316609999997,
+      "expected": 98.74316610000004,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.2.pv",
+      "actual": 80.86907811060377,
+      "expected": 80.86907811060382,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.3.sales",
+      "actual": 943.9864304,
+      "expected": 943.9864304,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.3.nopat",
+      "actual": 130.978117218,
+      "expected": 130.97811721800002,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.3.net_investment",
+      "actual": 56.27611411999993,
+      "expected": 56.276114120000216,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.3.fcff",
+      "actual": 74.70200309800006,
+      "expected": 74.7020030979998,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.3.pv",
+      "actual": 55.366288743573826,
+      "expected": 55.366288743573634,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.4.sales",
+      "actual": 981.745887616,
+      "expected": 981.745887616,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.4.nopat",
+      "actual": 136.21724190671998,
+      "expected": 136.21724190672,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.4.net_investment",
+      "actual": 34.92749792479989,
+      "expected": 34.92749792479989,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.4.fcff",
+      "actual": 101.28974398192008,
+      "expected": 101.28974398192011,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.4.pv",
+      "actual": 67.93856373023196,
+      "expected": 67.93856373023199,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.5.sales",
+      "actual": 1021.01572312064,
+      "expected": 1021.01572312064,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.5.nopat",
+      "actual": 141.66593158298878,
+      "expected": 141.6659315829888,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.5.net_investment",
+      "actual": 36.324597841792,
+      "expected": 36.324597841792,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.5.fcff",
+      "actual": 105.34133374119678,
+      "expected": 105.3413337411968,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.5.pv",
+      "actual": 63.94217762845355,
+      "expected": 63.94217762845357,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.6.sales",
+      "actual": 1057.7722891529831,
+      "expected": 1057.7722891529831,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.6.nopat",
+      "actual": 146.7659051199764,
+      "expected": 146.76590511997642,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.6.net_investment",
+      "actual": 33.99982357991746,
+      "expected": 33.99982357991746,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.6.fcff",
+      "actual": 112.76608154005893,
+      "expected": 112.76608154005896,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.6.pv",
+      "actual": 61.944795203548445,
+      "expected": 61.94479520354846,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.7.sales",
+      "actual": 1091.6210024058787,
+      "expected": 1091.6210024058787,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.7.nopat",
+      "actual": 151.46241408381564,
+      "expected": 151.46241408381564,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.7.net_investment",
+      "actual": 31.310059758928332,
+      "expected": 31.310059758928144,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.7.fcff",
+      "actual": 120.15235432488731,
+      "expected": 120.1523543248875,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.7.pv",
+      "actual": 59.73052594519812,
+      "expected": 59.73052594519821,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.8.sales",
+      "actual": 1122.1863904732434,
+      "expected": 1122.1863904732434,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.8.nopat",
+      "actual": 155.7033616781625,
+      "expected": 155.70336167816254,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.8.net_investment",
+      "actual": 28.272983962312424,
+      "expected": 28.272983962312615,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.8.fcff",
+      "actual": 127.43037771585008,
+      "expected": 127.43037771584991,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.8.pv",
+      "actual": 57.32905014415585,
+      "expected": 57.32905014415577,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.9.sales",
+      "actual": 1149.1188638446013,
+      "expected": 1149.1188638446013,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.9.nopat",
+      "actual": 159.4402423584384,
+      "expected": 159.44024235843844,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.9.net_investment",
+      "actual": 24.912537868506018,
+      "expected": 24.912537868506018,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.9.fcff",
+      "actual": 134.5277044899324,
+      "expected": 134.52770448993243,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.9.pv",
+      "actual": 54.771070525458555,
+      "expected": 54.77107052545857,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.10.sales",
+      "actual": 1172.1012411214933,
+      "expected": 1172.1012411214933,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.10.nopat",
+      "actual": 162.62904720560718,
+      "expected": 162.6290472056072,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.10.net_investment",
+      "actual": 21.25869898112512,
+      "expected": 21.25869898112512,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.10.fcff",
+      "actual": 141.37034822448206,
+      "expected": 141.3703482244821,
+      "pass": true
+    },
+    {
+      "label": "oldadverse.10.pv",
+      "actual": 52.08774395985735,
+      "expected": 52.08774395985736,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.value",
+      "actual": 99.49028902108373,
+      "expected": 99.49028902108373,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.ev",
+      "actual": 2837.2629990899013,
+      "expected": 2837.2629990899013,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.terminal_fcff",
+      "actual": 252.06068955702463,
+      "expected": 252.06068955702463,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.terminal_pv",
+      "actual": 1638.0486040379465,
+      "expected": 1638.0486040379462,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.terminal_fraction",
+      "actual": 0.5773340732118868,
+      "expected": 0.5773340732118867,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.required_net_deal_value",
+      "actual": 1666.2852935300998,
+      "expected": 1666.2852935300994,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.1.sales",
+      "actual": 951.74136,
+      "expected": 951.74136,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.1.nopat",
+      "actual": 142.76120400000002,
+      "expected": 142.76120400000002,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.1.net_investment",
+      "actual": 10.574904000000004,
+      "expected": 10.574904000000004,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.1.fcff",
+      "actual": 132.18630000000002,
+      "expected": 132.18630000000002,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.1.pv",
+      "actual": 121.27183486238533,
+      "expected": 121.27183486238533,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.2.sales",
+      "actual": 1027.8806688,
+      "expected": 1027.8806688,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.2.nopat",
+      "actual": 158.036652828,
+      "expected": 158.036652828,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.2.net_investment",
+      "actual": 11.420896319999997,
+      "expected": 11.420896319999997,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.2.fcff",
+      "actual": 146.615756508,
+      "expected": 146.615756508,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.2.pv",
+      "actual": 123.40354895042503,
+      "expected": 123.40354895042503,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.3.sales",
+      "actual": 1110.111122304,
+      "expected": 1110.111122304,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.3.nopat",
+      "actual": 174.84250176288,
+      "expected": 174.84250176288,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.3.net_investment",
+      "actual": 12.334568025600003,
+      "expected": 12.334568025600003,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.3.fcff",
+      "actual": 162.50793373728,
+      "expected": 162.50793373728,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.3.pv",
+      "actual": 125.48594181078569,
+      "expected": 125.48594181078569,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.4.sales",
+      "actual": 1187.81890086528,
+      "expected": 1187.81890086528,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.4.nopat",
+      "actual": 191.53579776452642,
+      "expected": 191.53579776452642,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.4.net_investment",
+      "actual": 11.65616678419201,
+      "expected": 11.65616678419201,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.4.fcff",
+      "actual": 179.8796309803344,
+      "expected": 179.8796309803344,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.4.pv",
+      "actual": 127.43126554357305,
+      "expected": 127.43126554357303,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.5.sales",
+      "actual": 1259.0880349171969,
+      "expected": 1259.0880349171969,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.5.nopat",
+      "actual": 207.74952576133748,
+      "expected": 207.7495257613375,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.5.net_investment",
+      "actual": 10.69037010778752,
+      "expected": 10.69037010778752,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.5.fcff",
+      "actual": 197.05915565354996,
+      "expected": 197.05915565355,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.5.pv",
+      "actual": 128.07493021669313,
+      "expected": 128.07493021669316,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.6.sales",
+      "actual": 1325.8197007678082,
+      "expected": 1325.8197007678082,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.6.nopat",
+      "actual": 218.76025062668836,
+      "expected": 218.76025062668833,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.6.net_investment",
+      "actual": 10.009749877591696,
+      "expected": 10.009749877591696,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.6.fcff",
+      "actual": 208.75050074909666,
+      "expected": 208.75050074909663,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.6.pv",
+      "actual": 124.4711030663616,
+      "expected": 124.4711030663616,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.7.sales",
+      "actual": 1386.8074070031273,
+      "expected": 1386.8074070031273,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.7.nopat",
+      "actual": 228.82322215551602,
+      "expected": 228.823222155516,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.7.net_investment",
+      "actual": 9.14815593529787,
+      "expected": 9.14815593529787,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.7.fcff",
+      "actual": 219.67506622021816,
+      "expected": 219.67506622021813,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.7.pv",
+      "actual": 120.16978396068274,
+      "expected": 120.16978396068272,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.8.sales",
+      "actual": 1440.8928958762492,
+      "expected": 1440.8928958762492,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.8.nopat",
+      "actual": 237.74732781958113,
+      "expected": 237.74732781958113,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.8.net_investment",
+      "actual": 8.112823330968284,
+      "expected": 8.112823330968284,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.8.fcff",
+      "actual": 229.63450448861283,
+      "expected": 229.63450448861283,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.8.pv",
+      "actual": 115.24581445219967,
+      "expected": 115.24581445219967,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.9.sales",
+      "actual": 1487.0014685442893,
+      "expected": 1487.0014685442893,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.9.nopat",
+      "actual": 245.35524230980775,
+      "expected": 245.35524230980775,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.9.net_investment",
+      "actual": 6.916285900206014,
+      "expected": 6.916285900206014,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.9.fcff",
+      "actual": 238.43895640960173,
+      "expected": 238.43895640960173,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.9.pv",
+      "actual": 109.783919249857,
+      "expected": 109.78391924985698,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.10.sales",
+      "actual": 1524.1765052578965,
+      "expected": 1524.1765052578965,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.10.nopat",
+      "actual": 251.48912336755293,
+      "expected": 251.48912336755293,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.10.net_investment",
+      "actual": 5.576255507041071,
+      "expected": 5.576255507041071,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.10.fcff",
+      "actual": 245.91286786051185,
+      "expected": 245.91286786051185,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral.10.pv",
+      "actual": 103.87625293899173,
+      "expected": 103.87625293899171,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.value",
+      "actual": 151.01767649709313,
+      "expected": 151.01767649709313,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.ev",
+      "actual": 4315.310083821726,
+      "expected": 4315.310083821726,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.terminal_fcff",
+      "actual": 345.9660488029414,
+      "expected": 345.9660488029414,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.terminal_pv",
+      "actual": 2782.1043178815216,
+      "expected": 2782.1043178815216,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.terminal_fraction",
+      "actual": 0.6447055400055131,
+      "expected": 0.6447055400055131,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.required_net_deal_value",
+      "actual": 188.2382087982751,
+      "expected": 188.2382087982744,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.1.sales",
+      "actual": 986.99104,
+      "expected": 986.99104,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.1.nopat",
+      "actual": 155.4510888,
+      "expected": 155.45108879999998,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.1.net_investment",
+      "actual": 15.862356000000005,
+      "expected": 15.862356000000005,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.1.fcff",
+      "actual": 139.5887328,
+      "expected": 139.58873279999997,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.1.pv",
+      "actual": 128.65320995391704,
+      "expected": 128.65320995391704,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.2.sales",
+      "actual": 1105.4299648,
+      "expected": 1105.4299648,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.2.nopat",
+      "actual": 182.39594419200003,
+      "expected": 182.395944192,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.2.net_investment",
+      "actual": 17.765838720000016,
+      "expected": 17.765838720000016,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.2.fcff",
+      "actual": 164.63010547200003,
+      "expected": 164.630105472,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.2.pv",
+      "actual": 139.84591345919432,
+      "expected": 139.8459134591943,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.3.sales",
+      "actual": 1227.0272609280003,
+      "expected": 1227.0272609280003,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.3.nopat",
+      "actual": 211.66220251008005,
+      "expected": 211.66220251008005,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.3.net_investment",
+      "actual": 18.23959441920002,
+      "expected": 18.23959441920002,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.3.fcff",
+      "actual": 193.42260809088003,
+      "expected": 193.42260809088003,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.3.pv",
+      "actual": 151.43212629394307,
+      "expected": 151.4321262939431,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.4.sales",
+      "actual": 1349.7299870208003,
+      "expected": 1349.7299870208003,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.4.nopat",
+      "actual": 237.88991021241605,
+      "expected": 237.88991021241605,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.4.net_investment",
+      "actual": 18.405408913920006,
+      "expected": 18.405408913920006,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.4.fcff",
+      "actual": 219.48450129849604,
+      "expected": 219.48450129849604,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.4.pv",
+      "actual": 158.37437193237096,
+      "expected": 158.37437193237093,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.5.sales",
+      "actual": 1471.2056858526723,
+      "expected": 1471.2056858526723,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.5.nopat",
+      "actual": 264.817023453481,
+      "expected": 264.817023453481,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.5.net_investment",
+      "actual": 18.221354824780803,
+      "expected": 18.221354824780803,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.5.fcff",
+      "actual": 246.5956686287002,
+      "expected": 246.5956686287002,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.5.pv",
+      "actual": 163.99732082426885,
+      "expected": 163.99732082426888,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.6.sales",
+      "actual": 1585.9597293491809,
+      "expected": 1585.9597293491809,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.6.nopat",
+      "actual": 285.4727512828525,
+      "expected": 285.4727512828525,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.6.net_investment",
+      "actual": 17.213106524476277,
+      "expected": 17.213106524476277,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.6.fcff",
+      "actual": 268.2596447583762,
+      "expected": 268.2596447583762,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.6.pv",
+      "actual": 164.42843225764042,
+      "expected": 164.42843225764042,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.7.sales",
+      "actual": 1690.633071486227,
+      "expected": 1690.633071486227,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.7.nopat",
+      "actual": 304.31395286752087,
+      "expected": 304.3139528675208,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.7.net_investment",
+      "actual": 15.701001320556918,
+      "expected": 15.701001320556918,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.7.fcff",
+      "actual": 288.6129515469639,
+      "expected": 288.61295154696387,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.7.pv",
+      "actual": 163.0450615031753,
+      "expected": 163.0450615031753,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.8.sales",
+      "actual": 1781.9272573464834,
+      "expected": 1781.9272573464834,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.8.nopat",
+      "actual": 320.746906322367,
+      "expected": 320.746906322367,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.8.net_investment",
+      "actual": 13.694127879038467,
+      "expected": 13.694127879038467,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.8.fcff",
+      "actual": 307.0527784433285,
+      "expected": 307.0527784433285,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.8.pv",
+      "actual": 159.87300057199963,
+      "expected": 159.8730005719996,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.9.sales",
+      "actual": 1856.7682021550359,
+      "expected": 1856.7682021550359,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.9.nopat",
+      "actual": 334.2182763879064,
+      "expected": 334.2182763879065,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.9.net_investment",
+      "actual": 11.226141721282863,
+      "expected": 11.226141721282863,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.9.fcff",
+      "actual": 322.99213466662354,
+      "expected": 322.9921346666236,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.9.pv",
+      "actual": 154.9973607131282,
+      "expected": 154.99736071312824,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.10.sales",
+      "actual": 1912.471248219687,
+      "expected": 1912.471248219687,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.10.nopat",
+      "actual": 344.2448246795436,
+      "expected": 344.2448246795436,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.10.net_investment",
+      "actual": 8.35545690969766,
+      "expected": 8.35545690969766,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.10.fcff",
+      "actual": 335.889367769846,
+      "expected": 335.889367769846,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable.10.pv",
+      "actual": 148.55896843056672,
+      "expected": 148.55896843056672,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.value",
+      "actual": 101.77731660337409,
+      "expected": 101.77731660337409,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.ev",
+      "actual": 2902.8656740223223,
+      "expected": 2902.8656740223223,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.terminal_fcff",
+      "actual": 221.9740804167776,
+      "expected": 221.9740804167776,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.terminal_pv",
+      "actual": 2024.8132661466689,
+      "expected": 2024.813266146669,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.terminal_fraction",
+      "actual": 0.6975222051322167,
+      "expected": 0.6975222051322169,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.required_net_deal_value",
+      "actual": 1600.6826185976788,
+      "expected": 1600.6826185976784,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.1.sales",
+      "actual": 951.74136,
+      "expected": 951.74136,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.1.nopat",
+      "actual": 142.76120400000002,
+      "expected": 142.76120400000002,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.1.net_investment",
+      "actual": 93.78477000000011,
+      "expected": 93.78477000000011,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.1.fcff",
+      "actual": 48.97643399999991,
+      "expected": 48.97643399999991,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.1.pv",
+      "actual": 45.46887411316234,
+      "expected": 45.46887411316234,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.2.sales",
+      "actual": 1027.8806688,
+      "expected": 1027.8806688,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.2.nopat",
+      "actual": 158.036652828,
+      "expected": 158.036652828,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.2.net_investment",
+      "actual": 76.3772441399999,
+      "expected": 76.3772441399999,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.2.fcff",
+      "actual": 81.6594086880001,
+      "expected": 81.6594086880001,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.2.pv",
+      "actual": 70.38179037799928,
+      "expected": 70.38179037799928,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.3.sales",
+      "actual": 1110.111122304,
+      "expected": 1110.111122304,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.3.nopat",
+      "actual": 174.84250176288,
+      "expected": 174.84250176288,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.3.net_investment",
+      "actual": 84.02924467440002,
+      "expected": 84.02924467440002,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.3.fcff",
+      "actual": 90.81325708847999,
+      "expected": 90.81325708847999,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.3.pv",
+      "actual": 72.66585225092625,
+      "expected": 72.66585225092625,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.4.sales",
+      "actual": 1187.81890086528,
+      "expected": 1187.81890086528,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.4.nopat",
+      "actual": 191.53579776452642,
+      "expected": 191.53579776452642,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.4.net_investment",
+      "actual": 83.46648000823208,
+      "expected": 83.46648000823208,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.4.fcff",
+      "actual": 108.06931775629434,
+      "expected": 108.06931775629434,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.4.pv",
+      "actual": 80.2805924328084,
+      "expected": 80.2805924328084,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.5.sales",
+      "actual": 1259.0880349171969,
+      "expected": 1259.0880349171969,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.5.nopat",
+      "actual": 207.74952576133748,
+      "expected": 207.7495257613375,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.5.net_investment",
+      "actual": 81.0686399840553,
+      "expected": 81.06863998405544,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.5.fcff",
+      "actual": 126.68088577728219,
+      "expected": 126.68088577728207,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.5.pv",
+      "actual": 87.36677204717407,
+      "expected": 87.36677204717398,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.6.sales",
+      "actual": 1325.8197007678082,
+      "expected": 1325.8197007678082,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.6.nopat",
+      "actual": 218.76025062668836,
+      "expected": 218.76025062668833,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.6.net_investment",
+      "actual": 56.177167680361634,
+      "expected": 56.17716768036134,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.6.fcff",
+      "actual": 162.58308294632673,
+      "expected": 162.58308294632698,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.6.pv",
+      "actual": 104.09685122145926,
+      "expected": 104.09685122145942,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.7.sales",
+      "actual": 1386.8074070031273,
+      "expected": 1386.8074070031273,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.7.nopat",
+      "actual": 228.82322215551602,
+      "expected": 228.823222155516,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.7.net_investment",
+      "actual": 52.411310045977395,
+      "expected": 52.411310045977395,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.7.fcff",
+      "actual": 176.41191210953863,
+      "expected": 176.4119121095386,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.7.pv",
+      "actual": 104.86177033026235,
+      "expected": 104.86177033026233,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.8.sales",
+      "actual": 1440.8928958762492,
+      "expected": 1440.8928958762492,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.8.nopat",
+      "actual": 237.74732781958113,
+      "expected": 237.74732781958113,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.8.net_investment",
+      "actual": 47.468647149282496,
+      "expected": 47.468647149282646,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.8.fcff",
+      "actual": 190.27868067029863,
+      "expected": 190.27868067029848,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.8.pv",
+      "actual": 105.00414654172454,
+      "expected": 105.00414654172445,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.9.sales",
+      "actual": 1487.0014685442893,
+      "expected": 1487.0014685442893,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.9.nopat",
+      "actual": 245.35524230980775,
+      "expected": 245.35524230980775,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.9.net_investment",
+      "actual": 41.34736135992728,
+      "expected": 41.34736135992728,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.9.fcff",
+      "actual": 204.00788094988047,
+      "expected": 204.00788094988047,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.9.pv",
+      "actual": 104.51781029533035,
+      "expected": 104.51781029533036,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.10.sales",
+      "actual": 1524.1765052578965,
+      "expected": 1524.1765052578965,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.10.nopat",
+      "actual": 251.48912336755293,
+      "expected": 251.48912336755293,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.10.net_investment",
+      "actual": 34.077116987473254,
+      "expected": 34.077116987473254,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.10.fcff",
+      "actual": 217.41200638007967,
+      "expected": 217.41200638007967,
+      "pass": true
+    },
+    {
+      "label": "fundedcentral_obs.10.pv",
+      "actual": 103.40794826480662,
+      "expected": 103.40794826480663,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.value",
+      "actual": 125.31326363612966,
+      "expected": 125.31326363612968,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.ev",
+      "actual": 3577.986994977389,
+      "expected": 3577.9869949773893,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.terminal_fcff",
+      "actual": 252.06068955702463,
+      "expected": 252.06068955702463,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.terminal_pv",
+      "actual": 2299.2586662859962,
+      "expected": 2299.2586662859967,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.terminal_fraction",
+      "actual": 0.642612359830706,
+      "expected": 0.6426123598307061,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.required_net_deal_value",
+      "actual": 925.5612976426123,
+      "expected": 925.5612976426115,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.1.sales",
+      "actual": 951.74136,
+      "expected": 951.74136,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.1.nopat",
+      "actual": 142.76120400000002,
+      "expected": 142.76120400000002,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.1.net_investment",
+      "actual": 10.574904000000004,
+      "expected": 10.574904000000004,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.1.fcff",
+      "actual": 132.18630000000002,
+      "expected": 132.18630000000002,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.1.pv",
+      "actual": 122.71947431257904,
+      "expected": 122.71947431257904,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.2.sales",
+      "actual": 1027.8806688,
+      "expected": 1027.8806688,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.2.nopat",
+      "actual": 158.036652828,
+      "expected": 158.036652828,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.2.net_investment",
+      "actual": 11.420896319999997,
+      "expected": 11.420896319999997,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.2.fcff",
+      "actual": 146.615756508,
+      "expected": 146.615756508,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.2.pv",
+      "actual": 126.36730545140766,
+      "expected": 126.36730545140766,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.3.sales",
+      "actual": 1110.111122304,
+      "expected": 1110.111122304,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.3.nopat",
+      "actual": 174.84250176288,
+      "expected": 174.84250176288,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.3.net_investment",
+      "actual": 12.334568025600003,
+      "expected": 12.334568025600003,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.3.fcff",
+      "actual": 162.50793373728,
+      "expected": 162.50793373728,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.3.pv",
+      "actual": 130.0336303437628,
+      "expected": 130.0336303437628,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.4.sales",
+      "actual": 1187.81890086528,
+      "expected": 1187.81890086528,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.4.nopat",
+      "actual": 191.53579776452642,
+      "expected": 191.53579776452642,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.4.net_investment",
+      "actual": 11.65616678419201,
+      "expected": 11.65616678419201,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.4.fcff",
+      "actual": 179.8796309803344,
+      "expected": 179.8796309803344,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.4.pv",
+      "actual": 133.62574726585723,
+      "expected": 133.6257472658572,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.5.sales",
+      "actual": 1259.0880349171969,
+      "expected": 1259.0880349171969,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.5.nopat",
+      "actual": 207.74952576133748,
+      "expected": 207.7495257613375,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.5.net_investment",
+      "actual": 10.69037010778752,
+      "expected": 10.69037010778752,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.5.fcff",
+      "actual": 197.05915565354996,
+      "expected": 197.05915565355,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.5.pv",
+      "actual": 135.90386762893738,
+      "expected": 135.90386762893738,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.6.sales",
+      "actual": 1325.8197007678082,
+      "expected": 1325.8197007678082,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.6.nopat",
+      "actual": 218.76025062668836,
+      "expected": 218.76025062668833,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.6.net_investment",
+      "actual": 10.009749877591696,
+      "expected": 10.009749877591696,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.6.fcff",
+      "actual": 208.75050074909666,
+      "expected": 208.75050074909663,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.6.pv",
+      "actual": 133.65640154614124,
+      "expected": 133.6564015461412,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.7.sales",
+      "actual": 1386.8074070031273,
+      "expected": 1386.8074070031273,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.7.nopat",
+      "actual": 228.82322215551602,
+      "expected": 228.823222155516,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.7.net_investment",
+      "actual": 9.14815593529787,
+      "expected": 9.14815593529787,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.7.fcff",
+      "actual": 219.67506622021816,
+      "expected": 219.67506622021813,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.7.pv",
+      "actual": 130.5780095335419,
+      "expected": 130.57800953354186,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.8.sales",
+      "actual": 1440.8928958762492,
+      "expected": 1440.8928958762492,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.8.nopat",
+      "actual": 237.74732781958113,
+      "expected": 237.74732781958113,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.8.net_investment",
+      "actual": 8.112823330968284,
+      "expected": 8.112823330968284,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.8.fcff",
+      "actual": 229.63450448861283,
+      "expected": 229.63450448861283,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.8.pv",
+      "actual": 126.72242142638754,
+      "expected": 126.72242142638753,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.9.sales",
+      "actual": 1487.0014685442893,
+      "expected": 1487.0014685442893,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.9.nopat",
+      "actual": 245.35524230980775,
+      "expected": 245.35524230980775,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.9.net_investment",
+      "actual": 6.916285900206014,
+      "expected": 6.916285900206014,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.9.fcff",
+      "actual": 238.43895640960173,
+      "expected": 238.43895640960173,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.9.pv",
+      "actual": 122.1576220340124,
+      "expected": 122.15762203401242,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.10.sales",
+      "actual": 1524.1765052578965,
+      "expected": 1524.1765052578965,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.10.nopat",
+      "actual": 251.48912336755293,
+      "expected": 251.48912336755293,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.10.net_investment",
+      "actual": 5.576255507041071,
+      "expected": 5.576255507041071,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.10.fcff",
+      "actual": 245.91286786051185,
+      "expected": 245.91286786051185,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_obs.10.pv",
+      "actual": 116.96384914876529,
+      "expected": 116.9638491487653,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.value",
+      "actual": 177.9526334690228,
+      "expected": 177.9526334690228,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.ev",
+      "actual": 5087.9309477899105,
+      "expected": 5087.9309477899105,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.terminal_fcff",
+      "actual": 345.9660488029414,
+      "expected": 345.9660488029414,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.terminal_pv",
+      "actual": 3490.566171653397,
+      "expected": 3490.566171653397,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.terminal_fraction",
+      "actual": 0.6860482595915781,
+      "expected": 0.6860482595915781,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.required_net_deal_value",
+      "actual": -584.3826551699094,
+      "expected": -584.3826551699099,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.1.sales",
+      "actual": 986.99104,
+      "expected": 986.99104,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.1.nopat",
+      "actual": 155.4510888,
+      "expected": 155.45108879999998,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.1.net_investment",
+      "actual": 15.862356000000005,
+      "expected": 15.862356000000005,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.1.fcff",
+      "actual": 139.5887328,
+      "expected": 139.58873279999997,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.1.pv",
+      "actual": 129.59176487408345,
+      "expected": 129.59176487408342,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.2.sales",
+      "actual": 1105.4299648,
+      "expected": 1105.4299648,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.2.nopat",
+      "actual": 182.39594419200003,
+      "expected": 182.395944192,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.2.net_investment",
+      "actual": 17.765838720000016,
+      "expected": 17.765838720000016,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.2.fcff",
+      "actual": 164.63010547200003,
+      "expected": 164.630105472,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.2.pv",
+      "actual": 141.89377267608026,
+      "expected": 141.89377267608023,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.3.sales",
+      "actual": 1227.0272609280003,
+      "expected": 1227.0272609280003,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.3.nopat",
+      "actual": 211.66220251008005,
+      "expected": 211.66220251008005,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.3.net_investment",
+      "actual": 18.23959441920002,
+      "expected": 18.23959441920002,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.3.fcff",
+      "actual": 193.42260809088003,
+      "expected": 193.42260809088003,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.3.pv",
+      "actual": 154.77056007171512,
+      "expected": 154.77056007171512,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.4.sales",
+      "actual": 1349.7299870208003,
+      "expected": 1349.7299870208003,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.4.nopat",
+      "actual": 237.88991021241605,
+      "expected": 237.88991021241605,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.4.net_investment",
+      "actual": 18.405408913920006,
+      "expected": 18.405408913920006,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.4.fcff",
+      "actual": 219.48450129849604,
+      "expected": 219.48450129849604,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.4.pv",
+      "actual": 163.04670150503006,
+      "expected": 163.04670150503006,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.5.sales",
+      "actual": 1471.2056858526723,
+      "expected": 1471.2056858526723,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.5.nopat",
+      "actual": 264.817023453481,
+      "expected": 264.817023453481,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.5.net_investment",
+      "actual": 18.221354824780803,
+      "expected": 18.221354824780803,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.5.fcff",
+      "actual": 246.5956686287002,
+      "expected": 246.5956686287002,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.5.pv",
+      "actual": 170.06723182202188,
+      "expected": 170.06723182202185,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.6.sales",
+      "actual": 1585.9597293491809,
+      "expected": 1585.9597293491809,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.6.nopat",
+      "actual": 285.4727512828525,
+      "expected": 285.4727512828525,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.6.net_investment",
+      "actual": 17.213106524476277,
+      "expected": 17.213106524476277,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.6.fcff",
+      "actual": 268.2596447583762,
+      "expected": 268.2596447583762,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.6.pv",
+      "actual": 171.7582409133737,
+      "expected": 171.75824091337367,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.7.sales",
+      "actual": 1690.633071486227,
+      "expected": 1690.633071486227,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.7.nopat",
+      "actual": 304.31395286752087,
+      "expected": 304.3139528675208,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.7.net_investment",
+      "actual": 15.701001320556918,
+      "expected": 15.701001320556918,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.7.fcff",
+      "actual": 288.6129515469639,
+      "expected": 288.61295154696387,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.7.pv",
+      "actual": 171.55567715101284,
+      "expected": 171.55567715101284,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.8.sales",
+      "actual": 1781.9272573464834,
+      "expected": 1781.9272573464834,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.8.nopat",
+      "actual": 320.746906322367,
+      "expected": 320.746906322367,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.8.net_investment",
+      "actual": 13.694127879038467,
+      "expected": 13.694127879038467,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.8.fcff",
+      "actual": 307.0527784433285,
+      "expected": 307.0527784433285,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.8.pv",
+      "actual": 169.44523070124325,
+      "expected": 169.44523070124325,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.9.sales",
+      "actual": 1856.7682021550359,
+      "expected": 1856.7682021550359,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.9.nopat",
+      "actual": 334.2182763879064,
+      "expected": 334.2182763879065,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.9.net_investment",
+      "actual": 11.226141721282863,
+      "expected": 11.226141721282863,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.9.fcff",
+      "actual": 322.99213466662354,
+      "expected": 322.9921346666236,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.9.pv",
+      "actual": 165.47611053449225,
+      "expected": 165.47611053449228,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.10.sales",
+      "actual": 1912.471248219687,
+      "expected": 1912.471248219687,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.10.nopat",
+      "actual": 344.2448246795436,
+      "expected": 344.2448246795436,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.10.net_investment",
+      "actual": 8.35545690969766,
+      "expected": 8.35545690969766,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.10.fcff",
+      "actual": 335.889367769846,
+      "expected": 335.889367769846,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_obs.10.pv",
+      "actual": 159.75948588746064,
+      "expected": 159.75948588746064,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.value",
+      "actual": 93.57664712597835,
+      "expected": 93.57664712597835,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.ev",
+      "actual": 2667.632020471433,
+      "expected": 2667.632020471433,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.terminal_fcff",
+      "actual": 252.06068955702463,
+      "expected": 252.06068955702463,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.terminal_pv",
+      "actual": 1491.1099725418048,
+      "expected": 1491.1099725418048,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.terminal_fraction",
+      "actual": 0.5589638904837747,
+      "expected": 0.5589638904837747,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.required_net_deal_value",
+      "actual": 1835.9162721485682,
+      "expected": 1835.9162721485675,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.1.sales",
+      "actual": 951.74136,
+      "expected": 951.74136,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.1.nopat",
+      "actual": 142.76120400000002,
+      "expected": 142.76120400000002,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.1.net_investment",
+      "actual": 10.574904000000004,
+      "expected": 10.574904000000004,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.1.fcff",
+      "actual": 132.18630000000002,
+      "expected": 132.18630000000002,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.1.pv",
+      "actual": 120.83947344364202,
+      "expected": 120.83947344364202,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.2.sales",
+      "actual": 1027.8806688,
+      "expected": 1027.8806688,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.2.nopat",
+      "actual": 158.036652828,
+      "expected": 158.036652828,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.2.net_investment",
+      "actual": 11.420896319999997,
+      "expected": 11.420896319999997,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.2.fcff",
+      "actual": 146.615756508,
+      "expected": 146.615756508,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.2.pv",
+      "actual": 122.52519459251299,
+      "expected": 122.525194592513,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.3.sales",
+      "actual": 1110.111122304,
+      "expected": 1110.111122304,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.3.nopat",
+      "actual": 174.84250176288,
+      "expected": 174.84250176288,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.3.net_investment",
+      "actual": 12.334568025600003,
+      "expected": 12.334568025600003,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.3.fcff",
+      "actual": 162.50793373728,
+      "expected": 162.50793373728,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.3.pv",
+      "actual": 124.1485642373436,
+      "expected": 124.1485642373436,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.4.sales",
+      "actual": 1187.81890086528,
+      "expected": 1187.81890086528,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.4.nopat",
+      "actual": 191.53579776452642,
+      "expected": 191.53579776452642,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.4.net_investment",
+      "actual": 11.65616678419201,
+      "expected": 11.65616678419201,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.4.fcff",
+      "actual": 179.8796309803344,
+      "expected": 179.8796309803344,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.4.pv",
+      "actual": 125.62367630083686,
+      "expected": 125.62367630083685,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.5.sales",
+      "actual": 1259.0880349171969,
+      "expected": 1259.0880349171969,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.5.nopat",
+      "actual": 207.74952576133748,
+      "expected": 207.7495257613375,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.5.net_investment",
+      "actual": 10.69037010778752,
+      "expected": 10.69037010778752,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.5.fcff",
+      "actual": 197.05915565354996,
+      "expected": 197.05915565355,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.5.pv",
+      "actual": 125.80807173578599,
+      "expected": 125.80807173578599,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.6.sales",
+      "actual": 1325.8197007678082,
+      "expected": 1325.8197007678082,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.6.nopat",
+      "actual": 218.76025062668836,
+      "expected": 218.76025062668833,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.6.net_investment",
+      "actual": 10.009749877591696,
+      "expected": 10.009749877591696,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.6.fcff",
+      "actual": 208.75050074909666,
+      "expected": 208.75050074909663,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.6.pv",
+      "actual": 121.83211733829744,
+      "expected": 121.83211733829741,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.7.sales",
+      "actual": 1386.8074070031273,
+      "expected": 1386.8074070031273,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.7.nopat",
+      "actual": 228.82322215551602,
+      "expected": 228.823222155516,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.7.net_investment",
+      "actual": 9.14815593529787,
+      "expected": 9.14815593529787,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.7.fcff",
+      "actual": 219.67506622021816,
+      "expected": 219.67506622021813,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.7.pv",
+      "actual": 117.20264414152297,
+      "expected": 117.20264414152294,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.8.sales",
+      "actual": 1440.8928958762492,
+      "expected": 1440.8928958762492,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.8.nopat",
+      "actual": 237.74732781958113,
+      "expected": 237.74732781958113,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.8.net_investment",
+      "actual": 8.112823330968284,
+      "expected": 8.112823330968284,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.8.fcff",
+      "actual": 229.63450448861283,
+      "expected": 229.63450448861283,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.8.pv",
+      "actual": 111.99952126644925,
+      "expected": 111.99952126644924,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.9.sales",
+      "actual": 1487.0014685442893,
+      "expected": 1487.0014685442893,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.9.nopat",
+      "actual": 245.35524230980775,
+      "expected": 245.35524230980775,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.9.net_investment",
+      "actual": 6.916285900206014,
+      "expected": 6.916285900206014,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.9.fcff",
+      "actual": 238.43895640960173,
+      "expected": 238.43895640960173,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.9.pv",
+      "actual": 106.31109988969502,
+      "expected": 106.311099889695,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.10.sales",
+      "actual": 1524.1765052578965,
+      "expected": 1524.1765052578965,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.10.nopat",
+      "actual": 251.48912336755293,
+      "expected": 251.48912336755293,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.10.net_investment",
+      "actual": 5.576255507041071,
+      "expected": 5.576255507041071,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.10.fcff",
+      "actual": 245.91286786051185,
+      "expected": 245.91286786051185,
+      "pass": true
+    },
+    {
+      "label": "efficientcentral_939.10.pv",
+      "actual": 100.2316849835418,
+      "expected": 100.2316849835418,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.value",
+      "actual": 128.57870533828327,
+      "expected": 128.57870533828327,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.ev",
+      "actual": 3671.655174651296,
+      "expected": 3671.655174651296,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.terminal_fcff",
+      "actual": 345.9660488029414,
+      "expected": 345.9660488029414,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.terminal_pv",
+      "actual": 2206.766589655033,
+      "expected": 2206.766589655033,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.terminal_fraction",
+      "actual": 0.6010277340013591,
+      "expected": 0.6010277340013591,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.required_net_deal_value",
+      "actual": 831.8931179687052,
+      "expected": 831.893117968705,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.1.sales",
+      "actual": 986.99104,
+      "expected": 986.99104,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.1.nopat",
+      "actual": 155.4510888,
+      "expected": 155.45108879999998,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.1.net_investment",
+      "actual": 15.862356000000005,
+      "expected": 15.862356000000005,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.1.fcff",
+      "actual": 139.5887328,
+      "expected": 139.58873279999997,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.1.pv",
+      "actual": 127.60648395648595,
+      "expected": 127.60648395648593,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.2.sales",
+      "actual": 1105.4299648,
+      "expected": 1105.4299648,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.2.nopat",
+      "actual": 182.39594419200003,
+      "expected": 182.395944192,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.2.net_investment",
+      "actual": 17.765838720000016,
+      "expected": 17.765838720000016,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.2.fcff",
+      "actual": 164.63010547200003,
+      "expected": 164.630105472,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.2.pv",
+      "actual": 137.5795902784985,
+      "expected": 137.5795902784985,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.3.sales",
+      "actual": 1227.0272609280003,
+      "expected": 1227.0272609280003,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.3.nopat",
+      "actual": 211.66220251008005,
+      "expected": 211.66220251008005,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.3.net_investment",
+      "actual": 18.23959441920002,
+      "expected": 18.23959441920002,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.3.fcff",
+      "actual": 193.42260809088003,
+      "expected": 193.42260809088003,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.3.pv",
+      "actual": 147.7659492264927,
+      "expected": 147.7659492264927,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.4.sales",
+      "actual": 1349.7299870208003,
+      "expected": 1349.7299870208003,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.4.nopat",
+      "actual": 237.88991021241605,
+      "expected": 237.88991021241605,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.4.net_investment",
+      "actual": 18.405408913920006,
+      "expected": 18.405408913920006,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.4.fcff",
+      "actual": 219.48450129849604,
+      "expected": 219.48450129849604,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.4.pv",
+      "actual": 153.28278023422936,
+      "expected": 153.28278023422934,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.5.sales",
+      "actual": 1471.2056858526723,
+      "expected": 1471.2056858526723,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.5.nopat",
+      "actual": 264.817023453481,
+      "expected": 264.817023453481,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.5.net_investment",
+      "actual": 18.221354824780803,
+      "expected": 18.221354824780803,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.5.fcff",
+      "actual": 246.5956686287002,
+      "expected": 246.5956686287002,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.5.pv",
+      "actual": 157.43356590401964,
+      "expected": 157.43356590401964,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.6.sales",
+      "actual": 1585.9597293491809,
+      "expected": 1585.9597293491809,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.6.nopat",
+      "actual": 285.4727512828525,
+      "expected": 285.4727512828525,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.6.net_investment",
+      "actual": 17.213106524476277,
+      "expected": 17.213106524476277,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.6.fcff",
+      "actual": 268.2596447583762,
+      "expected": 268.2596447583762,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.6.pv",
+      "actual": 156.563171824985,
+      "expected": 156.56317182498498,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.7.sales",
+      "actual": 1690.633071486227,
+      "expected": 1690.633071486227,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.7.nopat",
+      "actual": 304.31395286752087,
+      "expected": 304.3139528675208,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.7.net_investment",
+      "actual": 15.701001320556918,
+      "expected": 15.701001320556918,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.7.fcff",
+      "actual": 288.6129515469639,
+      "expected": 288.61295154696387,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.7.pv",
+      "actual": 153.98288771145104,
+      "expected": 153.98288771145099,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.8.sales",
+      "actual": 1781.9272573464834,
+      "expected": 1781.9272573464834,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.8.nopat",
+      "actual": 320.746906322367,
+      "expected": 320.746906322367,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.8.net_investment",
+      "actual": 13.694127879038467,
+      "expected": 13.694127879038467,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.8.fcff",
+      "actual": 307.0527784433285,
+      "expected": 307.0527784433285,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.8.pv",
+      "actual": 149.758697046729,
+      "expected": 149.758697046729,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.9.sales",
+      "actual": 1856.7682021550359,
+      "expected": 1856.7682021550359,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.9.nopat",
+      "actual": 334.2182763879064,
+      "expected": 334.2182763879065,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.9.net_investment",
+      "actual": 11.226141721282863,
+      "expected": 11.226141721282863,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.9.fcff",
+      "actual": 322.99213466662354,
+      "expected": 322.9921346666236,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.9.pv",
+      "actual": 144.01023058137528,
+      "expected": 144.0102305813753,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.10.sales",
+      "actual": 1912.471248219687,
+      "expected": 1912.471248219687,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.10.nopat",
+      "actual": 344.2448246795436,
+      "expected": 344.2448246795436,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.10.net_investment",
+      "actual": 8.35545690969766,
+      "expected": 8.35545690969766,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.10.fcff",
+      "actual": 335.889367769846,
+      "expected": 335.889367769846,
+      "pass": true
+    },
+    {
+      "label": "efficientfavorable_939.10.pv",
+      "actual": 136.9052282319967,
+      "expected": 136.9052282319967,
+      "pass": true
+    },
+    {
+      "label": "legacy.central.price",
+      "actual": 79.36295930578999,
+      "expected": 79.36295930578997,
+      "pass": true
+    },
+    {
+      "label": "legacy.central.ev",
+      "actual": 2259.916805806242,
+      "expected": 2259.9168058062414,
+      "pass": true
+    },
+    {
+      "label": "legacy.central.terminal_fcff",
+      "actual": 221.9740804167776,
+      "expected": 221.97408041677758,
+      "pass": true
+    },
+    {
+      "label": "legacy.central.pv_terminal",
+      "actual": 1442.5269295196854,
+      "expected": 1442.5269295196852,
+      "pass": true
+    },
+    {
+      "label": "legacy.favorable.price",
+      "actual": 119.96220407505892,
+      "expected": 119.9622040750589,
+      "pass": true
+    },
+    {
+      "label": "legacy.favorable.ev",
+      "actual": 3424.493515647598,
+      "expected": 3424.4935156475976,
+      "pass": true
+    },
+    {
+      "label": "legacy.favorable.terminal_fcff",
+      "actual": 301.3863440069405,
+      "expected": 301.3863440069405,
+      "pass": true
+    },
+    {
+      "label": "legacy.favorable.pv_terminal",
+      "actual": 2423.6142590102218,
+      "expected": 2423.6142590102218,
+      "pass": true
+    },
+    {
+      "label": "legacy.adverse.price",
+      "actual": 45.36916585898836,
+      "expected": 45.36916585898836,
+      "pass": true
+    },
+    {
+      "label": "legacy.adverse.ev",
+      "actual": 1284.815412854499,
+      "expected": 1284.815412854499,
+      "pass": true
+    },
+    {
+      "label": "legacy.adverse.terminal_fcff",
+      "actual": 143.76407772975676,
+      "expected": 143.76407772975676,
+      "pass": true
+    },
+    {
+      "label": "legacy.adverse.pv_terminal",
+      "actual": 623.173069089662,
+      "expected": 623.173069089662,
+      "pass": true
+    },
+    {
+      "label": "deal0required_net_deal_value",
+      "actual": 2243.6314868137592,
+      "expected": 2243.631486813759,
+      "pass": true
+    },
+    {
+      "label": "deal0required_acquired_gross_value",
+      "actual": 2243.6314868137592,
+      "expected": 2243.631486813759,
+      "pass": true
+    },
+    {
+      "label": "deal0illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 145.83604664289436,
+      "expected": 145.83604664289433,
+      "pass": true
+    },
+    {
+      "label": "deal1required_net_deal_value",
+      "actual": 2243.6314868137592,
+      "expected": 2243.631486813759,
+      "pass": true
+    },
+    {
+      "label": "deal1required_acquired_gross_value",
+      "actual": 2268.6314868137592,
+      "expected": 2268.631486813759,
+      "pass": true
+    },
+    {
+      "label": "deal1illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 147.46104664289436,
+      "expected": 147.46104664289433,
+      "pass": true
+    },
+    {
+      "label": "deal2required_net_deal_value",
+      "actual": 2243.6314868137592,
+      "expected": 2243.631486813759,
+      "pass": true
+    },
+    {
+      "label": "deal2required_acquired_gross_value",
+      "actual": 2293.6314868137592,
+      "expected": 2293.631486813759,
+      "pass": true
+    },
+    {
+      "label": "deal2illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 149.08604664289436,
+      "expected": 149.08604664289433,
+      "pass": true
+    },
+    {
+      "label": "deal3required_net_deal_value",
+      "actual": 2243.6314868137592,
+      "expected": 2243.631486813759,
+      "pass": true
+    },
+    {
+      "label": "deal3required_acquired_gross_value",
+      "actual": 2343.6314868137592,
+      "expected": 2343.631486813759,
+      "pass": true
+    },
+    {
+      "label": "deal3illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 152.33604664289436,
+      "expected": 152.33604664289433,
+      "pass": true
+    },
+    {
+      "label": "deal4required_net_deal_value",
+      "actual": 1079.0547769724035,
+      "expected": 1079.0547769724026,
+      "pass": true
+    },
+    {
+      "label": "deal4required_acquired_gross_value",
+      "actual": 1079.0547769724035,
+      "expected": 1079.0547769724026,
+      "pass": true
+    },
+    {
+      "label": "deal4illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 70.13856050320624,
+      "expected": 70.13856050320616,
+      "pass": true
+    },
+    {
+      "label": "deal5required_net_deal_value",
+      "actual": 1079.0547769724035,
+      "expected": 1079.0547769724026,
+      "pass": true
+    },
+    {
+      "label": "deal5required_acquired_gross_value",
+      "actual": 1104.0547769724035,
+      "expected": 1104.0547769724026,
+      "pass": true
+    },
+    {
+      "label": "deal5illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 71.76356050320624,
+      "expected": 71.76356050320616,
+      "pass": true
+    },
+    {
+      "label": "deal6required_net_deal_value",
+      "actual": 1079.0547769724035,
+      "expected": 1079.0547769724026,
+      "pass": true
+    },
+    {
+      "label": "deal6required_acquired_gross_value",
+      "actual": 1129.0547769724035,
+      "expected": 1129.0547769724026,
+      "pass": true
+    },
+    {
+      "label": "deal6illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 73.38856050320624,
+      "expected": 73.38856050320616,
+      "pass": true
+    },
+    {
+      "label": "deal7required_net_deal_value",
+      "actual": 1079.0547769724035,
+      "expected": 1079.0547769724026,
+      "pass": true
+    },
+    {
+      "label": "deal7required_acquired_gross_value",
+      "actual": 1179.0547769724035,
+      "expected": 1179.0547769724026,
+      "pass": true
+    },
+    {
+      "label": "deal7illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 76.63856050320624,
+      "expected": 76.63856050320616,
+      "pass": true
+    },
+    {
+      "label": "deal8required_net_deal_value",
+      "actual": 1666.2852935300998,
+      "expected": 1666.2852935300994,
+      "pass": true
+    },
+    {
+      "label": "deal8required_acquired_gross_value",
+      "actual": 1666.2852935300998,
+      "expected": 1666.2852935300994,
+      "pass": true
+    },
+    {
+      "label": "deal8illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 108.3085440794565,
+      "expected": 108.30854407945647,
+      "pass": true
+    },
+    {
+      "label": "deal9required_net_deal_value",
+      "actual": 1666.2852935300998,
+      "expected": 1666.2852935300994,
+      "pass": true
+    },
+    {
+      "label": "deal9required_acquired_gross_value",
+      "actual": 1691.2852935300998,
+      "expected": 1691.2852935300994,
+      "pass": true
+    },
+    {
+      "label": "deal9illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 109.9335440794565,
+      "expected": 109.93354407945647,
+      "pass": true
+    },
+    {
+      "label": "deal10required_net_deal_value",
+      "actual": 1666.2852935300998,
+      "expected": 1666.2852935300994,
+      "pass": true
+    },
+    {
+      "label": "deal10required_acquired_gross_value",
+      "actual": 1716.2852935300998,
+      "expected": 1716.2852935300994,
+      "pass": true
+    },
+    {
+      "label": "deal10illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 111.5585440794565,
+      "expected": 111.55854407945647,
+      "pass": true
+    },
+    {
+      "label": "deal11required_net_deal_value",
+      "actual": 1666.2852935300998,
+      "expected": 1666.2852935300994,
+      "pass": true
+    },
+    {
+      "label": "deal11required_acquired_gross_value",
+      "actual": 1766.2852935300998,
+      "expected": 1766.2852935300994,
+      "pass": true
+    },
+    {
+      "label": "deal11illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 114.8085440794565,
+      "expected": 114.80854407945647,
+      "pass": true
+    },
+    {
+      "label": "deal12required_net_deal_value",
+      "actual": 188.23820879827508,
+      "expected": 188.2382087982744,
+      "pass": true
+    },
+    {
+      "label": "deal12required_acquired_gross_value",
+      "actual": 188.23820879827508,
+      "expected": 188.2382087982744,
+      "pass": true
+    },
+    {
+      "label": "deal12illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 12.235483571887881,
+      "expected": 12.235483571887837,
+      "pass": true
+    },
+    {
+      "label": "deal13required_net_deal_value",
+      "actual": 188.23820879827508,
+      "expected": 188.2382087982744,
+      "pass": true
+    },
+    {
+      "label": "deal13required_acquired_gross_value",
+      "actual": 213.23820879827508,
+      "expected": 213.2382087982744,
+      "pass": true
+    },
+    {
+      "label": "deal13illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 13.860483571887881,
+      "expected": 13.860483571887837,
+      "pass": true
+    },
+    {
+      "label": "deal14required_net_deal_value",
+      "actual": 188.23820879827508,
+      "expected": 188.2382087982744,
+      "pass": true
+    },
+    {
+      "label": "deal14required_acquired_gross_value",
+      "actual": 238.23820879827508,
+      "expected": 238.2382087982744,
+      "pass": true
+    },
+    {
+      "label": "deal14illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 15.485483571887881,
+      "expected": 15.485483571887837,
+      "pass": true
+    },
+    {
+      "label": "deal15required_net_deal_value",
+      "actual": 188.23820879827508,
+      "expected": 188.2382087982744,
+      "pass": true
+    },
+    {
+      "label": "deal15required_acquired_gross_value",
+      "actual": 288.2382087982751,
+      "expected": 288.2382087982744,
+      "pass": true
+    },
+    {
+      "label": "deal15illustrative_perpetual_fcff_at_9pct_g25",
+      "actual": 18.73548357188788,
+      "expected": 18.735483571887837,
+      "pass": true
+    },
+    {
+      "label": "inverse0.root",
+      "actual": 0.22647725637338045,
+      "expected": 0.22647725637338045,
+      "pass": true
+    },
+    {
+      "label": "inverse0.value",
+      "actual": 157.57999999999996,
+      "expected": 157.58,
+      "pass": true
+    },
+    {
+      "label": "inverse0.sales",
+      "actual": 4013.0436452084073,
+      "expected": 4013.0436452084073,
+      "pass": true
+    },
+    {
+      "label": "inverse1.root",
+      "actual": 0.15700068788877442,
+      "expected": 0.15700068788877447,
+      "pass": true
+    },
+    {
+      "label": "inverse1.value",
+      "actual": 157.58000000000004,
+      "expected": 157.58,
+      "pass": true
+    },
+    {
+      "label": "inverse1.sales",
+      "actual": 2649.418447608789,
+      "expected": 2649.4184476087903,
+      "pass": true
+    },
+    {
+      "label": "inverse2.root",
+      "actual": 0.16965271646133184,
+      "expected": 0.16965271646133184,
+      "pass": true
+    },
+    {
+      "label": "inverse2.value",
+      "actual": 157.57999999999987,
+      "expected": 157.58,
+      "pass": true
+    },
+    {
+      "label": "inverse2.sales",
+      "actual": 2862.1457340133466,
+      "expected": 2862.1457340133466,
+      "pass": true
+    },
+    {
+      "label": "inverse3.root",
+      "actual": 0.11190688634230594,
+      "expected": 0.11190688634230589,
+      "pass": true
+    },
+    {
+      "label": "inverse3.value",
+      "actual": 157.58000000000018,
+      "expected": 157.58,
+      "pass": true
+    },
+    {
+      "label": "inverse3.sales",
+      "actual": 1999.3837407279939,
+      "expected": 1999.3837407279916,
+      "pass": true
+    }
+  ]
+}
