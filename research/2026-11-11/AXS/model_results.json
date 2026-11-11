@@ -1,0 +1,704 @@
+{
+  "status": "partial_research_model_not_approved",
+  "canonical_fair_value": null,
+  "canonical_target": null,
+  "canonical_entry_price": null,
+  "canonical_max_price": null,
+  "entry_approved": false,
+  "discount_25pct_status": "exploratory analyst sensitivity; not user plan rule or necessary rejection criterion",
+  "as_of": "2026-11-11",
+  "price": {
+    "value": 107.96,
+    "date": "2026-11-10",
+    "basis": "user scanner Last; not certified close"
+  },
+  "book": 5749.455,
+  "shares": 72.727,
+  "book_per_share": 79.05530270738515,
+  "actual_fy": {
+    "2023": {
+      "npe": 5083.781,
+      "nii": 611.742,
+      "gaap_common": 346.042,
+      "op_common": 486.133,
+      "combined": 99.9,
+      "ay_excat_loss": 55.9,
+      "cat_points": 2.7,
+      "reserve_points": 8.1,
+      "op_roe": 11.0,
+      "bvps": 54.06
+    },
+    "2024": {
+      "npe": 5306.235,
+      "nii": 759.229,
+      "gaap_common": 1051.536,
+      "op_common": 952.035,
+      "combined": 92.3,
+      "ay_excat_loss": 55.7,
+      "cat_points": 4.3,
+      "reserve_points": -0.5,
+      "op_roe": 18.6,
+      "bvps": 65.27
+    },
+    "2025": {
+      "npe": 5714.609,
+      "nii": 766.903,
+      "gaap_common": 978.648,
+      "op_common": 1024.212,
+      "combined": 89.8,
+      "ay_excat_loss": 56.3,
+      "cat_points": 2.8,
+      "reserve_points": -1.6,
+      "op_roe": 18.1,
+      "bvps": 77.2
+    }
+  },
+  "actual_quarters": [
+    {
+      "period": "Q4 2025",
+      "npe": 1528.475,
+      "nii": 186.992,
+      "gaap_common": 282.044,
+      "op_common": 249.547,
+      "cat": 29.855,
+      "reserve_release": 29.852,
+      "combined": 90.4,
+      "eps": 3.67,
+      "op_eps": 3.25,
+      "interest": 16.844,
+      "amort": 2.396,
+      "other_insurance": 4.383
+    },
+    {
+      "period": "Q1 2026",
+      "npe": 1480.466,
+      "nii": 184.74,
+      "gaap_common": 247.204,
+      "op_common": 256.887,
+      "cat": 47.8,
+      "reserve_release": 18.062,
+      "combined": 89.8,
+      "eps": 3.29,
+      "op_eps": 3.42,
+      "interest": 16.426,
+      "amort": 2.396,
+      "other_insurance": 5.649
+    },
+    {
+      "period": "Q2 2026",
+      "npe": 1518.984,
+      "nii": 181.594,
+      "gaap_common": 250.532,
+      "op_common": 210.649,
+      "cat": 80.334,
+      "reserve_release": 14.836,
+      "combined": 93.1,
+      "eps": 3.38,
+      "op_eps": 2.84,
+      "interest": 16.838,
+      "amort": 2.396,
+      "other_insurance": 5.601
+    },
+    {
+      "period": "Q3 2026",
+      "npe": 1619.334,
+      "nii": 211.367,
+      "gaap_common": 201.515,
+      "op_common": 229.203,
+      "cat": 74.508,
+      "reserve_release": 14.843,
+      "combined": 94.0,
+      "eps": 2.75,
+      "op_eps": 3.12,
+      "interest": 16.68,
+      "amort": 5.726,
+      "other_insurance": 5.738
+    }
+  ],
+  "ttm": {
+    "npe": 6147.259,
+    "nii": 764.693,
+    "gaap_common": 981.295,
+    "op_common": 946.2860000000001,
+    "cat": 232.49699999999999,
+    "reserve_release": 77.593,
+    "interest": 66.788,
+    "amort": 12.914,
+    "other_insurance": 21.371000000000002,
+    "eps": 13.09,
+    "op_eps": 12.629999999999999
+  },
+  "assumptions": {
+    "bear": {
+      "underlying_cr": 0.92,
+      "cat_ratio": 0.06,
+      "nii": 730,
+      "tax": 0.21,
+      "restructure": 20,
+      "ke": 0.13,
+      "g": 0.02,
+      "terminal_roe": 0.105,
+      "initial_reserve_shock": 300
+    },
+    "base": {
+      "underlying_cr": 0.9,
+      "cat_ratio": 0.045,
+      "nii": 800,
+      "tax": 0.2,
+      "restructure": 15,
+      "ke": 0.12,
+      "g": 0.03,
+      "terminal_roe": 0.13,
+      "initial_reserve_shock": 0
+    },
+    "bull": {
+      "underlying_cr": 0.885,
+      "cat_ratio": 0.035,
+      "nii": 840,
+      "tax": 0.19,
+      "restructure": 10,
+      "ke": 0.11,
+      "g": 0.04,
+      "terminal_roe": 0.155,
+      "initial_reserve_shock": 0
+    }
+  },
+  "results": {
+    "bear": {
+      "normalized_income": 581.6952021999998,
+      "normalized_eps": 7.9983390240213375,
+      "starting_roe": 0.10117397252435227,
+      "fair_value": 56.81131995849469,
+      "ddm_crosscheck": 56.81131995849476,
+      "price_upside": -0.47377436125884864,
+      "margin_of_safety": -0.9003254998981469,
+      "exploratory_price_at_25pct_discount": 42.60848996887102,
+      "year1_distribution": 229.7061021999998,
+      "terminal_pv_fraction": 0.386135427475076,
+      "rows": [
+        {
+          "year": 1,
+          "book_open": 5749.455,
+          "roe": 0.10117397252435227,
+          "income": 344.6952021999998,
+          "retention": 114.98910000000001,
+          "distribution": 229.7061021999998,
+          "book_close": 5864.4441,
+          "residual_income": -402.73394780000024,
+          "discount_factor": 1.13
+        },
+        {
+          "year": 2,
+          "book_open": 5864.4441,
+          "roe": 0.10117397252435227,
+          "income": 593.3291062439997,
+          "retention": 117.288882,
+          "distribution": 476.0402242439997,
+          "book_close": 5981.7329819999995,
+          "residual_income": -169.04862675600032,
+          "discount_factor": 1.2768999999999997
+        },
+        {
+          "year": 3,
+          "book_open": 5981.7329819999995,
+          "roe": 0.10117397252435227,
+          "income": 605.1956883688797,
+          "retention": 119.63465964,
+          "distribution": 485.5610287288797,
+          "book_close": 6101.367641639999,
+          "residual_income": -172.4295992911202,
+          "discount_factor": 1.4428969999999997
+        },
+        {
+          "year": 4,
+          "book_open": 6101.367641639999,
+          "roe": 0.10117397252435227,
+          "income": 617.2996021362574,
+          "retention": 122.02735283279999,
+          "distribution": 495.2722493034574,
+          "book_close": 6223.394994472799,
+          "residual_income": -175.87819127694263,
+          "discount_factor": 1.6304736099999995
+        },
+        {
+          "year": 5,
+          "book_open": 6223.394994472799,
+          "roe": 0.10117397252435227,
+          "income": 629.6455941789825,
+          "retention": 124.46789988945599,
+          "distribution": 505.17769428952647,
+          "book_close": 6347.862894362255,
+          "residual_income": -179.39575510248142,
+          "discount_factor": 1.8424351792999991
+        },
+        {
+          "year": 6,
+          "book_open": 6347.862894362255,
+          "roe": 0.10193917801948181,
+          "income": 647.095925631657,
+          "retention": 126.9572578872451,
+          "distribution": 520.1386677444119,
+          "book_close": 6474.8201522495,
+          "residual_income": -178.12625063543624,
+          "discount_factor": 2.081951752608999
+        },
+        {
+          "year": 7,
+          "book_open": 6474.8201522495,
+          "roe": 0.10270438351461136,
+          "income": 664.992412104767,
+          "retention": 129.49640304499002,
+          "distribution": 535.496009059777,
+          "book_close": 6604.31655529449,
+          "residual_income": -176.734207687668,
+          "discount_factor": 2.3526054804481684
+        },
+        {
+          "year": 8,
+          "book_open": 6604.31655529449,
+          "roe": 0.1034695890097409,
+          "income": 683.3459196665486,
+          "retention": 132.0863311058898,
+          "distribution": 551.2595885606588,
+          "book_close": 6736.40288640038,
+          "residual_income": -175.21523252173506,
+          "discount_factor": 2.65844419290643
+        },
+        {
+          "year": 9,
+          "book_open": 6736.40288640038,
+          "roe": 0.10423479450487046,
+          "income": 702.1675705659599,
+          "retention": 134.7280577280076,
+          "distribution": 567.4395128379523,
+          "book_close": 6871.130944128388,
+          "residual_income": -173.56480466608957,
+          "discount_factor": 3.0040419379842658
+        },
+        {
+          "year": 10,
+          "book_open": 6871.130944128388,
+          "roe": 0.105,
+          "income": 721.4687491334807,
+          "retention": 137.42261888256778,
+          "distribution": 584.0461302509129,
+          "book_close": 7008.553563010956,
+          "residual_income": -171.77827360320975,
+          "discount_factor": 3.3945673899222197
+        }
+      ]
+    },
+    "base": {
+      "normalized_income": 821.564596,
+      "normalized_eps": 11.29655555708334,
+      "starting_roe": 0.14289434320296446,
+      "fair_value": 92.82002688729479,
+      "ddm_crosscheck": 92.82002688729474,
+      "price_upside": -0.14023687581238609,
+      "margin_of_safety": -0.16311106148556354,
+      "exploratory_price_at_25pct_discount": 69.6150201654711,
+      "year1_distribution": 649.080946,
+      "terminal_pv_fraction": 0.4094857820120466,
+      "rows": [
+        {
+          "year": 1,
+          "book_open": 5749.455,
+          "roe": 0.14289434320296446,
+          "income": 821.564596,
+          "retention": 172.48364999999998,
+          "distribution": 649.080946,
+          "book_close": 5921.93865,
+          "residual_income": 131.62999600000012,
+          "discount_factor": 1.12
+        },
+        {
+          "year": 2,
+          "book_open": 5921.93865,
+          "roe": 0.14289434320296446,
+          "income": 846.21153388,
+          "retention": 177.65815949999998,
+          "distribution": 668.55337438,
+          "book_close": 6099.5968095,
+          "residual_income": 135.57889588000012,
+          "discount_factor": 1.2544000000000002
+        },
+        {
+          "year": 3,
+          "book_open": 6099.5968095,
+          "roe": 0.14289434320296446,
+          "income": 871.5978798964,
+          "retention": 182.98790428499998,
+          "distribution": 688.6099756113999,
+          "book_close": 6282.584713785,
+          "residual_income": 139.6462627564,
+          "discount_factor": 1.4049280000000004
+        },
+        {
+          "year": 4,
+          "book_open": 6282.584713785,
+          "roe": 0.14289434320296446,
+          "income": 897.7458162932919,
+          "retention": 188.47754141354997,
+          "distribution": 709.268274879742,
+          "book_close": 6471.06225519855,
+          "residual_income": 143.83565063909202,
+          "discount_factor": 1.5735193600000006
+        },
+        {
+          "year": 5,
+          "book_open": 6471.06225519855,
+          "roe": 0.14289434320296446,
+          "income": 924.6781907820907,
+          "retention": 194.13186765595648,
+          "distribution": 730.5463231261342,
+          "book_close": 6665.1941228545065,
+          "residual_income": 148.1507201582648,
+          "discount_factor": 1.7623416832000007
+        },
+        {
+          "year": 6,
+          "book_open": 6665.1941228545065,
+          "roe": 0.14031547456237156,
+          "income": 935.2298763986599,
+          "retention": 199.95582368563518,
+          "distribution": 735.2740527130247,
+          "book_close": 6865.149946540142,
+          "residual_income": 135.40658165611922,
+          "discount_factor": 1.973822685184001
+        },
+        {
+          "year": 7,
+          "book_open": 6865.149946540142,
+          "roe": 0.13773660592177867,
+          "income": 945.5824527805195,
+          "retention": 205.95449839620426,
+          "distribution": 739.6279543843152,
+          "book_close": 7071.104444936346,
+          "residual_income": 121.76445919570244,
+          "discount_factor": 2.2106814074060814
+        },
+        {
+          "year": 8,
+          "book_open": 7071.104444936346,
+          "roe": 0.1351577372811858,
+          "income": 955.7144768565319,
+          "retention": 212.13313334809038,
+          "distribution": 743.5813435084415,
+          "book_close": 7283.2375782844365,
+          "residual_income": 107.18194346417033,
+          "discount_factor": 2.4759631762948113
+        },
+        {
+          "year": 9,
+          "book_open": 7283.2375782844365,
+          "roe": 0.1325788686405929,
+          "income": 965.6033981696023,
+          "retention": 218.4971273485331,
+          "distribution": 747.1062708210692,
+          "book_close": 7501.73470563297,
+          "residual_income": 91.61488877546992,
+          "discount_factor": 2.773078757450189
+        },
+        {
+          "year": 10,
+          "book_open": 7501.73470563297,
+          "roe": 0.13,
+          "income": 975.2255117322861,
+          "retention": 225.0520411689891,
+          "distribution": 750.1734705632971,
+          "book_close": 7726.786746801959,
+          "residual_income": 75.01734705632975,
+          "discount_factor": 3.105848208344212
+        }
+      ]
+    },
+    "bull": {
+      "normalized_income": 993.1442732000002,
+      "normalized_eps": 13.655784965693623,
+      "starting_roe": 0.1727371156396563,
+      "fair_value": 137.15761475661614,
+      "ddm_crosscheck": 137.15761475661606,
+      "price_upside": 0.2704484508764,
+      "margin_of_safety": 0.21287636715195735,
+      "exploratory_price_at_25pct_discount": 102.86821106746211,
+      "year1_distribution": 763.1660732,
+      "terminal_pv_fraction": 0.49364471014373834,
+      "rows": [
+        {
+          "year": 1,
+          "book_open": 5749.455,
+          "roe": 0.1727371156396563,
+          "income": 993.1442732,
+          "retention": 229.97820000000002,
+          "distribution": 763.1660732,
+          "book_close": 5979.4331999999995,
+          "residual_income": 360.7042232,
+          "discount_factor": 1.11
+        },
+        {
+          "year": 2,
+          "book_open": 5979.4331999999995,
+          "roe": 0.1727371156396563,
+          "income": 1032.870044128,
+          "retention": 239.177328,
+          "distribution": 793.692716128,
+          "book_close": 6218.610527999999,
+          "residual_income": 375.1323921280001,
+          "discount_factor": 1.2321000000000002
+        },
+        {
+          "year": 3,
+          "book_open": 6218.610527999999,
+          "roe": 0.1727371156396563,
+          "income": 1074.18484589312,
+          "retention": 248.74442111999997,
+          "distribution": 825.44042477312,
+          "book_close": 6467.354949119999,
+          "residual_income": 390.13768781312,
+          "discount_factor": 1.3676310000000003
+        },
+        {
+          "year": 4,
+          "book_open": 6467.354949119999,
+          "roe": 0.1727371156396563,
+          "income": 1117.1522397288447,
+          "retention": 258.69419796479997,
+          "distribution": 858.4580417640448,
+          "book_close": 6726.049147084799,
+          "residual_income": 405.7431953256448,
+          "discount_factor": 1.5180704100000004
+        },
+        {
+          "year": 5,
+          "book_open": 6726.049147084799,
+          "roe": 0.1727371156396563,
+          "income": 1161.8383293179986,
+          "retention": 269.041965883392,
+          "distribution": 892.7963634346066,
+          "book_close": 6995.091112968191,
+          "residual_income": 421.9729231386707,
+          "discount_factor": 1.6850581551000008
+        },
+        {
+          "year": 6,
+          "book_open": 6995.091112968191,
+          "roe": 0.16918969251172503,
+          "income": 1183.4973144945886,
+          "retention": 279.80364451872765,
+          "distribution": 903.693669975861,
+          "book_close": 7274.894757486918,
+          "residual_income": 414.0372920680876,
+          "discount_factor": 1.870414552161001
+        },
+        {
+          "year": 7,
+          "book_open": 7274.894757486918,
+          "roe": 0.16564226938379378,
+          "income": 1205.0300771583973,
+          "retention": 290.9957902994767,
+          "distribution": 914.0342868589205,
+          "book_close": 7565.890547786395,
+          "residual_income": 404.7916538348363,
+          "discount_factor": 2.0761601528987113
+        },
+        {
+          "year": 8,
+          "book_open": 7565.890547786395,
+          "roe": 0.1620948462558625,
+          "income": 1226.391865132119,
+          "retention": 302.6356219114558,
+          "distribution": 923.7562432206631,
+          "book_close": 7868.5261696978505,
+          "residual_income": 394.1439048756155,
+          "discount_factor": 2.3045377697175695
+        },
+        {
+          "year": 9,
+          "book_open": 7868.5261696978505,
+          "roe": 0.15854742312793127,
+          "income": 1247.5345480202855,
+          "retention": 314.741046787914,
+          "distribution": 932.7935012323715,
+          "book_close": 8183.267216485765,
+          "residual_income": 381.99666935352195,
+          "discount_factor": 2.5580369243865024
+        },
+        {
+          "year": 10,
+          "book_open": 8183.267216485765,
+          "roe": 0.155,
+          "income": 1268.4064185552936,
+          "retention": 327.3306886594306,
+          "distribution": 941.075729895863,
+          "book_close": 8510.597905145196,
+          "residual_income": 368.2470247418595,
+          "discount_factor": 2.839420986069018
+        }
+      ]
+    }
+  },
+  "sensitivity": [
+    {
+      "ke": 0.1,
+      "terminal_roe": 0.11,
+      "value": 103.9511858216185
+    },
+    {
+      "ke": 0.1,
+      "terminal_roe": 0.12,
+      "value": 111.10966140413116
+    },
+    {
+      "ke": 0.1,
+      "terminal_roe": 0.13,
+      "value": 118.26813698664381
+    },
+    {
+      "ke": 0.1,
+      "terminal_roe": 0.14,
+      "value": 125.42661256915649
+    },
+    {
+      "ke": 0.1,
+      "terminal_roe": 0.15,
+      "value": 132.58508815166914
+    },
+    {
+      "ke": 0.1,
+      "terminal_roe": 0.16,
+      "value": 139.7435637341818
+    },
+    {
+      "ke": 0.11,
+      "terminal_roe": 0.11,
+      "value": 92.19747702662134
+    },
+    {
+      "ke": 0.11,
+      "terminal_roe": 0.12,
+      "value": 98.08412106209364
+    },
+    {
+      "ke": 0.11,
+      "terminal_roe": 0.13,
+      "value": 103.97076509756594
+    },
+    {
+      "ke": 0.11,
+      "terminal_roe": 0.14,
+      "value": 109.85740913303825
+    },
+    {
+      "ke": 0.11,
+      "terminal_roe": 0.15,
+      "value": 115.74405316851052
+    },
+    {
+      "ke": 0.11,
+      "terminal_roe": 0.16,
+      "value": 121.63069720398283
+    },
+    {
+      "ke": 0.12,
+      "terminal_roe": 0.11,
+      "value": 82.97774269912364
+    },
+    {
+      "ke": 0.12,
+      "terminal_roe": 0.12,
+      "value": 87.8988847932092
+    },
+    {
+      "ke": 0.12,
+      "terminal_roe": 0.13,
+      "value": 92.82002688729479
+    },
+    {
+      "ke": 0.12,
+      "terminal_roe": 0.14,
+      "value": 97.74116898138038
+    },
+    {
+      "ke": 0.12,
+      "terminal_roe": 0.15,
+      "value": 102.66231107546596
+    },
+    {
+      "ke": 0.12,
+      "terminal_roe": 0.16,
+      "value": 107.58345316955155
+    },
+    {
+      "ke": 0.13,
+      "terminal_roe": 0.11,
+      "value": 75.53744842232948
+    },
+    {
+      "ke": 0.13,
+      "terminal_roe": 0.12,
+      "value": 79.70579926967294
+    },
+    {
+      "ke": 0.13,
+      "terminal_roe": 0.13,
+      "value": 83.87415011701641
+    },
+    {
+      "ke": 0.13,
+      "terminal_roe": 0.14,
+      "value": 88.04250096435989
+    },
+    {
+      "ke": 0.13,
+      "terminal_roe": 0.15,
+      "value": 92.21085181170334
+    },
+    {
+      "ke": 0.13,
+      "terminal_roe": 0.16,
+      "value": 96.3792026590468
+    },
+    {
+      "ke": 0.14,
+      "terminal_roe": 0.11,
+      "value": 69.39597285807075
+    },
+    {
+      "ke": 0.14,
+      "terminal_roe": 0.12,
+      "value": 72.96480825853124
+    },
+    {
+      "ke": 0.14,
+      "terminal_roe": 0.13,
+      "value": 76.53364365899174
+    },
+    {
+      "ke": 0.14,
+      "terminal_roe": 0.14,
+      "value": 80.10247905945222
+    },
+    {
+      "ke": 0.14,
+      "terminal_roe": 0.15,
+      "value": 83.67131445991271
+    },
+    {
+      "ke": 0.14,
+      "terminal_roe": 0.16,
+      "value": 87.2401498603732
+    }
+  ],
+  "reverse": {
+    "perpetual_roe_for_price": 0.15290636639472782,
+    "exploratory_perpetual_roe_at_25pct_discount": 0.19387515519297044
+  },
+  "rate_sensitivity": {
+    "afs_assets": 13691.574,
+    "duration": 3.2,
+    "plus100bp_pretax": -438.13036800000003,
+    "plus100bp_aftertax_per_share": -4.819452120945454,
+    "full_portfolio_100bp_reinvestment_increment": 141.39802,
+    "credit_and_rate_2025_pretax": 668.241
+  }
+}
