@@ -1,0 +1,1201 @@
+{
+  "as_of": "2026-11-11",
+  "ticker": "CHDN",
+  "price": {
+    "regular_close": 101.96,
+    "date": "2026-11-10",
+    "time": "16:00 EST",
+    "afterhours_excluded": 102.5
+  },
+  "inputs": {
+    "rf": 0.0498,
+    "erp": 0.0441,
+    "beta_observed": 0.77,
+    "beta_normalized_assumption": 1.0,
+    "kd_assumption": 0.065,
+    "ke": 0.0939,
+    "wacc": 0.07537270177549019,
+    "bridge": {
+      "debt": 4748,
+      "excess_cash": 0,
+      "minority": 24,
+      "finance_lease_proxy": 27.8,
+      "liability_awards": 14,
+      "shares": 68.548342
+    }
+  },
+  "cases": {
+    "central_normalized": {
+      "assumptions": {
+        "growth": 0.04,
+        "margin": 0.26,
+        "g": 0.025,
+        "roic": 0.1,
+        "wacc": 0.07537270177549019,
+        "ke": 0.1139,
+        "jv_growth": 0.025,
+        "jv_cash": 117.27000000000001,
+        "jv_parent_tax": 38.74,
+        "project_caps": [
+          350,
+          320
+        ],
+        "bridge": {
+          "debt": 4748,
+          "excess_cash": 0,
+          "minority": 24,
+          "finance_lease_proxy": 27.8,
+          "liability_awards": 14,
+          "shares": 68.548342
+        }
+      },
+      "result": {
+        "per_share": 75.19714503633608,
+        "equity": 5154.639615374369,
+        "operating_ev": 9063.003732359748,
+        "jv_equity": 905.435883014622,
+        "operating_terminal_share": 0.6671206370344395,
+        "rows": [
+          {
+            "year": 1,
+            "revenue": 3125.0959999999995,
+            "margin": 0.2560666910712503,
+            "nopat": 592.1724140799998,
+            "da": 243.75748799999997,
+            "capex": 490.977708799998,
+            "delta_wc": 2.4039199999999985,
+            "fcff": 342.5482732800018,
+            "jv_distribution": 120.20175,
+            "parent_affiliate_tax": 39.7085,
+            "net_affiliate_cash": 80.49325
+          },
+          {
+            "year": 2,
+            "revenue": 3250.09984,
+            "margin": 0.2570500183034377,
+            "nopat": 618.2242852863999,
+            "da": 253.50778752,
+            "capex": 511.5264227840005,
+            "delta_wc": 2.500076800000006,
+            "fcff": 357.7055732223994,
+            "jv_distribution": 123.20679374999999,
+            "parent_affiliate_tax": 40.7012125,
+            "net_affiliate_cash": 82.50558124999999
+          },
+          {
+            "year": 3,
+            "revenue": 3380.1038336,
+            "margin": 0.2580333455356252,
+            "nopat": 645.412830326784,
+            "da": 263.64809902080003,
+            "capex": 532.9334695526416,
+            "delta_wc": 2.6000798720000056,
+            "fcff": 373.52737992294254,
+            "jv_distribution": 126.28696359374997,
+            "parent_affiliate_tax": 41.71874281249999,
+            "net_affiliate_cash": 84.56822078124998
+          },
+          {
+            "year": 4,
+            "revenue": 3515.3079869440003,
+            "margin": 0.2590166727678126,
+            "nopat": 673.7873001139405,
+            "da": 274.19402298163203,
+            "capex": 555.2346377863171,
+            "delta_wc": 2.7040830668800027,
+            "fcff": 390.04260224237555,
+            "jv_distribution": 129.4441376835937,
+            "parent_affiliate_tax": 42.761711382812486,
+            "net_affiliate_cash": 86.68242630078123
+          },
+          {
+            "year": 5,
+            "revenue": 3655.9203064217604,
+            "margin": 0.26,
+            "nopat": 703.3990669555467,
+            "da": 285.1617839008973,
+            "capex": 578.4672059274035,
+            "delta_wc": 2.812246389555203,
+            "fcff": 407.2813985394853,
+            "jv_distribution": 132.68024112568355,
+            "parent_affiliate_tax": 43.83075416738279,
+            "net_affiliate_cash": 88.84948695830076
+          },
+          {
+            "year": 6,
+            "revenue": 3791.189357759365,
+            "margin": 0.26,
+            "nopat": 729.4248324329019,
+            "da": 295.71276990523046,
+            "capex": 553.2650436520305,
+            "delta_wc": 2.705381026752093,
+            "fcff": 469.1671776593498,
+            "jv_distribution": 135.99724715382564,
+            "parent_affiliate_tax": 44.92652302156737,
+            "net_affiliate_cash": 91.07072413225828
+          },
+          {
+            "year": 7,
+            "revenue": 3920.0897959231834,
+            "margin": 0.26,
+            "nopat": 754.2252767356205,
+            "da": 305.7670040820083,
+            "capex": 551.1934383459177,
+            "delta_wc": 2.578008763276366,
+            "fcff": 506.2208337084348,
+            "jv_distribution": 139.39717833267127,
+            "parent_affiliate_tax": 46.049686097106544,
+            "net_affiliate_cash": 93.34749223556473
+          },
+          {
+            "year": 8,
+            "revenue": 4041.612579596802,
+            "margin": 0.26,
+            "nopat": 777.6062603144247,
+            "da": 315.24578120855057,
+            "capex": 546.6251613231209,
+            "delta_wc": 2.43045567347237,
+            "fcff": 543.796424526382,
+            "jv_distribution": 142.88210779098804,
+            "parent_affiliate_tax": 47.20092824953421,
+            "net_affiliate_cash": 95.68117954145384
+          },
+          {
+            "year": 9,
+            "revenue": 4154.777731825512,
+            "margin": 0.26,
+            "nopat": 799.3792356032285,
+            "da": 324.07266308238997,
+            "capex": 539.5391129258534,
+            "delta_wc": 2.2633030445742044,
+            "fcff": 581.649482715191,
+            "jv_distribution": 146.45416048576274,
+            "parent_affiliate_tax": 48.38095145577256,
+            "net_affiliate_cash": 98.07320902999018
+          },
+          {
+            "year": 10,
+            "revenue": 4258.647175121149,
+            "margin": 0.26,
+            "nopat": 819.3637164933092,
+            "da": 332.1744796594497,
+            "capex": 529.9418996943439,
+            "delta_wc": 2.077388865912744,
+            "fcff": 619.5189075925023,
+            "jv_distribution": 150.1155144979068,
+            "parent_affiliate_tax": 49.59047524216687,
+            "net_affiliate_cash": 100.52503925573993
+          }
+        ]
+      }
+    },
+    "efficiency_growth_only": {
+      "assumptions": {
+        "growth": 0.04,
+        "margin": 0.26,
+        "g": 0.025,
+        "roic": 0.1,
+        "wacc": 0.07537270177549019,
+        "ke": 0.1139,
+        "jv_growth": 0.025,
+        "jv_cash": 117.27000000000001,
+        "jv_parent_tax": 38.74,
+        "project_caps": [
+          350,
+          320
+        ],
+        "bridge": {
+          "debt": 4748,
+          "excess_cash": 0,
+          "minority": 24,
+          "finance_lease_proxy": 27.8,
+          "liability_awards": 14,
+          "shares": 68.548342
+        },
+        "growth_only_capital": true
+      },
+      "result": {
+        "per_share": 76.64139235704086,
+        "equity": 5253.640374646623,
+        "operating_ev": 9162.004491632,
+        "jv_equity": 905.435883014622,
+        "operating_terminal_share": 0.6599120125840892,
+        "rows": [
+          {
+            "year": 1,
+            "revenue": 3125.0959999999995,
+            "margin": 0.2560666910712503,
+            "nopat": 592.1724140799998,
+            "da": 243.75748799999997,
+            "capex": 468.237568,
+            "delta_wc": 2.4039199999999985,
+            "fcff": 365.2884140799998,
+            "jv_distribution": 120.20175,
+            "parent_affiliate_tax": 39.7085,
+            "net_affiliate_cash": 80.49325
+          },
+          {
+            "year": 2,
+            "revenue": 3250.09984,
+            "margin": 0.2570500183034377,
+            "nopat": 618.2242852863999,
+            "da": 253.50778752,
+            "capex": 487.87667635199995,
+            "delta_wc": 2.500076800000006,
+            "fcff": 381.3553196543999,
+            "jv_distribution": 123.20679374999999,
+            "parent_affiliate_tax": 40.7012125,
+            "net_affiliate_cash": 82.50558124999999
+          },
+          {
+            "year": 3,
+            "revenue": 3380.1038336,
+            "margin": 0.2580333455356252,
+            "nopat": 645.412830326784,
+            "da": 263.64809902080003,
+            "capex": 508.33773326336,
+            "delta_wc": 2.6000798720000056,
+            "fcff": 398.1231162122241,
+            "jv_distribution": 126.28696359374997,
+            "parent_affiliate_tax": 41.71874281249999,
+            "net_affiliate_cash": 84.56822078124998
+          },
+          {
+            "year": 4,
+            "revenue": 3515.3079869440003,
+            "margin": 0.2590166727678126,
+            "nopat": 673.7873001139405,
+            "da": 274.19402298163203,
+            "capex": 529.6550720454657,
+            "delta_wc": 2.7040830668800027,
+            "fcff": 415.622167983227,
+            "jv_distribution": 129.4441376835937,
+            "parent_affiliate_tax": 42.761711382812486,
+            "net_affiliate_cash": 86.68242630078123
+          },
+          {
+            "year": 5,
+            "revenue": 3655.9203064217604,
+            "margin": 0.26,
+            "nopat": 703.3990669555467,
+            "da": 285.1617839008973,
+            "capex": 551.8644575569183,
+            "delta_wc": 2.812246389555203,
+            "fcff": 433.88414690997047,
+            "jv_distribution": 132.68024112568355,
+            "parent_affiliate_tax": 43.83075416738279,
+            "net_affiliate_cash": 88.84948695830076
+          },
+          {
+            "year": 6,
+            "revenue": 3791.189357759365,
+            "margin": 0.26,
+            "nopat": 729.4248324329019,
+            "da": 295.71276990523046,
+            "capex": 553.2650436520306,
+            "delta_wc": 2.705381026752093,
+            "fcff": 469.1671776593497,
+            "jv_distribution": 135.99724715382564,
+            "parent_affiliate_tax": 44.92652302156737,
+            "net_affiliate_cash": 91.07072413225828
+          },
+          {
+            "year": 7,
+            "revenue": 3920.0897959231834,
+            "margin": 0.26,
+            "nopat": 754.2252767356205,
+            "da": 305.7670040820083,
+            "capex": 551.1934383459186,
+            "delta_wc": 2.578008763276366,
+            "fcff": 506.2208337084339,
+            "jv_distribution": 139.39717833267127,
+            "parent_affiliate_tax": 46.049686097106544,
+            "net_affiliate_cash": 93.34749223556473
+          },
+          {
+            "year": 8,
+            "revenue": 4041.612579596802,
+            "margin": 0.26,
+            "nopat": 777.6062603144247,
+            "da": 315.24578120855057,
+            "capex": 546.6251613231206,
+            "delta_wc": 2.43045567347237,
+            "fcff": 543.7964245263823,
+            "jv_distribution": 142.88210779098804,
+            "parent_affiliate_tax": 47.20092824953421,
+            "net_affiliate_cash": 95.68117954145384
+          },
+          {
+            "year": 9,
+            "revenue": 4154.777731825512,
+            "margin": 0.26,
+            "nopat": 799.3792356032285,
+            "da": 324.07266308238997,
+            "capex": 539.5391129258547,
+            "delta_wc": 2.2633030445742044,
+            "fcff": 581.6494827151896,
+            "jv_distribution": 146.45416048576274,
+            "parent_affiliate_tax": 48.38095145577256,
+            "net_affiliate_cash": 98.07320902999018
+          },
+          {
+            "year": 10,
+            "revenue": 4258.647175121149,
+            "margin": 0.26,
+            "nopat": 819.3637164933092,
+            "da": 332.1744796594497,
+            "capex": 529.941899694344,
+            "delta_wc": 2.077388865912744,
+            "fcff": 619.5189075925022,
+            "jv_distribution": 150.1155144979068,
+            "parent_affiliate_tax": 49.59047524216687,
+            "net_affiliate_cash": 100.52503925573993
+          }
+        ]
+      }
+    },
+    "recovery_efficiency": {
+      "assumptions": {
+        "growth": 0.065,
+        "margin": 0.28,
+        "g": 0.025,
+        "roic": 0.12,
+        "wacc": 0.07537270177549019,
+        "ke": 0.1139,
+        "jv_growth": 0.035,
+        "jv_cash": 130.3,
+        "jv_parent_tax": 38.74,
+        "project_caps": [
+          350,
+          320
+        ],
+        "bridge": {
+          "debt": 4748,
+          "excess_cash": 0,
+          "minority": 24,
+          "finance_lease_proxy": 27.8,
+          "liability_awards": 14,
+          "shares": 68.548342
+        },
+        "growth_only_capital": true
+      },
+      "result": {
+        "per_share": 112.4474967836264,
+        "equity": 7708.089466567923,
+        "operating_ev": 11408.264883484546,
+        "jv_equity": 1113.6245830833777,
+        "operating_terminal_share": 0.7117943085660358,
+        "rows": [
+          {
+            "year": 1,
+            "revenue": 3200.2184999999995,
+            "margin": 0.2600666910712503,
+            "nopat": 615.8799746399999,
+            "da": 249.61704299999997,
+            "capex": 552.9494229999999,
+            "delta_wc": 3.9063699999999972,
+            "fcff": 308.64122463999996,
+            "jv_distribution": 134.8605,
+            "parent_affiliate_tax": 40.0959,
+            "net_affiliate_cash": 94.7646
+          },
+          {
+            "year": 2,
+            "revenue": 3408.2327024999995,
+            "margin": 0.2650500183034377,
+            "nopat": 668.4805837331999,
+            "da": 265.84215079499995,
+            "capex": 595.283519675,
+            "delta_wc": 4.1602840500000005,
+            "fcff": 334.87893080319986,
+            "jv_distribution": 139.5806175,
+            "parent_affiliate_tax": 41.499256499999994,
+            "net_affiliate_cash": 98.08136099999999
+          },
+          {
+            "year": 3,
+            "revenue": 3629.7678281624994,
+            "margin": 0.2700333455356252,
+            "nopat": 725.317179115662,
+            "da": 283.121890596675,
+            "capex": 640.7848376055749,
+            "delta_wc": 4.430702513249998,
+            "fcff": 363.223529593512,
+            "jv_distribution": 144.46593911249997,
+            "parent_affiliate_tax": 42.95173047749999,
+            "net_affiliate_cash": 101.51420863499997
+          },
+          {
+            "year": 4,
+            "revenue": 3865.7027369930615,
+            "margin": 0.2750166727678126,
+            "nopat": 786.7182014315713,
+            "da": 301.5248134854588,
+            "capex": 689.6862539964978,
+            "delta_wc": 4.718698176611242,
+            "fcff": 393.8380627439209,
+            "jv_distribution": 149.52224698143746,
+            "parent_affiliate_tax": 44.45504104421249,
+            "net_affiliate_cash": 105.06720593722497
+          },
+          {
+            "year": 5,
+            "revenue": 4116.97341489761,
+            "margin": 0.28,
+            "nopat": 853.0368915667849,
+            "da": 321.1239263620136,
+            "capex": 742.2375385793571,
+            "delta_wc": 5.025413558090977,
+            "fcff": 426.8978657913504,
+            "jv_distribution": 154.75552562578775,
+            "parent_affiliate_tax": 46.01096748075992,
+            "net_affiliate_cash": 108.74455814502784
+          },
+          {
+            "year": 6,
+            "revenue": 4351.640899546774,
+            "margin": 0.28,
+            "nopat": 901.6599943860915,
+            "da": 339.42799016464835,
+            "capex": 739.927163965888,
+            "delta_wc": 4.693349692983266,
+            "fcff": 496.4674708918685,
+            "jv_distribution": 159.86245797143874,
+            "parent_affiliate_tax": 47.529329407625,
+            "net_affiliate_cash": 112.33312856381374
+          },
+          {
+            "year": 7,
+            "revenue": 4564.871303624565,
+            "margin": 0.28,
+            "nopat": 945.84133411101,
+            "da": 356.0599616827161,
+            "capex": 719.9731846421477,
+            "delta_wc": 4.264608081555834,
+            "fcff": 577.6635030700227,
+            "jv_distribution": 164.81819416855333,
+            "parent_affiliate_tax": 49.00273861926136,
+            "net_affiliate_cash": 115.81545554929198
+          },
+          {
+            "year": 8,
+            "revenue": 4752.0310270731725,
+            "margin": 0.28,
+            "nopat": 984.6208288095613,
+            "da": 370.65842011170747,
+            "capex": 690.0776814639971,
+            "delta_wc": 3.7431944689721424,
+            "fcff": 661.4583729882996,
+            "jv_distribution": 169.59792179944137,
+            "parent_affiliate_tax": 50.42381803921994,
+            "net_affiliate_cash": 119.17410376022143
+          },
+          {
+            "year": 9,
+            "revenue": 4908.848050966587,
+            "margin": 0.28,
+            "nopat": 1017.113316160277,
+            "da": 382.8901479753938,
+            "capex": 650.524535420155,
+            "delta_wc": 3.136340477868289,
+            "fcff": 746.3425882376475,
+            "jv_distribution": 174.17706568802626,
+            "parent_affiliate_tax": 51.78526112627887,
+            "net_affiliate_cash": 122.39180456174739
+          },
+          {
+            "year": 10,
+            "revenue": 5031.569252240751,
+            "margin": 0.28,
+            "nopat": 1042.5411490642837,
+            "da": 392.46240167477856,
+            "capex": 601.9065851826864,
+            "delta_wc": 2.4544240254832768,
+            "fcff": 830.6425415308925,
+            "jv_distribution": 178.5314923302269,
+            "parent_affiliate_tax": 53.079892654435845,
+            "net_affiliate_cash": 125.45159967579107
+          }
+        ]
+      }
+    },
+    "hurdle_9": {
+      "assumptions": {
+        "growth": 0.04,
+        "margin": 0.26,
+        "g": 0.025,
+        "roic": 0.1,
+        "wacc": 0.09,
+        "ke": 0.1139,
+        "jv_growth": 0.025,
+        "jv_cash": 117.27000000000001,
+        "jv_parent_tax": 38.74,
+        "project_caps": [
+          350,
+          320
+        ],
+        "bridge": {
+          "debt": 4748,
+          "excess_cash": 0,
+          "minority": 24,
+          "finance_lease_proxy": 27.8,
+          "liability_awards": 14,
+          "shares": 68.548342
+        }
+      },
+      "result": {
+        "per_share": 43.602830073292424,
+        "equity": 2988.9017080319345,
+        "operating_ev": 6897.265825017313,
+        "jv_equity": 905.435883014622,
+        "operating_terminal_share": 0.5934806406360809,
+        "rows": [
+          {
+            "year": 1,
+            "revenue": 3125.0959999999995,
+            "margin": 0.2560666910712503,
+            "nopat": 592.1724140799998,
+            "da": 243.75748799999997,
+            "capex": 490.977708799998,
+            "delta_wc": 2.4039199999999985,
+            "fcff": 342.5482732800018,
+            "jv_distribution": 120.20175,
+            "parent_affiliate_tax": 39.7085,
+            "net_affiliate_cash": 80.49325
+          },
+          {
+            "year": 2,
+            "revenue": 3250.09984,
+            "margin": 0.2570500183034377,
+            "nopat": 618.2242852863999,
+            "da": 253.50778752,
+            "capex": 511.5264227840005,
+            "delta_wc": 2.500076800000006,
+            "fcff": 357.7055732223994,
+            "jv_distribution": 123.20679374999999,
+            "parent_affiliate_tax": 40.7012125,
+            "net_affiliate_cash": 82.50558124999999
+          },
+          {
+            "year": 3,
+            "revenue": 3380.1038336,
+            "margin": 0.2580333455356252,
+            "nopat": 645.412830326784,
+            "da": 263.64809902080003,
+            "capex": 532.9334695526416,
+            "delta_wc": 2.6000798720000056,
+            "fcff": 373.52737992294254,
+            "jv_distribution": 126.28696359374997,
+            "parent_affiliate_tax": 41.71874281249999,
+            "net_affiliate_cash": 84.56822078124998
+          },
+          {
+            "year": 4,
+            "revenue": 3515.3079869440003,
+            "margin": 0.2590166727678126,
+            "nopat": 673.7873001139405,
+            "da": 274.19402298163203,
+            "capex": 555.2346377863171,
+            "delta_wc": 2.7040830668800027,
+            "fcff": 390.04260224237555,
+            "jv_distribution": 129.4441376835937,
+            "parent_affiliate_tax": 42.761711382812486,
+            "net_affiliate_cash": 86.68242630078123
+          },
+          {
+            "year": 5,
+            "revenue": 3655.9203064217604,
+            "margin": 0.26,
+            "nopat": 703.3990669555467,
+            "da": 285.1617839008973,
+            "capex": 578.4672059274035,
+            "delta_wc": 2.812246389555203,
+            "fcff": 407.2813985394853,
+            "jv_distribution": 132.68024112568355,
+            "parent_affiliate_tax": 43.83075416738279,
+            "net_affiliate_cash": 88.84948695830076
+          },
+          {
+            "year": 6,
+            "revenue": 3791.189357759365,
+            "margin": 0.26,
+            "nopat": 729.4248324329019,
+            "da": 295.71276990523046,
+            "capex": 553.2650436520305,
+            "delta_wc": 2.705381026752093,
+            "fcff": 469.1671776593498,
+            "jv_distribution": 135.99724715382564,
+            "parent_affiliate_tax": 44.92652302156737,
+            "net_affiliate_cash": 91.07072413225828
+          },
+          {
+            "year": 7,
+            "revenue": 3920.0897959231834,
+            "margin": 0.26,
+            "nopat": 754.2252767356205,
+            "da": 305.7670040820083,
+            "capex": 551.1934383459177,
+            "delta_wc": 2.578008763276366,
+            "fcff": 506.2208337084348,
+            "jv_distribution": 139.39717833267127,
+            "parent_affiliate_tax": 46.049686097106544,
+            "net_affiliate_cash": 93.34749223556473
+          },
+          {
+            "year": 8,
+            "revenue": 4041.612579596802,
+            "margin": 0.26,
+            "nopat": 777.6062603144247,
+            "da": 315.24578120855057,
+            "capex": 546.6251613231209,
+            "delta_wc": 2.43045567347237,
+            "fcff": 543.796424526382,
+            "jv_distribution": 142.88210779098804,
+            "parent_affiliate_tax": 47.20092824953421,
+            "net_affiliate_cash": 95.68117954145384
+          },
+          {
+            "year": 9,
+            "revenue": 4154.777731825512,
+            "margin": 0.26,
+            "nopat": 799.3792356032285,
+            "da": 324.07266308238997,
+            "capex": 539.5391129258534,
+            "delta_wc": 2.2633030445742044,
+            "fcff": 581.649482715191,
+            "jv_distribution": 146.45416048576274,
+            "parent_affiliate_tax": 48.38095145577256,
+            "net_affiliate_cash": 98.07320902999018
+          },
+          {
+            "year": 10,
+            "revenue": 4258.647175121149,
+            "margin": 0.26,
+            "nopat": 819.3637164933092,
+            "da": 332.1744796594497,
+            "capex": 529.9418996943439,
+            "delta_wc": 2.077388865912744,
+            "fcff": 619.5189075925023,
+            "jv_distribution": 150.1155144979068,
+            "parent_affiliate_tax": 49.59047524216687,
+            "net_affiliate_cash": 100.52503925573993
+          }
+        ]
+      }
+    },
+    "adverse": {
+      "assumptions": {
+        "growth": 0.01,
+        "margin": 0.23,
+        "g": 0.015,
+        "roic": 0.08,
+        "wacc": 0.1,
+        "ke": 0.13,
+        "jv_growth": 0,
+        "jv_cash": 104.24000000000001,
+        "jv_parent_tax": 38.74,
+        "project_caps": [
+          350,
+          320
+        ],
+        "bridge": {
+          "debt": 4748,
+          "excess_cash": 0,
+          "minority": 24,
+          "finance_lease_proxy": 27.8,
+          "liability_awards": 14,
+          "shares": 68.548342
+        }
+      },
+      "result": {
+        "per_share": 12.92988798253866,
+        "equity": 886.3223834487501,
+        "operating_ev": 5164.268758244463,
+        "jv_equity": 535.8536252042865,
+        "operating_terminal_share": 0.4153137961263736,
+        "rows": [
+          {
+            "year": 1,
+            "revenue": 3034.9489999999996,
+            "margin": 0.2500666910712503,
+            "nopat": 561.6153439599999,
+            "da": 236.72602199999997,
+            "capex": 350,
+            "delta_wc": 0.6009799999999996,
+            "fcff": 447.74038595999986,
+            "jv_distribution": 104.24000000000001,
+            "parent_affiliate_tax": 38.74,
+            "net_affiliate_cash": 65.5
+          },
+          {
+            "year": 2,
+            "revenue": 3065.2984899999997,
+            "margin": 0.24505001830343773,
+            "nopat": 555.8520737992,
+            "da": 239.09328221999996,
+            "capex": 320,
+            "delta_wc": 0.6069898000000012,
+            "fcff": 474.33836621919994,
+            "jv_distribution": 104.24000000000001,
+            "parent_affiliate_tax": 38.74,
+            "net_affiliate_cash": 65.5
+          },
+          {
+            "year": 3,
+            "revenue": 3095.9514748999995,
+            "margin": 0.24003334553562516,
+            "nopat": 549.9173767007879,
+            "da": 241.48421504219996,
+            "capex": 240.87115534419996,
+            "delta_wc": 0.6130596979999973,
+            "fcff": 549.9173767007879,
+            "jv_distribution": 104.24000000000001,
+            "parent_affiliate_tax": 38.74,
+            "net_affiliate_cash": 65.5
+          },
+          {
+            "year": 4,
+            "revenue": 3126.9109896489995,
+            "margin": 0.23501667276781257,
+            "nopat": 543.8084004530277,
+            "da": 243.89905719262197,
+            "capex": 243.27986689764197,
+            "delta_wc": 0.6191902949799988,
+            "fcff": 543.8084004530278,
+            "jv_distribution": 104.24000000000001,
+            "parent_affiliate_tax": 38.74,
+            "net_affiliate_cash": 65.5
+          },
+          {
+            "year": 5,
+            "revenue": 3158.1800995454896,
+            "margin": 0.23,
+            "nopat": 537.5222529426424,
+            "da": 246.33804776454818,
+            "capex": 245.71266556661837,
+            "delta_wc": 0.6253821979298028,
+            "fcff": 537.5222529426424,
+            "jv_distribution": 104.24000000000001,
+            "parent_affiliate_tax": 38.74,
+            "net_affiliate_cash": 65.5
+          },
+          {
+            "year": 6,
+            "revenue": 3192.9200806404897,
+            "margin": 0.23,
+            "nopat": 543.4349977250114,
+            "da": 249.0477662899582,
+            "capex": 322.26227644767107,
+            "delta_wc": 0.6947996219000016,
+            "fcff": 469.5256879453985,
+            "jv_distribution": 104.55272,
+            "parent_affiliate_tax": 38.85622,
+            "net_affiliate_cash": 65.69649999999999
+          },
+          {
+            "year": 7,
+            "revenue": 3231.2351216081756,
+            "margin": 0.23,
+            "nopat": 549.9562176977115,
+            "da": 252.0363394854377,
+            "capex": 332.78528832483556,
+            "delta_wc": 0.766300819353719,
+            "fcff": 468.4409680389599,
+            "jv_distribution": 105.18003632,
+            "parent_affiliate_tax": 39.08935732,
+            "net_affiliate_cash": 66.090679
+          },
+          {
+            "year": 8,
+            "revenue": 3273.2411781890814,
+            "margin": 0.23,
+            "nopat": 557.1056485277817,
+            "da": 255.31281189874835,
+            "capex": 343.8405761430074,
+            "delta_wc": 0.8401211316181162,
+            "fcff": 467.7377631519045,
+            "jv_distribution": 106.12665664688,
+            "parent_affiliate_tax": 39.44116153588,
+            "net_affiliate_cash": 66.685495111
+          },
+          {
+            "year": 9,
+            "revenue": 3319.0665546837286,
+            "margin": 0.23,
+            "nopat": 564.9051276071706,
+            "da": 258.88719126533084,
+            "capex": 355.46417222779917,
+            "delta_wc": 0.9165075298929424,
+            "fcff": 467.41163911480936,
+            "jv_distribution": 107.40017652664255,
+            "parent_affiliate_tax": 39.91445547431056,
+            "net_affiliate_cash": 67.485721052332
+          },
+          {
+            "year": 10,
+            "revenue": 3368.852553003984,
+            "margin": 0.23,
+            "nopat": 573.3787045212781,
+            "da": 262.7704991343108,
+            "capex": 367.69449059424977,
+            "delta_wc": 0.9957199664051132,
+            "fcff": 467.4589930949341,
+            "jv_distribution": 109.01117917454218,
+            "parent_affiliate_tax": 40.51317230642521,
+            "net_affiliate_cash": 68.49800686811696
+          }
+        ]
+      }
+    },
+    "recovery": {
+      "assumptions": {
+        "growth": 0.065,
+        "margin": 0.28,
+        "g": 0.025,
+        "roic": 0.12,
+        "wacc": 0.07537270177549019,
+        "ke": 0.1139,
+        "jv_growth": 0.035,
+        "jv_cash": 130.3,
+        "jv_parent_tax": 38.74,
+        "project_caps": [
+          350,
+          320
+        ],
+        "bridge": {
+          "debt": 4748,
+          "excess_cash": 0,
+          "minority": 24,
+          "finance_lease_proxy": 27.8,
+          "liability_awards": 14,
+          "shares": 68.548342
+        }
+      },
+      "result": {
+        "per_share": 105.90436673958678,
+        "equity": 7259.56875055862,
+        "operating_ev": 10959.744167475243,
+        "jv_equity": 1113.6245830833777,
+        "operating_terminal_share": 0.7409240480974405,
+        "rows": [
+          {
+            "year": 1,
+            "revenue": 3200.2184999999995,
+            "margin": 0.2600666910712503,
+            "nopat": 615.8799746399999,
+            "da": 249.61704299999997,
+            "capex": 651.2937949999987,
+            "delta_wc": 3.9063699999999972,
+            "fcff": 210.29685264000116,
+            "jv_distribution": 134.8605,
+            "parent_affiliate_tax": 40.0959,
+            "net_affiliate_cash": 94.7646
+          },
+          {
+            "year": 2,
+            "revenue": 3408.2327024999995,
+            "margin": 0.2650500183034377,
+            "nopat": 668.4805837331999,
+            "da": 265.84215079499995,
+            "capex": 700.0202758549998,
+            "delta_wc": 4.1602840500000005,
+            "fcff": 230.14217462320002,
+            "jv_distribution": 139.5806175,
+            "parent_affiliate_tax": 41.499256499999994,
+            "net_affiliate_cash": 98.08136099999999
+          },
+          {
+            "year": 3,
+            "revenue": 3629.7678281624994,
+            "margin": 0.2700333455356252,
+            "nopat": 725.317179115662,
+            "da": 283.121890596675,
+            "capex": 752.3294829372765,
+            "delta_wc": 4.430702513249998,
+            "fcff": 251.6788842618105,
+            "jv_distribution": 144.46593911249997,
+            "parent_affiliate_tax": 42.95173047749999,
+            "net_affiliate_cash": 101.51420863499997
+          },
+          {
+            "year": 4,
+            "revenue": 3865.7027369930615,
+            "margin": 0.2750166727678126,
+            "nopat": 786.7182014315713,
+            "da": 301.5248134854588,
+            "capex": 808.4813012747579,
+            "delta_wc": 4.718698176611242,
+            "fcff": 275.0430154656608,
+            "jv_distribution": 149.52224698143746,
+            "parent_affiliate_tax": 44.45504104421249,
+            "net_affiliate_cash": 105.06720593722497
+          },
+          {
+            "year": 5,
+            "revenue": 4116.97341489761,
+            "margin": 0.28,
+            "nopat": 853.0368915667849,
+            "da": 321.1239263620136,
+            "capex": 868.7542639307028,
+            "delta_wc": 5.025413558090977,
+            "fcff": 300.3811404400047,
+            "jv_distribution": 154.75552562578775,
+            "parent_affiliate_tax": 46.01096748075992,
+            "net_affiliate_cash": 108.74455814502784
+          },
+          {
+            "year": 6,
+            "revenue": 4351.640899546774,
+            "margin": 0.28,
+            "nopat": 901.6599943860915,
+            "da": 339.42799016464835,
+            "capex": 739.9271639658868,
+            "delta_wc": 4.693349692983266,
+            "fcff": 496.46747089186965,
+            "jv_distribution": 159.86245797143874,
+            "parent_affiliate_tax": 47.529329407625,
+            "net_affiliate_cash": 112.33312856381374
+          },
+          {
+            "year": 7,
+            "revenue": 4564.871303624565,
+            "margin": 0.28,
+            "nopat": 945.84133411101,
+            "da": 356.0599616827161,
+            "capex": 719.9731846421481,
+            "delta_wc": 4.264608081555834,
+            "fcff": 577.6635030700222,
+            "jv_distribution": 164.81819416855333,
+            "parent_affiliate_tax": 49.00273861926136,
+            "net_affiliate_cash": 115.81545554929198
+          },
+          {
+            "year": 8,
+            "revenue": 4752.0310270731725,
+            "margin": 0.28,
+            "nopat": 984.6208288095613,
+            "da": 370.65842011170747,
+            "capex": 690.0776814639961,
+            "delta_wc": 3.7431944689721424,
+            "fcff": 661.4583729883007,
+            "jv_distribution": 169.59792179944137,
+            "parent_affiliate_tax": 50.42381803921994,
+            "net_affiliate_cash": 119.17410376022143
+          },
+          {
+            "year": 9,
+            "revenue": 4908.848050966587,
+            "margin": 0.28,
+            "nopat": 1017.113316160277,
+            "da": 382.8901479753938,
+            "capex": 650.5245354201563,
+            "delta_wc": 3.136340477868289,
+            "fcff": 746.3425882376462,
+            "jv_distribution": 174.17706568802626,
+            "parent_affiliate_tax": 51.78526112627887,
+            "net_affiliate_cash": 122.39180456174739
+          },
+          {
+            "year": 10,
+            "revenue": 5031.569252240751,
+            "margin": 0.28,
+            "nopat": 1042.5411490642837,
+            "da": 392.46240167477856,
+            "capex": 601.9065851826841,
+            "delta_wc": 2.4544240254832768,
+            "fcff": 830.6425415308947,
+            "jv_distribution": 178.5314923302269,
+            "parent_affiliate_tax": 53.079892654435845,
+            "net_affiliate_cash": 125.45159967579107
+          }
+        ]
+      }
+    },
+    "generous_affiliate_earnings_payout": {
+      "assumptions": {
+        "growth": 0.04,
+        "margin": 0.26,
+        "g": 0.025,
+        "roic": 0.1,
+        "wacc": 0.07537270177549019,
+        "ke": 0.1139,
+        "jv_growth": 0.025,
+        "jv_cash": 149,
+        "jv_parent_tax": 0,
+        "project_caps": [
+          350,
+          320
+        ],
+        "bridge": {
+          "debt": 4748,
+          "excess_cash": 167,
+          "minority": 24,
+          "finance_lease_proxy": 27.8,
+          "liability_awards": 0,
+          "shares": 68.548342
+        }
+      },
+      "result": {
+        "per_share": 89.6906483846295,
+        "equity": 6148.145239671331,
+        "operating_ev": 9063.003732359748,
+        "jv_equity": 1717.9415073115838,
+        "operating_terminal_share": 0.6671206370344395,
+        "rows": [
+          {
+            "year": 1,
+            "revenue": 3125.0959999999995,
+            "margin": 0.2560666910712503,
+            "nopat": 592.1724140799998,
+            "da": 243.75748799999997,
+            "capex": 490.977708799998,
+            "delta_wc": 2.4039199999999985,
+            "fcff": 342.5482732800018,
+            "jv_distribution": 152.725,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 152.725
+          },
+          {
+            "year": 2,
+            "revenue": 3250.09984,
+            "margin": 0.2570500183034377,
+            "nopat": 618.2242852863999,
+            "da": 253.50778752,
+            "capex": 511.5264227840005,
+            "delta_wc": 2.500076800000006,
+            "fcff": 357.7055732223994,
+            "jv_distribution": 156.54312499999997,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 156.54312499999997
+          },
+          {
+            "year": 3,
+            "revenue": 3380.1038336,
+            "margin": 0.2580333455356252,
+            "nopat": 645.412830326784,
+            "da": 263.64809902080003,
+            "capex": 532.9334695526416,
+            "delta_wc": 2.6000798720000056,
+            "fcff": 373.52737992294254,
+            "jv_distribution": 160.45670312499996,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 160.45670312499996
+          },
+          {
+            "year": 4,
+            "revenue": 3515.3079869440003,
+            "margin": 0.2590166727678126,
+            "nopat": 673.7873001139405,
+            "da": 274.19402298163203,
+            "capex": 555.2346377863171,
+            "delta_wc": 2.7040830668800027,
+            "fcff": 390.04260224237555,
+            "jv_distribution": 164.46812070312495,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 164.46812070312495
+          },
+          {
+            "year": 5,
+            "revenue": 3655.9203064217604,
+            "margin": 0.26,
+            "nopat": 703.3990669555467,
+            "da": 285.1617839008973,
+            "capex": 578.4672059274035,
+            "delta_wc": 2.812246389555203,
+            "fcff": 407.2813985394853,
+            "jv_distribution": 168.57982372070308,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 168.57982372070308
+          },
+          {
+            "year": 6,
+            "revenue": 3791.189357759365,
+            "margin": 0.26,
+            "nopat": 729.4248324329019,
+            "da": 295.71276990523046,
+            "capex": 553.2650436520305,
+            "delta_wc": 2.705381026752093,
+            "fcff": 469.1671776593498,
+            "jv_distribution": 172.79431931372065,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 172.79431931372065
+          },
+          {
+            "year": 7,
+            "revenue": 3920.0897959231834,
+            "margin": 0.26,
+            "nopat": 754.2252767356205,
+            "da": 305.7670040820083,
+            "capex": 551.1934383459177,
+            "delta_wc": 2.578008763276366,
+            "fcff": 506.2208337084348,
+            "jv_distribution": 177.11417729656364,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 177.11417729656364
+          },
+          {
+            "year": 8,
+            "revenue": 4041.612579596802,
+            "margin": 0.26,
+            "nopat": 777.6062603144247,
+            "da": 315.24578120855057,
+            "capex": 546.6251613231209,
+            "delta_wc": 2.43045567347237,
+            "fcff": 543.796424526382,
+            "jv_distribution": 181.54203172897772,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 181.54203172897772
+          },
+          {
+            "year": 9,
+            "revenue": 4154.777731825512,
+            "margin": 0.26,
+            "nopat": 799.3792356032285,
+            "da": 324.07266308238997,
+            "capex": 539.5391129258534,
+            "delta_wc": 2.2633030445742044,
+            "fcff": 581.649482715191,
+            "jv_distribution": 186.08058252220215,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 186.08058252220215
+          },
+          {
+            "year": 10,
+            "revenue": 4258.647175121149,
+            "margin": 0.26,
+            "nopat": 819.3637164933092,
+            "da": 332.1744796594497,
+            "capex": 529.9418996943439,
+            "delta_wc": 2.077388865912744,
+            "fcff": 619.5189075925023,
+            "jv_distribution": 190.7325970852572,
+            "parent_affiliate_tax": 0.0,
+            "net_affiliate_cash": 190.7325970852572
+          }
+        ]
+      }
+    }
+  },
+  "sensitivity": {
+    "zero_incremental_parent_tax": 81.71320040498401,
+    "tax_distributions_instead_of_earnings": 76.58475870645151,
+    "kd_6": 79.51050653043012,
+    "kd_7": 71.13523953946012,
+    "kd_8": 63.68336078233328,
+    "central_roic_0.12": 85.56081898687529,
+    "central_roic_0.15": 94.48024561670977,
+    "central_roic_0.2": 103.39967224654426,
+    "extra_project_year1_100": 75.19714503633608,
+    "extra_project_year1_200": 74.39646296893801,
+    "extra_project_year1_300": 73.03988725640775,
+    "jv_cash_100": 72.29233666729765,
+    "jv_cash_130.3": 77.3887867878457,
+    "jv_cash_149": 80.53412069062617,
+    "jv_cash_175": 84.90731221320866
+  },
+  "inverse_year5_margin": {
+    "0.07537270177549019": 0.3974221199994066,
+    "0.09": null,
+    "0.1": null
+  }
+}

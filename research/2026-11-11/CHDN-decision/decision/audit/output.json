@@ -1,0 +1,105 @@
+{
+  "cases": [
+    {
+      "case": "central_normalized",
+      "value": 75.19714503633608,
+      "first_two_capex": [
+        490.977708799998,
+        511.5264227840005
+      ]
+    },
+    {
+      "case": "efficiency_growth_only",
+      "value": 76.64139235704086,
+      "first_two_capex": [
+        468.237568,
+        487.87667635199995
+      ]
+    },
+    {
+      "case": "recovery_efficiency",
+      "value": 112.4474967836264,
+      "first_two_capex": [
+        552.9494229999999,
+        595.283519675
+      ]
+    },
+    {
+      "case": "hurdle_9",
+      "value": 43.602830073292424,
+      "first_two_capex": [
+        490.977708799998,
+        511.5264227840005
+      ]
+    },
+    {
+      "case": "adverse",
+      "value": 12.929887982538656,
+      "first_two_capex": [
+        350,
+        320
+      ]
+    },
+    {
+      "case": "recovery",
+      "value": 105.9043667395868,
+      "first_two_capex": [
+        651.2937949999987,
+        700.0202758549998
+      ]
+    },
+    {
+      "case": "generous_affiliate_earnings_payout",
+      "value": 89.6906483846295,
+      "first_two_capex": [
+        490.977708799998,
+        511.5264227840005
+      ]
+    }
+  ],
+  "inverse_grid": [
+    {
+      "wacc": 0.07537270177549019,
+      "target": 0.3974221199994066,
+      "monotonic": true,
+      "max_value": 141.41189043311078,
+      "end_value": 141.41189043311078,
+      "min_value": 7.160289744899997
+    },
+    {
+      "wacc": 0.09,
+      "target": null,
+      "monotonic": true,
+      "max_value": 72.47176987182345,
+      "end_value": 72.47176987182345,
+      "min_value": 0
+    },
+    {
+      "wacc": 0.1,
+      "target": null,
+      "monotonic": true,
+      "max_value": 41.77246207524918,
+      "end_value": 41.77246207524918,
+      "min_value": 0
+    }
+  ],
+  "wacc": 0.07537270177549017,
+  "status": "PASS",
+  "sensitivities": {
+    "zero_incremental_parent_tax": 81.71320040498401,
+    "tax_distributions_instead_of_earnings": 76.58475870645151,
+    "kd_6": 79.51050653043006,
+    "kd_7": 71.13523953946012,
+    "kd_8": 63.68336078233328,
+    "extra_project_year1_100": 75.19714503633608,
+    "extra_project_year1_200": 74.39646296893801,
+    "extra_project_year1_300": 73.03988725640775,
+    "jv_cash_100": 72.29233666729765,
+    "jv_cash_130.3": 77.3887867878457,
+    "jv_cash_149": 80.53412069062617,
+    "jv_cash_175": 84.90731221320866,
+    "central_roic_0.12": 85.56081898687529,
+    "central_roic_0.15": 94.48024561670977,
+    "central_roic_0.2": 103.39967224654426
+  }
+}
