@@ -1,0 +1,23 @@
+{
+  "status": "pass_with_minor_source_label_edit",
+  "date": "2026-11-11",
+  "independent_checks": 451,
+  "cases": 7,
+  "sensitivities": 19,
+  "inverses": 3,
+  "monotonic_intervals": 3000,
+  "material_errors": [],
+  "verified": [
+    "All table roundedvalues and terminalfractions agree",
+    "FCFF107 and corporesensitivity2.32 agree",
+    "Derivative763 singlebridgeclaim,624source-scale andFXlimitations correctly distinguished",
+    "Forwardcorp/DA/tax/coupon assumptions clearly labeled",
+    "Negative residualfloor explicitlynot bankruptcyprobability"
+  ],
+  "minor_edit": {
+    "text": "WACC autom\u00e1tico6,77% del proveedor",
+    "recommendation": "Remove exact rejected vendorWACC or update to6.80% (latestprimarylookup ofvendorstatistics Nov11 showed6.80%). Old6.77 may be a dated prior observation but currentlyunlabeled.",
+    "materiality": "Does not affect model or conclusion."
+  },
+  "minor_edits_resolved": true
+}
