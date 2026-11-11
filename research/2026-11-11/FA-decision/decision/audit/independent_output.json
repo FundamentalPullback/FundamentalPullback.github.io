@@ -1,0 +1,56 @@
+{
+  "method": "No import of model.py. Independently built annual cashflows as weighted explicit and sustainable cashflows.",
+  "wacc": 0.08381512380031678,
+  "no_shield_wacc": 0.09122573282478498,
+  "cases": [
+    {
+      "case": "bear",
+      "independent": 8.584817587519792,
+      "model": 8.584817587519789,
+      "error": 3.552713678800501e-15
+    },
+    {
+      "case": "base",
+      "independent": 20.13513460021681,
+      "model": 20.13513460021681,
+      "error": 0.0
+    },
+    {
+      "case": "recovery",
+      "independent": 27.798429132411346,
+      "model": 27.798429132411346,
+      "error": 0.0
+    },
+    {
+      "case": "bull",
+      "independent": 41.709604064354835,
+      "model": 41.709604064354835,
+      "error": 0.0
+    }
+  ],
+  "sensitivities": {
+    "no_interest_tax_shield": 16.48871603078207,
+    "SBC50bp_all_years": 19.486444600863404,
+    "add_excluded_awards_1_116919m_fixed_EV": 20.00775417374128,
+    "combined_no_interest_shield_SBC50bp_extra_awards": 15.81065808002842
+  },
+  "reverse": [
+    {
+      "wacc": 0.08381512380031678,
+      "calculated": 21.579999999999995
+    },
+    {
+      "wacc": 0.09,
+      "calculated": 21.579999999999995
+    },
+    {
+      "wacc": 0.1,
+      "calculated": 21.579999999999995
+    },
+    {
+      "wacc": 0.105,
+      "calculated": 21.579999999999995
+    }
+  ],
+  "passed": true
+}
