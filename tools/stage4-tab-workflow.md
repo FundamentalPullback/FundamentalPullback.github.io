@@ -12,3 +12,6 @@ The public `#stage4` route shows the newest published management review and a se
 - Never add private account identifiers or unpublished data. The tab does not alter quantities, references, orders, or portfolio state.
 
 Run `node tools/test-stage4-tab.cjs` and the full publication suite. Check the live tab, dropdown, original report link, mobile layout, and Back/Forward. Published reports must remain immutable. The exact UI predecessor contract supports dated historical regression tests; do not update hashes to hide unrelated changes.
+
+## A547 dashboard (latest-only presentation)
+The November 10 review A547 now has a compact per-position dashboard. It reads that report's exact levels table, not live portfolio fields. Prices are dated regular closes; distances use next-session protection. Activation rules are explicitly tied to the verified A547 text. Missing fields remain unavailable. The historical renderer and date selector are unchanged. Do not retrofit this dashboard onto earlier reports without authorization; future report formats require explicit review before enabling this dashboard. Original prose and sources remain available in a disclosure panel.
