@@ -2,6 +2,7 @@
 const fs=require('fs'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 function legacy(root,a){
+ a=require("./stage4-nov11-contract.cjs").legacy(root,a);
  const rec=a.reports.find(r=>r.id==='A547');if(!rec)return a;
  const p=JSON.parse(fs.readFileSync(root+'/tools/stage4-nov10-prior.json')),rows=a.c.FP.ges;
  assert.equal(a.reports.filter(r=>r.id==='A547').length,1);assert.equal(sha(JSON.stringify(rec)),p.reportHash);
