@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "reviewed_file": "EPAM_20261111/decision/report.md",
+  "date": "2026-11-11",
+  "basis": [
+    "source_refresh/factual_note.md",
+    "source_refresh/source_ledger.json",
+    "decision/audit/output.json"
+  ],
+  "corrections_applied": [
+    "Expected initial delivery by November 10, not strictly before November 10.",
+    "Specified arithmetic mean of eligible daily VWAP rather than ambiguous general weighted-average pricing.",
+    "Added direct primary contract exhibit link; already present in source ledger."
+  ],
+  "findings": [
+    "All six ordinary final-settlement scenarios and rate sensitivities agree with independent arithmetic audit.",
+    "Initial receipt remains unverified; final ordinary settlement assumptions are not contractual bounds.",
+    "Full 500 cash/equity deduction accompanies final total shares, avoiding initial-only forward-asset omission.",
+    "Funding examples and interest costs are diagnostic only; no duplicate FCFF interest deduction.",
+    "CAPM sensitivity explicitly not certified post-ASR WACC.",
+    "No current balance/share census or automatic entry is claimed."
+  ],
+  "material_issues_remaining": []
+}

@@ -1,0 +1,131 @@
+{
+  "rate_sensitivity": {
+    "rf": 0.0498,
+    "assumed_erp": 0.0441,
+    "observed_beta": 1.27,
+    "simple_capm_rate": 0.105807,
+    "value_before_asr": 130.71459324642407,
+    "conditional_full_settlement_value": 128.61186959777925,
+    "not_post_asr_wacc": true
+  },
+  "as_of": "2026-11-11",
+  "reference_close": 164.14,
+  "close_date": "2026-11-10 16:00 EST",
+  "prior_model_sha256": "a404dd98fbdc6ef9f15e3e56ed4e070ba53ef4c618c2003010a24c5140b1b3e8",
+  "old_base_value": 124.4014996613333,
+  "old_equity_m": 6402.820786069164,
+  "old_shares_proxy_m": 51.469,
+  "old_bridge_m": 735.6358200000001,
+  "signed_asr_amount_m": 500,
+  "expected_initial_shares": 2550695,
+  "initial_shares_reference_dollars": 399999989.9,
+  "actual_initial_delivery_verified": false,
+  "actual_funding_split_verified": false,
+  "final_settlement_cases": [
+    {
+      "assumed_effective_final_price": 124.4014996613333,
+      "shares_retired_m": 4.019244151888716,
+      "remaining_shares_m": 47.44975584811129,
+      "equity_after_m": 5902.820786069164,
+      "value_after": 124.40149966133329,
+      "change_pct": -1.1102230246251565e-14
+    },
+    {
+      "assumed_effective_final_price": 140,
+      "shares_retired_m": 3.5714285714285716,
+      "remaining_shares_m": 47.89757142857143,
+      "equity_after_m": 5902.820786069164,
+      "value_after": 123.23841501801208,
+      "change_pct": -0.9349442301640809
+    },
+    {
+      "assumed_effective_final_price": 156.82,
+      "shares_retired_m": 3.188368830506313,
+      "remaining_shares_m": 48.28063116949369,
+      "equity_after_m": 5902.820786069164,
+      "value_after": 122.26063833645333,
+      "change_pct": -1.7209288720057114
+    },
+    {
+      "assumed_effective_final_price": 164.14,
+      "shares_retired_m": 3.046180090166931,
+      "remaining_shares_m": 48.42281990983307,
+      "equity_after_m": 5902.820786069164,
+      "value_after": 121.90163226884884,
+      "change_pct": -2.0095154795480963
+    },
+    {
+      "assumed_effective_final_price": 180,
+      "shares_retired_m": 2.7777777777777777,
+      "remaining_shares_m": 48.69122222222222,
+      "equity_after_m": 5902.820786069164,
+      "value_after": 121.22966967494135,
+      "change_pct": -2.549671824718225
+    },
+    {
+      "assumed_effective_final_price": 200,
+      "shares_retired_m": 2.5,
+      "remaining_shares_m": 48.969,
+      "equity_after_m": 5902.820786069164,
+      "value_after": 120.5419915879263,
+      "change_pct": -3.1024610506416694
+    }
+  ],
+  "funding_cases": [
+    {
+      "assumed_new_debt": 0,
+      "cash_used": 500,
+      "net_cash_change": -500,
+      "bridge_after": 235.63582000000008,
+      "interest_service": [
+        {
+          "assumed_rate": 0.06,
+          "annual_pretax": 0.0,
+          "annual_aftertax_if_deductible": 0.0
+        },
+        {
+          "assumed_rate": 0.08,
+          "annual_pretax": 0.0,
+          "annual_aftertax_if_deductible": 0.0
+        }
+      ]
+    },
+    {
+      "assumed_new_debt": 250,
+      "cash_used": 250,
+      "net_cash_change": -500,
+      "bridge_after": 235.63582000000008,
+      "interest_service": [
+        {
+          "assumed_rate": 0.06,
+          "annual_pretax": 15.0,
+          "annual_aftertax_if_deductible": 10.95
+        },
+        {
+          "assumed_rate": 0.08,
+          "annual_pretax": 20.0,
+          "annual_aftertax_if_deductible": 14.6
+        }
+      ]
+    },
+    {
+      "assumed_new_debt": 500,
+      "cash_used": 0,
+      "net_cash_change": -500,
+      "bridge_after": 235.63582000000008,
+      "interest_service": [
+        {
+          "assumed_rate": 0.06,
+          "annual_pretax": 30.0,
+          "annual_aftertax_if_deductible": 21.9
+        },
+        {
+          "assumed_rate": 0.08,
+          "annual_pretax": 40.0,
+          "annual_aftertax_if_deductible": 29.2
+        }
+      ]
+    }
+  ],
+  "scope": "Static same-EV full share-settlement sensitivity, not signed agreement fair-value accounting or actual settled shares. Final effective prices are scenarios not known VWAP/discount. Interest diagnostic not deducted from FCFF; financing risk/fees/new cash flows excluded."
+}
