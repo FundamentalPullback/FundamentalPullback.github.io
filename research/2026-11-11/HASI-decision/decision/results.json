@@ -1,0 +1,59 @@
+{
+  "as_of": "2026-11-11",
+  "units": "USDmillions",
+  "face": 500.0,
+  "estimated_net_proceeds": 493.3,
+  "offering_cost_estimate": 6.699999999999989,
+  "annual_initial_coupon": 39.25,
+  "coupon_over_net_proceeds": 0.07956618690452058,
+  "not_yield_to_maturity": true,
+  "full_refinance_nominal_debt_change": 6.699999999999989,
+  "refinance_scenarios": [
+    {
+      "assumed_repaid_debt_rate": 0.045,
+      "old_interest_avoided": 22.1985,
+      "new_cash_coupon": 39.25,
+      "annual_incremental_coupon": 17.0515
+    },
+    {
+      "assumed_repaid_debt_rate": 0.055,
+      "old_interest_avoided": 27.1315,
+      "new_cash_coupon": 39.25,
+      "annual_incremental_coupon": 12.118500000000001
+    },
+    {
+      "assumed_repaid_debt_rate": 0.065,
+      "old_interest_avoided": 32.0645,
+      "new_cash_coupon": 39.25,
+      "annual_incremental_coupon": 7.1854999999999976
+    },
+    {
+      "assumed_repaid_debt_rate": 0.075,
+      "old_interest_avoided": 36.9975,
+      "new_cash_coupon": 39.25,
+      "annual_incremental_coupon": 2.2524999999999977
+    }
+  ],
+  "full_deployment_scenarios": [
+    {
+      "hypothetical_cash_asset_yield": 0.1,
+      "gross_cash_income": 49.330000000000005,
+      "coupon_only_residual": 10.080000000000005,
+      "after_100bp_losses_and_50bp_overhead": 2.6805000000000057
+    },
+    {
+      "hypothetical_cash_asset_yield": 0.12,
+      "gross_cash_income": 59.196,
+      "coupon_only_residual": 19.945999999999998,
+      "after_100bp_losses_and_50bp_overhead": 12.546499999999998
+    },
+    {
+      "hypothetical_cash_asset_yield": 0.14,
+      "gross_cash_income": 69.06200000000001,
+      "coupon_only_residual": 29.812000000000012,
+      "after_100bp_losses_and_50bp_overhead": 22.412500000000012
+    }
+  ],
+  "settled": false,
+  "scope": "Initial-rate annualized diagnostics, not amortized effective yield or post-reset forecast. Full refinancing and full incremental deployment are separate hypothetical states, not additive. No new valuation or assured investment income."
+}

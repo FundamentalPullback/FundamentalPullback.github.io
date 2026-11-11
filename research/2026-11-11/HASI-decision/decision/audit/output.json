@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "numerical_checks": 21,
+  "checks": [
+    "annual_coupon",
+    "fees",
+    "net_coupon_ratio",
+    "debt_change_full_refi",
+    "avoided_0.045",
+    "increment_0.045",
+    "avoided_0.055",
+    "increment_0.055",
+    "avoided_0.065",
+    "increment_0.065",
+    "avoided_0.075",
+    "increment_0.075",
+    "income_0.1",
+    "spread_0.1",
+    "losses_overhead_0.1",
+    "income_0.12",
+    "spread_0.12",
+    "losses_overhead_0.12",
+    "income_0.14",
+    "spread_0.14",
+    "losses_overhead_0.14"
+  ],
+  "review": [
+    "No production calculation imported.",
+    "39.25 is annual initial-rate run-rate, not first stub payment.",
+    "Coupon/net is not effective yield or YTM.",
+    "6.7 nominal-debt delta assumes all net proceeds retire existing debt at par; no actual balance certified.",
+    "Refinance/deployment alternatives not simultaneous benefits.",
+    "Loss/overhead and asset-return assumptions illustrative; no tax, dilution, funding timeline or full valuation inferred.",
+    "No equity classification of junior debt or free-proceeds treatment."
+  ]
+}
