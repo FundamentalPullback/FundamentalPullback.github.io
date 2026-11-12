@@ -1,0 +1,75 @@
+{
+  "asOf": "2026-11-11",
+  "retrievedAt": "2026-11-12T00:55:26.025114+00:00",
+  "source": "Stock Analysis dated regular-session Close column cross-checked against connected Historial. Consistent vendor selection, not Last or after-hours; provisional ledger valuation, not broker balance.",
+  "sessions": {
+    "2026-11-11": {
+      "SPY": 759.81,
+      "ASO": 69.32,
+      "CTSH": 64.43,
+      "DOCU": 80.15,
+      "EXLS": 43.92,
+      "ULTA": 659.08,
+      "JXN": 139.44
+    }
+  },
+  "evidence": {
+    "2026-11-11": {
+      "SPY": {
+        "sessionDate": "2026-11-11",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/etf/spy/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-12T00:55:26.025114+00:00"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-11",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/aso/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-12T00:55:26.025114+00:00"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-11",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ctsh/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-12T00:55:26.025114+00:00"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-11",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/docu/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-12T00:55:26.025114+00:00"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-11",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/exls/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-12T00:55:26.025114+00:00"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-11",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ulta/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-12T00:55:26.025114+00:00"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-11",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/jxn/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-12T00:55:26.025114+00:00"
+      }
+    }
+  },
+  "reconciliation": {
+    "sheetHistoricalSeries": "Read dated 11 Nov 2026 row; CTSH now present. All seven required tickers match except EXLS: sheet43.91 vs dated vendor43.92. Selected vendor consistently; one-cent difference accepted under user instruction; no averaging.",
+    "calendar": "NYSE official2026 calendar: Veterans Day is regular equity session, not exchange holiday. 16:00EST close; more than30 minutes elapsed. No exceptional closure found.",
+    "calendarURL": "https://www.nyse.com/trade/hours-calendars",
+    "scope": "Market prices only; prior sessions and public ledger unchanged. Private source identifiers omitted."
+  }
+}
