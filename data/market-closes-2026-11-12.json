@@ -1,0 +1,85 @@
+{
+  "asOf": "2026-11-12",
+  "source": "Dated StockAnalysis daily regular close; reconciled with authorized Historial series",
+  "retrievedAt": "2026-11-13T00:41:46.427264+00:00",
+  "sessions": {
+    "2026-11-12": {
+      "SPY": 757.12,
+      "ASO": 67.29,
+      "CTSH": 63.75,
+      "DOCU": 80.15,
+      "EXLS": 43.1,
+      "JXN": 138.63,
+      "ULTA": 650.97
+    }
+  },
+  "evidence": {
+    "2026-11-12": {
+      "SPY": {
+        "sessionDate": "2026-11-12",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/etf/spy/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-13T00:41:46.427264+00:00"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-12",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/aso/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-13T00:41:46.427264+00:00"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-12",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ctsh/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-13T00:41:46.427264+00:00"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-12",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/docu/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-13T00:41:46.427264+00:00"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-12",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/exls/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-13T00:41:46.427264+00:00"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-12",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/jxn/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-13T00:41:46.427264+00:00"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-12",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ulta/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-13T00:41:46.427264+00:00"
+      }
+    }
+  },
+  "reconciliation": {
+    "Historial": "Read authorized dated historical series for November 12; CTSH now present. Public vendor Close selected consistently, not Last or adjusted Close.",
+    "differences": {
+      "ASO": {
+        "sheet": 67.28,
+        "selected": 67.29
+      },
+      "CTSH": {
+        "sheet": 63.78,
+        "selected": 63.75
+      }
+    },
+    "calendar": "NYSE 2026 calendar: November 12 normal regular session ending 16:00 EST; no extraordinary closure found.",
+    "calendarUrl": "https://www.nyse.com/trade/hours-calendars",
+    "ledger": "Existing public operations unchanged. Provisional strategy valuation, not broker balance; no inferred new CTSH purchase."
+  }
+}
