@@ -1,0 +1,88 @@
+{
+  "asOf": "2026-11-13",
+  "source": "Dated StockAnalysis unadjusted regular-session Close, reconciled with authorized Historial daily series",
+  "retrievedAt": "2026-11-14T00:41:37.867Z",
+  "sessions": {
+    "2026-11-13": {
+      "SPY": 754.37,
+      "ASO": 67.59,
+      "CTSH": 63.01,
+      "DOCU": 80.76,
+      "EXLS": 43.25,
+      "JXN": 138.95,
+      "ULTA": 660.66
+    }
+  },
+  "evidence": {
+    "2026-11-13": {
+      "SPY": {
+        "sessionDate": "2026-11-13",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/etf/spy/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-14T00:41:37.867Z"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-13",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/aso/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-14T00:41:37.867Z"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-13",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ctsh/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-14T00:41:37.867Z"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-13",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/docu/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-14T00:41:37.867Z"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-13",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/exls/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-14T00:41:37.867Z"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-13",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/jxn/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-14T00:41:37.867Z"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-13",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ulta/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-14T00:41:37.867Z"
+      }
+    }
+  },
+  "reconciliation": {
+    "Historial": "Authorized dated daily series cross-checked for all seven symbols, including CTSH. ASO differs by one cent; use vendor regular-session Close consistently.",
+    "differences": {
+      "ASO": {
+        "sheet": 67.58,
+        "selected": 67.59
+      },
+      "JXN": {
+        "nasdaqQuote": 138.9,
+        "selected": 138.95,
+        "resolution": "Authorized daily sheet, S&P Global daily history, and Yahoo NYSE regularMarketPrice timestamped 16:00:03 EST agree. The Nasdaq quote display differs; its after-hours quote is not an input.",
+        "corroboratingDailyUrl": "https://query1.finance.yahoo.com/v8/finance/chart/JXN?interval=1d&range=5d&includePrePost=false",
+        "differentQuoteUrl": "https://www.nasdaq.com/market-activity/stocks/jxn"
+      }
+    },
+    "calendar": "Normal NYSE and Nasdaq regular session ended at 16:00 EST. No extraordinary market closure found.",
+    "calendarUrl": "https://www.nyse.com/trade/hours-calendars",
+    "ledger": "Existing public ledger unchanged. Strategy valuation remains provisional, not a broker balance; no inferred new trades."
+  }
+}
