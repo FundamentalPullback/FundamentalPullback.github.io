@@ -24,3 +24,23 @@ if(nov13) {
  for(const lang of ['es','en']) {t.setLang(lang);t.profileRoute('stage4/A594');const h=t.vStage4();assert.equal((h.match(/class="s4-card /g)||[]).length,6);assert(h.includes('value="A594" selected'));}
  console.log('PASS Nov13 six cards and approved levels; withheld quantity values and M.');
 }
+
+const nov16=reports.find(r=>r.id==='A595');
+if(nov16) {
+ assert.equal(nov16.marketSession,'2026-11-16');
+ assert.equal(nov16.effectiveSession,'2026-11-17');
+ const p=t.stage4Positions(nov16);
+ assert.deepEqual(JSON.parse(JSON.stringify(p.map(x=>[x.ticker,x.price,x.low,x.stop,x.trailing,x.inactive,x.m]))),[
+  ['CTSH',62.29,61.80,61.2,null,true,null],['DOCU',79.82,79.33,62.5,77.25,false,null],
+  ['EXLS',43.60,43.21,33.5,40.98,false,null],['ASO',70.49,68.13,50.3,63.84,false,null],
+  ['ULTA',652.26,650.80,522,611.62,false,null],['JXN',137.59,136.41,124.8,null,true,null],
+ ]);
+ assert(p.every(x=>x.low>x.stop && x.watch));
+ assert(nov16.managementResearchOnly);
+ for(const lang of ['es','en']) {
+  t.setLang(lang);t.profileRoute('stage4/latest');const h=t.vStage4();
+  assert.equal((h.match(/class="s4-card /g)||[]).length,6);assert(h.includes('value="A595" selected'));
+  assert(h.includes('href="#biblioteca/A595"'));
+ }
+ console.log('PASS Nov16 six cards, November 17 protection, and latest route.');
+}

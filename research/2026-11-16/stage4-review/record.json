@@ -1,0 +1,80 @@
+{
+  "id": "A595",
+  "date": "2026-11-16",
+  "marketSession": "2026-11-16",
+  "effectiveSession": "2026-11-17",
+  "cat": "Gestión de posiciones",
+  "title": "Stage 4 · cierre 16 nov · sin salidas; vigilar CTSH y DOCU",
+  "managementResearchOnly": true,
+  "text": "# Stage 4 · cierre del 16 de noviembre de 2026\n\nRevisión del diario de simulación (PAPER). Referencias manuales para la siguiente sesión regular, martes 17 de noviembre. No son órdenes del bróker ni se publican cantidades, saldos, capturas o identificadores.\n\n## Decisión de gestión\n\n**Ninguna salida activada.** Ningún mínimo regular tocó el stop manual S y ningún cierre regular quedó por debajo del trailing vigente del informe A594. Se mantienen las seis posiciones del diario; no se incorporan nuevas ampliaciones, parciales u órdenes.\n\n**Vigilar primero CTSH y DOCU.** El mínimo de CTSH estuvo a 0,60 USD del stop manual. DOCU y EXLS ajustan su trailing para el martes; ASO y ULTA lo conservan.\n\n## Niveles y proximidad\n\nCierres del lunes a las 16:00 EST. La distancia es (cierre − nivel de protección) ÷ cierre. Si no hay trailing activo, se mide frente a S. No representa pérdida máxima.\n\n| Posición | Acciones PAPER ya registradas | Cierre regular USD | Mínimo regular USD | S manual USD | M USD | Protección próxima sesión USD | Distancia desde cierre |\n|---|---:|---:|---:|---:|---:|---|---:|\n| CTSH | — | 62,29 | 61,80 | 61,20 | — | S 61,20; trailing inactivo | 1,09 / 1,75 % |\n| DOCU | — | 79,82 | 79,33 | 62,50 | — | Trailing 77,25 | 2,57 / 3,22 % |\n| EXLS | — | 43,60 | 43,21 | 33,50 | — | Trailing 40,98 | 2,62 / 6,01 % |\n| ASO | — | 70,49 | 68,13 | 50,30 | — | Trailing 63,84 | 6,65 / 9,43 % |\n| ULTA | — | 652,26 | 650,80 | 522,00 | — | Trailing 611,62 | 40,64 / 6,23 % |\n| JXN | — | 137,59 | 136,41 | 124,80 | — | S 124,80; trailing inactivo | 12,79 / 9,30 % |\n\n## Qué vigilar\n\n- **CTSH:** Mínimo 61,80, a 0,60 de S 61,20 por toque intradía. No ampliar. Trailing inactivo hasta cierre 77,67.\n- **DOCU:** Vigilar el cierre regular frente a 77,25. No repetir parcial.\n- **EXLS:** Vigilar el cierre regular frente a 40,98.\n- **ASO:** Vigilar el cierre regular frente a 63,84.\n- **ULTA:** Vigilar el cierre regular frente a 611,62.\n- **JXN:** S 124,80 por toque intradía. Trailing inactivo hasta cierre 158,25.\n\n## Método y fuentes\n\nSe comprueba primero S con el mínimo de la sesión regular y el trailing del informe A594 con el cierre regular. Después se actualizan los cuatro trailing activos mediante máximo cierre técnico desde la entrada menos 3×ATR14 de Wilder, sin reducir el nivel anterior. Se continúa la serie técnica de A594; sus barras no se usan como precios de cierre para la decisión. M no se publica. No se usan cotizaciones extendidas. Para ASO se conserva el cierre conciliado de 70,49 USD, no el cruce anterior al cierre de 70,46 USD.\n\n[Cierres regulares y conciliación](https://fundamentalpullback.github.io/data/market-closes-2026-11-16.json) · [Informe anterior A594](https://fundamentalpullback.github.io/#stage4/A594) · [Cálculos y fuentes técnicas](https://fundamentalpullback.github.io/research/2026-11-16/stage4-review/calculations.json)\n",
+  "profiles": [
+    {
+      "ticker": "CTSH",
+      "kind": "management",
+      "label": "Stage 4 cierre 16 nov · niveles 17 nov",
+      "summary": "Mínimo 61,80, a 0,60 de S 61,20 por toque intradía. No ampliar. Trailing inactivo hasta cierre 77,67.",
+      "summaryEn": "Low $61.80, $0.60 above the $61.20 manual intraday stop. No add-on; trailing inactive until a $77.67 close."
+    },
+    {
+      "ticker": "DOCU",
+      "kind": "management",
+      "label": "Stage 4 cierre 16 nov · niveles 17 nov",
+      "summary": "Vigilar el cierre regular frente a 77,25. No repetir parcial.",
+      "summaryEn": "Watch regular closes against $77.25. No repeat partial sale."
+    },
+    {
+      "ticker": "EXLS",
+      "kind": "management",
+      "label": "Stage 4 cierre 16 nov · niveles 17 nov",
+      "summary": "Vigilar el cierre regular frente a 40,98.",
+      "summaryEn": "Watch regular closes against $40.98."
+    },
+    {
+      "ticker": "ASO",
+      "kind": "management",
+      "label": "Stage 4 cierre 16 nov · niveles 17 nov",
+      "summary": "Vigilar el cierre regular frente a 63,84.",
+      "summaryEn": "Watch regular closes against $63.84."
+    },
+    {
+      "ticker": "ULTA",
+      "kind": "management",
+      "label": "Stage 4 cierre 16 nov · niveles 17 nov",
+      "summary": "Vigilar el cierre regular frente a 611,62.",
+      "summaryEn": "Watch regular closes against $611.62."
+    },
+    {
+      "ticker": "JXN",
+      "kind": "management",
+      "label": "Stage 4 cierre 16 nov · niveles 17 nov",
+      "summary": "S 124,80 por toque intradía. Trailing inactivo hasta cierre 158,25.",
+      "summaryEn": "Watch the $124.80 manual intraday stop. Trailing inactive until a $158.25 close."
+    }
+  ],
+  "stage4Dashboard": {
+    "version": 1,
+    "rules": "manual-s-close-trailing",
+    "overview": [
+      {
+        "title": "Ninguna salida activada",
+        "titleEn": "No exit triggered",
+        "text": "Ni toque de S ni cierre bajo el trailing vigente del lunes.",
+        "textEn": "No manual stop touch or regular close below the active trailing level on Monday."
+      },
+      {
+        "title": "Dos ajustes para el martes",
+        "titleEn": "Two updates for Tuesday",
+        "text": "DOCU 77,25 · EXLS 40,98. Las otras protecciones no cambian.",
+        "textEn": "DOCU 77.25 · EXLS 40.98. Other protection levels are unchanged."
+      },
+      {
+        "title": "Vigilar primero",
+        "titleEn": "Watch first",
+        "text": "CTSH: mínimo a 0,60 USD de S. DOCU: cierre 3,22 % sobre el nuevo trailing.",
+        "textEn": "CTSH: low $0.60 above the stop. DOCU: close 3.22% above the new trailing level."
+      }
+    ],
+    "sourceNote": "Cierre regular del 16 nov: StockAnalysis/S&P Global. ATR: continuación de la serie ChartExchange de A594. Referencias manuales para el 17 nov, no órdenes.",
+    "sourceNoteEn": "Nov 16 regular close: StockAnalysis/S&P Global. ATR continues the A594 ChartExchange series. Manual levels for Nov 17, not orders."
+  }
+}

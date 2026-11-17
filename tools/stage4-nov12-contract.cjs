@@ -2,6 +2,15 @@
 const fs=require('fs'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 function legacy(root,a){
+ // Verify A595 independently before replaying the historical fixture.
+ const later=a.reports.filter(r=>r.id==='A595');
+ if(later.length) {
+  assert.equal(later.length,1);
+  assert.equal(sha(JSON.stringify(later[0])),'4e96e64e81df25f1238d8b19c93ccd5be0981883bdb290bc9346da3880262a7d');
+  assert(later[0].managementResearchOnly && later[0].profiles.length===6 && later[0].profiles.every(p=>p.kind==='management'&&!p.valuation&&!p.entryApproved&&!p.completedAt));
+  a.reports=a.reports.filter(r=>r.id!=='A595');a.t.S.lib=a.reports;a.c.window.FP_LIB.reports=a.reports;
+  a.c.window.FP_MANIFEST.libraryFiles=a.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!=='data/lib-stage4-nov16.js');a.profiles=a.t.profiles();
+ }
  // Verify the known append-only Nov 13 report, then reconstruct the older fixture.
  const next=a.reports.filter(r=>r.id==='A594');
  if(next.length) {
