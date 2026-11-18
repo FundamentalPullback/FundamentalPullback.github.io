@@ -69,3 +69,18 @@ if(nov17) {
  }
  console.log('PASS Nov17 six dated cards, two signals, no fills, and verified continuation for unaffected positions.');
 }
+
+const follow=reports.find(r=>r.id==='A600');
+if(follow) {
+ assert.equal(follow.marketSession,'2026-11-18');
+ assert(follow.managementResearchOnly && /intradía/.test(follow.title));
+ assert.deepEqual(Array.from(follow.profiles,p=>p.ticker),['DOCU','CTSH']);
+ assert.deepEqual(Array.from(follow.text.matchAll(/\b\d+[,.]\d+\b/g),m=>m[0]),['77,25','61,20']);
+ assert(!/\b\d{1,2}:\d{2}\b|Calpico|libfile|\.png|brokerage account/i.test(JSON.stringify(follow)));
+ for(const lang of ['es','en']) {
+  t.setLang(lang);t.profileRoute('stage4/A600');const h=t.vStage4();
+  assert(h.includes('value="A600" selected') && h.includes('href="#biblioteca/A600"'));
+  assert(h.includes('DOCU') && h.includes('CTSH'));
+ }
+ console.log('PASS Nov18 intraday follow-up, two status updates and no private fill details.');
+}

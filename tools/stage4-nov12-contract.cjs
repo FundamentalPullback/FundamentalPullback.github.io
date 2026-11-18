@@ -3,6 +3,16 @@ const fs=require('fs'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 function legacy(root,a){
  a=require("./scanner-nov17-contract.cjs").legacy(root,a);
+ // Verify the exact, minimized Nov 18 follow-up before testing old archives.
+ const follow=a.reports.filter(r=>r.id==='A600');
+ if(follow.length) {
+  assert.equal(follow.length,1);
+  const r=follow[0];
+  assert.equal(sha(JSON.stringify(r)),'a247d0beae980f5f1ceef832ba6ed93f03bbeaa9e3819a37d2f79d9be73c32ff');
+  assert(r.managementResearchOnly && r.marketSession==='2026-11-18' && r.profiles.length===2 && r.profiles.every(p=>p.kind==='management'&&!p.valuation&&!p.entryApproved&&!p.completedAt));
+  a.reports=a.reports.filter(r=>r.id!=='A600');a.t.S.lib=a.reports;a.c.window.FP_LIB.reports=a.reports;
+  a.c.window.FP_MANIFEST.libraryFiles=a.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!=='data/lib-stage4-nov18-execution-followup.js');a.profiles=a.t.profiles();
+ }
  // Verify the Nov 17 management-only append before projecting the historical fixture.
  const nov17=a.reports.filter(r=>r.id==='A596');
  if(nov17.length) {
