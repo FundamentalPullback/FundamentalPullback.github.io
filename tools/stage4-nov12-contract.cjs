@@ -2,6 +2,15 @@
 const fs=require('fs'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 function legacy(root,a){
+ // Verify the Nov 17 management-only append before projecting the historical fixture.
+ const nov17=a.reports.filter(r=>r.id==='A596');
+ if(nov17.length) {
+  assert.equal(nov17.length,1);
+  assert.equal(sha(JSON.stringify(nov17[0])),'e2cbc42a98fa23af2280933470c35a7d30fea7969d182e1d594f60cab8006bcd');
+  assert(nov17[0].managementResearchOnly && nov17[0].profiles.length===6 && nov17[0].profiles.every(p=>p.kind==='management'&&!p.valuation&&!p.entryApproved&&!p.completedAt));
+  a.reports=a.reports.filter(r=>r.id!=='A596');a.t.S.lib=a.reports;a.c.window.FP_LIB.reports=a.reports;
+  a.c.window.FP_MANIFEST.libraryFiles=a.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!=='data/lib-stage4-nov17.js');a.profiles=a.t.profiles();
+ }
  // Verify A595 independently before replaying the historical fixture.
  const later=a.reports.filter(r=>r.id==='A595');
  if(later.length) {

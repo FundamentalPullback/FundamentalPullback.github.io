@@ -38,9 +38,34 @@ if(nov16) {
  assert(p.every(x=>x.low>x.stop && x.watch));
  assert(nov16.managementResearchOnly);
  for(const lang of ['es','en']) {
-  t.setLang(lang);t.profileRoute('stage4/latest');const h=t.vStage4();
+  t.setLang(lang);t.profileRoute('stage4/A595');const h=t.vStage4();
   assert.equal((h.match(/class="s4-card /g)||[]).length,6);assert(h.includes('value="A595" selected'));
   assert(h.includes('href="#biblioteca/A595"'));
  }
- console.log('PASS Nov16 six cards, November 17 protection, and latest route.');
+ console.log('PASS Nov16 six cards, November 17 protection, and dated route.');
+}
+
+const nov17=reports.find(r=>r.id==='A596');
+if(nov17) {
+ assert.equal(nov17.marketSession,'2026-11-17');
+ assert.equal(nov17.effectiveSession,'2026-11-18');
+ assert(nov17.managementResearchOnly);
+ const p=t.stage4Positions(nov17);
+ assert.deepEqual(JSON.parse(JSON.stringify(p.map(x=>[x.ticker,x.price,x.low,x.stop,x.trailing,x.m]))),[
+  ['CTSH',60,59.76,61.20,null,null],['DOCU',75.93,74.69,62.50,77.25,null],
+  ['EXLS',42.83,42.75,33.50,41.04,null],['ASO',69.47,69.42,50.30,63.84,null],
+  ['ULTA',640.43,639.14,522,611.85,null],['JXN',133.17,132.28,124.80,null,null]
+ ]);
+ assert(p.every(x=>x.watch));
+ const d=JSON.parse(fs.readFileSync(root+'/research/2026-11-17/stage4-review/calculations.json'));
+ assert.equal(d.regularSession.CTSH.trigger,'manual-intraday');
+ assert.equal(d.regularSession.DOCU.trigger,'trailing-regular-close');
+ assert(Object.values(d.regularSession).every(x=>x.executionConfirmed!==true));
+ assert.equal(Object.values(d.regularSession).filter(x=>x.trigger).length,2);
+ for(const lang of ['es','en']) {
+  t.setLang(lang);t.profileRoute('stage4/A596');const h=t.vStage4();
+  assert.equal((h.match(/class="s4-card /g)||[]).length,6);
+  assert(h.includes('value="A596" selected') && h.includes('href="#biblioteca/A596"'));
+ }
+ console.log('PASS Nov17 six dated cards, two signals, no fills, and verified continuation for unaffected positions.');
 }

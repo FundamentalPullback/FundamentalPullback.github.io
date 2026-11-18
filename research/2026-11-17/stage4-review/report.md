@@ -1,0 +1,39 @@
+# Stage 4 · cierre del 17 de noviembre de 2026
+
+Revisión del diario de simulación (PAPER). Señales de la sesión regular del 17 y referencias para el miércoles 18. No son órdenes del bróker.
+
+## Decisión de gestión
+
+**CTSH: stop manual activado intradía.** Mínimo regular de 59,76 USD frente a S de 61,20 USD. La señal ocurrió el 17; no depende de otro cierre.
+
+**DOCU: trailing activado por cierre.** Cierre regular de 75,93 USD por debajo de 77,25 USD; no tocó S de 62,50 USD. El plan señala salida en la apertura regular del 18 si la posición sigue abierta.
+
+**Ninguna ejecución confirmada.** No se cambia el diario, no se repiten parciales ni se anotan ventas, precios de ejecución o beneficios realizados por inferencia. Las otras cuatro posiciones no dieron señal de salida.
+
+## Niveles y proximidad
+
+Cierres del martes a las 16:00 EST. Para CTSH y DOCU se muestra la referencia ya activada, no una nueva orden. Para las demás, la distancia se mide del cierre a la próxima protección; el porcentaje usa el cierre como denominador. No es pérdida máxima.
+
+| Posición | Acciones PAPER ya registradas | Cierre regular USD | Mínimo regular USD | S manual USD | M USD | Protección próxima sesión USD | Distancia desde cierre |
+|---|---|---|---|---|---|---|---|
+| CTSH | — | 60,00 | 59,76 | 61,20 | — | S 61,20; trailing inactivo · activado, no es una nueva instrucción | -1,20 / -2,00 % |
+| DOCU | — | 75,93 | 74,69 | 62,50 | — | Trailing 77,25 | -1,32 / -1,74 % |
+| EXLS | — | 42,83 | 42,75 | 33,50 | — | Trailing 41,04 | 1,79 / 4,18 % |
+| ASO | — | 69,47 | 69,42 | 50,30 | — | Trailing 63,84 | 5,63 / 8,10 % |
+| ULTA | — | 640,43 | 639,14 | 522,00 | — | Trailing 611,85 | 28,58 / 4,46 % |
+| JXN | — | 133,17 | 132,28 | 124,80 | — | S 124,80; trailing inactivo | 8,37 / 6,29 % |
+
+## Qué vigilar
+
+- **CTSH:** Stop manual activado intradía. Verificar ejecución; no ampliar.
+- **DOCU:** Trailing activado por cierre. El plan señala salida en la siguiente apertura regular si sigue abierta; comprobar antes de duplicar.
+- **EXLS:** Sin señal; vigilar el cierre frente al trailing actualizado. Nivel para el 18: 41,04 USD.
+- **ASO:** Sin señal; trailing sin cambios. Nivel para el 18: 63,84 USD.
+- **ULTA:** Sin señal; vigilar el cierre frente al trailing actualizado. Nivel para el 18: 611,85 USD.
+- **JXN:** Sin señal. S por toque intradía; trailing inactivo hasta cierre de 158,25 USD.
+
+## Método y fuentes
+
+Se contrastan el mínimo regular con S y el cierre regular con el trailing vigente en A595. Después se actualizan las referencias de las posiciones sin señal mediante máximo cierre técnico menos 3×ATR14 de Wilder, sin reducir el nivel anterior. La serie técnica de ChartExchange se usa solo para el ATR, no para sustituir cierres regulares. No se usan precios de horario extendido. No se muestran cantidades ni M.
+
+[Cierres regulares conciliados](https://fundamentalpullback.github.io/data/market-closes-2026-11-17.json) · [Niveles del informe anterior A595](https://fundamentalpullback.github.io/#stage4/A595) · [Cálculos y fuentes por símbolo](https://fundamentalpullback.github.io/research/2026-11-17/stage4-review/calculations.json)
