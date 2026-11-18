@@ -3,6 +3,16 @@ const fs=require('fs'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 function legacy(root,a){
  a=require("./scanner-nov17-contract.cjs").legacy(root,a);
+ // Validate the closing-review successor before historical replay.
+ const close=a.reports.filter(r=>r.id==='A601');
+ if(close.length) {
+  assert.equal(close.length,1);
+  const r=close[0];
+  assert.equal(sha(JSON.stringify(r)),'003992a716a29c96a7f0086112c82764d97af72fd8da782015d646cd69143302');
+  assert(r.managementResearchOnly && r.marketSession==='2026-11-18' && r.effectiveSession==='2026-11-19' && r.profiles.length===4 && r.profiles.every(p=>p.kind==='management'&&!p.valuation&&!p.entryApproved&&!p.completedAt));
+  a.reports=a.reports.filter(r=>r.id!=='A601');a.t.S.lib=a.reports;a.c.window.FP_LIB.reports=a.reports;
+  a.c.window.FP_MANIFEST.libraryFiles=a.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!=='data/lib-stage4-nov18.js');a.profiles=a.t.profiles();
+ }
  // Verify the exact, minimized Nov 18 follow-up before testing old archives.
  const follow=a.reports.filter(r=>r.id==='A600');
  if(follow.length) {

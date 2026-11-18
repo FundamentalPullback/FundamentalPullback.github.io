@@ -84,3 +84,19 @@ if(follow) {
  }
  console.log('PASS Nov18 intraday follow-up, two status updates and no private fill details.');
 }
+
+const close18=reports.find(r=>r.id==='A601');
+if(close18) {
+ assert.equal(rows[0].report.id,'A601');
+ assert.deepEqual(JSON.parse(JSON.stringify(t.stage4Positions(close18).map(p=>[p.ticker,p.price,p.low,p.stop,p.trailing,p.inactive]))),[
+ ['EXLS',42.23,42.21,33.5,41.10,false],['ASO',73.05,68.71,50.30,65.09,false],
+ ['ULTA',648.51,632.02,522,611.85,false],['JXN',132.60,132.35,124.80,null,true]
+ ]);
+ assert(!/76[,.]11|60[,.]38|60[,.]05|Calpico|libfile|\.png/i.test(JSON.stringify(close18)));
+ for(const lang of ['es','en']){
+  t.setLang(lang);t.profileRoute('stage4/A601');const h=t.vStage4();
+  assert.equal((h.match(/class="s4-card /g)||[]).length,4);
+  assert(h.includes('value="A601" selected')&&h.includes('href="#biblioteca/A601"'));
+ }
+ console.log('PASS Nov18 close: four controls, preserved intraday archive, no private execution data.');
+}
