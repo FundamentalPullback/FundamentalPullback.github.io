@@ -2,6 +2,7 @@
 const fs=require('fs'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 function legacy(root,a){
+ a=require("./scanner-nov17-contract.cjs").legacy(root,a);
  // Verify the Nov 17 management-only append before projecting the historical fixture.
  const nov17=a.reports.filter(r=>r.id==='A596');
  if(nov17.length) {

@@ -1465,14 +1465,18 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if (g) return head(t().tabs.resumen, "") + g;
     var dates = scanDates();                       /* newest first */
     if (!S.resDate || dates.indexOf(S.resDate) < 0) S.resDate = dates[0];
-    var d = S.resDate, di = dates.indexOf(d), prevD = dates[di + 1] || null;
+    var d = S.resDate, di = dates.indexOf(d), prevD = dates.slice(di + 1).find(function(x){return !scannerReviewSubset(x);}) || null;
+    if (scannerReviewSubset(d)) {
+      var partialSelect = dates.map(function (x) { return '<option value="' + esc(x) + '"' + (x === d ? " selected" : "") + ">" + esc(fmtD(x)) + "</option>"; }).join("");
+      return (embedded ? "" : head(t().tabs.resumen, R.lede, '<label class="inline" for="res-date">'+esc(t().date)+' <select id="res-date">'+partialSelect+'</select></label>')) + scanAuditNote(d);
+    }
     var byDate = {};
     S.scan.forEach(function (r) { (byDate[r.date] = byDate[r.date] || []).push(r); });
     function s2set(dt) { var o = {}; (byDate[dt] || []).forEach(function (r) { if (r.opp !== null && r.opp >= 85) o[r.ticker] = r; }); return o; }
     var day = byDate[d] || [], cur = s2set(d), prev = prevD ? s2set(prevD) : null;
     var curT = Object.keys(cur), nNew = prev ? curT.filter(function (k) { return !prev[k]; }) : [];
     var gone = prev ? Object.keys(prev).filter(function (k) { return !cur[k]; }) : [];
-    var asc = dates.slice().reverse(), sets = {};
+    var asc = dates.filter(function(x){return !scannerReviewSubset(x);}).reverse(), sets = {};
     asc.forEach(function (dt) { sets[dt] = s2set(dt); });
     function streak(tk) { var n = 0; for (var i = asc.indexOf(d); i >= 0 && sets[asc[i]][tk]; i--) n++; return n; }
     var lastSeen = {};
@@ -1632,8 +1636,14 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 
   /* Source labels and independently verified corrections stay separate. */
   function scannerAudit(date) { return (window.FP_SCAN_AUDIT || {})[date] || null; }
+  function scannerReviewSubset(date) { var a=scannerAudit(date);return a&&a.schema==='fp.scanner-review-subset.v1'?a:null; }
   function scanAuditNote(date, ticker) {
     var a = scannerAudit(date); if (!a) return '';
+    if (scannerReviewSubset(date)) {
+      var subsetLink=/^A[0-9]+$/.test(a.reportId||'')?'<a class="btn" href="#biblioteca/'+encodeURIComponent(a.reportId)+'">'+esc(pt('Ver cobertura e informes','View coverage and reports'))+'</a>':'';
+      var count=a.publishedCount+' '+pt('símbolos publicados de '+a.rowCount+' filas originales: '+a.valuationCount+' valoraciones de caja y '+a.reviewCount+' cribados o revisiones; no son análisis Stage 3 completos.', 'published symbols out of '+a.rowCount+' source rows: '+a.valuationCount+' cash-flow valuations and '+a.reviewCount+' screens or reviews; these are not full Stage 3 analyses.');
+      return '<section class="panel scan-audit" data-scan-subset="'+esc(date)+'"><h3>'+esc(pt('Escáner parcial · cobertura de investigación','Partial scan · research coverage'))+'</h3><p>'+esc(count)+'</p><p>'+esc(pt('La lista completa tenía '+a.priorityCount+' símbolos con Opportunity ≥85 y '+a.researchPool+' candidatas provisionales tras exclusiones. Este subconjunto no es comparable a un escáner completo y no autoriza entradas.', 'The full source had '+a.priorityCount+' symbols at Opportunity ≥85 and '+a.researchPool+' provisional candidates after exclusions. The subset cannot be compared with a full scan and does not authorize entries.'))+'</p><p>'+esc(a.rawTimestamp+' · '+pt('Last del export, zona horaria no indicada; no es cierre regular. Los demás campos se dejan en blanco, sin inferir Stage 2.', 'Export Last, timezone unspecified; not a regular close. Other fields are blank, with no inferred Stage 2 pass.'))+'</p>'+subsetLink+'</section>';
+    }
     if(a.schema==='fp.scanner-import.v1') {
       var imported='<section class="panel scan-audit"><h3>'+esc(pt('Control de importación del escáner','Scanner import check'))+'</h3><p>'+esc(a.rawTimestamp+' · '+pt('zona horaria no indicada; cierre regular no certificado por el archivo.','timezone unspecified; the file does not certify a regular-session close.'))+'</p>';
       imported+='<p>'+esc(String(a.rowCount)+' '+pt('filas originales; ','original rows; ')+String(a.priorityCount)+' '+pt('con Opportunity ≥85. No equivale a pasar Stage 2.','with Opportunity ≥85. This does not establish a Stage 2 pass.'))+'</p>';
@@ -1672,7 +1682,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       labelled(cP("opm"), scannerAudit(S.scanDate) ? pt("Margen exportado (sin validar)", "Exported margin (unverified)") : C.opm), labelled(cM("fcf"), C.fcf), labelled(cN("qp", 0), C.qp),
       labelled(cN("opp", 0), C.opp), labelled(cN("rsi", 1), C.rsi)
     ];
-    if (scannerAudit(S.scanDate)) cols.splice(6,0,labelled(cP("verifiedOpm"),pt("Margen operativo GAAP verificado", "Verified GAAP operating margin")));
+    if (scannerReviewSubset(S.scanDate)) cols=[cols[0],cols[1],labelled(cM("price"),pt("Last del escáner","Scanner Last")),cols[7],cols[8]];
+    else if (scannerAudit(S.scanDate)) cols.splice(6,0,labelled(cP("verifiedOpm"),pt("Margen operativo GAAP verificado", "Verified GAAP operating margin")));
     var ctl = '<div class="controls"><label class="inline" for="scan-date">' + esc(t().date) + ' <select id="scan-date">' +
       dates.map(function (d) { return '<option value="' + esc(d) + '"' + (d === S.scanDate ? " selected" : "") + ">" + esc(fmtD(d)) + "</option>"; }).join("") +
       '</select></label><button type="button" class="chip" id="only-s2" aria-pressed="' + S.onlyS2 + '">' + esc(t().onlyS2) + '</button>' +
@@ -2167,8 +2178,9 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         if(linkedDate===date&&profile.ticker&&rows.some(function(r){return r.ticker===profile.ticker;}))linked.add(profile.ticker);
       });
     });
-    var count=linked.size,audit=scannerAudit(date);
-    var h='<section class="panel latest-scanner-notice" data-scan-date="'+esc(date)+'"><h3>'+esc(pt('Último escáner · ','Latest scanner · ')+fmtD(date))+'</h3><p>'+esc(rows.length+' '+pt('símbolos publicados; ','published symbols; ')+qual+' '+pt('con Opportunity ≥85. ','with Opportunity ≥85. ')+(count?count+' '+pt('empresas con registros de investigación o revisión asociados a este escáner.','companies with research or review records linked to this scan.'):pt('Todavía no hay registros de investigación asociados a este escáner.','No research records are linked to this scan yet.')) )+'</p><p class="muted">'+esc(pt('Opportunity ≥85 es solo un filtro de puntuación: no certifica Stage 1, Stage 2, un análisis completo ni autoriza una compra. Los escáneres e informes anteriores se conservan en el archivo.','Opportunity ≥85 is only a score filter: it does not certify Stage 1, Stage 2, completed research or authorize a purchase. Earlier scans and reports remain in the archive.'))+'</p><div class="controls"><a class="btn" href="#escaner" data-latest-scan="'+esc(date)+'">'+esc(pt('Ver último escáner','View latest scanner'))+'</a><a class="btn" href="#resumen" data-latest-overview="'+esc(date)+'">'+esc(pt('Resumen diario y archivo','Daily overview and archive'))+'</a><a class="btn" href="#fichas">'+esc(pt('Buscar investigación','Find research'))+'</a>';
+    var count=linked.size,audit=scannerAudit(date),subset=scannerReviewSubset(date);
+    var h='<section class="panel latest-scanner-notice" data-scan-date="'+esc(date)+'"><h3>'+esc((subset?pt('Último escáner publicado · parcial · ','Latest published scanner · partial · '):pt('Último escáner · ','Latest scanner · '))+fmtD(date))+'</h3><p>'+esc(rows.length+' '+pt('símbolos publicados; ','published symbols; ')+qual+' '+pt('con Opportunity ≥85. ','with Opportunity ≥85. ')+(count?count+' '+pt('empresas con registros de investigación o revisión asociados a este escáner.','companies with research or review records linked to this scan.'):pt('Todavía no hay registros de investigación asociados a este escáner.','No research records are linked to this scan yet.')) )+'</p><p class="muted">'+esc(pt('Opportunity ≥85 es solo un filtro de puntuación: no certifica Stage 1, Stage 2, un análisis completo ni autoriza una compra. Los escáneres e informes anteriores se conservan en el archivo.','Opportunity ≥85 is only a score filter: it does not certify Stage 1, Stage 2, completed research or authorize a purchase. Earlier scans and reports remain in the archive.'))+'</p><div class="controls"><a class="btn" href="#escaner" data-latest-scan="'+esc(date)+'">'+esc(pt('Ver último escáner','View latest scanner'))+'</a><a class="btn" href="#resumen" data-latest-overview="'+esc(date)+'">'+esc(pt('Resumen diario y archivo','Daily overview and archive'))+'</a><a class="btn" href="#fichas">'+esc(pt('Buscar investigación','Find research'))+'</a>';
+    if(subset)h+='<a class="btn" href="#fichas?filter=all&amp;sort=ticker&amp;scans=1">'+esc(pt('Fichas del subconjunto','Profiles in the subset'))+'</a>';
     if(audit&&audit.reportId)h+='<a class="btn" href="#biblioteca/'+encodeURIComponent(audit.reportId)+'">'+esc(pt('Control de calidad y fuentes','Data quality and sources'))+'</a>';
     if(audit&&/^A[0-9]+$/.test(audit.reconciliationReportId||''))h+='<a class="btn" href="#biblioteca/'+encodeURIComponent(audit.reconciliationReportId)+'">'+esc(pt('Estado de la investigación y próximos eventos','Research status and upcoming events'))+'</a>';
     return h+'</div></section>';
@@ -2240,7 +2252,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     h += '<div class="home-grid">';
     /* latest scan + decisions */
     if (S.scan) {
-      var dates = scanDates(), d0 = dates[0], d1 = dates[1];
+      var dates = scanDates().filter(function(d){return !scannerReviewSubset(d);}), d0 = dates[0], d1 = dates[1];
       function cset(dt) { var o = {}; S.scan.forEach(function (r) { if (r.date === dt && r.opp !== null && r.opp >= 85) o[r.ticker] = 1; }); return o; }
       var rowsN = S.scan.filter(function (r) { return r.date === d0; }).length, c0 = cset(d0), c1 = d1 ? cset(d1) : null;
       var nNew = c1 ? Object.keys(c0).filter(function (k) { return !c1[k]; }).length : null;
@@ -2810,11 +2822,11 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     return {days:days,selected:valid?selected:[],requested:requested,tickers:tickers,valid:valid};
   }
   function profileScanLabel() {
-    return S.profileScans==='all'?pt('Sin filtro de escáner','No scan restriction'):S.profileScans==='any'?pt('Todos los escáneres','All scanner sessions'):S.profileScans==='1'?pt('Último escáner','Latest scan'):pt('Últimos ','Last ')+S.profileScans+pt(' escáneres',' scans');
+    return S.profileScans==='all'?pt('Sin filtro de escáner','No scan restriction'):S.profileScans==='any'?pt('Todos los escáneres','All scanner sessions'):S.profileScans==='1'?(scannerReviewSubset(scanDates()[0])?pt('Último escáner · parcial','Latest scan · partial'):pt('Último escáner','Latest scan')):pt('Últimos ','Last ')+S.profileScans+pt(' escáneres',' scans');
   }
   function profileScanControls() {
     var custom=S.profileScanCustom||(S.profileScans!=='all'&&S.profileScans!=='any'&&S.profileScans!=='1'),cohort=profileScanCohort();
-    var h='<label for="profile-scans">'+esc(pt('Escáneres incluidos','Scans included'))+'<select id="profile-scans" aria-describedby="profile-scans-note"><option value="all"'+(S.profileScans==='all'?' selected':'')+'>'+esc(pt('Todas las acciones · sin filtro','All stocks · no scan filter'))+'</option><option value="any"'+(S.profileScans==='any'?' selected':'')+'>'+esc(pt('Todos los escáneres','All scanner sessions'))+'</option><option value="1"'+(S.profileScans==='1'&&!custom?' selected':'')+'>'+esc(pt('Último escáner','Latest scan'))+'</option><option value="custom"'+(custom?' selected':'')+'>'+esc(pt('Últimos N escáneres…','Last N scans…'))+'</option></select></label>';
+    var h='<label for="profile-scans">'+esc(pt('Escáneres incluidos','Scans included'))+'<select id="profile-scans" aria-describedby="profile-scans-note"><option value="all"'+(S.profileScans==='all'?' selected':'')+'>'+esc(pt('Todas las acciones · sin filtro','All stocks · no scan filter'))+'</option><option value="any"'+(S.profileScans==='any'?' selected':'')+'>'+esc(pt('Todos los escáneres','All scanner sessions'))+'</option><option value="1"'+(S.profileScans==='1'&&!custom?' selected':'')+'>'+esc(scannerReviewSubset(scanDates()[0])?pt('Último escáner · parcial','Latest scan · partial'):pt('Último escáner','Latest scan'))+'</option><option value="custom"'+(custom?' selected':'')+'>'+esc(pt('Últimos N escáneres…','Last N scans…'))+'</option></select></label>';
     if(custom)h+='<label class="profile-scan-number" for="profile-scan-count">'+esc(pt('Número de escáneres','Number of scans'))+'<input id="profile-scan-count" type="number" min="1" step="1" inputmode="numeric" value="'+esc(S.profileScans)+'" aria-invalid="'+!cohort.valid+'" aria-describedby="profile-scans-note"></label>';
     return h;
   }
@@ -3801,7 +3813,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   /* ---------- data loading ---------- */
   var mcpNS = null;
   var PARTS = {
-    scan: function (v) { var rows=fullNames(numify(rowsToObjects(v, SCAN_MAP), NUM_SCAN)); rows.forEach(function(r){var a=scannerAudit(r.date),c=a&&a.corrections[r.ticker];r.verifiedOpm=c?c.verifiedOperatingMargin:null;});return rows; },
+    scan: function (v) { var rows=fullNames(numify(rowsToObjects(v, SCAN_MAP), NUM_SCAN)); rows.forEach(function(r){var a=scannerAudit(r.date),c=a&&a.corrections&&a.corrections[r.ticker];r.verifiedOpm=c?c.verifiedOperatingMargin:null;});return rows; },
     dec: function (v) { return fullNames(numify(rowsToObjects(v, DEC_MAP), NUM_DEC)); },
     ops: function (v) { return numify(rowsToObjects(v, OPS_MAP), NUM_OPS); },
     ges: function (v) { return numify(rowsToObjects(v, GES_MAP), ["stop", "m"]).map(function (r) { r.trailN = num(r.trail); return r; }); },
