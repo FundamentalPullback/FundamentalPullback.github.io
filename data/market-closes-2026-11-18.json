@@ -1,0 +1,89 @@
+{
+  "asOf": "2026-11-18",
+  "source": "Dated StockAnalysis / S&P Global Market Intelligence regular-session close (16:00 ET); cross-checked against authorized daily history and public corroboration where different",
+  "retrievedAt": "2026-11-19T00:58:16.918Z",
+  "sessions": {
+    "2026-11-18": {
+      "SPY": 730.2,
+      "ASO": 73.05,
+      "CTSH": 57.95,
+      "DOCU": 76.58,
+      "EXLS": 42.23,
+      "JXN": 132.6,
+      "ULTA": 648.51
+    }
+  },
+  "evidence": {
+    "2026-11-18": {
+      "SPY": {
+        "sessionDate": "2026-11-18",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/etf/spy/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-19T00:58:16.918Z"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-18",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/aso/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-19T00:58:16.918Z"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-18",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ctsh/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-19T00:58:16.918Z"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-18",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/docu/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-19T00:58:16.918Z"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-18",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/exls/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-19T00:58:16.918Z"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-18",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/jxn/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-19T00:58:16.918Z"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-18",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ulta/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-19T00:58:16.918Z"
+      }
+    }
+  },
+  "reconciliation": {
+    "Historial": "Daily series matched five of seven, including CTSH; public dated evidence used for all seven.",
+    "differences": {
+      "ASO": {
+        "sheet": 73.07,
+        "selected": 73.05,
+        "resolution": "Dated StockAnalysis close and Investing.com Canada daily historical close agree.",
+        "corroboratingDailyUrl": "https://ca.investing.com/equities/academy-sports-outdoors-inc-historical-data"
+      },
+      "EXLS": {
+        "sheet": 42.21,
+        "selected": 42.23,
+        "resolution": "Dated StockAnalysis and CloseLook daily closes agree; 42.21 was the day's low in both sources.",
+        "corroboratingDailyUrl": "https://closelook.net/indices/stock/exls/price-history"
+      }
+    },
+    "calendar": "Normal Wednesday session 09:30–16:00 ET, no exceptional closure identified.",
+    "calendarUrl": "https://www.nyse.com/trade/hours-calendars",
+    "scope": "Market history only. The existing public operations ledger stays unchanged; strategy totals remain provisional and are not a brokerage statement."
+  }
+}
