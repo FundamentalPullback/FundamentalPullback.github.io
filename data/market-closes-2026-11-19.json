@@ -1,0 +1,88 @@
+{
+  "asOf": "2026-11-19",
+  "source": "Dated regular-session closes from public sources, checked against the authorized daily historical series. No after-hours or Last values.",
+  "retrievedAt": "2026-11-20T00:52:17.053Z",
+  "sessions": {
+    "2026-11-19": {
+      "SPY": 715.87,
+      "ASO": 70.48,
+      "CTSH": 56.31,
+      "DOCU": 75.06,
+      "EXLS": 41.17,
+      "JXN": 129.56,
+      "ULTA": 629.34
+    }
+  },
+  "evidence": {
+    "2026-11-19": {
+      "SPY": {
+        "sessionDate": "2026-11-19",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/etf/spy/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-20T00:52:17.053Z"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-19",
+        "priceType": "regular-close",
+        "url": "https://ca.investing.com/equities/academy-sports-outdoors-inc-historical-data",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-20T00:52:17.053Z"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-19",
+        "priceType": "regular-close",
+        "url": "https://ca.investing.com/equities/cognizant-technology-solutio-historical-data",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-20T00:52:17.053Z"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-19",
+        "priceType": "regular-close",
+        "url": "https://stockcharted.com/docu/6-months",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-20T00:52:17.053Z"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-19",
+        "priceType": "regular-close",
+        "url": "https://chartexchange.com/symbol/nasdaq-exls/historical/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-20T00:52:17.053Z"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-19",
+        "priceType": "regular-close",
+        "url": "https://stockcharted.com/jxn/today",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-20T00:52:17.053Z"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-19",
+        "priceType": "regular-close",
+        "url": "https://finance.yahoo.com/quote/ULTA/?ltr=1",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-20T00:52:17.053Z"
+      }
+    }
+  },
+  "reconciliation": {
+    "Historial": "Daily series matched six of seven, including CTSH; EXLS reconciled to two independently displayed regular-session closes.",
+    "differences": {
+      "EXLS": {
+        "sheet": 41.18,
+        "selected": 41.17,
+        "resolution": "ChartExchange dated closing row and StockAnalysis timestamped regular close agree; Stage 4 A602 shows the same regular close.",
+        "corroboratingDailyUrl": "https://stockanalysis.com/stocks/exls/"
+      },
+      "CTSH": {
+        "selected": 56.31,
+        "resolution": "Dated Investing.com agrees with the Sheet; Google Finance displays the same timestamped regular close. A different StockAnalysis snapshot showed 56.32.",
+        "corroboratingDailyUrl": "https://www.google.com/finance/quote/CTSH:NASDAQ"
+      }
+    },
+    "calendar": "Normal Thursday session 09:30–16:00 ET, no exceptional closure identified.",
+    "calendarUrl": "https://www.nyse.com/trade/hours-calendars",
+    "scope": "Market history only. Existing public operations ledger unchanged; totals remain provisional and are not a brokerage statement."
+  }
+}
