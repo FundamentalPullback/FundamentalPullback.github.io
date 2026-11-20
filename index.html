@@ -1796,7 +1796,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   function execLine(r) { var e = execState(r); return e ? '<div class="exec exec-' + e.cls + '"><b>' + esc(t().apst.execLbl) + ":</b> " + esc(e.text) + "</div>" : ""; }
   function approvalStatus(r) {
     var A = t().apst;
-    var held = positions().list.some(function (p) { return p.ticker === r.ticker && p.shares > 0; });
+    var held = currentPositions().some(function (p) { return p.ticker === r.ticker; });
     if (held) return { code: "held", label: A.held };
     var from = String(r.adate || r.date || "");
     var buy = (S.ops || []).filter(function (o) { return o.ticker === r.ticker && isoDay(o.date) && isoDay(o.date) >= from && !/^(venta|sell)/i.test(String(o.type || "").trim()); })[0];
@@ -1821,7 +1821,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var A = t().apst, C = t().col;
     var base = S.latestOnly ? latestPerTicker(S.dec) : S.dec;
     var rows = base.filter(function (r) { return isApproved(r.decision); });
-    var openTk = {}; positions().list.forEach(function (p) { if (p.shares > 0) openTk[p.ticker] = 1; });
+    var openTk = {}; currentPositions().forEach(function (p) { openTk[p.ticker] = 1; });
     var heldRows = base.filter(function (r) { return r.decision === "En cartera" && openTk[r.ticker]; }).sort(function (a, b) { return String(a.ticker).localeCompare(String(b.ticker)); });
     rows.forEach(function (r) { var s = approvalStatus(r); r.st = s.code; r.stLabel = s.label; });
     if (!S.sort.app) S.sort.app = { key: "date", dir: "desc" };
@@ -1855,7 +1855,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   function vOperaciones() {
     var g = guard(["ops"]);
     if (g) return head(t().opsTitle, t().opsLede) + g;
-    var h = head(t().opsTitle, t().opsLede) + incompleteAccountingNotice();
+    var h = head(t().opsTitle, t().opsLede) + (pendingExitAccounting() ? reconciliationNotice() : incompleteAccountingNotice());
     var rows = S.ops.filter(function (r) { return r.ticker; });
     if (!rows.length) return h + notice(t().opsTitle, t().noOps);
     var W = positions().warn; if (W.length) h += notice(t().wTitle, W.join(" · "));
@@ -1864,8 +1864,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var totR = prow.some(function (p) { return p.realized === null; }) ? null : prow.reduce(function (a, p) { return a + p.realized; }, 0);
     var totC = prow.reduce(function (a, p) { return a + p.cost; }, 0);
     var nOpen = prow.filter(function (p) { return p.shares > 0; }).length;
-    h += '<div class="figures"><div class="fig"><b>' + nOpen + '</b><span>' + esc(t().fOpen) + '</span></div><div class="fig"><b>' + esc(fmtM(totC, 0)) + '</b><span>' + esc(t().fCost) + '</span></div><div class="fig"><b class="' + signCls(totR) + '">' + esc(fmtM(totR, 0)) + '</b><span>' + esc(t().fReal) + '</span></div><div class="fig"><b>' + rows.length + '</b><span>' + esc(t().fTrades) + '</span></div></div>';
-    h += '<div class="panel"><div><h3>' + esc(t().posTitle) + '</h3><p class="lede">' + esc(t().posLede) + '</p></div>' + table("pos", [
+    h += '<div class="figures"><div class="fig"><b>' + nOpen + '</b><span>' + esc(pendingExitAccounting() ? pt("Abiertas según el diario PAPER histórico", "Open in historical PAPER ledger") : t().fOpen) + '</span></div><div class="fig"><b>' + esc(fmtM(totC, 0)) + '</b><span>' + esc(t().fCost) + '</span></div><div class="fig"><b class="' + signCls(totR) + '">' + esc(fmtM(totR, 0)) + '</b><span>' + esc(t().fReal) + '</span></div><div class="fig"><b>' + rows.length + '</b><span>' + esc(t().fTrades) + '</span></div></div>';
+    h += '<div class="panel"><div><h3>' + esc(pendingExitAccounting() ? pt("Posiciones del diario PAPER histórico", "Historical PAPER ledger positions") : t().posTitle) + '</h3><p class="lede">' + esc(t().posLede) + '</p></div>' + table("pos", [
       labelled(cT("ticker", "t"), C.ticker), labelled(cT("state"), t().state),
       labelled({ key: "shares", num: true, cell: function (r) { return '<td class="n">' + esc(fmtSh(r.shares)) + '</td>'; } }, C.shares),
       labelled(cM("avg"), t().avgCost), labelled(cM("cost"), t().openCost),
@@ -1937,9 +1937,9 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     return complete ? day : null;
   }
   /* positions at average cost, shared by Operaciones and Cartera */
-  function positions() {
+  function positions(sourceRows) {
     var pos = {}, order = [], sales = [], fees = 0, warn = [], incompleteFees = false;
-    var rows = (S.ops || []).filter(function (r) { return r.ticker; });
+    var rows = (sourceRows || S.ops || []).filter(function (r) { return r.ticker; });
     rows.slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); }).forEach(function (r) {
       if (r.shares === null || r.exec === null) return;
       var p = pos[r.ticker]; if (!p) { p = pos[r.ticker] = { ticker: r.ticker, shares: 0, cost: 0, realized: 0, stop: null }; order.push(r.ticker); }
@@ -1960,6 +1960,29 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   }
 
 
+  // Confirmed public Stage 4 exit status only. Do not turn private fills into public trade rows.
+  var CONFIRMED_EXITS = { DOCU: "2026-11-18", CTSH: "2026-11-18" };
+  function currentPositions() {
+    var rows = (S.ops || []).filter(function (r) {
+      var closed = CONFIRMED_EXITS[r.ticker];
+      return !closed || isoDay(r.date) > closed;
+    });
+    return positions(rows).list.filter(function (p) { return p.shares > 0; });
+  }
+  function pendingExitAccounting(P) {
+    return (P || positions()).list.some(function (p) {
+      if (!CONFIRMED_EXITS[p.ticker]) return false;
+      var shares = (S.ops || []).filter(function (r) { return r.ticker === p.ticker && isoDay(r.date) <= CONFIRMED_EXITS[p.ticker] && r.shares > 0 && r.exec > 0; })
+        .reduce(function (n, r) { return n + (/^(compra|buy)/i.test(String(r.type || "").trim()) ? r.shares : /^(venta|sell)/i.test(String(r.type || "").trim()) ? -r.shares : 0); }, 0);
+      return shares > 1e-6;
+    });
+  }
+  function reconciliationNotice() {
+    return notice(pt("Vista actual separada del historial PAPER", "Current view separate from PAPER history"),
+      pt("DOCU y CTSH cerraron el 18 de noviembre (Stage 4 A600). No figuran como abiertas. El historial conserva el registro publicado, que todavía no incorpora esas salidas; el efectivo y el valor total actuales no se infieren.",
+        "DOCU and CTSH closed on November 18 (Stage 4 A600). They are not shown as open. The historical PAPER record has not incorporated those exits; current cash and total account value are not inferred."));
+  }
+
   /* ---------- positions: latest management review + latest valuation ---------- */
   var TRAIL_EN = { "Inactivo": "Inactive", "Activo; número pendiente": "Active; level pending", "Activación confirmada; nivel pendiente": "Activation confirmed; level pending" };
   function vPosiciones() {
@@ -1968,7 +1991,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if (g) return head(K.title, K.lede) + g;
     function sub(str, o) { return str.replace(/\{(\w+)\}/g, function (m, k) { return o[k] !== undefined ? o[k] : m; }); }
     var positionState = positions();
-    var open = positionState.list.filter(function (p) { return p.shares > 0; });
+    var open = currentPositions();
     var hrbPartials = (S.ops || []).filter(function (r) { return r.ticker === "HRB" && /^(venta|sell)/i.test(String(r.type || "")) && /\bA247\b/.test(String(r.signal || "")) && r.shares > 0; });
     var hrbPosition = positionState.list.filter(function (p) { return p.ticker === "HRB"; })[0];
     var hrbSold = hrbPartials.reduce(function (n, r) { return n + r.shares; }, 0);
@@ -2081,7 +2104,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
   /* One complete valuation set: never mix old snapshot holdings with new quotes. */
   function accountQuotes(open) {
     var L = S.live;
-    open = open || positions().list.filter(function (p) { return p.shares > 0; });
+    open = open || currentPositions();
     var valid = feedAfterTrades(L) && L.at >= Date.parse(S.snapshot || "1970-01-01") &&
       ["SPY"].concat(open.map(function (p) { return p.ticker; })).every(function (tk) {
         var q = L.prices[tk]; return q && Number.isFinite(q.p) && q.p > 0 && Number.isFinite(q.prev) && q.prev > 0;
@@ -2094,7 +2117,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var text = current ? (en ? "Latest available Google prices (not real-time). Refresh checked every 2 minutes; quotes may be delayed up to 20 minutes. " : "Últimos precios disponibles de Google (no en tiempo real). Consulta cada 2 minutos; cotizaciones con hasta 20 minutos de retraso. ") :
       (en ? "Using the saved price snapshot of " : "Usando los precios guardados del ") + fmtD(S.snapshot) + ". ";
     if (ledgerAfterSnapshot()) text += (en ? "Recorded trades through " : "Operaciones registradas hasta ") + fmtD(ledgerDay()) + (en ? "; historical closes remain through " : "; cierres históricos hasta ") + fmtD(S.snapshot) + (en ? ". Without a current feed, valuation uses these older prices only if every holding has one; otherwise account value, unrealized P&L and allocation are unavailable. Session P&L is unavailable. " : ". Sin una fuente actual, se usan estos precios anteriores solo si están todas las posiciones; si falta alguna, no se muestra valor total, resultado no realizado ni distribución. El resultado de la sesión no está disponible. ");
-    if (current) text += en ? "Session P&L includes recorded fills and fees; it is unavailable if a required prior close is missing. " : "El resultado de la sesión incluye ejecuciones y comisiones registradas; no está disponible si falta un cierre anterior necesario. ";
+    if (current && !pendingExitAccounting()) text += en ? "Session P&L includes recorded fills and fees; it is unavailable if a required prior close is missing. " : "El resultado de la sesión incluye ejecuciones y comisiones registradas; no está disponible si falta un cierre anterior necesario. ";
     if (L && L.at) text += (en ? "Sheet recalculated: " : "Hoja recalculada: ") + new Intl.DateTimeFormat(loc(), { timeZone: "America/New_York", dateStyle: "medium", timeStyle: "short" }).format(new Date(L.at)) + " (New York). ";
     if (L && L.readAt) text += (en ? "Last successful check: " : "Última consulta correcta: ") + new Intl.DateTimeFormat(loc(), {timeZone: "America/New_York", hour: "2-digit", minute: "2-digit"}).format(new Date(L.readAt)) + " (New York). ";
     text += en ? "The feed does not provide an exchange quote timestamp. Positions and historical chart remain the published record." : "La fuente no proporciona la hora de cotización de la bolsa. Las posiciones y la curva histórica siguen siendo el registro publicado.";
@@ -2116,7 +2139,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
           if (i === 0 && /^\d+$/.test(String(r[3] || "").trim())) L.at = +String(r[3]).trim() * 1000;
           if (tk) L.prices[tk] = { p: liveInt(r[1]), prev: liveInt(r[2]) };
         });
-        var required = ["SPY"].concat(positions().list.filter(function (p) { return p.shares > 0; }).map(function (p) { return p.ticker; }));
+        var required = ["SPY"].concat(currentPositions().map(function (p) { return p.ticker; }));
         if (!L.at || L.at > Date.now() + 5 * 60000 || required.some(function (tk) { var q = L.prices[tk]; return !q || !(q.p > 0) || !(q.prev > 0); })) throw new Error("incomplete feed");
         if (S.live && L.at < S.live.at) throw new Error("older feed");
         S.live = L; S.liveError = false;
@@ -2189,7 +2212,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var H = t().home, K = t().cart;
     var g = guard(["ops", "acct"]);
     if (g) return head(t().tabs.inicio, "") + g;
-    var X = acctCalc(), A = X.A;
+    var X = acctCalc(true), A = X.A;
     var asOf = ledgerAfterSnapshot() ? ledgerDay() : (S.snapshot || isoDay(new Date().toISOString()));
     var nDays = A.start && asOf ? Math.max(1, Math.round((Date.parse(asOf) - Date.parse(isoDay(A.start) || A.start)) / 864e5)) : null;
     var pts = X.excess !== null ? H.pts.replace("{p}", fmtN(Math.abs(X.excess) * 100, 1)) : "—";
@@ -2197,7 +2220,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var tpl = X.ret >= 0 ? (X.excess !== null && X.excess < 0 ? H.hlUpBehind : H.hlUp) : H.hlDown;
     var hl = esc(tpl).replace("{r}", '<span class="' + signCls(X.ret) + '">' + esc(rTxt) + "</span>").replace("{n}", esc(String(nDays || "—"))).replace("{x}", '<span class="' + signCls(X.excess) + '">' + esc(pts) + "</span>");
     if (X.current) hl = esc(K.total + ": " + fmtP(X.ret, 2) + " · " + K.vsSpy + ": " + fmtP(X.excess, 2));
-    if (X.P.incompleteFees) hl = esc(lang === "en" ? "Current net totals unavailable: fee not published." : "Totales netos actuales no disponibles: comisión no publicada.");
+    if (X.pending) hl = esc(pt("Totales actuales pendientes de conciliación.", "Current account totals pending reconciliation."));
+    else if (X.P.incompleteFees) hl = esc(lang === "en" ? "Current net totals unavailable: fee not published." : "Totales netos actuales no disponibles: comisión no publicada.");
     function more(view, label) { return '<button type="button" class="more-link" data-goview="' + view + '">' + esc(label) + "</button>"; }
     function secHead(title, sub, link) { return "<header><div><h3>" + esc(title) + "</h3>" + (sub ? "<small>" + esc(sub) + "</small>" : "") + "</div>" + (link || "") + "</header>"; }
 
@@ -2207,7 +2231,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       '<p class="home-sub">' + esc(H.sub.replace("{s}", fmtD(isoDay(A.start) || A.start))) + "</p></div>" +
       '<img class="home-emblem" src="img/emblem-320.png" width="220" height="220" alt="Fundamental Pullback"></div>';
 
-    h += incompleteAccountingNotice();
+    h += X.pending ? reconciliationNotice() : incompleteAccountingNotice();
     h += '<section class="panel profile-home"><div><h3>' + esc(pt('Encuentra la ficha de cualquier acción', 'Find any stock profile')) + '</h3><p>' + esc(pt('Busca por ticker o empresa y recupera su análisis e historial.', 'Search by ticker or company to retrieve its research and history.')) + '</p></div><a class="btn" href="#fichas">' + esc(pt('Buscar acciones →', 'Find a stock →')) + '</a></section>';
     h += latestScannerNotice();
     h += priceStatus();
@@ -2216,7 +2240,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     /* account curve */
     h += '<p class="muted">' + esc((lang === "en" ? "Historical closes through " : "Cierres históricos hasta ") + fmtD((X.eq && X.eq.length ? X.eq[X.eq.length - 1].d : S.snapshot))) + "</p>";
     h += '<div class="home-chart">';
-    if (X.eq && X.eq.length > 1) h += '<div class="sec-head"><div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" + more("cartera", H.seeCart) + "</div>" +
+    if (X.eq && X.eq.length > 1) h += '<div class="sec-head"><div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(X.pending ? pt("Historial PAPER sin conciliar", "Unreconciled PAPER history") : K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" + more("cartera", H.seeCart) + "</div>" +
       '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
     else h += '<p class="muted">' + esc(K.noHist) + "</p>";
     h += '<div class="home-stats">' +
@@ -2283,7 +2307,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     h += '<div class="home-sec">' + secHead(H.posTitle, "", more("posiciones", H.seePos));
     h += open.length ? '<ul class="home-list">' + open.map(function (p) {
       var w = X.total ? p.value / X.total : null;
-      return '<li><span class="t">' + esc(p.ticker) + '</span><span class="r ' + signCls(p.uplPct) + '">' + esc((p.uplPct > 0 ? "+" : "") + fmtP(p.uplPct, 1)) + "</span><small>" + esc(fmtM(p.value) + " · " + fmtP(w, 1) + " " + H.weight) + "</small></li>";
+      return '<li><span class="t">' + esc(p.ticker) + '</span><span class="r ' + signCls(p.uplPct) + '">' + esc((p.uplPct > 0 ? "+" : "") + fmtP(p.uplPct, 1)) + "</span><small>" + esc(fmtM(p.value) + (w === null ? "" : " · " + fmtP(w, 1) + " " + H.weight)) + "</small></li>";
     }).join("") + "</ul>" : '<p class="muted">' + esc(K.none) + "</p>";
     h += "</div>";
 
@@ -2300,10 +2324,11 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     return h;
   }
   /* account figures shared by the home page and the Portfolio tab */
-  function acctCalc() {
-    var A = S.acct, P = positions(), quotes = accountQuotes();
+  function acctCalc(currentView) {
+    var A = S.acct, P = positions(), pending = !!currentView && pendingExitAccounting(P);
     var cap = A.capital;
-    var open = P.list.filter(function (p) { return p.shares > 0; });
+    var open = currentView ? currentPositions() : P.list.filter(function (p) { return p.shares > 0; });
+    var quotes = accountQuotes(open);
     var missing = [];
     open.forEach(function (p) {
       var q = quotes.prices[p.ticker] || {};
@@ -2319,6 +2344,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var openCost = sum(open, "cost"), invested = missing.length ? null : sum(open, "value"), unreal = missing.length || P.incompleteFees ? null : sum(open, "upl"), realized = sum(P.list, "realized"), day = sum(open, "dayAmt");
     if (P.incompleteFees) realized = null;
     var cash = cap !== null && realized !== null ? cap - openCost + realized : null;
+    if (pending) { cash = null; realized = null; }
     var total = cash !== null && invested !== null ? cash + invested : null;
     var totPL = realized !== null && unreal !== null ? realized + unreal : null;
     var ret = cap && totPL !== null ? totPL / cap : null;
@@ -2328,19 +2354,20 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var eq = equitySeries(null);
     S.eq = eq;
     /* day change from the account-value series: includes shares sold during the day and recorded fees */
-    if (quotes.current) day = currentDayPL(open);
+    if (pending) day = null;
+    else if (quotes.current) day = currentDayPL(open);
     else if (ledgerAfterSnapshot()) day = null;
     else if (eq && eq.length > 1 && total !== null) day = total - eq[eq.length - 2].v;
     var dayBase = day === null ? null : (!quotes.current && eq && eq.length > 1 ? eq[eq.length - 2].v : (total !== null ? total - day : null));
     var dayPct = dayBase ? day / dayBase : null;
     if (P.incompleteFees) { day = null; dayBase = null; dayPct = null; }
-    return { current: quotes.current, A: A, P: P, cap: cap, open: open, missing: missing, openCost: openCost, invested: invested, unreal: unreal, realized: realized, day: day, cash: cash, total: total, totPL: totPL, ret: ret, spyRet: spyRet, excess: excess, eq: eq, dayBase: dayBase, dayPct: dayPct };
+    return { current: quotes.current, pending: pending, A: A, P: P, cap: cap, open: open, missing: missing, openCost: openCost, invested: invested, unreal: unreal, realized: realized, day: day, cash: cash, total: total, totPL: totPL, ret: ret, spyRet: spyRet, excess: excess, eq: eq, dayBase: dayBase, dayPct: dayPct };
   }
   function vCartera() {
     var K = t().cart, C = t().col;
     var g = guard(["ops", "acct"]);
     if (g) return head(K.title, K.lede) + g;
-    var X = acctCalc();
+    var X = acctCalc(true);
     var A = X.A, P = X.P, cap = X.cap, open = X.open, missing = X.missing, openCost = X.openCost, invested = X.invested, unreal = X.unreal, realized = X.realized, day = X.day;
     var cash = X.cash, total = X.total, totPL = X.totPL, ret = X.ret, spyRet = X.spyRet, excess = X.excess, eq = X.eq, dayBase = X.dayBase, dayPct = X.dayPct;
     function sum(list, k) { return list.reduce(function (a, x) { return a + (x[k] || 0); }, 0); }
@@ -2355,12 +2382,12 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       '<div><span class="eyebrow">' + esc(X.current ? (lang === "en" ? "Versus previous close" : "Frente al cierre anterior") : LV.lastSession) + '</span><b class="' + signCls(day) + '">' + esc(sgnM(day)) + '</b><small class="' + signCls(dayPct) + '">' + esc(fmtP(dayPct, 2)) + "</small></div></div></div>";
     if (eq && eq.length > 1) {
       h += '<p class="muted">' + esc((lang === "en" ? "Historical closes through " : "Cierres históricos hasta ") + fmtD((X.eq && X.eq.length ? X.eq[X.eq.length - 1].d : S.snapshot))) + "</p>";
-      h += '<div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" +
+      h += '<div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(X.pending ? pt("Historial PAPER sin conciliar", "Unreconciled PAPER history") : K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" +
         '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
     } else h += '<p class="muted">' + esc(K.noHist) + "</p>";
     h += "</div>";
     h = grossAccountingPanel() + h;
-    h += incompleteAccountingNotice() + priceStatus() + livePanel(open, cash);
+    h += (X.pending ? reconciliationNotice() : incompleteAccountingNotice()) + priceStatus() + livePanel(open, cash);
     var acctNote = lang === "en" && A.noteEn ? A.noteEn : A.note;
     if (acctNote) { var nm = /^([^:]{6,60}):\s*([\s\S]+)$/.exec(acctNote); h += nm ? '<details class="why-fold acct-note"><summary>' + esc(nm[1]) + "</summary><p>" + esc(nm[2]) + "</p></details>" : '<p class="acct-note">' + esc(acctNote) + "</p>"; }
     if (missing.length) h += notice(K.title, K.noPrice + " " + missing.join(", ") + ".");
@@ -2390,7 +2417,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       ang = a2;
     });
     var donut = '<div class="alloc"><svg viewBox="0 0 200 200" class="donut" role="img" aria-label="' + esc(slices.map(function (s) { return s.label + " " + fmtP(s.value / tot); }).join(", ")) + '">' + paths +
-      '<text x="100" y="96" text-anchor="middle" class="d-big">' + esc(fmtP(total ? invested / total : null, 0)) + '</text><text x="100" y="116" text-anchor="middle" class="d-small">' + esc(K.invested) + "</text></svg>" +
+      '<text x="100" y="96" text-anchor="middle" class="d-big">' + esc(X.pending ? String(open.length) : fmtP(total ? invested / total : null, 0)) + '</text><text x="100" y="116" text-anchor="middle" class="d-small">' + esc(X.pending ? pt("Posiciones", "Positions") : K.invested) + "</text></svg>" +
       '<ul class="alloc-list">' + slices.map(function (s) { return '<li><i style="background:' + s.color + '"></i><span class="t">' + esc(s.label) + '</span><span class="n">' + esc(fmtP(s.value / tot)) + '</span><span class="n muted">' + esc(fmtM(s.value, 0)) + "</span></li>"; }).join("") + "</ul></div>";
     var priced = open.filter(function (p) { return p.uplPct !== null; }).slice().sort(function (a, b) { return b.uplPct - a.uplPct; });
     var mx = Math.max.apply(null, priced.map(function (p) { return Math.abs(p.uplPct); }).concat([0.0001]));
@@ -2399,10 +2426,10 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
         var w = Math.abs(p.uplPct) / mx * 50, pos = p.uplPct >= 0;
         return '<div class="plrow" title="' + esc(p.ticker + " · " + fmtP(p.uplPct) + " · " + fmtM(p.upl, 0)) + '"><span class="t">' + esc(p.ticker) + '</span><span class="pltrack"><i class="plbar" style="' + (pos ? "left:50%" : "right:50%") + ";width:" + w.toFixed(2) + "%;background:var(" + (pos ? "--ok" : "--neg") + ')"></i></span><span class="v ' + signCls(p.uplPct) + '">' + esc(fmtP(p.uplPct)) + "</span></div>";
       }).join("") + "</div>";
-    h += '<div class="duo">' + (P.incompleteFees || missing.length ? '' : '<div class="panel"><div><h3>' + esc(K.allocTitle) + '</h3><p class="lede">' + esc(K.allocLede) + "</p></div>" + donut + '</div>') + '<div class="panel"><div><h3>' + esc(K.barsTitle) + '</h3><p class="lede">' + esc(K.barsLede) + "</p></div>" + bars + "</div></div>";
+    h += '<div class="duo">' + (P.incompleteFees || missing.length ? '' : '<div class="panel"><div><h3>' + esc(X.pending ? pt("Distribución de posiciones abiertas", "Open position allocation") : K.allocTitle) + '</h3><p class="lede">' + esc(X.pending ? pt("Peso dentro de las posiciones abiertas del registro PAPER, sin efectivo.", "Weight within the open positions in the PAPER record, excluding cash.") : K.allocLede) + "</p></div>" + donut + '</div>') + '<div class="panel"><div><h3>' + esc(K.barsTitle) + '</h3><p class="lede">' + esc(K.barsLede) + "</p></div>" + bars + "</div></div>";
 
     /* statistics */
-    var wins = P.sales.filter(function (s) { return s.pnl > 0; }), losses = P.sales.filter(function (s) { return s.pnl < 0; });
+    var wins = (X.pending ? [] : P.sales).filter(function (s) { return s.pnl > 0; }), losses = (X.pending ? [] : P.sales).filter(function (s) { return s.pnl < 0; });
     var gw = sum(wins, "pnl"), gl = -sum(losses, "pnl");
     var openUp = open.filter(function (p) { return p.upl !== null && p.upl > 0; }).length;
     var heavy = missing.length ? null : byVal[0];
@@ -2419,7 +2446,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       fmtM(risk, 0) + " · " + fmtP(total ? risk / total : null, 2) + " " + K.riskOf + (noStop.length ? " (" + K.riskMissing + " " + noStop.map(function (p) { return p.ticker; }).join(", ") + ")" : "") + (srcTxt ? " · " + K.riskSrc.replace("{s}", srcTxt) : "");
     h += '<div class="panel"><h3>' + esc(K.statsTitle) + '</h3><dl class="kv stats">' +
       kv(K.openWin, frac(openUp, priced.length)) +
-      kv(K.sellWin, P.incompleteFees ? "—" : frac(wins.length, P.sales.length)) +
+      kv(K.sellWin, (P.incompleteFees || X.pending) ? "—" : frac(wins.length, P.sales.length)) +
       kv(K.pf, P.incompleteFees ? "—" : (gl ? fmtN(gw / gl) : (gw ? K.pfNote : "—"))) +
       kv(K.avgWin, !P.incompleteFees && wins.length ? fmtP(wins.reduce(function (a, s) { return a + s.ret; }, 0) / wins.length) : "—", "pos") +
       kv(K.avgLoss, !P.incompleteFees && losses.length ? fmtP(losses.reduce(function (a, s) { return a + s.ret; }, 0) / losses.length) : "—", "neg") +

@@ -1,0 +1,28 @@
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),Module=require('module');
+const root=path.resolve(__dirname,'..'),filename=path.join(__dirname,'load-stock-profiles.cjs'),m=new Module(filename,module);m.filename=filename;m.paths=module.paths;
+m._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,positions,currentPositions,pendingExitAccounting,acctCalc,approvalStatus,vCartera,vPosiciones,vInicio,vOperaciones,equitySeries,'),filename);
+const {t}=m.exports(root), ids=x=>Array.from(x,p=>p.ticker).sort();
+const expected=['ASO','EXLS','JXN','ULTA'], legacy=['ASO','CTSH','DOCU','EXLS','JXN','ULTA'];
+assert.deepEqual(ids(t.currentPositions()),expected);
+assert.deepEqual(ids(t.positions().list.filter(p=>p.shares>0)),legacy);
+assert.equal(t.pendingExitAccounting(),true);
+const C=t.acctCalc(true),H=t.acctCalc();assert.deepEqual(ids(C.open),expected);assert.deepEqual(ids(H.open),legacy);
+for(const k of ['cash','total','realized','totPL','ret','day','dayPct'])assert.equal(C[k],null,k);
+assert.deepEqual(C.eq,H.eq);
+assert.notEqual(t.approvalStatus({ticker:'DOCU',date:'2026-11-18'}).code,'held');
+assert.notEqual(t.approvalStatus({ticker:'CTSH',date:'2026-11-18'}).code,'held');
+for(const lang of ['es','en']){
+ t.setLang(lang);
+ const html=t.vCartera();
+ const donut=html.match(/<ul class="alloc-list">([\s\S]*?)<\/ul>/)[1], bars=html.match(/<div class="plbars"([\s\S]*?)<\/div><\/div><\/div>/)[1];
+ for(const k of expected)assert(donut.includes('>'+k+'<')&&bars.includes('>'+k+'<'),k);
+ for(const k of ['DOCU','CTSH','Cash','Efectivo'])assert(!donut.includes('>'+k+'<')&&!bars.includes('>'+k+'<'),k);
+ const pos=t.vPosiciones();for(const tk of expected)assert(pos.includes('class="tick">'+tk+'<'));
+ assert(!pos.includes('class="tick">DOCU<')&&!pos.includes('class="tick">CTSH<'));
+ assert(t.vOperaciones().includes(lang==='en'?'Historical PAPER ledger positions':'Posiciones del diario PAPER histórico'));
+}
+const old=t.S.ops.find(r=>r.ticker==='CTSH'&&r.shares===41);
+t.S.ops.push({...old,date:'2026-11-23 10:00',shares:5,exec:60,fee:0});
+assert.equal(t.currentPositions().find(p=>p.ticker==='CTSH').shares,5,'A later recorded purchase reopens without bringing back old shares');
+assert.equal(t.pendingExitAccounting(),true,'Reopening does not reconcile missing exits');
+console.log('PASS verified current 4 positions, bilingual cards, archive and reopen behavior.');
