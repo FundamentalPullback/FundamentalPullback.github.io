@@ -3,6 +3,16 @@ const fs=require('fs'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 function legacy(root,a){
  a=require("./scanner-nov17-contract.cjs").legacy(root,a);
+ // Verify the Nov 19 management-only append before reconstructing dated fixtures.
+ const close19=a.reports.filter(r=>r.id==='A602');
+ if(close19.length) {
+  assert.equal(close19.length,1);
+  const r=close19[0];
+  assert.equal(sha(JSON.stringify(r)),'ebb8dd4129b7d83c16ddcf7c94fbcca9002294b7f6c93a295c8fa97bd4c595b0');
+  assert(r.managementResearchOnly && r.marketSession==='2026-11-19' && r.effectiveSession==='2026-11-20' && r.profiles.length===4 && r.profiles.every(p=>p.kind==='management'&&!p.valuation&&!p.entryApproved&&!p.completedAt));
+  a.reports=a.reports.filter(r=>r.id!=='A602');a.t.S.lib=a.reports;a.c.window.FP_LIB.reports=a.reports;
+  a.c.window.FP_MANIFEST.libraryFiles=a.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!=='data/lib-stage4-nov19.js');a.profiles=a.t.profiles();
+ }
  // Validate the closing-review successor before historical replay.
  const close=a.reports.filter(r=>r.id==='A601');
  if(close.length) {
