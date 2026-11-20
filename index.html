@@ -2212,7 +2212,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var H = t().home, K = t().cart;
     var g = guard(["ops", "acct"]);
     if (g) return head(t().tabs.inicio, "") + g;
-    var X = acctCalc(true), A = X.A;
+    var X = acctCalc(true), A = X.A, summary = publishedAccountSummary(X);
     var asOf = ledgerAfterSnapshot() ? ledgerDay() : (S.snapshot || isoDay(new Date().toISOString()));
     var nDays = A.start && asOf ? Math.max(1, Math.round((Date.parse(asOf) - Date.parse(isoDay(A.start) || A.start)) / 864e5)) : null;
     var pts = X.excess !== null ? H.pts.replace("{p}", fmtN(Math.abs(X.excess) * 100, 1)) : "—";
@@ -2225,7 +2225,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     function more(view, label) { return '<button type="button" class="more-link" data-goview="' + view + '">' + esc(label) + "</button>"; }
     function secHead(title, sub, link) { return "<header><div><h3>" + esc(title) + "</h3>" + (sub ? "<small>" + esc(sub) + "</small>" : "") + "</div>" + (link || "") + "</header>"; }
 
-    var h = '<div class="home"><div class="home-top"><div class="home-lead"><div class="eyebrow">' + esc(X.current ? t().live.title : (ledgerAfterSnapshot() ? pt("Operaciones al ", "Trades through ") + fmtD(ledgerDay()) : H.eyebrow.replace("{d}", fmtD(asOf)))) + "</div>" +
+    var h = '<div class="home"><div class="home-top"><div class="home-lead"><div class="eyebrow">' + esc(summary.date ? pt("Último cierre PAPER conciliado: ", "Last reconciled PAPER close: ") + fmtD(summary.date) : X.current ? t().live.title : (ledgerAfterSnapshot() ? pt("Operaciones al ", "Trades through ") + fmtD(ledgerDay()) : H.eyebrow.replace("{d}", fmtD(asOf)))) + "</div>" +
       '<h2 class="home-hl">' + esc(H.tagline) + "</h2>" +
       '<p class="home-live">' + hl + "</p>" +
       '<p class="home-sub">' + esc(H.sub.replace("{s}", fmtD(isoDay(A.start) || A.start))) + "</p></div>" +
@@ -2240,14 +2240,14 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     /* account curve */
     h += '<p class="muted">' + esc((lang === "en" ? "Historical closes through " : "Cierres históricos hasta ") + fmtD((X.eq && X.eq.length ? X.eq[X.eq.length - 1].d : S.snapshot))) + "</p>";
     h += '<div class="home-chart">';
-    if (X.eq && X.eq.length > 1) h += '<div class="sec-head"><div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(X.pending ? pt("Historial PAPER sin conciliar", "Unreconciled PAPER history") : K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" + more("cartera", H.seeCart) + "</div>" +
+    if (X.eq && X.eq.length > 1) h += '<div class="sec-head"><div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(X.pending ? pt("Historial PAPER conciliado", "Reconciled PAPER history") : K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" + more("cartera", H.seeCart) + "</div>" +
       '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
     else h += '<p class="muted">' + esc(K.noHist) + "</p>";
     h += '<div class="home-stats">' +
-      "<div><span>" + esc(H.value) + "</span><b>" + esc(fmtM(X.total)) + "</b></div>" +
-      "<div><span>" + esc(H.cash) + "</span><b>" + esc(fmtM(X.cash)) + "</b></div>" +
+      "<div><span>" + esc(H.value) + "</span><b>" + esc(fmtM(summary.total)) + "</b></div>" +
+      (X.pending ? "" : "<div><span>" + esc(H.cash) + "</span><b>" + esc(fmtM(X.cash)) + "</b></div>") +
       "<div><span>" + esc(lang === "en" ? "Recorded open positions" : "Posiciones abiertas registradas") + "</span><b>" + X.open.length + "</b></div>" +
-      "<div><span>" + esc(X.current ? (lang === "en" ? "Versus previous close" : "Frente al cierre anterior") : H.last) + '</span><b class="' + signCls(X.day) + '">' + esc(sgnM(X.day) + " (" + fmtP(X.dayPct, 2) + ")") + "</b></div></div></div>";
+      "<div><span>" + esc(!summary.date && X.current ? (lang === "en" ? "Versus previous close" : "Frente al cierre anterior") : H.last) + '</span><b class="' + signCls(summary.day) + '">' + esc(sgnM(summary.day) + " (" + fmtP(summary.dayPct, 2) + ")") + "</b></div></div></div>";
 
     h += '<p class="muted">' + esc(lang === "en" ? "Published history is a dated snapshot, not an automatic daily feed. See accounting sources and reconciliation." : "El histórico publicado es una instantánea fechada, no una actualización diaria automática. Consulta las fuentes y la conciliación.") + ' <a href="research/accounting-update.html">' + esc(lang === "en" ? "Sources" : "Fuentes") + '</a></p>';
     /* price vs value: the closest names in the latest analysis */
@@ -2351,7 +2351,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var spyRet = A.spy0 && quotes.spy ? quotes.spy / A.spy0 - 1 : null;
     var excess = ret !== null && spyRet !== null ? ret - spyRet : null;
     open.forEach(function (p) { p.weight = total ? p.value / total : null; });
-    var eq = equitySeries(null);
+    var cut = pending ? Object.keys(CONFIRMED_EXITS).map(function (k) { return CONFIRMED_EXITS[k]; }).sort()[0] : null;
+    var eq = equitySeries(null, cut);
     S.eq = eq;
     /* day change from the account-value series: includes shares sold during the day and recorded fees */
     if (pending) day = null;
@@ -2363,31 +2364,42 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if (P.incompleteFees) { day = null; dayBase = null; dayPct = null; }
     return { current: quotes.current, pending: pending, A: A, P: P, cap: cap, open: open, missing: missing, openCost: openCost, invested: invested, unreal: unreal, realized: realized, day: day, cash: cash, total: total, totPL: totPL, ret: ret, spyRet: spyRet, excess: excess, eq: eq, dayBase: dayBase, dayPct: dayPct };
   }
+  function publishedAccountSummary(X) {
+    if (!X.pending) return X;
+    var eq = X.eq || [], last = eq[eq.length - 1], prev = eq[eq.length - 2], base = X.cap;
+    if (!last || !base) return X;
+    var ret = last.v / base - 1, spyRet = last.b === null ? null : last.b / base - 1;
+    return { date: last.d, total: last.v, totPL: last.v - base, ret: ret, spyRet: spyRet,
+      excess: spyRet === null ? null : ret - spyRet, day: prev ? last.v - prev.v : null,
+      dayPct: prev && prev.v ? last.v / prev.v - 1 : null };
+  }
   function vCartera() {
     var K = t().cart, C = t().col;
     var g = guard(["ops", "acct"]);
     if (g) return head(K.title, K.lede) + g;
     var X = acctCalc(true);
     var A = X.A, P = X.P, cap = X.cap, open = X.open, missing = X.missing, openCost = X.openCost, invested = X.invested, unreal = X.unreal, realized = X.realized, day = X.day;
-    var cash = X.cash, total = X.total, totPL = X.totPL, ret = X.ret, spyRet = X.spyRet, excess = X.excess, eq = X.eq, dayBase = X.dayBase, dayPct = X.dayPct;
+    var cash = X.cash, total = X.total, eq = X.eq;
+    var summary = publishedAccountSummary(X), totPL = summary.totPL, ret = summary.ret, spyRet = summary.spyRet, excess = summary.excess, dayPct = summary.dayPct;
+    day = summary.day;
     function sum(list, k) { return list.reduce(function (a, x) { return a + (x[k] || 0); }, 0); }
 
     /* hero */
     var LV = t().live;
-    var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + (X.current ? " · " + LV.title : (S.snapshot ? " · " + (ledgerAfterSnapshot() ? pt("precios guardados del ", "saved prices from ") + fmtD(S.snapshot) : LV.headline.replace("{d}", fmtD(S.snapshot))) : "")) + '</div>' +
-      '<div class="hero-num">' + esc(fmtM(total)) + '</div>' +
+    var h = '<div class="hero"><div class="hero-top"><div><div class="eyebrow">' + esc(K.value) + (summary.date ? " · " + esc(pt("Último cierre PAPER conciliado: ", "Last reconciled PAPER close: ") + fmtD(summary.date)) : X.current ? " · " + LV.title : (S.snapshot ? " · " + (ledgerAfterSnapshot() ? pt("precios guardados del ", "saved prices from ") + fmtD(S.snapshot) : LV.headline.replace("{d}", fmtD(S.snapshot))) : "")) + '</div>' +
+      '<div class="hero-num">' + esc(fmtM(summary.total)) + '</div>' +
       '<div class="hero-sub"><span class="tag ' + (totPL >= 0 ? "tag-pos" : "tag-neg") + '">' + esc(sgnM(totPL) + " · " + (ret !== null && ret >= 0 ? "+" : "") + fmtP(ret, 2)) + '</span>' +
       '<span class="muted">' + esc(K.capital + " " + fmtM(cap) + " · " + K.since + " " + fmtD(A.start)) + "</span></div></div>" +
       '<div class="hero-side"><div><span class="eyebrow">' + esc(K.vsSpy) + '</span><b class="' + signCls(excess) + '">' + esc((excess !== null && excess >= 0 ? "+" : "") + fmtP(excess, 2)) + '</b><small>' + esc(K.spyLbl + " " + fmtP(spyRet, 2)) + '</small></div>' +
-      '<div><span class="eyebrow">' + esc(X.current ? (lang === "en" ? "Versus previous close" : "Frente al cierre anterior") : LV.lastSession) + '</span><b class="' + signCls(day) + '">' + esc(sgnM(day)) + '</b><small class="' + signCls(dayPct) + '">' + esc(fmtP(dayPct, 2)) + "</small></div></div></div>";
+      '<div><span class="eyebrow">' + esc(!summary.date && X.current ? (lang === "en" ? "Versus previous close" : "Frente al cierre anterior") : LV.lastSession) + '</span><b class="' + signCls(day) + '">' + esc(sgnM(day)) + '</b><small class="' + signCls(dayPct) + '">' + esc(fmtP(dayPct, 2)) + "</small></div></div></div>";
     if (eq && eq.length > 1) {
       h += '<p class="muted">' + esc((lang === "en" ? "Historical closes through " : "Cierres históricos hasta ") + fmtD((X.eq && X.eq.length ? X.eq[X.eq.length - 1].d : S.snapshot))) + "</p>";
-      h += '<div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(X.pending ? pt("Historial PAPER sin conciliar", "Unreconciled PAPER history") : K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" +
+      h += '<div class="legend eq-legend"><span><i class="ln" style="background:var(--s1)"></i>' + esc(X.pending ? pt("Historial PAPER conciliado", "Reconciled PAPER history") : K.account) + '</span><span><i class="ln dash"></i>' + esc(K.spyLine) + "</span></div>" +
         '<div id="eqchart" class="eqchart" role="img" aria-label="' + esc(K.eqAria) + '"></div><div id="eqtip" class="tip" hidden></div>';
     } else h += '<p class="muted">' + esc(K.noHist) + "</p>";
     h += "</div>";
-    h = grossAccountingPanel() + h;
-    h += (X.pending ? reconciliationNotice() : incompleteAccountingNotice()) + priceStatus() + livePanel(open, cash);
+    h = (X.pending ? reconciliationNotice() : "") + grossAccountingPanel() + h;
+    h += incompleteAccountingNotice() + priceStatus() + livePanel(open, cash);
     var acctNote = lang === "en" && A.noteEn ? A.noteEn : A.note;
     if (acctNote) { var nm = /^([^:]{6,60}):\s*([\s\S]+)$/.exec(acctNote); h += nm ? '<details class="why-fold acct-note"><summary>' + esc(nm[1]) + "</summary><p>" + esc(nm[2]) + "</p></details>" : '<p class="acct-note">' + esc(acctNote) + "</p>"; }
     if (missing.length) h += notice(K.title, K.noPrice + " " + missing.join(", ") + ".");
@@ -2396,8 +2408,8 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     function fig(label, val, cls, sub, subCls) { return '<div class="fig"><b class="' + (cls || "") + '">' + esc(val) + "</b>" + (sub ? '<small class="' + (subCls || "") + '">' + esc(sub) + "</small>" : "") + "<span>" + esc(label) + "</span></div>"; }
     h += '<div class="figures">' +
       fig(K.unreal, fmtM(unreal), signCls(unreal), openCost && unreal !== null ? fmtP(unreal / openCost, 2) : "", signCls(unreal)) +
-      fig(K.real, fmtM(realized), signCls(realized)) +
-      fig(K.cash, fmtM(cash), cash !== null && cash < 0 ? "neg" : "", fmtP(total ? cash / total : null) + " " + K.ofAcct) +
+      (X.pending ? "" : fig(K.real, fmtM(realized), signCls(realized)) +
+      fig(K.cash, fmtM(cash), cash !== null && cash < 0 ? "neg" : "", fmtP(total ? cash / total : null) + " " + K.ofAcct)) +
       fig(K.dd, eq ? fmtP(eq.maxDD, 2) : "—", eq && eq.maxDD < 0 ? "neg" : "") + "</div>";
 
     if (!open.length) return h + notice(K.tblTitle, K.none);
@@ -2473,7 +2485,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
 
   /* daily account value from closes, replaying the trades day by day */
   function isoDay(s) { var m = /^(\d{4}-\d{2}-\d{2})/.exec(String(s || "")); return m ? m[1] : null; }
-  function equitySeries(liveTotal) {
+  function equitySeries(liveTotal, before) {
     var H = S.hist, A = S.acct;
     if (!H || !H.SPY || !A || A.capital === null || !S.ops) return null;
     var first = (S.ops.map(function (r) { return isoDay(r.date); }).filter(Boolean).sort())[0];
@@ -2482,7 +2494,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var prior = days.filter(function (d) { return d < first; });
     var start = prior.length ? prior[prior.length - 1] : days[0];
     var incompleteFrom = unpublishedFeeDate();
-    days = days.filter(function (d) { return d >= start && (!incompleteFrom || d < incompleteFrom); });
+    days = days.filter(function (d) { return d >= start && (!incompleteFrom || d < incompleteFrom) && (!before || d < before); });
     var ops = S.ops.filter(function (r) { return r.ticker && r.shares !== null && r.exec !== null && isoDay(r.date); })
       .slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
     var sh = {}, cash = A.capital, k = 0, last = {}, lastExec = {}, out = [];
@@ -2503,7 +2515,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var today = new Date(), wd = today.getDay();
     var tIso = today.getFullYear() + "-" + String(today.getMonth() + 1).padStart(2, "0") + "-" + String(today.getDate()).padStart(2, "0");
     if (S.snapshot) { tIso = S.snapshot; wd = 1; }
-    if (!incompleteFrom && liveTotal !== null && wd > 0 && wd < 6 && tIso > out[out.length - 1].d && A.spy) out.push({ d: tIso, v: liveTotal, spy: A.spy, live: true });
+    if (!before && !incompleteFrom && liveTotal !== null && wd > 0 && wd < 6 && tIso > out[out.length - 1].d && A.spy) out.push({ d: tIso, v: liveTotal, spy: A.spy, live: true });
     var s0 = out[0].spy, base = A.capital;
     var peak = -Infinity, maxDD = 0, best = null, worst = null;
     out.forEach(function (p, i) {
