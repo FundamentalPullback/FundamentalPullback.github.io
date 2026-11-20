@@ -87,7 +87,7 @@ if(follow) {
 
 const close18=reports.find(r=>r.id==='A601');
 if(close18) {
- assert.equal(rows[0].report.id,'A601');
+ assert.equal(rows.find(x=>x.date==='2026-11-18')?.report.id,'A601');
  assert.deepEqual(JSON.parse(JSON.stringify(t.stage4Positions(close18).map(p=>[p.ticker,p.price,p.low,p.stop,p.trailing,p.inactive]))),[
  ['EXLS',42.23,42.21,33.5,41.10,false],['ASO',73.05,68.71,50.30,65.09,false],
  ['ULTA',648.51,632.02,522,611.85,false],['JXN',132.60,132.35,124.80,null,true]
