@@ -1,0 +1,382 @@
+{
+  "asOf": "2026-11-20",
+  "price": 106.4,
+  "book": {
+    "reported": 79.06,
+    "exAOCI": 84.33,
+    "reportedCommonEquityBn": 5.749455,
+    "exAOCICommonEquityBn": 6.133334,
+    "aociBn": -0.383879,
+    "preferredBn": 0.55,
+    "debtBn": 1.317905
+  },
+  "scenarios": [
+    {
+      "key": "bear",
+      "earned": 6,
+      "attr": 0.925,
+      "cat": 0.065,
+      "res": 0.008,
+      "invest": 0.69,
+      "other": 0.02,
+      "corp": 0.13,
+      "interest": 0.079,
+      "amort": 0.015,
+      "tax": 0.22,
+      "pref": 0.03025,
+      "book": 79.06,
+      "re": 0.12,
+      "payout": 0.35,
+      "fade": [
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "term": 0.085,
+      "g": 0.02,
+      "UW": 0.01199999999999972,
+      "pretax": 0.49799999999999967,
+      "net": 0.35818999999999973,
+      "r0": 0.06229981798274788,
+      "model": {
+        "path": [
+          {
+            "year": 1,
+            "ratio": 0.06229981798274788,
+            "EPS": 4.925423609716048,
+            "distribution": 1.7238982634006166,
+            "openingBook": 79.06,
+            "closingBook": 82.26152534631544
+          },
+          {
+            "year": 2,
+            "ratio": 0.06797486348706092,
+            "EPS": 5.591715955653194,
+            "distribution": 1.9571005844786176,
+            "openingBook": 82.26152534631544,
+            "closingBook": 85.89614071749001
+          },
+          {
+            "year": 3,
+            "ratio": 0.07364990899137394,
+            "EPS": 6.326242946553389,
+            "distribution": 2.214185031293686,
+            "openingBook": 85.89614071749001,
+            "closingBook": 90.00819863274971
+          },
+          {
+            "year": 4,
+            "ratio": 0.07932495449568697,
+            "EPS": 7.139896260781625,
+            "distribution": 2.4989636912735684,
+            "openingBook": 90.00819863274971,
+            "closingBook": 94.64913120225776
+          },
+          {
+            "year": 5,
+            "ratio": 0.085,
+            "EPS": 8.04517615219191,
+            "distribution": 2.8158116532671684,
+            "openingBook": 94.64913120225776,
+            "closingBook": 99.8784957011825
+          }
+        ],
+        "terminal": 64.92102220576864,
+        "year5BV": 99.8784957011825,
+        "fv": 44.69923190806056
+      },
+      "exAOCINonEconomicSensitivity": 47.67880377949339,
+      "impliedTerminalROE": 0.1666292172174794,
+      "impliedYear1ROE": 0.3,
+      "keSensitivity": [
+        [
+          0.095,
+          63.40609107280204
+        ],
+        [
+          0.1,
+          58.69195080075882
+        ],
+        [
+          0.105,
+          54.55057138484435
+        ],
+        [
+          0.11,
+          50.88596969701605
+        ],
+        [
+          0.115,
+          47.62238693861409
+        ],
+        [
+          0.12,
+          44.69923190806056
+        ]
+      ]
+    },
+    {
+      "key": "base",
+      "earned": 6.2,
+      "attr": 0.894,
+      "cat": 0.045,
+      "res": 0,
+      "invest": 0.77,
+      "other": 0.03,
+      "corp": 0.13,
+      "interest": 0.079,
+      "amort": 0.015,
+      "tax": 0.2,
+      "pref": 0.03025,
+      "book": 79.06,
+      "re": 0.105,
+      "payout": 0.45,
+      "fade": [
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "term": 0.12,
+      "g": 0.03,
+      "UW": 0.3781999999999999,
+      "pretax": 0.9542,
+      "net": 0.73311,
+      "r0": 0.1275094769852099,
+      "model": {
+        "path": [
+          {
+            "year": 1,
+            "ratio": 0.1275094769852099,
+            "EPS": 10.080899250450695,
+            "distribution": 4.536404662702813,
+            "openingBook": 79.06,
+            "closingBook": 84.60449458774788
+          },
+          {
+            "year": 2,
+            "ratio": 0.12563210773890743,
+            "EPS": 10.629040979243753,
+            "distribution": 4.783068440659688,
+            "openingBook": 84.60449458774788,
+            "closingBook": 90.45046712633194
+          },
+          {
+            "year": 3,
+            "ratio": 0.12375473849260495,
+            "EPS": 11.19367390575317,
+            "distribution": 5.037153257588927,
+            "openingBook": 90.45046712633194,
+            "closingBook": 96.60698777449619
+          },
+          {
+            "year": 4,
+            "ratio": 0.12187736924630246,
+            "EPS": 11.7742055207653,
+            "distribution": 5.298392484344385,
+            "openingBook": 96.60698777449619,
+            "closingBook": 103.0828008109171
+          },
+          {
+            "year": 5,
+            "ratio": 0.12,
+            "EPS": 12.369936097310053,
+            "distribution": 5.566471243789524,
+            "openingBook": 103.0828008109171,
+            "closingBook": 109.88626566443763
+          }
+        ],
+        "terminal": 131.86351879732516,
+        "year5BV": 109.88626566443763,
+        "fv": 98.72975209710613
+      },
+      "exAOCINonEconomicSensitivity": 105.31090304008295,
+      "impliedTerminalROE": 0.12711131325169175,
+      "impliedYear1ROE": 0.1662423662299336,
+      "keSensitivity": [
+        [
+          0.095,
+          115.83996137389349
+        ],
+        [
+          0.1,
+          106.6618736598933
+        ],
+        [
+          0.105,
+          98.72975209710613
+        ],
+        [
+          0.11,
+          91.8093338174441
+        ],
+        [
+          0.115,
+          85.72149805117449
+        ],
+        [
+          0.12,
+          80.32694807497398
+        ]
+      ]
+    },
+    {
+      "key": "bull",
+      "earned": 6.45,
+      "attr": 0.875,
+      "cat": 0.038,
+      "res": 0,
+      "invest": 0.84,
+      "other": 0.035,
+      "corp": 0.13,
+      "interest": 0.072,
+      "amort": 0.015,
+      "tax": 0.18,
+      "pref": 0.03025,
+      "book": 79.06,
+      "re": 0.095,
+      "payout": 0.5,
+      "fade": [
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "term": 0.145,
+      "g": 0.035,
+      "UW": 0.5611499999999999,
+      "pretax": 1.2191499999999997,
+      "net": 0.9694529999999999,
+      "r0": 0.1686165036512156,
+      "model": {
+        "path": [
+          {
+            "year": 1,
+            "ratio": 0.1686165036512156,
+            "EPS": 13.330820778665107,
+            "distribution": 6.665410389332553,
+            "openingBook": 79.06,
+            "closingBook": 85.72541038933255
+          },
+          {
+            "year": 2,
+            "ratio": 0.1627123777384117,
+            "EPS": 13.948585357049442,
+            "distribution": 6.974292678524721,
+            "openingBook": 85.72541038933255,
+            "closingBook": 92.69970306785727
+          },
+          {
+            "year": 3,
+            "ratio": 0.15680825182560781,
+            "EPS": 14.536078382823632,
+            "distribution": 7.268039191411816,
+            "openingBook": 92.69970306785727,
+            "closingBook": 99.96774225926909
+          },
+          {
+            "year": 4,
+            "ratio": 0.1509041259128039,
+            "EPS": 15.085544765111468,
+            "distribution": 7.542772382555734,
+            "openingBook": 99.96774225926909,
+            "closingBook": 107.51051464182483
+          },
+          {
+            "year": 5,
+            "ratio": 0.145,
+            "EPS": 15.5890246230646,
+            "distribution": 7.7945123115323,
+            "openingBook": 107.51051464182483,
+            "closingBook": 115.30502695335713
+          }
+        ],
+        "terminal": 211.39254941448803,
+        "year5BV": 115.30502695335713,
+        "fv": 161.91974345142964
+      },
+      "exAOCINonEconomicSensitivity": 172.71302764051433,
+      "impliedTerminalROE": 0.10564424181591747,
+      "impliedYear1ROE": 0.04000000000000001,
+      "keSensitivity": [
+        [
+          0.095,
+          161.91974345142964
+        ],
+        [
+          0.1,
+          148.43688293459962
+        ],
+        [
+          0.105,
+          136.90564637995894
+        ],
+        [
+          0.11,
+          126.93496706977469
+        ],
+        [
+          0.115,
+          118.2315696673421
+        ],
+        [
+          0.12,
+          110.57120712086932
+        ]
+      ]
+    }
+  ],
+  "peers": [
+    {
+      "ticker": "AXS",
+      "close": 106.4,
+      "book": 79.06,
+      "PB": 1.3458133063496078,
+      "operatingROE": 15.7,
+      "combinedRatio": 94,
+      "filing": "https://www.sec.gov/Archives/edgar/data/1214816/000121481626000213/q32026pressrelease.htm",
+      "quote": "https://stockanalysis.com/stocks/axs/history/"
+    },
+    {
+      "ticker": "ACGL",
+      "close": 108.82,
+      "book": 67.9,
+      "PB": 1.6026509572901324,
+      "operatingROE": 16,
+      "combinedRatio": 82.5,
+      "filing": "https://ir.archgroup.com/news/news-details/2026/Arch-Capital-Group-Ltd--Reports-2026-Third-Quarter-Results/default.aspx",
+      "quote": "https://stockanalysis.com/stocks/acgl/history/"
+    },
+    {
+      "ticker": "EG",
+      "close": 421.98,
+      "book": 381.04,
+      "PB": 1.1074427881587234,
+      "operatingROE": 7.4,
+      "combinedRatio": 105.8,
+      "filing": "https://www.sec.gov/Archives/edgar/data/1095073/000109507326000041/everest3q26earningsrelease.htm",
+      "quote": "https://stockanalysis.com/stocks/eg/history/"
+    },
+    {
+      "ticker": "RNR",
+      "close": 343.97,
+      "book": 259.61,
+      "PB": 1.324948961904395,
+      "operatingROE": 18.9,
+      "combinedRatio": 78.6,
+      "filing": "https://www.sec.gov/Archives/edgar/data/913144/000091314426000096/rnrearningsrelease2026q3.htm",
+      "quote": "https://stockanalysis.com/stocks/rnr/history/"
+    }
+  ],
+  "sources": {
+    "q": "https://www.sec.gov/Archives/edgar/data/1214816/000121481626000215/axs-20260930.htm",
+    "e": "https://www.sec.gov/Archives/edgar/data/1214816/000121481626000213/q32026pressrelease.htm",
+    "k": "https://www.sec.gov/Archives/edgar/data/1214816/000121481626000097/axs-20251231.htm"
+  },
+  "notes": [
+    "All underwriting bridge dollar inputs in billions USD. Per-share valuation USD.",
+    "Invest, net investment income; other, other insurance-related income/low recurring equity-method contribution; corp, recurring corporate expenses, no FX or realized marks projected; amort, retained expense; pref, full-year recurring preferred dividends.",
+    "Ex-AOCI sensitivity holds ROE fixed and mechanically assumes whole extra book earns the same economic spread; not additive or a second estimate of recurring cash."
+  ]
+}

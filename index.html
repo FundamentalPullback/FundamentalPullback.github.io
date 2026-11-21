@@ -1265,7 +1265,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     err: { scan: null, dec: null, ops: null, acct: null, hist: null, retro: null, ges: null },
     loadedAt: null,
     view: "inicio", profileTicker: null, profileQ: "", profileFilter: "all", profileStatus: "all", profileScans: "all", profileScanCustom: false, profileView: "all", profileHistory: "latest", profileSort: "ticker", profileContextValid: true, profileRefreshStatus: "",
-    reviewDate: null, reviewPanel: "overview", scanDate: null, onlyS2: true, scanQ: "",
+    reviewDate: null, reviewPanel: "overview", scanDate: null, onlyS2: true, dealTargetsOnly: false, scanQ: "",
     anaFilter: "all", rejFilter: "all", rejQ: "", anaQ: "", resDate: null, anaDate: null, latestOnly: true,
     retroHz: "corte", retroGrp: "A", calMode: "m", calMonth: null, calYear: null, calSel: null,
     entryQ: "", entryState: "current", entrySel: null,
@@ -1668,9 +1668,12 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     var dates = scanDates();
     if (!S.scanDate || dates.indexOf(S.scanDate) < 0) S.scanDate = dates[0];
     var q = S.scanQ.trim().toLowerCase();
+    var dealSet=(window.FP_SCAN_DEALS||{})[S.scanDate]||null, targets=dealSet&&dealSet.targets, dealOnly=!!(targets&&S.dealTargetsOnly);
     var rows = S.scan.filter(function (r) {
       if (r.date !== S.scanDate) return false;
-      if (S.onlyS2 && !(r.opp !== null && r.opp >= 85)) return false;
+      var tagged=!!(targets&&Object.prototype.hasOwnProperty.call(targets,r.ticker));
+      if (tagged!==dealOnly) return false;
+      if (!dealOnly && S.onlyS2 && !(r.opp !== null && r.opp >= 85)) return false;
       if (q && (r.ticker + " " + r.company).toLowerCase().indexOf(q) < 0) return false;
       return true;
     });
@@ -1688,6 +1691,15 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
       dates.map(function (d) { return '<option value="' + esc(d) + '"' + (d === S.scanDate ? " selected" : "") + ">" + esc(fmtD(d)) + "</option>"; }).join("") +
       '</select></label><button type="button" class="chip" id="only-s2" aria-pressed="' + S.onlyS2 + '">' + esc(t().onlyS2) + '</button>' +
       '<input type="search" id="scan-q" placeholder="' + esc(t().search) + '" aria-label="' + esc(t().search) + '" value="' + esc(S.scanQ) + '"><span class="status">' + rows.length + "</span></div>";
+    if(targets){
+      var deals='<button type="button" class="chip" id="scan-deal-toggle" aria-pressed="'+dealOnly+'">'+esc(dealOnly?pt('Volver al ranking ordinario','Back to ordinary ranking'):pt('Ver objetivos de compra ('+Object.keys(targets).length+')','View takeover targets ('+Object.keys(targets).length+')'))+'</button>';
+      ctl=ctl.replace('<input type="search" id="scan-q"',deals+'<input type="search" id="scan-q"');
+      if(dealOnly){
+        cols.push(labelled({key:'tickerDeal',cell:function(r){var d=targets[r.ticker]; return '<td><a target="_blank" rel="noopener noreferrer" href="'+esc(d.source)+'">'+esc(d.buyer)+'</a></td>';}},pt('Comprador / fuente','Buyer / source')));
+        ctl=ctl.replace(/<button[^>]*id="only-s2"[^>]*>[^<]*<\/button>/,'');
+      }
+      ctl+='<p class="muted" id="scan-deal-note">'+esc(dealOnly?pt('Operaciones anunciadas y pendientes en la fecha del escáner. Los scores siguen visibles, pero no son una valoración del acuerdo.','Signed or agreed deals pending as of this scanner date. Scores remain visible but do not value the deal.'):pt('Los objetivos verificados de compra quedan fuera del ranking ordinario. Los datos originales se conservan.','Verified takeover targets are kept out of ordinary ranking. The original scanner records are preserved.'))+'</p>';
+    }
     if (embedded) ctl = ctl.replace(/<label class="inline" for="scan-date">[\s\S]*?<\/label>/, '');
     return (embedded ? '<p class="lede">'+esc(t().scanLede)+'</p>' : head(t().scanTitle, t().scanLede)) + scanAuditNote(S.scanDate) + ctl + table("scan", cols, rows);
   }
@@ -3806,6 +3818,7 @@ body:has(.profile-navigation) #main { width:100%; max-width:1300px; padding-left
     if (cc) { openCalc(cc.getAttribute("data-calc")); return; }
     var op = e.target.closest("[data-open]");
     if (op) { openDetail(op.getAttribute("data-open")); return; }
+    if (e.target.id === "scan-deal-toggle") { S.dealTargetsOnly=!S.dealTargetsOnly; S.scanQ=""; updateDailyUrl(); render(); document.getElementById('scan-deal-toggle')?.focus(); return; }
     if (e.target.id === "only-s2") { S.onlyS2 = !S.onlyS2; updateDailyUrl(); render(); return; }
     if (e.target.closest("[data-allow]")) { loadOnce(); return; }
     var pg = e.target.closest("[data-plango]");

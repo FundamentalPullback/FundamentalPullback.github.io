@@ -1,0 +1,26 @@
+{
+  "beforeSha256": "ba1935871a2824a076b5a1809f4330b24e8dfcd1c86cfdf8dccf50527b117b6f",
+  "afterSha256": "2dad696f4666a5f5b5543a3478d765399d33f1e3da2b85d8e95f54b4bbdcdc71",
+  "replacements": [
+    {
+      "before": "scanDate: null, onlyS2: true, scanQ:",
+      "after": "scanDate: null, onlyS2: true, dealTargetsOnly: false, scanQ:"
+    },
+    {
+      "before": "    var q = S.scanQ.trim().toLowerCase();\n    var rows",
+      "after": "    var q = S.scanQ.trim().toLowerCase();\n    var dealSet=(window.FP_SCAN_DEALS||{})[S.scanDate]||null, targets=dealSet&&dealSet.targets, dealOnly=!!(targets&&S.dealTargetsOnly);\n    var rows"
+    },
+    {
+      "before": "      if (S.onlyS2 && !(r.opp !== null && r.opp >= 85)) return false;",
+      "after": "      var tagged=!!(targets&&Object.prototype.hasOwnProperty.call(targets,r.ticker));\n      if (tagged!==dealOnly) return false;\n      if (!dealOnly && S.onlyS2 && !(r.opp !== null && r.opp >= 85)) return false;"
+    },
+    {
+      "before": "    if (embedded) ctl = ctl.replace(/<label class=\"inline\" for=\"scan-date\">",
+      "after": "    if(targets){\n      var deals='<button type=\"button\" class=\"chip\" id=\"scan-deal-toggle\" aria-pressed=\"'+dealOnly+'\">'+esc(dealOnly?pt('Volver al ranking ordinario','Back to ordinary ranking'):pt('Ver objetivos de compra ('+Object.keys(targets).length+')','View takeover targets ('+Object.keys(targets).length+')'))+'</button>';\n      ctl=ctl.replace('<input type=\"search\" id=\"scan-q\"',deals+'<input type=\"search\" id=\"scan-q\"');\n      if(dealOnly){\n        cols.push(labelled({key:'tickerDeal',cell:function(r){var d=targets[r.ticker]; return '<td><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"'+esc(d.source)+'\">'+esc(d.buyer)+'</a></td>';}},pt('Comprador / fuente','Buyer / source')));\n        ctl=ctl.replace(/<button[^>]*id=\"only-s2\"[^>]*>[^<]*<\\/button>/,'');\n      }\n      ctl+='<p class=\"muted\" id=\"scan-deal-note\">'+esc(dealOnly?pt('Operaciones anunciadas y pendientes en la fecha del escáner. Los scores siguen visibles, pero no son una valoración del acuerdo.','Signed or agreed deals pending as of this scanner date. Scores remain visible but do not value the deal.'):pt('Los objetivos verificados de compra quedan fuera del ranking ordinario. Los datos originales se conservan.','Verified takeover targets are kept out of ordinary ranking. The original scanner records are preserved.'))+'</p>';\n    }\n    if (embedded) ctl = ctl.replace(/<label class=\"inline\" for=\"scan-date\">"
+    },
+    {
+      "before": "    if (e.target.id === \"only-s2\") {",
+      "after": "    if (e.target.id === \"scan-deal-toggle\") { S.dealTargetsOnly=!S.dealTargetsOnly; S.scanQ=\"\"; updateDailyUrl(); render(); document.getElementById('scan-deal-toggle')?.focus(); return; }\n    if (e.target.id === \"only-s2\") {"
+    }
+  ]
+}
