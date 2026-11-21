@@ -1,0 +1,83 @@
+{
+  "asOf": "2026-11-20",
+  "source": "Dated regular-session closes reconciled against the authorized daily historical series. No scanner Last or after-hours prices.",
+  "retrievedAt": "2026-11-21T00:45:00.871Z",
+  "sessions": {
+    "2026-11-20": {
+      "SPY": 689.81,
+      "ASO": 69.76,
+      "CTSH": 58.06,
+      "DOCU": 74.56,
+      "EXLS": 41.72,
+      "JXN": 127.12,
+      "ULTA": 615.74
+    }
+  },
+  "evidence": {
+    "2026-11-20": {
+      "SPY": {
+        "sessionDate": "2026-11-20",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/etf/spy/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-21T00:45:00.871Z"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-20",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/aso/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-21T00:45:00.871Z"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-20",
+        "priceType": "regular-close",
+        "url": "https://www.marketwatch.com/data-news/cognizant-technology-solutions-corp-stock-outperforms-competitors-on-strong-trading-day-0891fcb7-cf7a93e6230a",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-21T00:45:00.871Z"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-20",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/docu/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-21T00:45:00.871Z"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-20",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/exls/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-21T00:45:00.871Z"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-20",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/jxn/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-21T00:45:00.871Z"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-20",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ulta/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-21T00:45:00.871Z"
+      }
+    }
+  },
+  "reconciliation": {
+    "Historial": "Six of seven required closes match the dated historical series. EXLS resolved against the completed regular-session source used for Stage 4 A603.",
+    "differences": {
+      "EXLS": {
+        "sheet": 41.74,
+        "selected": 41.72,
+        "resolution": "Stock Analysis / S&P Global regular-session close matches Stage 4 A603. The ChartExchange series is retained separately for technical ATR, not used as the market-close source for this session.",
+        "alternateTechnicalSeriesUrl": "https://chartexchange.com/symbol/nasdaq-exls/historical/"
+      }
+    },
+    "calendar": "Normal Friday 09:30–16:00 ET session. No exceptional closure identified.",
+    "calendarUrl": "https://www.nyse.com/trade/hours-calendars",
+    "scope": "Market history only. Public operating ledger unchanged. PAPER portfolio chart and totals stay at the last reconciled date until the known exits can be reconciled without exposing private records. No brokerage statement."
+  }
+}

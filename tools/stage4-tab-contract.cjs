@@ -2,6 +2,7 @@
 const fs=require('fs'),crypto=require('crypto'),assert=require('assert/strict');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 function priorHtml(root,html){
+  html=require('./portfolio-ui-contract.cjs').priorHtml(root,html);
   // Remove only the exact reviewed scanner coverage extension before validating the unchanged Stage 4 predecessor.
   const scanner=JSON.parse(fs.readFileSync(root+'/tools/scanner-nov17-ui-contract.json'));
   if(sha(html)===scanner.afterSha256){

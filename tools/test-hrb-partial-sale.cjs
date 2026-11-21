@@ -3,7 +3,7 @@ const fs=require('fs'),path=require('path'),assert=require('assert/strict'),Modu
 const root=path.resolve(__dirname,'..'),clone=x=>JSON.parse(JSON.stringify(x));
 const filename=path.join(__dirname,'load-stock-profiles.cjs'),m=new Module(filename,module);m.filename=filename;m.paths=module.paths;
 m._compile(fs.readFileSync(filename,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,vPosiciones,vOperaciones,vInicio,vCartera,calPanel,positions,acctCalc,equitySeries,calSeries,livePanel,'),filename);
-const a=m.exports(root),t=a.t,sha=s=>crypto.createHash('sha256').update(s).digest('hex');
+const a=m.exports(root,require('./portfolio-ui-contract.cjs').priorHtml),t=a.t,sha=s=>crypto.createHash('sha256').update(s).digest('hex');
 // Keep the November 6 reconciliation as a dated scenario, not a prohibition on
 // subsequent reviewed executions. The current ledger remains independently frozen.
 assert.equal(a.c.FP.ops.length,31,'Review any additional executions before publication');

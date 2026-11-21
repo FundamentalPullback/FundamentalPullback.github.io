@@ -3,6 +3,17 @@ const fs=require('fs'),assert=require('assert/strict'),crypto=require('crypto');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 function legacy(root,a){
  a=require("./scanner-nov17-contract.cjs").legacy(root,a);
+ // Validate the reviewed Friday successor before replaying earlier reports.
+ const close20=a.reports.filter(r=>r.id==='A603'),file20='data/lib-stage4-nov20.js';
+ if(close20.length || a.c.window.FP_MANIFEST.libraryFiles.includes(file20)) {
+  assert.equal(close20.length,1);
+  assert.equal(a.c.window.FP_MANIFEST.libraryFiles.filter(f=>f===file20).length,1);
+  const r=close20[0];
+  assert.equal(sha(JSON.stringify(r)),'cad4fd91d418b563284fdeb16b0080f40e6892e791e2fcba13f5db687f5f1d97');
+  assert(r.managementResearchOnly && r.marketSession==='2026-11-20' && r.effectiveSession==='2026-11-23' && r.profiles.length===4 && r.profiles.every(p=>p.kind==='management'&&!p.valuation&&!p.entryApproved&&!p.completedAt));
+  a.reports=a.reports.filter(r=>r.id!=='A603');a.t.S.lib=a.reports;a.c.window.FP_LIB.reports=a.reports;
+  a.c.window.FP_MANIFEST.libraryFiles=a.c.window.FP_MANIFEST.libraryFiles.filter(f=>f!==file20);a.profiles=a.t.profiles();
+ }
  // Verify the Nov 19 management-only append before reconstructing dated fixtures.
  const close19=a.reports.filter(r=>r.id==='A602');
  if(close19.length) {
