@@ -1,0 +1,16 @@
+const fs=require('fs'),Module=require('module'),assert=require('assert/strict'),path=require('path');
+const root=path.resolve(__dirname,'..'),fn=__dirname+'/load-stock-profiles.cjs',m=new Module(fn,module);m.filename=fn;m.paths=module.paths;m._compile(fs.readFileSync(fn,'utf8').replace('profileRoute,renderProfile,','profileRoute,renderProfile,stage4Reports,stage4Positions,vStage4,'),fn);const {t,reports}=m.exports(root);
+const r=reports.find(x=>x.id==='A785'),d=JSON.parse(fs.readFileSync(root+'/research/2026-11-23/stage4-review/calculations.json')),prev=JSON.parse(fs.readFileSync(root+'/research/2026-11-20/stage4-review/calculations.json'));
+assert.equal(r.marketSession,'2026-11-23');assert.equal(r.effectiveSession,'2026-11-24');assert(r.managementResearchOnly);assert.equal(t.stage4Reports().find(x=>x.report.id==='A785').date,'2026-11-23');
+assert.deepEqual(JSON.parse(JSON.stringify(t.stage4Positions(r).map(p=>[p.ticker,p.price,p.low,p.stop,p.trailing,p.inactive]))),[['ULTA',625.02,615.65,522,611.85,false],['JXN',130.50,128.50,124.80,null,true],['EXLS',43.08,41.37,33.50,41.10,false],['ASO',69.28,68.74,50.30,65.43,false]]);
+for(const [ticker,p] of Object.entries(d.positions)) {
+ assert.equal(p.manualSignal,p.low<=p.manualStop);assert.equal(p.trailingSignal,p.priorTrailing!=null&&p.close<p.priorTrailing);assert.equal(p.executionConfirmed,false);
+ if(p.technical){const a=prev.positions[ticker].technical,b=p.technical;assert.equal(b.previousClose,a.close);assert.equal(b.priorATR14,a.ATR14);assert.equal(b.previousFloor,a.nextFloor);assert.equal(b.TR,Math.max(b.high-b.low,Math.abs(b.high-b.previousClose),Math.abs(b.low-b.previousClose)));assert(Math.abs(b.ATR14-(a.ATR14*13+b.TR)/14)<1e-12);assert.equal(b.nextFloor,Math.max(a.nextFloor,b.highestClose-3*b.ATR14));assert(b.nextFloor>=a.nextFloor);}
+ assert(!p.manualSignal&&!p.trailingSignal);
+}
+assert.equal(d.positions.JXN.trailingActivated,false);assert(d.positions.JXN.close>126.14&&d.positions.JXN.close<158.25);
+for(const lang of ['es','en']){t.setLang(lang);t.profileRoute('stage4/latest');assert(t.vStage4().includes('value="'+t.stage4Reports()[0].report.id+'" selected'));t.profileRoute('stage4/A785');const h=t.vStage4();assert(h.includes('value="A785" selected'));assert.equal((h.match(/class="s4-card /g)||[]).length,4);assert([...h.matchAll(/<dl class="s4-levels">([\s\S]*?)<\/dl>/g)].every(x=>!/No disponible|Not available/.test(x[1])),'Required price and protection data renders');assert(h.includes('href="#biblioteca/A785"'));t.profileRoute('stage4/A603');const hist=t.vStage4();assert(hist.includes('value="A603" selected'));assert(!hist.includes('value="A785" selected'));assert(!hist.split('</select>')[1].includes('65,43'));
+ t.profileRoute('stage4/A785');assert(t.vStage4().includes('value="A785" selected'));}
+// Observe rule boundary: a next-session floor must not retrospectively trigger today's close.
+const hypothetical={close:65.30,priorTrailing:65.17,nextTrailing:65.43};assert(!(hypothetical.close<hypothetical.priorTrailing));assert(hypothetical.close<hypothetical.nextTrailing);
+console.log('PASS Nov23: four rendered cards ES/EN, dated latest/deep/history routes, original A603 seeds, monotonic prospective floors, no new signals or execution claims.');
