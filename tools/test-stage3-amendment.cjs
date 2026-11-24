@@ -1,0 +1,58 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
+const site=path.resolve(__dirname,'..');
+const read=f=>fs.readFileSync(path.join(site,f));
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const parse=f=>{const c={window:{}};vm.runInNewContext(read(f).toString('utf8'),c);return JSON.parse(JSON.stringify(c.window.FP_PLAN));};
+const past='data/plan/plan-2026-11-09.js';
+const old=parse(past), active=parse('data/plan.js');
+assert.equal(sha(read(past)),'829d79f433f3616a01ce7f55b635bb56d2c20c89a5dc389aa6cdeb746cf63f70','Preserve historical 2.1 plan exactly');
+assert.equal(active.meta.date,'2026-11-23');
+assert.equal(active.meta.version,'Versión 2.2');
+assert.equal(active.meta.versionEn,'Version 2.2');
+assert.equal(active.meta.pdf,'data/plan/Plan_Completo_2026-11-23.pdf');
+assert(read(active.meta.pdf).subarray(0,5).equals(Buffer.from('%PDF-')));
+assert.equal(sha(read('data/plan/Plan_Completo_2026-10-30.pdf')),'3fbe4755403cca5a28b7b48a6dd895504060d66ab5ec6c814face8a55a4994a3');
+assert.equal(sha(read('data/plan/Plan_Completo_2026-11-09.pdf')),'b75aec6df079c532f873957e586e10c4b101ff236890e870852167835eb1422b');
+for(const l of ['es','en']){
+ const t=active[l], prior=old[l], s3=t.sections.filter(x=>x.stage==='Stage 3');
+ const excluded=s=>s.sections.filter(x=>x.stage!=='Stage 3');
+ assert.deepEqual(excluded(t),excluded(prior),l+': Stages 1, 2, 3.5 and 4 unchanged');
+ assert.deepEqual(active.meta[l].summary.filter(x=>x[0]!=='Stage 3'),old.meta[l].summary.filter(x=>x[0]!=='Stage 3'));
+ assert.deepEqual(t.intro[1],prior.intro[0],l+': Nov 9 sizing notice unchanged');
+ assert.deepEqual(s3.map(x=>x.id),['s3a','s3b','s3c','s3d','s3e','s3f']);
+ const es=l==='es',get=id=>s3.find(x=>x.id===id);
+ assert.match(get('s3a').blocks[1][1],es?/balance sanos.*tendencia larga alcista.*evidencia positiva.*no fundamental/:/healthy business and balance sheet.*long-term uptrend.*positive evidence.*non-fundamental/);
+ assert.match(get('s3a').blocks[2][1],es?/supere el valor central.*no veta por sí solo/:/above the central estimate.*not a veto by itself/);
+ assert.match(get('s3b').blocks.at(-1)[1],es?/mixtos, insuficientes.*observación.*daño material/:/Mixed, insufficient or unproven.*on watch.*material harm/);
+ assert.match(get('s3e').blocks[8][1],es?/riesgo de valoración material y justificado.*no por una diferencia mecánica/:/justified material valuation risk.*not for a mechanical gap/);
+ assert.match(get('s3e').blocks[9][1],es?/evaluar, no ejecutar.*señal, stop, invalidación/:/evaluation, not execution.*signal, stop, invalidation/);
+ const action=get('s3f').blocks[3][1];
+ assert.match(action[1][1],es?/No autoriza entrada/:/does not authorize entry/);
+ assert.match(action[2][1],es?/No pasa a Stage 3.5/:/Do not move to Stage 3.5/);
+ assert(!JSON.stringify(s3).includes(es?'exigir mayor descuento':'require a larger discount'));
+ assert(!JSON.stringify(action).includes(es?'Aprobada: precio razonable':'Approved: reasonable price'));
+ assert.equal(get('s3c').blocks[3][1],prior.sections.find(x=>x.id==='s3c').blocks[3][1]);
+}
+console.log('PASS Stage 3 v2.2 ES/EN, intact 1/2/3.5/4, legacy 75/25 notice and PDFs, nonfundamental evidence, watch and genuine-risk distinction.');
+const Module=require('node:module');
+const helper=path.join(__dirname,'load-stock-profiles.cjs');
+const m=new Module(helper,module);m.filename=helper;m.paths=module.paths;
+m._compile(fs.readFileSync(helper,'utf8').replace('profileRoute,renderProfile,setLang','profileRoute,renderProfile,vPlan,setLang'),helper);
+const {t,c,html}=m.exports(site);
+assert(html.includes('<script src="data/plan.js"></script>'),'Published renderer loads canonical plan JS');
+vm.runInContext(read('data/plan.js').toString('utf8'),c);
+for(const l of ['es','en']){
+ const es=l==='es';
+ t.setLang(l);
+ for(const id of ['s3a','s3b','s3e','s3f','s35a']) (t.S.planOpen||=( {} ))[id]=true;
+ const render=t.vPlan();
+ assert.match(render,es?/Versión 2\.2/:/Version 2\.2/);
+ assert.match(render,/href="data\/plan\/Plan_Completo_2026-11-23\.pdf" download/);
+ assert.match(render,/id="plan-s3a" open/);
+ assert.match(render,es?/supere el valor central.*no veta por sí solo/:/above the central estimate.*not a veto by itself/);
+ assert.match(render,es?/Causa mixta o sin demostrar/:/The cause is mixed or unproven/);
+ assert.match(render,/id="plan-s35a" open/);
+ assert.match(render,/75%.*25%/);
+ assert(!/NaN|undefined/.test(render));
+}
+console.log('PASS exact Plan-page renderer HTML in ES/EN, updated download link and preserved 75/25.');

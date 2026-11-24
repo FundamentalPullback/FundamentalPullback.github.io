@@ -6,8 +6,7 @@ const root = path.resolve(__dirname, '..');
 const ctx = {window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'data/plan.js'),'utf8'),ctx);
 const plan = ctx.window.FP_PLAN;
-assert.equal(plan.meta.date,'2026-11-09');
-assert.equal(plan.meta.pdf,'data/plan/Plan_Completo_2026-11-09.pdf');
+assert.ok(plan.meta.date >= '2026-11-09', 'Current plan retains the November 9 sizing amendment');
 assert.ok(fs.existsSync(path.join(root,plan.meta.pdf)), 'Current PDF must ship with the rule change');
 for (const lang of ['es','en']) {
   const get = id => plan[lang].sections.find(s=>s.id===id);
