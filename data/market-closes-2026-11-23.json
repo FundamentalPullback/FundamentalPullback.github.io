@@ -1,0 +1,83 @@
+{
+  "asOf": "2026-11-23",
+  "source": "Stock Analysis / S&P Global unadjusted closing column, regular session only, reconciled against the dated historical series. No live, scanner Last or after-hours quotes.",
+  "retrievedAt": "2026-11-24T00:13:22.327Z",
+  "sessions": {
+    "2026-11-23": {
+      "SPY": 722.29,
+      "ASO": 69.28,
+      "CTSH": 58.57,
+      "DOCU": 77.04,
+      "EXLS": 43.08,
+      "JXN": 130.5,
+      "ULTA": 625.02
+    }
+  },
+  "evidence": {
+    "2026-11-23": {
+      "SPY": {
+        "sessionDate": "2026-11-23",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/etf/spy/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-24T00:13:22.327Z"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-23",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/aso/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-24T00:13:22.327Z"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-23",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ctsh/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-24T00:13:22.327Z"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-23",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/docu/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-24T00:13:22.327Z"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-23",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/exls/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-24T00:13:22.327Z"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-23",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/jxn/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-24T00:13:22.327Z"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-23",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ulta/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-24T00:13:22.327Z"
+      }
+    }
+  },
+  "reconciliation": {
+    "Historial": "Six of seven required closes match the authorized dated historical series. The ASO difference was resolved against the confirmed 4 p.m. ET regular close also used in Stage 4 A785.",
+    "differences": {
+      "ASO": {
+        "sheet": 69.22,
+        "selected": 69.28,
+        "resolution": "The 4 p.m. ET Stock Analysis / S&P Global close is $69.28. $69.22 is the separate ChartExchange technical-series close, not the selected market close.",
+        "alternateTechnicalSeriesUrl": "https://chartexchange.com/symbol/nasdaq-aso/historical/"
+      }
+    },
+    "calendar": "Normal Monday 09:30–16:00 EST session (regular close 21:00 UTC). No exceptional closure identified. Review performed more than 30 minutes after close.",
+    "calendarUrl": "https://www.nyse.com/trade/hours-calendars",
+    "scope": "Market history only. Public operating ledger unchanged. Totals and chart remain at the last reconciled provisional PAPER snapshot until previously noted exits can be reconciled without publishing private records. Not a broker statement."
+  }
+}
