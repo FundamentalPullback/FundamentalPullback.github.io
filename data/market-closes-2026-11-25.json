@@ -1,0 +1,87 @@
+{
+  "asOf": "2026-11-25",
+  "source": "Stock Analysis / S&P Global dated unadjusted regular-session Close, explicitly marked 16:00 EST. Reconciled against Historial; no scanner Last or extended-hours prices.",
+  "retrievedAt": "2026-11-26T00:11:38.490Z",
+  "sessions": {
+    "2026-11-25": {
+      "SPY": 716.7,
+      "ASO": 73.33,
+      "CTSH": 63.32,
+      "DOCU": 80.75,
+      "EXLS": 45.1,
+      "JXN": 128.96,
+      "ULTA": 642.64
+    }
+  },
+  "evidence": {
+    "2026-11-25": {
+      "SPY": {
+        "sessionDate": "2026-11-25",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/etf/spy/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-26T00:11:38.490Z"
+      },
+      "ASO": {
+        "sessionDate": "2026-11-25",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/aso/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-26T00:11:38.490Z"
+      },
+      "CTSH": {
+        "sessionDate": "2026-11-25",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ctsh/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-26T00:11:38.490Z"
+      },
+      "DOCU": {
+        "sessionDate": "2026-11-25",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/docu/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-26T00:11:38.490Z"
+      },
+      "EXLS": {
+        "sessionDate": "2026-11-25",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/exls/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-26T00:11:38.490Z"
+      },
+      "JXN": {
+        "sessionDate": "2026-11-25",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/jxn/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-26T00:11:38.490Z"
+      },
+      "ULTA": {
+        "sessionDate": "2026-11-25",
+        "priceType": "regular-close",
+        "url": "https://stockanalysis.com/stocks/ulta/history/",
+        "sourceType": "dated-vendor-history",
+        "retrievedAt": "2026-11-26T00:11:38.490Z"
+      }
+    }
+  },
+  "reconciliation": {
+    "Historial": "Five of seven quotes matched. The two differences were reconciled to timestamped regular-session closes, not the alternate history marks.",
+    "differences": {
+      "ASO": {
+        "sheet": 73.3,
+        "selected": 73.33,
+        "resolution": "Dated 16:00 EST and S&P close; intraday or alternative marks not used."
+      },
+      "EXLS": {
+        "sheet": 45.07,
+        "selected": 45.1,
+        "resolution": "Dated 16:00 EST bar and latest displayed regular-session close."
+      }
+    },
+    "calendar": "November 25 regular session 09:30–16:00 Eastern; review more than 30 minutes after completion. Thanksgiving closed November 26.",
+    "calendarUrl": "https://www.nyse.com/trade/hours-calendars",
+    "scope": "Market history and existing public marks only. Published paper operating ledger unchanged; totals provisional, not broker records."
+  }
+}
